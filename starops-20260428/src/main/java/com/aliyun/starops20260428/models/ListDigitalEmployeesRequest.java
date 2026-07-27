@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDigitalEmployeesRequest extends TeaModel {
     /**
+     * <p>The display name of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The type of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -19,6 +23,8 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String employeeType;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -33,6 +41,8 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -40,12 +50,17 @@ public class ListDigitalEmployeesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 

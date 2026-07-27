@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FetchRemoteMcpToolsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
      */
@@ -12,6 +14,8 @@ public class FetchRemoteMcpToolsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The raw tools/list response returned by the remote MCP service.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:{&quot;tools&quot;:[]}}</p>
      */

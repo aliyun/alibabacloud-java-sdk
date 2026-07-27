@@ -4,10 +4,15 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
+    /**
+     * <p>A list of previous skill versions.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListDigitalEmployeeSkillVersionsResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
      */
@@ -37,6 +42,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeeSkillVersionsResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the skill version was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -46,6 +52,8 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -53,6 +61,8 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -60,6 +70,8 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>Indicates whether the skill version is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -67,6 +79,8 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The remark for the skill version.</p>
+         * 
          * <strong>example:</strong>
          * <p>remark</p>
          */
@@ -74,6 +88,8 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>The skill name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -81,6 +97,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String skillName;
 
         /**
+         * <p>The time when the skill version was last updated.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -90,6 +107,8 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1770386951147366810</p>
          */

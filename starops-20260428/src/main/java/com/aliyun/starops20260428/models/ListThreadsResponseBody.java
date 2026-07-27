@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListThreadsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of results to return. The maximum value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListThreadsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>A token to retrieve the next page of results. If this parameter is absent, no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */
@@ -19,7 +23,7 @@ public class ListThreadsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CD8BA7D6-995D-578D-9941-xxxx</p>
@@ -28,16 +32,23 @@ public class ListThreadsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The thread ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>thread-123123</p>
      */
     @NameInMap("threadId")
     public String threadId;
 
+    /**
+     * <p>A list of threads.</p>
+     */
     @NameInMap("threads")
     public java.util.List<ListThreadsResponseBodyThreads> threads;
 
     /**
+     * <p>The total number of threads.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -99,7 +110,7 @@ public class ListThreadsResponseBody extends TeaModel {
 
     public static class ListThreadsResponseBodyThreadsVariables extends TeaModel {
         /**
-         * <p>SLS project。</p>
+         * <p>The project in SLS.</p>
          * 
          * <strong>example:</strong>
          * <p>project</p>
@@ -108,6 +119,8 @@ public class ListThreadsResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>The workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace</p>
          */
@@ -138,10 +151,15 @@ public class ListThreadsResponseBody extends TeaModel {
     }
 
     public static class ListThreadsResponseBodyThreads extends TeaModel {
+        /**
+         * <p>A map of key-value pairs that you can attach to the thread.</p>
+         */
         @NameInMap("attributes")
         public java.util.Map<String, String> attributes;
 
         /**
+         * <p>The creation time of the thread, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-19T15:19:55.040403272+08:00</p>
          */
@@ -149,6 +167,8 @@ public class ListThreadsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The digital employee name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -156,6 +176,8 @@ public class ListThreadsResponseBody extends TeaModel {
         public String digitalEmployeeName;
 
         /**
+         * <p>The thread status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -163,6 +185,8 @@ public class ListThreadsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The thread ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>thread-123123</p>
          */
@@ -170,6 +194,8 @@ public class ListThreadsResponseBody extends TeaModel {
         public String threadId;
 
         /**
+         * <p>The thread title.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -177,16 +203,23 @@ public class ListThreadsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The last update time of the thread, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-19T15:19:55.040403272+08:00</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <p>The thread variables.</p>
+         */
         @NameInMap("variables")
         public ListThreadsResponseBodyThreadsVariables variables;
 
         /**
+         * <p>The thread version.</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */

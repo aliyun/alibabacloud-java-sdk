@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Tag extends TeaModel {
     /**
+     * <p>The key for the tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-key</p>
      */
@@ -12,6 +14,8 @@ public class Tag extends TeaModel {
     public String key;
 
     /**
+     * <p>The value for the tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-value</p>
      */

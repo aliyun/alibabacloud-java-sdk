@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     /**
+     * <p>The time when the skill was created.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The description of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,8 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -28,16 +33,23 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Indicates whether the skill is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <p>The file list of the skill.</p>
+     */
     @NameInMap("files")
     public java.util.List<GetDigitalEmployeeSkillResponseBodyFiles> files;
 
     /**
+     * <p>A user-provided remark about the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>remark</p>
      */
@@ -45,7 +57,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -54,6 +66,8 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -61,6 +75,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The time when the skill was last updated.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +85,8 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The version of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>1770386951147366810</p>
      */
@@ -163,6 +180,8 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
 
     public static class GetDigitalEmployeeSkillResponseBodyFiles extends TeaModel {
         /**
+         * <p>The file content.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          * <h2>name: skill
@@ -174,6 +193,8 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>SKILL.md</p>
          */

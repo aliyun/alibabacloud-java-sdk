@@ -4,10 +4,15 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class GetMcpServiceResponseBody extends TeaModel {
+    /**
+     * <p>The MCP service details.</p>
+     */
     @NameInMap("mcpService")
     public GetMcpServiceResponseBodyMcpService mcpService;
 
     /**
+     * <p>The region of the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -15,6 +20,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
      */
@@ -52,6 +59,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
 
     public static class GetMcpServiceResponseBodyMcpServiceConnectionAuth extends TeaModel {
         /**
+         * <p>The key-value information required for authentication.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;token&quot;:&quot;example-token&quot;}</p>
          */
@@ -59,6 +68,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public java.util.Map<String, String> keyInfo;
 
         /**
+         * <p>The authentication type. Currently, bearer is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>bearer</p>
          */
@@ -89,17 +100,27 @@ public class GetMcpServiceResponseBody extends TeaModel {
     }
 
     public static class GetMcpServiceResponseBodyMcpServiceConnection extends TeaModel {
+        /**
+         * <p>The authentication configuration of the MCP service.</p>
+         */
         @NameInMap("auth")
         public GetMcpServiceResponseBodyMcpServiceConnectionAuth auth;
 
         /**
+         * <p>The access endpoint of the MCP service.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("headers")
+        public java.util.Map<String, String> headers;
+
         /**
+         * <p>The MCP service platform type. Valid values: AIGateway and Custom.</p>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */
@@ -107,6 +128,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String platform;
 
         /**
+         * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -114,6 +137,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public Long timeout;
 
         /**
+         * <p>The MCP service transport protocol. Valid values: http and sse.</p>
+         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -139,6 +164,14 @@ public class GetMcpServiceResponseBody extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public GetMcpServiceResponseBodyMcpServiceConnection setHeaders(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+        public java.util.Map<String, String> getHeaders() {
+            return this.headers;
         }
 
         public GetMcpServiceResponseBodyMcpServiceConnection setPlatform(String platform) {
@@ -169,6 +202,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
 
     public static class GetMcpServiceResponseBodyMcpServiceNetwork extends TeaModel {
         /**
+         * <p>The IP address used to access the MCP service over the VPC network.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.12</p>
          */
@@ -176,6 +211,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String accessIp;
 
         /**
+         * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -183,6 +220,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public Long accessPort;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -190,6 +229,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The MCP Server instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-xxx</p>
          */
@@ -197,6 +238,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String mcpServerId;
 
         /**
+         * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -204,6 +247,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The region where the VPC network resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -211,6 +256,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxx</p>
          */
@@ -218,6 +265,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
@@ -225,6 +274,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>
          */
@@ -312,6 +363,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
 
     public static class GetMcpServiceResponseBodyMcpServiceTools extends TeaModel {
         /**
+         * <p>The annotation information of the MCP tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -319,19 +372,35 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public java.util.Map<String, ?> annotations;
 
         /**
+         * <p>Indicates whether user confirmation is required before the MCP tool is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("confirm")
         public Boolean confirm;
 
+        /**
+         * <p>The description of the MCP tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询指定日志库中的日志。</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display name of the MCP tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>日志查询工具</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>Indicates whether the MCP tool is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -339,6 +408,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The execution configuration of the MCP tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -346,6 +417,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public java.util.Map<String, ?> execution;
 
         /**
+         * <p>The list of MCP tool icons.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -353,6 +426,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> icons;
 
         /**
+         * <p>The JSON Schema of the MCP tool input parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;query&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;query&quot;]}</p>
          */
@@ -360,6 +435,8 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public java.util.Map<String, ?> inputSchema;
 
         /**
+         * <p>The name of the MCP tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>query_logs</p>
          */
@@ -367,12 +444,20 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The JSON Schema of the MCP tool output.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;}</p>
          */
         @NameInMap("outputSchema")
         public java.util.Map<String, ?> outputSchema;
 
+        /**
+         * <p>The title of the MCP tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询日志</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -472,16 +557,33 @@ public class GetMcpServiceResponseBody extends TeaModel {
     }
 
     public static class GetMcpServiceResponseBodyMcpService extends TeaModel {
+        /**
+         * <p>The MCP service connection configuration.</p>
+         */
         @NameInMap("connection")
         public GetMcpServiceResponseBodyMcpServiceConnection connection;
 
+        /**
+         * <p>The description of the MCP service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通过 MCP 调用日志查询工具。</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display name of the MCP service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>日志查询</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>Indicates whether the MCP service is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -489,16 +591,23 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The service name of the MCP service.</p>
+         * 
          * <strong>example:</strong>
          * <p>log-query</p>
          */
         @NameInMap("mcpServiceName")
         public String mcpServiceName;
 
+        /**
+         * <p>The network connectivity information.</p>
+         */
         @NameInMap("network")
         public GetMcpServiceResponseBodyMcpServiceNetwork network;
 
         /**
+         * <p>The list of MCP tools.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;query_logs&quot;}]</p>
          */

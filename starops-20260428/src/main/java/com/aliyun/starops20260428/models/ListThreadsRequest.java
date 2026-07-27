@@ -4,13 +4,21 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class ListThreadsRequest extends TeaModel {
+    /**
+     * <p>Filters the results. If this parameter is omitted, the operation returns all threads in the instance.</p>
+     */
     @NameInMap("filter")
     public java.util.List<ListThreadsRequestFilter> filter;
 
+    /**
+     * <p>Specifies whether to include threads created by missions.</p>
+     */
     @NameInMap("includeMission")
     public Boolean includeMission;
 
     /**
+     * <p>The maximum number of results to return. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -18,6 +26,8 @@ public class ListThreadsRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -25,6 +35,8 @@ public class ListThreadsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The status of the thread.</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -32,6 +44,8 @@ public class ListThreadsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The thread ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>thread-123123</p>
      */
@@ -93,6 +107,7 @@ public class ListThreadsRequest extends TeaModel {
 
     public static class ListThreadsRequestFilter extends TeaModel {
         /**
+         * <p>The filter key. Supported values are title, workspace, and project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +117,7 @@ public class ListThreadsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value for the filter key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

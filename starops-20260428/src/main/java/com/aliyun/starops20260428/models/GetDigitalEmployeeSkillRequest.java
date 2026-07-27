@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDigitalEmployeeSkillRequest extends TeaModel {
     /**
+     * <p>The version of the skill to retrieve. If this parameter is not specified, the latest version is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1770386951147366810</p>
      */

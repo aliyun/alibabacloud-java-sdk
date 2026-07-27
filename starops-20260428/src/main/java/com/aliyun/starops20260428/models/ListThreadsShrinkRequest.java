@@ -4,13 +4,21 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class ListThreadsShrinkRequest extends TeaModel {
+    /**
+     * <p>Filters the results. If this parameter is omitted, the operation returns all threads in the instance.</p>
+     */
     @NameInMap("filter")
     public String filterShrink;
 
+    /**
+     * <p>Specifies whether to include threads created by missions.</p>
+     */
     @NameInMap("includeMission")
     public Boolean includeMission;
 
     /**
+     * <p>The maximum number of results to return. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -18,6 +26,8 @@ public class ListThreadsShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
@@ -25,6 +35,8 @@ public class ListThreadsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The status of the thread.</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -32,6 +44,8 @@ public class ListThreadsShrinkRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The thread ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>thread-123123</p>
      */

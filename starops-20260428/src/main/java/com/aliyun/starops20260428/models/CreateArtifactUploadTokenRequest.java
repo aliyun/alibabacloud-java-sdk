@@ -3,23 +3,20 @@ package com.aliyun.starops20260428.models;
 
 import com.aliyun.tea.*;
 
-public class GetArtifactRequest extends TeaModel {
+public class CreateArtifactUploadTokenRequest extends TeaModel {
     /**
-     * <p>The path to the artifact.</p>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
-     * <p>missions/mission-xxx/artifacts/2026-05/05-01/xxxx.md</p>
+     * <p>upload/2026-05-25/</p>
      */
     @NameInMap("artifactPath")
     public String artifactPath;
 
-    public static GetArtifactRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetArtifactRequest self = new GetArtifactRequest();
+    public static CreateArtifactUploadTokenRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateArtifactUploadTokenRequest self = new CreateArtifactUploadTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetArtifactRequest setArtifactPath(String artifactPath) {
+    public CreateArtifactUploadTokenRequest setArtifactPath(String artifactPath) {
         this.artifactPath = artifactPath;
         return this;
     }

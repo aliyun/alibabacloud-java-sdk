@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateTicketRequest extends TeaModel {
     /**
+     * <ul>
+     * <li><p>The access token expiration time, in seconds. This specifies the expiration time for the user to access page operations. Default value: 86400 (one day). Valid values: 0 to 86400 (one day).</p>
+     * </li>
+     * <li><p>The actual access token expiration time is the minimum value of accessTokenExpirationTime and expirationTime.</p>
+     * </li>
+     * <li><p>If you call this operation by using Security Token Service (STS), the actual access token expiration time is the minimum value of accessTokenExpirationTime, expirationTime, and the STS token expiration time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>600</p>
      */
@@ -12,6 +21,10 @@ public class CreateTicketRequest extends TeaModel {
     public Long accessTokenExpirationTime;
 
     /**
+     * <ul>
+     * <li>The expiration time, in seconds. This specifies the expiration time of the embedded page URL. Default value: 86400 (one day). Valid values: 0 to 2592000 (30 days).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>86400</p>
      */

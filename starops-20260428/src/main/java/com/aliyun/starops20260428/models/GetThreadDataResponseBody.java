@@ -4,10 +4,15 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class GetThreadDataResponseBody extends TeaModel {
+    /**
+     * <p>The message data.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetThreadDataResponseBodyData> data;
 
     /**
+     * <p>The name of the current digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,8 @@ public class GetThreadDataResponseBody extends TeaModel {
     public String digitalEmployeeName;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -22,6 +29,8 @@ public class GetThreadDataResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If this parameter is not returned, there are no more results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */
@@ -29,6 +38,8 @@ public class GetThreadDataResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique ID for this GetThreadData API request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
@@ -36,6 +47,8 @@ public class GetThreadDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The unique ID of the thread.</p>
+     * 
      * <strong>example:</strong>
      * <p>thread_id01</p>
      */
@@ -96,33 +109,51 @@ public class GetThreadDataResponseBody extends TeaModel {
     }
 
     public static class GetThreadDataResponseBodyDataMessages extends TeaModel {
+        /**
+         * <p>A list of called agents.</p>
+         */
         @NameInMap("agents")
         public java.util.List<java.util.Map<String, ?>> agents;
 
+        /**
+         * <p>A list of generated artifacts.</p>
+         */
         @NameInMap("artifacts")
         public java.util.List<java.util.Map<String, ?>> artifacts;
 
         /**
+         * <p>The current call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b5287b7176360</p>
          */
         @NameInMap("callId")
         public String callId;
 
+        /**
+         * <p>The contents of the message.</p>
+         */
         @NameInMap("contents")
         public java.util.List<java.util.Map<String, ?>> contents;
 
         /**
+         * <p>The message details.</p>
+         * 
          * <strong>example:</strong>
          * <p>context of model exceed</p>
          */
         @NameInMap("detail")
         public String detail;
 
+        /**
+         * <p>A list of events.</p>
+         */
         @NameInMap("events")
         public java.util.List<java.util.Map<String, ?>> events;
 
         /**
+         * <p>The parent call ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b5287b7176360</p>
          */
@@ -130,6 +161,8 @@ public class GetThreadDataResponseBody extends TeaModel {
         public String parentCallId;
 
         /**
+         * <p>The role that initiates the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -137,6 +170,8 @@ public class GetThreadDataResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>The sequence number of the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -144,16 +179,23 @@ public class GetThreadDataResponseBody extends TeaModel {
         public Integer seq;
 
         /**
+         * <p>The message creation time in nanoseconds since the Unix epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1768702985000000000</p>
          */
         @NameInMap("timestamp")
         public String timestamp;
 
+        /**
+         * <p>A list of tools used to generate the message.</p>
+         */
         @NameInMap("tools")
         public java.util.List<java.util.Map<String, ?>> tools;
 
         /**
+         * <p>The message type.</p>
+         * 
          * <strong>example:</strong>
          * <p>task_finished</p>
          */
@@ -161,6 +203,8 @@ public class GetThreadDataResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The message data version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v0.1.0</p>
          */
@@ -279,10 +323,15 @@ public class GetThreadDataResponseBody extends TeaModel {
     }
 
     public static class GetThreadDataResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of messages in the thread.</p>
+         */
         @NameInMap("messages")
         public java.util.List<GetThreadDataResponseBodyDataMessages> messages;
 
         /**
+         * <p>The ID of the original request that generated this message.</p>
+         * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
@@ -290,6 +339,8 @@ public class GetThreadDataResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The unique ID that identifies the entire trace of a request.</p>
+         * 
          * <strong>example:</strong>
          * <p>3b5287b717636040171772050d0095</p>
          */

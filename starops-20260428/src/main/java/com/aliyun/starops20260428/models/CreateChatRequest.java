@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateChatRequest extends TeaModel {
     /**
+     * <p>The operation type. Valid values: <code>create</code> (default), <code>reconnect</code>, and <code>stop</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>create</p>
      */
@@ -12,16 +14,23 @@ public class CreateChatRequest extends TeaModel {
     public String action;
 
     /**
+     * <p>The name of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("digitalEmployeeName")
     public String digitalEmployeeName;
 
+    /**
+     * <p>The message list.</p>
+     */
     @NameInMap("messages")
     public java.util.List<CreateChatRequestMessages> messages;
 
     /**
+     * <p>The session thread ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>thread_id01</p>
      */
@@ -29,6 +38,8 @@ public class CreateChatRequest extends TeaModel {
     public String threadId;
 
     /**
+     * <p>The set of variables.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;workspace&quot;: &quot;test&quot;,
@@ -92,6 +103,8 @@ public class CreateChatRequest extends TeaModel {
 
     public static class CreateChatRequestMessagesContents extends TeaModel {
         /**
+         * <p>The content type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -99,6 +112,8 @@ public class CreateChatRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the content.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -129,10 +144,15 @@ public class CreateChatRequest extends TeaModel {
     }
 
     public static class CreateChatRequestMessages extends TeaModel {
+        /**
+         * <p>The multimodal content of the message.</p>
+         */
         @NameInMap("contents")
         public java.util.List<CreateChatRequestMessagesContents> contents;
 
         /**
+         * <p>A unique identifier for the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>message_id02</p>
          */
@@ -140,12 +160,17 @@ public class CreateChatRequest extends TeaModel {
         public String messageId;
 
         /**
+         * <p>The role of the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
         @NameInMap("role")
         public String role;
 
+        /**
+         * <p>The tool call list.</p>
+         */
         @NameInMap("tools")
         public java.util.List<java.util.Map<String, ?>> tools;
 

@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "starops.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "starops.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("starops", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +31,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取上传内容所需链接，适用于大文件。</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建对话</p>
+     * <p>创建产物上传凭证</p>
+     * 
+     * @param request CreateArtifactUploadTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateArtifactUploadTokenResponse
+     */
+    public CreateArtifactUploadTokenResponse createArtifactUploadTokenWithOptions(String name, CreateArtifactUploadTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactPath)) {
+            query.put("artifactPath", request.artifactPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateArtifactUploadToken"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/artifacts/uploadToken"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactUploadTokenResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取上传内容所需链接，适用于大文件。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建产物上传凭证</p>
+     * 
+     * @param request CreateArtifactUploadTokenRequest
+     * @return CreateArtifactUploadTokenResponse
+     */
+    public CreateArtifactUploadTokenResponse createArtifactUploadToken(String name, CreateArtifactUploadTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createArtifactUploadTokenWithOptions(name, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Starts a session.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>New conversation</p>
      * 
      * @param request CreateChatRequest
      * @param headers map
@@ -77,8 +137,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Starts a session.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建对话</p>
+     * <p>New conversation</p>
      * 
      * @param request CreateChatRequest
      * @return CreateChatResponse
@@ -90,8 +153,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建DigitalEmployee</p>
+     * <p>Creates a digital employee.</p>
      * 
      * @param request CreateDigitalEmployeeRequest
      * @param headers map
@@ -133,6 +199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("roleArn", request.roleArn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sandboxNetworkPolicy)) {
+            body.put("sandboxNetworkPolicy", request.sandboxNetworkPolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             body.put("tags", request.tags);
         }
@@ -160,8 +230,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建DigitalEmployee</p>
+     * <p>Creates a digital employee.</p>
      * 
      * @param request CreateDigitalEmployeeRequest
      * @return CreateDigitalEmployeeResponse
@@ -173,8 +246,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a new skill for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建技能</p>
+     * <p>Creates a skill for a digital employee.</p>
      * 
      * @param request CreateDigitalEmployeeSkillRequest
      * @param headers map
@@ -227,8 +303,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a new skill for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建技能</p>
+     * <p>Creates a skill for a digital employee.</p>
      * 
      * @param request CreateDigitalEmployeeSkillRequest
      * @return CreateDigitalEmployeeSkillResponse
@@ -240,8 +319,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an MCP service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建 MCP 服务</p>
+     * <p>Creates an MCP service.</p>
      * 
      * @param request CreateMcpServiceRequest
      * @param headers map
@@ -298,8 +380,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an MCP service.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建 MCP 服务</p>
+     * <p>Creates an MCP service.</p>
      * 
      * @param request CreateMcpServiceRequest
      * @return CreateMcpServiceResponse
@@ -311,8 +396,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a thread for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建会话</p>
+     * <p>Creates a thread.</p>
      * 
      * @param request CreateThreadRequest
      * @param headers map
@@ -353,8 +441,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a thread for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建会话</p>
+     * <p>Creates a thread.</p>
      * 
      * @param request CreateThreadRequest
      * @return CreateThreadResponse
@@ -367,7 +458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建票据</p>
+     * <p>Creates a ticket.</p>
      * 
      * @param request CreateTicketRequest
      * @param headers map
@@ -405,7 +496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建票据</p>
+     * <p>Creates a ticket.</p>
      * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
@@ -417,8 +508,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除DigitalEmployee</p>
+     * <p>Deletes a digital employee.</p>
      * 
      * @param request DeleteDigitalEmployeeRequest
      * @param headers map
@@ -445,8 +539,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除DigitalEmployee</p>
+     * <p>Deletes a digital employee.</p>
      * 
      * @param request DeleteDigitalEmployeeRequest
      * @return DeleteDigitalEmployeeResponse
@@ -458,8 +555,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a skill from the specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除技能</p>
+     * <p>Deletes a skill from a digital employee.</p>
      * 
      * @param request DeleteDigitalEmployeeSkillRequest
      * @param headers map
@@ -486,8 +586,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a skill from the specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除技能</p>
+     * <p>Deletes a skill from a digital employee.</p>
      * 
      * @param request DeleteDigitalEmployeeSkillRequest
      * @return DeleteDigitalEmployeeSkillResponse
@@ -500,7 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 MCP 服务</p>
+     * <p>Deletes an MCP service.</p>
      * 
      * @param request DeleteMcpServiceRequest
      * @param headers map
@@ -528,7 +631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 MCP 服务</p>
+     * <p>Deletes an MCP service.</p>
      * 
      * @param request DeleteMcpServiceRequest
      * @return DeleteMcpServiceResponse
@@ -540,8 +643,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes a specified thread.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除会话</p>
+     * <p>This operation deletes a thread.</p>
      * 
      * @param request DeleteThreadRequest
      * @param headers map
@@ -568,8 +674,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes a specified thread.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除会话</p>
+     * <p>This operation deletes a thread.</p>
      * 
      * @param request DeleteThreadRequest
      * @return DeleteThreadResponse
@@ -582,7 +691,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预览远端 MCP 工具列表</p>
+     * <p>Retrieves the tool list from a remote MCP server.</p>
      * 
      * @param request FetchRemoteMcpToolsRequest
      * @param headers map
@@ -620,7 +729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>预览远端 MCP 工具列表</p>
+     * <p>Retrieves the tool list from a remote MCP server.</p>
      * 
      * @param request FetchRemoteMcpToolsRequest
      * @return FetchRemoteMcpToolsResponse
@@ -632,8 +741,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the content of an artifact.</p>
+     * 
      * <b>summary</b> : 
-     * <p>下载小型产物文件</p>
+     * <p>Retrieves the content of an artifact.</p>
      * 
      * @param request GetArtifactRequest
      * @param headers map
@@ -683,8 +795,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the content of an artifact.</p>
+     * 
      * <b>summary</b> : 
-     * <p>下载小型产物文件</p>
+     * <p>Retrieves the content of an artifact.</p>
      * 
      * @param request GetArtifactRequest
      * @return GetArtifactResponse
@@ -697,7 +812,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 DigitalEmployee</p>
+     * <p>获取产物下载链接</p>
+     * 
+     * @param request GetArtifactDownloadUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactDownloadUrlResponse
+     */
+    public GetArtifactDownloadUrlResponse getArtifactDownloadUrlWithOptions(String name, GetArtifactDownloadUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactPath)) {
+            query.put("artifactPath", request.artifactPath);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetArtifactDownloadUrl"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/digitalEmployee/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/artifacts/downloadUrl"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactDownloadUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取产物下载链接</p>
+     * 
+     * @param request GetArtifactDownloadUrlRequest
+     * @return GetArtifactDownloadUrlResponse
+     */
+    public GetArtifactDownloadUrlResponse getArtifactDownloadUrl(String name, GetArtifactDownloadUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getArtifactDownloadUrlWithOptions(name, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a digital employee.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a digital employee.</p>
      * 
      * @param request GetDigitalEmployeeRequest
      * @param headers map
@@ -724,8 +889,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询 DigitalEmployee</p>
+     * <p>Retrieves a digital employee.</p>
      * 
      * @param request GetDigitalEmployeeRequest
      * @return GetDigitalEmployeeResponse
@@ -737,8 +905,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified skill for a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取技能详情</p>
+     * <p>Retrieves the details of a specific skill.</p>
      * 
      * @param request GetDigitalEmployeeSkillRequest
      * @param headers map
@@ -771,8 +942,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified skill for a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取技能详情</p>
+     * <p>Retrieves the details of a specific skill.</p>
      * 
      * @param request GetDigitalEmployeeSkillRequest
      * @return GetDigitalEmployeeSkillResponse
@@ -785,7 +959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 MCP 服务</p>
+     * <p>Queries an MCP service.</p>
      * 
      * @param request GetMcpServiceRequest
      * @param headers map
@@ -813,7 +987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 MCP 服务</p>
+     * <p>Queries an MCP service.</p>
      * 
      * @param request GetMcpServiceRequest
      * @return GetMcpServiceResponse
@@ -825,8 +999,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a thread.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取会话</p>
+     * <p>Retrieves a thread.</p>
      * 
      * @param request GetThreadRequest
      * @param headers map
@@ -853,8 +1030,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a thread.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取会话</p>
+     * <p>Retrieves a thread.</p>
      * 
      * @param request GetThreadRequest
      * @return GetThreadResponse
@@ -866,8 +1046,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Gets session data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取会话数据</p>
+     * <p>Get session data</p>
      * 
      * @param request GetThreadDataRequest
      * @param headers map
@@ -904,8 +1087,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Gets session data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取会话数据</p>
+     * <p>Get session data</p>
      * 
      * @param request GetThreadDataRequest
      * @return GetThreadDataResponse
@@ -917,8 +1103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the artifacts for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出产物文件</p>
+     * <p>Lists artifacts.</p>
      * 
      * @param request ListArtifactsRequest
      * @param headers map
@@ -959,8 +1148,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the artifacts for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出产物文件</p>
+     * <p>Lists artifacts.</p>
      * 
      * @param request ListArtifactsRequest
      * @return ListArtifactsResponse
@@ -972,8 +1164,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the previous versions of a skill.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出技能版本</p>
+     * <p>Lists the versions of a skill.</p>
      * 
      * @param request ListDigitalEmployeeSkillVersionsRequest
      * @param headers map
@@ -1000,8 +1195,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the previous versions of a skill.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出技能版本</p>
+     * <p>Lists the versions of a skill.</p>
      * 
      * @param request ListDigitalEmployeeSkillVersionsRequest
      * @return ListDigitalEmployeeSkillVersionsResponse
@@ -1013,8 +1211,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the skills of a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出技能</p>
+     * <p>Lists the skills of a digital employee.</p>
      * 
      * @param request ListDigitalEmployeeSkillsRequest
      * @param headers map
@@ -1055,8 +1256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the skills of a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出技能</p>
+     * <p>Lists the skills of a digital employee.</p>
      * 
      * @param request ListDigitalEmployeeSkillsRequest
      * @return ListDigitalEmployeeSkillsResponse
@@ -1068,8 +1272,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists digital employees.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出资源DigitalEmployee</p>
+     * <p>Returns a list of digital employees.</p>
      * 
      * @param tmpReq ListDigitalEmployeesRequest
      * @param headers map
@@ -1132,8 +1339,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists digital employees.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出资源DigitalEmployee</p>
+     * <p>Returns a list of digital employees.</p>
      * 
      * @param request ListDigitalEmployeesRequest
      * @return ListDigitalEmployeesResponse
@@ -1146,7 +1356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数字员工下的 MCP 服务列表</p>
+     * <p>Queries the list of MCP services.</p>
      * 
      * @param request ListMcpServicesRequest
      * @param headers map
@@ -1184,7 +1394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数字员工下的 MCP 服务列表</p>
+     * <p>Queries the list of MCP services.</p>
      * 
      * @param request ListMcpServicesRequest
      * @return ListMcpServicesResponse
@@ -1196,8 +1406,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>List sessions</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出会话</p>
+     * <p>List sessions</p>
      * 
      * @param tmpReq ListThreadsRequest
      * @param headers map
@@ -1256,8 +1469,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>List sessions</p>
+     * 
      * <b>summary</b> : 
-     * <p>列出会话</p>
+     * <p>List sessions</p>
      * 
      * @param request ListThreadsRequest
      * @return ListThreadsResponse
@@ -1269,8 +1485,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新UpdateDigitalEmployee</p>
+     * <p>Updates a digital employee.</p>
      * 
      * @param request UpdateDigitalEmployeeRequest
      * @param headers map
@@ -1304,6 +1523,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("roleArn", request.roleArn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sandboxNetworkPolicy)) {
+            body.put("sandboxNetworkPolicy", request.sandboxNetworkPolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.toolPolicy)) {
             body.put("toolPolicy", request.toolPolicy);
         }
@@ -1327,8 +1550,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新UpdateDigitalEmployee</p>
+     * <p>Updates a digital employee.</p>
      * 
      * @param request UpdateDigitalEmployeeRequest
      * @return UpdateDigitalEmployeeResponse
@@ -1340,8 +1566,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation updates a skill for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新技能</p>
+     * <p>Updates a skill for a digital employee.</p>
      * 
      * @param request UpdateDigitalEmployeeSkillRequest
      * @param headers map
@@ -1390,8 +1619,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation updates a skill for a specified digital employee.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新技能</p>
+     * <p>Updates a skill for a digital employee.</p>
      * 
      * @param request UpdateDigitalEmployeeSkillRequest
      * @return UpdateDigitalEmployeeSkillResponse
@@ -1404,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 MCP 服务</p>
+     * <p>Updates an MCP service.</p>
      * 
      * @param request UpdateMcpServiceRequest
      * @param headers map
@@ -1458,7 +1690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 MCP 服务</p>
+     * <p>Updates an MCP service.</p>
      * 
      * @param request UpdateMcpServiceRequest
      * @return UpdateMcpServiceResponse
@@ -1470,8 +1702,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a thread.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新会话</p>
+     * <p>Updates a thread.</p>
      * 
      * @param request UpdateThreadRequest
      * @param headers map
@@ -1512,8 +1747,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a thread.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新会话</p>
+     * <p>Updates a thread.</p>
      * 
      * @param request UpdateThreadRequest
      * @return UpdateThreadResponse

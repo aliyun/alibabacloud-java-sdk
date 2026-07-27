@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDigitalEmployeeSkillsRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return in the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListDigitalEmployeeSkillsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in a subsequent request to retrieve the next page of results. To retrieve the first page, do not specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
      */
@@ -19,6 +23,8 @@ public class ListDigitalEmployeeSkillsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The name of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

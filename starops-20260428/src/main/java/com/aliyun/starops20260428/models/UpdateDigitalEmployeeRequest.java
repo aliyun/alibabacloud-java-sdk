@@ -4,10 +4,15 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class UpdateDigitalEmployeeRequest extends TeaModel {
+    /**
+     * <p>The attributes.</p>
+     */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>The default rule of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String defaultRule;
 
     /**
+     * <p>The description of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -22,16 +29,23 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the digital employee.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>The list of knowledge bases.</p>
+     */
     @NameInMap("knowledges")
     public UpdateDigitalEmployeeRequestKnowledges knowledges;
 
     /**
+     * <p>The ARN of the RAM role.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::12345678912:role/testrole</p>
      */
@@ -39,7 +53,16 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>数字员工工具调用安全策略配置。</p>
+     * <p>The list of CIDRs or IP addresses that are allowed to be accessed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
+     */
+    @NameInMap("sandboxNetworkPolicy")
+    public UpdateDigitalEmployeeRequestSandboxNetworkPolicy sandboxNetworkPolicy;
+
+    /**
+     * <p>The security policy configuration for tool calling of the digital employee.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
@@ -100,6 +123,14 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         return this.roleArn;
     }
 
+    public UpdateDigitalEmployeeRequest setSandboxNetworkPolicy(UpdateDigitalEmployeeRequestSandboxNetworkPolicy sandboxNetworkPolicy) {
+        this.sandboxNetworkPolicy = sandboxNetworkPolicy;
+        return this;
+    }
+    public UpdateDigitalEmployeeRequestSandboxNetworkPolicy getSandboxNetworkPolicy() {
+        return this.sandboxNetworkPolicy;
+    }
+
     public UpdateDigitalEmployeeRequest setToolPolicy(UpdateDigitalEmployeeRequestToolPolicy toolPolicy) {
         this.toolPolicy = toolPolicy;
         return this;
@@ -110,6 +141,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestKnowledgesBailian extends TeaModel {
         /**
+         * <p>The attributes of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -117,6 +150,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String attributes;
 
         /**
+         * <p>The Bailian index ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>index-xxxx</p>
          */
@@ -124,6 +159,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String indexId;
 
         /**
+         * <p>The region of the knowledge base.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -131,6 +168,8 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String region;
 
         /**
+         * <p>The Bailian workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm-xxxx</p>
          */
@@ -177,9 +216,15 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
     }
 
     public static class UpdateDigitalEmployeeRequestKnowledges extends TeaModel {
+        /**
+         * <p>The list of Bailian knowledge bases.</p>
+         */
         @NameInMap("bailian")
         public java.util.List<UpdateDigitalEmployeeRequestKnowledgesBailian> bailian;
 
+        /**
+         * <p>The list of SOP knowledge bases.</p>
+         */
         @NameInMap("sop")
         public java.util.List<java.util.Map<String, ?>> sop;
 
@@ -206,9 +251,62 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     }
 
+    public static class UpdateDigitalEmployeeRequestSandboxNetworkPolicy extends TeaModel {
+        /**
+         * <p>The list of CIDRs or IP addresses that are allowed to be accessed.</p>
+         */
+        @NameInMap("allowCidrs")
+        public java.util.List<String> allowCidrs;
+
+        /**
+         * <p>The list of FQDNs that are allowed to be accessed.</p>
+         */
+        @NameInMap("allowFqdns")
+        public java.util.List<String> allowFqdns;
+
+        /**
+         * <p>Specifies whether to enable the sandbox network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("enableAcl")
+        public Boolean enableAcl;
+
+        public static UpdateDigitalEmployeeRequestSandboxNetworkPolicy build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDigitalEmployeeRequestSandboxNetworkPolicy self = new UpdateDigitalEmployeeRequestSandboxNetworkPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDigitalEmployeeRequestSandboxNetworkPolicy setAllowCidrs(java.util.List<String> allowCidrs) {
+            this.allowCidrs = allowCidrs;
+            return this;
+        }
+        public java.util.List<String> getAllowCidrs() {
+            return this.allowCidrs;
+        }
+
+        public UpdateDigitalEmployeeRequestSandboxNetworkPolicy setAllowFqdns(java.util.List<String> allowFqdns) {
+            this.allowFqdns = allowFqdns;
+            return this;
+        }
+        public java.util.List<String> getAllowFqdns() {
+            return this.allowFqdns;
+        }
+
+        public UpdateDigitalEmployeeRequestSandboxNetworkPolicy setEnableAcl(Boolean enableAcl) {
+            this.enableAcl = enableAcl;
+            return this;
+        }
+        public Boolean getEnableAcl() {
+            return this.enableAcl;
+        }
+
+    }
+
     public static class UpdateDigitalEmployeeRequestToolPolicyAliyunStatements extends TeaModel {
         /**
-         * <p>Aliyun OpenAPI Action 列表，格式为 product:ApiName、product:Prefix* 或 product:*。</p>
+         * <p>RAM action</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
@@ -217,16 +315,17 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public java.util.List<String> actions;
 
         /**
-         * <p>本条语句对应的 Aliyun OpenAPI API 版本。</p>
+         * <p>The API version. This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-12-30</p>
+         * <p>2024-03-30</p>
          */
         @NameInMap("apiVersion")
+        @Deprecated
         public String apiVersion;
 
         /**
-         * <p>命中该 API 后的执行策略。</p>
+         * <p>The execution policy.</p>
          * 
          * <strong>example:</strong>
          * <p>user_ack</p>
@@ -235,10 +334,10 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public String decision;
 
         /**
-         * <p>本条语句对应的 Aliyun OpenAPI 产品名。</p>
+         * <p>The cloud service code.</p>
          * 
          * <strong>example:</strong>
-         * <p>Sls</p>
+         * <p>Cms</p>
          */
         @NameInMap("product")
         public String product;
@@ -256,6 +355,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
             return this.actions;
         }
 
+        @Deprecated
         public UpdateDigitalEmployeeRequestToolPolicyAliyunStatements setApiVersion(String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
@@ -284,7 +384,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestToolPolicyAliyun extends TeaModel {
         /**
-         * <p>是否启用 Aliyun MCP 工具策略。</p>
+         * <p>Specifies whether to enable the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -293,7 +393,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Aliyun OpenAPI 工具策略语句列表。</p>
+         * <p>The list of Aliyun CLI tool policy statements.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -326,7 +426,7 @@ public class UpdateDigitalEmployeeRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeRequestToolPolicy extends TeaModel {
         /**
-         * <p>Aliyun MCP 工具调用安全策略配置。</p>
+         * <p>The security policy configuration for Aliyun CLI tool calling.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>

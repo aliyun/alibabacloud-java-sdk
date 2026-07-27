@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token to retrieve the next page of results. If this parameter is not returned, it indicates that no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
      */
@@ -19,7 +23,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
@@ -27,10 +31,15 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of skills.</p>
+     */
     @NameInMap("skills")
     public java.util.List<ListDigitalEmployeeSkillsResponseBodySkills> skills;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -84,6 +93,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
 
     public static class ListDigitalEmployeeSkillsResponseBodySkills extends TeaModel {
         /**
+         * <p>The time at which the skill was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -93,6 +103,8 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -100,6 +112,8 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The display name of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -107,6 +121,8 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>Indicates whether the skill is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -114,6 +130,8 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The name of the skill.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -121,6 +139,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         public String skillName;
 
         /**
+         * <p>The time at which the skill was last updated.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

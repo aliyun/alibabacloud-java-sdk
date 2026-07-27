@@ -5,11 +5,15 @@ import com.aliyun.tea.*;
 
 public class FetchRemoteMcpToolsRequest extends TeaModel {
     /**
+     * <p>The request body parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("connection")
     public FetchRemoteMcpToolsRequestConnection connection;
 
+    /**
+     * <p>The request body parameters.</p>
+     */
     @NameInMap("network")
     public FetchRemoteMcpToolsRequestNetwork network;
 
@@ -36,6 +40,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
 
     public static class FetchRemoteMcpToolsRequestConnectionAuth extends TeaModel {
         /**
+         * <p>The request body parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;token&quot;:&quot;example-token&quot;}</p>
          */
@@ -43,6 +49,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public java.util.Map<String, String> keyInfo;
 
         /**
+         * <p>The authentication type. Currently, only bearer is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>bearer</p>
          */
@@ -73,10 +81,14 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
     }
 
     public static class FetchRemoteMcpToolsRequestConnection extends TeaModel {
+        /**
+         * <p>The request body parameters.</p>
+         */
         @NameInMap("auth")
         public FetchRemoteMcpToolsRequestConnectionAuth auth;
 
         /**
+         * <p>The access endpoint of the MCP service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,7 +97,12 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("headers")
+        public java.util.Map<String, String> headers;
+
         /**
+         * <p>The MCP service platform type. Valid values: AIGateway and Custom.</p>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */
@@ -93,6 +110,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String platform;
 
         /**
+         * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -100,6 +119,7 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public Long timeout;
 
         /**
+         * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,6 +147,14 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public FetchRemoteMcpToolsRequestConnection setHeaders(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+        public java.util.Map<String, String> getHeaders() {
+            return this.headers;
         }
 
         public FetchRemoteMcpToolsRequestConnection setPlatform(String platform) {
@@ -157,6 +185,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
 
     public static class FetchRemoteMcpToolsRequestNetwork extends TeaModel {
         /**
+         * <p>The IP address used to access the MCP service over the VPC network.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.12</p>
          */
@@ -164,6 +194,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String accessIp;
 
         /**
+         * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -171,6 +203,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public Long accessPort;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -178,6 +212,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The MCP Server instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-xxx</p>
          */
@@ -185,6 +221,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String mcpServerId;
 
         /**
+         * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
+         * 
          * <strong>example:</strong>
          * <p>public</p>
          */
@@ -192,6 +230,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The region where the VPC network resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -199,6 +239,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String region;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxx</p>
          */
@@ -206,6 +248,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
@@ -213,6 +257,8 @@ public class FetchRemoteMcpToolsRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>
          */

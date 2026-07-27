@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMcpServicesRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListMcpServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
      */

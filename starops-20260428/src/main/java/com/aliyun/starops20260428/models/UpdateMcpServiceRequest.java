@@ -5,18 +5,32 @@ import com.aliyun.tea.*;
 
 public class UpdateMcpServiceRequest extends TeaModel {
     /**
+     * <p>The request body parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("connection")
     public UpdateMcpServiceRequestConnection connection;
 
+    /**
+     * <p>The description of the MCP service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通过 MCP 调用日志查询工具。</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The display name of the MCP service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>日志查询</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>Specifies whether to enable the MCP service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,12 +40,14 @@ public class UpdateMcpServiceRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The request body parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("network")
     public UpdateMcpServiceRequestNetwork network;
 
     /**
+     * <p>The list of MCP tools.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,6 +111,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
 
     public static class UpdateMcpServiceRequestConnectionAuth extends TeaModel {
         /**
+         * <p>The request body parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;token&quot;:&quot;example-token&quot;}</p>
          */
@@ -102,6 +120,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public java.util.Map<String, String> keyInfo;
 
         /**
+         * <p>The authentication type. Currently, only bearer is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>bearer</p>
          */
@@ -132,10 +152,14 @@ public class UpdateMcpServiceRequest extends TeaModel {
     }
 
     public static class UpdateMcpServiceRequestConnection extends TeaModel {
+        /**
+         * <p>The request body parameters.</p>
+         */
         @NameInMap("auth")
         public UpdateMcpServiceRequestConnectionAuth auth;
 
         /**
+         * <p>The access endpoint of the MCP service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +168,11 @@ public class UpdateMcpServiceRequest extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("headers")
+        public java.util.Map<String, String> headers;
+
         /**
+         * <p>The platform type of the MCP service. Valid values: AIGateway and Custom.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +182,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String platform;
 
         /**
+         * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -161,6 +191,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public Long timeout;
 
         /**
+         * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +219,14 @@ public class UpdateMcpServiceRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public UpdateMcpServiceRequestConnection setHeaders(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+        public java.util.Map<String, String> getHeaders() {
+            return this.headers;
         }
 
         public UpdateMcpServiceRequestConnection setPlatform(String platform) {
@@ -218,6 +257,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
 
     public static class UpdateMcpServiceRequestNetwork extends TeaModel {
         /**
+         * <p>The IP address used to access the MCP service over the VPC network.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.12</p>
          */
@@ -225,6 +266,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String accessIp;
 
         /**
+         * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -232,6 +275,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public Long accessPort;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -239,6 +284,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The MCP Server instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mcp-xxx</p>
          */
@@ -246,6 +293,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String mcpServerId;
 
         /**
+         * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,6 +303,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The region where the VPC network resides.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -262,6 +312,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String region;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxx</p>
          */
@@ -269,6 +321,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
@@ -276,6 +330,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>
          */
@@ -363,6 +419,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
 
     public static class UpdateMcpServiceRequestTools extends TeaModel {
         /**
+         * <p>The request body parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -370,19 +428,35 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public java.util.Map<String, ?> annotations;
 
         /**
+         * <p>Specifies whether user confirmation is required before calling the MCP tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("confirm")
         public Boolean confirm;
 
+        /**
+         * <p>The description of the MCP tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询指定日志库中的日志。</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The display name of the MCP tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>日志查询工具</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>Specifies whether to enable the MCP tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -390,6 +464,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The request body parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -397,6 +473,8 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public java.util.Map<String, ?> execution;
 
         /**
+         * <p>The list of MCP tool icons.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -404,6 +482,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> icons;
 
         /**
+         * <p>The request body parameters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -413,6 +492,7 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public java.util.Map<String, ?> inputSchema;
 
         /**
+         * <p>The name of the MCP tool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -422,12 +502,20 @@ public class UpdateMcpServiceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The request body parameters.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;}</p>
          */
         @NameInMap("outputSchema")
         public java.util.Map<String, ?> outputSchema;
 
+        /**
+         * <p>The title of the MCP tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>查询日志</p>
+         */
         @NameInMap("title")
         public String title;
 

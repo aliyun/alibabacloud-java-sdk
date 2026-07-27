@@ -4,16 +4,24 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class CreateThreadRequest extends TeaModel {
+    /**
+     * <p>Key-value pairs that you can attach to the thread.</p>
+     */
     @NameInMap("attributes")
     public java.util.Map<String, String> attributes;
 
     /**
+     * <p>The title of the thread.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>The variables for the thread. You can use them to pass custom data to the digital employee.</p>
+     */
     @NameInMap("variables")
     public CreateThreadRequestVariables variables;
 
@@ -48,6 +56,8 @@ public class CreateThreadRequest extends TeaModel {
 
     public static class CreateThreadRequestVariables extends TeaModel {
         /**
+         * <p>The name of the Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>project</p>
          */
@@ -55,6 +65,8 @@ public class CreateThreadRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace</p>
          */

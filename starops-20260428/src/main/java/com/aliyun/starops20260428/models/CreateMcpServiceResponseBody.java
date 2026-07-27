@@ -4,10 +4,18 @@ package com.aliyun.starops20260428.models;
 import com.aliyun.tea.*;
 
 public class CreateMcpServiceResponseBody extends TeaModel {
+    /**
+     * <p>The service name of the MCP service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>log-query</p>
+     */
     @NameInMap("mcpServiceName")
     public String mcpServiceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
      */

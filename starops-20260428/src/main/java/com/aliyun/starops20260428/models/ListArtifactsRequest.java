@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListArtifactsRequest extends TeaModel {
     /**
+     * <p>The artifact path from which to list artifacts. If this parameter is not specified, artifacts are listed from the root directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListArtifactsRequest extends TeaModel {
     public String artifactPath;
 
     /**
+     * <p>The maximum number of results to return. If more results are available, the response includes a <code>nextToken</code> to retrieve the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,8 @@ public class ListArtifactsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to retrieve the next page of results. You can obtain this token from the <code>nextToken</code> parameter of a previous response.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

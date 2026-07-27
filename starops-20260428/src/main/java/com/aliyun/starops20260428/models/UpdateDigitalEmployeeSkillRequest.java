@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     /**
+     * <p>The description of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,8 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,7 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Specifies whether the skill is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,12 +33,15 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>An array of skill files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("files")
     public java.util.List<UpdateDigitalEmployeeSkillRequestFiles> files;
 
     /**
+     * <p>Notes or comments about the skill.</p>
+     * 
      * <strong>example:</strong>
      * <p>remark</p>
      */
@@ -87,6 +95,8 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
 
     public static class UpdateDigitalEmployeeSkillRequestFiles extends TeaModel {
         /**
+         * <p>The content of the skill file.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          * <h2>name: skill
@@ -98,6 +108,8 @@ public class UpdateDigitalEmployeeSkillRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The name of the skill file.</p>
+         * 
          * <strong>example:</strong>
          * <p>SKILL.md</p>
          */

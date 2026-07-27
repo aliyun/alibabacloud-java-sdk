@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetThreadDataRequest extends TeaModel {
     /**
+     * <p>The maximum number of session entries to return. The maximum value is 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class GetThreadDataRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination cursor.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
      */

@@ -5,26 +5,32 @@ import com.aliyun.tea.*;
 
 public class CreateMcpServiceRequest extends TeaModel {
     /**
+     * <p>The request body parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("connection")
     public CreateMcpServiceRequestConnection connection;
 
     /**
+     * <p>The description of the MCP service.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>通过 MCP 调用日志查询工具。</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the MCP service.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>日志查询</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>Specifies whether to enable the MCP service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,22 +40,28 @@ public class CreateMcpServiceRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The service name of the MCP service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>log-query</p>
      */
     @NameInMap("mcpServiceName")
     public String mcpServiceName;
 
     /**
+     * <p>The request body parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("network")
     public CreateMcpServiceRequestNetwork network;
 
     /**
+     * <p>The list of MCP tools.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;query_logs&quot;}]</p>
      */
     @NameInMap("tools")
     public java.util.List<CreateMcpServiceRequestTools> tools;
@@ -117,12 +129,17 @@ public class CreateMcpServiceRequest extends TeaModel {
 
     public static class CreateMcpServiceRequestConnectionAuth extends TeaModel {
         /**
-         * <p>key</p>
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;token&quot;:&quot;example-token&quot;}</p>
          */
         @NameInMap("keyInfo")
         public java.util.Map<String, String> keyInfo;
 
         /**
+         * <p>The authentication type. Currently, only bearer is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>bearer</p>
          */
@@ -153,19 +170,27 @@ public class CreateMcpServiceRequest extends TeaModel {
     }
 
     public static class CreateMcpServiceRequestConnection extends TeaModel {
+        /**
+         * <p>The request body parameters.</p>
+         */
         @NameInMap("auth")
         public CreateMcpServiceRequestConnectionAuth auth;
 
         /**
+         * <p>The access endpoint of the MCP service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://10.0.1.23:8080/mcp">http://10.0.1.23:8080/mcp</a></p>
+         * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("headers")
+        public java.util.Map<String, String> headers;
+
         /**
+         * <p>The platform type of the MCP service. Valid values: AIGateway and Custom.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,13 +200,16 @@ public class CreateMcpServiceRequest extends TeaModel {
         public String platform;
 
         /**
+         * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
-         * <p>10000</p>
+         * <p>5000</p>
          */
         @NameInMap("timeout")
         public Long timeout;
 
         /**
+         * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +237,14 @@ public class CreateMcpServiceRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateMcpServiceRequestConnection setHeaders(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+        public java.util.Map<String, String> getHeaders() {
+            return this.headers;
         }
 
         public CreateMcpServiceRequestConnection setPlatform(String platform) {
@@ -239,13 +275,17 @@ public class CreateMcpServiceRequest extends TeaModel {
 
     public static class CreateMcpServiceRequestNetwork extends TeaModel {
         /**
+         * <p>The IP address used to access the MCP service over the VPC network.</p>
+         * 
          * <strong>example:</strong>
-         * <p>100.2.243.1</p>
+         * <p>10.0.0.12</p>
          */
         @NameInMap("accessIp")
         public String accessIp;
 
         /**
+         * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -253,6 +293,8 @@ public class CreateMcpServiceRequest extends TeaModel {
         public Long accessPort;
 
         /**
+         * <p>The gateway ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-xxx</p>
          */
@@ -260,13 +302,16 @@ public class CreateMcpServiceRequest extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>The MCP Server instance ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>mcp-xxxx</p>
+         * <p>mcp-xxx</p>
          */
         @NameInMap("mcpServerId")
         public String mcpServerId;
 
         /**
+         * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,20 +321,26 @@ public class CreateMcpServiceRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The region where the VPC network resides.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cn-zhangjiakou</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("region")
         public String region;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>sg-xxxx</p>
+         * <p>sg-xxx</p>
          */
         @NameInMap("securityGroupId")
         public String securityGroupId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
@@ -297,8 +348,10 @@ public class CreateMcpServiceRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>vsw-xxxx</p>
+         * <p>vsw-xxx</p>
          */
         @NameInMap("vswId")
         public String vswId;
@@ -383,60 +436,103 @@ public class CreateMcpServiceRequest extends TeaModel {
     }
 
     public static class CreateMcpServiceRequestTools extends TeaModel {
+        /**
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("annotations")
         public java.util.Map<String, ?> annotations;
 
+        /**
+         * <p>Specifies whether user confirmation is required before calling the MCP tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("confirm")
         public Boolean confirm;
 
         /**
+         * <p>The description of the MCP tool.</p>
+         * 
          * <strong>example:</strong>
-         * <p>hahahhahaha</p>
+         * <p>查询指定日志库中的日志。</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The display name of the MCP tool.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ahahah</p>
+         * <p>日志查询工具</p>
          */
         @NameInMap("displayName")
         public String displayName;
 
         /**
+         * <p>Specifies whether to enable the MCP tool.</p>
+         * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("execution")
         public java.util.Map<String, ?> execution;
 
+        /**
+         * <p>The list of MCP tool icons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("icons")
         public java.util.List<java.util.Map<String, ?>> icons;
 
         /**
+         * <p>The request body parameters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;query&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;query&quot;]}</p>
          */
         @NameInMap("inputSchema")
         public java.util.Map<String, ?> inputSchema;
 
         /**
+         * <p>The name of the MCP tool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>agentloop-1654218979e79fb55dbddac2</p>
+         * <p>query_logs</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;object&quot;}</p>
+         */
         @NameInMap("outputSchema")
         public java.util.Map<String, ?> outputSchema;
 
         /**
+         * <p>The title of the MCP tool.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>查询日志</p>
          */
         @NameInMap("title")
         public String title;

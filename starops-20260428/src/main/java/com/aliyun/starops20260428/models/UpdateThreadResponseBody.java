@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateThreadResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -14,6 +14,8 @@ public class UpdateThreadResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the thread.</p>
+     * 
      * <strong>example:</strong>
      * <p>thread-12313</p>
      */
@@ -21,6 +23,8 @@ public class UpdateThreadResponseBody extends TeaModel {
     public String threadId;
 
     /**
+     * <p>The version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */
