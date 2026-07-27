@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EticketInfo extends TeaModel {
     /**
-     * <p>The number of available units.</p>
+     * <p>The number of unredeemed voucher electronic credentials.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class EticketInfo extends TeaModel {
     public Long availableNum;
 
     /**
-     * <p>The unique code for the e-ticket.</p>
+     * <p>The code of the voucher electronic credential.</p>
      * 
      * <strong>example:</strong>
      * <p>taobao******tpg</p>
@@ -23,20 +23,14 @@ public class EticketInfo extends TeaModel {
     public String code;
 
     /**
-     * <p>The status of the e-ticket.</p>
+     * <p>The status of the voucher electronic credential.</p>
      * <blockquote>
-     * <p>Valid enum values:</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>1: valid</p>
-     * </li>
-     * <li><p>-1: redeemed</p>
-     * </li>
-     * <li><p>-2: expired</p>
-     * </li>
-     * <li><p>-5: expired</p>
-     * </li>
-     * <li><p>-8: expired</p>
-     * </li>
+     * <li>1: valid</li>
+     * <li>-1: redeemed</li>
+     * <li>-2: expired</li>
+     * <li>100: locked</li>
      * </ul>
      * </blockquote>
      * 
@@ -47,7 +41,7 @@ public class EticketInfo extends TeaModel {
     public Long codeStatus;
 
     /**
-     * <p>The end time of the e-ticket validity period.</p>
+     * <p>The end time of the validity period for the voucher electronic credential.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-02T23:59:59.000+08:00</p>
@@ -56,7 +50,7 @@ public class EticketInfo extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The number of locked units.</p>
+     * <p>The number of voucher electronic credentials in locked status.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -65,10 +59,7 @@ public class EticketInfo extends TeaModel {
     public Long lockNum;
 
     /**
-     * <p>The URL of the QR code image for the e-ticket.</p>
-     * <blockquote>
-     * <p>This field is not currently populated. Distributors must generate the QR code using the <code>code</code> field.</p>
-     * </blockquote>
+     * <p>The URL of the QR code image for the voucher electronic credential.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://qrcode.alicdn.com/img.jpg">http://qrcode.alicdn.com/img.jpg</a></p>
@@ -77,7 +68,7 @@ public class EticketInfo extends TeaModel {
     public String qrcodeUrl;
 
     /**
-     * <p>The start time of the e-ticket validity period.</p>
+     * <p>The start time of the validity period for the voucher electronic credential.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-04T00:00:00.000+08:00</p>
@@ -86,7 +77,7 @@ public class EticketInfo extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The time the e-ticket was redeemed.</p>
+     * <p>The redemption time of the voucher electronic credential.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-04T15:07:59.000+08:00</p>
@@ -95,7 +86,7 @@ public class EticketInfo extends TeaModel {
     public String useTime;
 
     /**
-     * <p>The number of redeemed units.</p>
+     * <p>The number of redeemed voucher electronic credentials.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

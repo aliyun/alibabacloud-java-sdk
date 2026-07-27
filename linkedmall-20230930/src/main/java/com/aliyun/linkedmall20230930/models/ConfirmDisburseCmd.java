@@ -4,9 +4,6 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ConfirmDisburseCmd extends TeaModel {
-    @NameInMap("disputeId")
-    public String disputeId;
-
     /**
      * <p>The primary distribution order ID.</p>
      * 
@@ -28,14 +25,6 @@ public class ConfirmDisburseCmd extends TeaModel {
     public static ConfirmDisburseCmd build(java.util.Map<String, ?> map) throws Exception {
         ConfirmDisburseCmd self = new ConfirmDisburseCmd();
         return TeaModel.build(map, self);
-    }
-
-    public ConfirmDisburseCmd setDisputeId(String disputeId) {
-        this.disputeId = disputeId;
-        return this;
-    }
-    public String getDisputeId() {
-        return this.disputeId;
     }
 
     public ConfirmDisburseCmd setOrderId(String orderId) {

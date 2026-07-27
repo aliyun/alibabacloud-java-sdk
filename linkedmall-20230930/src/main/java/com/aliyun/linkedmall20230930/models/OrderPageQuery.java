@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class OrderPageQuery extends TeaModel {
     /**
-     * <p>Collection of primary order IDs</p>
+     * <p>The collection of primary order IDs.</p>
      */
     @NameInMap("orderIdList")
     public java.util.List<String> orderIdList;
 
     /**
-     * <p>Page number</p>
+     * <p>The external purchase order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6692****56121</p>
+     */
+    @NameInMap("outPurchaseOrderId")
+    public String outPurchaseOrderId;
+
+    /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +30,7 @@ public class OrderPageQuery extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Quantity per page</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +40,7 @@ public class OrderPageQuery extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Purchase order ID</p>
+     * <p>The purchase order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6692****5696</p>
@@ -50,6 +59,14 @@ public class OrderPageQuery extends TeaModel {
     }
     public java.util.List<String> getOrderIdList() {
         return this.orderIdList;
+    }
+
+    public OrderPageQuery setOutPurchaseOrderId(String outPurchaseOrderId) {
+        this.outPurchaseOrderId = outPurchaseOrderId;
+        return this;
+    }
+    public String getOutPurchaseOrderId() {
+        return this.outPurchaseOrderId;
     }
 
     public OrderPageQuery setPageNumber(Integer pageNumber) {

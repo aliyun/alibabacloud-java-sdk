@@ -956,10 +956,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of orders.</p>
+     * <p>Lists orders.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of orders.</p>
+     * <p>Lists orders.</p>
      * 
      * @param request QueryOrdersRequest
      * @param headers map
@@ -988,10 +988,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of orders.</p>
+     * <p>Lists orders.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of orders.</p>
+     * <p>Lists orders.</p>
      * 
      * @param request QueryOrdersRequest
      * @return QueryOrdersResponse
