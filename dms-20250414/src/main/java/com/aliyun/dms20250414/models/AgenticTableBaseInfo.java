@@ -7,6 +7,9 @@ public class AgenticTableBaseInfo extends TeaModel {
     @NameInMap("CatalogType")
     public String catalogType;
 
+    @NameInMap("DatabaseQualifiedName")
+    public String databaseQualifiedName;
+
     @NameInMap("DatabaseUuid")
     public String databaseUuid;
 
@@ -36,6 +39,14 @@ public class AgenticTableBaseInfo extends TeaModel {
     }
     public String getCatalogType() {
         return this.catalogType;
+    }
+
+    public AgenticTableBaseInfo setDatabaseQualifiedName(String databaseQualifiedName) {
+        this.databaseQualifiedName = databaseQualifiedName;
+        return this;
+    }
+    public String getDatabaseQualifiedName() {
+        return this.databaseQualifiedName;
     }
 
     public AgenticTableBaseInfo setDatabaseUuid(String databaseUuid) {

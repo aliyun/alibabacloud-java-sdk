@@ -554,7 +554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom agent in your personal space or a workspace.</p>
+     * <p>Creates a custom agent in a personal space or workspace.</p>
      * 
      * @param tmpReq CreateCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -633,6 +633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WebReportConfig", request.webReportConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.webReportTheme)) {
+            query.put("WebReportTheme", request.webReportTheme);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
@@ -656,7 +660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom agent in your personal space or a workspace.</p>
+     * <p>Creates a custom agent in a personal space or workspace.</p>
      * 
      * @param request CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
@@ -2012,7 +2016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p><code>DescribeCustomAgent</code> retrieves the details of a custom agent by its agent ID.</p>
+     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2048,7 +2052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p><code>DescribeCustomAgent</code> retrieves the details of a custom agent by its agent ID.</p>
+     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
@@ -5128,7 +5132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify a custom agent in a personal space or workspace</p>
+     * <p>Modifies a custom agent in a personal space or workspace.</p>
      * 
      * @param tmpReq ModifyCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5211,6 +5215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WebReportConfig", request.webReportConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.webReportTheme)) {
+            query.put("WebReportTheme", request.webReportTheme);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
@@ -5234,7 +5242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify a custom agent in a personal space or workspace</p>
+     * <p>Modifies a custom agent in a personal space or workspace.</p>
      * 
      * @param request ModifyCustomAgentRequest
      * @return ModifyCustomAgentResponse
@@ -5572,15 +5580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
-     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
-     * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
-     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
-     * </ul>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
      * <p>Sends a user message to a specified session or cancels a session.</p>
@@ -5689,15 +5689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <ul>
-     * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
-     * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
-     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
-     * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
-     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
-     * </ul>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
      * <p>Sends a user message to a specified session or cancels a session.</p>

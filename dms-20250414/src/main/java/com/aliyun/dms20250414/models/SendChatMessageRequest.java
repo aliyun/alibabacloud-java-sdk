@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatMessageRequest extends TeaModel {
     /**
-     * <p>The agent ID. This parameter is required. You can obtain the current agent ID from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the agent ID that you specify in each request may change.</p>
+     * <p>The agent ID. This parameter is required. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</p>
      * 
      * <strong>example:</strong>
      * <p>agent_***</p>
@@ -14,7 +14,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The Data Management unit you are currently in. If you choose to analyze a database, this information is used to correctly connect to your Data Management instance. You can go to the Data Management console to view your current Data Management unit. If you are a user of the Alibaba Cloud China Website, set this parameter to ap-southeast-1.</p>
+     * <p>The Data Management unit you are currently in. If you select an analytics database, this information is used to correctly connect to your Data Management instance through Data Management. You can go to the DAS console to view your current Data Management unit. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to cn-hangzhou.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +23,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The data source information. This parameter is optional. You can pass only one data source in this parameter. Use the DataSources parameter instead.</p>
+     * <p>The data source information. This parameter can be left empty. Only one data source can be specified for this parameter. Use the DataSources parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -32,7 +32,7 @@ public class SendChatMessageRequest extends TeaModel {
     public SendChatMessageRequestDataSource dataSource;
 
     /**
-     * <p>The detailed data source information. This parameter is optional.</p>
+     * <p>The detailed data source information. This parameter can be left empty.</p>
      */
     @NameInMap("DataSources")
     public java.util.List<SendChatMessageRequestDataSources> dataSources;
@@ -48,17 +48,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The message type. Default value: <code>[primary]</code>.  </p>
-     * <ul>
-     * <li><p>In normal cases, set the message type to <code>[primary]</code> when interacting with the agent.</p>
-     * </li>
-     * <li><p>When the message is a response to a human-in-the-loop question from the agent, set the type to <code>[additional]</code>.</p>
-     * </li>
-     * <li><p>When the message is intended to trigger report generation, set the type to <code>[report]</code>.</p>
-     * </li>
-     * <li><p>When the message is intended to cancel the current session, set the type to <code>[cancel]</code>.</p>
-     * </li>
-     * </ul>
+     * <p>The message type. Default value: <code>[primary]</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -76,10 +66,10 @@ public class SendChatMessageRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>The specific question that the agent asks the user through human-in-the-loop. This parameter is required when the message type is <code>additional</code>.</p>
+     * <p>The specific question that the agent asks the user through Human-in-Loop. This parameter is required when the message type is <code>additional</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>请提供计算GMV的口径。</p>
+     * <p>Please provide the criteria for calculating GMV.</p>
      */
     @NameInMap("Question")
     public String question;
@@ -95,8 +85,6 @@ public class SendChatMessageRequest extends TeaModel {
 
     /**
      * <p><strong>Important</strong></p>
-     * <p>When this message is a reply to an agent message (for example, the agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried in that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after analysis is complete, you can leave reply_to empty or set it to &quot;0&quot;.  </p>
-     * <p>This field affects how the agent decides to process the message. Passing an incorrect value may cause the analysis results to be less effective than expected.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -105,7 +93,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String replyTo;
 
     /**
-     * <p>The special configuration for this session. Only the configuration passed in the first SendMessage call within the same session takes effect.</p>
+     * <p>The special configuration for the current session. For the same session, only the configuration specified in the first SendMessage call takes effect.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -114,7 +102,7 @@ public class SendChatMessageRequest extends TeaModel {
     public SendChatMessageRequestSessionConfig sessionConfig;
 
     /**
-     * <p>The session ID. This parameter is required. You can call the CreateAgentSession operation to obtain the session ID.</p>
+     * <p>The session ID. This parameter is required. You can obtain the SessionId by calling the CreateAgentSession operation.</p>
      * 
      * <strong>example:</strong>
      * <p>sess_***</p>
@@ -129,7 +117,7 @@ public class SendChatMessageRequest extends TeaModel {
     public SendChatMessageRequestTaskConfig taskConfig;
 
     /**
-     * <p>The OSS bucket of the user. If this parameter is not specified, the analysis process is securely stored in built-in storage.</p>
+     * <p>The OSS bucket of the user. If this parameter is not specified, the analysis data is securely stored in the built-in storage.</p>
      * 
      * <strong>example:</strong>
      * <p>my-bucket</p>
@@ -271,6 +259,84 @@ public class SendChatMessageRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class SendChatMessageRequestDataSourcePermissionTables extends TeaModel {
+        /**
+         * <p>The list of columns that are allowed to be queried in the current table. If this parameter is not specified, all columns can be queried. If this parameter is specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure the analysis effectiveness of DataAgent, avoid specifying columns that exceed the allowed scope in the prompts, knowledge, or instructions modules of DataAgent. Otherwise, SQL statements without the required permissions are generated and blocked, which reduces the analysis speed and effectiveness of DataAgent.</p>
+         */
+        @NameInMap("AllowedColumns")
+        public java.util.List<String> allowedColumns;
+
+        /**
+         * <p>The required row filter condition for the current table. If this parameter is not specified, it is ignored. If this parameter is specified, the query condition is appended to all SQL statements that involve this table. Verify the validity of the condition before specifying it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region = \&quot;east\&quot;</p>
+         */
+        @NameInMap("RequiredRowFilter")
+        public String requiredRowFilter;
+
+        /**
+         * <p>The name of the table to which the permission constraint rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample_table</p>
+         */
+        @NameInMap("TableName")
+        public String tableName;
+
+        public static SendChatMessageRequestDataSourcePermissionTables build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestDataSourcePermissionTables self = new SendChatMessageRequestDataSourcePermissionTables();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestDataSourcePermissionTables setAllowedColumns(java.util.List<String> allowedColumns) {
+            this.allowedColumns = allowedColumns;
+            return this;
+        }
+        public java.util.List<String> getAllowedColumns() {
+            return this.allowedColumns;
+        }
+
+        public SendChatMessageRequestDataSourcePermissionTables setRequiredRowFilter(String requiredRowFilter) {
+            this.requiredRowFilter = requiredRowFilter;
+            return this;
+        }
+        public String getRequiredRowFilter() {
+            return this.requiredRowFilter;
+        }
+
+        public SendChatMessageRequestDataSourcePermissionTables setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+    }
+
+    public static class SendChatMessageRequestDataSourcePermission extends TeaModel {
+        /**
+         * <p>The table-level permission constraints for querying the current data source. Each item in the list represents the permission constraints for a table.</p>
+         */
+        @NameInMap("Tables")
+        public java.util.List<SendChatMessageRequestDataSourcePermissionTables> tables;
+
+        public static SendChatMessageRequestDataSourcePermission build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestDataSourcePermission self = new SendChatMessageRequestDataSourcePermission();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestDataSourcePermission setTables(java.util.List<SendChatMessageRequestDataSourcePermissionTables> tables) {
+            this.tables = tables;
+            return this;
+        }
+        public java.util.List<SendChatMessageRequestDataSourcePermissionTables> getTables() {
+            return this.tables;
+        }
+
+    }
+
     public static class SendChatMessageRequestDataSource extends TeaModel {
         /**
          * <p>Deprecated. You do not need to specify this parameter.</p>
@@ -352,6 +418,12 @@ public class SendChatMessageRequest extends TeaModel {
          */
         @NameInMap("Location")
         public String location;
+
+        /**
+         * <p>The permission constraints for querying the current data source. The permission constraint feature is available through a canary release. This parameter does not take effect for users who are not included in the canary release.</p>
+         */
+        @NameInMap("Permission")
+        public SendChatMessageRequestDataSourcePermission permission;
 
         /**
          * <p>The region ID.</p>
@@ -445,6 +517,14 @@ public class SendChatMessageRequest extends TeaModel {
             return this.location;
         }
 
+        public SendChatMessageRequestDataSource setPermission(SendChatMessageRequestDataSourcePermission permission) {
+            this.permission = permission;
+            return this;
+        }
+        public SendChatMessageRequestDataSourcePermission getPermission() {
+            return this.permission;
+        }
+
         public SendChatMessageRequestDataSource setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -458,6 +538,84 @@ public class SendChatMessageRequest extends TeaModel {
             return this;
         }
         public java.util.List<String> getTables() {
+            return this.tables;
+        }
+
+    }
+
+    public static class SendChatMessageRequestDataSourcesPermissionTables extends TeaModel {
+        /**
+         * <p>The list of columns that are allowed to be queried in the current table. If this parameter is not specified, all columns can be queried. If this parameter is specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure the analysis effectiveness of DataAgent, avoid specifying columns that exceed the allowed scope in the prompts, knowledge, or instructions modules of DataAgent. Otherwise, SQL statements without the required permissions are generated and blocked, which reduces the analysis speed and effectiveness of DataAgent.</p>
+         */
+        @NameInMap("AllowedColumns")
+        public java.util.List<String> allowedColumns;
+
+        /**
+         * <p>The required row filter condition for the current table. If this parameter is not specified, it is ignored. If this parameter is specified, the query condition is appended to all SQL statements that involve this table. Verify the validity of the condition before specifying it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region = \&quot;east\&quot;</p>
+         */
+        @NameInMap("RequiredRowFilter")
+        public String requiredRowFilter;
+
+        /**
+         * <p>The name of the table to which the permission constraint rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample_table</p>
+         */
+        @NameInMap("TableName")
+        public String tableName;
+
+        public static SendChatMessageRequestDataSourcesPermissionTables build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestDataSourcesPermissionTables self = new SendChatMessageRequestDataSourcesPermissionTables();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestDataSourcesPermissionTables setAllowedColumns(java.util.List<String> allowedColumns) {
+            this.allowedColumns = allowedColumns;
+            return this;
+        }
+        public java.util.List<String> getAllowedColumns() {
+            return this.allowedColumns;
+        }
+
+        public SendChatMessageRequestDataSourcesPermissionTables setRequiredRowFilter(String requiredRowFilter) {
+            this.requiredRowFilter = requiredRowFilter;
+            return this;
+        }
+        public String getRequiredRowFilter() {
+            return this.requiredRowFilter;
+        }
+
+        public SendChatMessageRequestDataSourcesPermissionTables setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+    }
+
+    public static class SendChatMessageRequestDataSourcesPermission extends TeaModel {
+        /**
+         * <p>The table-level permission constraints for querying the current data source. Each item in the list represents the permission constraints for a table.</p>
+         */
+        @NameInMap("Tables")
+        public java.util.List<SendChatMessageRequestDataSourcesPermissionTables> tables;
+
+        public static SendChatMessageRequestDataSourcesPermission build(java.util.Map<String, ?> map) throws Exception {
+            SendChatMessageRequestDataSourcesPermission self = new SendChatMessageRequestDataSourcesPermission();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatMessageRequestDataSourcesPermission setTables(java.util.List<SendChatMessageRequestDataSourcesPermissionTables> tables) {
+            this.tables = tables;
+            return this;
+        }
+        public java.util.List<SendChatMessageRequestDataSourcesPermissionTables> getTables() {
             return this.tables;
         }
 
@@ -544,6 +702,12 @@ public class SendChatMessageRequest extends TeaModel {
          */
         @NameInMap("Location")
         public String location;
+
+        /**
+         * <p>The permission constraints for querying the current data source. The permission constraint feature is available through a canary release. This parameter does not take effect for users who are not included in the canary release.</p>
+         */
+        @NameInMap("Permission")
+        public SendChatMessageRequestDataSourcesPermission permission;
 
         /**
          * <p>The region ID.</p>
@@ -637,6 +801,14 @@ public class SendChatMessageRequest extends TeaModel {
             return this.location;
         }
 
+        public SendChatMessageRequestDataSources setPermission(SendChatMessageRequestDataSourcesPermission permission) {
+            this.permission = permission;
+            return this;
+        }
+        public SendChatMessageRequestDataSourcesPermission getPermission() {
+            return this.permission;
+        }
+
         public SendChatMessageRequestDataSources setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -657,7 +829,7 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestSessionConfig extends TeaModel {
         /**
-         * <p>Deprecated. Use the input parameters of CreateAgentSession instead.</p>
+         * <p>Deprecated. Use the input parameter of CreateAgentSession instead.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -666,7 +838,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>Deprecated. Use the input parameters of CreateAgentSession instead.</p>
+         * <p>Deprecated. Use the input parameter of CreateAgentSession instead.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -693,7 +865,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String kbUuidList;
 
         /**
-         * <p>Only Chinese and English are supported. The default value is Chinese. Only uppercase values are supported.</p>
+         * <p>Only Chinese and English are supported. Default value: Chinese. Only uppercase values are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>ENGLISH</p>
@@ -711,12 +883,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String mcpServerIds;
 
         /**
-         * <p>The mode. Valid values:</p>
-         * <ul>
-         * <li><strong>ASK_DATA</strong>: data query mode.</li>
-         * <li><strong>ANALYSIS</strong>: analysis mode.</li>
-         * <li><strong>INSIGHT</strong>: insight mode.</li>
-         * </ul>
+         * <p>The mode:</p>
          * 
          * <strong>example:</strong>
          * <p>ANALYSIS</p>
@@ -737,7 +904,7 @@ public class SendChatMessageRequest extends TeaModel {
          * <p>The text of up to 64 characters that is used as a watermark in the generated PDF report.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例水印</p>
+         * <p>SampleWatermark.</p>
          */
         @NameInMap("ReportWaterMark")
         public String reportWaterMark;
@@ -770,7 +937,7 @@ public class SendChatMessageRequest extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the web report generation confirmation.</p>
+         * <p>Specifies whether to skip the web report rendering confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -909,7 +1076,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String reportTheme;
 
         /**
-         * <p>The service type. Valid values: TextReport and WebReport, indicating that the task generates a text report or a web report. Only WebReport is supported.</p>
+         * <p>The service type. Valid values: TextReport and WebReport, indicating that the task generates a text report or a web report. Only WebReport is currently supported.</p>
          * 
          * <strong>example:</strong>
          * <p>WebReport</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAgentResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public CreateCustomAgentResponseBodyData data;
@@ -20,7 +20,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -29,7 +29,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
@@ -39,12 +39,6 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -162,7 +156,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodyDataExecutionConfig extends TeaModel {
         /**
-         * <p>Indicates whether to prevent the agent from asking the user for clarification during execution.</p>
+         * <p>Specifies whether to disable user inquiries during the process.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -171,7 +165,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public Boolean skipAskHuman;
 
         /**
-         * <p>Indicates whether to skip the plan confirmation step.</p>
+         * <p>Specifies whether to skip the plan confirmation step.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,7 +174,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public Boolean skipPlan;
 
         /**
-         * <p>Indicates whether to skip all SQL confirmations.</p>
+         * <p>Specifies whether to skip all SQL confirmations.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -189,7 +183,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Indicates whether to skip the web report generation confirmation.</p>
+         * <p>Specifies whether to skip the web report rendering confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -238,10 +232,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodyDataKnowledgeConfigList extends TeaModel {
         /**
-         * <p>The access method.</p>
-         * <ul>
-         * <li><code>mcp</code>: Connects using MCP.</li>
-         * </ul>
+         * <p>The access type.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp</p>
@@ -253,7 +244,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String kbUuid;
 
         /**
-         * <p>The ID of the MCP server.</p>
+         * <p>The ID of the MCP Server.</p>
          * 
          * <strong>example:</strong>
          * <p>nhdpt9adf6ac**********ca</p>
@@ -294,7 +285,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodyDataScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for the scheduled task.</p>
+         * <p>The cron expression for the time-based scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -306,13 +297,13 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The query for the scheduled task.</p>
          * 
          * <strong>example:</strong>
-         * <p>分析一下这份数据，给出简报</p>
+         * <p>Analyze this data and provide a brief report.</p>
          */
         @NameInMap("Query")
         public String query;
 
         /**
-         * <p>The ID of a previous session to be used as a template for the scheduled task.</p>
+         * <p>The ID of the referenced historical session.</p>
          * 
          * <strong>example:</strong>
          * <p>4m24*****mg7j2v</p>
@@ -353,7 +344,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     public static class CreateCustomAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The primary Alibaba Cloud account ID.</p>
+         * <p>The Alibaba Cloud account ID of the primary account.</p>
          * 
          * <strong>example:</strong>
          * <p>16738266********</p>
@@ -374,7 +365,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public CreateCustomAgentResponseBodyDataCallbackConfig callbackConfig;
 
         /**
-         * <p>The username of the creator.</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>HaoY*****</p>
@@ -401,21 +392,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String DMSUnit;
 
         /**
-         * <p>The specified data scope, in a JSON string format.</p>
+         * <p>The specified data scope in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{
-         *   &quot;tableFlag&quot; : true,
-         *   &quot;scope&quot; : &quot;personal&quot;,
-         *   &quot;personal&quot; : {
-         *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
-         *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;测试表格</strong></strong></strong>.xlsx&quot;,
-         *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
-         *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
-         *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
-         *   }
-         * }</p>
+         * <p>{</p>
          */
         @NameInMap("DataJson")
         public String dataJson;
@@ -424,7 +404,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent测试描述</p>
+         * <p>AgentTestDescription.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -463,19 +443,16 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The instruction for the agent.</p>
+         * <p>The instruction.</p>
          * 
          * <strong>example:</strong>
-         * <p>分析框架：
-         * 1、需按日、周、月维度监控核心指标（GMV、订单量、UV、转化率），分析趋势变化及同比/环比波动；
-         * 2、划分新老客、渠道、地域进行拆解，识别增长来源与短板；
-         * 3、结合用户行为路径（浏览→加购→支付）开展漏斗分析，定位流失环节；</p>
+         * <p>Analysis framework:</p>
          */
         @NameInMap("Instruction")
         public String instruction;
 
         /**
-         * <p>Indicates whether a scheduled task is configured for the agent.</p>
+         * <p>Indicates whether a periodic task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -484,26 +461,22 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public Boolean isScheduleTask;
 
         /**
-         * <p>The knowledge for the agent.</p>
+         * <p>The knowledge.</p>
          * 
          * <strong>example:</strong>
-         * <p>核心指标定义：
-         * 1、GMV（成交总额）指订单金额总和，含已支付及未支付成功订单；
-         * 2、订单量为每日有效下单笔数；
-         * 3、UV（独立访客）指访问网站或APP的去重用户数；
-         * 4、转化率=支付订单数 / UV，反映流量转化效率；</p>
+         * <p>Core metric definitions:</p>
          */
         @NameInMap("Knowledge")
         public String knowledge;
 
         /**
-         * <p>A list of external knowledge bases.</p>
+         * <p>The external knowledge base configurations.</p>
          */
         @NameInMap("KnowledgeConfigList")
         public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
 
         /**
-         * <p>The ID of the user who last modified the agent.</p>
+         * <p>The modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>20372822********</p>
@@ -512,7 +485,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The username of the user who last modified the agent.</p>
+         * <p>The name of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>HaoY*****</p>
@@ -524,16 +497,13 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent测试名称</p>
+         * <p>AgentTestName.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The next run time of the scheduled task, formatted as a UNIX timestamp.</p>
-         * <ul>
-         * <li>Timestamp format</li>
-         * </ul>
+         * <p>The next run time of the periodic task.</p>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -563,7 +533,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String relatedSessionId;
 
         /**
-         * <p>The release time.</p>
+         * <p>The publish time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-11T14:04:32.000+00:00</p>
@@ -572,7 +542,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The configuration of the scheduled task.</p>
+         * <p>The periodic task configuration.</p>
          */
         @NameInMap("ScheduleTaskConfig")
         public CreateCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
@@ -587,22 +557,25 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The format of the text report.</p>
+         * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>文字报告要求所有数字不使用阿拉伯数字，全部转为中文数字</p>
+         * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals.</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
 
         /**
-         * <p>The format of the web report.</p>
+         * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>网页报告要求所有数字不使用阿拉伯数字，全部转为中文数字</p>
+         * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals.</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
+
+        @NameInMap("WebReportTheme")
+        public String webReportTheme;
 
         /**
          * <p>The workspace ID.</p>
@@ -840,6 +813,14 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
         public String getWebReportConfig() {
             return this.webReportConfig;
+        }
+
+        public CreateCustomAgentResponseBodyData setWebReportTheme(String webReportTheme) {
+            this.webReportTheme = webReportTheme;
+            return this;
+        }
+        public String getWebReportTheme() {
+            return this.webReportTheme;
         }
 
         public CreateCustomAgentResponseBodyData setWorkspaceId(String workspaceId) {

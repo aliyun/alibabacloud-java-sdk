@@ -586,6 +586,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @NameInMap("WebReportConfig")
         public String webReportConfig;
 
+        @NameInMap("WebReportTheme")
+        public String webReportTheme;
+
         /**
          * <p>The workspace ID.</p>
          * 
@@ -830,6 +833,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public String getWebReportConfig() {
             return this.webReportConfig;
+        }
+
+        public ListCustomAgentResponseBodyDataContent setWebReportTheme(String webReportTheme) {
+            this.webReportTheme = webReportTheme;
+            return this;
+        }
+        public String getWebReportTheme() {
+            return this.webReportTheme;
         }
 
         public ListCustomAgentResponseBodyDataContent setWorkspaceId(String workspaceId) {

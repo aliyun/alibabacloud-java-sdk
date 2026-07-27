@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomAgentRequest extends TeaModel {
     /**
-     * <p>The ID of the custom agent.</p>
+     * <p>The custom agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-4y3ca4khkcu**********ysf</p>
@@ -14,7 +14,7 @@ public class DescribeCustomAgentRequest extends TeaModel {
     public String customAgentId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>56kv1pvl9uvt9**********bb</p>
