@@ -4,29 +4,29 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryAlertRulesFilter extends TeaModel {
+    @NameInMap("bizSource")
+    public BizSourceFilter bizSource;
+
     @NameInMap("datasourceType")
     public DatasourceTypeFilter datasourceType;
 
-    /**
-     * <p>Filters alert rules by display name.</p>
-     */
     @NameInMap("displayName")
     public DisplayNameFilter displayName;
 
-    /**
-     * <p>Filters alert rules by enabled status.</p>
-     */
     @NameInMap("enabled")
     public EnabledFilter enabled;
 
-    /**
-     * <p>Filters alert rules by label.</p>
-     */
     @NameInMap("labels")
     public LabelsFilter labels;
 
+    @NameInMap("notificationChannels")
+    public NotificationChannelsFilter notificationChannels;
+
     @NameInMap("notifyStrategyId")
     public NotifyStrategyIdFilter notifyStrategyId;
+
+    @NameInMap("observeResourceConfig")
+    public ObserveResourceConfigFilter observeResourceConfig;
 
     @NameInMap("observeResourceGlobalScope")
     public ObserveResourceGlobalScopeFilter observeResourceGlobalScope;
@@ -43,6 +43,7 @@ public class QueryAlertRulesFilter extends TeaModel {
     public ObserveResourceListFilter observeResourceList;
 
     @NameInMap("observeResourceType")
+    @Deprecated
     public ObserveResourceTypeFilter observeResourceType;
 
     @NameInMap("partitionKey")
@@ -51,21 +52,23 @@ public class QueryAlertRulesFilter extends TeaModel {
     @NameInMap("severityLevels")
     public SeverityLevelsFilter severityLevels;
 
-    /**
-     * <p>Filters alert rules by status.</p>
-     */
     @NameInMap("status")
     public StatusFilter status;
 
-    /**
-     * <p>Filters alert rules by UUID.</p>
-     */
     @NameInMap("uuid")
     public UuidFilter uuid;
 
     public static QueryAlertRulesFilter build(java.util.Map<String, ?> map) throws Exception {
         QueryAlertRulesFilter self = new QueryAlertRulesFilter();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAlertRulesFilter setBizSource(BizSourceFilter bizSource) {
+        this.bizSource = bizSource;
+        return this;
+    }
+    public BizSourceFilter getBizSource() {
+        return this.bizSource;
     }
 
     public QueryAlertRulesFilter setDatasourceType(DatasourceTypeFilter datasourceType) {
@@ -100,12 +103,28 @@ public class QueryAlertRulesFilter extends TeaModel {
         return this.labels;
     }
 
+    public QueryAlertRulesFilter setNotificationChannels(NotificationChannelsFilter notificationChannels) {
+        this.notificationChannels = notificationChannels;
+        return this;
+    }
+    public NotificationChannelsFilter getNotificationChannels() {
+        return this.notificationChannels;
+    }
+
     public QueryAlertRulesFilter setNotifyStrategyId(NotifyStrategyIdFilter notifyStrategyId) {
         this.notifyStrategyId = notifyStrategyId;
         return this;
     }
     public NotifyStrategyIdFilter getNotifyStrategyId() {
         return this.notifyStrategyId;
+    }
+
+    public QueryAlertRulesFilter setObserveResourceConfig(ObserveResourceConfigFilter observeResourceConfig) {
+        this.observeResourceConfig = observeResourceConfig;
+        return this;
+    }
+    public ObserveResourceConfigFilter getObserveResourceConfig() {
+        return this.observeResourceConfig;
     }
 
     public QueryAlertRulesFilter setObserveResourceGlobalScope(ObserveResourceGlobalScopeFilter observeResourceGlobalScope) {
@@ -133,6 +152,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         return this.observeResourceList;
     }
 
+    @Deprecated
     public QueryAlertRulesFilter setObserveResourceType(ObserveResourceTypeFilter observeResourceType) {
         this.observeResourceType = observeResourceType;
         return this;

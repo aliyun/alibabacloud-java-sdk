@@ -16,8 +16,14 @@ public class DatasourceConfigUnified extends TeaModel {
     @NameInMap("productCategory")
     public String productCategory;
 
+    @NameInMap("project")
+    public String project;
+
     @NameInMap("regionId")
     public String regionId;
+
+    @NameInMap("stores")
+    public java.util.List<Stores> stores;
 
     /**
      * <p>This parameter is required.</p>
@@ -62,12 +68,28 @@ public class DatasourceConfigUnified extends TeaModel {
         return this.productCategory;
     }
 
+    public DatasourceConfigUnified setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
+    }
+
     public DatasourceConfigUnified setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DatasourceConfigUnified setStores(java.util.List<Stores> stores) {
+        this.stores = stores;
+        return this;
+    }
+    public java.util.List<Stores> getStores() {
+        return this.stores;
     }
 
     public DatasourceConfigUnified setType(String type) {

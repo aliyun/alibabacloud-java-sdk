@@ -4,147 +4,89 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleV2 extends TeaModel {
-    /**
-     * <p>Configuration for action integrations, such as webhooks, that execute when an alert is triggered.</p>
-     */
     @NameInMap("actionIntegrationConfig")
     public ActionIntegrationConfig actionIntegrationConfig;
 
-    /**
-     * <p>A set of key-value pairs that serve as annotations, providing additional, non-identifying information, such as a description or a runbook link.</p>
-     */
     @NameInMap("annotations")
     public java.util.Map<String, String> annotations;
 
-    /**
-     * <p>The configuration for integrating the alert rule with Application Real-Time Monitoring Service (ARMS).</p>
-     */
     @NameInMap("armsIntegrationConfig")
     public ArmsIntegrationConfig armsIntegrationConfig;
 
-    /**
-     * <p>The configuration for the conditions that trigger an alert.</p>
-     */
+    @NameInMap("bizSource")
+    public String bizSource;
+
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
 
-    /**
-     * <p>The template for the alert notification content.</p>
-     */
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
-    /**
-     * <p>The time the alert rule was created.</p>
-     */
     @NameInMap("createdAt")
     public String createdAt;
 
-    /**
-     * <p>The configuration for the data source to be evaluated.</p>
-     */
     @NameInMap("datasourceConfig")
     public DatasourceConfigUnified datasourceConfig;
 
-    /**
-     * <p>The data source type. Examples: <code>sls</code>, <code>prometheus</code>.</p>
-     */
     @NameInMap("datasourceType")
     public String datasourceType;
 
-    /**
-     * <p>The user-defined display name for the alert rule.</p>
-     */
     @NameInMap("displayName")
     public String displayName;
 
-    /**
-     * <p>Indicates whether the alert rule is active. Set to <code>true</code> to enable the rule, or <code>false</code> to disable it.</p>
-     */
     @NameInMap("enabled")
     public Boolean enabled;
 
-    /**
-     * <p>A set of key-value pairs that serve as labels to filter and group alert rules.</p>
-     */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
-    /**
-     * <p>The configuration for sending notifications when an alert is triggered.</p>
-     */
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
-    /**
-     * <p>The ID of the notification strategy to use for this alert rule.</p>
-     */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
 
-    /**
-     * <p>Indicates whether the alert rule monitors all resources of the specified type. If <code>true</code>, the rule applies globally within the workspace.</p>
-     */
+    @NameInMap("observeResourceConfig")
+    public ObserveResourceConfig observeResourceConfig;
+
     @NameInMap("observeResourceGlobalScope")
+    @Deprecated
     public Boolean observeResourceGlobalScope;
 
-    /**
-     * <p>A list of specific resource IDs to monitor, used only when <code>observeResourceGlobalScope</code> is <code>false</code>.</p>
-     */
     @NameInMap("observeResourceList")
     public java.util.List<String> observeResourceList;
 
-    /**
-     * <p>The type of resource that the alert rule monitors.</p>
-     */
     @NameInMap("observeResourceType")
+    @Deprecated
     public String observeResourceType;
 
-    /**
-     * <p>The partition key used to group alerts. Alerts with the same partition key are treated as a single incident.</p>
-     */
     @NameInMap("partitionKey")
     public String partitionKey;
 
-    /**
-     * <p>The configuration for querying and processing data from the data source.</p>
-     */
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
 
-    /**
-     * <p>The configuration for how often the alert rule is evaluated.</p>
-     */
+    @NameInMap("rcaConfig")
+    public AlertRuleRcaConfig rcaConfig;
+
+    @NameInMap("regionId")
+    public String regionId;
+
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
 
-    /**
-     * <p>The severity level of the alert. Examples: <code>critical</code>, <code>warning</code>.</p>
-     */
     @NameInMap("severityLevels")
     public String severityLevels;
 
-    /**
-     * <p>The current status of the alert rule. Examples: <code>RUNNING</code>, <code>STOPPED</code>.</p>
-     */
     @NameInMap("status")
     public String status;
 
-    /**
-     * <p>The time the alert rule was last updated.</p>
-     */
     @NameInMap("updatedAt")
     public String updatedAt;
 
-    /**
-     * <p>The unique identifier for the alert rule.</p>
-     */
     @NameInMap("uuid")
     public String uuid;
 
-    /**
-     * <p>The ID of the workspace that contains the alert rule.</p>
-     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -175,6 +117,14 @@ public class AlertRuleV2 extends TeaModel {
     }
     public ArmsIntegrationConfig getArmsIntegrationConfig() {
         return this.armsIntegrationConfig;
+    }
+
+    public AlertRuleV2 setBizSource(String bizSource) {
+        this.bizSource = bizSource;
+        return this;
+    }
+    public String getBizSource() {
+        return this.bizSource;
     }
 
     public AlertRuleV2 setConditionConfig(ConditionConfigUnified conditionConfig) {
@@ -257,6 +207,15 @@ public class AlertRuleV2 extends TeaModel {
         return this.notifyStrategyId;
     }
 
+    public AlertRuleV2 setObserveResourceConfig(ObserveResourceConfig observeResourceConfig) {
+        this.observeResourceConfig = observeResourceConfig;
+        return this;
+    }
+    public ObserveResourceConfig getObserveResourceConfig() {
+        return this.observeResourceConfig;
+    }
+
+    @Deprecated
     public AlertRuleV2 setObserveResourceGlobalScope(Boolean observeResourceGlobalScope) {
         this.observeResourceGlobalScope = observeResourceGlobalScope;
         return this;
@@ -273,6 +232,7 @@ public class AlertRuleV2 extends TeaModel {
         return this.observeResourceList;
     }
 
+    @Deprecated
     public AlertRuleV2 setObserveResourceType(String observeResourceType) {
         this.observeResourceType = observeResourceType;
         return this;
@@ -295,6 +255,22 @@ public class AlertRuleV2 extends TeaModel {
     }
     public QueryConfigUnified getQueryConfig() {
         return this.queryConfig;
+    }
+
+    public AlertRuleV2 setRcaConfig(AlertRuleRcaConfig rcaConfig) {
+        this.rcaConfig = rcaConfig;
+        return this;
+    }
+    public AlertRuleRcaConfig getRcaConfig() {
+        return this.rcaConfig;
+    }
+
+    public AlertRuleV2 setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AlertRuleV2 setScheduleConfig(ScheduleConfigUnified scheduleConfig) {

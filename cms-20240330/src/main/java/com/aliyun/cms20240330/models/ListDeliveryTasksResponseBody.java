@@ -121,7 +121,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public java.util.Map<String, String> sinkConfigs;
 
         /**
-         * <p>The type of the delivery target.</p>
+         * <p>The delivery target type.</p>
          * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
@@ -197,6 +197,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
     public static class ListDeliveryTasksResponseBodyDeliveryTasks extends TeaModel {
         /**
          * <p>The creation time.</p>
+         * <p>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -300,6 +301,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
 
         /**
          * <p>The update time.</p>
+         * <p>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

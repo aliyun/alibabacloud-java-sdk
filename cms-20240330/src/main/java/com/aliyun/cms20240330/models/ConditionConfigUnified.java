@@ -7,8 +7,11 @@ public class ConditionConfigUnified extends TeaModel {
     @NameInMap("aggregate")
     public String aggregate;
 
+    @NameInMap("alertCount")
+    public Integer alertCount;
+
     @NameInMap("compareList")
-    public java.util.List<ApmCompositeCompareConfig> compareList;
+    public java.util.List<CompareList> compareList;
 
     @NameInMap("compositeEscalation")
     public CloudMonitoringCompositeEscalation compositeEscalation;
@@ -52,6 +55,15 @@ public class ConditionConfigUnified extends TeaModel {
     @NameInMap("min")
     public Double min;
 
+    @NameInMap("noDataAlertLevel")
+    public String noDataAlertLevel;
+
+    @NameInMap("noDataAlertSeverity")
+    public String noDataAlertSeverity;
+
+    @NameInMap("noDataAppendValue")
+    public Double noDataAppendValue;
+
     @NameInMap("noDataPolicy")
     public String noDataPolicy;
 
@@ -74,10 +86,10 @@ public class ConditionConfigUnified extends TeaModel {
     public Double threshold;
 
     @NameInMap("thresholdList")
-    public java.util.List<ApmThresholdConfig> thresholdList;
+    public java.util.List<ThresholdList> thresholdList;
 
     @NameInMap("triggers")
-    public java.util.List<MetricSetMultiTrigger> triggers;
+    public java.util.List<Triggers> triggers;
 
     /**
      * <p>This parameter is required.</p>
@@ -104,11 +116,19 @@ public class ConditionConfigUnified extends TeaModel {
         return this.aggregate;
     }
 
-    public ConditionConfigUnified setCompareList(java.util.List<ApmCompositeCompareConfig> compareList) {
+    public ConditionConfigUnified setAlertCount(Integer alertCount) {
+        this.alertCount = alertCount;
+        return this;
+    }
+    public Integer getAlertCount() {
+        return this.alertCount;
+    }
+
+    public ConditionConfigUnified setCompareList(java.util.List<CompareList> compareList) {
         this.compareList = compareList;
         return this;
     }
-    public java.util.List<ApmCompositeCompareConfig> getCompareList() {
+    public java.util.List<CompareList> getCompareList() {
         return this.compareList;
     }
 
@@ -224,6 +244,30 @@ public class ConditionConfigUnified extends TeaModel {
         return this.min;
     }
 
+    public ConditionConfigUnified setNoDataAlertLevel(String noDataAlertLevel) {
+        this.noDataAlertLevel = noDataAlertLevel;
+        return this;
+    }
+    public String getNoDataAlertLevel() {
+        return this.noDataAlertLevel;
+    }
+
+    public ConditionConfigUnified setNoDataAlertSeverity(String noDataAlertSeverity) {
+        this.noDataAlertSeverity = noDataAlertSeverity;
+        return this;
+    }
+    public String getNoDataAlertSeverity() {
+        return this.noDataAlertSeverity;
+    }
+
+    public ConditionConfigUnified setNoDataAppendValue(Double noDataAppendValue) {
+        this.noDataAppendValue = noDataAppendValue;
+        return this;
+    }
+    public Double getNoDataAppendValue() {
+        return this.noDataAppendValue;
+    }
+
     public ConditionConfigUnified setNoDataPolicy(String noDataPolicy) {
         this.noDataPolicy = noDataPolicy;
         return this;
@@ -280,19 +324,19 @@ public class ConditionConfigUnified extends TeaModel {
         return this.threshold;
     }
 
-    public ConditionConfigUnified setThresholdList(java.util.List<ApmThresholdConfig> thresholdList) {
+    public ConditionConfigUnified setThresholdList(java.util.List<ThresholdList> thresholdList) {
         this.thresholdList = thresholdList;
         return this;
     }
-    public java.util.List<ApmThresholdConfig> getThresholdList() {
+    public java.util.List<ThresholdList> getThresholdList() {
         return this.thresholdList;
     }
 
-    public ConditionConfigUnified setTriggers(java.util.List<MetricSetMultiTrigger> triggers) {
+    public ConditionConfigUnified setTriggers(java.util.List<Triggers> triggers) {
         this.triggers = triggers;
         return this;
     }
-    public java.util.List<MetricSetMultiTrigger> getTriggers() {
+    public java.util.List<Triggers> getTriggers() {
         return this.triggers;
     }
 

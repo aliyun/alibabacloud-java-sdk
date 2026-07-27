@@ -10,6 +10,9 @@ public class ManageAlertRulesShrinkRequest extends TeaModel {
     @NameInMap("body")
     public String bodyShrink;
 
+    @NameInMap("callSource")
+    public String callSource;
+
     public static ManageAlertRulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ManageAlertRulesShrinkRequest self = new ManageAlertRulesShrinkRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class ManageAlertRulesShrinkRequest extends TeaModel {
     }
     public String getBodyShrink() {
         return this.bodyShrink;
+    }
+
+    public ManageAlertRulesShrinkRequest setCallSource(String callSource) {
+        this.callSource = callSource;
+        return this;
+    }
+    public String getCallSource() {
+        return this.callSource;
     }
 
 }

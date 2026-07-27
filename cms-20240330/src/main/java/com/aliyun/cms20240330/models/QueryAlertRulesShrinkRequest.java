@@ -29,13 +29,16 @@ public class QueryAlertRulesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start reading data. If you leave this parameter empty, data is read from the beginning.</p>
+     * <p>The token that marks the position from which you want to start reading. If this parameter is left empty, data is read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
+
+    @NameInMap("queryJson")
+    public String queryJson;
 
     public static QueryAlertRulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAlertRulesShrinkRequest self = new QueryAlertRulesShrinkRequest();
@@ -72,6 +75,14 @@ public class QueryAlertRulesShrinkRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public QueryAlertRulesShrinkRequest setQueryJson(String queryJson) {
+        this.queryJson = queryJson;
+        return this;
+    }
+    public String getQueryJson() {
+        return this.queryJson;
     }
 
 }

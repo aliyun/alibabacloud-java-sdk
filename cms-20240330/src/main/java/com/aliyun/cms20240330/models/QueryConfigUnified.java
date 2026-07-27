@@ -7,8 +7,15 @@ public class QueryConfigUnified extends TeaModel {
     @NameInMap("aggregate")
     public String aggregate;
 
+    @NameInMap("checkAfterDataComplete")
+    @Deprecated
+    public Boolean checkAfterDataComplete;
+
     @NameInMap("dimensions")
     public java.util.List<java.util.Map<String, String>> dimensions;
+
+    @NameInMap("durationSecs")
+    public Long durationSecs;
 
     @NameInMap("enableDataCompleteCheck")
     public Boolean enableDataCompleteCheck;
@@ -17,10 +24,10 @@ public class QueryConfigUnified extends TeaModel {
     public String entityDomain;
 
     @NameInMap("entityFields")
-    public java.util.List<UmodelEntityField> entityFields;
+    public java.util.List<EntityFields> entityFields;
 
     @NameInMap("entityFilters")
-    public java.util.List<UmodelEntityFilter> entityFilters;
+    public java.util.List<EntityFilters> entityFilters;
 
     @NameInMap("entityType")
     public String entityType;
@@ -29,13 +36,25 @@ public class QueryConfigUnified extends TeaModel {
     public String expr;
 
     @NameInMap("filterList")
-    public java.util.List<ApmFilterConfig> filterList;
+    public java.util.List<FilterList> filterList;
+
+    @NameInMap("filterValues")
+    public java.util.List<PrometheusMetricFilterValue> filterValues;
+
+    @NameInMap("groupFieldList")
+    public java.util.List<String> groupFieldList;
 
     @NameInMap("groupId")
     public String groupId;
 
+    @NameInMap("groupType")
+    public String groupType;
+
+    @NameInMap("joinings")
+    public java.util.List<Joinings> joinings;
+
     @NameInMap("labelFilters")
-    public java.util.List<UmodelLabelFilter> labelFilters;
+    public java.util.List<LabelFilters> labelFilters;
 
     @NameInMap("legacyRaw")
     public String legacyRaw;
@@ -46,11 +65,24 @@ public class QueryConfigUnified extends TeaModel {
     @NameInMap("logSet")
     public String logSet;
 
+    @NameInMap("measureGroupKey")
+    public String measureGroupKey;
+
     @NameInMap("measureList")
-    public java.util.List<ApmMeasureConfig> measureList;
+    public java.util.List<MeasureList> measureList;
 
     @NameInMap("metric")
     public String metric;
+
+    @NameInMap("metricGroupId")
+    public String metricGroupId;
+
+    @NameInMap("metricId")
+    public String metricId;
+
+    @NameInMap("metricIds")
+    @Deprecated
+    public java.util.List<String> metricIds;
 
     @NameInMap("metricSet")
     public String metricSet;
@@ -61,12 +93,15 @@ public class QueryConfigUnified extends TeaModel {
     @NameInMap("offsetSecs")
     public Long offsetSecs;
 
+    @NameInMap("paramValues")
+    public java.util.List<PrometheusMetricParamValue> paramValues;
+
     @NameInMap("promQl")
     @Deprecated
     public String promQl;
 
     @NameInMap("queries")
-    public java.util.List<MetricSetNamedQueryEntry> queries;
+    public java.util.List<Queries> queries;
 
     @NameInMap("relationType")
     public String relationType;
@@ -96,12 +131,29 @@ public class QueryConfigUnified extends TeaModel {
         return this.aggregate;
     }
 
+    @Deprecated
+    public QueryConfigUnified setCheckAfterDataComplete(Boolean checkAfterDataComplete) {
+        this.checkAfterDataComplete = checkAfterDataComplete;
+        return this;
+    }
+    public Boolean getCheckAfterDataComplete() {
+        return this.checkAfterDataComplete;
+    }
+
     public QueryConfigUnified setDimensions(java.util.List<java.util.Map<String, String>> dimensions) {
         this.dimensions = dimensions;
         return this;
     }
     public java.util.List<java.util.Map<String, String>> getDimensions() {
         return this.dimensions;
+    }
+
+    public QueryConfigUnified setDurationSecs(Long durationSecs) {
+        this.durationSecs = durationSecs;
+        return this;
+    }
+    public Long getDurationSecs() {
+        return this.durationSecs;
     }
 
     public QueryConfigUnified setEnableDataCompleteCheck(Boolean enableDataCompleteCheck) {
@@ -120,19 +172,19 @@ public class QueryConfigUnified extends TeaModel {
         return this.entityDomain;
     }
 
-    public QueryConfigUnified setEntityFields(java.util.List<UmodelEntityField> entityFields) {
+    public QueryConfigUnified setEntityFields(java.util.List<EntityFields> entityFields) {
         this.entityFields = entityFields;
         return this;
     }
-    public java.util.List<UmodelEntityField> getEntityFields() {
+    public java.util.List<EntityFields> getEntityFields() {
         return this.entityFields;
     }
 
-    public QueryConfigUnified setEntityFilters(java.util.List<UmodelEntityFilter> entityFilters) {
+    public QueryConfigUnified setEntityFilters(java.util.List<EntityFilters> entityFilters) {
         this.entityFilters = entityFilters;
         return this;
     }
-    public java.util.List<UmodelEntityFilter> getEntityFilters() {
+    public java.util.List<EntityFilters> getEntityFilters() {
         return this.entityFilters;
     }
 
@@ -152,12 +204,28 @@ public class QueryConfigUnified extends TeaModel {
         return this.expr;
     }
 
-    public QueryConfigUnified setFilterList(java.util.List<ApmFilterConfig> filterList) {
+    public QueryConfigUnified setFilterList(java.util.List<FilterList> filterList) {
         this.filterList = filterList;
         return this;
     }
-    public java.util.List<ApmFilterConfig> getFilterList() {
+    public java.util.List<FilterList> getFilterList() {
         return this.filterList;
+    }
+
+    public QueryConfigUnified setFilterValues(java.util.List<PrometheusMetricFilterValue> filterValues) {
+        this.filterValues = filterValues;
+        return this;
+    }
+    public java.util.List<PrometheusMetricFilterValue> getFilterValues() {
+        return this.filterValues;
+    }
+
+    public QueryConfigUnified setGroupFieldList(java.util.List<String> groupFieldList) {
+        this.groupFieldList = groupFieldList;
+        return this;
+    }
+    public java.util.List<String> getGroupFieldList() {
+        return this.groupFieldList;
     }
 
     public QueryConfigUnified setGroupId(String groupId) {
@@ -168,11 +236,27 @@ public class QueryConfigUnified extends TeaModel {
         return this.groupId;
     }
 
-    public QueryConfigUnified setLabelFilters(java.util.List<UmodelLabelFilter> labelFilters) {
+    public QueryConfigUnified setGroupType(String groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    public String getGroupType() {
+        return this.groupType;
+    }
+
+    public QueryConfigUnified setJoinings(java.util.List<Joinings> joinings) {
+        this.joinings = joinings;
+        return this;
+    }
+    public java.util.List<Joinings> getJoinings() {
+        return this.joinings;
+    }
+
+    public QueryConfigUnified setLabelFilters(java.util.List<LabelFilters> labelFilters) {
         this.labelFilters = labelFilters;
         return this;
     }
-    public java.util.List<UmodelLabelFilter> getLabelFilters() {
+    public java.util.List<LabelFilters> getLabelFilters() {
         return this.labelFilters;
     }
 
@@ -200,11 +284,19 @@ public class QueryConfigUnified extends TeaModel {
         return this.logSet;
     }
 
-    public QueryConfigUnified setMeasureList(java.util.List<ApmMeasureConfig> measureList) {
+    public QueryConfigUnified setMeasureGroupKey(String measureGroupKey) {
+        this.measureGroupKey = measureGroupKey;
+        return this;
+    }
+    public String getMeasureGroupKey() {
+        return this.measureGroupKey;
+    }
+
+    public QueryConfigUnified setMeasureList(java.util.List<MeasureList> measureList) {
         this.measureList = measureList;
         return this;
     }
-    public java.util.List<ApmMeasureConfig> getMeasureList() {
+    public java.util.List<MeasureList> getMeasureList() {
         return this.measureList;
     }
 
@@ -214,6 +306,31 @@ public class QueryConfigUnified extends TeaModel {
     }
     public String getMetric() {
         return this.metric;
+    }
+
+    public QueryConfigUnified setMetricGroupId(String metricGroupId) {
+        this.metricGroupId = metricGroupId;
+        return this;
+    }
+    public String getMetricGroupId() {
+        return this.metricGroupId;
+    }
+
+    public QueryConfigUnified setMetricId(String metricId) {
+        this.metricId = metricId;
+        return this;
+    }
+    public String getMetricId() {
+        return this.metricId;
+    }
+
+    @Deprecated
+    public QueryConfigUnified setMetricIds(java.util.List<String> metricIds) {
+        this.metricIds = metricIds;
+        return this;
+    }
+    public java.util.List<String> getMetricIds() {
+        return this.metricIds;
     }
 
     public QueryConfigUnified setMetricSet(String metricSet) {
@@ -240,6 +357,14 @@ public class QueryConfigUnified extends TeaModel {
         return this.offsetSecs;
     }
 
+    public QueryConfigUnified setParamValues(java.util.List<PrometheusMetricParamValue> paramValues) {
+        this.paramValues = paramValues;
+        return this;
+    }
+    public java.util.List<PrometheusMetricParamValue> getParamValues() {
+        return this.paramValues;
+    }
+
     @Deprecated
     public QueryConfigUnified setPromQl(String promQl) {
         this.promQl = promQl;
@@ -249,11 +374,11 @@ public class QueryConfigUnified extends TeaModel {
         return this.promQl;
     }
 
-    public QueryConfigUnified setQueries(java.util.List<MetricSetNamedQueryEntry> queries) {
+    public QueryConfigUnified setQueries(java.util.List<Queries> queries) {
         this.queries = queries;
         return this;
     }
-    public java.util.List<MetricSetNamedQueryEntry> getQueries() {
+    public java.util.List<Queries> getQueries() {
         return this.queries;
     }
 

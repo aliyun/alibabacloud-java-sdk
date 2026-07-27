@@ -48,7 +48,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "metrics.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "metrics.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
@@ -5672,9 +5671,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Deletes a specified site monitoring task.</p>
-     * 
      * <b>summary</b> : 
      * <p>Retrieves the list of data delivery tasks.</p>
      * 
@@ -5731,9 +5727,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Deletes a specified site monitoring task.</p>
-     * 
      * <b>summary</b> : 
      * <p>Retrieves the list of data delivery tasks.</p>
      * 
@@ -7040,6 +7033,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.bodyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.body, "body", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callSource)) {
+            query.put("callSource", request.callSource);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
             body.put("body", request.bodyShrink);
@@ -7047,6 +7045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -7174,7 +7173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert rules.</p>
@@ -7205,6 +7204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("nextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryJson)) {
+            query.put("queryJson", request.queryJson);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.bodyShrink)) {
             body.put("body", request.bodyShrink);
@@ -7231,7 +7234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert rules.</p>
@@ -8052,11 +8055,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Deletes a specified site monitoring task.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</p>
+     * <p>Updates a data delivery task.</p>
      * 
      * @param request UpdateDeliveryTaskRequest
      * @param headers map
@@ -8121,11 +8121,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Deletes a specified site monitoring task.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</p>
+     * <p>Updates a data delivery task.</p>
      * 
      * @param request UpdateDeliveryTaskRequest
      * @return UpdateDeliveryTaskResponse

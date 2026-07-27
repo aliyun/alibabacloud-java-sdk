@@ -3,16 +3,16 @@ package com.aliyun.cms20240330.models;
 
 import com.aliyun.tea.*;
 
-public class StatusFilter extends TeaModel {
+public class BizSourceFilter extends TeaModel {
     @NameInMap("eq")
     public String eq;
 
-    public static StatusFilter build(java.util.Map<String, ?> map) throws Exception {
-        StatusFilter self = new StatusFilter();
+    public static BizSourceFilter build(java.util.Map<String, ?> map) throws Exception {
+        BizSourceFilter self = new BizSourceFilter();
         return TeaModel.build(map, self);
     }
 
-    public StatusFilter setEq(String eq) {
+    public BizSourceFilter setEq(String eq) {
         this.eq = eq;
         return this;
     }

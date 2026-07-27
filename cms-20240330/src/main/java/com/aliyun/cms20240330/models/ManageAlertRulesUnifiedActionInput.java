@@ -19,6 +19,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     @NameInMap("armsIntegrationConfig")
     public ArmsIntegrationConfig armsIntegrationConfig;
 
+    @NameInMap("bizSource")
+    public String bizSource;
+
     @NameInMap("conditionConfig")
     public ConditionConfigUnified conditionConfig;
 
@@ -40,14 +43,25 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     @NameInMap("notifyConfig")
     public NotifyConfigUnified notifyConfig;
 
+    @NameInMap("observeResourceConfig")
+    public ObserveResourceConfig observeResourceConfig;
+
     @NameInMap("observeResourceInstanceId")
+    @Deprecated
     public String observeResourceInstanceId;
 
     @NameInMap("observeResourceType")
+    @Deprecated
     public String observeResourceType;
 
     @NameInMap("queryConfig")
     public QueryConfigUnified queryConfig;
+
+    @NameInMap("rcaConfig")
+    public AlertRuleRcaConfig rcaConfig;
+
+    @NameInMap("regionId")
+    public String regionId;
 
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
@@ -96,6 +110,14 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     }
     public ArmsIntegrationConfig getArmsIntegrationConfig() {
         return this.armsIntegrationConfig;
+    }
+
+    public ManageAlertRulesUnifiedActionInput setBizSource(String bizSource) {
+        this.bizSource = bizSource;
+        return this;
+    }
+    public String getBizSource() {
+        return this.bizSource;
     }
 
     public ManageAlertRulesUnifiedActionInput setConditionConfig(ConditionConfigUnified conditionConfig) {
@@ -154,6 +176,15 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         return this.notifyConfig;
     }
 
+    public ManageAlertRulesUnifiedActionInput setObserveResourceConfig(ObserveResourceConfig observeResourceConfig) {
+        this.observeResourceConfig = observeResourceConfig;
+        return this;
+    }
+    public ObserveResourceConfig getObserveResourceConfig() {
+        return this.observeResourceConfig;
+    }
+
+    @Deprecated
     public ManageAlertRulesUnifiedActionInput setObserveResourceInstanceId(String observeResourceInstanceId) {
         this.observeResourceInstanceId = observeResourceInstanceId;
         return this;
@@ -162,6 +193,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         return this.observeResourceInstanceId;
     }
 
+    @Deprecated
     public ManageAlertRulesUnifiedActionInput setObserveResourceType(String observeResourceType) {
         this.observeResourceType = observeResourceType;
         return this;
@@ -176,6 +208,22 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     }
     public QueryConfigUnified getQueryConfig() {
         return this.queryConfig;
+    }
+
+    public ManageAlertRulesUnifiedActionInput setRcaConfig(AlertRuleRcaConfig rcaConfig) {
+        this.rcaConfig = rcaConfig;
+        return this;
+    }
+    public AlertRuleRcaConfig getRcaConfig() {
+        return this.rcaConfig;
+    }
+
+    public ManageAlertRulesUnifiedActionInput setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ManageAlertRulesUnifiedActionInput setScheduleConfig(ScheduleConfigUnified scheduleConfig) {

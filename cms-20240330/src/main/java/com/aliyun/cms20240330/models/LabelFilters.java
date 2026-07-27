@@ -3,7 +3,7 @@ package com.aliyun.cms20240330.models;
 
 import com.aliyun.tea.*;
 
-public class UmodelLabelFilter extends TeaModel {
+public class LabelFilters extends TeaModel {
     @NameInMap("name")
     public String name;
 
@@ -13,12 +13,12 @@ public class UmodelLabelFilter extends TeaModel {
     @NameInMap("value")
     public String value;
 
-    public static UmodelLabelFilter build(java.util.Map<String, ?> map) throws Exception {
-        UmodelLabelFilter self = new UmodelLabelFilter();
+    public static LabelFilters build(java.util.Map<String, ?> map) throws Exception {
+        LabelFilters self = new LabelFilters();
         return TeaModel.build(map, self);
     }
 
-    public UmodelLabelFilter setName(String name) {
+    public LabelFilters setName(String name) {
         this.name = name;
         return this;
     }
@@ -26,7 +26,7 @@ public class UmodelLabelFilter extends TeaModel {
         return this.name;
     }
 
-    public UmodelLabelFilter setOperator(String operator) {
+    public LabelFilters setOperator(String operator) {
         this.operator = operator;
         return this;
     }
@@ -34,7 +34,7 @@ public class UmodelLabelFilter extends TeaModel {
         return this.operator;
     }
 
-    public UmodelLabelFilter setValue(String value) {
+    public LabelFilters setValue(String value) {
         this.value = value;
         return this;
     }

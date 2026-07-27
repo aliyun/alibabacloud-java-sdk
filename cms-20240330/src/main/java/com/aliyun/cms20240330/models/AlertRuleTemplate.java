@@ -34,6 +34,12 @@ public class AlertRuleTemplate extends TeaModel {
     @NameInMap("labels")
     public String labels;
 
+    @NameInMap("namespace")
+    public String namespace;
+
+    @NameInMap("productCategory")
+    public String productCategory;
+
     @NameInMap("ruleConfigs")
     public String ruleConfigs;
 
@@ -144,6 +150,22 @@ public class AlertRuleTemplate extends TeaModel {
     }
     public String getLabels() {
         return this.labels;
+    }
+
+    public AlertRuleTemplate setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public AlertRuleTemplate setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
+        return this;
+    }
+    public String getProductCategory() {
+        return this.productCategory;
     }
 
     public AlertRuleTemplate setRuleConfigs(String ruleConfigs) {

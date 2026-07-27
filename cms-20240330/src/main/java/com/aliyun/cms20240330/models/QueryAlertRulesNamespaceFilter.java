@@ -3,16 +3,16 @@ package com.aliyun.cms20240330.models;
 
 import com.aliyun.tea.*;
 
-public class StatusFilter extends TeaModel {
+public class QueryAlertRulesNamespaceFilter extends TeaModel {
     @NameInMap("eq")
     public String eq;
 
-    public static StatusFilter build(java.util.Map<String, ?> map) throws Exception {
-        StatusFilter self = new StatusFilter();
+    public static QueryAlertRulesNamespaceFilter build(java.util.Map<String, ?> map) throws Exception {
+        QueryAlertRulesNamespaceFilter self = new QueryAlertRulesNamespaceFilter();
         return TeaModel.build(map, self);
     }
 
-    public StatusFilter setEq(String eq) {
+    public QueryAlertRulesNamespaceFilter setEq(String eq) {
         this.eq = eq;
         return this;
     }

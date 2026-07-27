@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MetricSetNamedQueryEntry extends TeaModel {
     @NameInMap("labelFilters")
-    public java.util.List<UmodelLabelFilter> labelFilters;
+    public java.util.List<LabelFilters> labelFilters;
 
     @NameInMap("metric")
     public String metric;
@@ -21,11 +21,11 @@ public class MetricSetNamedQueryEntry extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public MetricSetNamedQueryEntry setLabelFilters(java.util.List<UmodelLabelFilter> labelFilters) {
+    public MetricSetNamedQueryEntry setLabelFilters(java.util.List<LabelFilters> labelFilters) {
         this.labelFilters = labelFilters;
         return this;
     }
-    public java.util.List<UmodelLabelFilter> getLabelFilters() {
+    public java.util.List<LabelFilters> getLabelFilters() {
         return this.labelFilters;
     }
 

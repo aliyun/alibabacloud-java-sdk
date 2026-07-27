@@ -3,9 +3,9 @@ package com.aliyun.cms20240330.models;
 
 import com.aliyun.tea.*;
 
-public class UmodelLabelFilter extends TeaModel {
-    @NameInMap("name")
-    public String name;
+public class EntityFilters extends TeaModel {
+    @NameInMap("field")
+    public String field;
 
     @NameInMap("operator")
     public String operator;
@@ -13,20 +13,20 @@ public class UmodelLabelFilter extends TeaModel {
     @NameInMap("value")
     public String value;
 
-    public static UmodelLabelFilter build(java.util.Map<String, ?> map) throws Exception {
-        UmodelLabelFilter self = new UmodelLabelFilter();
+    public static EntityFilters build(java.util.Map<String, ?> map) throws Exception {
+        EntityFilters self = new EntityFilters();
         return TeaModel.build(map, self);
     }
 
-    public UmodelLabelFilter setName(String name) {
-        this.name = name;
+    public EntityFilters setField(String field) {
+        this.field = field;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getField() {
+        return this.field;
     }
 
-    public UmodelLabelFilter setOperator(String operator) {
+    public EntityFilters setOperator(String operator) {
         this.operator = operator;
         return this;
     }
@@ -34,7 +34,7 @@ public class UmodelLabelFilter extends TeaModel {
         return this.operator;
     }
 
-    public UmodelLabelFilter setValue(String value) {
+    public EntityFilters setValue(String value) {
         this.value = value;
         return this;
     }

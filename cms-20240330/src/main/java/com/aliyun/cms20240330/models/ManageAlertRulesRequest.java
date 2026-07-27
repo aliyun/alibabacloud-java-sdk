@@ -10,6 +10,9 @@ public class ManageAlertRulesRequest extends TeaModel {
     @NameInMap("body")
     public ManageAlertRulesUnifiedActionInput body;
 
+    @NameInMap("callSource")
+    public String callSource;
+
     public static ManageAlertRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ManageAlertRulesRequest self = new ManageAlertRulesRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class ManageAlertRulesRequest extends TeaModel {
     }
     public ManageAlertRulesUnifiedActionInput getBody() {
         return this.body;
+    }
+
+    public ManageAlertRulesRequest setCallSource(String callSource) {
+        this.callSource = callSource;
+        return this;
+    }
+    public String getCallSource() {
+        return this.callSource;
     }
 
 }
