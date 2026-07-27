@@ -17,7 +17,7 @@ public class UpdateDIJobRequest extends TeaModel {
      * <p>The description of the synchronization task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Synchronize mysql to hologres</p>
+     * <p>Synchronize MySQL to Hologres</p>
      */
     @NameInMap("Description")
     public String description;

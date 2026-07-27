@@ -8,7 +8,7 @@ public class ListDataServiceAuthorizedApisRequest extends TeaModel {
      * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>My API Name</p>
+     * <p>My API name</p>
      */
     @NameInMap("ApiNameKeyword")
     public String apiNameKeyword;
@@ -17,7 +17,7 @@ public class ListDataServiceAuthorizedApisRequest extends TeaModel {
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>PageNumber</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;

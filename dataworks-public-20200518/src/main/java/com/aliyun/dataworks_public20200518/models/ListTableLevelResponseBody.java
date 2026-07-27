@@ -113,7 +113,7 @@ public class ListTableLevelResponseBody extends TeaModel {
          * <p>The description of the table level.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Level description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -140,7 +140,7 @@ public class ListTableLevelResponseBody extends TeaModel {
          * <p>The name of the table level.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Level 1</p>
          */
         @NameInMap("Name")
         public String name;

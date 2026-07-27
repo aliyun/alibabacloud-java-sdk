@@ -63,7 +63,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
          * <p>The name of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Visitor</p>
          */
         @NameInMap("ProjectRoleName")
         public String projectRoleName;
@@ -71,8 +71,10 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * <p>The type of the role. Valid values:</p>
          * <ul>
-         * <li>0: SYSTEM, which indicates that the role is a built-in role.</li>
-         * <li>2: USER_CUSTOM, which indicates that the role is a custom role.</li>
+         * <li><p>0: SYSTEM, which indicates that the role is a built-in role.</p>
+         * </li>
+         * <li><p>2: USER_CUSTOM, which indicates that the role is a custom role.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
          * <p>The name of the member.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhangsan</p>
+         * <p>John Doe</p>
          */
         @NameInMap("ProjectMemberName")
         public String projectMemberName;
@@ -151,9 +153,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * <p>The type of the member. Valid values:</p>
          * <ul>
-         * <li>1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</li>
-         * <li>5: USER_UBACCOUNT, which indicates that the member is a RAM user.</li>
-         * <li>6: USER_STS_ROLE, which indicates that the member is a RAM role.</li>
+         * <li><p>1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</p>
+         * </li>
+         * <li><p>5: USER_UBACCOUNT, which indicates that the member is a RAM user.</p>
+         * </li>
+         * <li><p>6: USER_STS_ROLE, which indicates that the member is a RAM role.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,9 +176,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * <p>The status of the member. Valid values:</p>
          * <ul>
-         * <li>0: NORMAL, which indicates that the member is in a normal state.</li>
-         * <li>1: FORBIDDEN, which indicates that the member is disabled.</li>
-         * <li>2: DELETED, which indicates that the member is deleted.</li>
+         * <li><p>0: NORMAL, which indicates that the member is in a normal state.</p>
+         * </li>
+         * <li><p>1: FORBIDDEN, which indicates that the member is disabled.</p>
+         * </li>
+         * <li><p>2: DELETED, which indicates that the member is deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class GetProjectResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0bc1411515937635973****</p>
+     * <p>1AFAE64E-D1BE-432B-A9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -83,7 +83,7 @@ public class GetProjectResponseBody extends TeaModel {
          * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
-         * <p>Env</p>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
@@ -92,7 +92,7 @@ public class GetProjectResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -260,7 +260,7 @@ public class GetProjectResponseBody extends TeaModel {
          * <p>The description of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>test_describe</p>
          */
         @NameInMap("ProjectDescription")
         public String projectDescription;
@@ -269,7 +269,7 @@ public class GetProjectResponseBody extends TeaModel {
          * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>27</p>
+         * <p>466230</p>
          */
         @NameInMap("ProjectId")
         public Integer projectId;
@@ -278,7 +278,7 @@ public class GetProjectResponseBody extends TeaModel {
          * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>test_project</p>
          */
         @NameInMap("ProjectIdentifier")
         public String projectIdentifier;
@@ -300,7 +300,7 @@ public class GetProjectResponseBody extends TeaModel {
          * <p>The display name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>test_project</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
@@ -344,7 +344,7 @@ public class GetProjectResponseBody extends TeaModel {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmzbn7pti3zfa</p>
+         * <p>rg-acfmzbn7****</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;

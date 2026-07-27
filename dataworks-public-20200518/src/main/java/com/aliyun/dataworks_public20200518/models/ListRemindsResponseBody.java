@@ -194,7 +194,7 @@ public class ListRemindsResponseBody extends TeaModel {
          * <p>The name of the custom alert rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alert Rule</p>
+         * <p>Rule name</p>
          */
         @NameInMap("RemindName")
         public String remindName;

@@ -130,8 +130,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         /**
          * <p>The type of the metatable. Valid values:</p>
          * <ul>
-         * <li>0: table</li>
-         * <li>1: view</li>
+         * <li><p>0: table</p>
+         * </li>
+         * <li><p>1: view</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,8 +145,10 @@ public class SearchMetaTablesResponseBody extends TeaModel {
         /**
          * <p>The type of the environment. Valid values:</p>
          * <ul>
-         * <li>1: production environment</li>
-         * <li>0: development environment</li>
+         * <li><p>1: production environment</p>
+         * </li>
+         * <li><p>0: development environment</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

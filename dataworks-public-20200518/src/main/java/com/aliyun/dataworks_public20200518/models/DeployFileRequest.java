@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployFileRequest extends TeaModel {
     /**
-     * <p>The description of the deployment operation.</p>
+     * <p>Description of this deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>First release task</p>
@@ -14,16 +14,16 @@ public class DeployFileRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID. You must configure either this parameter or the NodeId parameter.</p>
+     * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain this ID. You only need to specify this parameter or the <code>NodeId</code> parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000001</p>
+     * <p>10000022</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
-     * <p>The ID of the node in the scheduling system that corresponds to the file that you want to deploy. You must configure either the NodeId parameter or the FileId parameter.</p>
+     * <p>The ID of the task in the scheduling system for the file to be deployed. You only need to specify either this parameter or the <code>FileId</code> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>2000001</p>
@@ -32,7 +32,7 @@ public class DeployFileRequest extends TeaModel {
     public Long nodeId;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log in to the DataWorks console and go to the workspace configuration page to obtain the workspace ID. You must set either this parameter or the ProjectIdentifier parameter to specify the DataWorks workspace for the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -41,7 +41,7 @@ public class DeployFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the workspace configuration page to obtain the workspace name. You must set either this parameter or the <code>ProjectId</code> parameter to specify the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

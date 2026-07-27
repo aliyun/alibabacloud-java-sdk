@@ -20,6 +20,9 @@ public class GetSensitiveDataResponseBody extends TeaModel {
      * <li>sensType: the type of the sensitive data.</li>
      * <li>sensLevel: the sensitivity level of the sensitive data</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{      &quot;sensDatas&quot;: [       {         &quot;sensLevel&quot;: &quot;L1&quot;,         &quot;guid&quot;: &quot;dsg_demo.animal.dog&quot;,         &quot;sensType&quot;: &quot; Name&quot;       }      ],     &quot;totalCount&quot;: 2171 }</p>
      */
     @NameInMap("SensitiveData")
     public java.util.Map<String, ?> sensitiveData;

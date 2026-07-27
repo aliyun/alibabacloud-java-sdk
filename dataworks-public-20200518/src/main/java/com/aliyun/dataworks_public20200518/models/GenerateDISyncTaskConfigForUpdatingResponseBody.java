@@ -22,8 +22,10 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,8 +85,10 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the ID of the asynchronous thread is generated. Valid values:</p>
          * <ul>
-         * <li>success: indicates that the ID of the asynchronous thread is generated.</li>
-         * <li>fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.</li>
+         * <li><p>success: indicates that the ID of the asynchronous thread is generated.</p>
+         * </li>
+         * <li><p>fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

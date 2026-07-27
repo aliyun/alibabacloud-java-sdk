@@ -131,7 +131,7 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
          * <p>The type of the baseline, including DAILY and HOURLY. Separate multiple types with commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>DAILY,HOURLY</p>
+         * <p>Baseline type</p>
          */
         @NameInMap("BaselineType")
         public String baselineType;

@@ -15,7 +15,7 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The partition filter expression.</p>
+     * <p>The partition expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     public String matchExpression;
 
     /**
-     * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+     * <p>The ID of the scheduling node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> API to obtain the node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     public Long nodeId;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine or data source.</p>
+     * <p>The name of the compute engine instance or data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The ID of the workspace to which the node belongs.</p>
+     * <p>The ID of the project to which the node belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class CreateQualityRelativeNodeRequest extends TeaModel {
     public Long targetNodeProjectId;
 
     /**
-     * <p>The name of the workspace to which the node to be associated with the partition filter expression belongs.</p>
+     * <p>The name of the project to which the scheduling node belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

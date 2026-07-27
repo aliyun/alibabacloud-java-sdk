@@ -26,7 +26,7 @@ public class CreateTableRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>reserved</p>
+     * <p>Reserved field</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -42,7 +42,7 @@ public class CreateTableRequest extends TeaModel {
      * <p>The comment.</p>
      * 
      * <strong>example:</strong>
-     * <p>comment</p>
+     * <p>Remarks</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -59,8 +59,10 @@ public class CreateTableRequest extends TeaModel {
     /**
      * <p>The environment type of the DataWorks workspace. Valid values:</p>
      * <ul>
-     * <li>0: development environment</li>
-     * <li>1: production environment</li>
+     * <li><p>0: development environment</p>
+     * </li>
+     * <li><p>1: production environment</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,10 +74,14 @@ public class CreateTableRequest extends TeaModel {
     /**
      * <p>The storage type of the external table. Valid values:</p>
      * <ul>
-     * <li>0: Object Storage Service (OSS)</li>
-     * <li>1: Tablestore</li>
-     * <li>2: Volume</li>
-     * <li>3: MySQL</li>
+     * <li><p>0: Object Storage Service (OSS)</p>
+     * </li>
+     * <li><p>1: Tablestore</p>
+     * </li>
+     * <li><p>2: Volume</p>
+     * </li>
+     * <li><p>3: MySQL</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,8 +102,10 @@ public class CreateTableRequest extends TeaModel {
     /**
      * <p>Specifies whether to create a view or table. Valid values:</p>
      * <ul>
-     * <li>0: Create a table.</li>
-     * <li>1: Create a view.</li>
+     * <li><p>0: Create a table.</p>
+     * </li>
+     * <li><p>1: Create a view.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -185,9 +193,12 @@ public class CreateTableRequest extends TeaModel {
     /**
      * <p>Specifies whether the table or workspace is visible. Valid values:</p>
      * <ul>
-     * <li>0: Both the table and workspace are invisible.</li>
-     * <li>1: Both the table and workspace are visible.</li>
-     * <li>2: Only the workspace is visible.</li>
+     * <li><p>0: Both the table and workspace are invisible.</p>
+     * </li>
+     * <li><p>1: Both the table and workspace are visible.</p>
+     * </li>
+     * <li><p>2: Only the workspace is visible.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -376,7 +387,7 @@ public class CreateTableRequest extends TeaModel {
          * <p>The display name of the field.</p>
          * 
          * <strong>example:</strong>
-         * <p>columnName in chinese</p>
+         * <p>中文名</p>
          */
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
@@ -395,7 +406,7 @@ public class CreateTableRequest extends TeaModel {
          * <p>The comment of the field.</p>
          * 
          * <strong>example:</strong>
-         * <p>comment</p>
+         * <p>备注</p>
          */
         @NameInMap("Comment")
         public String comment;

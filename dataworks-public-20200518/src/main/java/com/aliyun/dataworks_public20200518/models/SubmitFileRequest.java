@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitFileRequest extends TeaModel {
     /**
-     * <p>The description of the commit operation.</p>
+     * <p>The comment for the submission.</p>
      * 
      * <strong>example:</strong>
      * <p>Submit a task for the first time</p>
@@ -14,7 +14,7 @@ public class SubmitFileRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID.</p>
+     * <p>The ID of the file. Obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,16 @@ public class SubmitFileRequest extends TeaModel {
     public Long fileId;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks Console and go to the Workspace Configurations page to obtain the workspace ID. Specify either this parameter or <code>ProjectIdentifier</code> to identify the DataWorks workspace.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>100001</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The name of the DataWorks workspace. You can log on to the DataWorks Console and go to the Workspace Configurations page to obtain the workspace name. Specify either this parameter or <code>ProjectId</code> to identify the DataWorks workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>
@@ -42,10 +42,12 @@ public class SubmitFileRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
-     * <p>Specifies whether to skip the pre-publish check after the file is committed. Valid values:</p>
+     * <p>Specifies whether to skip the pre-deployment check after the file is submitted.</p>
      * <ul>
-     * <li>false: indicates that the pre-publish check is not skipped. After the file is committed, the pre-publish check is automatically triggered. The file can be deployed only after the file passes the check.</li>
-     * <li>true: indicates that the pre-publish check is skipped. After the file is submitted, the pre-publish check process is not triggered. You can directly deploy the file.</li>
+     * <li><p>false: Do not skip. After the file is submitted, the pre-deployment check process is automatically triggered. The file becomes deployable only after it passes the check.</p>
+     * </li>
+     * <li><p>true: Skip. The pre-deployment check process is not triggered after the file is submitted. You can proceed directly with the deployment process.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -9,7 +9,7 @@ public class UpdateDataServiceApiRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>API description</p>
+     * <p>Test API description</p>
      */
     @NameInMap("ApiDescription")
     public String apiDescription;

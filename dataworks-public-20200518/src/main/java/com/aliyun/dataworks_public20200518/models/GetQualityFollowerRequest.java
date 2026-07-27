@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetQualityFollowerRequest extends TeaModel {
     /**
-     * <p>The ID of the partition filter expression.</p>
+     * <p>The ID of the partition expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>12345</p>
      */
     @NameInMap("EntityId")
     public Long entityId;

@@ -8,7 +8,7 @@ public class UpdateTableLevelRequest extends TeaModel {
      * <p>The description of the table level.</p>
      * 
      * <strong>example:</strong>
-     * <p>level description</p>
+     * <p>Level description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -36,7 +36,7 @@ public class UpdateTableLevelRequest extends TeaModel {
      * <p>The name of the table level.</p>
      * 
      * <strong>example:</strong>
-     * <p>level name</p>
+     * <p>Level name</p>
      */
     @NameInMap("Name")
     public String name;

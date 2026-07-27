@@ -44,7 +44,7 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000001</p>
+     * <p>100000012</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,8 +52,10 @@ public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

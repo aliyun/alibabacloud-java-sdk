@@ -8,7 +8,7 @@ public class ListShiftSchedulesRequest extends TeaModel {
      * <p>The Alibaba Cloud account ID. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>1933790683****</p>
+     * <p>1933790683*****</p>
      */
     @NameInMap("Owner")
     public String owner;

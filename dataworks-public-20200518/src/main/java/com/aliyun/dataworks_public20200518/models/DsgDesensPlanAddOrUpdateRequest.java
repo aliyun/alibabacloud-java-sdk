@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
     /**
-     * <p>A collection of data masking rules that you want to add or modify.</p>
+     * <p>The collection of data masking rules to add or update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesensRules")
@@ -26,15 +26,22 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
 
     public static class DsgDesensPlanAddOrUpdateRequestDesensRulesDesensPlan extends TeaModel {
         /**
-         * <p>The masking method configured in the data masking rule. Valid values:</p>
+         * <p>The data masking method. Valid values:</p>
          * <ul>
-         * <li>hash</li>
-         * <li>mapping</li>
-         * <li>mask</li>
-         * <li>charreplacement</li>
-         * <li>intervalselect</li>
-         * <li>decimalpoint</li>
-         * <li>emptydesens</li>
+         * <li><p>hash: hashing</p>
+         * </li>
+         * <li><p>mapping: pseudonymization</p>
+         * </li>
+         * <li><p>mask: masking</p>
+         * </li>
+         * <li><p>charreplacement: character replacement</p>
+         * </li>
+         * <li><p>intervalselect: interval transformation</p>
+         * </li>
+         * <li><p>decimalpoint: rounding</p>
+         * </li>
+         * <li><p>emptydesens: nullification</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -45,7 +52,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         public String desensPlanType;
 
         /**
-         * <p>The parameters for the data masking rule.</p>
+         * <p>The parameters for the data masking method.</p>
          */
         @NameInMap("ExtParam")
         public java.util.Map<String, ?> extParam;
@@ -75,25 +82,41 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
 
     public static class DsgDesensPlanAddOrUpdateRequestDesensRulesColumns extends TeaModel {
         /**
+         * <p>The column name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_col_dev</p>
          */
         @NameInMap("column")
         public String column;
 
         /**
+         * <p>The data source type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS.ODPS</p>
          */
         @NameInMap("dbType")
         public String dbType;
 
         /**
+         * <p>The name of the DataWorks workspace.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_dev</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table_dev</p>
          */
         @NameInMap("table")
         public String table;
@@ -141,8 +164,10 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         /**
          * <p>Specifies whether to add a watermark. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: Adds a watermark.</p>
+         * </li>
+         * <li><p>false: Does not add a watermark.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,7 +177,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         public Boolean checkWatermark;
 
         /**
-         * <p>The sensitive field type.</p>
+         * <p>The sensitive data type.</p>
          * 
          * <strong>example:</strong>
          * <p>phone</p>
@@ -161,14 +186,14 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The data masking rule.</p>
+         * <p>The configuration of the data masking method.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DesensPlan")
         public DsgDesensPlanAddOrUpdateRequestDesensRulesDesensPlan desensPlan;
 
         /**
-         * <p>The ID of the data masking rule. You can call the <a href="https://help.aliyun.com/document_detail/2786578.html">DsgDesensPlanQueryList</a> operation to query the ID of the data masking rule.</p>
+         * <p>The data masking rule ID. You can call the <a href="https://help.aliyun.com/document_detail/2786578.html">DsgDesensPlanQueryList</a> operation to obtain it.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -197,7 +222,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The level-2 data masking scenario.</p>
+         * <p>The secondary data masking scenes.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SceneIds")
@@ -206,8 +231,10 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         /**
          * <p>The status of the data masking rule. Valid values:</p>
          * <ul>
-         * <li>0: expired</li>
-         * <li>1: effective</li>
+         * <li><p>0: Disabled</p>
+         * </li>
+         * <li><p>1: Enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,6 +243,9 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The associated columns for masking.</p>
+         */
         @NameInMap("columns")
         public java.util.List<DsgDesensPlanAddOrUpdateRequestDesensRulesColumns> columns;
 

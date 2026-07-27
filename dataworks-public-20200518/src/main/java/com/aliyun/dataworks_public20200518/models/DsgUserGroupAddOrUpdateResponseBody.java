@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
     /**
-     * <p>The operation result. Valid values:</p>
+     * <p>The result of the operation. Valid values:</p>
      * <ul>
-     * <li>true: The operation is successful.</li>
-     * <li>false: The operation fails.</li>
+     * <li><p><code>true</code>: The operation succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code that is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>1029030003</p>
@@ -27,7 +29,7 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message that is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>param error</p>
@@ -45,7 +47,7 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The ID of the request. This is a common parameter. We recommend that you save this ID. If an issue occurs, you can use the ID to locate logs for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>102400001</p>
@@ -54,10 +56,12 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request succeeded. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The request succeeded.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

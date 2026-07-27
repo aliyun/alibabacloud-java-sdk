@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateQualityFollowerResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the update is successful.</p>
+     * <p>Indicates whether the update was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

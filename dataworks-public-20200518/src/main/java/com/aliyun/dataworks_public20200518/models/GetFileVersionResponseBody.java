@@ -221,7 +221,7 @@ public class GetFileVersionResponseBody extends TeaModel {
          * <p>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value NORMAL indicates DataStudio. The value MANUAL indicates a manually triggered node. The value MANUAL_BIZ indicates a manually triggered workflow. The value SKIP indicates a dry-run DataStudio node. The value ADHOCQUERY indicates an ad hoc query. The value COMPONENT indicates snippets.</p>
          * 
          * <strong>example:</strong>
-         * <p>NORMAL</p>
+         * <p>0</p>
          */
         @NameInMap("UseType")
         public String useType;

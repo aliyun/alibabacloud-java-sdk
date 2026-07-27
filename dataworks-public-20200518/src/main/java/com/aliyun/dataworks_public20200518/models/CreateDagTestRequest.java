@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDagTestRequest extends TeaModel {
     /**
+     * <p>The business date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDagTestRequest extends TeaModel {
     public String bizdate;
 
     /**
+     * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateDagTestRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class CreateDagTestRequest extends TeaModel {
     public Long nodeId;
 
     /**
+     * <p>The parameters of the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>bizdate=$bizdate tbods=$tbods</p>
      */
@@ -39,6 +44,7 @@ public class CreateDagTestRequest extends TeaModel {
     public String nodeParams;
 
     /**
+     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

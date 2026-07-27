@@ -71,7 +71,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
          * <p>The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the &quot;Invalid path: Workflow/xxxx/Data Integration&quot; format is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>Invalid path: Business Flow/xxxx/Data Integration</p>
+         * <p>Invalid directory path: workflow/xxxx/data integration.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -79,8 +79,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         /**
          * <p>The creation status of the data synchronization task. Valid values:</p>
          * <ul>
-         * <li>success</li>
-         * <li>fail</li>
+         * <li><p>success</p>
+         * </li>
+         * <li><p>fail</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

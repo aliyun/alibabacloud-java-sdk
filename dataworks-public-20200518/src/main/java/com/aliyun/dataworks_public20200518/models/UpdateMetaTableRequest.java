@@ -17,7 +17,7 @@ public class UpdateMetaTableRequest extends TeaModel {
      * <p>The display name of the table.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>中文名</p>
      */
     @NameInMap("Caption")
     public String caption;

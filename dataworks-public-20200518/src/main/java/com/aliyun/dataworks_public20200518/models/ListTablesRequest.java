@@ -9,10 +9,7 @@ public class ListTablesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>odps
-     * emr
-     * mysql
-     * holo</p>
+     * <p>odps</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;

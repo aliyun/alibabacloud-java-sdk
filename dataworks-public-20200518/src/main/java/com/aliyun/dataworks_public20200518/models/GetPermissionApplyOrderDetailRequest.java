@@ -9,7 +9,7 @@ public class GetPermissionApplyOrderDetailRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>48f36729-05f9-4a40-9286-933fd940f30a</p>
+     * <p>48f36729-05f9-4a40-9286-933fd940****</p>
      */
     @NameInMap("FlowId")
     public String flowId;

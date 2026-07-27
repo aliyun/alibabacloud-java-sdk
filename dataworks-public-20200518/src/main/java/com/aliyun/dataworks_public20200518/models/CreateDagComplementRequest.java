@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDagComplementRequest extends TeaModel {
     /**
+     * <p>An optional parameter. The start time of the task. This parameter is required for hour-level scheduled tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>00:00:00</p>
      */
@@ -12,6 +14,8 @@ public class CreateDagComplementRequest extends TeaModel {
     public String bizBeginTime;
 
     /**
+     * <p>An optional parameter. The end time of the task. This parameter is required for hour-level scheduled tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>23:00:00</p>
      */
@@ -19,6 +23,7 @@ public class CreateDagComplementRequest extends TeaModel {
     public String bizEndTime;
 
     /**
+     * <p>The end business date of data backfill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class CreateDagComplementRequest extends TeaModel {
     public String endBizDate;
 
     /**
+     * <p>An optional parameter. The list of node IDs to exclude from data backfill.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -35,6 +42,7 @@ public class CreateDagComplementRequest extends TeaModel {
     public String excludeNodeIds;
 
     /**
+     * <p>The list of node IDs to include. If you backfill data for only one node, that node must be included in includeNodeIds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class CreateDagComplementRequest extends TeaModel {
     public String includeNodeIds;
 
     /**
+     * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,8 @@ public class CreateDagComplementRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>A JSON string. The key is the node ID, and the value is the actual parameter value.</p>
+     * 
      * <strong>example:</strong>
      * <p>{74324:&quot;key1=val1 key2=val&quot;}</p>
      */
@@ -60,6 +71,7 @@ public class CreateDagComplementRequest extends TeaModel {
     public String nodeParams;
 
     /**
+     * <p>Specifies whether the task can be executed concurrently.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +81,7 @@ public class CreateDagComplementRequest extends TeaModel {
     public Boolean parallelism;
 
     /**
+     * <p>The environment of the workspace, including PROD and DEV.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +91,7 @@ public class CreateDagComplementRequest extends TeaModel {
     public String projectEnv;
 
     /**
+     * <p>The ID of the start node for data backfill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +101,7 @@ public class CreateDagComplementRequest extends TeaModel {
     public Long rootNodeId;
 
     /**
+     * <p>The start business date of data backfill.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

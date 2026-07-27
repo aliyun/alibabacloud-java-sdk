@@ -26,7 +26,7 @@ public class ListProjectsRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmzbn7pti3zfa</p>
+     * <p>rg-acfmzbn7pt****</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
@@ -79,7 +79,7 @@ public class ListProjectsRequest extends TeaModel {
          * <p>The key of tag N to add to the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Env</p>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
@@ -88,7 +88,7 @@ public class ListProjectsRequest extends TeaModel {
          * <p>The value of tag N to add to the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

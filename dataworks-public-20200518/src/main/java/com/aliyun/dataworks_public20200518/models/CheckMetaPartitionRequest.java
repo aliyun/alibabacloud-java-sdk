@@ -17,7 +17,7 @@ public class CheckMetaPartitionRequest extends TeaModel {
      * <p>The type of the data source. Set the value to odps.</p>
      * 
      * <strong>example:</strong>
-     * <p>emr</p>
+     * <p>odps</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;

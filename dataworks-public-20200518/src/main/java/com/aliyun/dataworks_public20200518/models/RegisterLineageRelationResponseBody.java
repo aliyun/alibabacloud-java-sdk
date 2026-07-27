@@ -41,7 +41,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
      * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>EE50E05E-028C-182B-9xxx</p>
+     * <p>EE50E05E-028C-182B-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -49,8 +49,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

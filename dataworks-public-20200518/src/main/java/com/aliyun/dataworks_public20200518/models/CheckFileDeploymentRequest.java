@@ -26,9 +26,12 @@ public class CheckFileDeploymentRequest extends TeaModel {
     /**
      * <p>The check status of the file that you want to deploy. Valid values:</p>
      * <ul>
-     * <li>OK: The file passes the check.</li>
-     * <li>WARN: The file passes the check, but an alert is reported.</li>
-     * <li>FAIL: The file fails the check.</li>
+     * <li><p>OK: The file passes the check.</p>
+     * </li>
+     * <li><p>WARN: The file passes the check, but an alert is reported.</p>
+     * </li>
+     * <li><p>FAIL: The file fails the check.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

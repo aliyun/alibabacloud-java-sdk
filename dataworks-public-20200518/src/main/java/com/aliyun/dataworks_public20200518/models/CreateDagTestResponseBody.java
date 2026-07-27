@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDagTestResponseBody extends TeaModel {
     /**
+     * <p>The ID of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>3333333</p>
      */
@@ -12,6 +14,8 @@ public class CreateDagTestResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -19,6 +23,8 @@ public class CreateDagTestResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -26,6 +32,8 @@ public class CreateDagTestResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class CreateDagTestResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>E6F0DBDD-5AD****</p>
      */
@@ -40,6 +50,8 @@ public class CreateDagTestResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

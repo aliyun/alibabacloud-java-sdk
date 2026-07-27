@@ -50,7 +50,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>Boolean</p>
      */
     @NameInMap("Success")
     public Boolean success;

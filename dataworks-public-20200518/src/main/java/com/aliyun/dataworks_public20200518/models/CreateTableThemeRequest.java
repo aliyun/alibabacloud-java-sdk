@@ -19,7 +19,7 @@ public class CreateTableThemeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Topic name</p>
      */
     @NameInMap("Name")
     public String name;

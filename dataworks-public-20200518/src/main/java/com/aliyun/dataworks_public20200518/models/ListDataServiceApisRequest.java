@@ -26,7 +26,7 @@ public class ListDataServiceApisRequest extends TeaModel {
      * <p>The ID of the Alibaba Cloud account used by the creator of the APIs. The ID is used to search for the APIs created by the creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>12345</p>
+     * <p>123456</p>
      */
     @NameInMap("CreatorId")
     public String creatorId;

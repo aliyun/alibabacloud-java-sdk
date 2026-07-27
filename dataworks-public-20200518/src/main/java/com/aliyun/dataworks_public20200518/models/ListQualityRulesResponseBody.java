@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityRulesResponseBody extends TeaModel {
     /**
-     * <p>The list of retrieved rules.</p>
+     * <p>The paginated list of quality rules.</p>
      */
     @NameInMap("Data")
     public ListQualityRulesResponseBodyData data;
@@ -38,7 +38,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can troubleshoot errors based on the ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>38cbdef0-f6cf-49****</p>
@@ -49,8 +49,10 @@ public class ListQualityRulesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,8 +118,11 @@ public class ListQualityRulesResponseBody extends TeaModel {
         /**
          * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
          * <ul>
-         * <li>1: The monitoring rule is a strong rule.</li>
-         * <li>0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+         * <li><p><code>1</code>: The monitoring rule is a strong rule.</p>
+         * </li>
+         * <li><p><code>0</code>: The monitoring rule is a weak rule.
+         * You can specify a monitoring rule as a strong rule based on your business requirements. If a strong rule is triggered, a critical alert is reported and the scheduling of the task is blocked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +150,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * <p>The threshold for a critical alert. The threshold specifies the deviation of a monitoring result from the expected value. You can customize the threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, the scheduling of the task is blocked.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -172,7 +177,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String expectValue;
 
         /**
-         * <p>Indicates whether the monitoring is performed based on a fixed value.</p>
+         * <p>Indicates whether a fixed value is used for the check.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -199,7 +204,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String historyWarningThreshold;
 
         /**
-         * <p>The monitoring rule ID.</p>
+         * <p>The ID of the monitoring rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -217,7 +222,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String matchExpression;
 
         /**
-         * <p>The ID of the task that is associated with the partition filter expression.</p>
+         * <p>The ID of the method used to collect sample data.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -226,7 +231,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public Integer methodId;
 
         /**
-         * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>The name of the method used to collect sample data, such as <code>avg</code>, <code>count</code>, <code>sum</code>, <code>min</code>, <code>max</code>, <code>count_distinct</code>, <code>user_defined</code>, <code>table_count</code>, <code>table_size</code>, <code>table_dt_load_count</code>, <code>table_dt_refuseload_count</code>, <code>null_value</code>, <code>null_value/table_count</code>, <code>(table_count-count_distinct)/table_count</code>, or <code>table_count-count_distinct</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>count/table_count</p>
@@ -235,7 +240,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String methodName;
 
         /**
-         * <p>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1912****</p>
@@ -271,7 +276,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String property;
 
         /**
-         * <p>The field that is used to associate with monitoring rules at the frontend. This parameter can be ignored.</p>
+         * <p>This parameter is not used. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>table_count</p>
@@ -280,7 +285,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String propertyKey;
 
         /**
-         * <p>The ID of the task that is associated with the partition filter expression.</p>
+         * <p>The internal association ID for the rule details.</p>
          * 
          * <strong>example:</strong>
          * <p>132323</p>
@@ -298,11 +303,14 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule type:</p>
+         * <p>The type of the monitoring rule. Valid values:</p>
          * <ul>
-         * <li>0: System template rule</li>
-         * <li>1: Custom SQL rule</li>
-         * <li>1: Custom template rule</li>
+         * <li><p><code>0</code>: The monitoring rule is created by the system.</p>
+         * </li>
+         * <li><p><code>1</code>: The monitoring rule is created by a user.</p>
+         * </li>
+         * <li><p><code>2</code>: The monitoring rule is a workspace-level rule.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,7 +356,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String trend;
 
         /**
-         * <p>The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.</p>
+         * <p>The threshold for a warning alert. The threshold specifies the deviation of a monitoring result from the expected value. You can customize the threshold based on your business requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -582,7 +590,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. A valid value is 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -591,7 +599,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The details of the validation rule.</p>
+         * <p>The details of the quality rule.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListQualityRulesResponseBodyDataRules> rules;

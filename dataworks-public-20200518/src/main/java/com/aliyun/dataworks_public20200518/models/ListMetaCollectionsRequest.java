@@ -15,8 +15,10 @@ public class ListMetaCollectionsRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>ALBUM: data album </li>
-     * <li>ALBUM_CATEGORY: category in a data album</li>
+     * <li><p>ALBUM: data album</p>
+     * </li>
+     * <li><p>ALBUM_CATEGORY: category in a data album</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,7 +50,7 @@ public class ListMetaCollectionsRequest extends TeaModel {
      * <p>The keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Keyword</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -66,7 +68,7 @@ public class ListMetaCollectionsRequest extends TeaModel {
      * <p>The name of the sorting field.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Sort field</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;

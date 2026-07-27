@@ -131,7 +131,7 @@ public class GetNodeResponseBody extends TeaModel {
          * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first_dev</p>
+         * <p>odps_source_dev</p>
          */
         @NameInMap("Connection")
         public String connection;
@@ -192,7 +192,7 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The file ID.</p>
-         * <p>**</p>
+         * <p>\<em>\</em></p>
          * <p><strong>Warning</strong> The field is deprecated.</p>
          * 
          * <strong>example:</strong>
@@ -240,14 +240,18 @@ public class GetNodeResponseBody extends TeaModel {
         /**
          * <p>The scheduling type of the node. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The node is an auto triggered node.</li>
-         * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</li>
-         * <li>PAUSE: The node is a paused node.</li>
-         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * <li><p>NORMAL: The node is an auto triggered node.</p>
+         * </li>
+         * <li><p>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</p>
+         * </li>
+         * <li><p>PAUSE: The node is a paused node.</p>
+         * </li>
+         * <li><p>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>The ID of the baseline.</p>
+         * <p>Sql node</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -346,7 +350,7 @@ public class GetNodeResponseBody extends TeaModel {
          * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * <p>Default resource group</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;

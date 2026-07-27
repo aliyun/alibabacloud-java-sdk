@@ -4,11 +4,14 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetFolderResponseBody extends TeaModel {
+    /**
+     * <p>The details of the folder.</p>
+     */
     @NameInMap("Data")
     public GetFolderResponseBodyData data;
 
     /**
-     * <p>GetFolder</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -17,7 +20,7 @@ public class GetFolderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The folder ID.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -26,7 +29,7 @@ public class GetFolderResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The path of the folder.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -35,7 +38,7 @@ public class GetFolderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p><a href="http://100.67.165.184/business/api/folders/detail">http://100.67.165.184/business/api/folders/detail</a></p>
+     * <p>The ID of the request. Use this ID to troubleshoot issues if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -44,6 +47,8 @@ public class GetFolderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -105,6 +110,8 @@ public class GetFolderResponseBody extends TeaModel {
 
     public static class GetFolderResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>2735****</p>
          */
@@ -112,6 +119,8 @@ public class GetFolderResponseBody extends TeaModel {
         public String folderId;
 
         /**
+         * <p>The path of the folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
          */

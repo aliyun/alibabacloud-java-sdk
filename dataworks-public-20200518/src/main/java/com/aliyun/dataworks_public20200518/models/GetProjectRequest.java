@@ -8,7 +8,7 @@ public class GetProjectRequest extends TeaModel {
      * <p>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>27</p>
+     * <p>466230</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

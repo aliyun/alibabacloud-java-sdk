@@ -81,7 +81,7 @@ public class CreateRemindRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;hour&quot;:23,&quot;minu&quot;:59}</p>
+     * <p>{&quot;hour&quot;:&quot;23&quot;,&quot;minu&quot;:&quot;59&quot;}</p>
      */
     @NameInMap("Detail")
     public String detail;

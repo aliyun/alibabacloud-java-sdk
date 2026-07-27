@@ -80,7 +80,7 @@ public class ListInnerNodesResponseBody extends TeaModel {
          * <p>The connection string.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("Connection")
         public String connection;
@@ -214,10 +214,14 @@ public class ListInnerNodesResponseBody extends TeaModel {
         /**
          * <p>The scheduling type of the inner node. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The inner node is an auto triggered node.</li>
-         * <li>MANUAL: The inner node is a manually triggered node. The scheduling system does not run the node on a regular basis.</li>
-         * <li>PAUSE: The inner node is a paused node.</li>
-         * <li>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled, but the scheduling system sets the status of the nodes to successful when it starts to run them.</li>
+         * <li><p>NORMAL: The inner node is an auto triggered node.</p>
+         * </li>
+         * <li><p>MANUAL: The inner node is a manually triggered node. The scheduling system does not run the node on a regular basis.</p>
+         * </li>
+         * <li><p>PAUSE: The inner node is a paused node.</p>
+         * </li>
+         * <li><p>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled, but the scheduling system sets the status of the nodes to successful when it starts to run them.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

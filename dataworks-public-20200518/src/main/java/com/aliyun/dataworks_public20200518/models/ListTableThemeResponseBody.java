@@ -140,7 +140,7 @@ public class ListTableThemeResponseBody extends TeaModel {
          * <p>The name of the table level.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Level name</p>
          */
         @NameInMap("Name")
         public String name;

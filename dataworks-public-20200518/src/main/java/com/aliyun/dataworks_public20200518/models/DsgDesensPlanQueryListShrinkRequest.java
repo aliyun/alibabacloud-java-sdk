@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgDesensPlanQueryListShrinkRequest extends TeaModel {
     /**
-     * <p>The owner of the data masking rule.</p>
+     * <p>The owner of the desensitization rule.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -24,7 +24,7 @@ public class DsgDesensPlanQueryListShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. The maximum value is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DsgDesensPlanQueryListShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the sensitive field.</p>
+     * <p>The name of the desensitization rule.</p>
      * 
      * <strong>example:</strong>
      * <p>phone</p>
@@ -43,7 +43,7 @@ public class DsgDesensPlanQueryListShrinkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The ID of the level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the list of IDs.</p>
+     * <p>The ID of the Level-2 data desensitization scene. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,10 +53,12 @@ public class DsgDesensPlanQueryListShrinkRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>The status of the data masking rule. Valid values:</p>
+     * <p>The status of the desensitization rule. Valid values:</p>
      * <ul>
-     * <li>0: expired</li>
-     * <li>1: effective</li>
+     * <li><p>0: Inactive</p>
+     * </li>
+     * <li><p>1: Active</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

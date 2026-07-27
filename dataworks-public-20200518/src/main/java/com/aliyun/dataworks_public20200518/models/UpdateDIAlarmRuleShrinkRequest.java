@@ -35,9 +35,12 @@ public class UpdateDIAlarmRuleShrinkRequest extends TeaModel {
     /**
      * <p>The metric type in the alert rule. Valid values:</p>
      * <ul>
-     * <li>Heartbeat</li>
-     * <li>FailoverCount</li>
-     * <li>Delay</li>
+     * <li><p>Heartbeat</p>
+     * </li>
+     * <li><p>FailoverCount</p>
+     * </li>
+     * <li><p>Delay</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

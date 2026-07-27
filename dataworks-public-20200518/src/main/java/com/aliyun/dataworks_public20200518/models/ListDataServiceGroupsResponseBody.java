@@ -72,7 +72,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
          * <p>The description of the business process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Workflow description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -90,7 +90,7 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
          * <p>The name of the business process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>Workflow name</p>
          */
         @NameInMap("GroupName")
         public String groupName;

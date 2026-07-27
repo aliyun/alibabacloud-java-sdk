@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListPermissionApplyOrdersRequest extends TeaModel {
     /**
-     * <p>The type of permission request. Valid values:</p>
+     * <p>The type of the application order. Valid values:</p>
      * <ul>
-     * <li>MaxComputeTable: Permission request for MaxCompute tables</li>
-     * <li>MaxComputeFunction: Permission request for MaxCompute functions</li>
-     * <li>MaxComputeResource: Permission request for MaxCompute resources</li>
-     * <li>DLFSchema: Permission request for DLF 1.0 schemas</li>
-     * <li>DLFTable: Permission request for DLF 1.0 tables</li>
-     * <li>DLFColumn: Permission request for DLF 1.0 columns</li>
-     * <li>DsApiDeploy: Permission request for publishing data services</li>
+     * <li>[MaxComputeTable] MaxCompute table permission application order.</li>
+     * <li>[MaxComputeFunction] MaxCompute function application order.</li>
+     * <li>[MaxComputeResource] MaxCompute resource application order.</li>
+     * <li>[DLFSchema] DLF 1.0 schema permission application order.</li>
+     * <li>[DLFTable] DLF 1.0 table permission application order.</li>
+     * <li>[DLFColumn] DLF 1.0 column permission application order.</li>
+     * <li>[DsApiDeploy] DataService publishing permission application order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public String catalogName;
 
     /**
-     * <p>The end of the time range to query. You can query all the permissions request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.</p>
+     * <p>The end time for querying application orders, specified as a UNIX timestamp. If this parameter is not specified, application orders up to the current time are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1617200471885</p>
@@ -42,10 +42,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
 
     /**
      * <p>This parameter is deprecated and does not take effect.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>odps</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>odps</p>
@@ -54,22 +50,13 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The status of the permission request. Valid values:</p>
+     * <p>The status of the application order. Valid values:</p>
      * <ul>
-     * <li>1: Pending approval</li>
-     * <li>2: Approved and authorization succeeded</li>
-     * <li>3: Approved but authorization failed</li>
-     * <li>4: Rejected</li>
-     * <li>5: Withdrawn</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0</li>
-     * <li>1</li>
-     * <li>2</li>
-     * <li>3</li>
-     * <li>4</li>
-     * <li>5</li>
+     * <li>1: Pending approval.</li>
+     * <li>2: Approved, authorization succeeded.</li>
+     * <li>3: Approved, authorization failed.</li>
+     * <li>4: Rejected.</li>
+     * <li>5: Withdrawn.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +66,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer flowStatus;
 
     /**
-     * <p>The name of the MaxCompute project with which the permission request order is associated. If you do not specify the parameter, the permission request orders of all MaxCompute projects are returned.</p>
+     * <p>The name of the MaxCompute project to which the application order belongs. If this parameter is not specified, application orders from all MaxCompute projects are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>aMaxComputeProject</p>
@@ -89,11 +76,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
 
     /**
      * <p>This parameter is deprecated and does not take effect.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>1</li>
-     * <li>0</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,7 +84,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer orderType;
 
     /**
-     * <p>The page number for pagination. The value must be a positive integer greater than or equal to 1. Default value: 1.</p>
+     * <p>The page number for paginated queries. The value must be a positive integer greater than or equal to 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -120,11 +102,11 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query type for permission requests. Valid values:</p>
+     * <p>The query type of the application order. Valid values:</p>
      * <ul>
-     * <li>0: Permission requests submitted by me</li>
-     * <li>1: Permission requests pending my approval</li>
-     * <li>2: All permission requests</li>
+     * <li>0: Application orders submitted by me.</li>
+     * <li>1: Application orders approved by me.</li>
+     * <li>2: All application orders.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -135,7 +117,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer queryType;
 
     /**
-     * <p>The beginning of the time range to query. You can query all the permissions request orders that have been submitted after the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders are queried.</p>
+     * <p>The start time for querying application orders, specified as a UNIX timestamp. If this parameter is not specified, all application orders are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1616200471885</p>
@@ -144,7 +126,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The name of the table with which the permission request order is associated. If you do not specify the parameter, the permission request orders of all tables are returned.</p>
+     * <p>The table name included in the application order. If this parameter is not specified, application orders for all tables are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>aTableName</p>
@@ -153,7 +135,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The ID of the workspace to which the permission request belongs. If you do not specify this parameter, permission requests from all workspaces are returned. To obtain the workspace ID, log on to the DataWorks console and navigate to the workspace configuration page.</p>
+     * <p>The ID of the workspace to which the application order belongs. If this parameter is not specified, application orders from all workspaces are returned. You can log on to the DataWorks console and go to the Workspace Settings page to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

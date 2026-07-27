@@ -9,7 +9,7 @@ public class UpdateClusterConfigsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>12345</p>
      */
     @NameInMap("ClusterId")
     public Long clusterId;

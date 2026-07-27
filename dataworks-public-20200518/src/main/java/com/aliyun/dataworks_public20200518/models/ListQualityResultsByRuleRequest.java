@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListQualityResultsByRuleRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <p>This parameter is used together with the StartDate parameter. The interval between the time specified by this parameter and the time specified by the StartDate parameter cannot exceed 7 days.</p>
+     * <p>You must configure this parameter together with the StartDate parameter. The time range to query cannot exceed 7 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,16 +36,16 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
+     * <p>The ID of the DataWorks workspace.</p>
      * 
      * <strong>example:</strong>
-     * <p>12345</p>
+     * <p>123456</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine or data source for which data quality is monitored.</p>
+     * <p>The name of the compute engine or data source for which you want to perform data quality monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The monitoring rule ID. You can use the ID and information such as a partition filter expression to perform a joint query.</p>
+     * <p>The ID of the monitoring rule. You can use the rule ID and a partition filter to query the monitoring results of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ListQualityResultsByRuleRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <p>This parameter is used together with the EndDate parameter. The interval between the time specified by this parameter and the time specified by the EndDate parameter cannot exceed 7 days.</p>
+     * <p>You must configure this parameter together with the EndDate parameter. The time range to query cannot exceed 7 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

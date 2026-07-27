@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityResultsByEntityResponseBody extends TeaModel {
     /**
-     * <p>The data structure of the check results.</p>
+     * <p>The data object that contains the quality check results.</p>
      */
     @NameInMap("Data")
     public ListQualityResultsByEntityResponseBodyData data;
@@ -38,7 +38,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CBA58543-00D4-41****</p>
@@ -110,7 +110,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
     public static class ListQualityResultsByEntityResponseBodyDataRuleChecksReferenceValue extends TeaModel {
         /**
-         * <p>The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.</p>
+         * <p>The business date. If the monitored data is offline, the business date is typically the day before the check is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-03</p>
@@ -119,7 +119,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of the DiscreteProperty parameter are Male, Female, and null.</p>
+         * <p>The value of the sample field when a <code>group by</code> clause is used. For example, if you group by the gender field, the values for <code>DiscreteProperty</code> can be male, female, or null.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -128,7 +128,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String discreteProperty;
 
         /**
-         * <p>The check result.</p>
+         * <p>The result of a single check.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -137,7 +137,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Integer singleCheckResult;
 
         /**
-         * <p>The threshold.</p>
+         * <p>The threshold that was applied to this historical data point.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -146,7 +146,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Float threshold;
 
         /**
-         * <p>The check value.</p>
+         * <p>The historical check value.</p>
          * 
          * <strong>example:</strong>
          * <p>19</p>
@@ -203,7 +203,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
     public static class ListQualityResultsByEntityResponseBodyDataRuleChecksSampleValue extends TeaModel {
         /**
-         * <p>The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.</p>
+         * <p>The business date. If the monitored data is offline, the business date is typically the day before the check is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-03</p>
@@ -212,7 +212,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of the DiscreteProperty parameter are Male, Female, and null.</p>
+         * <p>The value of the sample field when a <code>group by</code> clause is used. For example, if you group by the gender field, the values for <code>DiscreteProperty</code> can be male, female, or null.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -262,7 +262,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
     public static class ListQualityResultsByEntityResponseBodyDataRuleChecks extends TeaModel {
         /**
-         * <p>The monitored partition in the data source table.</p>
+         * <p>The expression that specifies the data partition that was checked.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20200912</p>
@@ -271,7 +271,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String actualExpression;
 
         /**
-         * <p>The time when the monitoring started.</p>
+         * <p>The start time of the check. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1600704000000</p>
@@ -280,7 +280,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Long beginTime;
 
         /**
-         * <p>The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.</p>
+         * <p>The business date. If the monitored data is offline, the business date is typically the day before the check is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>1600704000000</p>
@@ -289,10 +289,12 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Long bizDate;
 
         /**
-         * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+         * <p>The strength of the monitoring rule. Valid values:</p>
          * <ul>
-         * <li>1: the monitoring rule is a strong rule.</li>
-         * <li>0: the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+         * <li><p>1: Strong Rule. If a Strong Rule check generates a critical alert, the associated Scheduling Task is blocked.</p>
+         * </li>
+         * <li><p>0: Weak Rule.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -302,11 +304,14 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Integer blockType;
 
         /**
-         * <p>The check result. The value of this parameter is the same as the value of the CheckResultStatus parameter. Valid values:</p>
+         * <p>The check result. This parameter usually has the same value as <code>CheckResultStatus</code>. Valid values:</p>
          * <ul>
-         * <li>0: indicates that the data source table is normal.</li>
-         * <li>1: indicates that a warning alert is reported.</li>
-         * <li>2: indicates that a critical alert is reported.</li>
+         * <li><p>0: Normal</p>
+         * </li>
+         * <li><p>1: Warning</p>
+         * </li>
+         * <li><p>2: Critical</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -316,11 +321,14 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Integer checkResult;
 
         /**
-         * <p>The check result of the monitoring rule. Valid values:</p>
+         * <p>The status of the check result. This parameter corresponds to the status displayed in the UI. Valid values:</p>
          * <ul>
-         * <li>0: indicates that the data source table is normal.</li>
-         * <li>1: indicates that a warning alert is reported.</li>
-         * <li>2: indicates that a critical alert is reported.</li>
+         * <li><p>0: Normal</p>
+         * </li>
+         * <li><p>1: Warning</p>
+         * </li>
+         * <li><p>2: Critical</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,7 +338,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Integer checkResultStatus;
 
         /**
-         * <p>The checker ID.</p>
+         * <p>The ID of the checker.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -348,11 +356,14 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String checkerName;
 
         /**
-         * <p>The check type. Valid values:</p>
+         * <p>The type of the checker. Valid values:</p>
          * <ul>
-         * <li>0: indicates that the monitoring is performed based on a fixed value.</li>
-         * <li>1: indicates that the monitoring is performed based on a non-fixed value.</li>
-         * <li>2: indicates that the monitoring is performed based on a dynamic threshold.</li>
+         * <li><p>0: Fixed Value</p>
+         * </li>
+         * <li><p>1: Fluctuation</p>
+         * </li>
+         * <li><p>2: Dynamic Threshold</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,7 +382,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The threshold for a critical alert. The threshold indicates the deviation of the check result from the expected value. You can specify a value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * <p>The acceptable deviation from the expected value that triggers a critical alert. This threshold is customizable. If a critical alert is triggered for a Strong Rule, the associated Scheduling Task is blocked.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -380,7 +391,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Float criticalThreshold;
 
         /**
-         * <p>The scheduling frequency. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.</p>
+         * <p>The scheduling cycle. A common value is YMD, which represents year, month, and day.</p>
          * 
          * <strong>example:</strong>
          * <p>YMD</p>
@@ -389,10 +400,12 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String dateType;
 
         /**
-         * <p>Indicates whether the monitoring is discrete monitoring. Valid values:</p>
+         * <p>Specifies whether the check is a discrete check. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The check is a discrete check.</p>
+         * </li>
+         * <li><p>false: The check is not a discrete check.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,7 +415,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Boolean discreteCheck;
 
         /**
-         * <p>The deadline for querying the check result.</p>
+         * <p>The end time of the check. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1600704000000</p>
@@ -429,7 +442,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Float expectValue;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The Node ID of the Scheduling Task.</p>
          * 
          * <strong>example:</strong>
          * <p>1112323123</p>
@@ -438,7 +451,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String externalId;
 
         /**
-         * <p>The type of the scheduling system. Only CWF scheduling systems are supported.</p>
+         * <p>The type of the scheduling system. Currently, only CWF is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>CWF2</p>
@@ -447,10 +460,12 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String externalType;
 
         /**
-         * <p>Indicates whether the monitoring is performed based on a fixed value. Valid values:</p>
+         * <p>Specifies whether the check is based on a fixed value. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The check is based on a fixed value.</p>
+         * </li>
+         * <li><p>false: The check is not based on a fixed value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -460,7 +475,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Boolean fixedCheck;
 
         /**
-         * <p>The primary key ID.</p>
+         * <p>The unique ID of the check result.</p>
          * 
          * <strong>example:</strong>
          * <p>121212121</p>
@@ -469,10 +484,12 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the check result is the same as the predicted result. Valid values:</p>
+         * <p>Specifies whether the result is a predicted value. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The result is a predicted value.</p>
+         * </li>
+         * <li><p>false: The result is not a predicted value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -482,7 +499,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Boolean isPrediction;
 
         /**
-         * <p>The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.</p>
+         * <p>The predicted lower limit. This value is automatically generated after you set a threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>2344</p>
@@ -500,7 +517,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String matchExpression;
 
         /**
-         * <p>The method used to collect sample data, such as such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>The method for collecting sample data. Valid values include <code>avg</code>, <code>count</code>, <code>sum</code>, <code>min</code>, <code>max</code>, <code>count_distinct</code>, <code>user_defined</code>, <code>table_count</code>, <code>table_size</code>, <code>table_dt_load_count</code>, <code>table_dt_refuseload_count</code>, <code>null_value</code>, <code>null_value/table_count</code>, <code>(table_count-count_distinct)/table_count</code>, and <code>table_count-count_distinct</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>count_distinct</p>
@@ -519,7 +536,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String op;
 
         /**
-         * <p>The name of the compute engine or data source for which data quality is monitored.</p>
+         * <p>The name of the monitored compute engine or Data Source.</p>
          * 
          * <strong>example:</strong>
          * <p>autotest</p>
@@ -528,7 +545,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.</p>
+         * <p>The name of the monitored column in the Data Source table.</p>
          * 
          * <strong>example:</strong>
          * <p>type</p>
@@ -543,7 +560,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public java.util.List<ListQualityResultsByEntityResponseBodyDataRuleChecksReferenceValue> referenceValue;
 
         /**
-         * <p>The string of the check result.</p>
+         * <p>The check result, returned as a string.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -552,7 +569,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String resultString;
 
         /**
-         * <p>The ID of the monitoring rule.</p>
+         * <p>The monitoring rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123123232</p>
@@ -570,7 +587,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The current sample value.</p>
+         * <p>The current sample values.</p>
          */
         @NameInMap("SampleValue")
         public java.util.List<ListQualityResultsByEntityResponseBodyDataRuleChecksSampleValue> sampleValue;
@@ -585,7 +602,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The monitoring task ID.</p>
+         * <p>The ID of the check task.</p>
          * 
          * <strong>example:</strong>
          * <p>16008552981681a0d6****</p>
@@ -594,7 +611,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The ID of the monitoring template.</p>
+         * <p>The ID of the rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -603,7 +620,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Integer templateId;
 
         /**
-         * <p>The name of the monitoring template.</p>
+         * <p>The name of the rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>Expected value verification</p>
@@ -612,7 +629,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The time that was taken to run the monitoring task. Unit: seconds.</p>
+         * <p>The time taken to run the check, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>202</p>
@@ -630,7 +647,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public String trend;
 
         /**
-         * <p>The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.</p>
+         * <p>The predicted upper limit. This value is automatically generated after you set a threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>25555</p>
@@ -639,7 +656,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Float upperValue;
 
         /**
-         * <p>The threshold for a warning alert. The threshold indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.</p>
+         * <p>The warning threshold. This value indicates the acceptable deviation from the expected value. You can customize this threshold based on your business requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -1011,13 +1028,13 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The returned check results.</p>
+         * <p>The monitoring rule check results.</p>
          */
         @NameInMap("RuleChecks")
         public java.util.List<ListQualityResultsByEntityResponseBodyDataRuleChecks> ruleChecks;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

@@ -9,7 +9,7 @@ public class GetIDEEventDetailRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8abcb91f-d266-4073-b907-2ed670378ed1</p>
+     * <p>8abcb91f-d266-4073-b907-2ed67****1</p>
      */
     @NameInMap("MessageId")
     public String messageId;

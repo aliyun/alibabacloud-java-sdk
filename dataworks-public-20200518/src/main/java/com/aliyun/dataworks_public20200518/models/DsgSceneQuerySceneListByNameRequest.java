@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgSceneQuerySceneListByNameRequest extends TeaModel {
     /**
-     * <p>The name of the data masking scenario. A fuzzy match is performed in the platform based on a keyword to search for the data masking scenario.</p>
+     * <p>The keyword for a fuzzy search of data masking scenario names.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the details of the deployment task.</p>
+     * <p>The ID of the deployment package. You can then use this ID as a parameter when calling the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> API to obtain the details of the deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>30000001</p>
@@ -14,7 +14,7 @@ public class DeployFileResponseBody extends TeaModel {
     public Long data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -23,7 +23,7 @@ public class DeployFileResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>Error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -32,7 +32,7 @@ public class DeployFileResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class DeployFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
+     * <p>The request ID is used to troubleshoot issues when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
@@ -50,7 +50,7 @@ public class DeployFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

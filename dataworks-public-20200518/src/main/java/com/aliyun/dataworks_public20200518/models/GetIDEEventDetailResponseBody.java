@@ -64,7 +64,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
          * <p>The name of the data source with which the file is associated.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
@@ -699,7 +699,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
          * <p>The name of the data source with which the file is associated.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
@@ -901,7 +901,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
          * <p>The name of the data source with which the file is associated.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
@@ -1063,7 +1063,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
          * <p>The name of the data source to which the table belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;

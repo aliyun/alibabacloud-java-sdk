@@ -63,7 +63,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
          * <p>The comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>The ID of the compute engine instance. The ID is in the Engine type.Engine name format.</p>
+         * <p>Remarks</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -126,7 +126,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
          * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>23</p>
+         * <p>userId</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
@@ -135,7 +135,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
          * <p>The name of the workspace owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>323</p>
+         * <p>my_name</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -162,7 +162,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
          * <p>The display name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>The storage path of the metadatabase of the EMR cluster.</p>
+         * <p>测试项目</p>
          */
         @NameInMap("ProjectNameCn")
         public String projectNameCn;

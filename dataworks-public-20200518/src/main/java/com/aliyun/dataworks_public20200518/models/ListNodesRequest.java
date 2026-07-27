@@ -81,9 +81,12 @@ public class ListNodesRequest extends TeaModel {
     /**
      * <p>The scheduling type. Valid values:</p>
      * <ul>
-     * <li>NORMAL: Nodes are scheduled as expected.</li>
-     * <li>PAUSE: Nodes are paused.</li>
-     * <li>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
+     * <li><p>NORMAL: Nodes are scheduled as expected.</p>
+     * </li>
+     * <li><p>PAUSE: Nodes are paused.</p>
+     * </li>
+     * <li><p>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

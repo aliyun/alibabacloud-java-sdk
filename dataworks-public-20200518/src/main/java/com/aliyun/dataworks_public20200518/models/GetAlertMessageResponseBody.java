@@ -117,7 +117,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>12312312</p>
+         * <p>12312****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;

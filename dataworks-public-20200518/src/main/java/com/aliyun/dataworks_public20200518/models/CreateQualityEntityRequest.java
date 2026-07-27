@@ -6,11 +6,6 @@ import com.aliyun.tea.*;
 public class CreateQualityEntityRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
-     * <p>The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.</p>
-     * <ul>
-     * <li>0</li>
-     * <li>1</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -19,17 +14,7 @@ public class CreateQualityEntityRequest extends TeaModel {
     public Integer entityLevel;
 
     /**
-     * <p>The type of the compute engine or data source.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>odps</li>
-     * <li>emr</li>
-     * <li>hadoop</li>
-     * <li>cdh</li>
-     * <li>analyticdb_for_mysql</li>
-     * <li>hybriddb_for_postgresql</li>
-     * <li>holodb</li>
-     * </ul>
+     * <p>The type of the engine or data source. Valid values: ODPS, EMR, CDH, and HOLO.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +24,7 @@ public class CreateQualityEntityRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The partition filter expression.</p>
+     * <p>The partition expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +34,7 @@ public class CreateQualityEntityRequest extends TeaModel {
     public String matchExpression;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. You can go to the DataWorks console to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -58,7 +43,7 @@ public class CreateQualityEntityRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine or data source.</p>
+     * <p>The name of the engine or data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

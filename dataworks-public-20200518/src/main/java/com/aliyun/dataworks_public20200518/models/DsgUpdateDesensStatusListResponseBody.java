@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     /**
+     * <p>The processing result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,12 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code. Valid values:</p>
+     * <ul>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section of this topic.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1010040007</p>
      */
@@ -19,6 +27,8 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameters are invalid.</p>
      */
@@ -26,6 +36,8 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +45,8 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
      */
@@ -40,6 +54,12 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

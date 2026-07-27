@@ -204,7 +204,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
          * <p>The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps | retail_e_commerce_2 | retail_e_commerce_2 | dws_ec_trd__cate_commodity_gmv_kpy_fy</p>
+         * <p>odps.tt.2</p>
          */
         @NameInMap("NextPrimaryKey")
         public String nextPrimaryKey;

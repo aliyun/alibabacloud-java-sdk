@@ -41,7 +41,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
      * <p>The request ID. You can troubleshoot issues based on the ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>asfasdfs-adfasdf-asfas-dfasdf-asdf</p>
+     * <p>asfsdfas-adfasdf-asfas-dfasdf-asdf</p>
      */
     @NameInMap("RequestId")
     public String requestId;

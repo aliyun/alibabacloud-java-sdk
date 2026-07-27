@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRemindRequest extends TeaModel {
     /**
-     * <p>The ID of the custom alert rule.</p>
+     * <p>The ID of the custom monitoring alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -16,8 +16,10 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <ul>
-     * <li>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</li>
-     * <li>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</li>
+     * <li><p>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</p>
+     * </li>
+     * <li><p>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,8 +58,10 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
      * <ul>
-     * <li>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</li>
-     * <li>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</li>
+     * <li><p>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</p>
+     * </li>
+     * <li><p>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

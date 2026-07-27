@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityFollowerResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the subscriber was successfully deleted. Valid values:</p>
+     * <p>Indicates whether the follower of the partition filter expression was deleted. Valid values:</p>
      * <ul>
-     * <li>true: The subscriber was successfully deleted.</li>
-     * <li>false: The subscriber failed to be deleted. You can troubleshoot errors based on the error message returned.</li>
+     * <li><p><code>true</code>: The follower was deleted.</p>
+     * </li>
+     * <li><p><code>false</code>: The follower failed to be deleted. You can troubleshoot the issue based on the error message.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the subscriber failed to be deleted.</p>
+     * <p>The error message returned if the follower of the partition filter expression fails to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>You have no permission.</p>
@@ -45,7 +47,7 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can troubleshoot errors based on the ID.</p>
+     * <p>The request ID. This parameter is used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>6d739ef6-098a-47****</p>
@@ -56,8 +58,10 @@ public class DeleteQualityFollowerResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The request was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

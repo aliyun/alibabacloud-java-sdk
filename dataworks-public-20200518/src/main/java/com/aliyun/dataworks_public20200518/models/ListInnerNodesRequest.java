@@ -18,7 +18,7 @@ public class ListInnerNodesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>12345</p>
      */
     @NameInMap("OuterNodeId")
     public Long outerNodeId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQualityFollowerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the subscription relationship.</p>
+     * <p>The subscription ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

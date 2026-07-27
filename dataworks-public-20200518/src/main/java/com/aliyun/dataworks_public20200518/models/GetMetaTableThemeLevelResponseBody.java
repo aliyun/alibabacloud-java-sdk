@@ -113,7 +113,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
          * <p>The description of the level.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -139,8 +139,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         /**
          * <p>The type of the level. Valid values:</p>
          * <ul>
-         * <li>1: indicates the logical level.</li>
-         * <li>2: indicates the physical level.</li>
+         * <li><p>1: indicates the logical level.</p>
+         * </li>
+         * <li><p>2: indicates the physical level.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,8 +194,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         /**
          * <p>The level of the theme. Valid values:</p>
          * <ul>
-         * <li>1</li>
-         * <li>2</li>
+         * <li><p>1</p>
+         * </li>
+         * <li><p>2</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

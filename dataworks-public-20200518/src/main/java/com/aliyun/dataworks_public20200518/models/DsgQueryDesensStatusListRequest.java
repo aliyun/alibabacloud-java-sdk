@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DsgQueryDesensStatusListRequest extends TeaModel {
     /**
+     * <p>Query keyword</p>
+     * 
      * <strong>example:</strong>
      * <p>my</p>
      */
@@ -12,6 +14,7 @@ public class DsgQueryDesensStatusListRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>Page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DsgQueryDesensStatusListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DsgQueryDesensStatusListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Primary scene code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class DsgQueryDesensStatusListRequest extends TeaModel {
     public String sceneCode;
 
     /**
+     * <p>Scene ID. Only required when querying project workspace switch data.</p>
+     * 
      * <strong>example:</strong>
      * <p>124</p>
      */

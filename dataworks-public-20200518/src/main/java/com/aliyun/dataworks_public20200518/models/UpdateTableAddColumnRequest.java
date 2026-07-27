@@ -57,7 +57,7 @@ public class UpdateTableAddColumnRequest extends TeaModel {
          * <p>The display name of the field.</p>
          * 
          * <strong>example:</strong>
-         * <p>Chinese</p>
+         * <p>中文</p>
          */
         @NameInMap("ColumnNameCn")
         public String columnNameCn;

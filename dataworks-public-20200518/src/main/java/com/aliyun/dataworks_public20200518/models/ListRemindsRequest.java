@@ -64,7 +64,7 @@ public class ListRemindsRequest extends TeaModel {
      * <p>The keyword in a rule name that is used to search for the rule. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>Keyword</p>
+     * <p>Fuzzy search rule name</p>
      */
     @NameInMap("SearchText")
     public String searchText;

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMetaTablePartitionShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <p>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the ID.</p>
+     * <p>The ID of the EMR cluster. Required only if <strong>DataSourceType</strong> is <strong>EMR</strong>.</p>
+     * <p>Log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -15,7 +15,7 @@ public class GetMetaTablePartitionShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The data source type. Valid values: ODPS and EMR.</p>
      * 
      * <strong>example:</strong>
      * <p>emr</p>
@@ -24,8 +24,8 @@ public class GetMetaTablePartitionShrinkRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The name of the database. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780105.html">ListMetaDB</a> operation to query the name of the metadatabase.</p>
+     * <p>The name of the database. Required only if <strong>DataSourceType</strong> is <strong>EMR</strong>.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2780105.html">ListMetaDB</a> operation to query the database name.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -52,13 +52,13 @@ public class GetMetaTablePartitionShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The logic for sorting partitions in the metatable.</p>
+     * <p>The partition sorting logic.</p>
      */
     @NameInMap("SortCriterion")
     public String sortCriterionShrink;
 
     /**
-     * <p>The unique identifier of the metatable.</p>
+     * <p>The unique identifier of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>odps.engine_name.table_name</p>
@@ -67,8 +67,8 @@ public class GetMetaTablePartitionShrinkRequest extends TeaModel {
     public String tableGuid;
 
     /**
-     * <p>The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the name of the metatable.</p>
+     * <p>The name of the EMR table. Required only if <strong>DataSourceType</strong> is <strong>EMR</strong>.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the table name.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>

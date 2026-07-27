@@ -38,7 +38,7 @@ public class UpdateWorkbenchEventResultRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>03400b03-b721-4c34-8727-2d6884077091</p>
+     * <p>03400b03-b721-4c34-8727-2****1</p>
      */
     @NameInMap("MessageId")
     public String messageId;

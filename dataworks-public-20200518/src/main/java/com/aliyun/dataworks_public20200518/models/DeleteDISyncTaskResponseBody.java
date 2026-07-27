@@ -22,8 +22,10 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,8 +76,10 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the synchronization task is deleted. Valid values:</p>
          * <ul>
-         * <li>success: The synchronization task is deleted.</li>
-         * <li>fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.</li>
+         * <li><p>success: The synchronization task is deleted.</p>
+         * </li>
+         * <li><p>fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

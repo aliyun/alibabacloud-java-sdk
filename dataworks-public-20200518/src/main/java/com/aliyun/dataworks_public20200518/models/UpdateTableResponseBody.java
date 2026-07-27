@@ -16,8 +16,10 @@ public class UpdateTableResponseBody extends TeaModel {
     /**
      * <p>The information about the request task. After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is terminated due to one of the following issues, address the issue based on the error code and initiate the request task again:</p>
      * <ul>
-     * <li>The request task fails to be submitted.</li>
-     * <li>After the request task is submitted, a subtask fails to run.</li>
+     * <li><p>The request task fails to be submitted.</p>
+     * </li>
+     * <li><p>After the request task is submitted, a subtask fails to run.</p>
+     * </li>
      * </ul>
      */
     @NameInMap("TaskInfo")
@@ -48,8 +50,10 @@ public class UpdateTableResponseBody extends TeaModel {
         /**
          * <p>The details about the status of the current subtask. Valid values:</p>
          * <ul>
-         * <li>If the current subtask is successful, success is returned.</li>
-         * <li>If the current subtask fails, the error details are displayed.</li>
+         * <li><p>If the current subtask is successful, success is returned.</p>
+         * </li>
+         * <li><p>If the current subtask fails, the error details are displayed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -70,9 +74,12 @@ public class UpdateTableResponseBody extends TeaModel {
         /**
          * <p>The status of the current subtask. Valid values:</p>
          * <ul>
-         * <li>operating: The subtask is running.</li>
-         * <li>success: The subtask succeeds.</li>
-         * <li>failure: The subtask fails to run. For more information about the error details, see the Content parameter.</li>
+         * <li><p>operating: The subtask is running.</p>
+         * </li>
+         * <li><p>success: The subtask succeeds.</p>
+         * </li>
+         * <li><p>failure: The subtask fails to run. For more information about the error details, see the Content parameter.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

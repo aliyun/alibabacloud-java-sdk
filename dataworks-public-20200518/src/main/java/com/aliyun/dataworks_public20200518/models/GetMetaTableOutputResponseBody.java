@@ -14,7 +14,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
      * <p>The error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -23,7 +23,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>SUCCESS</p>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -41,7 +41,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0000-0000-0000-000</p>
+     * <p>0bc1ec92159376****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -113,7 +113,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The end time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-02-12 0:32:12</p>
+         * <p>2020-01-01 00:01:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -122,7 +122,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>128</p>
+         * <p>333</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -131,7 +131,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The start time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-02-12 0:34:13</p>
+         * <p>2020-01-01 00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -140,7 +140,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The GUID of the MaxCompute table.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps.sample_project.sample_table</p>
+         * <p>odps.engine_name.table_name</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
@@ -158,7 +158,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>987654321</p>
+         * <p>3521</p>
          */
         @NameInMap("TaskInstanceId")
         public Long taskInstanceId;
@@ -167,7 +167,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The waiting time.</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>323</p>
          */
         @NameInMap("WaitTime")
         public String waitTime;
@@ -264,7 +264,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>128</p>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgQueryDesensStatusListResponseBody extends TeaModel {
+    /**
+     * <p>Response data details.</p>
+     */
     @NameInMap("Data")
     public DsgQueryDesensStatusListResponseBodyData data;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400010</p>
      */
@@ -15,6 +20,9 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message
+     * .</p>
+     * 
      * <strong>example:</strong>
      * <p>param error</p>
      */
@@ -22,6 +30,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +39,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>
      */
@@ -36,6 +48,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +111,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
 
     public static class DsgQueryDesensStatusListResponseBodyDataPageData extends TeaModel {
         /**
+         * <p>Switch status
+         * 1: Enabled
+         * 0: Disabled</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -104,6 +122,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         public Integer desensStatus;
 
         /**
+         * <p>Represents project space name or workspace ID depending on the scenario</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -111,6 +131,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         public String handleSpace;
 
         /**
+         * <p>Switch ID</p>
+         * 
          * <strong>example:</strong>
          * <p>56207</p>
          */
@@ -118,6 +140,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Workspace unique identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>test_space</p>
          */
@@ -125,6 +149,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         public String workspaceIdentifier;
 
         /**
+         * <p>Workspace name</p>
+         * 
          * <strong>example:</strong>
          * <p>test_space</p>
          */
@@ -179,10 +205,15 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
     }
 
     public static class DsgQueryDesensStatusListResponseBodyData extends TeaModel {
+        /**
+         * <p>Data masking rule type.</p>
+         */
         @NameInMap("PageData")
         public java.util.List<DsgQueryDesensStatusListResponseBodyDataPageData> pageData;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,6 +221,9 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Number of records displayed per page
+         * .</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -197,6 +231,8 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

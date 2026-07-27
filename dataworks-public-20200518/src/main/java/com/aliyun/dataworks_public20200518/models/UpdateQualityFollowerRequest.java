@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateQualityFollowerRequest extends TeaModel {
     /**
-     * <p>The notification method. Valid values: 1, 2, 4, 5, 6, 7, 8, and 9. The value 1 indicates that the notification is sent by email. The value 2 indicates that the notification is sent by email and text message. The value 4 indicates that the notification is sent by a DingTalk chatbot. The value 5 indicates that the notification is sent by a DingTalk chatbot to all members in a DingTalk group. The value 6 indicates that the notification is sent by Lark. The value 7 indicates that the notification is sent by WeCom. The value 8 indicates that the notification is sent by webhook. The value 9 indicates that the notification is sent by phone call.</p>
+     * <p>The notification method. Valid values: 1 (email), 2 (email and SMS), 4 (DingTalk group chatbot), 5 (DingTalk group chatbot with an @all reminder), 6 (Lark), 7 (WeCom), 8 (webhook), and 9 (phone call).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateQualityFollowerRequest extends TeaModel {
     public Integer alarmMode;
 
     /**
-     * <p>The name of the subscriber.</p>
+     * <p>The subscriber.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateQualityFollowerRequest extends TeaModel {
     public String follower;
 
     /**
-     * <p>The ID of the subscription relationship.</p>
+     * <p>The ID of the subscription.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateQualityFollowerRequest extends TeaModel {
     public Long followerId;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the DataWorks console to obtain the workspace ID.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

@@ -113,7 +113,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
          * <p>The description of the metatable.</p>
          * 
          * <strong>example:</strong>
-         * <p>\# Business requirements\n\n\&lt;a name=\&quot;xiw5n\&quot;</p>
+         * <h1>Business requirements\n\n&lt;a name=&quot;xiw5n&quot;</h1>
          */
         @NameInMap("Content")
         public String content;

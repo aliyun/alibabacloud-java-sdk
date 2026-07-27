@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFoldersRequest extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The number of the page to return. This parameter is used for pagination.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListFoldersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The number of entries per page. The default value is 10. The maximum value is 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ListFoldersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>0000-ABCD-EFG****</p>
+     * <p>The path of the parent folder.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListFoldersRequest extends TeaModel {
     public String parentFolderPath;
 
     /**
-     * <p>The error message.</p>
+     * <p>The ID of the DataWorks workspace. Log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must set either this parameter or ProjectIdentifier to specify the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -44,7 +44,7 @@ public class ListFoldersRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * <p>The name of the DataWorks workspace. Log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must set either this parameter or ProjectId to specify the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>

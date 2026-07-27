@@ -131,7 +131,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("Connection")
         public String connection;
@@ -192,7 +192,7 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The file ID. You can call the ListFiles operation to query the ID.</p>
-         * <p>**</p>
+         * <p>\<em>\</em></p>
          * <p><strong>Warning</strong> This field is deprecated.</p>
          * 
          * <strong>example:</strong>
@@ -341,7 +341,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>The ID of the workflow.</p>
          * 
          * <strong>example:</strong>
-         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+         * <p>Default resource group</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;

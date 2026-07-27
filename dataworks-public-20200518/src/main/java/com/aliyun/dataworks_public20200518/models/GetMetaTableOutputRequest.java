@@ -9,7 +9,7 @@ public class GetMetaTableOutputRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-02-15</p>
+     * <p>2020-05-27</p>
      */
     @NameInMap("EndDate")
     public String endDate;
@@ -37,7 +37,7 @@ public class GetMetaTableOutputRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-02-02</p>
+     * <p>2020-06-27</p>
      */
     @NameInMap("StartDate")
     public String startDate;
@@ -47,7 +47,7 @@ public class GetMetaTableOutputRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>odps.sample_project.sample_table</p>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

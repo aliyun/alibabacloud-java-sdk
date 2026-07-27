@@ -8,7 +8,7 @@ public class CreateTableLevelRequest extends TeaModel {
      * <p>The description of the table level.</p>
      * 
      * <strong>example:</strong>
-     * <p>The HTTP status code returned.</p>
+     * <p>Level description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -28,7 +28,7 @@ public class CreateTableLevelRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the table level.</p>
+     * <p>Level 1</p>
      */
     @NameInMap("Name")
     public String name;

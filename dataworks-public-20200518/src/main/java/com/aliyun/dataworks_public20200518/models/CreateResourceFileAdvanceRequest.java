@@ -77,7 +77,7 @@ public class CreateResourceFileAdvanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000</p>
+     * <p>10111</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -203,7 +203,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
          * <p>The ID of the workspace to which the baseline belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>9527</p>
+         * <p>100001</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;

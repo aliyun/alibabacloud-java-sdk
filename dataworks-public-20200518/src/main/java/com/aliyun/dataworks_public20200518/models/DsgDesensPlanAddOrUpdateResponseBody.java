@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
     /**
-     * <p>The execution result of adding or modifying a data masking rule.</p>
+     * <p>Indicates whether the add or update operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use the ID to trace logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>102400001</p>
@@ -50,7 +50,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true false</p>
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates that the request was successful. A value of <code>false</code> indicates that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

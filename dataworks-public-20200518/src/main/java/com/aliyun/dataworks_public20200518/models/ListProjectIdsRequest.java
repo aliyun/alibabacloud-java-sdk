@@ -10,7 +10,7 @@ public class ListProjectIdsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>171111</p>
+     * <p>139699392458****</p>
      */
     @NameInMap("UserId")
     public String userId;

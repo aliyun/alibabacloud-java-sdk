@@ -9,7 +9,7 @@ public class UpdateTableThemeRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>table folder name</p>
+     * <p>Topic name</p>
      */
     @NameInMap("Name")
     public String name;

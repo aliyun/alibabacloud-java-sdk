@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LineageEntityVO extends TeaModel {
     /**
+     * <p>A map of additional key-value attributes for the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>attribute map</p>
      */
@@ -12,7 +14,7 @@ public class LineageEntityVO extends TeaModel {
     public java.util.Map<String, String> attributes;
 
     /**
-     * <p>Detail url of entity</p>
+     * <p>A URL for more details about the entity.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://domain.test.url/entity">http://domain.test.url/entity</a></p>
@@ -21,6 +23,8 @@ public class LineageEntityVO extends TeaModel {
     public String detailUrl;
 
     /**
+     * <p>The type of the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>maxcompute-table</p>
      */
@@ -28,7 +32,7 @@ public class LineageEntityVO extends TeaModel {
     public String entityType;
 
     /**
-     * <p>Name of entity</p>
+     * <p>The human-readable name of the entity.</p>
      * 
      * <strong>example:</strong>
      * <p>tableName</p>
@@ -37,6 +41,8 @@ public class LineageEntityVO extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner of the entity.</p>
+     * 
      * <strong>example:</strong>
      * <p>owner</p>
      */
@@ -44,7 +50,7 @@ public class LineageEntityVO extends TeaModel {
     public String owner;
 
     /**
-     * <p>Parent name of entity</p>
+     * <p>The name of the entity\&quot;s parent container, such as a database.</p>
      * 
      * <strong>example:</strong>
      * <p>dbName</p>
@@ -53,7 +59,7 @@ public class LineageEntityVO extends TeaModel {
     public String parentName;
 
     /**
-     * <p>Unique identifier of entity</p>
+     * <p>The unique, fully qualified name of the entity.</p>
      * 
      * <strong>example:</strong>
      * <p>maxcompute-table.projectName.tablename</p>

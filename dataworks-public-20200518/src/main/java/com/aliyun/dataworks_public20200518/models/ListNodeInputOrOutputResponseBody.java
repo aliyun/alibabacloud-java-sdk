@@ -122,7 +122,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
          * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234667</p>
+         * <p>12314567</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;

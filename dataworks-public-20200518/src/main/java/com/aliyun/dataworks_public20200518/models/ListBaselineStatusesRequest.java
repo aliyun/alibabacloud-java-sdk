@@ -74,7 +74,7 @@ public class ListBaselineStatusesRequest extends TeaModel {
      * <p>The keyword of the baseline name used to search for the baseline.</p>
      * 
      * <strong>example:</strong>
-     * <p>Keyword of the baseline name</p>
+     * <p>Keyword</p>
      */
     @NameInMap("SearchText")
     public String searchText;

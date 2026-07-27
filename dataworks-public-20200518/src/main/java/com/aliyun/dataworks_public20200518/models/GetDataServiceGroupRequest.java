@@ -19,7 +19,7 @@ public class GetDataServiceGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10001</p>
+     * <p>10002</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
@@ -28,7 +28,7 @@ public class GetDataServiceGroupRequest extends TeaModel {
      * <p>The tenant ID. This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>10002</p>
+     * <p>10001</p>
      */
     @NameInMap("TenantId")
     public Long tenantId;

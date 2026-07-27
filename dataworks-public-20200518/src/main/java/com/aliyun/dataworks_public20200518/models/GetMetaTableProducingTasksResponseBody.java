@@ -4,54 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableProducingTasksResponseBody extends TeaModel {
-    /**
-     * <p>The output tasks of the metatable.</p>
-     */
     @NameInMap("Data")
     public java.util.List<GetMetaTableProducingTasksResponseBodyData> data;
 
-    /**
-     * <p>The error code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>&quot;0&quot;</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>00000-00000-00000-00000</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request was successful. Valid values: true and false. The value true indicates that the request was successful. The value false indicates that the request failed.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,18 +76,9 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableProducingTasksResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the output task.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9876543210</p>
-         */
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>The name of the output task.</p>
-         */
         @NameInMap("TaskName")
         public String taskName;
 

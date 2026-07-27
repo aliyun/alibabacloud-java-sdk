@@ -11,7 +11,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     public java.util.List<DsgQueryDefaultTemplatesResponseBodyData> data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>1029030003</p>
@@ -20,7 +20,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>param error</p>
@@ -29,7 +29,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -38,7 +38,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The Request ID. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>102400001</p>
@@ -49,8 +49,10 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +116,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
 
     public static class DsgQueryDefaultTemplatesResponseBodyData extends TeaModel {
         /**
-         * <p>The sensitive field type.</p>
+         * <p>The Sensitive Data Type.</p>
          * 
          * <strong>example:</strong>
          * <p>phone</p>
@@ -123,7 +125,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The supported data masking methods and parameter descriptions.</p>
+         * <p>A list of supported Desensitization Methods and their parameter descriptions.</p>
          */
         @NameInMap("DesensPlanTemplate")
         public java.util.Map<String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate;

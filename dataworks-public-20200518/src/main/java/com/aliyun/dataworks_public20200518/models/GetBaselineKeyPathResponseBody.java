@@ -351,7 +351,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
          * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345</p>
+         * <p>123456</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;

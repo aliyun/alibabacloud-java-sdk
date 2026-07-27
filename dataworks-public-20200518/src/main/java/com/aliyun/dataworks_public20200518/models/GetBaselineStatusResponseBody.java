@@ -149,7 +149,7 @@ public class GetBaselineStatusResponseBody extends TeaModel {
          * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>Node name</p>
+         * <p>节点名称</p>
          */
         @NameInMap("NodeName")
         public String nodeName;

@@ -18,7 +18,7 @@ public class CreateDataServiceGroupRequest extends TeaModel {
      * <p>The description of the business process.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test business process</p>
+     * <p>Test workflow</p>
      */
     @NameInMap("Description")
     public String description;
@@ -28,7 +28,7 @@ public class CreateDataServiceGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Business process name</p>
+     * <p>Workflow name</p>
      */
     @NameInMap("GroupName")
     public String groupName;

@@ -9,7 +9,7 @@ public class GetBusinessRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1000000001</p>
+     * <p>1000000111</p>
      */
     @NameInMap("BusinessId")
     public Long businessId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgUserGroupQueryListRequest extends TeaModel {
     /**
-     * <p>The keyword of the user group name. A fuzzy match is performed based on the keyword to search for the user group.</p>
+     * <p>A keyword for the user group name. The service performs a fuzzy search to find matching user groups.</p>
      * 
      * <strong>example:</strong>
      * <p>yun_group</p>
@@ -23,7 +23,7 @@ public class DsgUserGroupQueryListRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of the page to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DsgUserGroupQueryListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the compute engine. If you want to query the information about a MaxCompute user group, you need to configure this parameter.</p>
+     * <p>The name of the MaxCompute project to query for user groups.</p>
      * 
      * <strong>example:</strong>
      * <p>dev_project</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityFollowerResponseBody extends TeaModel {
     /**
-     * <p>The information about the subscription relationship.</p>
+     * <p>An array of follower objects.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetQualityFollowerResponseBodyData> data;
@@ -29,7 +29,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP return code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>38cbdef0-f6cf-49</p>
@@ -47,7 +47,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the call is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,12 +110,16 @@ public class GetQualityFollowerResponseBody extends TeaModel {
 
     public static class GetQualityFollowerResponseBodyData extends TeaModel {
         /**
-         * <p>The alert mode. The value is as follows:</p>
+         * <p>The alarm notification method. Valid values:</p>
          * <ul>
-         * <li>1 (Mail)</li>
-         * <li>2 (email and SMS)</li>
-         * <li>4 (DingTalk groups of robots or hook)</li>
-         * <li>5 (DingTalk groups of robots @ ALL)</li>
+         * <li><p>1: by email</p>
+         * </li>
+         * <li><p>2: by email and SMS</p>
+         * </li>
+         * <li><p>4: by DingTalk chatbot or webhook</p>
+         * </li>
+         * <li><p>5: by DingTalk chatbot with the @all keyword</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +129,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public Integer alarmMode;
 
         /**
-         * <p>The time when the data quality rule subscription configuration was created.</p>
+         * <p>The time when the subscription was created. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1541576644000</p>
@@ -143,7 +147,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>The subscriber to receive alert information.</p>
+         * <p>The follower who receives alarm notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -152,7 +156,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public String follower;
 
         /**
-         * <p>The Alibaba Cloud account name of the subscriber.</p>
+         * <p>The Alibaba Cloud account name of the follower.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -161,7 +165,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public String followerAccountName;
 
         /**
-         * <p>The ID of the subscription relationship.</p>
+         * <p>The subscription ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -170,7 +174,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The update time of the data quality rule subscription configuration.</p>
+         * <p>The time when the subscription was last updated. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1541576644000</p>

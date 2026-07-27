@@ -44,7 +44,7 @@ public class CreateTableLevelResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>The error message returned.</p>
+     * <p>Request ID</p>
      */
     @NameInMap("RequestId")
     public String requestId;

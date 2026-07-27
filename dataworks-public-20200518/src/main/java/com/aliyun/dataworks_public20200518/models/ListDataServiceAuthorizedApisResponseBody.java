@@ -122,7 +122,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
          * <p>The name of the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>My API Name</p>
+         * <p>My API name</p>
          */
         @NameInMap("ApiName")
         public String apiName;

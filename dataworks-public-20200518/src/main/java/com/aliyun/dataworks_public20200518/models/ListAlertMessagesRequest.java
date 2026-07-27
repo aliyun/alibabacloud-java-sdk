@@ -31,7 +31,7 @@ public class ListAlertMessagesRequest extends TeaModel {
      * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>12345</p>
      */
     @NameInMap("AlertUser")
     public String alertUser;

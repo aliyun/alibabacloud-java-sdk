@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQualityRuleResponseBody extends TeaModel {
     /**
-     * <p>Information about the retrieved rule.</p>
+     * <p>The quality rule details.</p>
      */
     @NameInMap("Data")
     public GetQualityRuleResponseBodyData data;
@@ -110,10 +110,12 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
     public static class GetQualityRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+         * <p>The severity of the quality rule. Valid values:</p>
          * <ul>
-         * <li>1: the monitoring rule is a strong rule.</li>
-         * <li>0: the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+         * <li><p><code>1</code>: Strong Rule. If a Strong Rule triggers a critical Alert, the associated Scheduling Task is blocked.</p>
+         * </li>
+         * <li><p><code>0</code>: Weak Rule.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +125,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Integer blockType;
 
         /**
-         * <p>The checker ID. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.</p>
+         * <p>The checker ID, which is derived from a primary key and used for front-end identification.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -141,7 +143,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String checkerName;
 
         /**
-         * <p>The description of the monitoring rule.</p>
+         * <p>The comment for the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Verify that the primary key is unique</p>
@@ -150,7 +152,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The threshold for a critical alert. The threshold indicates the deviation of the check result from the expected value. You can specify a value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * <p>The threshold for a critical Alert, which defines the maximum acceptable deviation from the Expected Value. If this threshold is met for a Strong Rule, the associated Scheduling Task is blocked.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -159,7 +161,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String criticalThreshold;
 
         /**
-         * <p>The ID of the partition filter expression.</p>
+         * <p>The ID of the partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>165523</p>
@@ -177,7 +179,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String expectValue;
 
         /**
-         * <p>Indicates whether the monitoring is performed based on a fixed value.</p>
+         * <p>Indicates whether to validate against a fixed value.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -186,7 +188,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Boolean fixCheck;
 
         /**
-         * <p>The monitoring rule ID.</p>
+         * <p>The ID of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123232</p>
@@ -195,7 +197,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the task that is associated with the partition filter expression.</p>
+         * <p>The ID of the method used to collect sample data.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -204,7 +206,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Integer methodId;
 
         /**
-         * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>The name of the method used to collect sample data. Valid values include <code>avg</code>, <code>count</code>, <code>sum</code>, <code>min</code>, <code>max</code>, <code>count_distinct</code>, <code>user_defined</code>, <code>table_count</code>, <code>table_size</code>, <code>table_dt_load_count</code>, <code>table_dt_refuseload_count</code>, <code>null_value</code>, <code>null_value/table_count</code>, <code>(table_count-count_distinct)/table_count</code>, and <code>table_count-count_distinct</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>table_count</p>
@@ -213,7 +215,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String methodName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * <p>The ID of the Alibaba Cloud account that configured the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1822931****</p>
@@ -222,7 +224,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String onDuty;
 
         /**
-         * <p>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * <p>The name of the Alibaba Cloud account that configured the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -231,7 +233,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String onDutyAccountName;
 
         /**
-         * <p>Indicates whether the monitoring rule is enabled.</p>
+         * <p>Indicates whether the rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -240,7 +242,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Boolean openSwitch;
 
         /**
-         * <p>The comparison operator of the monitoring rule.</p>
+         * <p>The comparison operator.</p>
          * 
          * <strong>example:</strong>
          * <blockquote>
@@ -251,10 +253,12 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Indicates whether the threshold is a dynamic threshold. Valid values:</p>
+         * <p>Indicates whether the threshold is dynamic. Valid values:</p>
          * <ul>
-         * <li>0: The threshold is not a dynamic threshold.</li>
-         * <li>1: The threshold is a dynamic threshold.</li>
+         * <li><p><code>0</code>: The threshold is static.</p>
+         * </li>
+         * <li><p><code>1</code>: The threshold is dynamic.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,7 +268,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Integer predictType;
 
         /**
-         * <p>The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.</p>
+         * <p>The column in the data source table to which the rule applies.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -273,7 +277,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String property;
 
         /**
-         * <p>The name of the monitoring rule.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>View table fluctuations</p>
@@ -282,11 +286,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule type:</p>
+         * <p>The type of the quality rule. Valid values:</p>
          * <ul>
-         * <li>0: System template rule</li>
-         * <li>1: Custom SQL rule</li>
-         * <li>4: Custom template rule</li>
+         * <li><p><code>0</code>: A rule based on a system template.</p>
+         * </li>
+         * <li><p><code>1</code>: A rule based on a custom SQL statement.</p>
+         * </li>
+         * <li><p><code>4</code>: A rule based on a custom template.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -296,7 +303,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Integer ruleType;
 
         /**
-         * <p>The variable settings inserted before the custom rule. Format: x=a,y=b.</p>
+         * <p>The variable settings inserted before a custom rule. The format is x=a,y=b.</p>
          * 
          * <strong>example:</strong>
          * <p>x=a,y=b</p>
@@ -305,7 +312,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String taskSetting;
 
         /**
-         * <p>The ID of the monitoring template.</p>
+         * <p>The ID of the template used.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -314,7 +321,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public Integer templateId;
 
         /**
-         * <p>The name of the monitoring template.</p>
+         * <p>The name of the template used.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL task table rows, 1,7, 30 days fluctuation test</p>
@@ -323,7 +330,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The trend of the check result.</p>
+         * <p>The trend of the validation result.</p>
          * 
          * <strong>example:</strong>
          * <p>abs</p>
@@ -332,7 +339,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String trend;
 
         /**
-         * <p>The threshold for a warning alert. The threshold indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.</p>
+         * <p>The threshold for a warning Alert. This value specifies the acceptable deviation from the Expected Value and can be customized.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -341,7 +348,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String warningThreshold;
 
         /**
-         * <p>The filter condition or custom SQL statement that is used for monitoring.</p>
+         * <p>The filter condition or custom SQL statement used for validation.</p>
          * 
          * <strong>example:</strong>
          * <p>id&gt;10</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMetaTablePartitionResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetMetaTablePartitionResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -20,7 +20,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
@@ -29,7 +29,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -110,16 +110,16 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
 
     public static class GetMetaTablePartitionResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The comment.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Remarks</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The creation time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1590032868000</p>
@@ -128,7 +128,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The size of the partition. Unit: bytes.</p>
+         * <p>The partition size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>19</p>
@@ -137,7 +137,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         public Long dataSize;
 
         /**
-         * <p>The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The modification time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1590032868000</p>
@@ -146,7 +146,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The GUID of the partition.</p>
+         * <p>The unique identifier of the partition.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.engine_name.table_name.pt=20170614</p>
@@ -173,7 +173,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         public String partitionName;
 
         /**
-         * <p>The path of the partition.</p>
+         * <p>The directory of the partition.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -191,7 +191,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         public String partitionType;
 
         /**
-         * <p>The number of entries in the partition.</p>
+         * <p>The record count.</p>
          * 
          * <strong>example:</strong>
          * <p>233</p>
@@ -200,7 +200,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         public Long recordCount;
 
         /**
-         * <p>The unique identifier of the metatable.</p>
+         * <p>The unique identifier of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.engine_name.table_name</p>

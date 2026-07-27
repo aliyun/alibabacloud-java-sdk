@@ -22,8 +22,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,8 +130,10 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</p>
          * <ul>
-         * <li>0: The instance is associated with a monitoring rule in Data Quality.</li>
-         * <li>1: The instance is not associated with a monitoring rule in Data Quality.</li>
+         * <li><p>0: The instance is associated with a monitoring rule in Data Quality.</p>
+         * </li>
+         * <li><p>1: The instance is not associated with a monitoring rule in Data Quality.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,14 +208,22 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         /**
          * <p>The status of the node that generates the instance. Valid values:</p>
          * <ul>
-         * <li>NOT_RUN: The node is not run.</li>
-         * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
-         * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
-         * <li>RUNNING: The node is running.</li>
-         * <li>CHECKING: Data quality is being checked for the node.</li>
-         * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
-         * <li>FAILURE: The node fails to be run.</li>
-         * <li>SUCCESS: The node is successfully run.</li>
+         * <li><p>NOT_RUN: The node is not run.</p>
+         * </li>
+         * <li><p>WAIT_TIME: The node is waiting for the scheduling time to arrive.</p>
+         * </li>
+         * <li><p>WAIT_RESOURCE: The node is waiting for resources.</p>
+         * </li>
+         * <li><p>RUNNING: The node is running.</p>
+         * </li>
+         * <li><p>CHECKING: Data quality is being checked for the node.</p>
+         * </li>
+         * <li><p>CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
+         * </li>
+         * <li><p>FAILURE: The node fails to be run.</p>
+         * </li>
+         * <li><p>SUCCESS: The node is successfully run.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,14 +235,22 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
         /**
          * <p>The scheduling type of the node. Valid values:</p>
          * <ul>
-         * <li>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</li>
-         * <li>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</li>
-         * <li>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</li>
-         * <li>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
-         * <li>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</li>
-         * <li>SKIP_CYCLE(5): The node is a node that is scheduled by the week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
-         * <li>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</li>
-         * <li>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</li>
+         * <li><p>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</p>
+         * </li>
+         * <li><p>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</p>
+         * </li>
+         * <li><p>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>SKIP_CYCLE(5): The node is a node that is scheduled by the week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
+         * </li>
+         * <li><p>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

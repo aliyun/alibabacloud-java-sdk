@@ -157,8 +157,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the field is a foreign key. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,8 +172,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the field is a partition field. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,8 +187,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the field is a primary key. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -336,8 +342,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the environment. Valid values:</p>
          * <ul>
-         * <li>0: indicates that the table resides in the development environment.</li>
-         * <li>1: indicates that the table resides in the production environment.</li>
+         * <li><p>0: indicates that the table resides in the development environment.</p>
+         * </li>
+         * <li><p>1: indicates that the table resides in the production environment.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -349,10 +357,14 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         /**
          * <p>The scope in which the table is visible. Valid values:</p>
          * <ul>
-         * <li>0: indicates that the table is visible to workspace members.</li>
-         * <li>1: indicates that the table is visible to users within a tenant.</li>
-         * <li>2: indicates that the table is visible to all tenants.</li>
-         * <li>3: indicates that the table is visible only to the table owner.</li>
+         * <li><p>0: indicates that the table is visible to workspace members.</p>
+         * </li>
+         * <li><p>1: indicates that the table is visible to users within a tenant.</p>
+         * </li>
+         * <li><p>2: indicates that the table is visible to all tenants.</p>
+         * </li>
+         * <li><p>3: indicates that the table is visible only to the table owner.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

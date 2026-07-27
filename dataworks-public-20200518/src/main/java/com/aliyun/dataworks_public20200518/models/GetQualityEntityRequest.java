@@ -5,15 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetQualityEntityRequest extends TeaModel {
     /**
-     * <p>The type of the compute engine or data source. Valid values:</p>
+     * <p>The type of the engine or data source. Valid values:</p>
      * <ul>
-     * <li>cdh</li>
-     * <li>analyticdb_for_mysql</li>
-     * <li>odps</li>
-     * <li>emr</li>
-     * <li>hadoop</li>
-     * <li>holodb</li>
-     * <li>hybriddb_for_postgresql</li>
+     * <li><p><code>cdh</code></p>
+     * </li>
+     * <li><p><code>analyticdb_for_mysql</code></p>
+     * </li>
+     * <li><p><code>odps</code></p>
+     * </li>
+     * <li><p><code>emr</code></p>
+     * </li>
+     * <li><p><code>hadoop</code></p>
+     * </li>
+     * <li><p><code>holodb</code></p>
+     * </li>
+     * <li><p><code>hybriddb_for_postgresql</code></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +31,7 @@ public class GetQualityEntityRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The partition filter expression.</p>
+     * <p>The partition expression.</p>
      * 
      * <strong>example:</strong>
      * <p>dt=$[yyyymmdd]</p>
@@ -33,16 +40,16 @@ public class GetQualityEntityRequest extends TeaModel {
     public String matchExpression;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The ID of the DataWorks workspace. To find the workspace ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks Console</a> and go to the Workspace Configurations page.</p>
      * 
      * <strong>example:</strong>
-     * <p>12345</p>
+     * <p>123456</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
+     * <p>The name of the engine or data source. You can find this name on the Data Source Configuration page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +59,7 @@ public class GetQualityEntityRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The name of the partitioned table. You can call the <a href="https://help.aliyun.com/document_detail/173923.html">GetMetaTablePartition</a> operation to obtain the name.</p>
+     * <p>The name of the partitioned table. You can call the <a href="https://help.aliyun.com/document_detail/173923.html">GetMetaTablePartition</a> operation to get the table name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

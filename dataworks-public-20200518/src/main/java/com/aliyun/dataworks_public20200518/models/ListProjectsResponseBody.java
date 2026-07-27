@@ -14,7 +14,7 @@ public class ListProjectsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>20658801***</p>
+     * <p>20658801****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The key of tag N added to the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Env</p>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
@@ -54,7 +54,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The value of tag N added to the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -122,7 +122,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1212</p>
+         * <p>466230</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -131,7 +131,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>test_project</p>
          */
         @NameInMap("ProjectIdentifier")
         public String projectIdentifier;
@@ -149,7 +149,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The ID of the user used by the workspace owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>122222</p>
+         * <p>13969939245****</p>
          */
         @NameInMap("ProjectOwnerBaseId")
         public String projectOwnerBaseId;
@@ -200,7 +200,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmzbn7pti3zfa</p>
+         * <p>rg-acfmzbn7****</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
@@ -377,7 +377,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>123</p>
+         * <p>68</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

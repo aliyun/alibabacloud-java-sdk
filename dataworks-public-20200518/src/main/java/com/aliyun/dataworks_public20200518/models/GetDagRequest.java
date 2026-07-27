@@ -7,9 +7,12 @@ public class GetDagRequest extends TeaModel {
     /**
      * <p>The ID of the DAG. You can use one of the following method to obtain the ID:</p>
      * <ul>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/2780209.html">RunCycleDagNodes</a> operation and obtain the value of the <strong>Data</strong> response parameter.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/2780210.html">RunSmokeTest</a> operation and obtain the value of the <strong>Data</strong> response parameter.</li>
-     * <li>Call the <a href="https://help.aliyun.com/document_detail/2780218.html">RunManualDagNodes</a> operation and obtain the value of the <strong>DagId</strong> response parameter.</li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/2780209.html">RunCycleDagNodes</a> operation and obtain the value of the <strong>Data</strong> response parameter.</p>
+     * </li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/2780210.html">RunSmokeTest</a> operation and obtain the value of the <strong>Data</strong> response parameter.</p>
+     * </li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/2780218.html">RunManualDagNodes</a> operation and obtain the value of the <strong>DagId</strong> response parameter.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

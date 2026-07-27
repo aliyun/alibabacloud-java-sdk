@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateManualDagRequest extends TeaModel {
     /**
-     * <p>The data timestamp. The value of the data timestamp must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Configure this parameter in the YYYY-MM-DD 00:00:00 format.</p>
+     * <p>The value of the business date must be less than or equal to the current date minus one day. For example, if today is November 11, 2020, the business date must be 2020-11-10 00:00:00 or an earlier date. The hour, minute, and second fields of the business date must all be set to 00.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateManualDagRequest extends TeaModel {
     public String bizDate;
 
     /**
-     * <p>The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.</p>
+     * <p>The workflow parameters. These parameters are synchronized to all instances of the current DAG. If the scheduling parameters of an internal node reference the workflow parameters in DagParameters, the corresponding parameter values of the node are replaced with the workflow parameters in DagParameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;kaaaa&quot;: &quot;vaaaaa&quot;, &quot;kbbbb&quot;: &quot;vbbbbb&quot;}</p>
@@ -24,7 +24,7 @@ public class CreateManualDagRequest extends TeaModel {
     public String dagParameters;
 
     /**
-     * <p>The IDs of the nodes that do not need to be run.</p>
+     * <p>The list of IDs of the nodes that do not need to be run.</p>
      * 
      * <strong>example:</strong>
      * <p>123,456</p>
@@ -33,7 +33,7 @@ public class CreateManualDagRequest extends TeaModel {
     public String excludeNodeIds;
 
     /**
-     * <p>The name of the manually triggered workflow.</p>
+     * <p>The name of the manual workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class CreateManualDagRequest extends TeaModel {
     public String flowName;
 
     /**
-     * <p>The IDs of the nodes that you want to run.</p>
+     * <p>The list of IDs of the nodes to be run.</p>
      * 
      * <strong>example:</strong>
      * <p>74324,74325</p>
@@ -52,7 +52,8 @@ public class CreateManualDagRequest extends TeaModel {
     public String includeNodeIds;
 
     /**
-     * <p>The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: <code>{ &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot;, &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot; }</code></p>
+     * <p>The node parameter information passed when the manual workflow is executed, in JSON format:
+     * <code>{      &quot;&lt;A node ID inside the manual workflow&gt;&quot;: &quot;The scheduling parameter information of the node, consistent with the parameter format in the data development scheduling configuration&quot;,       &quot;&lt;A node ID inside the manual workflow&gt;&quot;: &quot;The scheduling parameter information of the node, consistent with the parameter format in the data development scheduling configuration&quot; }</code></p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;20000123121&quot;: &quot;key1=val2 key2=val2&quot;, &quot;20000123124&quot;: &quot;kkkk=vvvvv aaaa=bbbb&quot;}</p>
@@ -61,14 +62,17 @@ public class CreateManualDagRequest extends TeaModel {
     public String nodeParameters;
 
     /**
-     * <p>The environment type of Operation Center. Valid values: PROD and DEV.</p>
+     * <p>The environment identifier of the Scheduling Operation Center. PROD indicates the production environment, and DEV indicates the development environment.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD or DEV</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
-     * <p>The name of the workspace to which the manually triggered workflow belongs.</p>
+     * <p>The English name of the workspace to which the manual workflow belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

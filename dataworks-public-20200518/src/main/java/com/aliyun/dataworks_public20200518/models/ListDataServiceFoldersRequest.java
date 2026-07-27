@@ -8,7 +8,7 @@ public class ListDataServiceFoldersRequest extends TeaModel {
      * <p>The keyword in folder names. The keyword is used to search for folders whose names contain this keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>Keyword in folder names</p>
+     * <p>Folder name keyword</p>
      */
     @NameInMap("FolderNameKeyword")
     public String folderNameKeyword;

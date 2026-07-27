@@ -113,7 +113,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
          * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>12345</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
@@ -140,7 +140,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
          * <p>The ID of the workspace to which the node belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>12345</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;

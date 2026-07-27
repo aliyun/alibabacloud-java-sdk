@@ -211,10 +211,14 @@ public class ListDagsResponseBody extends TeaModel {
         /**
          * <p>The status of the DAG. Valid values:</p>
          * <ul>
-         * <li>CREATED</li>
-         * <li>RUNNING</li>
-         * <li>FAILURE</li>
-         * <li>SUCCESS</li>
+         * <li><p>CREATED</p>
+         * </li>
+         * <li><p>RUNNING</p>
+         * </li>
+         * <li><p>FAILURE</p>
+         * </li>
+         * <li><p>SUCCESS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,10 +230,14 @@ public class ListDagsResponseBody extends TeaModel {
         /**
          * <p>The type of the DAG. Valid values:</p>
          * <ul>
-         * <li>MANUAL: DAG for a manually triggered workflow</li>
-         * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
-         * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
-         * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</li>
+         * <li><p>MANUAL: DAG for a manually triggered workflow</p>
+         * </li>
+         * <li><p>SMOKE_TEST: DAG for a smoke testing workflow</p>
+         * </li>
+         * <li><p>SUPPLY_DATA: DAG for a data backfill instance</p>
+         * </li>
+         * <li><p>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -158,7 +158,7 @@ public class ListTopicsResponseBody extends TeaModel {
          * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
-         * <p>Node Name</p>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -194,7 +194,7 @@ public class ListTopicsResponseBody extends TeaModel {
          * <p>The name of the event.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234 Error</p>
+         * <p>Error 1234</p>
          */
         @NameInMap("TopicName")
         public String topicName;

@@ -113,7 +113,7 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
          * <p>The display name of the metatable.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>中文名</p>
          */
         @NameInMap("Caption")
         public String caption;
@@ -175,8 +175,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the environment. Valid values:</p>
          * <ul>
-         * <li>0: development environment</li>
-         * <li>1: production environment</li>
+         * <li><p>0: development environment</p>
+         * </li>
+         * <li><p>1: production environment</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,8 +199,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the metatable is a partitioned table. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,8 +214,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the metatable is a view. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,10 +229,14 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         /**
          * <p>The scope in which the metatable is visible. Valid values:</p>
          * <ul>
-         * <li>0: The metatable is visible to workspace members.</li>
-         * <li>1: The metatable is visible to users within the tenant.</li>
-         * <li>2: The metatable is visible to all tenants.</li>
-         * <li>3: The metatable is visible only to the metatable owner.</li>
+         * <li><p>0: The metatable is visible to workspace members.</p>
+         * </li>
+         * <li><p>1: The metatable is visible to users within the tenant.</p>
+         * </li>
+         * <li><p>2: The metatable is visible to all tenants.</p>
+         * </li>
+         * <li><p>3: The metatable is visible only to the metatable owner.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +275,7 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         /**
          * <p>The lifecycle of the table. Unit: day.</p>
          * <blockquote>
-         * <p> If the lifecycle is not set for a MaxCompute table, the return value is 0, indicating that the table is permanently valid.</p>
+         * <p>If the lifecycle is not set for a MaxCompute table, the return value is 0, indicating that the table is permanently valid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

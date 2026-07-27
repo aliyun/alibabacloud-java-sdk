@@ -22,8 +22,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>True</li>
-     * <li>False</li>
+     * <li><p>True</p>
+     * </li>
+     * <li><p>False</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,8 +67,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         /**
          * <p>The calculation method of a metric. Valid values:</p>
          * <ul>
-         * <li>avg</li>
-         * <li>max</li>
+         * <li><p>avg</p>
+         * </li>
+         * <li><p>max</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,9 +82,12 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         /**
          * <p>The comparison operator, which indicates the method used to compare a metric with the alert rule.</p>
          * <ul>
-         * <li>\&quot;=\&quot;</li>
-         * <li>\&quot;&lt;\&quot;</li>
-         * <li>\&quot;&gt;\&quot;</li>
+         * <li><p>\&quot;=\&quot;</p>
+         * </li>
+         * <li><p>\&quot;&lt;\&quot;</p>
+         * </li>
+         * <li><p>\&quot;&gt;\&quot;</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,8 +107,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>WARNING</li>
-         * <li>CRITICAL</li>
+         * <li><p>WARNING</p>
+         * </li>
+         * <li><p>CRITICAL</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,12 +265,18 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         /**
          * <p>The alert type. Valid values:</p>
          * <ul>
-         * <li>taskStatus</li>
-         * <li>bizDelay</li>
-         * <li>taskFailoverCount</li>
-         * <li>ddlUnsupport</li>
-         * <li>ddlReport</li>
-         * <li>totalDirtyRecordWriteInLines</li>
+         * <li><p>taskStatus</p>
+         * </li>
+         * <li><p>bizDelay</p>
+         * </li>
+         * <li><p>taskFailoverCount</p>
+         * </li>
+         * <li><p>ddlUnsupport</p>
+         * </li>
+         * <li><p>ddlReport</p>
+         * </li>
+         * <li><p>totalDirtyRecordWriteInLines</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,16 +439,26 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         /**
          * <p>The status of the data synchronization solution. Valid values:</p>
          * <ul>
-         * <li>0: successful</li>
-         * <li>1: not running</li>
-         * <li>2: running</li>
-         * <li>3: failed</li>
-         * <li>4: committed</li>
-         * <li>5: pending manual confirmation</li>
-         * <li>6: manually confirmed</li>
-         * <li>7: others</li>
-         * <li>8: waiting</li>
-         * <li>9: deleted</li>
+         * <li><p>0: successful</p>
+         * </li>
+         * <li><p>1: not running</p>
+         * </li>
+         * <li><p>2: running</p>
+         * </li>
+         * <li><p>3: failed</p>
+         * </li>
+         * <li><p>4: committed</p>
+         * </li>
+         * <li><p>5: pending manual confirmation</p>
+         * </li>
+         * <li><p>6: manually confirmed</p>
+         * </li>
+         * <li><p>7: others</p>
+         * </li>
+         * <li><p>8: waiting</p>
+         * </li>
+         * <li><p>9: deleted</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -564,8 +589,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</li>
-         * <li>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</li>
+         * <li><p>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</p>
+         * </li>
+         * <li><p>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -586,8 +613,10 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</li>
-         * <li>If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.</li>
+         * <li><p>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</p>
+         * </li>
+         * <li><p>If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("SolutionDetail")

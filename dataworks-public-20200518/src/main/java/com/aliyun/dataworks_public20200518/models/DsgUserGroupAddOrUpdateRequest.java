@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
     /**
-     * <p>The information about the user group.</p>
+     * <p>The user groups.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroups")
@@ -26,20 +26,24 @@ public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
 
     public static class DsgUserGroupAddOrUpdateRequestUserGroups extends TeaModel {
         /**
-         * <p>The users in the group.</p>
+         * <p>The users in the user group.</p>
          * <ul>
-         * <li>If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
-         * <li>If a user group is created by using a MaxCompute role, you can call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
+         * <li><p>For user groups created based on Alibaba Cloud accounts and Resource Access Management (RAM) roles, call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> API to query the user list.</p>
+         * </li>
+         * <li><p>For user groups created based on MaxCompute roles, call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupGetOdpsRoleGroups</a> API to query the user list.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Accounts")
         public java.util.List<String> accounts;
 
         /**
-         * <p>The user group ID.</p>
+         * <p>The ID of the user group.</p>
          * <ul>
-         * <li>If you do not configure this parameter, the current operation is to add a user group.</li>
-         * <li>If you configure this parameter, the current operation is to modify a user group. You can call the <a href="https://help.aliyun.com/document_detail/2786441.html">DsgUserGroupQueryList</a> operation to query the user group ID.</li>
+         * <li><p>If you do not specify this parameter, a new user group is created.</p>
+         * </li>
+         * <li><p>If you specify this parameter, the specified user group is modified. You can call the <a href="https://help.aliyun.com/document_detail/2786441.html">DsgUserGroupQueryList</a> operation to query the ID of the user group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -69,7 +73,7 @@ public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the MaxCompute project. You must configure this parameter when you create a MaxCompute user group.</p>
+         * <p>The name of the MaxCompute project. Set this parameter when you create a MaxCompute user group.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_project</p>
@@ -78,11 +82,14 @@ public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The type of the user group. Valid values:</p>
+         * <p>The type of the user group. The following values are valid:</p>
          * <ul>
-         * <li>1: Alibaba Cloud account</li>
-         * <li>2: RAM role</li>
-         * <li>3: MaxCompute role</li>
+         * <li><p>1: Alibaba Cloud user</p>
+         * </li>
+         * <li><p>2: RAM Role</p>
+         * </li>
+         * <li><p>3: MaxCompute Role</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

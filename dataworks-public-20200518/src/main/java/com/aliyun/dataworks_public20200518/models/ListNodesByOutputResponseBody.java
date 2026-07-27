@@ -122,7 +122,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
          * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         @NameInMap("Connection")
         public String connection;

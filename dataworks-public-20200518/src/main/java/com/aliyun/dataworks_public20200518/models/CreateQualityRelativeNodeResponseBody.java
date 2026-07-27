@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQualityRelativeNodeResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the node is associated with the partition filter expression.</p>
+     * <p>Indicates whether the association was created successfully.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreateQualityRelativeNodeResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>401</p>
@@ -23,7 +23,7 @@ public class CreateQualityRelativeNodeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>You have no permission.</p>

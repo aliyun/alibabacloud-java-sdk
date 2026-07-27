@@ -45,7 +45,7 @@ public class GetMetaTableLineageRequest extends TeaModel {
      * <p>The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.</p>
      * 
      * <strong>example:</strong>
-     * <p>odps.engine_name.table_name1</p>
+     * <p>next_primary_key</p>
      */
     @NameInMap("NextPrimaryKey")
     public String nextPrimaryKey;

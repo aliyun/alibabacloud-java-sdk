@@ -9,7 +9,7 @@ public class TopTenElapsedTimeInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>100000</p>
+     * <p>1000001</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

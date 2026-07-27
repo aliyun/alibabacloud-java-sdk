@@ -4,13 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RelationshipVO extends TeaModel {
+    /**
+     * <p>Additional attributes.</p>
+     */
     @NameInMap("Attributes")
     public java.util.Map<String, String> attributes;
 
+    /**
+     * <p>The unique identifier for the relationship.</p>
+     */
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
     /**
+     * <p>The type of the relationship.</p>
+     * 
      * <strong>example:</strong>
      * <p>sql</p>
      */

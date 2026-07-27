@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaDBTableListRequest extends TeaModel {
     /**
-     * <p>The GUID of the MaxCompute project. Specify the GUID in the <code>odps.{projectName}</code> format. You must configure this parameter only if you set the DataSourceType parameter to odps.</p>
+     * <p>The unique identifier for the project, in the format <code>odps.{projectName}</code>. This parameter is required only if the <code>DataSourceType</code> is set to <code>odps</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>odps.testProjectName</p>
@@ -14,7 +14,7 @@ public class GetMetaDBTableListRequest extends TeaModel {
     public String appGuid;
 
     /**
-     * <p>The E-MapReduce (EMR) cluster ID. You must configure this parameter only if you set the DataSourceType parameter to emr.</p>
+     * <p>The ID of the E-MapReduce (EMR) cluster. This parameter is required only if the <code>DataSourceType</code> is set to <code>emr</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -23,7 +23,7 @@ public class GetMetaDBTableListRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The type of the data source. Valid values: <code>odps</code> and <code>emr</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>odps</p>
@@ -32,7 +32,7 @@ public class GetMetaDBTableListRequest extends TeaModel {
     public String dataSourceType;
 
     /**
-     * <p>The name of the metadatabase.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -41,7 +41,7 @@ public class GetMetaDBTableListRequest extends TeaModel {
     public String databaseName;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,10 +50,10 @@ public class GetMetaDBTableListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 1,000.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -8,7 +8,7 @@ public class ListDataServiceGroupsRequest extends TeaModel {
      * <p>The keyword of a business process name. The keyword is used to search for business processes whose names contain this keyword.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test business process</p>
+     * <p>Test workflow</p>
      */
     @NameInMap("GroupNameKeyword")
     public String groupNameKeyword;

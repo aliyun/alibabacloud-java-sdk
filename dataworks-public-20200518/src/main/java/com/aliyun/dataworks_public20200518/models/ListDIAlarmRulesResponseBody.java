@@ -14,7 +14,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>74C2FECD-5B3A-554A-BCF5-351A36DE9815</p>
+     * <p>74C2FECD-5B3A-554A-BCF5-35****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -50,8 +50,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The severity level. Valid values:</p>
          * <ul>
-         * <li>Warning</li>
-         * <li>Critical</li>
+         * <li><p>Warning</p>
+         * </li>
+         * <li><p>Critical</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,8 +89,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
          * <ul>
-         * <li>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <strong>AliyunUid</strong>, which indicates the Alibaba Cloud account ID.</li>
-         * <li>If the alert notification method is Ding, the value of this parameter is <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</li>
+         * <li><p>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <strong>AliyunUid</strong>, which indicates the Alibaba Cloud account ID.</p>
+         * </li>
+         * <li><p>If the alert notification method is Ding, the value of this parameter is <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,8 +196,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The severity level. Valid values:</p>
          * <ul>
-         * <li>Warning</li>
-         * <li>Critical</li>
+         * <li><p>Warning</p>
+         * </li>
+         * <li><p>Critical</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,9 +211,12 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The alert threshold.</p>
          * <ul>
-         * <li>If the alert rule is for task status, no threshold is used.</li>
-         * <li>If the alert rule is for failovers, the threshold is the number of failovers.</li>
-         * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+         * <li><p>If the alert rule is for task status, no threshold is used.</p>
+         * </li>
+         * <li><p>If the alert rule is for failovers, the threshold is the number of failovers.</p>
+         * </li>
+         * <li><p>If the alert rule is for latency, the threshold is the latency duration, in seconds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,9 +296,12 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         /**
          * <p>The metric type in the alert rule. Valid values:</p>
          * <ul>
-         * <li>Heartbeat</li>
-         * <li>FailoverCount</li>
-         * <li>Delay</li>
+         * <li><p>Heartbeat</p>
+         * </li>
+         * <li><p>FailoverCount</p>
+         * </li>
+         * <li><p>Delay</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

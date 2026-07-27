@@ -275,7 +275,7 @@ public class GetTopicResponseBody extends TeaModel {
          * <p>The ID of the workspace to which the node that triggered the event belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>123456</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;

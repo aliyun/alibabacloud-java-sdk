@@ -26,7 +26,7 @@ public class ListProjectsShrinkRequest extends TeaModel {
      * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfmzbn7pti3zfa</p>
+     * <p>rg-acfmzbn7pt****</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;

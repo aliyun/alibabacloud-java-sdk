@@ -71,12 +71,18 @@ public class ListDIJobsResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Finished</li>
-         * <li>Initialized</li>
-         * <li>Stopped</li>
-         * <li>Failed</li>
-         * <li>Running</li>
-         * <li>Stopping</li>
+         * <li><p>Finished</p>
+         * </li>
+         * <li><p>Initialized</p>
+         * </li>
+         * <li><p>Stopped</p>
+         * </li>
+         * <li><p>Failed</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Stopping</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,9 +94,12 @@ public class ListDIJobsResponseBody extends TeaModel {
         /**
          * <p>The synchronization type. Valid values:</p>
          * <ul>
-         * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
-         * <li>RealtimeIncremental: real-time incremental synchronization</li>
-         * <li>Full: one-time full synchronization</li>
+         * <li><p>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</p>
+         * </li>
+         * <li><p>RealtimeIncremental: real-time incremental synchronization</p>
+         * </li>
+         * <li><p>Full: one-time full synchronization</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

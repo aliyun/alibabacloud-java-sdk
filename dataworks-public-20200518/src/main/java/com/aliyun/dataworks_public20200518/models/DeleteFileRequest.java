@@ -9,7 +9,7 @@ public class DeleteFileRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000001</p>
+     * <p>10000201</p>
      */
     @NameInMap("FileId")
     public Long fileId;

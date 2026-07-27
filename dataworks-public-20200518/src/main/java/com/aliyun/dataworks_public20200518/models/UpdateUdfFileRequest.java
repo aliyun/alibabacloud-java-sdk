@@ -46,7 +46,7 @@ public class UpdateUdfFileRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>10000001</p>
+     * <p>1000000112</p>
      */
     @NameInMap("FileId")
     public String fileId;
