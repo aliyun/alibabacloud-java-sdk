@@ -15,7 +15,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The instance ID of the subcomponent.</p>
+     * <p>The subcomponent instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pac-xxx</p>
@@ -43,7 +43,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The search keyword. This parameter is used for PolarClaw instances.</p>
+     * <p>The search keyword. This parameter is used for polarclaw instances.</p>
      * 
      * <strong>example:</strong>
      * <p>Config</p>
@@ -52,7 +52,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The log level. This parameter is used for PolarClaw instances.</p>
+     * <p>The log level. This parameter is used for polarclaw instances.</p>
      * 
      * <strong>example:</strong>
      * <p>WARN</p>
@@ -108,7 +108,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The log type. This parameter is used for PolarClaw instances. Currently, only gateway is supported.</p>
+     * <p>The log type. This parameter is used for polarclaw instances. Currently, only gateway is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>gateway</p>

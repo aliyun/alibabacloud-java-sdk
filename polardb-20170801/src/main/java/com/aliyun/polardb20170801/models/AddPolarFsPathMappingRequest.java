@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddPolarFsPathMappingRequest extends TeaModel {
     /**
-     * <p>A list of objects, each containing a bucket and its corresponding path.</p>
+     * <p>The bucket and corresponding path information.</p>
      */
     @NameInMap("CustomBucketPathList")
     public java.util.List<AddPolarFsPathMappingRequestCustomBucketPathList> customBucketPathList;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the PolarFS instance.</p>
+     * <p>The PolarFS instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,13 +61,19 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
 
     public static class AddPolarFsPathMappingRequestCustomBucketPathList extends TeaModel {
         /**
-         * <p>The name of the bucket.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>Bucket1</p>
          */
         @NameInMap("Bucket")
         public String bucket;
+
+        @NameInMap("BucketAccessKeyId")
+        public String bucketAccessKeyId;
+
+        @NameInMap("BucketAccessKeySecret")
+        public String bucketAccessKeySecret;
 
         /**
          * <p>The custom storage path.</p>
@@ -89,6 +95,22 @@ public class AddPolarFsPathMappingRequest extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public AddPolarFsPathMappingRequestCustomBucketPathList setBucketAccessKeyId(String bucketAccessKeyId) {
+            this.bucketAccessKeyId = bucketAccessKeyId;
+            return this;
+        }
+        public String getBucketAccessKeyId() {
+            return this.bucketAccessKeyId;
+        }
+
+        public AddPolarFsPathMappingRequestCustomBucketPathList setBucketAccessKeySecret(String bucketAccessKeySecret) {
+            this.bucketAccessKeySecret = bucketAccessKeySecret;
+            return this;
+        }
+        public String getBucketAccessKeySecret() {
+            return this.bucketAccessKeySecret;
         }
 
         public AddPolarFsPathMappingRequestCustomBucketPathList setPath(String path) {

@@ -4,9 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterResponseBody extends TeaModel {
+    /**
+     * <p>The Agentic cluster description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pagc-***************</p>
+     */
     @NameInMap("AgenticDbClusterDescription")
     public String agenticDbClusterDescription;
 
+    /**
+     * <p>The Agentic cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pagc-***************</p>
+     */
     @NameInMap("AgenticDbClusterId")
     public String agenticDbClusterId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationPerformanceRequest extends TeaModel {
     /**
-     * <p>The ID of the application cluster.</p>
+     * <p>The application cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the consumer.</p>
+     * <p>The user.</p>
      * 
      * <strong>example:</strong>
      * <p>c-xxxxxxx</p>
@@ -24,7 +24,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String consumer;
 
     /**
-     * <p>The ID of the consumer group.</p>
+     * <p>The user group.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-xxxxxx</p>
@@ -32,14 +32,26 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     @NameInMap("ConsumerGroup")
     public String consumerGroup;
 
+    /**
+     * <p>The downsampling policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>raw_sample</p>
+     */
     @NameInMap("Downsample")
     public String downsample;
 
+    /**
+     * <p>The end step number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("EndStep")
     public Long endStep;
 
     /**
-     * <p>The end time for the query. Specify the time in UTC in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,22 +61,15 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The granularity of the performance data, in seconds. Valid values:</p>
+     * <p>The data granularity of performance data. Valid values:</p>
      * <ul>
-     * <li><p>5</p>
-     * </li>
-     * <li><p>30</p>
-     * </li>
-     * <li><p>60</p>
-     * </li>
-     * <li><p>600</p>
-     * </li>
-     * <li><p>1800</p>
-     * </li>
-     * <li><p>3600</p>
-     * </li>
-     * <li><p>86400</p>
-     * </li>
+     * <li>5</li>
+     * <li>30</li>
+     * <li>60</li>
+     * <li>600</li>
+     * <li>1800</li>
+     * <li>3600</li>
+     * <li>86400</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +79,10 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The performance metrics to query. Separate multiple metrics with commas (,).<br>You can specify up to five performance metrics.<br></p>
+     * <p>The performance metrics to query. Separate multiple values with commas (,).</p>
+     * <blockquote>
+     * <p><strong>Note</strong> You can specify up to 5 performance metrics.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,11 +91,17 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The maximum number of data points to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxPoints")
     public Integer maxPoints;
 
     /**
-     * <p>The ID of the model service.</p>
+     * <p>The model service.</p>
      * 
      * <strong>example:</strong>
      * <p>ms-xxxxxx</p>
@@ -95,11 +109,17 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     @NameInMap("ModelService")
     public String modelService;
 
+    /**
+     * <p>The start step number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StartStep")
     public Long startStep;
 
     /**
-     * <p>The start time for the query. Specify the time in UTC in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

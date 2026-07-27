@@ -67,9 +67,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "polardb.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "polardb.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "polardb.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "polardb.ap-northeast-1.aliyuncs.com")
         );
@@ -3205,6 +3203,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Each cluster can have a maximum of three manually created backups at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates API keys in batches.</p>
      * 
@@ -3225,6 +3232,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.count)) {
             query.put("Count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditToken)) {
+            query.put("CreditToken", request.creditToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gwClusterId)) {
@@ -3253,6 +3268,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Each cluster can have a maximum of three manually created backups at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>Creates API keys in batches.</p>
      * 
@@ -3787,6 +3811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a PolarDB cluster.</p>
      * 
@@ -4079,6 +4106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a PolarDB cluster.</p>
      * 
@@ -5262,6 +5292,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateGlobalSecurityIPGroupResponse createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createGlobalSecurityIPGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Places an order to purchase a token resource plan and activates a redemption code.</p>
+     * 
+     * @param request CreateGwConsumerOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGwConsumerOrderResponse
+     */
+    public CreateGwConsumerOrderResponse createGwConsumerOrderWithOptions(CreateGwConsumerOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            query.put("ExpireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("GatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyCount)) {
+            query.put("KeyCount", request.keyCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageSpec)) {
+            query.put("PackageSpec", request.packageSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGwConsumerOrder"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGwConsumerOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Places an order to purchase a token resource plan and activates a redemption code.</p>
+     * 
+     * @param request CreateGwConsumerOrderRequest
+     * @return CreateGwConsumerOrderResponse
+     */
+    public CreateGwConsumerOrderResponse createGwConsumerOrder(CreateGwConsumerOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGwConsumerOrderWithOptions(request, runtime);
     }
 
     /**
@@ -10962,7 +11056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log details of an AI application.</p>
+     * <p>Queries the details of AI application logs.</p>
      * 
      * @param request DescribeApplicationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11046,7 +11140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the log details of an AI application.</p>
+     * <p>Queries the details of AI application logs.</p>
      * 
      * @param request DescribeApplicationLogsRequest
      * @return DescribeApplicationLogsResponse
@@ -11112,7 +11206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying PolarDB AI application performance.</p>
+     * <p>Queries the performance of a PolarDB AI application.</p>
      * 
      * @param request DescribeApplicationPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11188,7 +11282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying PolarDB AI application performance.</p>
+     * <p>Queries the performance of a PolarDB AI application.</p>
      * 
      * @param request DescribeApplicationPerformanceRequest
      * @return DescribeApplicationPerformanceResponse
@@ -25215,7 +25309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
+     * <p>Enables or performs shutdown of the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25224,6 +25318,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBClusterSSLResponse modifyDBClusterSSLWithOptions(ModifyDBClusterSSLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certValidDays)) {
+            query.put("CertValidDays", request.certValidDays);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.connectionString)) {
             query.put("ConnectionString", request.connectionString);
         }
@@ -25287,7 +25385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
+     * <p>Enables or performs shutdown of the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @return ModifyDBClusterSSLResponse

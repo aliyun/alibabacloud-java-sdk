@@ -23,7 +23,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public String applicationType;
 
     /**
-     * <p>The end time of the query. The time is in UTC and follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+     * <p>The end of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-23T02:21:00Z</p>
@@ -31,12 +31,15 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The data granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
-    /**
-     * <p>The performance metrics.</p>
-     */
     @NameInMap("PerformanceKeys")
     public DescribeApplicationPerformanceResponseBodyPerformanceKeys performanceKeys;
 
@@ -50,7 +53,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time is in UTC and follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+     * <p>The beginning of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2022-11-15T16:00Z</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartPolarClawGatewayRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class RestartPolarClawGatewayRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The restart mode. Valid values:</p>
+     * <ul>
+     * <li>in-process: lightweight restart without applying environment variable changes. This is the default value.</li>
+     * <li>pkill: cold start that applies environment variable changes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>in-process</p>
      */
