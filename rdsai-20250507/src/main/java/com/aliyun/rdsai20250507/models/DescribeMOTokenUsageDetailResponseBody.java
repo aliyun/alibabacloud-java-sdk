@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     /**
-     * <p>The cursor for the next page. An empty value indicates the last page.</p>
+     * <p>The cursor for the next page. An empty value indicates that the current page is the last page.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>
@@ -32,7 +32,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of records returned.</p>
+     * <p>The list of records in the response.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeMOTokenUsageDetailResponseBodyRecords> records;
@@ -47,7 +47,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the query conditions.</p>
+     * <p>The total number of records that match the query conditions. This parameter is optional and may not be returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -126,6 +126,15 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeMOTokenUsageDetailResponseBodyRecords extends TeaModel {
+        /**
+         * <p>The number of input tokens that hit the cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
+         */
+        @NameInMap("CacheTokens")
+        public Double cacheTokens;
+
         /**
          * <p>The consumer associated with the API key.</p>
          * 
@@ -210,6 +219,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         public static DescribeMOTokenUsageDetailResponseBodyRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeMOTokenUsageDetailResponseBodyRecords self = new DescribeMOTokenUsageDetailResponseBodyRecords();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMOTokenUsageDetailResponseBodyRecords setCacheTokens(Double cacheTokens) {
+            this.cacheTokens = cacheTokens;
+            return this;
+        }
+        public Double getCacheTokens() {
+            return this.cacheTokens;
         }
 
         public DescribeMOTokenUsageDetailResponseBodyRecords setConsumerName(String consumerName) {

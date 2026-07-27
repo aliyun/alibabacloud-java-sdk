@@ -22,11 +22,17 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("AppType")
     public String appType;
 
+    @NameInMap("BranchName")
+    public String branchName;
+
+    @NameInMap("BranchingEnabled")
+    public String branchingEnabled;
+
     @NameInMap("Components")
     public java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components;
 
     /**
-     * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database to which the AI application is connected.</p>
+     * <p>The instance ID of the RDS PostgreSQL database to which the AI application is connected.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -173,6 +179,22 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
     public String getAppType() {
         return this.appType;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setBranchingEnabled(String branchingEnabled) {
+        this.branchingEnabled = branchingEnabled;
+        return this;
+    }
+    public String getBranchingEnabled() {
+        return this.branchingEnabled;
     }
 
     public DescribeAppInstanceAttributeResponseBody setComponents(java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components) {

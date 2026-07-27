@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceStorageConfigShrinkRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The value of the configuration item.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which ensures that the request is not repeated.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,13 +17,13 @@ public class ModifyInstanceStorageConfigShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The list of storage configurations.</p>
      */
     @NameInMap("ConfigList")
     public String configListShrink;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class ModifyInstanceStorageConfigShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceStorageConfig</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -41,6 +44,14 @@ public class ModifyInstanceStorageConfigShrinkRequest extends TeaModel {
     public static ModifyInstanceStorageConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceStorageConfigShrinkRequest self = new ModifyInstanceStorageConfigShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceStorageConfigShrinkRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyInstanceStorageConfigShrinkRequest setClientToken(String clientToken) {

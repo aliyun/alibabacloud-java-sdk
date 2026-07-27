@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetConversationsResponseBody extends TeaModel {
     /**
-     * <p>The returned results.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetConversationsResponseBodyData> data;
 
     /**
-     * <p>Indicates whether the current page is followed by a page.</p>
+     * <p>Indicates whether there is a next page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +20,7 @@ public class GetConversationsResponseBody extends TeaModel {
     public String hasMore;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -76,7 +76,7 @@ public class GetConversationsResponseBody extends TeaModel {
 
     public static class GetConversationsResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time of the conversation.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1764055092</p>
@@ -85,7 +85,7 @@ public class GetConversationsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The ID of the history conversation.</p>
+         * <p>The ID of the historical conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>60b335ca-124d-4ee1-864b-de554987****</p>
@@ -94,7 +94,7 @@ public class GetConversationsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The introduction to the conversation.</p>
+         * <p>The conversation introduction.</p>
          * 
          * <strong>example:</strong>
          * <p>测试搜索RDS资源</p>
@@ -102,14 +102,20 @@ public class GetConversationsResponseBody extends TeaModel {
         @NameInMap("Introduction")
         public String introduction;
 
+        @NameInMap("IsRunning")
+        public Boolean isRunning;
+
         /**
-         * <p>The name of the history conversation.</p>
+         * <p>The name of the historical conversation.</p>
          * 
          * <strong>example:</strong>
          * <p>搜索RDS资源。</p>
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("UpdatedAt")
+        public String updatedAt;
 
         public static GetConversationsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetConversationsResponseBodyData self = new GetConversationsResponseBodyData();
@@ -140,12 +146,28 @@ public class GetConversationsResponseBody extends TeaModel {
             return this.introduction;
         }
 
+        public GetConversationsResponseBodyData setIsRunning(Boolean isRunning) {
+            this.isRunning = isRunning;
+            return this;
+        }
+        public Boolean getIsRunning() {
+            return this.isRunning;
+        }
+
         public GetConversationsResponseBodyData setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetConversationsResponseBodyData setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+            return this;
+        }
+        public String getUpdatedAt() {
+            return this.updatedAt;
         }
 
     }

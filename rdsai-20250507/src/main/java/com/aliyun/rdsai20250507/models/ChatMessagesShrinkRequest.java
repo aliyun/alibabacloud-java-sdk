@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatMessagesShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fea7bdca-e848-44dd-b1ae-852472b8****</p>
@@ -17,13 +17,13 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     public String eventMode;
 
     /**
-     * <p>The inputs for the task.</p>
+     * <p>The task inputs.</p>
      */
     @NameInMap("Inputs")
     public String inputsShrink;
 
     /**
-     * <p>The ID of the parent message.</p>
+     * <p>The parent message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
@@ -32,11 +32,11 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     public String parentMessageId;
 
     /**
-     * <p>The content of the query.</p>
+     * <p>The query content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>实例rm-bp14as9914vd3**** 磁盘使用率，是否需要进行扩容</p>
+     * <p>The disk usage of instance rm-bp14as9914vd3****. Is capacity expansion required?</p>
      */
     @NameInMap("Query")
     public String query;

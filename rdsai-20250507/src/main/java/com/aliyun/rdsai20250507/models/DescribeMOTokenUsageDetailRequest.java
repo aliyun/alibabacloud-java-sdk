@@ -23,7 +23,7 @@ public class DescribeMOTokenUsageDetailRequest extends TeaModel {
     public String consumerName;
 
     /**
-     * <p>The cursor-based pagination token. This parameter takes priority over Page. Leave this parameter empty for the first call. For subsequent calls, use the NextCursor value returned in the previous response.</p>
+     * <p>The cursor-based pagination token. This parameter takes priority over Page. Leave this parameter empty for the first request. For subsequent requests, use the NextCursor value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</p>

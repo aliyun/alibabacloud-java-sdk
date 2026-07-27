@@ -3,31 +3,27 @@ package com.aliyun.rdsai20250507.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAppInstanceResponseBody extends TeaModel {
+public class ResetInstanceKeysResponseBody extends TeaModel {
     /**
-     * <p>The instance ID of the AI application.</p>
-     * 
      * <strong>example:</strong>
-     * <p>ra-supabase-8moov5lxba***</p>
+     * <p>ra-supabase-8moov5lxba****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+     * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteAppInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAppInstanceResponseBody self = new DeleteAppInstanceResponseBody();
+    public static ResetInstanceKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ResetInstanceKeysResponseBody self = new ResetInstanceKeysResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAppInstanceResponseBody setInstanceName(String instanceName) {
+    public ResetInstanceKeysResponseBody setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -35,7 +31,7 @@ public class DeleteAppInstanceResponseBody extends TeaModel {
         return this.instanceName;
     }
 
-    public DeleteAppInstanceResponseBody setRequestId(String requestId) {
+    public ResetInstanceKeysResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

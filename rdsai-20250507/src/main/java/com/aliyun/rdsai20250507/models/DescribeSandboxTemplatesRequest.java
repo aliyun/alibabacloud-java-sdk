@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeSandboxTemplatesRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>This parameter is reserved.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -24,7 +27,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token used to retrieve the next page of results. You do not need to specify this parameter for the first request.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>gAAAAABo-D-ze1Zog63nWMa8eDDMkqUoBB5-FDsHDUMiNIDSDZeP9g0LwJEozulOPG_LbsGwLRgmDFvTHZeSU90YsukT0pHtnA==</p>
@@ -42,7 +45,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,7 +64,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the sandbox template.</p>
+     * <p>The sandbox template name.</p>
      * 
      * <strong>example:</strong>
      * <p>code-interpreter</p>
@@ -72,6 +75,14 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public static DescribeSandboxTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSandboxTemplatesRequest self = new DescribeSandboxTemplatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSandboxTemplatesRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public DescribeSandboxTemplatesRequest setInstanceName(String instanceName) {

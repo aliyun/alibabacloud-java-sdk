@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceStorageConfigResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -25,6 +28,14 @@ public class ModifyInstanceStorageConfigResponseBody extends TeaModel {
     public static ModifyInstanceStorageConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceStorageConfigResponseBody self = new ModifyInstanceStorageConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceStorageConfigResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyInstanceStorageConfigResponseBody setInstanceName(String instanceName) {

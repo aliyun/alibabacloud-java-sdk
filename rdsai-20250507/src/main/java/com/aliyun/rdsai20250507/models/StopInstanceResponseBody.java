@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -25,6 +28,14 @@ public class StopInstanceResponseBody extends TeaModel {
     public static StopInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceResponseBody self = new StopInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StopInstanceResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public StopInstanceResponseBody setInstanceName(String instanceName) {

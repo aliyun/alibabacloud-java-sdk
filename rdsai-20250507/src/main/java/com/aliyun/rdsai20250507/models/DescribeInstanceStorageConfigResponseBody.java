@@ -4,14 +4,17 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The storage configurations.</p>
+     * <p>The list of storage configurations.</p>
      */
     @NameInMap("ConfigList")
     public java.util.List<DescribeInstanceStorageConfigResponseBodyConfigList> configList;
 
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -31,6 +34,14 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
     public static DescribeInstanceStorageConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStorageConfigResponseBody self = new DescribeInstanceStorageConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceStorageConfigResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public DescribeInstanceStorageConfigResponseBody setConfigList(java.util.List<DescribeInstanceStorageConfigResponseBodyConfigList> configList) {
@@ -59,13 +70,13 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
 
     public static class DescribeInstanceStorageConfigResponseBodyConfigList extends TeaModel {
         /**
-         * <p>The configuration item name. Valid values:</p>
+         * <p>The name of the configuration item. Valid values:</p>
          * <ul>
-         * <li><strong>AWS_SESSION_TOKEN</strong>: temporary OSS access token (session token).</li>
+         * <li><strong>AWS_SESSION_TOKEN</strong>: the temporary access token (Session Token) of OSS.</li>
          * <li><strong>AWS_ACCESS_KEY_ID</strong>: the AccessKey ID of OSS.</li>
-         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey secret of OSS.</li>
-         * <li><strong>GLOBAL_S3_BUCKET</strong>: the name of the OSS bucket.</li>
-         * <li><strong>TENANT_ID</strong>: the tenant ID of the OSS Prefix (prefix or directory).</li>
+         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey Secret of OSS.</li>
+         * <li><strong>GLOBAL_S3_BUCKET</strong>: the bucket name of OSS.</li>
+         * <li><strong>TENANT_ID</strong>: the tenant ID of the OSS prefix (prefix or directory).</li>
          * <li><strong>GLOBAL_S3_ENDPOINT</strong>: the endpoint of OSS.</li>
          * <li><strong>REGION</strong>: the region of OSS.</li>
          * </ul>

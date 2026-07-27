@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The result.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeMonitorDataResponseBodyData> data;
@@ -20,7 +20,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
@@ -29,7 +29,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -76,7 +76,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
 
     public static class DescribeMonitorDataResponseBodyDataValue extends TeaModel {
         /**
-         * <p>The timestamp of the data point.</p>
+         * <p>The point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>1774972800</p>
@@ -85,7 +85,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The value of the metric at the specified timestamp.</p>
+         * <p>The returned value.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -127,7 +127,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>An array of data points for the metric.</p>
+         * <p>The metric details.</p>
          */
         @NameInMap("Value")
         public java.util.List<DescribeMonitorDataResponseBodyDataValue> value;

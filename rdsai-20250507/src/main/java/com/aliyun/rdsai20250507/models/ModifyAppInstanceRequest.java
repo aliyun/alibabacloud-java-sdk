@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppInstanceRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -13,6 +16,12 @@ public class ModifyAppInstanceRequest extends TeaModel {
 
     @NameInMap("Components")
     public java.util.List<ModifyAppInstanceRequestComponents> components;
+
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("InstanceClass")
+    public String instanceClass;
 
     /**
      * <strong>example:</strong>
@@ -33,6 +42,14 @@ public class ModifyAppInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyAppInstanceRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
+    }
+
     public ModifyAppInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -47,6 +64,22 @@ public class ModifyAppInstanceRequest extends TeaModel {
     }
     public java.util.List<ModifyAppInstanceRequestComponents> getComponents() {
         return this.components;
+    }
+
+    public ModifyAppInstanceRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public ModifyAppInstanceRequest setInstanceClass(String instanceClass) {
+        this.instanceClass = instanceClass;
+        return this;
+    }
+    public String getInstanceClass() {
+        return this.instanceClass;
     }
 
     public ModifyAppInstanceRequest setInstanceName(String instanceName) {

@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppInstanceResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     @NameInMap("Components")
     public java.util.List<ModifyAppInstanceResponseBodyComponents> components;
 
@@ -24,6 +27,14 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     public static ModifyAppInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppInstanceResponseBody self = new ModifyAppInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAppInstanceResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyAppInstanceResponseBody setComponents(java.util.List<ModifyAppInstanceResponseBodyComponents> components) {

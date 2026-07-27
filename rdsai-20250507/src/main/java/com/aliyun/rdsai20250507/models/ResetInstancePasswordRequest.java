@@ -4,8 +4,12 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ResetInstancePasswordRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The Supabase Dashboard password.</p>
+     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>test_Password</p>
@@ -14,8 +18,12 @@ public class ResetInstancePasswordRequest extends TeaModel {
     public String dashboardPassword;
 
     /**
-     * <p>The Supabase Dashboard password.</p>
-     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following types: uppercase letters, lowercase letters, digits, and underscores (_).</p>
+     * <p>The RDS database access password.</p>
+     * <p>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</p>
+     * <blockquote>
+     * <p>Notice: This password change also updates the access passwords of the following accounts on the associated PostgreSQL instance. These accounts are required by Supabase: postgres, supabase_admin, supabase_auth_admin, supabase_functions_admin, supabase_storage_admin, authenticator, pgbouncer.
+     * </notice></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>test_Password</p>
@@ -24,7 +32,7 @@ public class ResetInstancePasswordRequest extends TeaModel {
     public String databasePassword;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +42,7 @@ public class ResetInstancePasswordRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ResetInstancePassword</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -45,6 +53,14 @@ public class ResetInstancePasswordRequest extends TeaModel {
     public static ResetInstancePasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetInstancePasswordRequest self = new ResetInstancePasswordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ResetInstancePasswordRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ResetInstancePasswordRequest setDashboardPassword(String dashboardPassword) {

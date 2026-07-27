@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -23,10 +26,10 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the RAG agent.</p>
+     * <p>The RAG Agent status. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,6 +41,14 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
     public static ModifyInstanceRAGConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceRAGConfigResponseBody self = new ModifyInstanceRAGConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceRAGConfigResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyInstanceRAGConfigResponseBody setInstanceName(String instanceName) {

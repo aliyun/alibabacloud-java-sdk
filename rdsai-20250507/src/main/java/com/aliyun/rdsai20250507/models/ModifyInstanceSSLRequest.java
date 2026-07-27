@@ -4,12 +4,14 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceSSLRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>Enables or disables SSL. Valid values:</p>
-     * <ul>
-     * <li><strong>1</strong>: enables SSL.</li>
-     * <li><strong>0</strong>: disables SSL.</li>
-     * </ul>
+     * <p>The certificate type. Currently, only <strong>custom</strong> is supported, which indicates that a custom certificate is used.</p>
+     * <blockquote>
+     * <p>This parameter is required when <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -18,7 +20,7 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public String CAType;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceSSL</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -37,7 +39,11 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>Specifies whether to enable or disable SSL. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Enable SSL.</li>
+     * <li><strong>0</strong>: Disable SSL.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,9 +53,9 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public Integer SSLEnabled;
 
     /**
-     * <p>The certificate type. Only <strong>custom</strong> is supported.</p>
+     * <p>The content of the custom certificate.</p>
      * <blockquote>
-     * <p> This parameter is required if <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
+     * <p>This parameter is required when <strong>CAType</strong> is set to <strong>custom</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,9 +65,9 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public String serverCert;
 
     /**
-     * <p>The content of the custom certificate.</p>
+     * <p>The private key of the certificate.</p>
      * <blockquote>
-     * <p> This parameter is required if <strong>CAType</strong> is set to <strong>custom</strong>.</p>
+     * <p>This parameter is required when <strong>CAType</strong> is set to <strong>custom</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,6 +79,14 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public static ModifyInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSSLRequest self = new ModifyInstanceSSLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceSSLRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyInstanceSSLRequest setCAType(String CAType) {

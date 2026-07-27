@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The idempotency parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +17,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The name of the configuration item to modify. This parameter is used together with ConfigValue.</p>
      * 
      * <strong>example:</strong>
      * <p>eip、nat</p>
@@ -23,7 +26,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String configName;
 
     /**
-     * <p>The name of the configuration item that you want to modify. Configure this parameter together with the ConfigValue parameter.</p>
+     * <p>The value of the configuration item to modify. This parameter is used together with ConfigName.</p>
      * 
      * <strong>example:</strong>
      * <p>on、off</p>
@@ -32,7 +35,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String configValue;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +45,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceConfig</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -53,6 +56,14 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public static ModifyInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceConfigRequest self = new ModifyInstanceConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceConfigRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyInstanceConfigRequest setClientToken(String clientToken) {

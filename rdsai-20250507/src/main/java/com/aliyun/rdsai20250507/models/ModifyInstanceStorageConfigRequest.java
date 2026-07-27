@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceStorageConfigRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The value of the configuration item.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which ensures that the request is not repeated.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,13 +17,13 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The list of storage configurations.</p>
      */
     @NameInMap("ConfigList")
     public java.util.List<ModifyInstanceStorageConfigRequestConfigList> configList;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceStorageConfig</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -41,6 +44,14 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
     public static ModifyInstanceStorageConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceStorageConfigRequest self = new ModifyInstanceStorageConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceStorageConfigRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyInstanceStorageConfigRequest setClientToken(String clientToken) {
@@ -79,13 +90,13 @@ public class ModifyInstanceStorageConfigRequest extends TeaModel {
         /**
          * <p>The name of the configuration item. Valid values:</p>
          * <ul>
-         * <li><strong>AWS_SESSION_TOKEN</strong> (optional): The temporary session token for OSS. If this parameter is not provided, validation is performed using the AccessKey ID and AccessKey secret.</li>
-         * <li><strong>AWS_ACCESS_KEY_ID</strong>: The AccessKey ID for OSS.</li>
-         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: The AccessKey secret for OSS.</li>
-         * <li><strong>GLOBAL_S3_BUCKET</strong>: The bucket name in OSS.</li>
-         * <li><strong>TENANT_ID</strong>: The folder name in OSS. No manual creation is required.</li>
-         * <li><strong>GLOBAL_S3_ENDPOINT</strong>: The endpoint (access domain name) for OSS.</li>
-         * <li><strong>REGION</strong>: The region of OSS.</li>
+         * <li><strong>AWS_SESSION_TOKEN</strong> (optional): the temporary access token (Session Token) for OSS. If this parameter is not specified, AccessKey ID and AccessKey Secret are used for authentication.</li>
+         * <li><strong>AWS_ACCESS_KEY_ID</strong>: the AccessKey ID for OSS.</li>
+         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey Secret for OSS.</li>
+         * <li><strong>GLOBAL_S3_BUCKET</strong>: the bucket name of OSS.</li>
+         * <li><strong>TENANT_ID</strong>: the OSS directory name. You do not need to create it in advance.</li>
+         * <li><strong>GLOBAL_S3_ENDPOINT</strong>: the endpoint of OSS.</li>
+         * <li><strong>REGION</strong>: the region of OSS.</li>
          * </ul>
          * 
          * <strong>example:</strong>

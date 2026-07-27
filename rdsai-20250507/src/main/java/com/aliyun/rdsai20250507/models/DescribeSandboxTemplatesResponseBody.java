@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     /**
-     * <p>This parameter is reserved.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The position from which to start the current read. An empty value indicates that the read starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
@@ -32,7 +32,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -50,13 +50,13 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of sandbox templates.</p>
+     * <p>The list of sandbox templates.</p>
      */
     @NameInMap("SandboxTemplates")
     public java.util.List<DescribeSandboxTemplatesResponseBodySandboxTemplates> sandboxTemplates;
 
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of records that match the query conditions. This is an optional response element and may not be returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -130,7 +130,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The default number of CPUs for a sandbox created from this template.</p>
+         * <p>The number of CPUs for the sandbox created by using this template.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -139,7 +139,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String defaultCpu;
 
         /**
-         * <p>The default memory size for a sandbox created from this template.</p>
+         * <p>The memory size of the sandbox created by using this template.</p>
          * 
          * <strong>example:</strong>
          * <p>4Gi</p>
@@ -148,7 +148,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String defaultMemory;
 
         /**
-         * <p>The description of the sandbox template.</p>
+         * <p>The sandbox template description.</p>
          * 
          * <strong>example:</strong>
          * <p>code-interpreter-vpc</p>
@@ -157,7 +157,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether sandboxes created from this template can access resources in the VPC of the parent RDS Supabase instance.</p>
+         * <p>Indicates whether the sandbox created by using this template can access resources within the VPC where Supabase resides.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -166,7 +166,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public String enableVpcAccess;
 
         /**
-         * <p>The name of the sandbox template.</p>
+         * <p>The sandbox template name.</p>
          * 
          * <strong>example:</strong>
          * <p>code-interpreter</p>
@@ -178,7 +178,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         public Long replicas;
 
         /**
-         * <p>The ID of the sandbox template. Use this ID when you create a sandbox.</p>
+         * <p>The sandbox template ID. Specify this ID when you create a sandbox by using this template.</p>
          * 
          * <strong>example:</strong>
          * <p>code-interpreter-asdxxxx</p>

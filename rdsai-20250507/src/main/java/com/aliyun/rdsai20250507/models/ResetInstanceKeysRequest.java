@@ -3,12 +3,8 @@ package com.aliyun.rdsai20250507.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstanceSSLRequest extends TeaModel {
-    @NameInMap("BranchName")
-    public String branchName;
-
+public class ResetInstanceKeysRequest extends TeaModel {
     /**
-     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +14,7 @@ public class DescribeInstanceSSLRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -26,20 +22,12 @@ public class DescribeInstanceSSLRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static DescribeInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstanceSSLRequest self = new DescribeInstanceSSLRequest();
+    public static ResetInstanceKeysRequest build(java.util.Map<String, ?> map) throws Exception {
+        ResetInstanceKeysRequest self = new ResetInstanceKeysRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceSSLRequest setBranchName(String branchName) {
-        this.branchName = branchName;
-        return this;
-    }
-    public String getBranchName() {
-        return this.branchName;
-    }
-
-    public DescribeInstanceSSLRequest setInstanceName(String instanceName) {
+    public ResetInstanceKeysRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -47,7 +35,7 @@ public class DescribeInstanceSSLRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public DescribeInstanceSSLRequest setRegionId(String regionId) {
+    public ResetInstanceKeysRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

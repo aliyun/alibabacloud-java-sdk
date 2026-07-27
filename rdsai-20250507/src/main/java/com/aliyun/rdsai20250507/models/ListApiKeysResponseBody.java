@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("Data")
     public ListApiKeysResponseBodyData data;
@@ -20,7 +20,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -29,7 +29,7 @@ public class ListApiKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the request succeeded.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -76,7 +76,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
     public static class ListApiKeysResponseBodyDataCustomKeyList extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>API Key</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -92,7 +92,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>Specifies if the API key is rate-limited.</p>
+         * <p>Indicates whether the key is throttled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -101,7 +101,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Boolean isRateLimited;
 
         /**
-         * <p>The key name.</p>
+         * <p>The name of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>api-*****</p>
@@ -110,7 +110,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>The limit, specified as a ratio in decimal format. This parameter is used when LimitType is ratio.</p>
+         * <p>The quota ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -119,14 +119,11 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The limit type. Valid values:</p>
+         * <p>The quota type. Valid values:</p>
          * <ul>
-         * <li><p><strong>fixed</strong>: A fixed value.</p>
-         * </li>
-         * <li><p><strong>ratio</strong>: A percentage of the total quota.</p>
-         * </li>
-         * <li><p><strong>auto</strong>: The quota is allocated automatically.</p>
-         * </li>
+         * <li><strong>fixed</strong>: fixed value.</li>
+         * <li><strong>ratio</strong>: percentage.</li>
+         * <li><strong>auto</strong>: automatic allocation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +133,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The alarm threshold percentage. For example, a value of 80 indicates that an alarm is triggered when usage reaches 80% of the quota. The alarm clears when usage falls below this threshold.</p>
+         * <p>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -145,7 +142,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer thresholdPercent;
 
         /**
-         * <p>The token quota.</p>
+         * <p>The quota of the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -226,7 +223,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
     public static class ListApiKeysResponseBodyData extends TeaModel {
         /**
-         * <p>The base URL for model calls.</p>
+         * <p>The URL for model invocation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
@@ -235,7 +232,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
-         * <p>The custom API key list.</p>
+         * <p>The list of custom API keys.</p>
          */
         @NameInMap("CustomKeyList")
         public java.util.List<ListApiKeysResponseBodyDataCustomKeyList> customKeyList;
@@ -248,7 +245,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>Specifies if the system-generated key is rate-limited.</p>
+         * <p>Indicates whether the key is throttled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -266,7 +263,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -284,7 +281,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public String systemApiKey;
 
         /**
-         * <p>The alarm threshold percentage for the SystemApiKey. For example, a value of 80 indicates that an alarm is triggered when usage reaches 80% of the quota. The alarm clears when usage falls below this threshold.</p>
+         * <p>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -293,7 +290,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public Integer thresholdPercent;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>138</p>

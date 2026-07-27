@@ -4,14 +4,17 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAuthConfigRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The list of authentication configurations.</p>
      */
     @NameInMap("ConfigList")
     public java.util.List<ModifyInstanceAuthConfigRequestConfigList> configList;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -20,7 +23,7 @@ public class ModifyInstanceAuthConfigRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceAuthConfig</strong>.</p>
+     * <p>The region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -31,6 +34,14 @@ public class ModifyInstanceAuthConfigRequest extends TeaModel {
     public static ModifyInstanceAuthConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAuthConfigRequest self = new ModifyInstanceAuthConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceAuthConfigRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public ModifyInstanceAuthConfigRequest setConfigList(java.util.List<ModifyInstanceAuthConfigRequestConfigList> configList) {
@@ -59,19 +70,19 @@ public class ModifyInstanceAuthConfigRequest extends TeaModel {
 
     public static class ModifyInstanceAuthConfigRequestConfigList extends TeaModel {
         /**
-         * <p>The name of the configuration item. Valid values:</p>
+         * <p>The configuration item name. Valid values:</p>
          * <ul>
-         * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: Enables external email addresses.</li>
-         * <li><strong>GOTRUE_SITE_URL</strong>: The website URL displayed in emails sent by the AI application.</li>
-         * <li><strong>GOTRUE_SMTP_PORT</strong>: The port of the SMTP service provider.</li>
-         * <li><strong>GOTRUE_SMTP_SENDER_NAME</strong>: The name of the email sender.</li>
-         * <li><strong>GOTRUE_SMTP_USER</strong>: The username of the SMTP service provider.</li>
-         * <li><strong>GOTRUE_SMTP_PASS</strong>: The key of the SMTP service provider.</li>
-         * <li><strong>GOTRUE_SMTP_ADMIN_EMAIL</strong>: The email address of the SMTP service provider.</li>
-         * <li><strong>GOTRUE_SMTP_HOST</strong>: The host address of the SMTP service provider.</li>
-         * <li><strong>GOTRUE_MAILER_AUTOCONFIRM</strong>: Specifies whether automatic confirmation is enabled.</li>
-         * <li><strong>GOTRUE_MAILER_OTP_EXP</strong>: The validity period of the one-time password (OTP), in seconds.</li>
-         * <li><strong>GOTRUE_MAILER_OTP_LENGTH</strong>: The length of the verification code for the one-time password (OTP). The value must be an integer greater than or equal to 6.</li>
+         * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: specifies whether to allow external email addresses.</li>
+         * <li><strong>GOTRUE_SITE_URL</strong>: the website URL displayed when the AI application sends emails.</li>
+         * <li><strong>GOTRUE_SMTP_PORT</strong>: the port of the SMTP provider.</li>
+         * <li><strong>GOTRUE_SMTP_SENDER_NAME</strong>: the name of the email sender.</li>
+         * <li><strong>GOTRUE_SMTP_USER</strong>: the username of the SMTP provider.</li>
+         * <li><strong>GOTRUE_SMTP_PASS</strong>: the secret key of the SMTP provider.</li>
+         * <li><strong>GOTRUE_SMTP_ADMIN_EMAIL</strong>: the email address of the SMTP provider.</li>
+         * <li><strong>GOTRUE_SMTP_HOST</strong>: the host address of the SMTP provider.</li>
+         * <li><strong>GOTRUE_MAILER_AUTOCONFIRM</strong>: specifies whether to enable automatic confirmation.</li>
+         * <li><strong>GOTRUE_MAILER_OTP_EXP</strong>: the validity period of the one-time password (OTP). Unit: seconds.</li>
+         * <li><strong>GOTRUE_MAILER_OTP_LENGTH</strong>: the length of the one-time password (OTP) verification code. The value must be an integer greater than or equal to 6.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateApiKeyResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateApiKeyResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
@@ -29,7 +29,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -76,7 +76,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
 
     public static class CreateApiKeyResponseBodyDataCustomKeyList extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>Api Key</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-*****</p>
@@ -88,7 +88,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>The API key name.</p>
+         * <p>The name of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>api-*****</p>
@@ -97,7 +97,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>The quota ratio. This parameter takes effect only when <strong>LimitType</strong> is set to <strong>ratio</strong>.</p>
+         * <p>The quota percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -106,13 +106,13 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota allocation method. Valid values:</p>
+         * <p>The quota type. Valid values:</p>
          * <ul>
-         * <li><p><strong>fixed</strong>: The quota is a fixed value.</p>
+         * <li><p><strong>fixed</strong>: by fixed value.</p>
          * </li>
-         * <li><p><strong>ratio</strong>: The quota is specified as a ratio of the total available resources.</p>
+         * <li><p><strong>ratio</strong>: by percentage.</p>
          * </li>
-         * <li><p><strong>auto</strong>: The quota is automatically allocated.</p>
+         * <li><p><strong>auto</strong>: automatic allocation.</p>
          * </li>
          * </ul>
          * 
@@ -123,7 +123,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The token quota for the API key.</p>
+         * <p>The quota for the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -188,7 +188,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
 
     public static class CreateApiKeyResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoint for model invocation.</p>
+         * <p>The URL for model invocation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></p>
@@ -203,7 +203,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public java.util.List<CreateApiKeyResponseBodyDataCustomKeyList> customKeyList;
 
         /**
-         * <p>The system-generated API key.</p>
+         * <p>The system-generated key.</p>
          * 
          * <strong>example:</strong>
          * <p>sk-rds-xxx</p>

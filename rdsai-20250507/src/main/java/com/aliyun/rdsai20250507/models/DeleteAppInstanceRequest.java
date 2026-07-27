@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The client generates the value of this parameter to prevent duplicate requests from being submitted.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +14,13 @@ public class DeleteAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Specifies whether to delete the corresponding database instance.</p>
+     */
+    @NameInMap("DeleteDBInstance")
+    public Boolean deleteDBInstance;
+
+    /**
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -23,7 +29,7 @@ public class DeleteAppInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DeleteAppInstance</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -42,6 +48,14 @@ public class DeleteAppInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DeleteAppInstanceRequest setDeleteDBInstance(Boolean deleteDBInstance) {
+        this.deleteDBInstance = deleteDBInstance;
+        return this;
+    }
+    public Boolean getDeleteDBInstance() {
+        return this.deleteDBInstance;
     }
 
     public DeleteAppInstanceRequest setInstanceName(String instanceName) {

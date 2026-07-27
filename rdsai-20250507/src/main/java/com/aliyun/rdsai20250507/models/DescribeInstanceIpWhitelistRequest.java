@@ -4,11 +4,20 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIpWhitelistRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
+    /**
+     * <p>The group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -17,7 +26,7 @@ public class DescribeInstanceIpWhitelistRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceIpWhitelist</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -28,6 +37,14 @@ public class DescribeInstanceIpWhitelistRequest extends TeaModel {
     public static DescribeInstanceIpWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceIpWhitelistRequest self = new DescribeInstanceIpWhitelistRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceIpWhitelistRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public DescribeInstanceIpWhitelistRequest setGroupName(String groupName) {

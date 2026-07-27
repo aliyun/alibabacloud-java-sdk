@@ -4,8 +4,14 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
+    @NameInMap("DbIpWhiteListGroups")
+    public java.util.List<DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups> dbIpWhiteListGroups;
+
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -14,7 +20,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The IP address whitelists.</p>
+     * <p>The IP whitelist groups.</p>
      */
     @NameInMap("IpWhiteListGroups")
     public java.util.List<DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups> ipWhiteListGroups;
@@ -31,6 +37,22 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
     public static DescribeInstanceIpWhitelistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceIpWhitelistResponseBody self = new DescribeInstanceIpWhitelistResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceIpWhitelistResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    public DescribeInstanceIpWhitelistResponseBody setDbIpWhiteListGroups(java.util.List<DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups> dbIpWhiteListGroups) {
+        this.dbIpWhiteListGroups = dbIpWhiteListGroups;
+        return this;
+    }
+    public java.util.List<DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups> getDbIpWhiteListGroups() {
+        return this.dbIpWhiteListGroups;
     }
 
     public DescribeInstanceIpWhitelistResponseBody setInstanceName(String instanceName) {
@@ -57,9 +79,39 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups extends TeaModel {
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("IpWhitelist")
+        public String ipWhitelist;
+
+        public static DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups self = new DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups setIpWhitelist(String ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+        public String getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
+    }
+
     public static class DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups extends TeaModel {
         /**
-         * <p>The IP address whitelist name.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -68,7 +120,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP addresses or CIDR blocks in the whitelist.</p>
+         * <p>The list of IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XXX.XXX/24,10.0.XXX.XXX/24</p>

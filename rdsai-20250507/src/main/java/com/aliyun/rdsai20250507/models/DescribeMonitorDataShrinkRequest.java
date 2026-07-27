@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorDataShrinkRequest extends TeaModel {
     /**
-     * <p>The names of the API keys to use for filtering the data. If this parameter is not specified, data from all keys is returned.</p>
+     * <p>The API key name.</p>
      */
     @NameInMap("ApiKeyName")
     public String apiKeyNameShrink;
 
     /**
-     * <p>The end of the query time range, specified as a Unix timestamp in seconds.</p>
+     * <p>The end time. Format: Timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeMonitorDataShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
@@ -30,7 +30,7 @@ public class DescribeMonitorDataShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The aggregation interval for monitoring data, in seconds. Default: 15.</p>
+     * <p>The statistical period. Default value: 15s.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -39,19 +39,23 @@ public class DescribeMonitorDataShrinkRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The metric to query. Valid values:</p>
+     * <p>The metric to query.</p>
      * <ul>
-     * <li><p><code>pv</code></p>
+     * <li><p>pv</p>
      * </li>
-     * <li><p><code>uv</code></p>
+     * <li><p>uv</p>
      * </li>
-     * <li><p><code>qps</code></p>
+     * <li><p>qps</p>
      * </li>
-     * <li><p><code>success_rate</code></p>
+     * <li><p>success_rate</p>
      * </li>
-     * <li><p><code>rt</code></p>
+     * <li><p>rt</p>
      * </li>
-     * <li><p><code>rate_limited_count</code></p>
+     * <li><p>rate_limited_count</p>
+     * </li>
+     * <li><p>tpm</p>
+     * </li>
+     * <li><p>cache</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -63,7 +67,7 @@ public class DescribeMonitorDataShrinkRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The start of the query time range, specified as a Unix timestamp in seconds.</p>
+     * <p>The start time. Format: Timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppInstanceAttributeRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
      * <p>The instance ID of the AI application.</p>
      * 
@@ -25,6 +28,14 @@ public class DescribeAppInstanceAttributeRequest extends TeaModel {
     public static DescribeAppInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppInstanceAttributeRequest self = new DescribeAppInstanceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAppInstanceAttributeRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public DescribeAppInstanceAttributeRequest setInstanceName(String instanceName) {

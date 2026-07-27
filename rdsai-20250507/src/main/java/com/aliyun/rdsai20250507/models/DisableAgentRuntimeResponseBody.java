@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DisableAgentRuntimeResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The ID of the AI application instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -14,7 +17,7 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D984FD38-6C2D-55DF-B0D7-8BCAC2E1F8C2</p>
@@ -25,6 +28,14 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
     public static DisableAgentRuntimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableAgentRuntimeResponseBody self = new DisableAgentRuntimeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DisableAgentRuntimeResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public DisableAgentRuntimeResponseBody setInstanceName(String instanceName) {

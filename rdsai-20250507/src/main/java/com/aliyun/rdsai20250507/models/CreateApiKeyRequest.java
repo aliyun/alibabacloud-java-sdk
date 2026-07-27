@@ -12,7 +12,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public Long dailyTokenQuota;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
@@ -21,7 +21,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The API key name.</p>
+     * <p>The name of the API key.</p>
      * 
      * <strong>example:</strong>
      * <p>api-*****</p>
@@ -30,7 +30,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public String keyName;
 
     /**
-     * <p>The proportion of the total quota to allocate. This parameter applies only when <code>LimitType</code> is set to <code>ratio</code>.</p>
+     * <p>The quota percentage.</p>
      * 
      * <strong>example:</strong>
      * <p>0.2</p>
@@ -39,14 +39,11 @@ public class CreateApiKeyRequest extends TeaModel {
     public Double limitRate;
 
     /**
-     * <p>The limit type. Valid values:</p>
+     * <p>The quota type. Valid values:</p>
      * <ul>
-     * <li><p><code>ratio</code>: Sets the limit as a ratio of the total available quota.</p>
-     * </li>
-     * <li><p><code>fixed</code>: Sets the limit to a fixed number of tokens.</p>
-     * </li>
-     * <li><p><code>auto</code>: Automatically allocates the quota.</p>
-     * </li>
+     * <li>ratio: by percentage.</li>
+     * <li>fixed: by fixed value.</li>
+     * <li>auto: automatic allocation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +62,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The fixed token quota for the API key. This parameter applies only when <code>LimitType</code> is set to <code>fixed</code>.</p>
+     * <p>The quota for the current key.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>

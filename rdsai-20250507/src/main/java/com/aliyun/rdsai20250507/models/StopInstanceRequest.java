@@ -4,11 +4,14 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     @NameInMap("Force")
     public Boolean force;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +21,7 @@ public class StopInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>StopInstance</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -29,6 +32,14 @@ public class StopInstanceRequest extends TeaModel {
     public static StopInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceRequest self = new StopInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopInstanceRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public StopInstanceRequest setForce(Boolean force) {

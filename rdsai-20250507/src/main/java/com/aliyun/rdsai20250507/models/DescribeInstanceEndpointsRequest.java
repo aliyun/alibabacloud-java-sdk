@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceEndpointsRequest extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The region ID.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -14,7 +17,7 @@ public class DescribeInstanceEndpointsRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceEndpoints</strong>.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -25,6 +28,14 @@ public class DescribeInstanceEndpointsRequest extends TeaModel {
     public static DescribeInstanceEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceEndpointsRequest self = new DescribeInstanceEndpointsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceEndpointsRequest setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public DescribeInstanceEndpointsRequest setInstanceName(String instanceName) {

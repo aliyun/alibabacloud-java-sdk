@@ -4,8 +4,11 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
+    @NameInMap("BranchName")
+    public String branchName;
+
     /**
-     * <p>The type of the certificate. Set the value to <strong>custom</strong>, which indicates that a custom certificate is used.</p>
+     * <p>The certificate type. The value is <strong>custom</strong>, which indicates that a custom certificate is used.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -14,7 +17,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String CAType;
 
     /**
-     * <p>The ID of the RDS Supabase instance.</p>
+     * <p>The instance ID of the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
@@ -32,10 +35,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+     * <p>Indicates whether SSL is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enables SSL encryption.</li>
-     * <li><strong>0</strong>: disables SSL encryption.</li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +48,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String SSLEnabled;
 
     /**
-     * <p>The content of the custom certificate.</p>
+     * <p>The custom certificate content.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
@@ -65,6 +68,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public static DescribeInstanceSSLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSSLResponseBody self = new DescribeInstanceSSLResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceSSLResponseBody setBranchName(String branchName) {
+        this.branchName = branchName;
+        return this;
+    }
+    public String getBranchName() {
+        return this.branchName;
     }
 
     public DescribeInstanceSSLResponseBody setCAType(String CAType) {
