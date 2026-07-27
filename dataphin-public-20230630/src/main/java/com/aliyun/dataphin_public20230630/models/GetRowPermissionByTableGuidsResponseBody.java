@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
     /**
-     * <p>Error code. A value of OK indicates that the request was successful</p>
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetRowPermissionByTableGuidsResponseBodyData> data;
 
     /**
-     * <p>HTTP status code of the backend response</p>
+     * <p>The HTTP status code returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -47,7 +47,7 @@ public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
 
     public static class GetRowPermissionByTableGuidsResponseBodyData extends TeaModel {
         /**
-         * <p>Row permission description</p>
+         * <p>The row permission description.</p>
          * 
          * <strong>example:</strong>
          * <p>Restrict query region</p>
@@ -116,7 +116,7 @@ public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
         public String rowPermissionDesc;
 
         /**
-         * <p>Row permission ID</p>
+         * <p>The row permission ID.</p>
          * 
          * <strong>example:</strong>
          * <p>300000001</p>
@@ -125,7 +125,7 @@ public class GetRowPermissionByTableGuidsResponseBody extends TeaModel {
         public String rowPermissionId;
 
         /**
-         * <p>Row permission name</p>
+         * <p>The row permission name.</p>
          * 
          * <strong>example:</strong>
          * <p>Region</p>

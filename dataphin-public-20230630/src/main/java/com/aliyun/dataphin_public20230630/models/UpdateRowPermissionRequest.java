@@ -44,16 +44,16 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
     public static class UpdateRowPermissionRequestUpdateRowPermissionCommandMappingColumns extends TeaModel {
         /**
-         * <p>The description of the mapping field.</p>
+         * <p>The mapping column description.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务ID</p>
+         * <p>Business ID.</p>
          */
         @NameInMap("ColumnDesc")
         public String columnDesc;
 
         /**
-         * <p>The name of the mapping field.</p>
+         * <p>The mapping column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The type of the mapping field.</p>
+         * <p>The mapping column type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
     public static class UpdateRowPermissionRequestUpdateRowPermissionCommandRulesExpressions extends TeaModel {
         /**
-         * <p>The name of the mapping field.</p>
+         * <p>The mapping column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,8 +142,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The operation values of the expression.</p>
-         * <p>This parameter is required.</p>
+         * <p>The expression operation values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -197,7 +196,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
     public static class UpdateRowPermissionRequestUpdateRowPermissionCommandRulesUserMappingListAccounts extends TeaModel {
         /**
-         * <p>The ID of the account associated with the rule.</p>
+         * <p>The ID of the account bound to the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +222,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
     public static class UpdateRowPermissionRequestUpdateRowPermissionCommandRulesUserMappingList extends TeaModel {
         /**
-         * <p>The type of the account associated with the rule.</p>
+         * <p>The type of the account bound to the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +232,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The accounts associated with the rule.</p>
+         * <p>The accounts bound to the rule.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Accounts")
@@ -284,13 +283,13 @@ public class UpdateRowPermissionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>管控业务ID大于100</p>
+         * <p>Control business ID greater than 100</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The scope type of the rule.</p>
+         * <p>The rule scope type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +300,6 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
         /**
          * <p>The rule status.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -310,7 +308,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The accounts associated with the rule.</p>
+         * <p>The accounts bound to the rule.</p>
          */
         @NameInMap("UserMappingList")
         public java.util.List<UpdateRowPermissionRequestUpdateRowPermissionCommandRulesUserMappingList> userMappingList;
@@ -372,7 +370,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
     public static class UpdateRowPermissionRequestUpdateRowPermissionCommandTables extends TeaModel {
         /**
-         * <p>The table field.</p>
+         * <p>The table column.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -382,7 +380,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The name of the mapping field.</p>
+         * <p>The mapping column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -434,7 +432,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
 
     public static class UpdateRowPermissionRequestUpdateRowPermissionCommand extends TeaModel {
         /**
-         * <p>The mapping fields.</p>
+         * <p>The mapping columns.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("MappingColumns")
@@ -444,7 +442,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
          * <p>The row-level permission description.</p>
          * 
          * <strong>example:</strong>
-         * <p>管控业务数据</p>
+         * <p>Control business data.</p>
          */
         @NameInMap("RowPermissionDesc")
         public String rowPermissionDesc;
@@ -464,7 +462,7 @@ public class UpdateRowPermissionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务管控</p>
+         * <p>BusinessControl.</p>
          */
         @NameInMap("RowPermissionName")
         public String rowPermissionName;

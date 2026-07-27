@@ -26,13 +26,13 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>非法入参</p>
+     * <p>Invalid input parameter.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID. It is a unique identifier for the request.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -48,6 +48,9 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +128,7 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer isAuthorized;
 
         /**
-         * <p>The parameter type.</p>
+         * <p>The parameter data type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -218,7 +221,7 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer isAuthorized;
 
         /**
-         * <p>The parameter type.</p>
+         * <p>The parameter data type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -323,19 +326,19 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
          * <p>The permission type.</p>
          * 
          * <strong>example:</strong>
-         * <p>使用权限</p>
+         * <p>Usage permission.</p>
          */
         @NameInMap("AuthType")
         public String authType;
 
         /**
-         * <p>The list of fields authorized for the API in the development environment.</p>
+         * <p>The list of authorized fields for the API in the development environment.</p>
          */
         @NameInMap("AuthorizedDevReturnParameters")
         public java.util.List<ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedDevReturnParameters> authorizedDevReturnParameters;
 
         /**
-         * <p>The list of fields authorized for the API in the production environment.</p>
+         * <p>The list of authorized fields for the API in the production environment.</p>
          */
         @NameInMap("AuthorizedProdReturnParameters")
         public java.util.List<ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedProdReturnParameters> authorizedProdReturnParameters;

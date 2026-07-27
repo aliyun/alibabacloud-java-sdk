@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetBatchTemplateVersionsResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetBatchTemplateVersionsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -29,12 +38,17 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
 
     public static class GetBatchTemplateVersionsResponseBodyDataTemplateVersionList extends TeaModel {
         /**
+         * <p>The template submit comment.</p>
+         * 
          * <strong>example:</strong>
          * <p>初始化提交</p>
          */
@@ -100,6 +116,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The template content.</p>
+         * 
          * <strong>example:</strong>
          * <p>#!/bin/bash
          * echo \&quot;hello world\&quot;</p>
@@ -108,6 +126,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The template description.</p>
+         * 
          * <strong>example:</strong>
          * <p>用于数据处理的Shell模板</p>
          */
@@ -115,6 +135,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The version of the compute engine. Currently supported Python versions: Python 2.7 and Python 3.7.</p>
+         * 
          * <strong>example:</strong>
          * <p>Python 3.7</p>
          */
@@ -122,6 +144,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String engine;
 
         /**
+         * <p>The template creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-01 10:00:00</p>
          */
@@ -129,6 +153,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The template modification time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-28 15:30:00</p>
          */
@@ -136,6 +162,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The template ID, which is the same as the menu tree node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -143,6 +171,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The last modifier of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>李四</p>
          */
@@ -150,6 +180,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The ID of the last modifier of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>100002</p>
          */
@@ -157,6 +189,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String modifierId;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>数据处理模板</p>
          */
@@ -164,6 +198,12 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The template operator type. Valid values:</p>
+         * <ul>
+         * <li>10: Shell.</li>
+         * <li>21: Python.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -171,6 +211,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public Integer operatorType;
 
         /**
+         * <p>The template owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -178,6 +220,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>The template owner ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>100001</p>
          */
@@ -185,6 +229,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String ownerId;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -192,6 +238,13 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
+         * <p>The template status. Valid values:</p>
+         * <ul>
+         * <li>0: draft.</li>
+         * <li>2: submitted.</li>
+         * <li>100: in development.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -199,6 +252,8 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -341,6 +396,9 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class GetBatchTemplateVersionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The template version list.</p>
+         */
         @NameInMap("TemplateVersionList")
         public java.util.List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionList> templateVersionList;
 

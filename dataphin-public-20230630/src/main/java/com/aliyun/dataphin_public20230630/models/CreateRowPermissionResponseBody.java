@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRowPermissionResponseBody extends TeaModel {
     /**
-     * <p>The error code of the request. OK indicates a successful request.</p>
+     * <p>The error code. A value of OK indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message of the request.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

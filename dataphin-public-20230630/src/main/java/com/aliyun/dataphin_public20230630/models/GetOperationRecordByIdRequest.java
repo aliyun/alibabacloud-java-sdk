@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetOperationRecordByIdRequest extends TeaModel {
     /**
+     * <p>The query command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DetailCommand")
     public GetOperationRecordByIdRequestDetailCommand detailCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class GetOperationRecordByIdRequest extends TeaModel {
 
     public static class GetOperationRecordByIdRequestDetailCommand extends TeaModel {
         /**
+         * <p>The operation log ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class GetOperationRecordByIdRequest extends TeaModel {
         public Long operationId;
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

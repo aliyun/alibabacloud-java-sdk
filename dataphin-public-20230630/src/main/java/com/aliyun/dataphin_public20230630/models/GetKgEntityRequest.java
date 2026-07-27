@@ -1,0 +1,80 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataphin_public20230630.models;
+
+import com.aliyun.tea.*;
+
+public class GetKgEntityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc-xxx</p>
+     */
+    @NameInMap("EntityId")
+    public String entityId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Company</p>
+     */
+    @NameInMap("EntityType")
+    public String entityType;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpTenantId")
+    public Long opTenantId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f1d4559a4db044158305e2d89bccf81f</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
+    public static GetKgEntityRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetKgEntityRequest self = new GetKgEntityRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetKgEntityRequest setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public String getEntityId() {
+        return this.entityId;
+    }
+
+    public GetKgEntityRequest setEntityType(String entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    public String getEntityType() {
+        return this.entityType;
+    }
+
+    public GetKgEntityRequest setOpTenantId(Long opTenantId) {
+        this.opTenantId = opTenantId;
+        return this;
+    }
+    public Long getOpTenantId() {
+        return this.opTenantId;
+    }
+
+    public GetKgEntityRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+}

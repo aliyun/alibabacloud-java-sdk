@@ -29,7 +29,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -107,7 +107,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
 
     public static class GetAccountByRowPermissionIdResponseBodyDataUserMappingListAccounts extends TeaModel {
         /**
-         * <p>The ID of the account associated with the rule.</p>
+         * <p>The ID of the account bound to the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>300901111</p>
@@ -116,10 +116,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The name of the account associated with the rule.</p>
+         * <p>The name of the account bound to the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -149,7 +149,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
 
     public static class GetAccountByRowPermissionIdResponseBodyDataUserMappingList extends TeaModel {
         /**
-         * <p>The type of the account associated with the rule.</p>
+         * <p>The type of the account bound to the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>PERSONAL</p>
@@ -158,7 +158,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The accounts associated with the rule.</p>
+         * <p>The accounts bound to the rule.</p>
          */
         @NameInMap("Accounts")
         public java.util.List<GetAccountByRowPermissionIdResponseBodyDataUserMappingListAccounts> accounts;
@@ -197,7 +197,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The accounts associated with the rule.</p>
+         * <p>The accounts bound to the rule.</p>
          */
         @NameInMap("UserMappingList")
         public java.util.List<GetAccountByRowPermissionIdResponseBodyDataUserMappingList> userMappingList;

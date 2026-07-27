@@ -615,6 +615,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates knowledge graph entity records in batches. Online version: v6.1.1.</p>
+     * 
+     * @param tmpReq BatchCreateKgEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchCreateKgEntityResponse
+     */
+    public BatchCreateKgEntityResponse batchCreateKgEntityWithOptions(BatchCreateKgEntityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchCreateKgEntityShrinkRequest request = new BatchCreateKgEntityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateKgEntity"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateKgEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates knowledge graph entity records in batches. Online version: v6.1.1.</p>
+     * 
+     * @param request BatchCreateKgEntityRequest
+     * @return BatchCreateKgEntityResponse
+     */
+    public BatchCreateKgEntityResponse batchCreateKgEntity(BatchCreateKgEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchCreateKgEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</p>
+     * 
+     * @param tmpReq BatchCreateKgRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchCreateKgRelationResponse
+     */
+    public BatchCreateKgRelationResponse batchCreateKgRelationWithOptions(BatchCreateKgRelationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchCreateKgRelationShrinkRequest request = new BatchCreateKgRelationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchCreateKgRelation"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchCreateKgRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</p>
+     * 
+     * @param request BatchCreateKgRelationRequest
+     * @return BatchCreateKgRelationResponse
+     */
+    public BatchCreateKgRelationResponse batchCreateKgRelation(BatchCreateKgRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchCreateKgRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Checks the connectivity of a compute source.</p>
      * 
      * @param tmpReq CheckComputeSourceConnectivityRequest
@@ -979,6 +1099,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAdHocFileResponse createAdHocFile(CreateAdHocFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAdHocFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Basic (single-environment) project.</p>
+     * 
+     * @param tmpReq CreateBasicProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBasicProjectResponse
+     */
+    public CreateBasicProjectResponse createBasicProjectWithOptions(CreateBasicProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateBasicProjectShrinkRequest request = new CreateBasicProjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBasicProject"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBasicProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Basic (single-environment) project.</p>
+     * 
+     * @param request CreateBasicProjectRequest
+     * @return CreateBasicProjectResponse
+     */
+    public CreateBasicProjectResponse createBasicProject(CreateBasicProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBasicProjectWithOptions(request, runtime);
     }
 
     /**
@@ -1625,6 +1801,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a Dev-Prod (dual-environment) project.</p>
+     * 
+     * @param tmpReq CreateDevProdProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDevProdProjectResponse
+     */
+    public CreateDevProdProjectResponse createDevProdProjectWithOptions(CreateDevProdProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDevProdProjectShrinkRequest request = new CreateDevProdProjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDevProdProject"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDevProdProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Dev-Prod (dual-environment) project.</p>
+     * 
+     * @param request CreateDevProdProjectRequest
+     * @return CreateDevProdProjectResponse
+     */
+    public CreateDevProdProjectResponse createDevProdProject(CreateDevProdProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDevProdProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</p>
      * 
      * @param tmpReq CreateDirectoryRequest
@@ -1677,6 +1909,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDirectoryResponse createDirectory(CreateDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDirectoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge graph entity record. Online version: v6.1.1.</p>
+     * 
+     * @param tmpReq CreateKgEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKgEntityResponse
+     */
+    public CreateKgEntityResponse createKgEntityWithOptions(CreateKgEntityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateKgEntityShrinkRequest request = new CreateKgEntityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKgEntity"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKgEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge graph entity record. Online version: v6.1.1.</p>
+     * 
+     * @param request CreateKgEntityRequest
+     * @return CreateKgEntityResponse
+     */
+    public CreateKgEntityResponse createKgEntity(CreateKgEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKgEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * 
+     * @param tmpReq CreateKgRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKgRelationResponse
+     */
+    public CreateKgRelationResponse createKgRelationWithOptions(CreateKgRelationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateKgRelationShrinkRequest request = new CreateKgRelationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createCommand)) {
+            request.createCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createCommand, "CreateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createCommandShrink)) {
+            body.put("CreateCommand", request.createCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKgRelation"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKgRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * 
+     * @param request CreateKgRelationRequest
+     * @return CreateKgRelationResponse
+     */
+    public CreateKgRelationResponse createKgRelation(CreateKgRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKgRelationWithOptions(request, runtime);
     }
 
     /**
@@ -1989,7 +2341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query detailed information about published APIs based on the appKey.</p>
+     * <p>Queries the details of published APIs by appKey.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a row-level permission.</p>
@@ -2036,7 +2388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query detailed information about published APIs based on the appKey.</p>
+     * <p>Queries the details of published APIs by appKey.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a row-level permission.</p>
@@ -3543,6 +3895,166 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes an entity record. Online version: v6.1.1.</p>
+     * 
+     * @param request DeleteKgEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKgEntityResponse
+     */
+    public DeleteKgEntityResponse deleteKgEntityWithOptions(DeleteKgEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            query.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKgEntity"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKgEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an entity record. Online version: v6.1.1.</p>
+     * 
+     * @param request DeleteKgEntityRequest
+     * @return DeleteKgEntityResponse
+     */
+    public DeleteKgEntityResponse deleteKgEntity(DeleteKgEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKgEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a relationship record. Online version: v6.1.1.</p>
+     * 
+     * @param request DeleteKgRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKgRelationResponse
+     */
+    public DeleteKgRelationResponse deleteKgRelationWithOptions(DeleteKgRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationId)) {
+            query.put("RelationId", request.relationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationType)) {
+            query.put("RelationType", request.relationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKgRelation"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKgRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a relationship record. Online version: v6.1.1.</p>
+     * 
+     * @param request DeleteKgRelationRequest
+     * @return DeleteKgRelationResponse
+     */
+    public DeleteKgRelationResponse deleteKgRelation(DeleteKgRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKgRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a project (applicable to both Basic and Dev-Prod projects).</p>
+     * 
+     * @param request DeleteProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteProjectResponse
+     */
+    public DeleteProjectResponse deleteProjectWithOptions(DeleteProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteProject"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a project (applicable to both Basic and Dev-Prod projects).</p>
+     * 
+     * @param request DeleteProjectRequest
+     * @return DeleteProjectResponse
+     */
+    public DeleteProjectResponse deleteProject(DeleteProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes quality rule objects in batches.
      * Release version: v5.4.2.</p>
      * 
@@ -4651,6 +5163,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Executes a custom Cypher query. Online version: v6.2.0.</p>
+     * 
+     * @param tmpReq ExecKgCypherRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecKgCypherResponse
+     */
+    public ExecKgCypherResponse execKgCypherWithOptions(ExecKgCypherRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExecKgCypherShrinkRequest request = new ExecKgCypherShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.execCommand)) {
+            request.execCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.execCommand, "ExecCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.execCommandShrink)) {
+            body.put("ExecCommand", request.execCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecKgCypher"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecKgCypherResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Executes a custom Cypher query. Online version: v6.2.0.</p>
+     * 
+     * @param request ExecKgCypherRequest
+     * @return ExecKgCypherResponse
+     */
+    public ExecKgCypherResponse execKgCypher(ExecKgCypherRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.execKgCypherWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Executes an ad hoc query task.</p>
      * 
      * @param tmpReq ExecuteAdHocTaskRequest
@@ -4827,6 +5399,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteTriggerNodeResponse executeTriggerNode(ExecuteTriggerNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeTriggerNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出知识图谱定义。</p>
+     * 
+     * @param request ExportKgSchemaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportKgSchemaResponse
+     */
+    public ExportKgSchemaResponse exportKgSchemaWithOptions(ExportKgSchemaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputFormat)) {
+            query.put("OutputFormat", request.outputFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportKgSchema"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportKgSchemaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出知识图谱定义。</p>
+     * 
+     * @param request ExportKgSchemaRequest
+     * @return ExportKgSchemaResponse
+     */
+    public ExportKgSchemaResponse exportKgSchema(ExportKgSchemaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportKgSchemaWithOptions(request, runtime);
     }
 
     /**
@@ -5441,7 +6069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定离线模板ID版本列表。</p>
+     * <p>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</p>
      * 
      * @param request GetBatchTemplateVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5485,7 +6113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定离线模板ID版本列表。</p>
+     * <p>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</p>
      * 
      * @param request GetBatchTemplateVersionsRequest
      * @return GetBatchTemplateVersionsResponse
@@ -7155,6 +7783,238 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取知识图谱实体记录。</p>
+     * 
+     * @param request GetKgEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKgEntityResponse
+     */
+    public GetKgEntityResponse getKgEntityWithOptions(GetKgEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            query.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKgEntity"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKgEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取知识图谱实体记录。</p>
+     * 
+     * @param request GetKgEntityRequest
+     * @return GetKgEntityResponse
+     */
+    public GetKgEntityResponse getKgEntity(GetKgEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKgEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取图谱模型邻居节点。</p>
+     * 
+     * @param tmpReq GetKgNeighborRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKgNeighborResponse
+     */
+    public GetKgNeighborResponse getKgNeighborWithOptions(GetKgNeighborRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetKgNeighborShrinkRequest request = new GetKgNeighborShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.neighborsQuery)) {
+            request.neighborsQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.neighborsQuery, "NeighborsQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityDataId)) {
+            query.put("EntityDataId", request.entityDataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.neighborsQueryShrink)) {
+            body.put("NeighborsQuery", request.neighborsQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKgNeighbor"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKgNeighborResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取图谱模型邻居节点。</p>
+     * 
+     * @param request GetKgNeighborRequest
+     * @return GetKgNeighborResponse
+     */
+    public GetKgNeighborResponse getKgNeighbor(GetKgNeighborRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKgNeighborWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取知识图谱关系记录。</p>
+     * 
+     * @param request GetKgRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKgRelationResponse
+     */
+    public GetKgRelationResponse getKgRelationWithOptions(GetKgRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationId)) {
+            query.put("RelationId", request.relationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationType)) {
+            query.put("RelationType", request.relationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKgRelation"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKgRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取知识图谱关系记录。</p>
+     * 
+     * @param request GetKgRelationRequest
+     * @return GetKgRelationResponse
+     */
+    public GetKgRelationResponse getKgRelation(GetKgRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKgRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取图谱模型发布结果。</p>
+     * 
+     * @param request GetKgSchemaPublishResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKgSchemaPublishResultResponse
+     */
+    public GetKgSchemaPublishResultResponse getKgSchemaPublishResultWithOptions(GetKgSchemaPublishResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKgSchemaPublishResult"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKgSchemaPublishResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取图谱模型发布结果。</p>
+     * 
+     * @param request GetKgSchemaPublishResultRequest
+     * @return GetKgSchemaPublishResultResponse
+     */
+    public GetKgSchemaPublishResultResponse getKgSchemaPublishResult(GetKgSchemaPublishResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getKgSchemaPublishResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the details of the latest pending submit record.</p>
      * 
      * @param tmpReq GetLatestSubmitDetailRequest
@@ -7383,7 +8243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据Id查询运行记录</p>
+     * <p>Queries an operation log by ID. Available since v6.2.0.</p>
      * 
      * @param tmpReq GetOperationRecordByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7427,7 +8287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据Id查询运行记录</p>
+     * <p>Queries an operation log by ID. Available since v6.2.0.</p>
      * 
      * @param request GetOperationRecordByIdRequest
      * @return GetOperationRecordByIdResponse
@@ -8965,7 +9825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Release version: v5.4.2.</p>
+     * <p>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</p>
      * 
      * @param tmpReq GetRowPermissionByTableGuidsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9009,7 +9869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Release version: v5.4.2.</p>
+     * <p>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</p>
      * 
      * @param request GetRowPermissionByTableGuidsRequest
      * @return GetRowPermissionByTableGuidsResponse
@@ -10481,6 +11341,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>导入知识图谱定义。</p>
+     * 
+     * @param tmpReq ImportKgSchemaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportKgSchemaResponse
+     */
+    public ImportKgSchemaResponse importKgSchemaWithOptions(ImportKgSchemaRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ImportKgSchemaShrinkRequest request = new ImportKgSchemaShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.importCommand)) {
+            request.importCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.importCommand, "ImportCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.importCommandShrink)) {
+            body.put("ImportCommand", request.importCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportKgSchema"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportKgSchemaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导入知识图谱定义。</p>
+     * 
+     * @param request ImportKgSchemaRequest
+     * @return ImportKgSchemaResponse
+     */
+    public ImportKgSchemaResponse importKgSchema(ImportKgSchemaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importKgSchemaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the global roles that can be assigned to tenant members. Only built-in global roles are supported. Custom global roles are not supported.</p>
      * 
      * @param request ListAddableRolesRequest
@@ -10754,8 +11674,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of specific fields for APIs that an application has requested.</p>
+     * <p>Queries the specific field list of APIs that an application has requested.</p>
      * 
      * @param tmpReq ListAuthorizedDataServiceApiDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10798,8 +11722,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of specific fields for APIs that an application has requested.</p>
+     * <p>Queries the specific field list of APIs that an application has requested.</p>
      * 
      * @param request ListAuthorizedDataServiceApiDetailsRequest
      * @return ListAuthorizedDataServiceApiDetailsResponse
@@ -11853,6 +12781,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries knowledge graph entity records with paging. Online version: v6.1.1.</p>
+     * 
+     * @param tmpReq ListKgEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKgEntityResponse
+     */
+    public ListKgEntityResponse listKgEntityWithOptions(ListKgEntityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListKgEntityShrinkRequest request = new ListKgEntityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listQuery)) {
+            request.listQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listQuery, "ListQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
+            query.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listQueryShrink)) {
+            body.put("ListQuery", request.listQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKgEntity"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKgEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries knowledge graph entity records with paging. Online version: v6.1.1.</p>
+     * 
+     * @param request ListKgEntityRequest
+     * @return ListKgEntityResponse
+     */
+    public ListKgEntityResponse listKgEntity(ListKgEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKgEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询知识图谱关系记录。</p>
+     * 
+     * @param tmpReq ListKgRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKgRelationResponse
+     */
+    public ListKgRelationResponse listKgRelationWithOptions(ListKgRelationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListKgRelationShrinkRequest request = new ListKgRelationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listQuery)) {
+            request.listQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listQuery, "ListQuery", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationType)) {
+            query.put("RelationType", request.relationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listQueryShrink)) {
+            body.put("ListQuery", request.listQueryShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKgRelation"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKgRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询知识图谱关系记录。</p>
+     * 
+     * @param request ListKgRelationRequest
+     * @return ListKgRelationResponse
+     */
+    public ListKgRelationResponse listKgRelation(ListKgRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKgRelationWithOptions(request, runtime);
     }
 
     /**
@@ -13761,6 +14817,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Publishes a knowledge graph model. Online version: v6.2.0.</p>
+     * 
+     * @param tmpReq PublishKgSchemaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishKgSchemaResponse
+     */
+    public PublishKgSchemaResponse publishKgSchemaWithOptions(PublishKgSchemaRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PublishKgSchemaShrinkRequest request = new PublishKgSchemaShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.publishCommand)) {
+            request.publishCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.publishCommand, "PublishCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.publishCommandShrink)) {
+            body.put("PublishCommand", request.publishCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishKgSchema"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishKgSchemaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Publishes a knowledge graph model. Online version: v6.2.0.</p>
+     * 
+     * @param request PublishKgSchemaRequest
+     * @return PublishKgSchemaResponse
+     */
+    public PublishKgSchemaResponse publishKgSchema(PublishKgSchemaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.publishKgSchemaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Publishes objects in batches.</p>
      * 
      * @param tmpReq PublishObjectListRequest
@@ -14967,6 +16083,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</p>
+     * 
+     * @param tmpReq UpdateBasicProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateBasicProjectResponse
+     */
+    public UpdateBasicProjectResponse updateBasicProjectWithOptions(UpdateBasicProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateBasicProjectShrinkRequest request = new UpdateBasicProjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateCommand)) {
+            request.updateCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateCommand, "UpdateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.updateCommandShrink)) {
+            body.put("UpdateCommand", request.updateCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateBasicProject"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateBasicProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</p>
+     * 
+     * @param request UpdateBasicProjectRequest
+     * @return UpdateBasicProjectResponse
+     */
+    public UpdateBasicProjectResponse updateBasicProject(UpdateBasicProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateBasicProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates an offline compute node.</p>
      * 
      * @param tmpReq UpdateBatchTaskRequest
@@ -15729,6 +16901,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Edits a Dev-Prod (dual-environment) project.</p>
+     * 
+     * @param tmpReq UpdateDevProdProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDevProdProjectResponse
+     */
+    public UpdateDevProdProjectResponse updateDevProdProjectWithOptions(UpdateDevProdProjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDevProdProjectShrinkRequest request = new UpdateDevProdProjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateCommand)) {
+            request.updateCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateCommand, "UpdateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.updateCommandShrink)) {
+            body.put("UpdateCommand", request.updateCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDevProdProject"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDevProdProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Edits a Dev-Prod (dual-environment) project.</p>
+     * 
+     * @param request UpdateDevProdProjectRequest
+     * @return UpdateDevProdProjectResponse
+     */
+    public UpdateDevProdProjectResponse updateDevProdProject(UpdateDevProdProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDevProdProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Moves the file position in the menu tree.</p>
      * 
      * @param request UpdateFileDirectoryRequest
@@ -15837,6 +17065,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateFileNameResponse updateFileName(UpdateFileNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateFileNameWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Edits a knowledge graph entity record. Online version: v6.1.1.</p>
+     * 
+     * @param tmpReq UpdateKgEntityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKgEntityResponse
+     */
+    public UpdateKgEntityResponse updateKgEntityWithOptions(UpdateKgEntityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateKgEntityShrinkRequest request = new UpdateKgEntityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateCommand)) {
+            request.updateCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateCommand, "UpdateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.updateCommandShrink)) {
+            body.put("UpdateCommand", request.updateCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKgEntity"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKgEntityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Edits a knowledge graph entity record. Online version: v6.1.1.</p>
+     * 
+     * @param request UpdateKgEntityRequest
+     * @return UpdateKgEntityResponse
+     */
+    public UpdateKgEntityResponse updateKgEntity(UpdateKgEntityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKgEntityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Edits a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * 
+     * @param tmpReq UpdateKgRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKgRelationResponse
+     */
+    public UpdateKgRelationResponse updateKgRelationWithOptions(UpdateKgRelationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateKgRelationShrinkRequest request = new UpdateKgRelationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateCommand)) {
+            request.updateCommandShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateCommand, "UpdateCommand", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.updateCommandShrink)) {
+            body.put("UpdateCommand", request.updateCommandShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKgRelation"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKgRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Edits a knowledge graph relationship record. Online version: v6.1.1.</p>
+     * 
+     * @param request UpdateKgRelationRequest
+     * @return UpdateKgRelationResponse
+     */
+    public UpdateKgRelationResponse updateKgRelation(UpdateKgRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateKgRelationWithOptions(request, runtime);
     }
 
     /**
@@ -16201,7 +17549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a row-level permission.</p>
+     * <p>Updates row-level permissions.</p>
      * 
      * @param tmpReq UpdateRowPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16245,7 +17593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a row-level permission.</p>
+     * <p>Updates row-level permissions.</p>
      * 
      * @param request UpdateRowPermissionRequest
      * @return UpdateRowPermissionResponse

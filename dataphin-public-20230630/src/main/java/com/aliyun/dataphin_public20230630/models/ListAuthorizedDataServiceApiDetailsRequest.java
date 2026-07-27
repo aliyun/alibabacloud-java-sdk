@@ -48,9 +48,6 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
     public static class ListAuthorizedDataServiceApiDetailsRequestListQuery extends TeaModel {
         /**
          * <p>The application key.</p>
-         * <blockquote>
-         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>200000000</p>

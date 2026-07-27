@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetOperationRecordByIdShrinkRequest extends TeaModel {
     /**
+     * <p>The query command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DetailCommand")
     public String detailCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

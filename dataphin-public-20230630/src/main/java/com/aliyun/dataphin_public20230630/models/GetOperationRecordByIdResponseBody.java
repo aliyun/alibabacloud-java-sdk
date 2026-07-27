@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOperationRecordByIdResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,22 +23,32 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The operation log details.</p>
+     */
     @NameInMap("OperationLogDTO")
     public GetOperationRecordByIdResponseBodyOperationLogDTO operationLogDTO;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
 
     public static class GetOperationRecordByIdResponseBodyOperationLogDTO extends TeaModel {
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-15 10:30:00</p>
          */
@@ -100,6 +116,15 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String beginTime;
 
         /**
+         * <p>The code type. Valid values:</p>
+         * <ul>
+         * <li>SQL0: SQL</li>
+         * <li>shell1: Shell</li>
+         * <li>Python2: Python</li>
+         * <li>MR3: MR</li>
+         * <li>Spark4: Spark</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -107,6 +132,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public Integer codeType;
 
         /**
+         * <p>The execution duration, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -114,6 +141,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -121,6 +150,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试任务</p>
          */
@@ -128,6 +159,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The object type.</p>
+         * 
          * <strong>example:</strong>
          * <p>onedata-ide</p>
          */
@@ -135,6 +168,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String objectType;
 
         /**
+         * <p>The operation log ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>987654321</p>
          */
@@ -142,16 +177,23 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public Long operationId;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>131211211</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The list of related tables.</p>
+         */
         @NameInMap("RelationTables")
         public java.util.List<String> relationTables;
 
         /**
+         * <p>The ID of the runner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30231123</p>
          */
@@ -159,6 +201,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String runner;
 
         /**
+         * <p>The name of the runner.</p>
+         * 
          * <strong>example:</strong>
          * <p>张三</p>
          */
@@ -166,6 +210,13 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String runnerName;
 
         /**
+         * <p>The node status. Valid values:</p>
+         * <ul>
+         * <li>4: Running.</li>
+         * <li>5: Succeeded.</li>
+         * <li>6: Failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -173,6 +224,8 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10001</p>
          */

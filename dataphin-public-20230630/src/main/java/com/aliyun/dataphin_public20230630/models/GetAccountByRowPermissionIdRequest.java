@@ -55,7 +55,6 @@ public class GetAccountByRowPermissionIdRequest extends TeaModel {
 
         /**
          * <p>The row-level permission rule IDs.</p>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("RuleIds")
         public java.util.List<Long> ruleIds;

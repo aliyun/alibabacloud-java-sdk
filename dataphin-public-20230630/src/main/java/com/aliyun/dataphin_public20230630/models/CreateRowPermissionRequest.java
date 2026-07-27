@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateRowPermissionRequest extends TeaModel {
     /**
-     * <p>Request command.</p>
+     * <p>The request command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateRowPermissionCommand")
     public CreateRowPermissionRequestCreateRowPermissionCommand createRowPermissionCommand;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,16 +44,16 @@ public class CreateRowPermissionRequest extends TeaModel {
 
     public static class CreateRowPermissionRequestCreateRowPermissionCommandMappingColumns extends TeaModel {
         /**
-         * <p>The description of the mapping column.</p>
+         * <p>The description of the mapping field.</p>
          * 
          * <strong>example:</strong>
-         * <p>控制业务ID字段</p>
+         * <p>Controls the business ID field.</p>
          */
         @NameInMap("ColumnDesc")
         public String columnDesc;
 
         /**
-         * <p>The name of the mapping column.</p>
+         * <p>The name of the mapping field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class CreateRowPermissionRequest extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The type of the mapping column.</p>
+         * <p>The type of the mapping field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class CreateRowPermissionRequest extends TeaModel {
 
     public static class CreateRowPermissionRequestCreateRowPermissionCommandRulesExpressions extends TeaModel {
         /**
-         * <p>The name of the mapping column.</p>
+         * <p>The name of the mapping field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,8 +142,7 @@ public class CreateRowPermissionRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The expression operation values.</p>
-         * <p>This parameter is required.</p>
+         * <p>The operation values of the expression.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -274,7 +273,7 @@ public class CreateRowPermissionRequest extends TeaModel {
         public java.util.List<CreateRowPermissionRequestCreateRowPermissionCommandRulesExpressions> expressions;
 
         /**
-         * <p>Specifies whether to delete the rule.</p>
+         * <p>Specifies whether the rule is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -287,7 +286,7 @@ public class CreateRowPermissionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>中台</p>
+         * <p>MiddlePlatform.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -304,7 +303,6 @@ public class CreateRowPermissionRequest extends TeaModel {
 
         /**
          * <p>The status of the rule.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -375,7 +373,7 @@ public class CreateRowPermissionRequest extends TeaModel {
 
     public static class CreateRowPermissionRequestCreateRowPermissionCommandTables extends TeaModel {
         /**
-         * <p>The column of the table.</p>
+         * <p>The field of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -385,7 +383,7 @@ public class CreateRowPermissionRequest extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The name of the mapping column.</p>
+         * <p>The name of the mapping field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,7 +435,7 @@ public class CreateRowPermissionRequest extends TeaModel {
 
     public static class CreateRowPermissionRequestCreateRowPermissionCommand extends TeaModel {
         /**
-         * <p>The mapping columns.</p>
+         * <p>The mapping fields.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("MappingColumns")
@@ -447,7 +445,7 @@ public class CreateRowPermissionRequest extends TeaModel {
          * <p>The description of the row-level permission.</p>
          * 
          * <strong>example:</strong>
-         * <p>管控业务数据</p>
+         * <p>Control business data.</p>
          */
         @NameInMap("RowPermissionDesc")
         public String rowPermissionDesc;
@@ -457,7 +455,7 @@ public class CreateRowPermissionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务管控</p>
+         * <p>BusinessControl.</p>
          */
         @NameInMap("RowPermissionName")
         public String rowPermissionName;

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBatchTemplateVersionsRequest extends TeaModel {
     /**
+     * <p>The environment. Valid values:</p>
+     * <ul>
+     * <li>DEV: development environment.</li>
+     * <li>PROD: production environment.</li>
+     * </ul>
+     * <p>Default value for dev_prod projects: DEV.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEV</p>
      */
@@ -12,6 +19,7 @@ public class GetBatchTemplateVersionsRequest extends TeaModel {
     public String env;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +29,7 @@ public class GetBatchTemplateVersionsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +39,7 @@ public class GetBatchTemplateVersionsRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
