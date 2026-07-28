@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
     /**
-     * <p>The information returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetCreateBEClusterInquiryResponseBodyData data;
@@ -140,7 +140,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         public java.util.Map<String, String> pricingRules;
 
         /**
-         * <p>The amount of money.</p>
+         * <p>The amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.76</p>

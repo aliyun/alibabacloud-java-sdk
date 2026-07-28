@@ -50,8 +50,10 @@ public class EnDisableScalingRulesRequest extends TeaModel {
      * <p>Specifies whether to enable the scheduled scaling policy.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBEClusterAttributeRequest extends TeaModel {
     /**
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyBEClusterAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,8 @@ public class ModifyBEClusterAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The attribute type of the instance. Set this parameter to DBInstanceDescription.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>MaintainTime</li>
-     * <li>DBInstanceDescription</li>
-     * </ul>
+     * <p>Attribute type to modify.
+     * Set to DBInstanceDescription.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +36,7 @@ public class ModifyBEClusterAttributeRequest extends TeaModel {
     public String instanceAttributeType;
 
     /**
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +49,7 @@ public class ModifyBEClusterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new name of the cluster.</p>
+     * <p>Target cluster name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

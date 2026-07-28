@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>New instance test</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -22,12 +25,18 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The state of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>CREATING</strong>: The instance is being created.</li>
-     * <li><strong>ACTIVATION</strong>: The instance is running.</li>
-     * <li><strong>RESOURCE_CHANGING</strong>: The resource configuration of the instance is being changed.</li>
-     * <li><strong>ORDER_PREPARING</strong>: The order is being confirmed.</li>
-     * <li><strong>READONLY_RESOURCE_CHANGING</strong>: The resource configuration of the instance is being changed and the instance is write-locked.</li>
-     * <li><strong>DELETING</strong>: The instance is being deleted.</li>
+     * <li><p><strong>CREATING</strong>: The instance is being created.</p>
+     * </li>
+     * <li><p><strong>ACTIVATION</strong>: The instance is running.</p>
+     * </li>
+     * <li><p><strong>RESOURCE_CHANGING</strong>: The instance is being upgraded or downgraded.</p>
+     * </li>
+     * <li><p><strong>ORDER_PREPARING</strong>: The order is being confirmed.</p>
+     * </li>
+     * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: The instance configuration is being changed, and the instance is write-locked.</p>
+     * </li>
+     * <li><p><strong>DELETING</strong>: The instance is being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,11 +55,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +72,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +82,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
@@ -81,6 +93,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The list of tags of instances.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesRequestTag> tag;
 
@@ -163,6 +178,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     public static class DescribeDBInstancesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -170,6 +187,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */

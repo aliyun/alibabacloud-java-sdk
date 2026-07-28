@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>failed</p>
      */
@@ -12,13 +14,13 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The information returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeDBClusterConfigChangeLogsResponseBodyData data;
 
     /**
-     * <p>The dynamic code. This parameter is not returned.</p>
+     * <p>The dynamic code. This parameter is not used. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -27,7 +29,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not returned.</p>
+     * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
@@ -36,6 +38,8 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8900A96-67F7-5274-A41B-7722E1ECF8C9</p>
      */
@@ -89,6 +93,8 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
 
     public static class DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs extends TeaModel {
         /**
+         * <p>The time when the task was created. The time is in GMT.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
          */
@@ -96,6 +102,8 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the task was last modified. The time is in GMT.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-08T10:08Z</p>
          */
@@ -103,7 +111,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the change log.</p>
+         * <p>The ID of the change record.</p>
          * 
          * <strong>example:</strong>
          * <p>617975</p>
@@ -112,7 +120,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the modification has taken effect.</p>
+         * <p>Indicates whether the configuration has taken effect.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -121,7 +129,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public Boolean isApplied;
 
         /**
-         * <p>The parameter name.</p>
+         * <p>The name of the configuration item.</p>
          * 
          * <strong>example:</strong>
          * <p>cumulative_compaction_rounds_for_each_base_compaction_round</p>
@@ -130,6 +138,8 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The new parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -137,6 +147,8 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String newValue;
 
         /**
+         * <p>The original parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -211,12 +223,14 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>selectdb-cn-wny3li00g02-be</p>
+         * <p>selectdb-cn-7213c8****-be</p>
          */
         @NameInMap("DbClusterId")
         public String dbClusterId;
 
         /**
+         * <p>The numeric ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>6585</p>
          */
@@ -227,7 +241,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>selectdb-cn-wny3li00g02</p>
+         * <p>selectdb-cn-7213c8****</p>
          */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;

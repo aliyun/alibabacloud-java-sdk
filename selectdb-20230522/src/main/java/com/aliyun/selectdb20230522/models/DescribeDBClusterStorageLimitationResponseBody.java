@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
     /**
+     * <p>The details of the access denial. This field is returned only when the RAM verification fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>failed</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeDBClusterStorageLimitationResponseBodyData data;
 
     /**
+     * <p>The dynamic code. This parameter is not used. Ignore this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
      */
@@ -82,6 +93,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
 
     public static class DescribeDBClusterStorageLimitationResponseBodyDataClassCodeList extends TeaModel {
         /**
+         * <p>The specification code.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb.xlarge</p>
          */
@@ -89,6 +102,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public String classCode;
 
         /**
+         * <p>The number of vCPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -96,6 +111,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer cpuCores;
 
         /**
+         * <p>The default cache size in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -103,6 +120,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer defaultStorageInGB;
 
         /**
+         * <p>The maximum cache size in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -110,6 +129,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer maxStorageInGB;
 
         /**
+         * <p>The memory size in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -117,6 +138,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer memoryInGB;
 
         /**
+         * <p>The minimum cache size in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -124,6 +147,8 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer minStorageInGB;
 
         /**
+         * <p>The cache step size in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -194,6 +219,9 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterStorageLimitationResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of cache specifications.</p>
+         */
         @NameInMap("ClassCodeList")
         public java.util.List<DescribeDBClusterStorageLimitationResponseBodyDataClassCodeList> classCodeList;
 

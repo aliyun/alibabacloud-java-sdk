@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceDeploySchemeShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class UpgradeDBInstanceDeploySchemeShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>A list of multi-zone configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MultiZone")
     public String multiZoneShrink;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -63,8 +63,10 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
          * <p>Indicates whether the scheduled scaling policy is enabled.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

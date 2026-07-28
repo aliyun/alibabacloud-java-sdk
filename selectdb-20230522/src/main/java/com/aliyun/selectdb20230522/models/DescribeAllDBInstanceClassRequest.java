@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAllDBInstanceClassRequest extends TeaModel {
     /**
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

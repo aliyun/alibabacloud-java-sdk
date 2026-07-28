@@ -61,8 +61,10 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         /**
          * <p>The IP address type. Valid values:</p>
          * <ul>
-         * <li>ipv4</li>
-         * <li>ipv6 (not supported)</li>
+         * <li><p>ipv4</p>
+         * </li>
+         * <li><p>ipv6 (not supported)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

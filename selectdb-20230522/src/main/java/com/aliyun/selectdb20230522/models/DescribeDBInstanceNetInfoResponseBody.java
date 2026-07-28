@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
-     * <p>The network information about the backend (BE) clusters.</p>
+     * <p>Network list of BE instances.</p>
      */
     @NameInMap("DBClustersNetInfos")
     public java.util.List<DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfos> DBClustersNetInfos;
 
     /**
-     * <p>The network information about the instance.</p>
+     * <p>Instance network information.</p>
      */
     @NameInMap("DBInstanceNetInfos")
     public java.util.List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos> DBInstanceNetInfos;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ADF42B18-43FD-5100-83A9-BE81AB70C863</p>
@@ -56,19 +56,19 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfosPortList extends TeaModel {
         /**
-         * <p>The port that is used to connect to the BE cluster.</p>
+         * <p>Connection port number.</p>
          * 
          * <strong>example:</strong>
-         * <p>MySQLPort/HttpPort</p>
+         * <p>9030/8080</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The protocol of the port.</p>
+         * <p>Port type.</p>
          * 
          * <strong>example:</strong>
-         * <p>9030/8080</p>
+         * <p>MySQLPort/HttpPort</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -98,7 +98,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfos extends TeaModel {
         /**
-         * <p>The cluster ID.</p>
+         * <p>Cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-****-be</p>
@@ -107,7 +107,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The connection string of the BE cluster.</p>
+         * <p>Connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-****-fe.selectdbfe.pre.rds.aliyuncs.com</p>
@@ -116,7 +116,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The IP address of the BE cluster.</p>
+         * <p>IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>8.131.<em><strong>.</strong></em></p>
@@ -125,7 +125,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The network type of the BE cluster.</p>
+         * <p>Network type.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC/PUBLIC</p>
@@ -133,11 +133,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>Port list.</p>
+         */
         @NameInMap("PortList")
         public java.util.List<DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfosPortList> portList;
 
         /**
-         * <p>Indicates whether the network information is visible to users.</p>
+         * <p>Indicates whether the information is visible to users.</p>
          * 
          * <strong>example:</strong>
          * <p>true/false</p>
@@ -146,7 +149,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public Boolean userVisible;
 
         /**
-         * <p>VPC ID</p>
+         * <p>VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-****</p>
@@ -155,7 +158,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-****-fe-20230816101006</p>
@@ -164,7 +167,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String vpcInstanceId;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-****</p>
@@ -253,7 +256,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosPortList extends TeaModel {
         /**
-         * <p>The port that is used to connect to the instance.</p>
+         * <p>Connection port number.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQLPort</p>
@@ -262,10 +265,12 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol of the port. Valid values:</p>
+         * <p>Port type. Valid values:</p>
          * <ul>
-         * <li><strong>HttpPort</strong>: HTTP port.</li>
-         * <li><strong>MySQLPort</strong>: MySQL port.</li>
+         * <li><p><strong>HttpPort</strong>: HTTP protocol port.</p>
+         * </li>
+         * <li><p><strong>MySQLPort</strong>: MySQL protocol port.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,7 +304,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos extends TeaModel {
         /**
-         * <p>The cluster ID.</p>
+         * <p>Cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-****-be</p>
@@ -308,7 +313,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The connection string of the instance.</p>
+         * <p>Connection address.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-h033cnd****-fe.selectdbfe.pre.rds.aliyuncs.com</p>
@@ -317,7 +322,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
@@ -326,10 +331,12 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The network type of the instance. Valid values:</p>
+         * <p>Network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: indicates a virtual private cloud (VPC)-connected instance.</li>
-         * <li><strong>PUBLIC</strong>: indicates an Internet-connected instance.</li>
+         * <li><p><strong>VPC</strong>: Virtual Private Cloud (VPC).</p>
+         * </li>
+         * <li><p><strong>PUBLIC</strong>: Internet.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,16 +346,18 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String netType;
 
         /**
-         * <p>The ports.</p>
+         * <p>Port object.</p>
          */
         @NameInMap("PortList")
         public java.util.List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosPortList> portList;
 
         /**
-         * <p>Indicates whether the network information is visible to users. Valid values:</p>
+         * <p>Indicates whether the information is visible to users. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Visible to users.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not visible to users.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -358,7 +367,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public Boolean userVisible;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz90scxq6ods388ft****</p>
@@ -367,7 +376,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the VPC-connected instance.</p>
+         * <p>VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb-cn-h033cnd****-fe-20230816101006</p>
@@ -376,7 +385,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String vpcInstanceId;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6mlqti065rer6m0****</p>

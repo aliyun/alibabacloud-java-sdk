@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifySecurityIPListResponseBody extends TeaModel {
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance test</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBClusterRequest extends TeaModel {
     /**
+     * <p>The reserved cache size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class CreateDBClusterRequest extends TeaModel {
     public String cacheSize;
 
     /**
+     * <p>The billing method of the cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +37,23 @@ public class CreateDBClusterRequest extends TeaModel {
     public String clusterNodeType;
 
     /**
+     * <p>The instance type of the cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>selectdb.xlarge</strong>: 4 cores, 32 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.2xlarge</strong>: 8 cores, 64 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.4xlarge</strong>: 16 cores, 128 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.8xlarge</strong>: 32 cores, 256 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.16xlarge</strong>: 64 cores, 512 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.24xlarge</strong>: 96 cores, 768 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.32xlarge</strong>: 128 cores, 1024 GB.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +63,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBClusterClass;
 
     /**
+     * <p>The description of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +73,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +83,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>
@@ -66,6 +92,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The database engine version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +102,17 @@ public class CreateDBClusterRequest extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The billing cycle of the subscription cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Year</strong>: The cluster is billed on a yearly basis.</p>
+     * </li>
+     * <li><p><strong>Month</strong>: The cluster is billed on a monthly basis.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required and takes effect only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -82,6 +120,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,6 +139,17 @@ public class CreateDBClusterRequest extends TeaModel {
     public Double scaleMin;
 
     /**
+     * <p>The subscription duration of the subscription cluster. Valid values:</p>
+     * <ul>
+     * <li><p>If Period is set to Year, valid values for UsedTime are 1, 2, 3, and 5.</p>
+     * </li>
+     * <li><p>If Period is set to Month, the value of UsedTime can be an integer from 1 to 9.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required and takes effect only when ChargeType is set to Prepaid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -107,6 +157,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String usedTime;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +167,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID.</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,6 +177,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

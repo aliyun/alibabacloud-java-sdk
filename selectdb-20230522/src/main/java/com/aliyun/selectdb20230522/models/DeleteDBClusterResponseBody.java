@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBClusterResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteDBClusterResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F203FA74-3041-589F-BE66-E570793A0C91</p>
      */
@@ -37,6 +42,8 @@ public class DeleteDBClusterResponseBody extends TeaModel {
 
     public static class DeleteDBClusterResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
          */
@@ -44,6 +51,8 @@ public class DeleteDBClusterResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>220088764060782</p>
          */

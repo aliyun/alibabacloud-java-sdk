@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateElasticRuleResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateElasticRuleResponseBodyData data;
@@ -42,7 +42,7 @@ public class CreateElasticRuleResponseBody extends TeaModel {
 
     public static class CreateElasticRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The rule for computing resources of the required cluster.</p>
+         * <p>The target compute resource class for the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb.2xlarge</p>
@@ -69,7 +69,7 @@ public class CreateElasticRuleResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
-         * <p>The time when the scheduled scaling rule is executed.</p>
+         * <p>The start time of the time-based scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>
@@ -78,11 +78,7 @@ public class CreateElasticRuleResponseBody extends TeaModel {
         public String elasticRuleStartTime;
 
         /**
-         * <p>The execution cycle.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Day</li>
-         * </ul>
+         * <p>The execution epoch.</p>
          * 
          * <strong>example:</strong>
          * <p>Day</p>

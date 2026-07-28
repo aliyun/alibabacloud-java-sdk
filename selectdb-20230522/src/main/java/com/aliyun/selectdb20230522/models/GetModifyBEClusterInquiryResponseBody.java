@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
     /**
-     * <p>The information returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetModifyBEClusterInquiryResponseBodyData data;
@@ -57,14 +57,14 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>通用优惠券可抵扣100</p>
+         * <p>General coupon deducts 100</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
          * <strong>example:</strong>
-         * <p>通用优惠券</p>
+         * <p>General coupon</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -140,7 +140,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public java.util.Map<String, String> pricingRules;
 
         /**
-         * <p>The estimated refund amount when the subscription cluster of a subscription instance is changed to a pay-as-you-go cluster.</p>
+         * <p>The estimated refund amount when you change the billing method of a subscription cluster to pay-as-you-go.</p>
          * 
          * <strong>example:</strong>
          * <p>-100</p>
@@ -149,7 +149,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String refundAmount;
 
         /**
-         * <p>The amount of money.</p>
+         * <p>The amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.76</p>

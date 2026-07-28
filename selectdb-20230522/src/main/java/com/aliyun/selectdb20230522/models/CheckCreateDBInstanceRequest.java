@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckCreateDBInstanceRequest extends TeaModel {
     /**
+     * <p>The reserved cache size, in GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public Integer cacheSize;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>Prepaid</strong>: subscription.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,8 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>A client-generated token that is used to ensure the idempotence of the request. The token must be unique among different requests. The token can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>AB</p>
      */
@@ -30,6 +40,8 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The connection string of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</p>
      */
@@ -37,15 +49,22 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The specifications of the instance. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li><strong>selectdb.xlarge</strong>: 4 CPU cores and 32 GB of memory.</li>
-     * <li><strong>selectdb.2xlarge</strong>: 8 CPU cores and 64 GB of memory.</li>
-     * <li><strong>selectdb.4xlarge</strong>: 16 CPU cores and 128 GB of memory.</li>
-     * <li><strong>selectdb.8xlarge</strong>: 32 CPU cores and 256 GB of memory.</li>
-     * <li><strong>selectdb.16xlarge</strong>: 64 CPU cores and 512 GB of memory.</li>
-     * <li><strong>selectdb.24xlarge</strong>: 96 CPU cores and 768 GB of memory.</li>
-     * <li><strong>selectdb.32xlarge</strong>: 128 CPU cores and 1,024 GB of memory.</li>
+     * <li><p><strong>selectdb.xlarge</strong>: 4 cores, 32 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.2xlarge</strong>: 8 cores, 64 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.4xlarge</strong>: 16 cores, 128 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.8xlarge</strong>: 32 cores, 256 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.16xlarge</strong>: 64 cores, 512 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.24xlarge</strong>: 96 cores, 768 GB.</p>
+     * </li>
+     * <li><p><strong>selectdb.32xlarge</strong>: 128 cores, 1024 GB.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,11 +74,17 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
+    /**
+     * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>New instance test</p>
+     */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>SelectDB</p>
@@ -68,16 +93,27 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database engine version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2.4</p>
+     * <p>3.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
+     * <p>The unit of the subscription duration. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Year</strong></p>
+     * </li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required and takes effect only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -85,6 +121,7 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,6 +131,8 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
      */
@@ -104,6 +143,8 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The IP address whitelist for the instance. Separate multiple IP addresses with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>172.16.XX.XX/12,192.168.XX.XX/22</p>
      */
@@ -111,13 +152,15 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The subscription duration of the instance. Valid values:</p>
+     * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</li>
-     * <li>If Period is set to Month, valid values of UsedTime are 1 to 12.</li>
+     * <li><p>If Period is set to Year, valid values are 1, 2, 3, 4, and 5.</p>
+     * </li>
+     * <li><p>If Period is set to Month, valid values are integers from 1 to 12.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter takes effect and is required only if ChargeType is set to Prepaid.</p>
+     * <p>This parameter is required and takes effect only when ChargeType is set to Prepaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -127,6 +170,7 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public Integer usedTime;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +180,7 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,6 +190,7 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

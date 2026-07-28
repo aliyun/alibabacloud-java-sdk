@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckCreateDBInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADF42B18-43FD-5100-83A9-BE81AB70C863</p>
      */

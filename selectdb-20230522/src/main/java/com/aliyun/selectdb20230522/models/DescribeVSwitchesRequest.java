@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
+     * <p>The number of entries to return on each page.</p>
+     * <blockquote>
+     * <p>Warning: This is a reserved parameter and is not supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +17,11 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query.</p>
+     * <blockquote>
+     * <p>Warning: This is a reserved parameter and is not supported.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>4ea98363565e4951e0b5e8707e68181f</p>
      */
@@ -19,6 +29,8 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +38,8 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +47,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +57,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The VPC ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +67,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

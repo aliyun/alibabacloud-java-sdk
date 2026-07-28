@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>FCEEA97F-85CA-5A9F-932F-B4BAEA170896</p>
      */

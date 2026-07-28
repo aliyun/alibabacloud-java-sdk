@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>New instance test</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;

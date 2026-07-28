@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
     /**
-     * <p>The instance specifications.</p>
+     * <p>Instance type list.</p>
      */
     @NameInMap("ClassCodeList")
     public java.util.List<DescribeAllDBInstanceClassResponseBodyClassCodeList> classCodeList;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
      */
@@ -40,6 +42,8 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
 
     public static class DescribeAllDBInstanceClassResponseBodyClassCodeList extends TeaModel {
         /**
+         * <p>Type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb.xlarge</p>
          */
@@ -47,6 +51,8 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public String classCode;
 
         /**
+         * <p>Number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -54,6 +60,8 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long cpuCores;
 
         /**
+         * <p>Default cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -61,6 +69,8 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long defaultStorageInGB;
 
         /**
+         * <p>Maximum cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -68,15 +78,17 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long maxStorageInGB;
 
         /**
-         * <p>The memory size.</p>
+         * <p>Memory.</p>
          * 
          * <strong>example:</strong>
-         * <p>32</p>
+         * <p>16</p>
          */
         @NameInMap("MemoryInGB")
         public Long memoryInGB;
 
         /**
+         * <p>Minimum cache.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -84,6 +96,8 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
         public Long minStorageInGB;
 
         /**
+         * <p>Cache increment.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

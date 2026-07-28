@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetModifyBEClusterInquiryRequest extends TeaModel {
     /**
-     * <p>The size of the elastic cache.</p>
+     * <p>The elastic cache space.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -15,11 +15,6 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
 
     /**
      * <p>The billing method.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PREPAY: subscription</li>
-     * <li>POSTPAY: pay-as-you-go</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,13 +34,6 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
 
     /**
      * <p>The commodity code.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>selectdb_pre_public_intl: subscription commodity on the international site (alibabacloud.com)</li>
-     * <li>selectdb_go_public_cn: pay-as-you-go commodity on the China site (aliyun.com)</li>
-     * <li>selectdb_go_public_intl: pay-as-you-go commodity on the international site (alibabacloud.com)</li>
-     * <li>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com)</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +43,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The number of elastic CPU cores.</p>
+     * <p>The elastic computing resources.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -74,7 +62,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>Specifies whether to change the billing method of the cluster.</p>
+     * <p>Specifies whether this is an inquiry for changing the billing method of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -83,7 +71,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public Boolean modifyClusterChargeType;
 
     /**
-     * <p>The size of the reserved cache.</p>
+     * <p>The reserved cache space.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -92,7 +80,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public Long preCacheSize;
 
     /**
-     * <p>The number of reserved CPU cores.</p>
+     * <p>The reserved computing resources.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -102,14 +90,6 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
 
     /**
      * <p>The billing cycle.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
-     * <li>Minute</li>
-     * <li>Hour</li>
-     * <li>Day</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +106,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String promotionOptionNo;
 
     /**
-     * <p>The number of clusters whose specifications are to be changed.</p>
+     * <p>The quantity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb-cn-7213cjv****</p>
@@ -13,10 +13,15 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyDBClusterResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0BF61F90-ACED-55DF-A6FE-56714B2BFCF6</p>
      */
@@ -54,6 +59,8 @@ public class ModifyDBClusterResponseBody extends TeaModel {
 
     public static class ModifyDBClusterResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
          */
@@ -61,6 +68,8 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
          */
@@ -68,6 +77,8 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>219396937240838</p>
          */

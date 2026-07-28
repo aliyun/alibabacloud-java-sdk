@@ -17,8 +17,10 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The instance parameter to be modified. Valid values:</p>
      * <ul>
-     * <li><strong>MaintainTime</strong>: Modify the maintenance window of the instance in the hh:mm-hh:mm format.</li>
-     * <li><strong>DBInstanceDescription</strong>: Modify the description of the instance.</li>
+     * <li><p><strong>MaintainTime</strong>: Modify the maintenance window of the instance in the hh:mm-hh:mm format.</p>
+     * </li>
+     * <li><p><strong>DBInstanceDescription</strong>: Modify the description of the instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,8 +46,10 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The new value of the instance parameter to be modified. Examples:</p>
      * <ul>
-     * <li>If InstanceAttributeType is set to MaintainTime, you can set Value to 00:00-06:00.</li>
-     * <li>If InstanceAttributeType is set to DBInstanceDescription, you can set Value to testdb.</li>
+     * <li><p>If InstanceAttributeType is set to MaintainTime, you can set Value to 00:00-06:00.</p>
+     * </li>
+     * <li><p>If InstanceAttributeType is set to DBInstanceDescription, you can set Value to testdb.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

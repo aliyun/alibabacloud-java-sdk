@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBClusterRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class DeleteDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class DeleteDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +35,7 @@ public class DeleteDBClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>代表资源组的资源属性字段</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>

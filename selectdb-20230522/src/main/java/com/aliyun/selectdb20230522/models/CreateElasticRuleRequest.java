@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateElasticRuleRequest extends TeaModel {
     /**
-     * <p>The rule for computing resources of the required cluster.</p>
+     * <p>The target compute resource class for the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateElasticRuleRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The time when you want to execute the scheduled scaling rule.</p>
+     * <p>The start time of the time-based scaling rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,11 +45,7 @@ public class CreateElasticRuleRequest extends TeaModel {
     public String elasticRuleStartTime;
 
     /**
-     * <p>The execution cycle.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>Day</li>
-     * </ul>
+     * <p>The execution epoch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

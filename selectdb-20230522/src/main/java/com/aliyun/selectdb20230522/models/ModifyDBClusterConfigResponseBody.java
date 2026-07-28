@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigResponseBody extends TeaModel {
     /**
+     * <p>Access denied details.</p>
+     * 
      * <strong>example:</strong>
      * <p>failed</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Return data.</p>
+     */
     @NameInMap("Data")
     public ModifyDBClusterConfigResponseBodyData data;
 
     /**
-     * <p>The dynamic code. This parameter is not returned.</p>
+     * <p>Dynamic code, currently not in use, please ignore.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -24,7 +29,7 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not returned.</p>
+     * <p>Dynamic message, currently not in use, please ignore.</p>
      * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
@@ -33,6 +38,8 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
      */
@@ -86,13 +93,17 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
 
     public static class ModifyDBClusterConfigResponseBodyData extends TeaModel {
         /**
+         * <p>Cluster ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>selectdb-cn-wny3li00g02-be</p>
+         * <p>selectdb-cn-7213c8*****</p>
          */
         @NameInMap("DbClusterId")
         public String dbClusterId;
 
         /**
+         * <p>Instance numeric ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6585</p>
          */
@@ -100,13 +111,17 @@ public class ModifyDBClusterConfigResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>selectdb-cn-wny3li00g02</p>
+         * <p>selectdb-cn-7213c8*****</p>
          */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>107878719</p>
          */

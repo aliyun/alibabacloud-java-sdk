@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeZonesResponseBodyItems> items;
 
     /**
+     * <p>The number of entries per page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class DescribeZonesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page of results. If this parameter is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>40831b4f-d91d-4796-9589-ad306ec528d5</p>
      */
@@ -69,6 +76,8 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static class DescribeZonesResponseBodyItems extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -76,6 +85,8 @@ public class DescribeZonesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-i</p>
          */

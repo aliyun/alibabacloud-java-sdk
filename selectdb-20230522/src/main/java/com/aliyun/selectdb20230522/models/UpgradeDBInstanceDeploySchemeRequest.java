@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceDeploySchemeRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class UpgradeDBInstanceDeploySchemeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>A list of multi-zone configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MultiZone")
     public java.util.List<UpgradeDBInstanceDeploySchemeRequestMultiZone> multiZone;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,12 +73,14 @@ public class UpgradeDBInstanceDeploySchemeRequest extends TeaModel {
 
     public static class UpgradeDBInstanceDeploySchemeRequestMultiZone extends TeaModel {
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
+         * <p>The zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

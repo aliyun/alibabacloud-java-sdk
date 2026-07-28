@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVirtualClusterRequest extends TeaModel {
     /**
+     * <p>The virtual cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteVirtualClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteVirtualClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopBEClusterResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC854513-E85E-54F3-9842-B9CCD3308CDD</p>
      */

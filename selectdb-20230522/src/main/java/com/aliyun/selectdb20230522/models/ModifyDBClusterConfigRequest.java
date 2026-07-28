@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigRequest extends TeaModel {
     /**
+     * <p>Configuration file to modify. For compute clusters, it is fixed as be.conf. For fe clusters, it is fixed as fe.conf.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,25 +15,27 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String configKey;
 
     /**
+     * <p>Cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>selectdb-cn-7213c8yvv09-be</p>
+     * <p>selectdb-cn-7213c8*****-be</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>selectdb-xxxd8a5h60y</p>
+     * <p>selectdb-cn-7213c8*****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to perform parallel operations on the cluster node.</p>
+     * <p>Whether to operate cluster nodes in parallel</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,15 +44,18 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public Boolean parallelOperation;
 
     /**
+     * <p>JSON string of parameters and parameter values.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;name\&quot;:\&quot;param1\&quot;,\&quot;value\&quot;:\&quot;1234577777\&quot;},{\&quot;name\&quot;:\&quot;param2\&quot;,\&quot;value\&quot;:\&quot;${yyyyMMdd}\&quot;}]</p>
+     * <p>{&quot;param1_name&quot;:&quot;param1_value&quot;,&quot;param2_name&quot;:&quot;param2_value&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -57,6 +63,8 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Upgrade method. If not specified, the upgrade will be performed immediately. If set to 1, the upgrade will be performed during the maintenance window.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

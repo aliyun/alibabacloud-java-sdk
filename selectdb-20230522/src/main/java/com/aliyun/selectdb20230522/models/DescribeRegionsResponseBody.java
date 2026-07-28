@@ -43,6 +43,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static class DescribeRegionsResponseBodyRegionModelListZones extends TeaModel {
         /**
          * <p>The zone description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京H可用区</p>
          */
         @NameInMap("Description")
         public String description;
@@ -67,6 +70,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         /**
          * <p>The zone name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing H</p>
          */
         @NameInMap("Name")
         public String name;

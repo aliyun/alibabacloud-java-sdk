@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>Database version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,17 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>Specifies whether to perform parallel operations on cluster nodes</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ParallelOperation")
     public Boolean parallelOperation;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +47,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The update mode. If you do not specify this parameter, the system immediately updates the database engine version. If you set this parameter to 1, the system updates the database engine version during the maintenance window.</p>
+     * <p>Upgrade method.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, the system immediately upgrades the instance.</li>
+     * <li>If you set this parameter to 1, the system upgrades the instance during the maintenance window.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>

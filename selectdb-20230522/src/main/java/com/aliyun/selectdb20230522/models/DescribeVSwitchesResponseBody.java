@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeVSwitchesResponseBodyItems> items;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to start the next query. If this parameter is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>459a0909c0315bfbe0b5e8707e68181f</p>
      */
@@ -22,6 +29,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,7 +47,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
@@ -45,6 +56,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -114,6 +127,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     public static class DescribeVSwitchesResponseBodyItems extends TeaModel {
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1usf8eabhvibkkfde96</p>
          */
@@ -121,6 +136,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The vSwitch name.</p>
+         * 
          * <strong>example:</strong>
          * <p>subnet</p>
          */
@@ -128,6 +145,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String vSwitchName;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */

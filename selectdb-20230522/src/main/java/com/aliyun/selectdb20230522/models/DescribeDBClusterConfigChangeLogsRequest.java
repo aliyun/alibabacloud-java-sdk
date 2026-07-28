@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     /**
-     * <p>The configuration file that you want to modify. For a compute cluster, set the value to be.conf. For a frontend (FE) cluster, set the value to fe.conf.</p>
+     * <p>The configuration file that was modified. The value is \<code>be.conf\\</code> for a compute cluster and \<code>fe.conf\\</code> for an FE cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>be.conf</p>
@@ -18,7 +18,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>selectdb-cn-7213c8yvv09-be</p>
+     * <p>selectdb-cn-7213c8****-be</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -28,22 +28,23 @@ public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>selectdb-cn-jia3ma3b003</p>
+     * <p>selectdb-cn-7213c8****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time to query change logs. The format is \<code>yyyy-MM-dd HH:mm:ss\\</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-05-08T15:59:59Z</p>
+     * <p>2023-05-08 15:59:59</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,11 +54,11 @@ public class DescribeDBClusterConfigChangeLogsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time to query change logs. The format is \<code>yyyy-MM-dd HH:mm:ss\\</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-04-25T09:48:23Z</p>
+     * <p>2023-04-25 09:48:23</p>
      */
     @NameInMap("StartTime")
     public String startTime;

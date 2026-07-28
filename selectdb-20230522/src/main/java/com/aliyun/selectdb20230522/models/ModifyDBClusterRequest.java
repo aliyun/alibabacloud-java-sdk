@@ -20,6 +20,23 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String clusterNodeType;
 
     /**
+     * <p>The instance class of the cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>selectdb.xlarge</strong>: 4 cores, 32 GB memory.</p>
+     * </li>
+     * <li><p><strong>selectdb.2xlarge</strong>: 8 cores, 64 GB memory.</p>
+     * </li>
+     * <li><p><strong>selectdb.4xlarge</strong>: 16 cores, 128 GB memory.</p>
+     * </li>
+     * <li><p><strong>selectdb.8xlarge</strong>: 32 cores, 256 GB memory.</p>
+     * </li>
+     * <li><p><strong>selectdb.16xlarge</strong>: 16 cores, 512 GB memory.</p>
+     * </li>
+     * <li><p><strong>selectdb.24xlarge</strong>: 24 cores, 768 GB memory.</p>
+     * </li>
+     * <li><p><strong>selectdb.32xlarge</strong>: 32 cores, 1024 GB memory.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +46,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBClusterClass;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +56,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +66,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance. Set the value to selectdb.</p>
+     * <p>The database type. The value is fixed to selectdb.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>
@@ -56,6 +75,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

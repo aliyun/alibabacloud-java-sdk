@@ -4,11 +4,14 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyVirtualClusterResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyVirtualClusterResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>06758CAB-1204-5852-A471-29C87D5C1D0F</p>
@@ -39,6 +42,8 @@ public class ModifyVirtualClusterResponseBody extends TeaModel {
 
     public static class ModifyVirtualClusterResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-vcg-b****-be</p>
          */
@@ -46,6 +51,8 @@ public class ModifyVirtualClusterResponseBody extends TeaModel {
         public String dbClusterId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
          */
