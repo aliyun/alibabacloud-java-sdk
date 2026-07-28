@@ -4,10 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel {
+    /**
+     * <p>The list of check items.</p>
+     */
     @NameInMap("CheckItemList")
     public java.util.List<DescribeNisInspectionReportCheckItemsResponseBodyCheckItemList> checkItemList;
 
     /**
+     * <p>The ID of the inspection report.</p>
+     * 
      * <strong>example:</strong>
      * <p>nir-ffd1af****196d0</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
     public String inspectionReportId;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>hKrS+MVXkuOgztXnvdml194Cz/lMNdmr+DEh0th6dVlNEo/F148UPCh2itDku7Qj</p>
      */
@@ -29,6 +38,8 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D5E98683-355B-5867-8D3D-A24755F6895B</p>
      */
@@ -36,6 +47,8 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -97,12 +110,30 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
 
     public static class DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListCheckResultList extends TeaModel {
         /**
+         * <p>The number of risks at the specified risk level in the inspection report.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>HighRisk</strong></p>
+         * </li>
+         * <li><p><strong>MediumRisk</strong></p>
+         * </li>
+         * <li><p><strong>LowRisk</strong></p>
+         * </li>
+         * <li><p><strong>NoRisk</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LowRisk</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
@@ -130,12 +161,30 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
     }
 
     public static class DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList extends TeaModel {
+        /**
+         * <p>The description of the abnormal item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multiple cross-zone resources share a single NAT gateway.</p>
+         */
         @NameInMap("Abnormality")
         public String abnormality;
 
+        /**
+         * <p>The metadata of the resource that corresponds to the abnormal item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Columns&quot;:[{&quot;ColumnType&quot;:&quot;id&quot;,&quot;ColumnTitle&quot;:&quot;Resource ID&quot;,&quot;ColumnValue&quot;:&quot;ResourceId&quot;},{&quot;ColumnType&quot;:&quot;az&quot;,&quot;ColumnTitle&quot;:&quot;NAT Deployment Zone&quot;,&quot;ColumnValue&quot;:&quot;NatAZ&quot;},{&quot;ColumnType&quot;:&quot;array.az&quot;,&quot;ColumnTitle&quot;:&quot;Resource Deployment Zone&quot;,&quot;ColumnValue&quot;:&quot;ForwardsAZs&quot;},{&quot;ColumnType&quot;:&quot;region&quot;,&quot;ColumnTitle&quot;:&quot;Region&quot;,&quot;ColumnValue&quot;:&quot;RegionNo&quot;}]}</p>
+         */
         @NameInMap("Metadata")
         public String metadata;
 
+        /**
+         * <p>The cause of the abnormality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multiple cross-zone resources share a single NAT gateway.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
@@ -143,15 +192,39 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         public String reasonCode;
 
         /**
+         * <p>The inspection item is abnormal.</p>
+         * 
          * <strong>example:</strong>
          * <p>nat_snat_cross_az_warn</p>
          */
         @NameInMap("RecommendationCode")
         public String recommendationCode;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>HighRisk</strong></p>
+         * </li>
+         * <li><p><strong>MediumRisk</strong></p>
+         * </li>
+         * <li><p><strong>LowRisk</strong></p>
+         * </li>
+         * <li><p><strong>NoRisk</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LowRisk</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The optimization suggestions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deploy NAT gateways in all zones where resources reside.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -231,6 +304,8 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
 
     public static class DescribeNisInspectionReportCheckItemsResponseBodyCheckItemList extends TeaModel {
         /**
+         * <p>The category of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>stability</p>
          */
@@ -238,18 +313,35 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         public String categoryCode;
 
         /**
+         * <p>The code of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_nat_water_level_check</p>
          */
         @NameInMap("CheckItemCode")
         public String checkItemCode;
 
+        /**
+         * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAT high-availability deployment check</p>
+         */
         @NameInMap("CheckItemName")
         public String checkItemName;
 
+        /**
+         * <p>The list of check results that indicates the number of risks at each risk level.</p>
+         */
         @NameInMap("CheckResultList")
         public java.util.List<DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListCheckResultList> checkResultList;
 
+        /**
+         * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -260,10 +352,15 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         @NameInMap("DescriptionCode")
         public String descriptionCode;
 
+        /**
+         * <p>The list of results for abnormal check items.</p>
+         */
         @NameInMap("RecommendationList")
         public java.util.List<DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList> recommendationList;
 
         /**
+         * <p>The resource type associated with the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>NAT</p>
          */

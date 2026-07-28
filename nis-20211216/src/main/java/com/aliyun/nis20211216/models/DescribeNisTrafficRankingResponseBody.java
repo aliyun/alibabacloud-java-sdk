@@ -4,10 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class DescribeNisTrafficRankingResponseBody extends TeaModel {
+    /**
+     * <p>The list of traffic ranking analysis results.</p>
+     */
     @NameInMap("FlowRankingList")
     public java.util.List<DescribeNisTrafficRankingResponseBodyFlowRankingList> flowRankingList;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>LoeJLhK0fsDqYoXkXieZUqB2vWnccJtVnsyKu9KxFFOMQxtV8XckOg5lk7F2bhC+</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the traffic ranking analysis result.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-7619ecb1db9148bab9f4</p>
      */
@@ -29,6 +38,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
     public String nisTrafficRankingId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4DAC4BE1-BEEA-5D84-BE06-E1B796F3B941</p>
      */
@@ -36,6 +47,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task running status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Complete</p>
      */
@@ -43,6 +56,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>72</p>
      */
@@ -112,6 +127,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
 
     public static class DescribeNisTrafficRankingResponseBodyFlowRankingList extends TeaModel {
         /**
+         * <p>The instance resource to which the EIP is bound.</p>
+         * <ul>
+         * <li>This field is returned only when Internet Shared Bandwidth metric analysis is queried.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ngw-ufwerthgvc*****</p>
          */
@@ -119,6 +139,20 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String bindingResourceId;
 
         /**
+         * <p>The type of the instance resource to which the EIP is attached.</p>
+         * <ul>
+         * <li>This field is returned only when Internet Shared Bandwidth metric analysis is queried.</li>
+         * <li>Valid values:<ul>
+         * <li>EIP_ECS: Elastic Compute Service (ECS) instance type.</li>
+         * <li>EIP_ENI: Server Load Balancer (SLB) instance type.</li>
+         * <li>EIP_NAT: NAT gateway instance type.</li>
+         * <li>EIP_SLB: elastic network interface (ENI) instance type.</li>
+         * <li>HAVIP_ECS: high availability (HA) virtual IP address type.</li>
+         * <li>TARGET_IP: IP address type.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EIP_NAT</p>
          */
@@ -126,48 +160,125 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String bindingResourceType;
 
         /**
+         * <p>The bandwidth.</p>
+         * <ul>
+         * <li>This field is returned for VPC, TR, or Internet Shared Bandwidth analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("Bytes")
         public Double bytes;
 
+        /**
+         * <p>The bandwidth increase.</p>
+         * <ul>
+         * <li>This field is returned only when TrafficScenario is set to TRFlowlog and the Order by field is BytesIncrease or BytesIncreaseRatio.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("BytesIncrease")
         public Double bytesIncrease;
 
+        /**
+         * <p>The bandwidth increase ratio.</p>
+         * <ul>
+         * <li>This field is returned only when TrafficScenario is set to TRFlowlog and the Order by field is BytesIncrease or BytesIncreaseRatio.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("BytesIncreaseRatio")
         public Double bytesIncreaseRatio;
 
         /**
+         * <p>The traffic proportion.</p>
+         * <ul>
+         * <li>This field is returned only when TR or VPC flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
         @NameInMap("BytesRate")
         public Double bytesRate;
 
+        /**
+         * <p>The CEN instance ID.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
         /**
+         * <p>The autonomous system number.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed for the VPC Internet scenario.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>45102</p>
          */
         @NameInMap("ClientAsn")
         public String clientAsn;
 
+        /**
+         * <p>The city where the client is located.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed for the VPC Internet scenario.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Kowloon.</p>
+         */
         @NameInMap("ClientCity")
         public String clientCity;
 
+        /**
+         * <p>The country where the client is located.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed for the VPC Internet scenario.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>China.</p>
+         */
         @NameInMap("ClientCountry")
         public String clientCountry;
 
+        /**
+         * <p>The network service provider.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed for the VPC Internet scenario.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud.</p>
+         */
         @NameInMap("ClientIsp")
         public String clientIsp;
 
+        /**
+         * <p>The province where the client is located.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed for the VPC Internet scenario.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Hong Kong Special Administrative Region.</p>
+         */
         @NameInMap("ClientProvince")
         public String clientProvince;
 
         /**
+         * <p>The destination IP address.</p>
+         * <ul>
+         * <li>This field is returned only when 2-tuple analysis is performed for TR or VPC flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>192.168.***.0</p>
          */
@@ -175,6 +286,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String destinationIp;
 
         /**
+         * <p>The destination port.</p>
+         * <ul>
+         * <li>This field is returned only when 5-tuple analysis is performed for TR or VPC flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -182,6 +298,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String destinationPort;
 
         /**
+         * <p>The destination region ID.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -189,6 +310,12 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String destinationRegionNo;
 
         /**
+         * <p>The traffic direction based on the Alibaba Cloud network resource instance. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound traffic.</li>
+         * <li><strong>out</strong>: outbound traffic.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>in</p>
          */
@@ -196,6 +323,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String direction;
 
         /**
+         * <p>The Differentiated Services Code Point (DSCP) value.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -203,6 +335,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String dscp;
 
         /**
+         * <p>The ECS instance ID of the management node.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>i-uf6i1zi6yhq7h***</p>
          */
@@ -210,6 +347,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String ecsId;
 
         /**
+         * <p>The EIP ID associated with the Internet Shared Bandwidth instance.</p>
+         * <ul>
+         * <li>This field is returned only when Internet Shared Bandwidth metric analysis is queried.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>eip-fb6wzjl9hm****</p>
          */
@@ -217,6 +359,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The elastic network interface (ENI) ID.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>eni-8vbf2jxul***</p>
          */
@@ -224,13 +371,29 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
+         * <p>The number of packets.</p>
+         * <ul>
+         * <li>This field is returned for VPC, TR, or CBWP flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("Packets")
         public Double packets;
 
+        @NameInMap("PacketsIncrease")
+        public Double packetsIncrease;
+
+        @NameInMap("PacketsIncreaseRatio")
+        public Double packetsIncreaseRatio;
+
         /**
+         * <p>The number of packets dropped due to blackhole routing.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -238,6 +401,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public Double packetsLostBlackhole;
 
         /**
+         * <p>The number of packets dropped due to no route.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -245,6 +413,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public Double packetsLostNoRoute;
 
         /**
+         * <p>The number of packets dropped due to TTL expiration.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -252,6 +425,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public Double packetsLostTTLExpired;
 
         /**
+         * <p>The network protocol.</p>
+         * <ul>
+         * <li>This field is returned only when 5-tuple analysis is performed for TR or VPC flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -259,6 +437,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The public IP address of the associated EIP.</p>
+         * <ul>
+         * <li>This field is returned only when Internet Shared Bandwidth metric analysis is queried.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>118.31.***.86</p>
          */
@@ -266,6 +449,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String publicIpAddress;
 
         /**
+         * <p>The region where the flow log resides.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -273,13 +461,26 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The TCP RTT.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("RoundTripTime")
         public Double roundTripTime;
 
+        @NameInMap("RoundTripTimeIncrease")
+        public Double roundTripTimeIncrease;
+
         /**
+         * <p>The source IP address.</p>
+         * <ul>
+         * <li>This field is returned only when 2-tuple analysis is performed for TR or VPC flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>47.92.245.***</p>
          */
@@ -287,6 +488,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String sourceIp;
 
         /**
+         * <p>The source port.</p>
+         * <ul>
+         * <li>This field is returned only when 5-tuple analysis is performed for TR or VPC flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5432</p>
          */
@@ -294,6 +500,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String sourcePort;
 
         /**
+         * <p>The source region ID.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -301,6 +512,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String sourceRegionNo;
 
         /**
+         * <p>The traffic path.</p>
+         * <ul>
+         * <li>This field is returned only when 2-tuple or 5-tuple analysis is performed for VPC flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
@@ -308,6 +524,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String trafficPath;
 
         /**
+         * <p>The network instance connection ID.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tr-attach-bfde1cd4cj***</p>
          */
@@ -315,6 +536,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterAttachmentId;
 
         /**
+         * <p>The account ID of the destination cloud resource instance connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1906814138****</p>
          */
@@ -322,6 +548,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterDestinationAccountId;
 
         /**
+         * <p>The zone of the destination resource connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only for the VPC connection traffic scenario under TR flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */
@@ -329,6 +560,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterDestinationAvailableZone;
 
         /**
+         * <p>The ENI ID of the destination resource connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only for the VPC connection traffic scenario under TR flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>eni-fdbf2jxulm***</p>
          */
@@ -336,6 +572,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterDestinationNetworkInterface;
 
         /**
+         * <p>The ID of the destination cloud resource instance connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tr-attach-bfve1cd4cjp****</p>
          */
@@ -343,6 +584,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterDestinationResourceId;
 
         /**
+         * <p>The vSwitch ID of the destination resource connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only for the VPC connection traffic scenario under TR flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>vsw-2zeekevlhxpqxu****</p>
          */
@@ -350,6 +596,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterDestinationVSwitchId;
 
         /**
+         * <p>The transit router instance ID.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tr-2zefvwy2fz3444***</p>
          */
@@ -357,6 +608,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
+         * <p>The transit router peering connection instance ID.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tr-attach-okvj1cd4cjp***</p>
          */
@@ -364,6 +620,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterPairAttachmentId;
 
         /**
+         * <p>The account ID of the source cloud resource instance connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1906814138***</p>
          */
@@ -371,6 +632,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterSourceAccountId;
 
         /**
+         * <p>The zone of the source resource connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only for the VPC connection traffic scenario under TR flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */
@@ -378,6 +644,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterSourceAvailableZone;
 
         /**
+         * <p>The ENI ID of the source resource connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only for the VPC connection traffic scenario under TR flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>eni-8vbf2jxulma***</p>
          */
@@ -385,6 +656,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterSourceNetworkInterface;
 
         /**
+         * <p>The ID of the source cloud resource instance connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only when TR flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tr-attach-hvve1cd4cjpj***</p>
          */
@@ -392,6 +668,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterSourceResourceId;
 
         /**
+         * <p>The vSwitch ID of the source resource connected to the transit router.</p>
+         * <ul>
+         * <li>This field is returned only for the VPC connection traffic scenario under TR flow log analysis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>vsw-ikfdkevlhxpqxuz****</p>
          */
@@ -399,6 +680,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String transitRouterSourceVSwitchId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>vsw-2zeekevlh****</p>
          */
@@ -406,6 +692,11 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * <ul>
+         * <li>This field is returned only when VPC flow log analysis is performed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>vpc-m5ec6i0h5xss***</p>
          */
@@ -585,6 +876,22 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             return this.packets;
         }
 
+        public DescribeNisTrafficRankingResponseBodyFlowRankingList setPacketsIncrease(Double packetsIncrease) {
+            this.packetsIncrease = packetsIncrease;
+            return this;
+        }
+        public Double getPacketsIncrease() {
+            return this.packetsIncrease;
+        }
+
+        public DescribeNisTrafficRankingResponseBodyFlowRankingList setPacketsIncreaseRatio(Double packetsIncreaseRatio) {
+            this.packetsIncreaseRatio = packetsIncreaseRatio;
+            return this;
+        }
+        public Double getPacketsIncreaseRatio() {
+            return this.packetsIncreaseRatio;
+        }
+
         public DescribeNisTrafficRankingResponseBodyFlowRankingList setPacketsLostBlackhole(Double packetsLostBlackhole) {
             this.packetsLostBlackhole = packetsLostBlackhole;
             return this;
@@ -639,6 +946,14 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         }
         public Double getRoundTripTime() {
             return this.roundTripTime;
+        }
+
+        public DescribeNisTrafficRankingResponseBodyFlowRankingList setRoundTripTimeIncrease(Double roundTripTimeIncrease) {
+            this.roundTripTimeIncrease = roundTripTimeIncrease;
+            return this;
+        }
+        public Double getRoundTripTimeIncrease() {
+            return this.roundTripTimeIncrease;
         }
 
         public DescribeNisTrafficRankingResponseBodyFlowRankingList setSourceIp(String sourceIp) {

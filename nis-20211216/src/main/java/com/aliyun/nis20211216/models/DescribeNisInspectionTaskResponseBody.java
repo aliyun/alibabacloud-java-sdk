@@ -4,10 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class DescribeNisInspectionTaskResponseBody extends TeaModel {
+    /**
+     * <p>The configuration of the inspected resources.</p>
+     */
     @NameInMap("CheckResourceList")
     public java.util.List<DescribeNisInspectionTaskResponseBodyCheckResourceList> checkResourceList;
 
     /**
+     * <p>The time when the task was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-01 10:00:57</p>
      */
@@ -15,6 +20,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The inspection interval. The unit is <strong>day</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String inspectionInterval;
 
     /**
+     * <p>The name of the inspection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Default</p>
      */
@@ -29,6 +38,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String inspectionName;
 
     /**
+     * <p>The type of inspection plan for the task. Valid values: basic and customized.</p>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -36,6 +47,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String inspectionProject;
 
     /**
+     * <p>The ID of the inspection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ni-8svmpe0yso2bhzr7fh79</p>
      */
@@ -43,6 +56,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String inspectionTaskId;
 
     /**
+     * <p>The time when the inspection task was triggered.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-01 15:15:57</p>
      */
@@ -50,6 +65,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String inspectionTriggerTime;
 
     /**
+     * <p>The ID of the latest report.</p>
+     * 
      * <strong>example:</strong>
      * <p>nir-7c3dd178738a429abe6d</p>
      */
@@ -57,6 +74,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String lastUpdateReportId;
 
     /**
+     * <p>The time when the task was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-01 10:00:59</p>
      */
@@ -64,6 +83,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String lastUpdateTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */
@@ -71,6 +92,12 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The running status of the task.</p>
+     * <p>Creating</p>
+     * <p>Active</p>
+     * <p>Running</p>
+     * <p>Inactive</p>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
@@ -172,6 +199,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
 
     public static class DescribeNisInspectionTaskResponseBodyCheckResourceList extends TeaModel {
         /**
+         * <p>The inspection rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>CheckAll</p>
          */
@@ -179,6 +208,8 @@ public class DescribeNisInspectionTaskResponseBody extends TeaModel {
         public String checkScope;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>EIP</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNisInspectionRecommendationResourcesRequest extends TeaModel {
     /**
+     * <p>The ID of the inspection report.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeNisInspectionRecommendationResourcesRequest extends TeaMode
     public String inspectionReportId;
 
     /**
+     * <p>The language to use.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -21,6 +24,8 @@ public class DescribeNisInspectionRecommendationResourcesRequest extends TeaMode
     public String language;
 
     /**
+     * <p>The maximum number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -28,6 +33,8 @@ public class DescribeNisInspectionRecommendationResourcesRequest extends TeaMode
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to query the next page of results. Set this parameter to the NextToken value returned from the last API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>hKrS+MVXkuOgztXnvdml16/uO3mvCyHxSjzdhx9VRUC+8umDTIV2Wg9TTOUrR7ve</p>
      */
@@ -35,6 +42,7 @@ public class DescribeNisInspectionRecommendationResourcesRequest extends TeaMode
     public String nextToken;
 
     /**
+     * <p>The recommendation code for the abnormal item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

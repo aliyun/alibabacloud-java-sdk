@@ -341,10 +341,14 @@ public class GetNetworkReachableAnalysisResponseBody extends TeaModel {
     /**
      * <p>The state of the task for analyzing network reachability. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong>: The task is in progress.</li>
-     * <li><strong>finish</strong>: The task is complete.</li>
-     * <li><strong>error</strong>: An analysis error occurred.</li>
-     * <li><strong>timeout</strong>: The task timed out.</li>
+     * <li><p><strong>init</strong>: The task is in progress.</p>
+     * </li>
+     * <li><p><strong>finish</strong>: The task is complete.</p>
+     * </li>
+     * <li><p><strong>error</strong>: An analysis error occurred.</p>
+     * </li>
+     * <li><p><strong>timeout</strong>: The task timed out.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -356,8 +360,10 @@ public class GetNetworkReachableAnalysisResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the network path is reachable. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The network path is reachable.</li>
-     * <li><strong>false</strong>: The network path is unreachable.</li>
+     * <li><p><strong>true</strong>: The network path is reachable.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The network path is unreachable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

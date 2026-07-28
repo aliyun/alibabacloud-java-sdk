@@ -4,10 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class GetNisNetworkRankingRequest extends TeaModel {
+    /**
+     * <p>The member account IDs explicitly passed.</p>
+     */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
 
     /**
+     * <p>The start timestamp, in <strong>ms</strong>. If not specified, the last hour is queried by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>1684373600099</p>
      */
@@ -15,6 +20,7 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public Long beginTime;
 
     /**
+     * <p>The network traffic direction based on Alibaba Cloud resources. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +30,22 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The end timestamp, in <strong>ms</strong>. If not specified, the last hour is queried by default. If only BeginTime is specified, the one hour after BeginTime is queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>1684379093000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>Specifies filter conditions for focused network traffic analysis.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<GetNisNetworkRankingRequestFilter> filter;
 
     /**
+     * <p>The dimension for metric ranking. Valid values vary by scenario:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +55,7 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public String groupBy;
 
     /**
+     * <p>The metric for ranking Internet traffic. Case-sensitive. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +65,7 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The region where the resource resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -61,6 +74,7 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public String regionNo;
 
     /**
+     * <p>The Alibaba Cloud network resource type used for traffic forwarding. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +84,8 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The sort order. Default value: desc. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -77,6 +93,8 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The number of top-ranked entries to display. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -84,6 +102,8 @@ public class GetNisNetworkRankingRequest extends TeaModel {
     public Integer topN;
 
     /**
+     * <p>Specifies whether to use multi-account access mode. This is a reserved parameter and is not currently supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -193,6 +213,8 @@ public class GetNisNetworkRankingRequest extends TeaModel {
 
     public static class GetNisNetworkRankingRequestFilter extends TeaModel {
         /**
+         * <p>The name of the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>instanceId</p>
          */
@@ -200,6 +222,8 @@ public class GetNisNetworkRankingRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>lb-2zxxxxz1d</p>
          */

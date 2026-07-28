@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListNisInspectionResourceTypeResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D5E98683-355B-5867-8D3D-A24755F6895B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource types for inspection.</p>
+     */
     @NameInMap("ResourceTypeList")
     public java.util.List<ListNisInspectionResourceTypeResponseBodyResourceTypeList> resourceTypeList;
 
@@ -37,6 +42,8 @@ public class ListNisInspectionResourceTypeResponseBody extends TeaModel {
 
     public static class ListNisInspectionResourceTypeResponseBodyResourceTypeList extends TeaModel {
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>EIP</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNisInspectionTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the inspection task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateNisInspectionTaskRequest extends TeaModel {
     public String inspectionTaskId;
 
     /**
+     * <p>The running status of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */

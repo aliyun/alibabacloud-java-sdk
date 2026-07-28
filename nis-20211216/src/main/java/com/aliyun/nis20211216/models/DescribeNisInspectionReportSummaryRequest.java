@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNisInspectionReportSummaryRequest extends TeaModel {
     /**
+     * <p>The ID of the inspection report.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -42,7 +42,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba</p>
+     * <p>阿里巴巴</p>
      */
     @NameInMap("CloudIsp")
     public String cloudIsp;
@@ -121,7 +121,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>Hangzhou</p>
+     * <p>杭州市</p>
      */
     @NameInMap("OtherCity")
     public String otherCity;
@@ -133,7 +133,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>China</p>
+     * <p>中国</p>
      */
     @NameInMap("OtherCountry")
     public String otherCountry;
@@ -157,7 +157,7 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>China Mobile</p>
+     * <p>移动</p>
      */
     @NameInMap("OtherIsp")
     public String otherIsp;

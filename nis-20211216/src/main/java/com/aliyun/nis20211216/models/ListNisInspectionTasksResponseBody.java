@@ -4,10 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class ListNisInspectionTasksResponseBody extends TeaModel {
+    /**
+     * <p>The list of network inspection tasks.</p>
+     */
     @NameInMap("InspectionTaskList")
     public java.util.List<ListNisInspectionTasksResponseBodyInspectionTaskList> inspectionTaskList;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListNisInspectionTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If the value of this parameter is not empty, it indicates that there are more results to retrieve. If this parameter is empty, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>hKrS+MVXkuOgztXnvdml194Cz/lMNdmr+DEh0th6dVlNEo/F148UPCh2itDku7Qj</p>
      */
@@ -22,6 +29,8 @@ public class ListNisInspectionTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */
@@ -29,6 +38,8 @@ public class ListNisInspectionTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,16 +93,26 @@ public class ListNisInspectionTasksResponseBody extends TeaModel {
 
     public static class ListNisInspectionTasksResponseBodyInspectionTaskList extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-18 00:14:46</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The name of the network inspection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NIS inspection</p>
+         */
         @NameInMap("InspectionName")
         public String inspectionName;
 
         /**
+         * <p>The type of inspection solution that the network inspection task uses. Valid values: basic and customized.</p>
+         * 
          * <strong>example:</strong>
          * <p>basic</p>
          */
@@ -99,6 +120,8 @@ public class ListNisInspectionTasksResponseBody extends TeaModel {
         public String inspectionProject;
 
         /**
+         * <p>The ID of the network inspection task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ni-8svm******hzr7fh79</p>
          */
@@ -106,6 +129,8 @@ public class ListNisInspectionTasksResponseBody extends TeaModel {
         public String inspectionTaskId;
 
         /**
+         * <p>The ID of the latest report.</p>
+         * 
          * <strong>example:</strong>
          * <p>nir-b4c4c9******8a25e</p>
          */
@@ -113,6 +138,17 @@ public class ListNisInspectionTasksResponseBody extends TeaModel {
         public String lastUpdateReportId;
 
         /**
+         * <p>The running status of the task. Valid values:</p>
+         * <p>Creating: The task is being created.</p>
+         * <ul>
+         * <li><p>Active</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * <li><p>Inactive</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */

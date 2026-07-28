@@ -75,7 +75,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
          * <p>The local city.</p>
          * 
          * <strong>example:</strong>
-         * <p>Nanjing</p>
+         * <p>南京市</p>
          */
         @NameInMap("CloudCity")
         public String cloudCity;
@@ -84,7 +84,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
          * <p>The local country or region.</p>
          * 
          * <strong>example:</strong>
-         * <p>China</p>
+         * <p>中国</p>
          */
         @NameInMap("CloudCountry")
         public String cloudCountry;
@@ -102,7 +102,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
          * <p>The local ISP.</p>
          * 
          * <strong>example:</strong>
-         * <p>China Mobile</p>
+         * <p>移动</p>
          */
         @NameInMap("CloudIsp")
         public String cloudIsp;
@@ -129,7 +129,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
          * <p>The local province.</p>
          * 
          * <strong>example:</strong>
-         * <p>Jiangsu</p>
+         * <p>江苏省</p>
          */
         @NameInMap("CloudProvince")
         public String cloudProvince;
@@ -196,7 +196,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
          * <p>The remote city. In most cases, this parameter is empty if you set <strong>OtherCountry</strong> to a country except China.</p>
          * 
          * <strong>example:</strong>
-         * <p>Austin</p>
+         * <p>奥斯汀</p>
          */
         @NameInMap("OtherCity")
         public String otherCity;
@@ -205,7 +205,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
          * <p>The remote country or region.</p>
          * 
          * <strong>example:</strong>
-         * <p>United States</p>
+         * <p>美国</p>
          */
         @NameInMap("OtherCountry")
         public String otherCountry;
@@ -250,7 +250,7 @@ public class GetInternetTupleResponseBody extends TeaModel {
          * <p>The remote province. In most cases, this parameter is empty if you set <strong>OtherCountry</strong> to a country except China.</p>
          * 
          * <strong>example:</strong>
-         * <p>Texas</p>
+         * <p>得克萨斯州</p>
          */
         @NameInMap("OtherProvince")
         public String otherProvince;

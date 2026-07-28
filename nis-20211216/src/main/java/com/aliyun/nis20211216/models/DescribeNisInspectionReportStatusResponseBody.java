@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNisInspectionReportStatusResponseBody extends TeaModel {
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-18 15:13:07</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNisInspectionReportStatusResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The type of inspection plan used for the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNisInspectionReportStatusResponseBody extends TeaModel {
     public String inspectionProject;
 
     /**
+     * <p>The ID of the inspection report.</p>
+     * 
      * <strong>example:</strong>
      * <p>nir-2ca527b8de114ba4afb9</p>
      */
@@ -26,16 +32,26 @@ public class DescribeNisInspectionReportStatusResponseBody extends TeaModel {
     public String inspectionReportId;
 
     /**
+     * <p>The ID of the inspection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ni-8svmpe0yso****r7fh79</p>
      */
     @NameInMap("InspectionTaskId")
     public String inspectionTaskId;
 
+    /**
+     * <p>The name of the inspection task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("InspectionTaskName")
     public String inspectionTaskName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */
@@ -43,6 +59,8 @@ public class DescribeNisInspectionReportStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-18 15:12:28</p>
      */
@@ -50,6 +68,8 @@ public class DescribeNisInspectionReportStatusResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the inspection report.</p>
+     * 
      * <strong>example:</strong>
      * <p>Finish</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNisInspectionReportCheckItemsRequest extends TeaModel {
     /**
+     * <p>The category of the check item.</p>
+     * 
      * <strong>example:</strong>
      * <p>stability</p>
      */
@@ -12,6 +14,7 @@ public class DescribeNisInspectionReportCheckItemsRequest extends TeaModel {
     public String categoryCode;
 
     /**
+     * <p>The ID of the inspection report.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeNisInspectionReportCheckItemsRequest extends TeaModel {
     public String inspectionReportId;
 
     /**
+     * <p>The language of the content. Valid values: zh-CN and en-US.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -28,6 +33,8 @@ public class DescribeNisInspectionReportCheckItemsRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The maximum number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,15 +42,23 @@ public class DescribeNisInspectionReportCheckItemsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value returned from the previous call.</p>
+     * 
      * <strong>example:</strong>
      * <p>hKrS+MVXkuOgztXnvdml16/uO3mvCyHxSjzdhx9VRUC+8umDTIV2Wg9TTOUrR7ve</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The resource type.</p>
+     */
     @NameInMap("ResourceType")
     public java.util.List<String> resourceType;
 
+    /**
+     * <p>A collection of risk levels.</p>
+     */
     @NameInMap("RiskLevel")
     public java.util.List<String> riskLevel;
 

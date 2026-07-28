@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNisInspectionTaskResponseBody extends TeaModel {
     /**
+     * <p>The update result.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class UpdateNisInspectionTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */

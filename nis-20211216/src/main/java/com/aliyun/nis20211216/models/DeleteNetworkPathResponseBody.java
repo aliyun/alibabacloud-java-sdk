@@ -7,12 +7,11 @@ public class DeleteNetworkPathResponseBody extends TeaModel {
     /**
      * <p>Result of operation.</p>
      * <ul>
-     * <li><strong>true</strong>: Delete Success.</li>
-     * <li><strong>false</strong>: Delete Fail.</li>
+     * <li><p><strong>true</strong>: Delete Success.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Delete Fail.</p>
+     * </li>
      * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;

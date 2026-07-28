@@ -8,7 +8,7 @@ public class CreateNetworkPathRequest extends TeaModel {
      * <p>The description of the network path.</p>
      * 
      * <strong>example:</strong>
-     * <p>Analyze the path from ECS to ECS</p>
+     * <p>Analysis ECS to ECS path</p>
      */
     @NameInMap("NetworkPathDescription")
     public String networkPathDescription;
@@ -26,9 +26,12 @@ public class CreateNetworkPathRequest extends TeaModel {
     /**
      * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li><strong>tcp</strong>: Transmission Control Protocol (TCP)</li>
-     * <li><strong>udp</strong>: User Datagram Protocol (UDP)</li>
-     * <li><strong>icmp</strong>: Internet Control Message Protocol (ICMP)</li>
+     * <li><p><strong>tcp</strong>: Transmission Control Protocol (TCP)</p>
+     * </li>
+     * <li><p><strong>udp</strong>: User Datagram Protocol (UDP)</p>
+     * </li>
+     * <li><p><strong>icmp</strong>: Internet Control Message Protocol (ICMP)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,11 +89,16 @@ public class CreateNetworkPathRequest extends TeaModel {
     /**
      * <p>The type of the source resource. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: the Elastic Compute Service (ECS) instance</li>
-     * <li><strong>internetIp</strong>: the public IP address</li>
-     * <li><strong>vsw</strong>: the vSwitch</li>
-     * <li><strong>vpn</strong>: the VPN gateway</li>
-     * <li><strong>vbr</strong>: the virtual border router (VBR)</li>
+     * <li><p><strong>ecs</strong>: the Elastic Compute Service (ECS) instance</p>
+     * </li>
+     * <li><p><strong>internetIp</strong>: the public IP address</p>
+     * </li>
+     * <li><p><strong>vsw</strong>: the vSwitch</p>
+     * </li>
+     * <li><p><strong>vpn</strong>: the VPN gateway</p>
+     * </li>
+     * <li><p><strong>vbr</strong>: the virtual border router (VBR)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -119,7 +127,7 @@ public class CreateNetworkPathRequest extends TeaModel {
      * <p>The destination IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.210</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("TargetIpAddress")
     public String targetIpAddress;
@@ -136,12 +144,18 @@ public class CreateNetworkPathRequest extends TeaModel {
     /**
      * <p>The type of the destination resource. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: the ECS instance</li>
-     * <li><strong>internetIp</strong>: the public IP address</li>
-     * <li><strong>vsw</strong>: the vSwitch</li>
-     * <li><strong>vpn</strong>: the VPN gateway</li>
-     * <li><strong>vbr</strong>: the VBR</li>
-     * <li><strong>clb</strong>: the Classic Load Balancer (CLB) instance</li>
+     * <li><p><strong>ecs</strong>: the ECS instance</p>
+     * </li>
+     * <li><p><strong>internetIp</strong>: the public IP address</p>
+     * </li>
+     * <li><p><strong>vsw</strong>: the vSwitch</p>
+     * </li>
+     * <li><p><strong>vpn</strong>: the VPN gateway</p>
+     * </li>
+     * <li><p><strong>vbr</strong>: the VBR</p>
+     * </li>
+     * <li><p><strong>clb</strong>: the Classic Load Balancer (CLB) instance</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

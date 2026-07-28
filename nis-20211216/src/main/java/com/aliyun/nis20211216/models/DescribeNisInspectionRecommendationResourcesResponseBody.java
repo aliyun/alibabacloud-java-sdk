@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNisInspectionRecommendationResourcesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the inspection report.</p>
+     * 
      * <strong>example:</strong>
      * <p>nir-ffd1af****196d0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
     public String inspectionReportId;
 
     /**
+     * <p>The maximum number of entries returned on each page. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
     public Integer maxResults;
 
     /**
+     * <p>The token to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>qt0DqY2lXxwBt9/ROQoS/7J9p90D1vF2vFbwzb/1oSWr3AxcM6/KpObZ7Z1PZdcV</p>
      */
@@ -26,16 +32,23 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of resources.</p>
+     */
     @NameInMap("ResourceList")
     public java.util.List<DescribeNisInspectionRecommendationResourcesResponseBodyResourceList> resourceList;
 
     /**
+     * <p>The total number of resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>192</p>
      */
@@ -97,6 +110,8 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
 
     public static class DescribeNisInspectionRecommendationResourcesResponseBodyResourceList extends TeaModel {
         /**
+         * <p>The details of the abnormal item.</p>
+         * 
          * <strong>example:</strong>
          * <p>{ResourceId: &quot;ngw-p0wn04hi4****q2us6q7q&quot;}</p>
          */
@@ -104,12 +119,20 @@ public class DescribeNisInspectionRecommendationResourcesResponseBody extends Te
         public String analysisData;
 
         /**
+         * <p>The ID of the abnormal instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ngw-p0wn04hi4****q2us6q7q</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public NAT gateway</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-03 09:36:00</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The ID of the inspection report.</p>
+     * 
      * <strong>example:</strong>
      * <p>nir-38abb318b27b49cc9a01</p>
      */
@@ -19,6 +23,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
     public String inspectionReportId;
 
     /**
+     * <p>The ID of the inspection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ni-8svmpe0yso2bhzr7fh79</p>
      */
@@ -26,6 +32,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
     public String inspectionTaskId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4838F3F2-30E1-5D82-B25A-B9FE33BC3E25</p>
      */
@@ -33,6 +41,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-03 09:35:00</p>
      */
@@ -40,12 +50,27 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the task. Valid values:</p>
+     * <ul>
+     * <li><p>Creating</p>
+     * </li>
+     * <li><p>Active</p>
+     * </li>
+     * <li><p>Running</p>
+     * </li>
+     * <li><p>Inactive</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The summary information.</p>
+     */
     @NameInMap("Summary")
     public DescribeNisInspectionReportSummaryResponseBodySummary summary;
 
@@ -112,6 +137,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
 
     public static class DescribeNisInspectionReportSummaryResponseBodySummaryPassRateSummary extends TeaModel {
         /**
+         * <p>The pass rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.98</p>
          */
@@ -119,6 +146,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         public Double passRate;
 
         /**
+         * <p>The scope of the pass rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>Stability</p>
          */
@@ -150,6 +179,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
 
     public static class DescribeNisInspectionReportSummaryResponseBodySummaryRiskSummary extends TeaModel {
         /**
+         * <p>The number of resources associated with the risk.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -157,6 +188,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         public Integer resourceCount;
 
         /**
+         * <p>The number of risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -164,6 +197,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         public Integer riskCount;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>HighRisk</p>
          */
@@ -171,6 +206,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
+         * <p>The risk type.</p>
+         * 
          * <strong>example:</strong>
          * <p>StabilityRisk</p>
          */
@@ -218,6 +255,8 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
 
     public static class DescribeNisInspectionReportSummaryResponseBodySummary extends TeaModel {
         /**
+         * <p>The number of inspection items.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -225,15 +264,23 @@ public class DescribeNisInspectionReportSummaryResponseBody extends TeaModel {
         public Integer checkItemCount;
 
         /**
+         * <p>The number of inspected resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("CheckResourceCount")
         public Integer checkResourceCount;
 
+        /**
+         * <p>The pass rate summary.</p>
+         */
         @NameInMap("PassRateSummary")
         public java.util.List<DescribeNisInspectionReportSummaryResponseBodySummaryPassRateSummary> passRateSummary;
 
+        /**
+         * <p>The risk summary.</p>
+         */
         @NameInMap("RiskSummary")
         public java.util.List<DescribeNisInspectionReportSummaryResponseBodySummaryRiskSummary> riskSummary;
 

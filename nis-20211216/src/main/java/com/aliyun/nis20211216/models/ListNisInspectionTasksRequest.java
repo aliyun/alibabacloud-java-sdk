@@ -4,10 +4,18 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class ListNisInspectionTasksRequest extends TeaModel {
+    /**
+     * <p>The name of the network inspection task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NIS inspection</p>
+     */
     @NameInMap("InspectionName")
     public String inspectionName;
 
     /**
+     * <p>The type of inspection solution that the network inspection task uses. Valid values: basic and customized.</p>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -15,6 +23,8 @@ public class ListNisInspectionTasksRequest extends TeaModel {
     public String inspectionProject;
 
     /**
+     * <p>The ID of the network inspection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ni-8svm******hzr7fh79</p>
      */
@@ -22,6 +32,8 @@ public class ListNisInspectionTasksRequest extends TeaModel {
     public String inspectionTaskId;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +41,8 @@ public class ListNisInspectionTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. Set this parameter to the NextToken value returned from a previous call.</p>
+     * 
      * <strong>example:</strong>
      * <p>hKrS+MVXkuOgztXnvdml1/R9jhHkiH8eW3CfaOYU0CEL7yiT0zae6J8v1zYNg+d1</p>
      */
@@ -36,6 +50,18 @@ public class ListNisInspectionTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The running status of the task. Valid values:</p>
+     * <ul>
+     * <li><p>Creating</p>
+     * </li>
+     * <li><p>Active</p>
+     * </li>
+     * <li><p>Running</p>
+     * </li>
+     * <li><p>Inactive</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Active</p>
      */

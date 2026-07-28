@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNisTrafficRankingRequest extends TeaModel {
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class DescribeNisTrafficRankingRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Set this parameter to the value of NextToken returned by the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>2A07PfBPlzmmNi/75Qca9SK73UfY48/+WBiREjfVfXqMQxtV8XckOg5lk7F2bhC+</p>
      */
@@ -19,6 +23,7 @@ public class DescribeNisTrafficRankingRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the traffic ranking analysis result. Set this parameter to the value returned by the StartNisTrafficRanking operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

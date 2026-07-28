@@ -14,7 +14,7 @@ public class GetTransitRouterFlowTopNRequest extends TeaModel {
      * <p>The ID of the CEN bandwidth plan.</p>
      * 
      * <strong>example:</strong>
-     * <p>cenbwp-ia8kw1zjv4hyal*****</p>
+     * <p>cenbwp-ia8kw1zjv4hyal****</p>
      */
     @NameInMap("BandwithPackageId")
     public String bandwithPackageId;

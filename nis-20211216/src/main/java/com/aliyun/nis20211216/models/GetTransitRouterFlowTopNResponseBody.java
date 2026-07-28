@@ -45,7 +45,7 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
          * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>118639953821xxxx</p>
+         * <p>118639953821****</p>
          */
         @NameInMap("AccountId")
         public String accountId;

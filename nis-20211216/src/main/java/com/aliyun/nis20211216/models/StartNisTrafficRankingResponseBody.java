@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartNisTrafficRankingResponseBody extends TeaModel {
     /**
+     * <p>The result ID of this traffic ranking analysis. Call the DescribeNisTrafficRanking operation to obtain the final analysis result.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-6462a7b4c4a54b****</p>
      */
@@ -12,6 +14,8 @@ public class StartNisTrafficRankingResponseBody extends TeaModel {
     public String nisTrafficRankingId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4DAC4BE1-BEEA-5D84-BE06-E1B796F3B941</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class GetNisNetworkRankingResponseBody extends TeaModel {
+    /**
+     * <p>The collection of cloud network metric ranking data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetNisNetworkRankingResponseBodyData> data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */
@@ -37,6 +42,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
 
     public static class GetNisNetworkRankingResponseBodyData extends TeaModel {
         /**
+         * <p>The number of concurrent connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>66</p>
          */
@@ -44,6 +51,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double activeSessionCount;
 
         /**
+         * <p>The autonomous system number (ASN) of the client ISP.</p>
+         * 
          * <strong>example:</strong>
          * <p>129103</p>
          */
@@ -51,6 +60,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String asn;
 
         /**
+         * <p>The transit router attachment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tr-sample*</p>
          */
@@ -58,6 +69,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String attachmentId;
 
         /**
+         * <p>The bandwidth package instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cbwp-sample*</p>
          */
@@ -65,29 +78,53 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String bandwidthPackageId;
 
         /**
+         * <p>The traffic volume in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
         @NameInMap("ByteCount")
         public Double byteCount;
 
+        /**
+         * <p>The city where the client is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chengdu.</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>The country where the client is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China.</p>
+         */
         @NameInMap("Country")
         public String country;
 
         /**
+         * <p>The destination IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.2.XX.XX</p>
          */
         @NameInMap("DestinationIp")
         public String destinationIp;
 
+        /**
+         * <p>The destination ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud.</p>
+         */
         @NameInMap("DestinationIsp")
         public String destinationIsp;
 
         /**
+         * <p>The destination port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -95,6 +132,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String destinationPort;
 
         /**
+         * <p>The destination region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -102,13 +141,23 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String destinationRegionNo;
 
         /**
+         * <p>The destination zone for probing.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-b</p>
          */
         @NameInMap("DestinationZone")
         public String destinationZone;
 
+        @NameInMap("GlobalCountryCode")
+        public String globalCountryCode;
+
+        @NameInMap("GlobalProvinceCode")
+        public String globalProvinceCode;
+
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>120.238.XX.XX</p>
          */
@@ -116,6 +165,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The inbound bandwidth. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -123,6 +174,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double inBps;
 
         /**
+         * <p>The inbound packet rate. Unit: packets per second.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -130,16 +183,29 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double inPps;
 
         /**
+         * <p>The cloud resource instance ID corresponding to each scenario. For example, in the cross-region network traffic analysis scenario, this represents the CEN ID. In the public network scenario, this represents the EIP ID, ECS instance ID, or CLB ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-sample*</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ISP of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Mobile.</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        @NameInMap("LineType")
+        public String lineType;
+
         /**
+         * <p>The number of new connections per second.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -147,6 +213,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double newSessionPerSecond;
 
         /**
+         * <p>The outbound bandwidth. Unit: bit/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>88</p>
          */
@@ -154,6 +222,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double outBps;
 
         /**
+         * <p>The outbound packet rate. Unit: packets per second.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -161,6 +231,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double outPps;
 
         /**
+         * <p>The number of traffic packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>66</p>
          */
@@ -168,16 +240,26 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double packetCount;
 
         /**
+         * <p>The network protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The province or state where the client is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sichuan.</p>
+         */
         @NameInMap("Province")
         public String province;
 
         /**
+         * <p>The latency. Unit: ms.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -185,6 +267,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double RTT;
 
         /**
+         * <p>The Alibaba Cloud region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -192,6 +276,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The retransmission rate of TCP packets.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -199,23 +285,38 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public Double retransmitRate;
 
         /**
+         * <p>The source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>42.120.XX.XX</p>
          */
         @NameInMap("SourceIp")
         public String sourceIp;
 
+        /**
+         * <p>The source Internet Service Provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Mobile.</p>
+         */
         @NameInMap("SourceIsp")
         public String sourceIsp;
 
         /**
+         * <p>The source port.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
         @NameInMap("SourcePort")
         public String sourcePort;
 
+        @NameInMap("SourceRegion")
+        public String sourceRegion;
+
         /**
+         * <p>The source zone for probing.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
          */
@@ -223,6 +324,8 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         public String sourceZone;
 
         /**
+         * <p>The instance ID of the virtual border router (VBR).</p>
+         * 
          * <strong>example:</strong>
          * <p>vbr-sample*</p>
          */
@@ -330,6 +433,22 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
             return this.destinationZone;
         }
 
+        public GetNisNetworkRankingResponseBodyData setGlobalCountryCode(String globalCountryCode) {
+            this.globalCountryCode = globalCountryCode;
+            return this;
+        }
+        public String getGlobalCountryCode() {
+            return this.globalCountryCode;
+        }
+
+        public GetNisNetworkRankingResponseBodyData setGlobalProvinceCode(String globalProvinceCode) {
+            this.globalProvinceCode = globalProvinceCode;
+            return this;
+        }
+        public String getGlobalProvinceCode() {
+            return this.globalProvinceCode;
+        }
+
         public GetNisNetworkRankingResponseBodyData setIP(String IP) {
             this.IP = IP;
             return this;
@@ -368,6 +487,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         }
         public String getIsp() {
             return this.isp;
+        }
+
+        public GetNisNetworkRankingResponseBodyData setLineType(String lineType) {
+            this.lineType = lineType;
+            return this;
+        }
+        public String getLineType() {
+            return this.lineType;
         }
 
         public GetNisNetworkRankingResponseBodyData setNewSessionPerSecond(Double newSessionPerSecond) {
@@ -464,6 +591,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         }
         public String getSourcePort() {
             return this.sourcePort;
+        }
+
+        public GetNisNetworkRankingResponseBodyData setSourceRegion(String sourceRegion) {
+            this.sourceRegion = sourceRegion;
+            return this;
+        }
+        public String getSourceRegion() {
+            return this.sourceRegion;
         }
 
         public GetNisNetworkRankingResponseBodyData setSourceZone(String sourceZone) {

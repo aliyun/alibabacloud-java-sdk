@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class StartNisInspectionTaskResponseBody extends TeaModel {
     /**
+     * <p>The inspection report ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>nir-9923e262c106461d86ad</p>
+     * <p>nir-9923e262c106461d****</p>
      */
     @NameInMap("InspectionReportId")
     public String inspectionReportId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */

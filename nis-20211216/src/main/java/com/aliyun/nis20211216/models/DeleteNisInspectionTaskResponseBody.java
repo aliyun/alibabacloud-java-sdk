@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteNisInspectionTaskResponseBody extends TeaModel {
     /**
+     * <p>The result of the deletion.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class DeleteNisInspectionTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */

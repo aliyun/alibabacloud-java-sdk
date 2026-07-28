@@ -4,10 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class GetNisNetworkMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The cloud network metric trends data object.</p>
+     */
     @NameInMap("Data")
     public GetNisNetworkMetricsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D5E98683-355B-5867-8D3D-A24755F6895B</p>
      */
@@ -37,6 +42,8 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
 
     public static class GetNisNetworkMetricsResponseBodyDataMetrics extends TeaModel {
         /**
+         * <p>The timestamp of the data in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1690684091100</p>
          */
@@ -44,6 +51,8 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
         public Long timeStamp;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>88</p>
          */
@@ -74,10 +83,15 @@ public class GetNisNetworkMetricsResponseBody extends TeaModel {
     }
 
     public static class GetNisNetworkMetricsResponseBodyData extends TeaModel {
+        /**
+         * <p>The collection of metric trends data.</p>
+         */
         @NameInMap("Metrics")
         public java.util.List<GetNisNetworkMetricsResponseBodyDataMetrics> metrics;
 
         /**
+         * <p>The unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>Bits/Second</p>
          */
