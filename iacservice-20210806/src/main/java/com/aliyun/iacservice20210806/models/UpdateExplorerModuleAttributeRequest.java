@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateExplorerModuleAttributeRequest extends TeaModel {
     /**
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>a65451293e64979ba7a4b573950217fe</p>
      */
@@ -12,6 +14,8 @@ public class UpdateExplorerModuleAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The template description. Length: 0 to 255 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class UpdateExplorerModuleAttributeRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The template name. Length: 1 to 128 characters. The name must be unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

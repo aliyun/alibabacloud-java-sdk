@@ -5,20 +5,36 @@ import com.aliyun.tea.*;
 
 public class GenerateModuleResponseBody extends TeaModel {
     /**
+     * <p>The generated Terraform HCL template code content.</p>
+     * 
      * <strong>example:</strong>
-     * <p>demo</p>
+     * <p>terraform {
+     *   required_providers {
+     *     alicloud = {
+     *       source   = &quot;aliyun/alicloud&quot;
+     *       version  = &quot;1.260.0&quot;
+     *     }
+     *   }
+     * }</p>
+     * <p>resource &quot;alicloud_vpc&quot; &quot;default&quot; {
+     *  vpc_name = &quot;vpc-test&quot;
+     * }</p>
      */
     @NameInMap("module")
     public String module;
 
     /**
+     * <p>The variables and resource properties in the generated template code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;vpc_name&quot;:&quot;vpc-test&quot;}</p>
      */
     @NameInMap("properties")
     public java.util.Map<String, ?> properties;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B40D088-E929-504B-8802-C1759A993FA2</p>
      */

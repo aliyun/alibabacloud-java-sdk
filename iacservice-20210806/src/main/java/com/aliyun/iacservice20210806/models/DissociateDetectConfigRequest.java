@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DissociateDetectConfigRequest extends TeaModel {
     /**
+     * <p>Drift detection configuration ID</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-xxxx</p>
      */
@@ -12,6 +14,7 @@ public class DissociateDetectConfigRequest extends TeaModel {
     public String detectConfigId;
 
     /**
+     * <p>ID of the association target. StackId or TaskId</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,11 @@ public class DissociateDetectConfigRequest extends TeaModel {
     public String targetId;
 
     /**
+     * <p>Type of the association target</p>
+     * <ul>
+     * <li>Task: Orchestration job  </li>
+     * <li>Stack: Resource stack</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

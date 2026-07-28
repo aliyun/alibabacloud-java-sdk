@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRegistryNamespacesRequest extends TeaModel {
     /**
+     * <p>The search keyword. Fuzzy search by workspace name is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -12,6 +14,9 @@ public class ListRegistryNamespacesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The number of entries per page in a paged query. Maximum value: 100.
+     * Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,13 +24,28 @@ public class ListRegistryNamespacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>hg7nXVngyM6tQlfXYzM1uI/7dKNGp1JMgsKtvCagmtY=</p>
+     * <p>hg7nXVngyM6tQtvCagmtY=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
+     * <p>The workspace type. Valid values:</p>
+     * <ul>
+     * <li><p>system: public workspace</p>
+     * </li>
+     * <li><p>self: custom workspace</p>
+     * </li>
+     * <li><p>shared: shared workspace</p>
+     * </li>
+     * <li><p>community: community workspace</p>
+     * </li>
+     * </ul>
+     * <p>By default, all workspaces are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>self</p>
      */

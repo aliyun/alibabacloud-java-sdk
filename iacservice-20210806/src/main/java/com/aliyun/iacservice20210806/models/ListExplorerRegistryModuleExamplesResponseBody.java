@@ -4,10 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
+    /**
+     * <p>The list of Explorer community module examples.</p>
+     */
     @NameInMap("explorerRegistryModuleExamples")
     public java.util.List<ListExplorerRegistryModuleExamplesResponseBodyExplorerRegistryModuleExamples> explorerRegistryModuleExamples;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 0 to 200.</p>
+     * <p>Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +22,9 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next page of results.</p>
+     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * 
      * <strong>example:</strong>
      * <p>VSjwD+sJ8OZJ8fNjV89AZs7o2AdSD25ZQLeWZ8REjXA=</p>
      */
@@ -22,6 +32,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA8F6459-EED6-556B-8130-D150A3866E56</p>
      */
@@ -29,6 +41,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>132</p>
      */
@@ -82,6 +96,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
 
     public static class ListExplorerRegistryModuleExamplesResponseBodyExplorerRegistryModuleExamples extends TeaModel {
         /**
+         * <p>The example name.</p>
+         * 
          * <strong>example:</strong>
          * <p>201-use-case-create-actiontrail-trail</p>
          */
@@ -89,6 +105,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String exampleName;
 
         /**
+         * <p>The example path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -96,6 +114,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String examplePath;
 
         /**
+         * <p>The example schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -103,6 +123,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public java.util.Map<String, ?> exampleSchema;
 
         /**
+         * <p>The module name.</p>
+         * 
          * <strong>example:</strong>
          * <p>iactestname1</p>
          */
@@ -110,6 +132,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The module version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.11.0</p>
          */
@@ -117,6 +141,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String moduleVersion;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba</p>
          */
@@ -124,6 +150,8 @@ public class ListExplorerRegistryModuleExamplesResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */

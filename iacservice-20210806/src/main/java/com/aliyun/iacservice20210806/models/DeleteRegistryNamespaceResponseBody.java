@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRegistryNamespaceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1D0CD708-E433-5F13-8A42-823C95FC756C</p>
      */

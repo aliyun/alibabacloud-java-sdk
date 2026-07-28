@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class UploadModuleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0DDD8773-5756-5508-BE36-D03DE43E2450</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>If ResourceType is set to ModuleVersion, this parameter takes effect and returns the version ID after publishing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("version")
     public String version;
 

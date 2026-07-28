@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,18 +23,25 @@ public class ListTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>98610149-488B-5E48-B981-8D4CE1AF77CD</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of tasks.</p>
+     */
     @NameInMap("tasks")
     public java.util.List<ListTasksResponseBodyTasks> tasks;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>55</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -82,6 +93,8 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static class ListTasksResponseBodyTasksGroupInfo extends TeaModel {
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-4267dcfbf1b6d1e0652bfbbe995</p>
          */
@@ -89,6 +102,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -96,6 +111,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-433aead7560571cf1b2bfbbe92b</p>
          */
@@ -103,6 +120,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -149,15 +168,39 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTasksTags extends TeaModel {
+        /**
+         * <p>The tag key of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag key of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iac-demo</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 
+        /**
+         * <p>The tag value of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iac-demo</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -201,10 +244,18 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTasks extends TeaModel {
+        /**
+         * <p>Indicates whether the task is automatically executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("autoApply")
         public Boolean autoApply;
 
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-11T15:09:53Z</p>
          */
@@ -212,6 +263,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The job ID of the current task.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-123asd</p>
          */
@@ -219,32 +272,59 @@ public class ListTasksResponseBody extends TeaModel {
         public String currentJobId;
 
         /**
+         * <p>The current job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pending</p>
          */
         @NameInMap("currentJobStatus")
         public String currentJobStatus;
 
+        /**
+         * <p>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when managed resources are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("deletionProtection")
         public Boolean deletionProtection;
 
+        /**
+         * <p>The task group information.</p>
+         */
         @NameInMap("groupInfo")
         public ListTasksResponseBodyTasksGroupInfo groupInfo;
 
+        /**
+         * <p>The latest version of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v3</p>
+         */
         @NameInMap("latestModuleVersion")
         public String latestModuleVersion;
 
         /**
+         * <p>The module ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mod-518855d9a058c331e9c60bc0ce</p>
          */
         @NameInMap("moduleId")
         public String moduleId;
 
+        /**
+         * <p>The module name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-name</p>
+         */
         @NameInMap("moduleName")
         public String moduleName;
 
         /**
+         * <p>The module version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -252,23 +332,36 @@ public class ListTasksResponseBody extends TeaModel {
         public String moduleVersion;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>TaskName</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Available: The task is available, and no job is running.</li>
+         * <li>Running: The task is running, and the current job is in progress.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The list of task tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListTasksResponseBodyTasksTags> tags;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-1525e992f1b621b0ca51647876e</p>
          */

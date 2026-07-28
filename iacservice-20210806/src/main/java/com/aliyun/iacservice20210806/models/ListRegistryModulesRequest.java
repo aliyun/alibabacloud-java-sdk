@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRegistryModulesRequest extends TeaModel {
     /**
+     * <p>The search keyword. Fuzzy search by module name is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -12,6 +14,8 @@ public class ListRegistryModulesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,13 +23,17 @@ public class ListRegistryModulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test_namespace</p>
+     * <p>NamespaceName</p>
      */
     @NameInMap("namespaceName")
     public String namespaceName;
 
     /**
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>NFzbQCa7/yd7rAuSo5xZb54dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -36,6 +44,19 @@ public class ListRegistryModulesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The workspace type. Valid values:</p>
+     * <ul>
+     * <li><p>system: public module</p>
+     * </li>
+     * <li><p>self: custom module</p>
+     * </li>
+     * <li><p>shared: shared module</p>
+     * </li>
+     * <li><p>community: community module</p>
+     * </li>
+     * </ul>
+     * <p>By default, all types are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>system</p>
      */

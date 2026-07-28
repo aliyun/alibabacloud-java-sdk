@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProjectResponseBody extends TeaModel {
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class ListProjectResponseBody extends TeaModel {
     public Long count;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,23 @@ public class ListProjectResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>The list of projects.</p>
+     */
     @NameInMap("projects")
     public java.util.List<ListProjectResponseBodyProjects> projects;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</p>
      */
@@ -81,9 +92,21 @@ public class ListProjectResponseBody extends TeaModel {
     }
 
     public static class ListProjectResponseBodyProjectsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -112,6 +135,8 @@ public class ListProjectResponseBody extends TeaModel {
 
     public static class ListProjectResponseBodyProjects extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-10T10:08:34Z</p>
          */
@@ -119,6 +144,8 @@ public class ListProjectResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The project description.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -126,6 +153,8 @@ public class ListProjectResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */
@@ -133,16 +162,23 @@ public class ListProjectResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-148e7853433574fffe9fec72ed9b72</p>
          */
         @NameInMap("projectId")
         public String projectId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListProjectResponseBodyProjectsTags> tags;
 
         /**
+         * <p>The number of tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

@@ -4,10 +4,14 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateDetectConfigRequest extends TeaModel {
+    /**
+     * <p>List of alerting addresses</p>
+     */
     @NameInMap("alarmConfigs")
     public java.util.List<CreateDetectConfigRequestAlarmConfigs> alarmConfigs;
 
     /**
+     * <p>Idempotence token, format: <code>[0-9a-zA-Z-]{1,64}</code>. It is recommended to use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,8 @@ public class CreateDetectConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Cron expression (UTC+8). Required when trigger type is <code>Cron</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0 0 0 ? * 1</p>
      */
@@ -24,6 +30,8 @@ public class CreateDetectConfigRequest extends TeaModel {
     public String cronExpression;
 
     /**
+     * <p>Description, up to 256 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */
@@ -31,6 +39,7 @@ public class CreateDetectConfigRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Detection configuration Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,10 +48,19 @@ public class CreateDetectConfigRequest extends TeaModel {
     @NameInMap("detectConfigName")
     public String detectConfigName;
 
+    /**
+     * <p>Whether the Detection feature is Enabled. The default value is <code>true</code>.</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
+     * <p>Trigger type  </p>
+     * <ul>
+     * <li>Manual: Execute manually  </li>
+     * <li>Cron: Trigger on a schedule</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Manual</p>
      */
@@ -112,6 +130,8 @@ public class CreateDetectConfigRequest extends TeaModel {
 
     public static class CreateDetectConfigRequestAlarmConfigs extends TeaModel {
         /**
+         * <p>Alerting address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx">https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx</a></p>
          */
@@ -119,6 +139,8 @@ public class CreateDetectConfigRequest extends TeaModel {
         public String address;
 
         /**
+         * <p>Alerting method. Currently only <code>cms</code> is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>cms</p>
          */

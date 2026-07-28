@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetRegistryModuleResponseBody extends TeaModel {
+    /**
+     * <p>The Registry module.</p>
+     */
     @NameInMap("registryModule")
     public GetRegistryModuleResponseBodyRegistryModule registryModule;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5B5AD471-5036-581B-AC9B-7D5EECED877A</p>
      */
@@ -36,39 +41,120 @@ public class GetRegistryModuleResponseBody extends TeaModel {
     }
 
     public static class GetRegistryModuleResponseBodyRegistryModule extends TeaModel {
+        /**
+         * <p>The permission. Valid values:</p>
+         * <ul>
+         * <li>private: private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("acl")
         public String acl;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-28 13:39:05</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The module description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The number of downloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("downloads")
         public Integer downloads;
 
+        /**
+         * <p>The module name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-cluster</p>
+         */
         @NameInMap("moduleName")
         public String moduleName;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NamespaceName</p>
+         */
         @NameInMap("namespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The provider type. Valid values:</p>
+         * <ul>
+         * <li>alicloud: Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud</p>
+         */
         @NameInMap("provider")
         public String provider;
 
+        /**
+         * <p>The list of accounts with which the Registry module is shared.</p>
+         */
         @NameInMap("sharedAccounts")
         public java.util.List<Long> sharedAccounts;
 
+        /**
+         * <p>The module source, which is a concatenation of <NamespaceName>/<ModuleName>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaceName/ModuleName</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The module source URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("sourceUrl")
         public String sourceUrl;
 
+        /**
+         * <p>The workspace type. Valid values:</p>
+         * <ul>
+         * <li>system: public module</li>
+         * <li>self: custom module</li>
+         * <li>shared: shared module</li>
+         * <li>community: community module.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("version")
         public String version;
 

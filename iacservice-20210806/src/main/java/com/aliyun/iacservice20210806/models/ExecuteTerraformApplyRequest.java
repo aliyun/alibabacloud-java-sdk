@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteTerraformApplyRequest extends TeaModel {
     /**
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ExecuteTerraformApplyRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The Terraform code to execute. If the execution content has not changed, you can specify only stateId.</p>
+     * 
      * <strong>example:</strong>
      * <p>terraform {
      *   required_providers {
@@ -36,6 +39,8 @@ public class ExecuteTerraformApplyRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The state file ID. If this parameter is specified, the Apply command continues execution based on the existing state file.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-xxx</p>
      */

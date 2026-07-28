@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModuleVersionResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListModuleVersionResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListModuleVersionResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>792171BB-1A68-5148-8B9B-C7C728E1E98B</p>
      */
@@ -26,12 +32,17 @@ public class ListModuleVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of version information.</p>
+     */
     @NameInMap("versions")
     public java.util.List<ListModuleVersionResponseBodyVersions> versions;
 
@@ -82,6 +93,8 @@ public class ListModuleVersionResponseBody extends TeaModel {
 
     public static class ListModuleVersionResponseBodyVersions extends TeaModel {
         /**
+         * <p>The time when the version was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-13T02:21:49Z</p>
          */
@@ -89,13 +102,17 @@ public class ListModuleVersionResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The version description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>description</p>
+         * <p>this is description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mod-55f1739d9050fffed3ec3a2c4a5e5</p>
          */
@@ -103,6 +120,8 @@ public class ListModuleVersionResponseBody extends TeaModel {
         public String moduleId;
 
         /**
+         * <p>The template version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>v3</p>
          */
@@ -110,13 +129,17 @@ public class ListModuleVersionResponseBody extends TeaModel {
         public String moduleVersion;
 
         /**
+         * <p>The version name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>name</p>
+         * <p>versionName</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>The source path of the version.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
          */

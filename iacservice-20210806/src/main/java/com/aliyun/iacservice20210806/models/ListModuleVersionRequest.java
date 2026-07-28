@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModuleVersionRequest extends TeaModel {
     /**
+     * <p>The search keyword. Fuzzy match on version names is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -12,6 +14,8 @@ public class ListModuleVersionRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListModuleVersionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,16 +14,23 @@ public class ListProductsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The maximum number of results per page. Valid values: 0 to 200. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30BaZ9ekYWXJdqshYecA++coNg7qT1Zbm3RfLyFIZeY=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The product list.</p>
+     */
     @NameInMap("products")
     public java.util.List<ListProductsResponseBodyProducts> products;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9bcaac3c-420d-4303-87ab-7638c07b0a0b</p>
      */
@@ -29,6 +38,8 @@ public class ListProductsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>134</p>
      */
@@ -81,10 +92,18 @@ public class ListProductsResponseBody extends TeaModel {
     }
 
     public static class ListProductsResponseBodyProducts extends TeaModel {
+        /**
+         * <p>The first-level category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>企业应用</p>
+         */
         @NameInMap("firstCategoryName")
         public String firstCategoryName;
 
         /**
+         * <p>The first-level category name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Enterprise application</p>
          */
@@ -92,26 +111,44 @@ public class ListProductsResponseBody extends TeaModel {
         public String firstCategoryNameEn;
 
         /**
+         * <p>The product name.</p>
+         * 
          * <strong>example:</strong>
          * <p>MSE</p>
          */
         @NameInMap("product")
         public String product;
 
+        /**
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>微服务引擎</p>
+         */
         @NameInMap("productName")
         public String productName;
 
         /**
+         * <p>The product name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Microservices Engine</p>
          */
         @NameInMap("productNameEn")
         public String productNameEn;
 
+        /**
+         * <p>The second-level category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>应用服务</p>
+         */
         @NameInMap("secondCategoryName")
         public String secondCategoryName;
 
         /**
+         * <p>The second-level category name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Application service</p>
          */
@@ -119,6 +156,8 @@ public class ListProductsResponseBody extends TeaModel {
         public String secondCategoryNameEn;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -126,6 +165,8 @@ public class ListProductsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The product category in Terraform.</p>
+         * 
          * <strong>example:</strong>
          * <p>Microservice_Engine(MSE)</p>
          */
@@ -133,6 +174,8 @@ public class ListProductsResponseBody extends TeaModel {
         public String subcategory;
 
         /**
+         * <p>Specifies whether Terraformer is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -140,6 +183,8 @@ public class ListProductsResponseBody extends TeaModel {
         public Boolean supportTerraformer;
 
         /**
+         * <p>The Terraform Provider version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.229.0</p>
          */

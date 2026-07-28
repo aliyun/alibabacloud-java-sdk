@@ -4,11 +4,14 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetStackDeploymentsResponseBody extends TeaModel {
+    /**
+     * <p>The deployment results of the stack.</p>
+     */
     @NameInMap("deployments")
     public java.util.List<GetStackDeploymentsResponseBodyDeployments> deployments;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BF72A6FB-B071-5F2E-A036-9D62545B962C</p>
@@ -17,6 +20,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +59,12 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
     public static class GetStackDeploymentsResponseBodyDeploymentsConfig extends TeaModel {
         /**
+         * <p>Specifies whether to automatically execute the task. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: No.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -61,6 +72,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public Boolean autoApply;
 
         /**
+         * <p>Specifies whether this is a destroy job.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -92,6 +105,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
     public static class GetStackDeploymentsResponseBodyDeploymentsOutputs extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>The name of the SLS log project</p>
          */
@@ -99,6 +114,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The expression, which can reference component outputs. Format: component.{component name}.{component output name}.</p>
+         * 
          * <strong>example:</strong>
          * <p>component.sls.project_name</p>
          */
@@ -106,6 +123,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>project_name</p>
          */
@@ -113,6 +132,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -120,6 +141,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The actual value after the deployment is completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>log-project-xxxx</p>
          */
@@ -175,6 +198,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
     public static class GetStackDeploymentsResponseBodyDeploymentsParameters extends TeaModel {
         /**
+         * <p>The default value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -182,6 +207,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>region of the resource</p>
          */
@@ -189,6 +216,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>region</p>
          */
@@ -199,6 +228,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public Boolean sensitive;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -206,6 +237,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-southeast-6</p>
          */
@@ -269,6 +302,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
     public static class GetStackDeploymentsResponseBodyDeploymentsPlanOutputsModuleActionDetail extends TeaModel {
         /**
+         * <p>The number of resources to be created.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -276,6 +311,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public Integer add;
 
         /**
+         * <p>The number of resources to be changed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -283,6 +320,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public Integer change;
 
         /**
+         * <p>The number of resources to be destroyed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -322,16 +361,23 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
     public static class GetStackDeploymentsResponseBodyDeploymentsPlanOutputsResourceChanges extends TeaModel {
         /**
+         * <p>The difference information of the resource change.</p>
+         * 
          * <strong>example:</strong>
          * <p>~ resource \&quot;alicloud_log_store\&quot; \&quot;default\&quot; {\n        id                    = \&quot;alb-log-project-v1-ph-xxxxx:alb-log-store-ph\&quot;\n      ~ max_split_shard_count = 64 -&gt; 32\n        name                  = \&quot;alb-log-store-ph\&quot;\n\n        # (13 unchanged attributes hidden)\n    }</p>
          */
         @NameInMap("change")
         public String change;
 
+        /**
+         * <p>The types of resource change actions included in this resource change.</p>
+         */
         @NameInMap("resourceActions")
         public java.util.List<String> resourceActions;
 
         /**
+         * <p>The unique identifier of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>alicloud_log_store.default</p>
          */
@@ -371,19 +417,35 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
 
     public static class GetStackDeploymentsResponseBodyDeploymentsPlanOutputs extends TeaModel {
         /**
+         * <p>The change type of the component. Valid values:</p>
+         * <ul>
+         * <li>create: all resource changes in the component are additions.</li>
+         * <li>delete: all resource changes in the component are deletions.</li>
+         * <li>read: all resource changes in the component are read operations.</li>
+         * <li>update: resource changes in the component include two or more types among additions, deletions, and read operations.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>update</p>
          */
         @NameInMap("moduleAction")
         public String moduleAction;
 
+        /**
+         * <p>The number of resources to be added, updated, and destroyed in this deployment.</p>
+         */
         @NameInMap("moduleActionDetail")
         public GetStackDeploymentsResponseBodyDeploymentsPlanOutputsModuleActionDetail moduleActionDetail;
 
+        /**
+         * <p>The resource change information.</p>
+         */
         @NameInMap("resourceChanges")
         public java.util.List<GetStackDeploymentsResponseBodyDeploymentsPlanOutputsResourceChanges> resourceChanges;
 
         /**
+         * <p>The component name of the stack.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls</p>
          */
@@ -430,10 +492,15 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
     }
 
     public static class GetStackDeploymentsResponseBodyDeployments extends TeaModel {
+        /**
+         * <p>The configuration item.</p>
+         */
         @NameInMap("config")
         public GetStackDeploymentsResponseBodyDeploymentsConfig config;
 
         /**
+         * <p>The configuration version, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration changes.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -441,6 +508,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String configVersion;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-01T12:10:18Z</p>
          */
@@ -448,6 +517,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The deployment name.</p>
+         * 
          * <strong>example:</strong>
          * <p>production</p>
          */
@@ -455,6 +526,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String deploymentName;
 
         /**
+         * <p>The deployment number. The deployment number of each stack starts from 1 and increments each time a deployment is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -462,6 +535,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String deploymentNo;
 
         /**
+         * <p>Deprecated field.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -469,6 +544,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String deploymentVersion;
 
         /**
+         * <p>The execution duration, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>38000</p>
          */
@@ -476,6 +553,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public Long elapsedTime;
 
         /**
+         * <p>The execution type.</p>
+         * <p>Manual: manual execution (default).</p>
+         * <p>Auto: automatic execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>Manual</p>
          */
@@ -483,6 +564,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String executeType;
 
         /**
+         * <p>The failure reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>\n Error: Invalid value for input variable\n \n   on main.tf line 17, in module \&quot;alb\&quot;:\n   17:   log_project           = var.log_project.project_name\n \n The given value is not suitable for module.alb.var.log_project declared at\n modules/alb/main.tf:34,1-23: string required.\n╵\n</p>
          */
@@ -490,22 +573,135 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String failedReason;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-as154vldqt46mv0ixxxxx</p>
          */
         @NameInMap("jobId")
         public String jobId;
 
+        /**
+         * <p>The outputs.</p>
+         */
         @NameInMap("outputs")
         public java.util.List<GetStackDeploymentsResponseBodyDeploymentsOutputs> outputs;
 
+        /**
+         * <p>The parameter set content.</p>
+         */
         @NameInMap("parameters")
         public java.util.List<GetStackDeploymentsResponseBodyDeploymentsParameters> parameters;
 
+        /**
+         * <p>The state file output results.</p>
+         */
         @NameInMap("planOutputs")
         public java.util.List<GetStackDeploymentsResponseBodyDeploymentsPlanOutputs> planOutputs;
 
         /**
+         * <p>The deployment status.</p>
+         * <table>
+         * <thead>
+         * <tr>
+         * <th>Name</th>
+         * <th>Description</th>
+         * </tr>
+         * </thead>
+         * <tbody><tr>
+         * <td>Pending</td>
+         * <td>The initial status after a deployment is created.</td>
+         * </tr>
+         * <tr>
+         * <td>PriorityQueued</td>
+         * <td>The deployment is queued by priority.</td>
+         * </tr>
+         * <tr>
+         * <td>PlanQueued</td>
+         * <td>The deployment is queued because no workflow is available after the deployment is created.</td>
+         * </tr>
+         * <tr>
+         * <td>ApplyQueued</td>
+         * <td>The deployment is queued because no workflow is available during execution.</td>
+         * </tr>
+         * <tr>
+         * <td>Planning</td>
+         * <td>The resource deployment is in the Plan phase.</td>
+         * </tr>
+         * <tr>
+         * <td>Planned</td>
+         * <td>The resource deployment has completed the Plan phase.</td>
+         * </tr>
+         * <tr>
+         * <td>ConfigProactiveInProgress</td>
+         * <td>A compliance pre-check is in progress.</td>
+         * </tr>
+         * <tr>
+         * <td>ConfigProactiveSuccess</td>
+         * <td>The compliance pre-check succeeded.</td>
+         * </tr>
+         * <tr>
+         * <td>DetectInProgress</td>
+         * <td>Drift detection is in progress.</td>
+         * </tr>
+         * <tr>
+         * <td>ImportQueued</td>
+         * <td>The deployment is queued because no workflow is available during the Import phase.</td>
+         * </tr>
+         * <tr>
+         * <td>Importing</td>
+         * <td>The resource deployment is in the Import phase.</td>
+         * </tr>
+         * <tr>
+         * <td>Imported</td>
+         * <td>The resource deployment has completed the Import phase.</td>
+         * </tr>
+         * <tr>
+         * <td>StateQueued</td>
+         * <td>The deployment is queued because no workflow is available during the state command execution.</td>
+         * </tr>
+         * <tr>
+         * <td>Stating</td>
+         * <td>The resource deployment is executing the state command.</td>
+         * </tr>
+         * <tr>
+         * <td>Stated</td>
+         * <td>The resource deployment has completed the state command execution.</td>
+         * </tr>
+         * <tr>
+         * <td>Confirmed</td>
+         * <td>The resource deployment has been confirmed after the Plan phase.</td>
+         * </tr>
+         * <tr>
+         * <td>PlannedAndFinished</td>
+         * <td>No differences were found after the Plan phase. The deployment is in a final status.</td>
+         * </tr>
+         * <tr>
+         * <td>Applying</td>
+         * <td>The resource deployment is in the Apply phase.</td>
+         * </tr>
+         * <tr>
+         * <td>Applied</td>
+         * <td>The resource deployment has completed the Apply phase.</td>
+         * </tr>
+         * <tr>
+         * <td>Discarded</td>
+         * <td>The resource deployment has been discarded and is in a final status.</td>
+         * </tr>
+         * <tr>
+         * <td>Errored</td>
+         * <td>The deployment encountered an error and is in a final status.</td>
+         * </tr>
+         * <tr>
+         * <td>ConfigProactiveFailure</td>
+         * <td>The compliance pre-check failed.</td>
+         * </tr>
+         * <tr>
+         * <td>Canceled</td>
+         * <td>The deployment has been canceled and is in a final status.</td>
+         * </tr>
+         * </tbody></table>
+         * 
          * <strong>example:</strong>
          * <p>Pending</p>
          */
@@ -513,6 +709,8 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-as1d4vld8ogb2l32xxxxxx</p>
          */

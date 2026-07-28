@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of jobs.</p>
+     */
     @NameInMap("jobs")
     public java.util.List<ListJobsResponseBodyJobs> jobs;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>882304F9-6DB1-5593-A719-33473D082B9C</p>
      */
@@ -29,6 +38,8 @@ public class ListJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -81,13 +92,27 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobsConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the job is a destroy job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isDestroy")
         public Boolean isDestroy;
 
+        /**
+         * <p>The template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>moduleDescription</p>
+         */
         @NameInMap("moduleDescription")
         public String moduleDescription;
 
         /**
+         * <p>The template version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v4</p>
          */
@@ -95,12 +120,20 @@ public class ListJobsResponseBody extends TeaModel {
         public String moduleVersion;
 
         /**
+         * <p>The resource change details.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>+0 ~0 -0</p>
          */
         @NameInMap("resourcesChanged")
         public String resourcesChanged;
 
+        /**
+         * <p>The operation command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>destroy</p>
+         */
         @NameInMap("subCommand")
         public String subCommand;
 
@@ -152,10 +185,15 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobs extends TeaModel {
+        /**
+         * <p>The job configuration.</p>
+         */
         @NameInMap("config")
         public ListJobsResponseBodyJobsConfig config;
 
         /**
+         * <p>The time when the job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-05T02:13:43Z</p>
          */
@@ -163,19 +201,39 @@ public class ListJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The job description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>plan</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The execution duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5m</p>
+         */
         @NameInMap("elapsedTime")
         public Long elapsedTime;
 
+        /**
+         * <p>The execution type. Valid values:</p>
+         * <ul>
+         * <li>Manual: manual execution. This is the default value.</li>
+         * <li>Auto: automatic execution.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("executeType")
         public String executeType;
 
         /**
+         * <p>Indicates whether the assertion check passed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -183,29 +241,61 @@ public class ListJobsResponseBody extends TeaModel {
         public Boolean isPassAssertCheck;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>job-433aead756057fff9e4dca57b147c</p>
+         * <p>job-433aff9e4dca57b147c</p>
          */
         @NameInMap("jobId")
         public String jobId;
 
         /**
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Pending: The initial status after the job is created.</li>
+         * <li>PlanQueued: After the job is created, if no workflow is available, the job is queued.</li>
+         * <li>Planning: The resource job is in the Plan execution phase.</li>
+         * <li>ConfigProactiveInProgress: Compliance pre-check is in progress. The compliance pre-check feature must be enabled for the account.</li>
+         * <li>ConfigProactiveSuccess: Compliance pre-check succeeded. The compliance pre-check feature must be enabled for the account.</li>
+         * <li>Planned: The resource job has completed the Plan execution.</li>
+         * <li>PlannedAndFinished: After the Plan execution is complete, no diff is found. This is a final status.</li>
+         * <li>Confirmed: The resource job is waiting for confirmation after the Plan execution is complete.</li>
+         * <li>ApplyQueued: During job execution, if no workflow is available, the job is queued.</li>
+         * <li>Applying: The resource job is in the Apply execution phase.</li>
+         * <li>Applied: The resource job has completed the Apply execution. This is a final status.</li>
+         * <li>Errored: The job execution encountered an error. This is a final status.</li>
+         * <li>Canceled: The job execution was canceled. This is a final status.</li>
+         * <li>Discarded: The plan of the resource job was discarded. This is a final status.</li>
+         * <li>ConfigProactiveFailure: Compliance pre-check failed. The compliance pre-check feature must be enabled for the account.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Errored</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The status details.</p>
+         */
         @NameInMap("statusDetail")
         public java.util.Map<String, JobsStatusDetailValue> statusDetail;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>task-518855d9a058c1176866c2c3efb</p>
+         * <p>task-518876866c2c3efb</p>
          */
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <p>The Terraform provider version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.240.0</p>
+         */
         @NameInMap("terraformProviderVersion")
         public String terraformProviderVersion;
 

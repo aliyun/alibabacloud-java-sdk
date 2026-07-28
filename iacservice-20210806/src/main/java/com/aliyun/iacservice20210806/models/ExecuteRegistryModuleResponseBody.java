@@ -14,6 +14,8 @@ public class ExecuteRegistryModuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The state file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-xxxx</p>
      */

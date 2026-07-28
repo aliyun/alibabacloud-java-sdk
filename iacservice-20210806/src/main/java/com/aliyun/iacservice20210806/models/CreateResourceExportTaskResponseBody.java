@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateResourceExportTaskResponseBody extends TeaModel {
     /**
+     * <p>The resource export task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ex-4a1ec8b7003d24528326821be</p>
      */
@@ -12,6 +14,8 @@ public class CreateResourceExportTaskResponseBody extends TeaModel {
     public String exportTaskId;
 
     /**
+     * <p>The resource export version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */
@@ -19,6 +23,8 @@ public class CreateResourceExportTaskResponseBody extends TeaModel {
     public String exportVersion;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CFD8C2A8-5BE7-56D2-916D-64039B8E06E3</p>
      */

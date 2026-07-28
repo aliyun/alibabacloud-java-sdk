@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1E7BA3EB-B0EF-53F5-9999-07CAD6D9F8A3</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries per page. Valid values: 0 to 200. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>LC4NJL3Ru2bIiRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -19,16 +23,23 @@ public class ListResourceTypesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9bcaac3c-420d-4303-87ab-7638c07b0a0b</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The resources.</p>
+     */
     @NameInMap("resourceTypes")
     public java.util.List<ListResourceTypesResponseBodyResourceTypes> resourceTypes;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>93</p>
      */
@@ -81,20 +92,36 @@ public class ListResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListResourceTypesResponseBodyResourceTypes extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>路由表</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The product name.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
         @NameInMap("product")
         public String product;
 
+        /**
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>专有网络VPC</p>
+         */
         @NameInMap("productName")
         public String productName;
 
         /**
+         * <p>The URL of the resource details page.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables/$%7BRouteTableId%7D">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables/${RouteTableId}</a></p>
          */
@@ -102,6 +129,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String resourceDetailPageUrl;
 
         /**
+         * <p>The URL of the resources page.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables</a></p>
          */
@@ -112,6 +141,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -119,6 +150,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The version from which the resource status takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
@@ -126,6 +159,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String statusStartVersion;
 
         /**
+         * <p>The product subcategory in Terraform.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -133,6 +168,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String subcategory;
 
         /**
+         * <p>Specifies whether Terraformer is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -140,6 +177,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String supportTerraformer;
 
         /**
+         * <p>The Terraform provider version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.248.0</p>
          */
@@ -147,12 +186,20 @@ public class ListResourceTypesResponseBody extends TeaModel {
         public String terraformProviderVersion;
 
         /**
+         * <p>The resource type in Terraform.</p>
+         * 
          * <strong>example:</strong>
          * <p>alicloud_route_table</p>
          */
         @NameInMap("terraformResourceType")
         public String terraformResourceType;
 
+        /**
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>路由表</p>
+         */
         @NameInMap("title")
         public String title;
 

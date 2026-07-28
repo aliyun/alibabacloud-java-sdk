@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class GenerateModuleRequest extends TeaModel {
     /**
+     * <p>The generation source. Valid values:</p>
+     * <ul>
+     * <li>Resource: Generates a Terraform HCL template based on resource properties.</li>
+     * <li>VariableToCode: Generates a final Terraform HCL template by combining variables with an existing Terraform HCL template.</li>
+     * <li>CodeToVariable: Extracts variable information from a Terraform HCL template.</li>
+     * <li>Module: Generates Terraform Module code based on variables.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Resource</p>
      */
     @NameInMap("generateSource")
     public String generateSource;
 
+    /**
+     * <p>The collection of parameters, passed in key:value format, such as {&quot;vpc_name&quot;:&quot;vpc-test&quot;}.</p>
+     */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -22,29 +35,41 @@ public class GenerateModuleRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The syntax. Valid values:</p>
+     * <ul>
+     * <li>hcl (default).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>terraform</p>
+     * <p>hcl</p>
      */
     @NameInMap("syntax")
     public String syntax;
 
     /**
+     * <p>The existing Terraform HCL template content.</p>
+     * 
      * <strong>example:</strong>
-     * <p>generateSource ==</p>
+     * <p>terraform {
+     * }</p>
      */
     @NameInMap("template")
     public String template;
 
     /**
+     * <p>The Terraform provider version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1.189.0</p>
+     * <p>1.260.0</p>
      */
     @NameInMap("terraformProviderVersion")
     public String terraformProviderVersion;
 
     /**
+     * <p>The Terraform resource type.</p>
+     * 
      * <strong>example:</strong>
-     * <p>alicloud_db_instance</p>
+     * <p>alicloud_vpc</p>
      */
     @NameInMap("terraformResourceType")
     public String terraformResourceType;

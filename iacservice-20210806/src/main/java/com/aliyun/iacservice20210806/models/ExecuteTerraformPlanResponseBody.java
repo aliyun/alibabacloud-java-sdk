@@ -14,6 +14,8 @@ public class ExecuteTerraformPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the state file.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-xxxx</p>
      */

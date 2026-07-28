@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetRegistryNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The workspace information.</p>
+     */
     @NameInMap("namespace")
     public GetRegistryNamespaceResponseBodyNamespace namespace;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>26684763-5BAB-58C8-BA4F-9D622AB7AD14</p>
      */
@@ -37,6 +42,8 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
 
     public static class GetRegistryNamespaceResponseBodyNamespace extends TeaModel {
         /**
+         * <p>The permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>private</p>
          */
@@ -44,6 +51,8 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
         public String acl;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-20T02:18:29Z</p>
          */
@@ -51,13 +60,17 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the workspace.</p>
+         * 
          * <strong>example:</strong>
-         * <p>demo</p>
+         * <p>description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The name of the administrator.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -65,6 +78,8 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
         public String maintainer;
 
         /**
+         * <p>The number of Registry templates in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>21</p>
          */
@@ -72,16 +87,23 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
         public Integer modules;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
-         * <p>test_namespace</p>
+         * <p>NamespaceName</p>
          */
         @NameInMap("namespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The list of shared accounts.</p>
+         */
         @NameInMap("sharedAccounts")
         public java.util.List<Long> sharedAccounts;
 
         /**
+         * <p>The type of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>share</p>
          */

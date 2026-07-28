@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListParameterSetRelationResponseBody extends TeaModel {
+    /**
+     * <p>The list of parameter sets.</p>
+     */
     @NameInMap("parameterSets")
     public java.util.List<ListParameterSetRelationResponseBodyParameterSets> parameterSets;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2F24E990-E8D3-5C18-ABEA-C7A3F1831C57</p>
      */
@@ -15,6 +20,8 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -52,6 +59,8 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
 
     public static class ListParameterSetRelationResponseBodyParameterSets extends TeaModel {
         /**
+         * <p>The time when the parameter set was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-14T10:05:19Z</p>
          */
@@ -59,6 +68,8 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>123111</p>
          */
@@ -66,6 +77,8 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the parameter set.</p>
+         * 
          * <strong>example:</strong>
          * <p>alb_enable_ipv6_4.2</p>
          */
@@ -73,12 +86,17 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the parameter set.</p>
+         * 
          * <strong>example:</strong>
          * <p>pts-kw1b11jlssrabb638ptums</p>
          */
         @NameInMap("parameterSetId")
         public String parameterSetId;
 
+        /**
+         * <p>The content of the parameter set.</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, String> parameters;
 

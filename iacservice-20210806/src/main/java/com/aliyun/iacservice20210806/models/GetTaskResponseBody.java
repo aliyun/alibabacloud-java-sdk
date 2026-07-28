@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C24C498A-09CF-54D3-8972-8DC074CF8614</p>
@@ -13,6 +13,9 @@ public class GetTaskResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("task")
     public GetTaskResponseBodyTask task;
 
@@ -39,6 +42,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTaskGroupInfo extends TeaModel {
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
          */
@@ -46,6 +51,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -53,6 +60,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-433aead756057fff47ecbfd94d76</p>
          */
@@ -60,6 +69,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -106,9 +117,21 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskTags extends TeaModel {
+        /**
+         * <p>The tag key of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 
@@ -136,12 +159,30 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskTaskBackend extends TeaModel {
+        /**
+         * <p>The endpoint information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-cn-beijing.aliyuncs.com</p>
+         */
         @NameInMap("bucketEndpoint")
         public String bucketEndpoint;
 
+        /**
+         * <p>The bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iac-runtime-test</p>
+         */
         @NameInMap("bucketName")
         public String bucketName;
 
+        /**
+         * <p>The object path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/log</p>
+         */
         @NameInMap("objectPath")
         public String objectPath;
 
@@ -178,6 +219,8 @@ public class GetTaskResponseBody extends TeaModel {
 
     public static class GetTaskResponseBodyTask extends TeaModel {
         /**
+         * <p>Indicates whether the task is automatically executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -185,6 +228,8 @@ public class GetTaskResponseBody extends TeaModel {
         public Boolean autoApply;
 
         /**
+         * <p>Indicates whether automatic deletion is enabled. When enabled, resources are automatically destroyed after the task is completed.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -192,6 +237,8 @@ public class GetTaskResponseBody extends TeaModel {
         public Boolean autoDestroy;
 
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-06-15T02:44:37Z</p>
          */
@@ -199,81 +246,156 @@ public class GetTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The job ID of the current task.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-absdf</p>
          */
         @NameInMap("currentJobId")
         public String currentJobId;
 
+        /**
+         * <p>The current job status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Planned</p>
+         */
         @NameInMap("currentJobStatus")
         public String currentJobStatus;
 
+        /**
+         * <p>Indicates whether deletion protection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("deletionProtection")
         public Boolean deletionProtection;
 
         /**
+         * <p>The description of the task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>demo</p>
+         * <p>this is description</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The group information.</p>
+         */
         @NameInMap("groupInfo")
         public GetTaskResponseBodyTaskGroupInfo groupInfo;
 
+        /**
+         * <p>Specifies whether to use a state file. Default value: false. This parameter is applicable to templates that originate from resource export. Only one task can use this parameter at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("initModuleState")
         public Boolean initModuleState;
 
+        /**
+         * <p>The latest version number of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v3</p>
+         */
         @NameInMap("latestModuleVersion")
         public String latestModuleVersion;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mod-4267dcfbf1b6d14625614ddbe15</p>
          */
         @NameInMap("moduleId")
         public String moduleId;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>moduleName</p>
+         */
         @NameInMap("moduleName")
         public String moduleName;
 
         /**
+         * <p>The template version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */
         @NameInMap("moduleVersion")
         public String moduleVersion;
 
+        /**
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TaskName</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The list of resource protection strategies.</p>
+         */
         @NameInMap("protectionStrategy")
         public java.util.List<String> protectionStrategy;
 
         /**
+         * <p>The RAM role.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{}</p>
+         * <p>role</p>
          */
         @NameInMap("ramRole")
         public String ramRole;
 
+        /**
+         * <p>Specifies whether to skip enumeration value validation. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("skipPropertyValidation")
         public Boolean skipPropertyValidation;
 
+        @NameInMap("skipRegionValidation")
+        public Boolean skipRegionValidation;
+
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Available: the task is available and no job is running.</li>
+         * <li>Running: a job is currently running.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The list of task tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<GetTaskResponseBodyTaskTags> tags;
 
+        /**
+         * <p>The task backend configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</p>
+         */
         @NameInMap("taskBackend")
         public GetTaskResponseBodyTaskTaskBackend taskBackend;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>task-433aead756057154bda7f1c2e98</p>
          */
@@ -281,6 +403,8 @@ public class GetTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task output path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -288,13 +412,23 @@ public class GetTaskResponseBody extends TeaModel {
         public String taskOutputPath;
 
         /**
+         * <p>The Terraform version.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1.2.6</p>
+         * <p>1.5.7</p>
          */
         @NameInMap("terraformVersion")
         public String terraformVersion;
 
         /**
+         * <p>The job trigger method. Valid values:</p>
+         * <ul>
+         * <li>Manual: manually triggered (default).</li>
+         * <li>NewVersion: triggered when a new template version is published.</li>
+         * <li>ParameterSetUpdated: triggered when the parameter set content changes or the parameter set attach relationship changes.</li>
+         * <li>Auto: automatically triggered when the task properties change, such as task creation, execution version change, or job trigger policy change (when changed from another value to Auto).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Manual</p>
          */
@@ -440,6 +574,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public Boolean getSkipPropertyValidation() {
             return this.skipPropertyValidation;
+        }
+
+        public GetTaskResponseBodyTask setSkipRegionValidation(Boolean skipRegionValidation) {
+            this.skipRegionValidation = skipRegionValidation;
+            return this;
+        }
+        public Boolean getSkipRegionValidation() {
+            return this.skipRegionValidation;
         }
 
         public GetTaskResponseBodyTask setStatus(String status) {

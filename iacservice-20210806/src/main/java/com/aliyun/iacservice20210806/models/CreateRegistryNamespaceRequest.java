@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateRegistryNamespaceRequest extends TeaModel {
     /**
+     * <p>The access permission. Valid values:</p>
+     * <ul>
+     * <li>private: private access.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>private</p>
      */
@@ -12,6 +17,7 @@ public class CreateRegistryNamespaceRequest extends TeaModel {
     public String acl;
 
     /**
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,13 +27,17 @@ public class CreateRegistryNamespaceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The workspace description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The administrator name.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -35,10 +45,16 @@ public class CreateRegistryNamespaceRequest extends TeaModel {
     public String maintainer;
 
     /**
+     * <p>The workspace name. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must be 3 to 63 characters in length.</li>
+     * <li>The name can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_), and cannot start or end with a hyphen.</li>
+     * <li>The name must be unique within the global workspace resources.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>iac</p>
+     * <p>NamespaceName</p>
      */
     @NameInMap("namespaceName")
     public String namespaceName;

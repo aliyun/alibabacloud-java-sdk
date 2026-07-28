@@ -5,13 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically execute the node. Default value: false.</p>
+     * <ul>
+     * <li>true: After the preview is complete (terraform plan), the execution (terraform apply) is automatically performed without manual confirmation.</li>
+     * <li>false: After the preview is complete (terraform plan), manual confirmation is required before the execution (terraform apply) starts.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("autoApply")
     public Boolean autoApply;
 
     /**
+     * <p>Specifies whether to automatically destroy resources after creation. Default value: false.</p>
+     * <ul>
+     * <li>true: After the execution is complete (terraform apply), the destroy operation (terraform destroy) is automatically performed without manual confirmation.</li>
+     * <li>false: After the execution is complete (terraform apply), no further action is taken.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,7 @@ public class CreateTaskRequest extends TeaModel {
     public Boolean autoDestroy;
 
     /**
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,28 +41,41 @@ public class CreateTaskRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the node.</p>
+     * 
      * <strong>example:</strong>
-     * <p>demo</p>
+     * <p>this is description</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The project group information.</p>
+     */
     @NameInMap("groupInfo")
     public CreateTaskRequestGroupInfo groupInfo;
 
+    /**
+     * <p>Specifies whether to use a state file. Default value: false. This parameter is applicable when the template originates from resource export. Only one node can use this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("initModuleState")
     public Boolean initModuleState;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mod-148e7853433574fff6b316f4eb737e</p>
+     * <p>mod-144fff6b316f4eb737e</p>
      */
     @NameInMap("moduleId")
     public String moduleId;
 
     /**
+     * <p>The template version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,46 +85,89 @@ public class CreateTaskRequest extends TeaModel {
     public String moduleVersion;
 
     /**
+     * <p>The node name. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
+     * <li>The name must be unique among all node resources within the current account.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>TaskName</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The collection of associated parameter set IDs.</p>
+     */
     @NameInMap("parameterSetIds")
     public java.util.List<String> parameterSetIds;
 
+    /**
+     * <p>The list of resource protection strategies.</p>
+     */
     @NameInMap("protectionStrategy")
     public java.util.List<String> protectionStrategy;
 
     /**
+     * <p>The RAM role. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>RoleName</p>
      */
     @NameInMap("ramRole")
     public String ramRole;
 
+    /**
+     * <p>Specifies whether to skip enumeration value validation. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("skipPropertyValidation")
     public Boolean skipPropertyValidation;
 
+    @NameInMap("skipRegionValidation")
+    public Boolean skipRegionValidation;
+
+    /**
+     * <p>The list of tags for the node.</p>
+     */
     @NameInMap("tags")
     public java.util.List<CreateTaskRequestTags> tags;
 
+    /**
+     * <p>The node backend configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</p>
+     */
     @NameInMap("taskBackend")
     public CreateTaskRequestTaskBackend taskBackend;
 
+    @NameInMap("terraformProviderVersion")
+    public String terraformProviderVersion;
+
     /**
+     * <p>The Terraform version. Call the <strong>ListAvailableTerraformVersions</strong> operation to obtain the list of supported versions. Default value: 1.5.7.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1.2.6</p>
+     * <p>1.5.7</p>
      */
     @NameInMap("terraformVersion")
     public String terraformVersion;
 
     /**
+     * <p>The job trigger method. Valid values:</p>
+     * <ul>
+     * <li>Manual: manual trigger (default).</li>
+     * <li>NewVersion: triggered when a new template version is published.</li>
+     * <li>ParameterSetUpdated: triggered when the parameter set content changes or the parameter set attach relationship changes.</li>
+     * <li>Auto: automatically triggered when the node properties change, such as node creation, execution version change, or job trigger policy change (when changed from another value to Auto).</li>
+     * </ul>
+     * <p>The <strong>ramRole</strong> parameter is required when the trigger method is not manual.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Always</p>
+     * <p>Manual</p>
      */
     @NameInMap("triggerStrategy")
     public String triggerStrategy;
@@ -212,6 +281,14 @@ public class CreateTaskRequest extends TeaModel {
         return this.skipPropertyValidation;
     }
 
+    public CreateTaskRequest setSkipRegionValidation(Boolean skipRegionValidation) {
+        this.skipRegionValidation = skipRegionValidation;
+        return this;
+    }
+    public Boolean getSkipRegionValidation() {
+        return this.skipRegionValidation;
+    }
+
     public CreateTaskRequest setTags(java.util.List<CreateTaskRequestTags> tags) {
         this.tags = tags;
         return this;
@@ -226,6 +303,14 @@ public class CreateTaskRequest extends TeaModel {
     }
     public CreateTaskRequestTaskBackend getTaskBackend() {
         return this.taskBackend;
+    }
+
+    public CreateTaskRequest setTerraformProviderVersion(String terraformProviderVersion) {
+        this.terraformProviderVersion = terraformProviderVersion;
+        return this;
+    }
+    public String getTerraformProviderVersion() {
+        return this.terraformProviderVersion;
     }
 
     public CreateTaskRequest setTerraformVersion(String terraformVersion) {
@@ -246,15 +331,19 @@ public class CreateTaskRequest extends TeaModel {
 
     public static class CreateTaskRequestGroupInfo extends TeaModel {
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>g-5fd38c9b92d541a7083a86432e2</p>
+         * <p>g-5fd38c9b83a86432e2</p>
          */
         @NameInMap("groupId")
         public String groupId;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>project-433aead7560572057e5d9167608</p>
+         * <p>p-433aeade5d9167608</p>
          */
         @NameInMap("projectId")
         public String projectId;
@@ -283,9 +372,21 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestTags extends TeaModel {
+        /**
+         * <p>The tag key of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 
@@ -313,12 +414,30 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestTaskBackend extends TeaModel {
+        /**
+         * <p>The endpoint information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-cn-beijing.aliyuncs.com</p>
+         */
         @NameInMap("bucketEndpoint")
         public String bucketEndpoint;
 
+        /**
+         * <p>The bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iac-runtime-test</p>
+         */
         @NameInMap("bucketName")
         public String bucketName;
 
+        /**
+         * <p>The object path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/log</p>
+         */
         @NameInMap("objectPath")
         public String objectPath;
 

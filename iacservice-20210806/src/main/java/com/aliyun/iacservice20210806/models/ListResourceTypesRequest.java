@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypesRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese.</li>
+     * <li>en-US: English.</li>
+     * </ul>
+     * <p>Default value: zh-CN.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -12,6 +19,8 @@ public class ListResourceTypesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The keyword for searching resource codes or names. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -19,6 +28,8 @@ public class ListResourceTypesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of entries per page. Valid values: 0 to 200. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +37,8 @@ public class ListResourceTypesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>tokenForNextPage</p>
      */
@@ -33,6 +46,8 @@ public class ListResourceTypesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The product code. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -40,6 +55,12 @@ public class ListResourceTypesRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The order in which resource types are returned. Valid values:</p>
+     * <ul>
+     * <li>Normal (default): returned in normal order.</li>
+     * <li>Top: returned in order of popularity.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */
@@ -47,6 +68,12 @@ public class ListResourceTypesRequest extends TeaModel {
     public String sort;
 
     /**
+     * <p>The status filter list. Valid values:</p>
+     * <ul>
+     * <li>Available</li>
+     * <li>Deprecated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Available,Deprecated</p>
      */
@@ -54,6 +81,8 @@ public class ListResourceTypesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The product subcategory in Terraform.</p>
+     * 
      * <strong>example:</strong>
      * <p>compute</p>
      */
@@ -61,6 +90,8 @@ public class ListResourceTypesRequest extends TeaModel {
     public String subcategory;
 
     /**
+     * <p>Specifies whether Terraformer is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -68,12 +99,17 @@ public class ListResourceTypesRequest extends TeaModel {
     public Boolean supportTerraformer;
 
     /**
+     * <p>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.227.0</p>
      */
     @NameInMap("terraformProviderVersion")
     public String terraformProviderVersion;
 
+    /**
+     * <p>The Terraform resources.</p>
+     */
     @NameInMap("terraformResourceTypes")
     public java.util.List<String> terraformResourceTypes;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DissociateGroupRequest extends TeaModel {
     /**
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2daf4227f747cbf11a5501f18cc5e004</p>
      */
@@ -12,12 +14,20 @@ public class DissociateGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The list of resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resourceIds")
     public java.util.List<String> resourceIds;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>Module: template.</li>
+     * <li>SceneTestingTask: scenario-based testing task.</li>
+     * <li>Task: regular task.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Task</p>
      */

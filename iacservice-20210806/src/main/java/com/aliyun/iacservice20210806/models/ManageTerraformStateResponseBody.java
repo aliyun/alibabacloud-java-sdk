@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ManageTerraformStateResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-5fd38c9xxxxx</p>
      */

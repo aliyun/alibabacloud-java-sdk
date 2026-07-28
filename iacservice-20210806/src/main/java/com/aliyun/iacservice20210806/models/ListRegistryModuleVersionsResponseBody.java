@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRegistryModuleVersionsResponseBody extends TeaModel {
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>21</p>
      */
@@ -12,23 +14,32 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
     public Long count;
 
     /**
+     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The list of template versions.</p>
+     */
     @NameInMap("moduleVersions")
     public java.util.List<ListRegistryModuleVersionsResponseBodyModuleVersions> moduleVersions;
 
     /**
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>IbuvZbAXFOiB4nKg8iOH447bhHWDavGTOMijI2Jep7c=</p>
+     * <p>IbuvZ8iOH447bhHWDavGTOMijI2Jep7c=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8606B880-3485-54E2-89E1-43361C468C85</p>
      */
@@ -81,24 +92,69 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
     }
 
     public static class ListRegistryModuleVersionsResponseBodyModuleVersions extends TeaModel {
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-28 11:15:57</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModuleName</p>
+         */
         @NameInMap("moduleName")
         public String moduleName;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NamespaceName</p>
+         */
         @NameInMap("namespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The provider type. Valid values:</p>
+         * <ul>
+         * <li>alicloud: Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud</p>
+         */
         @NameInMap("provider")
         public String provider;
 
+        /**
+         * <p>The template source, in the format of namespaceName/ModuleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namespace/RegistryModule-test0e</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The source URL of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("sourceUrl")
         public String sourceUrl;
 
+        /**
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("version")
         public String version;
 

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class TriggerStackExecutionRequest extends TeaModel {
     /**
+     * <p>Operation to execute  </p>
+     * <ul>
+     * <li>terraform plan  </li>
+     * <li>terraform apply  </li>
+     * <li>state detect</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +20,14 @@ public class TriggerStackExecutionRequest extends TeaModel {
     public String action;
 
     /**
+     * <p>Collection of changed files. You can specify only the folders containing changed files.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("changedFolders")
     public java.util.List<String> changedFolders;
 
     /**
+     * <p>Idempotent token. Format: [0-9a-zA-Z-]{1,64}. We recommend using a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +37,7 @@ public class TriggerStackExecutionRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Stack code path. Currently, only Stacks created through IaC templates are supported.<br>Parameter format: iacservice::{moduleId}</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +47,8 @@ public class TriggerStackExecutionRequest extends TeaModel {
     public String codePackagePath;
 
     /**
+     * <p>Code version of the Stack to trigger</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

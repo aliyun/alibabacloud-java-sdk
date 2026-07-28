@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
+    /**
+     * <p>The project details.</p>
+     */
     @NameInMap("project")
     public GetProjectResponseBodyProject project;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7FA0FF4A-ABD4-54F6-BEAC-B4273EBA10A2</p>
      */
@@ -37,6 +42,8 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static class GetProjectResponseBodyProject extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-06T06:11:27Z</p>
          */
@@ -44,6 +51,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The project description. Length: 0 to 1024 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -51,6 +60,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -58,6 +69,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-433aead7560572f8d95b25775c</p>
          */
@@ -65,6 +78,8 @@ public class GetProjectResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The number of tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

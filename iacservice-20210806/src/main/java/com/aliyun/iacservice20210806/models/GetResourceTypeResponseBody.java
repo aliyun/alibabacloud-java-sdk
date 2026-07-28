@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetResourceTypeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9bcaac3c-420d-4303-87ab-7638c07b0a0b</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The detailed information about the resource type.</p>
+     */
     @NameInMap("resourceType")
     public GetResourceTypeResponseBodyResourceType resourceType;
 
@@ -37,6 +42,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
 
     public static class GetResourceTypeResponseBodyResourceTypeOperations extends TeaModel {
         /**
+         * <p>The API name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CreateVSwitch</p>
          */
@@ -44,6 +51,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String apiName;
 
         /**
+         * <p>The API version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2016-04-28</p>
          */
@@ -51,6 +60,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
+         * <p>The operation type. Valid values: Write, Read.</p>
+         * 
          * <strong>example:</strong>
          * <p>Write</p>
          */
@@ -107,26 +118,41 @@ public class GetResourceTypeResponseBody extends TeaModel {
 
     public static class GetResourceTypeResponseBodyResourceType extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The collection of APIs associated with the resource.</p>
+         */
         @NameInMap("operations")
         public java.util.List<GetResourceTypeResponseBodyResourceTypeOperations> operations;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ECS</p>
          */
         @NameInMap("product")
         public String product;
 
+        /**
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>专有网络VPC</p>
+         */
         @NameInMap("productName")
         public String productName;
 
         /**
+         * <p>The English name of the product.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc</p>
          */
@@ -134,6 +160,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String productNameEn;
 
         /**
+         * <p>The resource properties.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -141,6 +169,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public java.util.Map<String, ?> properties;
 
         /**
+         * <p>The URL of the resource details page.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables/$%7BRouteTableId%7D">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables/${RouteTableId}</a></p>
          */
@@ -148,13 +178,20 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String resourceDetailPageUrl;
 
         /**
+         * <p>The URL of the resources page.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables</a></p>
          */
         @NameInMap("resourceListPageUrl")
         public String resourceListPageUrl;
 
+        @NameInMap("resourceType")
+        public String resourceType;
+
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -162,6 +199,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The version from which the status takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.227.0</p>
          */
@@ -169,6 +208,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String statusStartVersion;
 
         /**
+         * <p>The product category in Terraform.</p>
+         * 
          * <strong>example:</strong>
          * <p>network</p>
          */
@@ -176,6 +217,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String subcategory;
 
         /**
+         * <p>Indicates whether export is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -183,6 +226,8 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public Boolean supportExported;
 
         /**
+         * <p>The Terraform provider version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.227.0</p>
          */
@@ -190,12 +235,20 @@ public class GetResourceTypeResponseBody extends TeaModel {
         public String terraformProviderVersion;
 
         /**
+         * <p>The resource code in Terraform.</p>
+         * 
          * <strong>example:</strong>
          * <p>alicloud_vpc</p>
          */
         @NameInMap("terraformResourceType")
         public String terraformResourceType;
 
+        /**
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>路由表</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -266,6 +319,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
         public String getResourceListPageUrl() {
             return this.resourceListPageUrl;
+        }
+
+        public GetResourceTypeResponseBodyResourceType setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public GetResourceTypeResponseBodyResourceType setStatus(String status) {

@@ -4,10 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of Explorer community module versions.</p>
+     */
     @NameInMap("explorerRegistryModuleVersions")
     public java.util.List<ListExplorerRegistryModuleVersionsResponseBodyExplorerRegistryModuleVersions> explorerRegistryModuleVersions;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 0 to 200.</p>
+     * <p>Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +22,9 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next page of results.</p>
+     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * 
      * <strong>example:</strong>
      * <p>oIM6ssGyh00noi5zoDR1hJ4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -22,6 +32,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2D40488-3F74-568B-87EC-1C04D098DF8B</p>
      */
@@ -29,6 +41,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
@@ -82,6 +96,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
 
     public static class ListExplorerRegistryModuleVersionsResponseBodyExplorerRegistryModuleVersions extends TeaModel {
         /**
+         * <p>The module details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -89,6 +105,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         public java.util.Map<String, ?> moduleDetail;
 
         /**
+         * <p>The module file.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -96,6 +114,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         public java.util.Map<String, ?> moduleFile;
 
         /**
+         * <p>The module name.</p>
+         * 
          * <strong>example:</strong>
          * <p>eip-slb-ecs-polardb</p>
          */
@@ -103,6 +123,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>namespace-test</p>
          */
@@ -110,6 +132,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
+         * <p>The resource properties.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -117,6 +141,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         public java.util.Map<String, ?> properties;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_namespace/RegistryModule-test4</p>
          */
@@ -124,6 +150,8 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.5.0</p>
          */

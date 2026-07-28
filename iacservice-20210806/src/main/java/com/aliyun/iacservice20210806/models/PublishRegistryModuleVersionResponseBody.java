@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublishRegistryModuleVersionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36E1679B-4D91-5AF6-B505-B5D4ACDF75BD</p>
      */
@@ -12,6 +14,8 @@ public class PublishRegistryModuleVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1</p>
      */

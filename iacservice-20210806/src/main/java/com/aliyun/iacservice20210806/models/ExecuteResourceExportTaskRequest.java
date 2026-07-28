@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteResourceExportTaskRequest extends TeaModel {
     /**
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

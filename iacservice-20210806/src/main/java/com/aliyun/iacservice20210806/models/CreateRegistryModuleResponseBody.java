@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRegistryModuleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C896FE0A-1BEA-5D01-BFF4-B03B82B9CA3D</p>
      */
@@ -12,8 +14,10 @@ public class CreateRegistryModuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The template source, which is a concatenation of \<namespaceName>/\<ModuleName>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test_namespace/RegistryModule-test</p>
+     * <p>namespaceName/ModuleName</p>
      */
     @NameInMap("source")
     public String source;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteStackResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C7070EC3-DF66-58BA-A1DD-A8574FF53143</p>
      */

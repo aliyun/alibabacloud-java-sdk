@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListExplorerRegistryModulesRequest extends TeaModel {
     /**
+     * <p>The search keyword for the module name. Fuzzy matching is performed based on <code>moduleName</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -12,16 +14,27 @@ public class ListExplorerRegistryModulesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 0 to 200.</p>
+     * <p>Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name of the module.</p>
+     * <p>Note: The module name is not necessarily the same as the product name or resource name.</p>
+     */
     @NameInMap("moduleName")
     public String moduleName;
 
     /**
+     * <p>The pagination token for the next page of results.</p>
+     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * 
      * <strong>example:</strong>
      * <p>DxEkv+3w0EDAQgcRFBp8Ep4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -29,6 +42,12 @@ public class ListExplorerRegistryModulesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order of the returned results. Valid values:</p>
+     * <ul>
+     * <li>Normal (default): returns results in normal order.</li>
+     * <li>Top: returns results sorted by popularity.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Normal</p>
      */

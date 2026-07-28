@@ -4,11 +4,14 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListDetectConfigRelationsResponseBody extends TeaModel {
+    /**
+     * <p>List of associations</p>
+     */
     @NameInMap("detectConfigRelations")
     public java.util.List<ListDetectConfigRelationsResponseBodyDetectConfigRelations> detectConfigRelations;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0D797DC3-FF04-5C21-81EB-XXXXXXXXX</p>
@@ -17,6 +20,8 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -54,6 +59,8 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
 
     public static class ListDetectConfigRelationsResponseBodyDetectConfigRelations extends TeaModel {
         /**
+         * <p>Association time</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-08T08:53:07.000+00:00</p>
          */
@@ -61,6 +68,8 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         public String attachDate;
 
         /**
+         * <p>Drift detection configuration ID</p>
+         * 
          * <strong>example:</strong>
          * <p>dc-xxxx</p>
          */
@@ -68,6 +77,8 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         public String detectConfigId;
 
         /**
+         * <p>Whether enabled</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -75,6 +86,8 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         public String enabled;
 
         /**
+         * <p>Target ID. StackId or TaskId</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-xxxx</p>
          */
@@ -82,6 +95,8 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         public String targetId;
 
         /**
+         * <p>Target name</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-name-xxx</p>
          */
@@ -89,6 +104,12 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         public String targetName;
 
         /**
+         * <p>Target type  </p>
+         * <ul>
+         * <li>Task: orchestration job  </li>
+         * <li>Stack: resource stack</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Stack</p>
          */

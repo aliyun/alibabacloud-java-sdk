@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetParameterSetResponseBody extends TeaModel {
+    /**
+     * <p>The parameter set details.</p>
+     */
     @NameInMap("parameterSet")
     public GetParameterSetResponseBodyParameterSet parameterSet;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>99905C7C-1320-5E7F-A798-3071482EB08E</p>
      */
@@ -37,8 +42,10 @@ public class GetParameterSetResponseBody extends TeaModel {
 
     public static class GetParameterSetResponseBodyParameterSetParameters extends TeaModel {
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
-         * <p>test1121</p>
+         * <p>region</p>
          */
         @NameInMap("name")
         public String name;
@@ -47,6 +54,12 @@ public class GetParameterSetResponseBody extends TeaModel {
         public Boolean secret;
 
         /**
+         * <p>The status of the parameter. Valid values:</p>
+         * <ul>
+         * <li>HAS_VALUE (default): A specific value is defined.</li>
+         * <li>EXPLICIT_NULL: The value is explicitly set to null.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HAS_VALUE</p>
          */
@@ -54,6 +67,8 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the parameter. Valid values: string, number, bool, map(string), and list(string).</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -61,8 +76,10 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The value of the parameter.</p>
+         * 
          * <strong>example:</strong>
-         * <p>vpc-2ze83xrka9ktxy0pnaxn5</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("value")
         public Object value;
@@ -116,6 +133,8 @@ public class GetParameterSetResponseBody extends TeaModel {
 
     public static class GetParameterSetResponseBodyParameterSetRelationList extends TeaModel {
         /**
+         * <p>The time when the parameter set was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-24T22:58:50Z</p>
          */
@@ -123,6 +142,8 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The resource ID. When the resource type is ModuleVersion, the ID is a concatenation of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</p>
+         * 
          * <strong>example:</strong>
          * <p>mod-433aead756057101546eb5d50c1</p>
          */
@@ -130,6 +151,13 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Module: template</li>
+         * <li>ModuleVersion: template version</li>
+         * <li>Task: task.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Module</p>
          */
@@ -169,6 +197,8 @@ public class GetParameterSetResponseBody extends TeaModel {
 
     public static class GetParameterSetResponseBodyParameterSet extends TeaModel {
         /**
+         * <p>The time when the parameter set was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-30T02:14:16Z</p>
          */
@@ -176,29 +206,41 @@ public class GetParameterSetResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the parameter set.</p>
+         * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>This is parameterSet</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The name of the parameter set.</p>
+         * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>demo</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>The ID of the parameter set.</p>
+         * 
          * <strong>example:</strong>
          * <p>pts-3b6cb9fa4751afff9c5e4e01624b9</p>
          */
         @NameInMap("parameterSetId")
         public String parameterSetId;
 
+        /**
+         * <p>The parameters in the parameter set.</p>
+         */
         @NameInMap("parameters")
         public java.util.List<GetParameterSetResponseBodyParameterSetParameters> parameters;
 
+        /**
+         * <p>The association relationships.</p>
+         */
         @NameInMap("relationList")
         public java.util.List<GetParameterSetResponseBodyParameterSetRelationList> relationList;
 

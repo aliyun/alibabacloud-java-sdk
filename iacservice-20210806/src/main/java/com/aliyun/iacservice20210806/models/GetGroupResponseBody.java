@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetGroupResponseBody extends TeaModel {
+    /**
+     * <p>The group.</p>
+     */
     @NameInMap("group")
     public GetGroupResponseBodyGroup group;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</p>
      */
@@ -37,6 +42,8 @@ public class GetGroupResponseBody extends TeaModel {
 
     public static class GetGroupResponseBodyGroupNotifyConfig extends TeaModel {
         /**
+         * <p>The path configuration for notifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -44,6 +51,9 @@ public class GetGroupResponseBody extends TeaModel {
         public String notifyPath;
 
         /**
+         * <p>The notification type. Valid values:
+         * DingDing.</p>
+         * 
          * <strong>example:</strong>
          * <p>DingDing</p>
          */
@@ -75,6 +85,12 @@ public class GetGroupResponseBody extends TeaModel {
 
     public static class GetGroupResponseBodyGroupTriggerConfig extends TeaModel {
         /**
+         * <p>The trigger strategy. Valid values:</p>
+         * <ul>
+         * <li>ProviderNewVersion: triggered when a new provider version is released</li>
+         * <li>Cron: triggered on a schedule.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Cron</p>
          */
@@ -82,6 +98,8 @@ public class GetGroupResponseBody extends TeaModel {
         public String triggerStrategy;
 
         /**
+         * <p>The policy value that must be maintained for scheduled triggering. This value is a cron expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 8 * * ?</p>
          */
@@ -113,6 +131,8 @@ public class GetGroupResponseBody extends TeaModel {
 
     public static class GetGroupResponseBodyGroup extends TeaModel {
         /**
+         * <p>Indicates whether automatic deletion is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -120,6 +140,8 @@ public class GetGroupResponseBody extends TeaModel {
         public Boolean autoDestroy;
 
         /**
+         * <p>Indicates whether automatic triggering is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -127,6 +149,8 @@ public class GetGroupResponseBody extends TeaModel {
         public Boolean autoTrigger;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-21T10:57:11Z</p>
          */
@@ -134,6 +158,8 @@ public class GetGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The group description.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -141,6 +167,8 @@ public class GetGroupResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Indicates whether the group configuration is forcibly used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -148,6 +176,8 @@ public class GetGroupResponseBody extends TeaModel {
         public Boolean forcedSetting;
 
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-14e80de4866bf7ffed0bab6154d738</p>
          */
@@ -155,19 +185,29 @@ public class GetGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The notification configuration.</p>
+         */
         @NameInMap("notifyConfig")
         public java.util.List<GetGroupResponseBodyGroupNotifyConfig> notifyConfig;
 
+        /**
+         * <p>The list of notification operation types.</p>
+         */
         @NameInMap("notifyOperationTypes")
         public java.util.List<String> notifyOperationTypes;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-4267dcfbf1b6d126edcadf0e949</p>
          */
@@ -175,16 +215,23 @@ public class GetGroupResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The RAM role (1 to 128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger mode is not manual.</p>
+         * 
          * <strong>example:</strong>
          * <p>ramRoleName</p>
          */
         @NameInMap("ramRole")
         public String ramRole;
 
+        /**
+         * <p>The list of report export field options.</p>
+         */
         @NameInMap("reportExportField")
         public java.util.List<String> reportExportField;
 
         /**
+         * <p>The export address for the execution report. OSS addresses are supported. Format: https://<OSS bucket address>/<path>.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -192,6 +239,8 @@ public class GetGroupResponseBody extends TeaModel {
         public String reportExportPath;
 
         /**
+         * <p>The number of tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -199,15 +248,27 @@ public class GetGroupResponseBody extends TeaModel {
         public Long taskCnt;
 
         /**
+         * <p>The Terraform provider version. Select a Terraform provider version. Tasks in the group are executed based on the specified Terraform provider version. The version configured on a task takes higher priority. This version may conflict with the Terraform provider version specified in the module.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.191.0</p>
          */
         @NameInMap("terraformProviderVersion")
         public String terraformProviderVersion;
 
+        /**
+         * <p>The trigger policy. This parameter cannot be empty when autoTrigger is set to true.</p>
+         */
         @NameInMap("triggerConfig")
         public java.util.List<GetGroupResponseBodyGroupTriggerConfig> triggerConfig;
 
+        /**
+         * <p>The resource type that triggers execution. Valid values:</p>
+         * <ul>
+         * <li>Task: regular task</li>
+         * <li>SceneTestingTask: scenario-based testing task.</li>
+         * </ul>
+         */
         @NameInMap("triggerResourceType")
         public java.util.List<String> triggerResourceType;
 

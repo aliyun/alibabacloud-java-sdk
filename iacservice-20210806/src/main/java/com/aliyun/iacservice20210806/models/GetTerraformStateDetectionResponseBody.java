@@ -4,6 +4,9 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetTerraformStateDetectionResponseBody extends TeaModel {
+    /**
+     * <p>The job details.</p>
+     */
     @NameInMap("job")
     public GetTerraformStateDetectionResponseBodyJob job;
 
@@ -39,6 +42,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
 
     public static class GetTerraformStateDetectionResponseBodyJobChangedResourcesAttributeChanges extends TeaModel {
         /**
+         * <p>The attribute name.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc_name</p>
          */
@@ -46,6 +51,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String attributePath;
 
         /**
+         * <p>The server-side state value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_remote</p>
          */
@@ -53,6 +60,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String remoteValue;
 
         /**
+         * <p>The template-declared value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_hcl</p>
          */
@@ -91,10 +100,15 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
     }
 
     public static class GetTerraformStateDetectionResponseBodyJobChangedResources extends TeaModel {
+        /**
+         * <p>The collection of attribute changes.</p>
+         */
         @NameInMap("attributeChanges")
         public java.util.List<GetTerraformStateDetectionResponseBodyJobChangedResourcesAttributeChanges> attributeChanges;
 
         /**
+         * <p>The change type.</p>
+         * 
          * <strong>example:</strong>
          * <p>create</p>
          */
@@ -102,6 +116,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String changedType;
 
         /**
+         * <p>Indicates whether resource drift exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -109,6 +125,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public Boolean hasDrift;
 
         /**
+         * <p>The Terraform resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-axxxxx</p>
          */
@@ -116,6 +134,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc:alicloud_vpc.default</p>
          */
@@ -171,6 +191,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
 
     public static class GetTerraformStateDetectionResponseBodyJobDriftedResourcesAttributeDrifts extends TeaModel {
         /**
+         * <p>The attribute name.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc_name</p>
          */
@@ -178,6 +200,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String attributePath;
 
         /**
+         * <p>The server-side state value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_remote</p>
          */
@@ -185,6 +209,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String remoteValue;
 
         /**
+         * <p>The value stored in the state file.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_state</p>
          */
@@ -223,10 +249,15 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
     }
 
     public static class GetTerraformStateDetectionResponseBodyJobDriftedResources extends TeaModel {
+        /**
+         * <p>The collection of attribute drifts.</p>
+         */
         @NameInMap("attributeDrifts")
         public java.util.List<GetTerraformStateDetectionResponseBodyJobDriftedResourcesAttributeDrifts> attributeDrifts;
 
         /**
+         * <p>The drift type.</p>
+         * 
          * <strong>example:</strong>
          * <p>update</p>
          */
@@ -234,6 +265,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String driftedType;
 
         /**
+         * <p>The Terraform resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bxxxxx</p>
          */
@@ -241,6 +274,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc:alicloud_vpc.default2</p>
          */
@@ -287,13 +322,21 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
     }
 
     public static class GetTerraformStateDetectionResponseBodyJob extends TeaModel {
+        /**
+         * <p>The collection of resources with state changes.</p>
+         */
         @NameInMap("changedResources")
         public java.util.List<GetTerraformStateDetectionResponseBodyJobChangedResources> changedResources;
 
+        /**
+         * <p>The collection of resources with state drift.</p>
+         */
         @NameInMap("driftedResources")
         public java.util.List<GetTerraformStateDetectionResponseBodyJobDriftedResources> driftedResources;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>planned failed</p>
          */
@@ -301,6 +344,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The task identifier. For a Stack task, the value is in the format of &lt;$stackId&gt;:&lt;$deploymentName&gt;. For a Task task, the value is &lt;$TaskId&gt;.</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-as181axxxxxx:development_xxxx</p>
          */
@@ -308,6 +353,16 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String identifier;
 
         /**
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Pending: the initial status after the job is created.</li>
+         * <li>PlanQueued: the job is queued because no containers are available after the job is created.</li>
+         * <li>Planning: the resource job is in the Plan execution phase.</li>
+         * <li>Planned: the resource job has completed the Plan execution.</li>
+         * <li>PlannedAndFinished: no differences are found after the Plan execution is complete. The job is in a final status.</li>
+         * <li>Errored: the job execution encountered an error and entered a final status.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Errored</p>
          */
@@ -315,6 +370,8 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Stack</p>
          */

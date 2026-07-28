@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDetectConfigResponseBody extends TeaModel {
     /**
+     * <p>Drift detection configuration ID</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateDetectConfigResponseBody extends TeaModel {
     public String detectConfigId;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>String</p>
      */

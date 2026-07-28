@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListStacksRequest extends TeaModel {
     /**
+     * <p>The keyword used to perform a fuzzy search by stack name.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -19,6 +21,8 @@ public class ListStacksRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
+     * <p>The maximum number of results to return. Default value: 100. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +30,8 @@ public class ListStacksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>LC4NJL3Ru2bIiRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -33,6 +39,8 @@ public class ListStacksRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +48,8 @@ public class ListStacksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -47,6 +57,56 @@ public class ListStacksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The stack status.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Name</th>
+     * <th>Description</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>Creating</td>
+     * <td>Being created</td>
+     * </tr>
+     * <tr>
+     * <td>Created</td>
+     * <td>Creation complete</td>
+     * </tr>
+     * <tr>
+     * <td>Waiting</td>
+     * <td>Waiting for deployment</td>
+     * </tr>
+     * <tr>
+     * <td>Deploying</td>
+     * <td>Being deployed</td>
+     * </tr>
+     * <tr>
+     * <td>Deployed</td>
+     * <td>Deployment complete</td>
+     * </tr>
+     * <tr>
+     * <td>Errored</td>
+     * <td>Deployment failed</td>
+     * </tr>
+     * <tr>
+     * <td>Deleting</td>
+     * <td>Being deleted</td>
+     * </tr>
+     * <tr>
+     * <td>Deleted</td>
+     * <td>Deleted</td>
+     * </tr>
+     * <tr>
+     * <td>DeleteFailed</td>
+     * <td>Deletion failed</td>
+     * </tr>
+     * <tr>
+     * <td>DetectTriggered</td>
+     * <td>Drift detection triggered</td>
+     * </tr>
+     * </tbody></table>
+     * 
      * <strong>example:</strong>
      * <p>Deployed</p>
      */

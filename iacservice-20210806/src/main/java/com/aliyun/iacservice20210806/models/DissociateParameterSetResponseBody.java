@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DissociateParameterSetResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</p>
      */

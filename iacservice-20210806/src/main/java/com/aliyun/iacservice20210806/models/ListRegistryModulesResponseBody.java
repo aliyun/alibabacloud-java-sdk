@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRegistryModulesResponseBody extends TeaModel {
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>173</p>
      */
@@ -12,6 +14,8 @@ public class ListRegistryModulesResponseBody extends TeaModel {
     public Long count;
 
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,16 +23,23 @@ public class ListRegistryModulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page. A value of null indicates that no more pages are available.</p>
+     * 
      * <strong>example:</strong>
-     * <p>LC4NJL3Ru2bIiRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
+     * <p>iRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of registry modules.</p>
+     */
     @NameInMap("registryModules")
     public java.util.List<ListRegistryModulesResponseBodyRegistryModules> registryModules;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D25216A9-C0F7-5A3A-A7E4-2B3D4F3A355D</p>
      */
@@ -81,39 +92,108 @@ public class ListRegistryModulesResponseBody extends TeaModel {
     }
 
     public static class ListRegistryModulesResponseBodyRegistryModules extends TeaModel {
+        /**
+         * <p>The permission. A value of private indicates that the module is private.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("acl")
         public String acl;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-10 16:16:04</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The description of the registry module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The number of downloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("downloads")
         public Integer downloads;
 
+        /**
+         * <p>The name of the registry module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModuleName</p>
+         */
         @NameInMap("moduleName")
         public String moduleName;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NamespaceName</p>
+         */
         @NameInMap("namespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The provider type. A value of alicloud indicates Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud</p>
+         */
         @NameInMap("provider")
         public String provider;
 
+        /**
+         * <p>The list of accounts with which the registry module is shared.</p>
+         */
         @NameInMap("sharedAccounts")
         public java.util.List<Long> sharedAccounts;
 
+        /**
+         * <p>The module source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaceName/ModuleName</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The module source URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("sourceUrl")
         public String sourceUrl;
 
+        /**
+         * <p>The templatetype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The latest version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("version")
         public String version;
 

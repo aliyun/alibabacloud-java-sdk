@@ -13,10 +13,15 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The execution results of the triggered stacks.</p>
+     */
     @NameInMap("stackResults")
     public java.util.List<GetStackExecutionResultResponseBodyStackResults> stackResults;
 
     /**
+     * <p>The unique ID of the trigger.</p>
+     * 
      * <strong>example:</strong>
      * <p>event-xxx</p>
      */
@@ -65,6 +70,8 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
 
     public static class GetStackExecutionResultResponseBodyStackResultsDeployments extends TeaModel {
         /**
+         * <p>The deployment name.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod</p>
          */
@@ -72,6 +79,8 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         public String deploymentName;
 
         /**
+         * <p>The result of the deployment task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Service returned null result</p>
          */
@@ -79,6 +88,8 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         public String jobResult;
 
         /**
+         * <p>The deployment status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Applied</p>
          */
@@ -86,6 +97,8 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The URL to view the deployment details.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&deploymentNo=6&configVersion=v1">https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&amp;deploymentNo=6&amp;configVersion=v1</a></p>
          */
@@ -132,10 +145,15 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
     }
 
     public static class GetStackExecutionResultResponseBodyStackResults extends TeaModel {
+        /**
+         * <p>The deployment results of the stack.</p>
+         */
         @NameInMap("deployments")
         public java.util.List<GetStackExecutionResultResponseBodyStackResultsDeployments> deployments;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>No corresponding Stack found.</p>
          */
@@ -143,6 +161,8 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The unique identifier of the stack.</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-al181av2bloah5s53hacbp4</p>
          */
@@ -150,6 +170,8 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         public String stackId;
 
         /**
+         * <p>The stack name.</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-demo</p>
          */
@@ -157,6 +179,14 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         public String stackName;
 
         /**
+         * <p>The execution status of the stack. Valid values:</p>
+         * <ul>
+         * <li>Deploying: deploying</li>
+         * <li>Errored: deployment failed</li>
+         * <li>Deployed: deployment completed</li>
+         * <li>Waiting: waiting for deployment.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Deployed</p>
          */

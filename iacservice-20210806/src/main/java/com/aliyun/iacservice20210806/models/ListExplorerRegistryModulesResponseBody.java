@@ -4,10 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListExplorerRegistryModulesResponseBody extends TeaModel {
+    /**
+     * <p>The list of Explorer community modules.</p>
+     */
     @NameInMap("explorerRegistryModules")
     public java.util.List<ListExplorerRegistryModulesResponseBodyExplorerRegistryModules> explorerRegistryModules;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 0 to 200.</p>
+     * <p>Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +22,9 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next page of results.</p>
+     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * 
      * <strong>example:</strong>
      * <p>DxEkv+3w0EDAQgcRFBp8Ep4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -22,6 +32,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A662F56-CA76-55F6-869D-7F26293B8E67</p>
      */
@@ -29,6 +41,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>170</p>
      */
@@ -82,6 +96,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
 
     public static class ListExplorerRegistryModulesResponseBodyExplorerRegistryModules extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -89,6 +105,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The number of downloads.</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -96,6 +114,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public Long downloads;
 
         /**
+         * <p>The latest version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -103,6 +123,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public String latestVersion;
 
         /**
+         * <p>The module name.</p>
+         * 
          * <strong>example:</strong>
          * <p>terraform-alicloud-modules/mongodb</p>
          */
@@ -110,6 +132,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_namespace</p>
          */
@@ -117,6 +141,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
+         * <p>The source.</p>
+         * 
          * <strong>example:</strong>
          * <p>terraform-alicloud-modules/mongodb/alicloud</p>
          */
@@ -124,6 +150,8 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Default</p>
          */

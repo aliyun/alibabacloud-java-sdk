@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListGroupResponseBody extends TeaModel {
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <p>The list of service group IDs.</p>
+     */
     @NameInMap("groups")
     public java.util.List<ListGroupResponseBodyGroups> groups;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListGroupResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size, which indicates the maximum number of results returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListGroupResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</p>
      */
@@ -81,9 +92,21 @@ public class ListGroupResponseBody extends TeaModel {
     }
 
     public static class ListGroupResponseBodyGroupsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iac</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -112,6 +135,8 @@ public class ListGroupResponseBody extends TeaModel {
 
     public static class ListGroupResponseBodyGroups extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-14T07:19:13Z</p>
          */
@@ -119,6 +144,8 @@ public class ListGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The group description.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -126,6 +153,8 @@ public class ListGroupResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-148e7853433574fffe9fec72ed9b73</p>
          */
@@ -133,6 +162,8 @@ public class ListGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>Indicates whether the group is the default group.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -140,6 +171,8 @@ public class ListGroupResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The number of templates.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -147,6 +180,8 @@ public class ListGroupResponseBody extends TeaModel {
         public Long moduleCnt;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -154,6 +189,8 @@ public class ListGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>p-4267dcfbf1b6d126edcadf0e949</p>
          */
@@ -161,16 +198,23 @@ public class ListGroupResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The number of scenario-based testing tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("sceneTestingTaskCnt")
         public Long sceneTestingTaskCnt;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListGroupResponseBodyGroupsTags> tags;
 
         /**
+         * <p>The number of tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetExecuteStateResponseBody extends TeaModel {
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Your account does not have enough balance to order postpaid product.</p>
      */
@@ -12,6 +14,8 @@ public class GetExecuteStateResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The run log.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;tf-plan.run.log&quot;:&quot;xxx&quot;}</p>
      */
@@ -28,6 +32,8 @@ public class GetExecuteStateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The state file content.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;: 4, &quot;terraform_version&quot;: &quot;1.5.7&quot;, &quot;serial&quot;: 3, &quot;lineage&quot;: &quot;cb71b0b2-1ec2-6483-d409-8cae23186ec6&quot;,  &quot;outputs&quot;: {}, &quot;resources&quot;: [], &quot;check_results&quot;: null}</p>
      */
@@ -35,6 +41,22 @@ public class GetExecuteStateResponseBody extends TeaModel {
     public String state;
 
     /**
+     * <p>The status. Valid values:</p>
+     * <ul>
+     * <li>Pending: ready to start.</li>
+     * <li>PlanQueued: the plan task has been created but is waiting in the queue because no workflow is available.</li>
+     * <li>ApplyQueued: the apply task has been created but is waiting in the queue because no workflow is available.</li>
+     * <li>Planning: the plan phase is being executed.</li>
+     * <li>Planned: the plan execution is complete.</li>
+     * <li>Confirmed: the plan has been confirmed after execution.</li>
+     * <li>PlannedAndFinished: the plan execution is complete and no diff was found. The job is in a terminal state.</li>
+     * <li>Applying: the apply phase is being executed.</li>
+     * <li>Applied: the apply execution is complete.</li>
+     * <li>Discarded: the task has been discarded. This is a terminal state.</li>
+     * <li>Errored: the execution encountered an error. This is a terminal state.</li>
+     * <li>Canceled: the execution has been canceled. This is a terminal state.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Pending</p>
      */

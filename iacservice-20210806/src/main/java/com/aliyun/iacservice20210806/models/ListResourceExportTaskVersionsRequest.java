@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourceExportTaskVersionsRequest extends TeaModel {
     /**
+     * <p>The export version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */
@@ -12,6 +14,8 @@ public class ListResourceExportTaskVersionsRequest extends TeaModel {
     public String exportVersion;
 
     /**
+     * <p>The search keyword. Fuzzy match is supported for export version names.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -19,6 +23,8 @@ public class ListResourceExportTaskVersionsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListResourceExportTaskVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,15 @@ public class ListResourceExportTaskVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The export status. Valid values:</p>
+     * <ul>
+     * <li>Queue: queued</li>
+     * <li>Pending: preparing to run</li>
+     * <li>Success: succeeded</li>
+     * <li>Errored: failed</li>
+     * <li>Canceled: canceled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Errored</p>
      */

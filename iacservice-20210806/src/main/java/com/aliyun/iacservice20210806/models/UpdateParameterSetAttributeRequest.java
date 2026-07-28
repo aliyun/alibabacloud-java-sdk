@@ -5,21 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpdateParameterSetAttributeRequest extends TeaModel {
     /**
+     * <p>The description of the parameter set. Maximum length: 1024 characters.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>This is parameterSet</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The name of the parameter set. Maximum length: 128 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>demo</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The parameter list.</p>
+     */
     @NameInMap("parameters")
     public java.util.List<UpdateParameterSetAttributeRequestParameters> parameters;
 
@@ -54,8 +60,10 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
 
     public static class UpdateParameterSetAttributeRequestParameters extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>t</p>
+         * <p>region</p>
          */
         @NameInMap("name")
         public String name;
@@ -64,6 +72,12 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
         public Boolean secret;
 
         /**
+         * <p>The parameter set status. Valid values:</p>
+         * <ul>
+         * <li>HAS_VALUE (default): Defines a specific value.</li>
+         * <li>EXPLICIT_NULL: Explicitly set to null.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HAS_VALUE</p>
          */
@@ -71,6 +85,8 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
         public String status;
 
         /**
+         * <p>The parameter type. Valid values: string, number, bool, map(string), and list(string).</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -78,8 +94,10 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The parameter value. Use JSON for complex types.</p>
+         * 
          * <strong>example:</strong>
-         * <p>vpc-bp1mjm9exduos1bipw9x6</p>
+         * <p>cn-zhangjiakou</p>
          */
         @NameInMap("value")
         public String value;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateParameterSetRequest extends TeaModel {
     /**
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,21 +15,27 @@ public class CreateParameterSetRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the parameter set. Maximum length: 1024 characters.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>This is parameterSet</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The name of the parameter set. Maximum length: 128 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>demo</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The list of parameters.</p>
+     */
     @NameInMap("parameters")
     public java.util.List<CreateParameterSetRequestParameters> parameters;
 
@@ -71,8 +78,10 @@ public class CreateParameterSetRequest extends TeaModel {
 
     public static class CreateParameterSetRequestParameters extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>test1121</p>
+         * <p>region</p>
          */
         @NameInMap("name")
         public String name;
@@ -81,6 +90,12 @@ public class CreateParameterSetRequest extends TeaModel {
         public Boolean secret;
 
         /**
+         * <p>The parameter set status. Valid values:</p>
+         * <ul>
+         * <li>HAS_VALUE (default): Defines a specific value.</li>
+         * <li>EXPLICIT_NULL: Explicitly sets the value to null.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HAS_VALUE</p>
          */
@@ -88,6 +103,8 @@ public class CreateParameterSetRequest extends TeaModel {
         public String status;
 
         /**
+         * <p>The parameter type. Valid values: string, number, bool, map(string), and list(string).</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -95,8 +112,10 @@ public class CreateParameterSetRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The parameter value. Use JSON for complex types.</p>
+         * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("value")
         public String value;

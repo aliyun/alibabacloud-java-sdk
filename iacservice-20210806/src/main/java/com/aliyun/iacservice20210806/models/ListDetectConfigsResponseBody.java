@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListDetectConfigsResponseBody extends TeaModel {
+    /**
+     * <p>List of drift detection configurations</p>
+     */
     @NameInMap("detectConfigs")
     public java.util.List<ListDetectConfigsResponseBodyDetectConfigs> detectConfigs;
 
     /**
+     * <p>Maximum number of records to retrieve in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Paging nextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>30BaZ9ekYWXJdqshYecA++coNg7qT1Zbm3RfLyFIZeY=</p>
      */
@@ -22,7 +29,7 @@ public class ListDetectConfigsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>79284133-D4BA-56B3-954C-D538256F7EAA</p>
@@ -31,6 +38,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>82</p>
      */
@@ -84,6 +93,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
 
     public static class ListDetectConfigsResponseBodyDetectConfigsAlarmConfigs extends TeaModel {
         /**
+         * <p>Alerting address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx">https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx</a></p>
          */
@@ -91,6 +102,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>Alerting method. Currently only <code>cms</code> is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>cms</p>
          */
@@ -121,10 +134,15 @@ public class ListDetectConfigsResponseBody extends TeaModel {
     }
 
     public static class ListDetectConfigsResponseBodyDetectConfigs extends TeaModel {
+        /**
+         * <p>List of alerting addresses</p>
+         */
         @NameInMap("alarmConfigs")
         public java.util.List<ListDetectConfigsResponseBodyDetectConfigsAlarmConfigs> alarmConfigs;
 
         /**
+         * <p>Creation Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-10T02:30:04Z</p>
          */
@@ -132,6 +150,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Cron expression (UTC+8). Required when the trigger type is Cron.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1</p>
          */
@@ -139,6 +159,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>Description.</p>
+         * 
          * <strong>example:</strong>
          * <p>this is a description</p>
          */
@@ -146,6 +168,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Drift detection configuration ID</p>
+         * 
          * <strong>example:</strong>
          * <p>dc-xxxx</p>
          */
@@ -153,6 +177,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         public String detectConfigId;
 
         /**
+         * <p>Name of the drift detection configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -160,6 +186,8 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         public String detectConfigName;
 
         /**
+         * <p>Whether drift detection is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -167,6 +195,12 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>Trigger type  </p>
+         * <ul>
+         * <li>Manual: Execute manually  </li>
+         * <li>Cron: Trigger on schedule</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Cron</p>
          */

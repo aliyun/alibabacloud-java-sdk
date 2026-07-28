@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteRegistryModuleRequest extends TeaModel {
     /**
+     * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ExecuteRegistryModuleRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The set of parameters used by the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;region\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;vpcId\&quot;: \&quot;vpc-bp145sc90s26q0qbkfb6i\&quot;, \&quot;functionName\&quot;: \&quot;filemgr-cn-hangzhou-063fd4aead\&quot;, \&quot;mountPointsServerAddr\&quot;: \&quot;063fd4aead-dex50.cn-hangzhou.nas.aliyuncs.com\&quot;}</p>
      */

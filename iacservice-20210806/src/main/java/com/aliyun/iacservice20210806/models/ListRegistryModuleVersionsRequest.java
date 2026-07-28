@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRegistryModuleVersionsRequest extends TeaModel {
     /**
+     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,24 +14,28 @@ public class ListRegistryModuleVersionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The Registry template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs-rds</p>
+     * <p>ModuleName</p>
      */
     @NameInMap("moduleName")
     public String moduleName;
 
     /**
+     * <p>The workspace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>terraform-alicloud-modules</p>
+     * <p>MamespaceName</p>
      */
     @NameInMap("namespaceName")
     public String namespaceName;
 
     /**
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>TRkuCaTw/VsEHrnCZgrBA0ftQSEJU/lzo2ei7MJjplg=</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
     /**
+     * <p>The group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
      */
@@ -12,6 +14,8 @@ public class ListTasksRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The keyword for fuzzy search by task ID or task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -26,6 +30,8 @@ public class ListTasksRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
+     * <p>The module ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>mod-1525e992f1b62139d1c437d64ae</p>
      */
@@ -33,6 +39,8 @@ public class ListTasksRequest extends TeaModel {
     public String moduleId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +48,8 @@ public class ListTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -47,19 +57,40 @@ public class ListTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>p-433aead7560572f8d95b25775c</p>
      */
     @NameInMap("projectId")
     public String projectId;
 
+    /**
+     * <p>The job status. Valid values:</p>
+     * <ul>
+     * <li>Planning: The job is in the Plan execution phase.</li>
+     * <li>Planned: The job has completed the Plan execution.</li>
+     * <li>PlannedAndFinished: After the Plan execution is completed, no diff is found, and the job enters the final state.</li>
+     * <li>Applying: The job is in the Apply execution phase.</li>
+     * <li>Applied: The job has completed the Apply execution.</li>
+     * <li>Errored: The job execution encountered errors and entered the final state.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Errored</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The list of task tags.</p>
+     */
     @NameInMap("tag")
     public java.util.List<ListTasksRequestTag> tag;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-433aead756057fffeaba4828f5195</p>
      */
@@ -152,9 +183,21 @@ public class ListTasksRequest extends TeaModel {
     }
 
     public static class ListTasksRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 

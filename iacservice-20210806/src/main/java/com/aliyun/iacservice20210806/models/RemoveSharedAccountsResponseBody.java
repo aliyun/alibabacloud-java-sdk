@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveSharedAccountsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8294F4ED-8DBA-5441-B3F2-61C3C5374990</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStackResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79284133-D4BA-56B3-954C-D538256F7EAA</p>
      */
@@ -12,6 +14,8 @@ public class CreateStackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The stack ID. This is the unique identifier of the stack after it is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>stack-as1d4vld898ppnqbxxxxx</p>
      */

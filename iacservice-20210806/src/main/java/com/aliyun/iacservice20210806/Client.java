@@ -14,7 +14,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-zhangjiakou", "iac.cn-zhangjiakou.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("iacservice", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -132,8 +135,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增共享账号信息</p>
+     * <p>Adds shared accounts.</p>
      * 
      * @param request AddSharedAccountsRequest
      * @param headers map
@@ -174,8 +180,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增共享账号信息</p>
+     * <p>Adds shared accounts.</p>
      * 
      * @param request AddSharedAccountsRequest
      * @return AddSharedAccountsResponse
@@ -188,7 +197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将参数集关联资源</p>
+     * <p>Associate drift detection configuration</p>
      * 
      * @param request AssociateDetectConfigRequest
      * @param headers map
@@ -230,7 +239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将参数集关联资源</p>
+     * <p>Associate drift detection configuration</p>
      * 
      * @param request AssociateDetectConfigRequest
      * @return AssociateDetectConfigResponse
@@ -243,7 +252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分组关联</p>
+     * <p>Associates resources with a group.</p>
      * 
      * @param request AssociateGroupRequest
      * @param headers map
@@ -289,7 +298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分组关联</p>
+     * <p>Associates resources with a group.</p>
      * 
      * @param request AssociateGroupRequest
      * @return AssociateGroupResponse
@@ -301,8 +310,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</p>
+     * <ul>
+     * <li>Module: template</li>
+     * <li>ModuleVersion: template version</li>
+     * <li>Task: node.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>将参数集关联资源</p>
+     * <p>Associates parameter sets.</p>
      * 
      * @param request AssociateParameterSetRequest
      * @param headers map
@@ -343,8 +360,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</p>
+     * <ul>
+     * <li>Module: template</li>
+     * <li>ModuleVersion: template version</li>
+     * <li>Task: node.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>将参数集关联资源</p>
+     * <p>Associates parameter sets.</p>
      * 
      * @param request AssociateParameterSetRequest
      * @return AssociateParameterSetResponse
@@ -356,8 +381,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消资源导出任务</p>
+     * <p>Cancels a resource export task.</p>
      * 
      * @param request CancelResourceExportTaskRequest
      * @param headers map
@@ -390,8 +418,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消资源导出任务</p>
+     * <p>Cancels a resource export task.</p>
      * 
      * @param request CancelResourceExportTaskRequest
      * @return CancelResourceExportTaskResponse
@@ -403,8 +434,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>When <code>triggerType</code> is set to <code>Cron</code>, a valid <code>cronExpression</code> must be provided.  </li>
+     * <li>Each element in the <code>alarmConfigs</code> list must specify the alerting method <code>type</code> and the corresponding alerting address <code>address</code>.  </li>
+     * <li>If the <code>enabled</code> parameter is not explicitly set, its default value is <code>true</code>, meaning newly created detection configurations are enabled by default.  </li>
+     * <li>It is recommended to use a UUID as the value of <code>clientToken</code> to ensure request idempotence.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建偏差检测配置</p>
+     * <p>Creates a drift detection configuration that supports manual or scheduled triggering.</p>
      * 
      * @param request CreateDetectConfigRequest
      * @param headers map
@@ -461,8 +501,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>When <code>triggerType</code> is set to <code>Cron</code>, a valid <code>cronExpression</code> must be provided.  </li>
+     * <li>Each element in the <code>alarmConfigs</code> list must specify the alerting method <code>type</code> and the corresponding alerting address <code>address</code>.  </li>
+     * <li>If the <code>enabled</code> parameter is not explicitly set, its default value is <code>true</code>, meaning newly created detection configurations are enabled by default.  </li>
+     * <li>It is recommended to use a UUID as the value of <code>clientToken</code> to ensure request idempotence.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建偏差检测配置</p>
+     * <p>Creates a drift detection configuration that supports manual or scheduled triggering.</p>
      * 
      * @param request CreateDetectConfigRequest
      * @return CreateDetectConfigResponse
@@ -475,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建分组</p>
+     * <p>Creates a group.</p>
      * 
      * @param request CreateGroupRequest
      * @param headers map
@@ -565,7 +614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建分组</p>
+     * <p>Creates a group.</p>
      * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
@@ -577,8 +626,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建作业</p>
+     * <p>Creates a job and runs a task.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -623,8 +675,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建作业</p>
+     * <p>Creates a job and runs a task.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -636,8 +691,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create Module</p>
+     * <p>Creates a Terraform template. Multiple source methods are supported, such as OSS import, Registry import, file upload, and online editing.</p>
      * 
      * @param request CreateModuleRequest
      * @param headers map
@@ -702,8 +760,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Create Module</p>
+     * <p>Creates a Terraform template. Multiple source methods are supported, such as OSS import, Registry import, file upload, and online editing.</p>
      * 
      * @param request CreateModuleRequest
      * @return CreateModuleResponse
@@ -715,8 +776,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Use the <code>clientToken</code> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</li>
+     * <li>Use semantic versioning (such as <code>v1.0.0</code>).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Publish a template version.</p>
+     * <p>Publishes a new version for a specified template.</p>
      * 
      * @param request CreateModuleVersionRequest
      * @param headers map
@@ -757,8 +825,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Use the <code>clientToken</code> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</li>
+     * <li>Use semantic versioning (such as <code>v1.0.0</code>).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Publish a template version.</p>
+     * <p>Publishes a new version for a specified template.</p>
      * 
      * @param request CreateModuleVersionRequest
      * @return CreateModuleVersionResponse
@@ -770,8 +845,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation creates a new parameter set.</li>
+     * <li>The name field is required and can be up to 128 characters in length.</li>
+     * <li>Each element in the parameters array must contain the name field. Other fields are optional.</li>
+     * <li>Use the clientToken field to ensure the idempotence of the request.</li>
+     * <li>The request header must contain authentication information to ensure secure access.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建参数集</p>
+     * <p>Adds a new parameter set. You can set the name, description, and parameter list.</p>
      * 
      * @param request CreateParameterSetRequest
      * @param headers map
@@ -816,8 +901,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation creates a new parameter set.</li>
+     * <li>The name field is required and can be up to 128 characters in length.</li>
+     * <li>Each element in the parameters array must contain the name field. Other fields are optional.</li>
+     * <li>Use the clientToken field to ensure the idempotence of the request.</li>
+     * <li>The request header must contain authentication information to ensure secure access.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建参数集</p>
+     * <p>Adds a new parameter set. You can set the name, description, and parameter list.</p>
      * 
      * @param request CreateParameterSetRequest
      * @return CreateParameterSetResponse
@@ -830,7 +925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建项目</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateProjectRequest
      * @param headers map
@@ -872,7 +967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建项目</p>
+     * <p>Creates a project.</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -884,8 +979,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建RegistryModule</p>
+     * <p>Creates a Registry template.</p>
      * 
      * @param request CreateRegistryModuleRequest
      * @param headers map
@@ -942,8 +1040,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建RegistryModule</p>
+     * <p>Creates a Registry template.</p>
      * 
      * @param request CreateRegistryModuleRequest
      * @return CreateRegistryModuleResponse
@@ -955,8 +1056,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateRegistryNamespaceRequest
      * @param headers map
@@ -1005,8 +1109,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateRegistryNamespaceRequest
      * @return CreateRegistryNamespaceResponse
@@ -1018,8 +1125,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建导出任务</p>
+     * <p>Creates a resource export task.</p>
      * 
      * @param request CreateResourceExportTaskRequest
      * @param headers map
@@ -1088,8 +1198,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建导出任务</p>
+     * <p>Creates a resource export task.</p>
      * 
      * @param request CreateResourceExportTaskRequest
      * @return CreateResourceExportTaskResponse
@@ -1102,7 +1215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源栈</p>
+     * <p>Creates a resource stack and triggers deployment.</p>
      * 
      * @param request CreateStackRequest
      * @param headers map
@@ -1122,6 +1235,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameterSetIds)) {
+            body.put("parameterSetIds", request.parameterSetIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ramRole)) {
@@ -1160,7 +1277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源栈</p>
+     * <p>Creates a resource stack and triggers deployment.</p>
      * 
      * @param request CreateStackRequest
      * @return CreateStackResponse
@@ -1172,8 +1289,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建任务</p>
+     * <p>Creates a node.</p>
      * 
      * @param request CreateTaskRequest
      * @param headers map
@@ -1235,12 +1355,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("skipPropertyValidation", request.skipPropertyValidation);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skipRegionValidation)) {
+            body.put("skipRegionValidation", request.skipRegionValidation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             body.put("tags", request.tags);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskBackend)) {
             body.put("taskBackend", request.taskBackend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terraformProviderVersion)) {
+            body.put("terraformProviderVersion", request.terraformProviderVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.terraformVersion)) {
@@ -1270,8 +1398,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建任务</p>
+     * <p>Creates a node.</p>
      * 
      * @param request CreateTaskRequest
      * @return CreateTaskResponse
@@ -1284,7 +1415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除偏差检测配置</p>
+     * <p>Delete drift detection configuration</p>
      * 
      * @param request DeleteDetectConfigRequest
      * @param headers map
@@ -1312,7 +1443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除偏差检测配置</p>
+     * <p>Delete drift detection configuration</p>
      * 
      * @param request DeleteDetectConfigRequest
      * @return DeleteDetectConfigResponse
@@ -1325,7 +1456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除分组</p>
+     * <p>Deletes a group.</p>
      * 
      * @param request DeleteGroupRequest
      * @param headers map
@@ -1353,7 +1484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除分组</p>
+     * <p>Deletes a group.</p>
      * 
      * @param request DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -1365,8 +1496,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation deletes a specified template.</li>
+     * <li>Deletion is irreversible. Proceed with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除模板</p>
+     * <p>Deletes a specified template and all its versions.</p>
      * 
      * @param request DeleteModuleRequest
      * @param headers map
@@ -1393,8 +1531,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation deletes a specified template.</li>
+     * <li>Deletion is irreversible. Proceed with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除模板</p>
+     * <p>Deletes a specified template and all its versions.</p>
      * 
      * @param request DeleteModuleRequest
      * @return DeleteModuleResponse
@@ -1406,8 +1551,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified parameter set.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除参数集</p>
+     * <p>Deletes a specified parameter set by parameter set ID.</p>
      * 
      * @param request DeleteParameterSetRequest
      * @param headers map
@@ -1434,8 +1582,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified parameter set.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除参数集</p>
+     * <p>Deletes a specified parameter set by parameter set ID.</p>
      * 
      * @param request DeleteParameterSetRequest
      * @return DeleteParameterSetResponse
@@ -1448,7 +1599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除项目</p>
+     * <p>Deletes a project.</p>
      * 
      * @param request DeleteProjectRequest
      * @param headers map
@@ -1476,7 +1627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除项目</p>
+     * <p>Deletes a project.</p>
      * 
      * @param request DeleteProjectRequest
      * @return DeleteProjectResponse
@@ -1488,8 +1639,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除RegistryModule</p>
+     * <p>Deletes a Registry template.</p>
      * 
      * @param request DeleteRegistryModuleRequest
      * @param headers map
@@ -1516,8 +1670,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除RegistryModule</p>
+     * <p>Deletes a Registry template.</p>
      * 
      * @param request DeleteRegistryModuleRequest
      * @return DeleteRegistryModuleResponse
@@ -1529,8 +1686,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除RegistryModule版本</p>
+     * <p>Deletes a Registry template version.</p>
      * 
      * @param request DeleteRegistryModuleVersionRequest
      * @param headers map
@@ -1557,8 +1717,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除RegistryModule版本</p>
+     * <p>Deletes a Registry template version.</p>
      * 
      * @param request DeleteRegistryModuleVersionRequest
      * @return DeleteRegistryModuleVersionResponse
@@ -1570,8 +1733,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Deletes a workspace.</p>
      * 
      * @param request DeleteRegistryNamespaceRequest
      * @param headers map
@@ -1598,8 +1764,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除工作空间</p>
+     * <p>Deletes a workspace.</p>
      * 
      * @param request DeleteRegistryNamespaceRequest
      * @return DeleteRegistryNamespaceResponse
@@ -1611,8 +1780,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源导出任务</p>
+     * <p>Deletes a resource export task.</p>
      * 
      * @param request DeleteResourceExportTaskRequest
      * @param headers map
@@ -1639,8 +1811,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除资源导出任务</p>
+     * <p>Deletes a resource export task.</p>
      * 
      * @param request DeleteResourceExportTaskRequest
      * @return DeleteResourceExportTaskResponse
@@ -1653,7 +1828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源栈</p>
+     * <p>Deletes a stack.</p>
      * 
      * @param request DeleteStackRequest
      * @param headers map
@@ -1687,7 +1862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源栈</p>
+     * <p>Deletes a stack.</p>
      * 
      * @param request DeleteStackRequest
      * @return DeleteStackResponse
@@ -1699,8 +1874,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.
+     * Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除任务</p>
+     * <p>Deletes a node.</p>
      * 
      * @param request DeleteTaskRequest
      * @param headers map
@@ -1727,8 +1906,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.
+     * Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除任务</p>
+     * <p>Deletes a node.</p>
      * 
      * @param request DeleteTaskRequest
      * @return DeleteTaskResponse
@@ -1740,8 +1923,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</p>
+     * 
      * <b>summary</b> : 
-     * <p>发起状态文件一致性检测</p>
+     * <p>Initiates a state file consistency check.</p>
      * 
      * @param request DetectTerraformStateRequest
      * @param headers map
@@ -1782,8 +1968,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</p>
+     * 
      * <b>summary</b> : 
-     * <p>发起状态文件一致性检测</p>
+     * <p>Initiates a state file consistency check.</p>
      * 
      * @param request DetectTerraformStateRequest
      * @return DetectTerraformStateResponse
@@ -1796,7 +1985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除参数集关联资源关系</p>
+     * <p>Disassociate drift detection configuration</p>
      * 
      * @param request DissociateDetectConfigRequest
      * @param headers map
@@ -1838,7 +2027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除参数集关联资源关系</p>
+     * <p>Disassociate drift detection configuration</p>
      * 
      * @param request DissociateDetectConfigRequest
      * @return DissociateDetectConfigResponse
@@ -1851,7 +2040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消关联分组</p>
+     * <p>Dissociates a resource group.</p>
      * 
      * @param request DissociateGroupRequest
      * @param headers map
@@ -1893,7 +2082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消关联分组</p>
+     * <p>Dissociates a resource group.</p>
      * 
      * @param request DissociateGroupRequest
      * @return DissociateGroupResponse
@@ -1906,7 +2095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除参数集关联资源关系</p>
+     * <p>Dissociates a parameter set from other resources.</p>
      * 
      * @param request DissociateParameterSetRequest
      * @param headers map
@@ -1948,7 +2137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除参数集关联资源关系</p>
+     * <p>Dissociates a parameter set from other resources.</p>
      * 
      * @param request DissociateParameterSetRequest
      * @return DissociateParameterSetResponse
@@ -1960,8 +2149,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行RegistryModule</p>
+     * <p>Executes a Module officially provided by Alibaba Cloud Terraform.</p>
      * 
      * @param request ExecuteRegistryModuleRequest
      * @param headers map
@@ -1998,8 +2190,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行RegistryModule</p>
+     * <p>Executes a Module officially provided by Alibaba Cloud Terraform.</p>
      * 
      * @param request ExecuteRegistryModuleRequest
      * @return ExecuteRegistryModuleResponse
@@ -2011,8 +2206,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行资源导出任务</p>
+     * <p>Runs a resource export task.</p>
      * 
      * @param request ExecuteResourceExportTaskRequest
      * @param headers map
@@ -2045,8 +2243,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行资源导出任务</p>
+     * <p>Runs a resource export task.</p>
      * 
      * @param request ExecuteResourceExportTaskRequest
      * @return ExecuteResourceExportTaskResponse
@@ -2058,8 +2259,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
+     * Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行TerraformApply</p>
+     * <p>Executes TerraformApply.</p>
      * 
      * @param request ExecuteTerraformApplyRequest
      * @param headers map
@@ -2100,8 +2305,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
+     * Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行TerraformApply</p>
+     * <p>Executes TerraformApply.</p>
      * 
      * @param request ExecuteTerraformApplyRequest
      * @return ExecuteTerraformApplyResponse
@@ -2113,8 +2322,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes the Terraform Destroy command to destroy resources created by Terraform.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行TerraformDestroy</p>
+     * <p>Executes Terraform Destroy.</p>
      * 
      * @param request ExecuteTerraformDestroyRequest
      * @param headers map
@@ -2151,8 +2363,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes the Terraform Destroy command to destroy resources created by Terraform.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行TerraformDestroy</p>
+     * <p>Executes Terraform Destroy.</p>
      * 
      * @param request ExecuteTerraformDestroyRequest
      * @return ExecuteTerraformDestroyResponse
@@ -2164,8 +2379,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
+     * Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行TerraformPlan</p>
+     * <p>Executes a Terraform plan.</p>
      * 
      * @param request ExecuteTerraformPlanRequest
      * @param headers map
@@ -2206,8 +2425,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
+     * Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>执行TerraformPlan</p>
+     * <p>Executes a Terraform plan.</p>
      * 
      * @param request ExecuteTerraformPlanRequest
      * @return ExecuteTerraformPlanResponse
@@ -2220,7 +2443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成模板</p>
+     * <p>Generates Terraform HCL template code.</p>
      * 
      * @param request GenerateModuleRequest
      * @param headers map
@@ -2278,7 +2501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成模板</p>
+     * <p>Generates Terraform HCL template code.</p>
      * 
      * @param request GenerateModuleRequest
      * @return GenerateModuleResponse
@@ -2291,7 +2514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>偏差检测配置详情</p>
+     * <p>Retrieve drift detection configuration</p>
      * 
      * @param request GetDetectConfigRequest
      * @param headers map
@@ -2319,7 +2542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>偏差检测配置详情</p>
+     * <p>Retrieve drift detection configuration</p>
      * 
      * @param request GetDetectConfigRequest
      * @return GetDetectConfigResponse
@@ -2331,8 +2554,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the result of a Terraform run.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Terraform运行结果</p>
+     * <p>Retrieves the result of a Terraform run.</p>
      * 
      * @param request GetExecuteStateRequest
      * @param headers map
@@ -2359,8 +2585,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the result of a Terraform run.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取Terraform运行结果</p>
+     * <p>Retrieves the result of a Terraform run.</p>
      * 
      * @param request GetExecuteStateRequest
      * @return GetExecuteStateResponse
@@ -2373,7 +2602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分组</p>
+     * <p>Queries a group.</p>
      * 
      * @param request GetGroupRequest
      * @param headers map
@@ -2401,7 +2630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分组</p>
+     * <p>Queries a group.</p>
      * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
@@ -2413,8 +2642,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>作业详情</p>
+     * <p>Retrieves job information.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -2447,8 +2679,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>作业详情</p>
+     * <p>Retrieves job information.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -2460,8 +2695,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Get Module Details</p>
+     * <p>Queries the details of a specified template.</p>
      * 
      * @param request GetModuleRequest
      * @param headers map
@@ -2488,8 +2727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Get Module Details</p>
+     * <p>Queries the details of a specified template.</p>
      * 
      * @param request GetModuleRequest
      * @return GetModuleResponse
@@ -2501,8 +2744,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板版本详情</p>
+     * <p>Queries the details of a specific version of a specified template.</p>
      * 
      * @param request GetModuleVersionRequest
      * @param headers map
@@ -2529,8 +2776,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板版本详情</p>
+     * <p>Queries the details of a specific version of a specified template.</p>
      * 
      * @param request GetModuleVersionRequest
      * @return GetModuleVersionResponse
@@ -2542,8 +2793,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves detailed parameter set information by specifying a parameterSetId.</li>
+     * <li>Authentication is required to call this operation.</li>
+     * <li>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>参数集详情</p>
+     * <p>Retrieves the details of a parameter set by parameter set ID.</p>
      * 
      * @param request GetParameterSetRequest
      * @param headers map
@@ -2570,8 +2829,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves detailed parameter set information by specifying a parameterSetId.</li>
+     * <li>Authentication is required to call this operation.</li>
+     * <li>If the request succeeds, the response includes detailed data such as the parameter set name, description, and parameter list.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>参数集详情</p>
+     * <p>Retrieves the details of a parameter set by parameter set ID.</p>
      * 
      * @param request GetParameterSetRequest
      * @return GetParameterSetResponse
@@ -2584,7 +2851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目</p>
+     * <p>Queries a project.</p>
      * 
      * @param request GetProjectRequest
      * @param headers map
@@ -2612,7 +2879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目</p>
+     * <p>Queries a project.</p>
      * 
      * @param request GetProjectRequest
      * @return GetProjectResponse
@@ -2625,7 +2892,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取RegistryModule信息</p>
+     * <p>Retrieves the resource documentation of a Terraform provider.</p>
+     * 
+     * @param request GetProviderDocumentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetProviderDocumentResponse
+     */
+    public GetProviderDocumentResponse getProviderDocumentWithOptions(GetProviderDocumentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.providerVersion)) {
+            query.put("providerVersion", request.providerVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terraformResourceType)) {
+            query.put("terraformResourceType", request.terraformResourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProviderDocument"),
+            new TeaPair("version", "2021-08-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/version/terraform/provider/document"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProviderDocumentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the resource documentation of a Terraform provider.</p>
+     * 
+     * @param request GetProviderDocumentRequest
+     * @return GetProviderDocumentResponse
+     */
+    public GetProviderDocumentResponse getProviderDocument(GetProviderDocumentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProviderDocumentWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a Registry module.</p>
      * 
      * @param request GetRegistryModuleRequest
      * @param headers map
@@ -2652,8 +2973,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RegistryModule信息</p>
+     * <p>Queries a Registry module.</p>
      * 
      * @param request GetRegistryModuleRequest
      * @return GetRegistryModuleResponse
@@ -2665,8 +2989,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RegistryModule版本信息</p>
+     * <p>Queries a Registry template version.</p>
      * 
      * @param request GetRegistryModuleVersionRequest
      * @param headers map
@@ -2693,8 +3020,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RegistryModule版本信息</p>
+     * <p>Queries a Registry template version.</p>
      * 
      * @param request GetRegistryModuleVersionRequest
      * @return GetRegistryModuleVersionResponse
@@ -2706,8 +3036,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取工作空间信息</p>
+     * <p>Queries a workspace.</p>
      * 
      * @param request GetRegistryNamespaceRequest
      * @param headers map
@@ -2734,8 +3067,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取工作空间信息</p>
+     * <p>Queries a workspace.</p>
      * 
      * @param request GetRegistryNamespaceRequest
      * @return GetRegistryNamespaceResponse
@@ -2747,8 +3083,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询导出任务详情</p>
+     * <p>Queries the details of a resource export task.</p>
      * 
      * @param request GetResourceExportTaskRequest
      * @param headers map
@@ -2781,8 +3120,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询导出任务详情</p>
+     * <p>Queries the details of a resource export task.</p>
      * 
      * @param request GetResourceExportTaskRequest
      * @return GetResourceExportTaskResponse
@@ -2794,8 +3136,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * <b>summary</b> : 
-     * <p>获取资源类型信息</p>
+     * <p>Retrieves resource type information.</p>
      * 
      * @param request GetResourceTypeRequest
      * @param headers map
@@ -2836,8 +3181,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * <b>summary</b> : 
-     * <p>获取资源类型信息</p>
+     * <p>Retrieves resource type information.</p>
      * 
      * @param request GetResourceTypeRequest
      * @return GetResourceTypeResponse
@@ -2850,7 +3198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源栈</p>
+     * <p>Queries a stack.</p>
      * 
      * @param request GetStackRequest
      * @param headers map
@@ -2878,7 +3226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源栈</p>
+     * <p>Queries a stack.</p>
      * 
      * @param request GetStackRequest
      * @return GetStackResponse
@@ -2891,7 +3239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>部署详情接口</p>
+     * <p>Queries the list of deployments for a stack.</p>
      * 
      * @param request GetStackDeploymentsRequest
      * @param headers map
@@ -2945,7 +3293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>部署详情接口</p>
+     * <p>Queries the list of deployments for a stack.</p>
      * 
      * @param request GetStackDeploymentsRequest
      * @return GetStackDeploymentsResponse
@@ -2958,7 +3306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源栈部署结果</p>
+     * <p>Retrieves the trigger result of a stack.</p>
      * 
      * @param request GetStackExecutionResultRequest
      * @param headers map
@@ -2986,7 +3334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源栈部署结果</p>
+     * <p>Retrieves the trigger result of a stack.</p>
      * 
      * @param request GetStackExecutionResultRequest
      * @return GetStackExecutionResultResponse
@@ -2998,8 +3346,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询任务详情</p>
+     * <p>Retrieves the details of a task.</p>
      * 
      * @param request GetTaskRequest
      * @param headers map
@@ -3026,8 +3377,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询任务详情</p>
+     * <p>Retrieves the details of a task.</p>
      * 
      * @param request GetTaskRequest
      * @return GetTaskResponse
@@ -3039,8 +3393,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取状态文件检测结果</p>
+     * <p>Retrieves the detection result of a state file.</p>
      * 
      * @param request GetTerraformStateDetectionRequest
      * @param headers map
@@ -3067,8 +3424,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取状态文件检测结果</p>
+     * <p>Retrieves the detection result of a state file.</p>
      * 
      * @param request GetTerraformStateDetectionRequest
      * @return GetTerraformStateDetectionResponse
@@ -3081,7 +3441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关联到资源的偏差检测配置列表</p>
+     * <p>List drift detection associations</p>
      * 
      * @param request ListDetectConfigRelationsRequest
      * @param headers map
@@ -3123,7 +3483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关联到资源的偏差检测配置列表</p>
+     * <p>List drift detection associations</p>
      * 
      * @param request ListDetectConfigRelationsRequest
      * @return ListDetectConfigRelationsResponse
@@ -3136,7 +3496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>偏差检测配置列表</p>
+     * <p>List drift detection configurations</p>
      * 
      * @param request ListDetectConfigsRequest
      * @param headers map
@@ -3178,7 +3538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>偏差检测配置列表</p>
+     * <p>List drift detection configurations</p>
      * 
      * @param request ListDetectConfigsRequest
      * @return ListDetectConfigsResponse
@@ -3190,8 +3550,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModuleExamples operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
+     * <li>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <code>AND</code> relationship, and only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</li>
+     * <li>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</li>
+     * <li>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</li>
+     * <li>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</li>
+     * <li>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
+     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Explorer的egistryModule版本示例列表</p>
+     * <p>Retrieves the list of official Terraform Module examples.</p>
      * 
      * @param request ListExplorerRegistryModuleExamplesRequest
      * @param headers map
@@ -3248,8 +3624,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModuleExamples operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
+     * <li>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <code>AND</code> relationship, and only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</li>
+     * <li>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</li>
+     * <li>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</li>
+     * <li>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</li>
+     * <li>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
+     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Explorer的egistryModule版本示例列表</p>
+     * <p>Retrieves the list of official Terraform Module examples.</p>
      * 
      * @param request ListExplorerRegistryModuleExamplesRequest
      * @return ListExplorerRegistryModuleExamplesResponse
@@ -3261,8 +3653,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
+     * <li>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <code>AND</code> relationship. Only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
+     * <li>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</li>
+     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</li>
+     * <li>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
+     * The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Explorer的egistryModule版本列表</p>
+     * <p>Lists the version information of official Terraform modules provided by Alibaba Cloud.</p>
      * 
      * @param request ListExplorerRegistryModuleVersionsRequest
      * @param headers map
@@ -3315,8 +3722,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
+     * <li>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <code>AND</code> relationship. Only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
+     * <li>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</li>
+     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</li>
+     * <li>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
+     * The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Explorer的egistryModule版本列表</p>
+     * <p>Lists the version information of official Terraform modules provided by Alibaba Cloud.</p>
      * 
      * @param request ListExplorerRegistryModuleVersionsRequest
      * @return ListExplorerRegistryModuleVersionsResponse
@@ -3328,8 +3750,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries information about official Terraform modules provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If the <code>nextToken</code> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If you do not specify the <code>NextToken</code> parameter, the first page of data is returned by default.</li>
+     * <li>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <code>AND</code>. Only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
+     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
+     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Explorer的Registry Module列表</p>
+     * <p>Lists information about official Terraform modules provided by Alibaba Cloud.</p>
      * 
      * @param request ListExplorerRegistryModulesRequest
      * @param headers map
@@ -3378,8 +3813,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries information about official Terraform modules provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If the <code>nextToken</code> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If you do not specify the <code>NextToken</code> parameter, the first page of data is returned by default.</li>
+     * <li>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <code>AND</code>. Only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
+     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
+     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取Explorer的Registry Module列表</p>
+     * <p>Lists information about official Terraform modules provided by Alibaba Cloud.</p>
      * 
      * @param request ListExplorerRegistryModulesRequest
      * @return ListExplorerRegistryModulesResponse
@@ -3392,7 +3840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分组列表</p>
+     * <p>Queries the list of groups.</p>
      * 
      * @param tmpReq ListGroupRequest
      * @param headers map
@@ -3448,7 +3896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分组列表</p>
+     * <p>Queries the list of groups.</p>
      * 
      * @param request ListGroupRequest
      * @return ListGroupResponse
@@ -3460,8 +3908,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>作业列表</p>
+     * <p>Queries a list of jobs.</p>
      * 
      * @param request ListJobsRequest
      * @param headers map
@@ -3510,8 +3961,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>作业列表</p>
+     * <p>Queries a list of jobs.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -3523,8 +3977,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板版本列表</p>
+     * <p>Retrieves a list of template versions.</p>
      * 
      * @param request ListModuleVersionRequest
      * @param headers map
@@ -3565,8 +4022,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模板版本列表</p>
+     * <p>Retrieves a list of template versions.</p>
      * 
      * @param request ListModuleVersionRequest
      * @return ListModuleVersionResponse
@@ -3578,8 +4038,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>Use the pageNumber and pageSize parameters to control the number of returned results.</li>
+     * <li>Use the name parameter to perform a fuzzy match on template names.</li>
+     * <li>Use the source parameter to filter templates by source, such as OSS import or file upload.</li>
+     * <li>Use the status parameter to filter templates by status, such as Created or Published.</li>
+     * <li>Tag-based filtering requires a JSON-formatted string, for example, <code>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列举模板</p>
+     * <p>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</p>
      * 
      * @param tmpReq ListModulesRequest
      * @param headers map
@@ -3642,8 +4114,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation lists all Terraform templates for the current user. You can specify query parameters to implement pagination, fuzzy match template names, and filter templates by source or status. You can also filter templates by tag for more granular results.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>Use the pageNumber and pageSize parameters to control the number of returned results.</li>
+     * <li>Use the name parameter to perform a fuzzy match on template names.</li>
+     * <li>Use the source parameter to filter templates by source, such as OSS import or file upload.</li>
+     * <li>Use the status parameter to filter templates by status, such as Created or Published.</li>
+     * <li>Tag-based filtering requires a JSON-formatted string, for example, <code>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列举模板</p>
+     * <p>Retrieves a list of templates for the current user, with support for pagination and conditional filtering.</p>
      * 
      * @param request ListModulesRequest
      * @return ListModulesResponse
@@ -3656,7 +4140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关联到资源的参数集列表</p>
+     * <p>Lists the parameter sets associated with a resource.</p>
      * 
      * @param request ListParameterSetRelationRequest
      * @param headers map
@@ -3694,7 +4178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关联到资源的参数集列表</p>
+     * <p>Lists the parameter sets associated with a resource.</p>
      * 
      * @param request ListParameterSetRelationRequest
      * @return ListParameterSetRelationResponse
@@ -3706,8 +4190,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</li>
+     * <li>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>参数集列表</p>
+     * <p>Queries and retrieves a paginated list of parameter sets with keyword search support.</p>
      * 
      * @param request ListParameterSetsRequest
      * @param headers map
@@ -3752,8 +4245,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries all parameter sets in the system. You can filter results by keyword and paginate the results. Authentication information is required.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>The keyword parameter can be used to perform a fuzzy match on parameter sets by name or description.</li>
+     * <li>Pagination is controlled by pageNumber and pageSize. Results start from the first page by default. Set pageSize to a reasonable value to avoid performance issues.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>参数集列表</p>
+     * <p>Queries and retrieves a paginated list of parameter sets with keyword search support.</p>
      * 
      * @param request ListParameterSetsRequest
      * @return ListParameterSetsResponse
@@ -3765,8 +4267,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li><strong>Keyword search</strong>: Use the <code>keyword</code> parameter for fuzzy matching.</li>
+     * <li><strong>Paged query</strong>: Use <code>nextToken</code> for pagination and <code>maxResults</code> to specify the maximum number of results per page (default: 100, maximum: 200).</li>
+     * <li><strong>Terraform Provider version</strong>: The optional <code>terraformProviderVersion</code> parameter filters products associated with a specific Provider version.</li>
+     * <li><strong>Response structure</strong>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>所有产品列表</p>
+     * <p>Queries the list of all products.</p>
      * 
      * @param request ListProductsRequest
      * @param headers map
@@ -3823,8 +4334,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li><strong>Keyword search</strong>: Use the <code>keyword</code> parameter for fuzzy matching.</li>
+     * <li><strong>Paged query</strong>: Use <code>nextToken</code> for pagination and <code>maxResults</code> to specify the maximum number of results per page (default: 100, maximum: 200).</li>
+     * <li><strong>Terraform Provider version</strong>: The optional <code>terraformProviderVersion</code> parameter filters products associated with a specific Provider version.</li>
+     * <li><strong>Response structure</strong>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>所有产品列表</p>
+     * <p>Queries the list of all products.</p>
      * 
      * @param request ListProductsRequest
      * @return ListProductsResponse
@@ -3837,7 +4357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目列表</p>
+     * <p>Queries the list of projects.</p>
      * 
      * @param tmpReq ListProjectRequest
      * @param headers map
@@ -3889,7 +4409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询项目列表</p>
+     * <p>Queries the list of projects.</p>
      * 
      * @param request ListProjectRequest
      * @return ListProjectResponse
@@ -3901,8 +4421,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RegistryModule版本列表</p>
+     * <p>Queries the list of Registry template versions.</p>
      * 
      * @param request ListRegistryModuleVersionsRequest
      * @param headers map
@@ -3947,8 +4470,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RegistryModule版本列表</p>
+     * <p>Queries the list of Registry template versions.</p>
      * 
      * @param request ListRegistryModuleVersionsRequest
      * @return ListRegistryModuleVersionsResponse
@@ -3960,8 +4486,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RegistryModule列表</p>
+     * <p>Queries a list of registry modules.</p>
      * 
      * @param request ListRegistryModulesRequest
      * @param headers map
@@ -4014,8 +4543,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取RegistryModule列表</p>
+     * <p>Queries a list of registry modules.</p>
      * 
      * @param request ListRegistryModulesRequest
      * @return ListRegistryModulesResponse
@@ -4027,8 +4559,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取工作空间列表</p>
+     * <p>Queries the list of workspaces.</p>
      * 
      * @param request ListRegistryNamespacesRequest
      * @param headers map
@@ -4073,8 +4608,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取工作空间列表</p>
+     * <p>Queries the list of workspaces.</p>
      * 
      * @param request ListRegistryNamespacesRequest
      * @return ListRegistryNamespacesResponse
@@ -4086,8 +4624,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取任务版本列表</p>
+     * <p>Retrieves the list of versions for a resource export task.</p>
      * 
      * @param request ListResourceExportTaskVersionsRequest
      * @param headers map
@@ -4136,8 +4677,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取任务版本列表</p>
+     * <p>Retrieves the list of versions for a resource export task.</p>
      * 
      * @param request ListResourceExportTaskVersionsRequest
      * @return ListResourceExportTaskVersionsResponse
@@ -4149,8 +4693,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Rate limit per user: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询导出任务列表</p>
+     * <p>Queries the list of resource export tasks.</p>
      * 
      * @param request ListResourceExportTasksRequest
      * @param headers map
@@ -4195,8 +4742,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Rate limit per user: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询导出任务列表</p>
+     * <p>Queries the list of resource export tasks.</p>
      * 
      * @param request ListResourceExportTasksRequest
      * @return ListResourceExportTasksResponse
@@ -4208,8 +4758,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>资源类型列表</p>
+     * <p>Queries a list of resource types by filter conditions with pagination support.</p>
      * 
      * @param tmpReq ListResourceTypesRequest
      * @param headers map
@@ -4288,8 +4842,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform provider version, child class, status, and keyword. The results include detailed information about each resource, such as the product code, status, status effective version, child class, Terraform provider version, and resource type code. Paging is supported to facilitate handling large amounts of data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>资源类型列表</p>
+     * <p>Queries a list of resource types by filter conditions with pagination support.</p>
      * 
      * @param request ListResourceTypesRequest
      * @return ListResourceTypesResponse
@@ -4302,7 +4860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源列表</p>
+     * <p>Retrieves the resources of a node.</p>
      * 
      * @param request ListResourcesRequest
      * @param headers map
@@ -4352,7 +4910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源列表</p>
+     * <p>Retrieves the resources of a node.</p>
      * 
      * @param request ListResourcesRequest
      * @return ListResourcesResponse
@@ -4365,7 +4923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源栈配置列表</p>
+     * <p>Queries the list of stack configurations.</p>
      * 
      * @param request ListStackConfigsRequest
      * @param headers map
@@ -4411,7 +4969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源栈配置列表</p>
+     * <p>Queries the list of stack configurations.</p>
      * 
      * @param request ListStackConfigsRequest
      * @return ListStackConfigsResponse
@@ -4424,7 +4982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举资源栈</p>
+     * <p>Queries the list of stacks.</p>
      * 
      * @param request ListStacksRequest
      * @param headers map
@@ -4482,7 +5040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举资源栈</p>
+     * <p>Queries the list of stacks.</p>
      * 
      * @param request ListStacksRequest
      * @return ListStacksResponse
@@ -4494,8 +5052,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The maximum number of times that a single user can call this operation per second: 100.</p>
+     * 
      * <b>summary</b> : 
-     * <p>任务列表</p>
+     * <p>Queries a list of tasks.</p>
      * 
      * @param tmpReq ListTasksRequest
      * @param headers map
@@ -4570,8 +5131,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The maximum number of times that a single user can call this operation per second: 100.</p>
+     * 
      * <b>summary</b> : 
-     * <p>任务列表</p>
+     * <p>Queries a list of tasks.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -4584,7 +5148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>terraformProvider版本</p>
+     * <p>Retrieves the list of Terraform provider versions.</p>
      * 
      * @param request ListTerraformProviderVersionsRequest
      * @param headers map
@@ -4630,7 +5194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>terraformProvider版本</p>
+     * <p>Retrieves the list of Terraform provider versions.</p>
      * 
      * @param request ListTerraformProviderVersionsRequest
      * @return ListTerraformProviderVersionsResponse
@@ -4642,8 +5206,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+     * Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>支持状态文件的资源导入和移除</p>
+     * <p>Supports resource import and removal for state files.</p>
      * 
      * @param request ManageTerraformStateRequest
      * @param headers map
@@ -4696,8 +5264,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+     * Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>支持状态文件的资源导入和移除</p>
+     * <p>Supports resource import and removal for state files.</p>
      * 
      * @param request ManageTerraformStateRequest
      * @return ManageTerraformStateResponse
@@ -4709,8 +5281,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>控制作业</p>
+     * <p>After a job is created, you can perform the <strong>Cancel</strong> operation to stop the job while it is running.
+     * After a job reaches the pending confirmation state, you can perform the <strong>Abolish</strong> operation to stop the job, or perform the <strong>Execute</strong> operation to continue the job execution.</p>
      * 
      * @param request OperateJobRequest
      * @param headers map
@@ -4747,8 +5323,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>控制作业</p>
+     * <p>After a job is created, you can perform the <strong>Cancel</strong> operation to stop the job while it is running.
+     * After a job reaches the pending confirmation state, you can perform the <strong>Abolish</strong> operation to stop the job, or perform the <strong>Execute</strong> operation to continue the job execution.</p>
      * 
      * @param request OperateJobRequest
      * @return OperateJobResponse
@@ -4760,8 +5340,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布RegistryModule版本</p>
+     * <p>Publishes a Registry template version.</p>
      * 
      * @param request PublishRegistryModuleVersionRequest
      * @param headers map
@@ -4806,8 +5389,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>发布RegistryModule版本</p>
+     * <p>Publishes a Registry template version.</p>
      * 
      * @param request PublishRegistryModuleVersionRequest
      * @return PublishRegistryModuleVersionResponse
@@ -4819,8 +5405,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除共享账号信息</p>
+     * <p>Removes a shared account.</p>
      * 
      * @param tmpReq RemoveSharedAccountsRequest
      * @param headers map
@@ -4867,8 +5456,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除共享账号信息</p>
+     * <p>Removes a shared account.</p>
      * 
      * @param request RemoveSharedAccountsRequest
      * @return RemoveSharedAccountsResponse
@@ -4881,7 +5473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发资源栈部署</p>
+     * <p>Trigger Stack execution</p>
      * 
      * @param request TriggerStackExecutionRequest
      * @param headers map
@@ -4931,7 +5523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>触发资源栈部署</p>
+     * <p>Trigger Stack execution</p>
      * 
      * @param request TriggerStackExecutionRequest
      * @return TriggerStackExecutionResponse
@@ -4943,8 +5535,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li><code>detectConfigId</code> is a required parameter used to identify the specific detection configuration to update.  </li>
+     * <li>When <code>triggerType</code> is set to <code>Cron</code>, a valid <code>cronExpression</code> must be provided.  </li>
+     * <li>Each element in the <code>alarmConfigs</code> list must include an alert type (<code>type</code>) and an address (<code>address</code>).  </li>
+     * <li>If you do not want to change certain properties (such as <code>name</code>, <code>description</code>, etc.), you can omit these fields from the request body.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新偏差检测配置</p>
+     * <p>Updates the drift detection configuration information for the specified ID.</p>
      * 
      * @param request UpdateDetectConfigRequest
      * @param headers map
@@ -5001,8 +5602,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li><code>detectConfigId</code> is a required parameter used to identify the specific detection configuration to update.  </li>
+     * <li>When <code>triggerType</code> is set to <code>Cron</code>, a valid <code>cronExpression</code> must be provided.  </li>
+     * <li>Each element in the <code>alarmConfigs</code> list must include an alert type (<code>type</code>) and an address (<code>address</code>).  </li>
+     * <li>If you do not want to change certain properties (such as <code>name</code>, <code>description</code>, etc.), you can omit these fields from the request body.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新偏差检测配置</p>
+     * <p>Updates the drift detection configuration information for the specified ID.</p>
      * 
      * @param request UpdateDetectConfigRequest
      * @return UpdateDetectConfigResponse
@@ -5014,8 +5624,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an Explorer template.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改ExplorerModule</p>
+     * <p>Updates an Explorer template.</p>
      * 
      * @param request UpdateExplorerModuleAttributeRequest
      * @param headers map
@@ -5056,8 +5669,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an Explorer template.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改ExplorerModule</p>
+     * <p>Updates an Explorer template.</p>
      * 
      * @param request UpdateExplorerModuleAttributeRequest
      * @return UpdateExplorerModuleAttributeResponse
@@ -5070,7 +5686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改分组</p>
+     * <p>Modifies a group.</p>
      * 
      * @param request UpdateGroupRequest
      * @param headers map
@@ -5156,7 +5772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改分组</p>
+     * <p>Modifies a group.</p>
      * 
      * @param request UpdateGroupRequest
      * @return UpdateGroupResponse
@@ -5168,8 +5784,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</li>
+     * <li>The update operation does not affect the content or version information of the template.</li>
+     * <li>To enable or disable deletion protection, use the deletionProtection parameter.</li>
+     * <li>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Update Module</p>
+     * <p>Updates the name, description, tags, and other information of a specified template.</p>
      * 
      * @param request UpdateModuleAttributeRequest
      * @param headers map
@@ -5230,8 +5855,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</li>
+     * <li>The update operation does not affect the content or version information of the template.</li>
+     * <li>To enable or disable deletion protection, use the deletionProtection parameter.</li>
+     * <li>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Update Module</p>
+     * <p>Updates the name, description, tags, and other information of a specified template.</p>
      * 
      * @param request UpdateModuleAttributeRequest
      * @return UpdateModuleAttributeResponse
@@ -5243,8 +5877,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</li>
+     * <li>If the request includes the parameters field, the parameter list in the parameter set is updated.</li>
+     * <li>The clientToken field can be used to ensure the idempotence of the request.</li>
+     * <li>The update operation requires a valid parameterSetId as a path parameter.</li>
+     * <li>The request must include authentication information to pass identity verification.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新参数集</p>
+     * <p>Updates the attributes of a specified parameter set, such as the name and description.</p>
      * 
      * @param request UpdateParameterSetAttributeRequest
      * @param headers map
@@ -5285,8 +5929,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</li>
+     * <li>If the request includes the parameters field, the parameter list in the parameter set is updated.</li>
+     * <li>The clientToken field can be used to ensure the idempotence of the request.</li>
+     * <li>The update operation requires a valid parameterSetId as a path parameter.</li>
+     * <li>The request must include authentication information to pass identity verification.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新参数集</p>
+     * <p>Updates the attributes of a specified parameter set, such as the name and description.</p>
      * 
      * @param request UpdateParameterSetAttributeRequest
      * @return UpdateParameterSetAttributeResponse
@@ -5299,7 +5953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改项目</p>
+     * <p>Updates project information.</p>
      * 
      * @param request UpdateProjectRequest
      * @param headers map
@@ -5341,7 +5995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改项目</p>
+     * <p>Updates project information.</p>
      * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse
@@ -5353,8 +6007,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改RegistryModule</p>
+     * <p>Updates a Registry template.</p>
      * 
      * @param request UpdateRegistryModuleAttributeRequest
      * @param headers map
@@ -5395,8 +6052,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改RegistryModule</p>
+     * <p>Updates a Registry template.</p>
      * 
      * @param request UpdateRegistryModuleAttributeRequest
      * @return UpdateRegistryModuleAttributeResponse
@@ -5408,8 +6068,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改工作空间</p>
+     * <p>Modifies a workspace.</p>
      * 
      * @param request UpdateRegistryNamespaceAttributeRequest
      * @param headers map
@@ -5450,8 +6113,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改工作空间</p>
+     * <p>Modifies a workspace.</p>
      * 
      * @param request UpdateRegistryNamespaceAttributeRequest
      * @return UpdateRegistryNamespaceAttributeResponse
@@ -5463,8 +6129,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新导出任务</p>
+     * <p>Modifies a resource export task.</p>
      * 
      * @param request UpdateResourceExportTaskAttributeRequest
      * @param headers map
@@ -5533,8 +6202,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新导出任务</p>
+     * <p>Modifies a resource export task.</p>
      * 
      * @param request UpdateResourceExportTaskAttributeRequest
      * @return UpdateResourceExportTaskAttributeResponse
@@ -5547,7 +6219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源栈</p>
+     * <p>Modifies a stack. When the configuration changes, a stack deployment is triggered.</p>
      * 
      * @param request UpdateStackRequest
      * @param headers map
@@ -5601,7 +6273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源栈</p>
+     * <p>Modifies a stack. When the configuration changes, a stack deployment is triggered.</p>
      * 
      * @param request UpdateStackRequest
      * @return UpdateStackResponse
@@ -5613,8 +6285,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改任务</p>
+     * <p>Updates the properties of a task.</p>
      * 
      * @param request UpdateTaskAttributeRequest
      * @param headers map
@@ -5668,8 +6343,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("skipPropertyValidation", request.skipPropertyValidation);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skipRegionValidation)) {
+            body.put("skipRegionValidation", request.skipRegionValidation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.terraformProviderVersion)) {
+            body.put("terraformProviderVersion", request.terraformProviderVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.terraformVersion)) {
@@ -5699,8 +6382,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改任务</p>
+     * <p>Updates the properties of a task.</p>
      * 
      * @param request UpdateTaskAttributeRequest
      * @return UpdateTaskAttributeResponse
@@ -5713,7 +6399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模版上传</p>
+     * <p>Uploads a template.</p>
      * 
      * @param request UploadModuleRequest
      * @param headers map
@@ -5765,7 +6451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模版上传</p>
+     * <p>Uploads a template.</p>
      * 
      * @param request UploadModuleRequest
      * @return UploadModuleResponse
@@ -5865,8 +6551,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs a dry run on the content of a Terraform configuration file.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模版预检</p>
+     * <p>Performs a dry run on a template.</p>
      * 
      * @param request ValidateModuleRequest
      * @param headers map
@@ -5915,8 +6604,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs a dry run on the content of a Terraform configuration file.</p>
+     * 
      * <b>summary</b> : 
-     * <p>模版预检</p>
+     * <p>Performs a dry run on a template.</p>
      * 
      * @param request ValidateModuleRequest
      * @return ValidateModuleResponse

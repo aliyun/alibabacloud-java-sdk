@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListParameterSetsRequest extends TeaModel {
     /**
+     * <p>The keyword for exact match search. The search is case-insensitive.</p>
+     * 
      * <strong>example:</strong>
-     * <p>key</p>
+     * <p>vpc</p>
      */
     @NameInMap("keyword")
     public String keyword;
@@ -19,6 +21,8 @@ public class ListParameterSetsRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +30,8 @@ public class ListParameterSetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

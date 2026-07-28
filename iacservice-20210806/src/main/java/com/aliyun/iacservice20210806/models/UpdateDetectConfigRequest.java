@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateDetectConfigRequest extends TeaModel {
+    /**
+     * <p><strong>Alert address list</strong></p>
+     */
     @NameInMap("alarmConfigs")
     public java.util.List<UpdateDetectConfigRequestAlarmConfigs> alarmConfigs;
 
     /**
+     * <p>Idempotent token, format: [0-9a-zA-Z-]{1,64}. We recommend using a UUID.</p>
+     * 
      * <strong>example:</strong>
      * <p>a65451293e64979ba7a4b573950217fe</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDetectConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p><strong>Cron expression (UTC+8)</strong>. Required when the trigger type is Cron.</p>
+     * 
      * <strong>example:</strong>
      * <p>0 0 0 ? * 1</p>
      */
@@ -22,6 +29,8 @@ public class UpdateDetectConfigRequest extends TeaModel {
     public String cronExpression;
 
     /**
+     * <p><strong>Description</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>this is description</p>
      */
@@ -29,6 +38,8 @@ public class UpdateDetectConfigRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Drift detection name</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -36,6 +47,8 @@ public class UpdateDetectConfigRequest extends TeaModel {
     public String detectConfigName;
 
     /**
+     * <p><strong>Whether the detection feature is enabled. The default value is true.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,12 @@ public class UpdateDetectConfigRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p><strong>Trigger type</strong>  </p>
+     * <ul>
+     * <li>Manual: Execute manually  </li>
+     * <li>Cron: Trigger periodically</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Manual</p>
      */
@@ -112,6 +131,8 @@ public class UpdateDetectConfigRequest extends TeaModel {
 
     public static class UpdateDetectConfigRequestAlarmConfigs extends TeaModel {
         /**
+         * <p>Alert address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:example@example.com">example@example.com</a></p>
          */
@@ -119,6 +140,8 @@ public class UpdateDetectConfigRequest extends TeaModel {
         public String address;
 
         /**
+         * <p>Alerting method.<br>Currently, only <code>cms</code> is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>cms</p>
          */

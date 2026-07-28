@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDetectConfigResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>valueA</p>
      */

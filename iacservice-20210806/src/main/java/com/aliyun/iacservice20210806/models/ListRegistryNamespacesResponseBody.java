@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRegistryNamespacesResponseBody extends TeaModel {
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>53</p>
      */
@@ -12,23 +14,32 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
     public Long count;
 
     /**
+     * <p>The maximum number of records returned at a time.</p>
+     * 
      * <strong>example:</strong>
      * <p>24</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The list of workspaces.</p>
+     */
     @NameInMap("namespaces")
     public java.util.List<ListRegistryNamespacesResponseBodyNamespaces> namespaces;
 
     /**
+     * <p>The token for the next page. A value of null indicates that no more pages are available.</p>
+     * 
      * <strong>example:</strong>
-     * <p>IPTL1Zpr1andEF4lQ3XAYFTgtpI04QQpc5dyKpESXBc=</p>
+     * <p>IPTL1XAYFTgtpI04QQpc5dyKpESXBc=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FFB0033-A016-5A9D-9283-C123AAA7F71D</p>
      */
@@ -82,6 +93,8 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
 
     public static class ListRegistryNamespacesResponseBodyNamespaces extends TeaModel {
         /**
+         * <p>The permissions.</p>
+         * 
          * <strong>example:</strong>
          * <p>private</p>
          */
@@ -89,6 +102,8 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         public String acl;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-15T02:16:58Z</p>
          */
@@ -96,13 +111,17 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The workspace description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>dd</p>
+         * <p>description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The administrator name.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -110,6 +129,8 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         public String maintainer;
 
         /**
+         * <p>The number of Registry templates in the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>21</p>
          */
@@ -117,16 +138,23 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         public Integer modules;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>test_namespace</p>
+         * <p>NamespaceName</p>
          */
         @NameInMap("namespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The list of shared accounts.</p>
+         */
         @NameInMap("sharedAccounts")
         public java.util.List<Long> sharedAccounts;
 
         /**
+         * <p>The workspace type.</p>
+         * 
          * <strong>example:</strong>
          * <p>shared</p>
          */

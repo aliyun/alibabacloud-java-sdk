@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The resource information.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<ListResourcesResponseBodyResources> resources;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListResourcesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListResourcesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>67585D9B-EFA5-5E51-BAB1-8FF07DA1B36F</p>
      */
@@ -29,6 +38,8 @@ public class ListResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -82,6 +93,8 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyResourcesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -89,6 +102,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -120,6 +135,8 @@ public class ListResourcesResponseBody extends TeaModel {
 
     public static class ListResourcesResponseBodyResources extends TeaModel {
         /**
+         * <p>The Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>365845</p>
          */
@@ -127,16 +144,23 @@ public class ListResourcesResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-03T02:22:59Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The dependent resources.</p>
+         */
         @NameInMap("dependsOnResourceIds")
         public java.util.List<String> dependsOnResourceIds;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ECS</p>
          */
@@ -144,6 +168,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The resource properties.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -151,6 +177,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public java.util.Map<String, ?> properties;
 
         /**
+         * <p>The property variables.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -158,6 +186,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public java.util.Map<String, ?> propertyVariables;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -165,6 +195,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource ARN.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:vpc:cn-hangzhou:12345:test</p>
          */
@@ -172,6 +204,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public String resourceArn;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aekzyqyghofqbxy</p>
          */
@@ -179,6 +213,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-efegsewrttfd</p>
          */
@@ -186,16 +222,26 @@ public class ListResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("resourceName")
         public String resourceName;
 
+        /**
+         * <p>The URL of the resources page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https:://ecs.aliyncs.com</p>
+         */
         @NameInMap("resourcePageUrl")
         public String resourcePageUrl;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Task</p>
          */
@@ -203,12 +249,17 @@ public class ListResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListResourcesResponseBodyResourcesTags> tags;
 
@@ -231,6 +282,8 @@ public class ListResourcesResponseBody extends TeaModel {
         public String terraformCode;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
          */

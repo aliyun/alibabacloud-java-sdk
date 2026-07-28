@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class JobsStatusDetailValue extends TeaModel {
     /**
+     * <p>备注</p>
+     * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>comment</p>
      */
     @NameInMap("comment")
     public String comment;
 
     /**
+     * <p>作业执行结果</p>
+     * 
      * <strong>example:</strong>
-     * <p>&quot;&quot;</p>
+     * <p>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.</p>
      */
     @NameInMap("jobResult")
     public String jobResult;
 
     /**
+     * <p>到达状态时间</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-06-13 17:11:34</p>
      */

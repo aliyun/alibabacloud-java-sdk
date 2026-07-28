@@ -4,10 +4,18 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListModulesShrinkRequest extends TeaModel {
+    /**
+     * <p>The group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-kw1a50tj8rk7cki2q8bbat</p>
+     */
     @NameInMap("groupId")
     public String groupId;
 
     /**
+     * <p>The search keyword. Fuzzy match is supported for template names.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -18,6 +26,8 @@ public class ListModulesShrinkRequest extends TeaModel {
     public String moduleName;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,15 +35,26 @@ public class ListModulesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-al1c58tb2lu9oej36kclvf</p>
+     */
     @NameInMap("projectId")
     public String projectId;
 
+    /**
+     * <p>The list of template tags.</p>
+     */
     @NameInMap("tag")
     public String tagShrink;
 

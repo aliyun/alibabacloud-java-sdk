@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetResourceExportTaskResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FC49AA8C-0A19-5556-8929-E7447F18D529</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("task")
     public GetResourceExportTaskResponseBodyTask task;
 
@@ -37,6 +42,12 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
 
     public static class GetResourceExportTaskResponseBodyTaskExportToModule extends TeaModel {
         /**
+         * <p>The module type in which the exported template is saved. Valid values:</p>
+         * <ul>
+         * <li>OSS: OSS</li>
+         * <li>Registry: Terraform Registry.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -44,13 +55,23 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The path where the template content is saved.</p>
+         * <ul>
+         * <li><p>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
+         * </li>
+         * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>alibaba/security-group/alicloud</p>
+         * <p>oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip</p>
          */
         @NameInMap("sourcePath")
         public String sourcePath;
 
         /**
+         * <p>The path of the state file that corresponds to the module.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -90,12 +111,25 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
 
     public static class GetResourceExportTaskResponseBodyTaskIncludeRules extends TeaModel {
         /**
+         * <p>The name of the include rule for resource export. Valid values:</p>
+         * <ul>
+         * <li>ResourceType: required. The resource type. Example: ALIYUN::VPC::VPC.</li>
+         * <li>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: ap-southeast-1.</li>
+         * <li>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
+         * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
+         * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: ap-southeast-1a.</li>
+         * </ul>
+         * <p>By default, the relationship between multiple filter conditions is AND. A resource is considered matched only if all filter conditions are met.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ZoneId</p>
+         * <p>RegionId</p>
          */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The values of the include rules for resource export.</p>
+         */
         @NameInMap("values")
         public java.util.List<String> values;
 
@@ -124,6 +158,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
 
     public static class GetResourceExportTaskResponseBodyTaskModules extends TeaModel {
         /**
+         * <p>The module type where the exported template is stored. Two formats are supported: CloudRegistry and OSS. If the ExportToModule parameter is specified, both formats are returned. Otherwise, only CloudRegistry is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -131,6 +167,14 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The download URL of the module where the exported template is stored.</p>
+         * <ul>
+         * <li><p>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
+         * </li>
+         * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip</p>
          */
@@ -138,6 +182,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
+         * <p>The version of the module where the exported template is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>v3</p>
          */
@@ -176,12 +222,17 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
     }
 
     public static class GetResourceExportTaskResponseBodyTaskVariables extends TeaModel {
+        /**
+         * <p>The list of properties of the Terraform resource that corresponds to the resource type.</p>
+         */
         @NameInMap("properties")
         public java.util.List<String> properties;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ALIYUN::Bastionhost::Instance</p>
+         * <p>ALIYUN::VPC::VSwitch</p>
          */
         @NameInMap("resourceType")
         public String resourceType;
@@ -211,6 +262,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
 
     public static class GetResourceExportTaskResponseBodyTask extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-06-15T02:44:37Z</p>
          */
@@ -218,13 +271,17 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The task description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>demo</p>
+         * <p>this is description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The execution duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>4533</p>
          */
@@ -232,16 +289,23 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public Long elapsedTime;
 
         /**
+         * <p>The ID of the resource export task.</p>
+         * 
          * <strong>example:</strong>
          * <p>ex-al1111jlfh53i6mo4o94jj</p>
          */
         @NameInMap("exportTaskId")
         public String exportTaskId;
 
+        /**
+         * <p>Saves the exported template as a module. If this parameter is not set, the template is automatically saved in the registry.</p>
+         */
         @NameInMap("exportToModule")
         public GetResourceExportTaskResponseBodyTaskExportToModule exportToModule;
 
         /**
+         * <p>The resource export version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */
@@ -249,19 +313,29 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String exportVersion;
 
         /**
+         * <p>The failure reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>Reason</p>
          */
         @NameInMap("failedReason")
         public String failedReason;
 
+        /**
+         * <p>The values of the include rules for resource export.</p>
+         */
         @NameInMap("includeRules")
         public java.util.List<GetResourceExportTaskResponseBodyTaskIncludeRules> includeRules;
 
+        /**
+         * <p>The module configuration for the exported resources.</p>
+         */
         @NameInMap("modules")
         public java.util.List<GetResourceExportTaskResponseBodyTaskModules> modules;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc_all</p>
          */
@@ -269,6 +343,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The RAM role.</p>
+         * 
          * <strong>example:</strong>
          * <p>role</p>
          */
@@ -276,6 +352,12 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String ramRole;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Available: the task is available and no job is running.</li>
+         * <li>Running: a job is currently running.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -283,6 +365,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task output path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -290,6 +374,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String taskOutputPath;
 
         /**
+         * <p>The Terraform context.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -297,6 +383,8 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public java.util.Map<String, ?> terraformContext;
 
         /**
+         * <p>The Terraform provider version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.246.0</p>
          */
@@ -304,19 +392,31 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public String terraformProviderVersion;
 
         /**
+         * <p>The Terraform version.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1.2.6</p>
+         * <p>1.5.7</p>
          */
         @NameInMap("terraformVersion")
         public String terraformVersion;
 
         /**
+         * <p>The trigger strategy. Valid values:</p>
+         * <ul>
+         * <li>Auto: triggered automatically when rules are modified or the trigger strategy is changed to Auto.</li>
+         * <li>Manual: triggered manually.</li>
+         * </ul>
+         * <p>Default value: Manual.</p>
+         * 
          * <strong>example:</strong>
          * <p>Manual</p>
          */
         @NameInMap("triggerStrategy")
         public String triggerStrategy;
 
+        /**
+         * <p>The list of variables. Parameters in the exported resources are set as variables.</p>
+         */
         @NameInMap("variables")
         public java.util.List<GetResourceExportTaskResponseBodyTaskVariables> variables;
 

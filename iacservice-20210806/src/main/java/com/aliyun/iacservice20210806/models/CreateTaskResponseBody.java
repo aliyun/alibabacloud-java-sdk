@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTaskResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CD478792-6952-5A1C-9F57-78932BF0FAC6</p>
      */
@@ -12,6 +14,8 @@ public class CreateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-433aead756057fffeaba4828f5195</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetRegistryModuleVersionResponseBody extends TeaModel {
+    /**
+     * <p>The version information.</p>
+     */
     @NameInMap("moduleVersion")
     public GetRegistryModuleVersionResponseBodyModuleVersion moduleVersion;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>62DF26B0-53F0-5747-9D7F-FEF444FB4E24</p>
      */
@@ -36,30 +41,87 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
     }
 
     public static class GetRegistryModuleVersionResponseBodyModuleVersion extends TeaModel {
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-08T02:22:16Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The product page URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("detailUrl")
         public String detailUrl;
 
+        /**
+         * <p>The number of downloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("downloads")
         public String downloads;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-cluster</p>
+         */
         @NameInMap("moduleName")
         public String moduleName;
 
+        /**
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibabacloud</p>
+         */
         @NameInMap("namespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The provider type. Valid values:</p>
+         * <ul>
+         * <li>alicloud: Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud</p>
+         */
         @NameInMap("provider")
         public String provider;
 
+        /**
+         * <p>The template source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaceName/ModuleName</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The template source URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("sourceUrl")
         public String sourceUrl;
 
+        /**
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("version")
         public String version;
 

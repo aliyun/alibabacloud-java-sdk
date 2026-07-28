@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ValidateModuleResponseBody extends TeaModel {
     /**
+     * <p>The validation message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -12,6 +14,8 @@ public class ValidateModuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The validation ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BF72A6FB-B07</p>
      */
@@ -19,6 +23,8 @@ public class ValidateModuleResponseBody extends TeaModel {
     public String moduleValidationId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BF72A6FB-B071-5F2E-A036-9D62545B962C</p>
      */
@@ -26,6 +32,14 @@ public class ValidateModuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The validation result. Valid values:</p>
+     * <ul>
+     * <li>Initializing: initialization in progress.</li>
+     * <li>Validating: validation in progress.</li>
+     * <li>Validated: validation succeeded.</li>
+     * <li>Errored: validation failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Validating</p>
      */

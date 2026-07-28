@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishRegistryModuleVersionRequest extends TeaModel {
     /**
+     * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,24 +15,27 @@ public class PublishRegistryModuleVersionRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss-bucket</p>
+     * <p>ModuleName</p>
      */
     @NameInMap("moduleName")
     public String moduleName;
 
     /**
+     * <p>The workspace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>terraform-alicloud-modules</p>
+     * <p>NamespaceName</p>
      */
     @NameInMap("namespaceName")
     public String namespaceName;
 
     /**
+     * <p>The version number. The value must conform to the <a href="http://semver.org/">semantic version</a> specification, such as 1.0.1. The initial version is 1.0.0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateRegistryNamespaceAttributeResponseBody extends TeaModel {
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>NamespaceName</p>
      */
     @NameInMap("namespaceName")
     public String namespaceName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CA5C5B39-D1DC-5309-8E97-B9A91DA21094</p>
      */

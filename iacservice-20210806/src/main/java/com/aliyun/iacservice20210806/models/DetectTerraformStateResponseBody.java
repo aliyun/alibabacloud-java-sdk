@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DetectTerraformStateResponseBody extends TeaModel {
     /**
+     * <p>The ID of the detection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-dcsdxxxxxx</p>
      */

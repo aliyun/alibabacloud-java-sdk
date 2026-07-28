@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListStacksResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListStacksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>LC4NJL3Ru2bIiRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
      */
@@ -19,16 +23,23 @@ public class ListStacksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3E49127A-BB65-5CCD-AB93-0EC0A43E5446</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of stacks.</p>
+     */
     @NameInMap("stacks")
     public java.util.List<ListStacksResponseBodyStacks> stacks;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,8 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static class ListStacksResponseBodyStacks extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-07T02:21:28Z</p>
          */
@@ -89,6 +102,8 @@ public class ListStacksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the stack.</p>
+         * 
          * <strong>example:</strong>
          * <p>description of stack</p>
          */
@@ -96,6 +111,8 @@ public class ListStacksResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The stack name.</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-test</p>
          */
@@ -103,6 +120,12 @@ public class ListStacksResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The creation source. Valid values:</p>
+         * <ul>
+         * <li>OSS: a template stored in Object Storage Service (OSS).</li>
+         * <li>IAC_SERVICE_MODULE: a template created in the automation service console.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -110,6 +133,12 @@ public class ListStacksResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The path of the configuration source. The value cannot exceed 1000 characters.</p>
+         * <ul>
+         * <li>If the source is OSS, the value is in the format oss::<file link> and must be a zip file, such as oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+         * <li>If the source is IAC_SERVICE_MODULE, the value is a template ID, such as mod-xxxxx.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
          */
@@ -117,6 +146,8 @@ public class ListStacksResponseBody extends TeaModel {
         public String sourcePath;
 
         /**
+         * <p>The description of the stack.</p>
+         * 
          * <strong>example:</strong>
          * <p>description of stack</p>
          */
@@ -124,6 +155,8 @@ public class ListStacksResponseBody extends TeaModel {
         public String stackDescription;
 
         /**
+         * <p>The stack ID, which is the unique identifier generated after the stack is created.</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-as1d4vld898ppnqxxxxxx</p>
          */
@@ -131,6 +164,8 @@ public class ListStacksResponseBody extends TeaModel {
         public String stackId;
 
         /**
+         * <p>The stack name (deprecated). Use name instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>stack-test</p>
          */
@@ -138,6 +173,52 @@ public class ListStacksResponseBody extends TeaModel {
         public String stackName;
 
         /**
+         * <p>The stack status.</p>
+         * <table>
+         * <thead>
+         * <tr>
+         * <th>Name</th>
+         * <th>Description</th>
+         * </tr>
+         * </thead>
+         * <tbody><tr>
+         * <td>Creating</td>
+         * <td>Being created</td>
+         * </tr>
+         * <tr>
+         * <td>Created</td>
+         * <td>Creation complete</td>
+         * </tr>
+         * <tr>
+         * <td>Waiting</td>
+         * <td>Waiting for deployment</td>
+         * </tr>
+         * <tr>
+         * <td>Deploying</td>
+         * <td>Being deployed</td>
+         * </tr>
+         * <tr>
+         * <td>Deployed</td>
+         * <td>Deployment complete</td>
+         * </tr>
+         * <tr>
+         * <td>Errored</td>
+         * <td>Deployment failed</td>
+         * </tr>
+         * <tr>
+         * <td>Deleting</td>
+         * <td>Being deleted</td>
+         * </tr>
+         * <tr>
+         * <td>Deleted</td>
+         * <td>Deleted</td>
+         * </tr>
+         * <tr>
+         * <td>DeleteFailed</td>
+         * <td>Deletion failed</td>
+         * </tr>
+         * </tbody></table>
+         * 
          * <strong>example:</strong>
          * <p>Deployed</p>
          */

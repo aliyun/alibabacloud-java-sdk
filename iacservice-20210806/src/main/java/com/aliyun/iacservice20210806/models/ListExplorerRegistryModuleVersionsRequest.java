@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     /**
+     * <p>The search keyword. Fuzzy match is supported based on the module name.</p>
+     * 
      * <strong>example:</strong>
      * <p>key</p>
      */
@@ -12,6 +14,10 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 0 to 200.</p>
+     * <p>Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +25,8 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The name of the module.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */
@@ -26,6 +34,8 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public String moduleName;
 
     /**
+     * <p>The version of the module.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.11.0</p>
      */
@@ -33,6 +43,8 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public String moduleVersion;
 
     /**
+     * <p>The name of the workspace to which the module belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>alibaba</p>
      */
@@ -40,6 +52,9 @@ public class ListExplorerRegistryModuleVersionsRequest extends TeaModel {
     public String namespaceName;
 
     /**
+     * <p>The pagination token for the next page of results.</p>
+     * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+     * 
      * <strong>example:</strong>
      * <p>lJTuhMWkNH89zZWyYM9GjpAbgRb+bPPPwN0Q3pclzKI=</p>
      */
