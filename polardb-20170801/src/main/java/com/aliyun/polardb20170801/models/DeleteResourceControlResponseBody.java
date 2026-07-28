@@ -1,0 +1,29 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.polardb20170801.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteResourceControlResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static DeleteResourceControlResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteResourceControlResponseBody self = new DeleteResourceControlResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteResourceControlResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}
