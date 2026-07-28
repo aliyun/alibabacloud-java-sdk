@@ -44,7 +44,7 @@ public class JobSettings extends TeaModel {
     public DataJuicerConfig dataJuicerConfig;
 
     /**
-     * <p>Specifies whether to skip the inventory check. Valid values:</p>
+     * <p>Specifies whether to skip inventory check. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -66,7 +66,7 @@ public class JobSettings extends TeaModel {
     public String driver;
 
     /**
-     * <p>The CPU affinity setting. This setting takes effect only when general-purpose subscription computing resources are used.</p>
+     * <p>The CPU affinity setting. This setting is effective only when using general computing subscription resources.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -91,7 +91,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableErrorMonitoringInAIMaster;
 
     /**
-     * <p>Specifies whether OSS append writes are allowed. Valid values:</p>
+     * <p>Specifies whether to allow OSS append write. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -104,7 +104,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableOssAppend;
 
     /**
-     * <p>Specifies whether the job is allowed to use RDMA. Valid values:</p>
+     * <p>Specifies whether to allow the job to use RDMA. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -130,7 +130,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableSanityCheck;
 
     /**
-     * <p>Specifies whether the job is allowed to use tidal resources. Valid values:</p>
+     * <p>Specifies whether to allow the job to use tidal resources. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -143,7 +143,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableTideResource;
 
     /**
-     * <p>The configuration parameters for fault tolerance monitoring after it is enabled. For example, you can specify whether to enable log hang-based detection.</p>
+     * <p>The configuration parameters for fault tolerance monitoring after it is enabled, such as whether to enable log hang-based detection.</p>
      * 
      * <strong>example:</strong>
      * <p>--enable-log-hang-detection true</p>
@@ -152,7 +152,7 @@ public class JobSettings extends TeaModel {
     public String errorMonitoringArgs;
 
     /**
-     * <p>The duration (in minutes) for which the job is retained after it ends.</p>
+     * <p>The retention duration after job completion, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -161,7 +161,7 @@ public class JobSettings extends TeaModel {
     public Integer jobReservedMinutes;
 
     /**
-     * <p>The retention policy after the job ends.</p>
+     * <p>The retention policy after job completion.</p>
      * 
      * <strong>example:</strong>
      * <p>Always</p>
@@ -170,13 +170,13 @@ public class JobSettings extends TeaModel {
     public String jobReservedPolicy;
 
     /**
-     * <p>The output model configuration. This parameter currently takes effect only in federated training scenarios.</p>
+     * <p>The output model configuration. This parameter is currently effective only in federated training scenarios.</p>
      */
     @NameInMap("ModelConfig")
     public ModelConfig modelConfig;
 
     /**
-     * <p>The oversold resource usage mode for the job (not accepted, acceptable, or only accepted).</p>
+     * <p>The oversold resource usage mode for the job (reject/accept/only accept).</p>
      * 
      * <strong>example:</strong>
      * <p>AcceptQuotaOverSold</p>

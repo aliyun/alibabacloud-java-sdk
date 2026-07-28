@@ -75,6 +75,13 @@ public class PodItem extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sysom</p>
+     */
+    @NameInMap("supportedProfilingTypes")
+    public String supportedProfilingTypes;
+
     public static PodItem build(java.util.Map<String, ?> map) throws Exception {
         PodItem self = new PodItem();
         return TeaModel.build(map, self);
@@ -182,6 +189,14 @@ public class PodItem extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public PodItem setSupportedProfilingTypes(String supportedProfilingTypes) {
+        this.supportedProfilingTypes = supportedProfilingTypes;
+        return this;
+    }
+    public String getSupportedProfilingTypes() {
+        return this.supportedProfilingTypes;
     }
 
 }

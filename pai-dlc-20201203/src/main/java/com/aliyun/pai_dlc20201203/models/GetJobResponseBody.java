@@ -7,8 +7,8 @@ public class GetJobResponseBody extends TeaModel {
     /**
      * <p>The visibility of the job. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: Visible to all members in the workspace.</li>
-     * <li>PRIVATE (default): Visible only to you and administrators in the workspace.</li>
+     * <li>PUBLIC: Visible to all users in this workspace.</li>
+     * <li>PRIVATE (default): Visible only to you and administrators in this workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.List<JobReplicaStatus> jobReplicaStatuses;
 
     /**
-     * <p>The node configurations in the job. For more information, see the <strong>JobSpecs</strong> parameter in the CreateJob API.</p>
+     * <p>The node configurations in the job. Refer to <strong>JobSpecs</strong> in the CreateJob API.</p>
      */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
@@ -183,7 +183,7 @@ public class GetJobResponseBody extends TeaModel {
     public String jobType;
 
     /**
-     * <p>All nodes running in the job.</p>
+     * <p>All pods running in the job.</p>
      */
     @NameInMap("Pods")
     public java.util.List<GetJobResponseBodyPods> pods;
@@ -198,7 +198,7 @@ public class GetJobResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The status detail code, which categorizes the sub-status under the current status (Status).</p>
+     * <p>The status detail code, which is a classification of the sub-status under the current status (Status).</p>
      * 
      * <strong>example:</strong>
      * <p>JobStoppedByUser</p>
@@ -331,7 +331,7 @@ public class GetJobResponseBody extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The folder that contains the third-party library (requirements.txt) file.</p>
+     * <p>The folder where the third-party library (requirements.txt) file is located.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/code/</p>
@@ -386,6 +386,13 @@ public class GetJobResponseBody extends TeaModel {
      */
     @NameInMap("WorkspaceName")
     public String workspaceName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>sysom</p>
+     */
+    @NameInMap("supportedProfilingTypes")
+    public String supportedProfilingTypes;
 
     public static GetJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJobResponseBody self = new GetJobResponseBody();
@@ -768,6 +775,14 @@ public class GetJobResponseBody extends TeaModel {
         return this.workspaceName;
     }
 
+    public GetJobResponseBody setSupportedProfilingTypes(String supportedProfilingTypes) {
+        this.supportedProfilingTypes = supportedProfilingTypes;
+        return this;
+    }
+    public String getSupportedProfilingTypes() {
+        return this.supportedProfilingTypes;
+    }
+
     public static class GetJobResponseBodyCodeSource extends TeaModel {
         /**
          * <p>The code branch.</p>
@@ -1057,6 +1072,13 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sysom</p>
+         */
+        @NameInMap("supportedProfilingTypes")
+        public String supportedProfilingTypes;
+
         public static GetJobResponseBodyPodsHistoryPods build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyPodsHistoryPods self = new GetJobResponseBodyPodsHistoryPods();
             return TeaModel.build(map, self);
@@ -1166,6 +1188,14 @@ public class GetJobResponseBody extends TeaModel {
             return this.type;
         }
 
+        public GetJobResponseBodyPodsHistoryPods setSupportedProfilingTypes(String supportedProfilingTypes) {
+            this.supportedProfilingTypes = supportedProfilingTypes;
+            return this;
+        }
+        public String getSupportedProfilingTypes() {
+            return this.supportedProfilingTypes;
+        }
+
     }
 
     public static class GetJobResponseBodyPods extends TeaModel {
@@ -1185,7 +1215,7 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The node finish time (UTC).</p>
+         * <p>The pod finish time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T15:36:05Z</p>
@@ -1194,7 +1224,7 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtFinishTime;
 
         /**
-         * <p>The node start time (UTC).</p>
+         * <p>The pod start time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
@@ -1209,7 +1239,7 @@ public class GetJobResponseBody extends TeaModel {
         public java.util.List<GetJobResponseBodyPodsHistoryPods> historyPods;
 
         /**
-         * <p>The network IP address of the node.</p>
+         * <p>The network IP address of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.1.2</p>
@@ -1224,7 +1254,7 @@ public class GetJobResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The node ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events for the node.</p>
+         * <p>The pod ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events of the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>
@@ -1257,7 +1287,7 @@ public class GetJobResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The node status. Valid values:</p>
+         * <p>The pod status. Valid values:</p>
          * <ul>
          * <li>Pending</li>
          * <li>Running</li>
@@ -1286,13 +1316,20 @@ public class GetJobResponseBody extends TeaModel {
         public String subStatus;
 
         /**
-         * <p>The node type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</p>
+         * <p>The pod type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>
          */
         @NameInMap("Type")
         public String type;
+
+        /**
+         * <strong>example:</strong>
+         * <p>sysom</p>
+         */
+        @NameInMap("supportedProfilingTypes")
+        public String supportedProfilingTypes;
 
         public static GetJobResponseBodyPods build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyPods self = new GetJobResponseBodyPods();
@@ -1411,11 +1448,19 @@ public class GetJobResponseBody extends TeaModel {
             return this.type;
         }
 
+        public GetJobResponseBodyPods setSupportedProfilingTypes(String supportedProfilingTypes) {
+            this.supportedProfilingTypes = supportedProfilingTypes;
+            return this;
+        }
+        public String getSupportedProfilingTypes() {
+            return this.supportedProfilingTypes;
+        }
+
     }
 
     public static class GetJobResponseBodyRestartRecordDetailErrorInfoList extends TeaModel {
         /**
-         * <p>The job-level blacklist.</p>
+         * <p>The job blacklist.</p>
          */
         @NameInMap("AddJobLevelBlacklist")
         public Boolean addJobLevelBlacklist;
@@ -1579,7 +1624,7 @@ public class GetJobResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The restart duration, in seconds.</p>
+         * <p>The restart duration.</p>
          */
         @NameInMap("RestartDurationInSec")
         public Long restartDurationInSec;
@@ -1695,8 +1740,8 @@ public class GetJobResponseBody extends TeaModel {
     public static class GetJobResponseBodyUserVpc extends TeaModel {
         /**
          * <p>The default routing. This parameter is valid only for general computing resources. Valid values:</p>
-         * <p>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.
-         * eth1: uses the user elastic network interfaces (ENIs) to access external networks through the private gateway.</p>
+         * <p>eth0: uses the default network interface controller (NIC) to access external networks through a public gateway.
+         * eth1: uses the user elastic network interfaces (ENIs) to access external networks through a private gateway.</p>
          */
         @NameInMap("DefaultRoute")
         public String defaultRoute;

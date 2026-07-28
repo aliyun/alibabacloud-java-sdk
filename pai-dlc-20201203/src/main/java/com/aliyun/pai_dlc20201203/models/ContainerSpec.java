@@ -46,6 +46,9 @@ public class ContainerSpec extends TeaModel {
     @NameInMap("Resources")
     public ResourceRequirements resources;
 
+    @NameInMap("SecurityContext")
+    public SecurityContext securityContext;
+
     /**
      * <p>The working directory in the container.</p>
      * 
@@ -106,6 +109,14 @@ public class ContainerSpec extends TeaModel {
     }
     public ResourceRequirements getResources() {
         return this.resources;
+    }
+
+    public ContainerSpec setSecurityContext(SecurityContext securityContext) {
+        this.securityContext = securityContext;
+        return this;
+    }
+    public SecurityContext getSecurityContext() {
+        return this.securityContext;
     }
 
     public ContainerSpec setWorkingDir(String workingDir) {

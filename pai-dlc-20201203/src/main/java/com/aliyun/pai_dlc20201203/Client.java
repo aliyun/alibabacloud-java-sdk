@@ -91,13 +91,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * <p>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -231,13 +231,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <p>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</p>
      * <blockquote>
-     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * <p>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -819,7 +819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a DLC job.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a job.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -853,7 +853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a DLC job.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a job.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -1983,6 +1983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            query.put("ResourceIds", request.resourceIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceQuotaName)) {

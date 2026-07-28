@@ -4,12 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SignalTarget extends TeaModel {
+    /**
+     * <p>The pod name. Required when Scope is set to pods.</p>
+     */
     @NameInMap("PodNames")
     public java.util.List<String> podNames;
 
+    /**
+     * <p>The role information. Required when Scope is set to roles.</p>
+     */
     @NameInMap("Roles")
     public java.util.List<String> roles;
 
+    /**
+     * <p>The send scope.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pods</p>
+     */
     @NameInMap("Scope")
     public String scope;
 

@@ -59,7 +59,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String displayNameSearchMode;
 
     /**
-     * <p>Filters jobs based on whether running on specified nodes is enabled.</p>
+     * <p>Specifies whether to filter jobs that have assigned-node execution enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String enableAssignNode;
 
     /**
-     * <p>The end time of the query range. Jobs are filtered by creation time. Default value: the current time.</p>
+     * <p>The end time of the query range. The job creation time is used for filtering. Default value: the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-16T07:26:41Z</p>
@@ -86,7 +86,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public Boolean fromAllWorkspaces;
 
     /**
-     * <p>Retrieves nodes by performing a full-text index on the images field. Supports Chinese and English tokenization.</p>
+     * <p>Uses full-text index to retrieve the images field. Supports Chinese and English tokenization.</p>
      * 
      * <strong>example:</strong>
      * <p>pytorch</p>
@@ -185,7 +185,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String oversoldInfo;
 
     /**
-     * <p>The page number to return in a paged query. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number to return in a paged query. Minimum value: 1. Default value: 1. Paging starts from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -205,9 +205,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li>PrePaid: resource quota</li>
-     * <li>Spot: preemptible resources</li>
-     * <li>PostPaid: public resources</li>
+     * <li>PrePaid: resource quota.</li>
+     * <li>Spot: preemptible resources.</li>
+     * <li>PostPaid: public resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>Filters jobs created by the specified workflow ID.</p>
+     * <p>Filters jobs created by the specified pipeline ID.</p>
      * 
      * <strong>example:</strong>
      * <p>flow-*******</p>
@@ -226,7 +226,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>Retrieves nodes by performing a full-text index on the node failed reason field. Supports Chinese and English tokenization.</p>
+     * <p>Uses full-text index to retrieve the node failed reason field. Supports Chinese and English tokenization.</p>
      * 
      * <strong>example:</strong>
      * <p>OOM</p>
@@ -235,7 +235,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String reasonSearch;
 
     /**
-     * <p>The resource group ID. For information about how to query the dedicated resource group ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
+     * <p>The resource group ID. For information about how to obtain the dedicated resource group ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>r*****</p>
@@ -243,8 +243,11 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("ResourceIds")
+    public String resourceIds;
+
     /**
-     * <p>Filters the job list by the resource quota name. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</p>
+     * <p>The name of the resource quota, used to filter the job list. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>quota***</p>
@@ -278,7 +281,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start time of the query range. Jobs are filtered by creation time. Default value: the current time minus 7 days. If neither StartTime nor EndTime is specified, jobs created in the last 7 days are returned by default.</p>
+     * <p>The start time of the query range. The job creation time is used for filtering. Default value: the current time minus 7 days. If neither StartTime nor EndTime is specified, jobs created in the last 7 days are returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-16T07:25:34Z</p>
@@ -317,7 +320,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The template ID. Filters jobs created from the specified template.</p>
+     * <p>The template ID, used to filter jobs created from the specified template.</p>
      * 
      * <strong>example:</strong>
      * <p>tmlabc123</p>
@@ -335,7 +338,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String timeRangeField;
 
     /**
-     * <p>Retrieves nodes by performing a full-text index on the user_command field. Supports Chinese and English tokenization.</p>
+     * <p>Uses full-text index to retrieve the user_command field. Supports Chinese and English tokenization.</p>
      * 
      * <strong>example:</strong>
      * <p>python train.py</p>
@@ -344,7 +347,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String userCommandSearch;
 
     /**
-     * <p>Filters the job list by the user ID of the job submitter.</p>
+     * <p>The user ID of the job submitter, used to filter the job list.</p>
      * 
      * <strong>example:</strong>
      * <p>20**************</p>
@@ -353,7 +356,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String userIdForFilter;
 
     /**
-     * <p>Filters the job list by the username of the job submitter. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by username.</p>
+     * <p>The username of the job submitter, used to filter the job list. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by username.</p>
      * 
      * <strong>example:</strong>
      * <p>test***</p>
@@ -362,7 +365,7 @@ public class ListJobsShrinkRequest extends TeaModel {
     public String username;
 
     /**
-     * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID.&lt;props=&quot;china&quot;&gt; For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1****</p>
@@ -565,6 +568,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public ListJobsShrinkRequest setResourceIds(String resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public String getResourceIds() {
+        return this.resourceIds;
     }
 
     public ListJobsShrinkRequest setResourceQuotaName(String resourceQuotaName) {

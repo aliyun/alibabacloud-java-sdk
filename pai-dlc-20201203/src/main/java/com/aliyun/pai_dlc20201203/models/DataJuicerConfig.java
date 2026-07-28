@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DataJuicerConfig extends TeaModel {
     /**
-     * <p>The command type.</p>
+     * <p>The command type. Valid values:</p>
      * <ul>
-     * <li><p>shell: A shell command.</p>
-     * </li>
-     * <li><p>config: The YAML configuration for DataJuicer.</p>
-     * </li>
+     * <li>shell: shell command.</li>
+     * <li>config: DataJuicer YAML configuration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,18 +18,19 @@ public class DataJuicerConfig extends TeaModel {
     public String commandType;
 
     /**
-     * <p>Specifies whether to enable resource estimation.</p>
+     * <p>Specifies whether to enable resource estimation. When resource estimation is enabled, the execution mode must be distributed, and the command type must be config (DataJuicer YAML configuration).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableResourceEstimation")
     public Boolean enableResourceEstimation;
 
     /**
-     * <p>The execution mode.</p>
+     * <p>The execution mode. Valid values:</p>
      * <ul>
-     * <li><p>standalone: Single node.</p>
-     * </li>
-     * <li><p>distributed: Distributed.</p>
-     * </li>
+     * <li>standalone: single-node.</li>
+     * <li>distributed: distributed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,6 +39,9 @@ public class DataJuicerConfig extends TeaModel {
     @NameInMap("ExecutionMode")
     public String executionMode;
 
+    /**
+     * <p>The resource estimation limit. This parameter takes effect only when resource estimation is enabled.</p>
+     */
     @NameInMap("ResourceLimit")
     public ResourceLimit resourceLimit;
 

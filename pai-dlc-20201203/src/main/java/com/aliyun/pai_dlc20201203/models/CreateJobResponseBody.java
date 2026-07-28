@@ -14,7 +14,7 @@ public class CreateJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID, used for diagnostics and troubleshooting.</p>
+     * <p>The ID of this request, used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>

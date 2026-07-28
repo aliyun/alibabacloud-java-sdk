@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class JobSpec extends TeaModel {
     /**
-     * <p>The scheduling node assignment configuration.</p>
+     * <p>The assigned scheduling node configuration.</p>
      */
     @NameInMap("AssignNodeSpec")
     public AssignNodeSpec assignNodeSpec;
@@ -17,10 +17,13 @@ public class JobSpec extends TeaModel {
     public AutoScalingSpec autoScalingSpec;
 
     /**
-     * <p>Specifies whether to consider this role when determining job success. This parameter takes effect only when the success policy is set to Partial.</p>
+     * <p>Specifies whether this role is considered when determining job success. This parameter takes effect only when the success policy is set to Partial.</p>
      */
     @NameInMap("ConsiderInSuccessPolicy")
     public Boolean considerInSuccessPolicy;
+
+    @NameInMap("Driver")
+    public String driver;
 
     /**
      * <p>The hardware specifications of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed list of specifications.&gt;Notice: Prices vary depending on the specifications.</p>
@@ -129,7 +132,7 @@ public class JobSpec extends TeaModel {
     public SystemDisk systemDisk;
 
     /**
-     * <p>Type is closely related to Job Type. Different Job Types support different Worker Types.</p>
+     * <p>Type is closely related to Job Type. Different job types support different worker types.</p>
      * <ul>
      * <li><p><strong>TFJob</strong>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</p>
      * </li>
@@ -189,6 +192,14 @@ public class JobSpec extends TeaModel {
     }
     public Boolean getConsiderInSuccessPolicy() {
         return this.considerInSuccessPolicy;
+    }
+
+    public JobSpec setDriver(String driver) {
+        this.driver = driver;
+        return this;
+    }
+    public String getDriver() {
+        return this.driver;
     }
 
     public JobSpec setEcsSpec(String ecsSpec) {
