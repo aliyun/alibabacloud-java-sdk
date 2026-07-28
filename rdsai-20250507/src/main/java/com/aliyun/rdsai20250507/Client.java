@@ -1666,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -1712,7 +1712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
@@ -3734,13 +3734,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SSL settings of RDS Supabase instances in batches.</p>
+     * <p>Batch modifies the SSL configurations of RDS AI application instances.</p>
      * 
      * @param tmpReq ModifyInstancesSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3798,13 +3798,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SSL settings of RDS Supabase instances in batches.</p>
+     * <p>Batch modifies the SSL configurations of RDS AI application instances.</p>
      * 
      * @param request ModifyInstancesSSLRequest
      * @return ModifyInstancesSSLResponse

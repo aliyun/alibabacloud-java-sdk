@@ -47,6 +47,9 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     @NameInMap("SSLEnabled")
     public String SSLEnabled;
 
+    @NameInMap("SSLExpiredTime")
+    public String SSLExpiredTime;
+
     /**
      * <p>The custom certificate content.</p>
      * 
@@ -108,6 +111,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     }
     public String getSSLEnabled() {
         return this.SSLEnabled;
+    }
+
+    public DescribeInstanceSSLResponseBody setSSLExpiredTime(String SSLExpiredTime) {
+        this.SSLExpiredTime = SSLExpiredTime;
+        return this;
+    }
+    public String getSSLExpiredTime() {
+        return this.SSLExpiredTime;
     }
 
     public DescribeInstanceSSLResponseBody setServerCert(String serverCert) {

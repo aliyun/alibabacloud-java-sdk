@@ -155,6 +155,9 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        @NameInMap("Domain")
+        public String domain;
+
         /**
          * <p>The IP address.</p>
          * 
@@ -197,6 +200,14 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeInstanceEndpointsResponseBodyInstanceEndpoints setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeInstanceEndpointsResponseBodyInstanceEndpoints setIP(String IP) {

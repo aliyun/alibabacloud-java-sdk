@@ -41,8 +41,8 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable or disable SSL. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Enable SSL.</li>
-     * <li><strong>0</strong>: Disable SSL.</li>
+     * <li><strong>1</strong>: Enable.</li>
+     * <li><strong>0</strong>: Disable.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,7 +53,7 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public Integer SSLEnabled;
 
     /**
-     * <p>The content of the custom certificate.</p>
+     * <p>The custom certificate content.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>CAType</strong> is set to <strong>custom</strong>.</p>
      * </blockquote>

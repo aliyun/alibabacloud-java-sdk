@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstancesSSLResponseBody extends TeaModel {
     /**
-     * <p>The RDS Supabase instances whose SSL settings are modified.</p>
+     * <p>The list of instance IDs of AI applications that were successfully modified.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -24,6 +24,9 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SSLExpiredTime")
+    public String SSLExpiredTime;
 
     public static ModifyInstancesSSLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstancesSSLResponseBody self = new ModifyInstancesSSLResponseBody();
@@ -44,6 +47,14 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyInstancesSSLResponseBody setSSLExpiredTime(String SSLExpiredTime) {
+        this.SSLExpiredTime = SSLExpiredTime;
+        return this;
+    }
+    public String getSSLExpiredTime() {
+        return this.SSLExpiredTime;
     }
 
 }

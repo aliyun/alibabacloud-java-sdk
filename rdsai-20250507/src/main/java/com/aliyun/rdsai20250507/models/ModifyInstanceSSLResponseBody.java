@@ -25,6 +25,9 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SSLExpiredTime")
+    public String SSLExpiredTime;
+
     public static ModifyInstanceSSLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSSLResponseBody self = new ModifyInstanceSSLResponseBody();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyInstanceSSLResponseBody setSSLExpiredTime(String SSLExpiredTime) {
+        this.SSLExpiredTime = SSLExpiredTime;
+        return this;
+    }
+    public String getSSLExpiredTime() {
+        return this.SSLExpiredTime;
     }
 
 }
