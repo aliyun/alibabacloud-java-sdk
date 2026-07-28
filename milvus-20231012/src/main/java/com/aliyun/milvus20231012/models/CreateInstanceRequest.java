@@ -5,34 +5,73 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to enable AI function.</p>
+     */
     @NameInMap("aiFunction")
     public Boolean aiFunction;
 
+    /**
+     * <p>Specifies whether to enable automatic backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoBackup")
     public Boolean autoBackup;
 
+    /**
+     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the payment type is set to Subscription.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The backup and restoration information.</p>
+     */
     @NameInMap("backupRestoreInfo")
     public CreateInstanceRequestBackupRestoreInfo backupRestoreInfo;
 
+    /**
+     * <p>The component information.</p>
+     */
     @NameInMap("components")
     public java.util.List<CreateInstanceRequestComponents> components;
 
+    /**
+     * <p>The configuration items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rootCoord:
+     *     maxDatabaseNum: 64 # Maximum number of database
+     *     maxPartitionNum: 4096</p>
+     */
     @NameInMap("configuration")
     public String configuration;
 
     /**
+     * <p>The database administrator password.</p>
+     * 
      * <strong>example:</strong>
      * <p>test12</p>
      */
@@ -40,6 +79,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String dbAdminPassword;
 
     /**
+     * <p>The Milvus version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,10 +88,18 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("dbVersion")
     public String dbVersion;
 
+    /**
+     * <p>Specifies whether to enable OSS encryption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("encrypted")
     public Boolean encrypted;
 
     /**
+     * <p>Specifies whether to enable high availability.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,25 +107,50 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean ha;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>milvus-test</p>
      */
     @NameInMap("instanceName")
     public String instanceName;
 
+    /**
+     * <p>Specifies whether to enable multi-zone storage.</p>
+     */
     @NameInMap("isMultiAzStorage")
     public Boolean isMultiAzStorage;
 
+    /**
+     * <p>The ID of the KMS key used for encryption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-xxx</p>
+     */
     @NameInMap("kmsKeyId")
     public String kmsKeyId;
 
+    /**
+     * <p>The number of load replicas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("loadReplicas")
     public Integer loadReplicas;
 
+    /**
+     * <p>The zone configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Single</p>
+     */
     @NameInMap("multiZoneMode")
     public String multiZoneMode;
 
     /**
+     * <p>The payment duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -85,6 +158,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer paymentDuration;
 
     /**
+     * <p>The payment duration unit.</p>
+     * 
      * <strong>example:</strong>
      * <p>month</p>
      */
@@ -92,6 +167,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
+     * <p>The payment type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,20 +176,33 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("paymentType")
     public String paymentType;
 
+    /**
+     * <p>The coupon code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22120151****</p>
+     */
     @NameInMap("promotionNo")
     public String promotionNo;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The instance tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<CreateInstanceRequestTags> tags;
 
     /**
+     * <p>The vSwitches.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;vsw-123xxx&quot;]</p>
      */
@@ -121,6 +210,7 @@ public class CreateInstanceRequest extends TeaModel {
     public java.util.List<CreateInstanceRequestVSwitchIds> vSwitchIds;
 
     /**
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,6 +220,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The primary zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,6 +229,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("zoneId")
     public String zoneId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -363,12 +460,30 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestBackupRestoreInfo extends TeaModel {
+        /**
+         * <p>The backup ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bt-xxxxx</p>
+         */
         @NameInMap("backupId")
         public String backupId;
 
+        /**
+         * <p>The backup name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Backup1</p>
+         */
         @NameInMap("backupName")
         public String backupName;
 
+        /**
+         * <p>The ID of the source backup cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxxxxxx</p>
+         */
         @NameInMap("sourceClusterId")
         public String sourceClusterId;
 
@@ -403,8 +518,77 @@ public class CreateInstanceRequest extends TeaModel {
 
     }
 
+    public static class CreateInstanceRequestComponentsDataDisk extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("size")
+        public Integer size;
+
+        /**
+         * <strong>example:</strong>
+         * <p>alicloud-disk-essd-pl1</p>
+         */
+        @NameInMap("storageClass")
+        public String storageClass;
+
+        public static CreateInstanceRequestComponentsDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestComponentsDataDisk self = new CreateInstanceRequestComponentsDataDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestComponentsDataDisk setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateInstanceRequestComponentsDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public CreateInstanceRequestComponentsDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public CreateInstanceRequestComponentsDataDisk setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+    }
+
     public static class CreateInstanceRequestComponents extends TeaModel {
         /**
+         * <p>The number of compute units (CUs).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -414,16 +598,28 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer cuNum;
 
         /**
+         * <p>The CU type.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
         @NameInMap("cuType")
         public String cuType;
 
+        @NameInMap("dataDisk")
+        public CreateInstanceRequestComponentsDataDisk dataDisk;
+
+        /**
+         * <p>The disk size type for Query Node. Set to Large for storage-optimized, and Normal for compute-optimized or other configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("diskSizeType")
         public String diskSizeType;
 
         /**
+         * <p>The number of replicas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -433,6 +629,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>The component type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -462,6 +659,14 @@ public class CreateInstanceRequest extends TeaModel {
             return this.cuType;
         }
 
+        public CreateInstanceRequestComponents setDataDisk(CreateInstanceRequestComponentsDataDisk dataDisk) {
+            this.dataDisk = dataDisk;
+            return this;
+        }
+        public CreateInstanceRequestComponentsDataDisk getDataDisk() {
+            return this.dataDisk;
+        }
+
         public CreateInstanceRequestComponents setDiskSizeType(String diskSizeType) {
             this.diskSizeType = diskSizeType;
             return this;
@@ -489,9 +694,21 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestTags extends TeaModel {
+        /**
+         * <p>The key of the resource tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the resource tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -519,9 +736,21 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestVSwitchIds extends TeaModel {
+        /**
+         * <p>The vSwitch ID configuration in the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
+         */
         @NameInMap("vswId")
         public String vswId;
 
+        /**
+         * <p>The zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-a</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

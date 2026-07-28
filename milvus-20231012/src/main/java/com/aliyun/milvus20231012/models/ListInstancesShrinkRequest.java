@@ -23,7 +23,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region code.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -58,6 +58,9 @@ public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags used to filter instances.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

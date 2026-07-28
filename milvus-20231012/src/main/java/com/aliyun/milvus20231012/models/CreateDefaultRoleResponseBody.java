@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDefaultRoleResponseBody extends TeaModel {
     /**
-     * <p>The details about the failed permission verification.</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;, &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;, &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;, &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;, &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;, &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;, &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -14,7 +14,7 @@ public class CreateDefaultRoleResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class CreateDefaultRoleResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance.NotFound</p>
@@ -32,7 +32,7 @@ public class CreateDefaultRoleResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Failed to find instance c-123xxx</p>

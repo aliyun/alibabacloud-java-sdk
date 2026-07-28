@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAclGroupResponseBody extends TeaModel {
     /**
+     * <p>Details about the access denial. This parameter is returned only if a request is denied due to insufficient RAM permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class CreateAclGroupResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The data returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;instanceId\&quot;: \&quot;c-fa521a2393de4623\&quot;, \&quot;orderId\&quot;: \&quot;271129670950939\&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class CreateAclGroupResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class CreateAclGroupResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>[%60wget Nds0v6lx.popscan.xaliyun.com%60]</p>
      */
@@ -33,6 +41,8 @@ public class CreateAclGroupResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +50,8 @@ public class CreateAclGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The unique ID generated for the request. Use this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE7E95C4-10DE-5EA7-9D10-2D3E0FCCE68C</p>
      */
@@ -47,6 +59,8 @@ public class CreateAclGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded, where a value of <code>true</code> means success.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABCD-1234-5678-EFGH</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public CreateInstanceResponseBodyData data;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,9 +58,21 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxx</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("orderId")
         public String orderId;
 

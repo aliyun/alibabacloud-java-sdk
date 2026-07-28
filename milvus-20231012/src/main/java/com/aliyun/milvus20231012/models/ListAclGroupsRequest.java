@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAclGroupsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-123xxx</p>
      */
@@ -12,6 +14,8 @@ public class ListAclGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

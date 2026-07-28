@@ -4,10 +4,15 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class UpdateAclGroupCidrsRequest extends TeaModel {
+    /**
+     * <p>The name of the allow list group.</p>
+     */
     @NameInMap("groupName")
     public String groupName;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-xxxx</p>
      */
@@ -15,6 +20,8 @@ public class UpdateAclGroupCidrsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The new CIDR blocks for the allow list group. To specify multiple CIDR blocks, separate them with a comma.</p>
+     * 
      * <strong>example:</strong>
      * <p>140.205.11.0/24,140.205.11.2</p>
      */

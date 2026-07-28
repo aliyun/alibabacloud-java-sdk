@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the failed permission verification.</p>
+     * <p>The details of the access denied error.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -14,7 +14,7 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance.NotFound</p>
@@ -50,7 +50,7 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCD-1234-5678-EFGH</p>
@@ -59,7 +59,7 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

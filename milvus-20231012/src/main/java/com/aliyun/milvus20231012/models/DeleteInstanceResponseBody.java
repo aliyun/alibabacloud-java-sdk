@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABCD-1234-5678-EFGH</p>
      */
@@ -12,6 +14,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-xxxx</p>
      */
@@ -19,6 +23,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -26,6 +32,8 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

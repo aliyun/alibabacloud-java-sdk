@@ -8,7 +8,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("eu-central-1", "milvus.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "milvus.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "milvus.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "milvus.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "milvus.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "milvus.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "milvus.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "milvus.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "milvus.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("milvus", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +39,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Changes the resource group of a resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -78,7 +89,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Changes the resource group of a resource.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -91,7 +102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建白名单分组</p>
+     * <p>Creates an ACL group.</p>
      * 
      * @param request CreateAclGroupRequest
      * @param headers map
@@ -137,7 +148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建白名单分组</p>
+     * <p>Creates an ACL group.</p>
      * 
      * @param request CreateAclGroupRequest
      * @return CreateAclGroupResponse
@@ -150,7 +161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a service role for Milvus to access other cloud products</p>
+     * <p>Creates the server role required by Milvus to access other cloud products.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -176,7 +187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a service role for Milvus to access other cloud products</p>
+     * <p>Creates the server role required by Milvus to access other cloud products.</p>
      * @return CreateDefaultRoleResponse
      */
     public CreateDefaultRoleResponse createDefaultRole() throws Exception {
@@ -187,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a cluster instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @param headers map
@@ -327,7 +338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a cluster instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -340,7 +351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes an instance.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param headers map
@@ -378,7 +389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes an instance.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -485,7 +496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param headers map
@@ -523,7 +534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -536,7 +547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of an instance.</p>
+     * <p>Retrieves the details of a single instance.</p>
      * 
      * @param request GetInstanceDetailRequest
      * @param headers map
@@ -570,7 +581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of an instance.</p>
+     * <p>Retrieves the details of a single instance.</p>
      * 
      * @param request GetInstanceDetailRequest
      * @return GetInstanceDetailResponse
@@ -583,7 +594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前用户下的分组信息和内容</p>
+     * <p>Retrieves one or more access control list (ACL) groups.</p>
      * 
      * @param request ListAclGroupsRequest
      * @param headers map
@@ -621,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前用户下的分组信息和内容</p>
+     * <p>Retrieves one or more access control list (ACL) groups.</p>
      * 
      * @param request ListAclGroupsRequest
      * @return ListAclGroupsResponse
@@ -634,7 +645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the list of Milvus instances under the current account.</p>
+     * <p>Retrieves a list of Milvus instances in the current account.</p>
      * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
@@ -698,7 +709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the list of Milvus instances under the current account.</p>
+     * <p>Retrieves a list of Milvus instances in the current account.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -711,7 +722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据集群ID或者名称搜索集群</p>
+     * <p>Searches for clusters by cluster ID or name.</p>
      * 
      * @param tmpReq ListInstancesV2Request
      * @param headers map
@@ -783,7 +794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据集群ID或者名称搜索集群</p>
+     * <p>Searches for clusters by cluster ID or name.</p>
      * 
      * @param request ListInstancesV2Request
      * @return ListInstancesV2Response
@@ -796,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the configuration parameters of each component of Milvus.</p>
+     * <p>Modifies the configuration parameters for Milvus components.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @param headers map
@@ -838,7 +849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the configuration parameters of each component of Milvus.</p>
+     * <p>Modifies the configuration parameters for Milvus components.</p>
      * 
      * @param request ModifyInstanceConfigRequest
      * @return ModifyInstanceConfigResponse
@@ -851,7 +862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -897,7 +908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打标</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -910,7 +921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除标签</p>
+     * <p>Remove resource tags.</p>
      * 
      * @param tmpReq UnTagResourcesRequest
      * @param headers map
@@ -970,7 +981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除标签</p>
+     * <p>Remove resource tags.</p>
      * 
      * @param request UnTagResourcesRequest
      * @return UnTagResourcesResponse
@@ -983,7 +994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configure Public IP Address Whitelist</p>
+     * <p>Sets the IP address whitelist for public access to a Milvus instance.</p>
      * 
      * @param request UpdateAccessControlListRequest
      * @param headers map
@@ -1025,7 +1036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configure Public IP Address Whitelist</p>
+     * <p>Sets the IP address whitelist for public access to a Milvus instance.</p>
      * 
      * @param request UpdateAccessControlListRequest
      * @return UpdateAccessControlListResponse
@@ -1038,7 +1049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改分组内的白名单</p>
+     * <p>Modifies the CIDR blocks in a specified allow list group.</p>
      * 
      * @param request UpdateAclGroupCidrsRequest
      * @param headers map
@@ -1080,7 +1091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改分组内的白名单</p>
+     * <p>Modifies the CIDR blocks in a specified allow list group.</p>
      * 
      * @param request UpdateAclGroupCidrsRequest
      * @return UpdateAclGroupCidrsResponse
@@ -1093,7 +1104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates an instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param headers map
@@ -1161,7 +1172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates an instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -1174,7 +1185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name of an instance.</p>
+     * <p>Changes the name of an instance.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @param headers map
@@ -1212,7 +1223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name of an instance.</p>
+     * <p>Changes the name of an instance.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @return UpdateInstanceNameResponse
@@ -1225,7 +1236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable or disable Internet access for Milvus.</p>
+     * <p>Enables or disables public network access for a Milvus instance.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @param headers map
@@ -1271,7 +1282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable or disable Internet access for Milvus.</p>
+     * <p>Enables or disables public network access for a Milvus instance.</p>
      * 
      * @param request UpdatePublicNetworkStatusRequest
      * @return UpdatePublicNetworkStatusResponse

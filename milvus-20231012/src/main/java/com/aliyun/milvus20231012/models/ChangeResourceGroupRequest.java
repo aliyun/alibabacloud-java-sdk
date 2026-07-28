@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
+     * <p>The new resource group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -21,6 +24,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-123xxx</p>
      */
@@ -28,6 +33,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-xxx</p>
      */
@@ -35,6 +42,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>instance</p>
      */

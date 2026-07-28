@@ -4,27 +4,51 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class ScalingRule extends TeaModel {
+    /**
+     * <p>The adjustment information of the scaling rule.</p>
+     */
     @NameInMap("adjustInfos")
     public java.util.List<ScalingRuleAdjustInfos> adjustInfos;
 
+    /**
+     * <p>The cron expression for the scaling schedule.</p>
+     */
     @NameInMap("cronStr")
     public String cronStr;
 
+    /**
+     * <p>Indicates whether the scaling rule is disabled.</p>
+     */
     @NameInMap("disabled")
     public Boolean disabled;
 
+    /**
+     * <p>The end time of the scaling rule. Unit: milliseconds.</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>The ID of the scaling rule.</p>
+     */
     @NameInMap("ruleId")
     public String ruleId;
 
+    /**
+     * <p>The name of the scaling rule.</p>
+     */
     @NameInMap("scalingRuleName")
     public String scalingRuleName;
 
+    /**
+     * <p>The start time of the scaling rule. Unit: milliseconds.</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <p>The time zone of the scaling rule.</p>
+     */
     @NameInMap("timeZone")
     public String timeZone;
 
@@ -98,9 +122,15 @@ public class ScalingRule extends TeaModel {
     }
 
     public static class ScalingRuleAdjustInfos extends TeaModel {
+        /**
+         * <p>The type of the component to be adjusted.</p>
+         */
         @NameInMap("componentType")
         public String componentType;
 
+        /**
+         * <p>The target value for the adjustment.</p>
+         */
         @NameInMap("targetValue")
         public String targetValue;
 

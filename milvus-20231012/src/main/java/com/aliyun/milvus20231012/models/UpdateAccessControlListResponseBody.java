@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAccessControlListResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the failed permission verification.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</p>
@@ -14,7 +14,7 @@ public class UpdateAccessControlListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class UpdateAccessControlListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ILLEGAL.MilvusCidrFormat</p>
@@ -41,7 +41,7 @@ public class UpdateAccessControlListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +50,7 @@ public class UpdateAccessControlListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCD-1234-5678-EFGH</p>

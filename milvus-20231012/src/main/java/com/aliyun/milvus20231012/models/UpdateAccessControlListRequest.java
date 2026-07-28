@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAccessControlListRequest extends TeaModel {
     /**
-     * <p>The ID of public network access control</p>
+     * <p>The public access control ID.</p>
      * 
      * <strong>example:</strong>
      * <p>acl-123xxx</p>
@@ -14,16 +14,16 @@ public class UpdateAccessControlListRequest extends TeaModel {
     public String aclId;
 
     /**
-     * <p>The CIDR blocks.</p>
+     * <p>The CIDR block.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.1.0/24,172.16.0.0/16</p>
+     * <p><code>192.168.**.**</code>/24,<code>172.1.**.**</code>/16</p>
      */
     @NameInMap("Cidr")
     public String cidr;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-123xxx</p>

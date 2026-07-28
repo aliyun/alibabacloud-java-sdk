@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancesV2ShrinkRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,8 @@ public class ListInstancesV2ShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-123xxx</p>
      */
@@ -19,6 +23,8 @@ public class ListInstancesV2ShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>milvus-test</p>
      */
@@ -26,6 +32,8 @@ public class ListInstancesV2ShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The maximum number of records to retrieve in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,6 +41,8 @@ public class ListInstancesV2ShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next request (not currently enabled).</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -40,6 +50,8 @@ public class ListInstancesV2ShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class ListInstancesV2ShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,12 +68,17 @@ public class ListInstancesV2ShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-123xxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of tags in JSON format.</p>
+     */
     @NameInMap("tag")
     public String tagShrink;
 

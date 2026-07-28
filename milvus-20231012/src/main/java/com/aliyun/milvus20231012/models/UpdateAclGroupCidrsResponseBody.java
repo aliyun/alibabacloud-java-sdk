@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAclGroupCidrsResponseBody extends TeaModel {
     /**
+     * <p>Details about why access was denied. Returned only when RAM denies access due to insufficient permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>A value of <code>true</code> indicates that the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>[RDS%22]</p>
      */
@@ -33,6 +41,8 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +50,8 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB356AEE-6B3F-5FC8-9C2C-7B2D881EA9E2</p>
      */
@@ -47,6 +59,8 @@ public class UpdateAclGroupCidrsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class InstanceDetail extends TeaModel {
     /**
+     * <p>The automatic backup configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("autoBackup")
     public Boolean autoBackup;
 
+    /**
+     * <p>The component information.</p>
+     */
     @NameInMap("components")
     public java.util.List<InstanceDetailComponents> components;
 
     /**
+     * <p>The configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>rootCoord:
      *     maxDatabaseNum: 64 # Maximum number of database
@@ -24,6 +31,7 @@ public class InstanceDetail extends TeaModel {
     public String configuration;
 
     /**
+     * <p>The creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +41,8 @@ public class InstanceDetail extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The instance version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.5</p>
      */
@@ -40,6 +50,8 @@ public class InstanceDetail extends TeaModel {
     public String dbVersion;
 
     /**
+     * <p>Indicates whether data encryption is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -47,6 +59,7 @@ public class InstanceDetail extends TeaModel {
     public Boolean encrypted;
 
     /**
+     * <p>The expiration time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +69,8 @@ public class InstanceDetail extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>Indicates whether high availability is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -63,6 +78,8 @@ public class InstanceDetail extends TeaModel {
     public Boolean ha;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-xxx</p>
      */
@@ -70,6 +87,8 @@ public class InstanceDetail extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>milvus-test</p>
      */
@@ -86,6 +105,8 @@ public class InstanceDetail extends TeaModel {
     public String kmsKeyId;
 
     /**
+     * <p>The multi-zone deployment mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>Single</p>
      */
@@ -93,6 +114,8 @@ public class InstanceDetail extends TeaModel {
     public String multiZoneMode;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4751</p>
      */
@@ -100,6 +123,8 @@ public class InstanceDetail extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The billing method. Valid values: PayAsYouGo: pay-as-you-go billing method. Subscription: subscription.</p>
+     * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
      */
@@ -107,6 +132,8 @@ public class InstanceDetail extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -114,6 +141,8 @@ public class InstanceDetail extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek3dcgyq7pnqwa</p>
      */
@@ -121,29 +150,52 @@ public class InstanceDetail extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The running time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("runningTime")
     public Long runningTime;
 
+    /**
+     * <p>The security group IDs.</p>
+     */
     @NameInMap("securityGroupIds")
     public java.util.List<String> securityGroupIds;
 
     /**
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li>creating: Being created.</li>
+     * <li>running: Running.</li>
+     * <li>updating: Being upgraded. This includes specification changes, configuration changes, and public network access changes.</li>
+     * <li>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</li>
+     * <li>deleting: Being deleted.</li>
+     * <li>deleted: Deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<InstanceDetailTags> tags;
 
+    /**
+     * <p>The vSwitch IDs.</p>
+     */
     @NameInMap("vSwitchIds")
     public java.util.List<InstanceDetailVSwitchIds> vSwitchIds;
 
     /**
+     * <p>The VPC ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-xxx</p>
      */
@@ -151,6 +203,8 @@ public class InstanceDetail extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
      */
@@ -346,8 +400,92 @@ public class InstanceDetail extends TeaModel {
         return this.zoneId;
     }
 
+    public static class InstanceDetailComponentsDataDisk extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("performanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("size")
+        public Integer size;
+
+        @NameInMap("storageClass")
+        public String storageClass;
+
+        public static InstanceDetailComponentsDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            InstanceDetailComponentsDataDisk self = new InstanceDetailComponentsDataDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public InstanceDetailComponentsDataDisk setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public InstanceDetailComponentsDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public InstanceDetailComponentsDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public InstanceDetailComponentsDataDisk setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+    }
+
+    public static class InstanceDetailComponentsPodsList extends TeaModel {
+        @NameInMap("podId")
+        public String podId;
+
+        @NameInMap("podName")
+        public String podName;
+
+        public static InstanceDetailComponentsPodsList build(java.util.Map<String, ?> map) throws Exception {
+            InstanceDetailComponentsPodsList self = new InstanceDetailComponentsPodsList();
+            return TeaModel.build(map, self);
+        }
+
+        public InstanceDetailComponentsPodsList setPodId(String podId) {
+            this.podId = podId;
+            return this;
+        }
+        public String getPodId() {
+            return this.podId;
+        }
+
+        public InstanceDetailComponentsPodsList setPodName(String podName) {
+            this.podName = podName;
+            return this;
+        }
+        public String getPodName() {
+            return this.podName;
+        }
+
+    }
+
     public static class InstanceDetailComponents extends TeaModel {
         /**
+         * <p>The number of CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -355,13 +493,20 @@ public class InstanceDetail extends TeaModel {
         public Integer cuNum;
 
         /**
+         * <p>The CU type.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
         @NameInMap("cuType")
         public String cuType;
 
+        @NameInMap("dataDisk")
+        public InstanceDetailComponentsDataDisk dataDisk;
+
         /**
+         * <p>The disk size type for the Query Node. Set this parameter to Large for storage-optimized configurations, and to Normal for other configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -371,7 +516,12 @@ public class InstanceDetail extends TeaModel {
         @NameInMap("payType")
         public String payType;
 
+        @NameInMap("podsList")
+        public java.util.List<InstanceDetailComponentsPodsList> podsList;
+
         /**
+         * <p>The number of replicas.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -379,6 +529,8 @@ public class InstanceDetail extends TeaModel {
         public Integer replica;
 
         /**
+         * <p>The component type.</p>
+         * 
          * <strong>example:</strong>
          * <p>data</p>
          */
@@ -406,6 +558,14 @@ public class InstanceDetail extends TeaModel {
             return this.cuType;
         }
 
+        public InstanceDetailComponents setDataDisk(InstanceDetailComponentsDataDisk dataDisk) {
+            this.dataDisk = dataDisk;
+            return this;
+        }
+        public InstanceDetailComponentsDataDisk getDataDisk() {
+            return this.dataDisk;
+        }
+
         public InstanceDetailComponents setDiskSizeType(String diskSizeType) {
             this.diskSizeType = diskSizeType;
             return this;
@@ -420,6 +580,14 @@ public class InstanceDetail extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public InstanceDetailComponents setPodsList(java.util.List<InstanceDetailComponentsPodsList> podsList) {
+            this.podsList = podsList;
+            return this;
+        }
+        public java.util.List<InstanceDetailComponentsPodsList> getPodsList() {
+            return this.podsList;
         }
 
         public InstanceDetailComponents setReplica(Integer replica) {
@@ -442,6 +610,8 @@ public class InstanceDetail extends TeaModel {
 
     public static class InstanceDetailTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>k1</p>
          */
@@ -449,6 +619,8 @@ public class InstanceDetail extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -480,6 +652,8 @@ public class InstanceDetail extends TeaModel {
 
     public static class InstanceDetailVSwitchIds extends TeaModel {
         /**
+         * <p>The vSwitch IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>
          */
@@ -487,6 +661,8 @@ public class InstanceDetail extends TeaModel {
         public String vswId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */

@@ -4,12 +4,21 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class DBVersionDetail extends TeaModel {
+    /**
+     * <p>The specifications supported by the version.</p>
+     */
     @NameInMap("specs")
     public java.util.List<DBVersionDetailSpecs> specs;
 
+    /**
+     * <p>The status of the version.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The version number.</p>
+     */
     @NameInMap("version")
     public String version;
 
@@ -43,24 +52,45 @@ public class DBVersionDetail extends TeaModel {
     }
 
     public static class DBVersionDetailSpecsComponentSpecs extends TeaModel {
+        /**
+         * <p>The default number of replicas for the component.</p>
+         */
         @NameInMap("defaultReplicas")
         public Integer defaultReplicas;
 
+        /**
+         * <p>The maximum number of replicas for the component.</p>
+         */
         @NameInMap("maxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <p>The minimum number of replicas for the component.</p>
+         */
         @NameInMap("minReplicas")
         public Integer minReplicas;
 
+        /**
+         * <p>The name of the component.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The available specifications for the component.</p>
+         */
         @NameInMap("specs")
         public java.util.List<String> specs;
 
+        /**
+         * <p>The step size for scaling the number of replicas.</p>
+         */
         @NameInMap("step")
         public Integer step;
 
+        /**
+         * <p>The type of the component.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -128,18 +158,33 @@ public class DBVersionDetail extends TeaModel {
     }
 
     public static class DBVersionDetailSpecs extends TeaModel {
+        /**
+         * <p>The component specifications.</p>
+         */
         @NameInMap("componentSpecs")
         public java.util.List<DBVersionDetailSpecsComponentSpecs> componentSpecs;
 
+        /**
+         * <p>Indicates whether the high availability (HA) edition is supported.</p>
+         */
         @NameInMap("isHA")
         public Boolean isHA;
 
+        /**
+         * <p>Indicates whether the Standalone edition is supported.</p>
+         */
         @NameInMap("isStandalone")
         public Boolean isStandalone;
 
+        /**
+         * <p>Indicates whether the Standalone Pro edition is supported.</p>
+         */
         @NameInMap("isStandalonePro")
         public Boolean isStandalonePro;
 
+        /**
+         * <p>The zone mode of the specification.</p>
+         */
         @NameInMap("zoneMode")
         public String zoneMode;
 

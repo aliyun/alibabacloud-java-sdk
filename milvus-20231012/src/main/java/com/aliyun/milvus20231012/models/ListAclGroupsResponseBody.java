@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAclGroupsResponseBody extends TeaModel {
     /**
+     * <p>Details about the access denial. Returned only for requests denied due to insufficient RAM permissions.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
     @NameInMap("accessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListAclGroupsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListAclGroupsResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>66A13C31-473A-5B3A-8974-0B07A40649CF</p>
      */
@@ -66,10 +75,15 @@ public class ListAclGroupsResponseBody extends TeaModel {
     }
 
     public static class ListAclGroupsResponseBodyData extends TeaModel {
+        /**
+         * <p>The CIDR blocks in the group.</p>
+         */
         @NameInMap("cidrs")
         public java.util.List<String> cidrs;
 
         /**
+         * <p>The timestamp of the group\&quot;s creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-17T13:53:27Z</p>
          */
@@ -77,6 +91,8 @@ public class ListAclGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -84,6 +100,8 @@ public class ListAclGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>376774</p>
          */
@@ -91,6 +109,8 @@ public class ListAclGroupsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>c-xxx</p>
          */
@@ -98,6 +118,8 @@ public class ListAclGroupsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account. This parameter is read-only.</p>
+         * 
          * <strong>example:</strong>
          * <p>50832118</p>
          */

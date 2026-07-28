@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstancesV2ResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABCD-1234-5678-EFGH</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("instances")
     public java.util.List<InstanceDetail> instances;
 
     /**
+     * <p>The maximum number of records to retrieve in a single request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListInstancesV2ResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token (not currently enabled).</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -29,6 +38,8 @@ public class ListInstancesV2ResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class ListInstancesV2ResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */

@@ -4,12 +4,21 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class MigrationSource extends TeaModel {
+    /**
+     * <p>The authentication information of the migration source.</p>
+     */
     @NameInMap("authInfo")
     public MigrationSourceAuthInfo authInfo;
 
+    /**
+     * <p>The name of the database to migrate.</p>
+     */
     @NameInMap("database")
     public String database;
 
+    /**
+     * <p>The endpoint information of the migration source.</p>
+     */
     @NameInMap("endpoint")
     public MigrationSourceEndpoint endpoint;
 
@@ -43,15 +52,27 @@ public class MigrationSource extends TeaModel {
     }
 
     public static class MigrationSourceAuthInfo extends TeaModel {
+        /**
+         * <p>The authentication type.</p>
+         */
         @NameInMap("authType")
         public String authType;
 
+        /**
+         * <p>The password used for authentication.</p>
+         */
         @NameInMap("password")
         public String password;
 
+        /**
+         * <p>The token used for authentication.</p>
+         */
         @NameInMap("token")
         public String token;
 
+        /**
+         * <p>The username used for authentication.</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -95,9 +116,15 @@ public class MigrationSource extends TeaModel {
     }
 
     public static class MigrationSourceEndpoint extends TeaModel {
+        /**
+         * <p>The endpoint address of the migration source.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The port number of the migration source.</p>
+         */
         @NameInMap("port")
         public String port;
 

@@ -4,24 +4,45 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class PromotionInfo extends TeaModel {
+    /**
+     * <p>The fee that can be covered by the promotion.</p>
+     */
     @NameInMap("canPromFee")
     public String canPromFee;
 
+    /**
+     * <p>Indicates whether the promotion is selected.</p>
+     */
     @NameInMap("isSelected")
     public Boolean isSelected;
 
+    /**
+     * <p>The description of the promotion.</p>
+     */
     @NameInMap("promotionDesc")
     public String promotionDesc;
 
+    /**
+     * <p>The name of the promotion.</p>
+     */
     @NameInMap("promotionName")
     public String promotionName;
 
+    /**
+     * <p>The code of the promotion option.</p>
+     */
     @NameInMap("promotionOptionCode")
     public String promotionOptionCode;
 
+    /**
+     * <p>The number of the promotion option.</p>
+     */
     @NameInMap("promotionOptionNo")
     public String promotionOptionNo;
 
+    /**
+     * <p>Indicates whether the promotion is selected.</p>
+     */
     @NameInMap("selected")
     public Boolean selected;
 

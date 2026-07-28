@@ -4,27 +4,51 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class PriceInfo extends TeaModel {
+    /**
+     * <p>The currency of the price.</p>
+     */
     @NameInMap("currency")
     public String currency;
 
+    /**
+     * <p>The discount amount.</p>
+     */
     @NameInMap("discountAmount")
     public String discountAmount;
 
+    /**
+     * <p>The optional promotions.</p>
+     */
     @NameInMap("optionalPromotions")
     public java.util.List<PromotionInfo> optionalPromotions;
 
+    /**
+     * <p>The original price.</p>
+     */
     @NameInMap("originalAmount")
     public String originalAmount;
 
+    /**
+     * <p>The price modules.</p>
+     */
     @NameInMap("priceModules")
     public java.util.List<PriceInfoPriceModules> priceModules;
 
+    /**
+     * <p>The pricing rules.</p>
+     */
     @NameInMap("rules")
     public java.util.List<PriceInfoRules> rules;
 
+    /**
+     * <p>The tax amount.</p>
+     */
     @NameInMap("taxAmount")
     public String taxAmount;
 
+    /**
+     * <p>The actual trade price.</p>
+     */
     @NameInMap("tradeAmount")
     public String tradeAmount;
 
@@ -98,9 +122,15 @@ public class PriceInfo extends TeaModel {
     }
 
     public static class PriceInfoPriceModules extends TeaModel {
+        /**
+         * <p>The original amount of the price module.</p>
+         */
         @NameInMap("originalAmount")
         public String originalAmount;
 
+        /**
+         * <p>The type of the price module.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -128,12 +158,21 @@ public class PriceInfo extends TeaModel {
     }
 
     public static class PriceInfoRules extends TeaModel {
+        /**
+         * <p>The amount associated with the pricing rule.</p>
+         */
         @NameInMap("amount")
         public String amount;
 
+        /**
+         * <p>The name of the pricing rule.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The ID of the pricing rule.</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 

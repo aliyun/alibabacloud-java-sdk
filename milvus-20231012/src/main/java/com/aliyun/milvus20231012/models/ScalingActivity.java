@@ -4,42 +4,81 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class ScalingActivity extends TeaModel {
+    /**
+     * <p>The types of components involved in the scaling activity.</p>
+     */
     @NameInMap("componentTypes")
     public String componentTypes;
 
+    /**
+     * <p>The description of the scaling activity.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The end time of the scaling activity.</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the scaling policy.</p>
+     */
     @NameInMap("policyType")
     public String policyType;
 
+    /**
+     * <p>The ID of the scaling activity.</p>
+     */
     @NameInMap("scalingActivityId")
     public String scalingActivityId;
 
+    /**
+     * <p>The state of the scaling activity.</p>
+     */
     @NameInMap("scalingActivityState")
     public String scalingActivityState;
 
+    /**
+     * <p>The ID of the scaling policy.</p>
+     */
     @NameInMap("scalingPolicyId")
     public String scalingPolicyId;
 
+    /**
+     * <p>The details of the scaling rule.</p>
+     */
     @NameInMap("scalingRuleDetail")
     public String scalingRuleDetail;
 
+    /**
+     * <p>The ID of the scaling rule.</p>
+     */
     @NameInMap("scalingRuleId")
     public String scalingRuleId;
 
+    /**
+     * <p>The name of the scaling rule that triggered the activity.</p>
+     */
     @NameInMap("scalingRuleName")
     public String scalingRuleName;
 
+    /**
+     * <p>The start time of the scaling activity.</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>The time zone of the scaling activity.</p>
+     */
     @NameInMap("timeZone")
     public String timeZone;
 

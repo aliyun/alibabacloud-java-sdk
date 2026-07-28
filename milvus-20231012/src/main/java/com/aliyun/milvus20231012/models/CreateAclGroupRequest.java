@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAclGroupRequest extends TeaModel {
     /**
+     * <p>Specify one or more CIDR blocks, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>140.205.11.0/24,140.205.11.2</p>
      */
@@ -12,6 +14,8 @@ public class CreateAclGroupRequest extends TeaModel {
     public String cidrs;
 
     /**
+     * <p>The name of the ACL group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class CreateAclGroupRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-xxxx</p>
      */
@@ -26,6 +32,8 @@ public class CreateAclGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
