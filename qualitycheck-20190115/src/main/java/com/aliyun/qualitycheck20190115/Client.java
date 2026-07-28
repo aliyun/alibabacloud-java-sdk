@@ -1451,54 +1451,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a speech recognition quality check task.</p>
-     * 
-     * @param request DeletePrecisionTaskRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeletePrecisionTaskResponse
-     */
-    public DeletePrecisionTaskResponse deletePrecisionTaskWithOptions(DeletePrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeletePrecisionTask"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePrecisionTaskResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Delete a speech recognition quality check task.</p>
-     * 
-     * @param request DeletePrecisionTaskRequest
-     * @return DeletePrecisionTaskResponse
-     */
-    public DeletePrecisionTaskResponse deletePrecisionTask(DeletePrecisionTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deletePrecisionTaskWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>You can delete a quality check plan from the Quality Check Plan Management page by clicking the Delete button on the right side of the plan. The Apsara Stack API endpoint is ip:port/api/qcs/DeleteQualityCheckScheme.json.</p>
      * 
      * @param request DeleteQualityCheckSchemeRequest
@@ -2111,7 +2063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the task result of an agent node.</p>
+     * <p>Retrieves the task result of an Agent node.</p>
      * 
      * @param request GetAgentTaskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2147,7 +2099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the task result of an agent node.</p>
+     * <p>Retrieves the task result of an Agent node.</p>
      * 
      * @param request GetAgentTaskResultRequest
      * @return GetAgentTaskResultResponse
@@ -2491,54 +2443,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNextResultToVerifyResponse getNextResultToVerify(GetNextResultToVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNextResultToVerifyWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Retrieves the details of a (speech recognition) detection task.</p>
-     * 
-     * @param request GetPrecisionTaskRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetPrecisionTaskResponse
-     */
-    public GetPrecisionTaskResponse getPrecisionTaskWithOptions(GetPrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetPrecisionTask"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPrecisionTaskResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Retrieves the details of a (speech recognition) detection task.</p>
-     * 
-     * @param request GetPrecisionTaskRequest
-     * @return GetPrecisionTaskResponse
-     */
-    public GetPrecisionTaskResponse getPrecisionTask(GetPrecisionTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getPrecisionTaskWithOptions(request, runtime);
     }
 
     /**
@@ -3169,62 +3073,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about all scoring items.</p>
-     * 
-     * @deprecated OpenAPI GetScoreInfo is deprecated
-     * 
-     * @param request GetScoreInfoRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetScoreInfoResponse
-     */
-    @Deprecated
-    // Deprecated
-    public GetScoreInfoResponse getScoreInfoWithOptions(GetScoreInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetScoreInfo"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetScoreInfoResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Retrieves information about all scoring items.</p>
-     * 
-     * @deprecated OpenAPI GetScoreInfo is deprecated
-     * 
-     * @param request GetScoreInfoRequest
-     * @return GetScoreInfoResponse
-     */
-    @Deprecated
-    // Deprecated
-    public GetScoreInfoResponse getScoreInfo(GetScoreInfoRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getScoreInfoWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Retrieves the configuration that is specified by its ID.</p>
      * 
      * @deprecated OpenAPI GetSkillGroupConfig is deprecated
@@ -3643,54 +3491,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDataSetResponse listDataSet(ListDataSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDataSetWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Retrieve the list of speech recognition precision tasks. Set the service endpoint to Hangzhou (cn-hangzhou).</p>
-     * 
-     * @param request ListPrecisionTaskRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListPrecisionTaskResponse
-     */
-    public ListPrecisionTaskResponse listPrecisionTaskWithOptions(ListPrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListPrecisionTask"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrecisionTaskResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Retrieve the list of speech recognition precision tasks. Set the service endpoint to Hangzhou (cn-hangzhou).</p>
-     * 
-     * @param request ListPrecisionTaskRequest
-     * @return ListPrecisionTaskResponse
-     */
-    public ListPrecisionTaskResponse listPrecisionTask(ListPrecisionTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listPrecisionTaskWithOptions(request, runtime);
     }
 
     /**
@@ -4607,54 +4407,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitComplaintResponse submitComplaint(SubmitComplaintRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitComplaintWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates a speech recognition evaluation task. The service endpoint is China East 1 (Hangzhou) (cn-hangzhou).</p>
-     * 
-     * @param request SubmitPrecisionTaskRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return SubmitPrecisionTaskResponse
-     */
-    public SubmitPrecisionTaskResponse submitPrecisionTaskWithOptions(SubmitPrecisionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SubmitPrecisionTask"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitPrecisionTaskResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Creates a speech recognition evaluation task. The service endpoint is China East 1 (Hangzhou) (cn-hangzhou).</p>
-     * 
-     * @param request SubmitPrecisionTaskRequest
-     * @return SubmitPrecisionTaskResponse
-     */
-    public SubmitPrecisionTaskResponse submitPrecisionTask(SubmitPrecisionTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.submitPrecisionTaskWithOptions(request, runtime);
     }
 
     /**
@@ -6233,101 +5985,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadRuleResponse uploadRule(UploadRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadRuleWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Saves the verification result of a single file.</p>
-     * 
-     * @param request VerifyFileRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return VerifyFileResponse
-     */
-    public VerifyFileResponse verifyFileWithOptions(VerifyFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "VerifyFile"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyFileResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Saves the verification result of a single file.</p>
-     * 
-     * @param request VerifyFileRequest
-     * @return VerifyFileResponse
-     */
-    public VerifyFileResponse verifyFile(VerifyFileRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.verifyFileWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Save the verification result for a single sentence.</p>
-     * 
-     * @param request VerifySentenceRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return VerifySentenceResponse
-     */
-    public VerifySentenceResponse verifySentenceWithOptions(VerifySentenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
-            query.put("BaseMeAgentId", request.baseMeAgentId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
-            query.put("JsonStr", request.jsonStr);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "VerifySentence"),
-            new TeaPair("version", "2019-01-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifySentenceResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Save the verification result for a single sentence.</p>
-     * 
-     * @param request VerifySentenceRequest
-     * @return VerifySentenceResponse
-     */
-    public VerifySentenceResponse verifySentence(VerifySentenceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.verifySentenceWithOptions(request, runtime);
     }
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentTaskResultRequest extends TeaModel {
     /**
-     * <p>The ID of the business workspace.</p>
+     * <p>The ID of the business space.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

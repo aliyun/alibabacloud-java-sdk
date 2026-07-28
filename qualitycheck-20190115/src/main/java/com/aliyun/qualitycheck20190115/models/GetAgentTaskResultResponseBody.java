@@ -38,10 +38,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. You can use this field to determine whether the request succeeded:</p>
+     * <p>Indicates whether the request was successful. You can use this field to determine whether the request was successful:</p>
      * <ul>
-     * <li><strong>true</strong>: The request succeeded.</li>
-     * <li><strong>false/null</strong>: The request failed.</li>
+     * <li><strong>true</strong>: successful.</li>
+     * <li><strong>false/null</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The result returned by the large language model.</p>
          * 
          * <strong>example:</strong>
-         * <p>175/xl the fabric feels very comfortable, looks quite slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</p>
+         * <p>175/XL the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</p>
          */
         @NameInMap("Text")
         public String text;
@@ -207,7 +207,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList extends TeaModel {
         /**
-         * <p>The field name.</p>
+         * <p>The property name.</p>
          * 
          * <strong>example:</strong>
          * <p>phone</p>
@@ -231,7 +231,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String remarks;
 
         /**
-         * <p>The field value.</p>
+         * <p>The property value.</p>
          * 
          * <strong>example:</strong>
          * <p>1234561</p>
@@ -280,7 +280,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseFieldResponse extends TeaModel {
         /**
-         * <p>The list of fields.</p>
+         * <p>The list of properties.</p>
          */
         @NameInMap("FieldVoList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList> fieldVoList;
@@ -311,7 +311,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String dimension;
 
         /**
-         * <p>Indicates whether the tag is matched.</p>
+         * <p>Indicates whether the label is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -397,7 +397,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList extends TeaModel {
         /**
-         * <p>The tag dimension.</p>
+         * <p>The label dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>Customer intent.</p>
@@ -406,7 +406,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String dimension;
 
         /**
-         * <p>Indicates whether the tag is matched.</p>
+         * <p>Indicates whether the label is matched.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -484,7 +484,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     public static class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse extends TeaModel {
         /**
-         * <p>The list of tags.</p>
+         * <p>The list of labels.</p>
          */
         @NameInMap("TagCategoryVoList")
         public java.util.List<GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList> tagCategoryVoList;
@@ -742,7 +742,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public GetAgentTaskResultResponseBodyDataResponseCustomerPromptResponse customerPromptResponse;
 
         /**
-         * <p>The field extraction result.</p>
+         * <p>The property extraction result.</p>
          */
         @NameInMap("FieldResponse")
         public GetAgentTaskResultResponseBodyDataResponseFieldResponse fieldResponse;
@@ -809,21 +809,75 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetAgentTaskResultResponseBodyDataUsage extends TeaModel {
+        @NameInMap("InputTokens")
+        public String inputTokens;
+
+        @NameInMap("OutputTokens")
+        public String outputTokens;
+
+        @NameInMap("TotalTokens")
+        public String totalTokens;
+
+        @NameInMap("TymxPlusCount")
+        public String tymxPlusCount;
+
+        @NameInMap("TymxTurboCount")
+        public String tymxTurboCount;
+
+        public static GetAgentTaskResultResponseBodyDataUsage build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataUsage self = new GetAgentTaskResultResponseBodyDataUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataUsage setInputTokens(String inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public String getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public GetAgentTaskResultResponseBodyDataUsage setOutputTokens(String outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public String getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        public GetAgentTaskResultResponseBodyDataUsage setTotalTokens(String totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public String getTotalTokens() {
+            return this.totalTokens;
+        }
+
+        public GetAgentTaskResultResponseBodyDataUsage setTymxPlusCount(String tymxPlusCount) {
+            this.tymxPlusCount = tymxPlusCount;
+            return this;
+        }
+        public String getTymxPlusCount() {
+            return this.tymxPlusCount;
+        }
+
+        public GetAgentTaskResultResponseBodyDataUsage setTymxTurboCount(String tymxTurboCount) {
+            this.tymxTurboCount = tymxTurboCount;
+            return this;
+        }
+        public String getTymxTurboCount() {
+            return this.tymxTurboCount;
+        }
+
+    }
+
     public static class GetAgentTaskResultResponseBodyData extends TeaModel {
         @NameInMap("Dialogues")
         public java.util.List<GetAgentTaskResultResponseBodyDataDialogues> dialogues;
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
-
-        /**
-         * <p>The number of input tokens.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("InputTokens")
-        public String inputTokens;
 
         /**
          * <p>The request ID returned by the large language model service.</p>
@@ -835,15 +889,6 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public String llmRequestId;
 
         /**
-         * <p>The number of output tokens.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
-        @NameInMap("OutputTokens")
-        public String outputTokens;
-
-        /**
          * <p>The result of the computation task.</p>
          */
         @NameInMap("Response")
@@ -852,10 +897,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>1: pending</li>
-         * <li>2: running</li>
-         * <li>3: succeeded</li>
-         * <li>4: failed</li>
+         * <li>1: pending.</li>
+         * <li>2: running.</li>
+         * <li>3: succeeded.</li>
+         * <li>4: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -873,32 +918,8 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>The total number of tokens.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>300</p>
-         */
-        @NameInMap("TotalTokens")
-        public String totalTokens;
-
-        /**
-         * <p>The number of times the plus model is used.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TyxmPlusCount")
-        public String tyxmPlusCount;
-
-        /**
-         * <p>The number of times the turbo model is used.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("TyxmTurboCount")
-        public String tyxmTurboCount;
+        @NameInMap("Usage")
+        public GetAgentTaskResultResponseBodyDataUsage usage;
 
         /**
          * <p>The session ID.</p>
@@ -930,28 +951,12 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
-        public GetAgentTaskResultResponseBodyData setInputTokens(String inputTokens) {
-            this.inputTokens = inputTokens;
-            return this;
-        }
-        public String getInputTokens() {
-            return this.inputTokens;
-        }
-
         public GetAgentTaskResultResponseBodyData setLlmRequestId(String llmRequestId) {
             this.llmRequestId = llmRequestId;
             return this;
         }
         public String getLlmRequestId() {
             return this.llmRequestId;
-        }
-
-        public GetAgentTaskResultResponseBodyData setOutputTokens(String outputTokens) {
-            this.outputTokens = outputTokens;
-            return this;
-        }
-        public String getOutputTokens() {
-            return this.outputTokens;
         }
 
         public GetAgentTaskResultResponseBodyData setResponse(GetAgentTaskResultResponseBodyDataResponse response) {
@@ -978,28 +983,12 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public GetAgentTaskResultResponseBodyData setTotalTokens(String totalTokens) {
-            this.totalTokens = totalTokens;
+        public GetAgentTaskResultResponseBodyData setUsage(GetAgentTaskResultResponseBodyDataUsage usage) {
+            this.usage = usage;
             return this;
         }
-        public String getTotalTokens() {
-            return this.totalTokens;
-        }
-
-        public GetAgentTaskResultResponseBodyData setTyxmPlusCount(String tyxmPlusCount) {
-            this.tyxmPlusCount = tyxmPlusCount;
-            return this;
-        }
-        public String getTyxmPlusCount() {
-            return this.tyxmPlusCount;
-        }
-
-        public GetAgentTaskResultResponseBodyData setTyxmTurboCount(String tyxmTurboCount) {
-            this.tyxmTurboCount = tyxmTurboCount;
-            return this;
-        }
-        public String getTyxmTurboCount() {
-            return this.tyxmTurboCount;
+        public GetAgentTaskResultResponseBodyDataUsage getUsage() {
+            return this.usage;
         }
 
         public GetAgentTaskResultResponseBodyData setVid(String vid) {
