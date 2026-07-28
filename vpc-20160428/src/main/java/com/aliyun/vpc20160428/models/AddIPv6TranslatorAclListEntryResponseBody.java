@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddIPv6TranslatorAclListEntryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ACL entry.</p>
+     * <p>The ID of the access control policy group entry.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6transaclentry-bp105jrs****</p>

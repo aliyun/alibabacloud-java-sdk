@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class AssociateEipAddressBatchRequest extends TeaModel {
     /**
-     * <p>The ID of the instance with which you want to associate the EIPs.</p>
-     * <p>The instance can be a NAT gateway or a secondary ENI.</p>
+     * <p>The ID of the cloud service instance that you want to attach the EIPs to.</p>
+     * <p>You can enter the instance ID of an Internet NAT gateway instance or a secondary elastic network interfaces (ENIs) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +16,10 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
     public String bindedInstanceId;
 
     /**
-     * <p>The type of the instance with which you want to associate the EIPs. Valid values:</p>
+     * <p>The type of the instance that you want to attach the EIPs to. Valid values:</p>
      * <ul>
-     * <li><strong>Nat</strong>: NAT gateway</li>
-     * <li><strong>NetworkInterface</strong>: secondary ENI</li>
+     * <li><strong>Nat</strong>: Internet NAT gateway.</li>
+     * <li><strong>NetworkInterface</strong>: secondary elastic network interfaces (ENIs).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,16 +43,16 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The EIPs to be associated with the instance.</p>
-     * <p>You must enter at least one EIP. You can enter up to 50 EIPs.</p>
+     * <p>The list of EIPs that you want to associate with the cloud service instance.</p>
+     * <p>You must specify at least 1 EIP and can specify up to 50 EIPs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The association mode. Set the value to <strong>MULTI_BINDED</strong>, which specifies the Multi-EIP-to-ENI mode.</p>
-     * <p>This parameter is required only when <strong>BindedInstanceType</strong> is set to <strong>NetworkInterface</strong>.</p>
+     * <p>The association mode. Set the value to <strong>MULTI_BINDED</strong>, which specifies the multi-EIP-to-ENI mode.</p>
+     * <p>This parameter is required only when <strong>InstanceType</strong> is set to <strong>NetworkInterface</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MULTI_BINDED</p>
@@ -64,7 +64,8 @@ public class AssociateEipAddressBatchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the EIPs belong. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the EIPs that you want to associate with a cloud service instance.
+     * You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

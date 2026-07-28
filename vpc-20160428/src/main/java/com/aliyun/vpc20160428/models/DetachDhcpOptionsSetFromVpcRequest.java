@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the DHCP options set to be disassociated from a VPC.</p>
+     * <p>The ID of the DHCP options set to disassociate from the VPC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,9 +28,9 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     public String dhcpOptionsSetId;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <p><strong>true</strong>: performs only a dry run. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <p><strong>false</strong> (default): sends a Normal request. If the request passes the authorization and parameter check, a 2XX HTTP status code is returned and the DHCP options set is disassociated from the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -45,7 +45,7 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the DHCP options set belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the DHCP options set. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The ID of the VPC to disassociate from the DHCP options set.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     /**
-     * <p>The details of route entries in the gateway route table.</p>
+     * <p>The details of the route entries in the gateway route table.</p>
      */
     @NameInMap("GatewayRouteEntryModels")
     public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels> gatewayRouteEntryModels;
@@ -105,7 +105,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
          * <p>The next hop type. Valid values:</p>
          * <ul>
          * <li><strong>Instance</strong> (default): ECS instance.</li>
-         * <li><strong>HaVip</strong>: high-availability virtual IP address (HaVip).</li>
+         * <li><strong>HaVip</strong>: high-availability virtual IP address.</li>
          * <li><strong>VpnGateway</strong>: VPN gateway.</li>
          * <li><strong>NatGateway</strong>: NAT gateway.</li>
          * <li><strong>NetworkInterface</strong>: secondary elastic network interfaces (ENIs).</li>
@@ -227,7 +227,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops> nextHops;
 
         /**
-         * <p>The status of the route entry.</p>
+         * <p>The status of the route entry. Valid values:</p>
          * <ul>
          * <li><strong>Pending</strong>: being configured.</li>
          * <li><strong>Available</strong>: available.</li>

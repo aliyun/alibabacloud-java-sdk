@@ -24,7 +24,7 @@ public class ListIpsecServersRequest extends TeaModel {
     public String ipsecServerName;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,10 +33,12 @@ public class ListIpsecServersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * <li><p>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</p>
+     * </li>
+     * <li><p>If a subsequent query is to be sent, set the value to the NextToken value returned in the previous call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,8 +48,8 @@ public class ListIpsecServersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the IPsec server is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPsec server.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +60,7 @@ public class ListIpsecServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the IPsec server belongs.</p>
-     * <p>The IPsec server and its associated VPN gateway belong to the same resource group. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the ID of the resource group to which the VPN gateway belongs.</p>
+     * <p>The IPsec server belongs to the same resource group as the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the resource group ID of the VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>

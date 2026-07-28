@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSnatTableEntriesRequest extends TeaModel {
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT gateway to query.</p>
      * <blockquote>
-     * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * <p>You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The ID of the elastic network interface to be queried.</p>
+     * <p>The IDs of the elastic network interfaces (ENIs) to query.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -38,7 +38,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,8 +47,8 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where you want to create the NAT gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the NAT gateway.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
 
     /**
      * <p>The name of the SNAT entry.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>SnatEntry-1</p>
@@ -84,8 +84,10 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</li>
-     * <li>When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</li>
+     * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the elastic IP address (EIP) in the SNAT entry.</p>
+     * </li>
+     * <li><p>When you query SNAT entries of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,9 +97,9 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public String snatIp;
 
     /**
-     * <p>The ID of the SNAT table.</p>
+     * <p>The ID of the SNAT table. </p>
      * <blockquote>
-     * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * <p>You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,7 +109,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public String snatTableId;
 
     /**
-     * <p>The source CIDR block specified in the SNAT entry.</p>
+     * <p>The source CIDR block of the SNAT entry.</p>
      * 
      * <strong>example:</strong>
      * <p>116.22.XX.XX/24</p>
@@ -118,8 +120,10 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch.</p>
      * <ul>
-     * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</li>
-     * <li>When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</li>
+     * <li><p>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the vSwitch whose ECS instances can access the Internet by using the SNAT rule.</p>
+     * </li>
+     * <li><p>When you query SNAT entries of a VPC NAT gateway, this parameter specifies the vSwitch whose ECS instances can access external networks by using the SNAT rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

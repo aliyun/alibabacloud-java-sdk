@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesForExpressConnectRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+     * <p>Specifies whether to unbind all tags from the resource. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: Unbinds all tags from the resource.</li>
+     * <li><strong>false</strong> (default): Does not unbind all tags from the resource.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which the resource is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the resource.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the resources from which you want to remove tags.</p>
+     * <p>The list of resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -48,11 +48,12 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
-     * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
-     * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit instance.</li>
+     * <li><strong>VIRTUALBORDERROUTER</strong>: Virtual Border Router.</li>
+     * <li><strong>ROUTERINTERFACE</strong>: VBR uplink.</li>
+     * <li><strong>TRAFFICQOS</strong>: QoS policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +64,7 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to remove from the specified resource.</p>
+     * <p>The list of tag keys for the resource.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

@@ -25,7 +25,7 @@ public class DeleteSslVpnClientCertRequest extends TeaModel {
 
     /**
      * <p>The region ID of the SSL-VPN client certificate. </p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

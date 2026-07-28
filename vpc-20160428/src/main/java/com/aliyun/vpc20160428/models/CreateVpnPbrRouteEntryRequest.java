@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     /**
-     * <p>The description of the policy-based route.</p>
-     * <p>The description must be 1 to 100 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>d7d24a21-f4ba-4454-9173-b3****</p>
@@ -15,7 +18,8 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The description of the policy-based route.</p>
+     * <p>The description must be 1 to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -24,10 +28,10 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the route. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The description of the policy-based route.</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -62,11 +66,8 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The status of the policy-based route. Valid values:</p>
-     * <ul>
-     * <li><strong>published</strong>: advertised to the VPC route table.</li>
-     * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
-     * </ul>
+     * <p>The policy priority of the policy-based routing entry. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>A smaller policy priority value indicates a higher priority of the routing entry.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -75,7 +76,15 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The destination CIDR block of the policy-based route.</p>
+     * <p>Specifies whether to publish the policy-based route to the VPC route table. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Publishes the policy-based route to the VPC. The system publishes the route only to the VPC system route table, not to VPC custom route tables.</p>
+     * <p>If you want the VPC custom route table to contain this route, manually add it. For more information, see <a href="https://help.aliyun.com/document_detail/448722.html">CreateRouteEntry</a>.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Does not publish the policy-based route to the VPC route table.</p>
+     * <p>You must manually add a policy-based route with the next hop pointing to the VPN gateway instance in both the VPC system route table and custom route tables. Otherwise, the VPC cannot access resources in the destination CIDR block through the IPsec-VPN connection.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,15 +94,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public Boolean publishVpc;
 
     /**
-     * <p>Specifies whether to advertise the policy-based route to a virtual private cloud (VPC) route table. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: The route is advertised to the VPC system route table, but not to a VPC custom route table.</p>
-     * <p>You can manually add the route the a VPC custom route table. For more information, see <a href="https://help.aliyun.com/document_detail/448722.html">CreateRouteEntry</a>.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Do not advertise the route to the route table.</p>
-     * <p>You must manually add a policy-based route that points to the VPN gateway in the VPC custom and system route table. Otherwise, the VPC cannot access resources in the CIDR block through an IPsec-VPN connection.</p>
-     * </li>
-     * </ul>
+     * <p>The region ID of the VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +110,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The destination CIDR block of the policy-based route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,8 +120,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public String routeDest;
 
     /**
-     * <p>The priority of the policy-based route. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
-     * <p>A smaller value indicates a higher priority.</p>
+     * <p>The source CIDR block of the policy-based route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public String routeSource;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong>.</p>
+     * <p>The ID of the VPN gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,11 +140,19 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The weight of the policy-based route. Valid values:</p>
+     * <p>The weight of the policy-based routing entry.</p>
+     * <p>When you use the same VPN gateway instance to establish active/standby IPsec-VPN connections, you can specify the active and standby links by configuring the weight of the policy-based routing entry. A policy-based routing entry with a weight of 100 is the active link by default, and a policy-based routing entry with a weight of 0 is the standby link by default.</p>
+     * <p>You can configure health checks for the IPsec-VPN connection to automatically detect link connectivity. If the active link is down, the system automatically switches traffic to the standby link, ensuring high availability of the cloud connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</p>
      * <ul>
-     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
-     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based routing entry serves as the active link.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based routing entry serves as the standby link.</li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>When you specify active and standby links, the source and destination CIDR blocks of the active and standby policy-based routing entries must be the same.</li>
+     * <li>For VPN gateway instances that support dual-tunnel pattern IPsec-VPN connections, you do not need to configure this parameter. A dual-tunnel pattern IPsec-VPN connection contains two tunnels that automatically form active/standby links. You do not need to specify active/standby links by configuring this parameter. If you configure this parameter, the parameter settings do not take effect.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -17,7 +17,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of items per page in a paginated query.</p>
+     * <p>The number of entries per page in paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,9 +35,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>true</strong>: The call is successful.</li>
      * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
@@ -48,7 +48,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The number of entries in the queried flow log list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -205,6 +205,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("IpVersion")
         public String ipVersion;
 
+        @NameInMap("LogFormat")
+        public String logFormat;
+
         @NameInMap("LogStoreName")
         public String logStoreName;
 
@@ -313,6 +316,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
         public String getIpVersion() {
             return this.ipVersion;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setLogFormat(String logFormat) {
+            this.logFormat = logFormat;
+            return this;
+        }
+        public String getLogFormat() {
+            return this.logFormat;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setLogStoreName(String logStoreName) {

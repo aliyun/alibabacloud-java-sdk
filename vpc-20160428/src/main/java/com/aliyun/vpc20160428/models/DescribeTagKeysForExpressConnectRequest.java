@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     /**
-     * <p>The keyword of the tag. Fuzzy match is supported. You can specify a keyword to query all tags that contain the keyword.</p>
+     * <p>The keyword of the tag name. Fuzzy match is supported. You can enter a keyword to query all tags that contain the keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>keyword</p>
@@ -14,7 +14,7 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,10 +23,10 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     public Integer maxResult;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If this is the first query or there is no next query, leave this parameter empty.</li>
+     * <li>If there is a next query, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,8 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the resource resides.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the resource.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the resources. You can specify up to 20 resource IDs.</p>
+     * <p>The resource ID. You can specify up to 20 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -65,7 +65,13 @@ public class DescribeTagKeysForExpressConnectRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>PHYSICALCONNECTION</strong>, which specifies an Express Connect circuit.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit instance.</li>
+     * <li><strong>VIRTUALBORDERROUTER</strong>: Virtual Border Router.</li>
+     * <li><strong>ROUTERINTERFACE</strong>: VBR uplink.</li>
+     * <li><strong>TRAFFICQOS</strong>: QoS policy.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PHYSICALCONNECTION</p>

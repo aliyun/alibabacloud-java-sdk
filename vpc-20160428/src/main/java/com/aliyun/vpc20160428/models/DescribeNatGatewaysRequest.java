@@ -10,9 +10,9 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without querying resource status. The check items include whether the AccessKey pair is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM user authorization, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a normal request. After the check succeeds, a 2xx HTTP status code is returned and the resource status is queried directly.</p>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request. After the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried. This is the Normal request behavior.</p>
      * </li>
      * </ul>
      * 
@@ -23,13 +23,13 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The billing method of the NAT gateway instance to query. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The billing method of the NAT gateway instance that you want to query. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
-     * <li><strong>PrePaid</strong>: the legacy subscription billing method. The subscription billing method is no longer available for new purchases.</li>
+     * <li><strong>PrePaid</strong>: the legacy subscription billing method. New purchases under the subscription billing method are no longer supported.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway instance to query. Valid value: <strong>PostPaid</strong> (pay-as-you-go).</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway instance that you want to query. Valid value: <strong>PostPaid</strong> (pay-as-you-go).</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -38,7 +38,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the NAT gateway to query.</p>
+     * <p>The name of the NAT gateway that you want to query.</p>
      * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the NAT gateway to query.</p>
+     * <p>The ID of the NAT gateway that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1uewa15k4iy5770****</p>
@@ -66,7 +66,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String natType;
 
     /**
-     * <p>The type of the NAT gateway to query. Valid values:</p>
+     * <p>The type of the NAT gateway that you want to query. Valid values:</p>
      * <ul>
      * <li><strong>internet</strong>: Internet NAT gateway.</li>
      * <li><strong>intranet</strong>: VPC NAT gateway.</li>
@@ -94,7 +94,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paginated queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -103,7 +103,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the NAT gateway to query.</p>
+     * <p>The region ID of the NAT gateway that you want to query.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -114,7 +114,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the NAT gateway to query belongs.</p>
+     * <p>The ID of the resource group to which the NAT gateway that you want to query belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -129,7 +129,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The specification of the Internet NAT gateway. Only when <strong>InstanceChargeType</strong> is <strong>PrePaid</strong> (legacy subscription Internet NAT gateway), creating a NAT gateway by fixed specification is supported. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The specification of the Internet NAT gateway. This parameter is supported only when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong> (legacy subscription Internet NAT gateway) to create a NAT gateway with defined specifications. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li><strong>Small</strong> (default): small.</li>
@@ -145,17 +145,17 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The status of the NAT gateway to query. Valid values:</p>
+     * <p>The status of the NAT gateway that you want to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Creating</strong>: Creating a NAT gateway is an asynchronous operation. The status is <strong>Creating</strong> before the creation is complete.</p>
+     * <li><p><strong>Creating</strong>: The NAT gateway is being created. Creating a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Creating</strong> state until the operation is complete.</p>
      * </li>
-     * <li><p><strong>Available</strong>: The status after the NAT gateway is created. This is a stable status.</p>
+     * <li><p><strong>Available</strong>: The NAT gateway is available. This is a stable state after the NAT gateway is created.</p>
      * </li>
-     * <li><p><strong>Modifying</strong>: Modifying a NAT gateway is an asynchronous operation. The status is <strong>Modifying</strong> during the modification process.</p>
+     * <li><p><strong>Modifying</strong>: The NAT gateway is being modified. Modifying a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Modifying</strong> state until the operation is complete.</p>
      * </li>
-     * <li><p><strong>Deleting</strong>: Deleting a NAT gateway is an asynchronous operation. The status is <strong>Deleting</strong> during the deletion process.</p>
+     * <li><p><strong>Deleting</strong>: The NAT gateway is being deleted. Deleting a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Deleting</strong> state until the operation is complete.</p>
      * </li>
-     * <li><p><strong>Converting</strong>: Converting a standard NAT gateway to an enhanced NAT gateway is an asynchronous operation. The status is <strong>Converting</strong> during the conversion process.</p>
+     * <li><p><strong>Converting</strong>: The NAT gateway is being upgraded from a standard NAT gateway to an enhanced NAT gateway. This is an asynchronous operation. The NAT gateway remains in the <strong>Converting</strong> state until the operation is complete.</p>
      * </li>
      * </ul>
      * 
@@ -172,7 +172,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public java.util.List<DescribeNatGatewaysRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC to which the NAT gateway to query belongs.</p>
+     * <p>The ID of the VPC to which the NAT gateway that you want to query belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp15zckdt37pq72z****</p>
@@ -181,7 +181,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone where the NAT gateway is deployed.</p>
+     * <p>The zone ID of the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>
@@ -357,7 +357,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public static class DescribeNatGatewaysRequestTag extends TeaModel {
         /**
          * <p>The tag key of the NAT gateway instance. You can specify up to 20 tag keys.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyTest</p>
@@ -367,7 +367,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
 
         /**
          * <p>The tag value of the NAT gateway instance. You can specify up to 20 tag values.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>valueTest</p>

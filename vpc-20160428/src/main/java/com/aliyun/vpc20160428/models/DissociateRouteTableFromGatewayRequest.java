@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without disassociating the gateway route table from the IPv4 gateway instance. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the gateway route table is disassociated from the IPv4 gateway instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the IPv4 gateway.</p>
+     * <p>The instance ID of the IPv4 gateway to disassociate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The type of a gateway to be disassociated from a route table.</p>
+     * <p>The type of the gateway instance to disassociate.</p>
      * 
      * <strong>example:</strong>
      * <p>Ipv4Gateway</p>
@@ -56,8 +56,8 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IPv4 gateway from which you want to disassociate the gateway route table.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the gateway route table and IPv4 gateway instance to disassociate.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the gateway route table.</p>
+     * <p>The ID of the gateway route table to disassociate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

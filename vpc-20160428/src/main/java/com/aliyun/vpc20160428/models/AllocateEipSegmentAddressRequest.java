@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class AllocateEipSegmentAddressRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the contiguous EIP group. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
      * <ul>
-     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>: <strong>1</strong> to <strong>500</strong>.****</li>
-     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>: <strong>1</strong> to <strong>200</strong>.****</li>
-     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>: <strong>1</strong> to <strong>1000</strong>.****</li>
+     * <li><p>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</p>
+     * </li>
+     * <li><p>If <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>5</strong>. Unit: Mbit/s.</p>
+     * <p>Default value: <strong>5</strong> Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -21,9 +22,9 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,16 +34,21 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The subnet mask of the contiguous EIP group. Valid values:</p>
+     * <p>The subnet mask of the contiguous EIPs. Valid values:</p>
      * <ul>
-     * <li><strong>28</strong>: applies for 16 contiguous EIPs in each call.</li>
-     * <li><strong>27</strong>: applies for 32 contiguous EIPs in each call.</li>
-     * <li><strong>26</strong>: applies for 64 contiguous EIPs in each call.</li>
-     * <li><strong>25</strong>: applies for 128 contiguous EIPs in each call.</li>
-     * <li><strong>24</strong>: applies for 256 contiguous EIPs in each call.</li>
+     * <li><p><strong>28</strong>: The system allocates 16 contiguous EIPs per call.</p>
+     * </li>
+     * <li><p><strong>27</strong>: The system allocates 32 contiguous EIPs per call.</p>
+     * </li>
+     * <li><p><strong>26</strong>: The system allocates 64 contiguous EIPs per call.</p>
+     * </li>
+     * <li><p><strong>25</strong>: The system allocates 128 contiguous EIPs per call.</p>
+     * </li>
+     * <li><p><strong>24</strong>: The system allocates 256 contiguous EIPs per call.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Some IP address are reserved for specific purposes. Therefore, the actual number of the contiguous EIPs may be one, three, or four less than the expected number.</p>
+     * <p>Due to IP address reservation, the actual number of contiguous EIPs may be 1, 3, or 4 fewer than expected.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -53,10 +59,12 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public String eipMask;
 
     /**
-     * <p>The metering method of contiguous EIPs. Valid values:</p>
+     * <p>The billable methods of the contiguous EIPs. Valid values:</p>
      * <ul>
-     * <li><strong>PayByBandwidth</strong> (default)</li>
-     * <li><strong>PayByTraffic</strong></li>
+     * <li><p><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</p>
+     * </li>
+     * <li><p><strong>PayByTraffic</strong>: pay-by-data-transfer.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,20 +76,20 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) premium line. Only Hong Kong (China), Singapore, Tokyo (Japan), Kuala Lumpur (Malaysia), Manila (Philippines), Jakarta (Indonesia), and Bangkok (Thailand) regions support BGP (multi-ISP) premium EIPs.</li>
      * </ul>
-     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
-     * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+     * <p>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) premium lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
+     * <p>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:</p>
      * <ul>
-     * <li><strong>ChinaTelecom</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaTelecom_L2</strong></li>
-     * <li><strong>ChinaUnicom_L2</strong></li>
-     * <li><strong>ChinaMobile_L2</strong></li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile</li>
+     * <li><strong>ChinaTelecom_L2</strong>: China Telecom L2</li>
+     * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
+     * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
-     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to <strong>BGP_FinanceCloud</strong>.</p>
+     * <p>If you are an Alibaba Finance Cloud user, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -90,7 +98,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The network type. Set the value to <strong>public</strong>, which specifies the public network type.</p>
+     * <p>The network type. Set the value to <strong>public</strong>, which specifies the public network.</p>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -105,7 +113,7 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which the contiguous EIP group resides.</p>
+     * <p>The region ID of the contiguous EIPs.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 

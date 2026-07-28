@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFailoverTestJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the failover test.</p>
+     * <p>The ID of the failover test job.</p>
      * 
      * <strong>example:</strong>
      * <p>ftj-bp1yh6mvi13aq3g8w****</p>

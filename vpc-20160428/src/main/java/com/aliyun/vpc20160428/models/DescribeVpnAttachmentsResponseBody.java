@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page when paging is used.</p>
+     * <p>The number of entries per page in paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of IPsec-VPN connections that are associated with transit router instances.</p>
+     * <p>The list of IPsec-VPN connections associated with transit router instances.</p>
      */
     @NameInMap("VpnAttachments")
     public java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachments> vpnAttachments;
@@ -135,7 +135,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
 
     public static class DescribeVpnAttachmentsResponseBodyVpnAttachments extends TeaModel {
         /**
-         * <p>The type of resource to which the IPsec-VPN connection is attached. The value is <strong>CEN</strong>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</p>
+         * <p>The type of resource to which the IPsec-VPN connection is associated. The value is <strong>CEN</strong>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</p>
          * 
          * <strong>example:</strong>
          * <p>CEN</p>
@@ -146,8 +146,8 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the IPsec-VPN connection is associated with a transit router instance that belongs to a different Alibaba Cloud account.</p>
          * <ul>
-         * <li><strong>true</strong>: yes.</li>
-         * <li><strong>false</strong>: no.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,11 +185,11 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The system tags of the IPsec-VPN connection.</p>
-         * <p>You can use system tags to check whether the IPsec-VPN connection supports BGP. You do not need to pay attention to other properties.</p>
+         * <p>You can use system tags to check whether the IPsec-VPN connection supports BGP. You can ignore other properties.</p>
          * <p><strong>BGPSupport</strong>: indicates whether the IPsec-VPN connection supports BGP.</p>
          * <ul>
-         * <li><strong>true</strong>: supported.</li>
-         * <li><strong>false</strong>: not supported.</li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,13 +199,13 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The list of tags that are attached to the IPsec-VPN connection.</p>
+         * <p>The list of tags associated with the IPsec-VPN connection.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeVpnAttachmentsResponseBodyVpnAttachmentsTags> tags;
 
         /**
-         * <p>The ID of the transit routing instance to which the IPsec-VPN connection is attached.</p>
+         * <p>The instance ID of the forward routing vRouter to which the IPsec-VPN connection is attached.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-p0wkh4yryb1dnanqw****</p>
@@ -224,8 +224,8 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The bandwidth specification of a single VPN tunnel. Valid values:
-         * Standard (default): standard. The default bandwidth is 1 Gbit/s.
-         * Large: large. The default bandwidth is 3 Gbit/s.</p>
+         * Standard (default): standard. The default bandwidth is 1 Gbps.
+         * Large: large. The default bandwidth is 3 Gbps.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>

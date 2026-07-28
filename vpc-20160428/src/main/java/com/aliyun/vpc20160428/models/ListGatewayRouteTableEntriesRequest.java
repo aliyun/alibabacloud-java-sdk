@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     /**
-     * <p>The destination CIDR block of the route entry in the gateway route table that you want to query.</p>
+     * <p>The destination CIDR block of the route entry in the gateway route table to query.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.5</p>

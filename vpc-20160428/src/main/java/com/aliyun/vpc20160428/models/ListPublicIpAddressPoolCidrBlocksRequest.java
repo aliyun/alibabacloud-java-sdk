@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     /**
-     * <p>The CIDR blocks.</p>
+     * <p>The CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>47.0.XX.XX/24</p>
@@ -16,8 +16,8 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without querying the CIDR block information in the IP address pool. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,10 +36,10 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+     * <li>If a subsequent query exists, set the value to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the IP address pool.</p>
+     * <p>The instance ID of the IPAM pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     public String publicIpAddressPoolId;
 
     /**
-     * <p>The region ID of the CIDR blocks.</p>
+     * <p>The region ID of the CIDR block that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

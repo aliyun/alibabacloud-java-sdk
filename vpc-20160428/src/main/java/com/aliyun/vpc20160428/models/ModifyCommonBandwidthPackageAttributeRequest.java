@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP bandwidth plan.</p>
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The description of the EIP bandwidth plan. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the Internet Shared Bandwidth instance. The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>描述</p>
@@ -24,7 +24,7 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the EIP bandwidth plan. The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the Internet Shared Bandwidth instance. The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -39,8 +39,8 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the EIP bandwidth plan is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the Internet Shared Bandwidth instance is located. </p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

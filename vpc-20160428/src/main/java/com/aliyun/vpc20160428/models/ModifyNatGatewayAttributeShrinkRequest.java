@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the NAT gateway.</p>
-     * <p>The description must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the NAT gateway that you want to modify.</p>
+     * <p>The description must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Description</p>
@@ -15,16 +15,15 @@ public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Modifies the mode in which the EIP is associated with the NAT gateway. The value can be empty or <strong>NAT</strong>, which specifies the NAT mode.</p>
+     * <p>The EIP attach pattern of the NAT gateway. Valid values: The value can be empty. If the value is not empty, only <strong>NAT</strong> is allowed, which indicates that the attach pattern is EIP Normal pattern.</p>
      * <blockquote>
+     * <ul>
+     * <li>You can only change the pattern from <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. You cannot change the pattern from <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about the <strong>MULTI_BINDED</strong> pattern, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>You can only change <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. You cannot change <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about the <strong>MULTI_BINDED</strong> mode, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</p>
-     * </li>
-     * <li><p>When you change the association mode, your network may be interrupted for seconds. The duration increases with the number of EIPs. You can change the association mode for at most 5 EIPs at the same time. We recommend changing the association mode during off-peak hours.</p>
-     * </li>
-     * <li><p>After the association mode is changed to <strong>NAT</strong>, the Internet NAT gateway is compatible with an IPv4 gateway. If an EIP is associated with a NAT gateway in NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Ensure the vSwitch has sufficient private IP addresses for EIPs to be associated with the NAT gateway.</p>
-     * </li>
+     * <li>During the EIP attach pattern switchover procedure, network connectivity may experience second-level transient connections (the transient connection duration increases as the number of EIPs increases. Currently, configuration changes are supported for NAT gateways with up to 5 EIPs attached). Execute the switchover during off-peak hours.</li>
+     * <li>After the EIP attach pattern is changed to <strong>NAT</strong>, the Internet NAT gateway is compatible with the IPv4 gateway. However, attaching a public EIP occupies a private IP in the vSwitch where the NAT gateway resides. Make sure that sufficient private IP addresses are available in the vSwitch. If no available idle private IP addresses exist in the vSwitch, new EIPs cannot be attached.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,10 +33,12 @@ public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     public String eipBindMode;
 
     /**
-     * <p>Whether to enable session logging, with values:</p>
+     * <p>Specifies whether to enable session logging. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Session logging is enabled. </li>
-     * <li><strong>false</strong>: Session logging is disabled.</li>
+     * <li><p><strong>true</strong>: Session logging is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Session logging is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,10 +48,10 @@ public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     public Boolean enableSessionLog;
 
     /**
-     * <p>Specifies whether to enable the Internet Control Message Protocol (ICMP) non-retrieval feature. Valid values:</p>
+     * <p>Specifies whether to enable ICMP echo reply. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>true</strong> (default): Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,13 +61,13 @@ public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     public Boolean icmpReplyEnabled;
 
     /**
-     * <p>Session log configuration information.</p>
+     * <p>The session log configuration.</p>
      */
     @NameInMap("LogDelivery")
     public String logDeliveryShrink;
 
     /**
-     * <p>The name of the NAT gateway.</p>
+     * <p>The name of the NAT gateway that you want to modify.</p>
      * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +77,7 @@ public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT gateway that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +93,7 @@ public class ModifyNatGatewayAttributeShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway.</p>
+     * <p>The region ID of the NAT gateway that you want to modify. </p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

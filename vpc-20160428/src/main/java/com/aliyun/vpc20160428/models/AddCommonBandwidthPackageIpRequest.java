@@ -15,10 +15,10 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request.</p>
-     * <p>Generate a unique value for this parameter from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> is different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Performs a dry run without actually executing the operation.</p>
+     * <p>Specifies whether to perform a dry run without actually executing the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -37,8 +37,8 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the EIP instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> API to query the ID of the EIP instance.</p>
+     * <p>The ID of the EIP instance. </p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> to query the ID of the EIP instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     public String ipInstanceId;
 
     /**
-     * <p>The IP type. Valid value: <strong>EIP</strong>, which indicates that an EIP is added to the Internet Shared Bandwidth instance.</p>
+     * <p>The IP type. Valid values: <strong>EIP</strong>, which indicates that an EIP is added to the Internet Shared Bandwidth instance.</p>
      * 
      * <strong>example:</strong>
      * <p>EIP</p>
@@ -63,8 +63,8 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Internet Shared Bandwidth instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> API to obtain the region ID.</p>
+     * <p>The region ID of the Internet Shared Bandwidth instance. </p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

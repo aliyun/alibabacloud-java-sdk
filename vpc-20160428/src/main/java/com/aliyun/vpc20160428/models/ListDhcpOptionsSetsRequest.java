@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDhcpOptionsSetsRequest extends TeaModel {
     /**
-     * <p>The ID of the DHCP options set. You can specify at most 20 IDs.</p>
+     * <p>The ID of the DHCP options set. You can specify up to 20 DHCP options set IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>dopt-o6w0df4epg9zo8isy****</p>
@@ -15,21 +15,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
 
     /**
      * <p>The name of the DHCP options set.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>tf-testAccVpcDhcpOptionsSets-1585169790614573448</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>tf-testAccVpcDhcpOptionsSets-1585169790614573448</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * </ul>
+     * <p>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -38,8 +24,8 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public String dhcpOptionsSetName;
 
     /**
-     * <p>The root domain. For example, you can set the value to example.com.</p>
-     * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.</p>
+     * <p>The hostname suffix, such as example.com.</p>
+     * <p>After the DHCP options set is associated with a VPC, the hostname suffix is automatically synchronized to the ECS instances in the associated VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -57,12 +43,10 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>You do not need to specify this parameter for the first request.</p>
-     * </li>
-     * <li><p>You must specify the token that is obtained from the previous query as the value of the <strong>NextToken</strong> parameter.</p>
-     * </li>
+     * <li>If this is the first query or no subsequent query is required, leave this parameter empty.</li>
+     * <li>If a subsequent query is required, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +88,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListDhcpOptionsSetsRequestTags> tags;
@@ -212,8 +196,8 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
 
     public static class ListDhcpOptionsSetsRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -222,8 +206,8 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

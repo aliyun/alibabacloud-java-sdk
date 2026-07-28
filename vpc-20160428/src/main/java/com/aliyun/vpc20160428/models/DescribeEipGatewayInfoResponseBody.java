@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEipGatewayInfoResponseBody extends TeaModel {
     /**
-     * <p>The status code of the operation.</p>
+     * <p>The operation status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class DescribeEipGatewayInfoResponseBody extends TeaModel {
     public DescribeEipGatewayInfoResponseBodyEipInfos eipInfos;
 
     /**
-     * <p>The result of the operation.</p>
+     * <p>The operation message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

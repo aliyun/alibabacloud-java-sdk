@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     /**
-     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</li>
+     * <li>Leave this parameter empty for the first query or if no next query exists.</li>
+     * <li>If a next query exists, set this parameter to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +33,8 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the gateway endpoint.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the gateway endpoint to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the endpoint service that you want to query.</p>
+     * <p>The name of the endpoint service to query.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyun.cn-hangzhou.oss</p>

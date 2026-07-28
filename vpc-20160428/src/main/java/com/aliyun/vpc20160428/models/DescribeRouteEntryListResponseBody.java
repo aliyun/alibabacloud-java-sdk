@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether a next query token (Token) exists. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> has a returned value, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>

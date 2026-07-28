@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
      * <ul>
-     * <li>The elastic IP addresses (EIPs) that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</li>
-     * <li>The NAT IP addresses that can be accessed by external networks when you query DNAT entries of Virtual Private Cloud (VPC) NAT gateways.</li>
+     * <li><p>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the elastic IP address (EIP) that provides public network access in the DNAT entry.</p>
+     * </li>
+     * <li><p>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the NAT IP address that is accessed by external networks.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,14 +20,14 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</p>
+     * <li><p>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the external port or port range used for port forwarding.</p>
      * <ul>
-     * <li>Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
-     * <li>If you want to query a port range, separate the first port and last port with a forward slash (/), such as <code>10/20</code>.</li>
-     * <li>If you set <strong>ExternalPort</strong> to a port range, you must also set <strong>InternalPort</strong> to a port range, and the number of ports specified by these parameters must be the same. For example, if you set <strong>ExternalPort</strong> to <code>10/20</code>, you can set <strong>InternalPort</strong> to <code>80/90</code>.</li>
+     * <li>The port range must be within <strong>1</strong> to <strong>65535</strong>.</li>
+     * <li>To query a port range, separate the start and end ports with a forward slash (/), such as <code>10/20</code>.</li>
+     * <li>If <strong>ExternalPort</strong> is set to a port range, <strong>InternalPort</strong> must also be set to a port range with the same number of ports. For example, if <strong>ExternalPort</strong> is set to <code>10/20</code>, <strong>InternalPort</strong> must be set to <code>80/90</code>.</li>
      * </ul>
      * </li>
-     * <li><p>The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <li><p>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the port on the NAT IP address that is accessed by external networks. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * </li>
      * </ul>
      * 
@@ -46,7 +48,7 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
 
     /**
      * <p>The name of the DNAT entry.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ForwardEntry-1</p>
@@ -55,9 +57,10 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public String forwardEntryName;
 
     /**
-     * <p>The ID of the DNAT table.</p>
-     * <p>**</p>
-     * <p><strong>Description</strong> You must specify at least one of <strong>ForwardTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * <p>The ID of the DNAT table. </p>
+     * <blockquote>
+     * <p>You must specify at least one of <strong>ForwardTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ftb-bp1mbjubq34hlcqpa****</p>
@@ -68,8 +71,10 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
      * <p>The private IP address.</p>
      * <ul>
-     * <li>The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.</li>
-     * <li>The private IP address that uses DNAT entries for communication when you query DNAT entries of VPC NAT gateways.</li>
+     * <li><p>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the private IP address of the ECS instance that communicates with the Internet through the DNAT entry.</p>
+     * </li>
+     * <li><p>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the private IP address that needs to communicate through the DNAT rule.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,8 +85,10 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways. Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
-     * <li>The port of the destination ECS instance to be mapped when you query DNAT entries of VPC NAT gateways. Valid values: <strong>1</strong> to <strong>65535</strong>.</li>
+     * <li><p>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the internal port or port range used for port forwarding. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * </li>
+     * <li><p>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the port of the destination ECS instance to be mapped. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,11 +98,14 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public String internalPort;
 
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong></li>
-     * <li><strong>Any</strong></li>
+     * <li><p><strong>tcp</strong>: forwards TCP packets.</p>
+     * </li>
+     * <li><p><strong>udp</strong>: forwards UDP packets.</p>
+     * </li>
+     * <li><p><strong>any</strong>: forwards packets of all protocols.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,9 +115,10 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
-     * <p>**</p>
-     * <p><strong>Description</strong> You must specify at least one of <strong>ForwardTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * <p>The ID of the NAT gateway to query.</p>
+     * <blockquote>
+     * <p>You must specify at least one of <strong>ForwardTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1uewa15k4iy5770****</p>
@@ -122,7 +133,7 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +142,7 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -140,8 +151,8 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where you want to create the NAT gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the NAT gateway.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

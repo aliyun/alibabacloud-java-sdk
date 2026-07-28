@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRouteTargetGroupsRequest extends TeaModel {
     /**
-     * <p>Client token used to ensure idempotence of the request. Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken only supports ASCII characters. Note: If you do not specify this, the system will automatically use the RequestId of the API request as the ClientToken identifier. The RequestId is different for each API request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters. If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Page size, with a range of <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -23,8 +23,7 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Route target group member instance ID.
-     * Filters the route target groups that contain the specified member instance ID.</p>
+     * <p>The ID of a route target group member instance. This parameter filters route target groups that contain the specified member instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ep-xxxx</p>
@@ -33,7 +32,7 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
     public String memberId;
 
     /**
-     * <p>Token for the next query. Value: If it is the first query or there is no next query, this field does not need to be filled. If there is a next query, the value should be the NextToken returned from the previous API call.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for NextToken. In the next query, set NextToken to this value.</p>
      * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
@@ -42,7 +41,7 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the VPC to which the route target group belongs. You can obtain the region ID by calling the DescribeRegions interface.</p>
+     * <p>The region ID of the VPC to which the route target group belongs. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +51,7 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource group ID. For more information about resource groups, see What is a Resource Group?</p>
+     * <p>The ID of the resource group. For more information about resource groups, see What is a resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazdjdhd****</p>
@@ -61,14 +60,14 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>List of route target group instance IDs.</p>
-     * <p>Up to 50 instance IDs can be queried at a time.</p>
+     * <p>The list of route target group IDs.</p>
+     * <p>You can specify up to 50 instance IDs in a single query.</p>
      */
     @NameInMap("RouteTargetGroupIds")
     public java.util.List<String> routeTargetGroupIds;
 
     /**
-     * <p>List of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListRouteTargetGroupsRequestTag> tag;
@@ -161,8 +160,8 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
 
     public static class ListRouteTargetGroupsRequestTag extends TeaModel {
         /**
-         * <p>Resource tag key. Up to 20 tag keys are supported. If you need to pass this value, you cannot input an empty string.</p>
-         * <p>A tag key can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
@@ -171,8 +170,8 @@ public class ListRouteTargetGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Resource tag value. Up to 20 tag values are supported. If you need to pass this value, you can input an empty string.</p>
-         * <p>A tag value can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

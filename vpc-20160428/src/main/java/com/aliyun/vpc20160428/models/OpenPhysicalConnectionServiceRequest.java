@@ -11,8 +11,8 @@ public class OpenPhysicalConnectionServiceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Express Connect circuit is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Express Connect circuit. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

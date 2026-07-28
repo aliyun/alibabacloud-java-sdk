@@ -8,7 +8,7 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
      * <p>Specifies whether to enable routing automatic propagation for the VPN gateway. Valid values:</p>
      * <ul>
      * <li><p><strong>true</strong>: enabled.</p>
-     * <p>  After routing automatic propagation is enabled, the VPN gateway instance performs automatic learning of system routes from the system route table of the VPC-connected instance and automatically propagates routes of the on-premises data center to the system route table of the VPC-connected instance.</p>
+     * <p>  After routing automatic propagation is enabled, the VPN gateway instance performs automatic learning of system routes in the system route table of the VPC-connected instance and automatically propagates routes of the on-premises data center to the system route table of the VPC-connected instance.</p>
      * </li>
      * <li><p><strong>false</strong>: disabled.</p>
      * <p>  Before you disable routing automatic propagation, make sure that the BGP dynamic route feature is disabled for all IPsec-VPN connections under the VPN gateway.</p>
@@ -46,7 +46,7 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The new name of the VPN gateway.  </p>
-     * <p>The name must be 2 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</p>
+     * <p>The name must be 2 to 100 characters in length. It cannot start with <code>http://</code> or <code>https://</code>. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>myvpn</p>

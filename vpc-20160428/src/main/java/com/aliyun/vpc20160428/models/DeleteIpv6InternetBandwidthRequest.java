@@ -7,8 +7,7 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.
-     * -.</p>
+     * <h2>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</h2>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,9 +19,9 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without actually deleting the IPsec server. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error message is returned. If the check passes, <code>DryRunOperation</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run without actually deleting the Internet bandwidth. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error message is returned. If the check succeeds, <code>DryRunOperation</code> is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and then sends the request. If the check passes, the IPsec server is deleted.</p>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, the Internet bandwidth is deleted.</p>
      * </li>
      * </ul>
      * 

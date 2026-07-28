@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRouterInterfaceResponseBody extends TeaModel {
     /**
-     * <p>The order number. This parameter is returned if InstanceChargeType is set to PrePaid.</p>
+     * <p>The order ID. This parameter is returned when the subscription billing method is selected.</p>
      * 
      * <strong>example:</strong>
      * <p>20210101123456</p>

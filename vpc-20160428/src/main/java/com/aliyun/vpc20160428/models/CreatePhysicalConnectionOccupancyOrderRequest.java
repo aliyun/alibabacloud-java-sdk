@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payments. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.</li>
-     * <li><strong>false</strong>: disables automatic payment. This is the default value.</li>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated and can only be canceled.</li>
+     * <li><strong>false</strong> (default): generates an order without charging.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Whether to enable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (<strong>default</strong>): disable auto-renewal.</li>
-     * <li><strong>true</strong>: enable auto-renewal.</li>
+     * <li><strong>false</strong> (default): disables auto-renewal.</li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: months. Valid values: <strong>0</strong> to <strong>2147483647</strong>. Default Value: <strong>1</strong>.</p>
+     * <p>The auto-renewal duration. Unit: months. Valid values: <strong>0</strong> to <strong>2147483647</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>The client generates the value. The value must be unique among different requests.</p>
      * 
      * <strong>example:</strong>
      * <p>CBCE910E-D396-4944</p>
@@ -50,8 +50,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The billing method. Set the value to</p>
-     * <p><strong>PrePaid</strong>, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
+     * <p>The billing method of the instance. Valid values:</p>
+     * <p><strong>PrePaid</strong>: subscription. If you select this billing method, make sure that your Alibaba Cloud account supports balance payment or credit payment.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -68,8 +68,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     /**
      * <p>The subscription duration.</p>
      * <ul>
-     * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, set <strong>Period</strong> to a value from <strong>1 to 9</strong>.</li>
-     * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, set <strong>Period</strong> to a value from <strong>1 to 5</strong>.</li>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values of <strong>Period</strong> are <strong>1 to 9</strong>.</li>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values of <strong>Period</strong> are <strong>1 to 5</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The instance ID of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,8 +91,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     /**
      * <p>The billing cycle of the subscription. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong> (default)</li>
-     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong> (default): billed on a monthly basis.</li>
+     * <li><strong>Year</strong>: billed on a yearly basis.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,8 +102,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The region ID of the Express Connect circuit.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Express Connect circuit. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

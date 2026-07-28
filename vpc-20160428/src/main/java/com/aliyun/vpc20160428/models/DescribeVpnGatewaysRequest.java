@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewaysRequest extends TeaModel {
     /**
-     * <p>The payment status of the VPN gateway. Valid values:</p>
+     * <p>The billing status of the VPN gateway. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong></li>
-     * <li><strong>FinancialLocked</strong></li>
+     * <li><p><strong>Normal</strong>: Normal.</p>
+     * </li>
+     * <li><p><strong>FinancialLocked</strong>: locked due to overdue payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,21 +20,25 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public String businessStatus;
 
     /**
-     * <p>VPN 网关类型，取值：
-     * Traditional：传统型VPN网关，覆盖IPsec功能和SSL功能
-     * Enhance.SiteToSite：增强型站点入云VPN，只覆盖IPsec功能</p>
+     * <p>The type of the VPN gateway. Valid values:</p>
+     * <ul>
+     * <li>Traditional: a traditional VPN gateway that supports both IPsec-VPN and SSL-VPN features.</li>
+     * <li>Enhanced.SiteToSite: an enhanced site-to-cloud VPN gateway that supports only the IPsec-VPN feature.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Enhance.SiteToSite</p>
+     * <p>Enhanced.SiteToSite</p>
      */
     @NameInMap("GatewayType")
     public String gatewayType;
 
     /**
-     * <p>Specifies whether to return information about pending orders. Valid values:</p>
+     * <p>Specifies whether to include pending order data. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong> (default): does not include pending order data.</p>
+     * </li>
+     * <li><p><strong>true</strong>: includes pending order data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +54,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -57,7 +63,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging queries. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -66,8 +72,8 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the VPN gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPN gateway. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +84,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the VPN gateway belongs.</p>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>
@@ -95,11 +101,16 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     /**
      * <p>The status of the VPN gateway. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong></li>
-     * <li><strong>provisioning</strong></li>
-     * <li><strong>active</strong></li>
-     * <li><strong>updating</strong></li>
-     * <li><strong>deleting</strong></li>
+     * <li><p><strong>init</strong>: initializing.</p>
+     * </li>
+     * <li><p><strong>provisioning</strong>: preparing.</p>
+     * </li>
+     * <li><p><strong>active</strong>: Normal.</p>
+     * </li>
+     * <li><p><strong>updating</strong>: updating.</p>
+     * </li>
+     * <li><p><strong>deleting</strong>: deleting.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +120,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags that are added to the VPN gateway.</p>
+     * <p>The list of tags bound to the VPN gateway.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVpnGatewaysRequestTag> tag;
@@ -260,7 +271,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public static class DescribeVpnGatewaysRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>You can specify at most 20 tag keys at a time.</p>
+         * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -270,7 +281,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
+         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

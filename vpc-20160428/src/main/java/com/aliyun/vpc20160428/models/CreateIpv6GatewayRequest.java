@@ -79,7 +79,7 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     public java.util.List<CreateIpv6GatewayRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC for which you want to enable IPv6 and create the IPv6 gateway.</p>
+     * <p>The ID of the VPC for which you want to enable IPv6.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     public static class CreateIpv6GatewayRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -202,7 +202,7 @@ public class CreateIpv6GatewayRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

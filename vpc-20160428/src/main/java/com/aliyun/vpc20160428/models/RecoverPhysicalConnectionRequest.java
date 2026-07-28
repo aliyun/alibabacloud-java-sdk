@@ -7,8 +7,8 @@ public class RecoverPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without recovering access to the Express Connect circuit. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the request ID is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. After the request passes the check, access to the Express Connect circuit is recovered.</li>
+     * <li><strong>true</strong>: performs a dry run without recovering the Express Connect circuit access. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the request ID is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. After the request passes the check, the Express Connect circuit access is recovered.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The diagnostic information.</p>
+     * <p>The diagnostic information list of IPsec-VPN connections.</p>
      */
     @NameInMap("VpnConnections")
     public java.util.List<DiagnoseVpnConnectionsResponseBodyVpnConnections> vpnConnections;
@@ -93,7 +93,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
 
     public static class DiagnoseVpnConnectionsResponseBodyVpnConnections extends TeaModel {
         /**
-         * <p>The cause of the error.</p>
+         * <p>The error reason.</p>
          * 
          * <strong>example:</strong>
          * <p>Phase1 negotiation timeout</p>
@@ -111,8 +111,8 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         public String failedReasonCode;
 
         /**
-         * <p>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: millisecond.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: milliseconds.</p>
+         * <p>The timestamp is in UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the current error occurred on the IPsec-VPN connection.</p>
          * 
          * <strong>example:</strong>
          * <p>1673581161000</p>
@@ -121,7 +121,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         public Long failedTime;
 
         /**
-         * <p>If the values of the parameters configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameters configured for the IPsec-VPN connection.</p>
+         * <p>The parameter value configured on the IPsec-VPN connection when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA256</p>
@@ -130,7 +130,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         public String mismatchLocalParam;
 
         /**
-         * <p>If the parameter values configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameter configured for the peer gateway device.</p>
+         * <p>The parameter value configured on the peer gateway device when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA</p>
@@ -139,11 +139,11 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         public String mismatchRemoteParam;
 
         /**
-         * <p>The error level. Valid values:</p>
+         * <p>The severity level of the current error.</p>
          * <ul>
-         * <li><strong>Critical</strong></li>
-         * <li><strong>Warn</strong></li>
-         * <li><strong>Normal</strong></li>
+         * <li><strong>Critical</strong>: Critical. Troubleshoot the issue immediately.</li>
+         * <li><strong>Warn</strong>: Warning. Troubleshoot the issue as soon as possible.</li>
+         * <li><strong>Normal</strong>: Normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The log information about the error.</p>
+         * <p>The log information related to the current error.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-13 11:39:21 vco-bp1spxu8hlcvpd7ry**** [PROTO_ERR]: ikev1.c:1433:isakmp_ph1resend(): phase1 negotiation failed due to time up. [{remote id:4}{ph1: 172.16.0.88[500] &lt;=&gt; 192.168.0.206[500], 172.16.0.88 &lt;=&gt; 192.168.0.206}]</p>

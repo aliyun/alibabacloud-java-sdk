@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrefixListsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListPrefixListsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If this is the first request or no subsequent query exists, leave this parameter empty.</li>
+     * <li>If a subsequent query exists, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListPrefixListsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IDs of prefix lists to be queried. Valid values of <strong>N</strong> are <strong>1</strong> to <strong>100</strong>, which specifies that you can query up to 100 prefix lists at a time.</p>
+     * <p>The IDs of the prefix lists to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>100</strong>. You can query up to 100 prefix lists at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-m5estsqsdqwg88hjf****</p>
@@ -52,8 +52,8 @@ public class ListPrefixListsRequest extends TeaModel {
     public String prefixListName;
 
     /**
-     * <p>The ID of the region where you want to query prefix lists.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to query prefix lists.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -178,8 +178,8 @@ public class ListPrefixListsRequest extends TeaModel {
 
     public static class ListPrefixListsRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -188,8 +188,8 @@ public class ListPrefixListsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

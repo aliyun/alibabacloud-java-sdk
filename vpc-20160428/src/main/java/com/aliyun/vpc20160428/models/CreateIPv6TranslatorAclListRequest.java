@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorAclListRequest extends TeaModel {
     /**
-     * <p>The ACL name.</p>
+     * <p>The name of the access control policy group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateIPv6TranslatorAclListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

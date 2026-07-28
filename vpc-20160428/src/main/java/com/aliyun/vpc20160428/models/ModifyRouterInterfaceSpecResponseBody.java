@@ -38,7 +38,7 @@ public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
      * </li>
      * <li><p><strong>Large.5</strong>: 5000 Mbps</p>
      * </li>
-     * <li><p><strong>Xlarge.1</strong>: 10000 Mbps.</p>
+     * <li><p><strong>Xlarge.1</strong>: 10000 Mbps</p>
      * </li>
      * </ul>
      * 

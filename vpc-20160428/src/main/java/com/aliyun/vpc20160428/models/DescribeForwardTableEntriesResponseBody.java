@@ -8,7 +8,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     public DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

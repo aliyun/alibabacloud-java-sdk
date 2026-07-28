@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassociateHaVipRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>ClientToken</code> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -14,13 +14,15 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:</p>
+     * <p>Specifies whether to forcefully disassociate HaVip from the ECS instance or network interface controller (NIC). Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong> (default)</li>
+     * <li><p><strong>True</strong>: forcefully disassociates the instance.</p>
+     * </li>
+     * <li><p><strong>False</strong> (default): does not forcefully disassociate the instance.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set the value to <strong>False</strong>, you cannot disassociate the HAVIP from the primary instance.</p>
+     * <p>If this parameter is set to <strong>False</strong>, the primary instance attached to the HaVip cannot be disassociated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +32,7 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String force;
 
     /**
-     * <p>The ID of the HAVIP that you want to disassociate.</p>
+     * <p>The ID of the HaVip to be disassociated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String haVipId;
 
     /**
-     * <p>The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.</p>
+     * <p>The ID of the ECS instance or network interface controller (NIC) to disassociate HaVip from.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,13 +52,15 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance from which you want to disassociate the HAVIP. Valid values:</p>
+     * <p>The type of the instance to disassociate HaVip from. Valid values:</p>
      * <ul>
-     * <li><strong>EcsInstance</strong>: an ECS instance</li>
-     * <li><strong>NetworkInterface</strong>: an ENI</li>
+     * <li><p><strong>EcsInstance</strong>: ECS instance.</p>
+     * </li>
+     * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC) instance.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you want to disassociate the HAVIP from an ENI, this parameter is required.</p>
+     * <p>This parameter is required when the instance to be disassociated is a network interface controller (NIC) instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +76,7 @@ public class UnassociateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the HAVIP.</p>
+     * <p>The region ID of the HaVip.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

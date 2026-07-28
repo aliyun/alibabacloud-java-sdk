@@ -56,7 +56,7 @@ public class DescribeRouteTablesRequest extends TeaModel {
     /**
      * <p>The ID of the route table to query.</p>
      * <blockquote>
-     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * <p>You must specify at least one of the following parameters: <strong>VRouterId</strong>, <strong>RouteTableId</strong>, <strong>RouterId</strong>, and <strong>RouteTableName</strong>. You cannot specify both <strong>VRouterId</strong> and <strong>RouterId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,9 +67,9 @@ public class DescribeRouteTablesRequest extends TeaModel {
 
     /**
      * <p>The name of the route table to query.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * <blockquote>
-     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * <p>You must specify at least one of the following parameters: <strong>VRouterId</strong>, <strong>RouteTableId</strong>, <strong>RouterId</strong>, and <strong>RouteTableName</strong>. You cannot specify both <strong>VRouterId</strong> and <strong>RouterId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class DescribeRouteTablesRequest extends TeaModel {
     /**
      * <p>The ID of the router to which the route table belongs.</p>
      * <blockquote>
-     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * <p>You must specify at least one of the following parameters: <strong>VRouterId</strong>, <strong>RouteTableId</strong>, <strong>RouterId</strong>, and <strong>RouteTableName</strong>. You cannot specify both <strong>VRouterId</strong> and <strong>RouterId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class DescribeRouteTablesRequest extends TeaModel {
     public String routerType;
 
     /**
-     * <p>The destination type of the route to query. Valid values:</p>
+     * <p>The type of the route entry to query. Valid values:</p>
      * <ul>
      * <li><strong>Custom</strong>: custom route.</li>
      * <li><strong>System</strong>: system route.</li>
@@ -122,7 +122,7 @@ public class DescribeRouteTablesRequest extends TeaModel {
     /**
      * <p>The ID of the vRouter to query.</p>
      * <blockquote>
-     * <p>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</p>
+     * <p>You must specify at least one of the following parameters: <strong>VRouterId</strong>, <strong>RouteTableId</strong>, <strong>RouterId</strong>, and <strong>RouteTableName</strong>. You cannot specify both <strong>VRouterId</strong> and <strong>RouterId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

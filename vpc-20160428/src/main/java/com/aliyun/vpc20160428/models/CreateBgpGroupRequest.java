@@ -17,7 +17,7 @@ public class CreateBgpGroupRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateBgpGroupRequest extends TeaModel {
 
     /**
      * <p>The description of the BGP group.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -39,8 +39,8 @@ public class CreateBgpGroupRequest extends TeaModel {
     /**
      * <p>The IP version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong>: This is the default value.</li>
-     * <li><strong>IPv6</strong>: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</li>
+     * <li><strong>IPv4</strong> (default): IPv4.</li>
+     * <li><strong>IPv6</strong>: IPv6. IPv6 is supported only when the VBR for which the BGP group is created has the enable IPv6 feature turned on.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,11 +52,11 @@ public class CreateBgpGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to use a fake ASN. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default): No.</li>
+     * <li><strong>true</strong>: Yes.</li>
      * </ul>
      * <blockquote>
-     * <p> A router that runs BGP typically belongs to only one AS. If you need to replace an existing AS with a new AS and you cannot immediately modify BGP configurations, you can use fake ASNs to ensure service continuity.</p>
+     * <p>A router that runs BGP can belong to only one AS. When you need to replace an existing AS with a new one (for example, due to AS migration or merger with another AS) and cannot immediately modify the BGP configuration because of business or other objective factors, you can specify a fake ASN to establish a connection with the local end to ensure service continuity.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,11 +69,11 @@ public class CreateBgpGroupRequest extends TeaModel {
      * <p>The custom ASN on the Alibaba Cloud side. Valid values:</p>
      * <ul>
      * <li><strong>45104</strong></li>
-     * <li><strong>64512~65534</strong></li>
-     * <li><strong>4200000000~4294967294</strong></li>
+     * <li><strong>64512 to 65534</strong></li>
+     * <li><strong>4200000000 to 4294967294</strong></li>
      * </ul>
      * <blockquote>
-     * <p> <strong>65025</strong> is reserved by Alibaba Cloud. By default, Alibaba Cloud uses <strong>45104</strong> as <strong>LocalAsn</strong>. If you use custom <strong>LocalAsn</strong> in multi-line access scenarios, loops in BGP may occur.</p>
+     * <p><strong>65025</strong> is reserved by Alibaba Cloud. The default value of LocalAsn on the Alibaba Cloud side is <strong>45104</strong>. Using a custom LocalAsn in multi-line access scenarios may cause BGP routing loops. Evaluate the risks before you use this feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class CreateBgpGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the BGP group.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -99,7 +99,7 @@ public class CreateBgpGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ASN of the gateway device in the data center.</p>
+     * <p>The ASN of the device on the on-premises data center side.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,8 +109,8 @@ public class CreateBgpGroupRequest extends TeaModel {
     public Long peerAsn;
 
     /**
-     * <p>The region ID of the VBR.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VBR. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class CreateBgpGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum number of routes supported by a BGP peer. Default value: <strong>110</strong>.</p>
+     * <p>The maximum number of routes for a BGP peer. Unit: routes. Default value: <strong>110</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>110</p>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListNatIpCidrsResponseBody extends TeaModel {
     /**
-     * <p>The CIDR blocks of the NAT gateway.</p>
+     * <p>The list of NAT CIDR blocks.</p>
      */
     @NameInMap("NatIpCidrs")
     public java.util.List<ListNatIpCidrsResponseBodyNatIpCidrs> natIpCidrs;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
-     * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent requests exist.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7479A224-4A28-4895-9604-11F48BCE6A88</p>
@@ -33,7 +33,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of CIDR blocks that are returned.</p>
+     * <p>The total number of NAT CIDR block entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -80,7 +80,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
 
     public static class ListNatIpCidrsResponseBodyNatIpCidrs extends TeaModel {
         /**
-         * <p>The time when the CIDR block was created.</p>
+         * <p>The time when the NAT CIDR block was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-28T20:50Z</p>
@@ -89,10 +89,10 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Indicates whether the CIDR block is the default CIDR block of the NAT gateway. Valid values:</p>
+         * <p>Indicates whether the NAT CIDR block is the default NAT CIDR block. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The CIDR block is the default CIDR block of the NAT gateway.</li>
-         * <li><strong>false</strong>: The CIDR block is not the default CIDR block of the NAT gateway.</li>
+         * <li><strong>true</strong>: The NAT CIDR block is the default NAT CIDR block.</li>
+         * <li><strong>false</strong>: The NAT CIDR block is not the default NAT CIDR block.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The ID of the VPC NAT gateway.</p>
+         * <p>The instance ID of the VPC NAT gateway to which the NAT CIDR block belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-gw8v16wgvtq26vh59****</p>
@@ -111,7 +111,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The CIDR block of the NAT gateway.</p>
+         * <p>The NAT CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
@@ -120,7 +120,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         public String natIpCidr;
 
         /**
-         * <p>The description of the CIDR block of the NAT gateway.</p>
+         * <p>The description of the NAT CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -129,7 +129,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         public String natIpCidrDescription;
 
         /**
-         * <p>The ID of the CIDR block of the NAT gateway.</p>
+         * <p>The instance ID of the NAT CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>vpcnatcidr-gw8ov42ei6xh1jys2****</p>
@@ -138,7 +138,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         public String natIpCidrId;
 
         /**
-         * <p>The name of the CIDR block of the NAT gateway.</p>
+         * <p>The name of the NAT CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>Name</p>
@@ -147,7 +147,7 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
         public String natIpCidrName;
 
         /**
-         * <p>The status of the CIDR block of the NAT gateway. If <strong>Available</strong> is returned, it indicates that the CIDR block is available.</p>
+         * <p>The status of the NAT CIDR block. The value is <strong>Available</strong>, which indicates that the NAT CIDR block is available.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>

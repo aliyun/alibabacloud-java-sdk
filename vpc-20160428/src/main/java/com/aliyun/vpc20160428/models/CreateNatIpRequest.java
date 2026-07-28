@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateNatIpRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,9 +20,9 @@ public class CreateNatIpRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: sends a dry run request. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a Normal request. If the request passes the check, a 2xx HTTP status code is returned and the NAT IP address is created.</p>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the NAT IP address is created.</p>
      * </li>
      * </ul>
      * 
@@ -34,7 +34,7 @@ public class CreateNatIpRequest extends TeaModel {
 
     /**
      * <p>The IP prefix CIDR block to create.</p>
-     * <p>The IP prefix CIDR block must be within the reserved CIDR block of the vSwitch where the NAT gateway resides, and the reserved CIDR block must not be in use. The prefix mask must be /28.</p>
+     * <p>The IP prefix CIDR block must be within the reserved CIDR block of the vSwitch where the NAT gateway resides, and the reserved CIDR block must not be occupied. The IP prefix mask must be /28.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/28</p>
@@ -83,7 +83,7 @@ public class CreateNatIpRequest extends TeaModel {
     public String natIpCidr;
 
     /**
-     * <p>The description of the NAT IP address.</p>
+     * <p>The description of the NAT IP address to create.</p>
      * <p>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class CreateNatIpRequest extends TeaModel {
     public String natIpDescription;
 
     /**
-     * <p>The name of the NAT IP address.</p>
+     * <p>The name of the NAT IP address to create.</p>
      * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -109,8 +109,8 @@ public class CreateNatIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway instance to which the NAT IP address belongs.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the VPC NAT gateway instance to which the NAT IP address belongs.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

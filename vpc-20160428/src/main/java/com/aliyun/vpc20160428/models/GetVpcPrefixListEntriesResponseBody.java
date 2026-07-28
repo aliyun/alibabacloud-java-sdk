@@ -14,10 +14,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value indicates the token that is used for the next request to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
 
     public static class GetVpcPrefixListEntriesResponseBodyPrefixListEntry extends TeaModel {
         /**
-         * <p>The CIDR blocks specified in the prefix list.</p>
+         * <p>The Classless Inter-Domain Routing (CIDR) block of the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -115,7 +115,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the prefix list.</p>
+         * <p>The instance ID of the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-0b7hwu67****</p>

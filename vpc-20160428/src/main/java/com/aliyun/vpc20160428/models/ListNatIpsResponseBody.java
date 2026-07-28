@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListNatIpsResponseBody extends TeaModel {
     /**
-     * <p>The list of IP addresses of the NAT gateway.</p>
+     * <p>The list of NAT IP addresses.</p>
      */
     @NameInMap("NatIps")
     public java.util.List<ListNatIpsResponseBodyNatIps> natIps;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
-     * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListNatIpsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7E78CEEA-BF8F-44D1-9DCD-D9141135B71E</p>
@@ -33,7 +33,7 @@ public class ListNatIpsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of IP addresses that are returned.</p>
+     * <p>The total number of NAT IP addresses returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -80,7 +80,7 @@ public class ListNatIpsResponseBody extends TeaModel {
 
     public static class ListNatIpsResponseBodyNatIps extends TeaModel {
         /**
-         * <p>The IP prefix address range to which the queried NAT IP address belongs.</p>
+         * <p>The CIDR block of the IP prefix to which the NAT IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/28</p>
@@ -89,10 +89,12 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String ipv4Prefix;
 
         /**
-         * <p>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</p>
+         * <p>Indicates whether the NAT IP address is the default one. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><p><strong>true</strong>: The NAT IP address is the default one.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The NAT IP address is not the default one.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,7 +104,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway to which the IP address is assigned.</p>
+         * <p>The instance ID of the VPC NAT gateway to which the NAT IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-gw8v16wgvtq26vh59****</p>
@@ -111,7 +113,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The IP address.</p>
+         * <p>The NAT IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.126</p>
@@ -120,7 +122,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String natIp;
 
         /**
-         * <p>The CIDR block to which the IP address belongs.</p>
+         * <p>The CIDR block to which the NAT IP address belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/24</p>
@@ -129,7 +131,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String natIpCidr;
 
         /**
-         * <p>The description of the IP address.</p>
+         * <p>The description of the NAT IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -138,7 +140,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String natIpDescription;
 
         /**
-         * <p>The ID of the IP address.</p>
+         * <p>The instance ID of the NAT IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>vpcnatip-gw8a863sut1zijxh0****</p>
@@ -147,7 +149,7 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String natIpId;
 
         /**
-         * <p>The name of the IP address.</p>
+         * <p>The name of the NAT IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -156,14 +158,14 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String natIpName;
 
         /**
-         * <p>The status of the IP address. Valid values:</p>
+         * <p>The status of the NAT IP address. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong>: available</li>
-         * <li><strong>Deleted</strong>: deleted</li>
-         * <li><strong>Deleting</strong>: deleting</li>
-         * <li><strong>Creating</strong>: creating</li>
-         * <li><strong>Associated</strong>: specified in an SNAT or DNAT entry</li>
-         * <li><strong>Associating</strong>: being specified in an SNAT or DNAT entry</li>
+         * <li><strong>Available</strong>: available.</li>
+         * <li><strong>Deleted</strong>: deleted.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Associated</strong>: associated with an SNAT or DNAT entry.</li>
+         * <li><strong>Associating</strong>: being associated with an SNAT or DNAT entry.</li>
          * </ul>
          * 
          * <strong>example:</strong>

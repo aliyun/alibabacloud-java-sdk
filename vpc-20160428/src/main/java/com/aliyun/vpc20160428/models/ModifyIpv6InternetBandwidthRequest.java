@@ -8,14 +8,14 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
      * <p>The Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If the billing method is pay-by-data-transfer, the Internet bandwidth ranges from <strong>1</strong> to <strong>1000</strong>.</li>
-     * <li>If the billing method is pay-by-bandwidth, the Internet bandwidth ranges from <strong>1</strong> to <strong>2000</strong>.</li>
-     * <li>If the billing method is traditional 95th percentile, the Internet bandwidth ranges from <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If the billing method is pay-by-data-transfer, the Internet bandwidth value range is <strong>1</strong> to <strong>1000</strong>.</li>
+     * <li>If the billing method is pay-by-bandwidth, the Internet bandwidth value range is <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If the billing method is traditional 95th percentile, the Internet bandwidth value range is <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <ul>
-     * <li>If the billing method is pay-by-data-transfer, the Internet bandwidth ranges from <strong>1</strong> to <strong>1000</strong>.</li>
-     * <li>If the billing method is pay-by-bandwidth, the Internet bandwidth ranges from <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If the billing method is pay-by-data-transfer, the Internet bandwidth value range is <strong>1</strong> to <strong>1000</strong>.</li>
+     * <li>If the billing method is pay-by-bandwidth, the Internet bandwidth value range is <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,8 +41,8 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without creating an IPv4 gateway. The system checks the required parameters, request syntax, and business limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the IPv4 gateway is created.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the IPv4 gateway. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and then sends the request. If the check succeeds, an HTTP 2xx status code is returned and the IPv4 gateway is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
     /**
-     * <p>The bandwidth of the ECC instance.</p>
+     * <p>The bandwidth of the Express Cloud Connection (ECC) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
     public String bandwidth;
 
     /**
-     * <p>The ID of the ECC instance.</p>
+     * <p>The instance ID of the Express Cloud Connection (ECC) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

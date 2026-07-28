@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new priority of the policy-based route. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-     * <p>A smaller value indicates a higher priority.</p>
+     * <p>The new policy priority of the policy-based routing entry. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>A smaller value indicates a higher policy priority for the routing entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,8 +45,8 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The original priority of the policy-based route. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-     * <p>A smaller value indicates a higher priority.</p>
+     * <p>The original policy priority of the policy-based routing entry. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>A smaller value indicates a higher policy priority for the routing entry.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -56,7 +56,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPN gateway instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public String routeSource;
 
     /**
-     * <p>The ID of the VPN gateway instance.</p>
+     * <p>The instance ID of the VPN gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

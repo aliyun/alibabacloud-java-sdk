@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNatGatewayShrinkRequest extends TeaModel {
     /**
-     * <p>The access mode of the VPC NAT gateway for reverse endpoint access.</p>
+     * <p>The access mode for reverse access to the VPC NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>MULTI_BINDED</p>
@@ -14,7 +14,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String accessModeShrink;
 
     /**
-     * <p>Subscription-based public NAT gateways are no longer available for purchase. This parameter is deprecated.</p>
+     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>无效参数</p>
@@ -27,9 +27,9 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can create the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the NAT gateway.</p>
-     * <p>The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description can be empty or 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testnat</p>
@@ -49,7 +49,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Subscription-based public NAT gateways are no longer available for purchase. This parameter is deprecated.</p>
+     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>无效参数</p>
@@ -58,13 +58,11 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String duration;
 
     /**
-     * <p>The mode in which the EIP is associated with the NAT gateway. Valid values:</p>
+     * <p>The EIP binding pattern of the NAT gateway. Valid values:</p>
      * <ul>
-     * <li><p><strong>MULTI_BINDED</strong> (default): the multi-EIP-to-ENI mode.</p>
-     * </li>
-     * <li><p><strong>NAT</strong>: the EIP-to-NAT gateway mode. This mode is compatible with IPv4 gateways.</p>
-     * <blockquote>
-     * <p>If the EIP is associated with the NAT gateway in EIP-to-NAT gateway mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the EIP fails to be associated. In EIP-to-NAT gateway mode, a NAT gateway can be associated with up to 50 EIPs.</p>
+     * <li><strong>MULTI_BINDED</strong> (default): multi-EIP network interface controller (NIC)-visible pattern.</li>
+     * <li><strong>NAT</strong>: EIP normal pattern, compatible with IPv4 gateways.<blockquote>
+     * <p>When the EIP binding pattern of the NAT gateway is set to EIP normal pattern, each EIP occupies a private IP address in the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If no idle private IP addresses are available in the vSwitch, new EIPs cannot be attached. In EIP normal pattern, a maximum of 50 EIPs can be attached to the NAT gateway.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -76,12 +74,10 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String eipBindMode;
 
     /**
-     * <p>Specifies whether to enable ICMP reply. Valid values:</p>
+     * <p>Specifies whether to enable ICMP echo reply. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong> (default): enables ICMP reply.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disables ICMP reply.</p>
-     * </li>
+     * <li><strong>true</strong> (default): Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,9 +87,9 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public Boolean icmpReplyEnabled;
 
     /**
-     * <p>The billing method of the NAT gateway. Set the value to:</p>
+     * <p>The billing method of the NAT gateway. Valid values:</p>
      * <p><strong>PostPaid</strong> (default): pay-as-you-go.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of public NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of Internet NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -102,7 +98,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The billing method of the NAT gateway. Set the value to <strong>PayByLcu</strong>, which indicates that the NAT gateway is a pay-as-you-go NAT gateway and is measured in LCUs.</p>
+     * <p>The metering method of the NAT gateway. Valid values: <strong>PayByLcu</strong>: pay-by-data-transfer.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByLcu</p>
@@ -111,7 +107,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The IP address prefix. NAT IP addresses are created from the prefix. Use a reserved CIDR block that is not allocated in the vSwitch to which the NAT gateway belongs.</p>
+     * <p>The IP prefix CIDR block used to create NAT IP addresses in batches. Specify an unassigned reserved CIDR block from the vSwitch to which the NAT gateway belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/28</p>
@@ -121,8 +117,8 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the NAT gateway.</p>
-     * <p>Must be 2 to 128 characters in length, start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</p>
-     * <p>If you do not specify this parameter, the system automatically specifies a name for the NAT gateway.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>If you do not specify this parameter, the system assigns a default name to the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>fortest</p>
@@ -131,7 +127,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private IP address of the NAT gateway. Use an idle IP address from the CIDR block of the vSwitch to which the NAT gateway belongs. If this parameter is left empty, an IP address is randomly assigned.</p>
+     * <p>The private IP address occupied by the NAT gateway. Specify an unallocated IP address from the vSwitch CIDR block to which the NAT gateway belongs. If this parameter is left empty, a random IP address is allocated.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.2</p>
@@ -140,7 +136,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String natIp;
 
     /**
-     * <p>The type of NAT gateway. Set the value to <strong>Enhanced</strong>, which specifies an enhanced NAT gateway.</p>
+     * <p>The type of the NAT gateway. Valid values: <strong>Enhanced</strong>: enhanced NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Enhanced</p>
@@ -149,11 +145,11 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String natType;
 
     /**
-     * <p>The type of the NAT gateway to be created. Valid values:</p>
+     * <p>The type of NAT gateway to create. Valid values:</p>
      * <ul>
-     * <li><p><strong>internet</strong>: a public NAT gateway</p>
+     * <li><p><strong>internet</strong>: Internet NAT gateway.</p>
      * </li>
-     * <li><p><strong>intranet</strong>: a VPC NAT gateway</p>
+     * <li><p><strong>intranet</strong>: VPC NAT gateway.</p>
      * </li>
      * </ul>
      * 
@@ -170,7 +166,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Subscription-based public NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
+     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>无效参数</p>
@@ -181,9 +177,9 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable PrivateLink. Valid values:</p>
      * <ul>
-     * <li><p>true: enables PrivateLink.</p>
+     * <li><p>true: Enabled.</p>
      * </li>
-     * <li><p>false (default): disables PrivateLink.</p>
+     * <li><p>false (default): Disabled.</p>
      * </li>
      * </ul>
      * 
@@ -194,8 +190,8 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public Boolean privateLinkEnabled;
 
     /**
-     * <p>The ID of the region in which to create the NAT gateway.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the NAT gateway.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -213,11 +209,9 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the firewall feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): disables the firewall feature.</p>
-     * <blockquote>
-     * <p>Notice: </p>
+     * <li><strong>false</strong> (default): Disabled.<blockquote>
+     * <p>Notice:  This parameter is deprecated.</p>
      * </blockquote>
-     * <p>This parameter is deprecated.</p>
      * </li>
      * </ul>
      * 
@@ -229,7 +223,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public Boolean securityProtectionEnabled;
 
     /**
-     * <p>Subscription-based public NAT gateways are no longer available for purchase. This parameter is deprecated.</p>
+     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
      * 
      * <strong>example:</strong>
      * <p>无效参数</p>
@@ -238,7 +232,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      * 
      * <strong>example:</strong>
      * <p>MULTI_BINDED</p>
@@ -248,15 +242,15 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the NAT gateway belongs.</p>
-     * <p>When you create a NAT gateway, you must specify a vSwitch to which the NAT gateway belongs. The system then assigns a private IP address to the NAT gateway from the vSwitch.</p>
+     * <p>When you create a NAT gateway, you must specify the vSwitch to which the NAT gateway belongs. The system allocates an available private IP address from the vSwitch to the NAT gateway.</p>
      * <ul>
-     * <li><p>To create a NAT gateway in an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways and that the vSwitch has idle IP addresses.</p>
+     * <li><p>To create a NAT gateway in an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways and the vSwitch has active IP addresses.</p>
      * </li>
-     * <li><p>If you have not created a vSwitch, create a vSwitch in a zone that supports NAT gateways and then specify the vSwitch.</p>
+     * <li><p>If you have not created a vSwitch, create a vSwitch in a zone that supports NAT gateways first, and then specify the vSwitch for the NAT gateway.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/182292.html">ListEnhancedNatGatewayAvailableZones</a> operation to query available zones and <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> to query the number of idle IP addresses in a vSwitch.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/182292.html">ListEnhanhcedNatGatewayAvailableZones</a> operation to query the zones that support NAT gateways, and call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the available IP address count in a vSwitch.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -266,7 +260,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) where you want to create the NAT gateway.</p>
+     * <p>The ID of the VPC in which you want to create the NAT gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -499,7 +493,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
 
     public static class CreateNatGatewayShrinkRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. Specify this parameter in the Tag.N.Key format. N is the index of the tag, with valid values from 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -508,7 +502,7 @@ public class CreateNatGatewayShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string. The tag value must be 0 to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. Specify this parameter in the Tag.N.Value format. N is the index of the tag, with valid values from 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -16,8 +16,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The IPv4 gateway is activated.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The IPv4 gateway is not activated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The description of the IPv4 gateway.</p>
+     * <p>The description of the IPv4 gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>new</p>
@@ -36,7 +38,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String ipv4GatewayDescription;
 
     /**
-     * <p>The ID of the IPv4 gateway.</p>
+     * <p>The instance ID of the IPv4 gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
@@ -45,7 +47,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String ipv4GatewayId;
 
     /**
-     * <p>The name of the IPv4 gateway.</p>
+     * <p>The name of the IPv4 gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -54,7 +56,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String ipv4GatewayName;
 
     /**
-     * <p>The ID of the route table associated with the IPv4 gateway.</p>
+     * <p>The ID of the route table associated with the IPv4 gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-5ts0ohchwkp3dydt2****</p>
@@ -81,14 +83,20 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the IPv4 gateway. Valid values:</p>
+     * <p>The status of the IPv4 gateway instance. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong></li>
-     * <li><strong>Created</strong></li>
-     * <li><strong>Modifying</strong></li>
-     * <li><strong>Deleting</strong></li>
-     * <li><strong>Deleted</strong></li>
-     * <li><strong>Activating</strong></li>
+     * <li><p><strong>Creating</strong>: The IPv4 gateway is being created.</p>
+     * </li>
+     * <li><p><strong>Created</strong>: The IPv4 gateway is created and available.</p>
+     * </li>
+     * <li><p><strong>Modifying</strong>: The IPv4 gateway is being modified.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: The IPv4 gateway is being deleted.</p>
+     * </li>
+     * <li><p><strong>Deleted</strong>: The IPv4 gateway is deleted.</p>
+     * </li>
+     * <li><p><strong>Activating</strong>: The IPv4 gateway is being activated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +112,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public java.util.List<GetIpv4GatewayAttributeResponseBodyTags> tags;
 
     /**
-     * <p>The ID of the VPC with which the IPv4 gateway is associated.</p>
+     * <p>The ID of the VPC associated with the IPv4 gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-5tsrxlw7dv074gci4****</p>
@@ -207,7 +215,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
 
     public static class GetIpv4GatewayAttributeResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -216,7 +224,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

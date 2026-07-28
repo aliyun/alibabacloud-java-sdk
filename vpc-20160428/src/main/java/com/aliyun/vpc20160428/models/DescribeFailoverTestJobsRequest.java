@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeFailoverTestJobsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     public java.util.List<DescribeFailoverTestJobsRequestFilter> filter;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+     * <p>The number of entries per page for paginated queries. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,10 +33,12 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * <li><p>Leave this parameter empty for the first query or if no next query exists.</p>
+     * </li>
+     * <li><p>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,8 +54,8 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where you want to perform the failover test.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the failover test jobs reside.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -135,17 +137,23 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
 
     public static class DescribeFailoverTestJobsRequestFilter extends TeaModel {
         /**
-         * <p>The filter key. Valid values:</p>
+         * <p>The filter condition. Valid values:</p>
          * <ul>
-         * <li><strong>JobId</strong></li>
-         * <li><strong>JobName</strong></li>
-         * <li><strong>JobStatus</strong></li>
-         * <li><strong>ResourceId</strong></li>
-         * <li><strong>ResourceName</strong></li>
-         * <li><strong>ResourceType</strong></li>
+         * <li><p><strong>JobId</strong>: the failover test job ID.</p>
+         * </li>
+         * <li><p><strong>JobName</strong>: the failover test job name.</p>
+         * </li>
+         * <li><p><strong>JobStatus</strong>: the failover test job status.</p>
+         * </li>
+         * <li><p><strong>ResourceId</strong>: the failover test resource ID.</p>
+         * </li>
+         * <li><p><strong>ResourceName</strong>: the failover test resource name.</p>
+         * </li>
+         * <li><p><strong>ResourceType</strong>: the failover test resource type.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>You can specify at most five different filter keys. If you specify ResourceId or ResourceName, you must also specify ResourceType. The logical operator among the filter keys is AND. Results that meet all specified filter keys are returned.</p>
+         * <p>Specify up to 5 unique filter conditions. If you specify a resource ID or resource name, you must also specify the resource type. All filter conditions must be met to return accurate query results.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,9 +163,9 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the filter key.</p>
+         * <p>The filter values that correspond to the filter condition.</p>
          * <blockquote>
-         * <p>You can specify at most five filter values for each filter key. The logical operator among filter values is OR. If a filter value is matched, the filter key is considered matched.</p>
+         * <p>Each filter condition can contain up to 5 filter values. These filter values have an OR relationship. A record is considered a match if it matches any one of the filter values.</p>
          * </blockquote>
          */
         @NameInMap("Value")

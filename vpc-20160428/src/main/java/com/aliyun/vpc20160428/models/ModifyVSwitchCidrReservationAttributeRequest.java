@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     /**
-     * <p>A client token used to ensure the idempotence of the request.</p>
-     * <p>Generate a unique value from your client for this parameter to guarantee uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run of the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Sends a dry run request without creating any resource (performing the API operation). The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are met. If the check fails, an error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): Sends a normal request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,8 +37,8 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the vSwitch is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the vSwitch.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,8 +54,8 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new description of the reserved CIDR block. The default value is empty.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the reserved CIDR block for a vSwitch that you want to modify. If you do not specify this parameter, the description is empty. The default value is empty.</p>
+     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ReservationDescription</p>
@@ -64,7 +64,7 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     public String vSwitchCidrReservationDescription;
 
     /**
-     * <p>The ID of the reserved CIDR block.</p>
+     * <p>The instance ID of the reserved CIDR block for a vSwitch that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,8 +74,8 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
     public String vSwitchCidrReservationId;
 
     /**
-     * <p>The new name of the reserved CIDR block.</p>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name of the reserved CIDR block for a vSwitch that you want to modify.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ReservationName</p>

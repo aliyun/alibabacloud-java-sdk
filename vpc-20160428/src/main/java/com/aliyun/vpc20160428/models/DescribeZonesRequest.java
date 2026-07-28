@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The language used in the <strong>LocalName</strong> parameter. Valid values:</p>
+     * <p>The display language of the zone name <strong>LocalName</strong> in the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-cn</strong>: Chinese</li>
-     * <li><strong>en-us</strong>: English</li>
-     * <li><strong>ja</strong>: Japanese</li>
+     * <li><p><strong>zh-cn</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en-us</strong>: English.</p>
+     * </li>
+     * <li><p><strong>ja</strong>: Japanese.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the zones reside. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +44,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone type. Default value: <strong>AvailabilityZone</strong>.</p>
+     * <p>The type of zones to query. Default value: <strong>AvailabilityZone</strong>, which indicates a standard cloud zone.</p>
      * 
      * <strong>example:</strong>
      * <p>AvailabilityZone</p>

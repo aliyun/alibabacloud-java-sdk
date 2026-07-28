@@ -8,7 +8,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,20 +33,20 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The QoS queue IDs.</p>
+     * <p>The collection of QoS queue IDs.</p>
      */
     @NameInMap("QueueIdList")
     public java.util.List<String> queueIdList;
 
     /**
-     * <p>The QoS queue names.</p>
+     * <p>The collection of QoS queue names.</p>
      */
     @NameInMap("QueueNameList")
     public java.util.List<String> queueNameList;
 
     /**
      * <p>The region ID of the QoS policy.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

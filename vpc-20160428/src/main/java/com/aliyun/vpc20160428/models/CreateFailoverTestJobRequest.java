@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateFailoverTestJobRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the failover test.</p>
+     * <p>The description of the failover test job.</p>
      * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,11 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>If you set the value to true, the system performs only a dry run without actually performing the actual request. If you set the value to false, the system performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: sends the request without creating the failover test node. The system checks the request for potential issues, including whether the AccessKey is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request, and the failover test job is created after the check passes. A 2xx HTTP status code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -37,7 +41,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The duration of the failover test. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+     * <p>The duration of the failover test job. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +51,12 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public Integer jobDuration;
 
     /**
-     * <p>The type of the failover test. Valid values:</p>
+     * <p>The type of the failover test job. Valid values:</p>
      * <ul>
-     * <li><strong>StartNow</strong></li>
-     * <li><strong>StartLater</strong></li>
+     * <li><p><strong>StartNow</strong>: The failover test starts immediately after the job is created.</p>
+     * </li>
+     * <li><p><strong>StartLater</strong>: Only the job is created. The failover test does not start.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +67,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The name of the failover test.</p>
+     * <p>The name of the failover test job.</p>
      * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -77,8 +83,8 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the failover test.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the failover test job.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -87,7 +93,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of failover test resources. You can add at most 16 resources.</p>
+     * <p>The list of resource IDs to test. You can add up to 16 resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -97,7 +103,7 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The resource type of the failover test. Set the value to <strong>PHYSICALCONNECTION</strong>.</p>
+     * <p>The type of the resource to test. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

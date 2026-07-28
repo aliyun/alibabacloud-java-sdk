@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     /**
-     * <p>The language to display the results. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong> (default): Chinese</li>
-     * <li><strong>en-US</strong>: English</li>
+     * <li><strong>zh-CN</strong> (default): Chinese.</li>
+     * <li><strong>en-US</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The filter information. You can specify a filter key and a filter value.</p>
+     * <p>The filter information. You can specify key-value pairs to filter the query results.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListEnhanhcedNatGatewayAvailableZonesRequestFilter> filter;
@@ -30,9 +30,9 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region that you want to query.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
-     * <p>In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.</p>
+     * <p>The ID of the region to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.
+     * This example queries the zones available for NAT gateway resources in the UAE (Dubai) region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
 
     public static class ListEnhanhcedNatGatewayAvailableZonesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key. Only <strong>PrivateLinkEnabled</strong> is supported.</p>
+         * <p>The filter condition. Currently, only <strong>PrivateLinkEnabled</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PrivateLinkEnabled</p>
@@ -119,9 +119,9 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the filter key.</p>
+         * <p>The filter value that corresponds to the filter condition.</p>
          * <blockquote>
-         * <p> If the filter key is set to <strong>PrivateLinkEnabled</strong>, you must specify a filter value. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <p>If the filter condition is <strong>PrivateLinkEnabled</strong>, you must specify a filter value. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

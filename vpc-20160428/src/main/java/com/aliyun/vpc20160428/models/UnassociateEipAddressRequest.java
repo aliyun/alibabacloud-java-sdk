@@ -44,7 +44,7 @@ public class UnassociateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The instance ID of the cloud resource from which to disassociate the EIP.
-     * You can enter the instance ID of a NAT gateway, Classic Load Balancer (CLB) instance, ECS instance, secondary elastic network interface controller (NIC), high availability virtual IP address instance, or an IP address.</p>
+     * You can enter the instance ID of a NAT gateway, Classic Load Balancer (CLB) instance, ECS instance, secondary elastic network interface controller (NIC), high-availability virtual IP address, or an IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>i-hp3akk9irtd69jad****</p>
@@ -57,13 +57,13 @@ public class UnassociateEipAddressRequest extends TeaModel {
      * <ul>
      * <li><p><strong>EcsInstance</strong> (default): an ECS instance in a virtual private cloud (VPC).   </p>
      * </li>
-     * <li><p><strong>SlbInstance</strong>: a load balancing instance in a virtual private cloud (VPC).   </p>
+     * <li><p><strong>SlbInstance</strong>: an SLB instance in a virtual private cloud (VPC).   </p>
      * </li>
      * <li><p><strong>NetworkInterface</strong>: a secondary elastic network interface controller (NIC) in a virtual private cloud (VPC).</p>
      * </li>
      * <li><p><strong>Nat</strong>: a NAT gateway.  </p>
      * </li>
-     * <li><p><strong>HaVip</strong>: a high availability virtual IP address.</p>
+     * <li><p><strong>HaVip</strong>: a high-availability virtual IP address.</p>
      * </li>
      * <li><p><strong>IpAddress</strong>: an IP address.</p>
      * </li>
@@ -82,7 +82,7 @@ public class UnassociateEipAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private IP address of the ECS instance or secondary elastic network interface controller (NIC) instance from which to disassociate the EIP.</p>
+     * <p>The private IP address of the ECS instance or secondary elastic network interface controller (NIC) from which to disassociate the EIP.</p>
      * 
      * <strong>example:</strong>
      * <p>192.XX.XX.2</p>
@@ -92,7 +92,7 @@ public class UnassociateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The region ID of the EIP to disassociate.
-     *  You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
+     *  You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

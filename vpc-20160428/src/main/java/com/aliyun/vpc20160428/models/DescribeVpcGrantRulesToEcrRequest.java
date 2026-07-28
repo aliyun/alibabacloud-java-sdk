@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     /**
-     * <p>The ID of the Express Connect Router.</p>
+     * <p>The ID of the Express Connect Router (ECR) instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ecr-ncxadcujadncsa****</p>
@@ -14,9 +14,9 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public String ecrInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account (main account) that owns the Express Connect Router.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the ECR instance.</p>
      * <blockquote>
-     * <p>This parameter is required when querying a cross-account network instance.</p>
+     * <p>This parameter is required if you want to load a cross-account network instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Long ecrOwnerId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The ID of the network instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-wz9ek66wd7tl5xqpy****</p>
@@ -35,12 +35,10 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of instance whose authorization rules you want to query. Valid values:</p>
+     * <p>The type of the instance for which to query the authorization relationship. Valid values:</p>
      * <ul>
-     * <li><p><strong>VBR</strong>: Set the value to <strong>VBR</strong> to query the Virtual Private Cloud (VPC) instances authorized to connect to the specified virtual border router (VBR).</p>
-     * </li>
-     * <li><p><strong>VPC</strong>: Set the value to <strong>VPC</strong> to query the VBRs to which the specified VPC has granted authorization.</p>
-     * </li>
+     * <li><strong>VBR</strong>: Virtual Border Router (VBR) instance. Queries the VPC instances that the VBR instance is authorized to access through the vRouter.</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC) instance. Queries the VBR instances that the VPC instance has authorized through the vRouter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +48,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>.</p>
+     * <p>The number of entries per page for paginated queries. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -59,11 +57,11 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. Valid values:</p>
+     * <p>The pagination token for the next query. Valid values:</p>
      * <ul>
-     * <li><p>Omit this parameter for the first request.</p>
+     * <li><p>Leave this parameter empty for the first query or if no more results exist.</p>
      * </li>
-     * <li><p>For subsequent requests, set this to the <strong>NextToken</strong> value from the previous response.</p>
+     * <li><p>If a next query is available, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</p>
      * </li>
      * </ul>
      * 
@@ -80,7 +78,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the network instance is located.</p>
+     * <p>The region in which the network instance to query resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +103,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeVpcGrantRulesToEcrRequestTags> tags;
@@ -221,8 +219,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
 
     public static class DescribeVpcGrantRulesToEcrRequestTags extends TeaModel {
         /**
-         * <p>The tag key. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You must specify at least 1 and can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -231,8 +229,8 @@ public class DescribeVpcGrantRulesToEcrRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

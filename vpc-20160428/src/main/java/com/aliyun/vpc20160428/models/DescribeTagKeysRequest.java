@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagKeysRequest extends TeaModel {
     /**
-     * <p>The tag keys.</p>
+     * <p>The tag key.</p>
      * 
      * <strong>example:</strong>
      * <p>keyword</p>
@@ -23,10 +23,10 @@ public class DescribeTagKeysRequest extends TeaModel {
     public Integer maxResult;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li>If this is the first query or no subsequent query exists, leave this parameter empty.</li>
+     * <li>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeTagKeysRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
+     * <p>The resource ID. You can specify up to 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -67,13 +67,13 @@ public class DescribeTagKeysRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>VSWITCH</strong>: vSwitch</li>
-     * <li><strong>ROUTETABLE</strong>: route table</li>
-     * <li><strong>EIP</strong>: elastic IP address (EIP)</li>
-     * <li><strong>VpnGateway</strong>: VPN gateway</li>
-     * <li><strong>NATGATEWAY</strong>: NAT gateway</li>
-     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+     * <li><strong>VSWITCH</strong>: vSwitch instance.</li>
+     * <li><strong>ROUTETABLE</strong>: route table instance.</li>
+     * <li><strong>EIP</strong>: Elastic IP Address (EIP) instance.</li>
+     * <li><strong>VpnGateWay</strong>: VPN gateway instance.</li>
+     * <li><strong>NATGATEWAY</strong>: NAT gateway instance.</li>
+     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: Internet Shared Bandwidth instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>

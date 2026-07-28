@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExpressCloudConnectionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ECC instance.</p>
+     * <p>The instance ID of the Express Cloud Connection.</p>
      * 
      * <strong>example:</strong>
      * <p>ecc-jg************</p>

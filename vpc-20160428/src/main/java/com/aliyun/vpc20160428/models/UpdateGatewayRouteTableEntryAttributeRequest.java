@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination CIDR block of the route entry in the gateway route table.</p>
+     * <p>The destination CIDR block of the route in the gateway route table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,12 +81,12 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     /**
      * <p>The instance ID of the next hop that you want to modify.</p>
      * <ul>
-     * <li>If <strong>NextHopType</strong> is set to <strong>Instance</strong>, set <strong>NextHopId</strong> to the ID of the ECS instance.</li>
-     * <li>If <strong>NextHopType</strong> is set to <strong>NetworkInterface</strong>, set <strong>NextHopId</strong> to the ID of the elastic network interface (ENI) instance.</li>
+     * <li>If <strong>NextHopType</strong> is set to <strong>Instance</strong>, set <strong>NextHopId</strong> to the ID of an ECS instance.</li>
+     * <li>If <strong>NextHopType</strong> is set to <strong>NetworkInterface</strong>, set <strong>NextHopId</strong> to the ID of an elastic network interface controller (NIC) instance.</li>
      * <li>If <strong>NextHopType</strong> is set to <strong>Local</strong>, leave <strong>NextHopId</strong> empty, which indicates a local next hop.</li>
      * </ul>
      * <blockquote>
-     * <p>If the next hop type of the route is <strong>Instance</strong> or <strong>NetworkInterface</strong> and you want to modify the next hop, you must first change <strong>NextHopType</strong> to <strong>Local</strong>, and then change <strong>NextHopType</strong> to <strong>Instance</strong> or <strong>NetworkInterface</strong> and specify the <strong>NextHopId</strong>. You cannot directly change the next hop from one ENI or ECS instance to another ENI or ECS instance.</p>
+     * <p>If the next hop type of the route is <strong>Instance</strong> or <strong>NetworkInterface</strong> and you want to modify the next hop, you must first change <strong>NextHopType</strong> to <strong>Local</strong>, and then change <strong>NextHopType</strong> to <strong>Instance</strong> or <strong>NetworkInterface</strong> and specify a new <strong>NextHopId</strong>. You cannot directly change the next hop from one network interface controller (NIC) or ECS instance to another network interface controller (NIC) or ECS instance when the next hop type is network interface controller (NIC) or ECS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
      * <ul>
      * <li><p><strong>Instance</strong>: ECS instance.</p>
      * </li>
-     * <li><p><strong>NetworkInterface</strong>: elastic network interface (ENI) instance.</p>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interface controller (NIC) instance.</p>
      * </li>
      * <li><p><strong>Local</strong>: local.</p>
      * </li>
@@ -121,7 +121,7 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the gateway route table that you want to modify.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

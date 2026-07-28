@@ -28,10 +28,10 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the route. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -66,13 +66,13 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to publish the destination route to the VPC. Valid values:</p>
+     * <p>Specifies whether to publish the destination route to the VPC route table. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Publishes the destination route to the VPC. The system publishes the route only to the VPC system route table, not to VPC custom route tables.</p>
-     * <p>If you want the custom route table to contain this route, manually add the route. For more information, see <a href="https://help.aliyun.com/document_detail/448722.html">CreateRouteEntry</a>.</p>
+     * <li><p><strong>true</strong>: Publishes the destination route to the VPC route table. The system publishes the route only to the VPC system route table, not to VPC custom route tables.</p>
+     * <p>If you want the VPC custom route table to contain this route, manually add the route. For more information, see <a href="https://help.aliyun.com/document_detail/448722.html">CreateRouteEntry</a>.</p>
      * </li>
-     * <li><p><strong>false</strong>: Does not publish the destination route to the VPC.</p>
-     * <p>You must manually add a destination route with the next hop pointing to the VPN gateway instance in both the VPC system route table and custom route tables. Otherwise, the VPC cannot access resources in the destination CIDR block through the IPsec-VPN connection.</p>
+     * <li><p><strong>false</strong>: Does not publish the destination route to the VPC route table.</p>
+     * <p>You must manually add a destination route whose next hop points to the VPN gateway instance in both the VPC system route table and custom route tables. Otherwise, the VPC cannot access resources in the destination CIDR block through the IPsec-VPN connection.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -121,9 +121,9 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The weight of the destination routing entry.</p>
-     * <p>When you use the same VPN gateway instance to establish active/standby IPsec-VPN connections, you can specify the active and standby links by configuring the weight of the destination routing entry. A destination routing entry with a weight of 100 is the active link by default, and a destination routing entry with a weight of 0 is the standby link by default.</p>
-     * <p>You can configure health checks for the IPsec-VPN connection to automatically detect the connectivity of the link. If the active link is unavailable, the system automatically switches traffic to the standby link, ensuring high availability of the cloud connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</p>
+     * <p>The weight of the destination route.</p>
+     * <p>If you use the same VPN gateway instance to establish active/standby IPsec-VPN connections, you can specify the active and standby links by configuring the weight of the destination routing. A destination route with a weight of 100 is the active link by default, and a destination route with a weight of 0 is the standby link by default.</p>
+     * <p>You can configure health checks for the IPsec-VPN connection to automatically detect the connectivity of the link. If the active link is unavailable, the system automatically switches traffic to the standby link, which ensures high availability of the cloud connection. For more information, see <a href="https://help.aliyun.com/document_detail/120391.html">CreateVpnConnection</a>.</p>
      * <ul>
      * <li><strong>100</strong>: The IPsec-VPN connection associated with the destination route serves as the active link.</li>
      * <li><strong>0</strong>: The IPsec-VPN connection associated with the destination route serves as the standby link.</li>
@@ -131,7 +131,7 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>When you specify active and standby links, the active and standby destination routes must have the same destination CIDR block, different next hops, and different weights.</li>
-     * <li>For VPN gateway instances that support dual-tunnel pattern IPsec-VPN connections, you do not need to configure this parameter. A dual-tunnel pattern IPsec-VPN connection contains two tunnels that automatically form active/standby links. You do not need to specify active/standby links by configuring this parameter. If you configure this parameter, the parameter settings do not take effect.</li>
+     * <li>For VPN gateway instances that support dual-tunnel pattern IPsec-VPN connections, you do not need to configure this parameter. A dual-tunnel pattern IPsec-VPN connection contains two tunnels that automatically form active/standby links. You do not need to specify active/standby links by using the parameter settings. If you configure this parameter, the parameter settings do not take effect.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFullNatEntryResponseBody extends TeaModel {
     /**
-     * <p>The FULLNAT entry ID.</p>
+     * <p>The ID of the FULLNAT entry.</p>
      * 
      * <strong>example:</strong>
      * <p>fullnat-gw8fz23jezpbblf1j****</p>

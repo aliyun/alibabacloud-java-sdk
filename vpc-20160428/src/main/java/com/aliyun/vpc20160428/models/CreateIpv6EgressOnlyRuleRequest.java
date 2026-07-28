@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the value of RequestId as the client token. The value of RequestId is different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>A dry run of the request without actually executing it.</p>
+     * <p>Specifies whether to perform a dry run without performing the actual request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -45,7 +45,7 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
 
     /**
      * <p>The type of the instance for which you want to create an egress-only rule.</p>
-     * <p>Default value: <strong>Ipv6Address</strong></p>
+     * <p>Set the value to <strong>Ipv6Address</strong> (default), which indicates the IPv6 address type.</p>
      * 
      * <strong>example:</strong>
      * <p>Ipv6Address</p>
@@ -54,7 +54,7 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the IPv6 gateway.</p>
+     * <p>The instance ID of the IPv6 gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which the IPv6 gateway is deployed.</p>
+     * <p>The region ID of the IPv6 gateway.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 

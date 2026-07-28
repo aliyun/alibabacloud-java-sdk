@@ -21,7 +21,7 @@ public class ActiveFlowLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

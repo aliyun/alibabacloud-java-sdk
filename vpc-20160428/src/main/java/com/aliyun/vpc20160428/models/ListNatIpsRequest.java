@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ListNatIpsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListNatIpsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks the API request. IP addresses are not queried. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, the corresponding error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,15 @@ public class ListNatIpsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The enumeration of the fields used to describe the source of the NatIp. Prefix indicates the NatIp that belongs to the IPv4Prefix. The value cidr indicates isolated NatIp. The value control indicates all NatIp.</p>
+     * <p>The origin of the NAT IP address to query. Valid values:</p>
+     * <ul>
+     * <li><p>prefix: a NAT IP address that belongs to an IP prefix.</p>
+     * </li>
+     * <li><p>cidr: a standalone NAT IP address that does not belong to any IP prefix.</p>
+     * </li>
+     * <li><p>Empty: queries all NAT IP addresses.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cidr</p>
@@ -40,7 +48,7 @@ public class ListNatIpsRequest extends TeaModel {
     public String ipOrigin;
 
     /**
-     * <p>The IP prefix address range.</p>
+     * <p>The CIDR block of the IP prefix to query.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/28</p>
@@ -49,7 +57,7 @@ public class ListNatIpsRequest extends TeaModel {
     public String ipv4Prefix;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -58,7 +66,7 @@ public class ListNatIpsRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The instance ID of the NAT gateway to which the NAT IP addresses belong.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +76,7 @@ public class ListNatIpsRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The CIDR block to which the IP address belongs.</p>
+     * <p>The CIDR block to which the NAT IP addresses belong.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/24</p>
@@ -77,7 +85,7 @@ public class ListNatIpsRequest extends TeaModel {
     public String natIpCidr;
 
     /**
-     * <p>The ID of the IP address. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+     * <p>The instance ID of the NAT IP address to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcnatip-gw8a863sut1zijxh0****</p>
@@ -86,7 +94,7 @@ public class ListNatIpsRequest extends TeaModel {
     public java.util.List<String> natIpIds;
 
     /**
-     * <p>The name of the IP address. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+     * <p>The name of the NAT IP address to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -95,11 +103,11 @@ public class ListNatIpsRequest extends TeaModel {
     public java.util.List<String> natIpName;
 
     /**
-     * <p>The status of the IP address. Valid values:</p>
+     * <p>The status of the NAT IP addresses to query. Valid values:</p>
      * <ul>
-     * <li><strong>Available</strong></li>
-     * <li><strong>Deleting</strong></li>
-     * <li><strong>Creating</strong></li>
+     * <li><strong>Available</strong>: available.</li>
+     * <li><strong>Deleting</strong>: being deleted.</li>
+     * <li><strong>Creating</strong>: being created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,10 +117,10 @@ public class ListNatIpsRequest extends TeaModel {
     public String natIpStatus;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
+     * <li>If a next query exists, set the value to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +136,7 @@ public class ListNatIpsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the NAT gateway is deployed.</p>
+     * <p>The region ID of the NAT gateway instance to which the NAT IP addresses belong.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

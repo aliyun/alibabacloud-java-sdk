@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionLOARequest extends TeaModel {
     /**
-     * <p>A client token that ensures the idempotence of the request.</p>
-     * <p>Your client generates this value, which must be unique for each request and have a maximum length of 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. Each API request has a unique <strong>RequestId</strong>.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribePhysicalConnectionLOARequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the physical connection instance.</p>
+     * <p>The instance ID of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,8 @@ public class DescribePhysicalConnectionLOARequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the physical connection is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to get a list of available region IDs.</p>
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

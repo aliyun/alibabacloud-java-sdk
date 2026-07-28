@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTrafficMirrorFilterRuleAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>02EB8585-D4DC-4E29-A0F4-7C588C82863C</p>

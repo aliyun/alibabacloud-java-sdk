@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8AE6F367-52EA-535D-9A3D-EF23D70527C8</p>
@@ -42,7 +42,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
 
     public static class ListEnhanhcedNatGatewayAvailableZonesResponseBodyZones extends TeaModel {
         /**
-         * <p>The name of the zone.</p>
+         * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
          * <p>中东1 可用区A</p>
@@ -51,7 +51,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
         public String localName;
 
         /**
-         * <p>The ID of the zone where the instance is deployed.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>me-east-1a</p>

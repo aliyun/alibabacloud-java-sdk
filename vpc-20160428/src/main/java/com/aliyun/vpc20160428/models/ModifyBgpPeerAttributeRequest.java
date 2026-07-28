@@ -6,7 +6,11 @@ import com.aliyun.tea.*;
 public class ModifyBgpPeerAttributeRequest extends TeaModel {
     /**
      * <p>The BFD hop count. Valid values: <strong>1</strong> to <strong>255</strong>.</p>
-     * <p>This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</p>
+     * <p>This parameter is required when BFD is enabled.
+     * Enter the BFD hop count, which specifies the maximum number of devices that data passes through from the source to the destination. You can configure different hop counts based on the actual physical link conditions.</p>
+     * <blockquote>
+     * <p>If you use BFD in a multi-cloud environment or a direct fiber connection topology where no bridging devices exist, change the default BFD hop count from <strong>255</strong> to <strong>1</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -15,7 +19,7 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
     public Integer bfdMultiHop;
 
     /**
-     * <p>The ID of the BGP group to which the BGP peer that you want to modify belongs.</p>
+     * <p>The ID of the BGP group to which the BGP peer belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>bgpg-m5eo12jxuw2hc0uqq****</p>
@@ -24,7 +28,7 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
     public String bgpGroupId;
 
     /**
-     * <p>The ID of the BGP peer that you want to modify.</p>
+     * <p>The ID of the BGP peer whose attributes you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,9 +39,9 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,10 +51,12 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</p>
+     * <p>Specifies whether to enable Bidirectional Forwarding Detection (BFD). Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong>: enables BFD.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): does not enable BFD.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +72,7 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IP address of the BGP peer that you want to modify.</p>
+     * <p>The IP address of the BGP peer.</p>
      * 
      * <strong>example:</strong>
      * <p>116.62.XX.XX</p>
@@ -75,8 +81,8 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
     public String peerIpAddress;
 
     /**
-     * <p>The region ID of the BGP group to which the BGP peer that you want to modify belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the BGP group to which the BGP peer belongs. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

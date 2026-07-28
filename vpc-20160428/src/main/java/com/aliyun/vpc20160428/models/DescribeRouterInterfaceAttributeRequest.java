@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRouterInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the router interface.</p>
+     * <p>The ID of the router interface to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class DescribeRouterInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the router interface belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the router interface.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

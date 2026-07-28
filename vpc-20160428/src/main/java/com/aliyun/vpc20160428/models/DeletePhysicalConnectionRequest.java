@@ -21,7 +21,7 @@ public class DeletePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The instance ID of the Express Connect circuit instance.</p>
+     * <p>The instance ID of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DeletePhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Express Connect circuit. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

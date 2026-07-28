@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIpv4GatewayResponseBody extends TeaModel {
     /**
-     * <p>The ID of the IPv4 gateway.</p>
+     * <p>The instance ID of the IPv4 gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
@@ -14,7 +14,7 @@ public class CreateIpv4GatewayResponseBody extends TeaModel {
     public String ipv4GatewayId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F282742B-1BBB-5F63-A3AF-E92EC575A1A6</p>
@@ -23,7 +23,7 @@ public class CreateIpv4GatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the router interface is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region where the router interface is located.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     public String routerInterfaceId;
 
     /**
-     * <p>The specification of the router interface. The following table describes the available specifications and the corresponding bandwidths:</p>
+     * <p>The specification of the router interface. The following specifications and their corresponding bandwidths are available:</p>
      * <ul>
      * <li><p><strong>Mini.2</strong>: 2 Mbps</p>
      * </li>
@@ -79,7 +79,7 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If <strong>Role</strong> is set to <strong>AcceptingSide</strong> (accepter), set <strong>Spec</strong> to <strong>Negative</strong>.</p>
+     * <p>If <strong>Role</strong> is set to <strong>AcceptingSide</strong> (accepter VPC), set <strong>Spec</strong> to <strong>Negative</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

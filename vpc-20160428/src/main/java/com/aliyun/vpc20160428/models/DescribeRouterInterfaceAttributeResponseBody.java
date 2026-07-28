@@ -14,7 +14,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String accessPointId;
 
     /**
-     * <p>The bandwidth of the router interface. Unit: Mbit/s.</p>
+     * <p>The bandwidth of the router interface. Unit: Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,11 +23,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The status of the router interface. Valid values:</p>
+     * <p>The business status of the router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong></li>
-     * <li><strong>FinancialLocked</strong></li>
-     * <li><strong>SecurityLocked</strong></li>
+     * <li><p><strong>Normal</strong>: Normal.</p>
+     * </li>
+     * <li><p><strong>FinancialLocked</strong>: locked due to overdue payment.</p>
+     * </li>
+     * <li><p><strong>SecurityLocked</strong>: locked due to security risk control.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,8 +42,8 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>AfterPay</strong>: pay-as-you-go</li>
-     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>AfterPay</strong>: pay-as-you-go.</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,8 +82,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the connection is a cross-border connection. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong>: The connection is not a cross-border connection.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The connection is a cross-border connection.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +104,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end time of the data retrieval.</p>
      * 
      * <strong>example:</strong>
      * <p>2999-09-08T16:00:00Z</p>
@@ -108,18 +113,18 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</p>
+     * <p>Indicates whether the router interface on the VBR was created in fast link mode. Fast link mode allows the router interfaces on the VBR and VPC to be automatically connected after they are created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: The router interface was created in fast link mode.</li>
+     * <li><strong>false</strong> (default): The router interface was not created in fast link mode.</li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>This parameter takes effect only when <strong>RouterType</strong> is set to <strong>VBR</strong> and <strong>OppositeRouterType</strong> is set to <strong>VRouter</strong>.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only when <strong>RouterType</strong> is set to <strong>VBR</strong> and <strong>OppositeRouterType</strong> is set to <strong>VRouter</strong>.</p>
-     * </li>
-     * <li><p>When <strong>FastLinkMode</strong> is set to <strong>true</strong>, <strong>Role</strong> must be set to <strong>InitiatingSide</strong>. <strong>AccessPointId</strong>, <strong>OppositeRouterType</strong>, <strong>OpppsiteRouterId</strong>, and <strong>OppositeInterfaceOwnerId</strong> are required.</p>
-     * </li>
+     * <li>When <strong>FastLinkMode</strong> is set to <strong>true</strong>, <strong>Role</strong> must be set to <strong>InitiatingSide</strong>, and <strong>AccessPointId</strong>, <strong>OppositeRouterType</strong>, <strong>OpppsiteRouterId</strong>, and <strong>OppositeInterfaceOwnerId</strong> are required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +134,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String fastLinkMode;
 
     /**
-     * <p>The time when the router interface was modified.</p>
+     * <p>The time when the router interface was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-28T10:02:12Z</p>
@@ -138,10 +143,12 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>Indicates whether renewal data is included. Valid values:</p>
+     * <p>Indicates whether renewal data exists. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong>: No renewal data exists.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Renewal data exists.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,7 +158,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String hasReservationData;
 
     /**
-     * <p>The rate of health checks. Unit: seconds. The value indicates the interval at which probe packets are sent during a health check.</p>
+     * <p>The health check rate. Unit: seconds. This value indicates the interval between consecutive probe packets sent during a health check.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -160,7 +167,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public Integer hcRate;
 
     /**
-     * <p>The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.</p>
+     * <p>The health check threshold. This value indicates the number of probe packets sent during a health check. Unit: packets.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -169,7 +176,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public Integer hcThreshold;
 
     /**
-     * <p>The source IP address that is used for the health check.</p>
+     * <p>The source IP address of the health check.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -178,12 +185,12 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String healthCheckSourceIp;
 
     /**
-     * <p>The status of the health check. Valid values:</p>
+     * <p>The health check status. Valid values:</p>
      * <ul>
-     * <li><strong>Abnormal</strong></li>
-     * <li><strong>Normal</strong></li>
-     * <li><strong>NoRedundantRoute</strong></li>
-     * <li><strong>NoHealthCheckConfig</strong></li>
+     * <li><strong>Abnormal</strong>: abnormal.</li>
+     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>NoRedundantRoute</strong>: no redundant route configured.</li>
+     * <li><strong>NoHealthCheckConfig</strong>: no health check configured.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -193,7 +200,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String healthCheckStatus;
 
     /**
-     * <p>The destination IP address that is used for the health check.</p>
+     * <p>The target IP address of the health check.</p>
      * 
      * <strong>example:</strong>
      * <p>2.2.XX.XX</p>
@@ -202,7 +209,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String healthCheckTargetIp;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -229,7 +236,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String oppositeAccessPointId;
 
     /**
-     * <p>The maximum bandwidth of the peer router interface. Unit: Mbit/s.</p>
+     * <p>The bandwidth of the peer router interface. Unit: Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -238,11 +245,11 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public Integer oppositeBandwidth;
 
     /**
-     * <p>The service status of the peer router interface. Valid values:</p>
+     * <p>The business status of the peer router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong></li>
-     * <li><strong>FinancialLocked</strong></li>
-     * <li><strong>SecurityLocked</strong></li>
+     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>FinancialLocked</strong>: locked due to overdue payment.</li>
+     * <li><strong>SecurityLocked</strong>: locked due to security risk control.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -261,7 +268,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String oppositeInterfaceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+     * <p>The ID of the account to which the peer router interface belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>1321932713****</p>
@@ -272,19 +279,19 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The specification of the peer router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
-     * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
-     * <li><strong>Small.1</strong>: 10 Mbit/s</li>
-     * <li><strong>Small.2</strong>: 20 Mbit/s</li>
-     * <li><strong>Small.5</strong>: 50 Mbit/s</li>
-     * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
-     * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
-     * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
-     * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
-     * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
-     * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
-     * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
-     * <li><strong>Negative</strong>: not applicable</li>
+     * <li><strong>Mini.2</strong>: 2 Mbps</li>
+     * <li><strong>Mini.5</strong>: 5 Mbps</li>
+     * <li><strong>Small.1</strong>: 10 Mbps</li>
+     * <li><strong>Small.2</strong>: 20 Mbps</li>
+     * <li><strong>Small.5</strong>: 50 Mbps</li>
+     * <li><strong>Middle.1</strong>: 100 Mbps</li>
+     * <li><strong>Middle.2</strong>: 200 Mbps</li>
+     * <li><strong>Middle.5</strong>: 500 Mbps</li>
+     * <li><strong>Large.1</strong>: 1000 Mbps</li>
+     * <li><strong>Large.2</strong>: 2000 Mbps</li>
+     * <li><strong>Large.5</strong>: 5000 Mbps</li>
+     * <li><strong>Xlarge.1</strong>: 10000 Mbps</li>
+     * <li><strong>Negative</strong>: no specification involved.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -296,16 +303,16 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the peer router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Idle</strong></li>
-     * <li><strong>AcceptingConnecting</strong></li>
-     * <li><strong>Connecting</strong></li>
-     * <li><strong>Activating</strong></li>
-     * <li><strong>Active</strong></li>
-     * <li><strong>Modifying</strong></li>
-     * <li><strong>Deactivating</strong></li>
-     * <li><strong>Inactive</strong></li>
-     * <li><strong>Deleting</strong></li>
-     * <li><strong>Deleted</strong></li>
+     * <li><strong>Idle</strong>: not connected.</li>
+     * <li><strong>AcceptingConnecting</strong>: accepting a connection.</li>
+     * <li><strong>Connecting</strong>: connecting.</li>
+     * <li><strong>Activating</strong>: being activated.</li>
+     * <li><strong>Active</strong>: activated.</li>
+     * <li><strong>Modifying</strong>: being modified.</li>
+     * <li><strong>Deactivating</strong>: being frozen.</li>
+     * <li><strong>Inactive</strong>: frozen.</li>
+     * <li><strong>Deleting</strong>: being deleted.</li>
+     * <li><strong>Deleted</strong>: deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -335,8 +342,8 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The type of the router to which the peer router interface belongs. Valid values:</p>
      * <ul>
-     * <li><strong>VRouter</strong></li>
-     * <li><strong>VBR</strong></li>
+     * <li><strong>VRouter</strong>: vRouter of a VPC.</li>
+     * <li><strong>VBR</strong>: Virtual Border Router.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -364,7 +371,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the renewal takes effect.</p>
+     * <p>The renewal active time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-11T16:00:00Z</p>
@@ -373,7 +380,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String reservationActiveTime;
 
     /**
-     * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+     * <p>The renewal bandwidth. Unit: Mbps.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -382,7 +389,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String reservationBandwidth;
 
     /**
-     * <p>The metering method that is used after the renewal takes effect. Valid values: If <strong>PayByBandwidth</strong> is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.</p>
+     * <p>The renewal billing type. Valid values: <strong>PayByBandwidth</strong>, which indicates pay-by-bandwidth.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByBandwidth</p>
@@ -391,7 +398,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String reservationInternetChargeType;
 
     /**
-     * <p>The type of the renewal order. Only <strong>RENEW</strong> may be returned, which indicates that the order is placed for service renewal.</p>
+     * <p>The type of the renewal order. Valid values: <strong>RENEW</strong>, which indicates a renewal order.</p>
      * 
      * <strong>example:</strong>
      * <p>RENEW</p>
@@ -401,7 +408,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
-     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -410,7 +417,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The role of the router interface in the peering connection.</p>
+     * <p>The role in the peering connection.</p>
      * 
      * <strong>example:</strong>
      * <p>InitiatingSide</p>
@@ -439,8 +446,10 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The type of the router to which the route table belongs. Valid values:</p>
      * <ul>
-     * <li><strong>VRouter</strong></li>
-     * <li><strong>VBR</strong></li>
+     * <li><p><strong>VRouter</strong>: vRouter of a VPC.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: Virtual Border Router.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -452,18 +461,18 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The specification of the router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
-     * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
-     * <li><strong>Small.1</strong>: 10 Mbit/s</li>
-     * <li><strong>Small.2</strong>: 20 Mbit/s</li>
-     * <li><strong>Small.5</strong>: 50 Mbit/s</li>
-     * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
-     * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
-     * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
-     * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
-     * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
-     * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
-     * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+     * <li><strong>Mini.2</strong>: 2 Mbps</li>
+     * <li><strong>Mini.5</strong>: 5 Mbps</li>
+     * <li><strong>Small.1</strong>: 10 Mbps</li>
+     * <li><strong>Small.2</strong>: 20 Mbps</li>
+     * <li><strong>Small.5</strong>: 50 Mbps</li>
+     * <li><strong>Middle.1</strong>: 100 Mbps</li>
+     * <li><strong>Middle.2</strong>: 200 Mbps</li>
+     * <li><strong>Middle.5</strong>: 500 Mbps</li>
+     * <li><strong>Large.1</strong>: 1000 Mbps</li>
+     * <li><strong>Large.2</strong>: 2000 Mbps</li>
+     * <li><strong>Large.5</strong>: 5000 Mbps</li>
+     * <li><strong>Xlarge.1</strong>: 10000 Mbps</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -475,15 +484,15 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the router interface. Valid values:</p>
      * <ul>
-     * <li><strong>Idle</strong></li>
-     * <li><strong>AcceptingConnecting</strong></li>
-     * <li><strong>Connecting</strong></li>
-     * <li><strong>Activating</strong></li>
-     * <li><strong>Active</strong></li>
-     * <li><strong>Modifying</strong></li>
-     * <li><strong>Deactivating</strong></li>
-     * <li><strong>Inactive</strong></li>
-     * <li><strong>Deleting</strong></li>
+     * <li><strong>Idle</strong>: not connected.</li>
+     * <li><strong>AcceptingConnecting</strong>: accepting a connection.</li>
+     * <li><strong>Connecting</strong>: connecting.</li>
+     * <li><strong>Activating</strong>: being activated.</li>
+     * <li><strong>Active</strong>: activated.</li>
+     * <li><strong>Modifying</strong>: being modified.</li>
+     * <li><strong>Deactivating</strong>: being frozen.</li>
+     * <li><strong>Inactive</strong>: frozen.</li>
+     * <li><strong>Deleting</strong>: being deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -493,7 +502,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -505,7 +514,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public DescribeRouterInterfaceAttributeResponseBodyTags tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the router interface belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the routing interface belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1b49rqrybk45nio****</p>

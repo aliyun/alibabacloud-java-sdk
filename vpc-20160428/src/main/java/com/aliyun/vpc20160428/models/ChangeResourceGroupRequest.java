@@ -7,7 +7,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the new resource group.</p>
      * <blockquote>
-     * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>A resource group is a mechanism for managing resources by group within an Alibaba Cloud account. Resource groups help you address the complexity of resource grouping and authorization management within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,8 +18,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The ID of the region to which the new resource group belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the resource group that you want to modify.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Express Connect circuit whose resource group you want to modify.</p>
+     * <p>The ID of the Express Connect circuit resource whose resource group you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,11 +39,12 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
-     * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
-     * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit instance.</li>
+     * <li><strong>VIRTUALBORDERROUTER</strong>: Virtual Border Router.</li>
+     * <li><strong>ROUTERINTERFACE</strong>: VBR uplink.</li>
+     * <li><strong>TRAFFICQOS</strong>: QoS policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

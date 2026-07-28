@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteNatIpRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class DeleteNatIpRequest extends TeaModel {
      * <ul>
      * <li><p><strong>true</strong>: performs a dry run without deleting the NAT IP address. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a Normal request. After the request passes the check, a 2xx HTTP status code is returned and the NAT IP address is deleted.</p>
+     * <li><p><strong>false</strong> (default): sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the NAT IP address is deleted.</p>
      * </li>
      * </ul>
      * 
@@ -33,7 +33,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The IP prefix to delete.</p>
+     * <p>The IP prefix address to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/28</p>
@@ -51,7 +51,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The instance ID of the NAT IP address that you want to delete.</p>
+     * <p>The instance ID of the NAT IP address to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcnatip-gw8y7q3cpk3fggs87****</p>
@@ -66,7 +66,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway to which the NAT IP address belongs.</p>
+     * <p>The region ID of the NAT gateway instance to which the NAT IP address belongs.</p>
      * <p>You can call <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     /**
-     * <p>Indicates whether the tenant has accepted the virtual physical connection. Valid values:</p>
+     * <p>Indicates whether the shared Express Connect circuits have been confirmed and accepted by the tenant. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The connection has been accepted.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The connection has not been accepted.</p>
-     * </li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public Boolean isConfirmed;
 
     /**
-     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page when you query results by page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,12 +27,10 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. Valid values:</p>
+     * <p>Specifies whether a next query token is available. Valid values:</p>
      * <ul>
-     * <li><p>Leave this parameter empty for the first request.</p>
-     * </li>
-     * <li><p>For subsequent requests, set this parameter to the <code>NextToken</code> value returned from the previous request.</p>
-     * </li>
+     * <li>You do not need to specify this parameter for the first query or if no next query is available.</li>
+     * <li>If a next query is available, set this parameter to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +40,8 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the physical connection associated with the virtual physical connection.</p>
+     * <p>The ID of the Express Connect circuit associated with the shared Express Connect circuits.</p>
+     * <p>In the following content of this topic, the Express Connect circuit associated with the shared Express Connect circuits is referred to as the Express Connect circuit, to distinguish it from the shared Express Connect circuits.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp1ciz7ekd2grn1as****</p>
@@ -53,8 +50,8 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public String physicalConnectionId;
 
     /**
-     * <p>The ID of the region where the virtual physical connection is located.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the latest list of regions.</p>
+     * <p>The region ID of the shared Express Connect circuits.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +61,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the virtual physical connection belongs.</p>
+     * <p>The ID of the resource group to which the shared Express Connect circuits belong.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4p****</p>
@@ -73,13 +70,13 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListVirtualPhysicalConnectionsRequestTags> tags;
 
     /**
-     * <p>The Alibaba Cloud accounts that own the virtual physical connections.</p>
+     * <p>The Alibaba Cloud account information of the shared Express Connect circuits owner.</p>
      * 
      * <strong>example:</strong>
      * <p>189xxx</p>
@@ -88,14 +85,11 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public java.util.List<String> virtualPhysicalConnectionAliUids;
 
     /**
-     * <p>The business status of the virtual physical connection. Valid values:</p>
+     * <p>The business status of the shared Express Connect circuits. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: The connection is operating normally.</p>
-     * </li>
-     * <li><p><strong>FinancialLocked</strong>: The connection is locked due to an overdue payment.</p>
-     * </li>
-     * <li><p><strong>SecurityLocked</strong>: The connection is locked for security reasons.</p>
-     * </li>
+     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>FinancialLocked</strong>: financial lock.</li>
+     * <li><strong>SecurityLocked</strong>: Locked for security reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +99,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public String virtualPhysicalConnectionBusinessStatus;
 
     /**
-     * <p>The IDs of the virtual physical connections.</p>
+     * <p>The shared Express Connect circuits information.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-xxx</p>
@@ -114,7 +108,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public java.util.List<String> virtualPhysicalConnectionIds;
 
     /**
-     * <p>The business statuses of the virtual physical connections.</p>
+     * <p>The business status information of the shared Express Connect circuits.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-xxx</p>
@@ -123,7 +117,7 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public java.util.List<String> virtualPhysicalConnectionStatuses;
 
     /**
-     * <p>The VLAN IDs of the virtual physical connections.</p>
+     * <p>The VLAN ID of the shared Express Connect circuits.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-xxx</p>
@@ -234,8 +228,8 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
 
     public static class ListVirtualPhysicalConnectionsRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</p>
-         * <p>The key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -244,8 +238,8 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</p>
-         * <p>The value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag value cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

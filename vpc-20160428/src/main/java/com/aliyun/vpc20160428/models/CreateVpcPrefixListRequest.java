@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateVpcPrefixListRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the prefix list. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the prefix list is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +33,8 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     /**
      * <p>The IP version. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong> (default)</li>
-     * <li><strong>IPv6</strong></li>
+     * <li><strong>IPv4</strong> (default): IPv4.</li>
+     * <li><strong>IPv6</strong>: IPv6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The maximum number of CIDR blocks that you can specify in the prefix list. Default value: 50.</p>
+     * <p>The maximum number of entries for Classless Inter-Domain Routing (CIDR) blocks in the prefix list. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -69,14 +69,14 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     public String prefixListDescription;
 
     /**
-     * <p>The CIDR block information specified in the prefix list.</p>
+     * <p>The Classless Inter-Domain Routing (CIDR) block information of the prefix list.</p>
      */
     @NameInMap("PrefixListEntries")
     public java.util.List<CreateVpcPrefixListRequestPrefixListEntries> prefixListEntries;
 
     /**
      * <p>The name of the prefix list.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -85,7 +85,7 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     public String prefixListName;
 
     /**
-     * <p>The ID of the region where you want to create the prefix list.</p>
+     * <p>The region ID of the prefix list that you want to create. </p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -111,7 +111,7 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVpcPrefixListRequestTag> tag;
@@ -235,7 +235,7 @@ public class CreateVpcPrefixListRequest extends TeaModel {
 
     public static class CreateVpcPrefixListRequestPrefixListEntries extends TeaModel {
         /**
-         * <p>The CIDR block specified in the prefix list.</p>
+         * <p>The Classless Inter-Domain Routing (CIDR) block of the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -244,7 +244,7 @@ public class CreateVpcPrefixListRequest extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The description of the CIDR block specified in the prefix list.</p>
+         * <p>The description of the Classless Inter-Domain Routing (CIDR) block in the prefix list.</p>
          * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -278,8 +278,8 @@ public class CreateVpcPrefixListRequest extends TeaModel {
 
     public static class CreateVpcPrefixListRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -288,8 +288,8 @@ public class CreateVpcPrefixListRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

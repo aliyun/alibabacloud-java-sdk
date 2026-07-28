@@ -29,7 +29,7 @@ public class DescribeSslVpnClientCertsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries per page for paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class DescribeSslVpnClientCertsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the SSL client certificate that you want to query.</p>
+     * <p>The region ID of the SSL client certificates that you want to query.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 

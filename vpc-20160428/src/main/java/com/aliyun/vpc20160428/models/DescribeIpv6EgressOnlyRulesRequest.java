@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the IPv6 address for which the IPv6 egress-only rule is configured.</p>
+     * <p>The ID of the IPv6 address for which an IPv6 egress-only rule is configured.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6-bp12uzwhac8tv3xx6****</p>
@@ -70,7 +70,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

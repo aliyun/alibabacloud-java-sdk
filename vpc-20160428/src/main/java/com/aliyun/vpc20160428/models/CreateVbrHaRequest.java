@@ -8,7 +8,7 @@ public class CreateVbrHaRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class CreateVbrHaRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run without starting the instance. The system checks whether the required parameters are specified, whether the request format is valid, and whether the instance status is Normal. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
      * </li>
      * <li><p><strong>false</strong> (default): sends the request. After the request passes the check, the instance is started.</p>
      * </li>
@@ -84,7 +84,7 @@ public class CreateVbrHaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The instance ID of the VBR.</p>
+     * <p>The VBR instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

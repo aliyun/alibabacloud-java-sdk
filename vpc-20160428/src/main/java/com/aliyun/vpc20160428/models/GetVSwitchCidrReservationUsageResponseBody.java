@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
     /**
-     * <p>A list of reserved CIDR blocks that are in use.</p>
+     * <p>The list of allocated reserved CIDR blocks for a vSwitch.</p>
      */
     @NameInMap("CidrReservationUsages")
     public java.util.List<GetVSwitchCidrReservationUsageResponseBodyCidrReservationUsages> cidrReservationUsages;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,10 +20,10 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
 
     public static class GetVSwitchCidrReservationUsageResponseBodyCidrReservationUsages extends TeaModel {
         /**
-         * <p>The CIDR block allocated to the ENI from the reserved CIDR block.</p>
+         * <p>The prefix CIDR block allocated from the current reserved CIDR block for a vSwitch to an elastic network interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.64/28</p>
@@ -106,7 +106,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
         public String ipPrefixCidr;
 
         /**
-         * <p>The ID of the reserved CIDR block.</p>
+         * <p>The instance ID of the reserved CIDR block allocated by prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>vcr-bp1m12saqteraw3rp****</p>
@@ -115,7 +115,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
         public String ipPrefixId;
 
         /**
-         * <p>The ID of the elastic network interface (ENI) whose CIDR block is allocated from the reserved CIDR block.</p>
+         * <p>The instance ID of the elastic network interface (ENI) allocated from the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp14v2sdd3v8htln****</p>
@@ -124,7 +124,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource to which a CIDR block is allocated from the reserved CIDR block. Only <strong>NetworkInterface</strong> may be returned, which indicates an ENI.</p>
+         * <p>The instance type allocated from the reserved CIDR block for a vSwitch. Valid values: <strong>NetworkInterface</strong>, which indicates an elastic network interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>NetworkInterface</p>
@@ -133,7 +133,7 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the reserved CIDR block.</p>
+         * <p>The instance ID of the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vcr-bp1m12saqteraw3rp****</p>

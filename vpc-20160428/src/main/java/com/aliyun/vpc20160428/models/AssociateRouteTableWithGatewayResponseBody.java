@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateRouteTableWithGatewayResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F89C2176-8F10-55EF-90CF-CF99D1E3F816</p>

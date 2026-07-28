@@ -14,7 +14,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging.</p>
+     * <p>The number of entries per page in paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

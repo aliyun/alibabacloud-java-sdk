@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AttachVbrToVpconnRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the request ID is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without associating the VBR instance with the shared Express Connect circuits. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the request ID is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. After the check succeeds, the VBR instance is directly associated with the shared Express Connect circuits.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class AttachVbrToVpconnRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The region ID of the hosted connection.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the shared Express Connect circuits.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class AttachVbrToVpconnRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>CBCE910E-D396-4944-8****</p>
@@ -39,7 +39,7 @@ public class AttachVbrToVpconnRequest extends TeaModel {
     public String token;
 
     /**
-     * <p>The ID of the VBR.</p>
+     * <p>The instance ID of the VBR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class AttachVbrToVpconnRequest extends TeaModel {
     public String vbrId;
 
     /**
-     * <p>The ID of the hosted connection.</p>
+     * <p>The instance ID of the shared Express Connect circuits.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

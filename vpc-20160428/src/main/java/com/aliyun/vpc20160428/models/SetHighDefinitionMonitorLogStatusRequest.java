@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the instance for which you want to configure fine-grained monitoring.</p>
+     * <p>The instance ID of the instance for which you want to configure high-definition second-level monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance type. Set the value to <strong>EIP</strong>.</p>
+     * <p>The type of the instance. Set the value to <strong>EIP</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>EIP</p>
@@ -24,7 +24,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The name of the Simple Log Service (SLS) project.</p>
+     * <p>The name of the LogProject in Simple Log Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     public String logProject;
 
     /**
-     * <p>The name of the Logstore.</p>
+     * <p>The name of the LogStore in Simple Log Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,10 +67,10 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of fine-grained monitoring. Valid values:</p>
+     * <p>The high-definition second-level monitoring status of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong></li>
-     * <li><strong>OFF</strong></li>
+     * <li><strong>ON</strong>: Enables high-definition second-level monitoring.</li>
+     * <li><strong>OFF</strong>: Disables high-definition second-level monitoring.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

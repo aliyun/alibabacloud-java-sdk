@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. DryRun only validates the request format and permissions, but does not verify whether the specified resource actually exists. If the request fails the dry run, an error message is returned. If the request passes dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run without querying the resource. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, a 2xx HTTP status code is returned and the resource is queried directly.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class DescribeVpcAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether the VPC is the default VPC. Valid values:</p>
+     * <p>Specifies whether the VPC is the default VPC. Valid values: </p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong> (default): The VPC is not the default VPC.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The VPC is the default VPC.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,8 +41,8 @@ public class DescribeVpcAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VPC is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPC.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +58,7 @@ public class DescribeVpcAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPC that you want to query.</p>
+     * <p>The ID of the VPC to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

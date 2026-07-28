@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnablePhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to bypass the service provider (SP) subscription lifecycle. Valid values:</p>
+     * <p>Specifies whether to skip the SP (order lifecycle). Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Bypasses the SP subscription lifecycle. This means the instance is no longer managed by the Alibaba Cloud subscription system.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Does not bypass the SP subscription lifecycle.</p>
-     * </li>
+     * <li><strong>true</strong>: Skips the SP. The Alibaba Cloud billing system no longer manages this instance, and the instance can be used free of charge.</li>
+     * <li><strong>false</strong> (default): Does not skip the SP.</li>
      * </ul>
      * <blockquote>
      * <p>To use this feature, contact your account manager.</p>
@@ -23,8 +21,8 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public Boolean byPassSp;
 
     /**
-     * <p>A client-generated token that is used to ensure the idempotence of the request.</p>
-     * <p>The token must be unique across requests. The token can contain a maximum of 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The client generates the value of this parameter. Make sure that the value is unique among different requests. The value can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -39,7 +37,7 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the physical connection.</p>
+     * <p>The ID of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,8 +47,8 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public String physicalConnectionId;
 
     /**
-     * <p>The ID of the region where the physical connection is located.</p>
-     * <p>You can call <code>DescribeRegions</code> to get the latest region IDs.</p>
+     * <p>The region where the Express Connect circuit resides.</p>
+     * <p>You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListVSwitchCidrReservationsRequest extends TeaModel {
     /**
-     * <p>The IP version of the reserved CIDR block. Valid values:</p>
+     * <p>The IP version of the reserved CIDR block for a vSwitch. Valid values:</p>
      * <ul>
-     * <li><strong>IPv4</strong> (default)</li>
-     * <li><strong>IPv6</strong></li>
+     * <li><strong>IPv4</strong> (default): IPv4.</li>
+     * <li><strong>IPv6</strong>: IPv6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -27,10 +27,10 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If this is the first request or no subsequent query exists, leave this parameter empty.</li>
+     * <li>If a subsequent query exists, set this parameter to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the vSwitch.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,21 +63,21 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListVSwitchCidrReservationsRequestTags> tags;
 
     /**
-     * <p>The ID of the reserved CIDR block. You can specify at most 10 IDs.</p>
+     * <p>The instance IDs of the reserved CIDR block for a vSwitch. You can specify up to 10 reserved CIDR blocks.</p>
      */
     @NameInMap("VSwitchCidrReservationIds")
     public java.util.List<String> vSwitchCidrReservationIds;
 
     /**
-     * <p>The type of the reserved CIDR block. Set the value to <strong>prefix</strong>.</p>
+     * <p>The type of the reserved CIDR block for a vSwitch. Valid values: <strong>prefix</strong>, which indicates that addresses are allocated by CIDR block.</p>
      * <blockquote>
-     * <p> When you allocate CIDR blocks, or enable the service to automatically allocate CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks to allocate must fall into the reserved CIDR block. If the reserved CIDR is exhausted, an error message is returned.</p>
+     * <p>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block. If all addresses in the reserved CIDR block are allocated, the system returns an error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
     public String vSwitchCidrReservationType;
 
     /**
-     * <p>The ID of the vSwitch for which you want to query reserved CIDR blocks.</p>
+     * <p>The ID of the vSwitch to which the reserved CIDR block for a vSwitch belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-25navfgbue4g****</p>
@@ -198,7 +198,7 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
 
     public static class ListVSwitchCidrReservationsRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, the value cannot be an empty string.</p>
          * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
@@ -208,8 +208,8 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

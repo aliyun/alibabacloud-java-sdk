@@ -42,7 +42,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
 
     public static class DescribeExpressConnectTrafficQosQueueResponseBodyQueueListRuleList extends TeaModel {
         /**
-         * <p>The destination IP address IPv4 CIDR block that is used for traffic matching by the QoS rule.</p>
+         * <p>The destination IP address IPv4 CIDR block that the QoS rule matches for traffic.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
@@ -54,7 +54,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String dstCidr;
 
         /**
-         * <p>The destination IP address IPv6 CIDR block that is used for traffic matching by the QoS rule.</p>
+         * <p>The destination IP address IPv6 CIDR block that the QoS rule matches for traffic.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
@@ -66,7 +66,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String dstIPv6Cidr;
 
         /**
-         * <p>The destination port range that is used for traffic matching by the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no port is matched. Only a single port number is supported. The start and end port numbers must be the same. The destination port range is fixed for each protocol type. Valid values:</p>
+         * <p>The destination port range that the QoS rule matches. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no match is applied. Only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for different protocol types. Valid values:</p>
          * <ul>
          * <li><p><strong>ALL</strong>: -1/-1, not editable.</p>
          * </li>
@@ -109,7 +109,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String dstPortRange;
 
         /**
-         * <p>The DSCP value that is used for traffic matching by the QoS rule. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that no DSCP value is matched.</p>
+         * <p>The DSCP value that the QoS rule matches. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that no match is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,7 +118,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public Integer matchDscp;
 
         /**
-         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. The priority of each QoS rule must be unique within the same QoS policy.</p>
+         * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. QoS rule priorities must be unique within the same QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -159,7 +159,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
          * </li>
          * <li><p><strong>PostgreSQL</strong></p>
          * </li>
-         * <li><p><strong>Redis</strong>.</p>
+         * <li><p><strong>Redis</strong></p>
          * </li>
          * </ul>
          * 
@@ -188,7 +188,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String queueId;
 
         /**
-         * <p>The new DSCP value to remark in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that the DSCP value is not modified.</p>
+         * <p>The remarked DSCP value in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. A value of -1 indicates that the DSCP value is not modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +226,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String ruleName;
 
         /**
-         * <p>The source IPv4 CIDR block that is used for traffic matching by the QoS rule.</p>
+         * <p>The source IPv4 CIDR block that the QoS rule matches.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
          * </blockquote>
@@ -238,7 +238,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String srcCidr;
 
         /**
-         * <p>The source IPv6 CIDR block that is used for traffic matching by the QoS rule.</p>
+         * <p>The source IPv6 CIDR block that the QoS rule matches.</p>
          * <blockquote>
          * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
          * </blockquote>
@@ -250,7 +250,7 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
         public String srcIPv6Cidr;
 
         /**
-         * <p>The source port range that is used for traffic matching by the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no port is matched. Only a single port number is supported. The start and end port numbers must be the same.</p>
+         * <p>The source port range that the QoS rule matches. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of -1 indicates that no match is applied. Only a single port number can be specified. The start and end port numbers must be the same.</p>
          * 
          * <strong>example:</strong>
          * <p>-1/-1</p>

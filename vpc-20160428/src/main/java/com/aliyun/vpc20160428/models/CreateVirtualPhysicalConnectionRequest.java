@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The description of the shared Express Connect circuits.</p>
-     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character, but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -17,8 +17,8 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without creating the shared Express Connect circuits. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request. After the request passes the check, the shared Express Connect circuits are created.</li>
+     * <li><strong>true</strong>: performs a dry run without creating the shared Express Connect circuits. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <code>DRYRUN.SUCCESS</code> is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request. After the check passes, the shared Express Connect circuits are created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The name of the shared Express Connect circuits.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-) but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-), but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -92,7 +92,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
      * <blockquote>
      * <p>The bandwidth values <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
      * </blockquote>
-     * <p>Unit: <strong>M</strong> indicates Mbit/s. <strong>G</strong> indicates Gbit/s.</p>
+     * <p>Unit: <strong>M</strong> indicates Mbit/s, and <strong>G</strong> indicates Gbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVirtualPhysicalConnectionRequestTag> tag;
@@ -123,8 +123,8 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The VLAN ID of the shared Express Connect circuits. Valid values: <strong>0</strong> to <strong>2999</strong>.</p>
      * <ul>
-     * <li>If the VLAN ID is set to <strong>0</strong>, the physical switch port of the Virtual Border Router (VBR) uses Layer 3 routing interface mode instead of VLAN mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</li>
-     * <li>If the VLAN ID is set to a value from <strong>1</strong> to <strong>2999</strong>, the physical switch port of the VBR uses VLAN-based Layer 3 subinterface mode. In Layer 3 subinterface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have Layer 2 network isolation and cannot communicate with each other.</li>
+     * <li>If the VLAN ID is set to <strong>0</strong>, the physical vSwitch port of the Virtual Border Router (VBR) uses Layer 3 routing interface mode instead of VLAN mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</li>
+     * <li>If the VLAN ID is set to a value from <strong>1</strong> to <strong>2999</strong>, the physical vSwitch port of the VBR uses VLAN-based Layer 3 sub-interfaces. In Layer 3 sub-interface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -248,7 +248,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public static class CreateVirtualPhysicalConnectionRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -258,7 +258,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

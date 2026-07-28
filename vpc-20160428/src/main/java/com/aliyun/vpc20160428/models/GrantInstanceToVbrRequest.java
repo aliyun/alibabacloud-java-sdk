@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GrantInstanceToVbrRequest extends TeaModel {
     /**
-     * <p>The scope of VBR instances that accept the authorization. Valid values:</p>
+     * <p>The scope of VBR instances to be granted authorization. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: Grants authorization of the VPC instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</li>
-     * <li><strong>Specify</strong>: Grants authorization of the VPC instance to the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</li>
+     * <li><strong>All</strong>: Grants authorization of the VPC-connected instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</li>
+     * <li><strong>Specify</strong>: Grants authorization of the VPC-connected instance to the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class GrantInstanceToVbrRequest extends TeaModel {
     public String grantType;
 
     /**
-     * <p>The ID of the VPC instance for which authorization is to be granted.</p>
+     * <p>The ID of the VPC-connected instance for which to grant authorization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,8 +29,8 @@ public class GrantInstanceToVbrRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the VPC instance for which authorization is to be granted.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the VPC-connected instance for which to grant authorization.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

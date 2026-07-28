@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetFlowLogServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the flow log feature is activated. Valid values:</p>
+     * <p>Indicates whether the flow log service is activated. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: activated.</p>
+     * <li><p><strong>true</strong>: The flow log service is activated.</p>
      * </li>
-     * <li><p><strong>false</strong>: not activated. You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to activate the flow log feature.</p>
+     * <li><p><strong>false</strong>: The flow log service is not activated. You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to activate the flow log service.</p>
      * </li>
      * </ul>
      * 

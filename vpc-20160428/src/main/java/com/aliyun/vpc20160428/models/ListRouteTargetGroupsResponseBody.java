@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRouteTargetGroupsResponseBody extends TeaModel {
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Token for the next query. Value: If NextToken is empty, it indicates there is no next query. If NextToken has a return value, it indicates the token for the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If a value is returned for NextToken, the value indicates the token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
@@ -23,7 +23,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
@@ -32,13 +32,13 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of route target groups.</p>
+     * <p>The list of route target groups.</p>
      */
     @NameInMap("RouteTargetGroups")
     public java.util.List<ListRouteTargetGroupsResponseBodyRouteTargetGroups> routeTargetGroups;
 
     /**
-     * <p>Number of items in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,12 +93,12 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
 
     public static class ListRouteTargetGroupsResponseBodyRouteTargetGroupsRouteTargetMemberList extends TeaModel {
         /**
-         * <p>The enable status of the route target group member. Values:</p>
+         * <p>The enable status of the route target group member. Valid values:</p>
          * <ul>
          * <li><strong>Enable</strong>: Enabled.</li>
          * <li><strong>Disable</strong>: Disabled.</li>
          * </ul>
-         * <p>Only disabled route target group members can be modified to other instances. Enabled route target group members cannot be modified.</p>
+         * <p>Only members in the Disable state can be modified to other instances. Members in the Enable state cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -107,10 +107,10 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String enableStatus;
 
         /**
-         * <p>The health check status of the route target group member. Values:</p>
+         * <p>The health check status of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: Normal</li>
-         * <li><strong>Abnormal</strong>: Abnormal</li>
+         * <li><strong>Normal</strong>: Normal.</li>
+         * <li><strong>Abnormal</strong>: Abnormal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String healthCheckStatus;
 
         /**
-         * <p>The ID of the route target group member instance.</p>
+         * <p>The routing target group member instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxxx</p>
@@ -129,7 +129,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The type of the route target group member.</p>
+         * <p>The member type of the route target group.</p>
          * <p>Currently supported types:</p>
          * <ul>
          * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
@@ -142,12 +142,12 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String memberType;
 
         /**
-         * <p>The weight value of the route target group member. Values:</p>
+         * <p>The weight of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>100</strong>: Indicates that the member is the primary instance.</li>
-         * <li><strong>0</strong>: Indicates that the member is the backup instance.</li>
+         * <li><strong>100</strong>: The member is the active instance.</li>
+         * <li><strong>0</strong>: The member is the standby instance.</li>
          * </ul>
-         * <p>The weight value can only be set during creation and cannot be modified.</p>
+         * <p>The weight can only be set during creation and cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -204,7 +204,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
 
     public static class ListRouteTargetGroupsResponseBodyRouteTargetGroupsTags extends TeaModel {
         /**
-         * <p>The key of the resource tag.</p>
+         * <p>The tag key of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>image/upload/cbbec42e0be33abb27babefcbe0397f0</p>
@@ -213,7 +213,8 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the resource tag. Up to 20 tag values are supported. If you need to pass this value, you can input an empty string. A maximum of 128 characters is allowed. The value cannot start with <code>aliyun</code> or <code>acs:</code>, and it must not contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -246,9 +247,9 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
 
     public static class ListRouteTargetGroupsResponseBodyRouteTargetGroups extends TeaModel {
         /**
-         * <p>The configuration mode of the route target group. Supported modes are as follows:</p>
+         * <p>The configuration mode of the route target group. Valid values:</p>
          * <ul>
-         * <li><strong>Active-Standby</strong>: Active-standby mode.</li>
+         * <li><strong>Active-Standby</strong>: active/standby mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +269,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The region ID of the VPC to which the route target group belongs.</p>
-         * <p>You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> interface.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -286,7 +287,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Description of the route target group.</p>
+         * <p>The description of the route target group.</p>
          * 
          * <strong>example:</strong>
          * <p>myRouteTargetGroupDescription</p>
@@ -295,7 +296,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String routeTargetGroupDescription;
 
         /**
-         * <p>The ID of the route target group instance.</p>
+         * <p>The routing target group instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rtg-xxxx</p>
@@ -313,22 +314,22 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String routeTargetGroupName;
 
         /**
-         * <p>The list of route target group members.</p>
+         * <p>The list of members in the route target group.</p>
          */
         @NameInMap("RouteTargetMemberList")
         public java.util.List<ListRouteTargetGroupsResponseBodyRouteTargetGroupsRouteTargetMemberList> routeTargetMemberList;
 
         /**
-         * <p>Status of the route target group. Values:</p>
+         * <p>The status of the routing target group. Valid values:</p>
          * <ul>
-         * <li><strong>Recovering</strong>: Active-Standby rollback in progress</li>
-         * <li><strong>Switched</strong>: Active-Standby switched</li>
-         * <li><strong>Available</strong>: Available</li>
-         * <li><strong>Abnormal</strong>: Standby instance abnormal</li>
-         * <li><strong>Pending</strong>: Creating</li>
-         * <li><strong>Switching</strong>: Active-Standby switching in progress</li>
-         * <li><strong>Deleting</strong>: Deleting</li>
-         * <li><strong>Unavailable</strong>: Both primary and standby instances are abnormal</li>
+         * <li><strong>Recovering</strong>: The active/standby switchback is in progress.</li>
+         * <li><strong>Switched</strong>: The active/standby switchover is complete.</li>
+         * <li><strong>Available</strong>: Available.</li>
+         * <li><strong>Abnormal</strong>: The standby instance has instance failures.</li>
+         * <li><strong>Pending</strong>: Being created.</li>
+         * <li><strong>Switching</strong>: The active/standby switchover is in progress.</li>
+         * <li><strong>Deleting</strong>: Being deleted.</li>
+         * <li><strong>Unavailable</strong>: Both primary and secondary instances have instance failures.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,8 +339,8 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag values. A maximum of 20 tag values are supported. If you need to pass this value, you can input an empty string.</p>
-         * <p>A maximum of 128 characters are supported. The value cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListRouteTargetGroupsResponseBodyRouteTargetGroupsTags> tags;

@@ -14,10 +14,10 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     public String bgpGroupId;
 
     /**
-     * <p>Specifies whether the BGP group is the default one. Valid values:</p>
+     * <p>Specifies whether the BGP group is the default BGP group. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>: The BGP group is not the default BGP group.</li>
+     * <li><strong>true</strong>: The BGP group is the default BGP group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The maximum value is <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,8 +51,8 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the VBR is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the VBR. </p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the virtual border router (VBR) that is associated with the BGP group.</p>
+     * <p>The ID of the VBR associated with the BGP group.</p>
      * 
      * <strong>example:</strong>
      * <p>vbr-bp1ctxy813985gkuk****</p>

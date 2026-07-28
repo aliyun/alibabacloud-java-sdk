@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionLogsRequest extends TeaModel {
     /**
-     * <p>The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the log. Only UNIX timestamps in seconds are supported. For example, 1671003744 represents 2022-12-14 15:42:24.</p>
      * <blockquote>
-     * <p> If you specify <strong>From</strong>, you must specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
+     * <p>If you specify <strong>From</strong>, you must also specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Integer from;
 
     /**
-     * <p>The interval at which log data is collected. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: minutes.</p>
+     * <p>The log period. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: minutes.</p>
      * <blockquote>
-     * <p> If you do not specify <strong>From</strong> and <strong>To</strong>, you must specify <strong>MinutePeriod</strong>.</p>
+     * <p>If you do not specify <strong>From</strong> or <strong>To</strong>, you must specify <strong>MinutePeriod</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IPsec-VPN connection.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,9 +70,9 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time of the log. Only UNIX timestamps in seconds are supported. For example, 1671004344 represents 2022-12-14 15:52:24.</p>
      * <blockquote>
-     * <p> If you specify <strong>To</strong>, you must specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
+     * <p>If you specify <strong>To</strong>, you must also specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,8 +82,8 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Integer to;
 
     /**
-     * <p>The ID of the IPsec-VPN connection.</p>
-     * <p>This parameter is available only for a dual-tunnel IPsec-VPN connection.</p>
+     * <p>The tunnel ID of the IPsec-VPN connection.</p>
+     * <p>This parameter is supported only for IPsec-VPN connections in dual-tunnel mode.</p>
      * 
      * <strong>example:</strong>
      * <p>tun-opsqc4d97wni27****</p>

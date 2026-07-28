@@ -8,7 +8,7 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,11 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a precheck for the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: sends a precheck request without associating the route table. The check items include whether the AccessKey is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system does not associate a prefix list with a route table. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the precheck, a 2xx HTTP status code is returned and the route table is associated.</p>
+     * <li><p><strong>false</strong> (default): sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the routing table is associated.</p>
      * </li>
      * </ul>
      * 

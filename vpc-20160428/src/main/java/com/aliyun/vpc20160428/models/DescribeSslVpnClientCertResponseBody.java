@@ -60,8 +60,8 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     public String clientKey;
 
     /**
-     * <p>The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp when the SSL client certificate was created. Unit: milliseconds.</p>
+     * <p>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1552550980000</p>
@@ -70,8 +70,8 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp when the SSL client certificate expires. Unit: milliseconds.</p>
+     * <p>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1647158980000</p>
@@ -89,7 +89,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region where the SSL client certificate is created.</p>
+     * <p>The region ID of the SSL client certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -107,8 +107,8 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
-     * <p>The SSL client certificate and the SSL server associated with the SSL client certificate belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+     * <p>The resource group ID of the SSL client certificate.</p>
+     * <p>The SSL client certificate belongs to the same resource group as its associated SSL server. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>
@@ -137,9 +137,12 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     /**
      * <p>The status of the SSL client certificate. Valid values:</p>
      * <ul>
-     * <li><strong>expiring-soon</strong></li>
-     * <li><strong>normal</strong></li>
-     * <li><strong>expired</strong></li>
+     * <li><p><strong>expiring-soon</strong>: The certificate will expire within one week.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: Normal. </p>
+     * </li>
+     * <li><p><strong>expired</strong>: Expired.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

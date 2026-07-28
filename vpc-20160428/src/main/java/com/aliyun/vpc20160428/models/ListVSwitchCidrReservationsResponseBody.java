@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,10 +14,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>A list of reserved CIDR blocks.</p>
+     * <p>The list of reserved CIDR blocks for a vSwitch.</p>
      */
     @NameInMap("VSwitchCidrReservations")
     public java.util.List<ListVSwitchCidrReservationsResponseBodyVSwitchCidrReservations> vSwitchCidrReservations;
@@ -139,7 +139,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
 
     public static class ListVSwitchCidrReservationsResponseBodyVSwitchCidrReservations extends TeaModel {
         /**
-         * <p>The number of used prefixes in the reserved CIDR block.</p>
+         * <p>The number of used prefix CIDR blocks in the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -148,7 +148,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public Integer assignedCidrCount;
 
         /**
-         * <p>The number of available prefixes in the reserved CIDR block.</p>
+         * <p>The number of active prefix CIDR blocks in the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -166,10 +166,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The IP version of the reserved CIDR block. Valid values:</p>
+         * <p>The IP version of the reserved CIDR block for a vSwitch. Valid values:</p>
          * <ul>
-         * <li><strong>IPv4</strong> (default)</li>
-         * <li><strong>IPv6</strong></li>
+         * <li><strong>IPv4</strong> (default): IPv4.</li>
+         * <li><strong>IPv6</strong>: IPv6.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,10 +181,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         /**
          * <p>The status of the reserved CIDR block. Valid values:</p>
          * <ul>
-         * <li><strong>Assigning</strong></li>
-         * <li><strong>Assigned</strong></li>
-         * <li><strong>Releasing</strong></li>
-         * <li><strong>Released</strong></li>
+         * <li><strong>Assigning</strong>: being allocated.</li>
+         * <li><strong>Assigned</strong>: allocated.</li>
+         * <li><strong>Releasing</strong>: being released.</li>
+         * <li><strong>Released</strong>: released.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,13 +194,13 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListVSwitchCidrReservationsResponseBodyVSwitchCidrReservationsTags> tags;
 
         /**
-         * <p>The type of the reserved CIDR block. Valid value: <strong>prefix</strong>. CIDR blocks are allocated from the reserved CIDR block.</p>
+         * <p>The type of the reserved CIDR block for a vSwitch. Valid values: <strong>prefix</strong> (default), which indicates that addresses are allocated by CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>prefix</p>
@@ -209,7 +209,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The reserved CIDR block.</p>
+         * <p>The reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.64/28</p>
@@ -218,7 +218,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String vSwitchCidrReservationCidr;
 
         /**
-         * <p>The description of the reserved CIDR block.</p>
+         * <p>The description of the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>ReservationDescription</p>
@@ -227,7 +227,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String vSwitchCidrReservationDescription;
 
         /**
-         * <p>The ID of the reserved CIDR block.</p>
+         * <p>The instance ID of the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vcr-bp1m12saqteraw3rp****</p>
@@ -236,7 +236,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String vSwitchCidrReservationId;
 
         /**
-         * <p>The name of the reserved CIDR block.</p>
+         * <p>The name of the reserved CIDR block for a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>ReservationName</p>
@@ -245,7 +245,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String vSwitchCidrReservationName;
 
         /**
-         * <p>The ID of the vSwitch to which the reserved CIDR block belongs.</p>
+         * <p>The ID of the vSwitch to which the reserved CIDR block for a vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-25navfgbue4g****</p>
@@ -254,7 +254,7 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The virtual private cloud (VPC) to which the reserved CIDR block belongs.</p>
+         * <p>The ID of the VPC to which the reserved CIDR block for a vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1wdz2pdhgurz1od****</p>

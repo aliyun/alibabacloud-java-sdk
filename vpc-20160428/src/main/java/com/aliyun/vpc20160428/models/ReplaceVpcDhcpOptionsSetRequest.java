@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ReplaceVpcDhcpOptionsSetRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ReplaceVpcDhcpOptionsSetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the new DHCP options set.</p>
+     * <p>The ID of the DHCP options set to change.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,12 @@ public class ReplaceVpcDhcpOptionsSetRequest extends TeaModel {
     public String dhcpOptionsSetId;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks the request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the DryRunOperation error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the check, a 2XX HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a Normal request. If the request passes the authorization and parameter check, a 2XX HTTP status code is returned and the DHCP options set associated with the VPC is directly changed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +49,7 @@ public class ReplaceVpcDhcpOptionsSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the DHCP options set belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the DHCP options set resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +65,7 @@ public class ReplaceVpcDhcpOptionsSetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the associated VPC.</p>
+     * <p>The ID of the VPC whose association you want to change.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

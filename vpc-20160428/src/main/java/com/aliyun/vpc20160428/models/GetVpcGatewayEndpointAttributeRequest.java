@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVpcGatewayEndpointAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the gateway endpoint.</p>
+     * <p>The endpoint instance ID of the gateway endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -7,12 +7,12 @@ public class AllocateEipAddressProRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong>: Disables automatic payment. You must go to the Order Center to pay for the order.</p>
+     * <li><p><strong>false</strong>: Automatic payment is disabled. After an order is generated, go to the Order Center to complete the payment.</p>
      * </li>
-     * <li><p><strong>true</strong>: Enables automatic payment. The payment is completed automatically.</p>
+     * <li><p><strong>true</strong>: Automatic payment is enabled. The order is automatically paid.</p>
      * </li>
      * </ul>
-     * <p>This parameter is required only when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is optional if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,16 +21,16 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The peak bandwidth of the EIP. Unit: Mbps.</p>
+     * <p>The maximum bandwidth of the EIP to allocate. Unit: Mbit/s.</p>
      * <ul>
-     * <li><p>If <strong>InstanceChargeType</strong> is <strong>PostPaid</strong> (pay-as-you-go) and <strong>InternetChargeType</strong> is <strong>PayByBandwidth</strong>, <strong>Bandwidth</strong> can be from <strong>1</strong> to <strong>500</strong>.</p>
+     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>500</strong>.</p>
      * </li>
-     * <li><p>If <strong>InstanceChargeType</strong> is <strong>PostPaid</strong> (pay-as-you-go) and <strong>InternetChargeType</strong> is <strong>PayByTraffic</strong>, <strong>Bandwidth</strong> can be from <strong>1</strong> to <strong>200</strong>.</p>
+     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>200</strong>.</p>
      * </li>
-     * <li><p>If <strong>InstanceChargeType</strong> is <strong>PrePaid</strong> (subscription), <strong>Bandwidth</strong> can be from <strong>1</strong> to <strong>1000</strong>.</p>
+     * <li><p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, valid values of <strong>Bandwidth</strong> are <strong>1</strong> to <strong>1000</strong>.</p>
      * </li>
      * </ul>
-     * <p>Default value: <strong>5</strong>.</p>
+     * <p>Default value: <strong>5</strong> Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -39,10 +39,10 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String bandwidth;
 
     /**
-     * <p>A token used to ensure the idempotence of the request.</p>
-     * <p>You must ensure that this token is unique across requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> differs for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,31 +54,21 @@ public class AllocateEipAddressProRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><p><strong>BGP</strong> (default): BGP (Multi-ISP) line. All regions support EIPs that use BGP (Multi-ISP) lines.</p>
-     * </li>
-     * <li><p><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line. This line type is available only in the China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
-     * </li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. Only the following regions support BGP (multi-ISP) Pro EIPs: Hong Kong (China), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
      * </ul>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
+     * <p>For more information about BGP (multi-ISP) and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
      * <ul>
-     * <li><p>If your account is on the allowlist for single-ISP bandwidth, you can also select one of the following values:</p>
-     * <ul>
-     * <li><p><strong>ChinaTelecom</strong></p>
-     * </li>
-     * <li><p><strong>ChinaUnicom</strong></p>
-     * </li>
-     * <li><p><strong>ChinaMobile</strong></p>
-     * </li>
-     * <li><p><strong>ChinaTelecom_L2</strong></p>
-     * </li>
-     * <li><p><strong>ChinaUnicom_L2</strong></p>
-     * </li>
-     * <li><p><strong>ChinaMobile_L2</strong></p>
-     * </li>
+     * <li>If you are a single-ISP bandwidth whitelist user, you can also select the following types:<ul>
+     * <li><strong>ChinaTelecom</strong>: China Telecom</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile</li>
+     * <li><strong>ChinaTelecom_L2</strong>: China Telecom L2</li>
+     * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
+     * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
      * </li>
-     * <li><p>For China (Hangzhou) Finance Cloud users, this parameter is required and must be set to <strong>BGP_FinanceCloud</strong>.</p>
-     * </li>
+     * <li>If you are a China (Hangzhou) Finance Cloud user, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,15 +78,15 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String ISP;
 
     /**
-     * <p>The billing method of the EIP. Valid values:</p>
+     * <p>The billing method of the EIP to allocate. Valid values:</p>
      * <ul>
-     * <li><p><strong>PrePaid</strong>: subscription</p>
+     * <li><p><strong>PrePaid</strong>: subscription.</p>
      * </li>
-     * <li><p><strong>PostPaid</strong> (default): pay-as-you-go</p>
+     * <li><p><strong>PostPaid</strong> (default): pay-as-you-go.</p>
      * </li>
      * </ul>
      * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, <strong>InternetChargeType</strong> must be set to <strong>PayByBandwidth</strong>.</p>
-     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, you can set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, <strong>InternetChargeType</strong> can be set to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -105,8 +95,8 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The ID of the EIP to be allocated.</p>
-     * <p>You can specify either <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you do not specify either parameter, the system randomly allocates an EIP.</p>
+     * <p>The instance ID of the EIP to allocate.</p>
+     * <p>You need to specify only one of <strong>IpAddress</strong> and <strong>InstanceId</strong>. If neither is specified, the system randomly allocates an EIP.</p>
      * 
      * <strong>example:</strong>
      * <p>eip-25877c70gddh****</p>
@@ -115,15 +105,15 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The metering method of the EIP. Valid values:</p>
+     * <p>The metering method of the EIP to allocate. Valid values:</p>
      * <ul>
-     * <li><p><strong>PayByBandwidth</strong> (default): pay-by-bandwidth</p>
+     * <li><p><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</p>
      * </li>
-     * <li><p><strong>PayByTraffic</strong>: pay-by-traffic</p>
+     * <li><p><strong>PayByTraffic</strong>: pay-by-data-transfer.</p>
      * </li>
      * </ul>
      * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, <strong>InternetChargeType</strong> must be set to <strong>PayByBandwidth</strong>.</p>
-     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, you can set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, <strong>InternetChargeType</strong> can be set to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByBandwidth</p>
@@ -132,8 +122,8 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The IP address of the EIP to be allocated.</p>
-     * <p>You can specify either <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you do not specify either parameter, the system randomly allocates an EIP.</p>
+     * <p>The IP address of the EIP to allocate.</p>
+     * <p>You need to specify only one of <strong>IpAddress</strong> and <strong>InstanceId</strong>. If neither is specified, the system randomly allocates an EIP.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -142,7 +132,7 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String ipAddress;
 
     /**
-     * <p>The network type. The only valid value is <strong>public</strong> (default), which indicates the public network.</p>
+     * <p>The network type. The value can only be <strong>public</strong> (default), which indicates the public network.</p>
      * 
      * <strong>example:</strong>
      * <p>public</p>
@@ -157,15 +147,15 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period.</p>
+     * <p>The subscription duration.</p>
      * <ul>
-     * <li><p>If <strong>PricingCycle</strong> is <strong>Month</strong>, <strong>Period</strong> can be from <strong>1</strong> to <strong>9</strong>.</p>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, valid values of <strong>Period</strong> are <strong>1</strong> to <strong>9</strong>.</p>
      * </li>
-     * <li><p>If <strong>PricingCycle</strong> is <strong>Year</strong>, <strong>Period</strong> can be from <strong>1</strong> to <strong>3</strong>.</p>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, valid values of <strong>Period</strong> are <strong>1</strong> to <strong>3</strong>.</p>
      * </li>
      * </ul>
-     * <p>This parameter is required when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>.</p>
-     * <p>If <code>InstanceChargeType</code> is set to <code>PostPaid</code>, this parameter is not required.</p>
+     * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>.</p>
+     * <p>Do not set this parameter if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -174,14 +164,14 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The billing cycle of the subscription EIP. Valid values:</p>
+     * <p>The billing cycle of the subscription. Valid values:</p>
      * <ul>
-     * <li><p><strong>Month</strong> (default): Billed monthly.</p>
+     * <li><p><strong>Month</strong> (default): billed on a monthly basis.</p>
      * </li>
-     * <li><p><strong>Year</strong>: Billed annually.</p>
+     * <li><p><strong>Year</strong>: billed on a yearly basis.</p>
      * </li>
      * </ul>
-     * <p>This parameter is required only when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong> (subscription).</p>
+     * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is optional if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -190,8 +180,9 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The ID of the IP address pool from which to allocate the EIP.</p>
-     * <p>This feature is disabled by default. To use this feature, apply for the required permissions in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase quotas by using Quota Center</a>.</p>
+     * <p>The ID of the IP address pool.</p>
+     * <p>The EIP is allocated from the specified IP address pool.</p>
+     * <p>The IP address pool feature is not available by default. To use this feature, apply for the IP address pool privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase a quota in Quota Center</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pippool-2vc0kxcedhquybdsz****</p>
@@ -200,8 +191,8 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String publicIpAddressPoolId;
 
     /**
-     * <p>The ID of the region where the EIP is to be allocated.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the EIP to allocate.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -211,7 +202,7 @@ public class AllocateEipAddressProRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group for the EIP.</p>
+     * <p>The ID of the resource group to which the EIP belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-resourcegroup****</p>
@@ -228,18 +219,15 @@ public class AllocateEipAddressProRequest extends TeaModel {
     /**
      * <p>The security protection level.</p>
      * <ul>
-     * <li><p>If you do not specify this parameter, DDoS Protection (Basic) is enabled by default.</p>
+     * <li><p>If this parameter is left empty, the default value is Anti-DDoS Basic.</p>
      * </li>
-     * <li><p>Set the value to <strong>AntiDDoS_Enhanced</strong> to enable DDoS Protection (Enhanced).</p>
+     * <li><p>If this parameter is set to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS (Enhanced) is enabled.</p>
      * </li>
      * </ul>
      */
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 
-    /**
-     * <p>The tags to add to the EIP.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<AllocateEipAddressProRequestTag> tag;
 
@@ -409,15 +397,9 @@ public class AllocateEipAddressProRequest extends TeaModel {
     }
 
     public static class AllocateEipAddressProRequestTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         */
         @NameInMap("Value")
         public String value;
 

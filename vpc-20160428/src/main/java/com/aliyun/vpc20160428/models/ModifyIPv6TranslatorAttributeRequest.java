@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a unique value from your client to ensure that different requests have unique ClientToken values. ClientToken supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>sha1111</p>
@@ -15,7 +15,7 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+     * <p>The description of the IPv6 Translation Service instance. The default value is empty. The description must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-), but cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>instancedescription</p>
@@ -34,7 +34,7 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     public String ipv6TranslatorId;
 
     /**
-     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+     * <p>The name of the IPv6 Translation Service instance. The default value is the instance ID. The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-), but cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>instancename</p>
@@ -49,7 +49,7 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
+     * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

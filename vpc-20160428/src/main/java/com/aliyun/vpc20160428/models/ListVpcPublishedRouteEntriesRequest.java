@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The destination CIDR block of the route entry, supporting both IPv4 and IPv6 segments.</p>
+     * <p>The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX/16</p>
@@ -14,7 +14,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public String destinationCidrBlock;
 
     /**
-     * <p>The number of entries to display per batch query. Range: <strong>1</strong>~<strong>500</strong>, default value is <strong>50</strong>.</p>
+     * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -23,10 +23,10 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Indicates whether there is a token for the next query. Values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, it means there is no next query.</li>
-     * <li>If <strong>NextToken</strong> has a return value, this value indicates the token for the start of the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> has a value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance is located.</p>
+     * <p>The region ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -57,7 +57,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table.</p>
+     * <p>The route table ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The ID of the route publishing target instance.</p>
+     * <p>The instance ID of the route publish target.</p>
      * 
      * <strong>example:</strong>
      * <p>ecr-dhw2xsds5****</p>
@@ -76,7 +76,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public String targetInstanceId;
 
     /**
-     * <p>The type of the route publishing target.</p>
+     * <p>The type of the route publish target.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

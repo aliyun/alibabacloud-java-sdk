@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteBgpNetworkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteBgpNetworkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The CIDR block of the virtual private cloud (VPC) or vSwitch that you want to connect to a data center.</p>
+     * <p>The CIDR block of the VPC or vSwitch that needs to connect to the IDC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,8 @@ public class DeleteBgpNetworkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the BGP group.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the BGP group resides.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DeleteBgpNetworkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VBR.</p>
+     * <p>The ID of the Virtual Border Router (VBR).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -383,8 +383,10 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         /**
          * <p>The status of the network ACL. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Modifying</strong></li>
+         * <li><p><strong>Available</strong>: available.</p>
+         * </li>
+         * <li><p><strong>Modifying</strong>: being modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -394,7 +396,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the VPC to which the network ACL belongs.</p>
+         * <p>The ID of the VPC associated with the network ACL.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-a2d33rfpl72k5xsscd****</p>

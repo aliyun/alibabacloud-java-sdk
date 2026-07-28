@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteEnhancedVpnGatewayRequest extends TeaModel {
     /**
-     * <p>The client token used to ensure the idempotence of the request.<br> You can generate this token by using your client, but you must ensure that it is unique for each request. The token can contain only ASCII characters and must not exceed 64 characters in length.<br></p>
+     * <p>The client token that is used to ensure the idempotence of the request.<br>
+     * The client generates the value of this parameter. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,8 +24,8 @@ public class DeleteEnhancedVpnGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the enhanced VPN gateway is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the enhanced VPN gateway instance. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +41,7 @@ public class DeleteEnhancedVpnGatewayRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the enhanced VPN gateway.</p>
+     * <p>The ID of the enhanced VPN gateway instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

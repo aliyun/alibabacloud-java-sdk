@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
     /**
-     * <p>The details of the network ACLs.</p>
+     * <p>The details of the network ACL.</p>
      */
     @NameInMap("NetworkAclAttribute")
     public DescribeNetworkAclAttributesResponseBodyNetworkAclAttribute networkAclAttribute;
@@ -445,7 +445,10 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public String networkAclName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the network ACL belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the network ACL belongs.</p>
+         * <blockquote>
+         * <p>Notice: This value is of the Long type. Precision loss may occur in certain languages. Use this value with caution.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2546073170691****</p>
@@ -466,10 +469,12 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeResources resources;
 
         /**
-         * <p>The association status of the resource. Valid values:</p>
+         * <p>The status of the associated resource. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Modifying</strong></li>
+         * <li><p><strong>Available</strong>: available.</p>
+         * </li>
+         * <li><p><strong>Modifying</strong>: being modified.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -482,7 +487,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTags tags;
 
         /**
-         * <p>The ID of the VPC to which the network ACL belongs.</p>
+         * <p>The ID of the VPC associated with the network ACL.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-a2d33rfpl72k5defr****</p>

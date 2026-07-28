@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateVpnRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the destination route was created. Unit: milliseconds.</p>
-     * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the destination route was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1492747187000</p>
@@ -33,7 +33,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -62,9 +62,9 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The publish status of the destination route.</p>
      * <ul>
-     * <li><p><strong>published</strong>: The destination route has been published to the route table of the VPC.</p>
+     * <li><p><strong>published</strong>: The destination route is published to the VPC route table.</p>
      * </li>
-     * <li><p><strong>normal</strong>: The destination route has not been published to the route table of the VPC.</p>
+     * <li><p><strong>normal</strong>: The destination route is not published to the VPC route table.</p>
      * </li>
      * </ul>
      * 

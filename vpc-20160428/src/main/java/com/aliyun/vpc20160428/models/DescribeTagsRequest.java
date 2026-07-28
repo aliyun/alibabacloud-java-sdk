@@ -17,7 +17,7 @@ public class DescribeTagsRequest extends TeaModel {
      * <p>The pagination token. Valid values:</p>
      * <ul>
      * <li>If this is the first query or no subsequent query exists, leave this parameter empty.</li>
-     * <li>If a subsequent query exists, set this parameter to the NextToken value returned by the previous API call.</li>
+     * <li>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>

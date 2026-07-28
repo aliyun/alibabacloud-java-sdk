@@ -24,7 +24,7 @@ public class ReleaseEipSegmentAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the contiguous EIP group. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>The region ID of the contiguous EIPs. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

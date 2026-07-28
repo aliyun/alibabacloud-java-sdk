@@ -8,10 +8,10 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public java.util.List<DescribeEipAddressesRequestFilter> filter;
 
     /**
-     * <p>The ID of the EIP that you want to query.</p>
-     * <p>You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The ID of the EIP instance to query. </p>
+     * <p>You can specify up to 50 EIP instance IDs. Separate multiple instance IDs with commas (,).</p>
      * <blockquote>
-     * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIP IDs for <strong>AllocationId</strong>, and specify up to 50 EIPs for <strong>EipAddress</strong>.</p>
+     * <p>If you specify both <strong>EipAddress</strong> and <strong>AllocationId</strong>, you can specify up to 50 EIP instance IDs for <strong>AllocationId</strong> and up to 50 EIP IP addresses for <strong>EipAddress</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The ID of the instance associated with the EIP.</p>
+     * <p>The instance ID of the cloud resource.</p>
      * 
      * <strong>example:</strong>
      * <p>i-2zebb08phyccdvf****</p>
@@ -30,17 +30,17 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String associatedInstanceId;
 
     /**
-     * <p>The type of the cloud resource with which you want to associate the EIP. Valid values:</p>
+     * <p>The type of the cloud resource instance to attach. Valid values: </p>
      * <ul>
-     * <li><strong>EcsInstance</strong> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</li>
+     * <li><strong>EcsInstance</strong> (default): an ECS instance in a VPC.</li>
      * <li><strong>SlbInstance</strong>: a CLB instance in a VPC.</li>
      * <li><strong>Nat</strong>: a NAT gateway.</li>
-     * <li><strong>HaVip</strong>: an HAVIP.</li>
-     * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
+     * <li><strong>HaVip</strong>: a high-availability virtual IP address. </li>
+     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
      * <li><strong>IpAddress</strong>: an IP address.</li>
      * </ul>
      * <blockquote>
-     * <p> Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">Associate EIPs with and disassociate EIPs from cloud resources</a>.</p>
+     * <p>Each ECS instance, CLB instance, high-availability virtual IP address, and IP address can be attached with only one EIP at a time. A NAT gateway can be attached with multiple EIPs. The number of EIPs that can be attached to a secondary elastic network interface (ENI) depends on the EIP association pattern. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">EIP overview</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,10 +78,10 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The EIP that you want to query.</p>
-     * <p>You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
+     * <p>The IP address of the EIP to query.</p>
+     * <p>You can specify up to 50 EIP addresses. Separate multiple IP addresses with commas (,).</p>
      * <blockquote>
-     * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIPs for <strong>EipAddress</strong>, and specify up to 50 EIP IDs for <strong>AllocationId</strong>.</p>
+     * <p>If you specify both <strong>EipAddress</strong> and <strong>AllocationId</strong>, you can specify up to 50 EIP IP addresses for <strong>EipAddress</strong> and up to 50 EIP instance IDs for <strong>AllocationId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,7 +92,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     /**
      * <p>The name of the EIP.</p>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>EIP-01</p>
@@ -101,20 +103,20 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line. Only Hong Kong (China), Singapore, Tokyo (Japan), Kuala Lumpur (Malaysia), Manila (Philippines), Jakarta (Indonesia), and Bangkok (Thailand) regions support BGP (multi-ISP) Pro EIPs.</li>
      * </ul>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the <a href="https://help.aliyun.com/document_detail/32321.html">Line types</a> section of the &quot;What is EIP?&quot; topic.</p>
-     * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+     * <p>For more information about BGP (multi-ISP) and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
+     * <p>If you are a whitelist user of single-ISP bandwidth, you can also specify the following values:</p>
      * <ul>
-     * <li><strong>ChinaTelecom</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaTelecom_L2</strong></li>
-     * <li><strong>ChinaUnicom_L2</strong></li>
-     * <li><strong>ChinaMobile_L2</strong></li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile</li>
+     * <li><strong>ChinaTelecom_L2</strong>: China Telecom L2</li>
+     * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
+     * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
-     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * <p>If you are a user of Alibaba Finance Cloud in the China (Hangzhou) region, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -123,10 +125,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String ISP;
 
     /**
-     * <p>Specifies whether to return information about pending orders. Valid values:</p>
+     * <p>Specifies whether to include pending order data. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><p><strong>false</strong> (default): Does not include pending order data.</p>
+     * </li>
+     * <li><p><strong>true</strong>: Includes pending order data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,10 +140,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Boolean includeReservationData;
 
     /**
-     * <p>The reason why the EIP is locked. Valid values:</p>
+     * <p>The lock type. Valid values:</p>
      * <ul>
-     * <li><strong>financial</strong>: The EIP is locked due to overdue payments.</li>
-     * <li><strong>security</strong>: The EIP is locked for security reasons.</li>
+     * <li><p><strong>financial</strong>: locked due to overdue payment.</p>
+     * </li>
+     * <li><p><strong>security</strong>: locked for security reasons.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +161,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -164,7 +170,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -173,7 +179,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The IP address pool to which the EIP that you want to query belongs.</p>
+     * <p>The ID of the IP address pool to which the EIP belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>pippool-2vc0kxcedhquybdsz****</p>
@@ -208,10 +214,10 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to activate Anti-DDoS Pro/Premium. Valid values:</p>
+     * <p>Indicates whether Anti-DDoS (Enhanced) is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong></li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>: not enabled.</li>
+     * <li><strong>true</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -221,7 +227,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Boolean securityProtectionEnabled;
 
     /**
-     * <p>The ID of the contiguous EIP group.</p>
+     * <p>The instance ID of the contiguous EIP group.</p>
      * 
      * <strong>example:</strong>
      * <p>eipsg-t4nr90yik5oy38xdy****</p>
@@ -230,12 +236,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String segmentInstanceId;
 
     /**
-     * <p>Indicates whether the instance is managed. Valid values:</p>
+     * <p>Specifies whether the instance is a managed instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: a managed instance.</li>
+     * <li><strong>false</strong>: not a managed instance.</li>
      * </ul>
-     * <p>If you do not specify this parameter, all instances are queried.</p>
+     * <p>If you leave this parameter empty, all instances are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -244,13 +250,18 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The state of the EIP. Valid values:</p>
+     * <p>The status of the EIP. Valid values:</p>
      * <ul>
-     * <li><strong>Associating</strong></li>
-     * <li><strong>Unassociating</strong></li>
-     * <li><strong>InUse</strong></li>
-     * <li><strong>Available</strong></li>
-     * <li><strong>Releasing</strong></li>
+     * <li><p><strong>Associating</strong>: being associated.</p>
+     * </li>
+     * <li><p><strong>Unassociating</strong>: being disassociated.</p>
+     * </li>
+     * <li><p><strong>InUse</strong>: allocated.</p>
+     * </li>
+     * <li><p><strong>Available</strong>: available.</p>
+     * </li>
+     * <li><p><strong>Releasing</strong>: being released.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -472,7 +483,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     public static class DescribeEipAddressesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key used to query resources. Set the value to <strong>CreationStartTime</strong>, which specifies the time when the system started to create the resource.</p>
+         * <p>The filter key for querying resources. Set the value to <strong>CreationStartTime</strong>, which specifies the start time when the resource was created.</p>
          * 
          * <strong>example:</strong>
          * <p>CreationStartTime</p>
@@ -481,7 +492,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value used to query resources. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The filter value for querying resources. Specify the value in UTC. Format: <code>YYYY-MM-DDThh:mmZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-01T01:00Z</p>
@@ -514,8 +525,8 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     public static class DescribeEipAddressesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -524,8 +535,8 @@ public class DescribeEipAddressesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

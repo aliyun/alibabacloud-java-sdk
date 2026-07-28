@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value is the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The list of CIDR blocks in the IP address pool.</p>
      */
     @NameInMap("PublicIpPoolCidrBlockList")
     public java.util.List<ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList> publicIpPoolCidrBlockList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
@@ -33,7 +33,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The maximum number of entries returned. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -80,7 +80,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
 
     public static class ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList extends TeaModel {
         /**
-         * <p>The ID of the IP address pool.</p>
+         * <p>The CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>47.0.XX.XX/24</p>
@@ -89,7 +89,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The CIDR blocks.</p>
+         * <p>The time when the CIDR block was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-10T01:37:38Z</p>
@@ -98,7 +98,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The information about the CIDR blocks.</p>
+         * <p>The instance ID of the IPAM pool.</p>
          * 
          * <strong>example:</strong>
          * <p>pippool-6wetvn6fumkgycssx****</p>
@@ -107,7 +107,12 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         public String publicIpAddressPoolId;
 
         /**
-         * <p>The time when the CIDR block was created. The time is displayed in <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * <p>The status of the CIDR block in the IP address pool. Valid values:</p>
+         * <ul>
+         * <li><strong>Created</strong>: available.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Created</p>
@@ -116,7 +121,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total number of available IP addresses in the CIDR block.</p>
+         * <p>The total number of available IP addresses in the CIDR block of the IP address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,12 +130,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         public Integer totalIpNum;
 
         /**
-         * <p>The status of the CIDR block in the IP address pool. Valid values:</p>
-         * <ul>
-         * <li><strong>Created</strong>: available</li>
-         * <li><strong>Deleting</strong>: being deleted</li>
-         * <li><strong>Modifying</strong>: being modified</li>
-         * </ul>
+         * <p>The number of used IP addresses in the CIDR block of the IP address pool.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

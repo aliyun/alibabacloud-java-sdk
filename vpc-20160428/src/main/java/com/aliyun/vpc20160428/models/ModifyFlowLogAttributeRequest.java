@@ -24,7 +24,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the flow log.</p>
+     * <p>The flow log ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,17 +44,16 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The version of the IP address. Valid values:</p>
-     * <ul>
-     * <li><strong>IPV4</strong>: the IPv4 address.</li>
-     * <li><strong>DualStack</strong>: includes IPv4 and IPv6 address</li>
-     * </ul>
+     * <p>The IP address version of the traffic captured by the flow log.</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
+
+    @NameInMap("LogFormat")
+    public String logFormat;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -63,8 +62,8 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the flow log is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the flow log.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,6 +121,14 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     }
     public String getIpVersion() {
         return this.ipVersion;
+    }
+
+    public ModifyFlowLogAttributeRequest setLogFormat(String logFormat) {
+        this.logFormat = logFormat;
+        return this;
+    }
+    public String getLogFormat() {
+        return this.logFormat;
     }
 
     public ModifyFlowLogAttributeRequest setOwnerAccount(String ownerAccount) {

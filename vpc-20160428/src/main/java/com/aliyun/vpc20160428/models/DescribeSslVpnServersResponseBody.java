@@ -14,7 +14,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in paging query.</p>
+     * <p>The number of entries per page for paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

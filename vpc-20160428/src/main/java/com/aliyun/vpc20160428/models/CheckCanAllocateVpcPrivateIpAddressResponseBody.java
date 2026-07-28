@@ -7,8 +7,8 @@ public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the private IP address is available. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The private IP address is not occupied in the specified vSwitch and can be used.</li>
+     * <li><strong>false</strong>: The private IP address is already occupied in the specified vSwitch and cannot be used.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -20,8 +20,8 @@ public class ModifyForwardEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without modifying the DNAT entry. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DNAT entry is modified.</li>
+     * <li><strong>true</strong>: performs a dry run without modifying the DNAT entry. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. After the check succeeds, an HTTP 2xx status code is returned and the DNAT entry is modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ModifyForwardEntryRequest extends TeaModel {
      * <ul>
      * <li><p>If you modify a DNAT entry of an Internet NAT gateway, this parameter specifies the public IP address used to provide public network access.</p>
      * </li>
-     * <li><p>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address accessed by the external network.</p>
+     * <li><p>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address accessed by external networks.</p>
      * </li>
      * </ul>
      * 
@@ -53,7 +53,7 @@ public class ModifyForwardEntryRequest extends TeaModel {
      * <li>If you modify both <strong>ExternalPort</strong> and <strong>InternalPort</strong>, and <strong>ExternalPort</strong> is set to a port range, <strong>InternalPort</strong> must also be set to a port range with the same number of ports. For example, if <strong>ExternalPort</strong> is set to <code>10/20</code>, <strong>InternalPort</strong> must be set to <code>80/90</code>.</li>
      * </ul>
      * </li>
-     * <li><p>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the port accessed by the external network. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <li><p>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the port accessed by external networks. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * </li>
      * </ul>
      * 
@@ -64,7 +64,7 @@ public class ModifyForwardEntryRequest extends TeaModel {
     public String externalPort;
 
     /**
-     * <p>The ID of the DNAT entry to be modified.</p>
+     * <p>The ID of the DNAT entry that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class ModifyForwardEntryRequest extends TeaModel {
 
     /**
      * <p>The new name of the DNAT entry.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

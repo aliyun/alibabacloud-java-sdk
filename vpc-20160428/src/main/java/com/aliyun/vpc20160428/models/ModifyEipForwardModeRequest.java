@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyEipForwardModeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyEipForwardModeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the EIP whose attributes you want to modify.</p>
+     * <p>The ID of the EIP instance to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,17 @@ public class ModifyEipForwardModeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The association mode. Valid values:</p>
+     * <p>The binding mode. Valid values:</p>
      * <ul>
-     * <li><strong>NAT</strong> (default): the standard NAT mode.</li>
-     * <li><strong>MULTI_BINDED</strong>: the multi-EIP-to-ENI mode.</li>
-     * <li><strong>BINDED</strong>: the cut-through mode.</li>
+     * <li><p><strong>NAT</strong> (default): NAT mode (standard mode).</p>
+     * </li>
+     * <li><p><strong>MULTI_BINDED</strong>: multi-EIP to ENI mode.</p>
+     * </li>
+     * <li><p><strong>BINDED</strong>: EIP to ENI mode.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required only if <strong>InstanceType</strong> is set to <strong>NetworkInterface</strong>.</p>
+     * <p>This parameter is required only when <strong>InstanceType</strong> is set to <strong>NetworkInterface</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +52,7 @@ public class ModifyEipForwardModeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the EIP belongs. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID of the EIP. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

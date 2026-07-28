@@ -14,7 +14,7 @@ public class CreatePhysicalConnectionSetupOrderResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The Express Connect circuit ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2zegmc02v7ss4****</p>

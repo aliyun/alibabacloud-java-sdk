@@ -43,7 +43,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,8 +56,8 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>The second vSwitch associated with the VPN VPC-connected instance.</p>
      * <ul>
      * <li>If the current region supports dual-tunnel IPsec-VPN connections, this parameter is required.</li>
-     * <li>You must specify two vSwitches in different zones within the VPC associated with the VPN VPC-connected instance to implement zone-level disaster recovery for IPsec-VPN connections.</li>
-     * <li>For regions that support only one zone, zone-level disaster recovery is not supported. Specify two different vSwitches in the same zone to achieve high availability for IPsec-VPN connections. You can also specify the same vSwitch.</li>
+     * <li>You must specify two vSwitches in different zones from the VPC associated with the VPN VPC-connected instance to implement zone-level disaster recovery for IPsec-VPN connections.</li>
+     * <li>For regions that support only one zone, zone-level disaster recovery is not supported. Specify two different vSwitches in the same zone to implement high availability for IPsec-VPN connections. You can also specify the same vSwitch.</li>
      * </ul>
      * <p>For information about the regions and zones that support dual-tunnel IPsec-VPN connections, see <a href="https://help.aliyun.com/document_detail/2358946.html">Upgrade an IPsec-VPN connection to dual-tunnel mode</a>.</p>
      * 
@@ -98,9 +98,9 @@ public class CreateVpnGatewayRequest extends TeaModel {
     public Boolean enableSsl;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The billing method of the VPN gateway. Set the value to <strong>PREPAY</strong>, which specifies the subscription billing method.
-     * &lt;props=&quot;intl&quot;&gt;The billing method of the VPN gateway. Set the value to <strong>POSTPAY</strong>, which specifies the pay-as-you-go billing method.
-     * &lt;props=&quot;partner&quot;&gt;The billing method of the VPN gateway. Set the value to <strong>POSTPAY</strong>, which specifies the pay-as-you-go billing method.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The billing method of the VPN gateway. Set the value to <strong>PREPAY</strong> (subscription).
+     * &lt;props=&quot;intl&quot;&gt;The billing method of the VPN gateway. Set the value to <strong>POSTPAY</strong> (pay-as-you-go billing method).
+     * &lt;props=&quot;partner&quot;&gt;The billing method of the VPN gateway. Set the value to <strong>POSTPAY</strong> (pay-as-you-go billing method).</p>
      * <p>&lt;props=&quot;china&quot;&gt;This parameter is required when you create a VPN gateway.</p>
      * 
      * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is required if <strong>InstanceChargeType</strong> is set to <strong>PREPAY</strong>..</p>
+     * <p>This parameter is required if the <strong>InstanceChargeType</strong> parameter is set to <strong>PREPAY</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -168,8 +168,8 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * </li>
      * <li><p>If you do not specify a resource group ID, the VPN gateway belongs to the default resource group after it is created.</p>
      * </li>
-     * <li><p>After the VPN gateway is created, if you create SSL servers, SSL client certificates, IPsec servers, or IPsec-VPN connections (when the IPsec-VPN connection is associated with the VPN gateway) under the VPN gateway, these resources belong to the same resource group as the VPN gateway. The resource group of these resources cannot be modified.</p>
-     * <p>If you change the resource group of the VPN gateway, the resource group of the preceding resources is also changed.</p>
+     * <li><p>After the VPN gateway is created, if you create SSL servers, SSL client certificates, IPsec servers, or IPsec-VPN connections (when the IPsec-VPN connection is bindded to the VPN gateway) under the VPN gateway, these resources belong to the same resource group as the VPN gateway. The resource group of these resources cannot be modified.</p>
+     * <p>If you modify the resource group of the VPN gateway, the resource group of the preceding resources is also modified.</p>
      * </li>
      * </ul>
      * 
@@ -198,7 +198,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>The vSwitch associated with the VPN gateway instance. </p>
      * <ul>
      * <li>In regions that support dual-tunnel IPsec-VPN connections, this parameter is required. You must specify a vSwitch and also specify the <strong>DisasterRecoveryVSwitchId</strong> parameter.</li>
-     * <li>In regions that support only single-tunnel IPsec-VPN connections, if you do not specify a vSwitch, the system automatically selects a vSwitch from the VPC.</li>
+     * <li>In regions that support single-tunnel IPsec-VPN connections, if you do not specify a vSwitch, the system automatically selects a vSwitch from the VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>The type of the VPN gateway. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong> (default): standard.
-     * &lt;props=&quot;china&quot;&gt;- <strong>NationalStandard</strong>: Chinese SM-based..</li>
+     * &lt;props=&quot;china&quot;&gt;- <strong>NationalStandard</strong>: Chinese SM-based.</li>
      * </ul>
      * 
      * <strong>example:</strong>

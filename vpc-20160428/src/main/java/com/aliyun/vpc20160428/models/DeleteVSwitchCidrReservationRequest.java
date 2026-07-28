@@ -8,7 +8,7 @@ public class DeleteVSwitchCidrReservationRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,8 +19,10 @@ public class DeleteVSwitchCidrReservationRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <p><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): sends the request directly without performing a dry run. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run without creating the resource. The system checks whether the required parameters are specified, whether the request format is valid, and whether business restrictions are met. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,8 +37,8 @@ public class DeleteVSwitchCidrReservationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the vSwitch is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the vSwitch.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +54,7 @@ public class DeleteVSwitchCidrReservationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the reserved CIDR block.</p>
+     * <p>The instance ID of the reserved vSwitch CIDR block to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

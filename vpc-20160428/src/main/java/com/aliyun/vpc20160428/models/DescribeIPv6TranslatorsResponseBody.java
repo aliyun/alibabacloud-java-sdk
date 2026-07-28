@@ -8,7 +8,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
     public DescribeIPv6TranslatorsResponseBodyIpv6Translators ipv6Translators;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

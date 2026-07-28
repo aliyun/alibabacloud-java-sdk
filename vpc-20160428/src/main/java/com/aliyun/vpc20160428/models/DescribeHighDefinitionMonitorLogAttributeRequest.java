@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>
+     * <p>The instance ID for which you want to query high-precision second-level monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

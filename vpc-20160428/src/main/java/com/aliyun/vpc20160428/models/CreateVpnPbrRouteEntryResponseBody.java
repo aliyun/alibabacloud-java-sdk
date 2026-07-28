@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     /**
-     * <p>The timestamp generated when the policy-based route was created. Unit: milliseconds.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp when the policy-based route was created. Unit: milliseconds.</p>
+     * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1492747187000</p>
@@ -15,7 +15,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The description of the route.</p>
+     * <p>The description of the policy-based route.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -24,7 +24,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The tunneling protocol. The value is <strong>Ipsec</strong>.</p>
+     * <p>The next hop of the policy-based route.</p>
      * 
      * <strong>example:</strong>
      * <p>vco-bp15oes1py4i66rmd****</p>
@@ -33,7 +33,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -42,7 +42,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String overlayMode;
 
     /**
-     * <p>The priority of the policy-based route.</p>
+     * <p>The policy priority of the policy-based routing entry.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The priority of the policy-based route.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
@@ -60,7 +60,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The VPN gateway ID.</p>
+     * <p>The destination CIDR block of the policy-based route.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/24</p>
@@ -78,10 +78,12 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String routeSource;
 
     /**
-     * <p>The status of the policy-based route.</p>
+     * <p>The publish status of the policy-based route.</p>
      * <ul>
-     * <li><strong>published</strong>: advertised to the VPC route table.</li>
-     * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
+     * <li><p><strong>published</strong>: The policy-based route has been published to the VPC route table.</p>
+     * </li>
+     * <li><p><strong>normal</strong>: The policy-based route has not been published to the VPC route table.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +93,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The instance ID of the VPN gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-bp1cmw7jh1nfe43m9****</p>
@@ -100,7 +102,11 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String vpnInstanceId;
 
     /**
-     * <p>The source CIDR block of the policy-based route.</p>
+     * <p>The weight of the policy-based route.</p>
+     * <ul>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>

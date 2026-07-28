@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEipMonitorDataRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP.</p>
+     * <p>The instance ID of the EIP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. For example, <code>2013-01-10T12:00:00Z</code> specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
-     * <p>If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.</p>
+     * <p>The end time of the data to retrieve. Specify the time in UTC in the ISO 8601 standard format: <code>YYYY-MM-DDThh:mm:ssZ</code>. For example, <code>2013-01-10T12:00:00Z</code> represents 20:00:00 (UTC+8) on January 10, 2013.</p>
+     * <p>If the specified time is not on the minute, the end time is automatically rounded up to the next minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +32,10 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The duration of each monitoring data entry. Unit: seconds. Valid values: <strong>60</strong> (default), <strong>300</strong>, <strong>900</strong>, and <strong>3600</strong>.</p>
+     * <p>The duration of each monitoring data entry. Unit: seconds. Valid values: <strong>60</strong> (default), <strong>300</strong>, <strong>900</strong>, or <strong>3600</strong>.</p>
      * <ul>
-     * <li>If the value of <strong>(EndTime</strong> - <strong>StartTime</strong>)/<strong>Period</strong> is greater than 200, a maximum of 200 monitoring data entries are returned at a time.</li>
-     * <li>If the value of (<strong>EndTime</strong> - <strong>StartTime</strong>)/<strong>Period</strong> is less than or equal to 200, only the monitoring data collected between the start time and end time is returned.</li>
+     * <li>If (<strong>EndTime</strong> – <strong>StartTime</strong>) / <strong>Period</strong> is less than or equal to 400, all monitoring data from the start time to the end time is returned.</li>
+     * <li>If (<strong>EndTime</strong> – <strong>StartTime</strong>) / <strong>Period</strong> is greater than 400, monitoring data cannot be returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,8 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The ID of the region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the EIP.
+     * You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -60,8 +61,8 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in <code>YYYY-MM-DDThh:mm:ssZ</code> format. For example, <code>2013-01-10T12:00:00Z</code> specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
-     * <p>If the value of seconds (ss) is not 00, the start time is automatically rounded up to the next minute.</p>
+     * <p>The start time of the data to retrieve. Specify the time in UTC in the ISO 8601 standard format: <code>YYYY-MM-DDThh:mm:ssZ</code>. For example, <code>2013-01-10T12:00:00Z</code> represents 20:00:00 (UTC+8) on January 10, 2013.</p>
+     * <p>If the specified time is not on the minute, the start time is automatically rounded up to the next minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

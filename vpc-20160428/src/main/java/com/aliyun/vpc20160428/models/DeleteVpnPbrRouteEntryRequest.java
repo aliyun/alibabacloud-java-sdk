@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,8 +47,8 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
      * <ul>
      * <li><p>If no policy priority was previously configured for the policy-based route, you do not need to specify this parameter.</p>
      * </li>
-     * <li><p>If a policy priority was previously configured for the policy-based route, this parameter is optional.</p>
-     * <p>  If you specify this parameter, set it to the previously configured policy priority. If you set it to a different value, the operation fails.</p>
+     * <li><p>If a policy priority was previously configured for the policy-based route, you can choose whether to specify this parameter.</p>
+     * <p>  If you specify this parameter, enter the policy priority that was previously configured for the policy-based route. If you enter a different value, the operation fails.</p>
      * </li>
      * </ul>
      * 

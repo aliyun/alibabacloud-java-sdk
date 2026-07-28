@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEnhancedVpnGatewayResponseBody extends TeaModel {
     /**
-     * <p>The name of the enhanced VPN gateway.</p>
+     * <p>The name of the VPN gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>MYVPN</p>
@@ -23,7 +23,7 @@ public class CreateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the enhanced VPN gateway instance.</p>
+     * <p>The instance ID of the enhanced VPN gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-uf68lxhgr7ftbqr3p****</p>

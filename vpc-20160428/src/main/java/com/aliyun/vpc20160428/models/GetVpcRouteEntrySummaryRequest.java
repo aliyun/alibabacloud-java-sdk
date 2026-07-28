@@ -11,8 +11,8 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the route table.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the route table resides.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,11 +30,13 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     /**
      * <p>The type of the route. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong>: all route types</li>
-     * <li><strong>Custom</strong>: a custom route</li>
-     * <li><strong>System</strong>: a system route</li>
-     * <li><strong>BGP</strong>: a BGP route</li>
-     * <li><strong>CEN</strong>: a Cloud Enterprise Network (CEN) route</li>
+     * <li><strong>all</strong>: all route types.</li>
+     * <li><strong>custom</strong>: custom route.</li>
+     * <li><strong>system</strong>: system route.</li>
+     * <li><strong>bgp</strong>: BGP route.</li>
+     * <li><strong>cen</strong>: Cloud Enterprise Network (CEN) route.</li>
+     * <li><strong>type_vpn_bgp_internal</strong>: VPN BGP route.</li>
+     * <li><strong>ECR</strong>: Express Connect Router (ECR) route.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +47,7 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     public String routeEntryType;
 
     /**
-     * <p>The ID of the route table that you want to query.</p>
+     * <p>The ID of the route table to query.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-bp145q7glnuzdvzu2****</p>
@@ -54,7 +56,7 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     * <p>The ID of the VPC to which the route table belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDhcpOptionsSetRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,8 +18,8 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the DHCP options set.</p>
-     * <p>The description must be 1 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the DHCP options set. </p>
+     * <p>The description can be empty or 1 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -29,7 +29,7 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
 
     /**
      * <p>The name of the DHCP options set.</p>
-     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -38,8 +38,8 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public String dhcpOptionsSetName;
 
     /**
-     * <p>The root domain. For example, you can set the value to example.com.</p>
-     * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.</p>
+     * <p>The hostname suffix. Example: example.com.</p>
+     * <p>After the DHCP options set is used to associate VPC, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -48,9 +48,9 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The IP address of the DNS server. You can enter at most four DNS server IP addresses. Separate IP addresses with commas (,).</p>
+     * <p>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses. Separate multiple IP addresses with commas (,).</p>
      * <blockquote>
-     * <p> If no IP address is specified, the Elastic Compute Service (ECS) instance uses the IP addresses 100.100.2.136 and 100.100.2.138, which are provided by Alibaba Cloud by default.</p>
+     * <p>If you do not specify DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud (100.100.2.136 and 100.100.2.138) by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,9 +60,9 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public String domainNameServers;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
-     * <p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set is created.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -71,13 +71,15 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
+     * <p>The lease time of the IPv6 DHCP options set.</p>
      * <ul>
-     * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
-     * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+     * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
+     * </li>
+     * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When you enter a value, you must also specify the unit.</p>
+     * <p>You must include the unit when specifying the value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,13 +89,15 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public String ipv6LeaseTime;
 
     /**
-     * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
+     * <p>The lease time of the IPv4 DHCP options set.</p>
      * <ul>
-     * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
-     * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+     * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</p>
+     * </li>
+     * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When you enter a value, you must also specify the unit.</p>
+     * <p>You must include the unit when specifying the value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,8 +113,8 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the DHCP options set belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region in which the DHCP options set resides.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,7 +139,7 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag of the resource.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDhcpOptionsSetRequestTag> tag;
@@ -267,8 +271,8 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
 
     public static class CreateDhcpOptionsSetRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -277,8 +281,8 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

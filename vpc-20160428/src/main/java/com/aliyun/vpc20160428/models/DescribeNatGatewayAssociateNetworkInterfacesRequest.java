@@ -24,7 +24,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
     public java.util.List<DescribeNatGatewayAssociateNetworkInterfacesRequestFilter> filter;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paginated query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,9 +45,9 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
     /**
      * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li><p>If this is the first query or no subsequent query is required, you do not need to specify this parameter.</p>
+     * <li><p>If this is the first query or no subsequent query exists, leave this parameter empty.</p>
      * </li>
-     * <li><p>If a subsequent query is required, set the value to the <strong>NextToken</strong> value returned in the previous API call.</p>
+     * <li><p>If a subsequent query exists, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</p>
      * </li>
      * </ul>
      * 
@@ -65,7 +65,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
 
     /**
      * <p>The region ID of the NAT gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -198,18 +198,18 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
 
     public static class DescribeNatGatewayAssociateNetworkInterfacesRequestFilter extends TeaModel {
         /**
-         * <p>The key of the filter. Valid values:</p>
+         * <p>The valid values of Filter Key:</p>
          * <ul>
          * <li>ResourceId<blockquote>
-         * <p>Set Value to the ID of the EPS resource that you want to query.</p>
+         * <p>Specify the ID of the EPS resource in Value.</p>
          * </blockquote>
          * </li>
          * <li>NetworkInterfaceId<blockquote>
-         * <p>Set Value to the ID of the elastic network interface (ENI) that you want to query.</p>
+         * <p>Specify the ID of the network interface controller (NIC) in Value.</p>
          * </blockquote>
          * </li>
          * <li>ResourceOwnerId<blockquote>
-         * <p>Set Value to the UID of the user to whom the EPS resource belongs for resource ownership query.</p>
+         * <p>Specify the UID of the user to whom the EPS resource ownership belongs in Value.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -221,7 +221,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends TeaMode
         public String key;
 
         /**
-         * <p>The filter value. You can specify multiple values separated by commas (,).</p>
+         * <p>You can specify multiple values separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-8psre8c8936596cd****</p>

@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateVcoRouteEntryRequest extends TeaModel {
     /**
-     * <p>The status of the destination-based route.</p>
-     * <p>Only <strong>published</strong> is returned, which indicates that the current route is published to the transit router.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -15,11 +18,7 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The weight of the destination-based route. Valid values:</p>
-     * <ul>
-     * <li><strong>0</strong>: a low priority.</li>
-     * <li><strong>100</strong>: a high priority.</li>
-     * </ul>
+     * <p>The description of the destination route entry.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -28,10 +27,10 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +40,7 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The next hop of the destination-based route.</p>
+     * <p>The next hop of the destination route entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,8 +50,7 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol.</p>
-     * <p>The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (default), which specifies the IPsec tunneling protocol.</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -64,11 +62,8 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public String ownerAccount;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
-     * </blockquote>
+     * <p>The region ID of the IPsec-VPN connection.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +79,7 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the IPsec-VPN connection.</p>
+     * <p>The destination CIDR block of the destination route entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,7 +89,7 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public String routeDest;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The ID of the IPsec-VPN connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +99,11 @@ public class CreateVcoRouteEntryRequest extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The destination CIDR block of the destination-based route.</p>
+     * <p>The weight of the destination route entry. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: low priority.</li>
+     * <li><strong>100</strong>: high priority.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

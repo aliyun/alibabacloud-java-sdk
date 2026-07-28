@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateEipSegmentAddressResponseBody extends TeaModel {
     /**
-     * <p>The ID of the contiguous EIP group.</p>
+     * <p>The instance ID of the contiguous EIP group.</p>
      * 
      * <strong>example:</strong>
      * <p>eipsg-2zett8ba055tbsxme****</p>

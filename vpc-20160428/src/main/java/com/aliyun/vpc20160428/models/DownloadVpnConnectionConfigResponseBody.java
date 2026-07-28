@@ -14,7 +14,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configurations of the peer gateway device.</p>
+     * <p>The configuration of the peer gateway device of the IPsec-VPN connection.</p>
      */
     @NameInMap("VpnConnectionConfig")
     public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig vpnConnectionConfig;
@@ -135,7 +135,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IKE phase.</p>
+         * <p>The IKE phase authentication algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -144,7 +144,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IKE phase.</p>
+         * <p>The IKE phase encryption algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -153,7 +153,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeEncAlg;
 
         /**
-         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+         * <p>The IKE phase lifetime. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -164,8 +164,8 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         /**
          * <p>The IKE negotiation mode. Valid values:</p>
          * <ul>
-         * <li><strong>main</strong>: This mode offers higher security during negotiations.</li>
-         * <li><strong>aggressive</strong>: This mode is faster and has a higher success rate.</li>
+         * <li><strong>main</strong>: Main mode. This mode provides high security during negotiation.</li>
+         * <li><strong>aggressive</strong>: Aggressive mode. This mode supports fast negotiation and a higher success rate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikePfs;
 
         /**
-         * <p>The IKE version.</p>
+         * <p>The version of the IKE protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>ikev2</p>
@@ -300,7 +300,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm in the IPsec phase.</p>
+         * <p>The IPsec phase authentication algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>sha1</p>
@@ -309,7 +309,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ipsecAuthAlg;
 
         /**
-         * <p>The encryption algorithm in the IPsec phase.</p>
+         * <p>The IPsec phase encryption algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>aes</p>
@@ -318,7 +318,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ipsecEncAlg;
 
         /**
-         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+         * <p>The IPsec phase lifetime. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -375,88 +375,30 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig extends TeaModel {
-        /**
-         * <p>IKE阶段认证算法。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sha1</p>
-         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
-        /**
-         * <p>IKE阶段加密算法。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aes</p>
-         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
-        /**
-         * <p>IKE阶段生存时间。单位：秒。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86400</p>
-         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
-        /**
-         * <p>IKE协商模式。</p>
-         * <ul>
-         * <li><strong>main</strong>：主模式，协商过程安全性高。</li>
-         * <li><strong>aggressive</strong>：野蛮模式，协商快速且协商成功率高。</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>main</p>
-         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
-        /**
-         * <p>IKE阶段DH分组。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>group2</p>
-         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
-        /**
-         * <p>IKE协议的版本。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ikev2</p>
-         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
-        /**
-         * <p>本地IDC侧隧道的标识。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.21.XX.XX</p>
-         */
         @NameInMap("LocalId")
         public String localId;
 
-        /**
-         * <p>预共享密钥。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pgw6dy7d1i8i****</p>
-         */
         @NameInMap("Psk")
         public String psk;
 
-        /**
-         * <p>阿里云侧隧道的标识。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.24.XX.XX</p>
-         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -540,39 +482,15 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig extends TeaModel {
-        /**
-         * <p>IPsec阶段认证算法。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sha1</p>
-         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
-        /**
-         * <p>IPsec阶段加密算法。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aes</p>
-         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
-        /**
-         * <p>IPsec阶段生存时间。单位：秒。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>86400</p>
-         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
-        /**
-         * <p>IPsec阶段DH分组。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>group2</p>
-         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -616,42 +534,18 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig extends TeaModel {
-        /**
-         * <p>第一阶段协商的配置信息。</p>
-         */
         @NameInMap("IkeConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig ikeConfig;
 
-        /**
-         * <p>第二阶段协商的配置信息。</p>
-         */
         @NameInMap("IpsecConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig ipsecConfig;
 
-        /**
-         * <p>本地IDC侧隧道的标识。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.21.XX.XX</p>
-         */
         @NameInMap("Local")
         public String local;
 
-        /**
-         * <p>阿里云侧隧道的标识。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>47.24.XX.XX</p>
-         */
         @NameInMap("Remote")
         public String remote;
 
-        /**
-         * <p>隧道ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tun-opsqc4d97wni27****</p>
-         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
@@ -726,13 +620,13 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs bgpConfigs;
 
         /**
-         * <p>The configurations of Phase 1 negotiations.</p>
+         * <p>The configuration of Phase 1 negotiation.</p>
          */
         @NameInMap("IkeConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig ikeConfig;
 
         /**
-         * <p>The configurations of Phase 2 negotiations.</p>
+         * <p>The configuration of Phase 2 negotiation.</p>
          */
         @NameInMap("IpsecConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig ipsecConfig;
@@ -747,7 +641,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String local;
 
         /**
-         * <p>The CIDR block on the data center side.</p>
+         * <p>The CIDR block on the on-premises data center side.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -765,7 +659,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String remote;
 
         /**
-         * <p>The CIDR block on the virtual private cloud (VPC) side.</p>
+         * <p>The CIDR block on the VPC side.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpcAttributeRequest extends TeaModel {
     /**
      * <p>The new IPv4 CIDR block of the VPC.</p>
-     * <p>You can specify a larger or smaller IPv4 CIDR block than the IPv4 CIDR block of the VPC. The subnet mask must be 8 to 28 bits in length. If you specify a smaller IPv4 CIDR block and existing IP addresses do not fall within the CIDR block, the modification fails.</p>
+     * <p>You can expand or shrink the CIDR block within the original IPv4 CIDR block of the VPC. The recommended subnet mask is 16 to 28 bits. If you shrink the IPv4 CIDR block of the VPC and IP addresses that are already in use fall outside the target CIDR block, the modification fails.</p>
      * <blockquote>
-     * <p> If you modify the CIDR block of a VPC, your existing services are not affected.</p>
+     * <p>Modifying the IPv4 CIDR block of a VPC does not affect existing services.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     /**
      * <p>The new description of the VPC.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my VPC.</p>
@@ -30,8 +30,8 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the DNS hostname feature. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): disabled.</li>
-     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong> (default): Disabled.</li>
+     * <li><strong>true</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,10 +41,10 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     public Boolean enableDnsHostname;
 
     /**
-     * <p>Specifies whether to enable IPv6 CIDR blocks. Valid values:</p>
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>false</strong> (default): Disabled.</li>
+     * <li><strong>true</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,11 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     public Boolean enableIPv6;
 
     /**
-     * <p>The IPv6 CIDR block of the VPC.</p>
+     * <p>The IPv6 CIDR block of the VPC.
+     * When you enable IPv6 for a VPC, the system will assign an IPv6 CIDR block. To specify an IPv6 CIDR block, invoke the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve a specific IPv6 CIDR block first, and then pass it in.</p>
+     * <blockquote>
+     * <p>For a VPC that already has IPv6 enabled, you cannot modify the IPv6 CIDR block by passing in this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2408:XXXX:0:6a::/56</p>
@@ -63,15 +67,15 @@ public class ModifyVpcAttributeRequest extends TeaModel {
     public String ipv6CidrBlock;
 
     /**
-     * <p>The type of IPv6 CIDR block. Valid values:</p>
+     * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default)</li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaTelecom</strong></li>
+     * <li><strong>BGP</strong> (default): Alibaba Cloud BGP IPv6.</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile (single ISP).</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom (single ISP).</li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom (single ISP).</li>
      * </ul>
      * <blockquote>
-     * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * <p>If you are a user who has the single-ISP bandwidth whitelist enabled, you can set this parameter to <strong>ChinaTelecom</strong> (China Telecom), <strong>ChinaUnicom</strong> (China Unicom), or <strong>ChinaMobile</strong> (China Mobile).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

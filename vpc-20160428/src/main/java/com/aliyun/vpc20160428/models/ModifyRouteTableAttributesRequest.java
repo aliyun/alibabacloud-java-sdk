@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyRouteTableAttributesRequest extends TeaModel {
     /**
-     * <p>The description of the route table.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the route table.  </p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>描述信息</p>
@@ -21,8 +21,8 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPC to which the route table belongs. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,12 +38,10 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Indicates whether to enable route propagation to receive dynamic routes. Valid values:</p>
+     * <p>Specifies whether to receive dynamic routes by enabling or disabling route propagation. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong> (default): enables route propagation.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disables route propagation.</p>
-     * </li>
+     * <li><strong>true</strong> (default): enabled.</li>
+     * <li><strong>false</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +64,7 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The name of the route table.</p>
+     * <p>The name of the route table.  </p>
      * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>

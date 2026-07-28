@@ -23,7 +23,7 @@ public class CreateIPv6TranslatorResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The order ID for creating the IPv6 Translation Service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>202303300940739</p>

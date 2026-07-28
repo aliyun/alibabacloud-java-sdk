@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>The ID of the access point where the Express Connect circuit is located.</p>
+     * <p>The ID of the access point for the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,11 +61,11 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
      * </li>
      * <li><p><strong>CM</strong>: China Mobile.</p>
      * </li>
-     * <li><p><strong>CO</strong>: Other carriers in China. </p>
+     * <li><p><strong>CO</strong>: Other carriers in the Chinese mainland. </p>
      * </li>
      * <li><p><strong>Equinix</strong>: Equinix.</p>
      * </li>
-     * <li><p><strong>Other</strong>: Other carriers outside China.</p>
+     * <li><p><strong>Other</strong>: Other carriers outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -101,16 +101,16 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
      * <li><code>SFP-10G-ZR-SM1550,80KM</code></li>
      * </ul>
      * </li>
-     * <li>40GBase-LR : <ul>
+     * <li>40GBase-LR ： <ul>
      * <li><code>QSFP-40G-LR4-WDM1300,10KM</code></li>
      * <li><code>QSFP-40G-ER4-WDM1300,40KM</code></li>
      * <li><code>QSFP-40G-ZR4-WDM1300,80KM</code></li>
      * </ul>
      * </li>
-     * <li>100GBase-LR : <ul>
+     * <li>100GBase-LR ： <ul>
      * <li><code>QSFP28-100G-LR4-WDM1300,10KM</code></li>
      * <li><code>QSFP28-100G-ER4-WDM1300,40KM</code></li>
-     * <li><code>QSFP28-100G-ZR4-WDM1300,80KM</code>.</li>
+     * <li><code>QSFP28-100G-ZR4-WDM1300,80KM</code></li>
      * </ul>
      * </li>
      * </ul>
@@ -155,7 +155,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>40GBase-LR and 100GBase-LR are created based on the actual port availability in the backend. Contact your account manager for port availability details.</p>
+     * <p>40GBase-LR and 100GBase-LR are created based on the actual port availability. Contact your account manager for details.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

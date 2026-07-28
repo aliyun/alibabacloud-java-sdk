@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     public DescribeSnatTableEntriesResponseBodySnatTableEntries snatTableEntries;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

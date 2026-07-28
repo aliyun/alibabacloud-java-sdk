@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetRouteTargetGroupResponseBody extends TeaModel {
     /**
-     * <p>Configuration mode of the route target group. Supported modes are as follows:</p>
+     * <p>The configuration mode of the route target group. Valid values:</p>
      * <ul>
-     * <li><strong>Active-Standby</strong>: Active-standby mode.</li>
+     * <li><strong>Active-Standby</strong>: active/standby mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The region ID of the VPC to which the route target group belongs. You can obtain the region ID by calling the DescribeRegions interface.</p>
+     * <p>The region ID of the VPC to which the route target group belongs. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
@@ -53,7 +53,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Description of the route target group.</p>
+     * <p>The description of the route target group.</p>
      * 
      * <strong>example:</strong>
      * <p>myRouteTargetGroupDescription</p>
@@ -62,7 +62,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String routeTargetGroupDescription;
 
     /**
-     * <p>ID of the route target group instance.</p>
+     * <p>The instance ID of the routing target group.</p>
      * 
      * <strong>example:</strong>
      * <p>rtg-xxxx</p>
@@ -71,7 +71,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String routeTargetGroupId;
 
     /**
-     * <p>Name of the route target group.</p>
+     * <p>The name of the route target group.</p>
      * 
      * <strong>example:</strong>
      * <p>myRouteTargetGroupName</p>
@@ -80,22 +80,22 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String routeTargetGroupName;
 
     /**
-     * <p>List of members in the route target group.</p>
+     * <p>The member list of the route target group.</p>
      */
     @NameInMap("RouteTargetMemberList")
     public java.util.List<GetRouteTargetGroupResponseBodyRouteTargetMemberList> routeTargetMemberList;
 
     /**
-     * <p>The status of the route target group. Values:</p>
+     * <p>The status of the routing target group. Valid values:</p>
      * <ul>
-     * <li><strong>Recovering</strong>: In the process of switching back to the primary </li>
-     * <li><strong>Switched</strong>: The primary and secondary have been switched </li>
-     * <li><strong>Available</strong>: Available </li>
-     * <li><strong>Abnormal</strong>: Secondary instance is abnormal </li>
-     * <li><strong>Pending</strong>: In the process of being created </li>
-     * <li><strong>Switching</strong>: In the process of switching between primary and secondary </li>
-     * <li><strong>Deleting</strong>: In the process of being deleted </li>
-     * <li><strong>Unavailable</strong>: Both primary and secondary instances are abnormal</li>
+     * <li><strong>Recovering</strong>: The active/standby switchback is in progress.</li>
+     * <li><strong>Switched</strong>: The active/standby switchover is complete.</li>
+     * <li><strong>Available</strong>: The routing target group is available.</li>
+     * <li><strong>Abnormal</strong>: The standby instance has instance failures.</li>
+     * <li><strong>Pending</strong>: The routing target group is being created.</li>
+     * <li><strong>Switching</strong>: The active/standby switchover is in progress.</li>
+     * <li><strong>Deleting</strong>: The routing target group is being deleted.</li>
+     * <li><strong>Unavailable</strong>: Both the primary and secondary instances have instance failures.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,13 +105,13 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Tags of the route target group.</p>
+     * <p>The tags of the route target group.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetRouteTargetGroupResponseBodyTags> tags;
 
     /**
-     * <p>ID of the VPC to which the route target group belongs.</p>
+     * <p>The ID of the VPC to which the route target group belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-xxxx</p>
@@ -222,12 +222,12 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
 
     public static class GetRouteTargetGroupResponseBodyRouteTargetMemberList extends TeaModel {
         /**
-         * <p>The enable status of the route target group member. Values:</p>
+         * <p>The enable status of the route target group member. Valid values:</p>
          * <ul>
          * <li><strong>Enable</strong>: Enabled.</li>
          * <li><strong>Disable</strong>: Disabled.</li>
          * </ul>
-         * <p>Only disabled route target group members can be modified to other instances. Enabled route target group members cannot be modified.</p>
+         * <p>Only route target group members in the disabled state can be replaced with other instances. Route target group members in the enabled state cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -236,10 +236,10 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String enableStatus;
 
         /**
-         * <p>Route target group member health check status. Values:</p>
+         * <p>The health check status of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: Normal </li>
-         * <li><strong>Abnormal</strong>: Abnormal</li>
+         * <li><strong>Normal</strong>: Normal.</li>
+         * <li><strong>Abnormal</strong>: Abnormal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String healthCheckStatus;
 
         /**
-         * <p>ID of the route target group member instance.</p>
+         * <p>The instance ID of the routing target group member.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxxx</p>
@@ -258,7 +258,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String memberId;
 
         /**
-         * <p>Type of the route target group member.</p>
+         * <p>The member type of the route target group.</p>
          * <p>Currently supported types:</p>
          * <ul>
          * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
@@ -271,12 +271,12 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String memberType;
 
         /**
-         * <p>Weight value of the route target group member. Values:</p>
+         * <p>The weight of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>100</strong>: Indicates the member is the primary instance.</li>
-         * <li><strong>0</strong>: Indicates the member is the standby instance.</li>
+         * <li><strong>100</strong>: The member is the active instance.</li>
+         * <li><strong>0</strong>: The member is the standby instance.</li>
          * </ul>
-         * <p>The weight value can only be set during creation and cannot be modified.</p>
+         * <p>The weight can only be set during creation and cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -333,7 +333,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
 
     public static class GetRouteTargetGroupResponseBodyTags extends TeaModel {
         /**
-         * <p>Tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -342,7 +342,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

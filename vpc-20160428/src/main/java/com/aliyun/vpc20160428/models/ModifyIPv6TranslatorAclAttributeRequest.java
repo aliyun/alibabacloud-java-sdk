@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorAclAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the ACL that you want to modify.</p>
+     * <p>The ID of the access control policy group to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends TeaModel {
     public String aclId;
 
     /**
-     * <p>The name of the ACL.</p>
+     * <p>The name of the access control policy group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -41,7 +41,7 @@ public class ModifyIPv6TranslatorAclAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

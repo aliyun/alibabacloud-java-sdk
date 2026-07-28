@@ -8,7 +8,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
      * <p>The type of the IPv6 address. Valid values:</p>
      * <ul>
      * <li>IPv6Address (default): The instance is a single IPv6 address.</li>
-     * <li>IPv6Prefix: The instance is an IPv6 prefix CIDR block.</li>
+     * <li>IPv6Prefix: The instance is an IPv6 CIDR block.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</p>
+     * <li><p>true: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
      * </li>
      * <li><p>false (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</p>
      * </li>
@@ -105,7 +105,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tags for the resource.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<AllocateIpv6AddressRequestTag> tag;
@@ -239,8 +239,8 @@ public class AllocateIpv6AddressRequest extends TeaModel {
 
     public static class AllocateIpv6AddressRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not pass in an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -249,8 +249,8 @@ public class AllocateIpv6AddressRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. You can pass in an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

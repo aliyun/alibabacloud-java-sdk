@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel {
     /**
-     * <p>The description of the GA instance.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the Alibaba Cloud Global Accelerator (GA) instance.  </p>
+     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>My GA</p>
@@ -15,7 +15,7 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
     public String description;
 
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +25,8 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
     public String globalAccelerationInstanceId;
 
     /**
-     * <p>The name of the GA instance.</p>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the Alibaba Cloud Global Accelerator (GA) instance.  </p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>GA-1</p>
@@ -41,8 +41,8 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
     public Long ownerId;
 
     /**
-     * <p>The region ID of the GA instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the Alibaba Cloud Global Accelerator (GA) instance is located. </p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

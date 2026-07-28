@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrefixListsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value indicates the token that is used for the next request to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
 
     public static class ListPrefixListsResponseBodyPrefixLists extends TeaModel {
         /**
-         * <p>The CIDR block specified in the prefix list.</p>
+         * <p>The Classless Inter-Domain Routing (CIDR) block information of the prefix list.</p>
          */
         @NameInMap("CidrBlocks")
         public java.util.List<String> cidrBlocks;
@@ -156,8 +156,8 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * <p>The IP version of the prefix list. Valid values:</p>
          * <ul>
-         * <li><strong>IPV4</strong></li>
-         * <li><strong>IPV6</strong></li>
+         * <li><strong>IPV4</strong>: IPv4.</li>
+         * <li><strong>IPV6</strong>: IPv6.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         public String ipVersion;
 
         /**
-         * <p>The maximum number of CIDR blocks that you can specify in the prefix list.</p>
+         * <p>The maximum number of entries for Classless Inter-Domain Routing (CIDR) blocks in the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -214,12 +214,12 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * <p>The status of the prefix list. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong></li>
-         * <li><strong>Deleted</strong></li>
-         * <li><strong>Modifying</strong></li>
+         * <li><strong>Created</strong>: Created.</li>
+         * <li><strong>Deleted</strong>: Deleted.</li>
+         * <li><strong>Modifying</strong>: Being modified.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is the same as the <strong>Status</strong> parameter.</p>
+         * <p>This parameter has the same meaning and valid values as <strong>Status</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -256,10 +256,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the prefix list is shared. Valid values:</p>
+         * <p>The sharing type of the prefix list. Valid values:</p>
          * <ul>
-         * <li><strong>Shared</strong>: The prefix list is shared.</li>
-         * <li>If an empty value is returned, the prefix list is not shared.</li>
+         * <li><strong>Shared</strong>: The prefix list is a shared prefix list.</li>
+         * <li>Empty: The prefix list is not a shared prefix list.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,9 +271,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * <p>The status of the prefix list. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong></li>
-         * <li><strong>Deleted</strong></li>
-         * <li><strong>Modifying</strong></li>
+         * <li><strong>Created</strong>: Created.</li>
+         * <li><strong>Deleted</strong>: Deleted.</li>
+         * <li><strong>Modifying</strong>: Being modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>

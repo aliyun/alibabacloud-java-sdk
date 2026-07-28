@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListBusinessRegionsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response. Valid values: </p>
      * <ul>
-     * <li><strong>zh-CN</strong> (default): Chinese</li>
-     * <li><strong>en-US</strong>: English.</li>
+     * <li><p><strong>zh-CN</strong> (default): Chinese.</p>
+     * </li>
+     * <li><p><strong>en-US</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

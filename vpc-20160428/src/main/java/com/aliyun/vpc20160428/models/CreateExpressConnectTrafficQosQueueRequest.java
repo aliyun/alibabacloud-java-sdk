@@ -7,8 +7,8 @@ public class CreateExpressConnectTrafficQosQueueRequest extends TeaModel {
     /**
      * <p>The bandwidth percentage of the QoS queue.</p>
      * <ul>
-     * <li>When the QoS queue type is <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
-     * <li>When the QoS queue type is <strong>Default</strong>, this parameter is set to &quot;-&quot;.</li>
+     * <li>If the QoS queue type is <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
+     * <li>If the QoS queue type is <strong>Default</strong>, this parameter is set to &quot;-&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class CreateExpressConnectTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The region ID of the QoS policy.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

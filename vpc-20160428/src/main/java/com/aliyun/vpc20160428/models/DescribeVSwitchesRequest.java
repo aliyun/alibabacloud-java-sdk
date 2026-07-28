@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to query vSwitches with IPv6 enabled in the region. Valid values:</p>
+     * <p>Specifies whether to query vSwitches that have IPv6 CIDR blocks enabled in the specified region. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: queries vSwitches that have IPv6 CIDR blocks enabled in the specified region.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not query vSwitches that have IPv6 CIDR blocks enabled in the specified region.</p>
+     * </li>
      * </ul>
-     * <p>If you do not set this parameter, the system queries all vSwitches in the specified region by default.</p>
+     * <p>If you do not specify this parameter, the system queries all vSwitches in the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,12 +37,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Boolean enableIpv6;
 
     /**
-     * <p>Specifies whether to query the default vSwitches in the specified region. Valid values:</p>
+     * <p>Specifies whether to query the default vSwitch in the specified region. Valid values: </p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: queries the default vSwitch in the specified region.  </p>
+     * </li>
+     * <li><p><strong>false</strong>: does not query the default vSwitch in the specified region.</p>
+     * </li>
      * </ul>
-     * <p>If you do not set this parameter, the system queries all vSwitches in the specified region by default.</p>
+     * <p>If you do not specify this parameter, the system queries all vSwitches in the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -64,7 +68,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page when using paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -73,9 +77,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <blockquote>
-     * <p> You must set at least one of <strong>RegionId</strong> and <strong>VpcId</strong>.</p>
+     * <p>Specify at least one of the <strong>RegionId</strong> and <strong>VpcId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,13 +113,13 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeVSwitchesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch that you want to query.</p>
+     * <p>The ID of the vSwitch to query.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-23dscddcffvf3****</p>
@@ -124,8 +128,8 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The exact name of the vSwitch that you want to query. Fuzzy match is not supported.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the vSwitch.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>vSwitch</p>
@@ -134,7 +138,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vSwitchName;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the vSwitch belongs.</p>
+     * <p>The Alibaba Cloud account ID of the resource ownership.</p>
      * 
      * <strong>example:</strong>
      * <p>2546073170691****</p>
@@ -143,9 +147,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Long vSwitchOwnerId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the vSwitches belong.</p>
+     * <p>The ID of the VPC to which the vSwitch belongs. </p>
      * <blockquote>
-     * <p> You must set at least one of <strong>RegionId</strong> and <strong>VpcId</strong>.</p>
+     * <p>Specify at least one of the <strong>RegionId</strong> and <strong>VpcId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -155,7 +159,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitches belong. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The ID of the zone to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-d</p>
@@ -314,8 +318,8 @@ public class DescribeVSwitchesRequest extends TeaModel {
 
     public static class DescribeVSwitchesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -324,8 +328,8 @@ public class DescribeVSwitchesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

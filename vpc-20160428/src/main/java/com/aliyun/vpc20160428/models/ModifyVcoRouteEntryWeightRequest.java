@@ -8,7 +8,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new weight of the destination-based route that you want to modify. Valid values:</p>
+     * <p>The new weight of the destination route entry. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: a low priority</li>
-     * <li><strong>100</strong>: a high priority</li>
+     * <li><strong>0</strong>: low priority.</li>
+     * <li><strong>100</strong>: high priority.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +32,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public Integer newWeight;
 
     /**
-     * <p>The next hop of the destination-based route that you want to modify.</p>
+     * <p>The next hop of the destination route entry to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong>, which specifies the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (default), which specifies the IPsec tunneling protocol.</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -55,7 +55,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IPsec-VPN connection.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination CIDR block of the destination-based route that you want to modify.</p>
+     * <p>The destination CIDR block of the destination route entry to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,10 +91,10 @@ public class ModifyVcoRouteEntryWeightRequest extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The current weight of the destination-based route that you want to modify. Valid values:</p>
+     * <p>The current weight of the destination route entry to modify. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: a low priority</li>
-     * <li><strong>100</strong>: a high priority</li>
+     * <li><strong>0</strong>: low priority.</li>
+     * <li><strong>100</strong>: high priority.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

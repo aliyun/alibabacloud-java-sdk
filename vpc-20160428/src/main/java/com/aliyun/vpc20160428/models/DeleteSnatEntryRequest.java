@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteSnatEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteSnatEntryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NAT gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DeleteSnatEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SNAT entry that you want to delete.</p>
+     * <p>The ID of the SNAT entry to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

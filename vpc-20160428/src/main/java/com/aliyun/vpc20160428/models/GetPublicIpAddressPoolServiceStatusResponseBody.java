@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the IP address pool feature is enabled. Valid values:</p>
+     * <p>Indicates whether the IP address pool feature is activated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> You can call OpenPublicIpAddressPoolService to enable the IP address pool feature.</li>
+     * <li><p><strong>true</strong>: activated.</p>
+     * </li>
+     * <li><p><strong>false</strong>: not activated. You can call the OpenPublicIpAddressPoolService operation to activate the IP address pool feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

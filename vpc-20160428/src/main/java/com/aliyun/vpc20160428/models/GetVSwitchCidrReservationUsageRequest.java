@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVSwitchCidrReservationUsageRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,10 +14,10 @@ public class GetVSwitchCidrReservationUsageRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</li>
+     * <li>Leave this parameter empty for the first query or if no subsequent query is required.</li>
+     * <li>If a subsequent query is required, set this parameter to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class GetVSwitchCidrReservationUsageRequest extends TeaModel {
 
     /**
      * <p>The region ID of the vSwitch.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class GetVSwitchCidrReservationUsageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the reserved CIDR block.</p>
+     * <p>The instance ID of the reserved CIDR block for a vSwitch that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

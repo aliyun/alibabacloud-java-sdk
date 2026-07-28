@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGrantRulesToCenRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the network instance that you want to query.</p>
+     * <p>The ID of the network instance to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,14 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the network instance. Valid values:</p>
+     * <p>The type of the network instance to query. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong></li>
-     * <li><strong>VBR</strong></li>
-     * <li><strong>CCN</strong></li>
+     * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: Virtual Border Router.</p>
+     * </li>
+     * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +52,7 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,7 +61,7 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Minimum value: <strong>1</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -67,7 +70,7 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the network instance that you want to query.</p>
+     * <p>The region of the network instance to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

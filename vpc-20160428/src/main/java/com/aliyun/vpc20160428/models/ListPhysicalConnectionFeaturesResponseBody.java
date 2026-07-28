@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPhysicalConnectionFeaturesResponseBody extends TeaModel {
     /**
-     * <p>The list of Express Connect circuit features.</p>
+     * <p>The list of Express Connect circuit attributes.</p>
      */
     @NameInMap("PhysicalConnectionFeatures")
     public java.util.List<ListPhysicalConnectionFeaturesResponseBodyPhysicalConnectionFeatures> physicalConnectionFeatures;
@@ -42,16 +42,16 @@ public class ListPhysicalConnectionFeaturesResponseBody extends TeaModel {
 
     public static class ListPhysicalConnectionFeaturesResponseBodyPhysicalConnectionFeatures extends TeaModel {
         /**
-         * <p>The feature key of the Express Connect circuit. Valid values:</p>
+         * <p>The attribute key of the Express Connect circuit. Valid values:</p>
          * <ul>
-         * <li><strong>SubifRateLimit</strong>: subinterface throttling</li>
-         * <li><strong>BFD Capability</strong>: Bidirectional Forwarding Detection (BFD)</li>
-         * <li><strong>DualStack</strong>: Dual stack</li>
-         * <li><strong>CEN</strong>: When a virtual border router (VBR) is attached to a Cloud Enterprise Network (CEN) instance and BGP routes are advertised on the user side, attributes such as <strong>as-path</strong> and <strong>community</strong> are carried.</li>
-         * <li><strong>CENv6</strong>: When a VBR is attached to an IPv6 CEN instance and BGP routes are advertised on the user side, attributes such as <strong>as-path</strong> and <strong>community</strong> are carried.</li>
-         * <li><strong>QOS</strong>: The device supports configuring QOS policies on physical ports.</li>
-         * <li><strong>MSHA</strong>: The device supports fast switching groups between two VBRs.</li>
-         * <li><strong>MULTI_MS_HA</strong>: The device supports a maximum of eight VBRs that can be added to the same ECR.</li>
+         * <li><strong>SubifRateLimit</strong>: sub-interface rate limiting.</li>
+         * <li><strong>BFD能力</strong>: Bidirectional Forwarding Detection (BFD) capability.</li>
+         * <li><strong>DualStack</strong>: the capability to support both IPv4 and IPv6.</li>
+         * <li><strong>CEN</strong>: when a Virtual Border Router (VBR) is attached to a Cloud Enterprise Network (CEN) instance, the original route attributes such as <strong>as-path</strong> and <strong>community</strong> can be carried when advertising BGP routes to the user side.</li>
+         * <li><strong>CENv6</strong>: when a VBR is attached to an IPv6-enabled CEN instance, the original route attributes such as <strong>as-path</strong> and <strong>community</strong> can be carried when advertising BGP routes to the user side.</li>
+         * <li><strong>QOS</strong>: the device supports configuring QoS policies on physical ports.</li>
+         * <li><strong>MSHA</strong>: the device supports configuring a fast failover group between two VBRs.</li>
+         * <li><strong>MULTI_MS_HA</strong>: the device supports configuring a fast failover group among up to 8 VBRs. These VBRs must be added to the same Express Connect Router (ECR).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -61,10 +61,10 @@ public class ListPhysicalConnectionFeaturesResponseBody extends TeaModel {
         public String featureKey;
 
         /**
-         * <p>The feature value of the Express Connect circuit. Valid values:</p>
+         * <p>The attribute value of the Express Connect circuit. Valid values:</p>
          * <ul>
-         * <li><strong>OK</strong>: Supported</li>
-         * <li><strong>NOK</strong>: Not supported</li>
+         * <li><strong>OK</strong>: Supported.</li>
+         * <li><strong>NOK</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     /**
-     * <p>The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.</p>
+     * <p>The local BGP autonomous system (AS) number to be configured on the Smart Access Gateway device.</p>
      * 
      * <strong>example:</strong>
      * <p>sag-ejfge***</p>
@@ -14,7 +14,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     public String bgpAs;
 
     /**
-     * <p>The peer IP address when the SAG device is connected to the cloud.</p>
+     * <p>The cloud-side IP address used for peering with the Smart Access Gateway device.</p>
      * 
      * <strong>example:</strong>
      * <p><code>172.16.**.**</code></p>
@@ -23,7 +23,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     public String ceIp;
 
     /**
-     * <p>Descriptions of ECC.</p>
+     * <p>The description of the Express Cloud Connection instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ECC</p>
@@ -32,7 +32,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the ECC instance.</p>
+     * <p>The instance ID of the Express Cloud Connection instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     public String eccId;
 
     /**
-     * <p>The name of the ECC instance.</p>
+     * <p>The name of the Express Cloud Connection instance.</p>
      * 
      * <strong>example:</strong>
      * <p>doctest</p>
@@ -57,7 +57,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The on-premises IP address when the SAG device is connected to the cloud.</p>
+     * <p>The local IP address of the Smart Access Gateway device used for peering with the cloud.</p>
      * 
      * <strong>example:</strong>
      * <p><code>10.10.**.**</code></p>
@@ -66,7 +66,7 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     public String peIp;
 
     /**
-     * <p>The region ID of the ECC instance.</p>
+     * <p>The region ID of the Express Cloud Connection instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

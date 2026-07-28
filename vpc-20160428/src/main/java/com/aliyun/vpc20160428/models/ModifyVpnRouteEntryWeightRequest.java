@@ -8,7 +8,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new weight of the destination-based route. Valid values:</p>
+     * <p>The new weight of the destination route. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: a low priority</li>
-     * <li><strong>100</strong>: a high priority</li>
+     * <li><p><strong>0</strong>: low priority.</p>
+     * </li>
+     * <li><p><strong>100</strong>: high priority.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +34,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public Integer newWeight;
 
     /**
-     * <p>The next hop of the destination-based route.</p>
+     * <p>The next hop of the destination route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +44,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong>.</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -57,7 +59,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +75,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination CIDR block of the destination-based route.</p>
+     * <p>The destination CIDR block of the destination route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,10 +95,12 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The original weight of the destination-based route. Valid values:</p>
+     * <p>The original weight of the destination route before modification. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: a low priority</li>
-     * <li><strong>100</strong>: a high priority</li>
+     * <li><p><strong>0</strong>: low priority.</p>
+     * </li>
+     * <li><p><strong>100</strong>: high priority.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

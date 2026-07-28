@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFullNatEntriesResponseBody extends TeaModel {
     /**
-     * <p>The information about the FULLNAT entries that are queried.</p>
+     * <p>The list of FULLNAT entries.</p>
      */
     @NameInMap("FullNatEntries")
     public java.util.List<ListFullNatEntriesResponseBodyFullNatEntries> fullNatEntries;
@@ -29,7 +29,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The ID of the VPC NAT gateway.</p>
+     * <p>The instance ID of the VPC NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-gw8054kn57y3hq3bv****</p>
@@ -38,10 +38,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>Indicates whether the token for the next query exists. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If the value of <strong>NextToken</strong> is empty, no next queries are sent.</li>
-     * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of FULLNAT entries returned.</p>
+     * <p>The total number of FULLNAT entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +131,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
 
     public static class ListFullNatEntriesResponseBodyFullNatEntries extends TeaModel {
         /**
-         * <p>The backend domain name for FULLNAT address translation in a FULLNAT entry.</p>
+         * <p>The backend domain name for FULLNAT address translation in the FULLNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.com</p>
@@ -140,7 +140,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String accessDomain;
 
         /**
-         * <p>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</p>
+         * <p>The backend IP address for FULLNAT address translation in the FULLNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -149,7 +149,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String accessIp;
 
         /**
-         * <p>The backend port that is used for port mapping in FULLNAT entries. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The backend port for port mapping in the FULLNAT entry. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -167,7 +167,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The IP resolved from the backend domain name for address translation in the FULLNAT entry.</p>
+         * <p>The IP address resolved from the backend domain name for address translation in the FULLNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -177,7 +177,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the FULLNAT entry.</p>
-         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 2 to 128 characters in length, and must start with a letter or Chinese character. The description cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -196,7 +196,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the FULLNAT entry.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name must start with a letter or Chinese character.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -207,10 +207,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the FULLNAT entry. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * <li><strong>Deleted</strong></li>
+         * <li><strong>Pending</strong>: being configured.</li>
+         * <li><strong>Available</strong>: available.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Deleted</strong>: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,10 +229,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String fullNatTableId;
 
         /**
-         * <p>The protocol of the packets that are forwarded. Valid values:</p>
+         * <p>The forwarding protocol type. Valid values: </p>
          * <ul>
-         * <li><strong>TCP</strong></li>
-         * <li><strong>UDP</strong></li>
+         * <li><strong>TCP</strong>: forwards TCP packets. </li>
+         * <li><strong>UDP</strong>: forwards UDP packets.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The NAT IP address that is used for address translation in FULLNAT entries.</p>
+         * <p>The NAT IP address that provides address translation in the FULLNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
@@ -251,7 +251,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String natIp;
 
         /**
-         * <p>The frontend port that is used for port mapping in FULLNAT entries. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>The frontend port for port mapping in the FULLNAT entry. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -260,7 +260,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String natIpPort;
 
         /**
-         * <p>The ID of the elastic network interface (ENI).</p>
+         * <p>The elastic network interface (ENI) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-gw80wedm8pq0tpr2****</p>
@@ -269,7 +269,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The type of the ENI. The value is set to <strong>Endpoint</strong>, which indicates a reverse endpoint.</p>
+         * <p>The type of the elastic network interface (ENI). The value is <strong>Endpoint</strong> (reverse endpoint).</p>
          * 
          * <strong>example:</strong>
          * <p>Endpoint</p>

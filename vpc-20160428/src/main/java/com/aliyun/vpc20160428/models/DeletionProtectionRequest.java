@@ -8,7 +8,7 @@ public class DeletionProtectionRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeletionProtectionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance for which you want to set deletion protection in Settings.</p>
+     * <p>The ID of the instance for which you want to set deletion protection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,9 +33,9 @@ public class DeletionProtectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables deletion protection.</p>
+     * <li><p><strong>true</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: disables deletion protection.</p>
+     * <li><p><strong>false</strong>: Disabled.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -47,7 +47,7 @@ public class DeletionProtectionRequest extends TeaModel {
     public Boolean protectionEnable;
 
     /**
-     * <p>The region ID of the instance for which you want to enable or disable deletion protection. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the instance for which you want to set deletion protection. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,9 +63,9 @@ public class DeletionProtectionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the instance for which you want to enable or disable deletion protection. Valid values:</p>
+     * <p>The type of instance for which you want to set deletion protection. Valid values:</p>
      * <ul>
-     * <li><p><strong>EIP</strong>: elastic IP address (EIP).</p>
+     * <li><p><strong>EIP</strong>: elastic IP address.</p>
      * </li>
      * <li><p><strong>CBWP</strong>: Internet Shared Bandwidth.</p>
      * </li>

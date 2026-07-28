@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
-     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> has a value, the value is the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>739CA01C-92EB-4C69-BCC0-280149C6F41E</p>
@@ -36,7 +36,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     public String totalCount;
 
     /**
-     * <p>The details about the traffic mirror session.</p>
+     * <p>The details of traffic mirror sessions.</p>
      */
     @NameInMap("TrafficMirrorSessions")
     public java.util.List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions> trafficMirrorSessions;
@@ -122,7 +122,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
     public static class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions extends TeaModel {
         /**
-         * <p>The time when the session is created.</p>
+         * <p>The time when the traffic mirror session was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-05T15:26Z</p>
@@ -131,10 +131,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Indicates whether the traffic mirror session was enabled.</p>
+         * <p>Indicates whether the traffic mirror session is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong> </li>
-         * <li><strong>true</strong></li>
+         * <li><p><strong>false</strong> (default): The traffic mirror session is not enabled.</p>
+         * </li>
+         * <li><p><strong>true</strong>: The traffic mirror session is enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +146,13 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The maximum transmission unit.</p>
+         * <p>The length of the original packet to be mirrored (excluding the VXLAN packet length). Default value: <strong>1500</strong>. Valid values: <strong>64</strong> to <strong>8500</strong>. Unit: bytes.</p>
+         * <ul>
+         * <li><p>This parameter affects the packet length received by the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
+         * </li>
+         * <li><p>This parameter is available only in specific regions. For more information, see the mirrored packet length parameter description in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirrors</a>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1500</p>
@@ -163,7 +171,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the resource group to which the traffic mirror session belongs.</p>
+         * <p>The ID of the resource group to which the traffic mirroring session belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4ph****</p>
@@ -172,13 +180,13 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tag list.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags> tags;
 
         /**
-         * <p>The ID of the filter.</p>
+         * <p>The instance ID of the traffic mirror filter.</p>
          * 
          * <strong>example:</strong>
          * <p>tmf-j6cmls82xnc86vtpe****</p>
@@ -187,10 +195,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String trafficMirrorFilterId;
 
         /**
-         * <p>The status of the traffic mirror session.</p>
+         * <p>The business status of the traffic mirror session. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>FinancialLocked</strong></li>
+         * <li><p><strong>Normal</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>FinancialLocked</strong>: financial lock.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +219,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String trafficMirrorSessionDescription;
 
         /**
-         * <p>The ID of the traffic mirror session.</p>
+         * <p>The instance ID of the traffic mirror session.</p>
          * 
          * <strong>example:</strong>
          * <p>tms-j6cla50buc44ap8tu****</p>
@@ -229,10 +239,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         /**
          * <p>The status of the traffic mirror session. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Created</strong></li>
-         * <li><strong>Modifying</strong></li>
-         * <li><strong>Deleting</strong></li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Created</strong>: created.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,13 +252,13 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String trafficMirrorSessionStatus;
 
         /**
-         * <p>The ID of the traffic mirror source.</p>
+         * <p>The instance IDs of the traffic mirror sources.</p>
          */
         @NameInMap("TrafficMirrorSourceIds")
         public java.util.List<String> trafficMirrorSourceIds;
 
         /**
-         * <p>The ID of the traffic mirror destination.</p>
+         * <p>The instance ID of the traffic mirror destination.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-j6c2fp57q8rr47rp****</p>
@@ -257,10 +267,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String trafficMirrorTargetId;
 
         /**
-         * <p>The type of the traffic mirror destination. Valid values:</p>
+         * <p>The traffic mirror destination type. Valid values:</p>
          * <ul>
-         * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI)</li>
-         * <li><strong>SLB</strong>: an internal-facing Server Load Balancer (SLB) instance</li>
+         * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC).</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: internal-facing SLB instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +282,7 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public String trafficMirrorTargetType;
 
         /**
-         * <p>You can specify VNIs to distinguish different mirrored traffic.</p>
+         * <p>The VNI used to distinguish different mirrored data.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

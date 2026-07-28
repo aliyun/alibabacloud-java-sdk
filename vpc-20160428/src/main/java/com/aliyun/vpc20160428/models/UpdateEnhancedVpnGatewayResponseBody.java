@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether BGP routes are automatically propagated to the VPC. Valid values:</p>
+     * <p>Indicates whether BGP route automatic propagation to the VPC is enabled. Valid values:</p>
      * <ul>
      * <li><p><strong>true</strong>: Automatic propagation is enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: Automatic propagation is disabled.</p>
+     * <li><p><strong>false</strong>: Automatic propagation is not enabled.</p>
      * </li>
      * </ul>
      * 
@@ -20,8 +20,8 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public Boolean autoPropagate;
 
     /**
-     * <p>The timestamp when the Enhanced VPN Gateway was created. Unit: milliseconds.<br>
-     * This value is a Unix timestamp that represents the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.<br></p>
+     * <p>The timestamp when the enhanced VPN gateway instance was created. Unit: milliseconds.<br>
+     * The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1492753580000</p>
@@ -30,7 +30,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The description of the Enhanced VPN Gateway.</p>
+     * <p>The description of the enhanced VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -39,7 +39,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the second vSwitch with which the Enhanced VPN Gateway is associated.</p>
+     * <p>The ID of the second vSwitch associated with the enhanced VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-p0w95ql6tmr2ludkt****</p>
@@ -48,11 +48,11 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String disasterRecoveryVSwitchId;
 
     /**
-     * <p>Indicates whether BGP is enabled for the Enhanced VPN Gateway. Valid values:<br></p>
+     * <p>The enabling status of the BGP feature for the enhanced VPN gateway. Valid values:<br></p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
+     * <li><p><strong>true</strong>: enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
+     * <li><p><strong>false</strong>: disabled.</p>
      * </li>
      * </ul>
      * 
@@ -62,16 +62,13 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     @NameInMap("EnableBgp")
     public Boolean enableBgp;
 
-    /**
-     * <p>The ENIs created for the Enhanced VPN Gateway.</p>
-     */
     @NameInMap("EniInstanceIds")
     public UpdateEnhancedVpnGatewayResponseBodyEniInstanceIds eniInstanceIds;
 
     /**
-     * <p>The type of the Enhanced VPN Gateway. Only <strong>Enhanced.SiteToSite</strong> is returned, which indicates an enhanced site-to-site VPN gateway that supports only the IPsec-VPN feature.</p>
+     * <p>The type of the enhanced VPN gateway. Valid values:</p>
      * <ul>
-     * <li><strong>Enhanced.SiteToSite</strong>, an enhanced site-to-cloud VPN that supports only the IPsec feature.</li>
+     * <li><strong>Enhanced.SiteToSite</strong>: enhanced site-to-cloud VPN that supports only IPsec functionality.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +78,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The name of the Enhanced VPN Gateway.</p>
+     * <p>The name of the enhanced VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -90,9 +87,9 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The network type of the Enhanced VPN Gateway. Valid values:</p>
+     * <p>The network type of the enhanced VPN gateway. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong> (default): a public gateway.</li>
+     * <li><strong>public</strong> (default): public VPN gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,8 +108,8 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the Enhanced VPN Gateway belongs.<br>
-     * You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the details of resource groups.<br></p>
+     * <p>The ID of the resource group to which the enhanced VPN gateway instance belongs.<br>
+     * You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>
@@ -121,18 +118,13 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the Enhanced VPN Gateway.</p>
+     * <p>The status of the enhanced VPN gateway.</p>
      * <ul>
-     * <li><p><strong>init</strong>: The gateway is being initialized.</p>
-     * </li>
-     * <li><p><strong>provisioning</strong>: The gateway is being provisioned.</p>
-     * </li>
-     * <li><p><strong>active</strong>: The gateway is active.</p>
-     * </li>
-     * <li><p><strong>updating</strong>: The gateway is being updated.</p>
-     * </li>
-     * <li><p><strong>deleting</strong>: The gateway is being deleted.</p>
-     * </li>
+     * <li><strong>init</strong>: initializing.</li>
+     * <li><strong>provisioning</strong>: preparing.</li>
+     * <li><strong>active</strong>: normal.</li>
+     * <li><strong>updating</strong>: updating.</li>
+     * <li><strong>deleting</strong>: deleting.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,7 +134,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>A JSON string that indicates the features supported by the Enhanced VPN Gateway.</p>
+     * <p>The list of features supported by the enhanced VPN gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;VpnEnableBgp&quot;: true}</p>
@@ -150,14 +142,11 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     @NameInMap("Tag")
     public String tag;
 
-    /**
-     * <p>The tags of the Enhanced VPN Gateway.</p>
-     */
     @NameInMap("Tags")
     public UpdateEnhancedVpnGatewayResponseBodyTags tags;
 
     /**
-     * <p>The ID of the vSwitch associated with the Enhanced VPN Gateway.</p>
+     * <p>The ID of the vSwitch associated with the enhanced VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1y9ovl1cu9ou4tv****</p>
@@ -166,7 +155,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC to which the Enhanced VPN Gateway belongs.</p>
+     * <p>The ID of the VPC to which the enhanced VPN gateway instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1ub1yt9cvakoel****</p>
@@ -175,7 +164,7 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the Enhanced VPN Gateway.</p>
+     * <p>The ID of the enhanced VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
@@ -184,9 +173,9 @@ public class UpdateEnhancedVpnGatewayResponseBody extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The type of the Enhanced VPN Gateway.</p>
+     * <p>The type of the enhanced VPN gateway.</p>
      * <ul>
-     * <li><strong>Normal</strong> (default): standard type.</li>
+     * <li><strong>Normal</strong> (default): standard.</li>
      * </ul>
      * 
      * <strong>example:</strong>

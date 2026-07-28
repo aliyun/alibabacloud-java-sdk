@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalAccelerationInstanceRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the GA instance. Set the value to <strong>10</strong>. Unit: Mbit/s.</p>
+     * <p>The peak bandwidth of the Alibaba Cloud Global Accelerator (GA) instance. Unit: Mbit/s. Valid value: <strong>10</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class CreateGlobalAccelerationInstanceRequest extends TeaModel {
     public String bandwidth;
 
     /**
-     * <p>The bandwidth type. Valid values:</p>
+     * <p>The bandwidth type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Sharing</strong></li>
-     * <li><strong>Exclusive</strong></li>
+     * <li><p><strong>Sharing</strong>: shared bandwidth.</p>
+     * </li>
+     * <li><p><strong>Exclusive</strong>: dedicated bandwidth.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,8 +30,8 @@ public class CreateGlobalAccelerationInstanceRequest extends TeaModel {
     public String bandwidthType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. </p>
+     * <p>The client generates the value of this parameter. Ensure that the value is unique among different requests. The value can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -38,8 +40,8 @@ public class CreateGlobalAccelerationInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the GA instance.</p>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the Alibaba Cloud Global Accelerator (GA) instance. </p>
+     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character, but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>My GA</p>
@@ -48,8 +50,8 @@ public class CreateGlobalAccelerationInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the GA instance.</p>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the Alibaba Cloud Global Accelerator (GA) instance.  </p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-), but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>GA-1</p>
@@ -64,8 +66,8 @@ public class CreateGlobalAccelerationInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the GA instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the Alibaba Cloud Global Accelerator (GA) instance resides. </p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,12 +83,16 @@ public class CreateGlobalAccelerationInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The acceleration area. Valid values:</p>
+     * <p>The area where the accelerated service resides. Valid values:</p>
      * <ul>
-     * <li><strong>china-mainland</strong></li>
-     * <li><strong>north-america</strong></li>
-     * <li><strong>asia-pacific</strong></li>
-     * <li><strong>europe</strong></li>
+     * <li><p><strong>china-mainland</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>north-america</strong>: North America.</p>
+     * </li>
+     * <li><p><strong>asia-pacific</strong>: Asia-Pacific.</p>
+     * </li>
+     * <li><p><strong>europe</strong>: Europe.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -8,7 +8,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
     public DescribeIPv6TranslatorAclListsResponseBodyIpv6TranslatorAcls ipv6TranslatorAcls;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

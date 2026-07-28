@@ -7,10 +7,8 @@ public class DescribeAccessPointsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh-CN</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en-US</strong> (default): English.</p>
-     * </li>
+     * <li><strong>zh-CN</strong>: Chinese.</li>
+     * <li><strong>en-US</strong> (default): English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +30,7 @@ public class DescribeAccessPointsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,8 +39,8 @@ public class DescribeAccessPointsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the access point is located.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the access point.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

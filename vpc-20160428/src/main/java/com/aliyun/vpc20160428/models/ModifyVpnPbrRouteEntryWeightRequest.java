@@ -8,7 +8,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>The new weight of the policy-based route. Valid values:</p>
      * <ul>
-     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
-     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -57,13 +57,12 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority of the policy-based route.</p>
+     * <p>Policy priority of the policy-based route.</p>
      * <ul>
-     * <li><p>If the route was not assigned a priority, this parameter is optional.</p>
+     * <li><p>If no priority was previously configured for the policy-based route, you do not need to specify this parameter.</p>
      * </li>
-     * <li><p>If the route was assigned a priority, this parameter is optional.</p>
-     * <pre><code>If you specify this parameter, set the value to the priority that was assigned to the policy-based route. Otherwise, the operation fails.
-     * </code></pre>
+     * <li><p>If a priority was previously configured for the policy-based route, this parameter is optional.</p>
+     * <p> If you specify this parameter, enter policy priority that was previously configured for the policy-based route. If you enter a different value, the operation fails.</p>
      * </li>
      * </ul>
      * 
@@ -74,7 +73,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +109,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     public String routeSource;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The instance ID of the VPN gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,8 +121,8 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>The original weight of the policy-based route. Valid values:</p>
      * <ul>
-     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
-     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

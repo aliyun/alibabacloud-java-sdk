@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePublicIpAddressResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status codes returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response messages.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -41,7 +41,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The range of the public IP addresses of the VPC in the region.</p>
+     * <p>The range of public IP addresses in a virtual private cloud (VPC) in the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>110.11.1.0/24</p>
@@ -50,7 +50,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public java.util.List<String> publicIpAddress;
 
     /**
-     * <p>The ID of the region to which the public IP addresses belong.</p>
+     * <p>The region ID of the public IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -68,10 +68,12 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the query was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The query was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The query failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +83,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

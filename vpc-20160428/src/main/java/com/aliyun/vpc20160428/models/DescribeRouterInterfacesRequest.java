@@ -11,10 +11,12 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public java.util.List<DescribeRouterInterfacesRequestFilter> filter;
 
     /**
-     * <p>Specifies whether renewal data is included. Valid values:</p>
+     * <p>Specifies whether to include renewal data. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong> (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -46,7 +48,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the router interface.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,8 +58,8 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource Group ID.</p>
-     * <p>For more information about resource groups, please refer to <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group?</a></p>
+     * <p>The resource group ID.</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -164,21 +166,31 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
 
     public static class DescribeRouterInterfacesRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</p>
+         * <p>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</p>
          * <ul>
-         * <li><strong>RouterInterfaceId</strong>: the ID of the router interface.</li>
-         * <li><strong>RouterId</strong>: the ID of the router.</li>
-         * <li><strong>RouterType</strong>: the router type. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</li>
-         * <li><strong>RouterInterfaceOwnerId</strong>: the ID of the Alibaba Cloud account to which the router interface belongs.</li>
-         * <li><strong>OppositeInterfaceId</strong>: the ID of the peer router interface.</li>
-         * <li><strong>OppositeRouterType</strong>: the type of the peer router interface. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</li>
-         * <li><strong>OppositeRouterId</strong>: the ID of the peer router.</li>
-         * <li><strong>OppositeInterfaceOwnerId</strong>: the ID of the Alibaba Cloud account to which the peer router interface belongs.</li>
-         * <li><strong>Status</strong>: the status of the router interface.</li>
-         * <li><strong>Name</strong>: the name of the router interface.</li>
+         * <li><p><strong>RouterInterfaceId</strong>: the router interface ID.</p>
+         * </li>
+         * <li><p><strong>RouterId</strong>: the router ID.</p>
+         * </li>
+         * <li><p><strong>RouterType</strong>: the router type. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</p>
+         * </li>
+         * <li><p><strong>RouterInterfaceOwnerId</strong>: the ID of the account that owns the router interface.</p>
+         * </li>
+         * <li><p><strong>OppositeInterfaceId</strong>: the peer router interface ID.</p>
+         * </li>
+         * <li><p><strong>OppositeRouterType</strong>: the peer router interface type. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</p>
+         * </li>
+         * <li><p><strong>OppositeRouterId</strong>: the peer router interface ID.</p>
+         * </li>
+         * <li><p><strong>OppositeInterfaceOwnerId</strong>: the ID of the account that owns the peer router interface.</p>
+         * </li>
+         * <li><p><strong>Status</strong>: the router interface status.</p>
+         * </li>
+         * <li><p><strong>Name</strong>: the router interface name.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.</p>
+         * <p>Multiple values for a filter condition are evaluated by using the OR operator. A result is returned if any of the values match. Filter conditions are evaluated by using the AND operator. A result is returned only if all filter conditions are matched.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +200,7 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+         * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. Multiple filter values are evaluated by using the OR operator. A result is returned if any of the filter values match.</p>
          * 
          * <strong>example:</strong>
          * <p>Filter.1.Active 1</p>
@@ -221,8 +233,8 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
 
     public static class DescribeRouterInterfacesRequestTags extends TeaModel {
         /**
-         * <p>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</p>
-         * <p>A tag key can support up to 128 characters, cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * <p>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -231,8 +243,8 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</p>
-         * <p>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIpsecServerLogsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of log entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,16 +14,16 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>Log information list.</p>
+     * <p>The list of log entries.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
-     * <p>Indicates whether the log is accurate. Valid values:</p>
+     * <p>Indicates whether the queried logs are accurate. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: accurate</li>
-     * <li><strong>false</strong>: inaccurate</li>
+     * <li><strong>true</strong>: Accurate.</li>
+     * <li><strong>false</strong>: Not accurate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
     public Boolean isCompleted;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class ListIpsecServerLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DEDAC5B1-9292-5BF7-BDDF-61BA58CFB2FB</p>

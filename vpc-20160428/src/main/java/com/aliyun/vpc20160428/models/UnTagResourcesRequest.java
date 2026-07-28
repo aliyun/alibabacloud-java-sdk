@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+     * <p>Specifies whether to unbind all tags from the resources. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong>: Unbinds all tags from the resources.</li>
+     * <li><strong>false</strong> (default): Does not unbind all tags from the resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class UnTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the resources.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UnTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,29 @@ public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong></li>
-     * <li><strong>VSWITCH</strong></li>
-     * <li><strong>ROUTETABLE</strong></li>
-     * <li><strong>EIP</strong></li>
-     * <li><strong>VpnGateway</strong></li>
-     * <li><strong>NATGATEWAY</strong></li>
-     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
+     * <li><strong>VSWITCH</strong>: vSwitch instance.</li>
+     * <li><strong>ROUTETABLE</strong>: route table instance.</li>
+     * <li><strong>EIP</strong>: elastic IP address (EIP) instance.</li>
+     * <li><strong>VPNGATEWAY</strong>: VPN gateway instance.</li>
+     * <li><strong>NATGATEWAY</strong>: NAT gateway instance.</li>
+     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: Internet Shared Bandwidth instance.</li>
+     * <li><strong>PREFIXLIST</strong>: prefix list instance.</li>
+     * <li><strong>PUBLICIPADDRESSPOOL</strong>: IP address pool instance.</li>
+     * <li><strong>IPV4GATEWAY</strong>: IPv4 gateway instance.</li>
+     * <li><strong>IPV6GATEWAY</strong>: IPv6 gateway instance.</li>
+     * <li><strong>NETWORKACL</strong>: network ACL instance.</li>
+     * <li><strong>TRAFFICMIRRORFILTER</strong>: traffic mirror filter instance.</li>
+     * <li><strong>TRAFFICMIRRORSESSION</strong>: traffic mirror session instance.</li>
+     * <li><strong>FLOWLOG</strong>: flow log instance.</li>
+     * <li><strong>HAVIP</strong>: high-availability virtual IP address (HaVip) instance.</li>
+     * <li><strong>DHCPOPTIONSSET</strong>: DHCP options set instance.</li>
+     * <li><strong>GATEWAYENDPOINT</strong>: gateway endpoint instance.</li>
+     * <li><strong>IPV6ADDRESS</strong>: IPv6 address instance.</li>
      * </ul>
+     * <blockquote>
+     * <p>The resource type value is case-insensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,8 +85,8 @@ public class UnTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</p>
-     * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>The tag keys to unbind. You can specify up to 20 tag keys.</p>
+     * <p>Each tag key can be up to 128 characters in length, can be an empty string, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>FinanceDept</p>

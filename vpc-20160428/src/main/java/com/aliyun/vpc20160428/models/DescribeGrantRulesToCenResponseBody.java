@@ -8,7 +8,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public DescribeGrantRulesToCenResponseBodyCenGrantRules cenGrantRules;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -26,7 +26,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F5BB78C8-5F41-464F-B9FF-5E0A7198BA26</p>

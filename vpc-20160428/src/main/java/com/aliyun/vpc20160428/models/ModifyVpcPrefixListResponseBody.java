@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcPrefixListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The instance ID of the prefix list.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-0b7hwu67****</p>
@@ -14,7 +14,7 @@ public class ModifyVpcPrefixListResponseBody extends TeaModel {
     public String prefixListId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>

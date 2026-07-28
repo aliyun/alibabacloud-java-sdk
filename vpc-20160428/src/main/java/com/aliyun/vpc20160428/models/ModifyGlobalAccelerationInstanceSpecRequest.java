@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyGlobalAccelerationInstanceSpecRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the GA instance. Unit: Mbit/s. Set the value to <strong>10</strong>.</p>
+     * <p>The peak bandwidth of the Alibaba Cloud Global Accelerator (GA) instance. Unit: Mbit/s. Valid value: <strong>10</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends TeaModel {
     public String bandwidth;
 
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,8 @@ public class ModifyGlobalAccelerationInstanceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the GA instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the Alibaba Cloud Global Accelerator (GA) instance is deployed. </p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

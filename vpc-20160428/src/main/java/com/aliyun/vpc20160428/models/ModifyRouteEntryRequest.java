@@ -18,7 +18,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
      * <p>The IPv4 CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</p>
      * <blockquote>
      * <p>If the <strong>RouteEntryId</strong> parameter is not specified, the <strong>DestinationCidrBlock</strong> and <strong>RouteTableId</strong> parameters are required.
-     * To change the IPv4 CIDR block of a route to a <strong>prefix list</strong>, specify the <strong>RouteEntryId</strong> parameter. The <strong>DestinationCidrBlock</strong> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</p>
+     * To change the IPv4 CIDR block of a route to a <strong>prefix list</strong>, you must specify the <strong>RouteEntryId</strong> parameter. The <strong>DestinationCidrBlock</strong> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,14 +29,14 @@ public class ModifyRouteEntryRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <p><strong>true</strong>: sends the request without modifying the route. The system checks whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): sends a Normal request. After the request passes the check, a 2xx HTTP status code is returned and the route is modified.</p>
+     * <p><strong>true</strong>: performs a dry run without modifying the route. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * <p><strong>false</strong> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the route is modified.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The new next hop instance ID of the route.</p>
+     * <p>The new next hop instance ID of the route entry.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp17y37ytsenqyim****</p>
@@ -45,7 +45,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
     public String newNextHopId;
 
     /**
-     * <p>The new next hop type of the route. Valid values:</p>
+     * <p>The new next hop type of the route entry. Valid values:</p>
      * <ul>
      * <li><p><strong>Instance</strong>: ECS instance.</p>
      * </li>
@@ -53,7 +53,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
      * </li>
      * <li><p><strong>RouterInterface</strong>: vRouter interface.</p>
      * </li>
-     * <li><p><strong>NetworkInterface</strong>: elastic network interface (ENI).</p>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interfaces (ENIs).</p>
      * </li>
      * <li><p><strong>VpnGateway</strong>: VPN gateway.</p>
      * </li>
@@ -61,7 +61,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
      * </li>
      * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
      * </li>
-     * <li><p><strong>Attachment</strong>: transit router.</p>
+     * <li><p><strong>Attachment</strong>: forward router.</p>
      * </li>
      * <li><p><strong>VpcPeer</strong>: VPC peering connection.</p>
      * </li>
@@ -72,6 +72,8 @@ public class ModifyRouteEntryRequest extends TeaModel {
      * <li><p><strong>Ecr</strong>: Express Connect Router (ECR).</p>
      * </li>
      * <li><p><strong>GatewayLoadBalancerEndpoint</strong>: Gateway Load Balancer endpoint (GWLBe).</p>
+     * </li>
+     * <li><p><strong>RouteTargetGroup</strong>: route target group.</p>
      * </li>
      * </ul>
      * 

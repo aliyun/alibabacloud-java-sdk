@@ -17,7 +17,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public Integer count;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paginated query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

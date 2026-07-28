@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEipGatewayInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the secondary ENI that is associated with the EIP.</p>
+     * <p>The ID of the secondary elastic network interfaces (ENIs) to which the EIP that you want to query is attached. This parameter refers to the network interface controller (NIC) associated with the EIP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeEipGatewayInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the EIP that you want to query belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

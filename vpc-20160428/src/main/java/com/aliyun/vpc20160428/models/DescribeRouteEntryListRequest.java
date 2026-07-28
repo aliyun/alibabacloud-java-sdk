@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListRequest extends TeaModel {
     /**
-     * <p>The list of destination CIDR blocks of route entries.</p>
+     * <p>The list of destination CIDR blocks of routes.</p>
      */
     @NameInMap("DestCidrBlockList")
     public java.util.List<String> destCidrBlockList;
 
     /**
-     * <p>The destination CIDR block of the route entry. Both IPv4 and IPv6 CIDR blocks are supported.</p>
+     * <p>The destination CIDR block of the route. Both IPv4 and IPv6 CIDR blocks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.2.0/24</p>
@@ -22,9 +22,9 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     /**
      * <p>The version of the IP protocol. Valid values:</p>
      * <ul>
-     * <li><p><strong>ipv4</strong>: IPv4 protocol.</p>
+     * <li><p><strong>ipv4</strong>: IPv4.</p>
      * </li>
-     * <li><p><strong>ipv6</strong>: IPv6 protocol.</p>
+     * <li><p><strong>ipv6</strong>: IPv6.</p>
      * </li>
      * </ul>
      * 
@@ -35,7 +35,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The number of entries to return per page during a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public Integer maxResult;
 
     /**
-     * <p>The ID of the next hop instance.</p>
+     * <p>The instance ID of the next hop.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-bp10zyaph5cc8b7c7****</p>
@@ -53,19 +53,19 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String nextHopId;
 
     /**
-     * <p>The type of the next hop. Valid values:</p>
+     * <p>The next hop type. Valid values:</p>
      * <ul>
      * <li><p><strong>Instance</strong> (default): ECS instance.</p>
      * </li>
-     * <li><p><strong>HaVip</strong>: high-availability virtual IP address (HAVIP).</p>
+     * <li><p><strong>HaVip</strong>: high-availability virtual IP address.</p>
      * </li>
      * <li><p><strong>VpnGateway</strong>: VPN gateway.</p>
      * </li>
      * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
      * </li>
-     * <li><p><strong>NetworkInterface</strong>: secondary elastic network interface.</p>
+     * <li><p><strong>NetworkInterface</strong>: secondary elastic network interface controller (NIC).</p>
      * </li>
-     * <li><p><strong>RouterInterface</strong>: router interface.</p>
+     * <li><p><strong>RouterInterface</strong>: routing interface.</p>
      * </li>
      * <li><p><strong>IPv6Gateway</strong>: IPv6 gateway.</p>
      * </li>
@@ -75,7 +75,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
      * </li>
      * <li><p><strong>GatewayEndpoint</strong>: gateway endpoint.</p>
      * </li>
-     * <li><p><strong>Ecr</strong>: Express Connect Router.</p>
+     * <li><p><strong>Ecr</strong>: Express Connect Router (ECR).</p>
      * </li>
      * </ul>
      * 
@@ -86,10 +86,10 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String nextHopType;
 
     /**
-     * <p>Specifies whether a next query token (Token) exists. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first query or if no next query exists.</li>
-     * <li>If a next query exists, set the value to the NextToken value returned from the previous API call.</li>
+     * <li>If this is the first request or no subsequent query exists, leave this parameter empty.</li>
+     * <li>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,8 +105,8 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the route table to which the route entry belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the route table to which the route belongs.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route entry to query.</p>
+     * <p>The ID of the route that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>rte-bp1mnnr2al0naomnp****</p>
@@ -131,7 +131,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String routeEntryId;
 
     /**
-     * <p>The name of the route entry.</p>
+     * <p>The name of the route.</p>
      * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
      * <li><strong>System</strong>: system route.</li>
      * <li><strong>BGP</strong>: BGP route.</li>
      * <li><strong>CEN</strong>: Cloud Enterprise Network (CEN) route.</li>
-     * <li><strong>ECR</strong>: Express Connect Router route.</li>
+     * <li><strong>ECR</strong>: Express Connect Router (ECR) route.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String routeEntryType;
 
     /**
-     * <p>The ID of the route table to query.</p>
+     * <p>The ID of the route table that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -167,8 +167,8 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The type of route service. If this field is empty, it indicates that the route is not managed.</p>
-     * <p>Valid value: <strong>TR</strong>, which indicates that the managed type is transit router.</p>
+     * <p>The type of route hosting. If this field is empty, the route is not hosted.</p>
+     * <p>Valid values: <strong>TR</strong>, which indicates that the hosting type is transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>TR</p>

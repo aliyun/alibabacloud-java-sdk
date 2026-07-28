@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of log entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,10 +17,10 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
     public DescribeVpnConnectionLogsResponseBodyData data;
 
     /**
-     * <p>Indicates whether the log is accurate. Valid values:</p>
+     * <p>Indicates whether the queried logs are accurate. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Accurate.</li>
+     * <li><strong>false</strong>: Not accurate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
     public Boolean isCompleted;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +39,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

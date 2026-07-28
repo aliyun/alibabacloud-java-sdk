@@ -8,7 +8,7 @@ public class AssociateNetworkAclRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,11 @@ public class AssociateNetworkAclRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run.</li>
+     * <li>false (default): sends the request.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -152,8 +156,8 @@ public class AssociateNetworkAclRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of resource with which you want to associate the network ACL. Set the value to <strong>VSwitch</strong>.</p>
-         * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>29</strong>. You can associate a network ACL with up to 30 vSwitches.</p>
+         * <p>The type of the associated resource. Valid values: <strong>VSwitch</strong>.</p>
+         * <p>Valid values of <strong>N</strong>: <strong>0</strong> to <strong>29</strong>. You can associate up to 30 resources.</p>
          * 
          * <strong>example:</strong>
          * <p>VSwitch</p>

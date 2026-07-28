@@ -188,7 +188,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
          * <li><strong>VpnIPsecQuota</strong>: VPN gateway IPsec-VPN connection quota.</li>
          * <li><strong>VpnPbrRouteQuota</strong>: VPN gateway policy-based route quota.</li>
          * <li><strong>VcoConfigConsistency</strong>: IPsec configuration consistency.</li>
-         * <li><strong>VcoUserInternetIpConnectivity</strong>: public connectivity of the customer gateway.</li>
+         * <li><strong>VcoUserInternetIpConnectivity</strong>: public network connectivity of the customer gateway.</li>
          * <li><strong>VcoPrivateConnectivity</strong>: private network connectivity.</li>
          * </ul>
          * <p>For more information about each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</p>
@@ -205,41 +205,41 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
          * <ul>
          * <li><strong>RouteEntryConflict</strong>: The system returns information about the route conflict.</li>
          * <li><strong>VpnRouteQuota</strong>:<ul>
-         * <li><strong>quotaName</strong>: the ID of the destination route quota.</li>
-         * <li><strong>quantity</strong>: the number of destination routes that the current VPN gateway instance supports.</li>
-         * <li><strong>used</strong>: the number of destination routes that have been created for the current VPN gateway instance.</li>
+         * <li><strong>quotaName</strong>: The destination route quota ID.</li>
+         * <li><strong>quantity</strong>: The number of destination routes that the current VPN gateway instance supports.</li>
+         * <li><strong>used</strong>: The number of destination routes that have been created for the current VPN gateway instance.</li>
          * </ul>
          * </li>
          * <li><strong>VpnIPsecQuota</strong>:<ul>
-         * <li><strong>quotaName</strong>: the ID of the IPsec-VPN connection quota.</li>
-         * <li><strong>quantity</strong>: the number of IPsec-VPN connections that the current VPN gateway instance supports.</li>
-         * <li><strong>used</strong>: the number of IPsec-VPN connections that have been created for the current VPN gateway instance.</li>
+         * <li><strong>quotaName</strong>: The IPsec-VPN connection quota ID.</li>
+         * <li><strong>quantity</strong>: The number of IPsec-VPN connections that the current VPN gateway instance supports.</li>
+         * <li><strong>used</strong>: The number of IPsec-VPN connections that have been created for the current VPN gateway instance.</li>
          * </ul>
          * </li>
          * <li><strong>VpnPbrRouteQuota</strong>:<ul>
-         * <li><strong>quotaName</strong>: the ID of the policy-based route quota.</li>
-         * <li><strong>quantity</strong>: the number of policy-based routes that the current VPN gateway instance supports.</li>
-         * <li><strong>used</strong>: the number of policy-based routes that have been created for the current VPN gateway instance.</li>
+         * <li><strong>quotaName</strong>: The policy-based route quota ID.</li>
+         * <li><strong>quantity</strong>: The number of policy-based routes that the current VPN gateway instance supports.</li>
+         * <li><strong>used</strong>: The number of policy-based routes that have been created for the current VPN gateway instance.</li>
          * </ul>
          * </li>
          * <li><strong>VcoConfigConsistency</strong>:<ul>
-         * <li><strong>vcoLackConf</strong>: the system cannot obtain the configuration of the peer end of the IPsec-VPN connection.</li>
-         * <li><strong>vcoRunningConf</strong>: the configuration that has been added to the peer end of the IPsec-VPN connection.</li>
-         * <li><strong>vcoDiffConf</strong>: the list of configurations that are inconsistent between the local end and the peer end of the IPsec-VPN connection.</li>
-         * <li><strong>vcoConf</strong>: the configuration that has been added to the local end of the IPsec-VPN connection.</li>
+         * <li><strong>vcoLackConf</strong>: The system cannot obtain the configuration of the peer end of the IPsec-VPN connection.</li>
+         * <li><strong>vcoRunningConf</strong>: The configuration that has been added to the peer end of the IPsec-VPN connection.</li>
+         * <li><strong>vcoDiffConf</strong>: The list of configurations that are inconsistent between the local end and the peer end of the IPsec-VPN connection.</li>
+         * <li><strong>vcoConf</strong>: The configuration that has been added to the local end of the IPsec-VPN connection.</li>
          * </ul>
          * </li>
          * <li><strong>VcoUserInternetIpConnectivity</strong>:<ul>
-         * <li><strong>targetIp</strong>: the public IP address of the customer gateway.</li>
-         * <li><strong>rtt</strong>: the latency when the system accesses the public IP address of the customer gateway. Unit: ms.</li>
-         * <li><strong>lossRate</strong>: the packet loss rate when the system accesses the public IP address of the customer gateway.</li>
+         * <li><strong>targetIp</strong>: The public IP address of the customer gateway.</li>
+         * <li><strong>rtt</strong>: The latency when the system accesses the public IP address of the customer gateway. Unit: ms.</li>
+         * <li><strong>lossRate</strong>: The packet loss rate when the system accesses the public IP address of the customer gateway.</li>
          * </ul>
          * </li>
          * <li><strong>VcoPrivateConnectivity</strong>:<ul>
-         * <li><strong>targetIp</strong>: the source IP address.</li>
-         * <li><strong>srcIp</strong>: the destination IP address.</li>
-         * <li><strong>rtt</strong>: the latency when the source IP address accesses the destination IP address. Unit: ms.</li>
-         * <li><strong>lossRate</strong>: the packet loss rate when the source IP address accesses the destination IP address.</li>
+         * <li><strong>targetIp</strong>: The source IP address.</li>
+         * <li><strong>srcIp</strong>: The destination IP address.</li>
+         * <li><strong>rtt</strong>: The latency when the source IP address accesses the destination IP address. Unit: ms.</li>
+         * <li><strong>lossRate</strong>: The packet loss rate when the source IP address accesses the destination IP address.</li>
          * </ul>
          * </li>
          * </ul>

@@ -17,7 +17,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query.</p>
+     * <p>The number of entries per page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

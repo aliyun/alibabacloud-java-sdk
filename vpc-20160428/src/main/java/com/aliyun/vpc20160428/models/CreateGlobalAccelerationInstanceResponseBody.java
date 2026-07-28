@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ga-bp1fi6sq7npnicmjj****</p>
@@ -14,7 +14,7 @@ public class CreateGlobalAccelerationInstanceResponseBody extends TeaModel {
     public String globalAccelerationInstanceId;
 
     /**
-     * <p>The public IP address of the GA instance.</p>
+     * <p>The public IP address of the Alibaba Cloud Global Accelerator (GA) instance.</p>
      * <p>If <strong>BandwidthType</strong> is set to <strong>Sharing</strong>, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>

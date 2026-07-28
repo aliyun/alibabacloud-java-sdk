@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel {
     /**
-     * <p>The list of cross-account authorization information for the IPsec-VPN connection.</p>
+     * <p>The list of cross-account authorization information of the IPsec-VPN connection.</p>
      */
     @NameInMap("CrossAccountAuthorizations")
     public java.util.List<DescribeVpnCrossAccountAuthorizationsResponseBodyCrossAccountAuthorizations> crossAccountAuthorizations;
@@ -20,7 +20,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query.</p>
+     * <p>The number of entries per page when paging is used.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -102,7 +102,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         public Long aliUid;
 
         /**
-         * <p>The instance ID of the CEN instance to which the IPsec-VPN connection authorization is granted.</p>
+         * <p>The instance ID of the CEN instance to which the IPsec-VPN connection grants authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-vv8h0t3klfpaae****</p>
@@ -130,8 +130,8 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         public Long bindUid;
 
         /**
-         * <p>The timestamp when the cross-account authorization was created for the IPsec-VPN connection.</p>
-         * <p>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the cross-account authorization was created.</p>
+         * <p>The timestamp when the cross-account authorization of the IPsec-VPN connection was created.</p>
+         * <p>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the cross-account authorization was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1658201810000</p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteIPv6TranslatorRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ClientToken</p>
@@ -15,7 +15,7 @@ public class DeleteIPv6TranslatorRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the IPv6 Translation Service instance.</p>
+     * <p>The instance ID of the IPv6 Translation Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

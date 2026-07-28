@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the IPv6 Translation Service instance.</p>
+     * <p>The instance ID of the IPv6 Translation Service.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6transentry-xxxxxxxx</p>

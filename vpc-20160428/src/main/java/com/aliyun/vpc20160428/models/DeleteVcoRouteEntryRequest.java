@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteVcoRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
      * </blockquote>
@@ -18,7 +18,7 @@ public class DeleteVcoRouteEntryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The next hop of the destination route entry to be deleted.</p>
+     * <p>The next hop of the destination route entry to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,8 +40,8 @@ public class DeleteVcoRouteEntryRequest extends TeaModel {
     public String ownerAccount;
 
     /**
-     * <p>The region ID of the IPsec connection.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
+     * <p>The region ID of the IPsec-VPN connection.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DeleteVcoRouteEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination CIDR block of the destination route entry to be deleted.</p>
+     * <p>The destination CIDR block of the destination route entry to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class DeleteVcoRouteEntryRequest extends TeaModel {
     public String routeDest;
 
     /**
-     * <p>The ID of the IPsec connection.</p>
+     * <p>The ID of the IPsec-VPN connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class DeleteVcoRouteEntryRequest extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The weight of the destination route entry to be deleted. Valid values:</p>
+     * <p>The weight of the destination route entry to delete. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: low priority.</li>
      * <li><strong>100</strong>: high priority.</li>

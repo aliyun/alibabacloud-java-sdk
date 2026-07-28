@@ -16,7 +16,7 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     /**
      * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
      * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
@@ -175,12 +175,12 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         /**
          * <p>The association status of the prefix list. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong>: The association is created.</li>
-         * <li><strong>ModifyFailed</strong>: The association is not updated to the latest version.</li>
-         * <li><strong>Creating</strong>: The association is being created.</li>
-         * <li><strong>Modifying</strong>: The association is being modified.</li>
-         * <li><strong>Deleting</strong>: The association is being deleted.</li>
-         * <li><strong>Deleted</strong>: The association is deleted.</li>
+         * <li><strong>Created</strong>: succeeded.</li>
+         * <li><strong>ModifyFailed</strong>: not associated with the latest version.</li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
+         * <li><strong>Deleted</strong>: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

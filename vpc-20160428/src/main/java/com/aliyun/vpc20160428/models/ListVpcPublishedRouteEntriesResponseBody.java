@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether there is a token for the next query. Values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, it means there is no next query.</li>
-     * <li>If <strong>NextToken</strong> has a return value, this value indicates the token for the start of the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> has a value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1D0971B2-A35A-42C1-A44C-E91360C36C0B</p>
@@ -27,7 +27,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of route entry publishing status information.</p>
+     * <p>The list of route entry publish status information.</p>
      */
     @NameInMap("RouteEntries")
     public java.util.List<ListVpcPublishedRouteEntriesResponseBodyRouteEntries> routeEntries;
@@ -63,7 +63,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
 
     public static class ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets extends TeaModel {
         /**
-         * <p>The publishing status of the route entry in the publishing target.</p>
+         * <p>The publish status of the route entry in the publish target.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -72,7 +72,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public String publishStatus;
 
         /**
-         * <p>The ID of the route publishing target instance.</p>
+         * <p>The instance ID of the route publish target.</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-xvuqdfma6x57ei****</p>
@@ -81,7 +81,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public String publishTargetInstanceId;
 
         /**
-         * <p>The type of the route publishing target.</p>
+         * <p>The route publish target.</p>
          * 
          * <strong>example:</strong>
          * <p>ECR</p>
@@ -140,13 +140,13 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public String routeEntryId;
 
         /**
-         * <p>List of route entry publishing status information in the publishing targets.</p>
+         * <p>The list of publish status information for the route entry in publish targets.</p>
          */
         @NameInMap("RoutePublishTargets")
         public java.util.List<ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets> routePublishTargets;
 
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The route table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-2ze3jgygk9bmsj23s****</p>

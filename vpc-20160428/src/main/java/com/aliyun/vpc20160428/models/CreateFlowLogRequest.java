@@ -42,6 +42,9 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    @NameInMap("LogFormat")
+    public String logFormat;
+
     /**
      * <p>The name of the Logstore that stores the captured traffic.</p>
      * <ul>
@@ -96,7 +99,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the resource from which to capture traffic.</p>
+     * <p>The ID of the resource whose traffic you want to capture.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +115,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of resource from which to capture traffic. Valid values:</p>
+     * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
      * <ul>
      * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC).</p>
      * </li>
@@ -198,6 +201,14 @@ public class CreateFlowLogRequest extends TeaModel {
     }
     public String getIpVersion() {
         return this.ipVersion;
+    }
+
+    public CreateFlowLogRequest setLogFormat(String logFormat) {
+        this.logFormat = logFormat;
+        return this;
+    }
+    public String getLogFormat() {
+        return this.logFormat;
     }
 
     public CreateFlowLogRequest setLogStoreName(String logStoreName) {
@@ -306,8 +317,8 @@ public class CreateFlowLogRequest extends TeaModel {
 
     public static class CreateFlowLogRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -316,8 +327,8 @@ public class CreateFlowLogRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

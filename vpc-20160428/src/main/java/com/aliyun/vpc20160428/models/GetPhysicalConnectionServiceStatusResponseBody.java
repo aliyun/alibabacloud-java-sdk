@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalConnectionServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether billing for outbound data transfer is enabled. Valid values:</p>
+     * <p>Indicates whether outbound traffic billing is enabled.</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Not enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class GetPhysicalConnectionServiceStatusResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>

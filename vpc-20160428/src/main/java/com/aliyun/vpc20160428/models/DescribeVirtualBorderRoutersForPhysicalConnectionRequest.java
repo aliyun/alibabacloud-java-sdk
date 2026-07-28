@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>The filter keys.</p>
+     * <p>The list of filter conditions.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
@@ -14,7 +14,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public String physicalConnectionId;
 
     /**
-     * <p>The region in which the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,15 +128,22 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:</p>
+         * <p>The filter condition. You can specify up to five filter conditions. The following filter conditions are supported:</p>
          * <ul>
-         * <li><strong>PhysicalConnectionId</strong>: filter VBRs by the Express Connect circuit ID.</li>
-         * <li><strong>VbrId</strong>: filter VBRs by ID.</li>
-         * <li><strong>Status</strong>: filter VBRs by status.</li>
-         * <li><strong>Name</strong>: filter VBRs by name.</li>
-         * <li><strong>AccessPointId</strong>: filter VBRs by access point ID.</li>
-         * <li><strong>eccId</strong>: filter VBRs by ID of Express Cloud Connect (ECC) instance.</li>
-         * <li><strong>type</strong>: filter VBRs by type.</li>
+         * <li><p><strong>PhysicalConnectionId</strong>: instance ID of the Express Connect circuit instance.</p>
+         * </li>
+         * <li><p><strong>VbrId</strong>: instance ID of the Virtual Border Router instance.</p>
+         * </li>
+         * <li><p><strong>Status</strong>: the status of the Virtual Border Router.</p>
+         * </li>
+         * <li><p><strong>Name</strong>: the name of the Virtual Border Router.</p>
+         * </li>
+         * <li><p><strong>AccessPointId</strong>: instance ID of the access point.</p>
+         * </li>
+         * <li><p><strong>eccId</strong>: instance ID of the Express Cloud Connect instance.</p>
+         * </li>
+         * <li><p><strong>type</strong>: the type of the Virtual Border Router.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +153,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
         public String key;
 
         /**
-         * <p>The filter value for the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+         * <p>The filter value based on the specified Key. You can specify multiple filter values for a Key. The relationship between filter values is OR, which means that a match with any filter value is considered a match for the filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

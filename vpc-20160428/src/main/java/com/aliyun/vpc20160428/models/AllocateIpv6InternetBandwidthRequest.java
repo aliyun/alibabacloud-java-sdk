@@ -41,9 +41,9 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without associating a prefix list with a route table. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned. The system does not associate a prefix list with a route table.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the prefix list is associated with the route table.</p>
+     * <li><p><strong>false</strong> (default): sends a normal request. After the request passes the check, a 2xx HTTP status code is returned and the system associates the prefix list with a route table. The system checks whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether the required parameters are specified.</p>
      * </li>
      * </ul>
      * 
@@ -54,7 +54,7 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The billing method for IPv6 Internet bandwidth. Valid values:</p>
+     * <p>The billable methods of the IPv6 Internet bandwidth. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li><strong>PayByTraffic</strong>: pay-by-data-transfer.</li>

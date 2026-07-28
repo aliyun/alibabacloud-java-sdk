@@ -16,9 +16,9 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>Generate a unique value from your client to ensure that different requests have unique ClientToken values. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the customer company that requires the Express Connect circuit.</p>
+     * <p>The name of the company that accesses the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     public String companyName;
 
     /**
-     * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the construction company enters the site. The time is in the ISO 8601 standard and must be in UTC. Format: YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     public String constructionTime;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The instance ID of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,10 +60,10 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     /**
      * <p>The type of the Express Connect circuit. Valid values:</p>
      * <ul>
-     * <li><strong>MSTP</strong>: MSTP line</li>
-     * <li><strong>MPLSVPN</strong>: MPLSVPN line</li>
-     * <li><strong>FIBRE</strong>: fiber line</li>
-     * <li><strong>Other</strong>: other types</li>
+     * <li><strong>MSTP</strong>: MSTP line.</li>
+     * <li><strong>MPLSVPN</strong>: MPLSVPN line.</li>
+     * <li><strong>FIBRE</strong>: fiber optic direct connection.</li>
+     * <li><strong>Other</strong>: other type of line.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -81,12 +81,15 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The information about the construction engineer.</p>
+     * <blockquote>
+     * <p>This parameter is required. Specify the relevant information.</p>
+     * </blockquote>
      */
     @NameInMap("PMInfo")
     public java.util.List<ApplyPhysicalConnectionLOARequestPMInfo> PMInfo;
 
     /**
-     * <p>The geographic location where the Express Connect circuit is deployed.</p>
+     * <p>The geographical location where the Express Connect circuit is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>杭州</p>
@@ -96,7 +99,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,7 +115,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The construction company.</p>
+     * <p>The construction company of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -240,8 +243,8 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     public static class ApplyPhysicalConnectionLOARequestPMInfo extends TeaModel {
         /**
-         * <p>The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.</p>
-         * <p>You can configure information for up to 16 construction engineers.</p>
+         * <p>The ID number of the construction engineer. You can specify an ID card number or an international passport number.</p>
+         * <p>You can specify information about up to 16 construction engineers.</p>
          * 
          * <strong>example:</strong>
          * <p>5****************9</p>
@@ -250,10 +253,10 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
         public String PMCertificateNo;
 
         /**
-         * <p>The type of the identity document of the construction engineer. Valid values:</p>
+         * <p>The type of the ID document of the construction engineer. Valid values:</p>
          * <ul>
-         * <li><strong>IDCard</strong></li>
-         * <li><strong>Passport</strong></li>
+         * <li><strong>IDCard</strong>: ID card.</li>
+         * <li><strong>Passport</strong>: international passport.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,7 +266,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
         public String PMCertificateType;
 
         /**
-         * <p>The contact information about the construction engineer.</p>
+         * <p>The contact information of the construction engineer.</p>
          * 
          * <strong>example:</strong>
          * <p>1390000****</p>

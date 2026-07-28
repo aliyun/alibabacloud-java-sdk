@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIpv4GatewaysRequest extends TeaModel {
     /**
-     * <p>The ID of the IPv4 gateway.</p>
+     * <p>The ID of the IPv4 gateway instance that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
@@ -14,8 +14,8 @@ public class ListIpv4GatewaysRequest extends TeaModel {
     public String ipv4GatewayId;
 
     /**
-     * <p>The name of the IPv4 gateway.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the IPv4 gateway instance that you want to query.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -24,7 +24,7 @@ public class ListIpv4GatewaysRequest extends TeaModel {
     public String ipv4GatewayName;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,10 +33,10 @@ public class ListIpv4GatewaysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+     * <li>If this is the first query or no subsequent query exists, leave this parameter empty.</li>
+     * <li>If a subsequent query exists, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,8 +52,8 @@ public class ListIpv4GatewaysRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv4 gateways to be queried are deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv4 gateways that you want to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,13 +78,13 @@ public class ListIpv4GatewaysRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListIpv4GatewaysRequestTags> tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.</p>
+     * <p>The ID of the VPC associated with the IPv4 gateway instance that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-5tsrxlw7dv074gci4****</p>
@@ -195,8 +195,8 @@ public class ListIpv4GatewaysRequest extends TeaModel {
 
     public static class ListIpv4GatewaysRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -205,8 +205,8 @@ public class ListIpv4GatewaysRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

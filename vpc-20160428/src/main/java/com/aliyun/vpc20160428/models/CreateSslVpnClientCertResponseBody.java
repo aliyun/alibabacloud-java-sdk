@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSslVpnClientCertResponseBody extends TeaModel {
     /**
-     * <p>The name of the SSL-VPN client certificate.</p>
+     * <p>The name of the SSL client certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>SslVpnClientCert</p>
@@ -23,7 +23,7 @@ public class CreateSslVpnClientCertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the SSL-VPN client certificate.</p>
+     * <p>The ID of the SSL client certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>vsc-m5euof6s5jy8vs5kd****</p>

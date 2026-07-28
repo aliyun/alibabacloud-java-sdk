@@ -25,8 +25,10 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     /**
      * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong></li>
-     * <li><strong>FinancialLocked</strong></li>
+     * <li><p><strong>Normal</strong>: normal.</p>
+     * </li>
+     * <li><p><strong>FinancialLocked</strong>: locked.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +62,7 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +71,7 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -78,10 +80,12 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The billing method of the IPv6 Translation Service instance. Valid values:</p>
+     * <p>The billing transform type of the IPv6 Translation Service instance. Valid values:</p>
      * <ul>
-     * <li><strong>Prepay</strong>: subscription</li>
-     * <li><strong>Postpay</strong>: pay-as-you-go</li>
+     * <li><p><strong>Prepay</strong>: subscription.</p>
+     * </li>
+     * <li><p><strong>Postpay</strong>: pay-as-you-go.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +95,7 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region of the IPv6 Translation Service instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +111,7 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specification of the IPv6 Translation Service instance. Set the value to <strong>small</strong>.</p>
+     * <p>The specification of the IPv6 Translation Service instance. Valid values: <strong>small</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>small</p>
@@ -118,13 +122,20 @@ public class DescribeIPv6TranslatorsRequest extends TeaModel {
     /**
      * <p>The status of the IPv6 Translation Service instance. Valid values:</p>
      * <ul>
-     * <li><strong>init</strong></li>
-     * <li><strong>provisioning</strong></li>
-     * <li><strong>active</strong></li>
-     * <li><strong>updating</strong></li>
-     * <li><strong>upgrading</strong></li>
-     * <li><strong>deleting</strong></li>
-     * <li><strong>deleted</strong></li>
+     * <li><p><strong>init</strong>: initializing.</p>
+     * </li>
+     * <li><p><strong>provisioning</strong>: being provisioned.</p>
+     * </li>
+     * <li><p><strong>active</strong>: available.</p>
+     * </li>
+     * <li><p><strong>updating</strong>: being updated.</p>
+     * </li>
+     * <li><p><strong>upgrading</strong>: being upgraded.</p>
+     * </li>
+     * <li><p><strong>deleting</strong>: being deleted.</p>
+     * </li>
+     * <li><p><strong>deleted</strong>: deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
     /**
-     * <p>The remarks of the ACL rule.</p>
-     * <p>It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * <p>The description of the access control policy group entry.</p>
+     * <p>The description must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), or hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
     public String aclEntryComment;
 
     /**
-     * <p>The ID of the ACL rule to which the IP entry belongs.</p>
+     * <p>The ID of the access control policy group entry that contains the IP entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
     public String aclEntryId;
 
     /**
-     * <p>The ID of the ACL to which the IP entry belongs.</p>
+     * <p>The ID of the access control policy group that contains the IP entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the ACL.</p>
+     * <p>The region of the access control policy group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

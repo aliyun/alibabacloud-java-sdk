@@ -6,9 +6,10 @@ import com.aliyun.tea.*;
 public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>client token</code> can contain only ASCII characters.</p>
-     * <p>**</p>
-     * <p><strong>Description</strong> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>ClientToken</code> value can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44****</p>
@@ -17,10 +18,12 @@ public class CreateSnatEntryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Indicates whether to only precheck this request. Values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Sends a precheck request and does not create an SNAT entry. The precheck includes verifying if the AccessKey is valid, checking the RAM user\&quot;s authorization, and ensuring that all required parameters are filled out. If the precheck fails, the corresponding error is returned. If the precheck passes, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): Sends a normal request. After passing the precheck, it returns a 2xx HTTP status code and creates an SNAT entry.</li>
+     * <li><p><strong>true</strong>: performs a dry run without creating the SNAT entry. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a Normal request, and the SNAT entry is created after the check succeeds. A 2xx HTTP status code is returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,11 +35,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable EIP affinity. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><p><strong>0</strong> (default): disables EIP affinity.</p>
+     * </li>
+     * <li><p><strong>1</strong>: enables EIP affinity.</p>
+     * </li>
      * </ul>
-     * <p>**</p>
-     * <p><strong>Description</strong> After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.</p>
+     * <blockquote>
+     * <p>After EIP affinity is enabled, if the SNAT entry is bindded with multiple EIPs or NAT IP addresses, the same client uses the same EIP or NAT IP address to access the same destination IP address. Otherwise, the client randomly selects an EIP or NAT IP address from the bindded ones.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,9 +51,9 @@ public class CreateSnatEntryRequest extends TeaModel {
     public Integer eipAffinity;
 
     /**
-     * <p>Elastic Network Interface ID.  </p>
+     * <p>The ID of the elastic network interface (ENI).</p>
      * <blockquote>
-     * <p>The IPv4 address set of the elastic network interface will be used as the SNAT address.</p>
+     * <p>The IPv4 address set of the ENI is used as the SNAT address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,22 +69,8 @@ public class CreateSnatEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>ap-northeast-2-pop</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>ap-northeast-2-pop</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * </ul>
+     * <p>The region ID of the NAT gateway. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +87,7 @@ public class CreateSnatEntryRequest extends TeaModel {
 
     /**
      * <p>The name of the SNAT entry.</p>
-     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>SnatEntry-1</p>
@@ -104,14 +96,26 @@ public class CreateSnatEntryRequest extends TeaModel {
     public String snatEntryName;
 
     /**
+     * <p>When you add an SNAT entry for an Internet NAT gateway:</p>
      * <ul>
-     * <li>The EIPs in the SNAT entry when you add an SNAT entry to an Internet NAT gateway. Separate EIPs with commas (,).</li>
+     * <li><p>The SnatIp parameter is required.</p>
+     * </li>
+     * <li><p>This parameter specifies the EIPs in the SNAT entry. Separate multiple EIPs with commas (,).</p>
+     * </li>
+     * <li><p>If SnatIp specifies only one public IP address, the ECS instance uses the specified public IP address to access the Internet.</p>
+     * </li>
+     * <li><p>If SnatIp specifies multiple public IP addresses, the ECS instance randomly uses one of the public IP addresses in SnatIp to access the Internet.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you specify multiple EIPs in the SNAT IP address pool, the service connection is allocated to multiple EIPs by using the hashing algorithm. The traffic of each EIP may be different. Therefore, we recommend that you associate the EIPs with an Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion.</p>
+     * <p>If you specify multiple EIPs to configure an SNAT IP IPAM pool, connections are allocated to multiple EIPs by using a hash algorithm. Because the traffic of each connection varies, service traffic may be unevenly distributed among the EIPs. Add each EIP to the same Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion on a single EIP.</p>
      * </blockquote>
+     * <p>When you add an SNAT entry for a VPC NAT gateway:</p>
      * <ul>
-     * <li>When you add SNAT entries for a VPC NAT gateway, this parameter specifies the NAT IP addresses in the SNAT entry. Separate multiple NAT IP addresses with commas (,).</li>
+     * <li><p>This parameter specifies the NAT IP addresses in the SNAT entry. Separate multiple NAT IP addresses with commas (,).</p>
+     * </li>
+     * <li><p>You must specify one of the SnatIp and NetworkInterfaceId parameters, but you cannot specify both.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,17 +135,21 @@ public class CreateSnatEntryRequest extends TeaModel {
     public String snatTableId;
 
     /**
-     * <p>You can specify the CIDR block of a VPC, a vSwitch, or an ECS instance or enter a custom CIDR block.</p>
-     * <p>You can specify an SNAT entry in the following ways:</p>
+     * <p>The CIDR block of a VPC, vSwitch, or ECS instance. You can also specify a custom CIDR block.</p>
+     * <p>SNAT entries support the following granularities: </p>
      * <ul>
-     * <li>You can specify the CIDR block of the VPC where the NAT gateway is deployed. Then, all ECS instances in the VPC can access the Internet or external networks by using SNAT.</li>
-     * <li>You can specify the CIDR block of a vSwitch, for example, 192.168.1.0/24. Then, the ECS instances in the vSwitch can access the Internet or external networks by using SNAT.</li>
-     * <li>You can specify the IP address of an ECS instance, for example, 192.168.1.1/32. Then, the ECS instance can access the Internet or external networks by using SNAT.</li>
-     * <li>You can specify a custom CIDR block. Then, all ECS instances within the specified CIDR block can access the Internet or external networks by using SNAT.</li>
+     * <li><p>VPC granularity: the CIDR block of the VPC to which the NAT gateway belongs. All ECS instances in the VPC can access the Internet or external networks by using the SNAT rule.</p>
+     * </li>
+     * <li><p>vSwitch granularity: the CIDR block of a specified vSwitch (such as 192.168.1.0/24). ECS instances in the vSwitch can access the Internet or external networks by using the SNAT rule.</p>
+     * </li>
+     * <li><p>ECS granularity: the IP address of a specified ECS instance (such as 192.168.1.1/32). The ECS instance can access the Internet or external networks by using the SNAT rule.</p>
+     * </li>
+     * <li><p>Custom CIDR block: all ECS instances in the specified CIDR block can access the Internet or external networks by using the SNAT service.</p>
+     * </li>
      * </ul>
-     * <p>When you add an SNAT entry to an Internet NAT gateway, if <strong>SnatIp</strong> is set to an EIP, the ECS instance uses the specified EIP to access the Internet.</p>
-     * <p>If <strong>SnatIp</strong> is set to multiple EIPs, the ECS instance randomly selects an EIP specified in the <strong>SnatIp</strong> parameter to access the Internet.</p>
-     * <p>You cannot specify this parameter and <strong>SourceVSwtichId</strong> at the same time. If <strong>SourceVSwitchId</strong> is specified, you cannot specify <strong>SourceCIDR</strong>. If <strong>SourceCIDR</strong> is specified, you cannot specify <strong>SourceVSwitchId</strong>.</p>
+     * <blockquote>
+     * <p>You must specify one of the <strong>SourceCIDR</strong> and <strong>SourceVSwitchId</strong> parameters, but you cannot specify both.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10.1.1.0/24</p>
@@ -152,9 +160,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch.</p>
      * <ul>
-     * <li>When you add an SNAT entry to an Internet NAT gateway, this parameter specifies that ECS instances in the vSwitch can use the SNAT entry to access the Internet. If you select multiple elastic IP addresses (EIPs) to create an SNAT address pool, connections are hashed to these EIPs. Network traffic may not be evenly distributed to the EIPs because the amount of traffic that passes through each connection varies. We recommend that you associate these EIPs with the same EIP bandwidth plan to prevent service interruptions due to the bandwidth limits on individual EIPs.</li>
-     * <li>When you add an SNAT entry to a VPC NAT gateway, this parameter specifies that ECS instances in the vSwitch can use the SNAT entry to access external networks.</li>
+     * <li><p>When you add an SNAT entry for an Internet NAT gateway, this parameter specifies that ECS instances in the vSwitch can access the Internet by using the SNAT rule. If you specify multiple EIPs to configure an SNAT IP IPAM pool, connections are allocated to multiple EIPs by using a hash algorithm. Because the traffic of each connection varies, service traffic may be unevenly distributed among the EIPs. Add each EIP to the same Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion on a single EIP.</p>
+     * </li>
+     * <li><p>When you add an SNAT entry for a VPC NAT gateway, this parameter specifies that ECS instances in the vSwitch can access external networks by using the SNAT rule.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>You must specify one of the <strong>SourceCIDR</strong> and <strong>SourceVSwitchId</strong> parameters, but you cannot specify both.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1nhx2s9ui5o****</p>

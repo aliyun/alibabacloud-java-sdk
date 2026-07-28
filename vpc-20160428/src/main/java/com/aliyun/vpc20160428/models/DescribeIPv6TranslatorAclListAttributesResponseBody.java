@@ -8,7 +8,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     public DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntries aclEntries;
 
     /**
-     * <p>The ACL ID.</p>
+     * <p>The ID of the access control policy group.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6transacl-bp1de2****</p>
@@ -17,7 +17,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     public String aclId;
 
     /**
-     * <p>The name of the ACL.</p>
+     * <p>The name of the access control policy group.</p>
      * 
      * <strong>example:</strong>
      * <p>acl1</p>
@@ -26,7 +26,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     public String aclName;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

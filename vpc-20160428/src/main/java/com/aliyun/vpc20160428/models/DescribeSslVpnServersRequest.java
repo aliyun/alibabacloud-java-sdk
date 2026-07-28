@@ -30,7 +30,7 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -40,7 +40,7 @@ public class DescribeSslVpnServersRequest extends TeaModel {
 
     /**
      * <p>The region ID of the SSL server. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

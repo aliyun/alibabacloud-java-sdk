@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNatGatewayAttributeResponseBody extends TeaModel {
     /**
-     * <p>The access mode of the VPC NAT Gateway.</p>
+     * <p>The access mode for reverse access to the VPC NAT gateway.</p>
      */
     @NameInMap("AccessMode")
     public GetNatGatewayAttributeResponseBodyAccessMode accessMode;
@@ -14,18 +14,16 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String availabilityMode;
 
     /**
-     * <p>The billing configuration.</p>
+     * <p>The billing configuration information.</p>
      */
     @NameInMap("BillingConfig")
     public GetNatGatewayAttributeResponseBodyBillingConfig billingConfig;
 
     /**
-     * <p>The business status of the NAT Gateway instance. Valid values:</p>
+     * <p>The business status of the NAT gateway. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: The instance is running normally.</p>
-     * </li>
-     * <li><p><strong>FinancialLocked</strong>: The instance is suspended due to an overdue payment.</p>
-     * </li>
+     * <li><strong>Normal</strong>: Normal.</li>
+     * <li><strong>FinancialLocked</strong>: Locked due to overdue payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +33,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String businessStatus;
 
     /**
-     * <p>The creation time of the NAT Gateway instance. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * <p>The time when the NAT gateway was created. The time is displayed in the YYYY-MM-DDThh:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-08T12:20:20Z</p>
@@ -44,13 +42,13 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>Information about the deletion protection feature.</p>
+     * <p>The deletion protection information.</p>
      */
     @NameInMap("DeletionProtectionInfo")
     public GetNatGatewayAttributeResponseBodyDeletionProtectionInfo deletionProtectionInfo;
 
     /**
-     * <p>The description of the NAT Gateway instance.</p>
+     * <p>The description of the NAT gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>NAT</p>
@@ -61,10 +59,8 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the gateway traffic monitoring feature is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>true</strong>: The gateway traffic monitoring feature is enabled.</li>
+     * <li><strong>false</strong>: The gateway traffic monitoring feature is not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,9 +72,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether session logging is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
+     * <li><p><strong>true</strong>: Session logging is enabled.</p>
      * </li>
-     * <li><p><strong>false</strong></p>
+     * <li><p><strong>false</strong>: Session logging is disabled.</p>
      * </li>
      * </ul>
      * 
@@ -89,7 +85,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public Boolean enableSessionLog;
 
     /**
-     * <p>The expiration time of the NAT Gateway instance.</p>
+     * <p>The expiration time of the NAT gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-26T12:20:20Z</p>
@@ -98,31 +94,31 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>Information about the DNAT table.</p>
+     * <p>The DNAT table information.</p>
      */
     @NameInMap("ForwardTable")
     public GetNatGatewayAttributeResponseBodyForwardTable forwardTable;
 
     /**
-     * <p>Information about the FULLNAT table.</p>
+     * <p>The FULLNAT table information.</p>
      */
     @NameInMap("FullNatTable")
     public GetNatGatewayAttributeResponseBodyFullNatTable fullNatTable;
 
     /**
-     * <p>The Elastic IP Addresses (EIPs) that are associated with the public NAT gateway.</p>
+     * <p>The list of elastic IP addresses (EIPs) associated with the Internet NAT gateway.</p>
      */
     @NameInMap("IpList")
     public java.util.List<GetNatGatewayAttributeResponseBodyIpList> ipList;
 
     /**
-     * <p>The session log delivery settings.</p>
+     * <p>The session log configuration information.</p>
      */
     @NameInMap("LogDelivery")
     public GetNatGatewayAttributeResponseBodyLogDelivery logDelivery;
 
     /**
-     * <p>The name of the NAT Gateway instance.</p>
+     * <p>The name of the NAT gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -131,7 +127,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the NAT Gateway instance.</p>
+     * <p>The ID of the NAT gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1047e2d4z7kf2ki****</p>
@@ -140,7 +136,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The type of the public NAT gateway. The value <strong>Enhanced</strong> indicates an Enhanced NAT Gateway.</p>
+     * <p>The type of the Internet NAT gateway. The value is <strong>Enhanced</strong>, which indicates an enhanced NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Enhanced</p>
@@ -149,12 +145,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String natType;
 
     /**
-     * <p>The type of the NAT Gateway. Valid values:</p>
+     * <p>The type of the NAT gateway. Valid values:</p>
      * <ul>
-     * <li><p><strong>internet</strong>: A public NAT gateway.</p>
-     * </li>
-     * <li><p><strong>intranet</strong>: A VPC NAT Gateway.</p>
-     * </li>
+     * <li><strong>internet</strong>: Internet NAT gateway.</li>
+     * <li><strong>intranet</strong>: VPC NAT gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,7 +158,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The private network information about the NAT Gateway instance.</p>
+     * <p>The private network information of the NAT gateway instance.</p>
      */
     @NameInMap("PrivateInfo")
     public GetNatGatewayAttributeResponseBodyPrivateInfo privateInfo;
@@ -172,10 +166,8 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether PrivateLink is supported. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: PrivateLink is supported.</p>
-     * </li>
-     * <li><p><strong>false</strong>: PrivateLink is not supported.</p>
-     * </li>
+     * <li><strong>true</strong>: PrivateLink is supported.</li>
+     * <li><strong>false</strong>: PrivateLink is not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -185,12 +177,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public Boolean privateLinkEnabled;
 
     /**
-     * <p>The mode of the PrivateLink service. Valid values:</p>
+     * <p>The PrivateLink service conversion mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>FullNat</strong>: FULLNAT mode.</p>
-     * </li>
-     * <li><p><strong>Geneve</strong>: Geneve mode.</p>
-     * </li>
+     * <li><strong>FullNat</strong>: FULLNAT mode.</li>
+     * <li><strong>Geneve</strong>: Geneve mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -200,7 +190,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String privateLinkMode;
 
     /**
-     * <p>The region ID of the NAT Gateway instance.</p>
+     * <p>The region ID of the NAT gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
@@ -218,7 +208,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -227,24 +217,19 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Information about the SNAT table.</p>
+     * <p>The SNAT table information.</p>
      */
     @NameInMap("SnatTable")
     public GetNatGatewayAttributeResponseBodySnatTable snatTable;
 
     /**
-     * <p>The status of the NAT Gateway instance. Valid values:</p>
+     * <p>The status of the NAT gateway. Valid values:</p>
      * <ul>
-     * <li><p><strong>Creating</strong>: Being created. This is an asynchronous operation.</p>
-     * </li>
-     * <li><p><strong>Available</strong>: Available. This is the steady state of the NAT Gateway after creation.</p>
-     * </li>
-     * <li><p><strong>Modifying</strong>: Being modified. This is an asynchronous operation.</p>
-     * </li>
-     * <li><p><strong>Deleting</strong>: Being deleted. This is an asynchronous operation.</p>
-     * </li>
-     * <li><p><strong>Converting</strong>: Being converted to an Enhanced NAT Gateway. This is an asynchronous operation.</p>
-     * </li>
+     * <li><strong>Creating</strong>: The NAT gateway is being created. The creation of a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Creating</strong> state until the creation is complete.</li>
+     * <li><strong>Available</strong>: The NAT gateway is available. This is a stable state after the NAT gateway is created.</li>
+     * <li><strong>Modifying</strong>: The NAT gateway is being modified. The modification of a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Modifying</strong> state during the modification.</li>
+     * <li><strong>Deleting</strong>: The NAT gateway is being deleted. The deletion of a NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Deleting</strong> state during the deletion.</li>
+     * <li><strong>Converting</strong>: The NAT gateway is being converted. The conversion from a standard NAT gateway to an enhanced NAT gateway is an asynchronous operation. The NAT gateway remains in the <strong>Converting</strong> state during the conversion.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -254,7 +239,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the VPC to which the NAT Gateway instance belongs.</p>
+     * <p>The ID of the VPC to which the NAT gateway instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp15zckdt37pq72z****</p>
@@ -500,9 +485,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String modeValue;
 
         /**
-         * <p>The tunnel type. This parameter is returned only when <code>ModeValue</code> is set to <code>tunnel</code>. Valid value:</p>
+         * <p>The tunnel mode type. Valid values:</p>
          * <ul>
-         * <li><strong>geneve</strong>: Geneve.</li>
+         * <li><strong>geneve</strong>: Geneve type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -536,14 +521,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     public static class GetNatGatewayAttributeResponseBodyBillingConfig extends TeaModel {
         /**
-         * <p>Indicates whether auto-payment is enabled. This parameter is returned only if <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. Valid values:</p>
+         * <p>Indicates whether automatic payment is enabled. When the value of <strong>InstanceChargeType</strong> is <strong>PrePaid</strong>, the following values are returned:</p>
          * <ul>
-         * <li><p><strong>false</strong>: Auto-payment is disabled. After an order is generated, the payment must be completed in the Orders console.</p>
+         * <li><p><strong>false</strong>: Automatic payment is not enabled. After an order is generated, go to the Order Center to complete the payment.</p>
          * </li>
-         * <li><p><strong>true</strong>: Auto-payment is enabled. Payments are automatically completed.</p>
+         * <li><p><strong>true</strong>: Automatic payment is enabled. The order is automatically paid.</p>
          * </li>
          * </ul>
-         * <p>If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, an empty string is returned.</p>
+         * <p>When the value of <strong>InstanceChargeType</strong> is <strong>PostPaid</strong>, an empty value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -552,18 +537,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String autoPay;
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>The billing method of the NAT Gateway instance. Valid values:</p>
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <ul>
-         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
-         * </ul>
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <ul>
-         * <li><strong>PrePaid</strong>: subscription.</li>
-         * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <p>The billing method of the NAT Gateway instance. The value is <strong>PostPaid</strong> (pay-as-you-go).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The billing method of the NAT gateway instance. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- <strong>PostPaid</strong>: pay-as-you-go.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- <strong>PrePaid</strong>: subscription.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway instance. Valid values: <strong>PostPaid</strong> (pay-as-you-go).</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -572,12 +549,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>The billing method of the NAT Gateway instance. Valid values:</p>
+         * <p>The billing type of the NAT gateway instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>PayBySpec</strong>: billed by specification.</p>
-         * </li>
-         * <li><p><strong>PayByLcu</strong>: billed by usage.</p>
-         * </li>
+         * <li><strong>PayBySpec</strong>: billed by defined specifications.</li>
+         * <li><strong>PayByLcu</strong>: billed by usage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -587,14 +562,12 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The specification of the public NAT gateway instance. This parameter is returned only if <strong>InternetChargeType</strong> is set to <strong>PayBySpec</strong>. Valid values:</p>
+         * <p>The specification of the Internet NAT gateway instance. When <strong>InternetChargeType</strong> is <strong>PayBySpec</strong>, the following values are returned:</p>
          * <ul>
-         * <li><p><strong>Small</strong></p>
-         * </li>
-         * <li><p><strong>Middle</strong></p>
-         * </li>
-         * <li><p><strong>Large</strong></p>
-         * </li>
+         * <li><strong>Small</strong>: small.</li>
+         * <li><strong>Middle</strong>: medium.</li>
+         * <li><strong>Large</strong>: large.
+         * When <strong>InternetChargeType</strong> is <strong>PayByLcu</strong>, an empty value is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -646,10 +619,8 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether deletion protection is enabled.</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Deletion protection is enabled.</li>
+         * <li><strong>false</strong>: Deletion protection is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -759,7 +730,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     public static class GetNatGatewayAttributeResponseBodyIpList extends TeaModel {
         /**
-         * <p>The ID of the EIP instance.</p>
+         * <p>The instance ID of the EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bp13e9i2qst4g6jzi****</p>
@@ -768,7 +739,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The EIP address.</p>
+         * <p>The IP address of the EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>116.33.XX.XX</p>
@@ -777,14 +748,11 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The usage status of the EIP.</p>
+         * <p>The association status of the EIP bound to the Internet NAT gateway instance.</p>
          * <ul>
-         * <li><p><strong>Idle</strong>: Not associated with an SNAT entry or a DNAT entry.</p>
-         * </li>
-         * <li><p><strong>UsedBySnat</strong>: Associated with an SNAT entry.</p>
-         * </li>
-         * <li><p><strong>UsedByForward</strong>: Associated with a DNAT entry.</p>
-         * </li>
+         * <li><strong>idle</strong>: The EIP is not associated with any SNAT entry or DNAT entry.</li>
+         * <li><strong>UsedBySnatTable</strong>: The EIP is associated with an SNAT entry.</li>
+         * <li><strong>UsedByForwardTable</strong>: The EIP is associated with a DNAT entry.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -826,7 +794,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     public static class GetNatGatewayAttributeResponseBodyLogDelivery extends TeaModel {
         /**
-         * <p>The error message that is returned when log delivery fails.</p>
+         * <p>The error message for session log writing failure.</p>
          * 
          * <strong>example:</strong>
          * <p>LogStoreNotExist: logstore session_log_test does not exist</p>
@@ -835,12 +803,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String deliverLogsErrorMessage;
 
         /**
-         * <p>The status of log delivery. Valid values:</p>
+         * <p>The status of session log writing. Valid values:</p>
          * <ul>
-         * <li><p><strong>Success</strong>: The logs are delivered successfully.</p>
-         * </li>
-         * <li><p><strong>Failure</strong>: The logs failed to be delivered.</p>
-         * </li>
+         * <li><strong>Succsess</strong>: Succeeded.</li>
+         * <li><strong>Failure</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -850,8 +816,8 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String deliveryStatus;
 
         /**
-         * <p>The destination to which session logs are delivered. The value is always
-         * <strong>sls</strong>, which indicates Log Service.</p>
+         * <p>The destination type for session log delivery. Valid values:
+         * <strong>sls</strong>: Simple Log Service (SLS).</p>
          * 
          * <strong>example:</strong>
          * <p>sls</p>
@@ -860,7 +826,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String logDeliveryType;
 
         /**
-         * <p>The Log Service Logstore to which session logs are delivered.</p>
+         * <p>The destination address to which session logs are written.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</p>
@@ -909,7 +875,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     public static class GetNatGatewayAttributeResponseBodyPrivateInfo extends TeaModel {
         /**
-         * <p>The ID of the elastic network interface instance.</p>
+         * <p>The instance ID of the elastic network interfaces (ENIs) network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp1cmgtoaka8vfyg****</p>
@@ -918,7 +884,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String eniInstanceId;
 
         /**
-         * <p>The ID of the availability zone to which the NAT Gateway instance belongs.</p>
+         * <p>The zone to which the NAT gateway instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao-b</p>
@@ -927,7 +893,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String izNo;
 
         /**
-         * <p>The maximum bandwidth, in Mbps.</p>
+         * <p>The maximum bandwidth value. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5120</p>
@@ -945,7 +911,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         public String privateIpAddress;
 
         /**
-         * <p>The ID of the vSwitch to which the NAT Gateway instance belongs.</p>
+         * <p>The ID of the vSwitch to which the NAT gateway instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1s2laxhdf9ayjbo***</p>

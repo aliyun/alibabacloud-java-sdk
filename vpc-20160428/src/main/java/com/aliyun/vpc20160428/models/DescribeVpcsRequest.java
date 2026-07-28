@@ -16,9 +16,9 @@ public class DescribeVpcsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the resource is queried.</p>
+     * <li><p><strong>false</strong> (default): sends a normal request, and the resource status is directly queried after the request passes the check. An HTTP 2xx status code is returned.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is performed based on IPv6 enablement. Valid values:</p>
+     * <p>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is applied based on IPv6 enablement. Valid values:</p>
      * <ul>
      * <li><strong>false</strong>: IPv6 is not enabled.</li>
      * <li><strong>true</strong>: IPv6 is enabled.</li>
@@ -75,7 +75,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -58,7 +58,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID of the IP address pool.</p>
+     * <p>The ID of the resource group to which the IP address pool belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4pcdvf****</p>

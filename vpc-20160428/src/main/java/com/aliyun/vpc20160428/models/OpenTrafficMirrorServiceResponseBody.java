@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information returned after traffic mirror is enabled.</p>
+     * <p>The message returned after the traffic mirroring feature is activated.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

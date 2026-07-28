@@ -14,7 +14,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String accessDomain;
 
     /**
-     * <p>The backend IP address to be modified in FULLNAT address translation.</p>
+     * <p>The backend IP address for FULLNAT address translation.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -23,7 +23,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String accessIp;
 
     /**
-     * <p>The backend port to be modified in the mapping of FULLNAT port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The backend port for FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,9 +34,9 @@ public class CreateFullNatEntryRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck this request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without adding the FULLNAT entry. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the API request. This is the default value. After the request passes the precheck, a 2XX HTTP status code is returned and the FULLNAT entry is added.</li>
+     * <li><strong>true</strong>: sends a dry run request. The system checks the request for potential issues, including missing required parameters, invalid parameter values, and whether the Resource Access Management (RAM) user is granted the required authorization. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the FULLNAT entry is added.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
 
     /**
      * <p>The description of the FULLNAT entry.</p>
-     * <p>This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description can be empty or 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -69,7 +69,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String fullNatEntryDescription;
 
     /**
-     * <p>The FULLNAT entry name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>The name of the FULLNAT entry. The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -88,10 +88,10 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String fullNatTableId;
 
     /**
-     * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
+     * <p>The protocol type of the Redirection Port. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong></li>
+     * <li><strong>TCP</strong>: forwards TCP packets. </li>
+     * <li><strong>UDP</strong>: forwards UDP packets.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -112,7 +112,10 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String natIp;
 
     /**
-     * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The frontend port for FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system randomly assigns an available port.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -121,7 +124,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String natIpPort;
 
     /**
-     * <p>The elastic network interface (ENI) ID.</p>
+     * <p>The ID of the network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -137,7 +140,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be added belongs.</p>
+     * <p>The region ID of the VPC NAT gateway to which the FULLNAT entry belongs.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

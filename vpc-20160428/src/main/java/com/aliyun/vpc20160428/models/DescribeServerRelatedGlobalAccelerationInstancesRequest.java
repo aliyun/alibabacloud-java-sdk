@@ -11,8 +11,8 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
     public Long ownerId;
 
     /**
-     * <p>The region ID of the GA instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the Alibaba Cloud Global Accelerator (GA) instance resides. </p>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,12 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
     public String serverId;
 
     /**
-     * <p>The type of the backend service instance. Valid values:</p>
+     * <p>The type of the backend service instance. Valid values: </p>
      * <ul>
-     * <li><strong>EcsInstance</strong> (default): Elastic Compute Service (ECS)</li>
-     * <li><strong>SlbInstance</strong>: Server Load Balancer (SLB)</li>
+     * <li><p><strong>EcsInstance</strong> (default): ECS instance.</p>
+     * </li>
+     * <li><p><strong>SlbInstance</strong>: load balancing instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

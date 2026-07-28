@@ -11,7 +11,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpoints> endpoints;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,10 +20,10 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>Indicates whether a next query token is available. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no more results are available.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -97,7 +97,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
 
     public static class ListVpcGatewayEndpointsResponseBodyEndpointsTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -106,7 +106,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
@@ -139,13 +139,13 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
 
     public static class ListVpcGatewayEndpointsResponseBodyEndpoints extends TeaModel {
         /**
-         * <p>The ID of the route table associated with the gateway endpoint.</p>
+         * <p>The IDs of the route tables associated with the gateway endpoint.</p>
          */
         @NameInMap("AssociatedRouteTables")
         public java.util.List<String> associatedRouteTables;
 
         /**
-         * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the gateway endpoint was created. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-08T08:43:04Z</p>
@@ -163,7 +163,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         public String endpointDescription;
 
         /**
-         * <p>The ID of the gateway endpoint.</p>
+         * <p>The endpoint instance ID of the gateway endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>vpce-bp1i1212ss2whuwyw****</p>
@@ -183,12 +183,12 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         /**
          * <p>The status of the gateway endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Created</strong></li>
-         * <li><strong>Modifying</strong></li>
-         * <li><strong>Associating</strong></li>
-         * <li><strong>Dissociating</strong></li>
-         * <li><strong>Deleting</strong></li>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Created</strong>: created and in a normal state.</li>
+         * <li><strong>Modifying</strong>: being modified.</li>
+         * <li><strong>Associating</strong>: being associated.</li>
+         * <li><strong>Dissociating</strong>: being disassociated.</li>
+         * <li><strong>Deleting</strong>: being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
 
         /**
          * <p>The access policy for the cloud service.</p>
-         * <p>For more information about the syntax and structure of the access policy, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
+         * <p>For more information about the syntax and structure of access policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy structure and syntax</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\n  \&quot;Version\&quot;: \&quot;1\&quot;,\n  \&quot;Statement\&quot;: [\n    {\n      \&quot;Effect\&quot;: \&quot;Allow\&quot;,\n      \&quot;Action\&quot;: \&quot;<em>\&quot;,\n      \&quot;Principal\&quot;: \&quot;</em>\&quot;,\n      \&quot;Resource\&quot;: \&quot;*\&quot;\n    }\n  ]\n}</p>
@@ -217,7 +217,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The name of the endpoint service.</p>
+         * <p>The service name of the endpoint service.</p>
          * 
          * <strong>example:</strong>
          * <p>com.aliyun.cn-hangzhou.oss</p>
@@ -226,13 +226,13 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The tag list.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpointsTags> tags;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+         * <p>The ID of the VPC to which the gateway endpoint belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1gsk7h12ew7oegk****</p>

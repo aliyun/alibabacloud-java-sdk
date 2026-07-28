@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
-     * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the gateway endpoint was created. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-08-27T01:58:37Z</p>
@@ -23,7 +23,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     public String endpointDescription;
 
     /**
-     * <p>The ID of the gateway endpoint.</p>
+     * <p>The endpoint instance ID of the gateway endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>vpce-bp1w1dmdqjpwul0v3****</p>
@@ -43,12 +43,18 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the gateway endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Creating</strong></li>
-     * <li><strong>Created</strong></li>
-     * <li><strong>Modifying</strong></li>
-     * <li><strong>Associating</strong></li>
-     * <li><strong>Dissociating</strong></li>
-     * <li><strong>Deleting</strong></li>
+     * <li><p><strong>Creating</strong>: being created.</p>
+     * </li>
+     * <li><p><strong>Created</strong>: created and in a normal state.</p>
+     * </li>
+     * <li><p><strong>Modifying</strong>: being modified.</p>
+     * </li>
+     * <li><p><strong>Associating</strong>: being associated.</p>
+     * </li>
+     * <li><p><strong>Dissociating</strong>: being disassociated.</p>
+     * </li>
+     * <li><p><strong>Deleting</strong>: being deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,13 +91,13 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the route table associated with the gateway endpoint.</p>
+     * <p>The IDs of the route tables associated with the gateway endpoint.</p>
      */
     @NameInMap("RouteTables")
     public java.util.List<String> routeTables;
 
     /**
-     * <p>The name of the endpoint service.</p>
+     * <p>The service name of the endpoint service.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyun.cn-hangzhou.oss</p>
@@ -100,13 +106,13 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetVpcGatewayEndpointAttributeResponseBodyTags> tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+     * <p>The ID of the VPC to which the gateway endpoint belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1nh86rugg01zol0****</p>
@@ -217,7 +223,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
 
     public static class GetVpcGatewayEndpointAttributeResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -226,7 +232,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -11,7 +11,7 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -30,7 +30,7 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which the route table belongs.</p>
-     * <p>You can call <a href="https://www.alibabacloud.com/help/vpc/developer-reference/api-vpc-2016-04-28-describeregions">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,10 +73,12 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public String routeTableName;
 
     /**
-     * <p>The type of the route table.</p>
+     * <p>The type of the route table. Valid values:</p>
      * <ul>
-     * <li><strong>System</strong></li>
-     * <li><strong>Custom</strong></li>
+     * <li><p><strong>System</strong>: system route table.</p>
+     * </li>
+     * <li><p><strong>Custom</strong>: custom route table.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +88,7 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public String routeTableType;
 
     /**
-     * <p>The ID of vRouter to which the route table belongs.</p>
+     * <p>The ID of the router to which the route table belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vrt-bp1lhl0taikrteen8****</p>
@@ -95,10 +97,12 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public String routerId;
 
     /**
-     * <p>The type of the router to which the route table belongs. Valid value:</p>
+     * <p>The type of the router to which the route table belongs. Valid values: </p>
      * <ul>
-     * <li><strong>VRouter</strong> (default): a vRouter</li>
-     * <li><strong>VBR</strong>: a VBR</li>
+     * <li><p><strong>VRouter</strong> (default): vRouter.</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: Virtual Border Router.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,8 +118,8 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public java.util.List<DescribeRouteTableListRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC to which the route table belongs. </p>
-     * <p>When this parameter is set, the value of <strong>RouterType</strong> is automatically assigned to <strong>VRouter</strong>.</p>
+     * <p>The ID of the VPC to which the route table belongs.</p>
+     * <p>If you specify this parameter, the value of <strong>RouterType</strong> is automatically set to <strong>VRouter</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp15zckdt37pq72****</p>
@@ -250,8 +254,8 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
     public static class DescribeRouteTableListRequestTag extends TeaModel {
         /**
-         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -260,8 +264,8 @@ public class DescribeRouteTableListRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -16,7 +16,7 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
      * <p>&lt;props=&quot;china&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2.aliyun.com/home">Expenses and Costs</a> to complete the payment.
-     * &lt;props=&quot;intl&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Expenses and Costs</a> to complete the payment..</p>
+     * &lt;props=&quot;intl&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Expenses and Costs</a> to complete the payment.</p>
      * 
      * <strong>example:</strong>
      * <p>208240895400460</p>

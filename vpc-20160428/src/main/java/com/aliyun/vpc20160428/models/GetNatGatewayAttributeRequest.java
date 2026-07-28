@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNatGatewayAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The instance ID of the NAT gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class GetNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NAT gateway.</p>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

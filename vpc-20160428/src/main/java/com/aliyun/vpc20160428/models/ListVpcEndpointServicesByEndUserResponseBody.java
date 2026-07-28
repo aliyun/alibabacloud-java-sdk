@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value is the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0AB1129F-32C1-5E4D-9E22-E4A859CA46EB</p>
@@ -36,7 +36,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of entries returned.</p>
+     * <p>The list of available endpoint services.</p>
      */
     @NameInMap("Services")
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> services;
@@ -106,7 +106,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         public String defaultPolicyDocument;
 
         /**
-         * <p>The domain name of the cloud service to which the endpoint service belongs.</p>
+         * <p>The domain name of the cloud service associated with the endpoint service in the queried region.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-admin.aliyuncs.com</p>
@@ -115,7 +115,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         public String serviceDomain;
 
         /**
-         * <p>The ID of the endpoint service.</p>
+         * <p>The instance ID of the endpoint service.</p>
          * 
          * <strong>example:</strong>
          * <p>vpces-m5enwdmilo210aibo9****</p>
@@ -133,10 +133,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Indicate whether the endpoint service supports the access policy. Valid values:</p>
+         * <p>Indicates whether the endpoint service supports access policies. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong></li>
-         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: Access policies are not supported.</li>
+         * <li><strong>true</strong>: Access policies are supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

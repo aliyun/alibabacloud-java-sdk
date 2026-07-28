@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCustomerGatewayResponseBody extends TeaModel {
     /**
-     * <p>The timestamp generated when the customer gateway was created. Unit: milliseconds.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp when the customer gateway was created. Unit: milliseconds.</p>
+     * <p>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1493363486000</p>
@@ -15,7 +15,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The ID of the customer gateway.</p>
+     * <p>The instance ID of the customer gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cgw-bp1jrawp82av6bws9****</p>

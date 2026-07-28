@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListTrafficMirrorSessionsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the traffic mirror session. Valid values:</p>
+     * <p>Specifies whether the traffic mirror session is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: does not enable the traffic mirror session.</li>
-     * <li><strong>true</strong>: enables the traffic mirror session.</li>
+     * <li><p><strong>false</strong> (default): The traffic mirror session is not enabled.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The traffic mirror session is enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The maximum number of entries to return in this query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -27,10 +29,10 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+     * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
+     * <li>If a next query exists, set the value to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,8 +48,8 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority of the traffic mirror session. Valid values: <strong>1</strong> to <strong>32766</strong>.</p>
-     * <p>A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.</p>
+     * <p>The priority of traffic mirror session. Valid values: <strong>1</strong> to <strong>32766</strong>.</p>
+     * <p>A smaller value indicates a higher priority. The priority of traffic mirror session created by the same account in the same region must be unique.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +58,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the region to which the traffic mirror session belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirror, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirror</a>.</p>
+     * <p>The region ID of the traffic mirror session. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID. For information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +68,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+     * <p>The ID of the resource group to which the traffic mirroring session belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -81,13 +83,13 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListTrafficMirrorSessionsRequestTags> tags;
 
     /**
-     * <p>The ID of the traffic mirror filter.</p>
+     * <p>The instance ID of the traffic mirror filter.</p>
      * 
      * <strong>example:</strong>
      * <p>tmf-j6cmls82xnc86vtpe****</p>
@@ -96,7 +98,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public String trafficMirrorFilterId;
 
     /**
-     * <p>The IDs of the traffic mirror session. The maximum value of N is 100, which indicates that you can query up to 100 traffic mirror sessions at a time.</p>
+     * <p>The instance IDs of traffic mirror sessions. The maximum value of <strong>N</strong> is <strong>100</strong>, which means you can query up to 100 traffic mirror sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>tms-j6cla50buc44ap8tu****</p>
@@ -106,7 +108,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
 
     /**
      * <p>The name of the traffic mirror session.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -115,7 +117,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public String trafficMirrorSessionName;
 
     /**
-     * <p>The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the mirror source.</p>
+     * <p>The instance ID of the traffic mirror source. Currently, elastic network interfaces (ENIs) are supported as traffic mirror sources.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-j6c8znm5l1yt4sox*****</p>
@@ -124,7 +126,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public String trafficMirrorSourceId;
 
     /**
-     * <p>The ID of the traffic mirror destination. You can specify only an ENI or a Server Load Balancer (SLB) instance as a traffic mirror destination.</p>
+     * <p>The instance ID of the traffic mirror destination. Currently, elastic network interfaces (ENIs) and internal-facing SLB instances are supported as traffic mirror destinations. Elastic network interfaces are also referred to as network interface controllers (NICs).</p>
      * 
      * <strong>example:</strong>
      * <p>eni-j6c2fp57q8rr47rp****</p>
@@ -133,7 +135,7 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
     public String trafficMirrorTargetId;
 
     /**
-     * <p>The VXLAN network identifier (VNI) that is used to distinguish different mirrored traffic. Valid values: <strong>0</strong> to <strong>16777215</strong>. You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI that is allocated by the system. If you want the system to randomly allocate a VNI, ignore this parameter.</p>
+     * <p>The Virtual Network Identifier (VNI) used to distinguish different mirrored data. Valid values: <strong>0</strong> to <strong>16777215</strong>. You can use the VNI to identify mirrored data from different sessions at the traffic mirror destination. You can specify a custom VNI value or let the system randomly assign one. To let the system randomly assign a value, do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -284,8 +286,8 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
 
     public static class ListTrafficMirrorSessionsRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -294,8 +296,8 @@ public class ListTrafficMirrorSessionsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

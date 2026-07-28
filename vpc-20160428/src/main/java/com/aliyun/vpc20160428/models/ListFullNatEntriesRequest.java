@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ListFullNatEntriesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the FULLNAT entry that you want to query.</p>
+     * <p>The ID of the FULLNAT entry to query.</p>
      * 
      * <strong>example:</strong>
      * <p>fullnat-gw8fz23jezpbblf1j****</p>
@@ -27,16 +27,16 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String fullNatEntryId;
 
     /**
-     * <p>The name of the FULLNAT entry that you want to query. You can specify at most 20 names.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The names of the FULLNAT entries to query. You can specify up to 20 names.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name must start with a letter or Chinese character.</p>
      */
     @NameInMap("FullNatEntryNames")
     public java.util.List<String> fullNatEntryNames;
 
     /**
-     * <p>The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.</p>
+     * <p>The ID of the FULLNAT table to which the FULLNAT entries belong.</p>
      * <blockquote>
-     * <p> You must specify at least one of <strong>FullNatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * <p>You must specify at least one of <strong>FullNatTableId</strong> and <strong>NatGatewayId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String fullNatTableId;
 
     /**
-     * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
+     * <p>The protocol type of the Redirection Port. Valid values:</p>
      * <ul>
-     * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong></li>
+     * <li><strong>TCP</strong>: forwards TCP packets.</li>
+     * <li><strong>UDP</strong>: forwards UDP packets.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -68,9 +68,9 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The ID of the NAT gateway.</p>
+     * <p>The ID of the NAT gateway to query.</p>
      * <blockquote>
-     * <p> You must specify at least one of <strong>FullNatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * <p>You must specify at least one of <strong>FullNatTableId</strong> and <strong>NatGatewayId</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,7 +80,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The NAT IP address that provides address translation in FULLNAT entries.</p>
+     * <p>The NAT IP address in the FULLNAT entry to query.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.XX.XX</p>
@@ -89,7 +89,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String natIp;
 
     /**
-     * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The frontend port in the FULLNAT entry to query. Valid values: 1 to 65535.</p>
      * 
      * <strong>example:</strong>
      * <p>443</p>
@@ -98,7 +98,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String natIpPort;
 
     /**
-     * <p>The ID of the elastic network interface (ENI) that you want to query.</p>
+     * <p>The IDs of the elastic network interfaces (ENIs) to query.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -106,8 +106,8 @@ public class ListFullNatEntriesRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of the <strong>NextToken</strong> parameter.</li>
+     * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
+     * <li>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the virtual private cloud (VPC) NAT gateway to which the FULLNAT entries to be queried belong.</p>
+     * <p>The region ID of the VPC NAT gateway to which the FULLNAT entries belong.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

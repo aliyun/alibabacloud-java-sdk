@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     /**
-     * <p>The list of the DHCP options sets.</p>
+     * <p>The list of DHCP options sets.</p>
      */
     @NameInMap("DhcpOptionsSets")
     public java.util.List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSets> dhcpOptionsSets;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -80,7 +80,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions extends TeaModel {
         /**
-         * <p>The suffix of the hostname.</p>
+         * <p>The hostname suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -100,9 +100,9 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         /**
          * <p>The lease time of the IPv6 DHCP options set.</p>
          * <ul>
-         * <li><p>If you use hours as the unit, Unit: h. Valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
+         * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h</strong> to <strong>1176h</strong> and <strong>87600h</strong> to <strong>175200h</strong>. Default value: <strong>24h</strong>.</p>
          * </li>
-         * <li><p>If you use days as the unit, Unit: d. Valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
+         * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d</strong> to <strong>49d</strong> and <strong>3650d</strong> to <strong>7300d</strong>. Default value: <strong>1d</strong>.</p>
          * </li>
          * </ul>
          * 
@@ -113,10 +113,12 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public String ipv6LeaseTime;
 
         /**
-         * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
+         * <p>The lease time of the IPv4 DHCP options set.</p>
          * <ul>
-         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
-         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h</strong> to <strong>1176h</strong> and <strong>87600h</strong> to <strong>175200h</strong>. Default value: <strong>87600h</strong>.</p>
+         * </li>
+         * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d</strong> to <strong>49d</strong> and <strong>3650d</strong> to <strong>7300d</strong>. Default value: <strong>3650d</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +168,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -175,7 +177,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
@@ -208,7 +210,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSets extends TeaModel {
         /**
-         * <p>The number of VPCs with which the DHCP options set is associated.</p>
+         * <p>The number of VPCs associated with the DHCP options set.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -217,7 +219,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public Integer associateVpcCount;
 
         /**
-         * <p>The creation time of the DHCP options sets.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-21 ***</p>
@@ -226,7 +228,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The details of DHCP options.</p>
+         * <p>The DHCP options configuration.</p>
          */
         @NameInMap("DhcpOptions")
         public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions dhcpOptions;
@@ -259,7 +261,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public String dhcpOptionsSetName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</p>
+         * <p>The Alibaba Cloud account ID to which the DHCP options set belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>253460731706911258</p>
@@ -279,10 +281,14 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         /**
          * <p>The status of the DHCP options set. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong></li>
-         * <li><strong>InUse</strong></li>
-         * <li><strong>Pending</strong></li>
-         * <li><strong>Deleted</strong></li>
+         * <li><p><strong>Available</strong>: available.</p>
+         * </li>
+         * <li><p><strong>InUse</strong>: in use.</p>
+         * </li>
+         * <li><p><strong>Pending</strong>: being configured.</p>
+         * </li>
+         * <li><p><strong>Deleted</strong>: deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +298,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag list.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags> tags;

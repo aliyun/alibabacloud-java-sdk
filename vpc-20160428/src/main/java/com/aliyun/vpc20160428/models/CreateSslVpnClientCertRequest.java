@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSslVpnClientCertRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client generates the value of this parameter. Make sure that the value is unique among different requests. The value can be up to 64 ASCII characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateSslVpnClientCertRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SSL-VPN server.</p>
+     * <p>The ID of the SSL server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteCustomerGatewayRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>The client generates this parameter value, which must be unique among different requests. The maximum length is 64 ASCII characters.</p>
+     * <p>The client generates the value of this parameter. Make sure that the value is unique among different requests. The value can be up to 64 ASCII characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DeleteCustomerGatewayRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the customer gateway instance.</p>
+     * <p>The instance ID of the customer gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DeleteCustomerGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the customer gateway. You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation.</p>
+     * <p>The region ID of the customer gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

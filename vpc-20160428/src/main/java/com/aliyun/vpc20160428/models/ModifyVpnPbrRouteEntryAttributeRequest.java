@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,8 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
     /**
      * <p>The new weight of the policy-based route. Valid values:</p>
      * <ul>
-     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</li>
-     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</li>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</li>
      * </ul>
      * <p>If you do not specify this parameter, the weight of the policy-based route is not modified.</p>
      * <blockquote>
@@ -125,8 +125,8 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
     /**
      * <p>The original weight of the policy-based route. Valid values:</p>
      * <ul>
-     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</li>
-     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</li>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

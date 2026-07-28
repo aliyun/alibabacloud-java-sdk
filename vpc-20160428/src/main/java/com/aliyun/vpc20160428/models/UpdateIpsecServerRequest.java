@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateIpsecServerRequest extends TeaModel {
     /**
-     * <p>The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client.</p>
+     * <p>The client CIDR block, which is the CIDR block from which IP addresses are assigned to virtual network interface controllers (NICs) of the client.</p>
      * <blockquote>
-     * <p> The client CIDR block must not overlap with the CIDR blocks of the VPC.</p>
+     * <p>The client CIDR block cannot conflict with the VPC CIDR block.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class UpdateIpsecServerRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,10 +30,12 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck this request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request without modifying the configurations of the IPsec server. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the precheck, the system modifies the configurations of the IPsec server.</li>
+     * <li><p><strong>true</strong>: performs a dry run without modifying the IPsec server configuration. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error message is returned. If the check succeeds, <code>DryRunOperation</code> is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): performs a dry run and sends the request. After the check succeeds, the IPsec server configuration is modified.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,10 +45,12 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>Specifies whether to delete the negotiated IPsec tunnel and initiate the negotiation again. Valid values:</p>
+     * <p>Specifies whether to delete the currently negotiated IPsec tunnel and re-initiate negotiation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: immediately initiates negotiations after the configuration is complete.</li>
-     * <li><strong>false</strong>: initiates negotiations when inbound traffic is detected.</li>
+     * <li><p><strong>true</strong>: Negotiation is initiated immediately after the configuration is complete.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Negotiation is initiated when inbound traffic is detected.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,16 +60,24 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public Boolean effectImmediately;
 
     /**
-     * <p>The configuration of Phase 1 negotiations. Valid values:</p>
+     * <p>The Phase 1 negotiation parameter settings. Valid values:</p>
      * <ul>
-     * <li><strong>IkeVersion</strong>: The IKE version. Valid values: <strong>ikev1</strong> and <strong>ikev2</strong>.</li>
-     * <li><strong>IkeMode</strong>: The IKE negotiation mode. Default value: <strong>main</strong>.</li>
-     * <li><strong>IkeEncAlg</strong>: the encryption algorithm that is used in Phase 1 negotiation. Default value: <strong>aes</strong>.</li>
-     * <li><strong>IkeAuthAlg</strong>: the authentication algorithm that is used in Phase 1 negotiation. Default value: <strong>sha1</strong>.</li>
-     * <li><strong>IkePfs</strong>: The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Default value: <strong>group2</strong>.</li>
-     * <li><strong>IkeLifetime</strong>: The SA lifetime determined by Phase 1 negotiations. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
-     * <li><strong>LocalId</strong>: The identifier of the IPsec server. Only FQDN and IP address formats are supported.</li>
-     * <li><strong>RemoteId</strong>: the peer identifier. Only FQDN and IP address formats are supported.</li>
+     * <li><p><strong>IkeVersion</strong>: The version of the IKE protocol. Valid values: <strong>ikev1</strong> or <strong>ikev2</strong>.</p>
+     * </li>
+     * <li><p><strong>IkeMode</strong>: The negotiation pattern of the IKE version. Default value: <strong>main</strong>.</p>
+     * </li>
+     * <li><p><strong>IkeEncAlg</strong>: The encryption algorithm used in Phase 1 negotiations. Default value: <strong>aes</strong>.</p>
+     * </li>
+     * <li><p><strong>IkeAuthAlg</strong>: The authentication algorithm used in Phase 1 negotiations. Default value: <strong>sha1</strong>.</p>
+     * </li>
+     * <li><p><strong>IkePfs</strong>: The Diffie-Hellman key exchange algorithm used in Phase 1 negotiations. Default value: <strong>group2</strong>.</p>
+     * </li>
+     * <li><p><strong>IkeLifetime</strong>: The epoch of the SA negotiated in Phase 1. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
+     * </li>
+     * <li><p><strong>LocalId</strong>: The identity of the IPsec server. FQDN and IP address formats are supported.</p>
+     * </li>
+     * <li><p><strong>RemoteId</strong>: The identity of the peer. FQDN and IP address formats are supported.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,12 +87,16 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public String ikeConfig;
 
     /**
-     * <p>The configuration of Phase 2 negotiation. Valid values:</p>
+     * <p>The Phase 2 negotiation parameter settings. Valid values:</p>
      * <ul>
-     * <li><strong>IpsecEncAlg</strong>: the encryption algorithm that is used in Phase 2 negotiation. Default value: <strong>aes</strong>.</li>
-     * <li><strong>IpsecAuthAlg</strong>: the authentication algorithm that is used in Phase 2 negotiation. Default value: <strong>sha1</strong>.</li>
-     * <li><strong>IpsecPfs</strong>: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiation. Default value: <strong>group2</strong>.</li>
-     * <li><strong>IpsecLifetime</strong>: the SA lifetime determined by Phase 2 negotiation. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+     * <li><p><strong>IpsecEncAlg</strong>: The encryption algorithm used in Phase 2 negotiations. Default value: <strong>aes</strong>.</p>
+     * </li>
+     * <li><p><strong>IpsecAuthAlg</strong>: The authentication algorithm used in Phase 2 negotiations. Default value: <strong>sha1</strong>.</p>
+     * </li>
+     * <li><p><strong>IpsecPfs</strong>: Forward all protocol packets. The Diffie-Hellman key exchange algorithm used in Phase 2 negotiations. Default value: <strong>group2</strong>.</p>
+     * </li>
+     * <li><p><strong>IpsecLifetime</strong>: The epoch of the SA negotiated in Phase 2. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +106,7 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public String ipsecConfig;
 
     /**
-     * <p>The IPsec server ID.</p>
+     * <p>The ID of the IPsec server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +117,7 @@ public class UpdateIpsecServerRequest extends TeaModel {
 
     /**
      * <p>The name of the IPsec server.</p>
-     * <p>It must be 1 to 100 characters in length.</p>
+     * <p>The name must be 1 to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -110,8 +126,8 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public String ipsecServerName;
 
     /**
-     * <p>The local CIDR blocks, which are the CIDR blocks of the virtual private cloud (VPC) for the client to access.</p>
-     * <p>Multiple CIDR blocks are separated with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</p>
+     * <p>The local CIDR block, which is the CIDR block on the VPC side that needs to communicate with the client CIDR block.</p>
+     * <p>Separate multiple CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/24,172.17.0.0/16</p>
@@ -121,10 +137,10 @@ public class UpdateIpsecServerRequest extends TeaModel {
 
     /**
      * <p>The pre-shared key.</p>
-     * <p>The pre-shared key that is used for authentication between the IPsec server and the client. The key must be 1 to 100 characters in length.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/2794120.html">ListIpsecServers</a> to query keys generated by the system.</p>
+     * <p>The pre-shared key is used for identity authentication between the IPsec server and the client. The key must be 1 to 100 characters in length.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2794120.html">ListIpsecServers</a> operation to query the key generated by the system.</p>
      * <blockquote>
-     * <p>The pre-shared key of the IPsec server key must be the same as that of the client. Otherwise, the connection between the IPsec server and the client cannot be established.</p>
+     * <p>The pre-shared key of the IPsec server must be the same as the authentication key of the client. Otherwise, a connection cannot be established between the IPsec server and the client.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -134,7 +150,7 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public String psk;
 
     /**
-     * <p>Specifies whether to enable pre-shared key authentication. If you set the value to <strong>true</strong>, pre-shared key authentication is enabled.</p>
+     * <p>Specifies whether to enable pre-shared key authentication. Valid values: <strong>true</strong>, which indicates that pre-shared key authentication is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -143,8 +159,8 @@ public class UpdateIpsecServerRequest extends TeaModel {
     public Boolean pskEnabled;
 
     /**
-     * <p>The ID of the region where the IPsec server is created.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPsec server.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

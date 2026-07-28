@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth for the EIP. This value cannot be larger than the maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth that can be allocated within the Internet Shared Bandwidth instance. Unit: Mbps.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     public String bandwidth;
 
     /**
-     * <p>The ID of the Internet Shared Bandwidth instance.</p>
+     * <p>The instance ID of the Internet Shared Bandwidth instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The ID of the EIP that is associated with the Internet Shared Bandwidth instance.</p>
+     * <p>The instance ID of the EIP that has been added to the Internet Shared Bandwidth instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

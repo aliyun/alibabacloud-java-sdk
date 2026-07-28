@@ -11,7 +11,7 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The maximum value is <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,8 +29,8 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the BGP group.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the BGP group resides.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VBR.</p>
+     * <p>The ID of the Virtual Border Router.</p>
      * 
      * <strong>example:</strong>
      * <p>vbr-bp1ctxy813985gkuk****</p>

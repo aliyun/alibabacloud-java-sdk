@@ -53,7 +53,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The CA certificate of the peer when an IPsec-VPN connection is created with a Chinese SM VPN gateway.</p>
+     * <p>The peer CA certificate when the IPsec-VPN connection is created with a China CA VPN gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</p>
@@ -86,9 +86,9 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the tunnel.</p>
      * <ul>
-     * <li><strong>active</strong>: available.</li>
-     * <li><strong>updating</strong>: being updated.</li>
-     * <li><strong>deleting</strong>: being deleted.</li>
+     * <li><strong>active</strong>: The tunnel is available.</li>
+     * <li><strong>updating</strong>: The tunnel is being updated.</li>
+     * <li><strong>deleting</strong>: The tunnel is being deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -389,8 +389,8 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         /**
          * <p>The IKE negotiation mode.</p>
          * <ul>
-         * <li><strong>main</strong>: main mode. This mode offers high security during negotiations.</li>
-         * <li><strong>aggressive</strong>: aggressive mode. This mode supports fast negotiations and a higher success rate.</li>
+         * <li><strong>main</strong>: main mode. The negotiation process is more secure.</li>
+         * <li><strong>aggressive</strong>: aggressive mode. The negotiation is faster and has a higher success rate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -423,7 +423,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The identifier of the local end of the tunnel. It supports FQDN and IP formats. Default value: the IP address of the current tunnel.</p>
+         * <p>The identifier of the local end of the tunnel. The value supports FQDN and IP formats. Default value: the IP address of the current tunnel.</p>
          * 
          * <strong>example:</strong>
          * <p>47.XX.XX.87</p>
@@ -441,7 +441,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The identifier of the peer end of the tunnel. It supports FQDN and IP formats. Default value: the IP address of the customer gateway instance associated with the tunnel.</p>
+         * <p>The identifier of the peer end of the tunnel. The value supports FQDN and IP formats. Default value: the IP address of the customer gateway instance associated with the tunnel.</p>
          * 
          * <strong>example:</strong>
          * <p>47.XX.XX.207</p>

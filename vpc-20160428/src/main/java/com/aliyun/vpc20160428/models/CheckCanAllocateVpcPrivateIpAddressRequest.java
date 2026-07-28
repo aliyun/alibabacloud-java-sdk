@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     /**
-     * <p>The version of the private IP address. Valid values:</p>
+     * <p>The type of the private IP address to check. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong> If you want to query an IPv4 address, this parameter is optional.</li>
-     * <li><strong>ipv6</strong> If you want to query an IPv6 address, this parameter is required.</li>
+     * <li><strong>ipv4</strong>: IPv4. This parameter is optional when the private IP address is of the IPv4 type.</li>
+     * <li><strong>ipv6</strong>: IPv6. This parameter is required when the private IP address is of the IPv6 type.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
+     * <p>The private IP address to check. The private IP address must belong to the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,8 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The region ID of the vSwitch to which the private IP address that you want to query belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the vSwitch to which the private IP address belongs.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vSwitch to which the private IP address to be queried belongs.</p>
+     * <p>The ID of the vSwitch to which the private IP address belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

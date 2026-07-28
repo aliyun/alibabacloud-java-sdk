@@ -127,9 +127,9 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
 
     public static class DescribeSslVpnClientsResponseBodyClientInfoList extends TeaModel {
         /**
-         * <p>The SSL client certificate used by the client to establish the SSL-VPN connection to Alibaba Cloud.</p>
+         * <p>The SSL client certificate used when the client establishes an SSL-VPN connection to Alibaba Cloud.</p>
          * <blockquote>
-         * <p>If the client uses two-factor identity authentication to establish the SSL-VPN connection to Alibaba Cloud, the value of this parameter is the username of the client.</p>
+         * <p>If the client uses two-factor identity authentication to establish an SSL-VPN connection to Alibaba Cloud, the value of this parameter is the username of the client.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,8 +139,8 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The timestamp when the client established the SSL-VPN connection to Alibaba Cloud. Unit: milliseconds.</p>
-         * <p>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the SSL-VPN connection was established.</p>
+         * <p>The timestamp when the client establishes an SSL-VPN connection to Alibaba Cloud. Unit: milliseconds.</p>
+         * <p>The timestamp is in the UNIX format and represents the total duration from 00:00:00 on January 1, 1970 (UTC) to the time when the SSL-VPN connection is established.</p>
          * 
          * <strong>example:</strong>
          * <p>1670985008000</p>
@@ -149,7 +149,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public Long connectedTime;
 
         /**
-         * <p>The public IP address that the client used to establish the SSL-VPN connection to Alibaba Cloud.</p>
+         * <p>The public IP address that the client uses when establishing an SSL-VPN connection to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>8.XX.XX.15</p>
@@ -158,7 +158,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The port number that the client used to establish the SSL-VPN connection to Alibaba Cloud.</p>
+         * <p>The port number that the client uses when establishing an SSL-VPN connection to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>4****</p>
@@ -167,7 +167,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The private IP address that the VPN gateway assigned to the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+         * <p>The private IP address that the VPN gateway assigns to the client when the client establishes an SSL-VPN connection to Alibaba Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>10.10.10.10</p>
@@ -176,7 +176,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public String privateIp;
 
         /**
-         * <p>The traffic that the VPN gateway received from the client over the SSL-VPN connection. Unit: bytes.</p>
+         * <p>The traffic that the VPN gateway receives from the client over the SSL-VPN connection. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>60782</p>
@@ -185,7 +185,7 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public Long receiveBytes;
 
         /**
-         * <p>The traffic that the VPN gateway sent to the client over the SSL-VPN connection. Unit: bytes.</p>
+         * <p>The traffic that the VPN gateway sends to the client over the SSL-VPN connection. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>57144</p>

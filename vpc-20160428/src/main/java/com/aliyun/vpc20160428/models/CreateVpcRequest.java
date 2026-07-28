@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateVpcRequest extends TeaModel {
     /**
-     * <p>VPC CIDR.</p>
+     * <p>The CIDR block of the VPC.</p>
      * <ul>
-     * <li><p>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</p>
-     * </li>
-     * <li><p>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</p>
-     * </li>
+     * <li>We recommend that you use an IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC. The subnet mask must be 16 to 28 bits in length. Examples: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</li>
+     * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block of the virtual private cloud (VPC).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +21,7 @@ public class CreateVpcRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,12 +41,10 @@ public class CreateVpcRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * </li>
+     * <li><strong>true</strong>: performs a dry run without creating the VPC. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a Normal request and sends the request. If the request passes the check, an HTTP 2xx status code is returned and the system proceeds to create a VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,12 +54,10 @@ public class CreateVpcRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Whether to enable the DNS hostname feature. Values:</p>
+     * <p>Specifies whether to enable the DNS hostname feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Not enabled.</p>
-     * </li>
-     * <li><p><strong>true</strong>: Enabled.</p>
-     * </li>
+     * <li><strong>false</strong> (default): disabled.</li>
+     * <li><strong>true</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,12 +67,10 @@ public class CreateVpcRequest extends TeaModel {
     public Boolean enableDnsHostname;
 
     /**
-     * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): disabled.</p>
-     * </li>
-     * <li><p><strong>true</strong>: enabled.</p>
-     * </li>
+     * <li><strong>false</strong> (default): disabled.</li>
+     * <li><strong>true</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,9 +80,9 @@ public class CreateVpcRequest extends TeaModel {
     public Boolean enableIpv6;
 
     /**
-     * <p>Allocate VPC from the IPAM address pool by inputting a mask.</p>
+     * <p>The subnet mask used to allocate a CIDR block from the IPAM pool to the VPC.</p>
      * <blockquote>
-     * <p>When creating a VPC with a specified IPAM address pool, at least one of the parameters CidrBlock or Ipv4CidrMask must be provided.</p>
+     * <p>When you create a VPC by specifying an IPAM pool, you must specify at least one of CidrBlock or Ipv4CidrMask.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -100,7 +92,7 @@ public class CreateVpcRequest extends TeaModel {
     public Integer ipv4CidrMask;
 
     /**
-     * <p>The ID of the IP Address Manager (IPAM) pool of the IPv4 type.</p>
+     * <p>The instance ID of the IPv4 IPAM pool.</p>
      * 
      * <strong>example:</strong>
      * <p>ipam-pool-sycmt3p2a9v63i****</p>
@@ -109,7 +101,7 @@ public class CreateVpcRequest extends TeaModel {
     public String ipv4IpamPoolId;
 
     /**
-     * <p>The IPv6 CIDR block of the VPC. If you enable IPv6 for a VPC, the system allocates an IPv6 CIDR block. To specify an IPv6 CIDR block, you must call the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve the specified IPv6 CIDR block.</p>
+     * <p>The IPv6 CIDR block of the VPC. When you enable IPv6 for the VPC, the system will assign an IPv6 CIDR block. To specify an IPv6 CIDR block, you need to first invoke the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve the specified IPv6 CIDR block, and then pass it in.</p>
      * 
      * <strong>example:</strong>
      * <p>2408:XXXX:0:6a::/56</p>
@@ -118,7 +110,7 @@ public class CreateVpcRequest extends TeaModel {
     public String ipv6CidrBlock;
 
     /**
-     * <p>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</p>
+     * <p>The subnet mask used to add an IPv6 CIDR block to the VPC from the IPAM pool.</p>
      * 
      * <strong>example:</strong>
      * <p>56</p>
@@ -127,7 +119,7 @@ public class CreateVpcRequest extends TeaModel {
     public Integer ipv6CidrMask;
 
     /**
-     * <p>The ID of the IP Address Manager (IPAM) pool of the IPv6 type.</p>
+     * <p>The instance ID of the IPv6 IPAM pool.</p>
      * 
      * <strong>example:</strong>
      * <p>ipam-pool-bp1aq51kkfh477z03****</p>
@@ -138,17 +130,13 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
      * <ul>
-     * <li><p><strong>BGP</strong> (default)</p>
-     * </li>
-     * <li><p><strong>ChinaMobile</strong></p>
-     * </li>
-     * <li><p><strong>ChinaUnicom</strong></p>
-     * </li>
-     * <li><p><strong>ChinaTelecom</strong></p>
-     * </li>
+     * <li><strong>BGP</strong> (default): Alibaba Cloud BGP IPv6.</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile (single ISP).</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom (single ISP).</li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom (single ISP).</li>
      * </ul>
      * <blockquote>
-     * <p>If you are allowed to use single-ISP bandwidth, you can set the value to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * <p>If your account is included in the China single-ISP bandwidth whitelist, you can set this parameter to <strong>ChinaTelecom</strong> (China Telecom), <strong>ChinaUnicom</strong> (China Unicom), or <strong>ChinaMobile</strong> (China Mobile).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,7 +152,7 @@ public class CreateVpcRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the VPC belongs.</p>
+     * <p>The region ID of the VPC.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -175,8 +163,8 @@ public class CreateVpcRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
+     * <p>The resource group ID.</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -191,14 +179,14 @@ public class CreateVpcRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag of the resource.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVpcRequestTag> tag;
 
     /**
-     * <p>The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.</p>
-     * <p>For more information about user CIDR blocks, see the <code>What is a user CIDR block?</code> section in <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</p>
+     * <p>The user CIDR block. Separate multiple CIDR blocks with commas (,). You can specify up to three CIDR blocks.</p>
+     * <p>For more information about user CIDR blocks, see the <code>What is a user CIDR block?</code> section in <a href="https://help.aliyun.com/document_detail/185311.html">virtual private cloud (VPC) FAQ</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/12</p>
@@ -391,8 +379,8 @@ public class CreateVpcRequest extends TeaModel {
 
     public static class CreateVpcRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -401,8 +389,8 @@ public class CreateVpcRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

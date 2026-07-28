@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     /**
-     * <p>The ID of the associated ACL.</p>
+     * <p>The ID of the associated access control policy group.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6transacl-bp1de27sou71g0lf****</p>
@@ -14,10 +14,10 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public String aclId;
 
     /**
-     * <p>Specifies whether to enable access control lists (ACLs). Valid values:</p>
+     * <p>Specifies whether to enable access control. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: enabled.</li>
+     * <li><strong>off</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,12 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public String aclStatus;
 
     /**
-     * <p>The ACL type. Valid values:</p>
+     * <p>The type of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
-     * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
+     * <li><p><strong>white</strong>: allows the IPv6 addresses in the access control policy group to access backend services.</p>
+     * </li>
+     * <li><p><strong>black</strong>: denies the IPv6 addresses in the access control policy group from accessing backend services.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +42,7 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public String aclType;
 
     /**
-     * <p>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+     * <p>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -49,7 +51,7 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public Integer allocateIpv6Port;
 
     /**
-     * <p>The public IPv4 address that needs to provide IPv6 services.</p>
+     * <p>The public IPv4 address that needs to provide IPv6 services. This is the IPv4 address of the IPv4-only server.</p>
      * 
      * <strong>example:</strong>
      * <p>47.11.XX.XX</p>
@@ -67,13 +69,15 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public Integer backendIpv4Port;
 
     /**
-     * <p>The maximum bandwidth specified in the IPv6 mapping entry. Unit: Mbit/s. Valid values:</p>
+     * <p>The maximum bandwidth of the IPv6 Translation Service mapping entry. Unit: Mbit/s. Valid values: </p>
      * <ul>
-     * <li><strong>-1</strong> (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</li>
-     * <li><strong>1</strong> to <strong>200</strong>: changes the maximum bandwidth specified in the IPv6 mapping entry.</li>
+     * <li><p><strong>-1</strong> (default): does not limit the maximum bandwidth of the mapping entry.  </p>
+     * </li>
+     * <li><p><strong>1</strong> to <strong>200</strong>: the bandwidth value of the mapping entry.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>The sum of maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</p>
+     * <p>The sum of the maximum bandwidth values of all IPv6 Translation Service mapping entries cannot exceed the maximum bandwidth of the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,7 +87,7 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public Integer entryBandwidth;
 
     /**
-     * <p>The description of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+     * <p>The description of the IPv6 Translation Service mapping entry. The description must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>entrydescription</p>
@@ -92,7 +96,7 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public String entryDescription;
 
     /**
-     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+     * <p>The name of the IPv6 Translation Service mapping entry. The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>entry1</p>
@@ -101,7 +105,7 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public String entryName;
 
     /**
-     * <p>The ID of the IPv6 mapping entry.</p>
+     * <p>The ID of the IPv6 Translation Service mapping entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +121,7 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,10 +137,10 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li><strong>tcp</strong></li>
-     * <li><strong>udp</strong></li>
+     * <li><strong>tcp</strong>: forwards TCP packets.  </li>
+     * <li><strong>udp</strong>: forwards UDP packets.</li>
      * </ul>
      * 
      * <strong>example:</strong>

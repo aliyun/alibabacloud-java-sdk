@@ -11,7 +11,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
     public java.util.List<ListIpsecServersResponseBodyIpsecServers> ipsecServers;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,10 +20,12 @@ public class ListIpsecServersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
-     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query is to be sent.</p>
+     * </li>
+     * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,7 +127,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
         /**
          * <p>The IKE negotiation mode. Valid values:</p>
-         * <p><strong>main</strong>: This mode offers higher security during negotiations.</p>
+         * <p><strong>main</strong>: main mode. Negotiations are highly secure.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -152,7 +154,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.</p>
+         * <p>The identifier of the IPsec server. FQDN and IP address formats are supported. The default value is the public IP address of the selected VPN gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>116.64.XX.XX</p>
@@ -161,7 +163,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String localId;
 
         /**
-         * <p>The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.</p>
+         * <p>The identifier of the peer. FQDN and IP address formats are supported. The default value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>139.67.XX.XX</p>
@@ -318,7 +320,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
     public static class ListIpsecServersResponseBodyIpsecServers extends TeaModel {
         /**
-         * <p>The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.</p>
+         * <p>The client CIDR block, which is the CIDR block from which IP addresses are assigned to the virtual network interface controllers (NICs) of clients.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
@@ -328,7 +330,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the IPsec server was created.</p>
-         * <p>T is used as a delimiter. Z indicates that the time is in UTC.</p>
+         * <p>T is the delimiter. Z indicates UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-03T10:11:55Z</p>
@@ -337,10 +339,12 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:</p>
+         * <p>Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated.</p>
          * <ul>
-         * <li><strong>true</strong>: immediately initiates negotiations after the configuration is completed.</li>
-         * <li><strong>false</strong>: initiates negotiations when inbound traffic is detected.</li>
+         * <li><p><strong>true</strong>: Negotiations are reinitiated after the configuration is complete.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Negotiations are reinitiated when traffic is detected.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,7 +354,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public Boolean effectImmediately;
 
         /**
-         * <p>The ID of the IDaaS instance.</p>
+         * <p>The instance ID of IDaaS.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-cn-hangzhou-****</p>
@@ -380,7 +384,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public ListIpsecServersResponseBodyIpsecServersIpsecConfig ipsecConfig;
 
         /**
-         * <p>The IPsec server ID.</p>
+         * <p>The ID of the IPsec server.</p>
          * 
          * <strong>example:</strong>
          * <p>iss-bp1bo3xuvcxo7ixll****</p>
@@ -398,7 +402,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String ipsecServerName;
 
         /**
-         * <p>The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.</p>
+         * <p>The local CIDR block, which is the VPC-side CIDR block that needs to communicate with the client CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16,172.17.0.0/16</p>
@@ -407,9 +411,9 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String localSubnet;
 
         /**
-         * <p>The number of SSL-VPN connections supported by the VPN gateway.</p>
+         * <p>The maximum number of SSL-VPN connections supported by the VPN gateway.</p>
          * <blockquote>
-         * <p> The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.</p>
+         * <p>SSL-VPN and the IPsec server share SSL-VPN connections. For example, if the maximum number of SSL-VPN connections is 5 and three SSL clients are already connected to SSL-VPN, only two more clients can connect to the IPsec server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -419,10 +423,12 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
-         * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
+         * <p>Indicates whether two-factor authentication is enabled.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong>: The feature is disabled.</li>
+         * <li><p><strong>true</strong>: Two-factor authentication is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Two-factor authentication is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,7 +456,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>Indicates whether pre-shared key authentication is enabled. Only <strong>true</strong> may be returned, which indicates that pre-shared key authentication is enabled.</p>
+         * <p>Indicates whether pre-shared key authentication is enabled. The value is <strong>true</strong>, which indicates that pre-shared key authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -459,7 +465,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         public Boolean pskEnabled;
 
         /**
-         * <p>The ID of the region where the IPsec server is created.</p>
+         * <p>The region ID of the IPsec server.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -469,7 +475,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the IPsec server belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzs372yg****</p>

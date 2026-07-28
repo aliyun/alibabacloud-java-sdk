@@ -5,16 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
+     * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </p>
      * <p>&lt;props=&quot;intl&quot;&gt;<ph>Default value range: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</ph></p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-enhanced-95th-percentile, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByDominantTraffic</strong>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is enhanced 95th percentile billing, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByDominantTraffic</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
-     * <p> Default value: <strong>1000</strong>.
-     * .</p>
+     * <p> Default value: <strong>1000</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +24,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
@@ -49,8 +48,8 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): BGP (multi-ISP) lines. All regions support BGP (multi-ISP) lines.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) premium lines. Currently, only the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions support BGP (multi-ISP) premium Internet Shared Bandwidth instances.</li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) lines. BGP (multi-ISP) lines are supported in all regions.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) premium lines. Currently, BGP (multi-ISP) premium Internet Shared Bandwidth instances are supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
      * </ul>
      * <p>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</p>
      * <ul>
@@ -61,7 +60,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
      * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
-     * <p>If you are a Finance Cloud user in the China (Hangzhou) region, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * <p>If you are an Alibaba Finance Cloud user in Hangzhou, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -70,14 +69,13 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public String ISP;
 
     /**
-     * <p>The billable method of the Internet Shared Bandwidth instance. Valid values:
+     * <p>The billing method of the Internet Shared Bandwidth instance. Valid values:
      * &lt;props=&quot;intl&quot;&gt;<strong>PayByTraffic</strong> (pay-by-data-transfer).</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
      * <li><strong>PayBy95</strong>: pay-by-enhanced-95th-percentile.</li>
-     * <li><strong>PayByDominantTraffic</strong>: pay-by-dominant-traffic.
-     * .</li>
+     * <li><strong>PayByDominantTraffic</strong>: pay-by-dominant-traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,15 +140,15 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The security protection level.</p>
+     * <p>The edition of Anti-DDoS.</p>
      * <ul>
-     * <li><p>If you do not set this parameter, Anti-DDoS Origin Basic is used by default.</p>
+     * <li><p>If you leave this parameter empty, Anti-DDoS Origin Basic is used by default.</p>
      * </li>
      * <li><p>If you set this parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Origin Enhanced is used.</p>
      * </li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;<ph>You can set this parameter when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
-     * <p>You can specify up to 10 security protection levels.</p>
+     * <p>You can add up to 10 security protection levels.</p>
      * <blockquote>
      * <p>This parameter is deprecated.</p>
      * </blockquote>
@@ -169,7 +167,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The zone of the Internet Shared Bandwidth instance.
-     * This parameter is required when you create an Internet Shared Bandwidth instance for a CloudBox.</p>
+     * This parameter is required when you create an Internet Shared Bandwidth instance for a cloud box.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-southeast-1-lzdvn-cb</p>
@@ -313,7 +311,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public static class CreateCommonBandwidthPackageRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>

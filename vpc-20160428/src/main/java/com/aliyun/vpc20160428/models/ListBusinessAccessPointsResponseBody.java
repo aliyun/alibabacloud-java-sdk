@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBusinessAccessPointsResponseBody extends TeaModel {
     /**
-     * <p>A list of access points.</p>
+     * <p>The list of all access point information for Express Connect circuits.</p>
      */
     @NameInMap("BusinessAccessPoints")
     public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPoints> businessAccessPoints;
@@ -41,15 +41,9 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     }
 
     public static class ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels extends TeaModel {
-        /**
-         * <p>The model of the optical module.</p>
-         */
         @NameInMap("OpticalModuleModel")
         public String opticalModuleModel;
 
-        /**
-         * <p>The port type.</p>
-         */
         @NameInMap("PortType")
         public String portType;
 
@@ -78,7 +72,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
 
     public static class ListBusinessAccessPointsResponseBodyBusinessAccessPoints extends TeaModel {
         /**
-         * <p>The ID of the access point.</p>
+         * <p>The ID of the Express Connect circuit access point.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-cn-hangzhou-xs-B</p>
@@ -87,7 +81,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         public String accessPointId;
 
         /**
-         * <p>The name of the access point.</p>
+         * <p>The name of the Express Connect circuit access point.</p>
          * 
          * <strong>example:</strong>
          * <p>杭州-萧山-B</p>
@@ -96,9 +90,9 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         public String accessPointName;
 
         /**
-         * <p>The ID of the Cloud Box instance.</p>
+         * <p>The CloudBox instance ID.</p>
          * <blockquote>
-         * <p>This parameter is returned only for access points that are associated with Cloud Box instances.</p>
+         * <p>This parameter is available when the queried Express Connect circuit and access point are CloudBox Express Connect circuits and CloudBox access points.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -125,27 +119,18 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         @NameInMap("Longitude")
         public Double longitude;
 
-        /**
-         * <p>The supported model of the optical module.</p>
-         */
         @NameInMap("OpticalModuleModels")
         public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> opticalModuleModels;
 
         /**
-         * <p>The connectivity provider for the Express Connect circuit. Valid values:</p>
+         * <p>The telecommunications service providers that support physical line access. Valid values:</p>
          * <ul>
-         * <li><p><strong>CT</strong>: China Telecom.</p>
-         * </li>
-         * <li><p><strong>CU</strong>: China Unicom.</p>
-         * </li>
-         * <li><p><strong>CM</strong>: China Mobile.</p>
-         * </li>
-         * <li><p><strong>CO</strong>: other connectivity providers in the Chinese mainland.</p>
-         * </li>
-         * <li><p><strong>Equinix</strong>: Equinix.</p>
-         * </li>
-         * <li><p><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</p>
-         * </li>
+         * <li><strong>CT</strong>: China Telecom.</li>
+         * <li><strong>CU</strong>: China Unicom.</li>
+         * <li><strong>CM</strong>: China Mobile.</li>
+         * <li><strong>CO</strong>: Other Chinese providers.</li>
+         * <li><strong>Equinix</strong>: Equinix.</li>
+         * <li><strong>Other</strong>: Other providers outside the Chinese mainland.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,25 +140,18 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         public String supportLineOperator;
 
         /**
-         * <p>The port types supported by the access point. Valid values:</p>
+         * <p>The port types available for purchase at the Express Connect circuit access point. Valid values:</p>
          * <ul>
-         * <li><p><strong>100Base-T</strong>: 100 Mbit/s copper port.</p>
-         * </li>
-         * <li><p><strong>1000Base-T</strong>: 1,000 Mbit/s copper port.</p>
-         * </li>
-         * <li><p><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km).</p>
-         * </li>
-         * <li><p><strong>10GBase-T</strong>: 10,000 Mbit/s copper port.</p>
-         * </li>
-         * <li><p><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km).</p>
-         * </li>
-         * <li><p><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port.</p>
-         * </li>
-         * <li><p><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port.</p>
-         * </li>
+         * <li><strong>100Base-T</strong>: 100M Ethernet port.</li>
+         * <li><strong>1000Base-T</strong>: 1 GE electrical port.</li>
+         * <li><strong>1000Base-LX</strong>: GE single-mode optical port (10 km).</li>
+         * <li><strong>10GBase-T</strong>: 10 GE electrical port.</li>
+         * <li><strong>10GBase-LR</strong>: 10 GE single-mode optical port (10 km).</li>
+         * <li><strong>40GBase-LR</strong>: 40 GE single-mode optical port.</li>
+         * <li><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</li>
          * </ul>
          * <blockquote>
-         * <p>The 40GBase-LR and 100GBase-LR port types are subject to availability. To use these port types, contact your account manager.</p>
+         * <p> 40GBase-LR and 100GBase-LR ports are created based on actual backend port availability. Contact your account manager for details.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

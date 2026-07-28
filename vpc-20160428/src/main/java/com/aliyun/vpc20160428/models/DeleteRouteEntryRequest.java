@@ -19,7 +19,7 @@ public class DeleteRouteEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <p><strong>true</strong>: performs a dry run without deleting the route. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
-     * <p><strong>false</strong> (default): sends a normal request. After the check succeeds, a 2xx HTTP status code is returned and the route is deleted.</p>
+     * <p><strong>false</strong> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the route entry is deleted.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -27,8 +27,8 @@ public class DeleteRouteEntryRequest extends TeaModel {
     /**
      * <p>The ID of the next hop instance.</p>
      * <ul>
-     * <li>To delete a non-ECMP route, specify <strong>NextHopId</strong>. Do not specify <strong>NextHopList</strong>.</li>
-     * <li>To delete an ECMP route, specify <strong>NextHopList</strong>. Do not specify <strong>NextHopId</strong>.</li>
+     * <li>To delete a non-ECMP route, specify <strong>NextHopId</strong>. You do not need to specify <strong>NextHopList</strong>.</li>
+     * <li>To delete an ECMP route, specify <strong>NextHopList</strong>. You do not need to specify <strong>NextHopId</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

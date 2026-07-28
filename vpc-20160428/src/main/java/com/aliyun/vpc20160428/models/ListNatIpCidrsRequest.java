@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ListNatIpCidrsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,12 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck this request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks the API request. The CIDR blocks of the NAT gateway are not queried if the API request passes the precheck. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the precheck, the corresponding error message is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
-     * <li><strong>false</strong>: sends the API request. If the request passes the precheck, 2xx HTTP status code is returned and the CIDR blocks of the NAT gateway are queried. This is the default value.</li>
+     * <li><p><strong>true</strong>: performs a dry run without querying the NAT CIDR block list. The system checks the request for potential issues, including missing required parameters, invalid parameter values, and the authorization status of the RAM user. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): sends a normal request, and the NAT CIDR block list is returned after the request passes the check with an HTTP 2xx status code.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -40,7 +42,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The ID of the VPC NAT gateway that you want to query.</p>
+     * <p>The instance ID of the VPC NAT gateway whose NAT CIDR blocks you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +52,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The CIDR block of the NAT gateway that you want to query.</p>
+     * <p>The NAT CIDR block to query.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.0.0/24</p>
@@ -59,7 +61,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public String natIpCidr;
 
     /**
-     * <p>The name of the CIDR block that you want to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+     * <p>The name of the NAT CIDR block to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -68,7 +70,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public java.util.List<String> natIpCidrName;
 
     /**
-     * <p>The status of the CIDR block that you want to query. Set the value to <strong>Available</strong>.</p>
+     * <p>The status of the NAT CIDR block to query. Set the value to <strong>Available</strong>, which indicates that the NAT CIDR block is available.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -77,7 +79,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public String natIpCidrStatus;
 
     /**
-     * <p>The CIDR block of the NAT gateway that you want to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+     * <p>The NAT CIDR block to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.0.0/24</p>
@@ -86,10 +88,10 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public java.util.List<String> natIpCidrs;
 
     /**
-     * <p>The token that is used for the next query. Set the value as needed.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+     * <li>If this is the first request or no subsequent requests exist, you do not need to specify this parameter.</li>
+     * <li>If a subsequent request exists, set the value to the NextToken value returned in the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +107,7 @@ public class ListNatIpCidrsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Virtual Private Cloud (VPC) NAT gateway that you want to query.</p>
+     * <p>The region ID of the VPC NAT gateway to which the NAT CIDR blocks belong.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

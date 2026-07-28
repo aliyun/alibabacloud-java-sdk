@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     /**
-     * <p>The ID of the access point.</p>
+     * <p>The access point ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     public String accessPointId;
 
     /**
-     * <p>Specifies whether to enable automatic payments. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): disables automatic payment.</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>true</strong>: enables automatic payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,14 +41,20 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
+     * <p>The carrier that provides the physical connection. Valid values:</p>
      * <ul>
-     * <li><strong>CT</strong>: China Telecom</li>
-     * <li><strong>CU</strong>: China Unicom</li>
-     * <li><strong>CM</strong>: China Mobile</li>
-     * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland</li>
-     * <li><strong>Equinix</strong>: Equinix</li>
-     * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland</li>
+     * <li><p><strong>CT</strong>: China Telecom</p>
+     * </li>
+     * <li><p><strong>CU</strong>: China Unicom</p>
+     * </li>
+     * <li><p><strong>CM</strong>: China Mobile</p>
+     * </li>
+     * <li><p><strong>CO</strong>: other carriers in the Chinese mainland</p>
+     * </li>
+     * <li><p><strong>Equinix</strong>: Equinix</p>
+     * </li>
+     * <li><p><strong>Other</strong>: other carriers outside the Chinese mainland</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -67,16 +73,23 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     /**
      * <p>The port type of the Express Connect circuit. Valid values:</p>
      * <ul>
-     * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
-     * <li><strong>1000Base-T</strong> (default): 1,000 Mbit/s copper Ethernet port</li>
-     * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
-     * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
-     * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
-     * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
-     * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+     * <li><p><strong>100Base-T</strong>: 100M Ethernet port.</p>
+     * </li>
+     * <li><p><strong>1000Base-T</strong> (default): 1 GE port.</p>
+     * </li>
+     * <li><p><strong>1000Base-LX</strong>: GE single-mode optical port (10 km).</p>
+     * </li>
+     * <li><p><strong>10GBase-T</strong>: 10 GE port.</p>
+     * </li>
+     * <li><p><strong>10GBase-LR</strong>: 10 GE single-mode optical port (10 km).</p>
+     * </li>
+     * <li><p><strong>40GBase-LR</strong>: 40 GE single-mode optical port.</p>
+     * </li>
+     * <li><p><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.</p>
+     * <p>40GBase-LR and 100GBase-LR ports are created based on the actual port availability. Contact your account manager for details.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +99,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     public String portType;
 
     /**
-     * <p>The ID of the redundant physical connection. The redundant physical connection must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
+     * <p>The ID of the redundant Express Connect circuit. The circuit must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-bp10zsv5ntp****</p>
@@ -95,8 +108,8 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
     public String redundantPhysicalConnectionId;
 
     /**
-     * <p>The region ID of the Express Connect circuit.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Express Connect circuit. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

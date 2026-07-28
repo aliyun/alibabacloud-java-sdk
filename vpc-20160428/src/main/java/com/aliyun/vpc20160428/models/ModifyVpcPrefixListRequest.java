@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcPrefixListRequest extends TeaModel {
     /**
-     * <p>The information about CIDR blocks to be added to the prefix list.</p>
+     * <p>The list of Classless Inter-Domain Routing blocks to add to the prefix list instance.</p>
      */
     @NameInMap("AddPrefixListEntry")
     public java.util.List<ModifyVpcPrefixListRequestAddPrefixListEntry> addPrefixListEntry;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without modifying the prefix list configuration. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the prefix list configuration is modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.</p>
+     * <p>The new maximum number of Classless Inter-Domain Routing block entries in the prefix list instance.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,7 +53,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     /**
      * <p>The new description of the prefix list.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>newdescription</p>
@@ -62,7 +62,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     public String prefixListDescription;
 
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The instance ID of the prefix list that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     /**
      * <p>The new name of the prefix list.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>newname</p>
@@ -82,7 +82,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     public String prefixListName;
 
     /**
-     * <p>The region ID of the prefix list.</p>
+     * <p>The region ID of the prefix list that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The information about CIDR blocks to be deleted to the prefix list.</p>
+     * <p>The list of Classless Inter-Domain Routing blocks to delete from the prefix list instance.</p>
      */
     @NameInMap("RemovePrefixListEntry")
     public java.util.List<ModifyVpcPrefixListRequestRemovePrefixListEntry> removePrefixListEntry;
@@ -214,9 +214,9 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     public static class ModifyVpcPrefixListRequestAddPrefixListEntry extends TeaModel {
         /**
-         * <p>The CIDR block to be added to the prefix list.</p>
+         * <p>The Classless Inter-Domain Routing block to add to the prefix list instance.</p>
          * <blockquote>
-         * <p> If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the <strong>AddPrefixListEntry.N.Description</strong> parameter.</p>
+         * <p>If the Classless Inter-Domain Routing block already exists in the prefix list, only the value of <strong>AddPrefixListEntry.N.Description</strong> is modified, which means only the description of the Classless Inter-Domain Routing block is updated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,8 +226,8 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The description of the CIDR block to be added to the prefix list.</p>
-         * <p>The description must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description of the Classless Inter-Domain Routing block to add to the prefix list instance.</p>
+         * <p>The description must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>newcidr</p>
@@ -260,7 +260,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     public static class ModifyVpcPrefixListRequestRemovePrefixListEntry extends TeaModel {
         /**
-         * <p>The CIDR block that you want to delete from the prefix list.</p>
+         * <p>The Classless Inter-Domain Routing block to delete from the prefix list instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -269,7 +269,7 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The description of the CIDR block that you want to delete.</p>
+         * <p>The description of the Classless Inter-Domain Routing block to delete from the prefix list.</p>
          * 
          * <strong>example:</strong>
          * <p>cidr</p>

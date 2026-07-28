@@ -15,7 +15,7 @@ public class GrantInstanceToCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <p>The UID of the Alibaba Cloud account to which the CEN instance belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class GrantInstanceToCenRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,8 +50,10 @@ public class GrantInstanceToCenRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong></li>
-     * <li><strong>VBR</strong></li>
+     * <li><p><strong>VPC</strong>: virtual private cloud (VPC).</p>
+     * </li>
+     * <li><p><strong>VBR</strong>: Virtual Border Router.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -68,8 +70,8 @@ public class GrantInstanceToCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the network instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

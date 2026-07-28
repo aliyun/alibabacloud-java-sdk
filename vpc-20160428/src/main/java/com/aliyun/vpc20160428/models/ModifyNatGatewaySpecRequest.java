@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyNatGatewaySpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment.</p>
+     * <p>Specifies whether to enable automatic payment.</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
-     * <li><strong>false</strong> (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
+     * <li><p><strong>true</strong>: enables automatic payment. The order is automatically paid.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): disables automatic payment. After the order is generated, complete the payment in the Order Center.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +21,7 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655****</p>
@@ -28,7 +30,7 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the Internet NAT gateway that you want to upgrade.</p>
+     * <p>The ID of the Internet NAT gateway whose specification you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,8 +46,8 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the Internet NAT gateway is deployed.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the Internet NAT gateway.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,11 +63,14 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The size of the Internet NAT gateway. Valid values:</p>
+     * <p>The specification of the Internet NAT gateway. Valid values:</p>
      * <ul>
-     * <li><strong>Small</strong>: small</li>
-     * <li><strong>Middle</strong>: medium</li>
-     * <li><strong>Large</strong>: large</li>
+     * <li><p><strong>Small</strong></p>
+     * </li>
+     * <li><p><strong>Middle</strong>: medium.</p>
+     * </li>
+     * <li><p><strong>Large</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
