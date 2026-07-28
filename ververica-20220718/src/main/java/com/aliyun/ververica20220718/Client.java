@@ -158,6 +158,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Initiates a streaming conversation with an AI Agent.</p>
+     * 
+     * @param request ChatAiAgentRequest
+     * @param headers ChatAiAgentHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChatAiAgentResponse
+     */
+    public ChatAiAgentResponse chatAiAgentWithOptions(String namespace, ChatAiAgentRequest request, ChatAiAgentHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hitlDecisions)) {
+            body.put("hitlDecisions", request.hitlDecisions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.refs)) {
+            body.put("refs", request.refs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMessage)) {
+            body.put("userMessage", request.userMessage);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChatAiAgent"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/advisor/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/ai-agent/stream/agent/v2/chat"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChatAiAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Initiates a streaming conversation with an AI Agent.</p>
+     * 
+     * @param request ChatAiAgentRequest
+     * @return ChatAiAgentResponse
+     */
+    public ChatAiAgentResponse chatAiAgent(String namespace, ChatAiAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ChatAiAgentHeaders headers = new ChatAiAgentHeaders();
+        return this.chatAiAgentWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a deployment.</p>
      * 
      * @param request CreateDeploymentRequest
@@ -1928,6 +1996,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</p>
+     * 
+     * @param request GetAutopilotPolicyRequest
+     * @param headers GetAutopilotPolicyHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAutopilotPolicyResponse
+     */
+    public GetAutopilotPolicyResponse getAutopilotPolicyWithOptions(String namespace, String deploymentId, GetAutopilotPolicyRequest request, GetAutopilotPolicyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutopilotPolicy"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/" + com.aliyun.openapiutil.Client.getEncodeParam(deploymentId) + "/autopilotpolicy-describe"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutopilotPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</p>
+     * 
+     * @param request GetAutopilotPolicyRequest
+     * @return GetAutopilotPolicyResponse
+     */
+    public GetAutopilotPolicyResponse getAutopilotPolicy(String namespace, String deploymentId, GetAutopilotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetAutopilotPolicyHeaders headers = new GetAutopilotPolicyHeaders();
+        return this.getAutopilotPolicyWithOptions(namespace, deploymentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the details of a specified catalog or all catalogs.</p>
      * 
      * @param request GetCatalogsRequest
@@ -3307,6 +3425,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the Autopilot tuning history records.</p>
+     * 
+     * @param request ListAutopilotTuningHistoriesRequest
+     * @param headers ListAutopilotTuningHistoriesHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAutopilotTuningHistoriesResponse
+     */
+    public ListAutopilotTuningHistoriesResponse listAutopilotTuningHistoriesWithOptions(String namespace, String deploymentId, ListAutopilotTuningHistoriesRequest request, ListAutopilotTuningHistoriesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.acceptLanguage)) {
+            realHeaders.put("Accept-Language", com.aliyun.teautil.Common.toJSONString(headers.acceptLanguage));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutopilotTuningHistories"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/" + com.aliyun.openapiutil.Client.getEncodeParam(deploymentId) + "/tuninghistories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutopilotTuningHistoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the Autopilot tuning history records.</p>
+     * 
+     * @param request ListAutopilotTuningHistoriesRequest
+     * @return ListAutopilotTuningHistoriesResponse
+     */
+    public ListAutopilotTuningHistoriesResponse listAutopilotTuningHistories(String namespace, String deploymentId, ListAutopilotTuningHistoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListAutopilotTuningHistoriesHeaders headers = new ListAutopilotTuningHistoriesHeaders();
+        return this.listAutopilotTuningHistoriesWithOptions(namespace, deploymentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains a list of existing custom connectors.</p>
      * 
      * @param headers ListCustomConnectorsHeaders
@@ -4677,6 +4867,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         SubmitSqlPreviewHeaders headers = new SubmitSqlPreviewHeaders();
         return this.submitSqlPreviewWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an Autopilot tuning policy.</p>
+     * 
+     * @param request UpdateAutopilotPolicyRequest
+     * @param headers UpdateAutopilotPolicyHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAutopilotPolicyResponse
+     */
+    public UpdateAutopilotPolicyResponse updateAutopilotPolicyWithOptions(String namespace, String deploymentId, UpdateAutopilotPolicyRequest request, UpdateAutopilotPolicyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyConfig)) {
+            body.put("policyConfig", request.policyConfig);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAutopilotPolicy"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/autopilot/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/" + com.aliyun.openapiutil.Client.getEncodeParam(deploymentId) + "/autopilotpolicy-update"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAutopilotPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an Autopilot tuning policy.</p>
+     * 
+     * @param request UpdateAutopilotPolicyRequest
+     * @return UpdateAutopilotPolicyResponse
+     */
+    public UpdateAutopilotPolicyResponse updateAutopilotPolicy(String namespace, String deploymentId, UpdateAutopilotPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateAutopilotPolicyHeaders headers = new UpdateAutopilotPolicyHeaders();
+        return this.updateAutopilotPolicyWithOptions(namespace, deploymentId, request, headers, runtime);
     }
 
     /**
