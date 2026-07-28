@@ -53,7 +53,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Document review results</p>
+     * <p>Queries the document content moderation result.</p>
      * 
      * @param request DescribeFileModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -89,7 +89,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Document review results</p>
+     * <p>Queries the document content moderation result.</p>
      * 
      * @param request DescribeFileModerationResultRequest
      * @return DescribeFileModerationResultResponse
@@ -1000,7 +1000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If an API involves fees, add the following bold statement as the first sentence: <strong>Make sure that you fully understand the billing methods and pricing of XXX before you call this operation.</strong> In this statement, &quot;pricing&quot; is a hyperlink that points to: <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
+     * <p>If the API incurs fees, add the following bold statement as the first sentence: <strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</p>
@@ -1039,7 +1039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If an API involves fees, add the following bold statement as the first sentence: <strong>Make sure that you fully understand the billing methods and pricing of XXX before you call this operation.</strong> In this statement, &quot;pricing&quot; is a hyperlink that points to: <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
+     * <p>If the API incurs fees, add the following bold statement as the first sentence: <strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</strong></p>
      * 
      * <b>summary</b> : 
      * <p>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</p>
@@ -1054,7 +1054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</p>
+     * <p>Performs synchronous multimodal content moderation. Supports image base64 strings.</p>
      * 
      * @param request MultiModalGuardForBase64Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1068,6 +1068,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileBase64Str)) {
+            body.put("FileBase64Str", request.fileBase64Str);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageBase64Str)) {
             body.put("ImageBase64Str", request.imageBase64Str);
         }
@@ -1096,7 +1100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</p>
+     * <p>Performs synchronous multimodal content moderation. Supports image base64 strings.</p>
      * 
      * @param request MultiModalGuardForBase64Request
      * @return MultiModalGuardForBase64Response

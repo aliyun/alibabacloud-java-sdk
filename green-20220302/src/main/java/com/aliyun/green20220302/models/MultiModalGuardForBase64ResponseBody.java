@@ -88,7 +88,7 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>未检测出风险</p>
+         * <p>No risk detected.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -97,7 +97,7 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
          * <p>The extension information.</p>
          * 
          * <strong>example:</strong>
-         * <p>json格式数据</p>
+         * <p>JSON format data.</p>
          */
         @NameInMap("Ext")
         public Object ext;

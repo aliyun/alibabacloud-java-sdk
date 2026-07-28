@@ -4,6 +4,9 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class MultiModalGuardForBase64Request extends TeaModel {
+    @NameInMap("FileBase64Str")
+    public String fileBase64Str;
+
     /**
      * <p>The base64-encoded string of the image.</p>
      * 
@@ -34,6 +37,14 @@ public class MultiModalGuardForBase64Request extends TeaModel {
     public static MultiModalGuardForBase64Request build(java.util.Map<String, ?> map) throws Exception {
         MultiModalGuardForBase64Request self = new MultiModalGuardForBase64Request();
         return TeaModel.build(map, self);
+    }
+
+    public MultiModalGuardForBase64Request setFileBase64Str(String fileBase64Str) {
+        this.fileBase64Str = fileBase64Str;
+        return this;
+    }
+    public String getFileBase64Str() {
+        return this.fileBase64Str;
     }
 
     public MultiModalGuardForBase64Request setImageBase64Str(String imageBase64Str) {

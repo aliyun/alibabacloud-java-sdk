@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFileModerationResultRequest extends TeaModel {
     /**
-     * <p>The service for enhanced file moderation.</p>
+     * <p>The service supported by the enhanced file moderation feature.</p>
      * 
      * <strong>example:</strong>
      * <p>document_detection</p>
@@ -14,9 +14,9 @@ public class DescribeFileModerationResultRequest extends TeaModel {
     public String service;
 
     /**
-     * <p>The parameters for the moderation service, specified as a JSON string.</p>
+     * <p>The parameter set required by the moderation service, in JSON character string format.</p>
      * <ul>
-     * <li>taskId: Required. The URL of the object to moderate. The URL must be accessible over the public network.</li>
+     * <li>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible over the public network access.</li>
      * </ul>
      * 
      * <strong>example:</strong>
