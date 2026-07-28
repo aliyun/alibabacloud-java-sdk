@@ -247,6 +247,9 @@ public class CreateMmAppRequest extends TeaModel {
     }
 
     public static class CreateMmAppRequestModelConfig extends TeaModel {
+        @NameInMap("AppType")
+        public String appType;
+
         /**
          * <strong>example:</strong>
          * <p>5</p>
@@ -274,6 +277,14 @@ public class CreateMmAppRequest extends TeaModel {
         public static CreateMmAppRequestModelConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateMmAppRequestModelConfig self = new CreateMmAppRequestModelConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateMmAppRequestModelConfig setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
         }
 
         public CreateMmAppRequestModelConfig setHistoryLimit(Integer historyLimit) {
