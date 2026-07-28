@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetEmbodiedAIPlatformPasswordRequest extends TeaModel {
     /**
+     * <p>The cluster ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResetEmbodiedAIPlatformPasswordRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The new password for the admin user of the embodied intelligence platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ResetEmbodiedAIPlatformPasswordRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The name of the embodied intelligence multimodal data platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,10 @@ public class ResetEmbodiedAIPlatformPasswordRequest extends TeaModel {
     public String platformName;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

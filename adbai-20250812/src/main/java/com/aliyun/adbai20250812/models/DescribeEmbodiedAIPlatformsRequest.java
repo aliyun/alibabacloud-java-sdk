@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     /**
+     * <p>The cluster ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end time of platform creation, used to filter query results. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -22,13 +24,27 @@ public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Use PageSize and PageNumber for pagination.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Use PageSize and PageNumber for pagination.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>298a7d5473b128dfe0b5e8707e******</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +52,8 @@ public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page in a paged query. Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -43,6 +61,8 @@ public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the embodied intelligence multimodal data platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>platform1</p>
      */
@@ -50,6 +70,10 @@ public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     public String platformName;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +83,7 @@ public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start time of platform creation, used to filter query results. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +93,8 @@ public class DescribeEmbodiedAIPlatformsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The running status of the platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */

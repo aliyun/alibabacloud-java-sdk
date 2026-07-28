@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeChatMessageResponseBody extends TeaModel {
     /**
+     * <p>The backend error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,26 +14,38 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The completion time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-18T02:01:56Z</p>
      */
     @NameInMap("CompletedAt")
     public String completedAt;
 
+    /**
+     * <p>The task content.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeChatMessageResponseBodyContent> content;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-18T02:01:56Z</p>
      */
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("Data")
     public DescribeChatMessageResponseBodyData data;
 
     /**
+     * <p>Indicates whether the content is incremental.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -39,6 +53,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public Boolean delta;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Failed to get sse streaming, please try again later.</p>
      */
@@ -46,6 +62,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String error;
 
     /**
+     * <p>The message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>97616</p>
      */
@@ -53,6 +71,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The index.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -60,6 +80,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public Long index;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -67,6 +89,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>msg_294c8b98-dc64-4c82-9417-e03522a631f6</p>
      */
@@ -74,6 +98,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String msgId;
 
     /**
+     * <p>The message object.</p>
+     * 
      * <strong>example:</strong>
      * <p>content</p>
      */
@@ -81,6 +107,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String object;
 
     /**
+     * <p>The content output.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>
      */
@@ -88,6 +116,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String output;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B47EED99-BFA5-529D-8D85-A6642421D390</p>
      */
@@ -95,6 +125,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The message role.</p>
+     * 
      * <strong>example:</strong>
      * <p>assistant</p>
      */
@@ -102,6 +134,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String role;
 
     /**
+     * <p>The sequence number of the message.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -109,6 +143,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public Long sequenceNumber;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>593b51eef93b443fb2ba2a6dc68b737b</p>
      */
@@ -116,6 +152,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The message status.</p>
+     * 
      * <strong>example:</strong>
      * <p>created</p>
      */
@@ -123,6 +161,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The text content.</p>
+     * 
      * <strong>example:</strong>
      * <p>：-636 KB</p>
      */
@@ -130,6 +170,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     public String text;
 
     /**
+     * <p>The message type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -303,6 +345,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
 
     public static class DescribeChatMessageResponseBodyContentData extends TeaModel {
         /**
+         * <p>The ID of the data API operation that is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>call_e0e9ee423c7e4ba88d058fd6</p>
          */
@@ -310,6 +354,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String callId;
 
         /**
+         * <p>The name of the data API operation that is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>describeScalingRecommendation</p>
          */
@@ -317,6 +363,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The output of the data API operation that is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>
          */
@@ -355,10 +403,15 @@ public class DescribeChatMessageResponseBody extends TeaModel {
     }
 
     public static class DescribeChatMessageResponseBodyContent extends TeaModel {
+        /**
+         * <p>The result set.</p>
+         */
         @NameInMap("Data")
         public DescribeChatMessageResponseBodyContentData data;
 
         /**
+         * <p>Indicates whether the content is incremental.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -366,6 +419,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public Boolean delta;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Failed to get sse streaming, please try again later.</p>
          */
@@ -373,6 +428,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The index.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -380,6 +437,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public Long index;
 
         /**
+         * <p>The message ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>msg_294c8b98-dc64-4c82-9417-e03522a631f6</p>
          */
@@ -387,6 +446,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String msgId;
 
         /**
+         * <p>The message object.</p>
+         * 
          * <strong>example:</strong>
          * <p>content</p>
          */
@@ -394,6 +455,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String object;
 
         /**
+         * <p>The sequence number of the message.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -401,6 +464,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public Long sequenceNumber;
 
         /**
+         * <p>The message status.</p>
+         * 
          * <strong>example:</strong>
          * <p>completed</p>
          */
@@ -408,6 +473,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The text content.</p>
+         * 
          * <strong>example:</strong>
          * <p>3 MB\n-</p>
          */
@@ -415,6 +482,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The message type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -510,6 +579,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
 
     public static class DescribeChatMessageResponseBodyData extends TeaModel {
         /**
+         * <p>The parameters of the data API operation that is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;instanceName&quot;: &quot;amv-bp1b9y9xhvpzm9p0&quot;, &quot;pageNumber&quot;: 1, &quot;pageSize&quot;: 10}</p>
          */
@@ -517,6 +588,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String arguments;
 
         /**
+         * <p>The ID of the data API operation that is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>call_1891f1689bc44ab292aadff3</p>
          */
@@ -524,6 +597,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String callId;
 
         /**
+         * <p>The name of the data API operation that is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>describeScalingRecommendation</p>
          */
@@ -531,6 +606,8 @@ public class DescribeChatMessageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The output of the data API operation that is called.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Skill not found: instance_health_inspection&quot;}]</p>
          */

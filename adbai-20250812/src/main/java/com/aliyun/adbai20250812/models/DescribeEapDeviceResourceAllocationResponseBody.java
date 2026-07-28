@@ -4,6 +4,9 @@ package com.aliyun.adbai20250812.models;
 import com.aliyun.tea.*;
 
 public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
+    /**
+     * <p>List of specification recommendations.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeEapDeviceResourceAllocationResponseBodyItems> items;
 
@@ -39,6 +42,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
 
     public static class DescribeEapDeviceResourceAllocationResponseBodyItems extends TeaModel {
         /**
+         * <p>Total number of devices</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -46,6 +51,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Integer deviceCount;
 
         /**
+         * <p>Total ACU count for the Ray Cluster Head of the Embodied Intelligence platform</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0</p>
          */
@@ -53,6 +60,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Double headAcu;
 
         /**
+         * <p>Number of vCPU cores for the Ray Cluster Head node on the Intelligent Embodiment platform</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -60,6 +69,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Integer headCpu;
 
         /**
+         * <p>Ray Cluster Head specification of the Embodied Intelligence platform</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;medium&quot;</p>
          */
@@ -67,6 +78,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public String headSpecName;
 
         /**
+         * <p>Total number of ACUs actually deployed on the Intelligent Embodiment platform</p>
+         * 
          * <strong>example:</strong>
          * <p>26</p>
          */
@@ -74,6 +87,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Double totalAcu;
 
         /**
+         * <p>Total number of vCPU cores actually deployed on the Intelligent Embodiment platform</p>
+         * 
          * <strong>example:</strong>
          * <p>26</p>
          */
@@ -81,6 +96,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Integer totalDeployedCpu;
 
         /**
+         * <p>Total target number of vCPU cores</p>
+         * 
          * <strong>example:</strong>
          * <p>24</p>
          */
@@ -88,6 +105,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Integer totalTargetCpu;
 
         /**
+         * <p>Total ACU count for the Embodied Intelligence platform</p>
+         * 
          * <strong>example:</strong>
          * <p>8.0</p>
          */
@@ -95,6 +114,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Double webserverAcu;
 
         /**
+         * <p>Total number of vCPU cores for the Embodied Intelligence platform</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -102,6 +123,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Integer webserverCpu;
 
         /**
+         * <p>Webserver specification of the Embodied Intelligence platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;xlarge&quot;</p>
          */
@@ -109,6 +132,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public String webserverSpecName;
 
         /**
+         * <p>Total ACU count per Ray Cluster Worker of the Embodied Intelligence platform</p>
+         * 
          * <strong>example:</strong>
          * <p>16.0</p>
          */
@@ -116,6 +141,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Double workerAcu;
 
         /**
+         * <p>Total number of Ray Cluster Worker nodes on the Intelligent Embodiment platform</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -123,6 +150,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Integer workerCount;
 
         /**
+         * <p>Number of vCPU cores per Ray Cluster Worker of the Embodied Intelligence platform</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -130,6 +159,8 @@ public class DescribeEapDeviceResourceAllocationResponseBody extends TeaModel {
         public Integer workerCpu;
 
         /**
+         * <p>Ray Cluster Worker specification of the Embodied Intelligence platform</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;xlarge&quot;</p>
          */

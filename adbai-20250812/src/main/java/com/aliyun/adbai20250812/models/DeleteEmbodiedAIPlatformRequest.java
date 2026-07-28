@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEmbodiedAIPlatformRequest extends TeaModel {
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class DeleteEmbodiedAIPlatformRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the embodied intelligence multimodal data platform.</p>
+     * <blockquote>
+     * <p>The name can contain lowercase letters, digits, and underscores. It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,10 @@ public class DeleteEmbodiedAIPlatformRequest extends TeaModel {
     public String platformName;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

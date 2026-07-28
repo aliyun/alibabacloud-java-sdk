@@ -8,7 +8,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "adbai.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("adbai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +36,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建指标平台</p>
+     * <p>Creates a metric analysis platform.</p>
      * 
      * @param tmpReq CreateAgentPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -78,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建指标平台</p>
+     * <p>Creates a metric analysis platform.</p>
      * 
      * @param request CreateAgentPlatformRequest
      * @return CreateAgentPlatformResponse
@@ -89,8 +97,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the actual resource amount corresponding to the backend of the instance ontology count.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建具身智能平台</p>
+     * <p>Creates an embodied intelligence multimodal data platform.</p>
      * 
      * @param tmpReq CreateEmbodiedAIPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -155,8 +166,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the actual resource amount corresponding to the backend of the instance ontology count.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建具身智能平台</p>
+     * <p>Creates an embodied intelligence multimodal data platform.</p>
      * 
      * @param request CreateEmbodiedAIPlatformRequest
      * @return CreateEmbodiedAIPlatformResponse
@@ -168,7 +182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指标平台</p>
+     * <p>Deletes a metrics platform.</p>
      * 
      * @param request DeleteAgentPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -208,7 +222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指标平台</p>
+     * <p>Deletes a metrics platform.</p>
      * 
      * @param request DeleteAgentPlatformRequest
      * @return DeleteAgentPlatformResponse
@@ -220,7 +234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除具身智能平台</p>
+     * <p>Deletes an embodied intelligence platform.</p>
      * 
      * @param request DeleteEmbodiedAIPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -260,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除具身智能平台</p>
+     * <p>Deletes an embodied intelligence platform.</p>
      * 
      * @param request DeleteEmbodiedAIPlatformRequest
      * @return DeleteEmbodiedAIPlatformResponse
@@ -271,8 +285,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
+     * 
      * <b>summary</b> : 
-     * <p>对ADB-MySQL提供产品RAG检索和实例分析、运维诊断</p>
+     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
      * 
      * @param request DescribeChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -291,6 +308,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skill)) {
+            query.put("Skill", request.skill);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
@@ -315,8 +336,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
+     * 
      * <b>summary</b> : 
-     * <p>对ADB-MySQL提供产品RAG检索和实例分析、运维诊断</p>
+     * <p>Queries multi-turn conversations for instance kernel diagnostics.</p>
      * 
      * @param request DescribeChatMessageRequest
      * @return DescribeChatMessageResponse
@@ -327,8 +351,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to view the actual resource amount corresponding to the backend of the instance ontology count</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询具身智能平台设备资源分配方案</p>
+     * <p>Query the resource allocation plan for Embodied Intelligence platform devices</p>
      * 
      * @param request DescribeEapDeviceResourceAllocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -367,8 +394,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used to view the actual resource amount corresponding to the backend of the instance ontology count</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询具身智能平台设备资源分配方案</p>
+     * <p>Query the resource allocation plan for Embodied Intelligence platform devices</p>
      * 
      * @param request DescribeEapDeviceResourceAllocationRequest
      * @return DescribeEapDeviceResourceAllocationResponse
@@ -380,7 +410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询具身智能平台</p>
+     * <p>Queries embodied intelligence multimodal data platforms.</p>
      * 
      * @param request DescribeEmbodiedAIPlatformsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -448,7 +478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询具身智能平台</p>
+     * <p>Queries embodied intelligence multimodal data platforms.</p>
      * 
      * @param request DescribeEmbodiedAIPlatformsRequest
      * @return DescribeEmbodiedAIPlatformsResponse
@@ -460,7 +490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询具身智能平台资源用量</p>
+     * <p>Queries the resource usage information of an embodied intelligence platform.</p>
      * 
      * @param request GetEmbodiedAIPlatformResourceUsageInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -508,7 +538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询具身智能平台资源用量</p>
+     * <p>Queries the resource usage information of an embodied intelligence platform.</p>
      * 
      * @param request GetEmbodiedAIPlatformResourceUsageInfoRequest
      * @return GetEmbodiedAIPlatformResourceUsageInfoResponse
@@ -520,7 +550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解锁具身智能平台</p>
+     * <p>Locks an embodied intelligence platform.</p>
      * 
      * @param request LockEmbodiedAIPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -560,7 +590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解锁具身智能平台</p>
+     * <p>Locks an embodied intelligence platform.</p>
      * 
      * @param request LockEmbodiedAIPlatformRequest
      * @return LockEmbodiedAIPlatformResponse
@@ -572,7 +602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改变配指标平台</p>
+     * <p>Upgrades or downgrades the specifications of a metric platform.</p>
      * 
      * @param tmpReq ModifyAgentPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -622,7 +652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改变配指标平台</p>
+     * <p>Upgrades or downgrades the specifications of a metric platform.</p>
      * 
      * @param request ModifyAgentPlatformRequest
      * @return ModifyAgentPlatformResponse
@@ -634,7 +664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变配具身智能平台</p>
+     * <p>Modifies the specifications of an embodied intelligence platform.</p>
      * 
      * @param tmpReq ModifyEmbodiedAIPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -700,7 +730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变配具身智能平台</p>
+     * <p>Modifies the specifications of an embodied intelligence platform.</p>
      * 
      * @param request ModifyEmbodiedAIPlatformRequest
      * @return ModifyEmbodiedAIPlatformResponse
@@ -712,7 +742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置具身智能平台密码</p>
+     * <p>Resets the admin password for the embodied intelligence platform.</p>
      * 
      * @param request ResetEmbodiedAIPlatformPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -756,7 +786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置具身智能平台密码</p>
+     * <p>Resets the admin password for the embodied intelligence platform.</p>
      * 
      * @param request ResetEmbodiedAIPlatformPasswordRequest
      * @return ResetEmbodiedAIPlatformPasswordResponse
@@ -768,7 +798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解锁具身智能平台</p>
+     * <p>Unlocks an embodied intelligence platform.</p>
      * 
      * @param request UnlockEmbodiedAIPlatformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -808,7 +838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解锁具身智能平台</p>
+     * <p>Unlocks an embodied intelligence platform.</p>
      * 
      * @param request UnlockEmbodiedAIPlatformRequest
      * @return UnlockEmbodiedAIPlatformResponse

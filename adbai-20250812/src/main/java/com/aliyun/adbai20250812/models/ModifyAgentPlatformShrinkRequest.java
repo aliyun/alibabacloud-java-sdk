@@ -4,10 +4,14 @@ package com.aliyun.adbai20250812.models;
 import com.aliyun.tea.*;
 
 public class ModifyAgentPlatformShrinkRequest extends TeaModel {
+    /**
+     * <p>The parameters required for upgrading or downgrading the metric platform.</p>
+     */
     @NameInMap("AiPlatformConfig")
     public String aiPlatformConfigShrink;
 
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ModifyAgentPlatformShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the metric platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,10 @@ public class ModifyAgentPlatformShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

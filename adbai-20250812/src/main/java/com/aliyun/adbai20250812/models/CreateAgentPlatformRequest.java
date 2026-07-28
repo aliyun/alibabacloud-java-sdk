@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAgentPlatformRequest extends TeaModel {
     /**
+     * <p>The parameters required to create the metric analysis platform.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AiPlatformConfig")
     public CreateAgentPlatformRequestAiPlatformConfig aiPlatformConfig;
 
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class CreateAgentPlatformRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the metric analysis platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,11 @@ public class CreateAgentPlatformRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -74,6 +82,7 @@ public class CreateAgentPlatformRequest extends TeaModel {
 
     public static class CreateAgentPlatformRequestAiPlatformConfig extends TeaModel {
         /**
+         * <p>The API key of the model for the inference service that the metric analysis platform depends on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,6 +92,7 @@ public class CreateAgentPlatformRequest extends TeaModel {
         public String serveApiKey;
 
         /**
+         * <p>The endpoint of the embedding model for the inference service that the metric analysis platform depends on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,6 +102,7 @@ public class CreateAgentPlatformRequest extends TeaModel {
         public String serveEmbeddingEndpoint;
 
         /**
+         * <p>The name of the embedding model for the inference service that the metric analysis platform depends on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +112,7 @@ public class CreateAgentPlatformRequest extends TeaModel {
         public String serveEmbeddingModelName;
 
         /**
+         * <p>The endpoint of the base model for the inference service that the metric analysis platform depends on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +122,7 @@ public class CreateAgentPlatformRequest extends TeaModel {
         public String serveEndpoint;
 
         /**
+         * <p>The name of the base model for the inference service that the metric analysis platform depends on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,6 +132,7 @@ public class CreateAgentPlatformRequest extends TeaModel {
         public String serveModelName;
 
         /**
+         * <p>The specifications of the metric analysis platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

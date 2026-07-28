@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeChatMessageRequest extends TeaModel {
     /**
+     * <p>The question statement submitted by the user.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>How to set reasonable annual plan goals?</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The Alibaba Cloud region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,8 @@ public class DescribeChatMessageRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>df94eec5-3d95-435c-87d4-43e8bb3f9519</p>
      */
@@ -27,6 +34,15 @@ public class DescribeChatMessageRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Skill")
+    public String skill;
+
+    /**
+     * <p>The time zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>
      */
@@ -60,6 +76,14 @@ public class DescribeChatMessageRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public DescribeChatMessageRequest setSkill(String skill) {
+        this.skill = skill;
+        return this;
+    }
+    public String getSkill() {
+        return this.skill;
     }
 
     public DescribeChatMessageRequest setTimezone(String timezone) {

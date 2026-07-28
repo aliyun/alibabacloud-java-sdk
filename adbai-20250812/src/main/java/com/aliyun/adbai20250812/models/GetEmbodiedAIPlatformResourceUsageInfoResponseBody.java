@@ -7,10 +7,15 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     @NameInMap("AcuDetails")
     public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails acuDetails;
 
+    /**
+     * <p>The GPU usage details.</p>
+     */
     @NameInMap("GpuDetails")
     public java.util.List<GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails> gpuDetails;
 
     /**
+     * <p>The maximum number of embodiments that can be registered.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -18,6 +23,8 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     public Long maxRegisteredDevices;
 
     /**
+     * <p>The number of registered embodiments.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,9 +40,15 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The network resource usage information.</p>
+     */
     @NameInMap("SlbTraffic")
     public GetEmbodiedAIPlatformResourceUsageInfoResponseBodySlbTraffic slbTraffic;
 
+    /**
+     * <p>The storage resource usage information.</p>
+     */
     @NameInMap("StorageUsage")
     public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsage storageUsage;
 
@@ -153,10 +166,18 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     }
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails extends TeaModel {
+        /**
+         * <p>The GPU allocation unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AllocatedUnit")
         public Integer allocatedUnit;
 
         /**
+         * <p>The GPU model.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADB.MLLarge.2</p>
          */
@@ -164,6 +185,8 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         public String gpuModel;
 
         /**
+         * <p>The number of GPUs of this model currently in use.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -203,6 +226,8 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodySlbTraffic extends TeaModel {
         /**
+         * <p>The upstream bandwidth traffic over the public network. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -210,6 +235,8 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         public Long totalBytesIn;
 
         /**
+         * <p>The downstream bandwidth traffic over the public network. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -241,6 +268,8 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageNas extends TeaModel {
         /**
+         * <p>The NAS standard storage usage. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -264,6 +293,8 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageOss extends TeaModel {
         /**
+         * <p>The OSS standard storage usage. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -286,9 +317,15 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
     }
 
     public static class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsage extends TeaModel {
+        /**
+         * <p>The NAS storage usage.</p>
+         */
         @NameInMap("Nas")
         public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageNas nas;
 
+        /**
+         * <p>The OSS storage usage.</p>
+         */
         @NameInMap("Oss")
         public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyStorageUsageOss oss;
 

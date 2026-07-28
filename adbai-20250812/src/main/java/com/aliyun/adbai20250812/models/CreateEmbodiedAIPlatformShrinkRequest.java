@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEmbodiedAIPlatformShrinkRequest extends TeaModel {
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateEmbodiedAIPlatformShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ontology count.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -21,6 +24,10 @@ public class CreateEmbodiedAIPlatformShrinkRequest extends TeaModel {
     public Integer deviceCount;
 
     /**
+     * <p>The name of the embodied intelligence multimodal data platform.</p>
+     * <blockquote>
+     * <p>The name can contain lowercase letters, digits, and underscores. It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,13 +36,23 @@ public class CreateEmbodiedAIPlatformShrinkRequest extends TeaModel {
     @NameInMap("PlatformName")
     public String platformName;
 
+    /**
+     * <p>The Ray specification information of the platform.</p>
+     */
     @NameInMap("RayConfig")
     public String rayConfigShrink;
 
+    /**
+     * <p>The development and training resource configuration.</p>
+     */
     @NameInMap("RayTrainConfig")
     public String rayTrainConfigShrink;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +62,8 @@ public class CreateEmbodiedAIPlatformShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The webserver specification of the platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>large</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEapDeviceResourceAllocationRequest extends TeaModel {
     /**
+     * <p>Instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeEapDeviceResourceAllocationRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Total number of devices</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -21,6 +24,10 @@ public class DescribeEapDeviceResourceAllocationRequest extends TeaModel {
     public Integer deviceCount;
 
     /**
+     * <p>Region ID where the instance is located.</p>
+     * <blockquote>
+     * <p>You can invoke the DescribeRegions API to view the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

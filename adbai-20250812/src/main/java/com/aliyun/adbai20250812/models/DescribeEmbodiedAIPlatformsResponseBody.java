@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
     /**
+     * <p>Use the paged query parameters PageSize, PageNumber, and TotalCount for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -12,13 +14,17 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Use the paged query parameters PageSize, PageNumber, and TotalCount for paging.</p>
+     * 
      * <strong>example:</strong>
-     * <p>298a7d5473b128dfe0b5e8707e******</p>
+     * <p>9c3158c2e8acf616501bd5ee05******</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,16 +32,23 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of embodied intelligence multimodal data platforms.</p>
+     */
     @NameInMap("Platforms")
     public java.util.List<DescribeEmbodiedAIPlatformsResponseBodyPlatforms> platforms;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B47EED99-BFA5-529D-8D85-A6642421D390</p>
      */
@@ -43,6 +56,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of platforms.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -112,6 +127,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
 
     public static class DescribeEmbodiedAIPlatformsResponseBodyPlatformsEapConfig extends TeaModel {
         /**
+         * <p>The public network access address of the platform webserver.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://amv-2z******-***-roboto.ads.example.com:80">http://amv-2z******-***-roboto.ads.example.com:80</a></p>
          */
@@ -119,6 +136,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String webserverAddress;
 
         /**
+         * <p>The webserver specification of the platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>large</p>
          */
@@ -150,6 +169,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
 
     public static class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfigWorkerGroups extends TeaModel {
         /**
+         * <p>The allocation unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -157,6 +178,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String allocateUnit;
 
         /**
+         * <p>The name of the worker group.</p>
+         * 
          * <strong>example:</strong>
          * <p>worker1</p>
          */
@@ -164,6 +187,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The maximum number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -171,6 +196,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public Integer maxWorkerQuantity;
 
         /**
+         * <p>The minimum number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -178,6 +205,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public Integer minWorkerQuantity;
 
         /**
+         * <p>The disk size of each worker.</p>
+         * 
          * <strong>example:</strong>
          * <p>100G</p>
          */
@@ -185,6 +214,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String workerDiskCapacity;
 
         /**
+         * <p>The worker resource model.</p>
+         * 
          * <strong>example:</strong>
          * <p>large</p>
          */
@@ -192,6 +223,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String workerSpecName;
 
         /**
+         * <p>The Ray worker resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */
@@ -263,6 +296,12 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
 
     public static class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfig extends TeaModel {
         /**
+         * <p>The Ray cluster type. Valid values:</p>
+         * <ul>
+         * <li>BASIC: basic type without high availability.</li>
+         * <li>HIGH_AVAILABILITY: high-availability type.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -270,6 +309,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The disk size of the head node.</p>
+         * 
          * <strong>example:</strong>
          * <p>100G</p>
          */
@@ -277,6 +318,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String headDiskCapacity;
 
         /**
+         * <p>The node specifications of the head node.</p>
+         * 
          * <strong>example:</strong>
          * <p>large</p>
          */
@@ -284,6 +327,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String headSpec;
 
         /**
+         * <p>The resource type of the head node.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */
@@ -291,6 +336,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String headSpecType;
 
         /**
+         * <p>The Ray cluster address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ray-cluster-address.example.com">http://ray-cluster-address.example.com</a></p>
          */
@@ -298,6 +345,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String rayClusterAddress;
 
         /**
+         * <p>The Ray Dashboard address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ray-dashboard-address.example.com">http://ray-dashboard-address.example.com</a></p>
          */
@@ -305,12 +354,17 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String rayDashboardAddress;
 
         /**
+         * <p>The Ray Grafana address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ray-grafana-address.example.com">http://ray-grafana-address.example.com</a></p>
          */
         @NameInMap("RayGrafanaAddress")
         public String rayGrafanaAddress;
 
+        /**
+         * <p>The list of Ray worker group configurations.</p>
+         */
         @NameInMap("WorkerGroups")
         public java.util.List<DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfigWorkerGroups> workerGroups;
 
@@ -549,16 +603,23 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
 
     public static class DescribeEmbodiedAIPlatformsResponseBodyPlatforms extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-01 14:55:36</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The webserver configuration of the platform.</p>
+         */
         @NameInMap("EapConfig")
         public DescribeEmbodiedAIPlatformsResponseBodyPlatformsEapConfig eapConfig;
 
         /**
+         * <p>The lake storage name.</p>
+         * 
          * <strong>example:</strong>
          * <p>adb-lake-cn-beijing-5q1w******</p>
          */
@@ -566,12 +627,17 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public String ossBucketName;
 
         /**
+         * <p>The platform name.</p>
+         * 
          * <strong>example:</strong>
          * <p>platform1</p>
          */
         @NameInMap("PlatformName")
         public String platformName;
 
+        /**
+         * <p>The Ray specification information of the platform.</p>
+         */
         @NameInMap("RayConfig")
         public DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfig rayConfig;
 
@@ -579,6 +645,8 @@ public class DescribeEmbodiedAIPlatformsResponseBody extends TeaModel {
         public DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfig rayTrainConfig;
 
         /**
+         * <p>The running status.</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */

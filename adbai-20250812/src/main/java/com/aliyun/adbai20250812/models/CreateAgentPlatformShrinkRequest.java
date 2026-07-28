@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAgentPlatformShrinkRequest extends TeaModel {
     /**
+     * <p>The parameters required to create the metric analysis platform.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AiPlatformConfig")
     public String aiPlatformConfigShrink;
 
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class CreateAgentPlatformShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the metric analysis platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,11 @@ public class CreateAgentPlatformShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

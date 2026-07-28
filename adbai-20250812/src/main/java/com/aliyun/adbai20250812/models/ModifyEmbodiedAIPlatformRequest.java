@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,10 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     public String deviceCount;
 
     /**
+     * <p>The name of the embodied intelligence multimodal data platform.</p>
+     * <blockquote>
+     * <p>The name can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +30,9 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     @NameInMap("PlatformName")
     public String platformName;
 
+    /**
+     * <p>The Ray specification information of the platform.</p>
+     */
     @NameInMap("RayConfig")
     public ModifyEmbodiedAIPlatformRequestRayConfig rayConfig;
 
@@ -32,6 +40,10 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     public ModifyEmbodiedAIPlatformRequestRayTrainConfig rayTrainConfig;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +53,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The Webserver specification of the platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>large</p>
      */
@@ -110,6 +124,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class ModifyEmbodiedAIPlatformRequestRayConfigWorkerGroups extends TeaModel {
         /**
+         * <p>The allocation unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +133,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public String allocateUnit;
 
         /**
+         * <p>The name of the worker group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -124,6 +142,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The maximum number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -131,6 +151,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public Integer maxWorkerQuantity;
 
         /**
+         * <p>The minimum number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -138,6 +160,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public Integer minWorkerQuantity;
 
         /**
+         * <p>The disk size of the worker node.</p>
+         * 
          * <strong>example:</strong>
          * <p>100G</p>
          */
@@ -145,6 +169,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public String workerDiskCapacity;
 
         /**
+         * <p>The node specifications of the worker node.</p>
+         * 
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
@@ -152,6 +178,8 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public String workerSpecName;
 
         /**
+         * <p>The resource type of the worker node.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */
@@ -223,6 +251,14 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class ModifyEmbodiedAIPlatformRequestRayConfig extends TeaModel {
         /**
+         * <p>The type of the Ray cluster. Valid values:</p>
+         * <ul>
+         * <li><p>BASIC: basic type, which does not support high availability.</p>
+         * </li>
+         * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -230,12 +266,17 @@ public class ModifyEmbodiedAIPlatformRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>The node specifications of the head node.</p>
+         * 
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
         @NameInMap("HeadSpec")
         public String headSpec;
 
+        /**
+         * <p>The configuration information of Ray worker groups.</p>
+         */
         @NameInMap("WorkerGroups")
         public java.util.List<ModifyEmbodiedAIPlatformRequestRayConfigWorkerGroups> workerGroups;
 

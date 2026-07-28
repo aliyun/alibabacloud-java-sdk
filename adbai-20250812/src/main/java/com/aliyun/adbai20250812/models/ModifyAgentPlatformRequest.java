@@ -4,10 +4,14 @@ package com.aliyun.adbai20250812.models;
 import com.aliyun.tea.*;
 
 public class ModifyAgentPlatformRequest extends TeaModel {
+    /**
+     * <p>The parameters required for upgrading or downgrading the metric platform.</p>
+     */
     @NameInMap("AiPlatformConfig")
     public ModifyAgentPlatformRequestAiPlatformConfig aiPlatformConfig;
 
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ModifyAgentPlatformRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the metric platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,10 @@ public class ModifyAgentPlatformRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +82,8 @@ public class ModifyAgentPlatformRequest extends TeaModel {
 
     public static class ModifyAgentPlatformRequestAiPlatformConfig extends TeaModel {
         /**
+         * <p>The API key of the model for the inference service that the metric analysis platform depends on.</p>
+         * 
          * <strong>example:</strong>
          * <p>3760d3**************************</p>
          */
@@ -80,6 +91,8 @@ public class ModifyAgentPlatformRequest extends TeaModel {
         public String serveApiKey;
 
         /**
+         * <p>The endpoint of the embedding model for the inference service that the metric analysis platform depends on.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://111.xx.xx.xx:8100/inferenceservice/emb">http://111.xx.xx.xx:8100/inferenceservice/emb</a></p>
          */
@@ -87,6 +100,8 @@ public class ModifyAgentPlatformRequest extends TeaModel {
         public String serveEmbeddingEndpoint;
 
         /**
+         * <p>The name of the embedding model for the inference service that the metric analysis platform depends on.</p>
+         * 
          * <strong>example:</strong>
          * <p>Qwen3-Embedding-8B</p>
          */
@@ -94,6 +109,8 @@ public class ModifyAgentPlatformRequest extends TeaModel {
         public String serveEmbeddingModelName;
 
         /**
+         * <p>The endpoint of the base model for the inference service that the metric analysis platform depends on.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://111.xx.xx.xx:8100/inferenceservice/base">http://111.xx.xx.xx:8100/inferenceservice/base</a></p>
          */
@@ -101,6 +118,8 @@ public class ModifyAgentPlatformRequest extends TeaModel {
         public String serveEndpoint;
 
         /**
+         * <p>The name of the base model for the inference service that the metric analysis platform depends on.</p>
+         * 
          * <strong>example:</strong>
          * <p>Qwen3-235B-A22B-Instruct-2507</p>
          */
@@ -108,6 +127,8 @@ public class ModifyAgentPlatformRequest extends TeaModel {
         public String serveModelName;
 
         /**
+         * <p>The specification of the metric analysis platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>large</p>
          */

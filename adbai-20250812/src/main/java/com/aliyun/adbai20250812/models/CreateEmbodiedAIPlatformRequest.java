@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ontology count.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -21,6 +24,10 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     public Integer deviceCount;
 
     /**
+     * <p>The name of the embodied intelligence multimodal data platform.</p>
+     * <blockquote>
+     * <p>The name can contain lowercase letters, digits, and underscores. It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,13 +36,23 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     @NameInMap("PlatformName")
     public String platformName;
 
+    /**
+     * <p>The Ray specification information of the platform.</p>
+     */
     @NameInMap("RayConfig")
     public CreateEmbodiedAIPlatformRequestRayConfig rayConfig;
 
+    /**
+     * <p>The development and training resource configuration.</p>
+     */
     @NameInMap("RayTrainConfig")
     public CreateEmbodiedAIPlatformRequestRayTrainConfig rayTrainConfig;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +62,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The webserver specification of the platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>large</p>
      */
@@ -114,6 +133,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class CreateEmbodiedAIPlatformRequestRayConfigWorkerGroups extends TeaModel {
         /**
+         * <p>The allocation unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -121,6 +142,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public String allocateUnit;
 
         /**
+         * <p>The name of the worker group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -128,6 +151,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The maximum number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -135,6 +160,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public Integer maxWorkerQuantity;
 
         /**
+         * <p>The minimum number of workers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -142,6 +169,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public Integer minWorkerQuantity;
 
         /**
+         * <p>The disk size of the worker node.</p>
+         * 
          * <strong>example:</strong>
          * <p>100G</p>
          */
@@ -149,6 +178,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public String workerDiskCapacity;
 
         /**
+         * <p>The node specifications of the worker node.</p>
+         * 
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
@@ -156,6 +187,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public String workerSpecName;
 
         /**
+         * <p>The resource type of the worker node.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */
@@ -227,6 +260,14 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class CreateEmbodiedAIPlatformRequestRayConfig extends TeaModel {
         /**
+         * <p>The Ray cluster type. Valid values:</p>
+         * <ul>
+         * <li><p>BASIC: basic type, non-high-availability.</p>
+         * </li>
+         * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -234,12 +275,17 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public String category;
 
         /**
+         * <p>The node specifications of the head node.</p>
+         * 
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
         @NameInMap("HeadSpec")
         public String headSpec;
 
+        /**
+         * <p>The list of Ray worker group configurations.</p>
+         */
         @NameInMap("WorkerGroups")
         public java.util.List<CreateEmbodiedAIPlatformRequestRayConfigWorkerGroups> workerGroups;
 
@@ -276,6 +322,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs extends TeaModel {
         /**
+         * <p>The allocation unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;1&quot;</p>
          */
@@ -283,6 +331,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public String allocateUnit;
 
         /**
+         * <p>The number of GPU cards.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -290,6 +340,8 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
         public Long count;
 
         /**
+         * <p>The GPU model.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADB.MLGrand.4</p>
          */
@@ -329,16 +381,23 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
 
     public static class CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig extends TeaModel {
         /**
+         * <p>The instance ID of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-***</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The list of namespaces.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
 
         /**
+         * <p>The address of the image repository instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>example-vpc.example-region.cr.aliyuncs.com</p>
          */
@@ -377,6 +436,9 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     }
 
     public static class CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig extends TeaModel {
+        /**
+         * <p>The image repository configuration.</p>
+         */
         @NameInMap("AcrConfig")
         public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig acrConfig;
 
@@ -396,12 +458,21 @@ public class CreateEmbodiedAIPlatformRequest extends TeaModel {
     }
 
     public static class CreateEmbodiedAIPlatformRequestRayTrainConfig extends TeaModel {
+        /**
+         * <p>The number of CPU ACUs to purchase.</p>
+         */
         @NameInMap("CpuAcu")
         public Long cpuAcu;
 
+        /**
+         * <p>The list of GPU model specifications to purchase.</p>
+         */
         @NameInMap("GpuSpecs")
         public java.util.List<CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs> gpuSpecs;
 
+        /**
+         * <p>The development machine configuration.</p>
+         */
         @NameInMap("TerminalConfig")
         public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig terminalConfig;
 

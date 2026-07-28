@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends TeaModel {
     /**
+     * <p>The instance cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end of the time range for querying network resource usage. Format: yyyy-MM-ddTHH:mmZ.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The name of the embodied intelligence platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>platform1</p>
      */
@@ -30,6 +34,10 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends TeaModel {
     public String platformName;
 
     /**
+     * <p>The region ID of the instance.</p>
+     * <blockquote>
+     * <p>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +47,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start of the time range for querying network resource usage. Format: yyyy-MM-ddTHH:mmZ.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
