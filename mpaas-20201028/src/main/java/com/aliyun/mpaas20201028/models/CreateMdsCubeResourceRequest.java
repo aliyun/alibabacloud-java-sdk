@@ -19,6 +19,12 @@ public class CreateMdsCubeResourceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("HarmonyMaxVersion")
+    public String harmonyMaxVersion;
+
+    @NameInMap("HarmonyMinVersion")
+    public String harmonyMinVersion;
+
     @NameInMap("IosMaxVersion")
     public String iosMaxVersion;
 
@@ -95,6 +101,22 @@ public class CreateMdsCubeResourceRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public CreateMdsCubeResourceRequest setHarmonyMaxVersion(String harmonyMaxVersion) {
+        this.harmonyMaxVersion = harmonyMaxVersion;
+        return this;
+    }
+    public String getHarmonyMaxVersion() {
+        return this.harmonyMaxVersion;
+    }
+
+    public CreateMdsCubeResourceRequest setHarmonyMinVersion(String harmonyMinVersion) {
+        this.harmonyMinVersion = harmonyMinVersion;
+        return this;
+    }
+    public String getHarmonyMinVersion() {
+        return this.harmonyMinVersion;
     }
 
     public CreateMdsCubeResourceRequest setIosMaxVersion(String iosMaxVersion) {

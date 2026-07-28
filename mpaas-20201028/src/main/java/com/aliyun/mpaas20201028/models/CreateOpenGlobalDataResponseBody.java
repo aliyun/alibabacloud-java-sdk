@@ -4,6 +4,12 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateOpenGlobalDataResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -19,6 +25,22 @@ public class CreateOpenGlobalDataResponseBody extends TeaModel {
     public static CreateOpenGlobalDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateOpenGlobalDataResponseBody self = new CreateOpenGlobalDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOpenGlobalDataResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    public CreateOpenGlobalDataResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public CreateOpenGlobalDataResponseBody setRequestId(String requestId) {

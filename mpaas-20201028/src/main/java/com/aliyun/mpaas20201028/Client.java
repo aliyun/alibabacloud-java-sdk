@@ -1858,6 +1858,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FileUrl", request.fileUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyMaxVersion)) {
+            body.put("HarmonyMaxVersion", request.harmonyMaxVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.harmonyMinVersion)) {
+            body.put("HarmonyMinVersion", request.harmonyMinVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.iosMaxVersion)) {
             body.put("IosMaxVersion", request.iosMaxVersion);
         }
