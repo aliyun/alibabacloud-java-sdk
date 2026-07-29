@@ -4,21 +4,54 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class GetTopicAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetTopicAttributesResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class GetTopicAttributesResponseBody extends TeaModel {
     }
 
     public static class GetTopicAttributesResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -106,6 +151,12 @@ public class GetTopicAttributesResponseBody extends TeaModel {
     }
 
     public static class GetTopicAttributesResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the topic was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554277</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -118,18 +169,54 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
+        /**
+         * <p>The most recent time when the topic attributes were modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554460</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>Indicates whether the Log Management feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>True: Enabled.</p>
+         * </li>
+         * <li><p>False: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("LoggingEnabled")
         public Boolean loggingEnabled;
 
+        /**
+         * <p>The maximum length of the message body sent to the topic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
+         */
         @NameInMap("MaxMessageSize")
         public Long maxMessageSize;
 
+        /**
+         * <p>The number of messages in the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MessageCount")
         public Long messageCount;
 
+        /**
+         * <p>The maximum duration for which a message is retained in the topic. After the period of time specified by this parameter elapses since the message is sent to the topic, the message is deleted regardless of whether it is successfully pushed to the user. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("MessageRetentionPeriod")
         public Long messageRetentionPeriod;
 
@@ -139,6 +226,9 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @NameInMap("SseType")
         public String sseType;
 
+        /**
+         * <p>The list of resource tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetTopicAttributesResponseBodyDataTags> tags;
 
@@ -149,9 +239,25 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @NameInMap("TopicInnerUrl")
         public String topicInnerUrl;
 
+        /**
+         * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-topic</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
+        /**
+         * <p>The type of the topic. Valid values:</p>
+         * <ul>
+         * <li>normal: normal topic</li>
+         * <li>fifo: FIFO topic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("TopicType")
         public String topicType;
 

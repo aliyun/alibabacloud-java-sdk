@@ -4,6 +4,19 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the log management feature. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false: Disabled.
+     * Default value: false.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
 
@@ -13,6 +26,12 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
+    /**
+     * <p>The maximum length of the message body sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("MaxMessageSize")
     public Long maxMessageSize;
 
@@ -22,15 +41,32 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("SseType")
     public String sseType;
 
+    /**
+     * <p>The list of resource tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateTopicRequestTag> tag;
 
     /**
+     * <p>The name of the topic to create.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TopicName")
     public String topicName;
 
+    /**
+     * <p>The type of the topic. Valid values:</p>
+     * <ul>
+     * <li>normal: normal topic</li>
+     * <li>fifo: FIFO topic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("TopicType")
     public String topicType;
 
@@ -112,9 +148,21 @@ public class CreateTopicRequest extends TeaModel {
     }
 
     public static class CreateTopicRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

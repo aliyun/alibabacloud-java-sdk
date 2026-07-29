@@ -4,18 +4,53 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class ListQueueRequest extends TeaModel {
+    /**
+     * <p>The page number of the results to return.</p>
+     * <p>Valid values: 1 to 100000000.</p>
+     * <p>If you set this parameter to a value less than 1, the system uses 1 by default. If you set this parameter to a value greater than 100000000, the system uses 100000000 by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <p>Valid values: 10 to 50.</p>
+     * <p>If you set this parameter to a value less than 10, the system uses 10 by default. If you set this parameter to a value greater than 50, the system uses 50 by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The name of the queue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-queue</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The type of the queue. Valid values:</p>
+     * <ul>
+     * <li>normal: standard queue</li>
+     * <li>fifo: FIFO queue</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("QueueType")
     public String queueType;
 
+    /**
+     * <p>The list of resource tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListQueueRequestTag> tag;
 
@@ -65,9 +100,21 @@ public class ListQueueRequest extends TeaModel {
     }
 
     public static class ListQueueRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

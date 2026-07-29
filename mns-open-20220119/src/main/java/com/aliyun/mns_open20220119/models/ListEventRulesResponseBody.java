@@ -4,21 +4,54 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class ListEventRulesResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public ListEventRulesResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123E62C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +109,27 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyDataPageDataEndpoint extends TeaModel {
+        /**
+         * <p>The endpoint type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>topic</strong>: A topic can deliver messages to multiple subscribers. You can add or remove subscribers later.</p>
+         * </li>
+         * <li><p><strong>queue</strong>: Messages are delivered directly to a queue. This simplifies the delivery path, but you cannot add new subscribers later.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>topic</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The actual value of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-topic</p>
+         */
         @NameInMap("EndpointValue")
         public String endpointValue;
 
@@ -106,9 +157,21 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyDataPageDataSubscriptions extends TeaModel {
+        /**
+         * <p>The endpoint type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queue</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The actual value of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wyx-vp-complete-queue</p>
+         */
         @NameInMap("EndpointValue")
         public String endpointValue;
 
@@ -136,24 +199,54 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyDataPageData extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--</p>
+         */
         @NameInMap("DeliveryMode")
         public String deliveryMode;
 
+        /**
+         * <p>The endpoint of the subscription.</p>
+         */
         @NameInMap("Endpoint")
         public ListEventRulesResponseBodyDataPageDataEndpoint endpoint;
 
+        /**
+         * <p>The list of event types.</p>
+         */
         @NameInMap("EventTypes")
         public java.util.List<String> eventTypes;
 
+        /**
+         * <p>The event matching rules. The rules have an OR relationship.</p>
+         */
         @NameInMap("MatchRules")
         public java.util.List<java.util.List<EventMatchRule>> matchRules;
 
+        /**
+         * <p>The name of the event notification rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-xsXDW</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The subscribers. A maximum of 20 entries are returned. If there are more subscribers, see <a href="https://help.aliyun.com/document_detail/2804757.html">List Subscriptions</a>.</p>
+         */
         @NameInMap("Subscriptions")
         public java.util.List<ListEventRulesResponseBodyDataPageDataSubscriptions> subscriptions;
 
+        /**
+         * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-topic</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
@@ -221,27 +314,72 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>This parameter is deprecated. The maximum number of entries is based on Total.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>This parameter is deprecated. Paged queries are based on PageNum.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a88f58d504b8b4c4e0b5e8707e68181f</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The data entries.</p>
+         */
         @NameInMap("PageData")
         public java.util.List<ListEventRulesResponseBodyDataPageData> pageData;
 
+        /**
+         * <p>The page number of the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Long pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Pages")
         public Long pages;
 
+        /**
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130</p>
+         */
         @NameInMap("Total")
         public Long total;
 

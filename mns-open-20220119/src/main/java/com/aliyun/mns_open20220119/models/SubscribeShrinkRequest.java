@@ -4,59 +4,61 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SubscribeShrinkRequest extends TeaModel {
+    /**
+     * <p>The dead-letter queue policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public String dlqPolicyShrink;
 
     /**
-     * <p>邮箱推送相关属性，当 PushType=dm 时必填。JSON 格式，包含以下字段：</p>
+     * <p>The email push attributes. This parameter is required when PushType is set to dm. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>AccountName</strong>：发信地址，即 DirectMail 中配置的发信地址（如 <code>notify@example.com</code>）。</li>
-     * <li><strong>Subject</strong>：邮件主题。</li>
+     * <li>AccountName: The sender address configured in DirectMail (such as <a href="mailto:notify@example.com">notify@example.com</a>).</li>
+     * <li>Subject: The email subject.</li>
      * </ul>
      */
     @NameInMap("DmAttributes")
     public String dmAttributesShrink;
 
     /**
-     * <p>短信推送相关属性，当 PushType=alisms 时必填。JSON 格式，包含以下字段：</p>
+     * <p>The SMS push attributes. This parameter is required when PushType is set to alisms. The value is in JSON format and contains the following fields:</p>
      * <ul>
-     * <li><strong>TemplateCode</strong>：短信模板 Code，在短信服务控制台中获取。</li>
-     * <li><strong>SignName</strong>：短信签名名称。</li>
+     * <li>TemplateCode: The SMS template code, which can be obtained from the Short Message Service console.</li>
+     * <li>SignName: The SMS signature name.</li>
      * </ul>
      */
     @NameInMap("DysmsAttributes")
     public String dysmsAttributesShrink;
 
     /**
-     * <p>接收消息的终端地址，格式根据 PushType 不同而不同：</p>
+     * <h2>Endpoint address for receiving messages</h2>
+     * <p>The format varies depending on the value of <code>PushType</code>:</p>
      * <ul>
-     * <li><strong>PushType=http</strong>：HTTP/HTTPS 回调 URL，如 <code>http://example.com/callback</code> 或 <code>https://example.com/callback</code>。</li>
-     * <li><strong>PushType=queue</strong>：目标队列 ARN，格式为 <code>acs:mns:{RegionId}:{主账号UID}:queues/{QueueName}</code>。</li>
-     * <li><strong>PushType=dm</strong>：邮箱推送终端，格式固定为 <code>smq-ep:dm:{主账号UID}:__dynamic</code>，其中 <code>{主账号UID}</code> 替换为您的阿里云主账号 UID。</li>
-     * <li><strong>PushType=dysms</strong>：短信推送终端，格式为 <code>smq-ep:dysms:{主账号UID}:{手机号码}</code>。</li>
-     * <li><strong>PushType=kafka</strong>：Kafka 推送终端，格式为 <code>smq-ep:kafka:{主账号UID}:{InstanceId}</code>。</li>
-     * <li><strong>PushType=fc</strong>：函数计算终端，格式为 <code>acs:fc:{RegionId}:{主账号UID}:services/{ServiceName}/functions/{FunctionName}</code>。</li>
-     * <li><strong>PushType=eventbus</strong>：事件总线终端，格式为 <code>acs:eventbridge:{RegionId}:{主账号UID}:eventbus/{EventBusName}</code>。</li>
+     * <li><code>PushType=http</code>: An HTTP/HTTPS callback URL, such as <code>http://example.com/callback</code> or <code>https://example.com/callback</code>.</li>
+     * <li><code>PushType=queue</code>: The ARN of the destination queue, in the format <code>acs:mns:{RegionId}:{Alibaba Cloud account ID}:queues/{QueueName}</code>.</li>
+     * <li><code>PushType=dm</code>: The email push endpoint, in the fixed format <code>smq-ep:dm:{Alibaba Cloud account ID}:__dynamic</code>. Replace <code>{Alibaba Cloud account ID}</code> with your Alibaba Cloud account ID.</li>
+     * <li><code>PushType=dysms</code>: The SMS push endpoint, in the format <code>smq-ep:dysms:{Alibaba Cloud account ID}:{PhoneNumber}</code>.</li>
+     * <li><code>PushType=kafka</code>: The Kafka push endpoint. The Kafka push type is deprecated.</li>
+     * <li><code>PushType=fc</code>: The Function Compute endpoint, in the format <code>acs:fc:{RegionId}:{Alibaba Cloud account ID}:services/{ServiceName}/functions/{FunctionName}</code>.</li>
+     * <li><code>PushType=eventbus</code>: The EventBridge endpoint, in the format <code>acs:eventbridge:{RegionId}:{Alibaba Cloud account ID}:eventbus/{EventBusName}</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:mns:cn-hangzhou:1234567890:queues/MyQueue</p>
+     * <p>http://*****.com/uri1/xxx</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
     /**
-     * <p>Kafka 推送相关属性。JSON 格式，包含以下字段：</p>
-     * <ul>
-     * <li><strong>BusinessMode</strong>：业务模式。</li>
-     * </ul>
+     * <p>The Kafka push type is deprecated.</p>
      */
     @NameInMap("KafkaAttributes")
     public String kafkaAttributesShrink;
 
     /**
-     * <p>消息过滤标签（不超过 16 个字符），仅当消息带有相同标签时才会被推送到该订阅。不设置则表示不过滤，所有消息均推送。</p>
+     * <p>The tag used for message filtering in this subscription. Only messages with a matching tag are pushed. The value is a string of up to 16 characters.</p>
+     * <p>By default, no message filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>important</p>
@@ -65,24 +67,27 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String messageTag;
 
     /**
-     * <p>推送的消息内容格式。取值：</p>
+     * <h2>Format of the pushed message content</h2>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><strong>XML</strong>：消息体以 XML 格式推送（默认）。</li>
-     * <li><strong>JSON</strong>：消息体以 JSON 格式推送。</li>
-     * <li><strong>SIMPLIFIED</strong>：仅推送消息体原始内容，不包含 SMQ 的元信息包装。</li>
+     * <li><code>XML</code>: The message body is pushed in XML format. This is the default value.</li>
+     * <li><code>JSON</code>: The message body is pushed in JSON format.</li>
+     * <li><code>SIMPLIFIED</code>: Only the raw message body content is pushed, without SMQ metadata wrapping.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>SIMPLIFIED</p>
+     * <p>XML</p>
      */
     @NameInMap("NotifyContentFormat")
     public String notifyContentFormat;
 
     /**
-     * <p>推送消息出现错误时的重试策略。取值：</p>
+     * <p>The retry strategy when an error occurs while pushing messages to the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>BACKOFF_RETRY</strong>：退避重试策略，重试间隔逐渐递增（推荐）。</li>
-     * <li><strong>EXPONENTIAL_DECAY_RETRY</strong>：指数衰减重试策略。</li>
+     * <li><p>BACKOFF_RETRY: backoff retry.</p>
+     * </li>
+     * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,19 +97,30 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String notifyStrategy;
 
     /**
-     * <p>订阅的推送类型。取值：</p>
+     * <h2>Push type of the subscription</h2>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><strong>http</strong>：HTTP/HTTPS 推送，将消息推送到指定的 HTTP 或 HTTPS 回调地址。</li>
-     * <li><strong>queue</strong>：队列推送，将消息推送到指定的 SMQ 队列。</li>
-     * <li><strong>dm</strong>：邮箱推送，通过邮件服务（DirectMail）发送通知。需同时设置 DmAttributes 和 StsRoleArn 参数。</li>
-     * <li><strong>dysms</strong>：短信推送，通过阿里云短信服务发送通知。需同时设置 DysmsAttributes 参数。</li>
-     * <li><strong>kafka</strong>：Kafka 推送。需同时设置 KafkaAttributes 参数。</li>
-     * <li><strong>fc</strong>：函数计算推送，将消息推送到阿里云函数计算（FC）。</li>
-     * <li><strong>eventbus</strong>：事件总线推送，将消息推送到 EventBridge 事件总线。</li>
+     * <li><p><code>http</code>: HTTP/HTTPS push. Pushes messages to a specified HTTP or HTTPS callback URL.</p>
+     * </li>
+     * <li><p><code>queue</code>: Queue push. Pushes messages to a specified SMQ queue.</p>
+     * </li>
+     * <li><p><code>dm</code>: Email push. Sends notifications through DirectMail. You must also set the <code>DmAttributes</code> and <code>StsRoleArn</code> parameters.</p>
+     * </li>
+     * <li><p><code>dysms</code>: SMS push. Sends notifications through Alibaba Cloud Short Message Service. You must also set the <code>DysmsAttributes</code> parameter.</p>
+     * </li>
+     * <li><p><code>fc</code>: Function Compute push. Pushes messages to Alibaba Cloud Function Compute (FC).</p>
+     * </li>
+     * <li><p><code>eventbus</code>: EventBridge push. Pushes messages to an EventBridge event bus.</p>
+     * </li>
      * </ul>
-     * <blockquote>
-     * <p>以下值已废弃，仅用于兼容旧订阅：mpush（移动推送）、alisms（旧版短信）、email（旧版邮箱，请使用 dm）。</p>
-     * </blockquote>
+     * <p><strong>Note:</strong>
+     * The following values are deprecated and are only used for compatibility with legacy subscriptions:</p>
+     * <ul>
+     * <li><code>mpush</code>: Mobile push.</li>
+     * <li><code>alisms</code>: Legacy SMS.</li>
+     * <li><code>email</code>: Legacy email. Use <code>dm</code> instead.</li>
+     * <li><code>kafka</code>: Kafka push type is deprecated.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,15 +130,7 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String pushType;
 
     /**
-     * <p>SMQ 服务扮演的 RAM 角色 ARN。格式为 <code>acs:ram::{主账号UID}:role/{RoleName}</code>，其中 <code>{主账号UID}</code> 必须替换为调用 OpenAPI 的阿里云主账号 UID。</p>
-     * <p>使用场景：</p>
-     * <ul>
-     * <li>当 PushType=dm（邮箱推送）时<strong>必填</strong>，RoleName 通常为 <code>AliyunMNSNotificationRole</code>。</li>
-     * <li>当 PushType=queue 且目标队列与当前主题不在同一账号下时必填。</li>
-     * </ul>
-     * <blockquote>
-     * <p><strong>注意</strong>：ARN 中的 UID 必须与调用 OpenAPI 的主账号一致，否则将报跨账号错误（InvalidParameter: Cross account is not allowed）。</p>
-     * </blockquote>
+     * <p>The ARN of the RAM role assumed by the service. The format is acs:ram::{Alibaba Cloud account ID}:role/{RoleName}. Replace {Alibaba Cloud account ID} with the Alibaba Cloud account ID that calls the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1234567890:role/AliyunMNSNotificationRole</p>
@@ -131,16 +139,27 @@ public class SubscribeShrinkRequest extends TeaModel {
     public String stsRoleArn;
 
     /**
+     * <p>The name of the subscription.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSubscription</p>
      */
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
+    /**
+     * <p>The throttling policy.</p>
+     */
     @NameInMap("TenantRateLimitPolicy")
     public String tenantRateLimitPolicyShrink;
 
     /**
+     * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic****1</p>
      */
     @NameInMap("TopicName")
     public String topicName;

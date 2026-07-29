@@ -4,6 +4,19 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SetTopicAttributesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the log management feature. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false: Disabled.
+     * Default value: false.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
 
@@ -13,6 +26,12 @@ public class SetTopicAttributesRequest extends TeaModel {
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
+    /**
+     * <p>The maximum length of the message body sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65536</p>
+     */
     @NameInMap("MaxMessageSize")
     public Long maxMessageSize;
 
@@ -23,7 +42,11 @@ public class SetTopicAttributesRequest extends TeaModel {
     public String sseType;
 
     /**
+     * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TopicName")
     public String topicName;

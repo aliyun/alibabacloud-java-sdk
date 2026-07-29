@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteQueueRequest extends TeaModel {
     /**
+     * <p>The name of the queue.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf-testAccMNSQueue-525478433321945943</p>
      */
     @NameInMap("QueueName")
     public String queueName;

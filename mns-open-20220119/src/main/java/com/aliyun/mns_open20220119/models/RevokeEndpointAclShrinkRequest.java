@@ -5,19 +5,34 @@ import com.aliyun.tea.*;
 
 public class RevokeEndpointAclShrinkRequest extends TeaModel {
     /**
+     * <p>The ACL policy. Valid values:</p>
+     * <ul>
+     * <li><strong>allow</strong>: The operation is for a Classless Inter-Domain Routing (CIDR) whitelist. Currently, only \<code>allow\\</code> is supported.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>allow</p>
      */
     @NameInMap("AclStrategy")
     public String aclStrategy;
 
     /**
+     * <p>The list of network segments.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CidrList")
     public String cidrListShrink;
 
     /**
+     * <p>The endpoint type. Valid values:</p>
+     * <ul>
+     * <li><strong>public</strong>: The Internet endpoint. Currently, only \<code>public\\</code> is supported.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;

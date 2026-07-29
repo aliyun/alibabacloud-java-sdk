@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetEventRuleRequest extends TeaModel {
     /**
+     * <p>The name of the Alibaba Cloud product that triggers the event notification.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>The name of the event notification rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule-xsXDW</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

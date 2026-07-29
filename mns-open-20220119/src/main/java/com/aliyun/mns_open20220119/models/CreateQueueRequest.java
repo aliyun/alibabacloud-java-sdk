@@ -4,12 +4,36 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class CreateQueueRequest extends TeaModel {
+    /**
+     * <p>The delay period for all messages sent to the queue. A message sent to the queue can be consumed only after the delay period specified by this parameter elapses. Unit: seconds.</p>
+     * <p>Valid values: 0 to 604800.</p>
+     * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DelaySeconds")
     public Long delaySeconds;
 
+    /**
+     * <p>The dead-letter policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public CreateQueueRequestDlqPolicy dlqPolicy;
 
+    /**
+     * <p>Specifies whether to enable the log management feature. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false: Disabled.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
 
@@ -19,21 +43,59 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
+    /**
+     * <p>The maximum size of a message body that can be sent to the queue. Unit: bytes.</p>
+     * <p>Valid values: 1024 to 65536.</p>
+     * <p>Default value: 65536.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65536</p>
+     */
     @NameInMap("MaximumMessageSize")
     public Long maximumMessageSize;
 
+    /**
+     * <p>The maximum duration for which a message is retained in the queue. After the specified duration elapses from the time the message is sent to the queue, the message is deleted regardless of whether it has been consumed. Unit: seconds.</p>
+     * <p>Valid values: 60 to 604800.</p>
+     * <p>Default value: 345600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>345600</p>
+     */
     @NameInMap("MessageRetentionPeriod")
     public Long messageRetentionPeriod;
 
+    /**
+     * <p>The maximum wait time for a ReceiveMessage request when the queue is empty. Unit: seconds.</p>
+     * <p>Valid values: 0 to 30.</p>
+     * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PollingWaitSeconds")
     public Long pollingWaitSeconds;
 
     /**
+     * <p>The name of the queue.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
      */
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The type of the queue. Valid values:</p>
+     * <ul>
+     * <li>normal: standard queue.</li>
+     * <li>fifo: FIFO queue.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("QueueType")
     public String queueType;
 
@@ -43,12 +105,26 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("SseType")
     public String sseType;
 
+    /**
+     * <p>The list of resource tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateQueueRequestTag> tag;
 
+    /**
+     * <p>The rate limiting policy.</p>
+     */
     @NameInMap("TenantRateLimitPolicy")
     public CreateQueueRequestTenantRateLimitPolicy tenantRateLimitPolicy;
 
+    /**
+     * <p>The duration for which a consumed message stays in the Inactive state after it is changed from the Active state. Unit: seconds.</p>
+     * <p>Valid values: 1 to 43200.</p>
+     * <p>Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("VisibilityTimeout")
     public Long visibilityTimeout;
 
@@ -178,12 +254,30 @@ public class CreateQueueRequest extends TeaModel {
     }
 
     public static class CreateQueueRequestDlqPolicy extends TeaModel {
+        /**
+         * <p>The target queue for dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadLetterQueue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Specifies whether to enable dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The maximum number of times a message can be delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxReceiveCount")
         public Integer maxReceiveCount;
 
@@ -219,9 +313,21 @@ public class CreateQueueRequest extends TeaModel {
     }
 
     public static class CreateQueueRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -249,9 +355,25 @@ public class CreateQueueRequest extends TeaModel {
     }
 
     public static class CreateQueueRequestTenantRateLimitPolicy extends TeaModel {
+        /**
+         * <p>Specifies whether to enable rate limiting. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The maximum number of receives per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxReceivesPerSecond")
         public Integer maxReceivesPerSecond;
 

@@ -4,12 +4,36 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SetQueueAttributesRequest extends TeaModel {
+    /**
+     * <p>The delay time for all messages sent to this queue. Messages sent to the queue can be consumed only after the delay time specified by this parameter has elapsed.</p>
+     * <p>Valid values: 0 to 604800. Unit: seconds.</p>
+     * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DelaySeconds")
     public Long delaySeconds;
 
+    /**
+     * <p>The dead-letter queue policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public SetQueueAttributesRequestDlqPolicy dlqPolicy;
 
+    /**
+     * <p>Specifies whether to enable the log management feature. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false: Disabled.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableLogging")
     public Boolean enableLogging;
 
@@ -19,17 +43,45 @@ public class SetQueueAttributesRequest extends TeaModel {
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
+    /**
+     * <p>The maximum length of the message body sent to this queue.</p>
+     * <p>Valid values: 1024 to 65536. Unit: bytes.</p>
+     * <p>Default value: 65536.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("MaximumMessageSize")
     public Long maximumMessageSize;
 
+    /**
+     * <p>The maximum duration for which a message is retained in this queue. After the time specified by this parameter has elapsed since the message was sent to the queue, the message is deleted regardless of whether it has been consumed.</p>
+     * <p>Valid values: 60 to 604800. Unit: seconds.</p>
+     * <p>Default value: 345600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("MessageRetentionPeriod")
     public Long messageRetentionPeriod;
 
+    /**
+     * <p>The maximum wait time for a ReceiveMessage request on this queue when no messages are available in the queue.</p>
+     * <p>Valid values: 0 to 30. Unit: seconds.</p>
+     * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PollingWaitSeconds")
     public Long pollingWaitSeconds;
 
     /**
+     * <p>The name of the queue.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testqueue</p>
      */
     @NameInMap("QueueName")
     public String queueName;
@@ -43,6 +95,14 @@ public class SetQueueAttributesRequest extends TeaModel {
     @NameInMap("TenantRateLimitPolicy")
     public SetQueueAttributesRequestTenantRateLimitPolicy tenantRateLimitPolicy;
 
+    /**
+     * <p>The duration for which a message stays in the Inactive state after it is consumed from the queue and changes from the Active state to the Inactive state.</p>
+     * <p>Valid values: 1 to 43200. Unit: seconds.</p>
+     * <p>Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("VisibilityTimeout")
     public Long visibilityTimeout;
 
@@ -156,12 +216,30 @@ public class SetQueueAttributesRequest extends TeaModel {
     }
 
     public static class SetQueueAttributesRequestDlqPolicy extends TeaModel {
+        /**
+         * <p>The target queue for dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadLetterTargetQueue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Specifies whether to enable dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The maximum number of times a message can be delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxReceiveCount")
         public Integer maxReceiveCount;
 

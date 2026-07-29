@@ -4,21 +4,54 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class ListTopicResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public ListTopicResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class ListTopicResponseBody extends TeaModel {
     }
 
     public static class ListTopicResponseBodyDataPageDataTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -106,6 +151,12 @@ public class ListTopicResponseBody extends TeaModel {
     }
 
     public static class ListTopicResponseBodyDataPageData extends TeaModel {
+        /**
+         * <p>The time when the subscription was created. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554962</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -118,18 +169,54 @@ public class ListTopicResponseBody extends TeaModel {
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
+        /**
+         * <p>The time when the subscription attributes were last modified. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554962</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>Indicates whether the Log Management feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><p>True: Enabled.</p>
+         * </li>
+         * <li><p>False: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("LoggingEnabled")
         public Boolean loggingEnabled;
 
+        /**
+         * <p>The maximum length of the message body sent to the topic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
+         */
         @NameInMap("MaxMessageSize")
         public Long maxMessageSize;
 
+        /**
+         * <p>The number of messages in the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MessageCount")
         public Long messageCount;
 
+        /**
+         * <p>The maximum duration for which a message is retained in the topic. After the time specified by this parameter elapses since the message is sent to the topic, the message is deleted regardless of whether it has been successfully pushed to the user. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
+         */
         @NameInMap("MessageRetentionPeriod")
         public Long messageRetentionPeriod;
 
@@ -139,18 +226,49 @@ public class ListTopicResponseBody extends TeaModel {
         @NameInMap("SseType")
         public String sseType;
 
+        /**
+         * <p>The list of resource tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTopicResponseBodyDataPageDataTags> tags;
 
+        /**
+         * <p>The internal URL of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http:// 111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic</p>
+         */
         @NameInMap("TopicInnerUrl")
         public String topicInnerUrl;
 
+        /**
+         * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-topic</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
+        /**
+         * <p>The type of the topic. Valid values:</p>
+         * <ul>
+         * <li>normal: normal topic</li>
+         * <li>fifo: FIFO topic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("TopicType")
         public String topicType;
 
+        /**
+         * <p>The URL of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http:// 111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic</p>
+         */
         @NameInMap("TopicUrl")
         public String topicUrl;
 
@@ -290,15 +408,36 @@ public class ListTopicResponseBody extends TeaModel {
     }
 
     public static class ListTopicResponseBodyData extends TeaModel {
+        /**
+         * <p>The results returned on the current page.</p>
+         */
         @NameInMap("PageData")
         public java.util.List<ListTopicResponseBodyDataPageData> pageData;
 
+        /**
+         * <p>The page number of the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Long pageNum;
 
+        /**
+         * <p>The number of results returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130</p>
+         */
         @NameInMap("Total")
         public Long total;
 

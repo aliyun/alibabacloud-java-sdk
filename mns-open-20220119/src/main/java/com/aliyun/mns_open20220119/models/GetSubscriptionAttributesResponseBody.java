@@ -4,21 +4,54 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class GetSubscriptionAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetSubscriptionAttributesResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionAttributesResponseBodyDataDlqPolicy extends TeaModel {
+        /**
+         * <p>The target queue to which dead-letter messages are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadLetterTargetQueue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Indicates whether dead-letter message delivery is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -136,36 +181,108 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionAttributesResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the subscription was created. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554806</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The dead-letter queue policy.</p>
+         */
         @NameInMap("DlqPolicy")
         public GetSubscriptionAttributesResponseBodyDataDlqPolicy dlqPolicy;
 
+        /**
+         * <p>The endpoint of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The tag used for message filtering. Only messages that have a matching tag are pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>important</p>
+         */
         @NameInMap("FilterTag")
         public String filterTag;
 
+        /**
+         * <p>The time when the subscription properties were last modified. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 00:00:00 on January 1, 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554962</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>The format of the message content that is pushed to an endpoint.
+         * Valid values:</p>
+         * <ul>
+         * <li><p>XML</p>
+         * </li>
+         * <li><p>JSON</p>
+         * </li>
+         * <li><p>SIMPLIFIED</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>XML</p>
+         */
         @NameInMap("NotifyContentFormat")
         public String notifyContentFormat;
 
+        /**
+         * <p>The retry policy that is used when a message fails to be pushed to an endpoint. Valid values:</p>
+         * <ul>
+         * <li><p>BACKOFF_RETRY: backoff retry.</p>
+         * </li>
+         * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BACKOFF_RETRY</p>
+         */
         @NameInMap("NotifyStrategy")
         public String notifyStrategy;
 
+        /**
+         * <p>The name of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySubscription</p>
+         */
         @NameInMap("SubscriptionName")
         public String subscriptionName;
 
         @NameInMap("TenantRateLimitPolicy")
         public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy tenantRateLimitPolicy;
 
+        /**
+         * <p>The name of the topic to which the subscription belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTopic</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
+        /**
+         * <p>The AccountId of the owner of the topic to which the subscription belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789098****</p>
+         */
         @NameInMap("TopicOwner")
         public String topicOwner;
 

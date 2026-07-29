@@ -5,18 +5,38 @@ import com.aliyun.tea.*;
 
 public class EventMatchRule extends TeaModel {
     /**
+     * <p>Specifies whether to match.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("MatchState")
     public Boolean matchState;
 
+    /**
+     * <p>The full name to match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testBucket/folder1/file1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The prefix to match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testBucket/prefix1xxx</p>
+     */
     @NameInMap("Prefix")
     public String prefix;
 
+    /**
+     * <p>The suffix to match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>suffix/xxxx.test</p>
+     */
     @NameInMap("Suffix")
     public String suffix;
 

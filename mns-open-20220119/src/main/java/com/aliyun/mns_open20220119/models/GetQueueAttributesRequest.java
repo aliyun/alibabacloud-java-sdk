@@ -5,11 +5,18 @@ import com.aliyun.tea.*;
 
 public class GetQueueAttributesRequest extends TeaModel {
     /**
+     * <p>The name of the queue.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-queue</p>
      */
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The list of resource tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<GetQueueAttributesRequestTag> tag;
 
@@ -35,9 +42,21 @@ public class GetQueueAttributesRequest extends TeaModel {
     }
 
     public static class GetQueueAttributesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Value")
         public String value;
 

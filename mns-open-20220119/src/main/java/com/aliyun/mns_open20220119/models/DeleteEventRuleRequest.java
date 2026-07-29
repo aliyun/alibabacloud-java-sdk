@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteEventRuleRequest extends TeaModel {
     /**
+     * <p>The name of the cloud service for the event notification.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
+     * <p>The name of the event rule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule-xsXDW</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

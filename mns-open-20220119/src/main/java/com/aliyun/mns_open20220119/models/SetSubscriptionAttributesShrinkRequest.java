@@ -4,9 +4,24 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
+    /**
+     * <p>The dead-letter queue policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public String dlqPolicyShrink;
 
+    /**
+     * <p>The retry policy for message delivery failures to the endpoint. Valid values:</p>
+     * <ul>
+     * <li><p>BACKOFF_RETRY: backoff retry.</p>
+     * </li>
+     * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BACKOFF_RETRY</p>
+     */
     @NameInMap("NotifyStrategy")
     public String notifyStrategy;
 
@@ -18,7 +33,11 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     public String stsRoleArn;
 
     /**
+     * <p>The name of the subscription.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySubscription</p>
      */
     @NameInMap("SubscriptionName")
     public String subscriptionName;
@@ -27,7 +46,11 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     public String tenantRateLimitPolicyShrink;
 
     /**
+     * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TopicName")
     public String topicName;

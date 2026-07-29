@@ -5,19 +5,34 @@ import com.aliyun.tea.*;
 
 public class AuthorizeEndpointAclShrinkRequest extends TeaModel {
     /**
+     * <p>The access control list (ACL) policy. Valid value:</p>
+     * <ul>
+     * <li><strong>allow</strong>: A CIDR whitelist. Only allow is supported.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>allow</p>
      */
     @NameInMap("AclStrategy")
     public String aclStrategy;
 
     /**
+     * <p>A list of CIDR blocks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CidrList")
     public String cidrListShrink;
 
     /**
+     * <p>The type of the endpoint. Valid value:</p>
+     * <ul>
+     * <li><strong>public</strong>: An internet endpoint. Only public is supported.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;

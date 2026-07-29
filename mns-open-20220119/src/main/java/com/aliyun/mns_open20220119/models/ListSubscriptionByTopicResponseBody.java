@@ -4,21 +4,54 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByTopicResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public ListSubscriptionByTopicResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06273500-249F-5863-121D-74D51123****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy extends TeaModel {
+        /**
+         * <p>The destination queue for dead-letter messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dead-letter-queue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Indicates whether dead-letter message delivery is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -106,33 +151,105 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByTopicResponseBodyDataPageData extends TeaModel {
+        /**
+         * <p>The time when the subscription was created, in Unix time format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554806</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The dead-letter queue policy.</p>
+         */
         @NameInMap("DlqPolicy")
         public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy dlqPolicy;
 
+        /**
+         * <p>The endpoint of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The tag for message filtering in the subscription. Only messages with the same tag are pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>important</p>
+         */
         @NameInMap("FilterTag")
         public String filterTag;
 
+        /**
+         * <p>The time when the subscription properties were last modified. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1449554806</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>The format of the message content pushed to the endpoint.
+         * Valid values:</p>
+         * <ul>
+         * <li><p>XML</p>
+         * </li>
+         * <li><p>JSON</p>
+         * </li>
+         * <li><p>SIMPLIFIED</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>XML</p>
+         */
         @NameInMap("NotifyContentFormat")
         public String notifyContentFormat;
 
+        /**
+         * <p>The retry policy for message push failures to the endpoint. Valid values:</p>
+         * <ul>
+         * <li><p>BACKOFF_RETRY: backoff retry.</p>
+         * </li>
+         * <li><p>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BACKOFF_RETRY</p>
+         */
         @NameInMap("NotifyStrategy")
         public String notifyStrategy;
 
+        /**
+         * <p>The subscription name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySubscription</p>
+         */
         @NameInMap("SubscriptionName")
         public String subscriptionName;
 
+        /**
+         * <p>The name of the topic to which the subscription belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTopic</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
+        /**
+         * <p>The AccountId of the owner of the topic to which the subscription belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789098****</p>
+         */
         @NameInMap("TopicOwner")
         public String topicOwner;
 
@@ -224,21 +341,54 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByTopicResponseBodyData extends TeaModel {
+        /**
+         * <p>The entries on the current page.</p>
+         */
         @NameInMap("PageData")
         public java.util.List<ListSubscriptionByTopicResponseBodyDataPageData> pageData;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Long pageNum;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Pages")
         public Long pages;
 
+        /**
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130</p>
+         */
         @NameInMap("Total")
         public Long total;
 

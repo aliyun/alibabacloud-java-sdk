@@ -1,3 +1,8 @@
+2026-07-29 Version: 1.5.0
+- Support API GetAccountAttributes.
+- Support API SetAccountAttributes.
+
+
 2026-07-13 Version: 1.4.4
 - Update API CreateQueue: add request parameters EnableSSE.
 - Update API CreateQueue: add request parameters KmsKeyId.

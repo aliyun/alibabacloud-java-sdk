@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class UnsubscribeRequest extends TeaModel {
     /**
+     * <p>The name of the subscription.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySubscription</p>
      */
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
     /**
+     * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TopicName")
     public String topicName;
