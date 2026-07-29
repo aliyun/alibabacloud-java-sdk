@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserExclusiveCredentialRequest extends TeaModel {
     /**
+     * <p>The credential content.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("credentialContent")
@@ -14,6 +15,7 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     public String credentialExternalId;
 
     /**
+     * <p>The credential identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     public String credentialIdentifier;
 
     /**
+     * <p>The credential name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,12 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     public String credentialName;
 
     /**
+     * <p>The scenarios label of the credential. Valid values:</p>
+     * <ul>
+     * <li>llm: large language model.</li>
+     * <li>saas: third-party SaaS service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>llm</p>
      */
@@ -39,6 +48,11 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     public String credentialScenarioLabel;
 
     /**
+     * <p>The credential type. Valid values:</p>
+     * <ul>
+     * <li>api_key: API Key authentication credential.</li>
+     * <li>oauth_client: OAuth client authentication credential.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,11 +62,16 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     public String credentialType;
 
     /**
+     * <p>The credential description.</p>
+     * 
      * <strong>example:</strong>
      * <p>credential_description</p>
      */
     @NameInMap("description")
     public String description;
+
+    @NameInMap("returnCiphertext")
+    public Boolean returnCiphertext;
 
     public static CreateUserExclusiveCredentialRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserExclusiveCredentialRequest self = new CreateUserExclusiveCredentialRequest();
@@ -115,8 +134,17 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateUserExclusiveCredentialRequest setReturnCiphertext(Boolean returnCiphertext) {
+        this.returnCiphertext = returnCiphertext;
+        return this;
+    }
+    public Boolean getReturnCiphertext() {
+        return this.returnCiphertext;
+    }
+
     public static class CreateUserExclusiveCredentialRequestCredentialContentApiKeyContent extends TeaModel {
         /**
+         * <p>The value of the API Key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +169,9 @@ public class CreateUserExclusiveCredentialRequest extends TeaModel {
     }
 
     public static class CreateUserExclusiveCredentialRequestCredentialContent extends TeaModel {
+        /**
+         * <p>The credential content for the API Key credential type.</p>
+         */
         @NameInMap("apiKeyContent")
         public CreateUserExclusiveCredentialRequestCredentialContentApiKeyContent apiKeyContent;
 

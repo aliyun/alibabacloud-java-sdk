@@ -1,3 +1,12 @@
+2026-07-29 Version: 1.7.2
+- Update API CreateUserExclusiveCredential: add request parameters body.returnCiphertext.
+- Update API CreateUserExclusiveCredential: add response parameters Body.credentialCiphertext.
+- Update API FetchOAuthAuthenticationToken: add request parameters body.customParameters.
+- Update API FetchOAuthAuthenticationToken: add request parameters body.forceAuthentication.
+- Update API FetchOAuthAuthenticationToken: add response parameters Body.oauthAuthorizationSession.
+- Update API ObtainCloudAccountRoleAccessCredential: add response parameters Body.cloudAccountRoleAccessCredential.tencentCloudStsToken.
+
+
 2026-05-13 Version: 1.7.1
 - Update API CreateUserExclusiveCredential: add request parameters body.credentialExternalId.
 - Update API ObtainCredential: add response parameters Body.credentialExternalId.

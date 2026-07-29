@@ -8,6 +8,10 @@ public class ObtainCredentialHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>Authentication information. The format is <code>Bearer ${access_token}</code>.</p>
+     * <blockquote>
+     * <p>Use an access token issued by IDaaS.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeAuthenticationTokenByConsumerRequest extends TeaModel {
     /**
+     * <p>Consumer ID of the authentication token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RevokeAuthenticationTokenByConsumerRequest extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>Credential provider identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

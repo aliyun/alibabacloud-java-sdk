@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitsResponseBody extends TeaModel {
     /**
-     * <p>The queried organizational units.</p>
+     * <p>A list of data objects.</p>
      */
     @NameInMap("data")
     public java.util.List<ListOrganizationalUnitsResponseBodyData> data;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -42,7 +42,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
 
     public static class ListOrganizationalUnitsResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the organizational unit was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the organization was created. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652083425923</p>
@@ -51,10 +51,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the organizational unit.</p>
+         * <p>The description of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>test organizational unit</p>
+         * <p>测试组织</p>
          */
         @NameInMap("description")
         public String description;
@@ -69,8 +69,8 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The external ID of the organizational unit. The external ID can be used to map external data to the data of the organizational unit in EIAM of Identity as a Service (IDaaS). By default, the external ID is the organizational unit ID.</p>
-         * <p>Note: For organizational units with the same source type and source ID, each organizational unit has a unique external ID.</p>
+         * <p>The external ID of the organization. This ID is used to map external data to the organization\&quot;s data in IDaaS. The default value is the IDaaS organization ID.</p>
+         * <p>Note: The external ID must be unique for the same source type and source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -79,7 +79,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String organizationalUnitExternalId;
 
         /**
-         * <p>The ID of the organizational unit.</p>
+         * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -88,7 +88,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String organizationalUnitId;
 
         /**
-         * <p>The name of the organizational unit.</p>
+         * <p>The organization name.</p>
          * 
          * <strong>example:</strong>
          * <p>name001</p>
@@ -97,8 +97,8 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String organizationalUnitName;
 
         /**
-         * <p>The source ID of the organizational unit.</p>
-         * <p>If the organizational unit was created in IDaaS, its source ID is the ID of the IDaaS instance. If the organizational unit was imported, its source ID is the enterprise ID in the source. For example, if the organizational unit was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         * <p>The source ID of the organization.</p>
+         * <p>For the \<code>build_in\\</code> type, the default value is the instance ID. For other types, the value is the enterprise ID from the source. For example, if the source is DingTalk, the value is the \<code>corpId\\</code> of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -107,12 +107,16 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String organizationalUnitSourceId;
 
         /**
-         * <p>The source type of the organizational unit. Valid values:</p>
+         * <p>The source type of the organization. Valid values:</p>
          * <ul>
-         * <li>build_in: The organizational unit was created in IDaaS.</li>
-         * <li>ding_talk: The organizational unit was imported from DingTalk.</li>
-         * <li>ad: The organizational unit was imported from Microsoft Active Directory (AD).</li>
-         * <li>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * <li><p>\<code>build_in\\</code>: The organization is created in IDaaS.</p>
+         * </li>
+         * <li><p>\<code>ding_talk\\</code>: The organization is imported from DingTalk.</p>
+         * </li>
+         * <li><p>\<code>ad\\</code>: The organization is imported from Active Directory (AD).</p>
+         * </li>
+         * <li><p>\<code>ldap\\</code>: The organization is imported from LDAP.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +126,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String organizationalUnitSourceType;
 
         /**
-         * <p>The ID of the parent organizational unit.</p>
+         * <p>The parent organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -131,7 +135,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         public String parentId;
 
         /**
-         * <p>The time when the organizational unit was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the organization was last updated. This is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1652083425923</p>

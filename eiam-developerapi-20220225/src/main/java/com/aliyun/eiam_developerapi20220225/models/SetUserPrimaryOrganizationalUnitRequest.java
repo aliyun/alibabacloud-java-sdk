@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetUserPrimaryOrganizationalUnitRequest extends TeaModel {
     /**
+     * <p>The primary organization ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

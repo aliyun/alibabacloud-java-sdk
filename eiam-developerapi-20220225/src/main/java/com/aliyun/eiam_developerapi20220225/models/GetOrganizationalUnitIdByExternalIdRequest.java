@@ -29,10 +29,14 @@ public class GetOrganizationalUnitIdByExternalIdRequest extends TeaModel {
     /**
      * <p>The source type of the organizational unit. Valid values:</p>
      * <ul>
-     * <li>build_in: The organizational unit was created in IDaaS.</li>
-     * <li>ding_talk: The organizational unit was imported from DingTalk.</li>
-     * <li>ad: The organizational unit was imported from Microsoft Active Directory (AD).</li>
-     * <li>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+     * <li><p>build_in: The organizational unit was created in IDaaS.</p>
+     * </li>
+     * <li><p>ding_talk: The organizational unit was imported from DingTalk.</p>
+     * </li>
+     * <li><p>ad: The organizational unit was imported from Microsoft Active Directory (AD).</p>
+     * </li>
+     * <li><p>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

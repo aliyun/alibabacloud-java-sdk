@@ -8,6 +8,9 @@ public class RemoveUserFromOrganizationalUnitsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The authorization credential for the request.
+     * Format: Bearer ${access_token}.
+     * Example: Bearer ATxxxx.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
     /**
-     * <p>Custom fields</p>
+     * <p>A list of custom fields for the account.</p>
      */
     @NameInMap("customFields")
     public java.util.List<CreateUserRequestCustomFields> customFields;
 
     /**
-     * <p>The description of the account. The description can be up to 256 characters in length.</p>
+     * <p>The account description. The maximum length is 256 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>test user</p>
+     * <p>测试账户</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+     * <p>The display name. The maximum length is 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>display_name001</p>
@@ -29,7 +29,7 @@ public class CreateUserRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The email address of the user who owns the account.</p>
+     * <p>The email address. The local-part of the address can contain uppercase and lowercase letters, digits, periods (<code>.</code>), underscores (<code>_</code>), and hyphens (<code>-</code>). The maximum length is 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:example@example.com">example@example.com</a></p>
@@ -38,7 +38,7 @@ public class CreateUserRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>Indicates whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</p>
+     * <p>Specifies whether the email is verified. This parameter is required if <code>email</code> is set. Typically, set this to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,7 +47,7 @@ public class CreateUserRequest extends TeaModel {
     public Boolean emailVerified;
 
     /**
-     * <p>The password of the account. For information about the password rules, go to the Create User panel in the Identity as a Service (IDaaS) console.</p>
+     * <p>The account password. For password complexity rules, see the password policy in the IDaaS console.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
@@ -56,13 +56,13 @@ public class CreateUserRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>Configure the initial password</p>
+     * <p>The password initialization configuration.</p>
      */
     @NameInMap("passwordInitializationConfig")
     public CreateUserRequestPasswordInitializationConfig passwordInitializationConfig;
 
     /**
-     * <p>The mobile number of the user who owns the account.</p>
+     * <p>The account phone number. It must be 6 to 15 digits long.</p>
      * 
      * <strong>example:</strong>
      * <p>156xxxxxxx</p>
@@ -71,7 +71,7 @@ public class CreateUserRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>Indicates whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</p>
+     * <p>Specifies whether the phone number is verified. This parameter is required if <code>phoneNumber</code> is set. Typically, set this to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -80,7 +80,7 @@ public class CreateUserRequest extends TeaModel {
     public Boolean phoneNumberVerified;
 
     /**
-     * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +. This parameter is required if a mobile number is specified.</p>
+     * <p>The phone region code. For example, the code for the Chinese mainland is <code>86</code>. Do not include a <code>00</code> prefix or a plus sign (<code>+</code>). This parameter is required if <code>phoneNumber</code> is set.</p>
      * 
      * <strong>example:</strong>
      * <p>86</p>
@@ -99,7 +99,7 @@ public class CreateUserRequest extends TeaModel {
     public String primaryOrganizationalUnitId;
 
     /**
-     * <p>The external ID of the account. The external ID can be used to map external data to the data of the account in EIAM of Identity as a Service (IDaaS). By default, the external ID is the account ID.</p>
+     * <p>The external user ID, used to associate the account with an external system. The maximum length is 128 characters. If unspecified, it defaults to the account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -108,7 +108,7 @@ public class CreateUserRequest extends TeaModel {
     public String userExternalId;
 
     /**
-     * <p>The username of the account.</p>
+     * <p>The username. It can contain letters, digits, and the following special characters: underscore (<code>_</code>), period (<code>.</code>), at sign (<code>@</code>), and hyphen (<code>-</code>). The maximum length is 256 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -228,7 +228,7 @@ public class CreateUserRequest extends TeaModel {
 
     public static class CreateUserRequestCustomFields extends TeaModel {
         /**
-         * <p>Field name</p>
+         * <p>The name of the custom field. You can view the field\&quot;s data type and value range in the IDaaS console.</p>
          * 
          * <strong>example:</strong>
          * <p>age</p>
@@ -237,7 +237,7 @@ public class CreateUserRequest extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>Filed value</p>
+         * <p>The value of the custom field.</p>
          * 
          * <strong>example:</strong>
          * <p>fieldValue_001</p>
@@ -270,7 +270,13 @@ public class CreateUserRequest extends TeaModel {
 
     public static class CreateUserRequestPasswordInitializationConfig extends TeaModel {
         /**
-         * <p>Password  forced update</p>
+         * <p>The password forced update status. By default, this feature is disabled. Valid values:</p>
+         * <ul>
+         * <li><p><code>enabled</code>: Enables the feature.</p>
+         * </li>
+         * <li><p><code>disabled</code>: Disables the feature.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -279,7 +285,13 @@ public class CreateUserRequest extends TeaModel {
         public String passwordForcedUpdateStatus;
 
         /**
-         * <p>Password policy</p>
+         * <p>The priority of the password initialization policy. Valid values:</p>
+         * <ul>
+         * <li><p><code>global</code>: Uses the instance-level password initialization policy and ignores the custom settings in this request. For more information, see the password initialization policy configuration in the IDaaS console.</p>
+         * </li>
+         * <li><p><code>custom</code>: Uses the custom password initialization policy defined in this request. This includes settings for forced password updates, the initialization type, and notification channels.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -288,7 +300,10 @@ public class CreateUserRequest extends TeaModel {
         public String passwordInitializationPolicyPriority;
 
         /**
-         * <p>Password Initialization Type</p>
+         * <p>The password initialization type. Valid values:</p>
+         * <ul>
+         * <li><code>random</code>: A randomly generated password.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>random</p>
@@ -297,7 +312,13 @@ public class CreateUserRequest extends TeaModel {
         public String passwordInitializationType;
 
         /**
-         * <p>User Notification Channels</p>
+         * <p>The user notification channels. Valid values:</p>
+         * <ul>
+         * <li><p><code>email</code>: Email</p>
+         * </li>
+         * <li><p><code>sms</code>: SMS</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>sms</p>

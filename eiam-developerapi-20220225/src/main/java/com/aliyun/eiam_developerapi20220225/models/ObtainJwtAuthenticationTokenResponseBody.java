@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     /**
+     * <p>The ID of the authentication token.</p>
+     * 
      * <strong>example:</strong>
      * <p>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</p>
      */
@@ -12,6 +14,11 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public String authenticationTokenId;
 
     /**
+     * <p>The type of the authentication token.</p>
+     * <blockquote>
+     * <p>The value is always <code>jwt</code>, indicating a JWT-based authentication token.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>jwt</p>
      */
@@ -19,6 +26,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public String authenticationTokenType;
 
     /**
+     * <p>The ID of the authentication token consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_jwt_subject</p>
      */
@@ -26,6 +35,14 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>The type of entity that consumes the authentication token. Valid values:</p>
+     * <ul>
+     * <li><p><code>application</code>: The token is consumed by an application.</p>
+     * </li>
+     * <li><p><code>custom</code>: Indicates a user-defined consumer.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -33,6 +50,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public String consumerType;
 
     /**
+     * <p>The creation time of the authentication token, provided as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1649830225000</p>
      */
@@ -40,6 +59,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The ID of the authentication token\&quot;s creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
      */
@@ -47,6 +68,11 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public String creatorId;
 
     /**
+     * <p>The type of the entity that created the authentication token. Valid value:</p>
+     * <ul>
+     * <li><code>application</code>: The token was created by an application.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>application</p>
      */
@@ -54,6 +80,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public String creatorType;
 
     /**
+     * <p>The ID of the credential provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
      */
@@ -61,6 +89,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public String credentialProviderId;
 
     /**
+     * <p>The expiration time of the authentication token, provided as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1772693568000</p>
      */
@@ -68,7 +98,7 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public Long expirationTime;
 
     /**
-     * <p>EIAM实例ID。</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -76,10 +106,15 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The content of the JWT-based authentication token.</p>
+     */
     @NameInMap("jwtContent")
     public ObtainJwtAuthenticationTokenResponseBodyJwtContent jwtContent;
 
     /**
+     * <p>Indicates whether the authentication token has been revoked.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -87,6 +122,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
     public Boolean revoked;
 
     /**
+     * <p>The time the authentication token was last updated, provided as a Unix timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1649830225000</p>
      */
@@ -204,6 +241,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
 
     public static class ObtainJwtAuthenticationTokenResponseBodyJwtContent extends TeaModel {
         /**
+         * <p>A short token derived from the JWT.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-Nx2vzxxxxxxxxxxxxxxxxx</p>
          */
@@ -211,6 +250,8 @@ public class ObtainJwtAuthenticationTokenResponseBody extends TeaModel {
         public String derivedShortToken;
 
         /**
+         * <p>The JWT content.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJhbGciOixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */

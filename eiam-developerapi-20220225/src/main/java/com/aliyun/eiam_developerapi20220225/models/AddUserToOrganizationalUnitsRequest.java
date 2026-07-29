@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddUserToOrganizationalUnitsRequest extends TeaModel {
     /**
+     * <p>A list of organization IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

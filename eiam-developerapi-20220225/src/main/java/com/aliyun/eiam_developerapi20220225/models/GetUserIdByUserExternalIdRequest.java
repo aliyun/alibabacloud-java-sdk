@@ -27,10 +27,14 @@ public class GetUserIdByUserExternalIdRequest extends TeaModel {
     /**
      * <p>The source type of the account. Valid values:</p>
      * <ul>
-     * <li>build_in: The account was created in Identity as a Service (IDaaS).</li>
-     * <li>ding_talk: The account was imported from DingTalk.</li>
-     * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
-     * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+     * <li><p>build_in: The account was created in Identity as a Service (IDaaS).</p>
+     * </li>
+     * <li><p>ding_talk: The account was imported from DingTalk.</p>
+     * </li>
+     * <li><p>ad: The account was imported from Microsoft Active Directory (AD).</p>
+     * </li>
+     * <li><p>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

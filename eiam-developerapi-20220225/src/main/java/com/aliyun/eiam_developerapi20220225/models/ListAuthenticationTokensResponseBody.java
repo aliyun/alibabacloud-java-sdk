@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListAuthenticationTokensResponseBody extends TeaModel {
     /**
-     * <p>资源实体列表。</p>
+     * <p>List of resource entities.</p>
      */
     @NameInMap("entities")
     public java.util.List<ListAuthenticationTokensResponseBodyEntities> entities;
 
     /**
+     * <p>Maximum number of records returned in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -18,6 +20,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>Token returned by this call. Use it for the next paged query to get the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
      */
@@ -25,6 +29,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Total number of resource entities that match the query criteria.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -70,6 +76,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
 
     public static class ListAuthenticationTokensResponseBodyEntities extends TeaModel {
         /**
+         * <p>Authentication token ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</p>
          */
@@ -77,6 +85,14 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String authenticationTokenId;
 
         /**
+         * <p>Authentication token type. Valid values:</p>
+         * <ul>
+         * <li><p>jwt: JWT authentication token</p>
+         * </li>
+         * <li><p>oauth_access_token: OAuth Access Token authentication token</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>jwt</p>
          */
@@ -84,6 +100,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String authenticationTokenType;
 
         /**
+         * <p>ID of the authentication token consumer.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_jwt_subject</p>
          */
@@ -91,6 +109,14 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>Type of the authentication token consumer. Valid values:</p>
+         * <ul>
+         * <li><p>application: Application</p>
+         * </li>
+         * <li><p>custom: Custom type</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -98,6 +124,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String consumerType;
 
         /**
+         * <p>Creation time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
          */
@@ -105,6 +133,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>ID of the authentication token creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
          */
@@ -112,6 +142,11 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String creatorId;
 
         /**
+         * <p>Type of the authentication token creator. Valid values:</p>
+         * <ul>
+         * <li>application: Application</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>application</p>
          */
@@ -119,6 +154,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String creatorType;
 
         /**
+         * <p>Credential provider ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
          */
@@ -126,6 +163,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String credentialProviderId;
 
         /**
+         * <p>Expiration time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1772693568000</p>
          */
@@ -133,7 +172,7 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
-         * <p>EIAM实例ID。</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -142,6 +181,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Indicates whether the authentication token is revoked.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -149,6 +190,8 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         public Boolean revoked;
 
         /**
+         * <p>Last update time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuthenticationTokensRequest extends TeaModel {
     /**
+     * <p>ID of the authentication token consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListAuthenticationTokensRequest extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>Credential provider identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListAuthenticationTokensRequest extends TeaModel {
     public String credentialProviderIdentifier;
 
     /**
+     * <p>Indicates whether the authentication token is expired.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -30,6 +34,8 @@ public class ListAuthenticationTokensRequest extends TeaModel {
     public Boolean expired;
 
     /**
+     * <p>Maximum number of records to return in this paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -37,6 +43,8 @@ public class ListAuthenticationTokensRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>Token that marks the start of the next page in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
      */
@@ -44,6 +52,8 @@ public class ListAuthenticationTokensRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Indicates whether the authentication token is revoked.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsForUserResponseBody extends TeaModel {
+    /**
+     * <p>The data object.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListGroupsForUserResponseBodyData> data;
 
     /**
+     * <p>The maximum number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>NTxxx</p>
      */
@@ -22,6 +29,8 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -67,6 +76,8 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
     public static class ListGroupsForUserResponseBodyData extends TeaModel {
         /**
+         * <p>The group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
@@ -74,6 +85,8 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The source ID of the group membership.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
@@ -81,6 +94,8 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         public String groupMemberRelationSourceId;
 
         /**
+         * <p>The source type of the group membership.</p>
+         * 
          * <strong>example:</strong>
          * <p>build_in</p>
          */
@@ -88,6 +103,8 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         public String groupMemberRelationSourceType;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */

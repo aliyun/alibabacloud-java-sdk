@@ -4,7 +4,12 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
+    @NameInMap("credentialCiphertext")
+    public String credentialCiphertext;
+
     /**
+     * <p>The credential ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cred_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
      */
@@ -12,7 +17,7 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>凭据标识。</p>
+     * <p>The credential identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>credential_identifier_test</p>
@@ -23,6 +28,14 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
     public static CreateUserExclusiveCredentialResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUserExclusiveCredentialResponseBody self = new CreateUserExclusiveCredentialResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUserExclusiveCredentialResponseBody setCredentialCiphertext(String credentialCiphertext) {
+        this.credentialCiphertext = credentialCiphertext;
+        return this;
+    }
+    public String getCredentialCiphertext() {
+        return this.credentialCiphertext;
     }
 
     public CreateUserExclusiveCredentialResponseBody setCredentialId(String credentialId) {

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainJwtAuthenticationTokenByDerivedShortTokenRequest extends TeaModel {
     /**
+     * <p>Derived short token for the JWT authentication token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

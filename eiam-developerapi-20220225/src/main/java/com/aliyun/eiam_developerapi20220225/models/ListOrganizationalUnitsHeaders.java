@@ -8,7 +8,7 @@ public class ListOrganizationalUnitsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+     * <p>The authentication information. The value must be in the format of \<code>Bearer ${access_token}\\</code>. Example: \<code>Bearer ATxxxx\\</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

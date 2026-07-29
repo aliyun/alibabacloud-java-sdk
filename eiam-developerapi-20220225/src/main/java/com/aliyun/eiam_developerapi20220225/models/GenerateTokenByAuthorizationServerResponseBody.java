@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
     /**
+     * <p>Access credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJraWQiOiJLRVlLZ0Iyxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
     public String accessToken;
 
     /**
+     * <p>Expiration time of the access credential, as a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1653288641</p>
      */
@@ -19,6 +23,8 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
     public Long expiresAt;
 
     /**
+     * <p>Validity period of the access credential, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1200</p>
      */
@@ -26,6 +32,8 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
     public Long expiresIn;
 
     /**
+     * <p>Identity credential.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJraWQiOiJLRVlLZ0Iyxxxxx</p>
      */
@@ -33,6 +41,8 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
     public String idToken;
 
     /**
+     * <p>Refresh token.</p>
+     * 
      * <strong>example:</strong>
      * <p>ATxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
     public String refreshToken;
 
     /**
+     * <p>Scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>openid</p>
      */
@@ -47,6 +59,8 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
     public String scope;
 
     /**
+     * <p>Token type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Bearer</p>
      */

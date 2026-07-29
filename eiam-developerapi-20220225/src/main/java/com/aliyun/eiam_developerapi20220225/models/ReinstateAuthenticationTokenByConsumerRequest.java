@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReinstateAuthenticationTokenByConsumerRequest extends TeaModel {
     /**
+     * <p>The ID of the authentication token consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ReinstateAuthenticationTokenByConsumerRequest extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>The credential provider identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

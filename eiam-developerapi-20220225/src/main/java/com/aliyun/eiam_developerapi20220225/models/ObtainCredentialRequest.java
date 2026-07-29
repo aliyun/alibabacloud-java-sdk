@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainCredentialRequest extends TeaModel {
     /**
+     * <p>The identifier for the credential to obtain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

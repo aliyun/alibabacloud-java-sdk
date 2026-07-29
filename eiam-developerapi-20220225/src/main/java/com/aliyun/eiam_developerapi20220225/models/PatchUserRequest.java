@@ -164,9 +164,12 @@ public class PatchUserRequest extends TeaModel {
         /**
          * <p>The operation to be performed on the field. Valid values:</p>
          * <ul>
-         * <li>add</li>
-         * <li>replace If you leave the value of the extended field empty, the replace operation is converted to an add operation.</li>
-         * <li>remove</li>
+         * <li><p>add</p>
+         * </li>
+         * <li><p>replace If you leave the value of the extended field empty, the replace operation is converted to an add operation.</p>
+         * </li>
+         * <li><p>remove</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

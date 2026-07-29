@@ -8,6 +8,7 @@ public class UpdateUserPasswordHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The authentication credential. Format: \<code>Bearer ${access_token}\\</code>. Example: \<code>Bearer ATxxxx\\</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

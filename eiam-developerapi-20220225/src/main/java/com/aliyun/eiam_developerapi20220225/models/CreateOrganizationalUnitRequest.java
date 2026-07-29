@@ -8,7 +8,7 @@ public class CreateOrganizationalUnitRequest extends TeaModel {
      * <p>The description of the organizational unit.</p>
      * 
      * <strong>example:</strong>
-     * <p>test organizational unit</p>
+     * <p>测试组织</p>
      */
     @NameInMap("description")
     public String description;

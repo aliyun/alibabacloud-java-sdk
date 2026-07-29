@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GenerateJwtAuthenticationTokenRequest extends TeaModel {
     /**
+     * <p>The \<code>aud\\</code> field of the JWT.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("audiences")
     public java.util.List<String> audiences;
 
     /**
+     * <p>Credential provider identity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +21,19 @@ public class GenerateJwtAuthenticationTokenRequest extends TeaModel {
     @NameInMap("credentialProviderIdentifier")
     public String credentialProviderIdentifier;
 
+    /**
+     * <p>Custom claims.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>Key-value pairs. Keys must be strings.</p>
+     */
     @NameInMap("customClaims")
     public java.util.Map<String, ?> customClaims;
 
     /**
+     * <p>The validity period of the JWT, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>900</p>
      */
@@ -30,6 +41,8 @@ public class GenerateJwtAuthenticationTokenRequest extends TeaModel {
     public Integer expiration;
 
     /**
+     * <p>Whether the generated JWT needs to include a &quot;derived short token&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -37,6 +50,8 @@ public class GenerateJwtAuthenticationTokenRequest extends TeaModel {
     public Boolean includeDerivedShortToken;
 
     /**
+     * <p>The \<code>iss\\</code> field of the JWT.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://test.issuer.com">https://test.issuer.com</a></p>
      */
@@ -44,6 +59,7 @@ public class GenerateJwtAuthenticationTokenRequest extends TeaModel {
     public String issuer;
 
     /**
+     * <p>The \<code>sub\\</code> field of the JWT.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

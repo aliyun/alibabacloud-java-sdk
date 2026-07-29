@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     /**
+     * <p>Authentication token ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</p>
      */
@@ -12,6 +14,11 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public String authenticationTokenId;
 
     /**
+     * <p>Authentication token type.</p>
+     * <blockquote>
+     * <p>The value is fixed as <code>jwt</code>, indicating a JWT authentication token.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>jwt</p>
      */
@@ -19,6 +26,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public String authenticationTokenType;
 
     /**
+     * <p>Authentication token consumer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_jwt_subject</p>
      */
@@ -26,6 +35,14 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public String consumerId;
 
     /**
+     * <p>Authentication token consumer type. Valid values:</p>
+     * <ul>
+     * <li><p>application: Application</p>
+     * </li>
+     * <li><p>custom: Custom type</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -33,6 +50,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public String consumerType;
 
     /**
+     * <p>The creation time of the authentication token, UNIX timestamp, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1649830225000</p>
      */
@@ -40,6 +59,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>Authentication token creator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
      */
@@ -47,6 +68,11 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public String creatorId;
 
     /**
+     * <p>Authentication token creator type. Valid values:</p>
+     * <ul>
+     * <li>application: Application</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>application</p>
      */
@@ -54,6 +80,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public String creatorType;
 
     /**
+     * <p>Credential provider ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
      */
@@ -61,6 +89,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public String credentialProviderId;
 
     /**
+     * <p>Authentication token expiration time, UNIX timestamp, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1772693568000</p>
      */
@@ -68,7 +98,7 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public Long expirationTime;
 
     /**
-     * <p>EIAM实例ID。</p>
+     * <p>Instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -76,10 +106,15 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>JWT authentication token content.</p>
+     */
     @NameInMap("jwtContent")
     public GenerateJwtAuthenticationTokenResponseBodyJwtContent jwtContent;
 
     /**
+     * <p>Whether the authentication token is revoked.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -87,6 +122,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
     public Boolean revoked;
 
     /**
+     * <p>The update time of the authentication token, UNIX timestamp, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1649830225000</p>
      */
@@ -204,6 +241,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
 
     public static class GenerateJwtAuthenticationTokenResponseBodyJwtContent extends TeaModel {
         /**
+         * <p>The derived short token of the JWT.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-Nx2vzxxxxxxxxxxxxxxxxx</p>
          */
@@ -211,6 +250,8 @@ public class GenerateJwtAuthenticationTokenResponseBody extends TeaModel {
         public String derivedShortToken;
 
         /**
+         * <p>JWT content.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJhbGciOixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */

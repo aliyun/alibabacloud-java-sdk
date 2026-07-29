@@ -4,11 +4,14 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
+    /**
+     * <p>The list of group IDs.</p>
+     */
     @NameInMap("groupIds")
     public java.util.List<String> groupIds;
 
     /**
-     * <p>The IDs of organizational units.</p>
+     * <p>The list of organization IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[ou_xxx001]</p>

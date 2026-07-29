@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForUserRequest extends TeaModel {
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,7 +14,7 @@ public class ListGroupsForUserRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to retrieve the next page of results. Leave this parameter empty to query from the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxx</p>

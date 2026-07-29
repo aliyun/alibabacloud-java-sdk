@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainJwtAuthenticationTokenRequest extends TeaModel {
     /**
+     * <p>The ID of the authentication token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ObtainJwtAuthenticationTokenRequest extends TeaModel {
     public String authenticationTokenId;
 
     /**
+     * <p>The ID of the authentication token consumer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

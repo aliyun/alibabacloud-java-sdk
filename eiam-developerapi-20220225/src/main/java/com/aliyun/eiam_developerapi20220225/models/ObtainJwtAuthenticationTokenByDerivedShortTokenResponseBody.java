@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends TeaModel {
     /**
+     * <p>Authentication token ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</p>
      */
@@ -12,6 +14,11 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public String authenticationTokenId;
 
     /**
+     * <p>Type of the authentication token.</p>
+     * <blockquote>
+     * <p>The value is always <code>jwt</code>, indicating a JWT authentication token.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>jwt</p>
      */
@@ -19,6 +26,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public String authenticationTokenType;
 
     /**
+     * <p>ID of the authentication token consumer.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_jwt_subject</p>
      */
@@ -26,6 +35,14 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public String consumerId;
 
     /**
+     * <p>Type of the authentication token consumer. Valid values:</p>
+     * <ul>
+     * <li><p>application</p>
+     * </li>
+     * <li><p>custom</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
@@ -33,6 +50,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public String consumerType;
 
     /**
+     * <p>Creation time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1649830225000</p>
      */
@@ -40,6 +59,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public Long createTime;
 
     /**
+     * <p>ID of the authentication token creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
      */
@@ -47,6 +68,11 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public String creatorId;
 
     /**
+     * <p>Type of the authentication token creator. Valid values:</p>
+     * <ul>
+     * <li>application</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>application</p>
      */
@@ -54,6 +80,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public String creatorType;
 
     /**
+     * <p>Credential provider ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
      */
@@ -61,6 +89,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public String credentialProviderId;
 
     /**
+     * <p>Expiration time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1772693568000</p>
      */
@@ -68,7 +98,7 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public Long expirationTime;
 
     /**
-     * <p>EIAM实例ID。</p>
+     * <p>Instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -76,10 +106,15 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>Content of the JWT authentication token.</p>
+     */
     @NameInMap("jwtContent")
     public ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBodyJwtContent jwtContent;
 
     /**
+     * <p>Indicates whether the authentication token is revoked.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -87,6 +122,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
     public Boolean revoked;
 
     /**
+     * <p>Last update time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1649830225000</p>
      */
@@ -204,6 +241,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
 
     public static class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBodyJwtContent extends TeaModel {
         /**
+         * <p>Derived short token for the JWT.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-Nx2vzxxxxxxxxxxxxxxxxx</p>
          */
@@ -211,6 +250,8 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         public String derivedShortToken;
 
         /**
+         * <p>JWT content.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJhbGciOixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */

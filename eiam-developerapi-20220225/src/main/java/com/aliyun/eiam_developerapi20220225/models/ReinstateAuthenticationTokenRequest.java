@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ReinstateAuthenticationTokenRequest extends TeaModel {
     /**
+     * <p>The original authentication token.</p>
+     * <blockquote>
+     * <p>You can pass either the original authentication token or its derived short token.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class ReinstateAuthenticationTokenRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>A hint about the authentication token type.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>Do not provide a value for this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>

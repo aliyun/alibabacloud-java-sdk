@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserPasswordRequest extends TeaModel {
     /**
+     * <p>The new password. For the password requirements, see the password policy in the console.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

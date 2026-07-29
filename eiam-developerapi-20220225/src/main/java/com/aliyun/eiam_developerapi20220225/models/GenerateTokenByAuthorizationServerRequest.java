@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     /**
+     * <p>Federated application credential name.</p>
+     * 
      * <strong>example:</strong>
      * <p>testxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String applicationFederatedCredentialName;
 
     /**
+     * <p>Client assertion.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJraWQiOiJLRVlLZ0Iyxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String clientAssertion;
 
     /**
+     * <p>Client assertion type.</p>
+     * 
      * <strong>example:</strong>
      * <p>urn:ietf:params:oauth:client-assertion-type:jwt-bearer</p>
      */
@@ -26,6 +32,7 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String clientAssertionType;
 
     /**
+     * <p>Client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>Client key.</p>
+     * 
      * <strong>example:</strong>
      * <p>CSEHDcHcrUKHw1CuxkJEHPveWRxxxxx</p>
      */
@@ -42,6 +51,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String clientSecret;
 
     /**
+     * <p>Client certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>testxxxxx</p>
      */
@@ -49,6 +60,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String clientX509;
 
     /**
+     * <p>Intermediate certificate list.</p>
+     * 
      * <strong>example:</strong>
      * <p>testxxxxx</p>
      */
@@ -56,6 +69,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String clientX509Chain;
 
     /**
+     * <p>Authorization code. Required when grant_type is authorization_code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CO541xY59EsKniV2wvWDXZ4jiKxxxxx</p>
      */
@@ -63,6 +78,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>You can validate the code.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -70,6 +87,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String codeVerifier;
 
     /**
+     * <p>Device code. Required when grant_type is urn:ietf:params:oauth:grant-type:device_code.</p>
+     * 
      * <strong>example:</strong>
      * <p>DCxxxxxx</p>
      */
@@ -77,6 +96,7 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String deviceCode;
 
     /**
+     * <p>Grant type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +106,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String grantType;
 
     /**
+     * <p>Password.</p>
+     * 
      * <strong>example:</strong>
      * <p>testxxxxx</p>
      */
@@ -93,6 +115,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Redirection URI. Required when grant_type is authorization_code. Must match the redirect_uri used in the authorization code request.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/xxxxx">https://example.com/xxxxx</a></p>
      */
@@ -100,6 +124,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String redirectUri;
 
     /**
+     * <p>Refresh token.</p>
+     * 
      * <strong>example:</strong>
      * <p>RTxxxxx</p>
      */
@@ -107,6 +133,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String refreshToken;
 
     /**
+     * <p>Scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>openid</p>
      */
@@ -114,6 +142,8 @@ public class GenerateTokenByAuthorizationServerRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>Username.</p>
+     * 
      * <strong>example:</strong>
      * <p>userxxxxx</p>
      */

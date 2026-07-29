@@ -14,7 +14,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>The client secret. This parameter is required if grant_type is set to client_credentials.</p>
+     * <p>The client secret. This parameter is required when \<code>grant_type\\</code> is \<code>client_credentials\\</code> and the \<code>client_secret_post\\</code> method is used.</p>
      * 
      * <strong>example:</strong>
      * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -23,7 +23,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String clientSecret;
 
     /**
-     * <p>The authorization code. This parameter is required if grant_type is set to authorization_code.</p>
+     * <p>The authorization code. This parameter is required when \<code>grant_type\\</code> is \<code>authorization_code\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -32,7 +32,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String code;
 
     /**
-     * <p>The verification code.</p>
+     * <p>The code verifier. This is used in the authorization code grant type when PKCE is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -41,7 +41,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String codeVerifier;
 
     /**
-     * <p>The device code. This parameter is required if grant_type is set to authorization_code.urn:ietf:params:oauth:grant-type:device_code.</p>
+     * <p>The device code. This parameter is required when \<code>grant_type\\</code> is \<code>urn:ietf:params:oauth:grant-type:device_code\\</code> (device flow).</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -50,7 +50,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String deviceCode;
 
     /**
-     * <p>The excluded tags.</p>
+     * <p>The excluded tag.</p>
      * 
      * <strong>example:</strong>
      * <p>ATxxx</p>
@@ -59,13 +59,18 @@ public class GenerateTokenRequest extends TeaModel {
     public String exclusiveTag;
 
     /**
-     * <p>The supported authorization types are as follows:</p>
+     * <p>The authorization grant type. The following types are supported:</p>
      * <ul>
-     * <li>client_credentials:Client credentials flow, requires client_id and client_secret.</li>
-     * <li>refresh_token:Refresh token flow.</li>
-     * <li>authorization_code:Authorization code flow.</li>
-     * <li>urn:ietf:params:oauth:grant-type:device_code:Device authorization flow.</li>
-     * <li>password:Password (Resource Owner Password Credentials) flow.</li>
+     * <li><p>\<code>client_credentials\\</code>: Client credentials grant. Requires \<code>client_id\\</code> and \<code>client_secret\\</code>.</p>
+     * </li>
+     * <li><p>\<code>refresh_token\\</code>: Refresh token grant.</p>
+     * </li>
+     * <li><p>\<code>authorization_code\\</code>: Authorization code grant.</p>
+     * </li>
+     * <li><p>\<code>urn:ietf:params:oauth:grant-type:device_code\\</code>: Device flow.</p>
+     * </li>
+     * <li><p>\<code>password\\</code>: Password grant.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -76,7 +81,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String grantType;
 
     /**
-     * <p>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</p>
+     * <p>The username. This parameter is required for password mode.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -85,7 +90,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The redirect URI. This parameter is required if grant_type is set to authorization_code. The value of this parameter must be the same as the redirect URI in the request to obtain the authorization code.</p>
+     * <p>The redirection URI. This parameter is required for the authorization code grant type. It must match the redirection URI in the request to get the authorization code.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -94,7 +99,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String redirectUri;
 
     /**
-     * <p>The refreshed token. This parameter is required if grant_type is set to refresh_token.</p>
+     * <p>The refresh token. This parameter is required when \<code>grant_type\\</code> is \<code>refresh_token\\</code> (refresh token grant).</p>
      * 
      * <strong>example:</strong>
      * <p>ATxxx</p>
@@ -103,12 +108,17 @@ public class GenerateTokenRequest extends TeaModel {
     public String refreshToken;
 
     /**
-     * <p>The authorization scope. Valid values:</p>
+     * <p>The scope. This parameter is optional. Multiple values are supported. Separate multiple values with spaces.
+     * Valid values:</p>
      * <ul>
-     * <li>openid</li>
-     * <li>email</li>
-     * <li>phone</li>
-     * <li>profile</li>
+     * <li><p>openid</p>
+     * </li>
+     * <li><p>email</p>
+     * </li>
+     * <li><p>phone</p>
+     * </li>
+     * <li><p>profile</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +128,7 @@ public class GenerateTokenRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</p>
+     * <p>The username. This parameter is required for the password grant type.</p>
      * 
      * <strong>example:</strong>
      * <p>uesrname_001</p>

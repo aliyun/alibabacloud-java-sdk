@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ValidateAuthenticationTokenResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the authentication token is valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

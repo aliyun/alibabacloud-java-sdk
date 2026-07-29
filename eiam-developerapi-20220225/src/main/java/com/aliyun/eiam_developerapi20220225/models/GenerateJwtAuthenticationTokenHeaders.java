@@ -8,6 +8,10 @@ public class GenerateJwtAuthenticationTokenHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>Authentication information. Format: Bearer ${access_token}.</p>
+     * <blockquote>
+     * <p>Enter the Access Token issued by IDaaS.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

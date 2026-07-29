@@ -8,7 +8,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("eu-central-1", "eiam-developerapi.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "eiam-developerapi.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eiam-developerapi.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "eiam-developerapi.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eiam-developerapi.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "eiam-developerapi.ap-northeast-2.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eiam-developerapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +36,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将账户加入多个组织</p>
+     * <p>Adds an EIAM account to one or more EIAM organizations. These organizations serve as subordinate organizations for the account. If the account is already a member of a specified organization, no update is performed.</p>
      * 
      * @param request AddUserToOrganizationalUnitsRequest
      * @param headers AddUserToOrganizationalUnitsHeaders
@@ -71,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将账户加入多个组织</p>
+     * <p>Adds an EIAM account to one or more EIAM organizations. These organizations serve as subordinate organizations for the account. If the account is already a member of a specified organization, no update is performed.</p>
      * 
      * @param request AddUserToOrganizationalUnitsRequest
      * @return AddUserToOrganizationalUnitsResponse
@@ -268,7 +276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Employee Identity and Access Management (EIAM) account in an organizational unit.</p>
+     * <p>Creates a new EIAM account in a specified organization.</p>
      * 
      * @param request CreateUserRequest
      * @param headers CreateUserHeaders
@@ -359,7 +367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an Employee Identity and Access Management (EIAM) account in an organizational unit.</p>
+     * <p>Creates a new EIAM account in a specified organization.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -371,8 +379,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+     * Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|credential:manage</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建账户专属凭据。</p>
+     * <p>Creates an account-specific credential.</p>
      * 
      * @param request CreateUserExclusiveCredentialRequest
      * @param headers CreateUserExclusiveCredentialHeaders
@@ -410,6 +425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.returnCiphertext)) {
+            body.put("returnCiphertext", request.returnCiphertext);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -438,8 +457,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+     * Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|credential:manage</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建账户专属凭据。</p>
+     * <p>Creates an account-specific credential.</p>
      * 
      * @param request CreateUserExclusiveCredentialRequest
      * @return CreateUserExclusiveCredentialResponse
@@ -701,8 +727,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+     * Ensure that the Access Token you provide has the function authorization to &quot;obtain authentication token&quot; for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>拉取一个有效的OAuth认证令牌。</p>
+     * <p>Retrieves a valid OAuth authentication token.</p>
      * 
      * @param request FetchOAuthAuthenticationTokenRequest
      * @param headers FetchOAuthAuthenticationTokenHeaders
@@ -714,6 +747,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.credentialProviderIdentifier)) {
             body.put("credentialProviderIdentifier", request.credentialProviderIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customParameters)) {
+            body.put("customParameters", request.customParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forceAuthentication)) {
+            body.put("forceAuthentication", request.forceAuthentication);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
@@ -748,8 +789,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+     * Ensure that the Access Token you provide has the function authorization to &quot;obtain authentication token&quot; for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>拉取一个有效的OAuth认证令牌。</p>
+     * <p>Retrieves a valid OAuth authentication token.</p>
      * 
      * @param request FetchOAuthAuthenticationTokenRequest
      * @return FetchOAuthAuthenticationTokenResponse
@@ -808,8 +856,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API performs identity authentication and authorization using the Access Token issued by IDaaS.
+     * Ensure that the provided Access Token has the authorization to access the &quot;Obtain Authentication Token&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>生成一个有效的JWT认证令牌。</p>
+     * <p>Generates a JSON Web Token (JWT) authentication token.</p>
      * 
      * @param request GenerateJwtAuthenticationTokenRequest
      * @param headers GenerateJwtAuthenticationTokenHeaders
@@ -875,8 +930,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API performs identity authentication and authorization using the Access Token issued by IDaaS.
+     * Ensure that the provided Access Token has the authorization to access the &quot;Obtain Authentication Token&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>生成一个有效的JWT认证令牌。</p>
+     * <p>Generates a JSON Web Token (JWT) authentication token.</p>
      * 
      * @param request GenerateJwtAuthenticationTokenRequest
      * @return GenerateJwtAuthenticationTokenResponse
@@ -889,10 +951,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</p>
+     * <p>The following methods are supported: Authorization Code, Device Flow, Refresh Token, Client Credentials, and Password.</p>
+     * <h3>1. Authorization Code</h3>
+     * <p>Scenario: This is the standard OAuth 2.0 authorization code flow, which is suitable for web applications with frontend interaction.
+     * Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=authorization_code
+     * &amp;code={authorization_code}
+     * &amp;redirect_uri={redirect_uri}
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * </code></pre>
+     * <p>Parameters:
+     * ● code: The authorization code obtained from the authorization endpoint.
+     * ● redirect_uri: Must be the same as the redirect_uri that was used to obtain the authorization code.</p>
+     * <h3>1.1 Authorization Code for public clients</h3>
+     * <p>Scenario: This scenario is suitable for applications that cannot securely store a secret, such as single-page applications (SPAs) or native applications. In this flow, a client_secret is not required, but you must use the Proof Key for Code Exchange (PKCE) mechanism. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=authorization_code
+     * &amp;code={authorization_code}
+     * &amp;redirect_uri={redirect_uri}
+     * &amp;client_id={client_id}
+     * &amp;code_verifier={code_verifier}
+     * </code></pre>
+     * <p>Parameters:
+     * ● code_verifier: The code verifier for the PKCE mechanism. The client generates it when initiating an authorization request and uses it to derive the \<code>code_challenge\\</code>. When exchanging for a token, you must submit this value. It must be identical to the value used to generate the \<code>code_challenge\\</code>.
+     * Java example for generating a code_verifier and code_challenge:</p>
+     * <pre><code class="language-java">String codeVerifier = Base64.getUrlEncoder().withoutPadding().encodeToString(new SecureRandom().generateSeed(43));
+     * String codeChallenge = Base64.getUrlEncoder().withoutPadding().encodeToString(java.security.MessageDigest.getInstance(&quot;SHA-256&quot;).digest(codeVerifier.getBytes()));
+     * </code></pre>
+     * <h3>2. Device Flow</h3>
+     * <p>Scenario: This scenario is suitable for input-constrained devices, such as TVs and IoT devices. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=urn:ietf:params:oauth:grant-type:device_code
+     * &amp;device_code={device_code}
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * </code></pre>
+     * <p>To obtain the device code, first call <code>/oauth2/device/code</code> to retrieve the device_code and user_code.</p>
+     * <h3>2.1 Device Flow for public clients</h3>
+     * <p>Scenario: This scenario is used when interactive logon is not convenient and the client is a public client. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=urn:ietf:params:oauth:grant-type:device_code
+     * &amp;device_code={device_code}
+     * &amp;client_id={client_id}
+     * </code></pre>
+     * <h3>3. Refresh Token</h3>
+     * <p>Scenario: This scenario uses a refresh_token to obtain a new access_token. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=refresh_token
+     * &amp;refresh_token={refresh_token}
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * </code></pre>
+     * <h3>4. Client Credentials</h3>
+     * <p>Scenario: This scenario is for server-to-server authentication without user involvement. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=client_credentials
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * &amp;scope={scope}
+     * </code></pre>
+     * <h3>5. Password</h3>
+     * <p>Scenario: This scenario uses traditional username and password authentication. Use this method with caution. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=password
+     * &amp;username={username}
+     * &amp;password={password}
+     * &amp;client_id={client_id}
+     * &amp;scope={scope}
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Generates a token for accessing an application in an instance.</p>
+     * <p>Generates an access token for an application in a specified IDaaS instance based on credential information.</p>
      * 
      * @param request GenerateTokenRequest
      * @param headers map
@@ -970,10 +1108,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</p>
+     * <p>The following methods are supported: Authorization Code, Device Flow, Refresh Token, Client Credentials, and Password.</p>
+     * <h3>1. Authorization Code</h3>
+     * <p>Scenario: This is the standard OAuth 2.0 authorization code flow, which is suitable for web applications with frontend interaction.
+     * Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=authorization_code
+     * &amp;code={authorization_code}
+     * &amp;redirect_uri={redirect_uri}
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * </code></pre>
+     * <p>Parameters:
+     * ● code: The authorization code obtained from the authorization endpoint.
+     * ● redirect_uri: Must be the same as the redirect_uri that was used to obtain the authorization code.</p>
+     * <h3>1.1 Authorization Code for public clients</h3>
+     * <p>Scenario: This scenario is suitable for applications that cannot securely store a secret, such as single-page applications (SPAs) or native applications. In this flow, a client_secret is not required, but you must use the Proof Key for Code Exchange (PKCE) mechanism. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=authorization_code
+     * &amp;code={authorization_code}
+     * &amp;redirect_uri={redirect_uri}
+     * &amp;client_id={client_id}
+     * &amp;code_verifier={code_verifier}
+     * </code></pre>
+     * <p>Parameters:
+     * ● code_verifier: The code verifier for the PKCE mechanism. The client generates it when initiating an authorization request and uses it to derive the \<code>code_challenge\\</code>. When exchanging for a token, you must submit this value. It must be identical to the value used to generate the \<code>code_challenge\\</code>.
+     * Java example for generating a code_verifier and code_challenge:</p>
+     * <pre><code class="language-java">String codeVerifier = Base64.getUrlEncoder().withoutPadding().encodeToString(new SecureRandom().generateSeed(43));
+     * String codeChallenge = Base64.getUrlEncoder().withoutPadding().encodeToString(java.security.MessageDigest.getInstance(&quot;SHA-256&quot;).digest(codeVerifier.getBytes()));
+     * </code></pre>
+     * <h3>2. Device Flow</h3>
+     * <p>Scenario: This scenario is suitable for input-constrained devices, such as TVs and IoT devices. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=urn:ietf:params:oauth:grant-type:device_code
+     * &amp;device_code={device_code}
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * </code></pre>
+     * <p>To obtain the device code, first call <code>/oauth2/device/code</code> to retrieve the device_code and user_code.</p>
+     * <h3>2.1 Device Flow for public clients</h3>
+     * <p>Scenario: This scenario is used when interactive logon is not convenient and the client is a public client. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=urn:ietf:params:oauth:grant-type:device_code
+     * &amp;device_code={device_code}
+     * &amp;client_id={client_id}
+     * </code></pre>
+     * <h3>3. Refresh Token</h3>
+     * <p>Scenario: This scenario uses a refresh_token to obtain a new access_token. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=refresh_token
+     * &amp;refresh_token={refresh_token}
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * </code></pre>
+     * <h3>4. Client Credentials</h3>
+     * <p>Scenario: This scenario is for server-to-server authentication without user involvement. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=client_credentials
+     * &amp;client_id={client_id}
+     * &amp;client_secret={client_secret}
+     * &amp;scope={scope}
+     * </code></pre>
+     * <h3>5. Password</h3>
+     * <p>Scenario: This scenario uses traditional username and password authentication. Use this method with caution. Example call:</p>
+     * <pre><code>POST /v2/{instanceId}/{applicationId}/oauth2/token
+     * Content-Type: application/x-www-form-urlencoded
+     * grant_type=password
+     * &amp;username={username}
+     * &amp;password={password}
+     * &amp;client_id={client_id}
+     * &amp;scope={scope}
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Generates a token for accessing an application in an instance.</p>
+     * <p>Generates an access token for an application in a specified IDaaS instance based on credential information.</p>
      * 
      * @param request GenerateTokenRequest
      * @return GenerateTokenResponse
@@ -986,7 +1200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例级授权服务器 Token 端点</p>
+     * <p>The token endpoint for an instance-level authorization server.</p>
      * 
      * @param request GenerateTokenByAuthorizationServerRequest
      * @param headers map
@@ -1080,7 +1294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例级授权服务器 Token 端点</p>
+     * <p>The token endpoint for an instance-level authorization server.</p>
      * 
      * @param request GenerateTokenByAuthorizationServerRequest
      * @return GenerateTokenByAuthorizationServerResponse
@@ -1094,13 +1308,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You can go to the Applications page in the IDaaS console to set the synchronization scope. After an application is created, the application has the permission to call this operation by default.</li>
+     * <li>You can set the synchronization scope in Application Management in the IDaaS console. After you create an application, you have permission to call this API by default.</li>
      * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the synchronization scope of an application in an instance.</p>
+     * <p>The GetApplicationProvisioningScope operation retrieves the synchronization scope of an application in a specific instance.</p>
      * 
      * @param request GetApplicationProvisioningScopeRequest
      * @param headers GetApplicationProvisioningScopeHeaders
@@ -1138,13 +1352,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You can go to the Applications page in the IDaaS console to set the synchronization scope. After an application is created, the application has the permission to call this operation by default.</li>
+     * <li>You can set the synchronization scope in Application Management in the IDaaS console. After you create an application, you have permission to call this API by default.</li>
      * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the synchronization scope of an application in an instance.</p>
+     * <p>The GetApplicationProvisioningScope operation retrieves the synchronization scope of an application in a specific instance.</p>
      * 
      * @param request GetApplicationProvisioningScopeRequest
      * @return GetApplicationProvisioningScopeResponse
@@ -1157,7 +1371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a group.</p>
+     * <p>Retrieves the details of a group.</p>
      * 
      * @param request GetGroupRequest
      * @param headers GetGroupHeaders
@@ -1194,7 +1408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a group.</p>
+     * <p>Retrieves the details of a group.</p>
      * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
@@ -1207,7 +1421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an organizational unit.</p>
+     * <p>Retrieves the information about an organizational unit.</p>
      * 
      * @param request GetOrganizationalUnitRequest
      * @param headers GetOrganizationalUnitHeaders
@@ -1244,7 +1458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of an organizational unit.</p>
+     * <p>Retrieves the information about an organizational unit.</p>
      * 
      * @param request GetOrganizationalUnitRequest
      * @return GetOrganizationalUnitResponse
@@ -1321,7 +1535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Employee Identity and Access Management (EIAM) account.</p>
+     * <p>Retrieves the details of an Employee Identity and Access Management (EIAM) account.</p>
      * 
      * @param request GetUserRequest
      * @param headers GetUserHeaders
@@ -1358,7 +1572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Employee Identity and Access Management (EIAM) account.</p>
+     * <p>Retrieves the details of an Employee Identity and Access Management (EIAM) account.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -1603,7 +1817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a user by using the user token.</p>
+     * <p>Retrieves the information about a user by using the user token.</p>
      * 
      * @param request GetUserInfoRequest
      * @param headers GetUserInfoHeaders
@@ -1640,7 +1854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a user by using the user token.</p>
+     * <p>Retrieves the information about a user by using the user token.</p>
      * 
      * @param request GetUserInfoRequest
      * @return GetUserInfoResponse
@@ -1652,8 +1866,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+     * Ensure that the Access Token you provide has the Query authentication tokens permission for the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|authentication_token:read</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>列举认证令牌。</p>
+     * <p>Lists authentication tokens.</p>
      * 
      * @param request ListAuthenticationTokensRequest
      * @param headers ListAuthenticationTokensHeaders
@@ -1715,8 +1936,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+     * Ensure that the Access Token you provide has the Query authentication tokens permission for the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|authentication_token:read</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>列举认证令牌。</p>
+     * <p>Lists authentication tokens.</p>
      * 
      * @param request ListAuthenticationTokensRequest
      * @return ListAuthenticationTokensResponse
@@ -1729,7 +1957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Employee Identity and Access Management (EIAM) groups by page.</p>
+     * <p>Retrieves information about Employee Identity and Access Management (EIAM) groups by page.</p>
      * 
      * @param request ListGroupsRequest
      * @param headers ListGroupsHeaders
@@ -1780,7 +2008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about Employee Identity and Access Management (EIAM) groups by page.</p>
+     * <p>Retrieves information about Employee Identity and Access Management (EIAM) groups by page.</p>
      * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
@@ -1793,7 +2021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账户关联组列表</p>
+     * <p>Lists the groups that an EIAM user is a member of.</p>
      * 
      * @param request ListGroupsForUserRequest
      * @param headers ListGroupsForUserHeaders
@@ -1840,7 +2068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取账户关联组列表</p>
+     * <p>Lists the groups that an EIAM user is a member of.</p>
      * 
      * @param request ListGroupsForUserRequest
      * @return ListGroupsForUserResponse
@@ -1853,7 +2081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of all the parent organizational units of an organizational unit.</p>
+     * <p>Retrieves the information about all the parent organizational units of an organizational unit.</p>
      * 
      * @param request ListOrganizationalUnitParentIdsRequest
      * @param headers ListOrganizationalUnitParentIdsHeaders
@@ -1890,7 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of all the parent organizational units of an organizational unit.</p>
+     * <p>Retrieves the information about all the parent organizational units of an organizational unit.</p>
      * 
      * @param request ListOrganizationalUnitParentIdsRequest
      * @return ListOrganizationalUnitParentIdsResponse
@@ -1902,8 +2130,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To retrieve the direct child organizations of the root organization, set the request parameter as follows:</p>
+     * <pre><code>{
+     *   &quot;parentOrganizationalUnitId&quot;: &quot;ou_root&quot;
+     * }
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information of Employee Identity and Access Management (EIAM) organizational units by page.</p>
+     * <p>Performs a paged query to retrieve organization information from EIAM.</p>
      * 
      * @param request ListOrganizationalUnitsRequest
      * @param headers ListOrganizationalUnitsHeaders
@@ -1953,8 +2188,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To retrieve the direct child organizations of the root organization, set the request parameter as follows:</p>
+     * <pre><code>{
+     *   &quot;parentOrganizationalUnitId&quot;: &quot;ou_root&quot;
+     * }
+     * </code></pre>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information of Employee Identity and Access Management (EIAM) organizational units by page.</p>
+     * <p>Performs a paged query to retrieve organization information from EIAM.</p>
      * 
      * @param request ListOrganizationalUnitsRequest
      * @return ListOrganizationalUnitsResponse
@@ -1967,7 +2209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of Employee Identity and Access Management (EIAM) accounts by page.</p>
+     * <p>Performs a paged query for EIAM account information.</p>
      * 
      * @param request ListUsersRequest
      * @param headers ListUsersHeaders
@@ -2018,7 +2260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of Employee Identity and Access Management (EIAM) accounts by page.</p>
+     * <p>Performs a paged query for EIAM account information.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -2090,8 +2332,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+     * Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取云角色（CloudAccountRole）的临时访问凭证</p>
+     * <p>Retrieves temporary access credentials for a cloud account role (CloudAccountRole).</p>
      * 
      * @param request ObtainCloudAccountRoleAccessCredentialRequest
      * @param headers ObtainCloudAccountRoleAccessCredentialHeaders
@@ -2137,8 +2386,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+     * Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取云角色（CloudAccountRole）的临时访问凭证</p>
+     * <p>Retrieves temporary access credentials for a cloud account role (CloudAccountRole).</p>
      * 
      * @param request ObtainCloudAccountRoleAccessCredentialRequest
      * @return ObtainCloudAccountRoleAccessCredentialResponse
@@ -2150,8 +2406,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an access token from IDaaS for authentication and authorization.
+     * The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|credential:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取凭据明文。</p>
+     * <p>Retrieves the plaintext of a secret.</p>
      * 
      * @param request ObtainCredentialRequest
      * @param headers ObtainCredentialHeaders
@@ -2193,8 +2456,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an access token from IDaaS for authentication and authorization.
+     * The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|credential:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取凭据明文。</p>
+     * <p>Retrieves the plaintext of a secret.</p>
      * 
      * @param request ObtainCredentialRequest
      * @return ObtainCredentialResponse
@@ -2206,8 +2476,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API requires an access token issued by IDaaS for authentication and authorization.
+     * The provided access token must have permission to obtain authentication tokens for the built-in privileged access management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取JWT认证令牌明文。</p>
+     * <p>Obtains a JWT authentication token.</p>
      * 
      * @param request ObtainJwtAuthenticationTokenRequest
      * @param headers ObtainJwtAuthenticationTokenHeaders
@@ -2253,8 +2530,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API requires an access token issued by IDaaS for authentication and authorization.
+     * The provided access token must have permission to obtain authentication tokens for the built-in privileged access management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:obtain</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>获取JWT认证令牌明文。</p>
+     * <p>Obtains a JWT authentication token.</p>
      * 
      * @param request ObtainJwtAuthenticationTokenRequest
      * @return ObtainJwtAuthenticationTokenResponse
@@ -2267,7 +2551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>使用派生短令牌查询对应的JWT认证令牌详情。</p>
+     * <p>Obtain a JWT authentication token using a derived short token.</p>
      * 
      * @param request ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
      * @param headers map
@@ -2301,7 +2585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>使用派生短令牌查询对应的JWT认证令牌详情。</p>
+     * <p>Obtain a JWT authentication token using a derived short token.</p>
      * 
      * @param request ObtainJwtAuthenticationTokenByDerivedShortTokenRequest
      * @return ObtainJwtAuthenticationTokenByDerivedShortTokenResponse
@@ -2525,8 +2809,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an IDaaS-issued Access Token for identity authentication and authorization.
+     * Ensure that the Access Token you provide has the Manage authentication tokens permission for the IDaaS built-in Privileged Access Management (PAM) application.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * Only JWT authentication tokens support this operation.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>恢复一个认证令牌。</p>
+     * <p>Reinstate an authentication token.</p>
      * 
      * @param request ReinstateAuthenticationTokenRequest
      * @param headers ReinstateAuthenticationTokenHeaders
@@ -2572,8 +2865,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an IDaaS-issued Access Token for identity authentication and authorization.
+     * Ensure that the Access Token you provide has the Manage authentication tokens permission for the IDaaS built-in Privileged Access Management (PAM) application.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * Only JWT authentication tokens support this operation.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>恢复一个认证令牌。</p>
+     * <p>Reinstate an authentication token.</p>
      * 
      * @param request ReinstateAuthenticationTokenRequest
      * @return ReinstateAuthenticationTokenResponse
@@ -2585,8 +2887,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an access token issued by IDaaS to perform identity authentication and authorization.
+     * Ensure that the provided access token is authorized to access the Manage Authentication Token feature in the IDaaS built-in PAM (Privileged Access Management) application.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * This operation supports only JWT-type authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>基于使用者吊销认证令牌。</p>
+     * <p>Reinstate an authentication token for a consumer.</p>
      * 
      * @param request ReinstateAuthenticationTokenByConsumerRequest
      * @param headers ReinstateAuthenticationTokenByConsumerHeaders
@@ -2632,8 +2943,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an access token issued by IDaaS to perform identity authentication and authorization.
+     * Ensure that the provided access token is authorized to access the Manage Authentication Token feature in the IDaaS built-in PAM (Privileged Access Management) application.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * This operation supports only JWT-type authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>基于使用者吊销认证令牌。</p>
+     * <p>Reinstate an authentication token for a consumer.</p>
      * 
      * @param request ReinstateAuthenticationTokenByConsumerRequest
      * @return ReinstateAuthenticationTokenByConsumerResponse
@@ -2646,7 +2966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将账户从多个组织移除【不支持移除主组织】</p>
+     * <p>Removes an EIAM account from one or more EIAM organizational units. The operation succeeds even if the account is not in the specified organizational units.</p>
      * 
      * @param request RemoveUserFromOrganizationalUnitsRequest
      * @param headers RemoveUserFromOrganizationalUnitsHeaders
@@ -2689,7 +3009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将账户从多个组织移除【不支持移除主组织】</p>
+     * <p>Removes an EIAM account from one or more EIAM organizational units. The operation succeeds even if the account is not in the specified organizational units.</p>
      * 
      * @param request RemoveUserFromOrganizationalUnitsRequest
      * @return RemoveUserFromOrganizationalUnitsResponse
@@ -2757,8 +3077,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an Access Token issued by IDaaS to perform identity authentication and authorization.
+     * Ensure that the Access Token is authorized to access the &quot;Manage Authentication Tokens&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * This operation currently supports only JWT authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>吊销一个认证令牌。</p>
+     * <p>Revokes an authentication token.</p>
      * 
      * @param request RevokeAuthenticationTokenRequest
      * @param headers RevokeAuthenticationTokenHeaders
@@ -2804,8 +3133,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an Access Token issued by IDaaS to perform identity authentication and authorization.
+     * Ensure that the Access Token is authorized to access the &quot;Manage Authentication Tokens&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The corresponding scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * This operation currently supports only JWT authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>吊销一个认证令牌。</p>
+     * <p>Revokes an authentication token.</p>
      * 
      * @param request RevokeAuthenticationTokenRequest
      * @return RevokeAuthenticationTokenResponse
@@ -2817,8 +3155,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an access token issued by IDaaS to authenticate and authorize requests.
+     * Make sure that the access token you provide has the \&quot;Manage authentication tokens\&quot; permission for the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * This operation can revoke only JWT authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>基于使用者吊销认证令牌。</p>
+     * <p>Revokes an authentication token for a consumer.</p>
      * 
      * @param request RevokeAuthenticationTokenByConsumerRequest
      * @param headers RevokeAuthenticationTokenByConsumerHeaders
@@ -2864,8 +3211,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API uses an access token issued by IDaaS to authenticate and authorize requests.
+     * Make sure that the access token you provide has the \&quot;Manage authentication tokens\&quot; permission for the built-in Privileged Access Management (PAM) application in IDaaS.</p>
+     * <blockquote>
+     * <p>The required scope is <code>urn:cloud:idaas:pam|authentication_token:manage</code>.
+     * Notice: 
+     * This operation can revoke only JWT authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>基于使用者吊销认证令牌。</p>
+     * <p>Revokes an authentication token for a consumer.</p>
      * 
      * @param request RevokeAuthenticationTokenByConsumerRequest
      * @return RevokeAuthenticationTokenByConsumerResponse
@@ -2937,7 +3293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将指定组织设置为账户主组织，移除旧主组织，加入新主组织。</p>
+     * <p>Sets the primary organization for an EIAM account. This operation removes the account from the old primary organization and adds it to the new one.</p>
      * 
      * @param request SetUserPrimaryOrganizationalUnitRequest
      * @param headers SetUserPrimaryOrganizationalUnitHeaders
@@ -2980,7 +3336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将指定组织设置为账户主组织，移除旧主组织，加入新主组织。</p>
+     * <p>Sets the primary organization for an EIAM account. This operation removes the account from the old primary organization and adds it to the new one.</p>
      * 
      * @param request SetUserPrimaryOrganizationalUnitRequest
      * @return SetUserPrimaryOrganizationalUnitResponse
@@ -2993,7 +3349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新账户密码</p>
+     * <p>Updates the password for a specified EIAM account.</p>
      * 
      * @param request UpdateUserPasswordRequest
      * @param headers UpdateUserPasswordHeaders
@@ -3036,7 +3392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新账户密码</p>
+     * <p>Updates the password for a specified EIAM account.</p>
      * 
      * @param request UpdateUserPasswordRequest
      * @return UpdateUserPasswordResponse
@@ -3048,8 +3404,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This operation is supported only for JSON Web Token (JWT) authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>校验认证令牌是否有效。</p>
+     * <p>Validates an authentication token.</p>
      * 
      * @param request ValidateAuthenticationTokenRequest
      * @param headers map
@@ -3086,8 +3448,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: 
+     * This operation is supported only for JSON Web Token (JWT) authentication tokens.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>校验认证令牌是否有效。</p>
+     * <p>Validates an authentication token.</p>
      * 
      * @param request ValidateAuthenticationTokenRequest
      * @return ValidateAuthenticationTokenResponse
