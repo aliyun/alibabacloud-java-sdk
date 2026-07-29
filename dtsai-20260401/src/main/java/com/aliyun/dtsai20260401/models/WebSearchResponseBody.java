@@ -4,27 +4,72 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class WebSearchResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ErrorMessage Code</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ErrorMessage Example</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The search query statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Spring Boot</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A30D0930-xxxx-xxxx-xxxx-C2C661CC8B58</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The search result list.</p>
+     */
     @NameInMap("SearchResult")
     public java.util.List<WebSearchResponseBodySearchResult> searchResult;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of results returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalResults")
     public Integer totalResults;
 
@@ -98,12 +143,30 @@ public class WebSearchResponseBody extends TeaModel {
     }
 
     public static class WebSearchResponseBodySearchResult extends TeaModel {
+        /**
+         * <p>The summary of the web page content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications.</p>
+         */
         @NameInMap("Snippet")
         public String snippet;
 
+        /**
+         * <p>The title of the web page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spring Boot</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The URL of the web page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx/projects/spring-boot">https://xxx/projects/spring-boot</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

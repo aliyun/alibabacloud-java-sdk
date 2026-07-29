@@ -4,24 +4,80 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocParserJobStatusResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JobNotFound</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified job does not exist.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The failure cause. This parameter has a value only when Status is failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Failed Message</p>
+     */
     @NameInMap("FailureMessage")
     public String failureMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A30D0930-xxxx-xxxx-xxxx-C2C661CC8B58</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>init</strong>: Created and being prepared.</p>
+     * </li>
+     * <li><p><strong>pending</strong>: Queued and waiting to be scheduled.</p>
+     * </li>
+     * <li><p><strong>running</strong>: Being processed and parsed.</p>
+     * </li>
+     * <li><p><strong>success</strong>: Completed. You can call DescribeDocParserJobResult to obtain the result.</p>
+     * </li>
+     * <li><p><strong>failed</strong>: Failed. The cause is provided in FailureMessage.</p>
+     * </li>
+     * <li><p><strong>cancelled</strong>: Canceled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

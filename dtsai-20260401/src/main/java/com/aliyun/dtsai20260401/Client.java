@@ -14,7 +14,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "dtsai.cn-beijing.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dtsai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -132,8 +135,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) is supported.</li>
+     * <li>Fees: The service is free of charge during the public preview period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Creates a document parsing task.</p>
      * 
      * @param request CreateDocParserJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -154,12 +163,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileUrl", request.fileUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imageMode)) {
+            query.put("ImageMode", request.imageMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossFileUrl)) {
+            query.put("OssFileUrl", request.ossFileUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outputFormat)) {
             query.put("OutputFormat", request.outputFormat);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resultType)) {
+            query.put("ResultType", request.resultType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableFormat)) {
+            query.put("TableFormat", request.tableFormat);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -180,8 +205,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) is supported.</li>
+     * <li>Fees: The service is free of charge during the public preview period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Creates a document parsing task.</p>
      * 
      * @param request CreateDocParserJobRequest
      * @return CreateDocParserJobResponse
@@ -280,8 +311,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) is supported.</li>
+     * <li>Fees: Free of charge during the public preview period.</li>
+     * <li>Call DescribeDocParserJobResult to retrieve the parsing result of a document parsing task. Call this operation only after DescribeDocParserJobStatus returns a Status of success. Task results are retained for 72 hours and cannot be retrieved after expiration.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Retrieves the result of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -316,8 +354,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) is supported.</li>
+     * <li>Fees: Free of charge during the public preview period.</li>
+     * <li>Call DescribeDocParserJobResult to retrieve the parsing result of a document parsing task. Call this operation only after DescribeDocParserJobStatus returns a Status of success. Task results are retained for 72 hours and cannot be retrieved after expiration.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Retrieves the result of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobResultRequest
      * @return DescribeDocParserJobResultResponse
@@ -328,8 +373,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) is supported.</li>
+     * <li>Fees: The service is free of charge during the public preview period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Queries the status of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -364,8 +415,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) is supported.</li>
+     * <li>Fees: The service is free of charge during the public preview period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Queries the status of a document parsing task.</p>
      * 
      * @param request DescribeDocParserJobStatusRequest
      * @return DescribeDocParserJobStatusResponse
@@ -376,8 +433,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) and Singapore regions are supported.</li>
+     * <li>Pricing: Free of charge during the public preview period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Retrieves the content of a web page.</p>
      * 
      * @param request WebFetchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -416,8 +479,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) and Singapore regions are supported.</li>
+     * <li>Pricing: Free of charge during the public preview period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Retrieves the content of a web page.</p>
      * 
      * @param request WebFetchRequest
      * @return WebFetchResponse
@@ -428,8 +497,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) and Singapore regions are supported.</li>
+     * <li>Fees: Free of charge during the public preview. No fees are charged.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Performs a web search.</p>
      * 
      * @param request WebSearchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -468,8 +543,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Region: Only China (Beijing) and Singapore regions are supported.</li>
+     * <li>Fees: Free of charge during the public preview. No fees are charged.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>网页搜索</p>
+     * <p>Performs a web search.</p>
      * 
      * @param request WebSearchRequest
      * @return WebSearchResponse

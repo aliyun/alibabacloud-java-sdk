@@ -4,17 +4,31 @@ package com.aliyun.dtsai20260401.models;
 import com.aliyun.tea.*;
 
 public class WebSearchRequest extends TeaModel {
+    /**
+     * <p>The maximum number of results to return. Default value: 10. Valid values: 1 to 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The search query statement.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Spring Boot</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;

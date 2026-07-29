@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeDocParserJobResultRequest extends TeaModel {
     /**
+     * <p>The document parsing task ID. You can obtain this ID by calling CreateDocParserJob.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job_abc123</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
