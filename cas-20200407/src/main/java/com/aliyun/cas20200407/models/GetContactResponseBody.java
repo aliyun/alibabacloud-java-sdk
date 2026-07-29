@@ -76,6 +76,9 @@ public class GetContactResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("WebhookList")
+    public java.util.List<String> webhookList;
+
     /**
      * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots. The value is a string in list format.</p>
      * 
@@ -152,6 +155,14 @@ public class GetContactResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetContactResponseBody setWebhookList(java.util.List<String> webhookList) {
+        this.webhookList = webhookList;
+        return this;
+    }
+    public java.util.List<String> getWebhookList() {
+        return this.webhookList;
     }
 
     public GetContactResponseBody setWebhooks(String webhooks) {

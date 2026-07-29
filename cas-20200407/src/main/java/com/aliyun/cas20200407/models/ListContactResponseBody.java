@@ -163,6 +163,9 @@ public class ListContactResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("WebhookList")
+        public java.util.List<String> webhookList;
+
         /**
          * <p>The webhook URL.</p>
          * 
@@ -223,6 +226,14 @@ public class ListContactResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListContactResponseBodyContactList setWebhookList(java.util.List<String> webhookList) {
+            this.webhookList = webhookList;
+            return this;
+        }
+        public java.util.List<String> getWebhookList() {
+            return this.webhookList;
         }
 
         public ListContactResponseBodyContactList setWebhooks(String webhooks) {

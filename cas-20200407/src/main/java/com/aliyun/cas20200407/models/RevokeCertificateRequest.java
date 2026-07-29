@@ -4,6 +4,10 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class RevokeCertificateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>51001</p>
+     */
     @NameInMap("CertificateId")
     public Long certificateId;
 

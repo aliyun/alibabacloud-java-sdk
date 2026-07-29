@@ -61,12 +61,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("rus-west-1-pop", "cas.aliyuncs.com"),
             new TeaPair("us-east-1", "cas.aliyuncs.com"),
             new TeaPair("us-west-1", "cas.aliyuncs.com"),
-            new TeaPair("me-east-1", "cas.me-east-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "cas.eu-central-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "cas.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2582,7 +2578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * <p>The China single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</p>
@@ -2621,7 +2617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
+     * <p>The China single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</p>

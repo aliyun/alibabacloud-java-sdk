@@ -29,7 +29,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public Boolean buyInAliyun;
 
     /**
-     * <p>The certificate content that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</p>
+     * <p>The certificate content that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
@@ -53,6 +53,8 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String certIdentifier;
 
     /**
+     * <p>The SHA-2 algorithm value of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>E696C2DB574DF99467A90BEF62B341294A9B0C731D228A0BD38265E1467D8EF0</p>
      */
@@ -87,7 +89,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String country;
 
     /**
-     * <p>The encryption certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</p>
+     * <p>The encryption certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -98,7 +100,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String encryptCert;
 
     /**
-     * <p>The private key of the encryption certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</p>
+     * <p>The private key of the encryption certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN EC PRIVATE KEY-----
@@ -109,7 +111,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String encryptPrivateKey;
 
     /**
-     * <p>The certificate expiration date, in the format of YYYY-MM-DD.</p>
+     * <p>The certificate expiration date in the format of YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-25</p>
@@ -167,7 +169,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String issuer;
 
     /**
-     * <p>The private key that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</p>
+     * <p>The private key that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</p>
@@ -230,7 +232,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String province;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -275,7 +277,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String sha2;
 
     /**
-     * <p>The signing certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</p>
+     * <p>The signing certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -286,7 +288,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String signCert;
 
     /**
-     * <p>The private key of the signing certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</p>
+     * <p>The private key of the signing certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN EC PRIVATE KEY-----
@@ -297,7 +299,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     public String signPrivateKey;
 
     /**
-     * <p>The certificate issuance date, in the format of YYYY-MM-DD.</p>
+     * <p>The certificate issuance date in the format of YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-07-13</p>

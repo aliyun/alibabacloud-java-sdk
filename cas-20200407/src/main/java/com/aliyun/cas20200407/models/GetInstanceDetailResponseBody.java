@@ -66,7 +66,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String certificateName;
 
     /**
-     * <p>The end time of the latest certificate, in timestamp format. This value is empty if no certificate has been issued.</p>
+     * <p>The end time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -74,11 +74,17 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     @NameInMap("CertificateNotAfter")
     public Long certificateNotAfter;
 
+    /**
+     * <p>The start time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1781568000000</p>
+     */
     @NameInMap("CertificateNotBefore")
     public Long certificateNotBefore;
 
     /**
-     * <p>The revocation time of the latest certificate, in timestamp format.</p>
+     * <p>The revocation time of the latest certificate, in UNIX timestamp format. The value is accurate to the second.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -135,7 +141,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public java.util.List<Long> contactIdList;
 
     /**
-     * <p>The code of the country or region where the certificate organization is located. For example, CN indicates China, and US indicates the United States. This field is required when generating a certificate signing request. Default value: CN.</p>
+     * <p>The country or region code of the certificate organization. For example, CN indicates China, and US indicates the United States. This field is required when generating a certificate signing request. Default value: CN.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -168,7 +174,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String domain;
 
     /**
-     * <p>The list of domain names to be validated.</p>
+     * <p>The list of domain validations.</p>
      */
     @NameInMap("DomainValidationList")
     public java.util.List<GetInstanceDetailResponseBodyDomainValidationList> domainValidationList;
@@ -196,7 +202,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String generateCsrMethod;
 
     /**
-     * <p>The expiration time of the instance, in timestamp format. This value is empty if no certificate has been issued.</p>
+     * <p>The expiration time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -214,7 +220,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The start time of the instance, in timestamp format. This value is empty if no certificate has been issued.</p>
+     * <p>The start time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -252,7 +258,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String keyAlgorithm;
 
     /**
-     * <p>The end time of the instance purchase, in timestamp format. This value is used to determine the purchase duration of the instance.</p>
+     * <p>The end time of the instance purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -261,7 +267,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Long orderEndTime;
 
     /**
-     * <p>The start time of the instance purchase, in timestamp format. This value is used to determine the refund time limit.</p>
+     * <p>The start time of the instance purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -345,7 +351,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      * </li>
      * <li><p>payed: the instance upgrade has been paid.</p>
      * </li>
-     * <li><p>issued: the latest certificate has been issued for the upgraded instance.</p>
+     * <li><p>issued: the latest certificate has been issued after the instance upgrade.</p>
      * </li>
      * </ul>
      * 
@@ -356,7 +362,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String upgradeStatus;
 
     /**
-     * <p>The validation method for the certificate application. Valid values:</p>
+     * <p>The certificate validation method. Valid values:</p>
      * <ul>
      * <li>DNS: DNS validation, using TXT or CNAME.</li>
      * <li>HTTP: file-based validation.</li>

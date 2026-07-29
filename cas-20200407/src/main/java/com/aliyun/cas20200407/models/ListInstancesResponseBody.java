@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The current page number in a paged query.</p>
+     * <p>The current page number in the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of records displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -115,12 +115,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String brand;
 
         /**
-         * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+         * <p>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
          * <ul>
          * <li>For the China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
          * <li>For the China site: certificate ID + &quot;-ap-southeast-1&quot;</li>
          * </ul>
-         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</p>
+         * <p>For example, if the certificate ID is 123, the CertIdentifier for the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier for the International site is &quot;123-ap-southeast-1&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>21795675-cn-hangzhou</p>
@@ -156,7 +156,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certificateName;
 
         /**
-         * <p>The end time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</p>
+         * <p>The end time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -165,7 +165,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long certificateNotAfter;
 
         /**
-         * <p>The start time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</p>
+         * <p>The start time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1776988800000</p>
@@ -174,7 +174,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long certificateNotBefore;
 
         /**
-         * <p>The revocation time of the latest certificate, in timestamp format.</p>
+         * <p>The revocation time of the latest certificate. The value is a UNIX timestamp accurate to seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -225,7 +225,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer fullDomainCount;
 
         /**
-         * <p>The expiration time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</p>
+         * <p>The expiration time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -243,7 +243,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The start time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</p>
+         * <p>The start time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -281,7 +281,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String keyAlgorithm;
 
         /**
-         * <p>The end time of the instance purchase, in timestamp format. Used to determine the purchase duration of the instance.</p>
+         * <p>The end time of the instance purchase. The value is a UNIX timestamp accurate to seconds. Used to determine the purchase duration of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -290,7 +290,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long orderEndTime;
 
         /**
-         * <p>The start time of the instance purchase, in timestamp format. Used to determine the refund time limit.</p>
+         * <p>The start time of the instance purchase. The value is a UNIX timestamp accurate to seconds. Used to determine the refund time limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -328,13 +328,13 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><strong>inactive</strong>: pending use.</li>
-         * <li><strong>pending</strong>: under review. The latest certificate is being reviewed.</li>
-         * <li><strong>willExpire</strong>: about to expire.</li>
-         * <li><strong>expired</strong>: expired.</li>
-         * <li><strong>refund</strong>: refunded.</li>
-         * <li><strong>normal</strong>: normal.</li>
-         * <li><strong>closed</strong>: closed and unavailable.</li>
+         * <li><strong>inactive</strong>: Pending use.</li>
+         * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+         * <li><strong>willExpire</strong>: About to expire.</li>
+         * <li><strong>expired</strong>: Expired.</li>
+         * <li><strong>refund</strong>: Refunded.</li>
+         * <li><strong>normal</strong>: Normal.</li>
+         * <li><strong>closed</strong>: Closed and unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>

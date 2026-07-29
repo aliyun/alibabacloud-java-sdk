@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The certification authority (CA) brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
+     * <p>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
      * 
      * <strong>example:</strong>
      * <p>Digicert</p>
@@ -60,7 +60,7 @@ public class ListInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The keyword for fuzzy match. Matches domain names, instance names, or corresponding resource IDs.</p>
+     * <p>The keyword for fuzzy search. Matches domain names, instance names, or corresponding resource IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -89,13 +89,13 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>inactive</strong>: pending use.</li>
-     * <li><strong>pending</strong>: under review. The latest certificate is being reviewed.</li>
-     * <li><strong>willExpire</strong>: about to expire.</li>
-     * <li><strong>expired</strong>: expired.</li>
-     * <li><strong>refund</strong>: refunded.</li>
-     * <li><strong>normal</strong>: normal.</li>
-     * <li><strong>closed</strong>: closed and unavailable.</li>
+     * <li><strong>inactive</strong>: Pending use.</li>
+     * <li><strong>pending</strong>: Under review. The latest certificate is being reviewed.</li>
+     * <li><strong>willExpire</strong>: About to expire.</li>
+     * <li><strong>expired</strong>: Expired.</li>
+     * <li><strong>refund</strong>: Refunded.</li>
+     * <li><strong>normal</strong>: Normal.</li>
+     * <li><strong>closed</strong>: Closed and unavailable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
