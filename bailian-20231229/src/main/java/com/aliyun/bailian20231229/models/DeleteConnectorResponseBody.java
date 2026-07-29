@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteConnectorResponseBody extends TeaModel {
     /**
+     * <p>The error status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data field of the operation.</p>
+     */
     @NameInMap("Data")
     public DeleteConnectorResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource</p>
      */
@@ -22,6 +29,8 @@ public class DeleteConnectorResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1C139002-0EC5-584C-A755-4B8B9FA080BE</p>
      */
@@ -29,6 +38,8 @@ public class DeleteConnectorResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status code returned by the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,12 @@ public class DeleteConnectorResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +114,8 @@ public class DeleteConnectorResponseBody extends TeaModel {
 
     public static class DeleteConnectorResponseBodyData extends TeaModel {
         /**
+         * <p>The connector ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>conn_file_e0c9db4030b2465a9478028f7d76cd92_1234</p>
          */

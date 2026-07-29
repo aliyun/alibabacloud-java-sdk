@@ -399,6 +399,9 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         @NameInMap("code")
         public String code;
 
+        @NameInMap("description")
+        public String description;
+
         @NameInMap("instructions")
         public String instructions;
 
@@ -407,6 +410,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
 
         @NameInMap("name")
         public String name;
+
+        @NameInMap("subType")
+        public String subType;
+
+        @NameInMap("type")
+        public Integer type;
 
         public static ListPublishedAgentResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListPublishedAgentResponseBodyDataList self = new ListPublishedAgentResponseBodyDataList();
@@ -427,6 +436,14 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public ListPublishedAgentResponseBodyDataList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListPublishedAgentResponseBodyDataList setInstructions(String instructions) {
@@ -451,6 +468,22 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListPublishedAgentResponseBodyDataList setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
+        }
+
+        public ListPublishedAgentResponseBodyDataList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }

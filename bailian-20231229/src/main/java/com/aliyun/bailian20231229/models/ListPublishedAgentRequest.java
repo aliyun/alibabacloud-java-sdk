@@ -10,6 +10,9 @@ public class ListPublishedAgentRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("subTypes")
+    public java.util.List<String> subTypes;
+
     public static ListPublishedAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublishedAgentRequest self = new ListPublishedAgentRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListPublishedAgentRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListPublishedAgentRequest setSubTypes(java.util.List<String> subTypes) {
+        this.subTypes = subTypes;
+        return this;
+    }
+    public java.util.List<String> getSubTypes() {
+        return this.subTypes;
     }
 
 }
