@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,8 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The instance type. Set the value to <code>instance</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance</p>
      */
@@ -19,22 +23,32 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Custom</p>
      */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("resourceIds")
     public java.util.List<String> resourceIds;
 
     /**
+     * <p>The ID of the account that owns the tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>1062017779051424</p>
      */
     @NameInMap("tagOwnerUid")
     public Long tagOwnerUid;
 
+    /**
+     * <p>A collection of tags to add.</p>
+     */
     @NameInMap("tags")
     public java.util.List<TagResourcesRequestTags> tags;
 
@@ -93,6 +107,8 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>any_string</p>
          */
@@ -100,6 +116,8 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>any_string</p>
          */

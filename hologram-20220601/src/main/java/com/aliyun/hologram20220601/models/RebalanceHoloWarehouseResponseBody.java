@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebalanceHoloWarehouseResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>The result of the request. &quot;true&quot; indicates success, and &quot;false&quot; indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

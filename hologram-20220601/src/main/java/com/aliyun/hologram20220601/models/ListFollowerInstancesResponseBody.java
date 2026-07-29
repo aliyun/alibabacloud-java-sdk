@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFollowerInstancesResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,12 +23,17 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The instance details.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<ListFollowerInstancesResponseBodyInstanceList> instanceList;
 
@@ -38,6 +47,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. This parameter is not related to business logic.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
 
     public static class ListFollowerInstancesResponseBodyInstanceListTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag</p>
          */
@@ -106,6 +119,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -137,6 +152,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
 
     public static class ListFollowerInstancesResponseBodyInstanceList extends TeaModel {
         /**
+         * <p>The billing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -144,6 +161,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The commodity code, which is consistent with the product detail code in User Center.</p>
+         * 
          * <strong>example:</strong>
          * <p>hologram_postpay_public_cn</p>
          */
@@ -151,6 +170,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-16T02:24:05Z</p>
          */
@@ -158,6 +179,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-04T16:00:00.000Z</p>
          */
@@ -165,6 +188,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-aaab9ad2d8fb</p>
          */
@@ -172,6 +197,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_instance</p>
          */
@@ -179,6 +206,8 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -186,12 +215,17 @@ public class ListFollowerInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The tag details.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListFollowerInstancesResponseBodyInstanceListTags> tags;
 

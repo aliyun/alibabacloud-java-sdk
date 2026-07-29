@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateHoloWarehouseRequest extends TeaModel {
     /**
+     * <p>The number of clusters.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,7 +14,7 @@ public class CreateHoloWarehouseRequest extends TeaModel {
     public Long clusterCount;
 
     /**
-     * <p>The specifications of the virtual warehouse. The number of vCPUs must be an integer multiple of 16 CPUs. Minimum value: 16.</p>
+     * <p>The specifications of the virtual warehouse. The value must be a multiple of 16. The minimum value is 16.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +24,7 @@ public class CreateHoloWarehouseRequest extends TeaModel {
     public String cpu;
 
     /**
-     * <p>The name of the virtual warehouse.</p>
+     * <p>The virtual warehouse name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

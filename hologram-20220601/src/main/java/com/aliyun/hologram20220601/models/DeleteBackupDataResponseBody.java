@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupDataResponseBody extends TeaModel {
     /**
+     * <p>The result of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DeleteBackupDataResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
@@ -19,6 +23,8 @@ public class DeleteBackupDataResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
      */
@@ -26,6 +32,8 @@ public class DeleteBackupDataResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,7 +41,7 @@ public class DeleteBackupDataResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1907BA1B-B443-5B39-8113-7F3E260DC20D</p>
@@ -42,6 +50,8 @@ public class DeleteBackupDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

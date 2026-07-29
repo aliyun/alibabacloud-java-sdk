@@ -4,29 +4,51 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class EnableExecuteStatementResponseBody extends TeaModel {
+    /**
+     * <p>The result of the operation, where <code>true</code> indicates success and <code>false</code> indicates failure.</p>
+     */
     @NameInMap("data")
     public Boolean data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameterValue</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>错误信息示例</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E3F4B2A7-1234-5678-9ABC-DEF012345678</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API call was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

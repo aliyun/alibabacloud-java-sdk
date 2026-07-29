@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</p>
+     * <p>Specifies whether to enable monthly auto-renewal. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Enabled.</p>
+     * </li>
+     * <li><p>false (default): Disabled.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you enable auto-renewal for an instance for which auto-renewal is enabled, an error is reported.</p>
+     * <p>Enabling auto-renewal on an instance where it is already enabled causes an error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class RenewInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The renewal duration. Unit: month.</p>
+     * <p>The renewal period, in months.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

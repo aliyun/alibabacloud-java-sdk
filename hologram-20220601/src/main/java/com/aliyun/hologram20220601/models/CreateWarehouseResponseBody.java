@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWarehouseResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the virtual warehouse was created. Valid values: true and false.</p>
+     * <p>The result of the creation operation. <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreateWarehouseResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message for a failed request.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -41,12 +41,7 @@ public class CreateWarehouseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. The request result is irrelevant to the business.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Indicates whether the API call was successful. This does not reflect the outcome of the business operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

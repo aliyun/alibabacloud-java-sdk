@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindLeaderInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class BindLeaderInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the leader instance. The follower and leader instances must be in the same region and zone, and have the same version. Obtain this ID by calling the <code>ListFollowerInstances</code> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgpostcn-cn-uqm3316l1004</p>
      */

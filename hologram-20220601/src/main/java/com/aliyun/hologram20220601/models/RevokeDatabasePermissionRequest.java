@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RevokeDatabasePermissionRequest extends TeaModel {
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_db</p>
      */
     @NameInMap("databaseName")
     public String databaseName;
 
+    /**
+     * <p>The list of permissions.</p>
+     */
     @NameInMap("privileges")
     public java.util.List<String> privileges;
 
     /**
+     * <p>The user ID. For more information, see <a href="https://help.aliyun.com/document_detail/130393.html">Hologres account overview</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>p4_1234xxxx</p>
      */

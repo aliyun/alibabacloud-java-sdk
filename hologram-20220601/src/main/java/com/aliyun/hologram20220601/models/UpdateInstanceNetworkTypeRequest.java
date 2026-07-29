@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is invalid for new instances. For new instances, this parameter is set to null by default.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>others/null: The network type is not changed from AnyTunnel to SingleTunnel.</li>
-     * <li>true: The network type is changed from AnyTunnel to SingleTunnel.</li>
-     * </ul>
+     * <p>Specifies whether to change the network type from AnyTunnel to SingleTunnel. This parameter is not applicable to new instances. Keep the default value of null.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -19,14 +14,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String anyTunnelToSingleTunnel;
 
     /**
-     * <p>A list of network types that you want to enable. The network types are randomly ordered in the list. For example, the Internet, Intranet, and VPCSingleTunnel network types are enabled. If you want to disable the Internet type, set this parameter to Intranet,VPCSingleTunnel.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>VPCSingleTunnel: virtual private cloud (VPC).</li>
-     * <li>Intranet: internal network.</li>
-     * <li>VPCAnyTunnel: compatibility requirements. This value is not supported by new instances.</li>
-     * <li>Internet: Internet.</li>
-     * </ul>
+     * <p>The network types to enable. The order of the network types does not matter. For example, if an instance has the Internet, Intranet, and VPCSingleTunnel network types enabled, disable the Internet network type by specifying \<code>Intranet,VPCSingleTunnel\\</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Internet,VPCSingleTunnel</p>
@@ -53,7 +41,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>1999365732646672</p>
@@ -62,7 +50,7 @@ public class UpdateInstanceNetworkTypeRequest extends TeaModel {
     public String vpcOwnerId;
 
     /**
-     * <p>The region in which the VPC resides.</p>
+     * <p>The region ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

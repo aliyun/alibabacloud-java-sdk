@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class DiscardUpgradeResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DiscardUpgradeResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class DiscardUpgradeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class DiscardUpgradeResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class DiscardUpgradeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A47D57BE-59D1-51A6-9CC3-080C07852C4E</p>
@@ -38,6 +47,8 @@ public class DiscardUpgradeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API request itself was successful. This does not reflect the outcome of the operation. For the operation\&quot;s result, see the Success field in the Data array.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class DiscardUpgradeResponseBody extends TeaModel {
 
     public static class DiscardUpgradeResponseBodyData extends TeaModel {
         /**
+         * <p>The reason the upgrade failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -106,6 +119,8 @@ public class DiscardUpgradeResponseBody extends TeaModel {
         public String failReason;
 
         /**
+         * <p>The reason key.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -113,6 +128,8 @@ public class DiscardUpgradeResponseBody extends TeaModel {
         public String reasonKey;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

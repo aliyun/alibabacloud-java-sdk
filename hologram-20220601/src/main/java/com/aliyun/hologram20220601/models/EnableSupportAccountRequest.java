@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableSupportAccountRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class EnableSupportAccountRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>This parameter is deprecated.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class EnableSupportAccountRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-03-24 11:19:05</p>
      */
@@ -26,6 +32,8 @@ public class EnableSupportAccountRequest extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>The password.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A0A16C46-5B56-1F9B-AA37-4C3EAD95AAA8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of warehouse schedule tasks.</p>
+     */
     @NameInMap("ScheduleTaskList")
     public java.util.List<ListWarehouseScheduleTaskResponseBodyScheduleTaskList> scheduleTaskList;
 
@@ -37,6 +42,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
 
     public static class ListWarehouseScheduleTaskResponseBodyScheduleTaskListPlans extends TeaModel {
         /**
+         * <p>The description of the scaling plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>bill stat</p>
          */
@@ -44,6 +51,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The number of elastic resources. The value must be a multiple of 16, with a minimum value of 16, and cannot exceed the warehouse specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -51,6 +60,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public Long elasticCu;
 
         /**
+         * <p>The end time of the plan. The time must be on the hour or half-hour and in the HHmm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>0400</p>
          */
@@ -58,6 +69,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The ID of the scaling plan.</p>
+         * 
          * <strong>example:</strong>
          * <p>1802985780260052993</p>
          */
@@ -65,6 +78,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The start time of the plan. The time must be on the hour or half-hour and in the HHmm format. For example, 0100 represents 01:00.</p>
+         * 
          * <strong>example:</strong>
          * <p>0100</p>
          */
@@ -120,16 +135,23 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
 
     public static class ListWarehouseScheduleTaskResponseBodyScheduleTaskList extends TeaModel {
         /**
+         * <p>The scaling type.</p>
+         * 
          * <strong>example:</strong>
          * <p>timed</p>
          */
         @NameInMap("ElasticType")
         public String elasticType;
 
+        /**
+         * <p>The scaling plans for the warehouse.</p>
+         */
         @NameInMap("Plans")
         public java.util.List<ListWarehouseScheduleTaskResponseBodyScheduleTaskListPlans> plans;
 
         /**
+         * <p>The number of reserved resources for the warehouse.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -137,6 +159,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public Long reservedCpu;
 
         /**
+         * <p>The status of the warehouse.</p>
+         * 
          * <strong>example:</strong>
          * <p>kRunning</p>
          */
@@ -144,6 +168,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the warehouse.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -151,6 +177,8 @@ public class ListWarehouseScheduleTaskResponseBody extends TeaModel {
         public String warehouseId;
 
         /**
+         * <p>The name of the warehouse.</p>
+         * 
          * <strong>example:</strong>
          * <p>init_warehouse</p>
          */

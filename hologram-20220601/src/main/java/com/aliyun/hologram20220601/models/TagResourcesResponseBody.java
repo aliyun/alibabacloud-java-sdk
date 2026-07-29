@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the tagging operation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class TagResourcesResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
@@ -19,6 +23,8 @@ public class TagResourcesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
      */
@@ -26,6 +32,8 @@ public class TagResourcesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,7 +41,7 @@ public class TagResourcesResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15CEB459-CEE0-5528-87F5-B5A9B9F9B184</p>
@@ -42,6 +50,8 @@ public class TagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the API call was accepted. This is separate from whether the tagging operation itself succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

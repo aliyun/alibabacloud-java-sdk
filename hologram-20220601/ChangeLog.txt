@@ -1,3 +1,9 @@
+2026-07-29 Version: 1.10.1
+- Update API GetInstanceModel: add response parameters Body.modelServiceList.$.supportApiKeyAccess.
+- Update API ListModelCatalog: add request parameters provider.
+- Update API ListModelCatalog: add response parameters Body.modelList.$.supportApiKeyAccess.
+
+
 2026-05-21 Version: 1.10.0
 - Support API BindLeaderInstance.
 - Support API CreateManualBackup.

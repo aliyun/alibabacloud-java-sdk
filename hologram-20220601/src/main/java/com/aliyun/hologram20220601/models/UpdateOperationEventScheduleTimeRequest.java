@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateOperationEventScheduleTimeRequest extends TeaModel {
     /**
+     * <p>The event ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateOperationEventScheduleTimeRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The new scheduled time in <code>YYYY-MM-DD HH:mm:ss</code> format. The time zone is UTC+8.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

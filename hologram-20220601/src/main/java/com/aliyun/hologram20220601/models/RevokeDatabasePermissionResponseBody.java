@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RevokeDatabasePermissionResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the request was successful. A value of \<code>true\\</code> indicates success and a value of \<code>false\\</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

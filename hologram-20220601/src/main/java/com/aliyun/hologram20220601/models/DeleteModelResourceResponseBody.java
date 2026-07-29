@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteModelResourceResponseBody extends TeaModel {
     /**
+     * <p>Returns <code>true</code> if the operation was successful and <code>false</code> otherwise.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,7 +14,7 @@ public class DeleteModelResourceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>

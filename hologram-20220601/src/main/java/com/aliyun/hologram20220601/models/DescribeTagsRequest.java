@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTagsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether to return tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

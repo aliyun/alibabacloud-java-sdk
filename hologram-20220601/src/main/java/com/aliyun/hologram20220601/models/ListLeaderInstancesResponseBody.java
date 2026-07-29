@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLeaderInstancesResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
@@ -12,6 +14,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
      */
@@ -19,17 +23,22 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<ListLeaderInstancesResponseBodyInstanceList> instanceList;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5600196E-78E2-50F2-B2A1-C44D3B665438</p>
@@ -38,6 +47,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successfully processed. This does not reflect the business outcome of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
 
     public static class ListLeaderInstancesResponseBodyInstanceListTags extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>tagKey</p>
          */
@@ -106,6 +119,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -137,6 +152,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
 
     public static class ListLeaderInstancesResponseBodyInstanceList extends TeaModel {
         /**
+         * <p>Indicates the compatibility between the leader instance and the follower instance. A value of <code>0</code> indicates a perfect match. Any other value indicates a mismatch.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -144,6 +161,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String bindingCode;
 
         /**
+         * <p>The billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -151,6 +170,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>hologram_combo_public_cn</p>
          */
@@ -158,6 +179,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-25T02:15:35Z</p>
          */
@@ -165,6 +188,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The expiration time. This parameter is not returned for pay-as-you-go instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-25T02:15:35Z</p>
          */
@@ -172,6 +197,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-tl32vsdir00h</p>
          */
@@ -179,6 +206,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_defined_name</p>
          */
@@ -186,6 +215,8 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -193,12 +224,17 @@ public class ListLeaderInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListLeaderInstancesResponseBodyInstanceListTags> tags;
 

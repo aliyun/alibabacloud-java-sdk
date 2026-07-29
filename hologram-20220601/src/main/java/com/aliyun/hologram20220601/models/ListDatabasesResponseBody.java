@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>The list of databases.</p>
+     */
     @NameInMap("DatabaseList")
     public java.util.List<ListDatabasesResponseBodyDatabaseList> databaseList;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0C4935F5-6217-569A-902F-931B2F3E28BA</p>
@@ -38,6 +47,8 @@ public class ListDatabasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class ListDatabasesResponseBody extends TeaModel {
 
     public static class ListDatabasesResponseBodyDatabaseList extends TeaModel {
         /**
+         * <p>Indicates whether the table is a foreign table. \<code>true\\</code>: The table is a foreign table. \<code>false\\</code>: The table is not a foreign table.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -106,6 +119,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public Boolean external;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_db</p>
          */
@@ -113,6 +128,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The permission model. For more information, see <a href="https://help.aliyun.com/document_detail/198734.html">Hologres permission models</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>SPM</p>
          */
@@ -120,6 +137,8 @@ public class ListDatabasesResponseBody extends TeaModel {
         public String permissionModel;
 
         /**
+         * <p>The permission.</p>
+         * 
          * <strong>example:</strong>
          * <p>developer</p>
          */

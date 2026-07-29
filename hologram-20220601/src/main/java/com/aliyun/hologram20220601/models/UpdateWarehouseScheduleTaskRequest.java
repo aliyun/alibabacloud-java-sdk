@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     /**
+     * <p>The number of CUs to add. The value must be a multiple of 16, be at least 16, and not exceed the current warehouse size.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -12,6 +14,8 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public Long elasticCu;
 
     /**
+     * <p>The end time. The time must be in 24-hour HHmm format, on the hour or half-hour. The end time must be later than the start time. For example, <code>0030</code>, <code>0100</code>, and <code>0400</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0400</p>
      */
@@ -19,6 +23,8 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The elastic schedule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1980869072412614657</p>
      */
@@ -26,6 +32,8 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The start time. The time must be in 24-hour HHmm format, on the hour or half-hour. For example, <code>0030</code>, <code>0100</code>, and <code>0400</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>0200</p>
      */
@@ -33,6 +41,7 @@ public class UpdateWarehouseScheduleTaskRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The warehouse ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,26 +14,38 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource category.</p>
+     * 
      * <strong>example:</strong>
      * <p>Custom</p>
      */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <p>An array of instance IDs.</p>
+     */
     @NameInMap("resourceIds")
     public java.util.List<String> resourceIds;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>INSTANCe</p>
      */
     @NameInMap("resourceType")
     public String resourceType;
 
+    /**
+     * <p>An array of tag keys. To remove tags, you only need to provide the corresponding tag keys.</p>
+     */
     @NameInMap("tagKeys")
     public java.util.List<String> tagKeys;
 
     /**
+     * <p>The account ID of the tag owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1062017779051424</p>
      */

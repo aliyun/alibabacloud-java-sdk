@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpgradeInstanceRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class UpgradeInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The upgrade type.</p>
+     * 
      * <strong>example:</strong>
      * <p>hot</p>
      */
@@ -19,6 +23,8 @@ public class UpgradeInstanceRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The upgrade time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-02-11 10:00:01</p>
      */

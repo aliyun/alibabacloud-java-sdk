@@ -14,7 +14,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned values.</p>
+     * <p>The return value.</p>
      */
     @NameInMap("WarehouseDetail")
     public GetWarehouseDetailResponseBodyWarehouseDetail warehouseDetail;
@@ -42,6 +42,8 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList extends TeaModel {
         /**
+         * <p>The auto scaling type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */
@@ -49,6 +51,8 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String autoScaleType;
 
         /**
+         * <p>The number of clusters.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -56,6 +60,8 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String clusterCount;
 
         /**
+         * <p>The cluster specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -71,13 +77,27 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Long cpu;
 
+        /**
+         * <p>Indicates whether this is the default virtual warehouse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DefaultWarehouse")
         public Boolean defaultWarehouse;
 
+        /**
+         * <p>The elastic computing resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("ElasticCpu")
         public Long elasticCpu;
 
         /**
+         * <p>The type of elasticity.</p>
+         * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
@@ -94,6 +114,8 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The number of reserved clusters.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -101,6 +123,8 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String initClusterCount;
 
         /**
+         * <p>The maximum number of clusters.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -108,7 +132,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String maxClusterCount;
 
         /**
-         * <p>The memory capacity.</p>
+         * <p>The memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>128</p>
@@ -117,7 +141,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public Long mem;
 
         /**
-         * <p>The name of the virtual warehouse instance.</p>
+         * <p>The name of the virtual warehouse.</p>
          * 
          * <strong>example:</strong>
          * <p>MyWarehouse</p>
@@ -134,48 +158,17 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         @NameInMap("NodeCount")
         public Long nodeCount;
 
+        /**
+         * <p>The rebalancing status of the virtual warehouse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DONE</p>
+         */
         @NameInMap("RebalanceStatus")
         public String rebalanceStatus;
 
         /**
          * <p>The status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>kRunning</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>kSuspended</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>kInit</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>kFailed</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>kAllocating</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>kRunning</p>
@@ -311,11 +304,17 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
     }
 
     public static class GetWarehouseDetailResponseBodyWarehouseDetail extends TeaModel {
+        /**
+         * <p>The total current auto elastic computing resources of the virtual warehouse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("AutoElasticCpu")
         public String autoElasticCpu;
 
         /**
-         * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>
+         * <p>The unallocated computing resources in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -324,7 +323,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public String remainingCpu;
 
         /**
-         * <p>The reserved computing resources. The amount of computing resources in all running virtual warehouses in an instance cannot exceed the amount of reserved computing resources in the virtual warehouses.</p>
+         * <p>The reserved computing resources. The total computing resources of all running virtual warehouses in the instance cannot exceed this value.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -332,11 +331,17 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         @NameInMap("ReservedCpu")
         public String reservedCpu;
 
+        /**
+         * <p>The total current scheduled elastic computing resources of the virtual warehouse.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("TimedElasticCpu")
         public String timedElasticCpu;
 
         /**
-         * <p>The list of virtual warehouses.</p>
+         * <p>The warehouses.</p>
          */
         @NameInMap("WarehouseList")
         public java.util.List<GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList> warehouseList;

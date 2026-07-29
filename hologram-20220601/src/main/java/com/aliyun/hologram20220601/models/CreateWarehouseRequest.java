@@ -14,7 +14,7 @@ public class CreateWarehouseRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The configuration information.</p>
+     * <p>The configuration settings.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class CreateWarehouseRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The number of vCPUs.</p>
+     * <p>The number of CPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -32,7 +32,7 @@ public class CreateWarehouseRequest extends TeaModel {
     public String cpu;
 
     /**
-     * <p>The name of the virtual warehouse.</p>
+     * <p>The warehouse name.</p>
      * 
      * <strong>example:</strong>
      * <p>warehouse-test</p>

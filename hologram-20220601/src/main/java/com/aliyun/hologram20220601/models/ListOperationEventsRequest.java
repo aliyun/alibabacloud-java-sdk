@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOperationEventsRequest extends TeaModel {
     /**
+     * <p>Filters events by name.</p>
+     * 
      * <strong>example:</strong>
      * <p>COLD_UPGRADE</p>
      */
@@ -12,6 +14,8 @@ public class ListOperationEventsRequest extends TeaModel {
     public String eventName;
 
     /**
+     * <p>Specifies whether to sort events by event name in descending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class ListOperationEventsRequest extends TeaModel {
     public Boolean eventNameDesc;
 
     /**
+     * <p>Filters events by type.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_MAINTENANCE</p>
      */
@@ -26,6 +32,8 @@ public class ListOperationEventsRequest extends TeaModel {
     public String eventType;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgpost-cn-xxx</p>
      */
@@ -33,6 +41,8 @@ public class ListOperationEventsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ListOperationEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size. Default value: 50. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -47,6 +59,8 @@ public class ListOperationEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Specifies whether to sort events by schedule time in descending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class ListOperationEventsRequest extends TeaModel {
     public Boolean scheduleTimeDesc;
 
     /**
+     * <p>Filters events by state.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

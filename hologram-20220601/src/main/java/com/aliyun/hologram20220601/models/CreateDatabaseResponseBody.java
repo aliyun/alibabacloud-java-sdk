@@ -5,45 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseResponseBody extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>true</p>
+     * <p>Indicates whether the database was created.</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <strong>example:</strong>
-     * <p>null</p>
+     * <p>The error code returned if the request fails.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <strong>example:</strong>
-     * <p>null</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <strong>example:</strong>
-     * <p>200</p>
+     * <p>The HTTP status code returned for the request.</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>92F00FA1-CE4E-55A1-8BA9-F2C61534B518</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <strong>example:</strong>
-     * <p>True</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      */
     @NameInMap("Success")
     public String success;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUpgradeableRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

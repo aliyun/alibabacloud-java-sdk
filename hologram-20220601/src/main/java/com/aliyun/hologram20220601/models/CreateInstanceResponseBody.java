@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -20,7 +20,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9CC37B9F-F4B4-5FF1-939B-AEE78DC70130</p>
@@ -93,7 +93,7 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static class CreateInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidVpcOrVSwitch.NotAvailable</p>
@@ -111,10 +111,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The error details.</p>
+         * <p>The details of the error.</p>
          * 
          * <strong>example:</strong>
-         * <p>Vpc is not available</p>
+         * <p>InvalidVpcOrVSwitch.NotAvailable</p>
          */
         @NameInMap("Message")
         public String message;
@@ -131,8 +131,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance was created.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The instance was created.</p>
+         * </li>
+         * <li><p>false: The instance failed to be created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

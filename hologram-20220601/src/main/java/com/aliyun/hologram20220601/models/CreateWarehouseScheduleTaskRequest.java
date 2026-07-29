@@ -5,44 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateWarehouseScheduleTaskRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>user stat</p>
+     * <p>A description of the warehouse schedule task.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The number of elastic compute units.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>32</p>
      */
     @NameInMap("elasticCu")
     public Long elasticCu;
 
     /**
+     * <p>The UTC end time of the task, in ISO 8601 format.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0200</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
     /**
+     * <p>The UTC start time of the task, in ISO 8601 format.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0100</p>
      */
     @NameInMap("startTime")
     public String startTime;
 
     /**
+     * <p>The ID of the warehouse.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("warehouseId")
     public Long warehouseId;

@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class GetUpgradeableResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetUpgradeableResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class GetUpgradeableResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetUpgradeableResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class GetUpgradeableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. This parameter is not related to business logic.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetUpgradeableResponseBody extends TeaModel {
 
     public static class GetUpgradeableResponseBodyData extends TeaModel {
         /**
+         * <p>The reason why the upgrade failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -106,6 +119,8 @@ public class GetUpgradeableResponseBody extends TeaModel {
         public String failReason;
 
         /**
+         * <p>The key of the upgrade reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -113,6 +128,12 @@ public class GetUpgradeableResponseBody extends TeaModel {
         public String reasonKey;
 
         /**
+         * <p>Indicates whether the instance can be upgraded. Valid values:</p>
+         * <ul>
+         * <li>true: The instance can be upgraded.</li>
+         * <li>false: The instance cannot be upgraded because it is already the latest version.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

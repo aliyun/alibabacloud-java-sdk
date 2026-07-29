@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableWarehouseAutoScaleRequest extends TeaModel {
     /**
+     * <p>The maximum number of clusters. The value must be greater than the number of reserved clusters and less than or equal to 4.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class EnableWarehouseAutoScaleRequest extends TeaModel {
     public String maxClusterCount;
 
     /**
+     * <p>The name of the warehouse.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_warehouse</p>
      */

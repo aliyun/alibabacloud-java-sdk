@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableOperationEventRequest extends TeaModel {
     /**
+     * <p>The event ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

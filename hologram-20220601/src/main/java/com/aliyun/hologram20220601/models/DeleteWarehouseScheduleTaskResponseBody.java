@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteWarehouseScheduleTaskResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,7 +14,7 @@ public class DeleteWarehouseScheduleTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D1303CD4-AA70-5998-8025-F55B22C50840</p>

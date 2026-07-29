@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWarehouseScheduleTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the time-sharing elastic scaling plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteWarehouseScheduleTaskRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The ID of the warehouse.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

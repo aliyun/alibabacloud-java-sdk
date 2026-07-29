@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteModelServiceRequest extends TeaModel {
     /**
+     * <p>The name of the model service.</p>
+     * 
      * <strong>example:</strong>
      * <p>model-qwen</p>
      */

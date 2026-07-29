@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAutoUpgradeRequest extends TeaModel {
     /**
+     * <p>The upgrade type. Valid values: <code>auto</code> and <code>manual</code>. A value of auto specifies to enable automatic minor version upgrades. A value of manual specifies to disable automatic minor version upgrades.</p>
+     * 
      * <strong>example:</strong>
      * <p>auto</p>
      */

@@ -5,23 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
     /**
-     * <p>The returned result, which indicates whether the operation was successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The result of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +17,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
      * <p>The error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>404</p>
+     * <p>null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -42,7 +26,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Internal server error.</p>
+     * <p>null</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -57,7 +41,7 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9CC37B9F-F4B4-5FF1-939B-AEE78DC70130</p>
@@ -67,11 +51,6 @@ public class UpdateInstanceNetworkTypeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

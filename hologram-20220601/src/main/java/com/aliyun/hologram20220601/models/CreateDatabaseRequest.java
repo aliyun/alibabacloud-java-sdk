@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>my_db</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("databaseName")
     public String databaseName;
 
     /**
-     * <strong>example:</strong>
-     * <p>SPM</p>
+     * <p>The permission model of the database.</p>
      */
     @NameInMap("permissionModel")
     public String permissionModel;

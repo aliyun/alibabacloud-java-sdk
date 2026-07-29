@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWarehouseScheduleTaskResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the operation succeeded. A value of <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,7 +14,7 @@ public class UpdateWarehouseScheduleTaskResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</p>

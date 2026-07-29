@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteModelResourceRequest extends TeaModel {
     /**
+     * <p>The AI node instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hologram_aicombo_public_cn-yi34cxxxx</p>
      */

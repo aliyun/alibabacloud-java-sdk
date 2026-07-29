@@ -5,23 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNameResponseBody extends TeaModel {
     /**
-     * <p>The returned result, which indicates whether the operation was successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The result of the operation. This indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +17,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
      * <p>The error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>404</p>
+     * <p>null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -42,7 +26,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Internal server error.</p>
+     * <p>null</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -57,7 +41,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C6B55032-D41A-5FE0-9C07-8BD81C88422E</p>
@@ -66,23 +50,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result, which indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The result of the request. This indicates whether an exception occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

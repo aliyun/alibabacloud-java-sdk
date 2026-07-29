@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the operation was successful. A value of <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,7 +14,7 @@ public class CreateModelServiceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>

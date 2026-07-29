@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetScheduledBackupConfigRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -12,6 +14,8 @@ public class GetScheduledBackupConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgprecn-cn-9lb3bjg1n003</p>
      */
@@ -19,6 +23,8 @@ public class GetScheduledBackupConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The backup type. By default, the operation returns periodical and manual backup configurations. To retrieve the remote backup configuration, set this parameter to \&quot;remote\&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>remote</p>
      */

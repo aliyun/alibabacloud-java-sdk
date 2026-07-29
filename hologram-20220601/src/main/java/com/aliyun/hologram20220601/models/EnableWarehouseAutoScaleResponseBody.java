@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableWarehouseAutoScaleResponseBody extends TeaModel {
     /**
+     * <p>A value of <code>true</code> indicates success, while <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,7 +14,7 @@ public class EnableWarehouseAutoScaleResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>

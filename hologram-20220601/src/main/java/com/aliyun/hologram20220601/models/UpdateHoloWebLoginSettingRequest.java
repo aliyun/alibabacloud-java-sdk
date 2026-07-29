@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateHoloWebLoginSettingRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class UpdateHoloWebLoginSettingRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Set to <code>true</code> to allow logins from external accounts, or <code>false</code> to deny these logins.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

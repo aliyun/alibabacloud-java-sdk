@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateWarehouseScheduleTaskResponseBody extends TeaModel {
     /**
-     * <strong>example:</strong>
-     * <p>true</p>
+     * <p>The ID of the created warehouse schedule task.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

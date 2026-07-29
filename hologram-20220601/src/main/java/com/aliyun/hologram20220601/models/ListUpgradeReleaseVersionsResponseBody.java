@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListUpgradeReleaseVersionsResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -38,6 +47,8 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The request result, which indicates whether an exception occurred. This is not related to business logic.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,23 +110,32 @@ public class ListUpgradeReleaseVersionsResponseBody extends TeaModel {
 
     public static class ListUpgradeReleaseVersionsResponseBodyData extends TeaModel {
         /**
+         * <p>The URL of the version release notes.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="https://help.aliyun.com/zh/hologres/product-overview/release-notes">https://help.aliyun.com/zh/hologres/product-overview/release-notes</a></p>
+         * <p><a href="https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes">https://www.alibabacloud.com/help/en/hologres/product-overview/release-notes</a></p>
          */
         @NameInMap("ReleaseNotesUrl")
         public String releaseNotesUrl;
 
         /**
+         * <p>The version status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Stable</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The upgrade strategy.</p>
+         */
         @NameInMap("UpgradeStrategy")
         public java.util.List<String> upgradeStrategy;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>r2.2.47</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMigrationZonesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of results returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListMigrationZonesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A token used to retrieve the next page of results. This parameter is not returned if no more results are available.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -19,7 +23,7 @@ public class ListMigrationZonesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
@@ -27,6 +31,9 @@ public class ListMigrationZonesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of availability zones.</p>
+     */
     @NameInMap("zoneList")
     public java.util.List<ListMigrationZonesResponseBodyZoneList> zoneList;
 
@@ -69,6 +76,8 @@ public class ListMigrationZonesResponseBody extends TeaModel {
 
     public static class ListMigrationZonesResponseBodyZoneList extends TeaModel {
         /**
+         * <p>Indicates whether the instance can be migrated to the availability zone. A value of false indicates that the migration conditions are not met.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -76,6 +85,8 @@ public class ListMigrationZonesResponseBody extends TeaModel {
         public Boolean available;
 
         /**
+         * <p>The ID of the availability zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-i</p>
          */

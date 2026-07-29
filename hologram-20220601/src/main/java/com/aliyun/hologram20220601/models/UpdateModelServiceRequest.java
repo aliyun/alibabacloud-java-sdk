@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateModelServiceRequest extends TeaModel {
     /**
+     * <p>The CPU specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -12,6 +14,8 @@ public class UpdateModelServiceRequest extends TeaModel {
     public Long cpu;
 
     /**
+     * <p>The GPU specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class UpdateModelServiceRequest extends TeaModel {
     public Long gpu;
 
     /**
+     * <p>The memory specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -26,6 +32,7 @@ public class UpdateModelServiceRequest extends TeaModel {
     public Long memory;
 
     /**
+     * <p>A custom name for the model service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class UpdateModelServiceRequest extends TeaModel {
     public String modelServiceName;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Qwen/Qwen2.5-VL-32B-Instruct</p>
      */
@@ -42,6 +51,8 @@ public class UpdateModelServiceRequest extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The number of service replicas.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

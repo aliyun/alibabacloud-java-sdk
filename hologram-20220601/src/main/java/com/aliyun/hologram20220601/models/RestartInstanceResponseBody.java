@@ -5,23 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation was successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +17,7 @@ public class RestartInstanceResponseBody extends TeaModel {
      * <p>The error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>404</p>
+     * <p>null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -42,7 +26,7 @@ public class RestartInstanceResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Internal server error.</p>
+     * <p>null</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -66,7 +50,7 @@ public class RestartInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result, which indicates whether the request was successful.</p>
+     * <p>Indicates whether an exception occurred during the request. This parameter is not related to the business outcome.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

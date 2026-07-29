@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ScaleInstanceResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public ScaleInstanceResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -20,7 +20,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -93,7 +93,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
 
     public static class ScaleInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidScaleType.Unsupported</p>
@@ -102,16 +102,16 @@ public class ScaleInstanceResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error details.</p>
+         * <p>The details of the error.</p>
          * 
          * <strong>example:</strong>
-         * <p>null</p>
+         * <p>Invalid scale type</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>219183853450000</p>
@@ -120,23 +120,7 @@ public class ScaleInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
-         * <p>Indicates whether the change to specifications was successful.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether the scaling was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -8,7 +8,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "hologram.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "hologram.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "hologram.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "hologram.me-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "hologram.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "hologram.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "hologram.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "hologram.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "hologram.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "hologram.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "hologram.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "hologram.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "hologram.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "hologram.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "hologram.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "hologram.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "hologram.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "hologram.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "hologram.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "hologram.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "hologram.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("hologram", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +51,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定主实例</p>
+     * <p>Binds a follower instance to a leader instance.</p>
      * 
      * @param request BindLeaderInstanceRequest
      * @param headers map
@@ -68,7 +91,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定主实例</p>
+     * <p>Binds a follower instance to a leader instance.</p>
      * 
      * @param request BindLeaderInstanceRequest
      * @return BindLeaderInstanceResponse
@@ -81,7 +104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a resource group.</p>
+     * <p>Updates the resource group of a Hologres instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -119,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a resource group.</p>
+     * <p>Updates the resource group of a Hologres instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -132,7 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建db</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDatabaseRequest
      * @param headers map
@@ -170,7 +193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建db</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -183,7 +206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建外部db</p>
+     * <p>Creates an external database.</p>
      * 
      * @param request CreateExternalDatabaseRequest
      * @param headers map
@@ -233,7 +256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建外部db</p>
+     * <p>Creates an external database.</p>
      * 
      * @param request CreateExternalDatabaseRequest
      * @return CreateExternalDatabaseResponse
@@ -302,30 +325,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: 
+     * This API operation incurs fees. Before you call this operation, make sure that you fully understand the billing methods and pricing of Hologres.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</li>
-     * <li>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
-     * cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-     *    cn-shanghai: cn-shanghai-e, cn-shanghai-f
-     *    cn-beijing: cn-beijing-i, cn-beijing-g
-     *    cn-zhangjiakou: cn-zhangjiakou-b
-     *    cn-shenzhen: cn-shenzhen-e
-     *    cn-hongkong: cn-hongkong-b
-     *    cn-shanghai-finance-1: cn-shanghai-finance-1z
-     *    ap-northeast-1: ap-northeast-1a
-     *    ap-southeast-1: ap-southeast-1c
-     *    ap-southeast-3: ap-southeast-3b
-     *    ap-southeast-5: ap-southeast-5b
-     *    ap-south-1: ap-south-1b
-     *    eu-central-1: eu-central-1a
-     *    us-east-1: us-east-1a
-     *    us-west-1: us-west-1b</li>
+     * <li>For more information about the billing of Hologres, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
+     * <li>When you create a Hologres instance, you must specify the region and zone for the instance. A region can contain multiple zones. The following list describes the zones that are available in each region:</li>
      * </ul>
+     * <pre><code>   cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+     *    cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+     *    cn-shanghai (Shanghai): cn-shanghai-e, cn-shanghai-f, cn-shanghai-l
+     *    cn-beijing (Beijing): cn-beijing-i, cn-beijing-g, cn-beijing-l
+     *    cn-zhangjiakou (Zhangjiakou): cn-zhangjiakou-b
+     *    cn-shenzhen (Shenzhen): cn-shenzhen-d, cn-shenzhen-f, cn-shenzhen-e
+     *    cn-wulanchabu (Ulanqab): cn-wulanchabu-a
+     *    cn-hongkong (Hong Kong): cn-hongkong-b, cn-hongkong-d
+     *    cn-shanghai-finance-1 (Shanghai Finance Cloud): cn-shanghai-finance-1z, cn-shanghai-finance-1f
+     *    cn-hangzhou-finance (Hangzhou Finance Cloud): cn-hangzhou-finance-k
+     *    cn-shenzhen-finance-1 (Shenzhen Finance Cloud): cn-shenzhen-finance-1d
+     *    ap-northeast-1 (Tokyo): ap-northeast-1a
+     *    ap-southeast-1 (Singapore): ap-southeast-1c, ap-southeast-1a
+     *    ap-southeast-3 (Kuala Lumpur): ap-southeast-3b
+     *    ap-southeast-5 (Jakarta): ap-southeast-5b
+     *    eu-central-1 (Frankfurt): eu-central-1a
+     *    us-east-1 (Virginia): us-east-1a
+     *    us-west-1 (Silicon Valley): us-west-1b
+     *                     
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Hologres instance.</p>
+     * <p>Creates a Hologres instance in the specified region.</p>
      * 
      * @param request CreateInstanceRequest
      * @param headers map
@@ -436,30 +468,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: 
+     * This API operation incurs fees. Before you call this operation, make sure that you fully understand the billing methods and pricing of Hologres.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</li>
-     * <li>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
-     * cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-     *    cn-shanghai: cn-shanghai-e, cn-shanghai-f
-     *    cn-beijing: cn-beijing-i, cn-beijing-g
-     *    cn-zhangjiakou: cn-zhangjiakou-b
-     *    cn-shenzhen: cn-shenzhen-e
-     *    cn-hongkong: cn-hongkong-b
-     *    cn-shanghai-finance-1: cn-shanghai-finance-1z
-     *    ap-northeast-1: ap-northeast-1a
-     *    ap-southeast-1: ap-southeast-1c
-     *    ap-southeast-3: ap-southeast-3b
-     *    ap-southeast-5: ap-southeast-5b
-     *    ap-south-1: ap-south-1b
-     *    eu-central-1: eu-central-1a
-     *    us-east-1: us-east-1a
-     *    us-west-1: us-west-1b</li>
+     * <li>For more information about the billing of Hologres, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
+     * <li>When you create a Hologres instance, you must specify the region and zone for the instance. A region can contain multiple zones. The following list describes the zones that are available in each region:</li>
      * </ul>
+     * <pre><code>   cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+     *    cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+     *    cn-shanghai (Shanghai): cn-shanghai-e, cn-shanghai-f, cn-shanghai-l
+     *    cn-beijing (Beijing): cn-beijing-i, cn-beijing-g, cn-beijing-l
+     *    cn-zhangjiakou (Zhangjiakou): cn-zhangjiakou-b
+     *    cn-shenzhen (Shenzhen): cn-shenzhen-d, cn-shenzhen-f, cn-shenzhen-e
+     *    cn-wulanchabu (Ulanqab): cn-wulanchabu-a
+     *    cn-hongkong (Hong Kong): cn-hongkong-b, cn-hongkong-d
+     *    cn-shanghai-finance-1 (Shanghai Finance Cloud): cn-shanghai-finance-1z, cn-shanghai-finance-1f
+     *    cn-hangzhou-finance (Hangzhou Finance Cloud): cn-hangzhou-finance-k
+     *    cn-shenzhen-finance-1 (Shenzhen Finance Cloud): cn-shenzhen-finance-1d
+     *    ap-northeast-1 (Tokyo): ap-northeast-1a
+     *    ap-southeast-1 (Singapore): ap-southeast-1c, ap-southeast-1a
+     *    ap-southeast-3 (Kuala Lumpur): ap-southeast-3b
+     *    ap-southeast-5 (Jakarta): ap-southeast-5b
+     *    eu-central-1 (Frankfurt): eu-central-1a
+     *    us-east-1 (Virginia): us-east-1a
+     *    us-west-1 (Silicon Valley): us-west-1b
+     *                     
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Hologres instance.</p>
+     * <p>Creates a Hologres instance in the specified region.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -472,7 +513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建手动备份</p>
+     * <p>Creates a manual backup for an instance.</p>
      * 
      * @param request CreateManualBackupRequest
      * @param headers map
@@ -512,7 +553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建手动备份</p>
+     * <p>Creates a manual backup for an instance.</p>
      * 
      * @param request CreateManualBackupRequest
      * @return CreateManualBackupResponse
@@ -524,8 +565,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To create a model service, you must specify several parameters. Use the <code>ListModelCatalog</code> operation to find the parameters for a model from Alibaba Cloud Model Studio, and use the <code>GetAvailableModelsResource</code> operation for a model on a Hologres AI node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建模型服务</p>
+     * <p>Creates a model service that allows AI functions to invoke models. You can create a service for two types of models: a model from Alibaba Cloud Model Studio or a model on a Hologres AI node. If you use a Hologres AI node, you must purchase the AI node resources separately.</p>
      * 
      * @param request CreateModelServiceRequest
      * @param headers map
@@ -598,8 +642,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>To create a model service, you must specify several parameters. Use the <code>ListModelCatalog</code> operation to find the parameters for a model from Alibaba Cloud Model Studio, and use the <code>GetAvailableModelsResource</code> operation for a model on a Hologres AI node.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建模型服务</p>
+     * <p>Creates a model service that allows AI functions to invoke models. You can create a service for two types of models: a model from Alibaba Cloud Model Studio or a model on a Hologres AI node. If you use a Hologres AI node, you must purchase the AI node resources separately.</p>
      * 
      * @param request CreateModelServiceRequest
      * @return CreateModelServiceResponse
@@ -612,7 +659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加用户</p>
+     * <p>Adds a RAM user or an STS account to a Hologres instance. Once added, the account can be used to log on to the instance.</p>
      * 
      * @param request CreateUserRequest
      * @param headers map
@@ -650,7 +697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加用户</p>
+     * <p>Adds a RAM user or an STS account to a Hologres instance. Once added, the account can be used to log on to the instance.</p>
      * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
@@ -663,7 +710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建warehouse</p>
+     * <p>Creates a warehouse.</p>
      * 
      * @param request CreateWarehouseRequest
      * @param headers map
@@ -711,7 +758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建warehouse</p>
+     * <p>Creates a warehouse.</p>
      * 
      * @param request CreateWarehouseRequest
      * @return CreateWarehouseResponse
@@ -724,7 +771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建分时弹性计划</p>
+     * <p>Creates a warehouse schedule task.</p>
      * 
      * @param request CreateWarehouseScheduleTaskRequest
      * @param headers map
@@ -774,7 +821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建分时弹性计划</p>
+     * <p>Creates a warehouse schedule task.</p>
      * 
      * @param request CreateWarehouseScheduleTaskRequest
      * @return CreateWarehouseScheduleTaskResponse
@@ -787,7 +834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除备份</p>
+     * <p>Deletes a backup.</p>
      * 
      * @param request DeleteBackupDataRequest
      * @param headers map
@@ -821,7 +868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除备份</p>
+     * <p>Deletes a backup.</p>
      * 
      * @param request DeleteBackupDataRequest
      * @return DeleteBackupDataResponse
@@ -882,15 +929,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</p>
+     * <p>Warning: 
+     * Before you call this operation, make sure that you understand its prerequisites and consequences.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</li>
-     * <li>You can delete only pay-as-you-go instances.</li>
+     * <li>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</li>
+     * <li>This operation applies only to pay-as-you-go instances.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>To unsubscribe from a subscription instance, go to the Unsubscribe page in the Alibaba Cloud console. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Hologres instance.</p>
+     * <p>Releases an instance.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param headers map
@@ -925,15 +978,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</p>
+     * <p>Warning: 
+     * Before you call this operation, make sure that you understand its prerequisites and consequences.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</li>
-     * <li>You can delete only pay-as-you-go instances.</li>
+     * <li>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</li>
+     * <li>This operation applies only to pay-as-you-go instances.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>To unsubscribe from a subscription instance, go to the Unsubscribe page in the Alibaba Cloud console. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a Hologres instance.</p>
+     * <p>Releases an instance.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -946,7 +1005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型资源</p>
+     * <p>Deletes a model resource. This action permanently deletes all models deployed on the node.</p>
      * 
      * @param request DeleteModelResourceRequest
      * @param headers map
@@ -980,7 +1039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除模型资源</p>
+     * <p>Deletes a model resource. This action permanently deletes all models deployed on the node.</p>
      * 
      * @param request DeleteModelResourceRequest
      * @return DeleteModelResourceResponse
@@ -993,7 +1052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型服务</p>
+     * <p>Deletes a specified model service.</p>
      * 
      * @param request DeleteModelServiceRequest
      * @param headers map
@@ -1027,7 +1086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型服务</p>
+     * <p>Deletes a specified model service.</p>
      * 
      * @param request DeleteModelServiceRequest
      * @return DeleteModelServiceResponse
@@ -1039,8 +1098,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: 
+     * Before calling this operation, review the feature documentation to understand its prerequisites and impact.
+     * &lt;props=&quot;china&quot;&gt;</p>
+     * </blockquote>
+     * <ul>
+     * <li>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe"></a>
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7"></a></li>
+     * <li>This operation is not limited to pay-as-you-go (PostPaid) instances.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>This operation does not unsubscribe from a subscription (PrePaid) instance. To do so, go to the Alibaba Cloud Unsubscription page. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除计算组弹性计划</p>
+     * <p>Deletes a warehouse schedule task.</p>
      * 
      * @param request DeleteWarehouseScheduleTaskRequest
      * @param headers map
@@ -1077,8 +1151,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Warning: 
+     * Before calling this operation, review the feature documentation to understand its prerequisites and impact.
+     * &lt;props=&quot;china&quot;&gt;</p>
+     * </blockquote>
+     * <ul>
+     * <li>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe"></a>
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7"></a></li>
+     * <li>This operation is not limited to pay-as-you-go (PostPaid) instances.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>This operation does not unsubscribe from a subscription (PrePaid) instance. To do so, go to the Alibaba Cloud Unsubscription page. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除计算组弹性计划</p>
+     * <p>Deletes a warehouse schedule task.</p>
      * 
      * @param request DeleteWarehouseScheduleTaskRequest
      * @return DeleteWarehouseScheduleTaskResponse
@@ -1091,7 +1180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停实例</p>
+     * <p>Lists all tags.</p>
      * 
      * @param request DescribeTagsRequest
      * @param headers map
@@ -1129,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停实例</p>
+     * <p>Lists all tags.</p>
      * 
      * @param request DescribeTagsRequest
      * @return DescribeTagsResponse
@@ -1141,8 +1230,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable the feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭OpenAPI执行SQL功能</p>
+     * <p>Shuts down the ExecuteStatement API access permissions for a specified Hologres instance.</p>
      * 
      * @param request DisableExecuteStatementRequest
      * @param headers map
@@ -1169,8 +1261,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable the feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭OpenAPI执行SQL功能</p>
+     * <p>Shuts down the ExecuteStatement API access permissions for a specified Hologres instance.</p>
      * 
      * @param request DisableExecuteStatementRequest
      * @return DisableExecuteStatementResponse
@@ -1230,7 +1325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消执行计划</p>
+     * <p>Disables the instance log.</p>
      * 
      * @param request DisableOperationEventRequest
      * @param headers map
@@ -1264,7 +1359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消执行计划</p>
+     * <p>Disables the instance log.</p>
      * 
      * @param request DisableOperationEventRequest
      * @return DisableOperationEventResponse
@@ -1277,7 +1372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭SSL</p>
+     * <p>Disables SSL encryption for a Hologres instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1303,7 +1398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭SSL</p>
+     * <p>Disables SSL encryption for a Hologres instance.</p>
      * @return DisableSSLResponse
      */
     public DisableSSLResponse disableSSL(String instanceId) throws Exception {
@@ -1313,8 +1408,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables the execution of SQL statements through OpenAPI for a specified Hologres instance. After this feature is disabled, all <code>ExecuteStatement</code> calls return an error. You can call the <code>EnableExecuteStatement</code> operation to re-enable this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭服务账号</p>
+     * <p>Disables a Support Account.</p>
      * 
      * @param request DisableSupportAccountRequest
      * @param headers map
@@ -1347,8 +1445,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables the execution of SQL statements through OpenAPI for a specified Hologres instance. After this feature is disabled, all <code>ExecuteStatement</code> calls return an error. You can call the <code>EnableExecuteStatement</code> operation to re-enable this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭服务账号</p>
+     * <p>Disables a Support Account.</p>
      * 
      * @param request DisableSupportAccountRequest
      * @return DisableSupportAccountResponse
@@ -1361,7 +1462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭自动弹性</p>
+     * <p>Disables autoscale for a specified compute group.</p>
      * 
      * @param request DisableWarehouseAutoScaleRequest
      * @param headers map
@@ -1395,7 +1496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭自动弹性</p>
+     * <p>Disables autoscale for a specified compute group.</p>
      * 
      * @param request DisableWarehouseAutoScaleRequest
      * @return DisableWarehouseAutoScaleResponse
@@ -1408,7 +1509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消升级</p>
+     * <p>Cancels an upgrade. You can call this operation only if the upgrade task has not started or is in the <code>pre_check</code> state. You cannot cancel the upgrade after the task enters the <code>backup</code> state or any subsequent state.</p>
      * 
      * @param request DiscardUpgradeRequest
      * @param headers map
@@ -1442,7 +1543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消升级</p>
+     * <p>Cancels an upgrade. You can call this operation only if the upgrade task has not started or is in the <code>pre_check</code> state. You cannot cancel the upgrade after the task enters the <code>backup</code> state or any subsequent state.</p>
      * 
      * @param request DiscardUpgradeRequest
      * @return DiscardUpgradeResponse
@@ -1455,7 +1556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户</p>
+     * <p>Deletes a RAM user or an STS account from a Hologres instance. Once deleted, the user can no longer log in to the instance. To restore access, call the CreateUser operation to add the user.</p>
      * 
      * @param request DropUserRequest
      * @param headers map
@@ -1493,7 +1594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户</p>
+     * <p>Deletes a RAM user or an STS account from a Hologres instance. Once deleted, the user can no longer log in to the instance. To restore access, call the CreateUser operation to add the user.</p>
      * 
      * @param request DropUserRequest
      * @return DropUserResponse
@@ -1505,8 +1606,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enables SQL execution via OpenAPI for a specified Hologres instance. Once enabled, RAM accounts with the <code>hologram:ExecuteStatement</code> permission can execute SQL statements by calling the <code>ExecuteStatement</code> API. To query the current status, call the <code>GetExecuteStatementEnabled</code> API. To disable the feature, call the <code>DisableExecuteStatement</code> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启或关闭OpenAPI执行SQL功能</p>
+     * <p>Enables SQL execution via OpenAPI for a specified Hologres instance.</p>
      * 
      * @param request EnableExecuteStatementRequest
      * @param headers map
@@ -1533,8 +1637,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enables SQL execution via OpenAPI for a specified Hologres instance. Once enabled, RAM accounts with the <code>hologram:ExecuteStatement</code> permission can execute SQL statements by calling the <code>ExecuteStatement</code> API. To query the current status, call the <code>GetExecuteStatementEnabled</code> API. To disable the feature, call the <code>DisableExecuteStatement</code> API.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启或关闭OpenAPI执行SQL功能</p>
+     * <p>Enables SQL execution via OpenAPI for a specified Hologres instance.</p>
      * 
      * @param request EnableExecuteStatementRequest
      * @return EnableExecuteStatementResponse
@@ -1547,7 +1654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables data lake acceleration.</p>
+     * <p>Enables data lake acceleration for a Hologres instance.</p>
      * 
      * @param request EnableHiveAccessRequest
      * @param headers map
@@ -1581,7 +1688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables data lake acceleration.</p>
+     * <p>Enables data lake acceleration for a Hologres instance.</p>
      * 
      * @param request EnableHiveAccessRequest
      * @return EnableHiveAccessResponse
@@ -1594,7 +1701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打开SSL</p>
+     * <p>Enables SSL encryption for a Hologres instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1620,7 +1727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打开SSL</p>
+     * <p>Enables SSL encryption for a Hologres instance.</p>
      * @return EnableSSLResponse
      */
     public EnableSSLResponse enableSSL(String instanceId) throws Exception {
@@ -1630,8 +1737,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation lets you execute SQL statements on a specified Hologres instance through OpenAPI. After this feature is enabled, a RAM account with the <code>hologram:ExecuteStatement</code> permission can call the <code>ExecuteStatement</code> operation. You can call GetExecuteStatementEnabled to query the current status and DisableExecuteStatement to disable this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>打开服务账号</p>
+     * <p>Enables a support account.</p>
      * 
      * @param request EnableSupportAccountRequest
      * @param headers map
@@ -1678,8 +1788,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation lets you execute SQL statements on a specified Hologres instance through OpenAPI. After this feature is enabled, a RAM account with the <code>hologram:ExecuteStatement</code> permission can call the <code>ExecuteStatement</code> operation. You can call GetExecuteStatementEnabled to query the current status and DisableExecuteStatement to disable this feature.</p>
+     * 
      * <b>summary</b> : 
-     * <p>打开服务账号</p>
+     * <p>Enables a support account.</p>
      * 
      * @param request EnableSupportAccountRequest
      * @return EnableSupportAccountResponse
@@ -1692,7 +1805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启自动弹性</p>
+     * <p>Enables auto scaling for a warehouse.</p>
      * 
      * @param request EnableWarehouseAutoScaleRequest
      * @param headers map
@@ -1730,7 +1843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启自动弹性</p>
+     * <p>Enables auto scaling for a warehouse.</p>
      * 
      * @param request EnableWarehouseAutoScaleRequest
      * @return EnableWarehouseAutoScaleResponse
@@ -1742,8 +1855,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use this API to securely execute SQL statements on a Hologres instance through OpenAPI.
+     * Before using this API, ensure the following prerequisites are met:</p>
+     * <ol>
+     * <li>The &quot;Allow SQL execution through OpenAPI&quot; option is enabled on the &quot;Data Security&quot; tab of the instance details page in the console.</li>
+     * <li>The calling RAM account must have the hologram:ExecuteStatement permission.
+     * This API supports statements such as SELECT, DDL, and DML. It also supports parameterized queries with $1 and $2 placeholders to prevent SQL injection. By default, query results are limited to 200 rows (configurable up to 1,000) and 10 MB. Result sets that exceed these limits are truncated, and the <code>truncated</code> field in the response indicates if truncation occurred. The timeout for a single execution is 30 seconds.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>SQL执行</p>
+     * <p>Executes an SQL statement synchronously on a specified database via OpenAPI and returns the result.</p>
      * 
      * @param request ExecuteStatementRequest
      * @param headers map
@@ -1796,8 +1918,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use this API to securely execute SQL statements on a Hologres instance through OpenAPI.
+     * Before using this API, ensure the following prerequisites are met:</p>
+     * <ol>
+     * <li>The &quot;Allow SQL execution through OpenAPI&quot; option is enabled on the &quot;Data Security&quot; tab of the instance details page in the console.</li>
+     * <li>The calling RAM account must have the hologram:ExecuteStatement permission.
+     * This API supports statements such as SELECT, DDL, and DML. It also supports parameterized queries with $1 and $2 placeholders to prevent SQL injection. By default, query results are limited to 200 rows (configurable up to 1,000) and 10 MB. Result sets that exceed these limits are truncated, and the <code>truncated</code> field in the response indicates if truncation occurred. The timeout for a single execution is 30 seconds.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>SQL执行</p>
+     * <p>Executes an SQL statement synchronously on a specified database via OpenAPI and returns the result.</p>
      * 
      * @param request ExecuteStatementRequest
      * @return ExecuteStatementResponse
@@ -1810,7 +1941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得证书信息</p>
+     * <p>Retrieves the SSL certificate attributes of a Hologres instance, including SSL status and certificate expiration time.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1836,7 +1967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得证书信息</p>
+     * <p>Retrieves the SSL certificate attributes of a Hologres instance, including SSL status and certificate expiration time.</p>
      * @return GetCertificateAttributeResponse
      */
     public GetCertificateAttributeResponse getCertificateAttribute(String instanceId) throws Exception {
@@ -1846,8 +1977,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation checks if the &quot;Allow SQL execution through OpenAPI&quot; feature is enabled for a specified Hologres instance. Returns <code>true</code> if the feature is enabled, and <code>false</code> otherwise. If enabled, you can call the <code>ExecuteStatement</code> operation to execute SQL statements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例是否已开启OpenAPI执行SQL功能</p>
+     * <p>Checks whether a specified Hologres instance allows SQL execution through OpenAPI.</p>
      * 
      * @param request GetExecuteStatementEnabledRequest
      * @param headers map
@@ -1874,8 +2008,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation checks if the &quot;Allow SQL execution through OpenAPI&quot; feature is enabled for a specified Hologres instance. Returns <code>true</code> if the feature is enabled, and <code>false</code> otherwise. If enabled, you can call the <code>ExecuteStatement</code> operation to execute SQL statements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例是否已开启OpenAPI执行SQL功能</p>
+     * <p>Checks whether a specified Hologres instance allows SQL execution through OpenAPI.</p>
      * 
      * @param request GetExecuteStatementEnabledRequest
      * @return GetExecuteStatementEnabledResponse
@@ -1887,8 +2024,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Checks whether external accounts are allowed to log in to HoloWeb for a specified Hologres instance. The operation returns <code>true</code> if external accounts are allowed and <code>false</code> otherwise.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取holoweb登陆权限</p>
+     * <p>Gets the external account login setting for HoloWeb.</p>
      * 
      * @param request GetHoloWebLoginSettingRequest
      * @param headers map
@@ -1921,8 +2061,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Checks whether external accounts are allowed to log in to HoloWeb for a specified Hologres instance. The operation returns <code>true</code> if external accounts are allowed and <code>false</code> otherwise.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取holoweb登陆权限</p>
+     * <p>Gets the external account login setting for HoloWeb.</p>
      * 
      * @param request GetHoloWebLoginSettingRequest
      * @return GetHoloWebLoginSettingResponse
@@ -1935,7 +2078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of an instance.</p>
+     * <p>Retrieves the details of an instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1961,7 +2104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of an instance.</p>
+     * <p>Retrieves the details of an instance.</p>
      * @return GetInstanceResponse
      */
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
@@ -1972,7 +2115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型信息</p>
+     * <p>Queries the list of large model services bound to a Hologres instance.</p>
      * 
      * @param request GetInstanceModelRequest
      * @param headers map
@@ -2000,7 +2143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型信息</p>
+     * <p>Queries the list of large model services bound to a Hologres instance.</p>
      * 
      * @param request GetInstanceModelRequest
      * @return GetInstanceModelResponse
@@ -2013,7 +2156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取上次升级历史</p>
+     * <p>Retrieves the last upgrade record.</p>
      * 
      * @param request GetLastUpgradeRecordRequest
      * @param headers map
@@ -2041,7 +2184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取上次升级历史</p>
+     * <p>Retrieves the last upgrade record.</p>
      * 
      * @param request GetLastUpgradeRecordRequest
      * @return GetLastUpgradeRecordResponse
@@ -2054,7 +2197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得根证书</p>
+     * <p>Retrieves the root SSL certificate of a Hologres instance for client-side SSL connections.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2080,7 +2223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获得根证书</p>
+     * <p>Retrieves the root SSL certificate of a Hologres instance for client-side SSL connections.</p>
      * @return GetRootCertificateResponse
      */
     public GetRootCertificateResponse getRootCertificate(String instanceId) throws Exception {
@@ -2091,7 +2234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取周期备份配置</p>
+     * <p>Retrieves the backup configuration.</p>
      * 
      * @param request GetScheduledBackupConfigRequest
      * @param headers map
@@ -2133,7 +2276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取周期备份配置</p>
+     * <p>Retrieves the backup configuration.</p>
      * 
      * @param request GetScheduledBackupConfigRequest
      * @return GetScheduledBackupConfigResponse
@@ -2146,7 +2289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取升级状态</p>
+     * <p>Queries the upgrade status of an instance.</p>
      * 
      * @param request GetUpgradeStatusRequest
      * @param headers map
@@ -2180,7 +2323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取升级状态</p>
+     * <p>Queries the upgrade status of an instance.</p>
      * 
      * @param request GetUpgradeStatusRequest
      * @return GetUpgradeStatusResponse
@@ -2193,7 +2336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>是否可升级</p>
+     * <p>Queries whether an instance can be upgraded.</p>
      * 
      * @param request GetUpgradeableRequest
      * @param headers map
@@ -2227,7 +2370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>是否可升级</p>
+     * <p>Queries whether an instance can be upgraded.</p>
      * 
      * @param request GetUpgradeableRequest
      * @return GetUpgradeableResponse
@@ -2240,7 +2383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries details of a virtual warehouse instance.</p>
+     * <p>Retrieves the details of a virtual warehouse.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2266,7 +2409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries details of a virtual warehouse instance.</p>
+     * <p>Retrieves the details of a virtual warehouse.</p>
      * @return GetWarehouseDetailResponse
      */
     public GetWarehouseDetailResponse getWarehouseDetail(String instanceId) throws Exception {
@@ -2277,7 +2420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DB授权</p>
+     * <p>Grants permissions on a database to a specified user within a Hologres instance.</p>
      * 
      * @param request GrantDatabasePermissionRequest
      * @param headers map
@@ -2319,7 +2462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DB授权</p>
+     * <p>Grants permissions on a database to a specified user within a Hologres instance.</p>
      * 
      * @param request GrantDatabasePermissionRequest
      * @return GrantDatabasePermissionResponse
@@ -2332,7 +2475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DB授权</p>
+     * <p>Grants permissions on a schema to a specified user within a Hologres instance.</p>
      * 
      * @param request GrantSchemaPermissionRequest
      * @param headers map
@@ -2378,7 +2521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DB授权</p>
+     * <p>Grants permissions on a schema to a specified user within a Hologres instance.</p>
      * 
      * @param request GrantSchemaPermissionRequest
      * @return GrantSchemaPermissionResponse
@@ -2391,7 +2534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DB授权</p>
+     * <p>Grants permissions on a table to a specified user.</p>
      * 
      * @param request GrantTablePermissionRequest
      * @param headers map
@@ -2449,7 +2592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DB授权</p>
+     * <p>Grants permissions on a table to a specified user.</p>
      * 
      * @param request GrantTablePermissionRequest
      * @return GrantTablePermissionResponse
@@ -2462,7 +2605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</p>
+     * <p>Retrieves a list of snapshots. Each snapshot represents a point-in-time backup that can be used to restore a new instance with its full data.</p>
      * 
      * @param request ListBackupDataRequest
      * @param headers map
@@ -2500,7 +2643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</p>
+     * <p>Retrieves a list of snapshots. Each snapshot represents a point-in-time backup that can be used to restore a new instance with its full data.</p>
      * 
      * @param request ListBackupDataRequest
      * @return ListBackupDataResponse
@@ -2513,7 +2656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取DB列表</p>
+     * <p>Queries the databases in a Hologres instance.</p>
      * 
      * @param request ListDatabasesRequest
      * @param headers map
@@ -2547,7 +2690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取DB列表</p>
+     * <p>Queries the databases in a Hologres instance.</p>
      * 
      * @param request ListDatabasesRequest
      * @return ListDatabasesResponse
@@ -2559,8 +2702,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API operation retrieves information about model services deployed on a specific Holo instance, including but not limited to CPU, GPU, and memory resource usage.</li>
+     * <li>The <code>instanceId</code> parameter is optional. If not specified, information about all related instances is returned by default.</li>
+     * <li>This operation applies to Hologres AI nodes. Some parameters may be invalid or not applicable to non-AI nodes.</li>
+     * <li>Before using this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologram</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取只读从实例</p>
+     * <p>Retrieves read-only secondary instances.</p>
      * 
      * @param request ListFollowerInstancesRequest
      * @param headers map
@@ -2593,8 +2745,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API operation retrieves information about model services deployed on a specific Holo instance, including but not limited to CPU, GPU, and memory resource usage.</li>
+     * <li>The <code>instanceId</code> parameter is optional. If not specified, information about all related instances is returned by default.</li>
+     * <li>This operation applies to Hologres AI nodes. Some parameters may be invalid or not applicable to non-AI nodes.</li>
+     * <li>Before using this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologram</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取只读从实例</p>
+     * <p>Retrieves read-only secondary instances.</p>
      * 
      * @param request ListFollowerInstancesRequest
      * @return ListFollowerInstancesResponse
@@ -2606,8 +2767,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation retrieves information about model services deployed on a specific Hologres instance, including but not limited to CPU, GPU, and memory resource usage.</li>
+     * <li>The <code>instanceId</code> parameter is optional. If you do not specify this parameter, information about all related instances is returned by default.</li>
+     * <li>This operation applies to Hologres AI nodes. Some parameters may be invalid or inapplicable to non-AI nodes.</li>
+     * <li>Before you call this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologres</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>AI资源列表</p>
+     * <p>AI node resources.</p>
      * 
      * @param request ListInstanceModelRequest
      * @param headers map
@@ -2634,8 +2804,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation retrieves information about model services deployed on a specific Hologres instance, including but not limited to CPU, GPU, and memory resource usage.</li>
+     * <li>The <code>instanceId</code> parameter is optional. If you do not specify this parameter, information about all related instances is returned by default.</li>
+     * <li>This operation applies to Hologres AI nodes. Some parameters may be invalid or inapplicable to non-AI nodes.</li>
+     * <li>Before you call this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologres</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>AI资源列表</p>
+     * <p>AI node resources.</p>
      * 
      * @param request ListInstanceModelRequest
      * @return ListInstanceModelResponse
@@ -2648,7 +2827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Retrieves a list of instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param headers map
@@ -2690,7 +2869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>Retrieves a list of instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -2702,8 +2881,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves a list of leader instances that are associated with a specific Holo instance.</li>
+     * <li>The <code>instanceId</code> parameter is optional. If omitted, the API returns all related instances by default.</li>
+     * <li>This API applies to Hologres AI nodes. Some parameters may be invalid for non-AI nodes.</li>
+     * <li>Before you call this operation, review the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing and pricing of Alibaba Cloud Hologres</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取主实例</p>
+     * <p>Retrieves a list of potential leader instances.</p>
      * 
      * @param request ListLeaderInstancesRequest
      * @param headers map
@@ -2736,8 +2924,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves a list of leader instances that are associated with a specific Holo instance.</li>
+     * <li>The <code>instanceId</code> parameter is optional. If omitted, the API returns all related instances by default.</li>
+     * <li>This API applies to Hologres AI nodes. Some parameters may be invalid for non-AI nodes.</li>
+     * <li>Before you call this operation, review the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing and pricing of Alibaba Cloud Hologres</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取主实例</p>
+     * <p>Retrieves a list of potential leader instances.</p>
      * 
      * @param request ListLeaderInstancesRequest
      * @return ListLeaderInstancesResponse
@@ -2750,7 +2947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例可迁移可用区列表</p>
+     * <p>Lists the availability zones to which an instance can be migrated. This operation applies to instances that are deployed across three availability zones.</p>
      * 
      * @param request ListMigrationZonesRequest
      * @param headers map
@@ -2788,7 +2985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例可迁移可用区列表</p>
+     * <p>Lists the availability zones to which an instance can be migrated. This operation applies to instances that are deployed across three availability zones.</p>
      * 
      * @param request ListMigrationZonesRequest
      * @return ListMigrationZonesResponse
@@ -2801,7 +2998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出模型列表</p>
+     * <p>Lists models.</p>
      * 
      * @param request ListModelCatalogRequest
      * @param headers map
@@ -2817,6 +3014,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("provider", request.provider);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2839,7 +3040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出模型列表</p>
+     * <p>Lists models.</p>
      * 
      * @param request ListModelCatalogRequest
      * @return ListModelCatalogResponse
@@ -2852,7 +3053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运维事件列表</p>
+     * <p>Retrieves action events that match specified criteria, supporting pagination and sorting.</p>
      * 
      * @param request ListOperationEventsRequest
      * @param headers map
@@ -2914,7 +3115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>运维事件列表</p>
+     * <p>Retrieves action events that match specified criteria, supporting pagination and sorting.</p>
      * 
      * @param request ListOperationEventsRequest
      * @return ListOperationEventsResponse
@@ -2927,7 +3128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>holoapp共有云所有开服的region</p>
+     * <p>Queries the list of all regions supported by Hologres.</p>
      * 
      * @param request ListRegionsRequest
      * @param headers map
@@ -2955,7 +3156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>holoapp共有云所有开服的region</p>
+     * <p>Queries the list of all regions supported by Hologres.</p>
      * 
      * @param request ListRegionsRequest
      * @return ListRegionsResponse
@@ -2968,7 +3169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取版本列表</p>
+     * <p>Retrieves the list of versions available for upgrade.</p>
      * 
      * @param request ListUpgradeReleaseVersionsRequest
      * @param headers map
@@ -3002,7 +3203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取版本列表</p>
+     * <p>Retrieves the list of versions available for upgrade.</p>
      * 
      * @param request ListUpgradeReleaseVersionsRequest
      * @return ListUpgradeReleaseVersionsResponse
@@ -3014,8 +3215,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves compute group scaling events for a specific instance ID.</li>
+     * <li>The <code>startTime</code> and <code>endTime</code> parameters specify the time range for the query, which defaults to the last three days.</li>
+     * <li>The <code>pageSize</code> and <code>pageNumber</code> parameters control pagination. The maximum value for <code>pageSize</code> is 100.</li>
+     * <li>If the <code>elasticType</code> parameter is omitted, the API returns scaling events of all types.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分时弹性日志</p>
+     * <p>Retrieves the elastic scheduling events for a specified instance and time range.</p>
      * 
      * @param request ListWarehouseScheduleEventRequest
      * @param headers map
@@ -3064,8 +3274,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves compute group scaling events for a specific instance ID.</li>
+     * <li>The <code>startTime</code> and <code>endTime</code> parameters specify the time range for the query, which defaults to the last three days.</li>
+     * <li>The <code>pageSize</code> and <code>pageNumber</code> parameters control pagination. The maximum value for <code>pageSize</code> is 100.</li>
+     * <li>If the <code>elasticType</code> parameter is omitted, the API returns scaling events of all types.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>分时弹性日志</p>
+     * <p>Retrieves the elastic scheduling events for a specified instance and time range.</p>
      * 
      * @param request ListWarehouseScheduleEventRequest
      * @return ListWarehouseScheduleEventResponse
@@ -3078,7 +3297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计算分时弹性计划列表</p>
+     * <p>Lists all warehouse schedule tasks for a specified instance.</p>
      * 
      * @param request ListWarehouseScheduleTaskRequest
      * @param headers map
@@ -3106,7 +3325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计算分时弹性计划列表</p>
+     * <p>Lists all warehouse schedule tasks for a specified instance.</p>
      * 
      * @param request ListWarehouseScheduleTaskRequest
      * @return ListWarehouseScheduleTaskResponse
@@ -3119,7 +3338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of virtual warehouse instances.</p>
+     * <p>Retrieves a list of virtual warehouses.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3145,7 +3364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of virtual warehouse instances.</p>
+     * <p>Retrieves a list of virtual warehouses.</p>
      * @return ListWarehousesResponse
      */
     public ListWarehousesResponse listWarehouses(String instanceId) throws Exception {
@@ -3156,7 +3375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例迁移</p>
+     * <p>Migrates an instance to a target availability zone. This operation only supports instances deployed across three availability zones. The instance is launched in the target availability zone without migrating its storage. The process takes approximately 5 minutes.</p>
      * 
      * @param request MigrateInstanceZoneRequest
      * @param headers map
@@ -3190,7 +3409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例迁移</p>
+     * <p>Migrates an instance to a target availability zone. This operation only supports instances deployed across three availability zones. The instance is launched in the target availability zone without migrating its storage. The process takes approximately 5 minutes.</p>
      * 
      * @param request MigrateInstanceZoneRequest
      * @return MigrateInstanceZoneResponse
@@ -3203,7 +3422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>准备升级</p>
+     * <p>Prepares an instance for an upgrade by running a pre-upgrade assessment. You can upgrade the instance only if the assessment passes. If it fails, contact technical support for a manual upgrade.</p>
      * 
      * @param request PrepareUpgradeRequest
      * @param headers map
@@ -3247,7 +3466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>准备升级</p>
+     * <p>Prepares an instance for an upgrade by running a pre-upgrade assessment. You can upgrade the instance only if the assessment passes. If it fails, contact technical support for a manual upgrade.</p>
      * 
      * @param request PrepareUpgradeRequest
      * @return PrepareUpgradeResponse
@@ -3260,7 +3479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers shard rebalancing for a virtual warehouse.</p>
+     * <p>Rebalances shards in a virtual warehouse.</p>
      * 
      * @param request RebalanceHoloWarehouseRequest
      * @param headers map
@@ -3294,7 +3513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers shard rebalancing for a virtual warehouse.</p>
+     * <p>Rebalances shards in a virtual warehouse.</p>
      * 
      * @param request RebalanceHoloWarehouseRequest
      * @return RebalanceHoloWarehouseResponse
@@ -3359,16 +3578,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: 
+     * This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
-     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</li>
-     * <li>You can renew only subscription instances.</li>
+     * <li>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>For more information about Hologres renewal, see <a href="https://help.aliyun.com/zh/hologres/product-overview/manage-renewals?spm=a2c4g.11186623.0.0.6b776c2eJ1h2vx">Manage renewals</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</li>
+     * <li>Renewal is available only for subscription (PrePaid) instances.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</p>
+     * <p>Renews a subscription Hologres instance. You can also enable monthly auto-renewal.</p>
      * 
      * @param request RenewInstanceRequest
      * @param headers map
@@ -3407,16 +3633,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: 
+     * This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
-     * <li>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</li>
-     * <li>You can renew only subscription instances.</li>
+     * <li>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>For more information about Hologres renewal, see <a href="https://help.aliyun.com/zh/hologres/product-overview/manage-renewals?spm=a2c4g.11186623.0.0.6b776c2eJ1h2vx">Manage renewals</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</li>
+     * <li>Renewal is available only for subscription (PrePaid) instances.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</p>
+     * <p>Renews a subscription Hologres instance. You can also enable monthly auto-renewal.</p>
      * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -3429,7 +3662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新证书</p>
+     * <p>Renews the SSL certificate of a Hologres instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3455,7 +3688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新证书</p>
+     * <p>Renews the SSL certificate of a Hologres instance.</p>
      * @return RenewSSLCertificateResponse
      */
     public RenewSSLCertificateResponse renewSSLCertificate(String instanceId) throws Exception {
@@ -3513,7 +3746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an instance.</p>
+     * <p>Restarts a Hologres instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3539,7 +3772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts an instance.</p>
+     * <p>Restarts a Hologres instance.</p>
      * @return RestartInstanceResponse
      */
     public RestartInstanceResponse restartInstance(String instanceId) throws Exception {
@@ -3550,7 +3783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes a virtual warehouse.</p>
+     * <p>Resumes a virtual warehouse from Stopped to Running.</p>
      * 
      * @param request ResumeHoloWarehouseRequest
      * @param headers map
@@ -3584,7 +3817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes a virtual warehouse.</p>
+     * <p>Resumes a virtual warehouse from Stopped to Running.</p>
      * 
      * @param request ResumeHoloWarehouseRequest
      * @return ResumeHoloWarehouseResponse
@@ -3597,7 +3830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes an instance.</p>
+     * <p>Resumes a paused instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3623,7 +3856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes an instance.</p>
+     * <p>Resumes a paused instance.</p>
      * @return ResumeInstanceResponse
      */
     public ResumeInstanceResponse resumeInstance(String instanceId) throws Exception {
@@ -3634,7 +3867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消DB授权</p>
+     * <p>Revokes permissions on a database from a specified user within a Hologres instance.</p>
      * 
      * @param request RevokeDatabasePermissionRequest
      * @param headers map
@@ -3676,7 +3909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消DB授权</p>
+     * <p>Revokes permissions on a database from a specified user within a Hologres instance.</p>
      * 
      * @param request RevokeDatabasePermissionRequest
      * @return RevokeDatabasePermissionResponse
@@ -3689,7 +3922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消Schema授权</p>
+     * <p>Revokes permissions on a schema from a specified user within a Hologres instance.</p>
      * 
      * @param request RevokeSchemaPermissionRequest
      * @param headers map
@@ -3735,7 +3968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消Schema授权</p>
+     * <p>Revokes permissions on a schema from a specified user within a Hologres instance.</p>
      * 
      * @param request RevokeSchemaPermissionRequest
      * @return RevokeSchemaPermissionResponse
@@ -3748,7 +3981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消表授权</p>
+     * <p>Revokes permissions on a table from a specified user.</p>
      * 
      * @param request RevokeTablePermissionRequest
      * @param headers map
@@ -3806,7 +4039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消表授权</p>
+     * <p>Revokes permissions on a table from a specified user.</p>
      * 
      * @param request RevokeTablePermissionRequest
      * @return RevokeTablePermissionResponse
@@ -3819,7 +4052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales in or out a virtual warehouse.</p>
+     * <p>Scales a virtual warehouse.</p>
      * 
      * @param request ScaleHoloWarehouseRequest
      * @param headers map
@@ -3861,7 +4094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales in or out a virtual warehouse.</p>
+     * <p>Scales a virtual warehouse.</p>
      * 
      * @param request ScaleHoloWarehouseRequest
      * @return ScaleHoloWarehouseResponse
@@ -3875,11 +4108,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: 
+     * This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
-     * <li>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
+     * <li>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications?spm=a2c4g.11186623.0.i7">Upgrade or downgrade instance specifications</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3938,11 +4178,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</p>
+     * <p>Warning: 
+     * This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</li>
-     * <li>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
+     * <li>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications?spm=a2c4g.11186623.0.i7">Upgrade or downgrade instance specifications</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3959,7 +4206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops an instance.</p>
+     * <p>Stops a running instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3985,7 +4232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops an instance.</p>
+     * <p>Stops a running instance.</p>
      * @return StopInstanceResponse
      */
     public StopInstanceResponse stopInstance(String instanceId) throws Exception {
@@ -3996,7 +4243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suspends a virtual warehouse.</p>
+     * <p>Stops a virtual warehouse.</p>
      * 
      * @param request SuspendHoloWarehouseRequest
      * @param headers map
@@ -4030,7 +4277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suspends a virtual warehouse.</p>
+     * <p>Stops a virtual warehouse.</p>
      * 
      * @param request SuspendHoloWarehouseRequest
      * @return SuspendHoloWarehouseResponse
@@ -4043,7 +4290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增tag</p>
+     * <p>Adds tags to one or more resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -4099,7 +4346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增tag</p>
+     * <p>Adds tags to one or more resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -4112,7 +4359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除绑定主实例</p>
+     * <p>Detaches a read-only instance from its primary instance.</p>
      * 
      * @param request UnBindLeaderInstanceRequest
      * @param headers map
@@ -4146,7 +4393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解除绑定主实例</p>
+     * <p>Detaches a read-only instance from its primary instance.</p>
      * 
      * @param request UnBindLeaderInstanceRequest
      * @return UnBindLeaderInstanceResponse
@@ -4159,7 +4406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除tag</p>
+     * <p>Removes tags from one or more instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @param headers map
@@ -4215,7 +4462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除tag</p>
+     * <p>Removes tags from one or more instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -4228,7 +4475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改小版本自动升级开关</p>
+     * <p>Enables automatic minor version upgrades for an instance. The upgrade occurs automatically during the maintenance window.</p>
      * 
      * @param request UpdateAutoUpgradeRequest
      * @param headers map
@@ -4262,7 +4509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改小版本自动升级开关</p>
+     * <p>Enables automatic minor version upgrades for an instance. The upgrade occurs automatically during the maintenance window.</p>
      * 
      * @param request UpdateAutoUpgradeRequest
      * @return UpdateAutoUpgradeResponse
@@ -4275,7 +4522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份描述</p>
+     * <p>Updates the description of a backup.</p>
      * 
      * @param request UpdateBackupDataDescRequest
      * @param headers map
@@ -4319,7 +4566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新备份描述</p>
+     * <p>Updates the description of a backup.</p>
      * 
      * @param request UpdateBackupDataDescRequest
      * @return UpdateBackupDataDescResponse
@@ -4331,8 +4578,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creating a model service requires multiple parameters. To find the parameters for a Model Studio model, call the <code>ListModelCatalog</code> operation. For a Hologres AI node, call the <code>GetAvailableModelsResource</code> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改holoweb登陆权限</p>
+     * <p>Modifies the login settings for holoweb.</p>
      * 
      * @param request UpdateHoloWebLoginSettingRequest
      * @param headers map
@@ -4371,8 +4621,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creating a model service requires multiple parameters. To find the parameters for a Model Studio model, call the <code>ListModelCatalog</code> operation. For a Hologres AI node, call the <code>GetAvailableModelsResource</code> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改holoweb登陆权限</p>
+     * <p>Modifies the login settings for holoweb.</p>
      * 
      * @param request UpdateHoloWebLoginSettingRequest
      * @return UpdateHoloWebLoginSettingResponse
@@ -4432,7 +4685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the network configuration of an instance.</p>
+     * <p>Modifies the network type of an instance.</p>
      * 
      * @param request UpdateInstanceNetworkTypeRequest
      * @param headers map
@@ -4486,7 +4739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the network configuration of an instance.</p>
+     * <p>Modifies the network type of an instance.</p>
      * 
      * @param request UpdateInstanceNetworkTypeRequest
      * @return UpdateInstanceNetworkTypeResponse
@@ -4499,7 +4752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改端口号</p>
+     * <p>Updates the port of an instance.</p>
      * 
      * @param request UpdateInstancePortRequest
      * @param headers map
@@ -4533,7 +4786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改端口号</p>
+     * <p>Updates the port of an instance.</p>
      * 
      * @param request UpdateInstancePortRequest
      * @return UpdateInstancePortResponse
@@ -4546,7 +4799,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改可维护时间窗口</p>
+     * <p>Updates the maintenance window of a specified instance.</p>
      * 
      * @param request UpdateMaintenanceWindowRequest
      * @param headers map
@@ -4584,7 +4837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改可维护时间窗口</p>
+     * <p>Updates the maintenance window of a specified instance.</p>
      * 
      * @param request UpdateMaintenanceWindowRequest
      * @return UpdateMaintenanceWindowResponse
@@ -4597,7 +4850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型服务</p>
+     * <p>Updates a model service. This operation applies only to Hologres AI.</p>
      * 
      * @param request UpdateModelServiceRequest
      * @param headers map
@@ -4651,7 +4904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型服务</p>
+     * <p>Updates a model service. This operation applies only to Hologres AI.</p>
      * 
      * @param request UpdateModelServiceRequest
      * @return UpdateModelServiceResponse
@@ -4664,7 +4917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改运维事件执行时间</p>
+     * <p>Updates the scheduled execution time for an operation event.</p>
      * 
      * @param request UpdateOperationEventScheduleTimeRequest
      * @param headers map
@@ -4702,7 +4955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改运维事件执行时间</p>
+     * <p>Updates the scheduled execution time for an operation event.</p>
      * 
      * @param request UpdateOperationEventScheduleTimeRequest
      * @return UpdateOperationEventScheduleTimeResponse
@@ -4715,7 +4968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置周期备份</p>
+     * <p>This operation configures a backup policy for an instance. You can set a weekly schedule to back up an instance on specific days, such as every Monday, Wednesday, and Friday at 20:00:00. You can also specify the number of completed backups to retain. The system automatically deletes expired backups.</p>
      * 
      * @param request UpdateScheduledBackupConfigRequest
      * @param headers map
@@ -4787,7 +5040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置周期备份</p>
+     * <p>This operation configures a backup policy for an instance. You can set a weekly schedule to back up an instance on specific days, such as every Monday, Wednesday, and Friday at 20:00:00. You can also specify the number of completed backups to retain. The system automatically deletes expired backups.</p>
      * 
      * @param request UpdateScheduledBackupConfigRequest
      * @return UpdateScheduledBackupConfigResponse
@@ -4800,7 +5053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建分时弹性计划</p>
+     * <p>Updates an elastic schedule for a warehouse.</p>
      * 
      * @param request UpdateWarehouseScheduleTaskRequest
      * @param headers map
@@ -4850,7 +5103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建分时弹性计划</p>
+     * <p>Updates an elastic schedule for a warehouse.</p>
      * 
      * @param request UpdateWarehouseScheduleTaskRequest
      * @return UpdateWarehouseScheduleTaskResponse
@@ -4863,7 +5116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开始升级</p>
+     * <p>Upgrades an instance. If the preparation is successful, the instance can start the upgrade directly.</p>
      * 
      * @param request UpgradeInstanceRequest
      * @param headers map
@@ -4905,7 +5158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开始升级</p>
+     * <p>Upgrades an instance. If the preparation is successful, the instance can start the upgrade directly.</p>
      * 
      * @param request UpgradeInstanceRequest
      * @return UpgradeInstanceResponse

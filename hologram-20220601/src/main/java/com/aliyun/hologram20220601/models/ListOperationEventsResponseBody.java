@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListOperationEventsResponseBody extends TeaModel {
+    /**
+     * <p>The event list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListOperationEventsResponseBodyData> data;
 
     /**
+     * <p>The page number to return. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -15,6 +20,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 50. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,7 +29,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -31,6 +38,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>120</p>
      */
@@ -84,6 +93,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
 
     public static class ListOperationEventsResponseBodyDataFollowerInstances extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgxxxx</p>
          */
@@ -91,6 +102,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>hi</p>
          */
@@ -122,6 +135,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
 
     public static class ListOperationEventsResponseBodyData extends TeaModel {
         /**
+         * <p>Specifies whether the event can be canceled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -129,6 +144,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public Boolean cancelable;
 
         /**
+         * <p>Specifies whether the scheduled time for the event can be changed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -136,6 +153,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public Boolean changeScheduleTime;
 
         /**
+         * <p>The event details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -143,6 +162,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String detail;
 
         /**
+         * <p>The event name.</p>
+         * 
          * <strong>example:</strong>
          * <p>HOT_UPGRADE</p>
          */
@@ -150,17 +171,22 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String eventName;
 
         /**
+         * <p>The event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>UPGRADE_ON_CUSTOMERS_BEHALF</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The follower instance list.</p>
+         */
         @NameInMap("FollowerInstances")
         public java.util.List<ListOperationEventsResponseBodyDataFollowerInstances> followerInstances;
 
         /**
-         * <p>Id</p>
+         * <p>The event ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1826503661244379138</p>
@@ -169,6 +195,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>haha</p>
          */
@@ -176,6 +204,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The maintenance window.</p>
+         * 
          * <strong>example:</strong>
          * <p>21:00-22:00</p>
          */
@@ -183,6 +213,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String maintainWindow;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgpost-cn-sxfsdfsd</p>
          */
@@ -190,7 +222,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>ScheduleTime</p>
+         * <p>The scheduled time of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-22 15:49:28</p>
@@ -199,7 +231,7 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
-         * <p>State</p>
+         * <p>The state of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>queued</p>
@@ -208,6 +240,8 @@ public class ListOperationEventsResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
          */

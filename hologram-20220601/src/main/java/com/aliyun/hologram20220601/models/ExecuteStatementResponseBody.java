@@ -4,24 +4,41 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ExecuteStatementResponseBody extends TeaModel {
+    /**
+     * <p>The execution result of the SQL statement.</p>
+     */
     @NameInMap("data")
     public ExecuteStatementResponseBodyData data;
 
     /**
+     * <p>The error code. This parameter is returned only if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParameterValue</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message. This parameter is returned only if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参数值不合法（如 SQL 为空、超长等）</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
@@ -29,6 +46,12 @@ public class ExecuteStatementResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -87,16 +110,23 @@ public class ExecuteStatementResponseBody extends TeaModel {
 
     public static class ExecuteStatementResponseBodyDataResultsColumnMetadata extends TeaModel {
         /**
+         * <p>The name of the column.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Indicates whether the column can be null.</p>
+         */
         @NameInMap("nullable")
         public Boolean nullable;
 
         /**
+         * <p>The data type of the column, such as <code>int4</code>, <code>text</code>, or <code>bool</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>int4</p>
          */
@@ -135,20 +165,41 @@ public class ExecuteStatementResponseBody extends TeaModel {
     }
 
     public static class ExecuteStatementResponseBodyDataResults extends TeaModel {
+        /**
+         * <p>The metadata of columns in the result set.</p>
+         */
         @NameInMap("columnMetadata")
         public java.util.List<ExecuteStatementResponseBodyDataResultsColumnMetadata> columnMetadata;
 
+        /**
+         * <p>The number of rows returned by a SELECT statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("count")
         public Integer count;
 
+        /**
+         * <p>The error code for the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL_ERROR</p>
+         */
         @NameInMap("errorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message for the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR: relation \&quot;non_existent_table\&quot; does not exist\n  Position: 15</p>
+         */
         @NameInMap("errorMessage")
         public String errorMessage;
 
         /**
-         * <p><strong>Query ID</strong></p>
+         * <p>The ID of the query.</p>
          * 
          * <strong>example:</strong>
          * <p>E3F4B2A7-1234-5678-9ABC-DEF012345678</p>
@@ -156,18 +207,42 @@ public class ExecuteStatementResponseBody extends TeaModel {
         @NameInMap("queryId")
         public String queryId;
 
+        /**
+         * <p>The set of records that are returned by the query. Each row is an array of strings, and all values are serialized as strings. A NULL value is represented as &quot;\N&quot;.</p>
+         */
         @NameInMap("records")
         public java.util.List<java.util.List<String>> records;
 
+        /**
+         * <p>The executed SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test_table limit 10;</p>
+         */
         @NameInMap("sql")
         public String sql;
 
+        /**
+         * <p>Indicates whether the SQL statement was executed successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("success")
         public Boolean success;
 
+        /**
+         * <p>Indicates whether the result set was truncated. The value is <code>true</code> if the number of returned rows exceeds the value of <code>MaxResults</code>.</p>
+         */
         @NameInMap("truncated")
         public Boolean truncated;
 
+        /**
+         * <p>The number of rows affected by an INSERT, UPDATE, or DELETE statement. This parameter is not returned for SELECT statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("updateCount")
         public Integer updateCount;
 
@@ -260,18 +335,32 @@ public class ExecuteStatementResponseBody extends TeaModel {
 
     public static class ExecuteStatementResponseBodyData extends TeaModel {
         /**
+         * <p>The error code for the SQL statement execution. This parameter is returned only if the execution fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>InvalidParameterValue</p>
          */
         @NameInMap("errorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message for the SQL statement execution. This parameter is returned only if the execution fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>参数值不合法（如 SQL 为空、超长等）</p>
+         */
         @NameInMap("errorMessage")
         public String errorMessage;
 
+        /**
+         * <p>A list of execution results. This list always contains exactly one result object. If you execute multiple SELECT statements, only the result of the last one is returned.</p>
+         */
         @NameInMap("results")
         public java.util.List<ExecuteStatementResponseBodyDataResults> results;
 
+        /**
+         * <p>Indicates whether the SQL statement was executed successfully.</p>
+         */
         @NameInMap("success")
         public Boolean success;
 

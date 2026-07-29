@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GrantDatabasePermissionResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the operation was successful. \<code>true\\</code>: The operation was successful. \<code>false\\</code>: The operation failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class GrantDatabasePermissionResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +23,8 @@ public class GrantDatabasePermissionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class GrantDatabasePermissionResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -42,6 +50,8 @@ public class GrantDatabasePermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

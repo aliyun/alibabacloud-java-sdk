@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class GetScheduledBackupConfigResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetScheduledBackupConfigResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>623EF0B6-A6C1-5764-82CC-0BC176654CB9</p>
@@ -38,6 +47,8 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
 
     public static class GetScheduledBackupConfigResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the backup configuration is enabled. Valid values: <strong>1</strong> (enabled) and <strong>0</strong> (disabled).</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -106,6 +119,8 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
         public Long enabled;
 
         /**
+         * <p>The task parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;schedule&quot;:&quot;0 10 * * 1,2&quot;,&quot;instance_id&quot;:&quot;hgprecn-cn-lbj3dfgog004&quot;,&quot;week&quot;:&quot;1,2&quot;,&quot;hour&quot;:10,&quot;data_keep_quantity&quot;:3,&quot;type&quot;:&quot;periodical&quot;,&quot;enabled&quot;:true}</p>
          */
@@ -113,6 +128,8 @@ public class GetScheduledBackupConfigResponseBody extends TeaModel {
         public String taskParameter;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>backup</p>
          */

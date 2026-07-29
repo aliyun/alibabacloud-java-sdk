@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBackupDataDescRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class UpdateBackupDataDescRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The backup description.</p>
+     * 
      * <strong>example:</strong>
      * <p>back up test</p>
      */
@@ -19,6 +23,8 @@ public class UpdateBackupDataDescRequest extends TeaModel {
     public String desc;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgpostcn-cn-721344a2z001</p>
      */

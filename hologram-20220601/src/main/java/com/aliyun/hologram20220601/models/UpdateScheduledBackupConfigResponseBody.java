@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateScheduledBackupConfigResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the configuration was successful. A value of <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class UpdateScheduledBackupConfigResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +23,8 @@ public class UpdateScheduledBackupConfigResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class UpdateScheduledBackupConfigResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,7 +41,7 @@ public class UpdateScheduledBackupConfigResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>69221013-D303-5046-91A7-A0BE2BC2E7D7</p>
@@ -42,6 +50,8 @@ public class UpdateScheduledBackupConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

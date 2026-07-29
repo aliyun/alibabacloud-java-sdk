@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class GetUpgradeStatusResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetUpgradeStatusResponseBodyData> data;
 
     /**
+     * <p>The error code returned if the API call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
@@ -15,6 +20,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the API call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
      */
@@ -22,6 +29,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D73E42D0-AA72-5880-B96F-548B43C84736</p>
@@ -38,6 +47,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. This parameter does not reflect the status of the upgrade.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
 
     public static class GetUpgradeStatusResponseBodyData extends TeaModel {
         /**
+         * <p>Details about the upgrade process, formatted as a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;UpgradePhase&quot;:&quot;Upgrade&quot;,&quot;StatusCode&quot;:&quot;LeaderRestartFailed&quot;,&quot;FlightingReport&quot;:{&quot;SQLResultStat&quot;:{&quot;TotalExecuted&quot;:9000&quot;Exceptions&quot;:0,&quot;Incorrect&quot;:1,&quot;Slow&quot;:1,&quot;DQLSpeedup&quot;:2}&quot;SegmentFormatStat&quot;:[{&quot;Database&quot;:&quot;test_db&quot;,&quot;TableUsingSegmentCount&quot;:5},{&quot;Database&quot;:&quot;user_order&quot;,&quot;TableUsingSegmentCount&quot;:7}],&quot;EstimatedUpgradeTime&quot;:{&quot;StopInstance&quot;:30,&quot;BackupData&quot;:120,&quot;UpgradeInstance&quot;:600},&quot;ReadPermissionCheckStat&quot;:[{&quot;db&quot;:&quot;tst0&quot;,&quot;user&quot;:&quot;v4_300433463265624129&quot;,&quot;schema&quot;:&quot;dim_db&quot;,&quot;table&quot;:&quot;it_rpt_org_tree_info_partition_all&quot;},{&quot;db&quot;:&quot;tst1&quot;,&quot;user&quot;:&quot;v4_300433463265624129&quot;,&quot;schema&quot;:&quot;dim_db&quot;,&quot;table&quot;:&quot;it_rpt_org_tree_info_partition_all_2&quot;},]},&quot;UpgradingSteps&quot;:{&quot;Stop&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;},&quot;Backup&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;},&quot;DoUpgrade&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;},&quot;Rollback&quot;:{&quot;Status&quot;:&quot;Success&quot;,&quot;StartTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;,&quot;StopTime&quot;:&quot;2023-05-09T06:48:28.843Z&quot;}},&quot;Instances&quot;:{&quot;LeaderInstanceId&quot;:&quot;hgxxx&quot;,&quot;LeaderInstanceName&quot;:&quot;ERP instance&quot;,&quot;LeaderInstanceStatus&quot;:&quot;Running&quot;,&quot;FollowerInstances&quot;:[{&quot;InstanceId&quot;:&quot;hgxxx&quot;,&quot;InstanceName&quot;:&quot;TMSinstance&quot;,&quot;Status&quot;:&quot;Running&quot;},{&quot;InstanceId&quot;:&quot;hxxx&quot;&quot;InstanceName&quot;:&quot;WMS readonly&quot;,&quot;Status&quot;:&quot;Unavailable&quot;}]}}</p>
          */
@@ -106,6 +119,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         public String details;
 
         /**
+         * <p>The version of the instance before the upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.3.23</p>
          */
@@ -113,6 +128,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         public String fromVersion;
 
         /**
+         * <p>The completion time of the preparation phase, in ISO 8601 format: <code>YYYY-MM-DDThh:mm:ssZ</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-09T06:48:28.843Z</p>
          */
@@ -120,6 +137,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         public String prepareFinishTime;
 
         /**
+         * <p>The status of the Airflow directed acyclic graph (DAG) used for the instance upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>archived</p>
          */
@@ -127,6 +146,8 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The target version of the upgrade.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.3.24</p>
          */

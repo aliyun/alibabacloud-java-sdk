@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateManualBackupRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class CreateManualBackupRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hgpostcn-cn-721344a2z001</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnBindLeaderInstanceResponseBody extends TeaModel {
     /**
+     * <p>Whether the instance was successfully detached.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class UnBindLeaderInstanceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
@@ -19,6 +23,8 @@ public class UnBindLeaderInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
      */
@@ -26,6 +32,8 @@ public class UnBindLeaderInstanceResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,7 +41,7 @@ public class UnBindLeaderInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>288D934D-3F25-5BA6-9B50-7ABB3017A134</p>
@@ -42,6 +50,8 @@ public class UnBindLeaderInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. This does not indicate the outcome of the detach operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

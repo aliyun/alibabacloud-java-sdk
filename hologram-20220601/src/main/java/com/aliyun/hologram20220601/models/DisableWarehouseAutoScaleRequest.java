@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableWarehouseAutoScaleRequest extends TeaModel {
     /**
+     * <p>The compute group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_warehouse</p>
      */

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ScaleInstanceRequest extends TeaModel {
     /**
-     * <p>The infrequent access (IA) storage space of the instance. Unit: GB.</p>
+     * <p>The cold storage space of the instance. Unit: GB.</p>
      * <blockquote>
-     * <p>Ignore this parameter for pay-as-you-go instances.</p>
+     * <p>This parameter is ignored for pay-as-you-go instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,28 +17,31 @@ public class ScaleInstanceRequest extends TeaModel {
     public Long coldStorageSize;
 
     /**
-     * <p>The specifications of the instance. Valid values:</p>
+     * <p>The instance specifications. Valid values:</p>
      * <ul>
-     * <li>8-core 32GB (number of compute nodes: 1)</li>
-     * <li>16-core 64GB (number of compute nodes: 1)</li>
-     * <li>32-core 128GB (number of compute nodes: 2)</li>
-     * <li>64-core 256GB (number of compute nodes: 4)</li>
-     * <li>96-core 384GB (number of compute nodes: 6)</li>
-     * <li>128-core 512GB (number of compute nodes: 8)</li>
-     * <li>Others</li>
+     * <li><p><code>16</code>: 16 vCPUs and 64 GB of memory (1 compute node)</p>
+     * </li>
+     * <li><p><code>32</code>: 32 vCPUs and 128 GB of memory (2 compute nodes)</p>
+     * </li>
+     * <li><p><code>64</code>: 64 vCPUs and 256 GB of memory (4 compute nodes)</p>
+     * </li>
+     * <li><p><code>96</code>: 96 vCPUs and 384 GB memory (6 compute nodes)</p>
+     * </li>
+     * <li><p><code>128</code>: 128 vCPUs and 512 GB memory (8 compute nodes)</p>
+     * </li>
+     * <li><p>and so on.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Set this parameter to the number of cores.</p>
+     * <li><p>Specify the number of vCPUs.</p>
      * </li>
-     * <li><p>If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.</p>
+     * <li><p>To purchase an instance type with more than 1024 vCPUs, submit a ticket.</p>
      * </li>
-     * <li><p>This parameter is invalid for Hologres Shared Cluster instances.</p>
-     * </li>
-     * <li><p>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
+     * <li><p>Skip this parameter for shared instances.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -47,7 +50,7 @@ public class ScaleInstanceRequest extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>是否开启ServerlessComputing</p>
+     * <p>Specifies whether to enable Serverless Computing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,9 +59,9 @@ public class ScaleInstanceRequest extends TeaModel {
     public Boolean enableServerlessComputing;
 
     /**
-     * <p>The number of gateways. Valid values: 2 to 50.</p>
+     * <p>The number of gateways. Valid values: [2, 50].</p>
      * <blockquote>
-     * <p>This parameter is required only for virtual warehouse instances.</p>
+     * <p>This parameter applies only to virtual warehouse instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,19 +71,21 @@ public class ScaleInstanceRequest extends TeaModel {
     public Long gatewayCount;
 
     /**
-     * <p>The specification change type. Valid values:</p>
+     * <p>The scaling type.</p>
      * <ul>
-     * <li>UPGRADE</li>
-     * <li>DOWNGRADE</li>
+     * <li><p>UPGRADE: Upgrades the instance.</p>
+     * </li>
+     * <li><p>DOWNGRADE: Downgrades the instance.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you set this parameter to UPGRADE, the new specifications must be higher than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.</p>
+     * <li><p><strong>Upgrade an instance:</strong> New specifications must be equal to or greater than original specifications. Leaving a parameter empty retains its original specification. At least one specification must be increased.</p>
      * </li>
-     * <li><p>If you set this parameter to DOWNGRADE, the new specifications must be lower than the original specifications. You must configure at least one of the cpu, storageSize, and coldStorageSize parameters. If you leave a parameter empty, the related configuration remains unchanged.</p>
+     * <li><p><strong>Downgrade an instance:</strong> New specifications must be equal to or less than original specifications. Leaving a parameter empty retains its original specification. At least one specification must be decreased.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +97,7 @@ public class ScaleInstanceRequest extends TeaModel {
     /**
      * <p>The standard storage space of the instance. Unit: GB.</p>
      * <blockquote>
-     * <p>Ignore this parameter for pay-as-you-go instances.</p>
+     * <p>This parameter is ignored for pay-as-you-go instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

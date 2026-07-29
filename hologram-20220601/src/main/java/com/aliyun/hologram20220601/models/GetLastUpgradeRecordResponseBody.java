@@ -4,11 +4,14 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class GetLastUpgradeRecordResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetLastUpgradeRecordResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
@@ -39,6 +42,8 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
 
     public static class GetLastUpgradeRecordResponseBodyData extends TeaModel {
         /**
+         * <p>The source version.</p>
+         * 
          * <strong>example:</strong>
          * <p>r3.2.11</p>
          */
@@ -46,6 +51,8 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
         public String fromVersion;
 
         /**
+         * <p>The read-only start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-24 17:29:57</p>
          */
@@ -53,6 +60,8 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
         public String startReadonlyTime;
 
         /**
+         * <p>The read-only end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-24 18:23:22</p>
          */
@@ -60,6 +69,8 @@ public class GetLastUpgradeRecordResponseBody extends TeaModel {
         public String stopReadonlyTime;
 
         /**
+         * <p>The destination version.</p>
+         * 
          * <strong>example:</strong>
          * <p>r4.0.2</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstancePortResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +23,8 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,7 +32,7 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D1303CD4-AA70-5998-8025-F55B22C50840</p>
@@ -35,6 +41,8 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. This parameter is independent of the result of the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -42,6 +50,8 @@ public class UpdateInstancePortResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>The result of the operation. A value of <code>true</code> indicates that the operation is successful. A value of <code>false</code> indicates that the operation fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

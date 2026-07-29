@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMigrationZonesRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListMigrationZonesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token from a previous call to retrieve the next page of results. Omit this parameter to get the first page.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

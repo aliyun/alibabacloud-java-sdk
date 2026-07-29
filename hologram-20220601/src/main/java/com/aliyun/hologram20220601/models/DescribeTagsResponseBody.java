@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>404</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal server error.</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,7 +32,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>14E2358E-0499-509E-8E22-CA30EC474A9A</p>
@@ -35,12 +41,17 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. This parameter is independent of the business logic.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The list of resources.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<DescribeTagsResponseBodyTagResources> tagResources;
 
@@ -99,6 +110,8 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     public static class DescribeTagsResponseBodyTagResources extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgprecn-cn-0ju2uaanj001</p>
          */
@@ -106,6 +119,8 @@ public class DescribeTagsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Instance</p>
          */
@@ -113,12 +128,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:rm:rgId</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>A list of values for the corresponding tag key.</p>
+         */
         @NameInMap("TagValue")
         public java.util.List<String> tagValue;
 

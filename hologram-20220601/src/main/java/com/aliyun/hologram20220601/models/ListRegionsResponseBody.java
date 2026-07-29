@@ -4,6 +4,9 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;
 
@@ -39,6 +42,8 @@ public class ListRegionsResponseBody extends TeaModel {
 
     public static class ListRegionsResponseBodyRegions extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

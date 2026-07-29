@@ -11,7 +11,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public RenewInstanceResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -20,7 +20,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</p>
@@ -47,7 +47,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result, which indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. This parameter is not related to the business result.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -110,7 +110,7 @@ public class RenewInstanceResponseBody extends TeaModel {
 
     public static class RenewInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidChargeType.UnRenewable</p>
@@ -122,13 +122,13 @@ public class RenewInstanceResponseBody extends TeaModel {
          * <p>The error details.</p>
          * 
          * <strong>example:</strong>
-         * <p>InvalidChargeType.UnRenewable</p>
+         * <p>Invalid charge type</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>221625608580893</p>
@@ -137,10 +137,12 @@ public class RenewInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
-         * <p>Indicates whether the renewal was successful.</p>
+         * <p>Indicates whether the renewal is successful.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The renewal is successful.</p>
+         * </li>
+         * <li><p>false: The renewal failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

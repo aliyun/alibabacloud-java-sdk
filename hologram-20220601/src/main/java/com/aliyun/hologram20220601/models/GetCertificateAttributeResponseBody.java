@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class GetCertificateAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The certificate attributes.</p>
+     */
     @NameInMap("CertificateAttributeDto")
     public GetCertificateAttributeResponseBodyCertificateAttributeDto certificateAttributeDto;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>819A7F0F-2951-540F-BD94-6A41ECF0281F</p>
      */
@@ -97,6 +110,8 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
 
     public static class GetCertificateAttributeResponseBodyCertificateAttributeDto extends TeaModel {
         /**
+         * <p>Specifies whether SSL is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -104,6 +119,8 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         public Boolean enableSSL;
 
         /**
+         * <p>The UNIX timestamp when the certificate expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>1790583135000</p>
          */
@@ -111,6 +128,8 @@ public class GetCertificateAttributeResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
+         * <p>The status of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>effective</p>
          */

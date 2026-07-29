@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GrantTablePermissionRequest extends TeaModel {
     /**
+     * <p>Specifies whether to grant the permissions on all tables in the schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,16 +17,23 @@ public class GrantTablePermissionRequest extends TeaModel {
     public java.util.List<String> columnNames;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_db</p>
      */
     @NameInMap("databaseName")
     public String databaseName;
 
+    /**
+     * <p>The permissions to grant.</p>
+     */
     @NameInMap("privileges")
     public java.util.List<String> privileges;
 
     /**
+     * <p>The schema name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my_schema</p>
      */
@@ -32,6 +41,8 @@ public class GrantTablePermissionRequest extends TeaModel {
     public String schemaName;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>orders_pay</p>
      */
@@ -39,6 +50,8 @@ public class GrantTablePermissionRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The user ID. For more information, see <a href="https://help.aliyun.com/document_detail/130393.html">Hologres account overview</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>p4_1234xxxx</p>
      */

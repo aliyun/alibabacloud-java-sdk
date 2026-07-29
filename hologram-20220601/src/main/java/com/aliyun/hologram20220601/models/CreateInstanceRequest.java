@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-payment. Default value: true. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true (default): Automatic payment is enabled.</p>
+     * </li>
+     * <li><p>false: An order is generated, but no payment is made.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the Expenses and Costs console to pay for the order.</p>
+     * <p>If your account balance is insufficient, set the <code>autoPay</code> parameter to <code>false</code>. When an unpaid order is generated, log on to the Expenses and Costs console to pay for the order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,10 +23,12 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: Auto-renewal is enabled.</p>
+     * </li>
+     * <li><p>false (default): Auto-renewal is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,13 +38,15 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription</li>
-     * <li>PostPaid: pay-as-you-go</li>
+     * <li><p>PrePaid: Subscription.</p>
+     * </li>
+     * <li><p>PostPaid: Pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is invalid for Hologres Shared Cluster instances. Hologres Shared Cluster instances have fixed specifications and are pay-as-you-go instances.</p>
+     * <p>This parameter is ignored for shared instances. Shared instances use defined specifications and the default billing method is pay-as-you-go..</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -51,9 +57,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The infrequent access (IA) storage space of the instance. Unit: GB.</p>
+     * <p>The cold storage capacity of the instance. Unit: GB.</p>
      * <blockquote>
-     * <p> This parameter is invalid for pay-as-you-go instances.</p>
+     * <p>This parameter is ignored for pay-as-you-go (PostPaid) instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,27 +69,29 @@ public class CreateInstanceRequest extends TeaModel {
     public Long coldStorageSize;
 
     /**
-     * <p>The instance specifications. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li>8-core 32GB (number of compute nodes: 1)</li>
-     * <li>32-core 128GB (number of compute nodes: 2)</li>
-     * <li>64-core 256GB (number of compute nodes: 4)</li>
-     * <li>96-core 384GB (number of compute nodes: 6)</li>
-     * <li>128-core 512GB (number of compute nodes: 8)</li>
-     * <li>Others</li>
+     * <li><p>32 vCPUs and 128 GB of memory (2 compute nodes)</p>
+     * </li>
+     * <li><p>64 vCPUs and 256 GB of memory (4 compute nodes)</p>
+     * </li>
+     * <li><p>96 vCPUs and 384 GB of memory (6 compute nodes)</p>
+     * </li>
+     * <li><p>128 vCPUs and 512 GB of memory (8 compute nodes)</p>
+     * </li>
+     * <li><p>and so on.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Set this parameter to the number of cores.</p>
+     * <li><p>Specify the number of vCPUs.</p>
      * </li>
-     * <li><p>If you want to set this parameter to specifications with more than 1,024 GB, you must submit a ticket.</p>
+     * <li><p>To purchase an instance with more than 1,024 vCPUs, submit a ticket.</p>
      * </li>
-     * <li><p>This parameter is invalid for Hologres Shared Cluster instances.</p>
-     * </li>
-     * <li><p>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
+     * <li><p>You do not need to specify the instance type for a shared instance.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -92,9 +100,9 @@ public class CreateInstanceRequest extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>The validity period of the instance that you want to purchase. For example, you can specify a validity period of two months.</p>
+     * <p>The subscription duration, such as two months.</p>
      * <blockquote>
-     * <p> You do not need to configure this parameter for pay-as-you-go instances.</p>
+     * <p>Specify this parameter only for subscription instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,12 +112,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long duration;
 
     /**
-     * <p>Specifies whether to enable the Serverless Computing feature.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Specifies whether to enable Serverless Computing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -118,9 +121,9 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean enableServerlessComputing;
 
     /**
-     * <p>The number of gateways. Valid values: 2 to 50.</p>
+     * <p>The number of gateways. Valid values: [2, 50].</p>
      * <blockquote>
-     * <p> This parameter is required only for virtual warehouse instances.</p>
+     * <p>You must specify this parameter only for virtual warehouse instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -139,7 +142,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String initialDatabases;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 64 characters in length.</p>
+     * <p>The instance name. The name must be 2 to 64 characters in length. A letter is counted as one character.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -149,12 +152,18 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The category of the instance. Valid values:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
-     * <li>Standard: general-purpose instance</li>
-     * <li>Follower: read-only secondary instance</li>
-     * <li>Warehouse: virtual warehouse instance</li>
-     * <li>Shared: Hologres Shared Cluster instance</li>
+     * <li><p>Standard: General-purpose instance.</p>
+     * </li>
+     * <li><p>Follower: Read-only secondary instance.</p>
+     * </li>
+     * <li><p>Warehouse: Virtual warehouse instance.</p>
+     * </li>
+     * <li><p>Shared: Shared instance.</p>
+     * </li>
+     * <li><p>Serverless: Serverless instance.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -165,22 +174,22 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the primary instance. This parameter is required for read-only secondary instances.</p>
+     * <p>The ID of the primary instance. This parameter is required for secondary instances.</p>
      * <blockquote>
-     * <p> The primary and secondary instances must meet the following requirements:</p>
-     * </blockquote>
+     * <p>The primary and secondary instances must meet the following conditions:</p>
      * <ul>
      * <li><p>The primary instance is in the Running state.</p>
      * </li>
-     * <li><p>The primary instance and secondary instances are deployed in the same region.</p>
+     * <li><p>The primary and secondary instances are in the same region and zone.</p>
      * </li>
-     * <li><p>The primary instance and secondary instances are deployed in the same zone.</p>
+     * <li><p>They are in the same zone.</p>
      * </li>
-     * <li><p>Less than 10 secondary instances are associated with the primary instance.</p>
+     * <li><p>The primary instance has less than 10 secondary instances.</p>
      * </li>
-     * <li><p>The primary instance and secondary instances belong to the same Alibaba Cloud account.</p>
+     * <li><p>The primary and secondary instances belong to the same Alibaba Cloud account.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>hgpostcn-cn-lbj3aworq112</p>
@@ -191,19 +200,21 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The billing cycle. Valid values:</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Hour</li>
+     * <li><p>Month: The instance is billed on a monthly basis.</p>
+     * </li>
+     * <li><p>Hour: The instance is billed on an hourly basis.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter can only be set to Month for subscription instances.</p>
+     * <li><p>Subscription instances support only <code>Month</code>.</p>
      * </li>
-     * <li><p>This parameter can only be set to Hour for pay-as-you-go instances.</p>
+     * <li><p>Pay-as-you-go instances support only <code>Hour</code>.</p>
      * </li>
-     * <li><p>By default, this parameter is set to Hour for Hologres Shared Cluster instances.</p>
+     * <li><p>For shared instances, the value is automatically set to <code>Hour</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -212,7 +223,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The ID of the region. You can obtain region IDs in <a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/endpoints">Endpoints</a>.</p>
+     * <p>The region ID. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -222,7 +233,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If you do not specify this parameter, the default resource group of the account is used.</p>
+     * <p>The resource group. If you leave this parameter empty, the default resource group for your account is used.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -231,9 +242,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The standard storage space of the instance. Unit: GB.</p>
+     * <p>The standard storage capacity of the instance. Unit: GB.</p>
      * <blockquote>
-     * <p> This parameter is invalid for pay-as-you-go instances.</p>
+     * <p>This parameter is ignored for pay-as-you-go (PostPaid) instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -242,11 +253,17 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("storageSize")
     public Long storageSize;
 
+    /**
+     * <p>The storage class.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>redundant</p>
+     */
     @NameInMap("storageType")
     public String storageType;
 
     /**
-     * <p>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</p>
+     * <p>The ID of the vSwitch. The vSwitch must be in the same zone as the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -256,7 +273,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC). The region in which the VPC resides must be the same as the region in which the Hologres instance resides.</p>
+     * <p>The ID of the virtual private cloud (VPC). The VPC must be in the same region as the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -266,7 +283,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone. For more information, see the &quot;Operation description&quot; section in this topic.</p>
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

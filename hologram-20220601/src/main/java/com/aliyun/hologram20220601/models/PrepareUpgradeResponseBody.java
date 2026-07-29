@@ -4,10 +4,15 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class PrepareUpgradeResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public PrepareUpgradeResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>77B97AFB-7C9D-50FF-A72D-F13FD73E49D8</p>
@@ -38,6 +47,8 @@ public class PrepareUpgradeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful. This does not indicate the result of the upgrade preparation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class PrepareUpgradeResponseBody extends TeaModel {
 
     public static class PrepareUpgradeResponseBodyData extends TeaModel {
         /**
+         * <p>The reason the preparation task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -106,6 +119,8 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         public String failReason;
 
         /**
+         * <p>A key that identifies the reason for the failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -113,6 +128,8 @@ public class PrepareUpgradeResponseBody extends TeaModel {
         public String reasonKey;
 
         /**
+         * <p>Indicates whether the preparation task started successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

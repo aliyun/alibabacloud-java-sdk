@@ -4,6 +4,9 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceModelResponseBody extends TeaModel {
+    /**
+     * <p>The list of AI node resources.</p>
+     */
     @NameInMap("instanceModelList")
     public java.util.List<ListInstanceModelResponseBodyInstanceModelList> instanceModelList;
 
@@ -39,6 +42,8 @@ public class ListInstanceModelResponseBody extends TeaModel {
 
     public static class ListInstanceModelResponseBodyInstanceModelList extends TeaModel {
         /**
+         * <p>The AI node instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hologram_aicombo_public_cn-77xxx</p>
          */
@@ -46,16 +51,23 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String aiInstanceId;
 
         /**
+         * <p>The AI specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>small-8core-30G-24G</p>
          */
         @NameInMap("aiSpec")
         public String aiSpec;
 
+        /**
+         * <p>Indicates whether auto-renewal is enabled.</p>
+         */
         @NameInMap("autoRenewal")
         public Boolean autoRenewal;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -63,57 +75,125 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hologram_aipostpay_public_cn</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The CPU specifications. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("cpu")
         public Long cpu;
 
+        /**
+         * <p>The total CPU used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("cpuUsed")
         public Long cpuUsed;
 
         /**
+         * <p>The expiration time in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-28T07:44:27.535Z</p>
          */
         @NameInMap("expirationTime")
         public String expirationTime;
 
+        /**
+         * <p>The number of GPU cards. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("gpu")
         public Long gpu;
 
+        /**
+         * <p>The GPU memory size. Unit: GB. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("gpuMemory")
         public Long gpuMemory;
 
+        /**
+         * <p>The total GPU memory used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("gpuMemoryUsed")
         public Long gpuMemoryUsed;
 
+        /**
+         * <p>The total GPU used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("gpuUsed")
         public Long gpuUsed;
 
         /**
+         * <p>The Hologres instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hgpostcn-cn-yi34hlzdx003</p>
          */
         @NameInMap("holoInstanceId")
         public String holoInstanceId;
 
+        /**
+         * <p>The Hologres instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myInstance</p>
+         */
         @NameInMap("holoInstanceName")
         public String holoInstanceName;
 
+        /**
+         * <p>The memory size. Unit: GiB. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("memory")
         public Long memory;
 
+        /**
+         * <p>The total memory used by the node. This parameter applies only to Hologres AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("memoryUsed")
         public Long memoryUsed;
 
+        /**
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("nodeCount")
         public Long nodeCount;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -121,6 +201,8 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>small</p>
          */
@@ -128,6 +210,8 @@ public class ListInstanceModelResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ResourceReady</p>
          */
