@@ -655,13 +655,6 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("EntityId")
         public String entityId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>system</p>
-         */
-        @NameInMap("Type")
-        public String type;
-
         public static SearchMediaResponseBodyMediaInfoListMediaDynamicInfoDynamicMetaData build(java.util.Map<String, ?> map) throws Exception {
             SearchMediaResponseBodyMediaInfoListMediaDynamicInfoDynamicMetaData self = new SearchMediaResponseBodyMediaInfoListMediaDynamicInfoDynamicMetaData();
             return TeaModel.build(map, self);
@@ -683,135 +676,11 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.entityId;
         }
 
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoDynamicMetaData setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><em><strong>cd4754a89b6</strong></em>*</p>
-         */
-        @NameInMap("AiAuditJobId")
-        public String aiAuditJobId;
-
-        /**
-         * <strong>example:</strong>
-         * <p>normal</p>
-         */
-        @NameInMap("AiAuditLabel")
-        public String aiAuditLabel;
-
-        /**
-         * <strong>example:</strong>
-         * <p>Passed</p>
-         */
-        @NameInMap("AiAuditResult")
-        public String aiAuditResult;
-
-        /**
-         * <strong>example:</strong>
-         * <p>Success</p>
-         */
-        @NameInMap("AiAuditStatus")
-        public String aiAuditStatus;
-
-        /**
-         * <strong>example:</strong>
-         * <p>*<em><strong>aed4739c394b38c</strong></em></p>
-         */
-        @NameInMap("AiAuditTemplate")
-        public String aiAuditTemplate;
-
-        /**
-         * <strong>example:</strong>
-         * <p>Init</p>
-         */
-        @NameInMap("ManualAuditResult")
-        public String manualAuditResult;
-
-        /**
-         * <strong>example:</strong>
-         * <p>Init</p>
-         */
-        @NameInMap("ManualAuditStatus")
-        public String manualAuditStatus;
-
-        public static SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo build(java.util.Map<String, ?> map) throws Exception {
-            SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo self = new SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo setAiAuditJobId(String aiAuditJobId) {
-            this.aiAuditJobId = aiAuditJobId;
-            return this;
-        }
-        public String getAiAuditJobId() {
-            return this.aiAuditJobId;
-        }
-
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo setAiAuditLabel(String aiAuditLabel) {
-            this.aiAuditLabel = aiAuditLabel;
-            return this;
-        }
-        public String getAiAuditLabel() {
-            return this.aiAuditLabel;
-        }
-
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo setAiAuditResult(String aiAuditResult) {
-            this.aiAuditResult = aiAuditResult;
-            return this;
-        }
-        public String getAiAuditResult() {
-            return this.aiAuditResult;
-        }
-
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo setAiAuditStatus(String aiAuditStatus) {
-            this.aiAuditStatus = aiAuditStatus;
-            return this;
-        }
-        public String getAiAuditStatus() {
-            return this.aiAuditStatus;
-        }
-
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo setAiAuditTemplate(String aiAuditTemplate) {
-            this.aiAuditTemplate = aiAuditTemplate;
-            return this;
-        }
-        public String getAiAuditTemplate() {
-            return this.aiAuditTemplate;
-        }
-
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo setManualAuditResult(String manualAuditResult) {
-            this.manualAuditResult = manualAuditResult;
-            return this;
-        }
-        public String getManualAuditResult() {
-            return this.manualAuditResult;
-        }
-
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo setManualAuditStatus(String manualAuditStatus) {
-            this.manualAuditStatus = manualAuditStatus;
-            return this;
-        }
-        public String getManualAuditStatus() {
-            return this.manualAuditStatus;
-        }
-
     }
 
     public static class SearchMediaResponseBodyMediaInfoListMediaDynamicInfo extends TeaModel {
         @NameInMap("DynamicMetaData")
         public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoDynamicMetaData dynamicMetaData;
-
-        @NameInMap("MediaExtraInfo")
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo mediaExtraInfo;
 
         public static SearchMediaResponseBodyMediaInfoListMediaDynamicInfo build(java.util.Map<String, ?> map) throws Exception {
             SearchMediaResponseBodyMediaInfoListMediaDynamicInfo self = new SearchMediaResponseBodyMediaInfoListMediaDynamicInfo();
@@ -826,24 +695,9 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.dynamicMetaData;
         }
 
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfo setMediaExtraInfo(SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo mediaExtraInfo) {
-            this.mediaExtraInfo = mediaExtraInfo;
-            return this;
-        }
-        public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo getMediaExtraInfo() {
-            return this.mediaExtraInfo;
-        }
-
     }
 
     public static class SearchMediaResponseBodyMediaInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>{\&quot;intField1\&quot;:12,\&quot;strField1\&quot;:\&quot;abc\&quot;}</p>
-         */
-        @NameInMap("CustomFields")
-        public String customFields;
-
         @NameInMap("FileInfoList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;
 
@@ -863,14 +717,6 @@ public class SearchMediaResponseBody extends TeaModel {
         public static SearchMediaResponseBodyMediaInfoList build(java.util.Map<String, ?> map) throws Exception {
             SearchMediaResponseBodyMediaInfoList self = new SearchMediaResponseBodyMediaInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public SearchMediaResponseBodyMediaInfoList setCustomFields(String customFields) {
-            this.customFields = customFields;
-            return this;
-        }
-        public String getCustomFields() {
-            return this.customFields;
         }
 
         public SearchMediaResponseBodyMediaInfoList setFileInfoList(java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList) {

@@ -4,12 +4,24 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaComprehensionJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>68ca759e798b40b4903b255********</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

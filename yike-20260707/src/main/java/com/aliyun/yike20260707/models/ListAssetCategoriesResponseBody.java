@@ -19,7 +19,7 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
      * <p>50</p>
      */
     @NameInMap("Total")
-    public String total;
+    public Long total;
 
     public static ListAssetCategoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAssetCategoriesResponseBody self = new ListAssetCategoriesResponseBody();
@@ -42,11 +42,11 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAssetCategoriesResponseBody setTotal(String total) {
+    public ListAssetCategoriesResponseBody setTotal(Long total) {
         this.total = total;
         return this;
     }
-    public String getTotal() {
+    public Long getTotal() {
         return this.total;
     }
 

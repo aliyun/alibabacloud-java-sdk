@@ -391,6 +391,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于查询媒资内容理解作业。</p>
+     * 
      * <b>summary</b> : 
      * <p>查询媒资内容理解作业</p>
      * 
@@ -423,6 +427,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于查询媒资内容理解作业。</p>
+     * 
      * <b>summary</b> : 
      * <p>查询媒资内容理解作业</p>
      * 
@@ -480,6 +488,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetVideoGenerationJobResponse getVideoGenerationJob(GetVideoGenerationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getVideoGenerationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻主账户会员计划及积分情况</p>
+     * 
+     * @param request GetYikeAccountCreditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeAccountCreditResponse
+     */
+    public GetYikeAccountCreditResponse getYikeAccountCreditWithOptions(GetYikeAccountCreditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeAccountCredit"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeAccountCreditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取一刻主账户会员计划及积分情况</p>
+     * 
+     * @param request GetYikeAccountCreditRequest
+     * @return GetYikeAccountCreditResponse
+     */
+    public GetYikeAccountCreditResponse getYikeAccountCredit(GetYikeAccountCreditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeAccountCreditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询一刻任务实际消耗积分</p>
+     * 
+     * @param request GetYikeJobCreditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeJobCreditResponse
+     */
+    public GetYikeJobCreditResponse getYikeJobCreditWithOptions(GetYikeJobCreditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeJobCredit"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeJobCreditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询一刻任务实际消耗积分</p>
+     * 
+     * @param request GetYikeJobCreditRequest
+     * @return GetYikeJobCreditResponse
+     */
+    public GetYikeJobCreditResponse getYikeJobCredit(GetYikeJobCreditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeJobCreditWithOptions(request, runtime);
     }
 
     /**
@@ -645,10 +734,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CategoryId", request.categoryId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
-            query.put("EntityId", request.entityId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
             query.put("Match", request.match);
         }
@@ -663,10 +748,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scrollToken)) {
             query.put("ScrollToken", request.scrollToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
-            query.put("SearchLibName", request.searchLibName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
@@ -783,6 +864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
      * <b>summary</b> : 
      * <p>提交媒资内容理解作业</p>
      * 
@@ -819,6 +904,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * 
      * <b>summary</b> : 
      * <p>提交媒资内容理解作业</p>
      * 
@@ -912,6 +1001,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitVideoGenerationJobResponse submitVideoGenerationJob(SubmitVideoGenerationJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitVideoGenerationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</li>
+     * <li><code>JobType</code> 参数定义了任务类型，如 <code>SubtitleTranslate</code>和<code>VoiceTranslate</code> 。</li>
+     * <li><code>Input</code> 和 <code>Output</code> 参数分别指定了输入资源和输出路径。</li>
+     * <li><code>JobParameters</code> 包含了语言配置和其他能力开关，如 <code>SourceLanguage</code>、<code>TargetLanguage</code>、<code>NeedDetext</code> 和 <code>NeedVisualTranslate</code> 等。</li>
+     * <li><code>EditingConfig</code> 可以用来指定最终剪辑合成的样式配置。</li>
+     * <li><code>ClientToken</code> 是一个可选参数，用于保证请求的幂等性。</li>
+     * <li>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>提交视频翻译任务</p>
+     * 
+     * @param request SubmitVideoTranslationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoTranslationJobResponse
+     */
+    public SubmitVideoTranslationJobResponse submitVideoTranslationJobWithOptions(SubmitVideoTranslationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobParameters)) {
+            body.put("JobParameters", request.jobParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            body.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            body.put("Output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            body.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoTranslationJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoTranslationJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</li>
+     * <li><code>JobType</code> 参数定义了任务类型，如 <code>SubtitleTranslate</code>和<code>VoiceTranslate</code> 。</li>
+     * <li><code>Input</code> 和 <code>Output</code> 参数分别指定了输入资源和输出路径。</li>
+     * <li><code>JobParameters</code> 包含了语言配置和其他能力开关，如 <code>SourceLanguage</code>、<code>TargetLanguage</code>、<code>NeedDetext</code> 和 <code>NeedVisualTranslate</code> 等。</li>
+     * <li><code>EditingConfig</code> 可以用来指定最终剪辑合成的样式配置。</li>
+     * <li><code>ClientToken</code> 是一个可选参数，用于保证请求的幂等性。</li>
+     * <li>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>提交视频翻译任务</p>
+     * 
+     * @param request SubmitVideoTranslationJobRequest
+     * @return SubmitVideoTranslationJobResponse
+     */
+    public SubmitVideoTranslationJobResponse submitVideoTranslationJob(SubmitVideoTranslationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoTranslationJobWithOptions(request, runtime);
     }
 
     /**

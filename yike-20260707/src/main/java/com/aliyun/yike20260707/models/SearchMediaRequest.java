@@ -13,13 +13,6 @@ public class SearchMediaRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>BaseMedia</p>
-     */
-    @NameInMap("EntityId")
-    public String entityId;
-
-    /**
-     * <strong>example:</strong>
      * <p>title = \&quot;中国\&quot; and utcCreate = [\&quot;1693367158561\&quot;,\&quot;1693367158562\&quot;]</p>
      */
     @NameInMap("Match")
@@ -48,13 +41,6 @@ public class SearchMediaRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test-1</p>
-     */
-    @NameInMap("SearchLibName")
-    public String searchLibName;
-
-    /**
-     * <strong>example:</strong>
      * <p>utcCreate:Desc</p>
      */
     @NameInMap("SortBy")
@@ -71,14 +57,6 @@ public class SearchMediaRequest extends TeaModel {
     }
     public Long getCategoryId() {
         return this.categoryId;
-    }
-
-    public SearchMediaRequest setEntityId(String entityId) {
-        this.entityId = entityId;
-        return this;
-    }
-    public String getEntityId() {
-        return this.entityId;
     }
 
     public SearchMediaRequest setMatch(String match) {
@@ -111,14 +89,6 @@ public class SearchMediaRequest extends TeaModel {
     }
     public String getScrollToken() {
         return this.scrollToken;
-    }
-
-    public SearchMediaRequest setSearchLibName(String searchLibName) {
-        this.searchLibName = searchLibName;
-        return this;
-    }
-    public String getSearchLibName() {
-        return this.searchLibName;
     }
 
     public SearchMediaRequest setSortBy(String sortBy) {

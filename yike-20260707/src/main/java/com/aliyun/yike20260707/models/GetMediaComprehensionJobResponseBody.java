@@ -7,6 +7,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
     @NameInMap("MediaComprehensionJob")
     public GetMediaComprehensionJobResponseBodyMediaComprehensionJob mediaComprehensionJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
     }
 
     public static class GetMediaComprehensionJobResponseBodyMediaComprehensionJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The specified product does not exist.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>afaa6f37457</strong></strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>307e9971f1</strong></strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;source_video_url\&quot;:\&quot;<a href="http://xxx.mp4%5C%5C%22,%5C%5C%22narrative_overview%5C%5C%22:%7B******%7D%7D">http://xxx.mp4\\&quot;,\\&quot;narrative_overview\\&quot;:{******}}</a>&quot;</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Executing</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
+         */
         @NameInMap("UserData")
         public String userData;
 

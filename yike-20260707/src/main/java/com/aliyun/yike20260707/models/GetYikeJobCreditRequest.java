@@ -3,20 +3,22 @@ package com.aliyun.yike20260707.models;
 
 import com.aliyun.tea.*;
 
-public class GetMediaComprehensionJobRequest extends TeaModel {
+public class GetYikeJobCreditRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>68ca759e798b40b4903b255*******</p>
+     * <p>ag_12412424****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
-    public static GetMediaComprehensionJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetMediaComprehensionJobRequest self = new GetMediaComprehensionJobRequest();
+    public static GetYikeJobCreditRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetYikeJobCreditRequest self = new GetYikeJobCreditRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetMediaComprehensionJobRequest setJobId(String jobId) {
+    public GetYikeJobCreditRequest setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
