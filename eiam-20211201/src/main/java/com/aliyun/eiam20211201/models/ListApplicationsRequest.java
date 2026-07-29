@@ -40,6 +40,12 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The application template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apt_ramuser_xxxx</p>
+     */
     @NameInMap("ApplicationTemplateId")
     public String applicationTemplateId;
 
@@ -81,6 +87,12 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("M2MClientStatus")
     public String m2MClientStatus;
 
+    /**
+     * <p>The ServiceCode of the cloud service that manages the application template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf</p>
+     */
     @NameInMap("ManagedServiceCode")
     public String managedServiceCode;
 
@@ -111,11 +123,17 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("ResourceServerStatus")
     public String resourceServerStatus;
 
+    /**
+     * <p>Specifies whether the application template is managed by a cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
-     * <p>The SSO type filter condition. Multiple types can be separated by commas, such as oauth2/m2m,oidc+oauth2/m2m.</p>
+     * <p>The SSO type filter condition. Multiple types can be separated by commas. Example: oauth2/m2m,oidc+oauth2/m2m.</p>
      * 
      * <strong>example:</strong>
      * <p>oauth2/m2m</p>
@@ -273,7 +291,7 @@ public class ListApplicationsRequest extends TeaModel {
         /**
          * <p>The custom field identifier. Valid values:</p>
          * <ul>
-         * <li>agent_type: the agent type.</li>
+         * <li>agent_type: The agent type.</li>
          * </ul>
          * 
          * <strong>example:</strong>

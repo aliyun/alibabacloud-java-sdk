@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     /**
-     * <p>A collection of network endpoints.</p>
+     * <p>The list of network access endpoints.</p>
      */
     @NameInMap("NetworkAccessEndpoints")
     public java.util.List<ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints> networkAccessEndpoints;
 
     /**
-     * <p>The token returned for the next query.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -74,9 +74,86 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint extends TeaModel {
+        @NameInMap("BackupEgressPrivateIpAddresses")
+        public java.util.List<String> backupEgressPrivateIpAddresses;
+
+        @NameInMap("BackupEgressPublicIpAddresses")
+        public java.util.List<String> backupEgressPublicIpAddresses;
+
+        @NameInMap("BackupSecurityGroupId")
+        public String backupSecurityGroupId;
+
+        @NameInMap("BackupVSwitchIds")
+        public java.util.List<String> backupVSwitchIds;
+
+        @NameInMap("BackupVpcId")
+        public String backupVpcId;
+
+        @NameInMap("BackupVpcRegionId")
+        public String backupVpcRegionId;
+
+        public static ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint build(java.util.Map<String, ?> map) throws Exception {
+            ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint self = new ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint setBackupEgressPrivateIpAddresses(java.util.List<String> backupEgressPrivateIpAddresses) {
+            this.backupEgressPrivateIpAddresses = backupEgressPrivateIpAddresses;
+            return this;
+        }
+        public java.util.List<String> getBackupEgressPrivateIpAddresses() {
+            return this.backupEgressPrivateIpAddresses;
+        }
+
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint setBackupEgressPublicIpAddresses(java.util.List<String> backupEgressPublicIpAddresses) {
+            this.backupEgressPublicIpAddresses = backupEgressPublicIpAddresses;
+            return this;
+        }
+        public java.util.List<String> getBackupEgressPublicIpAddresses() {
+            return this.backupEgressPublicIpAddresses;
+        }
+
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint setBackupSecurityGroupId(String backupSecurityGroupId) {
+            this.backupSecurityGroupId = backupSecurityGroupId;
+            return this;
+        }
+        public String getBackupSecurityGroupId() {
+            return this.backupSecurityGroupId;
+        }
+
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint setBackupVSwitchIds(java.util.List<String> backupVSwitchIds) {
+            this.backupVSwitchIds = backupVSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getBackupVSwitchIds() {
+            return this.backupVSwitchIds;
+        }
+
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint setBackupVpcId(String backupVpcId) {
+            this.backupVpcId = backupVpcId;
+            return this;
+        }
+        public String getBackupVpcId() {
+            return this.backupVpcId;
+        }
+
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint setBackupVpcRegionId(String backupVpcRegionId) {
+            this.backupVpcRegionId = backupVpcRegionId;
+            return this;
+        }
+        public String getBackupVpcRegionId() {
+            return this.backupVpcRegionId;
+        }
+
+    }
+
     public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints extends TeaModel {
+        @NameInMap("BackupVpcEndpoint")
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint backupVpcEndpoint;
+
         /**
-         * <p>The time when the network endpoint was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -94,7 +171,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The network endpoint ID.</p>
+         * <p>The network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxx</p>
@@ -103,7 +180,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>The name of the network endpoint.</p>
+         * <p>The network access endpoint name.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC access endpoint for xx service</p>
@@ -112,12 +189,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointName;
 
         /**
-         * <p>The type of the network endpoint. Valid values:</p>
+         * <p>The type of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li><p>shared: a shared network endpoint.</p>
-         * </li>
-         * <li><p>private: a private network endpoint.</p>
-         * </li>
+         * <li>shared: Shared network access endpoint.</li>
+         * <li>private: Dedicated network access endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +202,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String networkAccessEndpointType;
 
         /**
-         * <p>The ID of the security group used by the private network endpoint.</p>
+         * <p>The security group ID used by the dedicated network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-examplexxx</p>
@@ -136,16 +211,12 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The status of the network endpoint. Valid values:</p>
+         * <p>The status of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li><p>pending: The endpoint is pending initialization.</p>
-         * </li>
-         * <li><p>creating: The endpoint is being created.</p>
-         * </li>
-         * <li><p>running: The endpoint is running.</p>
-         * </li>
-         * <li><p>deleting: The endpoint is being deleted.</p>
-         * </li>
+         * <li>pending: Pending initialization.</li>
+         * <li>creating: Being created.</li>
+         * <li>running: Running.</li>
+         * <li>deleting: Being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,7 +226,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the network endpoint was last updated. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The last update time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -164,7 +235,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>A list of vSwitches to which the private network endpoint is connected.</p>
+         * <p>The list of vSwitches for the dedicated network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-examplexxx</p>
@@ -173,7 +244,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The ID of the VPC to which the private network endpoint is connected.</p>
+         * <p>The VPC ID of the dedicated network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-examplexxx</p>
@@ -182,7 +253,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The region ID of the VPC to which the private network endpoint is connected.</p>
+         * <p>The region of the VPC for the dedicated network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -193,6 +264,14 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         public static ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints build(java.util.Map<String, ?> map) throws Exception {
             ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints self = new ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints();
             return TeaModel.build(map, self);
+        }
+
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints setBackupVpcEndpoint(ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint backupVpcEndpoint) {
+            this.backupVpcEndpoint = backupVpcEndpoint;
+            return this;
+        }
+        public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint getBackupVpcEndpoint() {
+            return this.backupVpcEndpoint;
         }
 
         public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints setCreateTime(Long createTime) {

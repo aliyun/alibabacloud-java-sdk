@@ -53,6 +53,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
@@ -109,6 +112,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstancesRequest setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
     }
 
     public ListInstancesRequest setStatus(String status) {

@@ -180,7 +180,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String logoUrl;
 
         /**
-         * <p>The ServiceCode of the Alibaba Cloud service that manages the application template.</p>
+         * <p>The ServiceCode of the cloud service that manages the application template.</p>
          * 
          * <strong>example:</strong>
          * <p>rpa</p>
@@ -216,7 +216,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String resourceServerStatus;
 
         /**
-         * <p>Indicates whether the application template is managed by an Alibaba Cloud service.</p>
+         * <p>Specifies whether the application template is managed by a cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

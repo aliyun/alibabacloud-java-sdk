@@ -141,7 +141,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String primaryInstanceRegionId;
 
         /**
-         * <p>The time when the disaster recovery data replication was created, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time of the disaster recovery data replication, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1778499337000</p>
@@ -276,6 +276,9 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>Indicates whether the instance is managed by an Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
+         * <p>true</p>
+         * 
+         * <strong>if can be null:</strong>
          * <p>true</p>
          */
         @NameInMap("ServiceManaged")

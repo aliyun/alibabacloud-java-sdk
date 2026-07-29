@@ -40,7 +40,84 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint extends TeaModel {
+        @NameInMap("BackupEgressPrivateIpAddresses")
+        public java.util.List<String> backupEgressPrivateIpAddresses;
+
+        @NameInMap("BackupEgressPublicIpAddresses")
+        public java.util.List<String> backupEgressPublicIpAddresses;
+
+        @NameInMap("BackupSecurityGroupId")
+        public String backupSecurityGroupId;
+
+        @NameInMap("BackupVSwitchIds")
+        public java.util.List<String> backupVSwitchIds;
+
+        @NameInMap("BackupVpcId")
+        public String backupVpcId;
+
+        @NameInMap("BackupVpcRegionId")
+        public String backupVpcRegionId;
+
+        public static GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint build(java.util.Map<String, ?> map) throws Exception {
+            GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint self = new GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint();
+            return TeaModel.build(map, self);
+        }
+
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint setBackupEgressPrivateIpAddresses(java.util.List<String> backupEgressPrivateIpAddresses) {
+            this.backupEgressPrivateIpAddresses = backupEgressPrivateIpAddresses;
+            return this;
+        }
+        public java.util.List<String> getBackupEgressPrivateIpAddresses() {
+            return this.backupEgressPrivateIpAddresses;
+        }
+
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint setBackupEgressPublicIpAddresses(java.util.List<String> backupEgressPublicIpAddresses) {
+            this.backupEgressPublicIpAddresses = backupEgressPublicIpAddresses;
+            return this;
+        }
+        public java.util.List<String> getBackupEgressPublicIpAddresses() {
+            return this.backupEgressPublicIpAddresses;
+        }
+
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint setBackupSecurityGroupId(String backupSecurityGroupId) {
+            this.backupSecurityGroupId = backupSecurityGroupId;
+            return this;
+        }
+        public String getBackupSecurityGroupId() {
+            return this.backupSecurityGroupId;
+        }
+
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint setBackupVSwitchIds(java.util.List<String> backupVSwitchIds) {
+            this.backupVSwitchIds = backupVSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getBackupVSwitchIds() {
+            return this.backupVSwitchIds;
+        }
+
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint setBackupVpcId(String backupVpcId) {
+            this.backupVpcId = backupVpcId;
+            return this;
+        }
+        public String getBackupVpcId() {
+            return this.backupVpcId;
+        }
+
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint setBackupVpcRegionId(String backupVpcRegionId) {
+            this.backupVpcRegionId = backupVpcRegionId;
+            return this;
+        }
+        public String getBackupVpcRegionId() {
+            return this.backupVpcRegionId;
+        }
+
+    }
+
     public static class GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint extends TeaModel {
+        @NameInMap("BackupVpcEndpoint")
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint backupVpcEndpoint;
+
         /**
          * <p>The time when the network access endpoint was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
@@ -51,7 +128,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The private egress IP addresses of the dedicated network access endpoint. This parameter is returned only when NetworkEndpointType is set to private.</p>
+         * <p>The private egress IP address range of the dedicated network access endpoint. This parameter is returned only when NetworkEndpointType is set to private.</p>
          * 
          * <strong>example:</strong>
          * <p>172.168.x.x</p>
@@ -60,7 +137,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public java.util.List<String> egressPrivateIpAddresses;
 
         /**
-         * <p>The public egress IP addresses of the shared network access endpoint. This parameter is returned only when NetworkEndpointType is set to shared.</p>
+         * <p>The public egress IP address range of the shared network access endpoint. This parameter is returned only when NetworkEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>203.0.XX.XX/27</p>
@@ -78,7 +155,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The dedicated network access endpoint ID.</p>
+         * <p>The ID of the dedicated network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxx</p>
@@ -98,8 +175,8 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         /**
          * <p>The type of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>shared: shared network access endpoint.</li>
-         * <li>private: dedicated network access endpoint.</li>
+         * <li>shared: Shared network access endpoint.</li>
+         * <li>private: Dedicated network access endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,10 +197,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         /**
          * <p>The status of the network access endpoint. Valid values:</p>
          * <ul>
-         * <li>pending: pending initialization.</li>
-         * <li>creating: being created.</li>
-         * <li>running: running.</li>
-         * <li>deleting: being deleted.</li>
+         * <li>pending: Pending initialization.</li>
+         * <li>creating: Being created.</li>
+         * <li>running: Running.</li>
+         * <li>deleting: Being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,6 +248,14 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         public static GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint build(java.util.Map<String, ?> map) throws Exception {
             GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint self = new GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint();
             return TeaModel.build(map, self);
+        }
+
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint setBackupVpcEndpoint(GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint backupVpcEndpoint) {
+            this.backupVpcEndpoint = backupVpcEndpoint;
+            return this;
+        }
+        public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpointBackupVpcEndpoint getBackupVpcEndpoint() {
+            return this.backupVpcEndpoint;
         }
 
         public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint setCreateTime(Long createTime) {

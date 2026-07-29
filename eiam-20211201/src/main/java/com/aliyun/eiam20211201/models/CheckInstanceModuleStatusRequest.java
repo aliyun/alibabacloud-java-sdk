@@ -33,6 +33,12 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     @NameInMap("ModuleKey")
     public String moduleKey;
 
+    @NameInMap("ResourceLabelKey")
+    public String resourceLabelKey;
+
+    @NameInMap("ResourceLabelValue")
+    public String resourceLabelValue;
+
     /**
      * <p>The tertiary module identifier.</p>
      * 
@@ -69,6 +75,22 @@ public class CheckInstanceModuleStatusRequest extends TeaModel {
     }
     public String getModuleKey() {
         return this.moduleKey;
+    }
+
+    public CheckInstanceModuleStatusRequest setResourceLabelKey(String resourceLabelKey) {
+        this.resourceLabelKey = resourceLabelKey;
+        return this;
+    }
+    public String getResourceLabelKey() {
+        return this.resourceLabelKey;
+    }
+
+    public CheckInstanceModuleStatusRequest setResourceLabelValue(String resourceLabelValue) {
+        this.resourceLabelValue = resourceLabelValue;
+        return this;
+    }
+    public String getResourceLabelValue() {
+        return this.resourceLabelValue;
     }
 
     public CheckInstanceModuleStatusRequest setSubFeatureKey(String subFeatureKey) {

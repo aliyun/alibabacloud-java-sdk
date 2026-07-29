@@ -1054,7 +1054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determines whether an instance has the feature of a specific module.</p>
+     * <p>Determines whether an instance has the capability of a specific module.</p>
      * 
      * @param request CheckInstanceModuleStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1073,6 +1073,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.moduleKey)) {
             query.put("ModuleKey", request.moduleKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceLabelKey)) {
+            query.put("ResourceLabelKey", request.resourceLabelKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceLabelValue)) {
+            query.put("ResourceLabelValue", request.resourceLabelValue);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.subFeatureKey)) {
@@ -1098,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Determines whether an instance has the feature of a specific module.</p>
+     * <p>Determines whether an instance has the capability of a specific module.</p>
      * 
      * @param request CheckInstanceModuleStatusRequest
      * @return CheckInstanceModuleStatusResponse
@@ -10608,7 +10616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more EIAM applications by using paged query. Paging is supported.</p>
+     * <p>Queries information about one or more EIAM applications by using paging.</p>
      * 
      * @param request ListApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10700,7 +10708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about one or more EIAM applications by using paged query. Paging is supported.</p>
+     * <p>Queries information about one or more EIAM applications by using paging.</p>
      * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
@@ -12860,6 +12868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceManaged)) {
+            query.put("ServiceManaged", request.serviceManaged);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }
@@ -12972,7 +12984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the network endpoints for an IDaaS EIAM instance.</p>
+     * <p>Queries the list of network access endpoints under an IDaaS EIAM instance.</p>
      * 
      * @param request ListNetworkAccessEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13028,7 +13040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the network endpoints for an IDaaS EIAM instance.</p>
+     * <p>Queries the list of network access endpoints under an IDaaS EIAM instance.</p>
      * 
      * @param request ListNetworkAccessEndpointsRequest
      * @return ListNetworkAccessEndpointsResponse

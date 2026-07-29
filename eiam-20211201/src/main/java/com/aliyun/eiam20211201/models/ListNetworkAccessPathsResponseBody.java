@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNetworkAccessPathsResponseBody extends TeaModel {
     /**
-     * <p>The list of network access endpoint access paths.</p>
+     * <p>The list of network access endpoint paths.</p>
      */
     @NameInMap("NetworkAccessPaths")
     public java.util.List<ListNetworkAccessPathsResponseBodyNetworkAccessPaths> networkAccessPaths;
@@ -42,13 +42,16 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
 
     public static class ListNetworkAccessPathsResponseBodyNetworkAccessPaths extends TeaModel {
         /**
-         * <p>The time when the dedicated network access endpoint access path was created, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time of the dedicated network access endpoint path. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("CrossRegionReplicationRole")
+        public String crossRegionReplicationRole;
 
         /**
          * <p>The instance ID.</p>
@@ -60,7 +63,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The dedicated network access endpoint ID.</p>
+         * <p>The ID of the dedicated network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxx</p>
@@ -69,7 +72,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>The ID of the dedicated network access endpoint access path.</p>
+         * <p>The ID of the dedicated network access endpoint path.</p>
          * 
          * <strong>example:</strong>
          * <p>nap_examplexxx</p>
@@ -78,7 +81,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String networkAccessPathId;
 
         /**
-         * <p>The ENI ID used by the dedicated network access endpoint access path.</p>
+         * <p>The ID of the ENI used by the dedicated network access endpoint path.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-examplexxx</p>
@@ -87,7 +90,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The private endpoint of the ENI used by the dedicated network access endpoint access path on the private network.</p>
+         * <p>The private endpoint of the ENI used by the dedicated network access endpoint path.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -96,12 +99,12 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String privateIpAddress;
 
         /**
-         * <p>The status of the dedicated network access endpoint access path. Valid values:</p>
+         * <p>The status of the dedicated network access endpoint path. Valid values:</p>
          * <ul>
-         * <li>pending: pending initialization.</li>
-         * <li>creating: being created.</li>
-         * <li>running: running.</li>
-         * <li>deleting: being deleted.</li>
+         * <li>pending: Pending initialization.</li>
+         * <li>creating: Being created.</li>
+         * <li>running: Running.</li>
+         * <li>deleting: Being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +114,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the dedicated network access endpoint access path was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The last update time of the dedicated network access endpoint path. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -120,13 +123,19 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The vSwitch ID to which the ENI of the dedicated network access endpoint access path belongs.</p>
+         * <p>The ID of the vSwitch to which the ENI of the dedicated network access endpoint path belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-examplexxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VpcRegionId")
+        public String vpcRegionId;
 
         public static ListNetworkAccessPathsResponseBodyNetworkAccessPaths build(java.util.Map<String, ?> map) throws Exception {
             ListNetworkAccessPathsResponseBodyNetworkAccessPaths self = new ListNetworkAccessPathsResponseBodyNetworkAccessPaths();
@@ -139,6 +148,14 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListNetworkAccessPathsResponseBodyNetworkAccessPaths setCrossRegionReplicationRole(String crossRegionReplicationRole) {
+            this.crossRegionReplicationRole = crossRegionReplicationRole;
+            return this;
+        }
+        public String getCrossRegionReplicationRole() {
+            return this.crossRegionReplicationRole;
         }
 
         public ListNetworkAccessPathsResponseBodyNetworkAccessPaths setInstanceId(String instanceId) {
@@ -203,6 +220,22 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public ListNetworkAccessPathsResponseBodyNetworkAccessPaths setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListNetworkAccessPathsResponseBodyNetworkAccessPaths setVpcRegionId(String vpcRegionId) {
+            this.vpcRegionId = vpcRegionId;
+            return this;
+        }
+        public String getVpcRegionId() {
+            return this.vpcRegionId;
         }
 
     }
