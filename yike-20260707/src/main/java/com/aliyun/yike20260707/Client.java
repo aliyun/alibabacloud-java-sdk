@@ -878,8 +878,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitMediaComprehensionJobResponse submitMediaComprehensionJobWithOptions(SubmitMediaComprehensionJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobParams)) {
             query.put("JobParams", request.jobParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            query.put("JobType", request.jobType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {

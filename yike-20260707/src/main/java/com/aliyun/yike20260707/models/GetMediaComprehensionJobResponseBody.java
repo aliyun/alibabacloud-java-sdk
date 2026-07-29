@@ -4,6 +4,9 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class GetMediaComprehensionJobResponseBody extends TeaModel {
+    @NameInMap("Job")
+    public GetMediaComprehensionJobResponseBodyJob job;
+
     @NameInMap("MediaComprehensionJob")
     public GetMediaComprehensionJobResponseBodyMediaComprehensionJob mediaComprehensionJob;
 
@@ -17,6 +20,14 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
     public static GetMediaComprehensionJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMediaComprehensionJobResponseBody self = new GetMediaComprehensionJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMediaComprehensionJobResponseBody setJob(GetMediaComprehensionJobResponseBodyJob job) {
+        this.job = job;
+        return this;
+    }
+    public GetMediaComprehensionJobResponseBodyJob getJob() {
+        return this.job;
     }
 
     public GetMediaComprehensionJobResponseBody setMediaComprehensionJob(GetMediaComprehensionJobResponseBodyMediaComprehensionJob mediaComprehensionJob) {
@@ -33,6 +44,100 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class GetMediaComprehensionJobResponseBodyJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>The specified product does not exist.</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("MediaIds")
+        public java.util.List<String> mediaIds;
+
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;source_video_url\&quot;:\&quot;<a href="http://xxx.mp4%5C%5C%22,%5C%5C%22narrative_overview%5C%5C%22:%7B******%7D%7D">http://xxx.mp4\\&quot;,\\&quot;narrative_overview\\&quot;:{******}}</a>&quot;</p>
+         */
+        @NameInMap("Result")
+        public String result;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Executing</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
+         */
+        @NameInMap("UserData")
+        public String userData;
+
+        public static GetMediaComprehensionJobResponseBodyJob build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaComprehensionJobResponseBodyJob self = new GetMediaComprehensionJobResponseBodyJob();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaComprehensionJobResponseBodyJob setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetMediaComprehensionJobResponseBodyJob setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public GetMediaComprehensionJobResponseBodyJob setMediaIds(java.util.List<String> mediaIds) {
+            this.mediaIds = mediaIds;
+            return this;
+        }
+        public java.util.List<String> getMediaIds() {
+            return this.mediaIds;
+        }
+
+        public GetMediaComprehensionJobResponseBodyJob setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public GetMediaComprehensionJobResponseBodyJob setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetMediaComprehensionJobResponseBodyJob setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
     }
 
     public static class GetMediaComprehensionJobResponseBodyMediaComprehensionJob extends TeaModel {
