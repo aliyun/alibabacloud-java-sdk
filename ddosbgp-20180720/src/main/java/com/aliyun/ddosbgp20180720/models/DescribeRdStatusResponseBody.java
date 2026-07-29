@@ -16,9 +16,12 @@ public class DescribeRdStatusResponseBody extends TeaModel {
     /**
      * <p>The type of the Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><strong>MasterAccount</strong>: management account.</li>
-     * <li><strong>DelegatedAdminAccount</strong>: delegated administrator account.</li>
-     * <li><strong>MemberAccount</strong>: member.</li>
+     * <li><p><strong>MasterAccount</strong>: management account.</p>
+     * </li>
+     * <li><p><strong>DelegatedAdminAccount</strong>: delegated administrator account.</p>
+     * </li>
+     * <li><p><strong>MemberAccount</strong>: member.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

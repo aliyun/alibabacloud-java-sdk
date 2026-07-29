@@ -7,8 +7,10 @@ public class CheckGrantRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow Anti-DDoS Origin to check the service-linked role. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +22,7 @@ public class CheckGrantRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

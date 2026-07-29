@@ -14,7 +14,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the regions of cloud assets that can be protected by Anti-DDoS Origin. The information includes region IDs and names.</p>
+     * <p>The region information of cloud assets that can be protected by Anti-DDoS Origin, including region IDs and names.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
@@ -29,10 +29,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionEnName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPolicyAttachmentRequest extends TeaModel {
     /**
-     * <p>The protected objects.</p>
+     * <p>The list of protected objects.</p>
      */
     @NameInMap("IpPortProtocolList")
     public java.util.List<ListPolicyAttachmentRequestIpPortProtocolList> ipPortProtocolList;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of rows per page in a paging query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>f38f6520-92b7-451e-b520-9ab3********</p>
@@ -38,11 +38,11 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The type of the policy. Valid values:</p>
+     * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: the default mitigation policies.</li>
-     * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
-     * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+     * <li><strong>default</strong>: default mitigation policy.</li>
+     * <li><strong>l3</strong>: IP-specific mitigation policy.</li>
+     * <li><strong>l4</strong>: port-specific mitigation policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,16 @@ public class ListPolicyAttachmentRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Not specified</strong>: queries the policy associations that attach to the default surf DPI engine.</li>
+     * <li><strong>2</strong>: queries the policy associations that attach to the new stream DPI engine.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PortVersion")
     public String portVersion;
 
@@ -127,14 +137,20 @@ public class ListPolicyAttachmentRequest extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The port number range of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8*-9*</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
         /**
          * <p>The protocol type of the protected object. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+         * <li><strong>udp</strong>: User Datagram Protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The IP addresses that are protected by the instance.</p>
+     * <p>The list of IP addresses that are protected by the Anti-DDoS Origin instance.</p>
      */
     @NameInMap("IpList")
     public java.util.List<DescribePackIpListResponseBodyIpList> ipList;
@@ -30,10 +30,12 @@ public class DescribePackIpListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call is successful.</li>
-     * <li><strong>false</strong>: The call fails.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +45,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The number of protected IP addresses.</p>
+     * <p>The number of protected IP addresses that are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -107,7 +109,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The ID of the member.</p>
+         * <p>The UID of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>170858869679****</p>
@@ -116,7 +118,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The time when the near-origin traffic diversion feature was disabled.</p>
+         * <p>The end time of cross-border traffic blocking.</p>
          * 
          * <strong>example:</strong>
          * <p>1715658000</p>
@@ -125,7 +127,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public Long nsmExpireAt;
 
         /**
-         * <p>The time when the near-origin traffic diversion feature was enabled.</p>
+         * <p>The start time of cross-border traffic blocking.</p>
          * 
          * <strong>example:</strong>
          * <p>1715655000</p>
@@ -134,10 +136,12 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public Long nsmStartAt;
 
         /**
-         * <p>The status of the near-origin traffic diversion feature. Valid values:</p>
+         * <p>The status of cross-border traffic blocking. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The near-origin traffic diversion feature is enabled.</li>
-         * <li><strong>0</strong>: The near-origin traffic diversion feature is disabled.</li>
+         * <li><p><strong>1</strong>: Cross-border traffic is being blocked.</p>
+         * </li>
+         * <li><p><strong>0</strong>: Cross-border traffic is not blocked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,10 +153,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
         /**
          * <p>The type of the cloud asset to which the IP address belongs. Valid values:</p>
          * <ul>
-         * <li><strong>ECS</strong>: an ECS instance.</li>
-         * <li><strong>SLB</strong>: a CLB (formerly SLB) instance.</li>
-         * <li><strong>EIP</strong>: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.</li>
-         * <li><strong>WAF</strong>: a WAF instance.</li>
+         * <li><p><strong>ECS</strong>: an ECS instance.</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: a CLB instance.</p>
+         * </li>
+         * <li><p><strong>EIP</strong>: an EIP instance. This includes the EIP used by an ALB instance.</p>
+         * </li>
+         * <li><p><strong>WAF</strong>: a WAF instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,9 +170,9 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The region to which the protected IP address belongs.</p>
+         * <p>The region where the protected IP address is deployed.</p>
          * <blockquote>
-         * <p> If the protected IP address is in the same region as the instance, this parameter is not returned.</p>
+         * <p>This parameter is not returned if the protected IP address is deployed in the same region as the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,9 +182,9 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The description of the cloud asset to which the IP address belongs. The asset can be an ECS instance or an SLB instance.</p>
+         * <p>The remarks on the cloud asset to which the IP address belongs, such as an ECS instance or an SLB instance.</p>
          * <blockquote>
-         * <p> If no descriptions are provided for the asset, this parameter is not returned.</p>
+         * <p>This parameter is not returned if no remarks are specified for the cloud asset.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,10 +194,12 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The status of the IP address. Valid values:</p>
+         * <p>The current status of the IP address. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: The IP address is not under attack.</li>
-         * <li><strong>hole_begin</strong>: Blackhole filtering is triggered for the IP address.</li>
+         * <li><p><strong>normal</strong>: The IP address is not under attack.</p>
+         * </li>
+         * <li><p><strong>hole_begin</strong>: The IP address is in blackhole filtering status.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -1,3 +1,10 @@
+2026-07-29 Version: 3.1.0
+- Support API DescribeNetworkLayerIntercepts.
+- Update API ListPolicy: add response parameters Body.PolicyList.$.Content.SipDefense.
+- Update API ModifyPolicy: add request parameters Content.SipDefense.
+- Update API ModifyPolicyContent: add request parameters Content.SipDefense.
+
+
 2026-03-18 Version: 3.0.0
 - Delete API ConfigSchedruleOnDemand.
 - Delete API CreateSchedruleOnDemand.

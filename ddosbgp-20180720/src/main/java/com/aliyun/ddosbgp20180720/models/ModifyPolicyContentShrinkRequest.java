@@ -11,7 +11,7 @@ public class ModifyPolicyContentShrinkRequest extends TeaModel {
     public String contentShrink;
 
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyPolicyContentShrinkRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>demo**</p>
@@ -29,6 +29,12 @@ public class ModifyPolicyContentShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PortVersion")
     public String portVersion;
 

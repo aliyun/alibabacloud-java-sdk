@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DetachFromPolicyRequest extends TeaModel {
     /**
-     * <p>The protected objects.</p>
+     * <p>The list of protected objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpPortProtocolList")
     public java.util.List<DetachFromPolicyRequestIpPortProtocolList> ipPortProtocolList;
 
     /**
-     * <p>The type of the policy. Valid values:</p>
+     * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: the default mitigation policies.</li>
-     * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
-     * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+     * <li><strong>default</strong>: default mitigation policy.</li>
+     * <li><strong>l3</strong>: IP-specific mitigation policy.</li>
+     * <li><strong>l4</strong>: port-specific mitigation policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -26,6 +26,19 @@ public class DetachFromPolicyRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Not specified</strong>: dissociates the default surf anti-DDoS engine policy.</li>
+     * <li><strong>2</strong>: dissociates the new stream anti-DDoS engine policy.<blockquote>
+     * <p>Only port-specific mitigation policies support this parameter.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PortVersion")
     public String portVersion;
 
@@ -78,14 +91,23 @@ public class DetachFromPolicyRequest extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The port range of the protected object.</p>
+         * <blockquote>
+         * <p>Only port-specific mitigation policies support this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8*-9*</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
         /**
          * <p>The protocol type of the protected object. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
+         * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+         * <li><strong>udp</strong>: User Datagram Protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>

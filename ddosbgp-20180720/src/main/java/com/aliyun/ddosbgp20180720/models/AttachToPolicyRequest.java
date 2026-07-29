@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachToPolicyRequest extends TeaModel {
     /**
-     * <p>The protected objects.</p>
+     * <p>The list of protection objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpPortProtocolList")
@@ -21,6 +21,19 @@ public class AttachToPolicyRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Not specified</strong>: Associates the default surf anti-DDoS engine policy.</li>
+     * <li><strong>2</strong>: Associates the new stream anti-DDoS engine policy.<blockquote>
+     * <p>Only port-specific mitigation policies support this parameter.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PortVersion")
     public String portVersion;
 
@@ -55,7 +68,7 @@ public class AttachToPolicyRequest extends TeaModel {
 
     public static class AttachToPolicyRequestIpPortProtocolList extends TeaModel {
         /**
-         * <p>The IP address of the protected object.</p>
+         * <p>The IP address of the protection object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,9 +78,9 @@ public class AttachToPolicyRequest extends TeaModel {
         public String ip;
 
         /**
-         * <p>The port number of the protected object.</p>
+         * <p>The port number of the protection object.</p>
          * <blockquote>
-         * <p> This parameter is available for only port-specific mitigation policies.</p>
+         * <p>Only port-specific mitigation policies support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -76,18 +89,27 @@ public class AttachToPolicyRequest extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The port range of the protection object.</p>
+         * <blockquote>
+         * <p>Only port-specific mitigation policies support this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8*-9*</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
         /**
-         * <p>The protocol type of the protected object. Valid values:</p>
+         * <p>The protocol type of the protection object. Valid values:</p>
          * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is available for only port-specific mitigation policies.</p>
+         * <li><strong>tcp</strong>: Transmission Control Protocol.</li>
+         * <li><strong>udp</strong>: User Datagram Protocol.<blockquote>
+         * <p>Only port-specific mitigation policies support this parameter.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>tcp</p>

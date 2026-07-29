@@ -7,7 +7,7 @@ public class DeleteIpRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,11 +18,12 @@ public class DeleteIpRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP addresses that you want to remove from the Anti-DDoS Origin instance. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</p>
+     * <p>A list of IP addresses to remove from the protected objects of the Anti-DDoS Origin instance. Specify the list as a string that is a JSON array. Each element in the array is a struct that contains the following field:</p>
      * <ul>
-     * <li><p><strong>ip</strong>: required. The IP address that you want to remove. Data type: string.</p>
-     * <p>**</p>
-     * <p><strong>Note</strong> The IP addresses that you want to remove must be protected by the Anti-DDoS Origin instance.</p>
+     * <li><p><strong>ip</strong>: The IP address to remove. This parameter is a string and is required.</p>
+     * <blockquote>
+     * <p>The IP address must be in the protection list of the Anti-DDoS Origin instance.</p>
+     * </blockquote>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -34,9 +35,9 @@ public class DeleteIpRequest extends TeaModel {
     public String ipList;
 
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all regions that Anti-DDoS Origin supports.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,8 +47,8 @@ public class DeleteIpRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
-     * <p>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. If you leave this parameter empty, the instance belongs to the default resource group.</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>

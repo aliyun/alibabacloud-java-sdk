@@ -83,9 +83,12 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The event that triggers automatic association. Valid values:</p>
          * <ul>
-         * <li><strong>any</strong>: The instance is automatically associated with an object based on traffic scrubbing events or blackhole filtering events.</li>
-         * <li><strong>clean</strong>: The instance is automatically associated with an object based on traffic scrubbing events.</li>
-         * <li><strong>blackhole</strong>: The instance is automatically associated with an object based on blackhole filtering events.</li>
+         * <li><p><strong>any</strong>: The instance is automatically associated with an object based on traffic scrubbing events or blackhole filtering events.</p>
+         * </li>
+         * <li><p><strong>clean</strong>: The instance is automatically associated with an object based on traffic scrubbing events.</p>
+         * </li>
+         * <li><p><strong>blackhole</strong>: The instance is automatically associated with an object based on blackhole filtering events.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("AutoProtectCondition")
@@ -103,8 +106,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The type of the instance.</p>
          * <ul>
-         * <li><strong>ddos_ddosorigin_public_cn</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com).</li>
-         * <li><strong>ddos_ddosorigin_public_intl</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com).</li>
+         * <li><p><strong>ddos_ddosorigin_public_cn</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>ddos_ddosorigin_public_intl</strong>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,8 +130,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether overdue payments exist. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Overdue payments do not exist.</li>
-         * <li><strong>1</strong>: Overdue payments exist.</li>
+         * <li><p><strong>0</strong>: Overdue payments do not exist.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Overdue payments exist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,8 +163,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The mitigation plan of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: the Professional mitigation plan</li>
-         * <li><strong>1</strong>: the Enterprise mitigation plan</li>
+         * <li><p><strong>0</strong>: the Professional mitigation plan</p>
+         * </li>
+         * <li><p><strong>1</strong>: the Enterprise mitigation plan</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +178,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The number of protected public IP addresses for which blackhole filtering is triggered.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -181,10 +190,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>The application scope of the instance.</p>
          * <ul>
-         * <li><strong>1</strong>: The instance supports public IP addresses in all regions.</li>
-         * <li><strong>2</strong>: The instance supports public IP addresses in regions in the Chinese mainland.</li>
-         * <li><strong>3</strong>: The instance supports public IP addresses in regions outside the Chinese mainland.</li>
-         * <li><strong>4</strong>: The instance supports public IP addresses in a region in or outside the Chinese mainland.</li>
+         * <li><p><strong>1</strong>: The instance supports public IP addresses in all regions.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The instance supports public IP addresses in regions in the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The instance supports public IP addresses in regions outside the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The instance supports public IP addresses in a region in or outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,8 +228,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
          * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>gamebox</strong>: The Anti-DDoS Origin instance is created by using Game Security Box.</li>
-         * <li><strong>eip</strong>: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</li>
+         * <li><p><strong>gamebox</strong>: The Anti-DDoS Origin instance is created by using Game Security Box.</p>
+         * </li>
+         * <li><p><strong>eip</strong>: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,8 +252,10 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

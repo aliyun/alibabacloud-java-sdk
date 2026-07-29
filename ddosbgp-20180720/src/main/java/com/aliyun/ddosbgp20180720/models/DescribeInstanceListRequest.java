@@ -32,8 +32,10 @@ public class DescribeInstanceListRequest extends TeaModel {
     /**
      * <p>The sorting method. Valid values:</p>
      * <ul>
-     * <li><strong>desc</strong>: the descending order. This is the default value.</li>
-     * <li><strong>asc</strong>: the ascending order.</li>
+     * <li><p><strong>desc</strong>: the descending order. This is the default value.</p>
+     * </li>
+     * <li><p><strong>asc</strong>: the ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class DescribeInstanceListRequest extends TeaModel {
     /**
      * <p>The ID of the region where the Anti-DDoS Origin instance to query resides.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,8 +77,10 @@ public class DescribeInstanceListRequest extends TeaModel {
     /**
      * <p>The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:</p>
      * <ul>
-     * <li><strong>Ipv4</strong>: IPv4</li>
-     * <li><strong>Ipv6</strong>: IPv6</li>
+     * <li><p><strong>Ipv4</strong>: IPv4</p>
+     * </li>
+     * <li><p><strong>Ipv6</strong>: IPv6</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -89,8 +93,10 @@ public class DescribeInstanceListRequest extends TeaModel {
     /**
      * <p>The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: the Professional mitigation plan</li>
-     * <li><strong>1</strong>: the Enterprise mitigation plan</li>
+     * <li><p><strong>0</strong>: the Professional mitigation plan</p>
+     * </li>
+     * <li><p><strong>1</strong>: the Enterprise mitigation plan</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -255,8 +261,10 @@ public class DescribeInstanceListRequest extends TeaModel {
         /**
          * <p>The mitigation plan of the Anti-DDoS Origin instance. Valid values:</p>
          * <ul>
-         * <li>0: the Professional mitigation plan.</li>
-         * <li>1: the Enterprise mitigation plan.</li>
+         * <li><p>0: the Professional mitigation plan.</p>
+         * </li>
+         * <li><p>1: the Enterprise mitigation plan.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

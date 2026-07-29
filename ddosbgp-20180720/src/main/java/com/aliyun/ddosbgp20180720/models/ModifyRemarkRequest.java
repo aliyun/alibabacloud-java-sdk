@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyRemarkRequest extends TeaModel {
     /**
-     * <p>The ID of the Anti-DDoS Origin instance for which you want to add remarks.</p>
+     * <p>The ID of the Anti-DDoS Origin instance for which you want to set a remark.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class ModifyRemarkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,7 @@ public class ModifyRemarkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remarks for the Anti-DDoS Origin instance.</p>
-     * <p>This parameter is required.</p>
+     * <p>The remark for the Anti-DDoS Origin instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test-remark</p>

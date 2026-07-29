@@ -16,8 +16,10 @@ public class CheckGrantResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.</li>
-     * <li><strong>0</strong>: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.</li>
+     * <li><p><strong>1</strong>: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddIpRequest extends TeaModel {
     /**
-     * <p>The ID of the Anti-DDoS Origin instance.</p>
+     * <p>The ID of the Anti-DDoS Origin instance to manage.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,23 +18,25 @@ public class AddIpRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP addresses that you want to add to the Anti-DDoS Origin instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following fields:</p>
+     * <p>The list of IP addresses to add to the Anti-DDoS Origin instance for protection. The value is a string that is converted from a JSON array. Each element in the JSON array is a struct that contains the following fields:</p>
      * <ul>
-     * <li><strong>ip</strong>: required. The IP address that you want to add. Data type: string.</li>
-     * <li><strong>member_uid</strong>: optional. The member to which the asset belongs. Data type: string. This field is required only if the asset of a member is queried. Example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162\<em>\</em>\<em>\</em>&quot;}].</li>
+     * <li><p><strong>ip</strong>: The IP address to add. This parameter is of the String type and is required.</p>
+     * </li>
+     * <li><p><strong>member_uid</strong>: The ID of the member account that owns the asset. This parameter is of the String type and is optional. Specify this parameter only when you add an asset that belongs to a member account. For example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162\<em>\</em>\<em>\</em>&quot;}]</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;ip&quot;:&quot;1.XX.XX.1&quot;},{&quot;ip&quot;:&quot;2.XX.XX.2&quot;}]</p>
+     * <p>[{&quot;ip&quot;:&quot;121.41.XX.XX&quot;},{&quot;ip&quot;:&quot;121.42.XX.XX&quot;}]</p>
      */
     @NameInMap("IpList")
     public String ipList;
 
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query information about all regions that Anti-DDoS Origin supports.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,8 +46,8 @@ public class AddIpRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
-     * <p>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+     * <p>The ID of the resource group in Resource Management to which the Anti-DDoS Origin instance belongs. If you leave this parameter empty, the instance is added to the default resource group.</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>

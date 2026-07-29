@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>83967609-7ea5-4f6d-a6ea-380b09e****</p>
@@ -14,7 +14,7 @@ public class CreatePolicyResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>864FE2F4-CB2E-4024-B9EF-D59FD08A****</p>

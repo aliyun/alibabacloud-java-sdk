@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicyRequest extends TeaModel {
     /**
-     * <p>The name of the policy.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>test**</p>
@@ -14,7 +14,7 @@ public class ListPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number.</p>
+     * <p>Settings the page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListPolicyRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,16 +32,7 @@ public class ListPolicyRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The service type. Valid values:</p>
-     * <ul>
-     * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
-     * <li><strong>slb</strong>: Server Load Balancer (SLB).</li>
-     * <li><strong>eip</strong>: Elastic IP Address (EIP).</li>
-     * <li><strong>gf-eip</strong>: EIP with Anti-DDoS (Enhanced) enabled.</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter is available only if Type is set to <code>default</code>.</p>
-     * </blockquote>
+     * <p>The applicable product type. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -50,12 +41,7 @@ public class ListPolicyRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The type of the policy. Valid values:</p>
-     * <ul>
-     * <li><strong>default</strong>: the default mitigation policy.</li>
-     * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
-     * <li><strong>l4</strong>: port-specific mitigation policies.</li>
-     * </ul>
+     * <p>The policy type. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>l3</p>

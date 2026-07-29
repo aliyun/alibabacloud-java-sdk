@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficResponseBody extends TeaModel {
     /**
-     * <p>The queried traffic statistics.</p>
+     * <p>The traffic statistics.</p>
      */
     @NameInMap("FlowList")
     public java.util.List<DescribeTrafficResponseBodyFlowList> flowList;
@@ -42,9 +42,9 @@ public class DescribeTrafficResponseBody extends TeaModel {
 
     public static class DescribeTrafficResponseBodyFlowList extends TeaModel {
         /**
-         * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+         * <p>The bandwidth of attack traffic. Unit: bps.</p>
          * <blockquote>
-         * <p> This parameter is returned only if attack traffic exists.</p>
+         * <p>This field is returned only when attack traffic exists.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -54,9 +54,9 @@ public class DescribeTrafficResponseBody extends TeaModel {
         public Long attackBps;
 
         /**
-         * <p>The packet forwarding rate of attack traffic. Unit: packets per second.</p>
+         * <p>The packet forwarding rate of attack traffic. Unit: pps.</p>
          * <blockquote>
-         * <p> This parameter is returned only if attack traffic exists.</p>
+         * <p>This field is returned only when attack traffic exists.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -68,8 +68,8 @@ public class DescribeTrafficResponseBody extends TeaModel {
         /**
          * <p>The type of the traffic statistics. Valid values:</p>
          * <ul>
-         * <li><strong>max</strong>: the peak traffic within the specified interval</li>
-         * <li><strong>avg</strong>: the average traffic within the specified interval</li>
+         * <li><strong>max</strong>: the peak traffic within the statistical interval.</li>
+         * <li><strong>avg</strong>: the average traffic within the statistical interval.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
         public String flowType;
 
         /**
-         * <p>The bandwidth of the total traffic. Unit: Kbit/s.</p>
+         * <p>The bandwidth of total traffic. Unit: Kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>417</p>
@@ -88,7 +88,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
         public Integer kbps;
 
         /**
-         * <p>The ID of the traffic statistics.</p>
+         * <p>The ID of the traffic statistics entry.</p>
          * 
          * <strong>example:</strong>
          * <p>8e33f19e-5644-11eb-b5c1-d89d67182200</p>
@@ -97,7 +97,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The packet forwarding rate of the total traffic. Unit: packets per second.</p>
+         * <p>The packet forwarding rate of total traffic. Unit: pps.</p>
          * 
          * <strong>example:</strong>
          * <p>274</p>
@@ -106,7 +106,7 @@ public class DescribeTrafficResponseBody extends TeaModel {
         public Integer pps;
 
         /**
-         * <p>The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time of the traffic statistics. Expressed as a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1620951900</p>

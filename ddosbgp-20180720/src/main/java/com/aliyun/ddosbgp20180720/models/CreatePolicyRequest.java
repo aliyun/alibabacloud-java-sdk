@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
     /**
-     * <p>The name of the policy.</p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,14 +14,27 @@ public class CreatePolicyRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Not specified</strong>: creates a default surf DPI engine policy.</li>
+     * <li><strong>2</strong>: creates a new stream DPI engine policy.<blockquote>
+     * <p>Only port-specific mitigation policies support this parameter.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PortVersion")
     public String portVersion;
 
     /**
-     * <p>The type of the policy. Valid values:</p>
+     * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li><strong>l3</strong>: IP-specific mitigation policies.</li>
-     * <li><strong>l4</strong>: port-specific mitigation policies.</li>
+     * <li><strong>l3</strong>: IP-specific mitigation policy.</li>
+     * <li><strong>l4</strong>: port-specific mitigation policy.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

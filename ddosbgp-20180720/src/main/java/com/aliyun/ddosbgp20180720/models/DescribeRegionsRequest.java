@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The ID of the region. The default value is <strong>cn-hangzhou</strong>. If the default value is used, the regions of cloud assets that can be protected by Anti-DDoS Origin in the China (Hangzhou) region are queried.</p>
-     * <p>If you want to specify another value for <strong>RegionId</strong>, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and Zones</a>.</p>
+     * <p>The region ID to query. Default value: <strong>ap-southeast-1</strong>, which indicates that the regions of cloud assets that can be protected by the Anti-DDoS Origin instance in the China (Hangzhou) region are queried.</p>
+     * <p>To query other region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> to obtain the corresponding <strong>RegionId</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -15,8 +15,8 @@ public class DescribeRegionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
-     * <p>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. By default, this parameter is empty, which indicates that the instance belongs to the default resource group.</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>

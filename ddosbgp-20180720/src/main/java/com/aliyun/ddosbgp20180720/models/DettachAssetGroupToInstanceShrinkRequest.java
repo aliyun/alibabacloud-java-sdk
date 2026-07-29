@@ -14,7 +14,7 @@ public class DettachAssetGroupToInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances of paid editions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DettachAssetGroupToInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the instance resides.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -7,7 +7,7 @@ public class ReleaseDdosOriginInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin instance that you want to release.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

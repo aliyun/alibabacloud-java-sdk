@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachToPolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The protected objects.</p>
+     * <p>The list of protection objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpPortProtocolList")
@@ -21,6 +21,19 @@ public class AttachToPolicyShrinkRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * <ul>
+     * <li><strong>Not specified</strong>: Associates the default surf anti-DDoS engine policy.</li>
+     * <li><strong>2</strong>: Associates the new stream anti-DDoS engine policy.<blockquote>
+     * <p>Only port-specific mitigation policies support this parameter.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PortVersion")
     public String portVersion;
 

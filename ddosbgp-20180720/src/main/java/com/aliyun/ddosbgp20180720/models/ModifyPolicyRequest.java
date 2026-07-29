@@ -5,31 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyRequest extends TeaModel {
     /**
-     * <p>The type of the action. Valid values:</p>
-     * <ul>
-     * <li><strong>10</strong>: modifies the name. If you specify this value, <code>Name</code> is required.</li>
-     * <li><strong>11</strong>: modifies the blacklist validity period. If you specify this value, <code>BlackIpListExpireAt</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>12</strong>: changes the status of the feature of adding back-to-origin CIDR blocks of Anti-DDoS Proxy to the whitelist. If you specify this value, <code>WhitenGfbrNets</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>13</strong>: changes the status of the ICMP blocking feature. If you specify this value, <code>EnableDropIcmp</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>20</strong>: adds IP addresses to the blacklist or the whitelist. If you specify this value, you must specify at least one of <code>WhiteIpList</code> and <code>BlackIpList</code>. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>21</strong>: removes IP addresses from the blacklist or the whitelist. If you specify this value, at least one of <code>WhiteIpList</code> and <code>BlackIpList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>22</strong>: clears the whitelist. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>23</strong>: clears the blacklist. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>30</strong>: modifies the status and level of intelligent protection. If you specify this value, <code>EnableIntelligence</code> and <code>IntelligenceLevel</code> are required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>31</strong>: modifies the location blacklist settings. If you specify this value, one of <code>RegionBlockCountryList</code> and <code>RegionBlockProvinceList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>32</strong>: modifies the settings for source rate limiting. If you specify this value, <code>SourceLimit</code> and <code>SourceBlockList</code> are required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>33</strong>: modifies the settings for reflection attack filtering. If you specify this value, <code>ReflectBlockUdpPortList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>40</strong>: creates a port blocking rule. If you specify this value, <code>PortRuleList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>41</strong>: modifies the port blocking rule. If you specify this value, <code>PortRuleList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>42</strong>: deletes the port blocking rule. If you specify this value, <code>PortRuleList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>50</strong>: creates a byte-match filter rule. If you specify this value, <code>FingerPrintRuleList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>51</strong>: modifies the byte-match filter rule. If you specify this value, <code>FingerPrintRuleList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>52</strong>: deletes the byte-match filter rule. If you specify this value, <code>FingerPrintRuleList</code> is required. Only IP-specific mitigation policies support this value.</li>
-     * <li><strong>60</strong>: changes the status of the port-specific mitigation feature. If you specify this value, <code>EnableL4Defense</code> is required. Only port-specific mitigation policies support this value.</li>
-     * <li><strong>61</strong>: creates a port-specific mitigation rule. If you specify this value, <code>L4RuleList</code> is required. Only port-specific mitigation policies support this value.</li>
-     * <li><strong>62</strong>: modifies the port-specific mitigation rule. If you specify this value, <code>L4RuleList</code> is required. Only port-specific mitigation policies support this value.</li>
-     * <li><strong>63</strong>: deletes the port-specific mitigation rule. If you specify this value, <code>L4RuleList</code> is required. Only port-specific mitigation policies support this value.</li>
-     * </ul>
+     * <p>The action type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +21,7 @@ public class ModifyPolicyRequest extends TeaModel {
     public ModifyPolicyRequestContent content;
 
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +31,7 @@ public class ModifyPolicyRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>demo**</p>
@@ -63,6 +39,12 @@ public class ModifyPolicyRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The version of the port-specific mitigation policy. Valid values:</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PortVersion")
     public String portVersion;
 
@@ -113,7 +95,7 @@ public class ModifyPolicyRequest extends TeaModel {
 
     public static class ModifyPolicyRequestContentFingerPrintRuleList extends TeaModel {
         /**
-         * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The end value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +105,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer dstPortEnd;
 
         /**
-         * <p>The start of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The start value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +115,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer dstPortStart;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5fbe941f-a0cf-4a49-9c7c-8fac********</p>
@@ -142,13 +124,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The action triggered if the rule is matched. Valid values:</p>
-         * <ul>
-         * <li><strong>accept</strong>: allows the traffic that matches the conditions in the byte-match filter rule.</li>
-         * <li><strong>drop</strong>: discards the traffic that matches the conditions in the byte-match filter rule.</li>
-         * <li><strong>ip_rate</strong>: limits rates on the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by <strong>RateValue</strong>.</li>
-         * <li><strong>session_rate</strong>: limits the number of sessions from the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by <strong>RateValue</strong>.</li>
-         * </ul>
+         * <p>The match action. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +163,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer offset;
 
         /**
-         * <p>The payload. The value is a hexadecimal string.</p>
+         * <p>The detection payload. Represented in hexadecimal string format.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -196,11 +172,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String payloadBytes;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
-         * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
-         * </ul>
+         * <p>The protocol type. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,10 +182,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The rate limit. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
-         * <blockquote>
-         * <p> This parameter is required when <strong>MatchAction</strong> is set to <strong>ip_rate</strong> or <strong>session_rate</strong>.</p>
-         * </blockquote>
+         * <p>The rate limit value. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -222,10 +191,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer rateValue;
 
         /**
-         * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
-         * <blockquote>
-         * <p> A smaller number indicates a higher priority.</p>
-         * </blockquote>
+         * <p>The priority number, represented as an integer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +201,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer seqNo;
 
         /**
-         * <p>The end of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The end value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +211,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer srcPortEnd;
 
         /**
-         * <p>The start of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The start value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -366,9 +332,21 @@ public class ModifyPolicyRequest extends TeaModel {
     }
 
     public static class ModifyPolicyRequestContentL4RuleListConditionListOffset extends TeaModel {
+        /**
+         * <p>The end position. Valid values: <strong>0</strong> to <strong>1499</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1499</p>
+         */
         @NameInMap("End")
         public Integer end;
 
+        /**
+         * <p>The start position. Valid values: <strong>0</strong> to <strong>1499</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Start")
         public Integer start;
 
@@ -397,10 +375,7 @@ public class ModifyPolicyRequest extends TeaModel {
 
     public static class ModifyPolicyRequestContentL4RuleListConditionList extends TeaModel {
         /**
-         * <p>The term that is used for matching.</p>
-         * <blockquote>
-         * <p> If Method is set to <strong>char</strong>, the value of this parameter must be ASCII strings. If Method is set to <strong>hex</strong>, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.</p>
-         * </blockquote>
+         * <p>The detection content.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -408,11 +383,17 @@ public class ModifyPolicyRequest extends TeaModel {
         @NameInMap("Arg")
         public String arg;
 
+        /**
+         * <p>The matching content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test**</p>
+         */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The number of bytes from the start position for matching. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
+         * <p>The detection window length. Valid values: <strong>1</strong> to <strong>2048</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -420,17 +401,32 @@ public class ModifyPolicyRequest extends TeaModel {
         @NameInMap("Depth")
         public Integer depth;
 
+        /**
+         * <p>The character type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>str</p>
+         */
         @NameInMap("Encode")
         public String encode;
 
+        /**
+         * <p>The matching range.</p>
+         */
         @NameInMap("Offset")
         public ModifyPolicyRequestContentL4RuleListConditionListOffset offset;
 
+        /**
+         * <p>The matching pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>contain</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 
         /**
-         * <p>The start position for matching. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
+         * <p>The detection start position. Valid values: <strong>0</strong> to <strong>2047</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -503,10 +499,7 @@ public class ModifyPolicyRequest extends TeaModel {
 
     public static class ModifyPolicyRequestContentL4RuleList extends TeaModel {
         /**
-         * <p>The action that is specified in the rule. Valid value:</p>
-         * <ul>
-         * <li><strong>2</strong>: The traffic is discarded.</li>
-         * </ul>
+         * <p>The action.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -515,13 +508,13 @@ public class ModifyPolicyRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The match conditions.</p>
+         * <p>The list of detection conditions.</p>
          */
         @NameInMap("ConditionList")
         public java.util.List<ModifyPolicyRequestContentL4RuleListConditionList> conditionList;
 
         /**
-         * <p>The minimum number of bytes in a session to trigger matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
+         * <p>The minimum number of bytes in a session flow that triggers rule matching. Valid values: <strong>0</strong> to <strong>2048</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -530,11 +523,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer limited;
 
         /**
-         * <p>The condition based on which an action is performed. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: If the rule is matched, the action specified in the rule is performed.</li>
-         * <li><strong>1</strong>: If the rule is not matched, the action specified in the rule is performed.</li>
-         * </ul>
+         * <p>The logical operator. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -543,11 +532,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String match;
 
         /**
-         * <p>The type of the rule. Valid values:</p>
-         * <ul>
-         * <li><strong>char</strong>: string match.</li>
-         * <li><strong>hex</strong>: hexadecimal string match.</li>
-         * </ul>
+         * <p>The rule type. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>char</p>
@@ -556,7 +541,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String method;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -566,10 +551,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The priority of the rule. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
-         * <blockquote>
-         * <p> A smaller value indicates a higher priority.</p>
-         * </blockquote>
+         * <p>The rule priority. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -642,7 +624,7 @@ public class ModifyPolicyRequest extends TeaModel {
 
     public static class ModifyPolicyRequestContentPortRuleList extends TeaModel {
         /**
-         * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The end value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -652,7 +634,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer dstPortEnd;
 
         /**
-         * <p>The start of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The start value of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -662,7 +644,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer dstPortStart;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c52c2fa6-fdac-40c4-8753-be7c*********</p>
@@ -671,10 +653,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The action triggered if the rule is matched. Valid values:</p>
-         * <ul>
-         * <li><strong>drop</strong>: The traffic is discarded.</li>
-         * </ul>
+         * <p>The match action. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -684,11 +663,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String matchAction;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
-         * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>udp</strong></li>
-         * </ul>
+         * <p>The protocol type. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -698,10 +673,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
-         * <blockquote>
-         * <p> A smaller number indicates a higher priority.</p>
-         * </blockquote>
+         * <p>The priority number, represented as an integer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -711,7 +683,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer seqNo;
 
         /**
-         * <p>The end of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The end value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -721,7 +693,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer srcPortEnd;
 
         /**
-         * <p>The start of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>The start value of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -801,9 +773,161 @@ public class ModifyPolicyRequest extends TeaModel {
 
     }
 
+    public static class ModifyPolicyRequestContentSipDefense extends TeaModel {
+        /**
+         * <p>Specifies whether to enable SIP protection. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        /**
+         * <p>The SIP protection level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
+        @NameInMap("Level")
+        public String level;
+
+        /**
+         * <p>Specifies whether to enable SIP defense mode.</p>
+         */
+        @NameInMap("SipDefend")
+        public Boolean sipDefend;
+
+        /**
+         * <p>Specifies whether to enable SIP learning mode.</p>
+         */
+        @NameInMap("SipLearn")
+        public Boolean sipLearn;
+
+        /**
+         * <p>Specifies whether to enable the SIP source rate limiting module.</p>
+         */
+        @NameInMap("SipModule")
+        public Boolean sipModule;
+
+        /**
+         * <p>The SIP protection port. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5060</p>
+         */
+        @NameInMap("SipPort")
+        public String sipPort;
+
+        /**
+         * <p>The SIP source rate limit value in PPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("SipRate")
+        public Long sipRate;
+
+        /**
+         * <p>The SIP activation threshold in Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("SipStartMbps")
+        public Long sipStartMbps;
+
+        /**
+         * <p>The SIP activation threshold in PPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        @NameInMap("SipStartPps")
+        public Long sipStartPps;
+
+        public static ModifyPolicyRequestContentSipDefense build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyRequestContentSipDefense self = new ModifyPolicyRequestContentSipDefense();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyRequestContentSipDefense setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setSipDefend(Boolean sipDefend) {
+            this.sipDefend = sipDefend;
+            return this;
+        }
+        public Boolean getSipDefend() {
+            return this.sipDefend;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setSipLearn(Boolean sipLearn) {
+            this.sipLearn = sipLearn;
+            return this;
+        }
+        public Boolean getSipLearn() {
+            return this.sipLearn;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setSipModule(Boolean sipModule) {
+            this.sipModule = sipModule;
+            return this;
+        }
+        public Boolean getSipModule() {
+            return this.sipModule;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setSipPort(String sipPort) {
+            this.sipPort = sipPort;
+            return this;
+        }
+        public String getSipPort() {
+            return this.sipPort;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setSipRate(Long sipRate) {
+            this.sipRate = sipRate;
+            return this;
+        }
+        public Long getSipRate() {
+            return this.sipRate;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setSipStartMbps(Long sipStartMbps) {
+            this.sipStartMbps = sipStartMbps;
+            return this;
+        }
+        public Long getSipStartMbps() {
+            return this.sipStartMbps;
+        }
+
+        public ModifyPolicyRequestContentSipDefense setSipStartPps(Long sipStartPps) {
+            this.sipStartPps = sipStartPps;
+            return this;
+        }
+        public Long getSipStartPps() {
+            return this.sipStartPps;
+        }
+
+    }
+
     public static class ModifyPolicyRequestContentSourceBlockList extends TeaModel {
         /**
-         * <p>The validity period of the blacklist to which the source IP address is added. Unit: seconds.</p>
+         * <p>The duration for which the source IP address is added to the blacklist. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -813,7 +937,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer blockExpireSeconds;
 
         /**
-         * <p>The statistical period during which the system collects data on source IP addresses to determine whether to add the source IP addresses to the blacklist. Unit: seconds.</p>
+         * <p>The statistical period for source rate limiting blacklisting. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -823,7 +947,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer everySeconds;
 
         /**
-         * <p>The number of times that the source IP address exceeds a limit in a statistical period.</p>
+         * <p>The number of times the source IP address exceeds the rate limit within one statistical period.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -833,13 +957,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer exceedLimitTimes;
 
         /**
-         * <p>The type of the source rate limit. Valid values:</p>
-         * <ul>
-         * <li><strong>3</strong>: the pps limit on source IP addresses.</li>
-         * <li><strong>4</strong>: the bandwidth limit on source IP addresses.</li>
-         * <li><strong>5</strong>: the pps limit on source SYN packets.</li>
-         * <li><strong>6</strong>: the bandwidth limit on source SYN packets.</li>
-         * </ul>
+         * <p>The source rate limiting type. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -889,7 +1007,7 @@ public class ModifyPolicyRequest extends TeaModel {
 
     public static class ModifyPolicyRequestContentSourceLimit extends TeaModel {
         /**
-         * <p>The bandwidth limit on source IP addresses. Unit: bytes per second.</p>
+         * <p>The source bandwidth throttling. Unit: Byte/s.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -898,7 +1016,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer bps;
 
         /**
-         * <p>The packets per second (pps) limit on source IP addresses.</p>
+         * <p>The source PPS rate limit. Unit: Packet/s.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -907,7 +1025,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer pps;
 
         /**
-         * <p>The bandwidth limit on source SYN packets. Unit: bytes per second.</p>
+         * <p>The source SYN bandwidth throttling. Unit: Byte/s.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -916,7 +1034,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Integer synBps;
 
         /**
-         * <p>The pps limit on source SYN packets.</p>
+         * <p>The source SYN PPS rate limit. Unit: Packet/s.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -965,13 +1083,13 @@ public class ModifyPolicyRequest extends TeaModel {
 
     public static class ModifyPolicyRequestContent extends TeaModel {
         /**
-         * <p>The IP addresses in the blacklist.</p>
+         * <p>The IP blacklist.</p>
          */
         @NameInMap("BlackIpList")
         public java.util.List<String> blackIpList;
 
         /**
-         * <p>The validity period of the IP address blacklist. The value is a UNIX timestamp.</p>
+         * <p>The expiration time of the IP blacklist (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1716878000</p>
@@ -980,7 +1098,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Long blackIpListExpireAt;
 
         /**
-         * <p>Specifies whether to enable ICMP blocking.</p>
+         * <p>Specifies whether to disable the ICMP protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -989,7 +1107,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Boolean enableDropIcmp;
 
         /**
-         * <p>Specifies whether to enable intelligent protection.</p>
+         * <p>Specifies whether to enable AI-based intelligent protection.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -998,7 +1116,7 @@ public class ModifyPolicyRequest extends TeaModel {
         public Boolean enableIntelligence;
 
         /**
-         * <p>Specifies whether to enable port-specific mitigation.</p>
+         * <p>Specifies whether to enable port protection.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1007,18 +1125,13 @@ public class ModifyPolicyRequest extends TeaModel {
         public Boolean enableL4Defense;
 
         /**
-         * <p>The byte-match filter rules.</p>
+         * <p>The list of byte-match filter rules.</p>
          */
         @NameInMap("FingerPrintRuleList")
         public java.util.List<ModifyPolicyRequestContentFingerPrintRuleList> fingerPrintRuleList;
 
         /**
-         * <p>The level of intelligent protection. Valid values:</p>
-         * <ul>
-         * <li><strong>default</strong>: normal.</li>
-         * <li><strong>hard</strong>: strict.</li>
-         * <li><strong>weak</strong>: loose.</li>
-         * </ul>
+         * <p>The protection level of AI-based intelligent protection. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -1027,55 +1140,61 @@ public class ModifyPolicyRequest extends TeaModel {
         public String intelligenceLevel;
 
         /**
-         * <p>The port-specific mitigation rules.</p>
+         * <p>The list of port-specific mitigation rules.</p>
          */
         @NameInMap("L4RuleList")
         public java.util.List<ModifyPolicyRequestContentL4RuleList> l4RuleList;
 
         /**
-         * <p>The port blocking rules.</p>
+         * <p>The list of port blocking rules.</p>
          */
         @NameInMap("PortRuleList")
         public java.util.List<ModifyPolicyRequestContentPortRuleList> portRuleList;
 
         /**
-         * <p>The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.</p>
+         * <p>The list of ports filtered by reflection attack prevention.</p>
          */
         @NameInMap("ReflectBlockUdpPortList")
         public java.util.List<Integer> reflectBlockUdpPortList;
 
         /**
-         * <p>The countries in the location blacklist.</p>
+         * <p>The list of countries for location blacklist.</p>
          */
         @NameInMap("RegionBlockCountryList")
         public java.util.List<Integer> regionBlockCountryList;
 
         /**
-         * <p>The provinces in the location blacklist.</p>
+         * <p>The list of provinces for location blacklist.</p>
          */
         @NameInMap("RegionBlockProvinceList")
         public java.util.List<Integer> regionBlockProvinceList;
 
         /**
-         * <p>The source IP addresses that are added to the blacklist.</p>
+         * <p>The SIP protection settings.</p>
+         */
+        @NameInMap("SipDefense")
+        public ModifyPolicyRequestContentSipDefense sipDefense;
+
+        /**
+         * <p>The source rate limiting blacklist.</p>
          */
         @NameInMap("SourceBlockList")
         public java.util.List<ModifyPolicyRequestContentSourceBlockList> sourceBlockList;
 
         /**
-         * <p>The settings for source rate limiting.</p>
+         * <p>The source rate limiting configuration.</p>
          */
         @NameInMap("SourceLimit")
         public ModifyPolicyRequestContentSourceLimit sourceLimit;
 
         /**
-         * <p>The IP addresses in the whitelist.</p>
+         * <p>The IP whitelist.</p>
          */
         @NameInMap("WhiteIpList")
         public java.util.List<String> whiteIpList;
 
         /**
-         * <p>Specifies whether to add back-to-origin CIDR blocks of Anti-DDoS Proxy to the whitelist.</p>
+         * <p>Specifies whether to whitelist the back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (the Chinese mainland &amp; outside the Chinese mainland).</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1182,6 +1301,14 @@ public class ModifyPolicyRequest extends TeaModel {
         }
         public java.util.List<Integer> getRegionBlockProvinceList() {
             return this.regionBlockProvinceList;
+        }
+
+        public ModifyPolicyRequestContent setSipDefense(ModifyPolicyRequestContentSipDefense sipDefense) {
+            this.sipDefense = sipDefense;
+            return this;
+        }
+        public ModifyPolicyRequestContentSipDefense getSipDefense() {
+            return this.sipDefense;
         }
 
         public ModifyPolicyRequestContent setSourceBlockList(java.util.List<ModifyPolicyRequestContentSourceBlockList> sourceBlockList) {
