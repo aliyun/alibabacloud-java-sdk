@@ -37,7 +37,7 @@ public class ResetPasswordRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>liming</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -66,7 +66,7 @@ public class ResetPasswordRequest extends TeaModel {
      * <p>The phone number of the user.</p>
      * 
      * <strong>example:</strong>
-     * <p>1827912****</p>
+     * <p>138****1111</p>
      */
     @NameInMap("phone")
     public String phone;

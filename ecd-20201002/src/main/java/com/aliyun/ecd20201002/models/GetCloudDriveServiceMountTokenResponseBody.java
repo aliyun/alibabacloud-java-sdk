@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC27288A-F9E1-5092-9B5B-71C27D15****</p>
      */
@@ -40,6 +42,8 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
 
     public static class GetCloudDriveServiceMountTokenResponseBodyToken extends TeaModel {
         /**
+         * <p>Enterprise File Gateway domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>h****</p>
          */
@@ -47,6 +51,8 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         public String domainId;
 
         /**
+         * <p>Expiration Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-10T04:41:35Z</p>
          */
@@ -54,6 +60,8 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         public String expiredAfter;
 
         /**
+         * <p>Current status of the Enterprise File Gateway user.</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -79,6 +87,8 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
+         * <p>Used capacity. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>605089</p>
          */

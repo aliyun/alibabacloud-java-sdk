@@ -72,7 +72,7 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
          * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>liming</p>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;

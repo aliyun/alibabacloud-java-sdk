@@ -116,7 +116,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          * <p>The name of the restore point.</p>
          * 
          * <strong>example:</strong>
-         * <p>Data Disk Backup</p>
+         * <p>Data disk backup</p>
          */
         @NameInMap("RestorePointName")
         public String restorePointName;

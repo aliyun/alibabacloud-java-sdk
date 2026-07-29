@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReportSessionStatusRequest extends TeaModel {
     /**
+     * <p>End user.</p>
+     * 
      * <strong>example:</strong>
      * <p>liming</p>
      */
@@ -12,6 +14,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Duration of the session change.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public Long sessionChangeTime;
 
     /**
+     * <p>Session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,7 @@ public class ReportSessionStatusRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Session status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

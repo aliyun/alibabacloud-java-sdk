@@ -4,8 +4,11 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserResourcesResponseBody extends TeaModel {
+    @NameInMap("AgentBriefSummary")
+    public DescribeUserResourcesResponseBodyAgentBriefSummary agentBriefSummary;
+
     /**
-     * <p>返回最大数量。</p>
+     * <p>The maximum number of results returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +17,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token used to start the next query. An empty NextToken indicates that there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -23,13 +26,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource types that failed to be queried.</p>
+     * <p>The list of resource types that failed to be queried.</p>
      */
     @NameInMap("QueryFailedResourceTypes")
     public java.util.List<String> queryFailedResourceTypes;
 
     /**
-     * <p>The version number of the ranking data.</p>
+     * <p>The ranking data version number.</p>
      * 
      * <strong>example:</strong>
      * <p>1732869815062</p>
@@ -47,13 +50,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources.</p>
+     * <p>The list of resource details.</p>
      */
     @NameInMap("Resources")
     public java.util.List<DescribeUserResourcesResponseBodyResources> resources;
 
     /**
-     * <p>总数。</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,6 +67,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     public static DescribeUserResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserResourcesResponseBody self = new DescribeUserResourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeUserResourcesResponseBody setAgentBriefSummary(DescribeUserResourcesResponseBodyAgentBriefSummary agentBriefSummary) {
+        this.agentBriefSummary = agentBriefSummary;
+        return this;
+    }
+    public DescribeUserResourcesResponseBodyAgentBriefSummary getAgentBriefSummary() {
+        return this.agentBriefSummary;
     }
 
     public DescribeUserResourcesResponseBody setMaxResults(Integer maxResults) {
@@ -122,6 +133,168 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ENTERPRISE_JVS</p>
+         */
+        @NameInMap("AgentPlatform")
+        public String agentPlatform;
+
+        /**
+         * <strong>example:</strong>
+         * <p>OpenClaw</p>
+         */
+        @NameInMap("AgentProvider")
+        public String agentProvider;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.png">https://xxx.png</a></p>
+         */
+        @NameInMap("AvatarNoResourceUrl")
+        public String avatarNoResourceUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://abc.com/efg.png">https://abc.com/efg.png</a></p>
+         */
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("Count")
+        public Integer count;
+
+        /**
+         * <strong>example:</strong>
+         * <p>JVS Claw</p>
+         */
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Intelligent Evolution, Happy Shrimp Farming.</p>
+         */
+        @NameInMap("SubTitle")
+        public String subTitle;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://test.png">https://test.png</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        public static DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs self = new DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setAgentPlatform(String agentPlatform) {
+            this.agentPlatform = agentPlatform;
+            return this;
+        }
+        public String getAgentPlatform() {
+            return this.agentPlatform;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setAgentProvider(String agentProvider) {
+            this.agentProvider = agentProvider;
+            return this;
+        }
+        public String getAgentProvider() {
+            return this.agentProvider;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setAvatarNoResourceUrl(String avatarNoResourceUrl) {
+            this.avatarNoResourceUrl = avatarNoResourceUrl;
+            return this;
+        }
+        public String getAvatarNoResourceUrl() {
+            return this.avatarNoResourceUrl;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setSubTitle(String subTitle) {
+            this.subTitle = subTitle;
+            return this;
+        }
+        public String getSubTitle() {
+            return this.subTitle;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class DescribeUserResourcesResponseBodyAgentBriefSummary extends TeaModel {
+        @NameInMap("AgentBriefs")
+        public java.util.List<DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs> agentBriefs;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static DescribeUserResourcesResponseBodyAgentBriefSummary build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUserResourcesResponseBodyAgentBriefSummary self = new DescribeUserResourcesResponseBodyAgentBriefSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummary setAgentBriefs(java.util.List<DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs> agentBriefs) {
+            this.agentBriefs = agentBriefs;
+            return this;
+        }
+        public java.util.List<DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs> getAgentBriefs() {
+            return this.agentBriefs;
+        }
+
+        public DescribeUserResourcesResponseBodyAgentBriefSummary setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
     public static class DescribeUserResourcesResponseBodyResourcesClients extends TeaModel {
         /**
          * <p>The client type.</p>
@@ -133,12 +306,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String clientType;
 
         /**
-         * <p>The status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>OFF</li>
-         * <li>ON</li>
-         * </ul>
+         * <p>The support status.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -171,7 +339,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
     public static class DescribeUserResourcesResponseBodyResourcesDesktopDurationList extends TeaModel {
         /**
-         * <p>The ID of the instance order.</p>
+         * <p>The order instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mdp-0bxls4qpi6bl6****</p>
@@ -180,7 +348,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String orderInstanceId;
 
         /**
-         * <p>The time when the package was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-17T07:01Z</p>
@@ -189,7 +357,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String packageCreationTime;
 
         /**
-         * <p>The expiration time of the package.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-17T15:59Z</p>
@@ -207,7 +375,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String packageId;
 
         /**
-         * <p>The package status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -216,14 +384,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String packageStatus;
 
         /**
-         * <p>The package type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>FREE_PACKAGE: a free package.</li>
-         * <li>NORMAL_PACKAGE: a paid package (120-hour computing plan).</li>
-         * <li>POSTPAID_PACKAGE: a pay-as-you-go package (200-hour computing plan).</li>
-         * <li>Duration: an hourly package.</li>
-         * </ul>
+         * <p>The duration package type.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL_PACKAGE</p>
@@ -232,12 +393,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String packageType;
 
         /**
-         * <p>The policy for the cloud computer status once the monthly package quota is exhausted.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Shutdown: The cloud computer enters the Stopped or Hibernated state.</li>
-         * <li>PostPaid: The cloud computer continues providing services that are billed on the pay-as-you-go basis.</li>
-         * </ul>
+         * <p>The cloud desktop status policy after the monthly quota of the plan is used up.</p>
          * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
@@ -246,7 +402,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String packageUsedUpStrategy;
 
         /**
-         * <p>The package\&quot;s effective end time for the current month.</p>
+         * <p>The end time of the current monthly package.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-17T15:59Z</p>
@@ -255,7 +411,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String periodEndTime;
 
         /**
-         * <p>The package\&quot;s effective start time for the current month.</p>
+         * <p>The start time of the current monthly package.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-17T07:01Z</p>
@@ -264,10 +420,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String periodStartTime;
 
         /**
-         * <p>The maximum fee for the package in the second phase.</p>
-         * <blockquote>
-         * <p> This parameter is returned if you set ResourceType to <code>POSTPAID_PACKAG</code> or <code>FREE_PACKAGE</code>.</p>
-         * </blockquote>
+         * <p>The cap amount for the second-phase package.</p>
          * 
          * <strong>example:</strong>
          * <p>199</p>
@@ -285,7 +438,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Long totalDuration;
 
         /**
-         * <p>The subscription duration consumed.</p>
+         * <p>The used duration.</p>
          * 
          * <strong>example:</strong>
          * <p>16850</p>
@@ -398,7 +551,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
     public static class DescribeUserResourcesResponseBodyResourcesDesktopTimers extends TeaModel {
         /**
-         * <p>Indicates whether to allow end users to configure scheduled tasks on clients.</p>
+         * <p>Indicates whether the client is allowed to configure this setting.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -407,7 +560,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String allowClientSetting;
 
         /**
-         * <p>The cron expression specified in the scheduled task.</p>
+         * <p>The cron expression of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>0 30 13 ? * 1-7</p>
@@ -416,7 +569,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Indicates whether to forcibly execute the scheduled task.</p>
+         * <p>Indicates whether the task is forcibly executed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -425,7 +578,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The time when the scheduled task is executed.</p>
+         * <p>The execution time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-21T11:37Z</p>
@@ -434,7 +587,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String executionTime;
 
         /**
-         * <p>The interval at which the scheduled task is executed.</p>
+         * <p>The interval of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -443,7 +596,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The type of the scheduled action.</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>Hibernate</p>
@@ -452,7 +605,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The reset option.</p>
+         * <p>The reset type.</p>
          * 
          * <strong>example:</strong>
          * <p>RESET_TYPE_SYSTEM</p>
@@ -551,7 +704,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The current version number of the cloud computer\&quot;s image.</p>
+         * <p>The version number of the current image on the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>2.7.0-R-20250122.154826</p>
@@ -560,7 +713,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String currentAppVersion;
 
         /**
-         * <p>Specifies whether to implement a forced update.</p>
+         * <p>Indicates whether the upgrade is mandatory.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -569,7 +722,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Boolean force;
 
         /**
-         * <p>The target version number of the cloud computer\&quot;s image.</p>
+         * <p>The version number available for upgrade on the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>2.7.0-R-20250125.154826</p>
@@ -578,7 +731,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String newAppVersion;
 
         /**
-         * <p>The latest version available for updating the component disk.</p>
+         * <p>The component disk version number available for upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>2.6.9-R-20250123.153415</p>
@@ -596,34 +749,34 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The version description of the cloud computer\&quot;s image.</p>
+         * <p>The release note for the available upgrade version.</p>
          * 
          * <strong>example:</strong>
-         * <p>up</p>
+         * <p>New version.</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
-         * <p>The English release note for the new image version.</p>
+         * <p>The English release note for the available upgrade version.</p>
          * 
          * <strong>example:</strong>
-         * <p>up</p>
+         * <p>new version</p>
          */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
         /**
-         * <p>The Japanese release note for the new image version.</p>
+         * <p>The Japanese release note for the available upgrade version.</p>
          * 
          * <strong>example:</strong>
-         * <p>up</p>
+         * <p>新バージョン.</p>
          */
         @NameInMap("ReleaseNoteJp")
         public String releaseNoteJp;
 
         /**
-         * <p>The size of the update package for the cloud computer image. Unit: KB.</p>
+         * <p>The installation package size of the available upgrade version. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>474981930</p>
@@ -721,6 +874,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     public static class DescribeUserResourcesResponseBodyResourcesOsUpdatePackages extends TeaModel {
         /**
          * <p>The patch description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Install this update to modify the files that are used to detect viruses, spyware, and other potentially unwanted software. Once installed, this item cannot be removed.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -736,6 +892,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The patch title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Patch for ****.</p>
          */
         @NameInMap("Title")
         public String title;
@@ -773,7 +932,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
     public static class DescribeUserResourcesResponseBodyResourcesOsUpdate extends TeaModel {
         /**
-         * <p>The ID of the check task.</p>
+         * <p>The check ID.</p>
          * 
          * <strong>example:</strong>
          * <p>wua-1740652957251743***</p>
@@ -782,7 +941,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String checkId;
 
         /**
-         * <p>The patch numbers.</p>
+         * <p>The patch number list information.</p>
          * 
          * <strong>example:</strong>
          * <p>KB2267***</p>
@@ -791,7 +950,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String kbListString;
 
         /**
-         * <p>The number of packets.</p>
+         * <p>The number of packages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -800,13 +959,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Integer packageCount;
 
         /**
-         * <p>The patch packages.</p>
+         * <p>The list of patch package information.</p>
          */
         @NameInMap("Packages")
         public java.util.List<DescribeUserResourcesResponseBodyResourcesOsUpdatePackages> packages;
 
         /**
-         * <p>The update categorization URL.</p>
+         * <p>The update catalog URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://catalog.update.microsoft.com/home.aspx">https://catalog.update.microsoft.com/home.aspx</a></p>
@@ -862,8 +1021,11 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserResourcesResponseBodyResourcesSessions extends TeaModel {
+        @NameInMap("LastClientIp")
+        public String lastClientIp;
+
         /**
-         * <p>用户的昵称。</p>
+         * <p>The nickname of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -872,7 +1034,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The timestamp when the resource session was established.</p>
+         * <p>The time when the resource session was connected.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-22T11:03:36Z</p>
@@ -881,7 +1043,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String resourceSessionStartTime;
 
         /**
-         * <p>The username used to log on to the resource.</p>
+         * <p>The username logged on to the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>user001</p>
@@ -890,7 +1052,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The User Principal Name (UPN) of the resource-bound user (if applicable). This parameter is returned only when you query the current user\&quot;s sessions.</p>
+         * <p>The User Principal Name (UPN) of the user bound to the resource, if available. This value is populated only for the session of the currently queried user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:benchmark_test@test.shenzhen">benchmark_test@test.shenzhen</a></p>
@@ -901,6 +1063,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public static DescribeUserResourcesResponseBodyResourcesSessions build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserResourcesResponseBodyResourcesSessions self = new DescribeUserResourcesResponseBodyResourcesSessions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesSessions setLastClientIp(String lastClientIp) {
+            this.lastClientIp = lastClientIp;
+            return this;
+        }
+        public String getLastClientIp() {
+            return this.lastClientIp;
         }
 
         public DescribeUserResourcesResponseBodyResourcesSessions setNickName(String nickName) {
@@ -940,12 +1110,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     public static class DescribeUserResourcesResponseBodyResources extends TeaModel {
         /**
          * <p>The access type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>INTERNET: access over the Internet.</li>
-         * <li>VPC: access over an enterprise VPC.</li>
-         * <li>ANY: access over the Internet or an enterprise VPC.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
@@ -954,7 +1118,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <strong>example:</strong>
+         * <p><a href="https://wuying.aliyun.com/OpenIM/chat?desktopId=ecd-xxxxx">https://wuying.aliyun.com/OpenIM/chat?desktopId=ecd-xxxxx</a></p>
+         */
+        @NameInMap("AgentImUrl")
+        public String agentImUrl;
+
+        /**
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>194101959****</p>
@@ -963,7 +1134,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>The app ID. This parameter is for apps only.</p>
+         * <p>The application ID. This parameter is specific to resources of the App type.</p>
          * 
          * <strong>example:</strong>
          * <p>app-0001</p>
@@ -972,13 +1143,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The authorization mode of the cloud app.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>App: authorizes access to apps.</li>
-         * <li>AppInstanceGroup: authorizes access to delivery groups.</li>
-         * <li>Session: authorizes access to sessions.</li>
-         * </ul>
+         * <p>The cloud application authorization mode.</p>
          * 
          * <strong>example:</strong>
          * <p>App</p>
@@ -987,7 +1152,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String authMode;
 
         /**
-         * <p>The level-2 resource category. This parameter is for apps only.</p>
+         * <p>The secondary category of the resource. This parameter is specific to resources of the App type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -996,7 +1161,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Integer categoryId;
 
         /**
-         * <p>The level-1 resource category. This parameter is for apps only.</p>
+         * <p>The primary category of the resource. This parameter is specific to resources of the App type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1005,7 +1170,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Integer categoryType;
 
         /**
-         * <p>The drive name. This parameter is for enterprise drives only.</p>
+         * <p>The cloud drive name. This parameter is specific to resources of the CloudDrive type.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai+cds-695277****</p>
@@ -1014,7 +1179,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String cdsName;
 
         /**
-         * <p>The ID of the centralized resource.</p>
+         * <p>The centralized resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecds-0****</p>
@@ -1024,11 +1189,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Postpaid (default): pay-as-you-go.</li>
-         * <li>PrePaid: subscription.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -1037,13 +1197,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The client types supported by resources.</p>
+         * <p>The list of client types supported by the resource.</p>
          */
         @NameInMap("Clients")
         public java.util.List<DescribeUserResourcesResponseBodyResourcesClients> clients;
 
         /**
-         * <p>The connection attributes in JSON format. The client does not need to process the attributes; they are directly passed to the resource management center when the app resource is created.</p>
+         * <p>The connection properties in JSON string format. The client does not need to parse the content. The value is passed directly to the central resource management service when the application resource establishes a connection.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;authMode&quot;:&quot;App&quot;}</p>
@@ -1061,19 +1221,19 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cloud computer plans.</p>
+         * <p>The list of cloud desktop package information.</p>
          */
         @NameInMap("DesktopDurationList")
         public java.util.List<DescribeUserResourcesResponseBodyResourcesDesktopDurationList> desktopDurationList;
 
         /**
-         * <p>The scheduled tasks for cloud computers.</p>
+         * <p>The list of Cloud Desktop scheduled task settings.</p>
          */
         @NameInMap("DesktopTimers")
         public java.util.List<DescribeUserResourcesResponseBodyResourcesDesktopTimers> desktopTimers;
 
         /**
-         * <p>The expiration time of the subscription resource.</p>
+         * <p>The expiration time of subscription resources.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-02-22T16:00:00Z</p>
@@ -1082,7 +1242,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The ID of the external domain. This parameter is for enterprise drives only.</p>
+         * <p>The external domain ID. This parameter is specific to resources of the CloudDrive type.</p>
          * 
          * <strong>example:</strong>
          * <p>stg114510</p>
@@ -1091,7 +1251,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String externalDomainId;
 
         /**
-         * <p>The ID of the external user. This parameter is for enterprise drives only.</p>
+         * <p>The external user ID. This parameter is specific to resources of the CloudDrive type.</p>
          * 
          * <strong>example:</strong>
          * <p>test001</p>
@@ -1100,13 +1260,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String externalUserId;
 
         /**
-         * <p>The update info of the cloud computer.</p>
+         * <p>The cloud desktop upgrade information.</p>
          */
         @NameInMap("FotaUpdate")
         public DescribeUserResourcesResponseBodyResourcesFotaUpdate fotaUpdate;
 
         /**
-         * <p>Indicates whether cross-region access is supported. This parameter is for enterprise drives only.</p>
+         * <p>Indicates whether cross-region access is supported. This parameter is specific to resources of the CloudDrive type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1115,7 +1275,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Boolean globalStatus;
 
         /**
-         * <p>Indicates whether an update exists.</p>
+         * <p>Indicates whether an update is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1124,12 +1284,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Boolean hasUpgrade;
 
         /**
-         * <p>Indicates whether this is a beta version of the hibernation feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the resource is a hibernation beta version.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1138,7 +1293,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Boolean hibernationBeta;
 
         /**
-         * <p>The resource icon. This parameter is for apps only.</p>
+         * <p>The resource icon URL. This parameter is specific to resources of the App type.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/icon.png">http://example.com/icon.png</a></p>
@@ -1147,7 +1302,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String icon;
 
         /**
-         * <p>The time when the resource was last started.</p>
+         * <p>The last time the resource was started.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-24T03:12:04Z</p>
@@ -1157,12 +1312,15 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Singapore.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The management status.</p>
+         * <p>The list of management statuses.</p>
          */
         @NameInMap("ManagementStatuses")
         public java.util.List<String> managementStatuses;
@@ -1178,13 +1336,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The order status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Ceased: Your account has an overdue payment.</li>
-         * <li>Released: The order is closed.</li>
-         * <li>Expired: The subscription resource has expired.</li>
-         * <li>Normal: The order is normal.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1193,7 +1344,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String orderStatus;
 
         /**
-         * <p>The OS platform.</p>
+         * <p>The operating system platform information.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows Server 2022</p>
@@ -1202,19 +1353,16 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String os;
 
         /**
-         * <p>The description of the OS platform.</p>
+         * <p>The operating system platform description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows Genuine License.</p>
          */
         @NameInMap("OsDescription")
         public String osDescription;
 
         /**
-         * <p>The OS type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Linux</li>
-         * <li>Windows</li>
-         * <li>Android</li>
-         * </ul>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -1223,20 +1371,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The update info of the OS.</p>
+         * <p>The operating system upgrade information.</p>
          */
         @NameInMap("OsUpdate")
         public DescribeUserResourcesResponseBodyResourcesOsUpdate osUpdate;
 
         /**
-         * <p>The service type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CloudDesktop: regular cloud computers or cloud computer shares.</li>
-         * <li>CloudApp: App Streaming</li>
-         * <li>CloudBrowser: Cloud Browser.</li>
-         * <li>AndroidCloud: Cloud Phone.</li>
-         * </ul>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>AndroidCloud</p>
@@ -1246,11 +1387,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>HDX</li>
-         * <li>ASP</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ASP</p>
@@ -1259,7 +1395,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The real ID of the cloud computer (from a share). This parameter is returned only when the cloud computer share has ongoing sessions.</p>
+         * <p>The real cloud desktop ID of the shared cloud desktop. This value exists only when the shared cloud desktop has an active session.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-0001</p>
@@ -1277,12 +1413,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The geographical location.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Mainland: regions in the Chinese mainland.</li>
-         * <li>Overseas: regions outside the Chinese mainland, including China (Hong Kong).</li>
-         * </ul>
+         * <p>The region location.</p>
          * 
          * <strong>example:</strong>
          * <p>Mainland</p>
@@ -1310,11 +1441,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The resource level.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Center: a centralized resource.</li>
-         * <li>Region: a unit resource.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Center</p>
@@ -1333,12 +1459,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The session status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Unknown</li>
-         * <li>Connected</li>
-         * <li>Disconnected</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Connected</p>
@@ -1348,20 +1468,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The resource status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Unknown: The resource status is unknown.</li>
-         * <li>Stopped: The resource is stopped.</li>
-         * <li>Failed: The resource failed to be created.</li>
-         * <li>Starting: The resource is being started.</li>
-         * <li>Rebuilding: The resource is changing.</li>
-         * <li>Running: The resource is running.</li>
-         * <li>Stopping: The resource is being stopped.</li>
-         * <li>FotaUpdating: The image is being updated.</li>
-         * <li>Pending: The resource is still being prepared.</li>
-         * <li>Deleting: The resource is being deleted.</li>
-         * <li>Unavailable: The resource is unavailable.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -1371,13 +1477,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>App: cloud apps including App Streaming, Cloud Phone, and Cloud Browser.</li>
-         * <li>Desktop: cloud computers.</li>
-         * <li>DesktopGroup: cloud computer shares.</li>
-         * <li>CloudDrive: enterprise drives.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Desktop</p>
@@ -1387,11 +1486,6 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The session type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SINGLE_SESSION</li>
-         * <li>MULTIPLE_SESSION</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SINGLE_SESSION</p>
@@ -1400,18 +1494,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String sessionType;
 
         /**
-         * <p>The sessions established between users and resources.</p>
+         * <p>The list of resource user session information.</p>
          */
         @NameInMap("Sessions")
         public java.util.List<DescribeUserResourcesResponseBodyResourcesSessions> sessions;
 
         /**
          * <p>The sub-billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>monthPackage: monthly subscription.</li>
-         * <li>PrePaid: hourly plans.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -1419,13 +1508,11 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         @NameInMap("SubPayType")
         public String subPayType;
 
+        @NameInMap("SupportAgentIm")
+        public Boolean supportAgentIm;
+
         /**
          * <p>Indicates whether hibernation is supported.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1434,13 +1521,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public Boolean supportHibernation;
 
         /**
-         * <p>The supported actions. This parameter is returned only for cloud computers or phones.</p>
+         * <p>The list of supported action types. Currently supported only for cloud phones and cloud desktops (including shared cloud desktops).</p>
          */
         @NameInMap("SupportedActions")
         public java.util.List<String> supportedActions;
 
         /**
-         * <p>The theme color of the resource. This parameter is for apps only.</p>
+         * <p>The resource theme color. This parameter is specific to resources of the App type.</p>
          * 
          * <strong>example:</strong>
          * <p>#FFFFFF</p>
@@ -1449,13 +1536,19 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public String themeColor;
 
         /**
-         * <p>The custom name of the resource.</p>
+         * <p>The user-defined name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My cloud desktop</p>
          */
         @NameInMap("UserCustomName")
         public String userCustomName;
 
         /**
-         * <p>The resource version. This parameter is for apps only.</p>
+         * <p>The resource version. This parameter is specific to resources of the App type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource version.</p>
          */
         @NameInMap("Version")
         public String version;
@@ -1471,6 +1564,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
         public String getAccessType() {
             return this.accessType;
+        }
+
+        public DescribeUserResourcesResponseBodyResources setAgentImUrl(String agentImUrl) {
+            this.agentImUrl = agentImUrl;
+            return this;
+        }
+        public String getAgentImUrl() {
+            return this.agentImUrl;
         }
 
         public DescribeUserResourcesResponseBodyResources setAliUid(Long aliUid) {
@@ -1831,6 +1932,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
         public String getSubPayType() {
             return this.subPayType;
+        }
+
+        public DescribeUserResourcesResponseBodyResources setSupportAgentIm(Boolean supportAgentIm) {
+            this.supportAgentIm = supportAgentIm;
+            return this;
+        }
+        public Boolean getSupportAgentIm() {
+            return this.supportAgentIm;
         }
 
         public DescribeUserResourcesResponseBodyResources setSupportHibernation(Boolean supportHibernation) {

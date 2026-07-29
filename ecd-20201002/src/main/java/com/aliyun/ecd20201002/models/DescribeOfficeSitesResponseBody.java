@@ -11,6 +11,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     public java.util.List<DescribeOfficeSitesResponseBodyOfficeSites> officeSites;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -58,6 +60,11 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Integer bizType;
 
         /**
+         * <p>The allowed connection types for accessing the office network.</p>
+         * <blockquote>
+         * <p>The VPC connection type depends on the Alibaba Cloud PrivateLink service, which incurs no fee. When this parameter is set to VPC or Any, the system automatically enables the PrivateLink service for you.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -65,6 +72,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String desktopAccessType;
 
         /**
+         * <p>The endpoint used when connecting to cloud desktops through a VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com">http://ep-bp1s2vmbj55r5rzc****.epsrv-bp1pcfhpwvlpny01****.cn-hangzhou.privatelink.aliyuncs.com</a></p>
          */
@@ -72,6 +81,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String desktopVpcEndpoint;
 
         /**
+         * <p>Office network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
          */
@@ -79,6 +90,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
+         * <p>The type of account system used by the office network.</p>
+         * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
          */
@@ -86,6 +99,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String officeSiteType;
 
         /**
+         * <p>User Account BID.</p>
+         * 
          * <strong>example:</strong>
          * <p>268****</p>
          */
@@ -93,6 +108,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String providerId;
 
         /**
+         * <p>SSO connection.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://eds-cn-shanghai-67">https://eds-cn-shanghai-67</a>****</p>
          */

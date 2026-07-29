@@ -19,7 +19,7 @@ public class ChangePasswordRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>liming</p>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
