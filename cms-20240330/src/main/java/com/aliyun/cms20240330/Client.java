@@ -1609,6 +1609,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a service task for an application in a specified workspace.
+     * Common use cases:</p>
+     * <ul>
+     * <li>heapdump: Triggers a JVM heap dump.</li>
+     * <li>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</li>
+     * <li>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</li>
+     * <li>LiveDebug Code Replace: Performs hot code replacement.
+     * After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ServiceTask (heap dump or LiveDebug diagnostic task) for a specified application.</p>
+     * 
+     * @param request CreateServiceTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceTaskResponse
+     */
+    public CreateServiceTaskResponse createServiceTaskWithOptions(String workspace, String serviceId, CreateServiceTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
+            body.put("ip", request.ip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskConfig)) {
+            body.put("taskConfig", request.taskConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceTask"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/serviceTask/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/task"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a service task for an application in a specified workspace.
+     * Common use cases:</p>
+     * <ul>
+     * <li>heapdump: Triggers a JVM heap dump.</li>
+     * <li>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</li>
+     * <li>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</li>
+     * <li>LiveDebug Code Replace: Performs hot code replacement.
+     * After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ServiceTask (heap dump or LiveDebug diagnostic task) for a specified application.</p>
+     * 
+     * @param request CreateServiceTaskRequest
+     * @return CreateServiceTaskResponse
+     */
+    public CreateServiceTaskResponse createServiceTask(String workspace, String serviceId, CreateServiceTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createServiceTaskWithOptions(workspace, serviceId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</p>
      * 
@@ -2749,6 +2826,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified service task by taskId.
+     * heapdump: Simultaneously deletes the corresponding heap dump record.
+     * LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified ServiceTask under a specified application.</p>
+     * 
+     * @param request DeleteServiceTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServiceTaskResponse
+     */
+    public DeleteServiceTaskResponse deleteServiceTaskWithOptions(String workspace, String serviceId, String taskId, DeleteServiceTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServiceTask"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/serviceTask/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/task/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a specified service task by taskId.
+     * heapdump: Simultaneously deletes the corresponding heap dump record.
+     * LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified ServiceTask under a specified application.</p>
+     * 
+     * @param request DeleteServiceTaskRequest
+     * @return DeleteServiceTaskResponse
+     */
+    public DeleteServiceTaskResponse deleteServiceTask(String workspace, String serviceId, String taskId, DeleteServiceTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteServiceTaskWithOptions(workspace, serviceId, taskId, request, headers, runtime);
     }
 
     /**
@@ -4680,6 +4814,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据 taskId 查询单个服务任务详情。
+     * 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询ServiceTask</p>
+     * 
+     * @param request GetServiceTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceTaskResponse
+     */
+    public GetServiceTaskResponse getServiceTaskWithOptions(String workspace, String serviceId, String taskId, GetServiceTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceTask"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/serviceTask/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/task/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>根据 taskId 查询单个服务任务详情。
+     * 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询ServiceTask</p>
+     * 
+     * @param request GetServiceTaskRequest
+     * @return GetServiceTaskResponse
+     */
+    public GetServiceTaskResponse getServiceTask(String workspace, String serviceId, String taskId, GetServiceTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getServiceTaskWithOptions(workspace, serviceId, taskId, request, headers, runtime);
     }
 
     /**
@@ -6799,6 +6988,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listServiceRecordsWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>按任务类型列举应用下的服务任务。</p>
+     * <ul>
+     * <li>type=heapdump：返回堆转储任务列表</li>
+     * <li>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</li>
+     * <li>type=live_debug_*：返回对应 LiveDebug 任务列表
+     * 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>列举ServiceTask</p>
+     * 
+     * @param request ListServiceTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServiceTaskResponse
+     */
+    public ListServiceTaskResponse listServiceTaskWithOptions(String workspace, String serviceId, ListServiceTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchCondition)) {
+            query.put("searchCondition", request.searchCondition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServiceTask"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/serviceTask/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>按任务类型列举应用下的服务任务。</p>
+     * <ul>
+     * <li>type=heapdump：返回堆转储任务列表</li>
+     * <li>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</li>
+     * <li>type=live_debug_*：返回对应 LiveDebug 任务列表
+     * 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>列举ServiceTask</p>
+     * 
+     * @param request ListServiceTaskRequest
+     * @return ListServiceTaskResponse
+     */
+    public ListServiceTaskResponse listServiceTask(String workspace, String serviceId, ListServiceTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listServiceTaskWithOptions(workspace, serviceId, request, headers, runtime);
     }
 
     /**
