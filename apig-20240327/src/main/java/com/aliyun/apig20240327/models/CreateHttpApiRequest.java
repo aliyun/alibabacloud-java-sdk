@@ -90,7 +90,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public CreateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>The model category. This parameter is optional when type is set to LLM or Ai. This parameter is not required for other types.</p>
+     * <p>The model category. This parameter is optional when type is set to LLM or Ai. This parameter is not required for other types. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Text</p>

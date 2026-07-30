@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupsRequest extends TeaModel {
     /**
+     * <p>The gateway type. Valid values: API or AI.</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
@@ -12,6 +14,8 @@ public class ListConsumerGroupsRequest extends TeaModel {
     public String gatewayType;
 
     /**
+     * <p>The fuzzy match condition for the consumer group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>api</p>
      */
@@ -19,6 +23,8 @@ public class ListConsumerGroupsRequest extends TeaModel {
     public String nameLike;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListConsumerGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

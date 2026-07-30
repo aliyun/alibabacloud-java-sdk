@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchRemoveConsumerGroupConsumersRequest extends TeaModel {
     /**
+     * <p>The list of consumer IDs to remove from the consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;cs-8c13d2b4f8a1&quot;]</p>
      */

@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the destination resource group.</p>
+     * <p>The ID of the destination resource group. You can view resource group IDs in the Resource Management console.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aekzdrfx2xdnaja</p>
+     * <p>rg-aekzuqyxxxxxxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource to be moved. The value must match the specified ResourceType.</p>
      * 
      * <strong>example:</strong>
-     * <p>gw-ct4i14um1hkn0tpqfae0</p>
+     * <p>gw-cq2vmc93km41m3dm4bg0</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. The value is case-sensitive and must exactly match one of the valid values.</p>
      * 
      * <strong>example:</strong>
-     * <p>gateway</p>
+     * <p>Gateway</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The service name. Set this parameter to apig.</p>
+     * <p>The cloud service identifier. Fixed as APIG. You generally do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>apig</p>
+     * <p>APIG</p>
      */
     @NameInMap("Service")
     public String service;

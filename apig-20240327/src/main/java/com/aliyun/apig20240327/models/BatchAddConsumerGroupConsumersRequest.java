@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchAddConsumerGroupConsumersRequest extends TeaModel {
     /**
+     * <p>The list of consumer IDs to add to the consumer group.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;cs-8c13d2b4f8a1&quot;]</p>
      */

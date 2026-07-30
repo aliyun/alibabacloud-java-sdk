@@ -14,16 +14,15 @@ public class ListPoliciesRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The type of the attachment point supported by the policy.</p>
-     * <p>Valid values:</p>
+     * <p>The type of attachment point supported by the policy.</p>
      * <ul>
-     * <li>HttpApi: HTTP API.</li>
-     * <li>Operation: Operation of an HTTP API.</li>
-     * <li>GatewayRoute: Gateway route.</li>
-     * <li>GatewayService: Gateway service.</li>
-     * <li>GatewayServicePort: Gateway service port.</li>
-     * <li>Domain: Gateway domain name.</li>
-     * <li>Gateway: Gateway.</li>
+     * <li>HttpApi: HttpApi.</li>
+     * <li>Operation: Operation of HttpApi.</li>
+     * <li>GatewayRoute: gateway route.</li>
+     * <li>GatewayService: gateway service.</li>
+     * <li>GatewayServicePort: gateway service port.</li>
+     * <li>Domain: gateway domain name.</li>
+     * <li>Gateway: gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>

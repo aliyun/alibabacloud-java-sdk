@@ -32,7 +32,7 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
     public String attachResourceType;
 
     /**
-     * <p>The configuration information. The value is a JSON string.</p>
+     * <p>The configuration information. A JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UpdateAndAttachPolicyRequest extends TeaModel {
      * <p>The policy description.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是策略描述。</p>
+     * <p>This is a policy description.</p>
      */
     @NameInMap("description")
     public String description;

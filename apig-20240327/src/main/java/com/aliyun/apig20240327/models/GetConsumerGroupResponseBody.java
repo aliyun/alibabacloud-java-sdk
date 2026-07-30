@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetConsumerGroupResponseBody extends TeaModel {
     /**
+     * <p>The response status code. Ok is returned if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetConsumerGroupResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -67,6 +76,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
     public static class GetConsumerGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The number of consumers in the consumer group.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -74,6 +85,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public Long consumerCount;
 
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
          */
@@ -81,6 +94,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The creation time of the consumer group, in Unix millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715769600000</p>
          */
@@ -88,13 +103,17 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The consumer group description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>用于线上 API 调用方分组</p>
+         * <p>Used for online API caller grouping.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The gateway type. Valid values: API or AI.</p>
+         * 
          * <strong>example:</strong>
          * <p>API</p>
          */
@@ -102,6 +121,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
+         * <p>The consumer group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-consumer-group</p>
          */
@@ -109,6 +130,8 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The update time of the consumer group, in Unix millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715769600000</p>
          */

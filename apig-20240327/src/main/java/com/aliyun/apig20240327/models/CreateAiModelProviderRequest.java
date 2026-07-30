@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAiModelProviderRequest extends TeaModel {
     /**
+     * <p>The display name of the model provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateAiModelProviderRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateAiModelProviderRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The model provider identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,8 +34,20 @@ public class CreateAiModelProviderRequest extends TeaModel {
     @NameInMap("provider")
     public String provider;
 
+    /**
+     * <p>The list of service IDs to bind to the provider.</p>
+     */
     @NameInMap("serviceIds")
     public java.util.List<String> serviceIds;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
+    @NameInMap("clientToken")
+    public String clientToken;
 
     public static CreateAiModelProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAiModelProviderRequest self = new CreateAiModelProviderRequest();
@@ -69,6 +84,14 @@ public class CreateAiModelProviderRequest extends TeaModel {
     }
     public java.util.List<String> getServiceIds() {
         return this.serviceIds;
+    }
+
+    public CreateAiModelProviderRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
 }

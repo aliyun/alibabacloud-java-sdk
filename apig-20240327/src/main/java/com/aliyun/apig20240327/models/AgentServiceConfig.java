@@ -15,19 +15,19 @@ public class AgentServiceConfig extends TeaModel {
     public String address;
 
     /**
-     * <p>User-defined configuration</p>
+     * <p>The custom configuration. Required when provider is set to custom.</p>
      */
     @NameInMap("customConfig")
     public AgentServiceConfigCustomConfig customConfig;
 
     /**
-     * <p>The Model Studio service configuration.</p>
+     * <p>The DashScope service configuration. Required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
      */
     @NameInMap("dashScopeConfig")
     public AgentServiceConfigDashScopeConfig dashScopeConfig;
 
     /**
-     * <p>The Dify service configuration.</p>
+     * <p>The Dify service configuration. Required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
      */
     @NameInMap("difyConfig")
     public AgentServiceConfigDifyConfig difyConfig;
@@ -42,7 +42,7 @@ public class AgentServiceConfig extends TeaModel {
     public Boolean enableHealthCheck;
 
     /**
-     * <p>Whether to enable outlier detection</p>
+     * <p>Specifies whether to enable outlier detection.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,7 +51,7 @@ public class AgentServiceConfig extends TeaModel {
     public Boolean enableOutlierDetection;
 
     /**
-     * <p>The protocol.</p>
+     * <p>The list of communication protocols.</p>
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
@@ -137,7 +137,7 @@ public class AgentServiceConfig extends TeaModel {
 
     public static class AgentServiceConfigCustomConfig extends TeaModel {
         /**
-         * <p>apiKey</p>
+         * <p>The API key.</p>
          * 
          * <strong>example:</strong>
          * <p>app-xxx</p>
@@ -146,7 +146,7 @@ public class AgentServiceConfig extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>API key generation mode.</p>
+         * <p>The key generation mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Reference</p>
@@ -255,7 +255,7 @@ public class AgentServiceConfig extends TeaModel {
          * <p>The interaction type.</p>
          * 
          * <strong>example:</strong>
-         * <p>chatbot</p>
+         * <p>chatflow</p>
          */
         @NameInMap("botType")
         public String botType;

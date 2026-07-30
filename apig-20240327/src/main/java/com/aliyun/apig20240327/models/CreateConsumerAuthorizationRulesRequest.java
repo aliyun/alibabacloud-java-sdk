@@ -43,7 +43,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String parentResourceId;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the target resource to authorize. The required ID type is determined by resourceType, and the prefix must match.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-li942gy8p03</p>
@@ -116,7 +116,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The expiration mode. Currently, only LongTerm is supported.</p>
+         * <p>The expiration mode. Currently only LongTerm is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>LongTerm</p>
@@ -134,7 +134,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The type of the authorization principal.</p>
+         * <p>The principal type.</p>
          * 
          * <strong>example:</strong>
          * <p>ConsumerGroup</p>
@@ -143,7 +143,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String principalType;
 
         /**
-         * <p>The resource identifier, which serves as a unique identifier for space reuse by non-standard code sources.</p>
+         * <p>The resource identifier. Serves as a unique identifier for space reuse by non-standard code sources.</p>
          */
         @NameInMap("resourceIdentifier")
         public CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier resourceIdentifier;

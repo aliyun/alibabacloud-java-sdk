@@ -253,7 +253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量添加消费者组成员</p>
+     * <p>Adds members to a consumer group in batches.</p>
      * 
      * @param request BatchAddConsumerGroupConsumersRequest
      * @param headers map
@@ -287,7 +287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量添加消费者组成员</p>
+     * <p>Adds members to a consumer group in batches.</p>
      * 
      * @param request BatchAddConsumerGroupConsumersRequest
      * @return BatchAddConsumerGroupConsumersResponse
@@ -347,7 +347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量移除消费者组成员</p>
+     * <p>Removes consumer group members in batches.</p>
      * 
      * @param request BatchRemoveConsumerGroupConsumersRequest
      * @param headers map
@@ -381,7 +381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量移除消费者组成员</p>
+     * <p>Removes consumer group members in batches.</p>
      * 
      * @param request BatchRemoveConsumerGroupConsumersRequest
      * @return BatchRemoveConsumerGroupConsumersResponse
@@ -453,11 +453,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
-     * 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</p>
+     * <p>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
+     * The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建AI模型卡片</p>
+     * <p>Creates an AI model card.</p>
      * 
      * @param request CreateAiModelCardRequest
      * @param headers map
@@ -515,11 +515,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
-     * 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</p>
+     * <p>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
+     * The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建AI模型卡片</p>
+     * <p>Creates an AI model card.</p>
      * 
      * @param request CreateAiModelCardRequest
      * @return CreateAiModelCardResponse
@@ -532,7 +532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建AI模型供应商</p>
+     * <p>Creates an AI model provider.</p>
      * 
      * @param request CreateAiModelProviderRequest
      * @param headers map
@@ -541,6 +541,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateAiModelProviderResponse createAiModelProviderWithOptions(CreateAiModelProviderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
             body.put("displayName", request.displayName);
@@ -560,6 +565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -578,7 +584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建AI模型供应商</p>
+     * <p>Creates an AI model provider.</p>
      * 
      * @param request CreateAiModelProviderRequest
      * @return CreateAiModelProviderResponse
@@ -799,6 +805,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
+     * Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
+     * Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates consumer authorization rules.</p>
      * 
@@ -833,6 +847,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+     * Gateway instance (CreateGateway → gatewayId, gw- prefix)
+     * Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+     * HTTP API (CreateHttpApi → httpApiId, api- prefix)
+     * Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
+     * Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates consumer authorization rules.</p>
      * 
@@ -847,7 +869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建消费者组</p>
+     * <p>Creates a consumer group.</p>
      * 
      * @param request CreateConsumerGroupRequest
      * @param headers map
@@ -893,7 +915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建消费者组</p>
+     * <p>Creates a consumer group.</p>
      * 
      * @param request CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
@@ -2035,7 +2057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除AI模型卡片</p>
+     * <p>Deletes an AI model card.</p>
      * 
      * @param request DeleteAiModelCardRequest
      * @param headers map
@@ -2063,7 +2085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除AI模型卡片</p>
+     * <p>Deletes an AI model card.</p>
      * 
      * @param request DeleteAiModelCardRequest
      * @return DeleteAiModelCardResponse
@@ -2076,7 +2098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除AI模型供应商</p>
+     * <p>Deletes an AI model provider.</p>
      * 
      * @param request DeleteAiModelProviderRequest
      * @param headers map
@@ -2104,7 +2126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除AI模型供应商</p>
+     * <p>Deletes an AI model provider.</p>
      * 
      * @param request DeleteAiModelProviderRequest
      * @return DeleteAiModelProviderResponse
@@ -2191,7 +2213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除消费者组</p>
+     * <p>Deletes a consumer group.</p>
      * 
      * @param request DeleteConsumerGroupRequest
      * @param headers map
@@ -2219,7 +2241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除消费者组</p>
+     * <p>Deletes a consumer group.</p>
      * 
      * @param request DeleteConsumerGroupRequest
      * @return DeleteConsumerGroupResponse
@@ -3093,7 +3115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型卡片详情</p>
+     * <p>Queries the details of an AI model card.</p>
      * 
      * @param request GetAiModelCardRequest
      * @param headers map
@@ -3121,7 +3143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型卡片详情</p>
+     * <p>Queries the details of an AI model card.</p>
      * 
      * @param request GetAiModelCardRequest
      * @return GetAiModelCardResponse
@@ -3134,7 +3156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型供应商详情</p>
+     * <p>Queries the details of an AI model provider.</p>
      * 
      * @param request GetAiModelProviderRequest
      * @param headers map
@@ -3162,7 +3184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型供应商详情</p>
+     * <p>Queries the details of an AI model provider.</p>
      * 
      * @param request GetAiModelProviderRequest
      * @return GetAiModelProviderResponse
@@ -3249,7 +3271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组</p>
+     * <p>Queries a consumer group.</p>
      * 
      * @param request GetConsumerGroupRequest
      * @param headers map
@@ -3277,7 +3299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组</p>
+     * <p>Queries a consumer group.</p>
      * 
      * @param request GetConsumerGroupRequest
      * @return GetConsumerGroupResponse
@@ -3592,6 +3614,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGatewayQuotaRuleSubjectUsageResponse getGatewayQuotaRuleSubjectUsageWithOptions(String gatewayId, String ruleId, String subjectId, GetGatewayQuotaRuleSubjectUsageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterFailedRequests)) {
+            query.put("filterFailedRequests", request.filterFailedRequests);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
@@ -4075,7 +4101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a service.</p>
+     * <p>Gets service details.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4101,7 +4127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a service.</p>
+     * <p>Gets service details.</p>
      * @return GetServiceResponse
      */
     public GetServiceResponse getService(String serviceId) throws Exception {
@@ -4346,7 +4372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型卡片列表</p>
+     * <p>Queries the list of AI model cards.</p>
      * 
      * @param request ListAiModelCardsRequest
      * @param headers map
@@ -4392,7 +4418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型卡片列表</p>
+     * <p>Queries the list of AI model cards.</p>
      * 
      * @param request ListAiModelCardsRequest
      * @return ListAiModelCardsResponse
@@ -4405,7 +4431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型供应商列表</p>
+     * <p>Queries the list of AI model providers.</p>
      * 
      * @param request ListAiModelProvidersRequest
      * @param headers map
@@ -4451,7 +4477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI模型供应商列表</p>
+     * <p>Queries the list of AI model providers.</p>
      * 
      * @param request ListAiModelProvidersRequest
      * @return ListAiModelProvidersResponse
@@ -4519,7 +4545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组成员列表</p>
+     * <p>Queries the member list of a consumer group.</p>
      * 
      * @param request ListConsumerGroupConsumersRequest
      * @param headers map
@@ -4561,7 +4587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组成员列表</p>
+     * <p>Queries the member list of a consumer group.</p>
      * 
      * @param request ListConsumerGroupConsumersRequest
      * @return ListConsumerGroupConsumersResponse
@@ -4574,7 +4600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组列表</p>
+     * <p>Queries the list of consumer groups.</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @param headers map
@@ -4620,7 +4646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询消费者组列表</p>
+     * <p>Queries the list of consumer groups.</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @return ListConsumerGroupsResponse
@@ -5126,6 +5152,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
             query.put("tag", request.tagShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("vpcId", request.vpcId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6936,7 +6966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AI模型卡片</p>
+     * <p>Updates an AI model card.</p>
      * 
      * @param request UpdateAiModelCardRequest
      * @param headers map
@@ -6990,7 +7020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AI模型卡片</p>
+     * <p>Updates an AI model card.</p>
      * 
      * @param request UpdateAiModelCardRequest
      * @return UpdateAiModelCardResponse
@@ -7003,7 +7033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AI模型供应商</p>
+     * <p>Updates an AI model provider.</p>
      * 
      * @param request UpdateAiModelProviderRequest
      * @param headers map
@@ -7041,7 +7071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AI模型供应商</p>
+     * <p>Updates an AI model provider.</p>
      * 
      * @param request UpdateAiModelProviderRequest
      * @return UpdateAiModelProviderResponse
@@ -7243,7 +7273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新消费者组</p>
+     * <p>Updates a consumer group.</p>
      * 
      * @param request UpdateConsumerGroupRequest
      * @param headers map
@@ -7281,7 +7311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新消费者组</p>
+     * <p>Updates a consumer group.</p>
      * 
      * @param request UpdateConsumerGroupRequest
      * @return UpdateConsumerGroupResponse

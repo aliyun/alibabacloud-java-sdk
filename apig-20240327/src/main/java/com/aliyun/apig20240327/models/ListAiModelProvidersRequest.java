@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAiModelProvidersRequest extends TeaModel {
     /**
+     * <p>The ID of the AI gateway instance. The target instance must exist, belong to the current account, and be of the AI gateway type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListAiModelProvidersRequest extends TeaModel {
     public String gatewayId;
 
     /**
+     * <p>The page number. Default value: 1. The value must be greater than or equal to 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListAiModelProvidersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,8 @@ public class ListAiModelProvidersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The fuzzy match condition for the model provider identifier. If left empty, all model providers under the current gateway are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen</p>
      */

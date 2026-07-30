@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
+    @NameInMap("filterFailedRequests")
+    public Boolean filterFailedRequests;
+
     /**
      * <p>The page number of the detailed consumption (request) records of the consumer within the cycle.</p>
      * 
@@ -25,6 +28,14 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends TeaModel {
     public static GetGatewayQuotaRuleSubjectUsageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGatewayQuotaRuleSubjectUsageRequest self = new GetGatewayQuotaRuleSubjectUsageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetGatewayQuotaRuleSubjectUsageRequest setFilterFailedRequests(Boolean filterFailedRequests) {
+        this.filterFailedRequests = filterFailedRequests;
+        return this;
+    }
+    public Boolean getFilterFailedRequests() {
+        return this.filterFailedRequests;
     }
 
     public GetGatewayQuotaRuleSubjectUsageRequest setPageNumber(Integer pageNumber) {

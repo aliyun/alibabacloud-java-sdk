@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateAiModelProviderResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response struct.</p>
+     */
     @NameInMap("data")
     public CreateAiModelProviderResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>464F9EA0-1052-51BD-8187-D292AA2D8D24</p>
      */
@@ -67,6 +76,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
 
     public static class CreateAiModelProviderResponseBodyDataModelCardsAvailablePaths extends TeaModel {
         /**
+         * <p>The API path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/v1/chat/completions</p>
          */
@@ -74,6 +85,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The path type.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat</p>
          */
@@ -105,6 +118,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
 
     public static class CreateAiModelProviderResponseBodyDataModelCardsCredit extends TeaModel {
         /**
+         * <p>The credits consumption coefficient for cached tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.015</p>
          */
@@ -112,6 +127,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public Float cacheCost;
 
         /**
+         * <p>The credits consumption coefficient for input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.03</p>
          */
@@ -119,6 +136,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public Float inputCost;
 
         /**
+         * <p>The credits consumption coefficient for output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.06</p>
          */
@@ -126,6 +145,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public Float outputCost;
 
         /**
+         * <p>The credits billing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>token</p>
          */
@@ -173,6 +194,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
 
     public static class CreateAiModelProviderResponseBodyDataModelCardsMeta extends TeaModel {
         /**
+         * <p>The maximum number of input tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>128000</p>
          */
@@ -180,6 +203,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public Long maxInputTokens;
 
         /**
+         * <p>The maximum number of output tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>4096</p>
          */
@@ -187,15 +212,23 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public Long maxOutputTokens;
 
         /**
+         * <p>The maximum total number of tokens.</p>
+         * 
          * <strong>example:</strong>
          * <p>132096</p>
          */
         @NameInMap("maxTokens")
         public Long maxTokens;
 
+        /**
+         * <p>The supported input modalities.</p>
+         */
         @NameInMap("supportedInputModalities")
         public java.util.List<String> supportedInputModalities;
 
+        /**
+         * <p>The supported output modalities.</p>
+         */
         @NameInMap("supportedOutputModalities")
         public java.util.List<String> supportedOutputModalities;
 
@@ -247,13 +280,21 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
     }
 
     public static class CreateAiModelProviderResponseBodyDataModelCards extends TeaModel {
+        /**
+         * <p>The list of available paths for the model.</p>
+         */
         @NameInMap("availablePaths")
         public java.util.List<CreateAiModelProviderResponseBodyDataModelCardsAvailablePaths> availablePaths;
 
+        /**
+         * <p>The model credits consumption configuration.</p>
+         */
         @NameInMap("credit")
         public CreateAiModelProviderResponseBodyDataModelCardsCredit credit;
 
         /**
+         * <p>The model capability features.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;stream&quot;:true,&quot;tools&quot;:true}</p>
          */
@@ -261,16 +302,23 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public java.util.Map<String, ?> features;
 
         /**
+         * <p>The gateway instance ID to which the model card belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-ucbx3s2m****</p>
          */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The model metadata.</p>
+         */
         @NameInMap("meta")
         public CreateAiModelProviderResponseBodyDataModelCardsMeta meta;
 
         /**
+         * <p>The model card ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mc-xxx****</p>
          */
@@ -278,6 +326,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String modelCardId;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>gpt-4</p>
          */
@@ -285,6 +335,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String modelName;
 
         /**
+         * <p>The model provider identifier to which the model card belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>openai</p>
          */
@@ -292,6 +344,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String modelProvider;
 
         /**
+         * <p>The model source.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -299,6 +353,17 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The URL of the model metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope-intl.aliyuncs.com">https://dashscope-intl.aliyuncs.com</a></p>
+         */
+        @NameInMap("sourceURL")
+        public String sourceURL;
+
+        /**
+         * <p>The last update time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-03T10:48:00Z</p>
          */
@@ -382,6 +447,14 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             return this.source;
         }
 
+        public CreateAiModelProviderResponseBodyDataModelCards setSourceURL(String sourceURL) {
+            this.sourceURL = sourceURL;
+            return this;
+        }
+        public String getSourceURL() {
+            return this.sourceURL;
+        }
+
         public CreateAiModelProviderResponseBodyDataModelCards setUpdateTime(String updateTime) {
             this.updateTime = updateTime;
             return this;
@@ -393,10 +466,15 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
     }
 
     public static class CreateAiModelProviderResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of services bound to the provider.</p>
+         */
         @NameInMap("boundServices")
         public java.util.List<ServiceInfo> boundServices;
 
         /**
+         * <p>The display name of the model provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>OpenAI</p>
          */
@@ -404,16 +482,23 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The gateway instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-ucbx3s2m****</p>
          */
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        /**
+         * <p>The list of model cards under the provider.</p>
+         */
         @NameInMap("modelCards")
         public java.util.List<CreateAiModelProviderResponseBodyDataModelCards> modelCards;
 
         /**
+         * <p>The number of models under the provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -421,6 +506,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public Integer modelCount;
 
         /**
+         * <p>The model provider ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>mp-xxx****</p>
          */
@@ -428,6 +515,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String modelProviderId;
 
         /**
+         * <p>The model provider identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>openai</p>
          */
@@ -435,6 +524,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String provider;
 
         /**
+         * <p>The provider source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -442,6 +533,8 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The last update time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-03T10:48:00Z</p>
          */

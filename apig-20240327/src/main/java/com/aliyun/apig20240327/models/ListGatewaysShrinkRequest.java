@@ -23,7 +23,7 @@ public class ListGatewaysShrinkRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The keyword for full match search. Case-insensitive.</p>
+     * <p>The keyword for full match search. The search is case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -59,7 +59,7 @@ public class ListGatewaysShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzq6bzz5uyg2q</p>
@@ -72,6 +72,15 @@ public class ListGatewaysShrinkRequest extends TeaModel {
      */
     @NameInMap("tag")
     public String tagShrink;
+
+    /**
+     * <p>The virtual private cloud (VPC) ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zeqrgx6jrlb063y06yjo</p>
+     */
+    @NameInMap("vpcId")
+    public String vpcId;
 
     public static ListGatewaysShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGatewaysShrinkRequest self = new ListGatewaysShrinkRequest();
@@ -140,6 +149,14 @@ public class ListGatewaysShrinkRequest extends TeaModel {
     }
     public String getTagShrink() {
         return this.tagShrink;
+    }
+
+    public ListGatewaysShrinkRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

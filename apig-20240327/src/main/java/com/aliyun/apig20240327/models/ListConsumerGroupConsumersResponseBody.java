@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupConsumersResponseBody extends TeaModel {
     /**
+     * <p>The response status code. Ok is returned if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public ListConsumerGroupConsumersResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -67,6 +76,8 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
 
     public static class ListConsumerGroupConsumersResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The consumer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cs-8c13d2b4f8a1</p>
          */
@@ -74,6 +85,8 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public String consumerId;
 
         /**
+         * <p>The consumer deployment status. Valid values: Processing, Failed, and Success.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -81,13 +94,17 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public String deployStatus;
 
         /**
+         * <p>The consumer description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>线上 API 调用方</p>
+         * <p>Online API caller.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>Indicates whether the consumer is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -95,6 +112,8 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The time when the consumer joined the consumer group, in Unix millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715769600000</p>
          */
@@ -102,6 +121,8 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public Long joinTimestamp;
 
         /**
+         * <p>The consumer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-consumer</p>
          */
@@ -164,10 +185,15 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
     }
 
     public static class ListConsumerGroupConsumersResponseBodyData extends TeaModel {
+        /**
+         * <p>The consumer group member list.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListConsumerGroupConsumersResponseBodyDataItems> items;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -175,6 +201,8 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -182,6 +210,8 @@ public class ListConsumerGroupConsumersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of consumers that match the filter conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

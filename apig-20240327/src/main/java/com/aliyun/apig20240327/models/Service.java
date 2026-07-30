@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
     /**
-     * <p>The address information, including IP addresses or domain names.</p>
+     * <p>The address information, including IP addresses or domain name lists.</p>
      */
     @NameInMap("addresses")
     public java.util.List<String> addresses;
@@ -31,8 +31,11 @@ public class Service extends TeaModel {
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    @NameInMap("dnsServers")
+    public java.util.List<String> dnsServers;
+
     /**
-     * <p>The CloudFlow execution mode.</p>
+     * <p>The execution mode of CloudFlow.</p>
      * 
      * <strong>example:</strong>
      * <p>StartExecution</p>
@@ -50,7 +53,7 @@ public class Service extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The service group name.</p>
+     * <p>The name of the service group.</p>
      * 
      * <strong>example:</strong>
      * <p>publich</p>
@@ -65,17 +68,16 @@ public class Service extends TeaModel {
     public ServiceHealthCheck healthCheck;
 
     /**
-     * <p>The health check status. Valid values:</p>
-     * <ul>
-     * <li>Healthy</li>
-     * <li>Unhealthy</li>
-     * </ul>
+     * <p>The health check status. Valid values: Healthy and Unhealthy.</p>
      * 
      * <strong>example:</strong>
      * <p>Healthy</p>
      */
     @NameInMap("healthStatus")
     public String healthStatus;
+
+    @NameInMap("healthyPanicThreshold")
+    public Float healthyPanicThreshold;
 
     /**
      * <p>The label information of the service.</p>
@@ -91,7 +93,7 @@ public class Service extends TeaModel {
     public String modelProviderId;
 
     /**
-     * <p>The service name.</p>
+     * <p>The name of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>user-service</p>
@@ -107,6 +109,9 @@ public class Service extends TeaModel {
      */
     @NameInMap("namespace")
     public String namespace;
+
+    @NameInMap("outlierDetection")
+    public ServiceOutlierDetection outlierDetection;
 
     /**
      * <p>The circuit-broken endpoints.</p>
@@ -237,6 +242,14 @@ public class Service extends TeaModel {
         return this.createTimestamp;
     }
 
+    public Service setDnsServers(java.util.List<String> dnsServers) {
+        this.dnsServers = dnsServers;
+        return this;
+    }
+    public java.util.List<String> getDnsServers() {
+        return this.dnsServers;
+    }
+
     public Service setExpressType(String expressType) {
         this.expressType = expressType;
         return this;
@@ -277,6 +290,14 @@ public class Service extends TeaModel {
         return this.healthStatus;
     }
 
+    public Service setHealthyPanicThreshold(Float healthyPanicThreshold) {
+        this.healthyPanicThreshold = healthyPanicThreshold;
+        return this;
+    }
+    public Float getHealthyPanicThreshold() {
+        return this.healthyPanicThreshold;
+    }
+
     public Service setLabelDetails(java.util.List<LabelDetail> labelDetails) {
         this.labelDetails = labelDetails;
         return this;
@@ -307,6 +328,14 @@ public class Service extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public Service setOutlierDetection(ServiceOutlierDetection outlierDetection) {
+        this.outlierDetection = outlierDetection;
+        return this;
+    }
+    public ServiceOutlierDetection getOutlierDetection() {
+        return this.outlierDetection;
     }
 
     public Service setOutlierEndpoints(java.util.List<String> outlierEndpoints) {
@@ -405,9 +434,72 @@ public class Service extends TeaModel {
         return this.versions;
     }
 
+    public static class ServiceOutlierDetection extends TeaModel {
+        @NameInMap("baseEjectionTime")
+        public Integer baseEjectionTime;
+
+        @NameInMap("enable")
+        public Boolean enable;
+
+        @NameInMap("failurePercentageMinimumHosts")
+        public Integer failurePercentageMinimumHosts;
+
+        @NameInMap("failurePercentageThreshold")
+        public Integer failurePercentageThreshold;
+
+        @NameInMap("interval")
+        public Integer interval;
+
+        public static ServiceOutlierDetection build(java.util.Map<String, ?> map) throws Exception {
+            ServiceOutlierDetection self = new ServiceOutlierDetection();
+            return TeaModel.build(map, self);
+        }
+
+        public ServiceOutlierDetection setBaseEjectionTime(Integer baseEjectionTime) {
+            this.baseEjectionTime = baseEjectionTime;
+            return this;
+        }
+        public Integer getBaseEjectionTime() {
+            return this.baseEjectionTime;
+        }
+
+        public ServiceOutlierDetection setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public ServiceOutlierDetection setFailurePercentageMinimumHosts(Integer failurePercentageMinimumHosts) {
+            this.failurePercentageMinimumHosts = failurePercentageMinimumHosts;
+            return this;
+        }
+        public Integer getFailurePercentageMinimumHosts() {
+            return this.failurePercentageMinimumHosts;
+        }
+
+        public ServiceOutlierDetection setFailurePercentageThreshold(Integer failurePercentageThreshold) {
+            this.failurePercentageThreshold = failurePercentageThreshold;
+            return this;
+        }
+        public Integer getFailurePercentageThreshold() {
+            return this.failurePercentageThreshold;
+        }
+
+        public ServiceOutlierDetection setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+    }
+
     public static class ServicePorts extends TeaModel {
         /**
-         * <p>The port name.</p>
+         * <p>The name of the port.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>

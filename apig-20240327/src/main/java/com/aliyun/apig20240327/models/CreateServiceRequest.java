@@ -29,7 +29,7 @@ public class CreateServiceRequest extends TeaModel {
     public java.util.List<CreateServiceRequestServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The service source. Valid values:</p>
+     * <p>The service source type. Valid values:</p>
      * <ul>
      * <li>MSE_NACOS: a service in MSE Nacos.</li>
      * <li>K8S: a service in a Kubernetes cluster of Container Service.</li>
@@ -137,7 +137,7 @@ public class CreateServiceRequest extends TeaModel {
         public AgentServiceConfig agentServiceConfig;
 
         /**
-         * <p>The AI service configuration.</p>
+         * <p>The AI service configuration. This parameter is required when sourceType is set to AI.</p>
          */
         @NameInMap("aiServiceConfig")
         public AiServiceConfig aiServiceConfig;
@@ -149,7 +149,7 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> dnsServers;
 
         /**
-         * <p>The service expression type. Identifies the special type or mode of the service.</p>
+         * <p>The service expression type that identifies the special type or mode of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -167,7 +167,7 @@ public class CreateServiceRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The model provider ID.</p>
+         * <p>The model provider ID. This parameter is applicable only to AI services.</p>
          * 
          * <strong>example:</strong>
          * <p>mp-xxx****</p>
@@ -176,7 +176,7 @@ public class CreateServiceRequest extends TeaModel {
         public String modelProviderId;
 
         /**
-         * <p>The service name.</p>
+         * <p>The service name. This parameter is required when sourceType is set to FC3.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -217,7 +217,7 @@ public class CreateServiceRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The validation options. Configuration options related to service validation.</p>
+         * <p>The validation options for service verification configuration.</p>
          */
         @NameInMap("validationOptions")
         public CreateServiceRequestServiceConfigsValidationOptions validationOptions;

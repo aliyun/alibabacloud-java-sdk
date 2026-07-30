@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupResponseBody extends TeaModel {
     /**
+     * <p>The response status code. Ok is returned if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreateConsumerGroupResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -67,6 +76,8 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
 
     public static class CreateConsumerGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
          */
@@ -74,6 +85,8 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The gateway type. Valid values: API or AI.</p>
+         * 
          * <strong>example:</strong>
          * <p>API</p>
          */

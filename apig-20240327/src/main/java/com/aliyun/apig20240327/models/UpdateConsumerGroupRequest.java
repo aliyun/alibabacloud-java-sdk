@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateConsumerGroupRequest extends TeaModel {
     /**
+     * <p>The consumer group description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>用于线上 API 调用方分组</p>
+     * <p>Used for grouping online API callers.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The consumer group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-consumer-group</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConsumerGroupInfo extends TeaModel {
     /**
+     * <p>The consumer group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>csg-8c13d2b4f8a1</p>
      */
@@ -12,6 +14,8 @@ public class ConsumerGroupInfo extends TeaModel {
     public String consumerGroupId;
 
     /**
+     * <p>The gateway type. Valid values: API or AI.</p>
+     * 
      * <strong>example:</strong>
      * <p>API</p>
      */
@@ -19,6 +23,8 @@ public class ConsumerGroupInfo extends TeaModel {
     public String gatewayType;
 
     /**
+     * <p>The consumer group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-consumer-group</p>
      */
