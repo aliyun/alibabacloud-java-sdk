@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class VideoGenerationResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -16,21 +16,21 @@ public class VideoGenerationResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
+     * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,6 +81,10 @@ public class VideoGenerationResponseBody extends TeaModel {
     }
 
     public static class VideoGenerationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>778fa8bd21804828a5d147050e30edac</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

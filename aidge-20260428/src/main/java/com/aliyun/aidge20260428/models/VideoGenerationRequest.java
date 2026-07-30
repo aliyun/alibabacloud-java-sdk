@@ -60,6 +60,9 @@ public class VideoGenerationRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026 New Slimming Women\&quot;s Summer Dress with Mid-Length Design, High-Quality Waist Definition for a Slender Look</p>
          */
         @NameInMap("Title")
         public String title;
@@ -96,9 +99,21 @@ public class VideoGenerationRequest extends TeaModel {
     }
 
     public static class VideoGenerationRequestIntent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Goal")
         public String goal;
 
@@ -128,16 +143,26 @@ public class VideoGenerationRequest extends TeaModel {
     public static class VideoGenerationRequestOutput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080p</p>
          */
         @NameInMap("Quality")
         public String quality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9:16</p>
+         */
         @NameInMap("Ratio")
         public String ratio;
 
