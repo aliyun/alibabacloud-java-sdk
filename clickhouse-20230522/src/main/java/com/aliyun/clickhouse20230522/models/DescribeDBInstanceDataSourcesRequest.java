@@ -25,6 +25,7 @@ public class DescribeDBInstanceDataSourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

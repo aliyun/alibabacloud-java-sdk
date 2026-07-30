@@ -54,14 +54,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "clickhouse.us-southeast-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "clickhouse.na-south-1.aliyuncs.com"),
             new TeaPair("me-central-1", "clickhouse.me-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "clickhouse.cn-wulanchabu-gic-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "clickhouse.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "clickhouse.ap-southeast-8.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
@@ -2108,7 +2112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Langfuse实例组织列表</p>
+     * <p>Queries the list of organizations for a Langfuse instance.</p>
      * 
      * @param request DescribeLangfuseOrgsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2152,7 +2156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Langfuse实例组织列表</p>
+     * <p>Queries the list of organizations for a Langfuse instance.</p>
      * 
      * @param request DescribeLangfuseOrgsRequest
      * @return DescribeLangfuseOrgsResponse

@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeLangfuseOrgsResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DescribeLangfuseOrgsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
      */
@@ -37,6 +42,8 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
 
     public static class DescribeLangfuseOrgsResponseBodyDataOrganizations extends TeaModel {
         /**
+         * <p>The time when the Langfuse organization was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-11T10:27:23Z</p>
          */
@@ -44,6 +51,8 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The Langfuse organization name.</p>
+         * 
          * <strong>example:</strong>
          * <p>org_name</p>
          */
@@ -51,6 +60,8 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The Langfuse organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmrbhzx930005jw2q****</p>
          */
@@ -58,6 +69,8 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The time when the Langfuse organization was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-09T10:27:55</p>
          */
@@ -104,10 +117,15 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
     }
 
     public static class DescribeLangfuseOrgsResponseBodyData extends TeaModel {
+        /**
+         * <p>The Langfuse organization information.</p>
+         */
         @NameInMap("Organizations")
         public java.util.List<DescribeLangfuseOrgsResponseBodyDataOrganizations> organizations;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -115,6 +133,8 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -122,6 +142,8 @@ public class DescribeLangfuseOrgsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>17</p>
          */
