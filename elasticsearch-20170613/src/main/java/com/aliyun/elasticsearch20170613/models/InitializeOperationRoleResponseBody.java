@@ -16,8 +16,8 @@ public class InitializeOperationRoleResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The service-linked role is created.</li>
-     * <li>false: The service-linked role failed to be created.</li>
+     * <li>true: Created.</li>
+     * <li>false: Failed to create.</li>
      * </ul>
      * 
      * <strong>example:</strong>

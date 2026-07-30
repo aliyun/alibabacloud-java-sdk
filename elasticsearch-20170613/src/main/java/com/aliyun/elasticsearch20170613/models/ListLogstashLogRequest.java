@@ -42,7 +42,7 @@ public class ListLogstashLogRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The number of entries per page for a paged query. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of entries per page for the paged query. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

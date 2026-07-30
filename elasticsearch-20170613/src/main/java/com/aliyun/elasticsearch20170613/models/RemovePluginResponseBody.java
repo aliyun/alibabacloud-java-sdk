@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePluginResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -14,7 +14,7 @@ public class RemovePluginResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Result</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

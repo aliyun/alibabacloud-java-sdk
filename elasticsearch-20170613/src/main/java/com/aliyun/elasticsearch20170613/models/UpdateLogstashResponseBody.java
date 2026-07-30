@@ -16,8 +16,8 @@ public class UpdateLogstashResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the instance information is modified. Valid values:</p>
      * <ul>
-     * <li>true: The instance information is modified.</li>
-     * <li>false: The instance information failed to be modified.</li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

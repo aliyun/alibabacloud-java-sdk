@@ -12,7 +12,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The resource type. Set this parameter to INSTANCE.</p>
+     * <p>The resource type. The value is fixed as INSTANCE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

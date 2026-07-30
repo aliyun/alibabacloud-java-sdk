@@ -24,7 +24,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The list of instance IDs to query. The value is in JSON array format and can contain up to 20 items.</p>
+     * <p>The list of instance IDs to query. The value is in JSON array format and supports up to 20 items.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</p>
@@ -43,7 +43,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The number of entries per page in Settings for paged query and paging. This field is deprecated.</p>
+     * <p>The number of entries per page for paged query. This is a deprecated field. Settings for paging are no longer supported.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,7 +53,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The list of tags to query. The value is in JSON string format and can contain up to 20 items.</p>
+     * <p>The list of tags to query. The value is in JSON string format and contains up to 20 items.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;env&quot;, &quot;value&quot;:&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</p>

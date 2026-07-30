@@ -51,7 +51,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The target number of elastic data nodes during peak hours.</p>
+         * <p>The number of elastic data nodes during peak hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -138,7 +138,7 @@ public class ModifyElastictaskResponseBody extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>The target number of elastic data nodes during off-peak hours.</p>
+         * <p>The number of elastic data nodes during off-peak hours.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

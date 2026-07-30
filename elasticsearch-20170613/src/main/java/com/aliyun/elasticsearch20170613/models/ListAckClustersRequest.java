@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAckClustersRequest extends TeaModel {
     /**
-     * <p>The page number. (Deprecated).</p>
+     * <p>The page number. (Deprecated)</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListAckClustersRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of records per page. (Deprecated).</p>
+     * <p>The number of records per page. (Deprecated)</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

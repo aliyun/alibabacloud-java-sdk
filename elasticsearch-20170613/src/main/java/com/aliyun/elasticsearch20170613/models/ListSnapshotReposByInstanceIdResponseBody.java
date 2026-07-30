@@ -60,7 +60,7 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
         public String repoPath;
 
         /**
-         * <p>The name of the referenced repository.</p>
+         * <p>The referenced repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_snapshot_from_es-cn-6ja1ro4jt000c****</p>

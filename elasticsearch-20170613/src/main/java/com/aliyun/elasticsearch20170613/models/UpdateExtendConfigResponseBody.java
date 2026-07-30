@@ -14,9 +14,9 @@ public class UpdateExtendConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The scenario-based configuration template was modified.</li>
+     * <li>true: The scenario-based configuration template was modified successfully.</li>
      * <li>false: The scenario-based configuration template failed to be modified.</li>
      * </ul>
      * 

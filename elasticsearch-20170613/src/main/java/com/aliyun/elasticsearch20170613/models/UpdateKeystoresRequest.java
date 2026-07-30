@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateKeystoresRequest extends TeaModel {
     /**
-     * <p>Delete keystore configuration</p>
+     * <p>Removes keystore configurations.</p>
      */
     @NameInMap("remove")
     public java.util.List<String> remove;
 
     /**
-     * <p>Add or update keystore</p>
+     * <p>Adds or updates the keystore.</p>
      */
     @NameInMap("update")
     public java.util.Map<String, String> update;
 
     /**
-     * <p>Whether to force the change. false: non-forced, true: forced</p>
+     * <p>Specifies whether to forcibly apply the change. Valid values:</p>
+     * <ul>
+     * <li>false: The change is not forcibly applied.</li>
+     * <li>true: The change is forcibly applied.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>

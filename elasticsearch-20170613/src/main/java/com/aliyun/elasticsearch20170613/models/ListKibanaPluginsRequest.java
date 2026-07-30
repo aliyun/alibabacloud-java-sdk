@@ -14,7 +14,7 @@ public class ListKibanaPluginsRequest extends TeaModel {
     public String page;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page Settings for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

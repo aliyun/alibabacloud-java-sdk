@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateFalconSeekRequest extends TeaModel {
     /**
-     * <p>true: Enabled, false: shutdown</p>
+     * <p>Specifies whether to enable the FalconSeek cloud-native kernel feature. Valid values:</p>
+     * <ul>
+     * <li>true: Enable the feature.</li>
+     * <li>false: Disable the feature.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("enable")

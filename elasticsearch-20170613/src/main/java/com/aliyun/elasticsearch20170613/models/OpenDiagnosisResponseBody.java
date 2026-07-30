@@ -16,7 +16,7 @@ public class OpenDiagnosisResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the intelligent O&amp;M feature is enabled. Valid values:</p>
      * <ul>
-     * <li>true: Enabled.</li>
+     * <li>true: Succeeded.</li>
      * <li>false: Failed.</li>
      * </ul>
      * 

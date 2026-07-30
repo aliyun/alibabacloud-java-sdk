@@ -20,7 +20,7 @@ public class UpdateKibanaPvlNetworkRequest extends TeaModel {
     public java.util.List<String> securityGroups;
 
     /**
-     * <p>Used to ensure the idempotency of the request.</p>
+     * <p>A client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>

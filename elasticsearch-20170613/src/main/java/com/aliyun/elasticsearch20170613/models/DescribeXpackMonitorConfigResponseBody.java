@@ -44,8 +44,8 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether X-Pack monitoring is enabled. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: not enabled.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

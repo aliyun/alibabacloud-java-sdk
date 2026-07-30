@@ -34,8 +34,8 @@ public class GetEmonGrafanaAlertsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the Grafana alert list is retrieved. Valid values:</p>
      * <ul>
-     * <li>true: The alert list is retrieved.</li>
-     * <li>false: The alert list failed to be retrieved.</li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

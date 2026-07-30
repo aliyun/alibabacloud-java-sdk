@@ -23,7 +23,7 @@ public class ListLogstashPluginsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page in paging settings. Minimum value: 1. Maximum value: 200.</p>
+     * <p>The number of entries per page for paging. Minimum value: 1. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -35,7 +35,7 @@ public class ListLogstashPluginsRequest extends TeaModel {
      * <p>The plugin source. Valid values:</p>
      * <ul>
      * <li>USER: custom plugin</li>
-     * <li>SYSTEM: system preset plugin.</li>
+     * <li>SYSTEM: system preset plugin</li>
      * </ul>
      * 
      * <strong>example:</strong>

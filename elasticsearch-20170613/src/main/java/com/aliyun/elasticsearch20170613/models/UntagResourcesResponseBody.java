@@ -14,7 +14,7 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned result:</p>
      * <ul>
      * <li>true: The deletion was successful.</li>
      * <li>false: The deletion failed.</li>

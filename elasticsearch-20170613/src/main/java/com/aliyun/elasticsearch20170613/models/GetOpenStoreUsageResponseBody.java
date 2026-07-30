@@ -51,7 +51,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         public Long currentUsage;
 
         /**
-         * <p>The OpenStore storage usage on the previous day. Unit: bytes.</p>
+         * <p>The OpenStore storage usage of the previous day. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>184320</p>

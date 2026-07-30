@@ -54,7 +54,7 @@ public class ListCollectorsRequest extends TeaModel {
      * <ul>
      * <li><p>ECS: ECS instance</p>
      * </li>
-     * <li><p>ACK: Container Kubernetes cluster.</p>
+     * <li><p>ACK: Container Kubernetes cluster</p>
      * </li>
      * </ul>
      * 

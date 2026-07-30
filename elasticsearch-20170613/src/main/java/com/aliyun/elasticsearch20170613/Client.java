@@ -12,9 +12,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("us-west-1", "elasticsearch.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "elasticsearch.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "elasticsearch.na-south-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "elasticsearch.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "elasticsearch.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "elasticsearch.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "elasticsearch.cn-wulanchabu-gic-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "elasticsearch.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "elasticsearch.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "elasticsearch.cn-shanghai-finance-1.aliyuncs.com"),
@@ -27,11 +29,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-guangzhou", "elasticsearch.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "elasticsearch.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing", "elasticsearch.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "elasticsearch.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "elasticsearch.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "elasticsearch.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "elasticsearch.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "elasticsearch.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "elasticsearch.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "elasticsearch.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "elasticsearch.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
@@ -238,7 +240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes a frozen Logstash instance that was frozen after release.</p>
+     * <p>Resumes a frozen Logstash instance that was released.</p>
      * 
      * @param request CancelLogstashDeletionRequest
      * @param headers map
@@ -272,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes a frozen Logstash instance that was frozen after release.</p>
+     * <p>Resumes a frozen Logstash instance that was released.</p>
      * 
      * @param request CancelLogstashDeletionRequest
      * @return CancelLogstashDeletionResponse
@@ -336,7 +338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recommends optimal cluster capacity planning configurations based on business scenarios, QPS, and log generation volume.</p>
+     * <p>Recommends the optimal cluster capacity planning configuration based on business scenarios, QPS, and log generation volume.</p>
      * 
      * @param request CapacityPlanRequest
      * @param headers map
@@ -382,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Recommends optimal cluster capacity planning configurations based on business scenarios, QPS, and log generation volume.</p>
+     * <p>Recommends the optimal cluster capacity planning configuration based on business scenarios, QPS, and log generation volume.</p>
      * 
      * @param request CapacityPlanRequest
      * @return CapacityPlanResponse
@@ -493,7 +495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the cloud managed feature for a specified index in an Indexing Service cluster. This operation is irreversible. After the feature is disabled, it cannot be enabled again.</p>
+     * <p>Disables the cloud-managed feature for a specified index in an Indexing Service cluster. This operation is irreversible. After the feature is disabled, it cannot be enabled again.</p>
      * 
      * @param request CloseManagedIndexRequest
      * @param headers map
@@ -527,7 +529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the cloud managed feature for a specified index in an Indexing Service cluster. This operation is irreversible. After the feature is disabled, it cannot be enabled again.</p>
+     * <p>Disables the cloud-managed feature for a specified index in an Indexing Service cluster. This operation is irreversible. After the feature is disabled, it cannot be enabled again.</p>
      * 
      * @param request CloseManagedIndexRequest
      * @return CloseManagedIndexResponse
@@ -621,7 +623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store large volumes of data by using OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an Elasticsearch composable template.</p>
@@ -662,7 +664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store large volumes of data by using OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an Elasticsearch composable template.</p>
@@ -679,7 +681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The data stream name you create must have a one-to-one correspondence with the index pattern in the index template, and the index template must have the data stream feature enabled. For example, if the index pattern in the index template is ds-\*, the corresponding data stream name should be ds-.</p>
+     * <p>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -719,7 +721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The data stream name you create must have a one-to-one correspondence with the index pattern in the index template, and the index template must have the data stream feature enabled. For example, if the index pattern in the index template is ds-\*, the corresponding data stream name should be ds-.</p>
+     * <p>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -736,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an index lifecycle policy. If a policy with the specified name already exists, the existing policy is replaced and its version is incremented.</p>
+     * <p>Creates an index lifecycle policy. If a policy with the specified name already exists, replaces it and increments the version.</p>
      * 
      * @param request CreateILMPolicyRequest
      * @param headers map
@@ -771,7 +773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an index lifecycle policy. If a policy with the specified name already exists, the existing policy is replaced and its version is incremented.</p>
+     * <p>Creates an index lifecycle policy. If a policy with the specified name already exists, replaces it and increments the version.</p>
      * 
      * @param request CreateILMPolicyRequest
      * @return CreateILMPolicyResponse
@@ -859,12 +861,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before calling this operation, note the following:</p>
      * <ul>
-     * <li>Make sure that you are familiar with the billing method and pricing of Logstash. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/260882.html">Billing</a>.</ph></li>
-     * <li>To create an instance, complete real-name verification. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph>.</li>
+     * <li>Make sure that you are familiar with the billing methods and pricing of Logstash. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/260882.html">Billing overview</a>.</ph></li>
+     * <li>To create an instance, complete real-name verification. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Logstash instance by calling CreateLogstash.</p>
+     * <p>Creates a Logstash instance.</p>
      * 
      * @param request CreateLogstashRequest
      * @param headers map
@@ -934,12 +936,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Before calling this operation, note the following:</p>
      * <ul>
-     * <li>Make sure that you are familiar with the billing method and pricing of Logstash. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/260882.html">Billing</a>.</ph></li>
-     * <li>To create an instance, complete real-name verification. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph>.</li>
+     * <li>Make sure that you are familiar with the billing methods and pricing of Logstash. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/260882.html">Billing overview</a>.</ph></li>
+     * <li>To create an instance, complete real-name verification. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Logstash instance by calling CreateLogstash.</p>
+     * <p>Creates a Logstash instance.</p>
      * 
      * @param request CreateLogstashRequest
      * @return CreateLogstashResponse
@@ -1052,7 +1054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about this API operation, see <a href="https://help.aliyun.com/document_detail/279559.html">Configure private connectivity for an instance</a>.</p>
+     * <p>For more information about this API, see <a href="https://help.aliyun.com/document_detail/279559.html">Configure private network connectivity for an instance</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a PrivateLink VPC endpoint to connect to an endpoint service created in a user VPC.</p>
@@ -1103,7 +1105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about this API operation, see <a href="https://help.aliyun.com/document_detail/279559.html">Configure private connectivity for an instance</a>.</p>
+     * <p>For more information about this API, see <a href="https://help.aliyun.com/document_detail/279559.html">Configure private network connectivity for an instance</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a PrivateLink VPC endpoint to connect to an endpoint service created in a user VPC.</p>
@@ -1119,7 +1121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes part of the zones offline when multiple zones are available, and migrates the nodes in the offline zones to other zones.</p>
+     * <p>Takes specified zones offline when multiple zones are available, and migrates nodes from the offline zones to other zones.</p>
      * 
      * @param request DeactivateZonesRequest
      * @param headers map
@@ -1154,7 +1156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes part of the zones offline when multiple zones are available, and migrates the nodes in the offline zones to other zones.</p>
+     * <p>Takes specified zones offline when multiple zones are available, and migrates nodes from the offline zones to other zones.</p>
      * 
      * @param request DeactivateZonesRequest
      * @return DeactivateZonesResponse
@@ -1214,10 +1216,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data by using OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Implement massive data storage through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a component index template of Elasticsearch.</p>
+     * <p>Deletes a composite index template from an Elasticsearch instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1243,10 +1245,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data by using OpenStore</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Implement massive data storage through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a component index template of Elasticsearch.</p>
+     * <p>Deletes a composite index template from an Elasticsearch instance.</p>
      * @return DeleteComponentIndexResponse
      */
     public DeleteComponentIndexResponse deleteComponentIndex(String InstanceId, String name) throws Exception {
@@ -1310,7 +1312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Deleting a data stream also deletes its backing indexes. Proceed with caution.- When an index template has associated data streams, you must delete the data streams associated with the index template before you can delete the index template. On the data stream list page, view the data stream details to find the index template that matches the data stream.</li>
+     * <li>Deleting a data stream also deletes its backing indexes. Proceed with caution.- To delete an index template that has associated data streams, delete the associated data streams first. On the data stream list page, view the data stream details to find the index template that the data stream matches.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1351,7 +1353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Deleting a data stream also deletes its backing indexes. Proceed with caution.- When an index template has associated data streams, you must delete the data streams associated with the index template before you can delete the index template. On the data stream list page, view the data stream details to find the index template that matches the data stream.</li>
+     * <li>Deleting a data stream also deletes its backing indexes. Proceed with caution.- To delete an index template that has associated data streams, delete the associated data streams first. On the data stream list page, view the data stream details to find the index template that the data stream matches.</li>
      * </ul>
      * </blockquote>
      * 
@@ -1561,7 +1563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * Data cannot be recovered after the instance is released. Back up your data before releasing the instance. For more information, see <a href="https://help.aliyun.com/document_detail/65675.html">Snapshot backup and recovery commands</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>All physical resources used by the instance are reclaimed, all related data is permanently lost and cannot be recovered, and the cloud disks mounted to the instance nodes along with their corresponding snapshots are released.</p>
+     * <p>All physical resources used by the instance are reclaimed, all related data is permanently lost and unrecoverable, and the cloud disks attached to the instance nodes along with their corresponding snapshots are released.</p>
      * 
      * @param request DeleteInstanceRequest
      * @param headers map
@@ -1603,7 +1605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * Data cannot be recovered after the instance is released. Back up your data before releasing the instance. For more information, see <a href="https://help.aliyun.com/document_detail/65675.html">Snapshot backup and recovery commands</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>All physical resources used by the instance are reclaimed, all related data is permanently lost and cannot be recovered, and the cloud disks mounted to the instance nodes along with their corresponding snapshots are released.</p>
+     * <p>All physical resources used by the instance are reclaimed, all related data is permanently lost and unrecoverable, and the cloud disks attached to the instance nodes along with their corresponding snapshots are released.</p>
      * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -1777,7 +1779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DeleteVpcEndpoint to delete a VPC endpoint under a service account.</p>
+     * <p>Calls DeleteVpcEndpoint to delete an endpoint in the service VPC.</p>
      * 
      * @param request DeleteVpcEndpointRequest
      * @param headers map
@@ -1811,7 +1813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DeleteVpcEndpoint to delete a VPC endpoint under a service account.</p>
+     * <p>Calls DeleteVpcEndpoint to delete an endpoint in the service VPC.</p>
      * 
      * @param request DeleteVpcEndpointRequest
      * @return DeleteVpcEndpointResponse
@@ -1825,7 +1827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installing a collector on an ACK cluster, you can call this operation to check the installation status of the Elasticsearch Operator on the target cluster.</p>
+     * <p>Before installing a collector on an ACK cluster, call this operation to check the installation status of the Elasticsearch Operator on the target cluster.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1856,7 +1858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installing a collector on an ACK cluster, you can call this operation to check the installation status of the Elasticsearch Operator on the target cluster.</p>
+     * <p>Before installing a collector on an ACK cluster, call this operation to check the installation status of the Elasticsearch Operator on the target cluster.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1951,7 +1953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances that can establish private network peering with the current instance. Instances that are already connected are not included.</p>
+     * <p>Retrieves the list of instances that can establish private network peering with the current instance. Instances that are already connected are not included.</p>
      * 
      * @param request DescribeConnectableClustersRequest
      * @param headers map
@@ -1985,7 +1987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances that can establish private network peering with the current instance. Instances that are already connected are not included.</p>
+     * <p>Retrieves the list of instances that can establish private network peering with the current instance. Instances that are already connected are not included.</p>
      * 
      * @param request DescribeConnectableClustersRequest
      * @return DescribeConnectableClustersResponse
@@ -2035,7 +2037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDiagnoseReport operation to view historical reports of intelligent O&amp;M.</p>
+     * <p>Queries historical reports of intelligent O&amp;M diagnostics.</p>
      * 
      * @param request DescribeDiagnoseReportRequest
      * @param headers map
@@ -2069,7 +2071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDiagnoseReport operation to view historical reports of intelligent O&amp;M.</p>
+     * <p>Queries historical reports of intelligent O&amp;M diagnostics.</p>
      * 
      * @param request DescribeDiagnoseReportRequest
      * @return DescribeDiagnoseReportResponse
@@ -2082,7 +2084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDiagnosisSettings operation to obtain the scenario settings of intelligent O&amp;M.</p>
+     * <p>Calls DescribeDiagnosisSettings to retrieve the scenario settings of intelligent diagnosis and optimization.</p>
      * 
      * @param request DescribeDiagnosisSettingsRequest
      * @param headers map
@@ -2116,7 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDiagnosisSettings operation to obtain the scenario settings of intelligent O&amp;M.</p>
+     * <p>Calls DescribeDiagnosisSettings to retrieve the scenario settings of intelligent diagnosis and optimization.</p>
      * 
      * @param request DescribeDiagnosisSettingsRequest
      * @return DescribeDiagnosisSettingsResponse
@@ -2168,13 +2170,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>The instance health status. The following three states are supported:</p>
      * <ul>
-     * <li>GREEN: Primary and replica shards are allocated properly.</li>
-     * <li>YELLOW: Primary shards are allocated properly, but replica shards are not allocated properly.</li>
-     * <li>RED: Primary shards are not allocated properly.</li>
+     * <li>GREEN: Primary and replica shards are allocated normally.</li>
+     * <li>YELLOW: Primary shards are allocated normally, but replica shards are not allocated normally.</li>
+     * <li>RED: Primary shards are not allocated normally.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the health status of a cluster to check whether it is running properly.</p>
+     * <p>Queries the health status of a cluster to check whether it is running normally.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2202,13 +2204,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>The instance health status. The following three states are supported:</p>
      * <ul>
-     * <li>GREEN: Primary and replica shards are allocated properly.</li>
-     * <li>YELLOW: Primary shards are allocated properly, but replica shards are not allocated properly.</li>
-     * <li>RED: Primary shards are not allocated properly.</li>
+     * <li>GREEN: Primary and replica shards are allocated normally.</li>
+     * <li>YELLOW: Primary shards are allocated normally, but replica shards are not allocated normally.</li>
+     * <li>RED: Primary shards are not allocated normally.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the health status of a cluster to check whether it is running properly.</p>
+     * <p>Queries the health status of a cluster to check whether it is running normally.</p>
      * @return DescribeElasticsearchHealthResponse
      */
     public DescribeElasticsearchHealthResponse describeElasticsearchHealth(String InstanceId) throws Exception {
@@ -2441,7 +2443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DescribePipelineManagementConfig to retrieve the pipeline management configuration of a Logstash instance.</p>
+     * <p>Retrieves the pipeline management configuration of a Logstash instance.</p>
      * 
      * @param request DescribePipelineManagementConfigRequest
      * @param headers map
@@ -2475,7 +2477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DescribePipelineManagementConfig to retrieve the pipeline management configuration of a Logstash instance.</p>
+     * <p>Retrieves the pipeline management configuration of a Logstash instance.</p>
      * 
      * @param request DescribePipelineManagementConfigRequest
      * @return DescribePipelineManagementConfigResponse
@@ -2562,7 +2564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the scenario-specific template configuration and cluster settings of an instance.</p>
+     * <p>Retrieves the scenario-specific template configuration and cluster settings configuration of an instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2588,7 +2590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the scenario-specific template configuration and cluster settings of an instance.</p>
+     * <p>Retrieves the scenario-specific template configuration and cluster settings configuration of an instance.</p>
      * @return DescribeTemplatesResponse
      */
     public DescribeTemplatesResponse describeTemplates(String InstanceId) throws Exception {
@@ -2636,7 +2638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DiagnoseInstance to immediately diagnose an instance.</p>
+     * <p>Diagnoses an instance immediately.</p>
      * 
      * @param request DiagnoseInstanceRequest
      * @param headers map
@@ -2688,7 +2690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls DiagnoseInstance to immediately diagnose an instance.</p>
+     * <p>Diagnoses an instance immediately.</p>
      * 
      * @param request DiagnoseInstanceRequest
      * @return DiagnoseInstanceResponse
@@ -2701,7 +2703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</p>
+     * <p>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables Kibana private network access.</p>
@@ -2730,7 +2732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</p>
+     * <p>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables Kibana private network access.</p>
@@ -2745,7 +2747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
+     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
      * <li>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</li>
      * </ol>
      * 
@@ -2803,7 +2805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
+     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
      * <li>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</li>
      * </ol>
      * 
@@ -2821,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the estimated restart time of a Logstash instance.</p>
+     * <p>Retrieves the estimated restart time for a Logstash instance.</p>
      * 
      * @param request EstimatedLogstashRestartTimeRequest
      * @param headers map
@@ -2856,7 +2858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the estimated restart time of a Logstash instance.</p>
+     * <p>Retrieves the estimated restart time for a Logstash instance.</p>
      * 
      * @param request EstimatedLogstashRestartTimeRequest
      * @return EstimatedLogstashRestartTimeResponse
@@ -2869,7 +2871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the estimated restart time for an instance.</p>
+     * <p>Retrieves the estimated time for an instance restart.</p>
      * 
      * @param request EstimatedRestartTimeRequest
      * @param headers map
@@ -2904,7 +2906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the estimated restart time for an instance.</p>
+     * <p>Retrieves the estimated time for an instance restart.</p>
      * 
      * @param request EstimatedRestartTimeRequest
      * @return EstimatedRestartTimeResponse
@@ -3102,7 +3104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls GetEmonGrafanaDashboards to retrieve the list of Grafana dashboards.</p>
+     * <p>Retrieves the list of Grafana dashboards.</p>
      * 
      * @param request GetEmonGrafanaDashboardsRequest
      * @param headers map
@@ -3136,7 +3138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls GetEmonGrafanaDashboards to retrieve the list of Grafana dashboards.</p>
+     * <p>Retrieves the list of Grafana dashboards.</p>
      * 
      * @param request GetEmonGrafanaDashboardsRequest
      * @return GetEmonGrafanaDashboardsResponse
@@ -3196,7 +3198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve keystore information</p>
+     * <p>Retrieves keystore information.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3222,7 +3224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve keystore information</p>
+     * <p>Retrieves keystore information.</p>
      * @return GetKeystoresResponse
      */
     public GetKeystoresResponse getKeystores(String InstanceId) throws Exception {
@@ -3409,7 +3411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the nodes available for data migration based on the specified node type and count.</p>
+     * <p>Retrieves the nodes that are available for data migration based on the specified node type and count.</p>
      * 
      * @param request GetTransferableNodesRequest
      * @param headers map
@@ -3447,7 +3449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the nodes available for data migration based on the specified node type and count.</p>
+     * <p>Retrieves the nodes that are available for data migration based on the specified node type and count.</p>
      * 
      * @param request GetTransferableNodesRequest
      * @return GetTransferableNodesResponse
@@ -3460,7 +3462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Continue restarting the remaining edge zones of the Elasticsearch instance after the phased release is completed.</p>
+     * <p>Continues the canary release by restarting the remaining nodes of an Elasticsearch instance after the canary release is complete.</p>
      * 
      * @param request GrayPublishRequest
      * @param headers map
@@ -3494,7 +3496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Continue restarting the remaining edge zones of the Elasticsearch instance after the phased release is completed.</p>
+     * <p>Continues the canary release by restarting the remaining nodes of an Elasticsearch instance after the canary release is complete.</p>
      * 
      * @param request GrayPublishRequest
      * @return GrayPublishResponse
@@ -3507,7 +3509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initialize AI model</p>
+     * <p>Initializes AI models.</p>
      * 
      * @param request InitModelRequest
      * @param headers map
@@ -3557,7 +3559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initialize AI model</p>
+     * <p>Initializes AI models.</p>
      * 
      * @param request InitModelRequest
      * @return InitModelResponse
@@ -3571,11 +3573,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you use a collector to collect logs from different data sources or perform elastic scaling tasks for a cluster (applicable only to the China site), you must create a service-linked role.</p>
+     * <p>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Calls the InitializeOperationRole operation to create a service-linked role.</p>
+     * <p>Creates a service-linked role.</p>
      * 
      * @param request InitializeOperationRoleRequest
      * @param headers map
@@ -3611,11 +3613,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you use a collector to collect logs from different data sources or perform elastic scaling tasks for a cluster (applicable only to the China site), you must create a service-linked role.</p>
+     * <p>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Calls the InitializeOperationRole operation to create a service-linked role.</p>
+     * <p>Creates a service-linked role.</p>
      * 
      * @param request InitializeOperationRoleRequest
      * @return InitializeOperationRoleResponse
@@ -3629,11 +3631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installing a collector on an ACK cluster, call this operation to install the Elasticsearch Operator on the target cluster.</p>
+     * <p>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Installs the ACK Operator on a specified Container Service cluster.</p>
+     * <p>Installs Ack Operator on a specified Container Service cluster.</p>
      * 
      * @param request InstallAckOperatorRequest
      * @param headers map
@@ -3669,11 +3671,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installing a collector on an ACK cluster, call this operation to install the Elasticsearch Operator on the target cluster.</p>
+     * <p>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Installs the ACK Operator on a specified Container Service cluster.</p>
+     * <p>Installs Ack Operator on a specified Container Service cluster.</p>
      * 
      * @param request InstallAckOperatorRequest
      * @return InstallAckOperatorResponse
@@ -3686,7 +3688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs preset plug-ins for Kibana. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</p>
+     * <p>Installs preset Kibana plug-ins. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</p>
      * 
      * @param request InstallKibanaSystemPluginRequest
      * @param headers map
@@ -3721,7 +3723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs preset plug-ins for Kibana. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</p>
+     * <p>Installs preset Kibana plug-ins. The Kibana instance must have specifications of 2 vCPUs and 4 GB of memory or higher.</p>
      * 
      * @param request InstallKibanaSystemPluginRequest
      * @return InstallKibanaSystemPluginResponse
@@ -3839,7 +3841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The custom plugin installation feature is being upgraded internally and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</p>
+     * <p>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3879,7 +3881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The custom plugin installation feature is being upgraded internally and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</p>
+     * <p>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -3896,7 +3898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Interrupts an instance change task. This operation is valid only for instances in the Effecting state. After the interruption, the instance enters the suspended state.</p>
+     * <p>Interrupts an instance change task. This operation is valid only for instances in the active state. After the interruption, the instance enters the suspended state.</p>
      * 
      * @param request InterruptElasticsearchTaskRequest
      * @param headers map
@@ -3930,7 +3932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Interrupts an instance change task. This operation is valid only for instances in the Effecting state. After the interruption, the instance enters the suspended state.</p>
+     * <p>Interrupts an instance change task. This operation is valid only for instances in the active state. After the interruption, the instance enters the suspended state.</p>
      * 
      * @param request InterruptElasticsearchTaskRequest
      * @return InterruptElasticsearchTaskResponse
@@ -4045,10 +4047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is deprecated and will be taken offline soon.</p>
+     * <p>This operation is not recommended and will be taken offline soon.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Queries all namespaces of a specified Container Service for Kubernetes (ACK) cluster.</p>
      * 
      * @param request ListAckNamespacesRequest
      * @param headers map
@@ -4086,10 +4088,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is deprecated and will be taken offline soon.</p>
+     * <p>This operation is not recommended and will be taken offline soon.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all namespaces in a specified Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Queries all namespaces of a specified Container Service for Kubernetes (ACK) cluster.</p>
      * 
      * @param request ListAckNamespacesRequest
      * @return ListAckNamespacesResponse
@@ -4102,7 +4104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Release notes Release notes details.</p>
+     * <p>Release notes Change details.</p>
      * 
      * @param request ListActionRecordsRequest
      * @param headers map
@@ -4164,7 +4166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Release notes Release notes details.</p>
+     * <p>Release notes Change details.</p>
      * 
      * @param request ListActionRecordsRequest
      * @return ListActionRecordsResponse
@@ -4271,7 +4273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of available Elasticsearch instances when configuring X-Pack monitoring for a Logstash instance.</p>
+     * <p>Retrieves the list of available Elasticsearch instances when configuring X-Pack monitoring for a Logstash instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4297,7 +4299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of available Elasticsearch instances when configuring X-Pack monitoring for a Logstash instance.</p>
+     * <p>Retrieves the list of available Elasticsearch instances when configuring X-Pack monitoring for a Logstash instance.</p>
      * @return ListAvailableEsInstanceIdsResponse
      */
     public ListAvailableEsInstanceIdsResponse listAvailableEsInstanceIds(String InstanceId) throws Exception {
@@ -4308,7 +4310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of collectors.</p>
+     * <p>Retrieves the list of collectors.</p>
      * 
      * @param request ListCollectorsRequest
      * @param headers map
@@ -4362,7 +4364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of collectors.</p>
+     * <p>Retrieves the list of collectors.</p>
      * 
      * @param request ListCollectorsRequest
      * @return ListCollectorsResponse
@@ -4436,7 +4438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances that have established private network peering with the current instance.</p>
+     * <p>Retrieves the list of instances that have established private network peering with the current instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4462,7 +4464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances that have established private network peering with the current instance.</p>
+     * <p>Retrieves the list of instances that have established private network peering with the current instance.</p>
      * @return ListConnectedClustersResponse
      */
     public ListConnectedClustersResponse listConnectedClusters(String InstanceId) throws Exception {
@@ -4561,7 +4563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the ListDefaultCollectorConfigurations operation to retrieve the default configuration file of a collector.</p>
+     * <p>Invokes ListDefaultCollectorConfigurations to retrieve the default configuration file of a collector.</p>
      * 
      * @param request ListDefaultCollectorConfigurationsRequest
      * @param headers map
@@ -4603,7 +4605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invokes the ListDefaultCollectorConfigurations operation to retrieve the default configuration file of a collector.</p>
+     * <p>Invokes ListDefaultCollectorConfigurations to retrieve the default configuration file of a collector.</p>
      * 
      * @param request ListDefaultCollectorConfigurationsRequest
      * @return ListDefaultCollectorConfigurationsResponse
@@ -4616,7 +4618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Use OpenStore to store large volumes of data</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of historical index templates.</p>
@@ -4661,7 +4663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Use OpenStore to store large volumes of data</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of historical index templates.</p>
@@ -4724,7 +4726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls ListDiagnoseReport to retrieve historical reports of intelligent O&amp;M.</p>
+     * <p>Retrieves historical reports of intelligent O&amp;M diagnostics.</p>
      * 
      * @param request ListDiagnoseReportRequest
      * @param headers map
@@ -4782,7 +4784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls ListDiagnoseReport to retrieve historical reports of intelligent O&amp;M.</p>
+     * <p>Retrieves historical reports of intelligent O&amp;M diagnostics.</p>
      * 
      * @param request ListDiagnoseReportRequest
      * @return ListDiagnoseReportResponse
@@ -4795,7 +4797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all IDs of Intelligent O&amp;M Center historical reports.</p>
+     * <p>Retrieves all IDs of intelligent O&amp;M historical reports.</p>
      * 
      * @param request ListDiagnoseReportIdsRequest
      * @param headers map
@@ -4849,7 +4851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all IDs of Intelligent O&amp;M Center historical reports.</p>
+     * <p>Retrieves all IDs of intelligent O&amp;M historical reports.</p>
      * 
      * @param request ListDiagnoseReportIdsRequest
      * @return ListDiagnoseReportIdsResponse
@@ -5020,8 +5022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.
-     * .</p>
+     * <p>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5080,8 +5081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.
-     * .</p>
+     * <p>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5098,7 +5098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain Event List</p>
+     * <p>Retrieves a list of events.</p>
      * 
      * @param request ListEventRecordsRequest
      * @param headers map
@@ -5152,7 +5152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain Event List</p>
+     * <p>Retrieves a list of events.</p>
      * 
      * @param request ListEventRecordsRequest
      * @return ListEventRecordsResponse
@@ -5249,7 +5249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of index templates.</p>
+     * <p>Queries the list of index templates.</p>
      * 
      * @param request ListIndexTemplatesRequest
      * @param headers map
@@ -5291,7 +5291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of index templates.</p>
+     * <p>Queries the list of index templates.</p>
      * 
      * @param request ListIndexTemplatesRequest
      * @return ListIndexTemplatesResponse
@@ -5304,7 +5304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Elasticsearch instances.</p>
+     * <p>Retrieves the list of Elasticsearch instances.</p>
      * 
      * @param request ListInstanceRequest
      * @param headers map
@@ -5382,7 +5382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Elasticsearch instances.</p>
+     * <p>Retrieves the list of Elasticsearch instances.</p>
      * 
      * @param request ListInstanceRequest
      * @return ListInstanceResponse
@@ -5505,8 +5505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have the indexing service enabled. Query index information by using the Elasticsearch API. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API
-     * </a>.</p>
+     * <p>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Filters system indexes from the index list of a cluster.</p>
@@ -5563,8 +5562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have the indexing service enabled. Query index information by using the Elasticsearch API. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API
-     * </a>.</p>
+     * <p>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Filters system indexes from the index list of a cluster.</p>
@@ -5871,7 +5869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Historical report list of intelligent O&amp;M.</p>
+     * <p>Queries the machine status under a search collector.</p>
      * 
      * @param request ListNodesRequest
      * @param headers map
@@ -5921,7 +5919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Historical report list of intelligent O&amp;M.</p>
+     * <p>Queries the machine status under a search collector.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -6168,7 +6166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Shard recovery is the process of synchronizing data from a primary shard to a replica shard. After recovery is complete, the replica shard becomes available for search.</p>
+     * <p>Shard recovery is the process of synchronizing data from a primary shard to a replica shard. After recovery is complete, the replica shard is available for search.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6207,7 +6205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Shard recovery is the process of synchronizing data from a primary shard to a replica shard. After recovery is complete, the replica shard becomes available for search.</p>
+     * <p>Shard recovery is the process of synchronizing data from a primary shard to a replica shard. After recovery is complete, the replica shard is available for search.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -6261,7 +6259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Statistics of management event records</p>
+     * <p>Queries statistics on event records.</p>
      * 
      * @param request ListStatsEventRecordsRequest
      * @param headers map
@@ -6271,12 +6269,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListStatsEventRecordsResponse listStatsEventRecordsWithOptions(ListStatsEventRecordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("endTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
             query.put("eventType", request.eventType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.level)) {
             query.put("level", request.level);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -6303,7 +6309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Statistics of management event records</p>
+     * <p>Queries statistics on event records.</p>
      * 
      * @param request ListStatsEventRecordsRequest
      * @return ListStatsEventRecordsResponse
@@ -6434,7 +6440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom plugin list</p>
+     * <p>Queries the list of user-defined plug-ins.</p>
      * 
      * @param request ListUserPluginRequest
      * @param headers map
@@ -6476,7 +6482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Custom plugin list</p>
+     * <p>Queries the list of user-defined plug-ins.</p>
      * 
      * @param request ListUserPluginRequest
      * @return ListUserPluginResponse
@@ -6489,7 +6495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of endpoints in the VPC of a service account.</p>
+     * <p>Queries the endpoint status in the VPC of the service account.</p>
      * 
      * @param request ListVpcEndpointsRequest
      * @param headers map
@@ -6527,7 +6533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of endpoints in the VPC of a service account.</p>
+     * <p>Queries the endpoint status in the VPC of the service account.</p>
      * 
      * @param request ListVpcEndpointsRequest
      * @return ListVpcEndpointsResponse
@@ -6540,16 +6546,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you upgrade the specifications of an instance and encounter insufficient inventory in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, make sure that:</p>
+     * <p>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</p>
      * <ul>
      * <li>Your account has a zone with sufficient resources.
-     *  After migrating nodes of the current specifications to another zone, you must manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order first. For example, between ap-southeast-1e and ap-southeast-1h, select ap-southeast-1h first.</li>
+     *  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</li>
      * <li>The cluster is in a healthy state.
      *  You can run the <code>GET _cat/health?v</code> command to check the cluster health status.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates nodes in a specified zone to a destination zone.</p>
+     * <p>Migrates nodes in a specified zone to a target zone.</p>
      * 
      * @param request MigrateToOtherZoneRequest
      * @param headers map
@@ -6584,16 +6590,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you upgrade the specifications of an instance and encounter insufficient inventory in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, make sure that:</p>
+     * <p>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</p>
      * <ul>
      * <li>Your account has a zone with sufficient resources.
-     *  After migrating nodes of the current specifications to another zone, you must manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order first. For example, between ap-southeast-1e and ap-southeast-1h, select ap-southeast-1h first.</li>
+     *  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</li>
      * <li>The cluster is in a healthy state.
      *  You can run the <code>GET _cat/health?v</code> command to check the cluster health status.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates nodes in a specified zone to a destination zone.</p>
+     * <p>Migrates nodes in a specified zone to a target zone.</p>
      * 
      * @param request MigrateToOtherZoneRequest
      * @return MigrateToOtherZoneResponse
@@ -6654,7 +6660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the elastic scaling rules of a cluster.</p>
+     * <p>Updates the elastic scaling rules for a cluster.</p>
      * 
      * @param request ModifyElastictaskRequest
      * @param headers map
@@ -6683,7 +6689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the elastic scaling rules of a cluster.</p>
+     * <p>Updates the elastic scaling rules for a cluster.</p>
      * 
      * @param request ModifyElastictaskRequest
      * @return ModifyElastictaskResponse
@@ -6696,11 +6702,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, note the following:</p>
+     * <p>Before calling this operation, note the following information:</p>
      * <ul>
-     * <li>Before the scheduled maintenance, Alibaba Cloud sends SMS messages and emails to the contacts configured in your Alibaba Cloud account. Check your messages promptly.</li>
-     * <li>On the day of instance maintenance, to ensure stability throughout the maintenance process, the instance enters the Effective state before the maintenance window begins. While the instance is in this state, access to the cluster and query operations such as performance monitoring are not affected. However, cluster change operations such as cluster upgrades and restarts are temporarily unavailable.</li>
-     * <li>During the maintenance window, transient disconnections may occur. Ensure that your application has a reconnection mechanism.</li>
+     * <li>Before formal maintenance begins, Alibaba Cloud sends SMS messages and emails to the contacts configured in your Alibaba Cloud account. Check your messages promptly.</li>
+     * <li>On the day of instance maintenance, to ensure stability throughout the maintenance process, the instance enters an active state before the maintenance window. When the instance is in this state, access to the cluster and query operations (such as performance monitoring) are not affected, but cluster change operations (such as cluster upgrades and restarts) are temporarily unavailable.</li>
+     * <li>During the maintenance window, transient disconnections may occur on the instance. Ensure that your application has a reconnection mechanism.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6739,11 +6745,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, note the following:</p>
+     * <p>Before calling this operation, note the following information:</p>
      * <ul>
-     * <li>Before the scheduled maintenance, Alibaba Cloud sends SMS messages and emails to the contacts configured in your Alibaba Cloud account. Check your messages promptly.</li>
-     * <li>On the day of instance maintenance, to ensure stability throughout the maintenance process, the instance enters the Effective state before the maintenance window begins. While the instance is in this state, access to the cluster and query operations such as performance monitoring are not affected. However, cluster change operations such as cluster upgrades and restarts are temporarily unavailable.</li>
-     * <li>During the maintenance window, transient disconnections may occur. Ensure that your application has a reconnection mechanism.</li>
+     * <li>Before formal maintenance begins, Alibaba Cloud sends SMS messages and emails to the contacts configured in your Alibaba Cloud account. Check your messages promptly.</li>
+     * <li>On the day of instance maintenance, to ensure stability throughout the maintenance process, the instance enters an active state before the maintenance window. When the instance is in this state, access to the cluster and query operations (such as performance monitoring) are not affected, but cluster change operations (such as cluster upgrades and restarts) are temporarily unavailable.</li>
+     * <li>During the maintenance window, transient disconnections may occur on the instance. Ensure that your application has a reconnection mechanism.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6760,7 +6766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>For O&amp;M events in the Event Center, you can specify a restart event, and the system will restart the specified edge zone of the relevant instance at the scheduled time.</p>
+     * <p>For O&amp;M events in the Event Center, you can specify a restart event, and the system restarts the specified node of the relevant instance at the scheduled time.</p>
      * 
      * @param request ModifyScheduleExecuteTimeRequest
      * @param headers map
@@ -6798,7 +6804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>For O&amp;M events in the Event Center, you can specify a restart event, and the system will restart the specified edge zone of the relevant instance at the scheduled time.</p>
+     * <p>For O&amp;M events in the Event Center, you can specify a restart event, and the system restarts the specified node of the relevant instance at the scheduled time.</p>
      * 
      * @param request ModifyScheduleExecuteTimeRequest
      * @return ModifyScheduleExecuteTimeResponse
@@ -6814,12 +6820,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Before you begin</h2>
      * <ul>
      * <li>You cannot update information for an instance whose instance status is activating, invalid, or freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters:<ul>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<ul>
      * <li>IP whitelist list: whiteIpList, nodeType, networkType</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public network access whitelist does not support private network IP addresses, and the internal-facing whitelist does not support public IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6882,12 +6888,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Before you begin</h2>
      * <ul>
      * <li>You cannot update information for an instance whose instance status is activating, invalid, or freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters:<ul>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<ul>
      * <li>IP whitelist list: whiteIpList, nodeType, networkType</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public network access whitelist does not support private network IP addresses, and the internal-facing whitelist does not support public IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7009,11 +7015,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>Except for versions 8.5 and 7.16&lt;props=&quot;china&quot;&gt;<ph> and version 7.10 in some regions</ph>, make sure that you have purchased client nodes before enabling HTTPS.</li>
+     * <li>Except for versions 8.5, 7.16, &lt;props=&quot;china&quot;&gt;<ph>and version 7.10 in some regions</ph>, ensure that you have purchased client nodes before enabling HTTPS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables the HTTPS protocol. Before enabling HTTPS, make sure that you have purchased client nodes.</p>
+     * <p>Enables the HTTPS protocol. Before enabling HTTPS, ensure that you have purchased client nodes.</p>
      * 
      * @param request OpenHttpsRequest
      * @param headers map
@@ -7053,11 +7059,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>Except for versions 8.5 and 7.16&lt;props=&quot;china&quot;&gt;<ph> and version 7.10 in some regions</ph>, make sure that you have purchased client nodes before enabling HTTPS.</li>
+     * <li>Except for versions 8.5, 7.16, &lt;props=&quot;china&quot;&gt;<ph>and version 7.10 in some regions</ph>, ensure that you have purchased client nodes before enabling HTTPS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables the HTTPS protocol. Before enabling HTTPS, make sure that you have purchased client nodes.</p>
+     * <p>Enables the HTTPS protocol. Before enabling HTTPS, ensure that you have purchased client nodes.</p>
      * 
      * @param request OpenHttpsRequest
      * @return OpenHttpsResponse
@@ -7070,7 +7076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload a custom plugin to the plugin repository. After uploading, the plugin is in the pending installation status.</p>
+     * <p>Uploads a custom plug-in to the plug-in library. After the upload, the plug-in is in the pending installation state.</p>
      * 
      * @param request PluginAnalysisRequest
      * @param headers map
@@ -7105,7 +7111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upload a custom plugin to the plugin repository. After uploading, the plugin is in the pending installation status.</p>
+     * <p>Uploads a custom plug-in to the plug-in library. After the upload, the plug-in is in the pending installation state.</p>
      * 
      * @param request PluginAnalysisRequest
      * @return PluginAnalysisResponse
@@ -7175,7 +7181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls RecommendTemplates to retrieve recommended cluster configurations.</p>
+     * <p>Retrieves recommended cluster configurations by calling RecommendTemplates.</p>
      * 
      * @param request RecommendTemplatesRequest
      * @param headers map
@@ -7209,7 +7215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls RecommendTemplates to retrieve recommended cluster configurations.</p>
+     * <p>Retrieves recommended cluster configurations by calling RecommendTemplates.</p>
      * 
      * @param request RecommendTemplatesRequest
      * @return RecommendTemplatesResponse
@@ -7270,7 +7276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can delete uploaded but uninstalled plugins from the plugin library.</p>
+     * <p>Removes an uploaded but uninstalled plugin from the plugin repository.</p>
      * 
      * @param request RemovePluginRequest
      * @param headers map
@@ -7299,7 +7305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can delete uploaded but uninstalled plugins from the plugin library.</p>
+     * <p>Removes an uploaded but uninstalled plugin from the plugin repository.</p>
      * 
      * @param request RemovePluginRequest
      * @return RemovePluginResponse
@@ -7456,7 +7462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restarts. Node restarts are classified into normal restarts and blue-green restarts.</p>
+     * <p>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -7500,7 +7506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restarts. Node restarts are classified into normal restarts and blue-green restarts.</p>
+     * <p>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -7517,7 +7523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts a specified instance. After the restart, the instance enters the activating (activing) state.</p>
+     * <p>Restarts a specified instance. After the restart, the instance enters the activating state.</p>
      * 
      * @param request RestartLogstashRequest
      * @param headers map
@@ -7577,7 +7583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Restarts a specified instance. After the restart, the instance enters the activating (activing) state.</p>
+     * <p>Restarts a specified instance. After the restart, the instance enters the activating state.</p>
      * 
      * @param request RestartLogstashRequest
      * @return RestartLogstashResponse
@@ -7590,7 +7596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes an interrupted change task for an instance.</p>
+     * <p>Resumes a change task that was interrupted between instances.</p>
      * 
      * @param request ResumeElasticsearchTaskRequest
      * @param headers map
@@ -7624,7 +7630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes an interrupted change task for an instance.</p>
+     * <p>Resumes a change task that was interrupted between instances.</p>
      * 
      * @param request ResumeElasticsearchTaskRequest
      * @return ResumeElasticsearchTaskResponse
@@ -7780,10 +7786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Note the following when you invoke this operation:
-     * Before scaling in data nodes of a cluster, perform data migration from the nodes to be removed to other nodes. After you confirm that the nodes to be removed contain no data, proceed with the scale-in operation.</p>
+     * Before shrinking data nodes from a cluster, perform data migration from the nodes to be removed to other nodes. After you confirm that the nodes to be removed contain no data, proceed with the node shrinking operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Scales in nodes of a specified role in an Elasticsearch cluster.</p>
+     * <p>Shrinks nodes of a specified role from an Elasticsearch cluster.</p>
      * 
      * @param request ShrinkNodeRequest
      * @param headers map
@@ -7831,10 +7837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Note the following when you invoke this operation:
-     * Before scaling in data nodes of a cluster, perform data migration from the nodes to be removed to other nodes. After you confirm that the nodes to be removed contain no data, proceed with the scale-in operation.</p>
+     * Before shrinking data nodes from a cluster, perform data migration from the nodes to be removed to other nodes. After you confirm that the nodes to be removed contain no data, proceed with the node shrinking operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Scales in nodes of a specified role in an Elasticsearch cluster.</p>
+     * <p>Shrinks nodes of a specified role from an Elasticsearch cluster.</p>
      * 
      * @param request ShrinkNodeRequest
      * @return ShrinkNodeResponse
@@ -7941,7 +7947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops Logstash pipelines by calling StopPipelines.</p>
+     * <p>Stops Logstash pipelines from running.</p>
      * 
      * @param request StopPipelinesRequest
      * @param headers map
@@ -7976,7 +7982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops Logstash pipelines by calling StopPipelines.</p>
+     * <p>Stops Logstash pipelines from running.</p>
      * 
      * @param request StopPipelinesRequest
      * @return StopPipelinesResponse
@@ -8157,10 +8163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * @param request TurnOffZoneRequest
      * @param headers map
@@ -8198,10 +8204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * @param request TurnOffZoneRequest
      * @return TurnOffZoneResponse
@@ -8214,10 +8220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Reopens an offline zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Reopens a zone that has been taken offline for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reopens an offline zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Reopens a zone that has been taken offline for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * @param request TurnOnZoneRequest
      * @param headers map
@@ -8255,10 +8261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Reopens an offline zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Reopens a zone that has been taken offline for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Reopens an offline zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Proceed with caution.</p>
+     * <p>Reopens a zone that has been taken offline for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
      * 
      * @param request TurnOnZoneRequest
      * @return TurnOnZoneResponse
@@ -8426,12 +8432,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>User tags are tags that users manually add to instances. System tags are tags that Alibaba Cloud services add to user instances. System tags are classified into visible tags and invisible tags.</p>
      * </blockquote>
      * </li>
-     * <li><p>If a tag is not associated with any resource, the tag is also deleted when the resource tag association is deleted.</p>
+     * <li><p>If a tag is not associated with any resource after the tag relationship is deleted, the tag is also deleted.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes user resource tag associations for a specified instance.</p>
+     * <p>Deletes the tag relationships of specified resources for a given instance.</p>
      * 
      * @param request UntagResourcesRequest
      * @param headers map
@@ -8488,12 +8494,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>User tags are tags that users manually add to instances. System tags are tags that Alibaba Cloud services add to user instances. System tags are classified into visible tags and invisible tags.</p>
      * </blockquote>
      * </li>
-     * <li><p>If a tag is not associated with any resource, the tag is also deleted when the resource tag association is deleted.</p>
+     * <li><p>If a tag is not associated with any resource after the tag relationship is deleted, the tag is also deleted.</p>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes user resource tag associations for a specified instance.</p>
+     * <p>Deletes the tag relationships of specified resources for a given instance.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -8619,7 +8625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Instances of version 5.x do not support the AliNLP tokenizer plugin.</li>
      * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
-     * <li>If a previously uploaded dictionary is not configured with ORIGIN, calling this operation will delete the dictionary file.</li>
+     * <li>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8662,7 +8668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>Instances of version 5.x do not support the AliNLP tokenizer plugin.</li>
      * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
-     * <li>If a previously uploaded dictionary is not configured with ORIGIN, calling this operation will delete the dictionary file.</li>
+     * <li>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8830,7 +8836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Use OpenStore to store massive amounts of data</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a composable index template for an Elasticsearch instance.</p>
@@ -8871,7 +8877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Use OpenStore to store massive amounts of data</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a composable index template for an Elasticsearch instance.</p>
@@ -8994,8 +9000,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file originates from OSS, ensure that the OSS storage space is publicly readable.</li>
-     * <li>If previously uploaded dictionaries are not configured with ORIGIN, the dictionary files will be deleted after this operation is called.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
+     * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9036,8 +9042,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file originates from OSS, ensure that the OSS storage space is publicly readable.</li>
-     * <li>If previously uploaded dictionaries are not configured with ORIGIN, the dictionary files will be deleted after this operation is called.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
+     * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9054,7 +9060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Cluster Dynamic Configuration</p>
+     * <p>Modifies the dynamic configurations of a cluster.</p>
      * 
      * @param request UpdateDynamicSettingsRequest
      * @param headers map
@@ -9097,7 +9103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Cluster Dynamic Configuration</p>
+     * <p>Modifies the dynamic configurations of a cluster.</p>
      * 
      * @param request UpdateDynamicSettingsRequest
      * @return UpdateDynamicSettingsResponse
@@ -9212,7 +9218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Toggle the FalconSeek cloud-native kernel attribute for instances of Version 8.17.</p>
+     * <p>Enables or disables the FalconSeek cloud-native kernel feature for instances running version 8.17.</p>
      * 
      * @param request UpdateFalconSeekRequest
      * @param headers map
@@ -9246,7 +9252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Toggle the FalconSeek cloud-native kernel attribute for instances of Version 8.17.</p>
+     * <p>Enables or disables the FalconSeek cloud-native kernel feature for instances running version 8.17.</p>
      * 
      * @param request UpdateFalconSeekRequest
      * @return UpdateFalconSeekResponse
@@ -9261,12 +9267,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file is sourced from OSS, make sure the OSS bucket has public-read permission.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
      * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the IK hot-word dictionary of an Alibaba Cloud Elasticsearch instance.</p>
+     * <p>Updates the IK hot dictionary of an Alibaba Cloud Elasticsearch instance.</p>
      * 
      * @param request UpdateHotIkDictsRequest
      * @param headers map
@@ -9303,12 +9309,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file is sourced from OSS, make sure the OSS bucket has public-read permission.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
      * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the IK hot-word dictionary of an Alibaba Cloud Elasticsearch instance.</p>
+     * <p>Updates the IK hot dictionary of an Alibaba Cloud Elasticsearch instance.</p>
      * 
      * @param request UpdateHotIkDictsRequest
      * @return UpdateHotIkDictsResponse
@@ -9417,11 +9423,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, note the following items:
-     * For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</p>
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You cannot change the configurations of an instance when the instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>If the cluster is under heavy load, indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeouts may occur. Configure a retry mechanism on the client side before you change the cluster configurations to minimize the impact on your business.</li>
+     * <li>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</li>
+     * <li>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of instances with 1 vCPU and 2 GB of memory, dedicated master nodes with 2 vCPUs and 2 GB of memory, or instances of version 7.4. If you have confirmed that purchased specifications you purchased are no longer available for sale, perform the following operations first:<ul>
+     * <li>For instances with 1 vCPU and 2 GB of memory or 2 vCPUs and 2 GB of memory, upgrade purchased specifications to a stable specification that is available on the buy page. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Parameters on the buy page (Commercial Edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Parameters on the buy page (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Parameters on the buy page</a>.</li>
+     * <li>For version 7.4, purchase a new instance of version 7.10 and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+     * For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configurations</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configurations</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the configuration of an Elasticsearch cluster, including the number of nodes, roles, specifications, and disk configurations.</p>
+     * <p>Upgrades an Elasticsearch cluster by increasing the number of nodes, roles, specifications, or disk configurations.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param headers map
@@ -9501,11 +9517,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, note the following items:
-     * For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</p>
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You cannot change the configurations of an instance when the instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>If the cluster is under heavy load, indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeouts may occur. Configure a retry mechanism on the client side before you change the cluster configurations to minimize the impact on your business.</li>
+     * <li>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</li>
+     * <li>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of instances with 1 vCPU and 2 GB of memory, dedicated master nodes with 2 vCPUs and 2 GB of memory, or instances of version 7.4. If you have confirmed that purchased specifications you purchased are no longer available for sale, perform the following operations first:<ul>
+     * <li>For instances with 1 vCPU and 2 GB of memory or 2 vCPUs and 2 GB of memory, upgrade purchased specifications to a stable specification that is available on the buy page. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Parameters on the buy page (Commercial Edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Parameters on the buy page (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Parameters on the buy page</a>.</li>
+     * <li>For version 7.4, purchase a new instance of version 7.10 and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+     * For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configurations</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configurations</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the configuration of an Elasticsearch cluster, including the number of nodes, roles, specifications, and disk configurations.</p>
+     * <p>Upgrades an Elasticsearch cluster by increasing the number of nodes, roles, specifications, or disk configurations.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -9644,7 +9670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update keystore</p>
+     * <p>Updates the keystore.</p>
      * 
      * @param request UpdateKeystoresRequest
      * @param headers map
@@ -9688,7 +9714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update keystore</p>
+     * <p>Updates the keystore.</p>
      * 
      * @param request UpdateKeystoresRequest
      * @return UpdateKeystoresResponse
@@ -9702,12 +9728,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation supports only cloud-native instances. For instances of the legacy architecture, use the TriggerNetwork operation.</li>
+     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
      * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Update Kibana private network access</p>
+     * <p>Updates the private network access configuration for Kibana.</p>
      * 
      * @param request UpdateKibanaPvlNetworkRequest
      * @param headers map
@@ -9756,12 +9782,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation supports only cloud-native instances. For instances of the legacy architecture, use the TriggerNetwork operation.</li>
+     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
      * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Update Kibana private network access</p>
+     * <p>Updates the private network access configuration for Kibana.</p>
      * 
      * @param request UpdateKibanaPvlNetworkRequest
      * @return UpdateKibanaPvlNetworkResponse
@@ -9822,7 +9848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable or disable Alibaba Cloud account authentication for Kibana. After Alibaba Cloud account authentication is enabled, you must log on with your Alibaba Cloud account before you can use Kibana features.</p>
+     * <p>Enables or disables Alibaba Cloud account authentication for Kibana. After Alibaba Cloud account authentication is enabled, you must log on to your Alibaba Cloud account before using Kibana features.</p>
      * 
      * @param request UpdateKibanaSsoRequest
      * @param headers map
@@ -9860,7 +9886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable or disable Alibaba Cloud account authentication for Kibana. After Alibaba Cloud account authentication is enabled, you must log on with your Alibaba Cloud account before you can use Kibana features.</p>
+     * <p>Enables or disables Alibaba Cloud account authentication for Kibana. After Alibaba Cloud account authentication is enabled, you must log on to your Alibaba Cloud account before using Kibana features.</p>
      * 
      * @param request UpdateKibanaSsoRequest
      * @return UpdateKibanaSsoResponse
@@ -9875,13 +9901,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>When you invoke this operation, you cannot update information if the instance status is activating, invalid, or freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows: <ul>
+     * <li>When you invoke this operation, you cannot update information when the instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used simultaneously, and apart from InstanceId and clientToken, the two methods support different parameters as follows: <ul>
      * <li>IP whitelist list: kibanaIPWhitelist</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public network access whitelist does not support private IP addresses, and the internal-facing whitelist does not support public IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9935,13 +9961,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>When you invoke this operation, you cannot update information if the instance status is activating, invalid, or freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows: <ul>
+     * <li>When you invoke this operation, you cannot update information when the instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used simultaneously, and apart from InstanceId and clientToken, the two methods support different parameters as follows: <ul>
      * <li>IP whitelist list: kibanaIPWhitelist</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public network access whitelist does not support private IP addresses, and the internal-facing whitelist does not support public IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9962,7 +9988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot modify instance information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies some information about a specified instance, such as the number of nodes, quota, name, and disk size.</p>
+     * <p>Modifies partial information of a specified instance, such as the number of nodes, quota, name, and disk size.</p>
      * 
      * @param request UpdateLogstashRequest
      * @param headers map
@@ -10010,7 +10036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot modify instance information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies some information about a specified instance, such as the number of nodes, quota, name, and disk size.</p>
+     * <p>Modifies partial information of a specified instance, such as the number of nodes, quota, name, and disk size.</p>
      * 
      * @param request UpdateLogstashRequest
      * @return UpdateLogstashResponse
@@ -10071,8 +10097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:
-     * You cannot modify the instance name when the instance status is activating, invalid, or freeze (inactive).</p>
+     * <p>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the name of a specified Logstash instance.</p>
@@ -10115,8 +10140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:
-     * You cannot modify the instance name when the instance status is activating, invalid, or freeze (inactive).</p>
+     * <p>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the name of a specified Logstash instance.</p>
@@ -10191,7 +10215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the pipeline management method for a specified Logstash instance.</p>
+     * <p>Modifies the pipeline management method of a specified Logstash instance.</p>
      * 
      * @param request UpdatePipelineManagementConfigRequest
      * @param headers map
@@ -10256,7 +10280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the pipeline management method for a specified Logstash instance.</p>
+     * <p>Modifies the pipeline management method of a specified Logstash instance.</p>
      * 
      * @param request UpdatePipelineManagementConfigRequest
      * @return UpdatePipelineManagementConfigResponse
@@ -10324,7 +10348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Before you begin</h2>
      * <ul>
      * <li>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: by using an IP whitelist list or by using an IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters:<ul>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<ul>
      * <li>IP whitelist list: privateNetworkIpWhiteList</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
@@ -10375,7 +10399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Before you begin</h2>
      * <ul>
      * <li>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: by using an IP whitelist list or by using an IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters:<ul>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<ul>
      * <li>IP whitelist list: privateNetworkIpWhiteList</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
@@ -10397,7 +10421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, note the following:
+     * <p>When you invoke this operation, note the following:
      * You cannot update information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * <b>summary</b> : 
@@ -10436,7 +10460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, note the following:
+     * <p>When you invoke this operation, note the following:
      * You cannot update information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * <b>summary</b> : 
@@ -10455,17 +10479,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>You cannot update the public endpoint access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters:   <ul>
+     * <li>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <ul>
      * <li>IP whitelist list: publicIpWhitelist</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public network access whitelist does not support private network IP addresses, and the private network access whitelist does not support public network IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the public endpoint access whitelist of a specified Elasticsearch instance.</p>
+     * <p>Updates the public network access whitelist of a specified Elasticsearch instance.</p>
      * 
      * @param request UpdatePublicWhiteIpsRequest
      * @param headers map
@@ -10506,17 +10530,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Before you begin</h2>
      * <ul>
-     * <li>You cannot update the public endpoint access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters:   <ul>
+     * <li>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <ul>
      * <li>IP whitelist list: publicIpWhitelist</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public network access whitelist does not support private network IP addresses, and the private network access whitelist does not support public network IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the public endpoint access whitelist of a specified Elasticsearch instance.</p>
+     * <p>Updates the public network access whitelist of a specified Elasticsearch instance.</p>
      * 
      * @param request UpdatePublicWhiteIpsRequest
      * @return UpdatePublicWhiteIpsResponse
@@ -10621,7 +10645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file is sourced from OSS, make sure the OSS bucket has public-read permission.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
      * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
@@ -10663,7 +10687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file is sourced from OSS, make sure the OSS bucket has public-read permission.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
      * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
@@ -10732,16 +10756,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Before you begin</h2>
      * <ul>
      * <li>You cannot update information when the instance status is activating, invalid, or freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters besides InstanceId and clientToken. The details are as follows: <ul>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used simultaneously, and they support different parameters (except for InstanceId and clientToken). The details are as follows: <ul>
      * <li>IP whitelist list: esIPWhitelist</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public access whitelist does not support private network IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the VPC internal-facing access whitelist of an Elasticsearch instance.</p>
+     * <p>Modifies the VPC private network access whitelist of an Elasticsearch instance.</p>
      * 
      * @param request UpdateWhiteIpsRequest
      * @param headers map
@@ -10792,16 +10816,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Before you begin</h2>
      * <ul>
      * <li>You cannot update information when the instance status is activating, invalid, or freeze (inactive).</li>
-     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters besides InstanceId and clientToken. The details are as follows: <ul>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used simultaneously, and they support different parameters (except for InstanceId and clientToken). The details are as follows: <ul>
      * <li>IP whitelist list: esIPWhitelist</li>
      * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>The public access whitelist does not support private network IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the VPC internal-facing access whitelist of an Elasticsearch instance.</p>
+     * <p>Modifies the VPC private network access whitelist of an Elasticsearch instance.</p>
      * 
      * @param request UpdateWhiteIpsRequest
      * @return UpdateWhiteIpsResponse
@@ -10880,11 +10904,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The version upgrade feature currently supports only the following upgrade paths: 5.5.3 to 5.6.16, 5.6.16 to 6.3.2, and 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</p>
+     * <p>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the version of an Elasticsearch instance. Both major version upgrades and kernel version upgrades are supported.</p>
+     * <p>Upgrades the version of an Elasticsearch instance. This operation supports major version upgrades and kernel version upgrades.</p>
      * 
      * @param request UpgradeEngineVersionRequest
      * @param headers map
@@ -10941,11 +10965,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The version upgrade feature currently supports only the following upgrade paths: 5.5.3 to 5.6.16, 5.6.16 to 6.3.2, and 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</p>
+     * <p>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades the version of an Elasticsearch instance. Both major version upgrades and kernel version upgrades are supported.</p>
+     * <p>Upgrades the version of an Elasticsearch instance. This operation supports major version upgrades and kernel version upgrades.</p>
      * 
      * @param request UpgradeEngineVersionRequest
      * @return UpgradeEngineVersionResponse
@@ -10958,7 +10982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query whether a minor version is available for upgrade.</p>
+     * <p>Queries whether a minor engine version upgrade is available.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -10984,7 +11008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query whether a minor version is available for upgrade.</p>
+     * <p>Queries whether a minor engine version upgrade is available.</p>
      * @return UpgradeInfoResponse
      */
     public UpgradeInfoResponse upgradeInfo(String instanceId) throws Exception {
@@ -11053,7 +11077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether specific nodes in a specified instance can be scaled in.</p>
+     * <p>Checks whether specific nodes in a specified instance can be removed during a scale-in operation.</p>
      * 
      * @param request ValidateShrinkNodesRequest
      * @param headers map
@@ -11096,7 +11120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether specific nodes in a specified instance can be scaled in.</p>
+     * <p>Checks whether specific nodes in a specified instance can be removed during a scale-in operation.</p>
      * 
      * @param request ValidateShrinkNodesRequest
      * @return ValidateShrinkNodesResponse
@@ -11110,11 +11134,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>When you use a collector to collect logs from different data sources, you must first authorize the creation of a service-linked role. You can call this operation to check whether the service-linked role has been created.</p>
+     * <p>Before you use a collector to collect logs from different data sources, you must authorize the creation of a service-linked role. Call this operation to check whether the service-linked role has been created.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the service-linked role (SLR) permission of the current account.</p>
+     * <p>Validates the service-linked role (SLR) permissions for the current account.</p>
      * 
      * @param request ValidateSlrPermissionRequest
      * @param headers map
@@ -11153,11 +11177,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>When you use a collector to collect logs from different data sources, you must first authorize the creation of a service-linked role. You can call this operation to check whether the service-linked role has been created.</p>
+     * <p>Before you use a collector to collect logs from different data sources, you must authorize the creation of a service-linked role. Call this operation to check whether the service-linked role has been created.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Verifies the service-linked role (SLR) permission of the current account.</p>
+     * <p>Validates the service-linked role (SLR) permissions for the current account.</p>
      * 
      * @param request ValidateSlrPermissionRequest
      * @return ValidateSlrPermissionResponse
@@ -11170,7 +11194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validates whether data on specific nodes in a specified instance can be migrated.</p>
+     * <p>Validates whether data on specified nodes in an instance can be migrated.</p>
      * 
      * @param request ValidateTransferableNodesRequest
      * @param headers map
@@ -11205,7 +11229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validates whether data on specific nodes in a specified instance can be migrated.</p>
+     * <p>Validates whether data on specified nodes in an instance can be migrated.</p>
      * 
      * @param request ValidateTransferableNodesRequest
      * @return ValidateTransferableNodesResponse
@@ -11218,11 +11242,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Precautions</h3>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.7.657d2cbeRoSPCd#/elasticsearch/detail">Alibaba Cloud Elasticsearch pricing</a>.</li>
-     * <li>Real-name verification is required to create instances.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
-     * <li>You do not need to specify a zone when creating an instance. By default, the instance is in the same zone as the selected VPC.</li>
+     * <li>Make sure that you fully understand the billing and pricing of Elasticsearch. For more information, see <a href="https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.7.657d2cbeRoSPCd#/elasticsearch/detail">Alibaba Cloud Elasticsearch pricing</a>.</li>
+     * <li>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
+     * <li>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -11330,11 +11354,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Precautions</h3>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.7.657d2cbeRoSPCd#/elasticsearch/detail">Alibaba Cloud Elasticsearch pricing</a>.</li>
-     * <li>Real-name verification is required to create instances.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
-     * <li>You do not need to specify a zone when creating an instance. By default, the instance is in the same zone as the selected VPC.</li>
+     * <li>Make sure that you fully understand the billing and pricing of Elasticsearch. For more information, see <a href="https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.7.657d2cbeRoSPCd#/elasticsearch/detail">Alibaba Cloud Elasticsearch pricing</a>.</li>
+     * <li>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
+     * <li>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 

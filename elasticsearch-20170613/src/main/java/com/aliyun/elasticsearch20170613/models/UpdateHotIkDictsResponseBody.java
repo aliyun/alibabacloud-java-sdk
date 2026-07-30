@@ -63,7 +63,7 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
          * <li>OSS: uses OSS open storage.</li>
-         * <li>ORIGIN: retains a previously uploaded dictionary.</li>
+         * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>

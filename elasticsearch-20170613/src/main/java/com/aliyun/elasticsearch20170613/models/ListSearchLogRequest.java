@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSearchLogRequest extends TeaModel {
     /**
-     * <p>The start timestamp of the log, in milliseconds. The value must be within the last 7 days. If this parameter is not specified, all logs within the [current time - 7 days, endTime\] range are queried.</p>
+     * <p>The start timestamp of the log, in milliseconds. The value must be within the last 7 days. If this parameter is not specified, all logs within the range of [current time - 7 days, endTime\] are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1531910852074</p>
@@ -23,7 +23,7 @@ public class ListSearchLogRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The page number of the plug-in list. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number of the plugin list. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

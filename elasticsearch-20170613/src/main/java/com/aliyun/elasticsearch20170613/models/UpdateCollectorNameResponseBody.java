@@ -176,7 +176,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public java.util.List<String> hosts;
 
         /**
-         * <p>The ID of the instance associated with the collector. When <strong>configType</strong> is <strong>collectorTargetInstance</strong>, this is the instance ID of the collector Output. When <strong>configType</strong> is <strong>collectorDeployMachines</strong> and <strong>type</strong> is <strong>ACKCluster</strong>, this is the ACK cluster ID.</p>
+         * <p>The instance ID associated with the collector. When <strong>configType</strong> is <strong>collectorTargetInstance</strong>, this is the instance ID of the collector Output. When <strong>configType</strong> is <strong>collectorDeployMachines</strong> and <strong>type</strong> is <strong>ACKCluster</strong>, this is the ACK cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1****</p>
@@ -387,10 +387,10 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         public java.util.List<UpdateCollectorNameResponseBodyResultConfigs> configs;
 
         /**
-         * <p>Indicates whether the collector is validated only without being created. Valid values:</p>
+         * <p>Indicates whether the collector is validated and created. Valid values:</p>
          * <ul>
-         * <li>true: Only validates without updating.</li>
-         * <li>false: Validates and updates.</li>
+         * <li>true: Only validated, not updated.</li>
+         * <li>false: Validated and updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -463,7 +463,7 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
          * <p>The collector version. The supported versions depend on the type of machine on which the collector is deployed:</p>
          * <ul>
          * <li>ECS: 6.8.5_with_community</li>
-         * <li>ACK: 6.8.13_with_community.</li>
+         * <li>ACK: 6.8.13_with_community</li>
          * </ul>
          * 
          * <strong>example:</strong>

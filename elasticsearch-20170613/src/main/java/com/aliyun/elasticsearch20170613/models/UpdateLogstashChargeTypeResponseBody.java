@@ -14,7 +14,7 @@ public class UpdateLogstashChargeTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The returned result:</p>
      * <ul>
      * <li>true: The conversion succeeded.</li>
      * <li>false: The conversion failed.</li>

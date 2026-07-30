@@ -5,26 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateDynamicSettingsRequest extends TeaModel {
     /**
-     * <p>A client token used to ensure the idempotency of the request.</p>
+     * <p>The idempotence parameter.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The ID of the region where the instance is deployed.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The request body, which contains the dynamic settings to be updated.</p>
-     */
     @NameInMap("body")
     public String body;
 
-    /**
-     * <p>The update mode for the dynamic settings.</p>
-     */
     @NameInMap("mode")
     public String mode;
 

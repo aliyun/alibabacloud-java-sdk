@@ -20,10 +20,10 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     public Integer count;
 
     /**
-     * <p>Specifies whether to ignore the cluster health status.</p>
+     * <p>Specifies whether to ignore the cluster health status. Valid values:</p>
      * <ul>
-     * <li>true: ignores the cluster health status.</li>
-     * <li>false (default): does not ignore the cluster health status.</li>
+     * <li>true: Ignored.</li>
+     * <li>false (default): Not ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         public String host;
 
         /**
-         * <p>The node name of the cloud-native ACK-based cluster. You can call the <a href="https://help.aliyun.com/document_detail/183958.html">ListAllNode</a> operation to obtain the node name.</p>
+         * <p>The node name of the cloud-native ACK cluster. You can call the <a href="https://help.aliyun.com/document_detail/183958.html">ListAllNode</a> operation to obtain the node name.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-pl32xxxxxxx-data-f-1</p>
@@ -125,7 +125,7 @@ public class ValidateShrinkNodesRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The zone ID of the node in the instance. For example, the zone ID of China (Shanghai) Zone C is cn-shanghai-c.</p>
+         * <p>The zone ID of the instance node. For example, the zone ID of Shanghai Zone C is cn-shanghai-c.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-c</p>

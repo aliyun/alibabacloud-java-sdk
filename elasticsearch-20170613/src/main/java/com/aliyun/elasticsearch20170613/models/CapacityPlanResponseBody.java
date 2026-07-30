@@ -136,13 +136,13 @@ public class CapacityPlanResponseBody extends TeaModel {
         /**
          * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li><p>cloud_essd: ESSD</p>
+         * <li><p>cloud_essd: ESSD.</p>
          * </li>
-         * <li><p>cloud_ssd: standard SSD</p>
+         * <li><p>cloud_ssd: standard SSD.</p>
          * </li>
-         * <li><p>cloud_efficiency: ultra cloud disk</p>
+         * <li><p>cloud_efficiency: ultra cloud disk.</p>
          * </li>
-         * <li><p>local_ssd: local SSD</p>
+         * <li><p>local_ssd: local SSD.</p>
          * </li>
          * <li><p>local_efficiency: local ultra disk.</p>
          * </li>
@@ -155,7 +155,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The memory size of the specifications for the current node role.</p>
+         * <p>The memory size of the specification for the current node role.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -166,15 +166,15 @@ public class CapacityPlanResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><p>WORKER: data node</p>
+         * <li><p>WORKER: data node.</p>
          * </li>
-         * <li><p>WORKER_WARM: warm node</p>
+         * <li><p>WORKER_WARM: warm node.</p>
          * </li>
-         * <li><p>MASTER: dedicated master node</p>
+         * <li><p>MASTER: dedicated master node.</p>
          * </li>
-         * <li><p>KIBANA: Kibana node</p>
+         * <li><p>KIBANA: Kibana node.</p>
          * </li>
-         * <li><p>COORDINATING: client node</p>
+         * <li><p>COORDINATING: client node.</p>
          * </li>
          * <li><p>ELASTIC_WORKER: elastic node.</p>
          * </li>
@@ -251,9 +251,9 @@ public class CapacityPlanResponseBody extends TeaModel {
         /**
          * <p>The edition type. Valid values:</p>
          * <ul>
-         * <li><p>advanced: Advanced Edition</p>
+         * <li><p>advanced: Advanced Edition.</p>
          * </li>
-         * <li><p>x-pack: Commercial Edition</p>
+         * <li><p>x-pack: Commercial Edition.</p>
          * </li>
          * <li><p>community: Community Edition.</p>
          * </li>

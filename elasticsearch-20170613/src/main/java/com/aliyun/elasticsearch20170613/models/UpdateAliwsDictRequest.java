@@ -8,7 +8,7 @@ public class UpdateAliwsDictRequest extends TeaModel {
     public String body;
 
     /**
-     * <p>A unique token used to ensure idempotence of the request. The client generates this value. The value must be unique across different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>A unique token used to ensure the idempotence of the request. The client generates this value. It must be unique across different requests and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>

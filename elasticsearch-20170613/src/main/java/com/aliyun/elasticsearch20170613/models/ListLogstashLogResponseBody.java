@@ -66,7 +66,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The log level. Valid values: trace, debug, info, warn, and error. GC logs do not have a level.</p>
+         * <p>The log level. Valid values include trace, debug, info, warn, and error. GC logs do not have a level.</p>
          * 
          * <strong>example:</strong>
          * <p>info</p>

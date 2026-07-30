@@ -47,7 +47,7 @@ public class TriggerNetworkRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A unique token used to ensure idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>407d02b74c49beb5bfdac7ec8bde2488</p>

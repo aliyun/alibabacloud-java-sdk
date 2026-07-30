@@ -14,7 +14,7 @@ public class GrayPublishResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

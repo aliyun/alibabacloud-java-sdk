@@ -176,7 +176,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         public String isManaged;
 
         /**
-         * <p>The managed status of the index. Valid values:</p>
+         * <p>The index management status. Valid values:</p>
          * <ul>
          * <li><p>following: Managed.</p>
          * </li>
@@ -214,7 +214,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is empty, the index is not managed by a lifecycle policy.</p>
+         * <p>If this value is empty, the index is not managed by a lifecycle policy.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

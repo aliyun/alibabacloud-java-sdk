@@ -32,7 +32,7 @@ public class PostEmonTryAlarmRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the alert message was sent. Valid values: true (sent) and false (failed to send).</p>
+     * <p>Indicates whether the alert message is sent. Valid values: true (sent) and false (failed to send).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

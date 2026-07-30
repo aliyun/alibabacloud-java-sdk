@@ -105,13 +105,13 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
         public String sourceNode;
 
         /**
-         * <p>The stage of the data recovery process. Valid values:</p>
+         * <p>The stage of data recovery. Valid values:</p>
          * <ul>
          * <li><p>done: Recovery is complete.</p>
          * </li>
-         * <li><p>finalize: Cleanup operations are in progress.</p>
+         * <li><p>finalize: Cleanup work is in progress.</p>
          * </li>
-         * <li><p>index: Reading index metadata and copying bytes from the source to the target.</p>
+         * <li><p>index: Reading index metadata and copying bytes from source to target.</p>
          * </li>
          * <li><p>init: Recovery has not started.</p>
          * </li>

@@ -14,7 +14,7 @@ public class UpdateXpackMonitorConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the operation. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
      * <li>true: The update was successful.</li>
      * <li>false: The update failed.</li>

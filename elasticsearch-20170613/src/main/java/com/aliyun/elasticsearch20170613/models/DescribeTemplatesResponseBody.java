@@ -56,7 +56,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          * <li>staticSettings: elasticsearch.yml configuration</li>
          * <li>ilmPolicy: index lifecycle configuration</li>
          * <li>indexTemplate: index template configuration</li>
-         * <li>dynamicSettings: cluster dynamic configuration.</li>
+         * <li>dynamicSettings: cluster dynamic configuration</li>
          * </ul>
          * 
          * <strong>example:</strong>

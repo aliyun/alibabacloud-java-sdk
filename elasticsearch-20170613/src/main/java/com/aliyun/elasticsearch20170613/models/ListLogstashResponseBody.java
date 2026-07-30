@@ -352,7 +352,7 @@ public class ListLogstashResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The status of the instance. Valid values: active (Normal), activating (Taking Effect), inactive (Frozen), and invalid (Expired).</p>
+         * <p>The instance status. Valid values: active (Normal), activating (taking effect), inactive (frozen), and invalid (expired).</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>

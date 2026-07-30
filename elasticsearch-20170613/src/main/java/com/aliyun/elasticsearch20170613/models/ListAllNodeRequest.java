@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return monitoring information for the nodes. Valid values:</p>
+     * <p>Specifies whether to return monitoring information for nodes. Valid values:</p>
      * <ul>
      * <li><p>true (default): Returns monitoring information.</p>
      * </li>

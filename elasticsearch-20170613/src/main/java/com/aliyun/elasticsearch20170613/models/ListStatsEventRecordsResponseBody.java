@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStatsEventRecordsResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -14,7 +14,7 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Result</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public ListStatsEventRecordsResponseBodyResult result;
@@ -42,7 +42,7 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
 
     public static class ListStatsEventRecordsResponseBodyResultResult extends TeaModel {
         /**
-         * <p>Number of events</p>
+         * <p>The number of events.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -51,7 +51,7 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
         public String cnt;
 
         /**
-         * <p>Event level</p>
+         * <p>The event level.</p>
          * 
          * <strong>example:</strong>
          * <p>Info</p>
@@ -60,7 +60,7 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>Event status</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>Executed</p>
@@ -69,7 +69,7 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Event type</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>UserOperator</p>
@@ -118,13 +118,13 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
 
     public static class ListStatsEventRecordsResponseBodyResult extends TeaModel {
         /**
-         * <p>Return Result</p>
+         * <p>The returned result.</p>
          */
         @NameInMap("result")
         public java.util.List<ListStatsEventRecordsResponseBodyResultResult> result;
 
         /**
-         * <p>Total number of entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

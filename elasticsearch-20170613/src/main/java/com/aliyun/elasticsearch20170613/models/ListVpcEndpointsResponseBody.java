@@ -80,7 +80,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
          * <ul>
          * <li><p>Normal: Normal.</p>
          * </li>
-         * <li><p>FinancialLocked: Locked due to overdue payment.</p>
+         * <li><p>FinancialLocked: Financial lock.</p>
          * </li>
          * </ul>
          * 
@@ -122,7 +122,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
          * <ul>
          * <li><p>Creating: Being created.</p>
          * </li>
-         * <li><p>Active: Available.</p>
+         * <li><p>Active: Active.</p>
          * </li>
          * <li><p>Pending: Being modified.</p>
          * </li>

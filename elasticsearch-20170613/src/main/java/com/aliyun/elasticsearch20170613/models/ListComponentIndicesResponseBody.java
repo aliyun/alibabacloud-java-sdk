@@ -108,8 +108,8 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         /**
          * <p>The index compression method. Valid values:</p>
          * <ul>
-         * <li>LZ4: the default compression algorithm of Elasticsearch. It provides fast compression and decompression but a relatively lower compression ratio.</li>
-         * <li>best_compression: uses the best_compression algorithm for compression, which provides a higher compression ratio.</li>
+         * <li>LZ4: The default compression algorithm of Elasticsearch. It provides fast compression and decompression but a relatively lower compression ratio.</li>
+         * <li>best_compression: Uses the best_compression algorithm for compression, which provides a higher compression ratio.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
 
     public static class ListComponentIndicesResponseBodyResult extends TeaModel {
         /**
-         * <p>The information about the index templates that reference this composable template.</p>
+         * <p>The information about index templates that reference this composable template.</p>
          */
         @NameInMap("composed")
         public java.util.List<String> composed;

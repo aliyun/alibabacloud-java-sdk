@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePluginRequest extends TeaModel {
     /**
-     * <p>Request body.</p>
+     * <p>The request body.</p>
      * 
      * <strong>example:</strong>
      * <p>[

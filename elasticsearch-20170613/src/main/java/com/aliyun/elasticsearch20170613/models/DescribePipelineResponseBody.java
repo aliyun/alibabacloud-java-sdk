@@ -14,7 +14,7 @@ public class DescribePipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned pipeline information. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</p>
+     * <p>The pipeline information. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</p>
      */
     @NameInMap("Result")
     public DescribePipelineResponseBodyResult result;
@@ -109,7 +109,7 @@ public class DescribePipelineResponseBody extends TeaModel {
          * <ul>
          * <li>NOT_DEPLOYED: not deployed.</li>
          * <li>RUNNING: running.</li>
-         * <li>DELETED: deleted. This status is not displayed in the console.</li>
+         * <li>DELETED: deleted (this status is not displayed in the console).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +128,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         public Integer queueCheckPointWrites;
 
         /**
-         * <p>The total capacity of the queue, in bytes. Unit: MB.</p>
+         * <p>The total capacity of the queue in bytes. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

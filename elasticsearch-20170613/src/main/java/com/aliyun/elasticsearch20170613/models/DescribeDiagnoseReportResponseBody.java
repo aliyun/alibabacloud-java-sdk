@@ -283,7 +283,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String diagnosisMode;
 
         /**
-         * <p>The overall health status of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         * <p>The overall health of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
          * 
          * <strong>example:</strong>
          * <p>YELLOW</p>
@@ -292,7 +292,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String health;
 
         /**
-         * <p>The ID of the diagnosed instance.</p>
+         * <p>The instance ID of the diagnosed instance.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc</p>
@@ -322,7 +322,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The method used to trigger the health diagnosis. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
+         * <p>The method used to trigger the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>

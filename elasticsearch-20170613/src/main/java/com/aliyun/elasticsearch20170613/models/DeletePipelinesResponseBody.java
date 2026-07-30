@@ -14,10 +14,10 @@ public class DeletePipelinesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result:</p>
+     * <p>The result of the operation. Valid values:</p>
      * <ul>
-     * <li>true: The pipelines are deleted.</li>
-     * <li>false: The pipelines failed to be deleted.</li>
+     * <li>true: The deletion was successful.</li>
+     * <li>false: The deletion failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -41,7 +41,7 @@ public class ListLogstashRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of entries per page for paging. Default value: 20.</p>
+     * <p>The number of entries per page in Settings for paging. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

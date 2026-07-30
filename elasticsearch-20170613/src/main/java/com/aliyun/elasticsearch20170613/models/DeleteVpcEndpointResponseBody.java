@@ -14,11 +14,11 @@ public class DeleteVpcEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the deletion is successful. Valid values:</p>
+     * <p>Indicates whether the endpoint is deleted. Valid values:</p>
      * <ul>
-     * <li><p>true: The deletion is successful.</p>
+     * <li><p>true: The endpoint is deleted.</p>
      * </li>
-     * <li><p>false: The deletion failed.</p>
+     * <li><p>false: The endpoint failed to be deleted.</p>
      * </li>
      * </ul>
      * 

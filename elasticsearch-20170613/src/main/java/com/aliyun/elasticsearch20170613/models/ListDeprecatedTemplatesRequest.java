@@ -14,7 +14,7 @@ public class ListDeprecatedTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number Settings for a paged query. Paging is used to retrieve results.</p>
+     * <p>The page number settings for a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class ListDeprecatedTemplatesRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page Settings for a paged query. Paging is used to retrieve results.</p>
+     * <p>The number of entries per page settings for a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

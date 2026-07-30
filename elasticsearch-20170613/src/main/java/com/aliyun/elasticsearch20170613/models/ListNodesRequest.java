@@ -41,7 +41,7 @@ public class ListNodesRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The tag information of the ECS instance. The tag key (tagKey) and tag value (tagValue) must be included.</p>
+     * <p>The tag information of the ECS instance. Must include the tag key (tagKey) and tag value (tagValue).</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;tagKey&quot;:&quot;abc&quot;,&quot;tagValue&quot;:&quot;xyz&quot;}]</p>

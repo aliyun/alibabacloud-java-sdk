@@ -109,11 +109,11 @@ public class ListDataStreamsResponseBody extends TeaModel {
         /**
          * <p>The index status. Valid values:</p>
          * <ul>
-         * <li><p>Green: healthy.</p>
+         * <li><p>Green: Healthy.</p>
          * </li>
-         * <li><p>Yellow: warning.</p>
+         * <li><p>Yellow: Warning.</p>
          * </li>
-         * <li><p>Red: abnormal.</p>
+         * <li><p>Red: Abnormal.</p>
          * </li>
          * </ul>
          * 
@@ -133,13 +133,13 @@ public class ListDataStreamsResponseBody extends TeaModel {
         public Boolean isManaged;
 
         /**
-         * <p>The managed status of the index. Valid values:</p>
+         * <p>The index managed status. Valid values:</p>
          * <ul>
-         * <li><p>following: managed.</p>
+         * <li><p>following: Managed.</p>
          * </li>
-         * <li><p>closing: being unmanaged.</p>
+         * <li><p>closing: Being unmanaged.</p>
          * </li>
-         * <li><p>closed: not managed.</p>
+         * <li><p>closed: Not managed.</p>
          * </li>
          * </ul>
          * 
@@ -226,11 +226,11 @@ public class ListDataStreamsResponseBody extends TeaModel {
         /**
          * <p>The data stream status. Valid values:</p>
          * <ul>
-         * <li><p>Green: healthy.</p>
+         * <li><p>Green: Healthy.</p>
          * </li>
-         * <li><p>Yellow: warning.</p>
+         * <li><p>Yellow: Warning.</p>
          * </li>
-         * <li><p>Red: abnormal.</p>
+         * <li><p>Red: Abnormal.</p>
          * </li>
          * </ul>
          * 

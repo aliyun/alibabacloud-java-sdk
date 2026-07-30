@@ -14,7 +14,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned result details.</p>
      */
     @NameInMap("Result")
     public CreateVpcEndpointResponseBodyResult result;

@@ -90,7 +90,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The type of the IP address. Valid values:</p>
+         * <p>The IP address type. Valid values:</p>
          * <ul>
          * <li>public: public IP address.</li>
          * <li>private: private IP address.</li>
@@ -171,10 +171,10 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The status of each collector on the ECS instance. Valid values:</p>
          * <ul>
-         * <li>heartOk: normal heartbeat.</li>
-         * <li>heartLost: abnormal heartbeat.</li>
-         * <li>uninstalled: not installed.</li>
-         * <li>failed: installation failed.</li>
+         * <li>heartOk: Normal heartbeat.</li>
+         * <li>heartLost: Abnormal heartbeat.</li>
+         * <li>uninstalled: Not installed.</li>
+         * <li>failed: Installation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,8 +186,8 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Cloud Assistant is enabled. Valid values:</p>
          * <ul>
-         * <li>true: enabled.</li>
-         * <li>false: not enabled.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String ecsInstanceName;
 
         /**
-         * <p>The list of IP address information of the ECS instance.</p>
+         * <p>The list of IP address information for the ECS instance.</p>
          */
         @NameInMap("ipAddress")
         public java.util.List<ListNodesResponseBodyResultIpAddress> ipAddress;
@@ -234,12 +234,12 @@ public class ListNodesResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The status of the ECS instance. Valid values:</p>
+         * <p>The ECS instance status. Valid values:</p>
          * <ul>
-         * <li>running: running.</li>
-         * <li>starting: starting.</li>
-         * <li>stopping: stopping.</li>
-         * <li>stopped: stopped.</li>
+         * <li>running: Running.</li>
+         * <li>starting: Starting.</li>
+         * <li>stopping: Stopping.</li>
+         * <li>stopped: Stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventRecordsResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
@@ -14,7 +14,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Result</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public ListEventRecordsResponseBodyResult result;
@@ -42,13 +42,13 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResultResultShowContentActionSuggest extends TeaModel {
         /**
-         * <p>Operation suggestion</p>
+         * <p>The suggested action.</p>
          */
         @NameInMap("suggestActions")
         public java.util.List<String> suggestActions;
 
         /**
-         * <p>Operation suggestion text</p>
+         * <p>The text of the suggested action.</p>
          * 
          * <strong>example:</strong>
          * <p>“”</p>
@@ -57,7 +57,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String suggestText;
 
         /**
-         * <p>Operation suggestion type</p>
+         * <p>The type of the suggested action.</p>
          * 
          * <strong>example:</strong>
          * <p>promptText</p>
@@ -98,13 +98,13 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResultResultShowContent extends TeaModel {
         /**
-         * <p>Operation suggestion</p>
+         * <p>The suggested action.</p>
          */
         @NameInMap("actionSuggest")
         public ListEventRecordsResponseBodyResultResultShowContentActionSuggest actionSuggest;
 
         /**
-         * <p>Description of the management event</p>
+         * <p>The event description.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance.SpecModify</p>
@@ -113,7 +113,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>Management event status</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>Executed</p>
@@ -122,7 +122,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String eventStatus;
 
         /**
-         * <p>Time of occurrence</p>
+         * <p>The time when the event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:31:01</p>
@@ -131,7 +131,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String eventTime;
 
         /**
-         * <p>End Time of O&amp;M execution for the management event</p>
+         * <p>The end time of the O&amp;M execution for the event.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:41:01</p>
@@ -140,7 +140,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String executeFinishTime;
 
         /**
-         * <p>Start Time of O&amp;M execution for the management event</p>
+         * <p>The start time of the O&amp;M execution for the event.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:31:00</p>
@@ -149,7 +149,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String executeStartTime;
 
         /**
-         * <p>Instance ID of the occurrence</p>
+         * <p>The instance ID of the instance on which the event occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-a5cb2dece****</p>
@@ -158,7 +158,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Execution ID of the cluster Change</p>
+         * <p>The execution ID of the cluster change.</p>
          * 
          * <strong>example:</strong>
          * <p>f183728022a1c769e97b4*****</p>
@@ -239,7 +239,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResultResult extends TeaModel {
         /**
-         * <p>Is auto-alarm enabled</p>
+         * <p>Indicates whether automatic alerting is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -248,7 +248,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public Boolean autoAlarm;
 
         /**
-         * <p>Management event display name</p>
+         * <p>The display name of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance.SpecModify</p>
@@ -257,7 +257,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>is Preview</p>
+         * <p>Indicates whether this is a dry run.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -266,7 +266,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
-         * <p>event level</p>
+         * <p>The event level.</p>
          * 
          * <strong>example:</strong>
          * <p>Info</p>
@@ -275,7 +275,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>is O&amp;M processing required</p>
+         * <p>Indicates whether O&amp;M processing is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -284,7 +284,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public Boolean mustOps;
 
         /**
-         * <p>product type of the management event</p>
+         * <p>The product type of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch</p>
@@ -293,7 +293,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>scheduled running time</p>
+         * <p>The scheduled execution time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:41:01</p>
@@ -302,7 +302,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String scheduleExecuteTime;
 
         /**
-         * <p>scheduled end time</p>
+         * <p>The scheduled end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-08 18:41:01</p>
@@ -311,13 +311,13 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String scheduleFinishTime;
 
         /**
-         * <p>Management event content</p>
+         * <p>The event content.</p>
          */
         @NameInMap("showContent")
         public ListEventRecordsResponseBodyResultResultShowContent showContent;
 
         /**
-         * <p>Event occurrence source</p>
+         * <p>The source of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>webConsole</p>
@@ -326,7 +326,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>Event status</p>
+         * <p>The event status.</p>
          * 
          * <strong>example:</strong>
          * <p>Executed</p>
@@ -335,7 +335,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Event type</p>
+         * <p>The event type.</p>
          * 
          * <strong>example:</strong>
          * <p>UserOperator</p>
@@ -448,13 +448,13 @@ public class ListEventRecordsResponseBody extends TeaModel {
 
     public static class ListEventRecordsResponseBodyResult extends TeaModel {
         /**
-         * <p>Content</p>
+         * <p>The returned content.</p>
          */
         @NameInMap("result")
         public java.util.List<ListEventRecordsResponseBodyResultResult> result;
 
         /**
-         * <p>Total number of records</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

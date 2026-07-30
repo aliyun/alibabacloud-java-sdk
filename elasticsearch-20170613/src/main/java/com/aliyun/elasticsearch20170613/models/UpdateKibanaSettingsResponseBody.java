@@ -16,7 +16,7 @@ public class UpdateKibanaSettingsResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The Kibana language was modified.</li>
+     * <li>true: The Kibana language is modified.</li>
      * <li>false: The Kibana language failed to be modified.</li>
      * </ul>
      * 

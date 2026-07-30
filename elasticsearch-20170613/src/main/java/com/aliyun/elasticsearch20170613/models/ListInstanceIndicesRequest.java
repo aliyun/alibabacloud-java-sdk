@@ -7,9 +7,9 @@ public class ListInstanceIndicesRequest extends TeaModel {
     /**
      * <p>Specifies whether to retrieve all indexes. Valid values:</p>
      * <ul>
-     * <li><p>true: Returns the index list that includes system indexes.</p>
+     * <li><p>true: Returns the index list including system indexes.</p>
      * </li>
-     * <li><p>false (default): Returns the index list that excludes system indexes.</p>
+     * <li><p>false (default): Returns the index list excluding system indexes.</p>
      * </li>
      * </ul>
      * 

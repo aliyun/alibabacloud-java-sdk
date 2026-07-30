@@ -54,7 +54,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         public String diagnosisMode;
 
         /**
-         * <p>The scenario of intelligent O&amp;M.</p>
+         * <p>The common scenarios of intelligent diagnosis and optimization.</p>
          * 
          * <strong>example:</strong>
          * <p>Business Search</p>
@@ -66,7 +66,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         public java.util.List<String> selectedItems;
 
         /**
-         * <p>The timestamp when the intelligent O&amp;M scenario was last updated.</p>
+         * <p>The UNIX timestamp when the intelligent diagnosis and optimization common scenarios were last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1588994035385</p>

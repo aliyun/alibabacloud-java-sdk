@@ -34,8 +34,8 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the Grafana dashboard list is retrieved. Valid values:</p>
      * <ul>
-     * <li>true: succeeded.</li>
-     * <li>false: failed.</li>
+     * <li>true: The list is retrieved.</li>
+     * <li>false: The retrieval failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

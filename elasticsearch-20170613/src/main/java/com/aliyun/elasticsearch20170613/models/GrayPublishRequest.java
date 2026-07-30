@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrayPublishRequest extends TeaModel {
     /**
-     * <p>Change ID</p>
+     * <p>The change ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ea8d33aa4371c3499d0***</p>

@@ -4,8 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListStatsEventRecordsRequest extends TeaModel {
+    @NameInMap("endTime")
+    public Long endTime;
+
     /**
-     * <p>Event type</p>
+     * <p>The event type.</p>
      * 
      * <strong>example:</strong>
      * <p>UserOperator</p>
@@ -14,7 +17,7 @@ public class ListStatsEventRecordsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>Event level</p>
+     * <p>The event level.</p>
      * 
      * <strong>example:</strong>
      * <p>Info</p>
@@ -22,8 +25,11 @@ public class ListStatsEventRecordsRequest extends TeaModel {
     @NameInMap("level")
     public String level;
 
+    @NameInMap("startTime")
+    public Long startTime;
+
     /**
-     * <p>Status of the management event</p>
+     * <p>The event status.</p>
      * 
      * <strong>example:</strong>
      * <p>Executed</p>
@@ -34,6 +40,14 @@ public class ListStatsEventRecordsRequest extends TeaModel {
     public static ListStatsEventRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStatsEventRecordsRequest self = new ListStatsEventRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListStatsEventRecordsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public ListStatsEventRecordsRequest setEventType(String eventType) {
@@ -50,6 +64,14 @@ public class ListStatsEventRecordsRequest extends TeaModel {
     }
     public String getLevel() {
         return this.level;
+    }
+
+    public ListStatsEventRecordsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public ListStatsEventRecordsRequest setStatus(String status) {

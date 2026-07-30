@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateKibanaSsoRequest extends TeaModel {
     /**
-     * <p>true: Enabled; false: shutdown</p>
+     * <p>Specifies whether to enable Alibaba Cloud account authentication for Kibana. Valid values:</p>
+     * <ul>
+     * <li>true: Enable.</li>
+     * <li>false: Disable.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

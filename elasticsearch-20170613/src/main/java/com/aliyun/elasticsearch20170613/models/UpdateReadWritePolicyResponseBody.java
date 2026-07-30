@@ -14,7 +14,7 @@ public class UpdateReadWritePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The returned result.</p>
      * <ul>
      * <li>true: The write high availability feature is enabled or disabled.</li>
      * <li>false: Failed to enable or disable the write high availability feature.</li>

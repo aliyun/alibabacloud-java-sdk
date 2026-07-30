@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     /**
-     * <p>The type of the collector. Valid values:</p>
+     * <p>The collector type. Valid values:</p>
      * <ul>
      * <li>fileBeat</li>
      * <li>metricBeat</li>
      * <li>heartBeat</li>
-     * <li>auditBeat.</li>
+     * <li>auditBeat</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,10 +21,10 @@ public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     public String resType;
 
     /**
-     * <p>The version of the collector. The available versions vary based on the type of machine on which the collector is deployed. Valid values:</p>
+     * <p>The collector version. The available versions vary depending on the machine type on which the collector is deployed. Valid values:</p>
      * <ul>
      * <li>ECS: 6.8.5_with_community</li>
-     * <li>ACK: 6.8.13_with_community.</li>
+     * <li>ACK: 6.8.13_with_community</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,8 +37,8 @@ public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     /**
      * <p>The type of machine on which the collector is deployed. If you do not specify this parameter, all types are returned. Valid values:</p>
      * <ul>
-     * <li>ECS: Elastic Compute Service (ECS) instance</li>
-     * <li>ACK: Container Service for Kubernetes (ACK) cluster.</li>
+     * <li>ECS: Elastic Compute Service instance</li>
+     * <li>ACK: Container Kubernetes cluster</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListDiagnosisItemsResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
 
     public static class ListDiagnosisItemsResponseBodyResult extends TeaModel {
         /**
-         * <p>The diagnostic item description.</p>
+         * <p>The description of the diagnostic item.</p>
          * 
          * <strong>example:</strong>
          * <p>诊断集群写数据是否有堆积当集群的数据写入存在堆积时，会造成BulkReject异常，可能会导致数据丢失，且会造成系统资源消耗严重</p>
@@ -54,7 +54,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         public Boolean esApiRequired;
 
         /**
-         * <p>The diagnostic item identifier.</p>
+         * <p>The identifier of the diagnostic item.</p>
          * 
          * <strong>example:</strong>
          * <p>ClusterBulkRejectDiagnostic</p>
@@ -63,7 +63,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The diagnostic item name.</p>
+         * <p>The name of the diagnostic item.</p>
          * 
          * <strong>example:</strong>
          * <p>索引写入BulkReject诊断</p>

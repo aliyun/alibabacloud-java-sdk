@@ -17,7 +17,7 @@ public class CancelDeletionResponseBody extends TeaModel {
      * <p>Indicates whether the instance is recovered. Valid values:</p>
      * <ul>
      * <li>true: The instance is recovered.</li>
-     * <li>false: The instance failed to be recovered.</li>
+     * <li>false: The instance is not recovered.</li>
      * </ul>
      * 
      * <strong>example:</strong>

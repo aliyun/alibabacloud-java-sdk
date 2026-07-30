@@ -16,8 +16,8 @@ public class CloseDiagnosisResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the intelligent O&amp;M feature is disabled. Valid values:</p>
      * <ul>
-     * <li>true: Succeeded.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The feature is disabled.</li>
+     * <li>false: The feature failed to be disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

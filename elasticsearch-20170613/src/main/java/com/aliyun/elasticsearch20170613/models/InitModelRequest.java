@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitModelRequest extends TeaModel {
     /**
-     * <p>API key for the AI Search Open Platform</p>
+     * <p>The API key for the AISearch open platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class InitModelRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>Service registration endpoint of the AI Search Open Platform</p>
+     * <p>The service registration address of the AISearch open platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class InitModelRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>HTTP protocol type</p>
+     * <p>The HTTP protocol type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,13 +35,13 @@ public class InitModelRequest extends TeaModel {
     public String httpSchema;
 
     /**
-     * <p>Specify the models to initialize. If empty, all built-in models will be initialized.</p>
+     * <p>The models to initialize. If this parameter is left empty, all built-in models are initialized.</p>
      */
     @NameInMap("models")
     public java.util.List<InitModelRequestModels> models;
 
     /**
-     * <p>Workspace.</p>
+     * <p>The workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,15 +97,15 @@ public class InitModelRequest extends TeaModel {
 
     public static class InitModelRequestModels extends TeaModel {
         /**
-         * <p>Model category  </p>
+         * <p>The model type. Valid values:</p>
          * <ul>
-         * <li>a. Text embedding: text_embedding  </li>
-         * <li>b. Reranking: rerank  </li>
-         * <li>c. Document segmentation: doc_split  </li>
-         * <li>d. Large Language Model (LLM) service: completion  </li>
-         * <li>e. Query analysis: query_analyze  </li>
-         * <li>f. Document content parsing: doc_analyze  </li>
-         * <li>g. Image content parsing: img_analyze</li>
+         * <li>text_embedding: text embedding</li>
+         * <li>rerank: reranking</li>
+         * <li>doc_split: document splitting</li>
+         * <li>completion: large language model service</li>
+         * <li>query_analyze: query analysis</li>
+         * <li>doc_analyze: document content parsing</li>
+         * <li>img_analyze: image content parsing</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class InitModelRequest extends TeaModel {
         public String modelType;
 
         /**
-         * <p>Service ID of the Search Open Platform</p>
+         * <p>The service ID of the AISearch open platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ops-text-embedding-**</p>

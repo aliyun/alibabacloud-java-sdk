@@ -108,7 +108,7 @@ public class ListPluginsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The URL of the plugin documentation.</p>
+         * <p>The URL of the plugin specification document.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx.html">https://xxxx.html</a></p>

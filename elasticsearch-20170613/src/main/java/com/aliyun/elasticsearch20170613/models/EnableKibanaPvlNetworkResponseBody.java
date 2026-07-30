@@ -16,8 +16,8 @@ public class EnableKibanaPvlNetworkResponseBody extends TeaModel {
     /**
      * <p>Indicates whether private network access for Kibana is created. Valid values:</p>
      * <ul>
-     * <li>true: The operation is successful.</li>
-     * <li>false: The operation failed.</li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

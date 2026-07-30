@@ -51,7 +51,7 @@ public class ListDictInformationResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The MD5 checksum (ETag) of the OSS file, in uppercase.</p>
+         * <p>The MD5 checksum (ETag) of the OSS file in uppercase.</p>
          * 
          * <strong>example:</strong>
          * <p>2ABAB5E70BBF631145647F6BE533****</p>
@@ -118,9 +118,9 @@ public class ListDictInformationResponseBody extends TeaModel {
         /**
          * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li><p>MAIN: primary tokenization dictionary</p>
+         * <li><p>MAIN: primary token dictionary</p>
          * </li>
-         * <li><p>STOP: stopword dictionary.</p>
+         * <li><p>STOP: stopword dictionary</p>
          * </li>
          * </ul>
          * 

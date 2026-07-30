@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateComponentIndexRequest extends TeaModel {
     /**
-     * <p>The metadata, which is used to store information such as remarks.</p>
+     * <p>The metadata, which is used to store remarks and other information.</p>
      * 
      * <strong>example:</strong>
      * <p>{       &quot;description&quot;: &quot;set number of shards to one&quot;   }</p>

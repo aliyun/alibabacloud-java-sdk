@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CapacityPlanRequest extends TeaModel {
     /**
-     * <p>Specifies whether complex aggregate query is required. Valid values:</p>
+     * <p>Specifies whether complex aggregation query is required. Valid values:</p>
      * <ul>
      * <li>true: Required.</li>
      * <li>false (default): Not required.</li>
@@ -24,7 +24,7 @@ public class CapacityPlanRequest extends TeaModel {
     public java.util.List<CapacityPlanRequestDataInfo> dataInfo;
 
     /**
-     * <p>The metric information, including disk usage, search and write operations, and aggregation requests.</p>
+     * <p>The metric information for disk usage, search and write operations, and aggregation requests.</p>
      */
     @NameInMap("metric")
     public java.util.List<CapacityPlanRequestMetric> metric;
@@ -36,7 +36,7 @@ public class CapacityPlanRequest extends TeaModel {
      * <li>analysisVisualization: data analytics scenario</li>
      * <li>dbAcceleration: database acceleration scenario</li>
      * <li>search: search scenario</li>
-     * <li>log: log scenario.</li>
+     * <li>log: log scenario</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class CapacityPlanRequest extends TeaModel {
          * <li>dailyIncrement: daily data growth</li>
          * <li>dailyIncrement: daily incremental documents</li>
          * <li>retentionTime: data retention period</li>
-         * <li>replica: replica settings.</li>
+         * <li>replica: replica settings</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class CapacityPlanRequest extends TeaModel {
          * <p>The disk data type. Valid values:</p>
          * <ul>
          * <li>hot: hot data</li>
-         * <li>warm: warm data.</li>
+         * <li>warm: warm data</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class CapacityPlanRequest extends TeaModel {
          * <p>The data unit or time unit. Valid values:</p>
          * <ul>
          * <li>Data units: MiB, GiB, TB, PB</li>
-         * <li>Time units: DAYS, WEEKS, MONTHS, YEARS.</li>
+         * <li>Time units: DAYS, WEEKS, MONTHS, YEARS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,7 +205,7 @@ public class CapacityPlanRequest extends TeaModel {
          * <p>The search or write metric code. Valid values:</p>
          * <ul>
          * <li>write: write</li>
-         * <li>search: search.</li>
+         * <li>search: search</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class CapacityPlanRequest extends TeaModel {
          * <p>The search or write peak type. Valid values:</p>
          * <ul>
          * <li>common: normal</li>
-         * <li>peak: peak.</li>
+         * <li>peak: peak</li>
          * </ul>
          * 
          * <strong>example:</strong>

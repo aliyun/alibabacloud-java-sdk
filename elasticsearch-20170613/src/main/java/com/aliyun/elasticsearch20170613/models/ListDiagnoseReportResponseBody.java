@@ -121,7 +121,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
          * <ul>
          * <li>TEXT: text description</li>
          * <li>CONSOLE_API: console-triggered</li>
-         * <li>ES_API: API-triggered.</li>
+         * <li>ES_API: API-triggered</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,7 +370,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
          * <ul>
          * <li>SYSTEM: automatically triggered by the system</li>
          * <li>INNER: internally triggered</li>
-         * <li>USER: manually triggered by the user.</li>
+         * <li>USER: manually triggered by the user</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -78,15 +78,15 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         public String specificationUrl;
 
         /**
-         * <p>The plugin status. Valid values:</p>
+         * <p>Creation status of the plugin. Valid values:</p>
          * <ul>
-         * <li>INSTALLED: installed</li>
-         * <li>UNINSTALLED: not installed</li>
-         * <li>INSTALLING: being installed</li>
-         * <li>UNINSTALLING: being uninstalled</li>
-         * <li>UPGRADING: being upgraded</li>
-         * <li>FAILED: installation failed</li>
-         * <li>UNKNOWN: the cluster is disconnected and the creation status cannot be retrieved.</li>
+         * <li>INSTALLED: Installed.</li>
+         * <li>UNINSTALLED: Not installed.</li>
+         * <li>INSTALLING: Being installed.</li>
+         * <li>UNINSTALLING: Being uninstalled.</li>
+         * <li>UPGRADING: Being upgraded.</li>
+         * <li>FAILED: Installation failed.</li>
+         * <li>UNKNOWN: The cluster is disconnected and creation status cannot be retrieved.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -101,10 +101,10 @@ public class DescribeDeprecatedTemplateResponseBody extends TeaModel {
 
     public static class DescribeDeprecatedTemplateResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether automatic creation of a data stream is enabled. Valid values:</p>
+         * <p>Indicates whether automatic creation of a data stream is enabled at the same time. Valid values:</p>
          * <ul>
-         * <li>true: Automatic creation of a data stream is enabled.</li>
-         * <li>false: Automatic creation of a data stream is not enabled.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PluginAnalysisResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -14,7 +14,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<PluginAnalysisResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
 
     public static class PluginAnalysisResponseBodyResult extends TeaModel {
         /**
-         * <p>Plugin Description.</p>
+         * <p>The plug-in description.</p>
          * 
          * <strong>example:</strong>
          * <p>plugin description</p>
@@ -51,7 +51,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Plugin version.</p>
+         * <p>The plug-in version.</p>
          * 
          * <strong>example:</strong>
          * <p>8.17.0</p>
@@ -60,7 +60,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
         public String elasticsearchVersion;
 
         /**
-         * <p>Plugin Name.</p>
+         * <p>The plug-in name.</p>
          * 
          * <strong>example:</strong>
          * <p>plugin_name</p>
@@ -69,7 +69,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Plugin security policy.</p>
+         * <p>The security policy of the plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -78,7 +78,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
         public String securityPolicy;
 
         /**
-         * <p>Plugin Version.</p>
+         * <p>The plug-in version.</p>
          * 
          * <strong>example:</strong>
          * <p>8.17.0</p>

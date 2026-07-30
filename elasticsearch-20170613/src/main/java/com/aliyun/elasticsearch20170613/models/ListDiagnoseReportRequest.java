@@ -17,7 +17,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
      * <p>The end timestamp of the query. Unit: milliseconds.</p>
      * <ul>
      * <li>Minimum value: 1000000000000</li>
-     * <li>Maximum value: 2000000000000.</li>
+     * <li>Maximum value: 2000000000000</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
      * <li>zh: Simplified Chinese</li>
      * <li>zt: Traditional Chinese</li>
      * <li>es: Spanish</li>
-     * <li>fr: French.</li>
+     * <li>fr: French</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
      * <p>The start timestamp of the query. Unit: milliseconds.</p>
      * <ul>
      * <li>Minimum value: 1000000000000</li>
-     * <li>Maximum value: 2000000000000.</li>
+     * <li>Maximum value: 2000000000000</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -80,7 +80,7 @@ public class ListDiagnoseReportRequest extends TeaModel {
      * <ul>
      * <li>SYSTEM (default): automatically triggered by the system</li>
      * <li>INNER: internally triggered</li>
-     * <li>USER: manually triggered by the user.</li>
+     * <li>USER: manually triggered by the user</li>
      * </ul>
      * 
      * <strong>example:</strong>

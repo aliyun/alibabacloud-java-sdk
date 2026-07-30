@@ -44,7 +44,7 @@ public class ListAllNodeResponseBody extends TeaModel {
         /**
          * <p>The CPU usage.</p>
          * <blockquote>
-         * <p>When <strong>extended</strong> is set to <strong>true</strong> and the monitoring information of the node is being synchronized, the parameter value returns null. In this case, wait 10 seconds and send the request again to retrieve the value.</p>
+         * <p>When <strong>extended</strong> is set to <strong>true</strong> and the monitoring information of the node is being synchronized, the parameter value returns null. In this case, wait 10 seconds and resend the request to obtain the value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class ListAllNodeResponseBody extends TeaModel {
          * <li>WORKER: hot node</li>
          * <li>WORKER_WARM: warm node</li>
          * <li>COORDINATING: client node</li>
-         * <li>KIBANA: Kibana node.</li>
+         * <li>KIBANA: Kibana node</li>
          * </ul>
          * 
          * <strong>example:</strong>

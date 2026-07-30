@@ -134,8 +134,8 @@ public class DescribeCollectorResponseBody extends TeaModel {
         /**
          * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>collectorTargetInstance: the collector Output</li>
-         * <li>collectorDeployMachine: the deployment machine of the collector</li>
+         * <li>collectorTargetInstance: the collector Output.</li>
+         * <li>collectorDeployMachine: the deployment machine of the collector.</li>
          * <li>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana Dashboard.</li>
          * </ul>
          * 
@@ -182,7 +182,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public java.util.List<String> hosts;
 
         /**
-         * <p>The ID of the instance associated with the collector. When <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>, this parameter indicates the instance ID of the collector Output. When <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>, this parameter indicates the ACK (Container Kubernetes) cluster ID.</p>
+         * <p>The ID of the instance associated with the collector. When <strong>configType</strong> is set to <strong>collectorTargetInstance</strong>, this is the instance ID of the collector Output. When <strong>configType</strong> is set to <strong>collectorDeployMachines</strong> and <strong>type</strong> is set to <strong>ACKCluster</strong>, this is the ACK (Container Kubernetes) cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-n6w1o1****</p>
@@ -224,7 +224,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of pods in the ACK cluster from which data is successfully collected.</p>
+         * <p>The number of pods that are successfully collected in the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -233,7 +233,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public String successPodsCount;
 
         /**
-         * <p>The total number of pods in the ACK cluster from which data is collected.</p>
+         * <p>The total number of pods collected in the ACK cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,7 +245,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
          * <p>The type of machine on which the collector is deployed. This parameter is displayed when <strong>configType</strong> is set to <strong>collectorDeployMachine</strong>. Valid values:</p>
          * <ul>
          * <li>ECSInstanceId: ECS</li>
-         * <li>ACKCluster: Container Kubernetes.</li>
+         * <li>ACKCluster: Container Kubernetes</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -393,10 +393,10 @@ public class DescribeCollectorResponseBody extends TeaModel {
         public java.util.List<DescribeCollectorResponseBodyResultConfigs> configs;
 
         /**
-         * <p>Specifies whether to perform only a dry run without creating the collector. Valid values:</p>
+         * <p>Indicates whether the collector is only validated without being created. Valid values:</p>
          * <ul>
-         * <li>true: Only validates the request without creating the collector.</li>
-         * <li>false: Validates the request and creates the collector.</li>
+         * <li>true: Only validates without creating.</li>
+         * <li>false: Validates and creates.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,7 +477,7 @@ public class DescribeCollectorResponseBody extends TeaModel {
         /**
          * <p>The collector status. Valid values:</p>
          * <ul>
-         * <li>activing: being activated</li>
+         * <li>activing: being activated.</li>
          * <li>active: activated.</li>
          * </ul>
          * 

@@ -29,7 +29,7 @@ public class ListInstanceHistoryEventsRequest extends TeaModel {
     public String eventCreateStartTime;
 
     /**
-     * <p>The lifecycle status of the event.</p>
+     * <p>The lifecycle status object of the event.</p>
      */
     @NameInMap("eventCycleStatus")
     public java.util.List<String> eventCycleStatus;
@@ -101,7 +101,7 @@ public class ListInstanceHistoryEventsRequest extends TeaModel {
     public String nodeIP;
 
     /**
-     * <p>The starting document offset. The value must be a non-negative integer. Default value: 0.</p>
+     * <p>The starting document offset. The value must be a non-negative number. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -110,7 +110,7 @@ public class ListInstanceHistoryEventsRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of events to return. The value must be a non-negative integer. Default value: 10.</p>
+     * <p>The number of events to return. The value must be a non-negative number. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -239,8 +239,8 @@ public class ListInstanceHistoryEventsRequest extends TeaModel {
         /**
          * <p>Specifies whether to sort in descending order. Valid values:</p>
          * <ul>
-         * <li>true (default): Yes.</li>
-         * <li>false: No.</li>
+         * <li>true (default): yes</li>
+         * <li>false: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class ListInstanceHistoryEventsRequest extends TeaModel {
          * <ul>
          * <li>event_time: event creation time</li>
          * <li>event_execute_start_time: event execution time</li>
-         * <li>event_execute_finish_time: event completion time.</li>
+         * <li>event_execute_finish_time: event completion time</li>
          * </ul>
          * 
          * <strong>example:</strong>

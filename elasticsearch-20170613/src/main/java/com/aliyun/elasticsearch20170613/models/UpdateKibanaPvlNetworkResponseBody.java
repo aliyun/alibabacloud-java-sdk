@@ -16,7 +16,7 @@ public class UpdateKibanaPvlNetworkResponseBody extends TeaModel {
     /**
      * <p>The result. Valid values:</p>
      * <ul>
-     * <li>true: The operation was successful.</li>
+     * <li>true: The operation is successful.</li>
      * <li>false: The operation failed.</li>
      * </ul>
      * 

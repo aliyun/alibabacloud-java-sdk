@@ -17,7 +17,7 @@ public class CloseHttpsResponseBody extends TeaModel {
      * <p>The returned result. Valid values:</p>
      * <ul>
      * <li>true: The HTTPS protocol is disabled.</li>
-     * <li>false: The HTTPS protocol failed to be disabled.</li>
+     * <li>false: Failed to disable the HTTPS protocol.</li>
      * </ul>
      * 
      * <strong>example:</strong>

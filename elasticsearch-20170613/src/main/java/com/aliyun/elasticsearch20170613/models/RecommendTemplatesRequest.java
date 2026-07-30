@@ -14,7 +14,7 @@ public class RecommendTemplatesRequest extends TeaModel {
      * <li>log: log scenario</li>
      * </ul>
      * <blockquote>
-     * <p>Commercial model instances support the general-purpose, data analytics, database acceleration, and search scenarios. Advanced Edition instances support only the log scenario.</p>
+     * <p>Standard instances support general-purpose, data analytics, database acceleration, and search scenarios. Advanced Edition supports only the log scenario.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

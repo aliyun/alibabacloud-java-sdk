@@ -14,7 +14,7 @@ public class ValidateShrinkNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result. Valid values:</p>
      * <ul>
      * <li>true: The nodes can be scaled in.</li>
      * <li>false: The nodes cannot be scaled in.</li>

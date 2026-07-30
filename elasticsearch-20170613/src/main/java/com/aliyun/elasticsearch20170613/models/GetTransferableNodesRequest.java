@@ -15,7 +15,7 @@ public class GetTransferableNodesRequest extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The type of node for data migration. <strong>WORKER</strong> indicates a hot node. <strong>WORKER_WARM</strong> indicates a warm node.</p>
+     * <p>The type of nodes for data migration. <strong>WORKER</strong> indicates hot nodes. <strong>WORKER_WARM</strong> indicates warm nodes.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

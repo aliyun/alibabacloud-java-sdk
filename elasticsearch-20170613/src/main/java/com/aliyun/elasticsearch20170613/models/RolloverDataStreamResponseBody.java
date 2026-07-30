@@ -16,7 +16,7 @@ public class RolloverDataStreamResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li><p>true: The rollover succeeded.</p>
+     * <li><p>true: The rollover was successful.</p>
      * </li>
      * <li><p>false: The rollover failed.</p>
      * </li>

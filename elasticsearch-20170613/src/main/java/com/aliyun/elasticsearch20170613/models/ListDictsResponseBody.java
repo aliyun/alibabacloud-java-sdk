@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDictsResponseBody extends TeaModel {
     /**
-     * <p>The response headers.</p>
+     * <p>The response header information.</p>
      */
     @NameInMap("Headers")
     public ListDictsResponseBodyHeaders headers;
@@ -81,7 +81,7 @@ public class ListDictsResponseBody extends TeaModel {
 
     public static class ListDictsResponseBodyResult extends TeaModel {
         /**
-         * <p>The publicly accessible download URL. The URL is valid for 90 seconds.</p>
+         * <p>The public download URL. The URL is valid for 90 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&OSSAccessKeyId=LTAI*****V9&Signature=PNPO********BBGsJDO4V3VfU4sE%3D">http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&amp;OSSAccessKeyId=LTAI*****V9&amp;Signature=PNPO********BBGsJDO4V3VfU4sE%3D</a></p>
@@ -119,9 +119,9 @@ public class ListDictsResponseBody extends TeaModel {
         /**
          * <p>The type of the IK dictionary. Valid values:</p>
          * <ul>
-         * <li><p>MAIN: main tokenization dictionary.</p>
+         * <li><p>MAIN: Main tokenizer dictionary.</p>
          * </li>
-         * <li><p>STOP: stopword dictionary.</p>
+         * <li><p>STOP: Stopword dictionary.</p>
          * </li>
          * </ul>
          * 

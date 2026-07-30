@@ -16,8 +16,8 @@ public class ShrinkNodeResponseBody extends TeaModel {
     /**
      * <p>The result of the operation. Valid values:</p>
      * <ul>
-     * <li>true: The scale-in operation succeeded.</li>
-     * <li>false: The scale-in operation failed.</li>
+     * <li>true: The node shrinking succeeded.</li>
+     * <li>false: The node shrinking failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

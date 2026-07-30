@@ -44,10 +44,10 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
         /**
          * <p>The Operator installation status. Valid values:</p>
          * <ul>
-         * <li>deployed: installed</li>
-         * <li>not-deploy: not installed</li>
-         * <li>failed: installation failed</li>
-         * <li>unknown: unknown status.</li>
+         * <li>deployed: Installed.</li>
+         * <li>not-deploy: Not installed.</li>
+         * <li>failed: Installation failed.</li>
+         * <li>unknown: Unknown status.</li>
          * </ul>
          * 
          * <strong>example:</strong>

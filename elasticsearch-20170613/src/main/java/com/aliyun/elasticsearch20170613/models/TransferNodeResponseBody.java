@@ -14,7 +14,7 @@ public class TransferNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the operation. Valid values:</p>
+     * <p>The result of the request. Valid values:</p>
      * <ul>
      * <li>true: The task was successful.</li>
      * <li>false: The task failed.</li>

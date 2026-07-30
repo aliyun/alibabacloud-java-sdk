@@ -25,7 +25,7 @@ public class ListDictsRequest extends TeaModel {
     public String analyzerType;
 
     /**
-     * <p>The name of the file to filter.</p>
+     * <p>The file name used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_MAIN.dic</p>

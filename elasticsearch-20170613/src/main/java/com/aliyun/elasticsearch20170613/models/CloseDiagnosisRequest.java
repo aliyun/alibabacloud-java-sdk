@@ -20,7 +20,7 @@ public class CloseDiagnosisRequest extends TeaModel {
      * <li>zh: Simplified Chinese</li>
      * <li>zt: Traditional Chinese</li>
      * <li>es: Spanish</li>
-     * <li>fr: French.</li>
+     * <li>fr: French</li>
      * </ul>
      * 
      * <strong>example:</strong>

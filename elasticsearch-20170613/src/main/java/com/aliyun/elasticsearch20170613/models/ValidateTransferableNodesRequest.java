@@ -68,7 +68,7 @@ public class ValidateTransferableNodesRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The zone ID of the instance node. For example, the ID of Zone C in the China (Shanghai) region is cn-shanghai-c.</p>
+         * <p>The zone ID of the instance node. For example, the zone ID for Shanghai Zone C is cn-shanghai-c.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-c</p>

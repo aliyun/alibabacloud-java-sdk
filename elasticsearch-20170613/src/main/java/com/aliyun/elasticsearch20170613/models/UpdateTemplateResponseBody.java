@@ -14,7 +14,7 @@ public class UpdateTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the scenario-specific template configuration is modified. Valid values:</p>
+     * <p>Indicates whether the scenario-specific template configuration is modified.</p>
      * <ul>
      * <li>true: The modification is successful.</li>
      * <li>false: The modification failed.</li>

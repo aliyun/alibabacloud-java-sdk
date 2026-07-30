@@ -137,7 +137,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
          * <ul>
          * <li>FAILED: failed</li>
          * <li>EXECUTED: executed</li>
-         * <li>EXECUTING: executing.</li>
+         * <li>EXECUTING: executing</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
          * <ul>
          * <li>INFO: information</li>
          * <li>WARN: warning</li>
-         * <li>CRITICAL: critical.</li>
+         * <li>CRITICAL: critical</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,12 +181,12 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * <p>The event type. Valid values:</p>
          * <ul>
-         * <li>ECS:AUTO_RESTART: Automatic restart of an ECS node.</li>
-         * <li>Instance:InstanceFailure.Reboot:Executed: ECS instance reboot completed (instance error).</li>
-         * <li>Instance:InstanceFailure.Reboot:Executing: ECS instance reboot started (instance error).</li>
-         * <li>Instance:SystemFailure.Reboot:Executed: ECS instance reboot completed (system error).</li>
-         * <li>Instance:SystemFailure.Reboot:Executing: ECS instance reboot started (system error).</li>
-         * <li>Instance:SystemFailure.Reboot:Failed: ECS instance reboot failed (system error).</li>
+         * <li>ECS:AUTO_RESTART: ECS node automatic restart.</li>
+         * <li>Instance:InstanceFailure.Reboot:Executed: ECS instance restart completed (ECS instance error).</li>
+         * <li>Instance:InstanceFailure.Reboot:Executing: ECS instance restart started (instance error).</li>
+         * <li>Instance:SystemFailure.Reboot:Executed: ECS instance restart completed (system error).</li>
+         * <li>Instance:SystemFailure.Reboot:Executing: ECS instance restart started (system error).</li>
+         * <li>Instance:SystemFailure.Reboot:Failed: ECS instance restart failed (system error).</li>
          * </ul>
          * 
          * <strong>example:</strong>

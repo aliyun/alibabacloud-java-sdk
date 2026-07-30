@@ -81,7 +81,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     public static class ListDeprecatedTemplatesResponseBodyResultTemplate extends TeaModel {
         /**
-         * <p>The alias configuration of the template.</p>
+         * <p>The aliases configuration of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{}&quot;</p>
@@ -142,7 +142,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the template matches a data stream. Valid values:</p>
          * <ul>
-         * <li>true: matched</li>
+         * <li>true: matched.</li>
          * <li>false: not matched.</li>
          * </ul>
          * 

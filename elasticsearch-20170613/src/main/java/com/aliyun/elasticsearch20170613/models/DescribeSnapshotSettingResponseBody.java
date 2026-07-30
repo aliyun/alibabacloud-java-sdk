@@ -51,7 +51,7 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The automatic backup time configuration, specified as a Quartz Cron expression.</p>
+         * <p>The automatic backup time configuration, which uses a Quartz Cron expression.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 01 ? * * *</p>

@@ -14,9 +14,9 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The returned result:</p>
      * <ul>
-     * <li>true: The migration was successful.</li>
+     * <li>true: The migration is successful.</li>
      * <li>false: The migration failed.</li>
      * </ul>
      * 

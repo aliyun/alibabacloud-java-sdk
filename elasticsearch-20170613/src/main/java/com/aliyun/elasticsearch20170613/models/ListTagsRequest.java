@@ -14,7 +14,7 @@ public class ListTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource type. Fixed value: INSTANCE.</p>
+     * <p>The resource type. Set to INSTANCE.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>

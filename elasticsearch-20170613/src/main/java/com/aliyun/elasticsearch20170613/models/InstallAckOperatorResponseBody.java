@@ -16,7 +16,7 @@ public class InstallAckOperatorResponseBody extends TeaModel {
     /**
      * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The installation was successful.</li>
+     * <li>true: The installation succeeded.</li>
      * <li>false: The installation failed.</li>
      * </ul>
      * 

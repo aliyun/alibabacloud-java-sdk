@@ -16,8 +16,8 @@ public class UpdateXpackMonitorConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable X-Pack monitoring. Valid values:</p>
      * <ul>
-     * <li>true: Enable X-Pack monitoring.</li>
-     * <li>false: Disable X-Pack monitoring.</li>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -103,9 +103,9 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the data stream is enabled. Valid values:</p>
          * <ul>
-         * <li><p>true: enabled.</p>
+         * <li><p>true: Enabled.</p>
          * </li>
-         * <li><p>false (default): not enabled.</p>
+         * <li><p>false (default): Not enabled.</p>
          * </li>
          * </ul>
          * 

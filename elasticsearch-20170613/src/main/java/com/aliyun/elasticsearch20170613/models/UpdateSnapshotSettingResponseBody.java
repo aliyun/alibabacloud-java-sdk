@@ -51,7 +51,7 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The start time of automatic backup.</p>
+         * <p>The automatic backup start time.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 01 ? * * *</p>

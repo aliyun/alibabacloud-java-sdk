@@ -16,8 +16,8 @@ public class CreatePipelinesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the pipeline is created. Valid values:</p>
      * <ul>
-     * <li>true: The pipeline is created.</li>
-     * <li>false: The pipeline failed to be created.</li>
+     * <li>true: Created.</li>
+     * <li>false: Failed to create.</li>
      * </ul>
      * 
      * <strong>example:</strong>

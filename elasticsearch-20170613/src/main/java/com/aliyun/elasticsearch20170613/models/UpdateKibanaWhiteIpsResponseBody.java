@@ -194,7 +194,7 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         public java.util.List<String> kibanaIPWhitelist;
 
         /**
-         * <p>The Kibana internal-facing whitelist.</p>
+         * <p>The Kibana private network access whitelist.</p>
          */
         @NameInMap("kibanaPrivateIPWhitelist")
         public java.util.List<String> kibanaPrivateIPWhitelist;

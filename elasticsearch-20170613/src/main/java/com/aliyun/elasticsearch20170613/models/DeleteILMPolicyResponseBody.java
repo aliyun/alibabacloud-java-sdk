@@ -14,7 +14,7 @@ public class DeleteILMPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The result. Valid values:</p>
      * <ul>
      * <li><p>true: The specified lifecycle policy definition is deleted.</p>
      * </li>

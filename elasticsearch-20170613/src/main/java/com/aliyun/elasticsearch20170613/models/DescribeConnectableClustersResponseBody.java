@@ -42,7 +42,7 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
 
     public static class DescribeConnectableClustersResponseBodyResult extends TeaModel {
         /**
-         * <p>The instance ID of instances that can establish private network peering.</p>
+         * <p>The instance IDs that can establish private network peering.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-xxx</p>

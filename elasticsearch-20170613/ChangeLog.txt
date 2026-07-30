@@ -1,3 +1,8 @@
+2026-07-30 Version: 5.3.3
+- Update API ListStatsEventRecords: add request parameters endTime.
+- Update API ListStatsEventRecords: add request parameters startTime.
+
+
 2026-06-24 Version: 5.3.2
 - Update API DescribeDiagnoseReport: add response parameters Body.Result.diagnosisMode.
 - Update API DescribeDiagnoseReport: add response parameters Body.Result.items.

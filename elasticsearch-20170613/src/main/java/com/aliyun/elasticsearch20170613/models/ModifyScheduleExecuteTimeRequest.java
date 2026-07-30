@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScheduleExecuteTimeRequest extends TeaModel {
     /**
-     * <p>Event ID.</p>
+     * <p>The event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eb7efbc90864a0***</p>
@@ -14,7 +14,7 @@ public class ModifyScheduleExecuteTimeRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>Scheduled execution time (UTC)</p>
+     * <p>The scheduled execution time in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-30T08:45:00Z</p>

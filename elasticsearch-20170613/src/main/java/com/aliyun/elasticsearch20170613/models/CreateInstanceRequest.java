@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>Coordinating node configuration.</p>
+     * <p>The client node configuration.</p>
      */
     @NameInMap("clientNodeConfiguration")
     public ClientNodeConfiguration clientNodeConfiguration;
@@ -20,7 +20,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Elastic node configuration.</p>
+     * <p>The elastic node configuration.</p>
      */
     @NameInMap("elasticDataNodeConfiguration")
     public ElasticDataNodeConfiguration elasticDataNodeConfiguration;
@@ -48,7 +48,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <li>5.5.3_with_X-Pack</li>
      * </ul>
      * <blockquote>
-     * <p>The versions listed above may not include all versions supported by Elasticsearch instances. You can call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actually supported versions.</p>
+     * <p>The versions listed above may not include all versions supported by Elasticsearch instances. Call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actual supported versions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -59,7 +59,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String esVersion;
 
     /**
-     * <p>The edition type:</p>
+     * <p>The edition type. Valid values:</p>
      * <ul>
      * <li>x-pack: creates a commercial edition instance, or a kernel-enhanced edition instance without Indexing Service or OpenStore enabled.</li>
      * <li>IS: creates a kernel-enhanced edition instance with Indexing Service or OpenStore enabled.</li>
@@ -72,27 +72,27 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceCategory;
 
     /**
-     * <p>Kibana node configuration.</p>
+     * <p>The Kibana node configuration.</p>
      * <blockquote>
-     * <p>We strongly recommend that you enable the Kibana node.</p>
+     * <p>We strongly recommend that you enable Kibana nodes.</p>
      * </blockquote>
      */
     @NameInMap("kibanaConfiguration")
     public KibanaNodeConfiguration kibanaConfiguration;
 
     /**
-     * <p>Dedicated master node configuration.</p>
+     * <p>The dedicated master node configuration.</p>
      * <blockquote>
-     * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you use createInstance to create an instance with next-generation cloud disk dedicated master nodes, you must specify the instance family with the <code>.new</code> suffix, for example, elasticsearch.sn1ne.large.new.</p>
+     * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based dedicated master nodes, specify the instance family with the <code>.new</code> suffix. Example: elasticsearch.sn1ne.large.new.</p>
      * </blockquote>
      */
     @NameInMap("masterConfiguration")
     public MasterNodeConfiguration masterConfiguration;
 
     /**
-     * <p>Network configuration.</p>
+     * <p>The network configuration.</p>
      * <blockquote>
-     * <p>Specifying IP whitelists is not supported when creating an instance.</p>
+     * <p>You cannot specify an IP whitelist when creating an instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -110,16 +110,16 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer nodeAmount;
 
     /**
-     * <p>Data node configuration.</p>
+     * <p>The data node configuration.</p>
      * <blockquote>
-     * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you use createInstance to create an instance with next-generation cloud disk data nodes, you must specify the instance family with the <code>.new</code> suffix, for example, elasticsearch.sn1ne.large.new.</p>
+     * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based data nodes, specify the instance family with the <code>.new</code> suffix. Example: elasticsearch.sn1ne.large.new.</p>
      * </blockquote>
      */
     @NameInMap("nodeSpec")
     public NodeSpec nodeSpec;
 
     /**
-     * <p>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</p>
+     * <p>The payment details of the subscription instance. This parameter is required when you create a subscription instance.</p>
      */
     @NameInMap("paymentInfo")
     public PaymentInfo paymentInfo;
@@ -127,7 +127,7 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>postpaid: pay-as-you-go.</li>
+     * <li>postpaid: pay-as-you-go billing method.</li>
      * <li>prepaid: subscription.</li>
      * </ul>
      * 
@@ -147,13 +147,13 @@ public class CreateInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Instance tags.</p>
+     * <p>The instance tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateInstanceRequestTags> tags;
 
     /**
-     * <p>Cold data node configuration.</p>
+     * <p>The warm node configuration. Warm nodes are used to store cold data that is migrated from data nodes.</p>
      */
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
@@ -168,7 +168,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer zoneCount;
 
     /**
-     * <p>Used to ensure the idempotency of the request. The parameter value is generated by the client and must be unique across different requests. The value cannot exceed 64 ASCII characters.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The value is generated by the client and must be unique among different requests. The maximum length is 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>

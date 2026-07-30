@@ -113,7 +113,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         /**
          * <p>The endpoint status. Valid values:</p>
          * <ul>
-         * <li><p>Disconnected: not connected.</p>
+         * <li><p>Disconnected: disconnected.</p>
          * </li>
          * <li><p>Connected: connected.</p>
          * </li>

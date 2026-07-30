@@ -14,9 +14,9 @@ public class ResumeElasticsearchTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return result:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
-     * <li>true: The interrupted change was resumed successfully.</li>
+     * <li>true: The interrupted change is resumed.</li>
      * <li>false: The interrupted change failed to be resumed.</li>
      * </ul>
      * 

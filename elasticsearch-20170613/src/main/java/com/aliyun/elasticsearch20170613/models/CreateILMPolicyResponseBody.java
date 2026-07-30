@@ -14,7 +14,7 @@ public class CreateILMPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the lifecycle policy that is created.</p>
+     * <p>The name of the lifecycle policy created by the request.</p>
      * 
      * <strong>example:</strong>
      * <p>my-policy</p>

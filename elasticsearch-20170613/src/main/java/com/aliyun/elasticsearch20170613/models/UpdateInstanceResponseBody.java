@@ -91,7 +91,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>节点规格。</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.n4.small</p>
@@ -167,7 +167,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>节点规格。</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.large</p>
@@ -227,7 +227,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         /**
          * <p>The storage type of the node. Valid values:</p>
          * <ul>
-         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_ssd: standard SSD.</li>
          * <li>cloud_efficiency: ultra disk.</li>
          * </ul>
          * 
@@ -238,7 +238,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>节点规格。</p>
+         * <p>The node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn2ne.xlarge</p>
@@ -297,7 +297,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>实例的私网访问域名。</p>
+         * <p>The internal-facing access endpoint of the instance for private network access.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-abc.elasticsearch.aliyuncs.com</p>
@@ -353,7 +353,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>prepaid: subscription</li>
+         * <li>prepaid: subscription.</li>
          * <li>postpaid: pay-as-you-go.</li>
          * </ul>
          * 
@@ -366,9 +366,9 @@ public class UpdateInstanceResponseBody extends TeaModel {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <ul>
-         * <li>active: Normal</li>
-         * <li>activating: Taking effect</li>
-         * <li>inactive: Frozen</li>
+         * <li>active: Normal.</li>
+         * <li>activating: Taking effect.</li>
+         * <li>inactive: Frozen.</li>
          * <li>invalid: Invalid.</li>
          * </ul>
          * 

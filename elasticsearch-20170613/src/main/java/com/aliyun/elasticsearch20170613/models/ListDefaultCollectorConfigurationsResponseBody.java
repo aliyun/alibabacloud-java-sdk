@@ -14,7 +14,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListDefaultCollectorConfigurationsResponseBodyResult> result;

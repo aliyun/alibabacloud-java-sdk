@@ -76,7 +76,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The resource count of TagResource resources found.</p>
+         * <p>The resource count of TagResource entries found.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

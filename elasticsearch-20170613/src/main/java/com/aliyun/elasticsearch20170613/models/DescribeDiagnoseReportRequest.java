@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnoseReportRequest extends TeaModel {
     /**
-     * <p>The language of the intelligent diagnostic report. Default value: the browser language. Valid values:</p>
+     * <p>The language in which the intelligent diagnostic report is generated. Default value: browser language. Valid values:</p>
      * <ul>
      * <li>en: English</li>
      * <li>zh: Simplified Chinese</li>

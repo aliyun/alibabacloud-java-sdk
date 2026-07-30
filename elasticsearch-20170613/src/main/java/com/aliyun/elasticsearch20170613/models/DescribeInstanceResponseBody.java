@@ -87,7 +87,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS: Object Storage Service (OSS). Make sure that the OSS bucket has public read permissions.</li>
+         * <li>OSS: OSS open storage (the OSS bucket must be publicly readable).</li>
          * <li>ORIGIN: Open-source Elasticsearch.</li>
          * <li>UPLOAD: Uploaded file.</li>
          * </ul>
@@ -267,7 +267,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS: Object Storage Service (OSS). Make sure that the OSS bucket has public read permissions.</li>
+         * <li>OSS: OSS open storage (the OSS bucket must be publicly readable).</li>
          * <li>ORIGIN: Open-source Elasticsearch.</li>
          * <li>UPLOAD: Uploaded file.</li>
          * </ul>
@@ -534,7 +534,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS: Uses OSS.</li>
+         * <li>OSS: Uses OSS open storage.</li>
          * <li>ORIGIN: Retains the previously uploaded dictionary.</li>
          * </ul>
          * 
@@ -545,9 +545,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the dictionary to update. Valid values:</p>
+         * <p>The type of dictionary to update. Valid values:</p>
          * <ul>
-         * <li>MAIN: IK main dictionary</li>
+         * <li>MAIN: IK main dictionary.</li>
          * <li>STOP: IK stopword dictionary.</li>
          * </ul>
          * 
@@ -948,7 +948,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
          * <p>The disk type of the node. Valid values:</p>
          * <ul>
          * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_efficiency: ultra disk</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -958,7 +958,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The performance level (PL) of the ESSD. This parameter is required when diskType is set to cloud_essd. Valid values: PL1, PL2, and PL3.</p>
+         * <p>The performance level (PL) of the ESSD cloud disk. This parameter is required when diskType is set to cloud_essd. Valid values: PL1, PL2, and PL3. When diskType is set to cloud_ssd, the disk type is standard SSD.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -1288,7 +1288,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
          * <p>The zone status. Valid values:</p>
          * <ul>
          * <li>ISOLATION: offline</li>
-         * <li>NORMAL: normal.</li>
+         * <li>NORMAL: normal</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1425,7 +1425,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public DescribeInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
         /**
-         * <p>Indicates whether internal-facing access to Kibana is enabled. Valid values:</p>
+         * <p>Indicates whether internal-facing private network access to Kibana is enabled. Valid values:</p>
          * <ul>
          * <li><p>true: Enabled.</p>
          * </li>
@@ -1473,7 +1473,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The private endpoints for each zone of an HP_ALILB multi-zone instance.</p>
+         * <p>The private endpoints for each zone of HP_ALILB multi-zone instances.</p>
          */
         @NameInMap("endpoints")
         public java.util.List<DescribeInstanceResponseBodyResultEndpoints> endpoints;
@@ -1488,13 +1488,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public java.util.Map<String, ?> esConfig;
 
         /**
-         * <p>The internal-facing access blacklist (deprecated).</p>
+         * <p>The internal-facing private network access blacklist (deprecated).</p>
          */
         @NameInMap("esIPBlacklist")
         public java.util.List<String> esIPBlacklist;
 
         /**
-         * <p>The internal-facing access whitelist (deprecated).</p>
+         * <p>The internal-facing private network access whitelist (deprecated).</p>
          */
         @NameInMap("esIPWhitelist")
         public java.util.List<String> esIPWhitelist;
@@ -1545,7 +1545,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean haveKibana;
 
         /**
-         * <p>The IK dictionary hot update configuration.</p>
+         * <p>The IK hot update dictionary configuration.</p>
          */
         @NameInMap("ikHotDicts")
         public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> ikHotDicts;
@@ -1554,10 +1554,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean inited;
 
         /**
-         * <p>The edition of the instance. Valid values:</p>
+         * <p>The edition type of the instance. Valid values:</p>
          * <ul>
          * <li>x-pack: Commercial Edition.</li>
-         * <li>advanced/IS: Advanced Edition.</li>
+         * <li>advanced/IS: Enhanced Edition.</li>
          * <li>community: Basic Edition.</li>
          * </ul>
          * 
@@ -1816,7 +1816,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String vpcInstanceId;
 
         /**
-         * <p>Specifies whether warm data nodes are enabled. Valid values:</p>
+         * <p>Indicates whether warm data nodes is enabled. Valid values:</p>
          * <ul>
          * <li><p>true: Enabled.</p>
          * </li>

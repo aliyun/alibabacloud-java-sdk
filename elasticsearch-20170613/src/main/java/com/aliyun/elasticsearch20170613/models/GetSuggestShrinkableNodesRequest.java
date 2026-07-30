@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSuggestShrinkableNodesRequest extends TeaModel {
     /**
-     * <p>The expected number of removable nodes to retrieve.</p>
+     * <p>The expected number of nodes available for scale-in to retrieve.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

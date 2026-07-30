@@ -14,7 +14,7 @@ public class DeleteDeprecatedTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result. Valid values:</p>
+     * <p>The returned result. Valid values:</p>
      * <ul>
      * <li>true: succeeded.</li>
      * <li>false: failed.</li>

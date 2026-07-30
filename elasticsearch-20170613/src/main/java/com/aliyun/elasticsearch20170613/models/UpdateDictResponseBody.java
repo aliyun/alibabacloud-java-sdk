@@ -14,7 +14,7 @@ public class UpdateDictResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<UpdateDictResponseBodyResult> result;
@@ -62,8 +62,8 @@ public class UpdateDictResponseBody extends TeaModel {
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
          * <ul>
-         * <li>OSS: Object Storage Service (OSS).</li>
-         * <li>ORIGIN: Retains the previously uploaded dictionary.</li>
+         * <li>OSS: OSS open storage.</li>
+         * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,9 +73,9 @@ public class UpdateDictResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the dictionary. Valid values:</p>
+         * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li>MAIN: IK main dictionary.</li>
+         * <li>MAIN: IK main tokenizer dictionary.</li>
          * <li>STOP: IK stopword dictionary.</li>
          * </ul>
          * 

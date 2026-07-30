@@ -62,7 +62,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>OSS: OSS open storage. Make sure that the OSS bucket has public-read permission.</li>
+         * <li>OSS: OSS open storage (the OSS bucket must be publicly readable).</li>
          * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
@@ -137,7 +137,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage size of the node. Unit: GB.</p>
+         * <p>The storage space size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -213,7 +213,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The storage size of the node. Unit: GB.</p>
+         * <p>The storage space size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -289,7 +289,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp16k1dvzxtmagcva****</p>
@@ -356,7 +356,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     public static class MoveResourceGroupResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The storage size of the node. Unit: GB.</p>
+         * <p>The storage space size of the node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -435,7 +435,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The source type. Valid values:</p>
          * <ul>
-         * <li>OSS: OSS open storage. Make sure that the OSS bucket has public-read permission.</li>
+         * <li>OSS: OSS open storage (the OSS bucket must be publicly readable).</li>
          * <li>ORIGIN: retains the previously uploaded dictionary.</li>
          * </ul>
          * 
@@ -525,7 +525,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList;
 
         /**
-         * <p>The internal endpoint of the instance.</p>
+         * <p>The internal network access address of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
@@ -552,13 +552,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The configuration of Kibana nodes.</p>
+         * <p>The Kibana node configuration.</p>
          */
         @NameInMap("kibanaConfiguration")
         public MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
         /**
-         * <p>The public network access address for Kibana.</p>
+         * <p>The Kibana public network access address.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</p>
@@ -567,7 +567,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String kibanaDomain;
 
         /**
-         * <p>The public port for Kibana.</p>
+         * <p>The Kibana public network port.</p>
          * 
          * <strong>example:</strong>
          * <p>5601</p>
@@ -576,7 +576,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer kibanaPort;
 
         /**
-         * <p>The configuration of master nodes.</p>
+         * <p>The master node configuration.</p>
          */
         @NameInMap("masterConfiguration")
         public MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration;
@@ -588,7 +588,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public MoveResourceGroupResponseBodyResultNetworkConfig networkConfig;
 
         /**
-         * <p>The number of data nodes of the instance.</p>
+         * <p>The number of data nodes in the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -597,7 +597,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The configuration of data nodes.</p>
+         * <p>The data node configuration.</p>
          */
         @NameInMap("nodeSpec")
         public MoveResourceGroupResponseBodyResultNodeSpec nodeSpec;
@@ -625,7 +625,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         public String publicDomain;
 
         /**
-         * <p>The public port.</p>
+         * <p>The public network port.</p>
          * 
          * <strong>example:</strong>
          * <p>9200</p>
@@ -639,7 +639,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
          * <li>active: Normal.</li>
          * <li>activating: Taking effect.</li>
          * <li>inactive: Frozen.</li>
-         * <li>invalid: Expired.</li>
+         * <li>invalid: Invalid.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -84,7 +84,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultZoneInfos extends TeaModel {
         /**
-         * <p>The status of the zone. Valid values:</p>
+         * <p>The zone status. Valid values:</p>
          * <ul>
          * <li>ISOLATION: offline.</li>
          * <li>NORMAL: Normal.</li>
@@ -296,7 +296,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The specification of the node.</p>
+         * <p>The node specification.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch.sn1ne.large</p>
@@ -357,7 +357,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The instance labels.</p>
+         * <p>The instance tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeLogstashResponseBodyResultTags> tags;
@@ -369,7 +369,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos;
 
         /**
-         * <p>The instance configuration.</p>
+         * <p>The instance configuration information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</p>
@@ -387,7 +387,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-cn-abc</p>
@@ -429,7 +429,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The configuration of the node.</p>
+         * <p>The configuration information of the node.</p>
          */
         @NameInMap("nodeSpec")
         public DescribeLogstashResponseBodyResultNodeSpec nodeSpec;
@@ -438,7 +438,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
          * <li>prepaid: subscription</li>
-         * <li>postpaid: pay-as-you-go.</li>
+         * <li>postpaid: pay-as-you-go</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,7 +472,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         public String updatedAt;
 
         /**
-         * <p>The version of the instance.</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>7.4.0_with_X-Pack</p>

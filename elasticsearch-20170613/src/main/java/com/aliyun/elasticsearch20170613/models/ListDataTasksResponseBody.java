@@ -96,7 +96,7 @@ public class ListDataTasksResponseBody extends TeaModel {
         public String vpcInstanceId;
 
         /**
-         * <p>The port number used to access the cluster.</p>
+         * <p>The access port of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>9200</p>

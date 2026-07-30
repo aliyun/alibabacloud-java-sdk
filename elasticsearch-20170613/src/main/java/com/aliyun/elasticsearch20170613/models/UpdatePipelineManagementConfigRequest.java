@@ -14,7 +14,7 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     public String esInstanceId;
 
     /**
-     * <p>The password used to log on to Kibana.</p>
+     * <p>The password for logging on to Kibana.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -42,7 +42,7 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     public String pipelineManagementType;
 
     /**
-     * <p>The username used to log on to Kibana.</p>
+     * <p>The username for logging on to Kibana.</p>
      * 
      * <strong>example:</strong>
      * <p>elastic</p>
@@ -51,7 +51,7 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>A unique token used to ensure idempotence of the request. The client generates this value. The value must be unique across different requests and can contain up to 64 ASCII characters.</p>
+     * <p>A unique token used to ensure idempotency of the request. The client generates this value. It must be unique across different requests and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>

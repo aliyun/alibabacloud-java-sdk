@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserPluginResponseBody extends TeaModel {
     /**
-     * <p>Response header information.</p>
+     * <p>The response headers.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;totalCount\&quot;: 1, \&quot;X-Total-Count\&quot;: 1}</p>
@@ -14,7 +14,7 @@ public class ListUserPluginResponseBody extends TeaModel {
     public java.util.Map<String, ?> headers;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5EEF8FAE-EEDD***</p>
@@ -23,7 +23,7 @@ public class ListUserPluginResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return Result array</p>
+     * <p>The result array.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListUserPluginResponseBodyResult> result;
@@ -59,7 +59,7 @@ public class ListUserPluginResponseBody extends TeaModel {
 
     public static class ListUserPluginResponseBodyResultBingoPlugins extends TeaModel {
         /**
-         * <p>Plugin Description.</p>
+         * <p>The plug-in description.</p>
          * 
          * <strong>example:</strong>
          * <p>The plugin***</p>
@@ -68,7 +68,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Elasticsearch version of the plugin.</p>
+         * <p>The Elasticsearch version of the plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>8.17.0</p>
@@ -77,7 +77,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String elasticsearchVersion;
 
         /**
-         * <p>Plugin UUID</p>
+         * <p>The unique identifier of the plug-in.</p>
          * 
          * <strong>example:</strong>
          * <p>CAEQaRiBgIDI2tie6hkiIGIwM2I3MjZmNjk3YzR***</p>
@@ -86,7 +86,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String fileVersion;
 
         /**
-         * <p>Plugin Name.</p>
+         * <p>The plug-in name.</p>
          * 
          * <strong>example:</strong>
          * <p>dynamic-name</p>
@@ -95,10 +95,10 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Plugin Source. Valid values:</p>
+         * <p>The plug-in source. Valid values:</p>
          * <ul>
-         * <li>USER: Custom plugin  </li>
-         * <li>SYSTEM: Preset system plugin</li>
+         * <li>USER: custom plug-in.</li>
+         * <li>SYSTEM: system preset plug-in.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,16 +108,16 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>Plugin Status</p>
+         * <p>The plug-in status. Valid values: </p>
          * <ul>
-         * <li>INSTALLED,</li>
-         * <li>UNINSTALLED,</li>
-         * <li>INSTALLING,</li>
-         * <li>UNINSTALLING,</li>
-         * <li>UPGRADING,</li>
-         * <li>FAILED,</li>
-         * <li>UNKNOWN,</li>
-         * <li>UPLOADING,</li>
+         * <li>INSTALLED</li>
+         * <li>UNINSTALLED</li>
+         * <li>INSTALLING</li>
+         * <li>UNINSTALLING</li>
+         * <li>UPGRADING</li>
+         * <li>FAILED</li>
+         * <li>UNKNOWN</li>
+         * <li>UPLOADING</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>Plugin Version.</p>
+         * <p>The plug-in version.</p>
          * 
          * <strong>example:</strong>
          * <p>8.17.0</p>
@@ -200,13 +200,13 @@ public class ListUserPluginResponseBody extends TeaModel {
 
     public static class ListUserPluginResponseBodyResult extends TeaModel {
         /**
-         * <p>List of plugins with the same name</p>
+         * <p>The list of plug-ins with the same name.</p>
          */
         @NameInMap("bingoPlugins")
         public java.util.List<ListUserPluginResponseBodyResultBingoPlugins> bingoPlugins;
 
         /**
-         * <p>Plugin Name.</p>
+         * <p>The plug-in name.</p>
          * 
          * <strong>example:</strong>
          * <p>ct-test</p>
@@ -215,7 +215,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Plugin Source.</p>
+         * <p>The plug-in source.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -224,7 +224,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>Plugin Status.</p>
+         * <p>The plug-in status.</p>
          * 
          * <strong>example:</strong>
          * <p>UNINSTALLED</p>
@@ -233,7 +233,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>Plugin Version.</p>
+         * <p>The plug-in version.</p>
          * 
          * <strong>example:</strong>
          * <p>8.17.0</p>

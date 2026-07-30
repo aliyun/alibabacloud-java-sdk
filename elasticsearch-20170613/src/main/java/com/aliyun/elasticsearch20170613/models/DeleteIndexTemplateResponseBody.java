@@ -14,7 +14,7 @@ public class DeleteIndexTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result. Valid values:</p>
+     * <p>The result of the operation. Valid values:</p>
      * <ul>
      * <li><p>true: The index template was deleted.</p>
      * </li>

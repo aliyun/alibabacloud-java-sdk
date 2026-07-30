@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
-     * <p>The instance name. Fuzzy search is supported. For example, if you search for all instances matching <strong>abc</strong>, all instances named <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong> may be returned.</p>
+     * <p>The instance name. Fuzzy match is supported. For example, if you search for <strong>abc</strong>, instances named <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong> may be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyunes_test1</p>
@@ -23,11 +23,11 @@ public class ListInstanceRequest extends TeaModel {
     public String esVersion;
 
     /**
-     * <p>The edition type of the instance. Valid values:</p>
+     * <p>The instance edition. Valid values:</p>
      * <ul>
      * <li><p>x-pack: Commercial Edition</p>
      * </li>
-     * <li><p>advanced/IS: Enhanced Edition</p>
+     * <li><p>advanced/IS: Advanced Edition</p>
      * </li>
      * <li><p>community: Basic Edition</p>
      * </li>
@@ -50,7 +50,7 @@ public class ListInstanceRequest extends TeaModel {
 
     /**
      * <p>The page number of the instance list.
-     * Start value: <strong>1</strong>, default value: <strong>1</strong>.</p>
+     * Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -83,7 +83,7 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of entries per page for paginated queries. Maximum value: <strong>100</strong>, default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging queries. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -104,7 +104,7 @@ public class ListInstanceRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) where the instance is deployed.</p>
+     * <p>The ID of the virtual private cloud (VPC) in which the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp16k1dvzxtmagcva****</p>

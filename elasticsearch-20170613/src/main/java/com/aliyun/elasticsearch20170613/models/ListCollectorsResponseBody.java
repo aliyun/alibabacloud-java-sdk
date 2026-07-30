@@ -125,10 +125,10 @@ public class ListCollectorsResponseBody extends TeaModel {
 
     public static class ListCollectorsResponseBodyResultExtendConfigsMachines extends TeaModel {
         /**
-         * <p>The status of each collector on the ECS instance. Valid values:</p>
+         * <p>The status of the collector on the ECS instance. Valid values:</p>
          * <ul>
-         * <li>heartOk: The heartbeat is normal.</li>
-         * <li>heartLost: The heartbeat is abnormal.</li>
+         * <li>heartOk: Normal heartbeat.</li>
+         * <li>heartLost: Abnormal heartbeat.</li>
          * <li>uninstalled: Not installed.</li>
          * <li>failed: Installation failed.</li>
          * </ul>
@@ -140,7 +140,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         public String agentStatus;
 
         /**
-         * <p>The list of ECS machine IDs.</p>
+         * <p>The ECS machine ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp13y63575oypr9d****</p>
@@ -177,7 +177,7 @@ public class ListCollectorsResponseBody extends TeaModel {
          * <ul>
          * <li>collectorTargetInstance: the collector Output</li>
          * <li>collectorDeployMachine: the deployment machine of the collector</li>
-         * <li>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana dashboards.</li>
+         * <li>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana dashboards</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of instance specified in the collector Output. Valid values: elasticsearch, logstash. This parameter is displayed when <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
+         * <p>The type of instance specified in the collector Output. Supported values: elasticsearch, logstash. This parameter is displayed when <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>elasticsearch</p>
@@ -256,7 +256,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         public java.util.List<ListCollectorsResponseBodyResultExtendConfigsMachines> machines;
 
         /**
-         * <p>The transmission protocol, which must be consistent with the access protocol of the instance specified in the collector Output. Valid values: HTTP, HTTPS. This parameter is displayed when <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
+         * <p>The transmission protocol, which must be consistent with the access protocol of the instance specified in the collector Output. Supported values: HTTP, HTTPS. This parameter is displayed when <strong>configType</strong> is <strong>collectorTargetInstance</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -287,7 +287,7 @@ public class ListCollectorsResponseBody extends TeaModel {
          * <ul>
          * <li><p>ECSInstanceId: ECS</p>
          * </li>
-         * <li><p>ACKCluster: Container Kubernetes.</p>
+         * <li><p>ACKCluster: Container Kubernetes</p>
          * </li>
          * </ul>
          * 
@@ -436,10 +436,10 @@ public class ListCollectorsResponseBody extends TeaModel {
         public java.util.List<ListCollectorsResponseBodyResultConfigs> configs;
 
         /**
-         * <p>Indicates whether the collector is validated only without being created. Valid values:</p>
+         * <p>Indicates whether the collector is validated and created. Valid values:</p>
          * <ul>
-         * <li>true: Only validates without creating.</li>
-         * <li>false: Validates and creates.</li>
+         * <li>true: Only validated, not created.</li>
+         * <li>false: Validated and created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -500,7 +500,7 @@ public class ListCollectorsResponseBody extends TeaModel {
         public String resId;
 
         /**
-         * <p>The collector type. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
+         * <p>The collector type. Supported values: fileBeat, metricBeat, heartBeat, and auditBeat.</p>
          * 
          * <strong>example:</strong>
          * <p>fileBeat</p>

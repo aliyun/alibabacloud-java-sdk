@@ -14,7 +14,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the index template.</p>
+     * <p>The index template details.</p>
      */
     @NameInMap("Result")
     public DescribeIndexTemplateResponseBodyResult result;
@@ -117,7 +117,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public Boolean dataStream;
 
         /**
-         * <p>The Policy Name of the lifecycle epoch.</p>
+         * <p>The lifecycle policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>cube_default_ilm_policy</p>
@@ -129,7 +129,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         public java.util.List<String> indexPatterns;
 
         /**
-         * <p>The name of the index template.</p>
+         * <p>The index template name.</p>
          * 
          * <strong>example:</strong>
          * <p>data-stream-default</p>

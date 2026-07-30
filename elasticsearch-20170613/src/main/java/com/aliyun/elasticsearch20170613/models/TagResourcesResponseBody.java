@@ -14,10 +14,10 @@ public class TagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. Valid values:</p>
+     * <p>The result. Valid values:</p>
      * <ul>
-     * <li>true: The tag-resource relationships are created.</li>
-     * <li>false: The tag-resource relationships failed to be created.</li>
+     * <li>true: The tag-resource relationship is created.</li>
+     * <li>false: The tag-resource relationship failed to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiagnoseInstanceRequest extends TeaModel {
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A unique token used to ensure idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -45,7 +45,7 @@ public class DiagnoseInstanceRequest extends TeaModel {
      * <li>zh: Simplified Chinese</li>
      * <li>zt: Traditional Chinese</li>
      * <li>es: Spanish</li>
-     * <li>fr: French.</li>
+     * <li>fr: French</li>
      * </ul>
      * 
      * <strong>example:</strong>

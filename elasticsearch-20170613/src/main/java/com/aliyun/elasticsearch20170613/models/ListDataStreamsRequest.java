@@ -7,9 +7,9 @@ public class ListDataStreamsRequest extends TeaModel {
     /**
      * <p>Specifies whether to display only managed indexes. Valid values:</p>
      * <ul>
-     * <li><p>true: displays only managed indexes.</p>
+     * <li><p>true: Only managed indexes are displayed.</p>
      * </li>
-     * <li><p>false (default): displays all indexes.</p>
+     * <li><p>false (default): All indexes are displayed.</p>
      * </li>
      * </ul>
      * 

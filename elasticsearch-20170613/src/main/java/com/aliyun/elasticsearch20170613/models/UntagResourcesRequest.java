@@ -14,7 +14,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The list of resources to delete.</p>
+     * <p>The list of resources from which you want to delete tags.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;es-cn-09k1rocex0006****&quot;,&quot;es-cn-oew1rgiev0009****&quot;]</p>
@@ -23,7 +23,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>The resource type. Set this to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
@@ -32,7 +32,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags to delete. A maximum of 20 items can be specified.</p>
+     * <p>The list of tag keys to delete. A maximum of 20 items can be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;tagKey1&quot;,&quot;tagKey2&quot;]</p>

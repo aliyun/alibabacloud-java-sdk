@@ -57,7 +57,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         public java.util.List<String> ips;
 
         /**
-         * <p>The whitelist type. The value is fixed as PRIVATE_ES, which indicates the private network internal-facing access whitelist.</p>
+         * <p>The whitelist type. The value is fixed as PRIVATE_ES, which indicates the private network access whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE_ES</p>
@@ -120,7 +120,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
     public static class UpdateWhiteIpsResponseBodyResult extends TeaModel {
         /**
-         * <p>The private network internal-facing access whitelist (deprecated).</p>
+         * <p>The private network access whitelist (deprecated).</p>
          */
         @NameInMap("esIPWhitelist")
         public java.util.List<String> esIPWhitelist;
