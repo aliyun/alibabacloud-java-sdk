@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobResponseBody extends TeaModel {
     /**
-     * <p>The visibility of the job. Valid values:</p>
-     * <ul>
-     * <li>PUBLIC: Visible to all users in this workspace.</li>
-     * <li>PRIVATE (default): Visible only to you and administrators in this workspace.</li>
-     * </ul>
+     * <p>The visibility of the task. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -60,7 +56,7 @@ public class GetJobResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The job running duration, in seconds.</p>
+     * <p>The job duration, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3602</p>
@@ -75,7 +71,7 @@ public class GetJobResponseBody extends TeaModel {
     public JobElasticSpec elasticSpec;
 
     /**
-     * <p>Indicates whether the debugger is enabled for the job.</p>
+     * <p>Specifies whether the debugger task is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -108,7 +104,7 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtFailedTime;
 
     /**
-     * <p>The job finish time (UTC).</p>
+     * <p>The time when the task finished (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
@@ -207,7 +203,7 @@ public class GetJobResponseBody extends TeaModel {
     public String reasonCode;
 
     /**
-     * <p>The detailed description of the status.</p>
+     * <p>The detailed description of the status detail.</p>
      * 
      * <strong>example:</strong>
      * <p>Job is stopped by user.</p>
@@ -234,7 +230,7 @@ public class GetJobResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource level used by the job at runtime.</p>
+     * <p>The resource level used when the job runs.</p>
      * 
      * <strong>example:</strong>
      * <p>L0</p>
@@ -258,7 +254,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.List<GetJobResponseBodyRestartRecord> restartRecord;
 
     /**
-     * <p>The number of retries used and the maximum number of retries for the job.</p>
+     * <p>The used retry count and maximum retry count for the job.</p>
      * 
      * <strong>example:</strong>
      * <p>0/10</p>
@@ -277,28 +273,13 @@ public class GetJobResponseBody extends TeaModel {
     public String schedulingStrategy;
 
     /**
-     * <p>The additional parameter settings of the job.</p>
+     * <p>The additional parameter settings for the job.</p>
      */
     @NameInMap("Settings")
     public JobSettings settings;
 
     /**
      * <p>The job running status. Valid values:</p>
-     * <ul>
-     * <li>Creating</li>
-     * <li>Queuing</li>
-     * <li>Bidding (currently only for Lingjun spot jobs)</li>
-     * <li>EnvPreparing</li>
-     * <li>SanityChecking</li>
-     * <li>Running</li>
-     * <li>Restarting</li>
-     * <li>Stopping</li>
-     * <li>SucceededReserving</li>
-     * <li>FailedReserving</li>
-     * <li>Succeeded</li>
-     * <li>Failed</li>
-     * <li>Stopped</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Stopped</p>
@@ -307,13 +288,13 @@ public class GetJobResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The historical statuses.</p>
+     * <p>The status history.</p>
      */
     @NameInMap("StatusHistory")
     public java.util.List<StatusTransitionItem> statusHistory;
 
     /**
-     * <p>The job sub-status, such as preemption retry status.</p>
+     * <p>The job substatus, such as preemption retry status.</p>
      * 
      * <strong>example:</strong>
      * <p>Restarting</p>
@@ -911,7 +892,7 @@ public class GetJobResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The local mount path. This is an optional parameter. If left empty, the mount path specified in the data source is used.</p>
+         * <p>The local mount path. This is an optional parameter. The default value is empty, which indicates that the mount path in the data source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/data/</p>
@@ -961,7 +942,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyPodsHistoryPods extends TeaModel {
         /**
-         * <p>The pod running duration.</p>
+         * <p>The pod duration.</p>
          */
         @NameInMap("Duration")
         public Double duration;
@@ -1018,7 +999,7 @@ public class GetJobResponseBody extends TeaModel {
         public String podId;
 
         /**
-         * <p>The IP addresses of the pod.</p>
+         * <p>The pod IP addresses.</p>
          */
         @NameInMap("PodIps")
         public java.util.List<PodNetworkInterface> podIps;
@@ -1051,11 +1032,7 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The pod sub-status, such as preemption status. Valid values:</p>
-         * <ul>
-         * <li>Normal</li>
-         * <li>Evicted</li>
-         * </ul>
+         * <p>The pod substatus, such as preemption status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1200,7 +1177,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyPods extends TeaModel {
         /**
-         * <p>The pod running duration.</p>
+         * <p>The pod duration.</p>
          */
         @NameInMap("Duration")
         public Double duration;
@@ -1233,7 +1210,7 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtStartTime;
 
         /**
-         * <p>The historical pods.</p>
+         * <p>The history pods.</p>
          */
         @NameInMap("HistoryPods")
         public java.util.List<GetJobResponseBodyPodsHistoryPods> historyPods;
@@ -1254,7 +1231,7 @@ public class GetJobResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The pod ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events of the pod.</p>
+         * <p>The pod ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events for the pod.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>
@@ -1263,7 +1240,7 @@ public class GetJobResponseBody extends TeaModel {
         public String podId;
 
         /**
-         * <p>The IP addresses of the pod.</p>
+         * <p>The pod IP addresses.</p>
          */
         @NameInMap("PodIps")
         public java.util.List<PodNetworkInterface> podIps;
@@ -1288,13 +1265,6 @@ public class GetJobResponseBody extends TeaModel {
 
         /**
          * <p>The pod status. Valid values:</p>
-         * <ul>
-         * <li>Pending</li>
-         * <li>Running</li>
-         * <li>Succeeded</li>
-         * <li>Failed</li>
-         * <li>Unknown</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -1303,11 +1273,7 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The pod sub-status, such as preemption status. Valid values:</p>
-         * <ul>
-         * <li>Normal</li>
-         * <li>Evicted</li>
-         * </ul>
+         * <p>The pod substatus, such as preemption status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1316,7 +1282,7 @@ public class GetJobResponseBody extends TeaModel {
         public String subStatus;
 
         /**
-         * <p>The pod type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</p>
+         * <p>The pod type, which corresponds to a JobSpec in JobSpecs of CreateJob.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>
@@ -1484,7 +1450,7 @@ public class GetJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The fault message.</p>
+         * <p>The fault error message.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
@@ -1502,7 +1468,7 @@ public class GetJobResponseBody extends TeaModel {
         public String node;
 
         /**
-         * <p>The instance.</p>
+         * <p>The pod.</p>
          */
         @NameInMap("Pod")
         public String pod;
@@ -1594,13 +1560,13 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyRestartRecord extends TeaModel {
         /**
-         * <p>The list of fault information.</p>
+         * <p>The list of fault error messages.</p>
          */
         @NameInMap("DetailErrorInfoList")
         public java.util.List<GetJobResponseBodyRestartRecordDetailErrorInfoList> detailErrorInfoList;
 
         /**
-         * <p>The job restart count.</p>
+         * <p>The number of job restarts.</p>
          */
         @NameInMap("JobRestartCount")
         public Long jobRestartCount;
@@ -1618,19 +1584,19 @@ public class GetJobResponseBody extends TeaModel {
         public String occurTime;
 
         /**
-         * <p>The reason.</p>
+         * <p>The reason for the restart.</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The restart duration.</p>
+         * <p>The restart duration, in seconds.</p>
          */
         @NameInMap("RestartDurationInSec")
         public Long restartDurationInSec;
 
         /**
-         * <p>The restart failure reason.</p>
+         * <p>The reason for the restart failure.</p>
          */
         @NameInMap("RestartFailReason")
         public String restartFailReason;
@@ -1740,14 +1706,12 @@ public class GetJobResponseBody extends TeaModel {
     public static class GetJobResponseBodyUserVpc extends TeaModel {
         /**
          * <p>The default routing. This parameter is valid only for general computing resources. Valid values:</p>
-         * <p>eth0: uses the default network interface controller (NIC) to access external networks through a public gateway.
-         * eth1: uses the user elastic network interfaces (ENIs) to access external networks through a private gateway.</p>
          */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
         /**
-         * <p>The extended CIDR blocks, for example, 192.168.0.1/24.</p>
+         * <p>The extended CIDR blocks. Example: 192.168.0.1/24.</p>
          */
         @NameInMap("ExtendedCidrs")
         public java.util.List<String> extendedCidrs;

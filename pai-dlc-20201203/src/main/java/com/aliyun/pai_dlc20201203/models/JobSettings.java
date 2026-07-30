@@ -65,6 +65,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("Driver")
     public String driver;
 
+    @NameInMap("ElasticSpotJobMaxRestartTimes")
+    public Integer elasticSpotJobMaxRestartTimes;
+
     /**
      * <p>The CPU affinity setting. This setting is effective only when using general computing subscription resources.</p>
      * 
@@ -170,7 +173,7 @@ public class JobSettings extends TeaModel {
     public String jobReservedPolicy;
 
     /**
-     * <p>The output model configuration. This parameter is currently effective only in federated training scenarios.</p>
+     * <p>The output model configuration. This parameter is currently effective only in joint training scenarios.</p>
      */
     @NameInMap("ModelConfig")
     public ModelConfig modelConfig;
@@ -285,6 +288,14 @@ public class JobSettings extends TeaModel {
     }
     public String getDriver() {
         return this.driver;
+    }
+
+    public JobSettings setElasticSpotJobMaxRestartTimes(Integer elasticSpotJobMaxRestartTimes) {
+        this.elasticSpotJobMaxRestartTimes = elasticSpotJobMaxRestartTimes;
+        return this;
+    }
+    public Integer getElasticSpotJobMaxRestartTimes() {
+        return this.elasticSpotJobMaxRestartTimes;
     }
 
     public JobSettings setEnableCPUAffinity(Boolean enableCPUAffinity) {

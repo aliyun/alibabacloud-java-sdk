@@ -819,7 +819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a job.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a node.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -853,7 +853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the detailed configuration and runtime information of a job.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a node.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
