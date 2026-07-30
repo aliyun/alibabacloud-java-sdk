@@ -7,29 +7,15 @@ public class SubmitTuringTaskResponseBody extends TeaModel {
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>400</p>
-     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>551FF252-6CFC-5DDA-9F84-9B07302385C2</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public SubmitTuringTaskResponseBodyResult result;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -79,10 +65,6 @@ public class SubmitTuringTaskResponseBody extends TeaModel {
     }
 
     public static class SubmitTuringTaskResponseBodyResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>874890065171169280</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 

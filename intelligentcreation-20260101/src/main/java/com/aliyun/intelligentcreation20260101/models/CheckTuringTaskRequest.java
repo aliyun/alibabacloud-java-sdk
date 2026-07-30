@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20260101.models;
 import com.aliyun.tea.*;
 
 public class CheckTuringTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>871509423398305792</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

@@ -4,32 +4,18 @@ package com.aliyun.intelligentcreation20260101.models;
 import com.aliyun.tea.*;
 
 public class CheckTuringTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>404</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
     public CheckTuringTaskResponseBodyResult result;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -79,40 +65,35 @@ public class CheckTuringTaskResponseBody extends TeaModel {
     }
 
     public static class CheckTuringTaskResponseBodyResult extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
+        @NameInMap("failBizCode")
+        public String failBizCode;
+
         @NameInMap("failCode")
         public String failCode;
 
         @NameInMap("failMsg")
         public String failMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>success</p>
-         */
         @NameInMap("status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>871509423398305792</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="http://order-45-1318180738.cos.ap-beijing.myqcloud.com/2025/06/09/1a4837f81c594e7790073f22a43439bf.mp4">http://order-45-1318180738.cos.ap-beijing.myqcloud.com/2025/06/09/1a4837f81c594e7790073f22a43439bf.mp4</a></p>
-         */
         @NameInMap("videoUrl")
         public String videoUrl;
 
         public static CheckTuringTaskResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CheckTuringTaskResponseBodyResult self = new CheckTuringTaskResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public CheckTuringTaskResponseBodyResult setFailBizCode(String failBizCode) {
+            this.failBizCode = failBizCode;
+            return this;
+        }
+        public String getFailBizCode() {
+            return this.failBizCode;
         }
 
         public CheckTuringTaskResponseBodyResult setFailCode(String failCode) {
