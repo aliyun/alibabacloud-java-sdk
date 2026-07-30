@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigGroupRequest extends TeaModel {
     /**
-     * <p>The IDs of the configuration groups that you want to delete.</p>
+     * <p>The list of configuration group IDs to delete.</p>
      */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
 
     /**
-     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * <p>The region ID. This operation is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

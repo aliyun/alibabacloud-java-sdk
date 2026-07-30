@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
     /**
-     * <p>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:</p>
+     * <p>Specifies a custom user-mode application that is automatically launched after the credential is obtained.</p>
      * <ul>
-     * <li><p>appPath: the path of the application startup file. Example: <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double slashes (\) as the delimiter. Type of the parameter value: string.</p>
-     * </li>
-     * <li><p>appParameter: the startup arguments of the application. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate multiple arguments with spaces. Type of the parameter value: string.</p>
-     * </li>
+     * <li>appPath: String. The path of the application startup file. Example: <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double backslashes (\\) as path separators.</li>
+     * <li>appParameter: String. The application startup parameters. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate parameters with spaces.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +32,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String commandContent;
 
     /**
-     * <p>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.</p>
+     * <p>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required to generate the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
@@ -43,7 +41,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.</p>
+     * <p>The username of the authorized user of the cloud computer. You must specify an existing authorized user of the cloud computer to generate the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -55,7 +53,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The password of the current end user of the cloud computer.</p>
+     * <p>The password of the authorized user of the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>Ab123456</p>
@@ -64,7 +62,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +87,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <strong>About</strong> on the client logon page to view the identifier of the client.</p>
+     * <p>The unique identifier of the client. If you use the Apsara Uni-manager client, you can view this parameter in the <strong>About</strong> dialog box on the client logon page.</p>
      * 
      * <strong>example:</strong>
      * <p>28c80e90-f71e-4c23-93d6-1225329cf949</p>

@@ -14,7 +14,7 @@ public class QueryHistoryUsageDurationRankRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The end date of the query in <code>YYYY-MM-DD</code> format. You can query data within the last 90 days.</p>
+     * <p>The end date of the query. Format: YYYY-MM-DD. Supports querying data within a maximum of 90 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-19</p>
@@ -23,7 +23,7 @@ public class QueryHistoryUsageDurationRankRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The number of entries to return. The default value is 5, and the maximum value is 200.</p>
+     * <p>The number of results to return. Default value: 5. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -32,7 +32,7 @@ public class QueryHistoryUsageDurationRankRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You can obtain this token from the response to the previous request.</p>
+     * <p>The paging token for the next query. Obtained from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -41,7 +41,7 @@ public class QueryHistoryUsageDurationRankRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The start date of the query in <code>YYYY-MM-DD</code> format. You can query data within the last 90 days.</p>
+     * <p>The start date of the query. Format: YYYY-MM-DD. Supports querying data within a maximum of 90 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-07</p>

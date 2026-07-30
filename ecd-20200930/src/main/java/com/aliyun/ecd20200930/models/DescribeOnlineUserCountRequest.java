@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeOnlineUserCountRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is for internal use only.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DescribeOnlineUserCountRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The office site ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai+dir-631324****</p>
@@ -25,7 +25,7 @@ public class DescribeOnlineUserCountRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -34,7 +34,7 @@ public class DescribeOnlineUserCountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the region to search. This filters the results to show only resources from the specified region.</p>
+     * <p>The region ID used to filter cloud resource information for the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

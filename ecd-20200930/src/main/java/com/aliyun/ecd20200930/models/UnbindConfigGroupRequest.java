@@ -8,7 +8,7 @@ public class UnbindConfigGroupRequest extends TeaModel {
      * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-shanghai</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

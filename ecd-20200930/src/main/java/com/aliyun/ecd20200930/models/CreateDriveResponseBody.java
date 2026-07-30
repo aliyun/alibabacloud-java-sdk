@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDriveResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value 200 indicates that the request was successful.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class CreateDriveResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B7AA****</p>
@@ -93,7 +93,7 @@ public class CreateDriveResponseBody extends TeaModel {
 
     public static class CreateDriveResponseBodyDrive extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1202****</p>
@@ -102,7 +102,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String aliUid;
 
         /**
-         * <p>The description of the storage resource.</p>
+         * <p>The storage resource description.</p>
          * 
          * <strong>example:</strong>
          * <p>test****</p>
@@ -111,7 +111,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the storage resource.</p>
+         * <p>The storage resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dom-aaaa****</p>
@@ -120,7 +120,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String domainId;
 
         /**
-         * <p>The ID of the user-level storage resource.</p>
+         * <p>The user-level storage resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dri-aaaa****</p>
@@ -129,9 +129,9 @@ public class CreateDriveResponseBody extends TeaModel {
         public String driveId;
 
         /**
-         * <p>The ID of the external user-level storage resource.</p>
+         * <p>The external user-level storage resource ID.</p>
          * <blockquote>
-         * <p>A value is returned for this parameter only if ResourceType is set to PDS.</p>
+         * <p>This parameter is returned only when the storage resource type is PDS.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String externalDriveId;
 
         /**
-         * <p>The ID of the external user.</p>
+         * <p>The external user ID.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:user01@cn-hangzhou.120">user01@cn-hangzhou.120</a>****</p>
@@ -150,7 +150,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String externalUserId;
 
         /**
-         * <p>The time when the storage resource was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-02T08:42:26.000+00:00</p>
@@ -159,7 +159,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the storage resource was last modified.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-07T02:46:04.000+00:00</p>
@@ -168,7 +168,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID.</p>
+         * <p>ID。</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,7 +177,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the storage resource.</p>
+         * <p>The storage resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>test****</p>
@@ -200,21 +200,6 @@ public class CreateDriveResponseBody extends TeaModel {
 
         /**
          * <p>The status of the user-level storage resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>INIT: initializing</p>
-         * </li>
-         * <li><p>MAINTAIN: maintaining</p>
-         * </li>
-         * <li><p>DELETING</p>
-         * </li>
-         * <li><p>INVALID</p>
-         * </li>
-         * <li><p>NORMAL</p>
-         * </li>
-         * <li><p>FAIL: failed</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -223,7 +208,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The total amount of the user-level storage resource capacity.</p>
+         * <p>The total capacity of the user-level storage resource.</p>
          * <blockquote>
          * <p>Unit: bytes.</p>
          * </blockquote>
@@ -235,14 +220,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
-         * <p>The usage of the storage resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>DESKTOP: data disk space</p>
-         * </li>
-         * <li><p>USER_PROFILE: space for personal data of the user</p>
-         * </li>
-         * </ul>
+         * <p>The purpose of the storage resource.</p>
          * 
          * <strong>example:</strong>
          * <p>USER_PROFILE</p>
@@ -251,7 +229,7 @@ public class CreateDriveResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The amount of user-level storage resource capacity used.</p>
+         * <p>The used capacity of the user-level storage resource.</p>
          * <blockquote>
          * <p>Unit: bytes.</p>
          * </blockquote>

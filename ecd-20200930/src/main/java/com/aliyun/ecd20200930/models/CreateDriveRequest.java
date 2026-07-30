@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDriveRequest extends TeaModel {
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1202****</p>
@@ -23,9 +23,9 @@ public class CreateDriveRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the storage resource.</p>
+     * <p>The storage resource ID.</p>
      * <blockquote>
-     * <p>Call the DescribeDrives operation to retrieve the storage resource ID.</p>
+     * <p>You can call the DescribeDrives operation to obtain this value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,9 +44,9 @@ public class CreateDriveRequest extends TeaModel {
     public String driveName;
 
     /**
-     * <p>The ID of the external storage resource.</p>
+     * <p>The external storage resource ID.</p>
      * <blockquote>
-     * <p>Call the DescribeDrives operation to retrieve the external storage resource ID.</p>
+     * <p>You can call the DescribeDrives operation to obtain this value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,14 +78,7 @@ public class CreateDriveRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the storage resource.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>NAS: File Storage NAS</p>
-     * </li>
-     * <li><p>PDS: Drive and Photo Service</p>
-     * </li>
-     * </ul>
+     * <p>The storage resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>NAS</p>
@@ -94,14 +87,7 @@ public class CreateDriveRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The usage of the storage resource.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>DESKTOP: data disk space</p>
-     * </li>
-     * <li><p>USER_PROFILE: space for personal data of the user</p>
-     * </li>
-     * </ul>
+     * <p>The purpose of the storage resource.</p>
      * 
      * <strong>example:</strong>
      * <p>USER_PROFILE</p>

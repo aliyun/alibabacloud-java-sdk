@@ -59,7 +59,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
     public static class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules extends TeaModel {
         /**
-         * <p>The client access IP CIDR block, in IPv4 CIDR notation.</p>
+         * <p>The client access IP CIDR block in IPv4 CIDR format.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -101,7 +101,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
     public static class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules extends TeaModel {
         /**
-         * <p>The target of the security group control rule, which is an IPv4 CIDR block.</p>
+         * <p>The object of the security group rule, which is an IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -110,7 +110,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String cidrIp;
 
         /**
-         * <p>The description of the security group control rule.</p>
+         * <p>The description of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -119,7 +119,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The protocol type of the security group control rule.</p>
+         * <p>The protocol type of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>tcp</p>
@@ -128,7 +128,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The authorization policy of the security group control rule.</p>
+         * <p>The authorization policy of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -137,7 +137,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The port range of the security group control rule.</p>
+         * <p>The port range of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>22/22</p>
@@ -146,7 +146,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The priority of the security group control rule. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the security group rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,7 +155,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String priority;
 
         /**
-         * <p>The direction of the security group control rule.</p>
+         * <p>The direction of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>inflow</p>
@@ -339,7 +339,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+         * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0x0781</p>
@@ -587,7 +587,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public Long usbRuleType;
 
         /**
-         * <p>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
+         * <p>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>04**</p>
@@ -683,7 +683,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public java.util.List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
         /**
-         * <p>The list of security group control rules.</p>
+         * <p>The list of security group rules.</p>
          */
         @NameInMap("AuthorizeSecurityPolicyRules")
         public java.util.List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
@@ -1010,7 +1010,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String localDrive;
 
         /**
-         * <p>The maximum reconnection retry time when the cloud desktop is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+         * <p>The maximum reconnection retry time when the cloud desktop is disconnected due to objective reasons. Valid values: 30 to 7200. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1073,7 +1073,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public Integer memorySingleRateLimit;
 
         /**
-         * <p>Indicates whether the restart button is provided in the cloud desktop floating ball when connecting through a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+         * <p>Indicates whether the restart button is provided in the cloud desktop floating ball when connecting through mobile clients (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
          * <blockquote>
          * <p>Applicable only to mobile clients V7.4 or later.</p>
          * </blockquote>
@@ -1088,7 +1088,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String mobileSafeMenu;
 
         /**
-         * <p>Indicates whether the shutdown button is provided in the cloud desktop floating ball when connecting through a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
+         * <p>Indicates whether the shutdown button is provided in the cloud desktop floating ball when connecting through mobile clients (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</p>
          * <blockquote>
          * <p>Applicable only to mobile clients V7.4 or later.</p>
          * </blockquote>
@@ -1135,8 +1135,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         /**
          * <p>The network redirection policy details.</p>
          * <blockquote>
-         * <p>This feature is in invitational preview and is not publicly available.
-         * .</p>
+         * <p>This feature is in invitational preview and is not publicly available.</p>
          * </blockquote>
          */
         @NameInMap("NetRedirectRule")
@@ -1230,7 +1229,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String recordContent;
 
         /**
-         * <p>The expiration period of custom screen recording files. Default value: 30. Unit: days.</p>
+         * <p>The expiration time of custom screen recording files. Default value: 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1281,7 +1280,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String recordingAudio;
 
         /**
-         * <p>The duration of each screen recording file. Unit: minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</p>
+         * <p>The duration of screen recording files. Unit: minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1290,7 +1289,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public Integer recordingDuration;
 
         /**
-         * <p>The screen recording end time, in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</p>
+         * <p>The screen recording end time in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</p>
          * 
          * <strong>example:</strong>
          * <p>08:59:00</p>
@@ -1317,7 +1316,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public Long recordingFps;
 
         /**
-         * <p>The screen recording start time, in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</p>
+         * <p>The screen recording start time in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00:00</p>
@@ -1335,7 +1334,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String recordingUserNotify;
 
         /**
-         * <p>The notification message displayed to end users about screen recording.</p>
+         * <p>The notification message displayed to end users about screen recording being enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>Screen recording is enabled.</p>
@@ -1572,7 +1571,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public Integer watermarkColor;
 
         /**
-         * <p>If the <code>WatermarkType</code> parameter is set to <code>custom</code>, you must also specify the custom text content by using the <code>WatermarkCustomText</code> parameter.</p>
+         * <p>If the WatermarkType parameter is set to <code>custom</code>, you must also specify the custom text content by using the WatermarkCustomText parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>custom-watermark</p>

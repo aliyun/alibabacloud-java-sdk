@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigGroupResponseBody extends TeaModel {
     /**
-     * <p>The configuration groups.</p>
+     * <p>The configuration group information.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeConfigGroupResponseBodyData> data;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -38,7 +38,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +93,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
 
     public static class DescribeConfigGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The number of resources that are bound to the configuration group.</p>
+         * <p>The number of resources bound to the configuration group.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -102,7 +102,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public Integer bindCount;
 
         /**
-         * <p>The number of bound cloud computers.</p>
+         * <p>The quantity information of resources bound to the configuration group.</p>
          */
         @NameInMap("BindCountMap")
         public java.util.Map<String, Integer> bindCountMap;
@@ -117,7 +117,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the configuration group.</p>
+         * <p>The configuration group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ccg-0cid8v30an12****</p>
@@ -126,7 +126,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>Used for frontend display. The system scheduled task description uses a code.</p>
+         * <p>Used for frontend display. The code for the system scheduled task description.</p>
          * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</p>
@@ -135,7 +135,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String innerTimerDesc;
 
         /**
-         * <p>Used for frontend display; maps the system scheduled task name to a code.</p>
+         * <p>Used for frontend display. The mapping code for the system scheduled task name.</p>
          * 
          * <strong>example:</strong>
          * <p>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</p>
@@ -144,19 +144,19 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String innerTimerName;
 
         /**
-         * <p>Used for system scheduled task checks. The current scheduled task does not support detach or attach operations.</p>
+         * <p>Used by system scheduled task check. The current scheduled task does not support unbinding or binding.</p>
          */
         @NameInMap("IsBind")
         public Boolean isBind;
 
         /**
-         * <p>Used for system scheduled task checks. The current scheduled task does not support modification.</p>
+         * <p>Used by system scheduled task check. The current scheduled task does not support modification.</p>
          */
         @NameInMap("IsUpdate")
         public Boolean isUpdate;
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>The configuration group name.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled task</p>
@@ -165,11 +165,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The service type of the configuration group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-         * </ul>
+         * <p>The product type used by the configuration group.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
@@ -178,14 +174,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The state of the configuration group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AVAILABLE: The configuration group is available.</li>
-         * <li>UNAVAILABLE: The configuration group is deleted.</li>
-         * <li>DELETING: The configuration group is being deleted.</li>
-         * <li>UPDATING: The configuration group is being modified.</li>
-         * </ul>
+         * <p>The configuration group status.</p>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
@@ -194,11 +183,7 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the configuration group.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Timer: the scheduled task type.</li>
-         * </ul>
+         * <p>The configuration group type.</p>
          * 
          * <strong>example:</strong>
          * <p>Timer</p>

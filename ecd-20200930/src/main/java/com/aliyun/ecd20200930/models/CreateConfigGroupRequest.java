@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigGroupRequest extends TeaModel {
     /**
-     * <p>An array of scheduled task configurations.</p>
+     * <p>The configuration information of scheduled tasks. This parameter is a list.</p>
      */
     @NameInMap("ConfigTimers")
     public java.util.List<CreateConfigGroupRequestConfigTimers> configTimers;
@@ -30,7 +30,7 @@ public class CreateConfigGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The product to which the configuration group applies.</p>
+     * <p>The product type used by the configuration group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class CreateConfigGroupRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The region ID. This feature is not region-specific. You must set this parameter to cn-shanghai.</p>
+     * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -113,7 +113,7 @@ public class CreateConfigGroupRequest extends TeaModel {
 
     public static class CreateConfigGroupRequestConfigTimersSegmentTimers extends TeaModel {
         /**
-         * <p>The execution time for a one-time scheduled task, specified as a UNIX timestamp in milliseconds.</p>
+         * <p>The specified time point for executing a scheduled task. After this parameter is specified, the scheduled task is executed at the specified time point.</p>
          * 
          * <strong>example:</strong>
          * <p>1764660600967</p>
@@ -131,7 +131,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The image ID for a scheduled task that changes the image of a cloud desktop.</p>
+         * <p>The image ID to change to. This parameter is used for image change scheduled tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>m-5b0vjqbiqu010XXXXXX</p>
@@ -146,7 +146,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public java.util.List<String> ipSegments;
 
         /**
-         * <p>The amount of inactive time, in seconds, before the screen automatically locks. This parameter applies only to Active Directory desktops.</p>
+         * <p>The lock screen time point for the no-operation lock screen feature. This parameter cannot be used for non-AD desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -352,7 +352,7 @@ public class CreateConfigGroupRequest extends TeaModel {
 
     public static class CreateConfigGroupRequestConfigTimers extends TeaModel {
         /**
-         * <p>Whether to allow end users to configure the scheduled task.</p>
+         * <p>Specifies whether to allow end users to configure scheduled tasks on their own.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -361,11 +361,10 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Boolean allowClientSetting;
 
         /**
-         * <p>The cron expression for the scheduled task.</p>
+         * <p>The cron expression of the scheduled task.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice: Specify the time in UTC. For example, to specify 00:00 (UTC+8) every day, use 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
          * </blockquote>
-         * <p>The cron expression is based on UTC. For example, to run a task at 00:00 China Standard Time (UTC+8) every day, set this parameter to <code>0 0 16 ? * 1,2,3,4,5,6,7</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 16 ? * 1,2,3,4,5,6,7</p>
@@ -374,7 +373,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Whether to forcefully execute the scheduled task.</p>
+         * <p>Specifies whether to forcibly execute the task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -395,7 +394,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Integer notificationTime;
 
         /**
-         * <p>The operation to perform for the scheduled task. This parameter is valid only when <code>TimerType</code> is set to <code>NoConnect</code>.</p>
+         * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Shutdown</p>
@@ -404,13 +403,13 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The process whitelist for smart detection. If a process from this whitelist is running, the inactivity-based scheduled task does not run.</p>
+         * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
          */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
         /**
-         * <p>The reset type for the cloud desktop.</p>
+         * <p>The reset type of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>RESET_TYPE_SYSTEM</p>
@@ -432,7 +431,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String timerType;
 
         /**
-         * <p>The trigger condition for inactivity-based scheduled tasks.</p>
+         * <p>The trigger configuration type of the no-operation scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>

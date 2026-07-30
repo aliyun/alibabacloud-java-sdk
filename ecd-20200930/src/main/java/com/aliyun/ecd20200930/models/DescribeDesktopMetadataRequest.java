@@ -67,7 +67,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not yet available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,6 +85,12 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The private IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.1</p>
+     */
     @NameInMap("NetworkInterfaceIp")
     public String networkInterfaceIp;
 

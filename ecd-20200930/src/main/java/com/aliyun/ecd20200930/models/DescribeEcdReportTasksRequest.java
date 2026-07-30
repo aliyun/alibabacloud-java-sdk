@@ -8,7 +8,7 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: 200.</p>
+     * <p>The number of entries per page. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20。</p>
@@ -32,7 +32,7 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The sub-type of the report export task.</p>
+     * <p>The subtype of the report task.</p>
      * 
      * <strong>example:</strong>
      * <p>DESKTOP</p>
@@ -41,7 +41,7 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
     public String subType;
 
     /**
-     * <p>The ID of the report export task.</p>
+     * <p>The report task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ret-sfkdsjfi*****</p>
@@ -50,11 +50,7 @@ public class DescribeEcdReportTasksRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The type of the report.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>RESOURCE_REPORT</li>
-     * </ul>
+     * <p>The report type.</p>
      * 
      * <strong>example:</strong>
      * <p>RESOURCE_REPORT</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The information about the request denial..</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,7 +14,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The modification result. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+     * <p>The operation result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The description of the error code.</p>
+     * <p>The error code description.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned. This parameter is not returned if the value of Code is <code>success</code>.</p>
+     * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,13 +50,10 @@ public class DeleteTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request is successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

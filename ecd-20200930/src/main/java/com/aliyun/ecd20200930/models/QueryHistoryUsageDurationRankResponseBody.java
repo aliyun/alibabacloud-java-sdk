@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
     /**
-     * <p>The token used to retrieve the next page of results. If this parameter is not returned, there are no more results.</p>
+     * <p>The paging token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAWvmfbFWy0uSlxZ6pIAKAnuwt1ezsRqxI6hPibm27fMH</p>
@@ -14,7 +14,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -23,7 +23,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching entries.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>94</p>
@@ -32,7 +32,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of usage duration metrics.</p>
+     * <p>The list of user usage duration metrics.</p>
      */
     @NameInMap("UsageDurationList")
     public java.util.List<QueryHistoryUsageDurationRankResponseBodyUsageDurationList> usageDurationList;
@@ -76,7 +76,13 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
 
     public static class QueryHistoryUsageDurationRankResponseBodyUsageDurationList extends TeaModel {
         /**
-         * <p>The <strong>charge type</strong>. Valid values: <code>POST_PAID</code> (post-paid), <code>PRE_PAID</code> (pre-paid), <code>MONTH_PACKAGE</code> (monthly subscription), and <code>DURATION</code> (duration package).</p>
+         * <p>The billing type. Valid values:</p>
+         * <ul>
+         * <li>POST_PAID: pay-as-you-go.</li>
+         * <li>PRE_PAID: subscription.</li>
+         * <li>MONTH_PACKAGE: monthly package.</li>
+         * <li>DURATION: duration-based package.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -85,7 +91,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p><strong>The ID of the cloud desktop.</strong></p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-8cndajrdrd424sb99</p>
@@ -94,7 +100,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p><strong>The name of the cloud desktop.</strong></p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>TestName</p>
@@ -103,7 +109,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p><strong>The end user ID.</strong></p>
+         * <p>The end user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>endUserId</p>
@@ -121,7 +127,7 @@ public class QueryHistoryUsageDurationRankResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The <strong>usage duration</strong>, in seconds. Note: This is a <code>Long</code> value. Ensure your client can handle the precision.</p>
+         * <p>The usage duration, in seconds. This value is of the Long type. Handle precision conversion on the frontend.</p>
          * 
          * <strong>example:</strong>
          * <p>20000</p>

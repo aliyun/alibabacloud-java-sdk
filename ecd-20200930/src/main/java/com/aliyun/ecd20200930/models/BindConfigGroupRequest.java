@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindConfigGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration group.</p>
+     * <p>The configuration group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class BindConfigGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * <p>The region ID. This operation is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -24,7 +24,7 @@ public class BindConfigGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resources to which you want to bind the configuration group.</p>
+     * <p>The resource information to associate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceInfos")
@@ -61,11 +61,7 @@ public class BindConfigGroupRequest extends TeaModel {
 
     public static class BindConfigGroupRequestResourceInfos extends TeaModel {
         /**
-         * <p>The service type of the resource.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
-         * </ul>
+         * <p>The product type to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
@@ -74,7 +70,7 @@ public class BindConfigGroupRequest extends TeaModel {
         public String productType;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-1bo4xotjvwyon****</p>
@@ -83,7 +79,7 @@ public class BindConfigGroupRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The region where the resource resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -92,14 +88,7 @@ public class BindConfigGroupRequest extends TeaModel {
         public String resourceRegionId;
 
         /**
-         * <p>The type of the resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>RESOURCE_GROUP: the resource group</p>
-         * </li>
-         * <li><p>CLOUD_DESKTOP: the cloud computer service.</p>
-         * </li>
-         * </ul>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>

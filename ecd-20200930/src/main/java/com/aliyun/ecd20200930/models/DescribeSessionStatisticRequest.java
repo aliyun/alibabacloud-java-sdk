@@ -25,10 +25,8 @@ public class DescribeSessionStatisticRequest extends TeaModel {
     /**
      * <p>The query interval. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><p>60</p>
-     * </li>
-     * <li><p>120</p>
-     * </li>
+     * <li>60</li>
+     * <li>120</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +45,7 @@ public class DescribeSessionStatisticRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies to search for session information by region ID. This parameter is used to filter desktop information of a specific region.</p>
+     * <p>The region ID used to filter desktop information for a specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

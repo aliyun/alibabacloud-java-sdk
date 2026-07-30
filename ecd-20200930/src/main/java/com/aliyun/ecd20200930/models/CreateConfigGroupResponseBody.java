@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigGroupResponseBody extends TeaModel {
     /**
-     * <p>Configuration group ID.</p>
+     * <p>The configuration group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ccg-0ctwi5zbswtql****</p>
@@ -14,16 +14,16 @@ public class CreateConfigGroupResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Result message.</p>
+     * <p>The creation result.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE9472BC-0B5D-5458-85CD-C52BDD******</p>

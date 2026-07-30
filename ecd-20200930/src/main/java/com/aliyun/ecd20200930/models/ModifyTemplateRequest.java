@@ -17,7 +17,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public java.util.List<ModifyTemplateRequestDataDiskList> dataDiskList;
 
     /**
-     * <p>The default language to set when the WUYING Workspace starts. This parameter is valid only when you create a WUYING Workspace from an OS image.</p>
+     * <p>The default language that is set when the cloud computer starts. This parameter takes effect only when a system image is used to create the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -28,10 +28,8 @@ public class ModifyTemplateRequest extends TeaModel {
     /**
      * <p>The description of the template. The description must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>It can contain Chinese characters, letters, digits, spaces, and special characters. Use line breaks to start a new line.</p>
-     * </li>
+     * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +39,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the WUYING Workspace image. You can find the ID on the Image Management page. OS images and custom images are supported.</p>
+     * <p>The ID of the cloud computer image. You can query the ID on the image management page. System images and custom images are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>m-gx2x1dhsmusr2****</p>
@@ -68,16 +66,16 @@ public class ModifyTemplateRequest extends TeaModel {
     public Boolean postPaidAfterUsedUp;
 
     /**
-     * <p>The region-specific template configurations. You can specify configurations for multiple regions. The system matches the configuration based on the specific region.</p>
+     * <p>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</p>
      * <blockquote>
-     * <p>You can specify configurations for up to 20 regions.</p>
+     * <p>A maximum of 20 region configurations are supported.</p>
      * </blockquote>
      */
     @NameInMap("RegionConfigList")
     public java.util.List<ModifyTemplateRequestRegionConfigList> regionConfigList;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-a5fqjjqaejt***</p>
@@ -86,7 +84,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Tags for the cloud computer, in key-value format. You can specify up to 20 tags.</p>
+     * <p>The tags of the cloud computer in key-value format. A maximum of 20 tags can be specified.</p>
      */
     @NameInMap("ResourceTagList")
     public java.util.List<ModifyTemplateRequestResourceTagList> resourceTagList;
@@ -95,9 +93,9 @@ public class ModifyTemplateRequest extends TeaModel {
     public java.util.List<ModifyTemplateRequestSiteConfigList> siteConfigList;
 
     /**
-     * <p>The type of the system disk.</p>
+     * <p>The type of the system cloud disk.</p>
      * <blockquote>
-     * <p>Enhanced SSD (ESSD) disks are supported only by cloud computers with high clock speeds and powerful graphics capabilities.</p>
+     * <p>Only high-frequency and GPU-accelerated cloud computer specifications support ESSD cloud disks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,9 +105,9 @@ public class ModifyTemplateRequest extends TeaModel {
     public String systemDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system disk. Unit: GiB. The value must be between 40 and 500, inclusive. The step size is 10 GiB.</p>
+     * <p>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</p>
      * <blockquote>
-     * <p>The system disk size cannot be smaller than the size of the image.</p>
+     * <p>The system cloud disk size cannot be smaller than the size of the configured image.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,12 +129,9 @@ public class ModifyTemplateRequest extends TeaModel {
     /**
      * <p>The name of the template. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must be 2 to 126 characters in length.</p>
-     * </li>
-     * <li><p>It must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>It can contain letters, digits, Chinese characters, colons (:), underscores (_), and hyphens (-). It cannot contain periods (.).</p>
-     * </li>
+     * <li>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</li>
+     * <li>The name must start with a letter or a Chinese character. The name cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -146,7 +141,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The ID of the configuration group.</p>
+     * <p>The configuration group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>bcc-dweha*****</p>
@@ -332,13 +327,13 @@ public class ModifyTemplateRequest extends TeaModel {
 
     public static class ModifyTemplateRequestDataDiskList extends TeaModel {
         /**
-         * <p>The performance level of the data disk. The default value is <code>AutoPL</code>.</p>
+         * <p>The performance level of the data cloud disk. Default value: <code>AutoPL</code>.</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
-         * <p>The size of the data disk. Unit: GiB. The value must be between 40 and 2040, inclusive. The step size is 10 GiB.</p>
+         * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -371,7 +366,7 @@ public class ModifyTemplateRequest extends TeaModel {
 
     public static class ModifyTemplateRequestRegionConfigList extends TeaModel {
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-709****</p>
@@ -380,7 +375,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to obtain a list of regions that WUYING Workspace supports.</p>
+         * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -389,7 +384,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the cloud desktop instance type.</p>
+         * <p>The cloud computer specification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.8c16g</p>
@@ -407,7 +402,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String snapshotPolicyId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The subnet ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-adjrehad1****</p>
@@ -416,7 +411,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>Specifies whether to enable disk encryption.</p>
+         * <p>Specifies whether to enable cloud disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -425,7 +420,7 @@ public class ModifyTemplateRequest extends TeaModel {
         public Boolean volumeEncryptionEnable;
 
         /**
-         * <p>The ID of the KMS key to use when disk encryption is enabled.</p>
+         * <p>The ID of the KMS key used when cloud disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>a7b3c0c8-b3a2-4876-b1cc-116dddc9****</p>

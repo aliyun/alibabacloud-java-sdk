@@ -14,13 +14,13 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistics.</p>
+     * <p>The statistics information.</p>
      */
     @NameInMap("Statistic")
     public java.util.List<DescribeSessionStatisticResponseBodyStatistic> statistic;
 
     /**
-     * <p>The total number of sessions returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
 
     public static class DescribeSessionStatisticResponseBodyStatistic extends TeaModel {
         /**
-         * <p>The total number of sessions in the time range.</p>
+         * <p>The total number of sessions within the interval.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

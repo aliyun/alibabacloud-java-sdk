@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The cloud computer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
@@ -14,7 +14,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -23,7 +23,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</p>
+     * <p>The ticket used to connect to the user instance. Before using the ticket, decode its content with Base64 and save it as an xxx.ica file, then open the file. Python code example:</p>
      * <pre><code>import base64
      * response = {
      *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
@@ -51,7 +51,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The ID of the connection task.</p>
+     * <p>The ID of the cloud computer connection task.</p>
      * 
      * <strong>example:</strong>
      * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
@@ -61,29 +61,6 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     /**
      * <p>The task status.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>FAILED: The credential fails to be obtained.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>RUNNING: The credential is being obtained.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>FINISHED: The credential is obtained.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>FINISHED</p>
@@ -92,7 +69,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
-     * <p>The credentials for connecting to the cloud computer.</p>
+     * <p>The connection credential for the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

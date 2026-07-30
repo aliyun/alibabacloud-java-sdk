@@ -21,7 +21,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String modelLibrary;
 
     /**
-     * <p>The page number of the current page in a paged query. Paging starts from page 1.<br>Default value: 1.</p>
+     * <p>The page number of the current page in a paging query.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +30,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Paging is used to return results in batches.</p>
+     * <p>The maximum number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -291,7 +291,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The specific operating system version.</p>
+         * <p>The specific operating system model.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows 10</p>
@@ -300,7 +300,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The protocol type.</p>
          * <ul>
          * <li>HDX</li>
          * <li>ASP</li>

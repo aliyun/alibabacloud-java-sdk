@@ -129,7 +129,7 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
      * <p>The domain name of the existing AD subdomain.</p>
      * 
      * <strong>example:</strong>
-     * <p>child.example.com</p>
+     * <p>childexample.com</p>
      */
     @NameInMap("SubDomainName")
     public String subDomainName;

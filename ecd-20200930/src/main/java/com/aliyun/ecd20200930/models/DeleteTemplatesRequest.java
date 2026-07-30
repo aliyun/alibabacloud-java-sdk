@@ -16,7 +16,7 @@ public class DeleteTemplatesRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The IDs of the templates that you want to delete.</p>
+     * <p>The list of template IDs to delete.</p>
      */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;

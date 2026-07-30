@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsRequest extends TeaModel {
     /**
-     * <p>The IDs of the NAS file systems.</p>
+     * <p>The list of NAS file system IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>04f314****</p>
@@ -14,7 +14,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public java.util.List<String> fileSystemId;
 
     /**
-     * <p>Specifies whether to return only NAS file systems that are compatible with User Profile Management (UPM).</p>
+     * <p>Specifies whether to include only NAS file systems that support UPM in the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,12 +23,10 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public Boolean matchCompatibleProfile;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page for a paged query.    </p>
      * <ul>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
-     * <li><p>Default value: 10.</p>
-     * </li>
+     * <li>Maximum value: 100.    </li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -47,7 +45,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -56,7 +54,7 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions where Elastic Desktop Service (EDS) is available.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

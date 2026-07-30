@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNASFileSystemRequest extends TeaModel {
     /**
-     * <p>Description of the NAS file system.</p>
+     * <p>The description of the NAS file system.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -14,7 +14,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system\&quot;s on-disk data. No decryption is required when reading and writing encrypted data.</p>
+     * <p>Specifies whether the file system uses a KMS-managed key to encrypt data stored on the file system. Encrypted data does not need to be decrypted during read and write operations.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,16 +23,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String encryptType;
 
     /**
-     * <p>Name of the NAS file system.
-     * The file name must follow these rules:</p>
-     * <ul>
-     * <li><p>Length: 2 to 128 English or Chinese characters.</p>
-     * </li>
-     * <li><p>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http\:// or https\://.</p>
-     * </li>
-     * <li><p>Can include numbers, underscores (_), or hyphens (-).</p>
-     * </li>
-     * </ul>
+     * <p>The NAS file system name. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, underscores (_), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testNAS</p>
@@ -41,7 +32,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Workspace ID.</p>
+     * <p>The office network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,8 +41,11 @@ public class CreateNASFileSystemRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    @NameInMap("ProtocolType")
+    public String protocolType;
+
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +55,7 @@ public class CreateNASFileSystemRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Storage specification type of the NAS file system.</p>
+     * <p>The storage type of the NAS file system.</p>
      * 
      * <strong>example:</strong>
      * <p>Capacity</p>
@@ -104,6 +98,14 @@ public class CreateNASFileSystemRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public CreateNASFileSystemRequest setProtocolType(String protocolType) {
+        this.protocolType = protocolType;
+        return this;
+    }
+    public String getProtocolType() {
+        return this.protocolType;
     }
 
     public CreateNASFileSystemRequest setRegionId(String regionId) {

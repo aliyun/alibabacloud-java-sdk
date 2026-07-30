@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTimerGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration group.</p>
+     * <p>The configuration group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeTimerGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     /**
-     * <p>The batch ID for a scheduled task execution.</p>
+     * <p>The batch ID of the scheduled task execution.</p>
      * 
      * <strong>example:</strong>
      * <p>ccg-****</p>
@@ -14,12 +14,14 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String batchId;
 
     /**
-     * <p>A list of cloud desktop IDs.</p>
+     * <p>The list of cloud computer IDs.</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
     /**
+     * <p>The display result name.</p>
+     * 
      * <strong>example:</strong>
      * <p>FAILED</p>
      */
@@ -27,7 +29,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String displayResultName;
 
     /**
-     * <p>The scheduled task group ID.</p>
+     * <p>The ID of the scheduled task group.</p>
      * 
      * <strong>example:</strong>
      * <p>ccg-0cvfvf6u1enx1****</p>
@@ -36,9 +38,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -56,7 +56,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to list the regions available in Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -68,7 +68,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public java.util.List<String> resourceTypes;
 
     /**
-     * <p>Filters the results by execution status. Valid values:</p>
+     * <p>Filters results by execution result.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCEED</p>
@@ -77,6 +77,8 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String resultCategory;
 
     /**
+     * <p>Specifies whether the task can be retried.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,7 +86,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public Boolean retryable;
 
     /**
-     * <p>The ID of the region to filter by. Only records for cloud desktops in this region are returned.</p>
+     * <p>The region ID used to filter cloud computer information for a specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -93,7 +95,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String searchRegionId;
 
     /**
-     * <p>The execution result of the scheduled task. Valid values:</p>
+     * <p>The execution result of the scheduled task.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -102,7 +104,7 @@ public class DescribeGlobalTimerRecordsRequest extends TeaModel {
     public String timerResult;
 
     /**
-     * <p>The types of scheduled tasks.</p>
+     * <p>The list of scheduled tasks.</p>
      */
     @NameInMap("TimerTypes")
     public java.util.List<String> timerTypes;

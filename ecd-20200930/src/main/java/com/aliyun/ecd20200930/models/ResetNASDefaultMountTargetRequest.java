@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetNASDefaultMountTargetRequest extends TeaModel {
     /**
-     * <p>The ID of the NAS file system.</p>
+     * <p>The NAS file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

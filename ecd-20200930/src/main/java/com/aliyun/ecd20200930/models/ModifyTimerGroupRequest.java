@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTimerGroupRequest extends TeaModel {
     /**
-     * <p>The scheduled task configurations.</p>
+     * <p>The configuration information of scheduled tasks.</p>
      */
     @NameInMap("ConfigTimers")
     public java.util.List<ModifyTimerGroupRequestConfigTimers> configTimers;
@@ -14,7 +14,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
      * <p>The description of the configuration group.</p>
      * 
      * <strong>example:</strong>
-     * <p>Scheduled task</p>
+     * <p>ScheduledTask.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -30,16 +30,16 @@ public class ModifyTimerGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the configuration group.</p>
+     * <p>The configuration group name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Scheduled task</p>
+     * <p>ScheduledTask.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The region ID. This feature is not tied to a specific region, but you must set this parameter to <code>cn-shanghai</code>.</p>
+     * <p>The region ID. This feature is not region-specific. Set this parameter to <code>cn-shanghai</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -94,7 +94,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
 
     public static class ModifyTimerGroupRequestConfigTimersSegmentTimers extends TeaModel {
         /**
-         * <p>Timestamp for scheduled task execution. The task runs at the specified time.</p>
+         * <p>The specified time point for fixed-time scheduled task execution. After this parameter is specified, the scheduled task is executed at the specified time point.</p>
          * 
          * <strong>example:</strong>
          * <p>1764660600967</p>
@@ -109,7 +109,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>Image ID for image-change scheduled tasks.</p>
+         * <p>The image ID to change to. This parameter is used for image change scheduled tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>m-5b0vjqbiqu010XXXXXX</p>
@@ -124,7 +124,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public java.util.List<String> ipSegments;
 
         /**
-         * <p>Lock screen time for inactivity-based lock screen. Not supported for non-AD desktops.</p>
+         * <p>The lock screen time point for the no-operation lock screen feature. This parameter is not supported for non-AD desktops.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -307,7 +307,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
 
     public static class ModifyTimerGroupRequestConfigTimers extends TeaModel {
         /**
-         * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
+         * <p>Specifies whether to allow end users to configure scheduled tasks on their own.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -316,9 +316,9 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Boolean allowClientSetting;
 
         /**
-         * <p>The Cron expression for the scheduled task.</p>
+         * <p>The cron expression of the scheduled task.</p>
          * <blockquote>
-         * <p>The Cron expression must be in UTC. For example, to schedule a task for 00:00 daily in China Standard Time (UTC+8), set this parameter to <code>0 0 16 ? * 1,2,3,4,5,6,7</code>.</p>
+         * <p>Specify the time in UTC. For example, to schedule a task at 00:00 (UTC+8) every day, set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -328,7 +328,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to force execution. If this parameter is set to <code>true</code>, the scheduled task runs regardless of the desktop and connection status.</p>
+         * <p>Specifies whether to forcefully execute the task. If set to true, the scheduled task is forcefully executed regardless of the desktop and connection status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -337,7 +337,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The interval, in minutes.</p>
+         * <p>The time interval, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -349,7 +349,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Integer notificationTime;
 
         /**
-         * <p>The operation to perform. This parameter applies only if <code>TimerType</code> is set to <code>NoConnect</code>.</p>
+         * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Shutdown</p>
@@ -358,13 +358,13 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The process whitelist for advanced inactivity detection. The scheduled task is not triggered if a process from this list is running.</p>
+         * <p>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</p>
          */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
         /**
-         * <p>Specifies which disks to reset.</p>
+         * <p>The reset type, which determines whether to reset and the scope of cloud disks to reset.</p>
          * 
          * <strong>example:</strong>
          * <p>RESET_TYPE_SYSTEM</p>
@@ -376,7 +376,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public java.util.List<ModifyTimerGroupRequestConfigTimersSegmentTimers> segmentTimers;
 
         /**
-         * <p>The type of the scheduled task.</p>
+         * <p>The scheduled task type.</p>
          * 
          * <strong>example:</strong>
          * <p>TimerBoot</p>
@@ -385,7 +385,7 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String timerType;
 
         /**
-         * <p>The method for detecting inactivity.</p>
+         * <p>The trigger configuration type for no-operation scheduled tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>

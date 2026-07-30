@@ -7,10 +7,8 @@ public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment.</p>
      * <ul>
-     * <li><p>If set to <code>true</code>, ensure your account has a sufficient balance. Otherwise, an abnormal order is generated.</p>
-     * </li>
-     * <li><p>If set to <code>false</code>, log on to the console. Then, go to the <strong>Expenses and Costs</strong> page to pay for the order using the returned order ID.</p>
-     * </li>
+     * <li>If you set this parameter to <code>true</code>, ensure that your account balance is sufficient. Otherwise, abnormal orders are generated.</li>
+     * <li>If you set this parameter to <code>false</code>, log on to the console and go to the <strong>Expenses and Costs</strong> page to complete the payment based on the returned order ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The cloud computer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +28,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The promotion ID. Call a pricing inquiry API to get a list of applicable promotion IDs.</p>
+     * <p>The promotion ID. You can call the pricing API to obtain the list of matched promotion IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -39,7 +37,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of supported regions for WUYING Workspace.</p>
+     * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +50,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Long resellerOwnerUid;
 
     /**
-     * <p>The performance level of the system disk. You can set the performance level for Graphics or High-frequency workspaces.</p>
+     * <p>The performance level of the system cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -61,7 +59,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The performance level of the data disk. You can set the performance level for Graphics or High-frequency workspaces.</p>
+     * <p>The performance level of the data cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>

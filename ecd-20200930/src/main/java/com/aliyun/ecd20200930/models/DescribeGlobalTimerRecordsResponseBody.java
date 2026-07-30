@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,7 +14,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</p>
@@ -32,7 +32,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("Results")
     public java.util.List<DescribeGlobalTimerRecordsResponseBodyResults> results;
@@ -76,7 +76,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
 
     public static class DescribeGlobalTimerRecordsResponseBodyResults extends TeaModel {
         /**
-         * <p>The type of action performed.</p>
+         * <p>The type of action that was performed.</p>
          * 
          * <strong>example:</strong>
          * <p>REBOOT</p>
@@ -94,7 +94,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String batchId;
 
         /**
-         * <p>The recorded information during the execution of the scheduled task.</p>
+         * <p>The record information during the execution of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -112,7 +112,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-0c951fy9arnk9****</p>
@@ -121,7 +121,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The cloud computer name.</p>
          * 
          * <strong>example:</strong>
          * <p>DesktopName</p>
@@ -130,6 +130,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
+         * <p>The display result name.</p>
+         * 
          * <strong>example:</strong>
          * <p>SKIPPED</p>
          */
@@ -162,6 +164,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String resourceParentId;
 
         /**
+         * <p>Specifies whether the task can be retried.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -169,7 +173,7 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public Boolean retryable;
 
         /**
-         * <p>The scheduled task group ID.</p>
+         * <p>The ID of the scheduled task group.</p>
          * 
          * <strong>example:</strong>
          * <p>ccg-xxxx</p>
@@ -178,6 +182,8 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         public String timerGroupId;
 
         /**
+         * <p>The timer record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-xxx</p>
          */

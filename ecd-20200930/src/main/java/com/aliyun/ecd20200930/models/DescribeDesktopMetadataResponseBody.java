@@ -142,7 +142,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops whose billable methods is subscription.</p>
+         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-31T15:59Z</p>
@@ -163,7 +163,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
          * <p>The local name of the region where the cloud desktop resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Shanghai)</p>
+         * <p>华东2（上海）</p>
          */
         @NameInMap("LocalName")
         public String localName;
@@ -229,7 +229,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>The start time of the cloud desktop.</p>
+         * <p>The time when the cloud desktop was started.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:31Z</p>

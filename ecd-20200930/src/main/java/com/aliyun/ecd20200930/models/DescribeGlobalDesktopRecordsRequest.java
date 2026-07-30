@@ -8,7 +8,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The cloud desktop IDs. You can specify 1 to 100 IDs.</p>
+     * <p>The cloud desktop ID. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -26,7 +26,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public java.util.List<String> desktopStatusList;
 
     /**
-     * <p>The cloud desktop type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported cloud desktop type IDs.</p>
+     * <p>The cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.enterprise_office.2c4g</p>
@@ -68,7 +68,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The sort field. If not specified, results are sorted by creation time in descending order. Valid values:</p>
+     * <p>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</p>
      * <ul>
      * <li>uptime: sorts by cloud desktop uptime.</li>
      * </ul>
@@ -80,7 +80,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number for a paged query.<br>Default value: 1.</p>
+     * <p>The page number of the current page in a paged query. Paging starts from page 1.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,7 +98,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. Valid values:</p>
+     * <p>The region ID.</p>
      * <ul>
      * <li>Shanghai</li>
      * <li>Singapore</li>

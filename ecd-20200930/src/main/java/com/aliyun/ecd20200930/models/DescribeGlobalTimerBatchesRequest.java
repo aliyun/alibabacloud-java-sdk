@@ -23,7 +23,7 @@ public class DescribeGlobalTimerBatchesRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. Set this parameter to the <code>NextToken</code> value from a previous response.</p>
+     * <p>The pagination token for the next query. An empty value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -34,10 +34,8 @@ public class DescribeGlobalTimerBatchesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <ul>
-     * <li><p>China (Shanghai)</p>
-     * </li>
-     * <li><p>Singapore (Singapore)</p>
-     * </li>
+     * <li>Shanghai</li>
+     * <li>Singapore</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +48,7 @@ public class DescribeGlobalTimerBatchesRequest extends TeaModel {
     public java.util.List<String> resourceTypes;
 
     /**
-     * <p>The ID of the region where the cloud computers are located. This parameter filters the results to include only cloud computers in the specified region.</p>
+     * <p>The region ID used for searching. Filters cloud desktop information for the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,20 +57,14 @@ public class DescribeGlobalTimerBatchesRequest extends TeaModel {
     public String searchRegionId;
 
     /**
-     * <p>The type of the scheduled task. This operation returns batch information for timer-based scheduled tasks only.</p>
+     * <p>The type of task to query. Only scheduled tasks have batch information available.</p>
      * <ul>
-     * <li><p><code>TimerBoot</code>: scheduled startup</p>
-     * </li>
-     * <li><p><code>TimerShutdown</code>: scheduled shutdown</p>
-     * </li>
-     * <li><p><code>TimerReboot</code>: scheduled reboot</p>
-     * </li>
-     * <li><p><code>TimerReset</code>: scheduled reset</p>
-     * </li>
-     * <li><p><code>TimerMaintenance</code>: scheduled maintenance</p>
-     * </li>
-     * <li><p><code>TimerHibernate</code>: scheduled hibernation</p>
-     * </li>
+     * <li>TimerBoot: scheduled startup</li>
+     * <li>TimerShutdown: scheduled shutdown</li>
+     * <li>TimerReboot: scheduled restart</li>
+     * <li>TimerReset: scheduled reset</li>
+     * <li>TimerMaintenance: scheduled maintenance</li>
+     * <li>TimerHibernate: scheduled hibernation</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
     /**
-     * <p>The active user statistics.</p>
+     * <p>The active user count metrics.</p>
      */
     @NameInMap("ActiveUserCount")
     public QueryHistoryActiveUserCountResponseBodyActiveUserCount activeUserCount;
@@ -42,7 +42,7 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
 
     public static class QueryHistoryActiveUserCountResponseBodyActiveUserCount extends TeaModel {
         /**
-         * <p>The number of daily active users.</p>
+         * <p>The daily active user count.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -51,7 +51,7 @@ public class QueryHistoryActiveUserCountResponseBody extends TeaModel {
         public Integer dailyActiveUserCount;
 
         /**
-         * <p>The number of monthly active users.</p>
+         * <p>The monthly active user count.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>

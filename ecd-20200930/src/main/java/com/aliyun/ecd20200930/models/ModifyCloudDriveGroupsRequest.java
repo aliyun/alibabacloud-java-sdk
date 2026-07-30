@@ -48,7 +48,7 @@ public class ModifyCloudDriveGroupsRequest extends TeaModel {
      * <p>The total capacity of the team space.</p>
      * 
      * <strong>example:</strong>
-     * <p>1073741824</p>
+     * <p>32212254720</p>
      */
     @NameInMap("TotalSize")
     public Long totalSize;

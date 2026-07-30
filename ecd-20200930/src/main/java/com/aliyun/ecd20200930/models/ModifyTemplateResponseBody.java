@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateResponseBody extends TeaModel {
     /**
-     * <p>The result of the operation. A value of <code>success</code> indicates that the operation was successful. Otherwise, an error message is returned.</p>
+     * <p>The execution result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class ModifyTemplateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message. This parameter is not returned if the value of Code is <code>success</code>.</p>
+     * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class ModifyTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -128,7 +128,7 @@ public class CreateEcdReportTaskRequest extends TeaModel {
          * <li>IncludeAssignedUser: specifies whether users are assigned.</li>
          * <li>ResourceGroupId: the resource group ID.</li>
          * <li>PolicyId: the policy ID.</li>
-         * <li>Tag:{Tag Key}: the cloud computer tag. To query by multiple tags, pass in multiple Filter objects.</li>
+         * <li>Tag:{Tag key}: the cloud computer tag. To query by multiple tags, pass in multiple Filter objects.</li>
          * </ul>
          * 
          * <strong>example:</strong>

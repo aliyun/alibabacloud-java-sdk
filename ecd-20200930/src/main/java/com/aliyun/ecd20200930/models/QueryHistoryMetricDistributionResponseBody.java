@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
     /**
-     * <p>An array of objects, each representing the distribution data for a specific value range.</p>
+     * <p>The distribution list corresponding to resource monitoring.</p>
      */
     @NameInMap("DistributionList")
     public java.util.List<QueryHistoryMetricDistributionResponseBodyDistributionList> distributionList;
@@ -20,7 +20,7 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of data points that match the query.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>94</p>
@@ -59,7 +59,7 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
 
     public static class QueryHistoryMetricDistributionResponseBodyDistributionList extends TeaModel {
         /**
-         * <p>The number of data points in this value range.</p>
+         * <p>The count.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -68,7 +68,7 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The range label that you defined in the request.</p>
+         * <p>The range label.</p>
          * 
          * <strong>example:</strong>
          * <p>2F2BF549-CBD9-1FED-9ABB-086B62D7B293</p>
@@ -77,7 +77,7 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The maximum value of the value range.</p>
+         * <p>The maximum value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -86,7 +86,7 @@ public class QueryHistoryMetricDistributionResponseBody extends TeaModel {
         public Float max;
 
         /**
-         * <p>The minimum value of the value range.</p>
+         * <p>The minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
