@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListHivesRequest extends TeaModel {
     /**
+     * <p>The time range filter parameter. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-14T15:20:37+08:00</p>
      */
@@ -12,6 +14,8 @@ public class ListHivesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The cloud application service group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>g-xxxx</p>
      */
@@ -19,6 +23,8 @@ public class ListHivesRequest extends TeaModel {
     public String hiveId;
 
     /**
+     * <p>The name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test001</p>
      */
@@ -26,6 +32,8 @@ public class ListHivesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListHivesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +50,8 @@ public class ListHivesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-14T15:20:37+08:00</p>
      */

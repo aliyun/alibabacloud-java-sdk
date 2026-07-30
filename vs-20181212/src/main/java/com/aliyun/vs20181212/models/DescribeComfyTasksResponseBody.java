@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyTasksResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of 0 indicates a successful request.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The message that provides details about the result of the request.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned data. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,9 +32,9 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of tasks per page.</p>
+     * <p>The page size.</p>
      * <blockquote>
-     * <p>This parameter applies only to recording queries.</p>
+     * <p>Only applicable to recording queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -53,13 +53,13 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of Comfy tasks.</p>
+     * <p>The task list.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<DescribeComfyTasksResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of tasks that match the filter criteria.</p>
+     * <p>The number of tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
 
     public static class DescribeComfyTasksResponseBodyTasks extends TeaModel {
         /**
-         * <p>The creation time of the task.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387493000</p>
@@ -139,7 +139,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The end time of the task.</p>
+         * <p>The task end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387494000</p>
@@ -148,7 +148,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the resource pool used by the task.</p>
+         * <p>The resource pool ID used by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>hive-26cd567b35c04a0a90f017388207b2</p>
@@ -166,7 +166,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task state.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -175,7 +175,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String taskState;
 
         /**
-         * <p>The last modified time of the task.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387494000</p>
@@ -184,7 +184,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String updatedTime;
 
         /**
-         * <p>The ID of the Comfy workflow associated with the task.</p>
+         * <p>The Comfy workflow ID used by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>

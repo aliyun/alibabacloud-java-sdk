@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DelHiveEdgeWorkersRequest extends TeaModel {
     /**
+     * <p><strong>The cluster ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DelHiveEdgeWorkersRequest extends TeaModel {
     public String hiveId;
 
     /**
+     * <p><strong>The list of workload IDs.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

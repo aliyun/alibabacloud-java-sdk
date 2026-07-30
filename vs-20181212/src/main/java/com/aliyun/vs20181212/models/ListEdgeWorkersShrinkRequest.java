@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeWorkersShrinkRequest extends TeaModel {
     /**
-     * <p>This parameter is required for renewal scenarios.</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-14T15:20:37+08:00</p>
@@ -14,7 +14,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The list of cluster IDs.</p>
+     * <p>The cluster ID list.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
@@ -23,7 +23,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String hiveIdsShrink;
 
     /**
-     * <p>The list of payload IDs.</p>
+     * <p>The workload ID list.</p>
      * 
      * <strong>example:</strong>
      * <p>ew-xxxxxx</p>
@@ -32,7 +32,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String instanceIdsShrink;
 
     /**
-     * <p>The page number of the query. The value starts from 1. Default value: 1.</p>
+     * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. Default value: 10.</p>
+     * <p>The number of entries per page for a paginated query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of package IDs.</p>
+     * <p>The plan ID list.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;pk-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
@@ -59,7 +59,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String planIdsShrink;
 
     /**
-     * <p>Specification</p>
+     * <p>The specification.</p>
      * 
      * <strong>example:</strong>
      * <p>ew.gn8t6xlarge-rb.x1p</p>
@@ -68,7 +68,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The parameter for filtering by time range. The time must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-25T06:35:26+08:00</p>
@@ -77,7 +77,7 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The list of statuses.</p>
+     * <p>The status list.</p>
      */
     @NameInMap("Statuses")
     public String statusesShrink;

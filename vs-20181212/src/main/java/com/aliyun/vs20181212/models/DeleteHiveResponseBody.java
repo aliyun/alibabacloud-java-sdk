@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHiveResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxx</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
     /**
-     * <p>The number of instances that failed to move.</p>
+     * <p>The number of failed operations.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
     public Integer failedInstanceCount;
 
     /**
-     * <p>Details of the instances that failed to move.</p>
+     * <p>The list of workloads that failed to be moved.</p>
      */
     @NameInMap("FailedInstances")
     public java.util.List<MoveHiveEdgeWorkersResponseBodyFailedInstances> failedInstances;
@@ -29,7 +29,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of successfully moved instances.</p>
+     * <p>The number of successful operations.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -38,7 +38,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
     public Integer successInstanceCount;
 
     /**
-     * <p>Details of the successfully moved instances.</p>
+     * <p>The list of workloads that were successfully moved.</p>
      */
     @NameInMap("SuccessInstances")
     public java.util.List<MoveHiveEdgeWorkersResponseBodySuccessInstances> successInstances;
@@ -90,7 +90,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
 
     public static class MoveHiveEdgeWorkersResponseBodyFailedInstances extends TeaModel {
         /**
-         * <p>The instance ID.</p>
+         * <p>The workload ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ew-1226d588c69449209ee963161c067b04</p>
@@ -132,7 +132,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
 
     public static class MoveHiveEdgeWorkersResponseBodySuccessInstances extends TeaModel {
         /**
-         * <p>The instance ID.</p>
+         * <p>The workload ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ew-1226d588c69449209ee963161c067b04</p>
@@ -141,7 +141,7 @@ public class MoveHiveEdgeWorkersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The result message. For a successful operation, the value is typically <code>SUCCESS</code>.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

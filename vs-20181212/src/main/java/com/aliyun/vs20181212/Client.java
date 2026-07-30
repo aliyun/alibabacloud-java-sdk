@@ -1769,7 +1769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must first enable the on-demand screenshot feature in the associated screenshot template.</p>
+     * <p>You must enable on-demand snapshot in the associated snapshot template in advance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -1814,7 +1814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You must first enable the on-demand screenshot feature in the associated screenshot template.</p>
+     * <p>You must enable on-demand snapshot in the associated snapshot template in advance.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -2890,15 +2890,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>HiveId</strong> 是必填参数，表示要操作的集群ID。</li>
-     * <li><strong>InstanceIds</strong> 是必填参数，需要提供一个负载ID列表，用于指定要从集群中解绑的负载实例。</li>
-     * <li>解绑操作成功后，会返回成功和失败的负载实例列表及其相关信息。</li>
+     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the cluster to operate on.</li>
+     * <li><strong>InstanceIds</strong> is a required parameter that specifies a list of workload IDs to unbind from the cluster.</li>
+     * <li>After the unbind operation succeeds, the response returns lists of successful and failed workload instances along with related information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>从集群删除负载</p>
+     * <p>Unbinds one or more workload instances from a specified cluster.</p>
      * 
      * @param tmpReq DelHiveEdgeWorkersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2940,15 +2940,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>HiveId</strong> 是必填参数，表示要操作的集群ID。</li>
-     * <li><strong>InstanceIds</strong> 是必填参数，需要提供一个负载ID列表，用于指定要从集群中解绑的负载实例。</li>
-     * <li>解绑操作成功后，会返回成功和失败的负载实例列表及其相关信息。</li>
+     * <li><strong>HiveId</strong> is a required parameter that specifies the ID of the cluster to operate on.</li>
+     * <li><strong>InstanceIds</strong> is a required parameter that specifies a list of workload IDs to unbind from the cluster.</li>
+     * <li>After the unbind operation succeeds, the response returns lists of successful and failed workload instances along with related information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>从集群删除负载</p>
+     * <p>Unbinds one or more workload instances from a specified cluster.</p>
      * 
      * @param request DelHiveEdgeWorkersRequest
      * @return DelHiveEdgeWorkersResponse
@@ -3354,14 +3354,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>需要确保该集群内所有应用服务已清空，否则无法执行删除操作。</li>
-     * <li><code>HiveId</code> 是必填参数，用于标识待删除的集群。</li>
+     * <li>Ensure that all application services in the cluster have been removed. Otherwise, the delete operation cannot be performed.</li>
+     * <li><code>HiveId</code> is a required parameter that identifies the cluster to be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除集群</p>
+     * <p>Deletes an empty cluster by the specified ID.</p>
      * 
      * @param request DeleteHiveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3393,14 +3393,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>需要确保该集群内所有应用服务已清空，否则无法执行删除操作。</li>
-     * <li><code>HiveId</code> 是必填参数，用于标识待删除的集群。</li>
+     * <li>Ensure that all application services in the cluster have been removed. Otherwise, the delete operation cannot be performed.</li>
+     * <li><code>HiveId</code> is a required parameter that identifies the cluster to be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>删除集群</p>
+     * <p>Deletes an empty cluster by the specified ID.</p>
      * 
      * @param request DeleteHiveRequest
      * @return DeleteHiveResponse
@@ -4091,11 +4091,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Querying by screenshot does not support pagination and only supports iteration. To request the next page, use the extStartTime parameter value from the response as the StartTime for the new request.</p>
+     * <p>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of Comfy tasks.</p>
+     * <p>Queries the list of Comfy tasks.</p>
      * 
      * @param request DescribeComfyTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4110,6 +4110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskState)) {
@@ -4140,11 +4144,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Querying by screenshot does not support pagination and only supports iteration. To request the next page, use the extStartTime parameter value from the response as the StartTime for the new request.</p>
+     * <p>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of Comfy tasks.</p>
+     * <p>Queries the list of Comfy tasks.</p>
      * 
      * @param request DescribeComfyTasksRequest
      * @return DescribeComfyTasksResponse
@@ -8068,16 +8072,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>This API queries payload information for cloud application services and supports filtering and paged queries using various parameters.</li>
-     * <li>Optional parameters include <code>Spec</code>, <code>Statuses</code>, <code>InstanceIds</code>, <code>PlanIds</code>, and <code>HiveIds</code>.</li>
-     * <li>For paged queries, you can use the <code>PageNumber</code> and <code>PageSize</code> parameters to control the amount of data returned. The default page size is 10 records, and the maximum is 100 records.</li>
-     * <li>You can specify a time range for the query using the <code>StartTime</code> and <code>EndTime</code> parameters.</li>
+     * <li>This API operation queries workload information and supports filtering and pagination by using multiple parameters.</li>
+     * <li>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</li>
+     * <li>For pagination, use the PageNumber and PageSize parameters to control the amount of returned data. By default, 10 records are returned per page and a maximum of 100 records are supported per page.</li>
+     * <li>Use the StartTime and EndTime parameters to specify the time range for queries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries payload information for cloud application services. This operation supports paged queries.</p>
+     * <p>Queries workload information with pagination.</p>
      * 
      * @param tmpReq ListEdgeWorkersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8159,16 +8163,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>This API queries payload information for cloud application services and supports filtering and paged queries using various parameters.</li>
-     * <li>Optional parameters include <code>Spec</code>, <code>Statuses</code>, <code>InstanceIds</code>, <code>PlanIds</code>, and <code>HiveIds</code>.</li>
-     * <li>For paged queries, you can use the <code>PageNumber</code> and <code>PageSize</code> parameters to control the amount of data returned. The default page size is 10 records, and the maximum is 100 records.</li>
-     * <li>You can specify a time range for the query using the <code>StartTime</code> and <code>EndTime</code> parameters.</li>
+     * <li>This API operation queries workload information and supports filtering and pagination by using multiple parameters.</li>
+     * <li>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</li>
+     * <li>For pagination, use the PageNumber and PageSize parameters to control the amount of returned data. By default, 10 records are returned per page and a maximum of 100 records are supported per page.</li>
+     * <li>Use the StartTime and EndTime parameters to specify the time range for queries.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries payload information for cloud application services. This operation supports paged queries.</p>
+     * <p>Queries workload information with pagination.</p>
      * 
      * @param request ListEdgeWorkersRequest
      * @return ListEdgeWorkersResponse
@@ -8260,16 +8264,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该 API 用于查询用户创建的所有集群信息。</li>
-     * <li>支持通过 <code>HiveId</code> 和 <code>Name</code> 参数进行过滤查询。</li>
-     * <li>分页参数 <code>PageNumber</code> 和 <code>PageSize</code> 可以控制返回结果的数量和页码，默认每页显示10条记录，最大支持100条。</li>
-     * <li><code>StartTime</code> 和 <code>EndTime</code> 参数可用于指定时间范围内的集群信息查询，但非必填项。</li>
+     * <li>This API operation queries information about all clusters created by the user.</li>
+     * <li>You can use the <code>HiveId</code> and <code>Name</code> parameters to filter query results.</li>
+     * <li>The pagination parameters <code>PageNumber</code> and <code>PageSize</code> control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</li>
+     * <li>The <code>StartTime</code> and <code>EndTime</code> parameters specify a time range for querying cluster information, but they are optional.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询所有集群信息，支持分页查询。</p>
+     * <p>Queries all cluster information by using paging and supports filtering by conditions.</p>
      * 
      * @param request ListHivesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8321,16 +8325,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该 API 用于查询用户创建的所有集群信息。</li>
-     * <li>支持通过 <code>HiveId</code> 和 <code>Name</code> 参数进行过滤查询。</li>
-     * <li>分页参数 <code>PageNumber</code> 和 <code>PageSize</code> 可以控制返回结果的数量和页码，默认每页显示10条记录，最大支持100条。</li>
-     * <li><code>StartTime</code> 和 <code>EndTime</code> 参数可用于指定时间范围内的集群信息查询，但非必填项。</li>
+     * <li>This API operation queries information about all clusters created by the user.</li>
+     * <li>You can use the <code>HiveId</code> and <code>Name</code> parameters to filter query results.</li>
+     * <li>The pagination parameters <code>PageNumber</code> and <code>PageSize</code> control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</li>
+     * <li>The <code>StartTime</code> and <code>EndTime</code> parameters specify a time range for querying cluster information, but they are optional.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询所有集群信息，支持分页查询。</p>
+     * <p>Queries all cluster information by using paging and supports filtering by conditions.</p>
      * 
      * @param request ListHivesRequest
      * @return ListHivesResponse
@@ -8824,15 +8828,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该 API 用于查询所有可用的云应用服务规格信息。</li>
-     * <li>支持通过 <code>Specification</code> 参数过滤特定规格。</li>
-     * <li>分页查询时，可以通过 <code>PageNumber</code> 和 <code>PageSize</code> 参数控制返回的数据量。</li>
+     * <li>This API operation queries all active cloud application service specifications.</li>
+     * <li>You can use the <code>Specification</code> parameter to filter specific specifications.</li>
+     * <li>For paging, use the <code>PageNumber</code> and <code>PageSize</code> parameters to control the data volume returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询规格信息，支持分页查询。</p>
+     * <p>Queries all cloud application service specification information. Paging is supported.</p>
      * 
      * @param request ListSpecificationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8872,15 +8876,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>该 API 用于查询所有可用的云应用服务规格信息。</li>
-     * <li>支持通过 <code>Specification</code> 参数过滤特定规格。</li>
-     * <li>分页查询时，可以通过 <code>PageNumber</code> 和 <code>PageSize</code> 参数控制返回的数据量。</li>
+     * <li>This API operation queries all active cloud application service specifications.</li>
+     * <li>You can use the <code>Specification</code> parameter to filter specific specifications.</li>
+     * <li>For paging, use the <code>PageNumber</code> and <code>PageSize</code> parameters to control the data volume returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询规格信息，支持分页查询。</p>
+     * <p>Queries all cloud application service specification information. Paging is supported.</p>
      * 
      * @param request ListSpecificationsRequest
      * @return ListSpecificationsResponse
@@ -9946,13 +9950,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Ensure the target Hive has sufficient resources to accommodate the instances.</li>
+     * <li><strong>HiveId</strong>: The target cluster ID. Required.</li>
+     * <li><strong>InstanceIds</strong>: The list of workload IDs to move. Required.</li>
+     * <li>This operation moves the specified workloads from the current cluster to the target cluster.</li>
+     * <li>Ensure that the target cluster exists to accept the new workloads.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Moves the specified cloud application service instances from their current cluster to the target Hive.</p>
+     * <p>Moves specified workloads to a target cluster.</p>
      * 
      * @param tmpReq MoveHiveEdgeWorkersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9994,13 +10001,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Ensure the target Hive has sufficient resources to accommodate the instances.</li>
+     * <li><strong>HiveId</strong>: The target cluster ID. Required.</li>
+     * <li><strong>InstanceIds</strong>: The list of workload IDs to move. Required.</li>
+     * <li>This operation moves the specified workloads from the current cluster to the target cluster.</li>
+     * <li>Ensure that the target cluster exists to accept the new workloads.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Moves the specified cloud application service instances from their current cluster to the target Hive.</p>
+     * <p>Moves specified workloads to a target cluster.</p>
      * 
      * @param request MoveHiveEdgeWorkersRequest
      * @return MoveHiveEdgeWorkersResponse

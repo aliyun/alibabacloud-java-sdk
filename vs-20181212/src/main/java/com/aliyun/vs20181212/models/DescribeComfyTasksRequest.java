@@ -14,7 +14,7 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of tasks per page.</p>
+     * <p>The number of records displayed per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -22,8 +22,11 @@ public class DescribeComfyTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     /**
-     * <p>The task state. If specified, the operation returns only tasks in that state.</p>
+     * <p>The task status used as a filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>QUEUED</p>
@@ -32,7 +35,7 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public String taskState;
 
     /**
-     * <p>If you specify this parameter, the operation returns only tasks for the specified workflow.</p>
+     * <p>The Comfy workflow ID used as a filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>
@@ -59,6 +62,14 @@ public class DescribeComfyTasksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeComfyTasksRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public DescribeComfyTasksRequest setTaskState(String taskState) {

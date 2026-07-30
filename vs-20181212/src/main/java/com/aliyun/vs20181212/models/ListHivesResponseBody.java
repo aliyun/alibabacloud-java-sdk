@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListHivesResponseBody extends TeaModel {
+    /**
+     * <p>The list of clusters.</p>
+     */
     @NameInMap("Hives")
     public java.util.List<ListHivesResponseBodyHives> hives;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxx</p>
      */
@@ -15,6 +20,8 @@ public class ListHivesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -52,6 +59,8 @@ public class ListHivesResponseBody extends TeaModel {
 
     public static class ListHivesResponseBodyHives extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-14T15:20:37+08:00</p>
          */
@@ -59,13 +68,17 @@ public class ListHivesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>基础型S1</p>
+         * <p>Basic S1</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hive-3b506f0868a7451ba15e0e890706033a</p>
          */
@@ -73,6 +86,8 @@ public class ListHivesResponseBody extends TeaModel {
         public String hiveId;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>yy-test2</p>
          */

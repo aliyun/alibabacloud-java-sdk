@@ -1,3 +1,7 @@
+2026-07-30 Version: 3.9.1
+- Update API DescribeComfyTasks: add request parameters TaskId.
+
+
 2026-07-08 Version: 3.9.0
 - Support API BatchCaptureRenderingInstanceScreenshot.
 

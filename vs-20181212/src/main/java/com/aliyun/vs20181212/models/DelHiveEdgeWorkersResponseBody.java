@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DelHiveEdgeWorkersResponseBody extends TeaModel {
     /**
+     * <p>The number of workload instances that failed to be unbound.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("FailedInstanceCount")
     public Integer failedInstanceCount;
 
+    /**
+     * <p>The list of workload instances that failed to be unbound.</p>
+     */
     @NameInMap("FailedInstances")
     public java.util.List<DelHiveEdgeWorkersResponseBodyFailedInstances> failedInstances;
 
     /**
+     * <p><strong>The request ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxx</p>
      */
@@ -22,12 +29,17 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of workload instances that were successfully unbound.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("SuccessInstanceCount")
     public Integer successInstanceCount;
 
+    /**
+     * <p>The list of workload instances that were successfully unbound.</p>
+     */
     @NameInMap("SuccessInstances")
     public java.util.List<DelHiveEdgeWorkersResponseBodySuccessInstances> successInstances;
 
@@ -78,6 +90,8 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
 
     public static class DelHiveEdgeWorkersResponseBodyFailedInstances extends TeaModel {
         /**
+         * <p>The workload ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ew-1226d588c69449209ee963161c067b04</p>
          */
@@ -85,6 +99,8 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The failure reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>Error 1062 (23000): Duplicate entry \&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed-ew-1226d588c69449209ee9631\&quot; for key \&quot;PRIMARY\&quot;</p>
          */
@@ -116,6 +132,8 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
 
     public static class DelHiveEdgeWorkersResponseBodySuccessInstances extends TeaModel {
         /**
+         * <p>The workload ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ew-1226d588c69449209ee963161c067b04</p>
          */
@@ -123,6 +141,8 @@ public class DelHiveEdgeWorkersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The message.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */

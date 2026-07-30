@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSpecificationsRequest extends TeaModel {
     /**
+     * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListSpecificationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page for paging. Maximum value: 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListSpecificationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>ew.gn8t6xlarge-rb.x1p</p>
      */

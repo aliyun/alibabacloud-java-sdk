@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListSpecificationsResponseBody extends TeaModel {
+    /**
+     * <p>The result objects.</p>
+     */
     @NameInMap("Items")
     public java.util.List<ListSpecificationsResponseBodyItems> items;
 
     /**
+     * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxx</p>
      */
@@ -29,6 +38,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -82,6 +93,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
 
     public static class ListSpecificationsResponseBodyItems extends TeaModel {
         /**
+         * <p>The specification family.</p>
+         * 
          * <strong>example:</strong>
          * <p>4090CU</p>
          */
@@ -89,6 +102,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public String _class;
 
         /**
+         * <p>The number of cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -96,6 +111,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public Integer cores;
 
         /**
+         * <p>The memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -103,6 +120,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public Integer memory;
 
         /**
+         * <p>The number of cards per single load.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +129,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public Integer shard;
 
         /**
+         * <p><code>RenderingSpec</code></p>
+         * 
          * <strong>example:</strong>
          * <p>crs.xic.s1</p>
          */
@@ -117,6 +138,8 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public String specification;
 
         /**
+         * <p>The maximum storage capacity. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEdgeWorkersResponseBody extends TeaModel {
     /**
-     * <p>The list of payloads.</p>
+     * <p>The workload list.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListEdgeWorkersResponseBodyInstances> instances;
 
     /**
-     * <p>The page number of the query. The value starts from 1. Default value: 1.</p>
+     * <p>The page number of the query list. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. Default value: 100.</p>
+     * <p>The number of entries per page for a paginated query. Maximum value: 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of workloads.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -120,7 +120,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String hiveId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The workload ID.</p>
          * 
          * <strong>example:</strong>
          * <p>as-d135ca4425c24b99b79cd0b6c552cac9</p>
@@ -129,7 +129,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The package ID.</p>
+         * <p>The plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pk-db3394401cc8403f85e4d72d99b52449</p>
