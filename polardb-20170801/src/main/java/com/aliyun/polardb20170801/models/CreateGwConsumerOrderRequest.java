@@ -15,7 +15,6 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
 
     /**
      * <p>The expiration time of the API key in ISO 8601 format. The value must be later than the current time.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2027-07-23T03:09:08Z</p>
@@ -34,7 +33,7 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The number of API keys to generate, which corresponds to the number of resource plans to purchase. Valid values: 1 to 30.</p>
+     * <p>The number of API keys to generate, which is the number of resource plans to order. Valid values: 1 to 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,10 +45,11 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     /**
      * <p>The specification tier of the resource plan. Valid values:</p>
      * <ul>
-     * <li>basic: 3000 points per plan.</li>
-     * <li>advanced: 6000 points per plan.</li>
-     * <li>pro: 9000 points per plan.</li>
+     * <li>basic</li>
+     * <li>advanced</li>
+     * <li>pro</li>
      * </ul>
+     * <p>Each value represents the number of credits for a single key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

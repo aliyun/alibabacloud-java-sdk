@@ -63,6 +63,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hongkong", "polardb.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
@@ -828,11 +829,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation associates an agent (specified by <code>AgentId</code>) of PolarClaw (identified by <code>ApplicationId</code>) with a specified communication channel (<code>Channel</code>). You can also specify an account ID (<code>ChannelAccountId</code>) within the channel.</p>
+     * <p>Resource Control limits the CPU resources that can be used by specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates resource control.</p>
+     * <p>Binds a specified resource control rule to a user, database, query, or connection in a PolarDB for MySQL cluster. After the binding succeeds, the target object is subject to the CPU quota limit defined by the resource control rule.</p>
      * 
      * @param request BindResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -880,11 +888,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation associates an agent (specified by <code>AgentId</code>) of PolarClaw (identified by <code>ApplicationId</code>) with a specified communication channel (<code>Channel</code>). You can also specify an account ID (<code>ChannelAccountId</code>) within the channel.</p>
+     * <p>Resource Control limits the CPU resources that can be used by specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates resource control.</p>
+     * <p>Binds a specified resource control rule to a user, database, query, or connection in a PolarDB for MySQL cluster. After the binding succeeds, the target object is subject to the CPU quota limit defined by the resource control rule.</p>
      * 
      * @param request BindResourceControlRequest
      * @return BindResourceControlResponse
@@ -2148,6 +2163,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAIDBClusterResponse createAIDBCluster(CreateAIDBClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAIDBClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a model service API key.</p>
+     * 
+     * @param request CreateAIDBClusterApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAIDBClusterApiKeyResponse
+     */
+    public CreateAIDBClusterApiKeyResponse createAIDBClusterApiKeyWithOptions(CreateAIDBClusterApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAIDBClusterApiKey"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAIDBClusterApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a model service API key.</p>
+     * 
+     * @param request CreateAIDBClusterApiKeyRequest
+     * @return CreateAIDBClusterApiKeyResponse
+     */
+    public CreateAIDBClusterApiKeyResponse createAIDBClusterApiKey(CreateAIDBClusterApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAIDBClusterApiKeyWithOptions(request, runtime);
     }
 
     /**
@@ -6302,11 +6365,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to define and create a cron job. The cron job is triggered periodically based on a specified schedule and carries specific messages or instructions. Advanced options such as custom execution frequency, time zone settings, and alert mechanisms for failures are supported. You can also configure the message content, target channel, and recipients.</p>
+     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
+     * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
+     * <li>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</p>
      * 
      * @param request CreateResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6354,11 +6426,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to define and create a cron job. The cron job is triggered periodically based on a specified schedule and carries specific messages or instructions. Advanced options such as custom execution frequency, time zone settings, and alert mechanisms for failures are supported. You can also configure the message content, target channel, and recipients.</p>
+     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
+     * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
+     * <li>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a resource control.</p>
+     * <p>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</p>
      * 
      * @param request CreateResourceControlRequest
      * @return CreateResourceControlResponse
@@ -6550,6 +6631,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAIDBClusterResponse deleteAIDBCluster(DeleteAIDBClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAIDBClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an API key for a model service.</p>
+     * 
+     * @param request DeleteAIDBClusterApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAIDBClusterApiKeyResponse
+     */
+    public DeleteAIDBClusterApiKeyResponse deleteAIDBClusterApiKeyWithOptions(DeleteAIDBClusterApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            query.put("ApiKey", request.apiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAIDBClusterApiKey"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAIDBClusterApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an API key for a model service.</p>
+     * 
+     * @param request DeleteAIDBClusterApiKeyRequest
+     * @return DeleteAIDBClusterApiKeyResponse
+     */
+    public DeleteAIDBClusterApiKeyResponse deleteAIDBClusterApiKey(DeleteAIDBClusterApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAIDBClusterApiKeyWithOptions(request, runtime);
     }
 
     /**
@@ -9356,12 +9485,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>The cluster must be in the Running state. Otherwise, the operation fails.</p>
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a resource control.</p>
+     * <p>Deletes a resource control rule from a specified PolarDB for MySQL cluster.</p>
      * 
      * @param request DeleteResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9401,12 +9536,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>The cluster must be in the Running state. Otherwise, the operation fails.</p>
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a resource control.</p>
+     * <p>Deletes a resource control rule from a specified PolarDB for MySQL cluster.</p>
      * 
      * @param request DeleteResourceControlRequest
      * @return DeleteResourceControlResponse
@@ -9478,6 +9619,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSQLRateLimitingRulesResponse deleteSQLRateLimitingRules(DeleteSQLRateLimitingRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSQLRateLimitingRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the API key of a model service.</p>
+     * 
+     * @param request DescribeAIDBClusterApiKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAIDBClusterApiKeysResponse
+     */
+    public DescribeAIDBClusterApiKeysResponse describeAIDBClusterApiKeysWithOptions(DescribeAIDBClusterApiKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAIDBClusterApiKeys"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAIDBClusterApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the API key of a model service.</p>
+     * 
+     * @param request DescribeAIDBClusterApiKeysRequest
+     * @return DescribeAIDBClusterApiKeysResponse
+     */
+    public DescribeAIDBClusterApiKeysResponse describeAIDBClusterApiKeys(DescribeAIDBClusterApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAIDBClusterApiKeysWithOptions(request, runtime);
     }
 
     /**
@@ -28053,12 +28238,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
+     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
+     * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
+     * <li>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies resource control.</p>
+     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</p>
      * 
      * @param request ModifyResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28106,12 +28299,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
+     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
+     * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
+     * <li>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies resource control.</p>
+     * <p>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</p>
      * 
      * @param request ModifyResourceControlRequest
      * @return ModifyResourceControlResponse
@@ -30523,15 +30724,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
+     * <p>Resource Control is used to limit the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release provides the capabilities to create, modify, delete, attach, and unbind resource control rules. It does not provide the capability to query Resource Control CPU usage.</p>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>Only the privileged user of a PolarDB for MySQL cluster can be reset.</li>
-     * <li>If the privileged user encounters issues, such as permissions being unexpectedly revoked (REVOKE), you can reset the permissions of the privileged user to restore it to normal.</li>
-     * </ul>
+     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a resource control.</p>
+     * <p>Unbinds a specified resource control rule from a user, database, query, or connection in a PolarDB for MySQL cluster. After the unbinding is successful, the resource control rule no longer limits the CPU quota of the corresponding target object.</p>
      * 
      * @param request UnbindResourceControlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30579,15 +30783,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
+     * <p>Resource Control is used to limit the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release provides the capabilities to create, modify, delete, attach, and unbind resource control rules. It does not provide the capability to query Resource Control CPU usage.</p>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>Only the privileged user of a PolarDB for MySQL cluster can be reset.</li>
-     * <li>If the privileged user encounters issues, such as permissions being unexpectedly revoked (REVOKE), you can reset the permissions of the privileged user to restore it to normal.</li>
-     * </ul>
+     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a resource control.</p>
+     * <p>Unbinds a specified resource control rule from a user, database, query, or connection in a PolarDB for MySQL cluster. After the unbinding is successful, the resource control rule no longer limits the CPU quota of the corresponding target object.</p>
      * 
      * @param request UnbindResourceControlRequest
      * @return UnbindResourceControlResponse
