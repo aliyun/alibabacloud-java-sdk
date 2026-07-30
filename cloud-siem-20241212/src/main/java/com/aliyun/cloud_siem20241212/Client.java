@@ -565,6 +565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DetectionRuleType", request.detectionRuleType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.detectionRules)) {
+            body.put("DetectionRules", request.detectionRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.entityMappings)) {
             body.put("EntityMappings", request.entityMappings);
         }
@@ -5155,7 +5159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of query views.</p>
@@ -5220,7 +5224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of query views.</p>

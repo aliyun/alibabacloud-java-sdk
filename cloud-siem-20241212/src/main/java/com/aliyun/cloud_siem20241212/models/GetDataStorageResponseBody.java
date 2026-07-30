@@ -60,7 +60,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
-         * <p>The hot storage capacity used.</p>
+         * <p>The hot storage used capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>10.333</p>
@@ -255,7 +255,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The time-to-live (TTL) of the Logstore.</p>
+         * <p>The Logstore TTL.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -264,7 +264,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
-         * <p>The used capacity of the Logstore.</p>
+         * <p>The Logstore used capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>11.111</p>
@@ -316,8 +316,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         /**
          * <p>The group to which the log belongs. Valid values:</p>
          * <ul>
-         * <li>host: host logs.</li>
-         * <li>security: security logs.</li>
+         * <li>host: Host logs.</li>
+         * <li>security: Security logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logDeliveryGroup;
 
         /**
-         * <p>Indicates whether log delivery can be toggled. Log delivery cannot be enabled if the service is not purchased. Valid values:</p>
+         * <p>Indicates whether you are allowed to toggle the log delivery switch. Log delivery cannot be performed if the service is not purchased. Valid values:</p>
          * <ul>
          * <li>allow: Allowed.</li>
          * <li>deny: Not allowed.</li>
@@ -342,8 +342,8 @@ public class GetDataStorageResponseBody extends TeaModel {
         /**
          * <p>The log delivery status. Valid values:</p>
          * <ul>
-         * <li>enable: log delivery is enabled.</li>
-         * <li>disable: log delivery is disabled.</li>
+         * <li>enable: Log delivery is enabled.</li>
+         * <li>disable: Log delivery is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,7 +371,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String logName;
 
         /**
-         * <p>The default log query conditions for the log. When multiple logs are stored in the same Logstore, log query conditions are required to query individual logs.</p>
+         * <p>The default log query conditions for the log. When multiple logs are stored in the same Logstore, query conditions are required to perform a log query for a specific log.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;<strong>topic</strong>\&quot;:\&quot;sas-net-block\&quot;}]</p>
@@ -411,7 +411,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
-         * <p>The hot storage capacity used.</p>
+         * <p>The hot storage used capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>10.333</p>
@@ -534,7 +534,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Integer logStoreTtl;
 
         /**
-         * <p>The hot storage capacity used.</p>
+         * <p>The hot storage used capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>10.333</p>
@@ -584,7 +584,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public Double coldStorageUsedCapacity;
 
         /**
-         * <p>The storage region of user logs.</p>
+         * <p>The storage region of user-side logs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -593,10 +593,10 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionId;
 
         /**
-         * <p>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact your account manager to reset the region. The region can be reset only once. Valid values:</p>
+         * <p>Indicates whether the storage region can be modified. By default, modification is not allowed. Contact the product manager to reset the region. The region can be reset only once. Valid values:</p>
          * <ul>
-         * <li>allow: The storage region can be modified.</li>
-         * <li>deny: The storage region cannot be modified.</li>
+         * <li>allow: Modification is allowed.</li>
+         * <li>deny: Modification is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -606,7 +606,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageRegionPermission;
 
         /**
-         * <p>The storage capacity purchased in the subscription scenario.</p>
+         * <p>The storage capacity purchased in the prepaid scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -633,7 +633,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public String dataStorageUsedCapacityDetail;
 
         /**
-         * <p>The name of the Simple Log Service project that stores user logs.</p>
+         * <p>The name of the Simple Log Service (SLS) project that stores user logs.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun-cloudsiem-data-171835723111****-cn-shanghai</p>
@@ -641,8 +641,17 @@ public class GetDataStorageResponseBody extends TeaModel {
         @NameInMap("LogProject")
         public String logProject;
 
+        @NameInMap("LogProjectState")
+        public String logProjectState;
+
+        @NameInMap("LogProjectStateChangeAllowed")
+        public Boolean logProjectStateChangeAllowed;
+
+        @NameInMap("LogServiceDisabled")
+        public Boolean logServiceDisabled;
+
         /**
-         * <p>The details of the Logstores for normalized data.</p>
+         * <p>The details of Logstores for normalized data.</p>
          */
         @NameInMap("NormalizationLogStores")
         public java.util.List<GetDataStorageResponseBodyDataNormalizationLogStores> normalizationLogStores;
@@ -666,7 +675,7 @@ public class GetDataStorageResponseBody extends TeaModel {
         public java.util.List<GetDataStorageResponseBodyDataSasLogStores> sasLogStores;
 
         /**
-         * <p>The list of legacy SIEM V1 Logstores.</p>
+         * <p>The list of SIEM V1 legacy Logstores.</p>
          */
         @NameInMap("UnusedLogStores")
         public java.util.List<GetDataStorageResponseBodyDataUnusedLogStores> unusedLogStores;
@@ -730,6 +739,30 @@ public class GetDataStorageResponseBody extends TeaModel {
         }
         public String getLogProject() {
             return this.logProject;
+        }
+
+        public GetDataStorageResponseBodyData setLogProjectState(String logProjectState) {
+            this.logProjectState = logProjectState;
+            return this;
+        }
+        public String getLogProjectState() {
+            return this.logProjectState;
+        }
+
+        public GetDataStorageResponseBodyData setLogProjectStateChangeAllowed(Boolean logProjectStateChangeAllowed) {
+            this.logProjectStateChangeAllowed = logProjectStateChangeAllowed;
+            return this;
+        }
+        public Boolean getLogProjectStateChangeAllowed() {
+            return this.logProjectStateChangeAllowed;
+        }
+
+        public GetDataStorageResponseBodyData setLogServiceDisabled(Boolean logServiceDisabled) {
+            this.logServiceDisabled = logServiceDisabled;
+            return this;
+        }
+        public Boolean getLogServiceDisabled() {
+            return this.logServiceDisabled;
         }
 
         public GetDataStorageResponseBodyData setNormalizationLogStores(java.util.List<GetDataStorageResponseBodyDataNormalizationLogStores> normalizationLogStores) {

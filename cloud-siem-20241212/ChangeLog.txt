@@ -1,3 +1,13 @@
+2026-07-30 Version: 2.5.1
+- Update API CreateDetectionRule: add request parameters DetectionRules.
+- Update API GetDataStorage: add response parameters Body.Data.LogProjectState.
+- Update API GetDataStorage: add response parameters Body.Data.LogProjectStateChangeAllowed.
+- Update API GetDataStorage: add response parameters Body.Data.LogServiceDisabled.
+- Update API ListQueryViews: add response parameters Body.LogProjectName.
+- Update API ListQueryViews: add response parameters Body.LogRegionId.
+- Update API ListQueryViews: add response parameters Body.LogStoreName.
+
+
 2026-07-16 Version: 2.5.0
 - Support API DeleteNormalizationSchema.
 - Support API UpdateDataConnector.

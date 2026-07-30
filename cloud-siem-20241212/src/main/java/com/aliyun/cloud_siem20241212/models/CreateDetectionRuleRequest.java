@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDetectionRuleRequest extends TeaModel {
     /**
-     * <p>The ATT\&amp;CK stage of the alert.</p>
+     * <p>The alert ATT&amp;CK technique.</p>
      * 
      * <strong>example:</strong>
      * <p>Discovery</p>
@@ -17,7 +17,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String alertAttCkMapping;
 
     /**
-     * <p>The alert description. You can use $$ to reference fields from the query output.</p>
+     * <p>The alert description. You can use $$ to reference query output fields.</p>
      * 
      * <strong>example:</strong>
      * <p>Alert from: $product_code$, detected network attack from $src_ip$, affected assets include: $dst_ip$</p>
@@ -28,18 +28,12 @@ public class CreateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The threat level of the alert. Valid values:</p>
      * <ul>
-     * <li><p>5: critical.</p>
-     * </li>
-     * <li><p>4: important.</p>
-     * </li>
-     * <li><p>3: medium.</p>
-     * </li>
-     * <li><p>2: low.</p>
-     * </li>
-     * <li><p>1: informational.</p>
-     * </li>
+     * <li>5: Critical.</li>
+     * <li>4: High.</li>
+     * <li>3: Medium.</li>
+     * <li>2: Low.</li>
+     * <li>1: Informational.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +45,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String alertLevelMapping;
 
     /**
-     * <p>The alert name. You can use $$ to reference fields from the query output.</p>
+     * <p>The alert name. You can use $$ to reference query output fields.</p>
      * 
      * <strong>example:</strong>
      * <p>Detected high-frequency multi-type network attacks from $src_ip$</p>
@@ -60,18 +54,13 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String alertName;
 
     /**
-     * <p>The ID of the alert template for the detection rule. Valid values:</p>
+     * <p>The ID of the detection rule alert template. Valid values:</p>
      * <ul>
-     * <li><p>ALERT_ACTIVITY: other alerts.</p>
-     * </li>
-     * <li><p>EDR_ALERT_ACTIVITY: Endpoint Detection and Response (EDR) alerts.</p>
-     * </li>
-     * <li><p>FIREWALL_ALERT_ACTIVITY: firewall alerts.</p>
-     * </li>
-     * <li><p>WAF_ALERT_ACTIVITY: Web Application Firewall (WAF) alerts.</p>
-     * </li>
+     * <li>ALERT_ACTIVITY: other alerts.</li>
+     * <li>EDR_ALERT_ACTIVITY: endpoint detection and response alerts.</li>
+     * <li>FIREWALL_ALERT_ACTIVITY: firewall alerts.</li>
+     * <li>WAF_ALERT_ACTIVITY: web application firewall alerts.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ALERT_ACTIVITY</p>
@@ -80,7 +69,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String alertSchemaId;
 
     /**
-     * <p>The tactic phase of the alert.</p>
+     * <p>The alert tactic stage.</p>
      * 
      * <strong>example:</strong>
      * <p>TA0042</p>
@@ -89,7 +78,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String alertTacticId;
 
     /**
-     * <p>The count for the alert threshold.</p>
+     * <p>The alert threshold count.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -98,7 +87,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Integer alertThresholdCount;
 
     /**
-     * <p>The list of fields for the alert threshold. Separate multiple fields with commas.</p>
+     * <p>The list of alert threshold fields, separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>alert_type,ip</p>
@@ -116,8 +105,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String alertThresholdPeriod;
 
     /**
-     * <p>The alert type.</p>
-     * <p>This parameter is required.</p>
+     * <p>The Alarm Metric of the alerting rule.</p>
      * 
      * <strong>example:</strong>
      * <p>WebShell</p>
@@ -153,10 +141,8 @@ public class CreateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The type of the detection rule expression. Valid values:</p>
      * <ul>
-     * <li><p>sql: SQL.</p>
-     * </li>
-     * <li><p>playbook: playbook.</p>
-     * </li>
+     * <li>sql: SQL.</li>
+     * <li>playbook: playbook.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -176,7 +162,6 @@ public class CreateDetectionRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the detection rule.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>dr-ha1i09ob3zmqrs85****</p>
@@ -214,20 +199,19 @@ public class CreateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The type of the detection rule. Valid values:</p>
      * <ul>
-     * <li><p>preset: predefined detection rule.</p>
-     * </li>
-     * <li><p>custom: custom detection rule.</p>
-     * </li>
-     * <li><p>custom_template: rule template.</p>
-     * </li>
+     * <li>preset: preset detection rule.</li>
+     * <li>custom: custom detection rule.</li>
+     * <li>custom_template: rule template.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
      */
     @NameInMap("DetectionRuleType")
     public String detectionRuleType;
+
+    @NameInMap("DetectionRules")
+    public String detectionRules;
 
     /**
      * <p>The entity mapping configuration.</p>
@@ -239,7 +223,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String entityMappings;
 
     /**
-     * <p>The configuration of the event aggregation period.</p>
+     * <p>The event aggregation period configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>5m</p>
@@ -250,16 +234,11 @@ public class CreateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The event aggregation type. Valid values:</p>
      * <ul>
-     * <li><p>none: Events are not generated.</p>
-     * </li>
-     * <li><p>graph_compute: graph computing (supported by predefined rules).</p>
-     * </li>
-     * <li><p>expert: expert rules.</p>
-     * </li>
-     * <li><p>passthrough: Alerts are passed through (one-to-one).</p>
-     * </li>
-     * <li><p>window: Similar alerts are aggregated (window).</p>
-     * </li>
+     * <li>none: No event is generated.</li>
+     * <li>graph_compute: Graph computing. This value is supported by predefined rules.</li>
+     * <li>expert: Expert rule.</li>
+     * <li>passthrough: Alerting pass-through (one-to-one).</li>
+     * <li>window: Same-type aggregation (window).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -271,10 +250,8 @@ public class CreateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -294,7 +271,6 @@ public class CreateDetectionRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the log normalization schema.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>API_RISK_ACTIVITY</p>
@@ -303,7 +279,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String logSchemaId;
 
     /**
-     * <p>The custom parameters for the playbook.</p>
+     * <p>The custom parameters of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -325,12 +301,10 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String playbookUuid;
 
     /**
-     * <p>The region where the Data Management center of Threat Analysis is located. Select a region based on the region where your assets are located. Valid values:</p>
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou: Your assets are in the Chinese mainland.</p>
-     * </li>
-     * <li><p>ap-southeast-1: Your assets are in a region outside China.</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets reside outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -340,7 +314,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID that an administrator uses to switch to the perspective of another member.</p>
+     * <p>The ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -349,7 +323,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>The start time for scheduling. This is a 13-digit UNIX timestamp.</p>
+     * <p>The scheduling start time. The value is a 13-digit UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1733269771123</p>
@@ -358,7 +332,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Long scheduleBeginTime;
 
     /**
-     * <p>The cron expression for scheduling. This parameter is required if you set ScheduleType to cron.</p>
+     * <p>The scheduling cron expression. This parameter is required when ScheduleType is set to cron.</p>
      * 
      * <strong>example:</strong>
      * <p>0/5 * * * *</p>
@@ -367,7 +341,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public String scheduleExpression;
 
     /**
-     * <p>The maximum number of retries after a timeout. Valid values: 1 to 100.</p>
+     * <p>The maximum number of retries upon timeout. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -376,7 +350,7 @@ public class CreateDetectionRuleRequest extends TeaModel {
     public Integer scheduleMaxRetries;
 
     /**
-     * <p>The maximum timeout period in seconds. Valid values: 60 to 1800.</p>
+     * <p>The maximum timeout period, in seconds. Valid values: 60 to 1800.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -387,10 +361,8 @@ public class CreateDetectionRuleRequest extends TeaModel {
     /**
      * <p>The scheduling type. Valid values:</p>
      * <ul>
-     * <li><p>fixed_rate: fixed interval.</p>
-     * </li>
-     * <li><p>cron: cron expression.</p>
-     * </li>
+     * <li>fixed_rate: fixed interval.</li>
+     * <li>cron: cron expression.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -579,6 +551,14 @@ public class CreateDetectionRuleRequest extends TeaModel {
     }
     public String getDetectionRuleType() {
         return this.detectionRuleType;
+    }
+
+    public CreateDetectionRuleRequest setDetectionRules(String detectionRules) {
+        this.detectionRules = detectionRules;
+        return this;
+    }
+    public String getDetectionRules() {
+        return this.detectionRules;
     }
 
     public CreateDetectionRuleRequest setEntityMappings(String entityMappings) {

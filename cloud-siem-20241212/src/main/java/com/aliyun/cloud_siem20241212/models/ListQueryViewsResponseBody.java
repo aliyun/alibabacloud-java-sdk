@@ -4,8 +4,17 @@ package com.aliyun.cloud_siem20241212.models;
 import com.aliyun.tea.*;
 
 public class ListQueryViewsResponseBody extends TeaModel {
+    @NameInMap("LogProjectName")
+    public String logProjectName;
+
+    @NameInMap("LogRegionId")
+    public String logRegionId;
+
+    @NameInMap("LogStoreName")
+    public String logStoreName;
+
     /**
-     * <p>The maximum number of results to return per request when using the NextToken-based pagination. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +23,7 @@ public class ListQueryViewsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -40,6 +49,30 @@ public class ListQueryViewsResponseBody extends TeaModel {
     public static ListQueryViewsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListQueryViewsResponseBody self = new ListQueryViewsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListQueryViewsResponseBody setLogProjectName(String logProjectName) {
+        this.logProjectName = logProjectName;
+        return this;
+    }
+    public String getLogProjectName() {
+        return this.logProjectName;
+    }
+
+    public ListQueryViewsResponseBody setLogRegionId(String logRegionId) {
+        this.logRegionId = logRegionId;
+        return this;
+    }
+    public String getLogRegionId() {
+        return this.logRegionId;
+    }
+
+    public ListQueryViewsResponseBody setLogStoreName(String logStoreName) {
+        this.logStoreName = logStoreName;
+        return this;
+    }
+    public String getLogStoreName() {
+        return this.logStoreName;
     }
 
     public ListQueryViewsResponseBody setMaxResults(Integer maxResults) {

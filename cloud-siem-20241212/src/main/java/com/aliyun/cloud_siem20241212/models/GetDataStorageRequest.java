@@ -20,8 +20,8 @@ public class GetDataStorageRequest extends TeaModel {
     /**
      * <p>The region where the threat analysis data management center is located. Specify the management center region based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the asset is in the Chinese mainland.</li>
-     * <li>ap-southeast-1: the asset is outside China.</li>
+     * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class GetDataStorageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the member to which the administrator switches the view.</p>
+     * <p>The user ID that the administrator uses to switch to another member\&quot;s perspective.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
