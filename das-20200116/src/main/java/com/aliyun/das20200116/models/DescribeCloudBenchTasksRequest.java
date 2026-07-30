@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudBenchTasksRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeCloudBenchTasksRequest extends TeaModel {
     public String pageNo;
 
     /**
-     * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The value must be a positive integer. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeCloudBenchTasksRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1596177993000</p>
@@ -44,12 +44,16 @@ public class DescribeCloudBenchTasksRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the stress testing task. Valid values:</p>
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li><strong>SUCCESS</strong>: The task is successful.</li>
-     * <li><strong>IGNORED</strong>: The task is ignored.</li>
-     * <li><strong>RUNNING</strong>: The task is running.</li>
-     * <li><strong>EXCEPTION</strong>: The task is abnormal.</li>
+     * <li><p><strong>SUCCESS</strong>: The task is successful.</p>
+     * </li>
+     * <li><p><strong>IGNORED</strong>: The task is ignored.</p>
+     * </li>
+     * <li><p><strong>RUNNING</strong>: The task is running.</p>
+     * </li>
+     * <li><p><strong>EXCEPTION</strong>: The task is abnormal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,8 +65,10 @@ public class DescribeCloudBenchTasksRequest extends TeaModel {
     /**
      * <p>The type of the stress testing task. Valid values:</p>
      * <ul>
-     * <li><strong>pressure test</strong> (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</li>
-     * <li><strong>smart pressure test</strong>: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</li>
+     * <li><p><strong>pressure test</strong> (default): A stress testing task that replays the traffic captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</p>
+     * </li>
+     * <li><p><strong>smart pressure test</strong>: A stress testing task that is generated to perform continuous stress testing. The task analyzes the traffic that is captured from a source instance in a short period of time and generates traffic that is similar to the traffic on the source instance in terms of business model and traffic distribution. This reduces the time that is required to collect data from the source instance and lowers the costs of storage and performance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

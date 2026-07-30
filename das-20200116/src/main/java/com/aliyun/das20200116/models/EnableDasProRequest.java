@@ -17,11 +17,16 @@ public class EnableDasProRequest extends TeaModel {
     /**
      * <p>The storage duration of SQL Explorer data. Unit: day. Default value: <strong>30</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong></li>
-     * <li><strong>180</strong></li>
-     * <li><strong>365</strong></li>
-     * <li><strong>1095</strong></li>
-     * <li><strong>1825</strong></li>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>180</strong></p>
+     * </li>
+     * <li><p><strong>365</strong></p>
+     * </li>
+     * <li><p><strong>1095</strong></p>
+     * </li>
+     * <li><p><strong>1825</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +38,7 @@ public class EnableDasProRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
      * <blockquote>
-     * <p> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     * <p>This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

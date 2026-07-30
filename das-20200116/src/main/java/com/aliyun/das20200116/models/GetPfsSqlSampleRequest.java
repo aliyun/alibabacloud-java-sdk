@@ -7,7 +7,7 @@ public class GetPfsSqlSampleRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
+     * <p>The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class GetPfsSqlSampleRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported</p>
+     * <p>Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +33,7 @@ public class GetPfsSqlSampleRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</p>
+     * <p>For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -22,7 +22,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     /**
      * <p>The message that is returned for the request.</p>
      * <blockquote>
-     * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -745,7 +747,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The message that is returned for the request.</p>
          * <blockquote>
-         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -766,10 +768,14 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The state of the cache analysis task. Valid values:</p>
          * <ul>
-         * <li><strong>BACKUP</strong>: The data is being backed up.</li>
-         * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
-         * <li><strong>FINISHED</strong>: The data is analyzed.</li>
-         * <li><strong>FAILED</strong>: An error occurred.</li>
+         * <li><p><strong>BACKUP</strong>: The data is being backed up.</p>
+         * </li>
+         * <li><p><strong>ANALYZING</strong>: The data is being analyzed.</p>
+         * </li>
+         * <li><p><strong>FINISHED</strong>: The data is analyzed.</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: An error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

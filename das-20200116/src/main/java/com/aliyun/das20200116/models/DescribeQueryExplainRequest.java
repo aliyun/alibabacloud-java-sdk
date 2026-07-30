@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeQueryExplainRequest extends TeaModel {
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>dbtest01</p>
      */
@@ -12,6 +14,7 @@ public class DescribeQueryExplainRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,16 +24,28 @@ public class DescribeQueryExplainRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the node.</p>
+     * <blockquote>
+     * <p>For PolarDB for MySQL instances, if you specify a node ID, the system queries the execution plan on that node. Otherwise, it queries the execution plan on a secondary node.For high availability ApsaraDB RDS for MySQL instances, if you specify an instance ID, the system queries the execution plan on that node. Otherwise, it queries the execution plan on a secondary node.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pi-bp1v203xzzh0a****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>Schema information. This is a reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Schema")
     public String schema;
 
     /**
+     * <p>The SQL statement for which you want to get the execution plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

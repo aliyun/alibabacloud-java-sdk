@@ -22,7 +22,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +104,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The number of active sessions that belong to the client IP address.</p>
          * <blockquote>
-         * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <p>If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,7 +194,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The number of active sessions of the database.</p>
          * <blockquote>
-         * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <p>If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,7 +320,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The SQL template ID.</p>
          * <blockquote>
-         * <p> This parameter is returned only when you use a PolarDB-X 2.0 instance.</p>
+         * <p>This parameter is returned only when you use a PolarDB-X 2.0 instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -497,7 +499,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The number of active sessions within the account.</p>
          * <blockquote>
-         * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <p>If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -719,8 +721,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -732,8 +736,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asynchronous request failed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -745,8 +751,10 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -773,9 +781,12 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The state of the asynchronous request. Valid values:</p>
          * <ul>
-         * <li><strong>RUNNING</strong></li>
-         * <li><strong>SUCCESS</strong></li>
-         * <li><strong>FAIL</strong></li>
+         * <li><p><strong>RUNNING</strong></p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong></p>
+         * </li>
+         * <li><p><strong>FAIL</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

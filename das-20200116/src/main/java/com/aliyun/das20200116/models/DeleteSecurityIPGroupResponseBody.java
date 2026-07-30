@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityIPGroupResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,17 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>ListResult<InstanceSSL></p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DeleteSecurityIPGroupResponseBodyData data;
 
     /**
+     * <p>The message returned for the request.</p>
+     * <blockquote>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned. The error message may include an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -25,6 +32,8 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
@@ -32,6 +41,14 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,6 +102,8 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
 
     public static class DeleteSecurityIPGroupResponseBodyDataGlobalSecurityIPGroup extends TeaModel {
         /**
+         * <p>The ID of the IP address whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-1no2rzybnqcv0m****</p>
          */
@@ -107,6 +126,9 @@ public class DeleteSecurityIPGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSecurityIPGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the cross-product whitelist template.</p>
+         */
         @NameInMap("GlobalSecurityIPGroup")
         public java.util.List<DeleteSecurityIPGroupResponseBodyDataGlobalSecurityIPGroup> globalSecurityIPGroup;
 

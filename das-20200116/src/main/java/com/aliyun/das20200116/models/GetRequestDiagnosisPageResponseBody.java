@@ -22,7 +22,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+     * <p>If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,12 +122,18 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>SQLServer</strong></li>
-         * <li><strong>PolarDBMySQL</strong></li>
-         * <li><strong>PolarDBOracle</strong></li>
-         * <li><strong>MongoDB</strong></li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>SQLServer</strong></p>
+         * </li>
+         * <li><p><strong>PolarDBMySQL</strong></p>
+         * </li>
+         * <li><p><strong>PolarDBOracle</strong></p>
+         * </li>
+         * <li><p><strong>MongoDB</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,29 +185,40 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>errorCode</strong>: indicates whether the SQL diagnostics task is complete. Valid values:</p>
          * <ul>
-         * <li><strong>0001</strong>: The SQL diagnostics task is complete.</li>
-         * <li><strong>0003</strong>: The SQL diagnostics task failed.</li>
+         * <li><p><strong>0001</strong>: The SQL diagnostics task is complete.</p>
+         * </li>
+         * <li><p><strong>0003</strong>: The SQL diagnostics task failed.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>errorMessage</strong>: the error message.</p>
          * </li>
          * <li><p><strong>estimateCost</strong>: the estimated cost.</p>
          * <ul>
-         * <li><strong>cpu</strong>: the estimated CPU utilization of the index.</li>
-         * <li><strong>io</strong>: the estimated I/O usage of the index.</li>
-         * <li><strong>rows</strong>: the estimated values of the rows returned for the index.</li>
+         * <li><p><strong>cpu</strong>: the estimated CPU utilization of the index.</p>
+         * </li>
+         * <li><p><strong>io</strong>: the estimated I/O usage of the index.</p>
+         * </li>
+         * <li><p><strong>rows</strong>: the estimated values of the rows returned for the index.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>improvement</strong>: the performance improvement ratio.</p>
          * </li>
          * <li><p><strong>indexAdvices</strong>: the index recommendations, which include the following information:</p>
          * <ul>
-         * <li><strong>columns</strong>: the index columns.</li>
-         * <li><strong>ddlAddIndex</strong>: the DDL statement for the index.</li>
-         * <li><strong>indexName</strong>: the name of the index.</li>
-         * <li><strong>schemaName</strong>: the name of the database.</li>
-         * <li><strong>tableName</strong>: the name of the table.</li>
-         * <li><strong>unique</strong>: indicates whether the index is unique.</li>
+         * <li><p><strong>columns</strong>: the index columns.</p>
+         * </li>
+         * <li><p><strong>ddlAddIndex</strong>: the DDL statement for the index.</p>
+         * </li>
+         * <li><p><strong>indexName</strong>: the name of the index.</p>
+         * </li>
+         * <li><p><strong>schemaName</strong>: the name of the database.</p>
+         * </li>
+         * <li><p><strong>tableName</strong>: the name of the table.</p>
+         * </li>
+         * <li><p><strong>unique</strong>: indicates whether the index is unique.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>ip</strong>: the IP address of the instance.</p>
@@ -216,8 +235,10 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>support</strong>: indicates whether the SQL statement can be diagnosed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The SQL statement can be diagnosed.</li>
-         * <li><strong>false</strong>: The SQL statement cannot be diagnosed.</li>
+         * <li><p><strong>true</strong>: The SQL statement can be diagnosed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The SQL statement cannot be diagnosed.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>tuningAdvices</strong>: the SQL rewrite suggestions.</p>
@@ -225,7 +246,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{ &quot;endTime&quot;:1636354256000, &quot;errorCode&quot;:&quot;0001&quot;, &quot;errorMessage&quot;:&quot;TFX Successful&quot;, &quot;estimateCost&quot;:{ &quot;cpu&quot;:1.7878745150389268, &quot;io&quot;:9.948402604746128, &quot;rows&quot;:8.889372575194633 }, &quot;improvement&quot;:12933.97, &quot;indexAdvices&quot;:[ { &quot;columns&quot;:[ &quot;work_no&quot; ], &quot;ddlAddIndex&quot;:&quot;ALTER TABLE <code>test</code>.<code>work_order</code> ADD INDEX <code>idx_workno</code> (<code>work_no</code>)&quot;, &quot;indexName&quot;:&quot;idx_workno&quot;, &quot;schemaName&quot;:&quot;test&quot;, &quot;tableName&quot;:&quot;work_order&quot;, &quot;unique&quot;:false } ], &quot;ip&quot;:&quot;<strong><strong>.mysql.rds.aliyuncs.com&quot;, &quot;messageId&quot;:&quot;6188c8cb2f1365b16aee</strong></strong>&quot;, &quot;port&quot;:3306, &quot;sqlTag&quot;:&quot;{\&quot;PRED_EQUAL\&quot;:\&quot;Y\&quot;,\&quot;CNT_QB\&quot;:\&quot;1\&quot;,\&quot;CNT_TB\&quot;:\&quot;1\&quot;}&quot;, &quot;startTime&quot;:1636354252000, &quot;success&quot;:true, &quot;support&quot;:true, &quot;tuningAdvices&quot;:[ ] }</p>
+         * <p>{     &quot;endTime&quot;:1636354256000,     &quot;errorCode&quot;:&quot;0001&quot;,     &quot;errorMessage&quot;:&quot;TFX成功&quot;,     &quot;estimateCost&quot;:{         &quot;cpu&quot;:1.7878745150389268,         &quot;io&quot;:9.948402604746128,         &quot;rows&quot;:8.889372575194633     },     &quot;improvement&quot;:12933.97,     &quot;indexAdvices&quot;:[         {             &quot;columns&quot;:[                 &quot;work_no&quot;             ],             &quot;ddlAddIndex&quot;:&quot;ALTER TABLE <code>test</code>.<code>work_order</code> ADD INDEX <code>idx_workno</code> (<code>work_no</code>)&quot;,             &quot;indexName&quot;:&quot;idx_workno&quot;,             &quot;schemaName&quot;:&quot;test&quot;,             &quot;tableName&quot;:&quot;work_order&quot;,             &quot;unique&quot;:false         }     ],     &quot;ip&quot;:&quot;<strong><strong>.mysql.rds.aliyuncs.com&quot;,     &quot;messageId&quot;:&quot;6188c8cb2f1365b16aee</strong></strong>&quot;,     &quot;port&quot;:3306,     &quot;sqlTag&quot;:&quot;{\&quot;PRED_EQUAL\&quot;:\&quot;Y\&quot;,\&quot;CNT_QB\&quot;:\&quot;1\&quot;,\&quot;CNT_TB\&quot;:\&quot;1\&quot;}&quot;,     &quot;startTime&quot;:1636354252000,     &quot;success&quot;:true,     &quot;support&quot;:true,     &quot;tuningAdvices&quot;:[      ] }</p>
          */
         @NameInMap("result")
         public String result;

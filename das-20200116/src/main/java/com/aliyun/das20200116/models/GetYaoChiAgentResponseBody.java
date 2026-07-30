@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetYaoChiAgentResponseBody extends TeaModel {
     /**
+     * <p>The response content.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The tool calling invoke list.</p>
+     */
     @NameInMap("FunctionCall")
     public java.util.List<GetYaoChiAgentResponseBodyFunctionCall> functionCall;
 
+    /**
+     * <p>The ParentId field. This field exists only when the message is output by a sub-agent, and the value is the sub-agent ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
     /**
+     * <p>The cloud service type.</p>
+     * 
      * <strong>example:</strong>
      * <p>polardb</p>
      */
@@ -25,6 +38,8 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     public String product;
 
     /**
+     * <p>The query ID. This value is the same as the QueryId request parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
      */
@@ -32,6 +47,8 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     public String queryId;
 
     /**
+     * <p>The reasoning content of the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -39,6 +56,8 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     public String reasoningContent;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7172BECE-588A-5961-8126-C216E16B****</p>
      */
@@ -46,15 +65,23 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The session ID. This value is the same as the SessionId request parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
      */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The list of sub-agent call information.</p>
+     */
     @NameInMap("SubAgentCall")
     public java.util.List<GetYaoChiAgentResponseBodySubAgentCall> subAgentCall;
 
+    /**
+     * <p>The card tool calling invoke list.</p>
+     */
     @NameInMap("UiFunctionCall")
     public java.util.List<GetYaoChiAgentResponseBodyUiFunctionCall> uiFunctionCall;
 
@@ -145,6 +172,8 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
 
     public static class GetYaoChiAgentResponseBodyFunctionCall extends TeaModel {
         /**
+         * <p>The parameters of the called tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;arg&quot;: &quot;xxx&quot;}</p>
          */
@@ -152,13 +181,17 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         public String arguments;
 
         /**
+         * <p>The tool ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>123447</p>
+         * <p>12345</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
+         * <p>The name of the called tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>sqlReview</p>
          */
@@ -166,6 +199,8 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The tool calling invoke status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -212,12 +247,30 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
     }
 
     public static class GetYaoChiAgentResponseBodySubAgentCall extends TeaModel {
+        /**
+         * <p>The sub-agent status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The sub-agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("SubAgentId")
         public String subAgentId;
 
+        /**
+         * <p>The sub-agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX Agent</p>
+         */
         @NameInMap("SubAgentName")
         public String subAgentName;
 
@@ -254,6 +307,8 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
 
     public static class GetYaoChiAgentResponseBodyUiFunctionCall extends TeaModel {
         /**
+         * <p>The parameters of the card tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;arg&quot;: &quot;xxx&quot;}</p>
          */
@@ -261,6 +316,8 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         public String argsText;
 
         /**
+         * <p>The name of the card tool.</p>
+         * 
          * <strong>example:</strong>
          * <p>card</p>
          */

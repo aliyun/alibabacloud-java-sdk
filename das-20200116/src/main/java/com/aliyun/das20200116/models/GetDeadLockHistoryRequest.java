@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetDeadLockHistoryRequest extends TeaModel {
     /**
+     * <p>The end time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is a Long value. To prevent precision loss during serialization and deserialization, make sure that the value does not exceed 9007199254740991.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class GetDeadLockHistoryRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,11 @@ public class GetDeadLockHistoryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The node ID.</p>
+     * <blockquote>
+     * <p>Specify the node ID for a PolarDB for MySQL instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pi-bp16v3824rt73****</p>
      */
@@ -30,6 +41,8 @@ public class GetDeadLockHistoryRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +50,8 @@ public class GetDeadLockHistoryRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. The maximum value is <strong>100</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -44,6 +59,18 @@ public class GetDeadLockHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The source of the task:</p>
+     * <ul>
+     * <li><p><strong>MANUAL</strong> or unspecified: queries tasks for recent deadlock analysis.</p>
+     * </li>
+     * <li><p><strong>AUTO</strong>: queries tasks for full deadlock analysis.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>If you set this parameter to AUTO to query tasks for full deadlock analysis, the start time can be a maximum of seven days earlier than the end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>AUTO</p>
      */
@@ -51,6 +78,11 @@ public class GetDeadLockHistoryRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The start time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is a Long value. To prevent precision loss during serialization and deserialization, make sure that the value does not exceed 9007199254740991.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

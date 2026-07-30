@@ -22,7 +22,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,14 +161,22 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         /**
          * <p>The description of the session when the session was terminated.</p>
          * <ul>
-         * <li><strong>SESSION_KILLED</strong>: The session is terminated.</li>
-         * <li><strong>SESSION_EXPIRED</strong>: The session has expired.</li>
-         * <li><strong>SESSION_NO_PERMISSION</strong>: The account used to terminate the session has insufficient permissions.</li>
-         * <li><strong>SESSION_ACCOUNT_ERROR</strong>: The account or password used to terminate the session is invalid.</li>
-         * <li><strong>SESSION_IGNORED_USER</strong>: The session of the account does not need to be terminated.</li>
-         * <li><strong>SESSION_INTERNAL_USER_OR_COMMAND</strong>: The session is a session initiated by or a command run by an Alibaba Cloud O\&amp;M account.</li>
-         * <li><strong>SESSION_KILL_TASK_TIMEOUT</strong>: Timeout occurs when the session is terminated.</li>
-         * <li><strong>SESSION_OTHER_ERROR</strong>: Other errors occurred.</li>
+         * <li><p><strong>SESSION_KILLED</strong>: The session is terminated.</p>
+         * </li>
+         * <li><p><strong>SESSION_EXPIRED</strong>: The session has expired.</p>
+         * </li>
+         * <li><p><strong>SESSION_NO_PERMISSION</strong>: The account used to terminate the session has insufficient permissions.</p>
+         * </li>
+         * <li><p><strong>SESSION_ACCOUNT_ERROR</strong>: The account or password used to terminate the session is invalid.</p>
+         * </li>
+         * <li><p><strong>SESSION_IGNORED_USER</strong>: The session of the account does not need to be terminated.</p>
+         * </li>
+         * <li><p><strong>SESSION_INTERNAL_USER_OR_COMMAND</strong>: The session is a session initiated by or a command run by an Alibaba Cloud O\&amp;M account.</p>
+         * </li>
+         * <li><p><strong>SESSION_KILL_TASK_TIMEOUT</strong>: Timeout occurs when the session is terminated.</p>
+         * </li>
+         * <li><p><strong>SESSION_OTHER_ERROR</strong>: Other errors occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,7 +356,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter is returned only if the instance is a PolarDB for MySQL cluster.</p>
+         * <p>This parameter is returned only if the instance is a PolarDB for MySQL cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -364,7 +374,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         /**
          * <p>The session IDs.</p>
          * <blockquote>
-         * <p> If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</p>
+         * <p>If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</p>
          * </blockquote>
          */
         @NameInMap("Sessions")
@@ -382,10 +392,14 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         /**
          * <p>The state of the task that terminates sessions.</p>
          * <ul>
-         * <li><strong>RUNNING</strong>: The task is in progress.</li>
-         * <li><strong>SUCCESS</strong>: The task is successful.</li>
-         * <li><strong>FAILURE</strong>: The task failed.</li>
-         * <li><strong>ERROR</strong>: Other errors occur.</li>
+         * <li><p><strong>RUNNING</strong>: The task is in progress.</p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong>: The task is successful.</p>
+         * </li>
+         * <li><p><strong>FAILURE</strong>: The task failed.</p>
+         * </li>
+         * <li><p><strong>ERROR</strong>: Other errors occur.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

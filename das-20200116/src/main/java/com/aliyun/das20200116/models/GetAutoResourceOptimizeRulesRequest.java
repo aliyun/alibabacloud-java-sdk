@@ -20,8 +20,10 @@ public class GetAutoResourceOptimizeRulesRequest extends TeaModel {
      * </li>
      * <li><p>By default, if you leave this parameter empty, all database instances for which the automatic fragment recycling feature has been enabled within the current Alibaba Cloud account are returned. The following types of database instances are returned:</p>
      * <ul>
-     * <li>Database instances for which the automatic fragment recycling feature is currently enabled.</li>
-     * <li>Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Enterprise Edition has been disabled but excluding those that have been released.</li>
+     * <li><p>Database instances for which the automatic fragment recycling feature is currently enabled.</p>
+     * </li>
+     * <li><p>Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Enterprise Edition has been disabled but excluding those that have been released.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>

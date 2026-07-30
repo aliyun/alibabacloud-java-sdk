@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceGroupInspectReportListRequest extends TeaModel {
     /**
+     * <p>Optional. By default, the default Agent is used. You can also specify the Agent that was generated after DAS Agent was activated or that was manually created.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag-472T0DxtmjIxxxxx</p>
      */
@@ -12,6 +14,7 @@ public class GetInstanceGroupInspectReportListRequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>The end timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,13 +24,19 @@ public class GetInstanceGroupInspectReportListRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("ReportType")
+    public String reportType;
+
     /**
+     * <p>The start timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +72,14 @@ public class GetInstanceGroupInspectReportListRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public GetInstanceGroupInspectReportListRequest setReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    public String getReportType() {
+        return this.reportType;
     }
 
     public GetInstanceGroupInspectReportListRequest setStartTime(Long startTime) {

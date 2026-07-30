@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -18,6 +20,11 @@ public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
     public java.util.List<GetInstanceGroupInspectReportListResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * <blockquote>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, exception information such as an error code is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -25,6 +32,8 @@ public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
@@ -32,6 +41,12 @@ public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,6 +100,8 @@ public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
 
     public static class GetInstanceGroupInspectReportListResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-11 00:39:00</p>
          */
@@ -92,6 +109,8 @@ public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The date of the diagnosis.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-10</p>
          */
@@ -99,6 +118,8 @@ public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
         public String reportDate;
 
         /**
+         * <p>The report ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>13f52040-5a6e-42c3-bb84-051f5d6d****</p>
          */
@@ -106,6 +127,8 @@ public class GetInstanceGroupInspectReportListResponseBody extends TeaModel {
         public String reportId;
 
         /**
+         * <p>The task status. Valid values: WAITING_UNREADY = 0, WAITING_READY = 1, PROCESSING = 2, FINISHED = 3, ERROR = 4, STOPPED = -1.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

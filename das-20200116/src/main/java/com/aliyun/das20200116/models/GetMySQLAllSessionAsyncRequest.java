@@ -7,7 +7,7 @@ public class GetMySQLAllSessionAsyncRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> Only ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances are supported.</p>
+     * <p>Only ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class GetMySQLAllSessionAsyncRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> You must specify this parameter for PolarDB for MySQL clusters. If you do not specify a node ID, the session data of the primary node is returned by default.</p>
+     * <p>You must specify this parameter for PolarDB for MySQL clusters. If you do not specify a node ID, the session data of the primary node is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class GetMySQLAllSessionAsyncRequest extends TeaModel {
     /**
      * <p>The asynchronous request ID.</p>
      * <blockquote>
-     * <p> GetMySQLAllSessionAsync is an asynchronous operation. After a request is sent, the system does not return complete results but returns a <strong>request ID</strong>. You need to use the <strong>request ID</strong> to initiate requests until the value of the <strong>isFinish</strong> field in the returned results is <strong>true</strong>, the complete results are returned. This indicates that to obtain complete data, you must call this operation at least twice.</p>
+     * <p>GetMySQLAllSessionAsync is an asynchronous operation. After a request is sent, the system does not return complete results but returns a <strong>request ID</strong>. You need to use the <strong>request ID</strong> to initiate requests until the value of the <strong>isFinish</strong> field in the returned results is <strong>true</strong>, the complete results are returned. This indicates that to obtain complete data, you must call this operation at least twice.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

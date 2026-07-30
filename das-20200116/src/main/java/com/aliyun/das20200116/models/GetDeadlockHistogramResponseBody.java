@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetDeadlockHistogramResponseBody extends TeaModel {
     /**
+     * <p>The returned status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetDeadlockHistogramResponseBodyData> data;
 
     /**
+     * <p>The message returned.</p>
+     * <blockquote>
+     * <p>When the request is successful, this parameter returns <strong>Successful</strong>. When the request fails, this parameter returns exception information such as error codes.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -22,6 +32,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
      */
@@ -29,6 +41,14 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +102,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
 
     public static class GetDeadlockHistogramResponseBodyData extends TeaModel {
         /**
+         * <p>The end time of the analysis task range.</p>
+         * 
          * <strong>example:</strong>
          * <p>1729998000000</p>
          */
@@ -89,6 +111,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-bp1u5mas9exx7****</p>
          */
@@ -96,6 +120,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The number of deadlocks.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -103,6 +129,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public Integer lockNumber;
 
         /**
+         * <p>The node ID, used for PolarDB MySQL clusters.</p>
+         * 
          * <strong>example:</strong>
          * <p>pi-bp16v3824rt73****</p>
          */
@@ -110,6 +138,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The start time of the analysis task range.</p>
+         * 
          * <strong>example:</strong>
          * <p>1729994400000</p>
          */
@@ -117,6 +147,14 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The task status:</p>
+         * <ul>
+         * <li><p><strong>SUCCESS</strong>: The analysis was successful.</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: The analysis was abnormal or failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -124,6 +162,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the full deadlock analysis task.</p>
+         * 
          * <strong>example:</strong>
          * <p>B6D17591-B48B-4D31-9CD6-1321B394****</p>
          */
@@ -131,6 +171,8 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>108************</p>
          */

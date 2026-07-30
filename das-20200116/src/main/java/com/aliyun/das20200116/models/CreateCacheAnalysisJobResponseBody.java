@@ -22,7 +22,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -229,7 +231,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The ID of the cache analysis task.</p>
          * <blockquote>
-         * <p> This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis results of the specified cache analysis task.</p>
+         * <p>This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis results of the specified cache analysis task.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -241,7 +243,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,10 +264,14 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The state of the cache analysis task. Valid values:</p>
          * <ul>
-         * <li><strong>BACKUP</strong>: The data is being backed up.</li>
-         * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
-         * <li><strong>FINISHED</strong>: The data is analyzed.</li>
-         * <li><strong>FAILED</strong>: An error occurred.</li>
+         * <li><p><strong>BACKUP</strong>: The data is being backed up.</p>
+         * </li>
+         * <li><p><strong>ANALYZING</strong>: The data is being analyzed.</p>
+         * </li>
+         * <li><p><strong>FINISHED</strong>: The data is analyzed.</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: An error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

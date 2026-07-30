@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteStopGatewayResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,18 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of the DeleteStopGateway operation. Valid values:</p>
+     * <p>The status code indicating the result of the deletion:</p>
      * <ul>
-     * <li><strong>0</strong>: The metadata of the DBGateway is deleted.</li>
-     * <li><strong>-1</strong>: A system error occurs.</li>
-     * <li><strong>-2</strong>: The DBGateway does not exist.</li>
-     * <li><strong>-3</strong>: The DBGateway is not stopped and the metadata cannot be deleted.</li>
-     * <li><strong>-4</strong>: The metadata of the DBGateway fails to be deleted.</li>
+     * <li><p><strong>0</strong>: Success. The metadata was deleted.</p>
+     * </li>
+     * <li><p><strong>-1</strong>: A system error occurred.</p>
+     * </li>
+     * <li><p><strong>-2</strong>: The specified database gateway does not exist.</p>
+     * </li>
+     * <li><p><strong>-3</strong>: The database gateway is still active (not stopped) and its metadata cannot be deleted.</p>
+     * </li>
+     * <li><p><strong>-4</strong>: Failed to delete the metadata.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +37,7 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>When the request is successful, this parameter returns <strong>Successful</strong>. When the request fails, this parameter returns exception information such as error codes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,10 +56,12 @@ public class DeleteStopGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The operation is successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

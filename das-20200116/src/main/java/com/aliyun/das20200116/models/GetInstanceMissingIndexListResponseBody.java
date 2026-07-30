@@ -40,8 +40,10 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
          * <p>The database name.</p>
          * 
          * <strong>example:</strong>
-         * <p>school</p>
+         * <p>testdb</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;

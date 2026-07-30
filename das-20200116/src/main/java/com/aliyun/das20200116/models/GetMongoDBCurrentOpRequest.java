@@ -18,7 +18,7 @@ public class GetMongoDBCurrentOpRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dds-uf608087********</p>
+     * <p>dds-uf6079bda570****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -26,7 +26,7 @@ public class GetMongoDBCurrentOpRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
+     * <p>If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

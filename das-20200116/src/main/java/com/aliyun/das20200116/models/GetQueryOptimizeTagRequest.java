@@ -7,9 +7,12 @@ public class GetQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
-     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
-     * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * <li><p><strong>MySQL</strong>: ApsaraDB RDS for MySQL</p>
+     * </li>
+     * <li><p><strong>PolarDBMySQL</strong>: PolarDB for MySQL</p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +37,7 @@ public class GetQueryOptimizeTagRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>29d9fef63e347d39c3436658a5fe5f2b</p>
+     * <p>29d9fef63e347d39c3436658a5fe****</p>
      */
     @NameInMap("SqlId")
     public String sqlId;

@@ -16,7 +16,7 @@ public class DisableAutoThrottleRulesRequest extends TeaModel {
     /**
      * <p>The database instance IDs.</p>
      * <blockquote>
-     * <p> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\\&quot;Instance ID1\\&quot;,\\&quot;Instance ID2\\&quot;]</code>.</p>
+     * <p>Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\\&quot;Instance ID1\\&quot;,\\&quot;Instance ID2\\&quot;]</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

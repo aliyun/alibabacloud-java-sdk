@@ -17,7 +17,7 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     /**
      * <p>The end of the time range to create the diagnostic report. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> The start time must be later than the end time.</p>
+     * <p>The start time must be later than the end time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -22,7 +22,7 @@ public class DescribeTopBigKeysRequest extends TeaModel {
      * </li>
      * <li><p>Only data within the last four days can be queried.</p>
      * </li>
-     * <li><p>The maximum interval between the <strong>start time</strong> and the** end time** is 3 hours.</p>
+     * <li><p>The maximum interval between the <strong>start time</strong> and the\<em>\</em> end time\<em>\</em> is 3 hours.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

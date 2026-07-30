@@ -22,7 +22,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,8 +158,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         /**
          * <p>The file descriptor event. Valid values:</p>
          * <ul>
-         * <li><strong>r</strong>: Client sockets are readable in the event loop.</li>
-         * <li><strong>w</strong>: Client sockets are writable in the event loop.</li>
+         * <li><p><strong>r</strong>: Client sockets are readable in the event loop.</p>
+         * </li>
+         * <li><p><strong>w</strong>: Client sockets are writable in the event loop.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,19 +182,32 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         /**
          * <p>The client flag. Valid values:</p>
          * <ul>
-         * <li><strong>A</strong>: The connection needs to be closed at the earliest opportunity.</li>
-         * <li><strong>b</strong>: The client is waiting for blocked events.</li>
-         * <li><strong>c</strong>: The connection is closed after all replies are written.</li>
-         * <li><strong>d</strong>: The monitored keys have been modified, and the <code>EXEC</code> command is about to fail.</li>
-         * <li><strong>i</strong>: The client is waiting for VM I/O operations. This value is no longer used.</li>
-         * <li><strong>M</strong>: The client is the primary node.</li>
-         * <li><strong>N</strong>: No special flags are configured.</li>
-         * <li><strong>O</strong>: The client is in monitor mode.</li>
-         * <li><strong>r</strong>: The client is a cluster node in read-only mode.</li>
-         * <li><strong>S</strong>: The client is a replica node in normal mode.</li>
-         * <li><strong>u</strong>: The client is not blocked.</li>
-         * <li><strong>U</strong>: The client is connected by using UNIX domain sockets.</li>
-         * <li><strong>x</strong>: The client is executing a transaction.</li>
+         * <li><p><strong>A</strong>: The connection needs to be closed at the earliest opportunity.</p>
+         * </li>
+         * <li><p><strong>b</strong>: The client is waiting for blocked events.</p>
+         * </li>
+         * <li><p><strong>c</strong>: The connection is closed after all replies are written.</p>
+         * </li>
+         * <li><p><strong>d</strong>: The monitored keys have been modified, and the <code>EXEC</code> command is about to fail.</p>
+         * </li>
+         * <li><p><strong>i</strong>: The client is waiting for VM I/O operations. This value is no longer used.</p>
+         * </li>
+         * <li><p><strong>M</strong>: The client is the primary node.</p>
+         * </li>
+         * <li><p><strong>N</strong>: No special flags are configured.</p>
+         * </li>
+         * <li><p><strong>O</strong>: The client is in monitor mode.</p>
+         * </li>
+         * <li><p><strong>r</strong>: The client is a cluster node in read-only mode.</p>
+         * </li>
+         * <li><p><strong>S</strong>: The client is a replica node in normal mode.</p>
+         * </li>
+         * <li><p><strong>u</strong>: The client is not blocked.</p>
+         * </li>
+         * <li><p><strong>U</strong>: The client is connected by using UNIX domain sockets.</p>
+         * </li>
+         * <li><p><strong>x</strong>: The client is executing a transaction.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

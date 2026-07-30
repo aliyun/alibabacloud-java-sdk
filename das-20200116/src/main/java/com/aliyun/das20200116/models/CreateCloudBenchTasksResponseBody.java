@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudBenchTasksResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -19,7 +19,7 @@ public class CreateCloudBenchTasksResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>When the request is successful, <strong>Successful</strong> is returned. When the request fails, exception information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,12 @@ public class CreateCloudBenchTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

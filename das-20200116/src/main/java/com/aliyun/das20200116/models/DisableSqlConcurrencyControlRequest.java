@@ -16,7 +16,7 @@ public class DisableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+     * <p>The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

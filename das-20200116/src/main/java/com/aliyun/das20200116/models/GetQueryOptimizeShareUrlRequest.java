@@ -7,8 +7,10 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
      * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>true</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,9 +31,12 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
-     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
-     * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * <li><p><strong>MySQL</strong>: ApsaraDB RDS for MySQL</p>
+     * </li>
+     * <li><p><strong>PolarDBMySQL</strong>: PolarDB for MySQL</p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -62,8 +67,10 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
      * <p>The logical relationship between multiple keywords. Valid values:</p>
      * <ul>
-     * <li><strong>or</strong></li>
-     * <li><strong>and</strong></li>
+     * <li><p><strong>or</strong></p>
+     * </li>
+     * <li><p><strong>and</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,8 +82,10 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
      * <p>Specifies whether to query only SQL templates that need to be optimized. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,15 +97,24 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
      * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>count</strong>: the number of executions.</li>
-     * <li><strong>maxQueryTime</strong>: the longest execution duration.</li>
-     * <li><strong>avgQueryTime</strong>: the average execution duration.</li>
-     * <li><strong>maxLockTime</strong>: the longest lock wait duration.</li>
-     * <li><strong>avgLockTime</strong>: the average lock wait duration.</li>
-     * <li><strong>maxRowsExamined</strong>: the largest number of scanned rows.</li>
-     * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
-     * <li><strong>maxRowsSent</strong>: the largest number of returned rows.</li>
-     * <li><strong>avgRowsSent</strong>: the average number of returned rows.</li>
+     * <li><p><strong>count</strong>: the number of executions.</p>
+     * </li>
+     * <li><p><strong>maxQueryTime</strong>: the longest execution duration.</p>
+     * </li>
+     * <li><p><strong>avgQueryTime</strong>: the average execution duration.</p>
+     * </li>
+     * <li><p><strong>maxLockTime</strong>: the longest lock wait duration.</p>
+     * </li>
+     * <li><p><strong>avgLockTime</strong>: the average lock wait duration.</p>
+     * </li>
+     * <li><p><strong>maxRowsExamined</strong>: the largest number of scanned rows.</p>
+     * </li>
+     * <li><p><strong>avgRowsExamined</strong>: the average number of scanned rows.</p>
+     * </li>
+     * <li><p><strong>maxRowsSent</strong>: the largest number of returned rows.</p>
+     * </li>
+     * <li><p><strong>avgRowsSent</strong>: the average number of returned rows.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,13 +144,16 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
      * <p>The region in which the instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-china</strong>: Chinese mainland</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><p><strong>cn-china</strong>: Chinese mainland</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Singapore</p>
+     * </li>
      * </ul>
-     * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
+     * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.\<em>\</em>\<em>\</em></p>
      * <blockquote>
-     * <p> If your instances reside in the regions in the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
+     * <p>If your instances reside in the regions in the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

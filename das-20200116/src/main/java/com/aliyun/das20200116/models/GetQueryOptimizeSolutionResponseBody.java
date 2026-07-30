@@ -40,8 +40,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,8 +101,10 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
         /**
          * <p>The severity level. Valid values:</p>
          * <ul>
-         * <li><strong>INFO</strong></li>
-         * <li><strong>WARN</strong></li>
+         * <li><p><strong>INFO</strong></p>
+         * </li>
+         * <li><p><strong>WARN</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

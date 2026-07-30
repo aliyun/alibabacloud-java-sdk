@@ -7,9 +7,12 @@ public class GetQueryOptimizeSolutionRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>PolarDBMySQL</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PolarDBMySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

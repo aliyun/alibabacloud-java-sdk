@@ -8,7 +8,7 @@ public class GetBlockingDetailListRequest extends TeaModel {
      * <p>The name of the database. Separate multiple database names with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>school1,school2</p>
+     * <p>testdb1,testdb2</p>
      */
     @NameInMap("DbNameList")
     public String dbNameList;
@@ -28,7 +28,7 @@ public class GetBlockingDetailListRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rm-t4nfalp2ap421312z</p>
+     * <p>rm-t4nfalp2ap421****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIPGroupRelationRequest extends TeaModel {
     /**
+     * <p>The ID of the IP address whitelist template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifySecurityIPGroupRelationRequest extends TeaModel {
     public String globalSecurityGroupId;
 
     /**
+     * <p>The database instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifySecurityIPGroupRelationRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

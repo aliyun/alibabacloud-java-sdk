@@ -16,11 +16,16 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     /**
      * <p>The information of the diagnostics reports. Valid values:</p>
      * <ul>
-     * <li><strong>total</strong>: the number of diagnostics reports.</li>
-     * <li><strong>score</strong>: the health score.</li>
-     * <li><strong>diagnosticTime</strong>: the time when the diagnostics report was generated. The time is displayed in UTC.</li>
-     * <li><strong>startTime</strong>: the start time of the query. The time is displayed in UTC.</li>
-     * <li><strong>endTime</strong>: the end time of the query. The time is displayed in UTC.</li>
+     * <li><p><strong>total</strong>: the number of diagnostics reports.</p>
+     * </li>
+     * <li><p><strong>score</strong>: the health score.</p>
+     * </li>
+     * <li><p><strong>diagnosticTime</strong>: the time when the diagnostics report was generated. The time is displayed in UTC.</p>
+     * </li>
+     * <li><p><strong>startTime</strong>: the start time of the query. The time is displayed in UTC.</p>
+     * </li>
+     * <li><p><strong>endTime</strong>: the end time of the query. The time is displayed in UTC.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +37,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,8 +58,10 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

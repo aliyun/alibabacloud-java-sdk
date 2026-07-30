@@ -16,7 +16,7 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends TeaModel {
     /**
      * <p>The database instance IDs.</p>
      * <blockquote>
-     * <p> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</code>.</p>
+     * <p>Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends TeaModel {
     /**
      * <p>The ID of the asynchronous request.</p>
      * <blockquote>
-     * <p> Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of <strong>ResultId</strong> returned in the response to re-initiate the call until the value of <strong>isFinish</strong> is <strong>true</strong>.**** In this case, you must call this operation at least twice.</p>
+     * <p>Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of <strong>ResultId</strong> returned in the response to re-initiate the call until the value of <strong>isFinish</strong> is <strong>true</strong>.\<em>\</em>\<em>\</em> In this case, you must call this operation at least twice.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

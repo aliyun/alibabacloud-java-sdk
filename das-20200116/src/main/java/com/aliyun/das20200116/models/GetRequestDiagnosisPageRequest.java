@@ -27,7 +27,7 @@ public class GetRequestDiagnosisPageRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> You must specify the node ID if your database instance is a PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB instance.</p>
+     * <p>You must specify the node ID if your database instance is a PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

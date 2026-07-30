@@ -27,7 +27,7 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     /**
      * <p>The account whose sessions do not need to be terminated.</p>
      * <blockquote>
-     * <p> Set this parameter to a JSON array. Separate database accounts with commas (,). Example: [\&quot;Database account 1\&quot;,\&quot;Database account 2\&quot;].</p>
+     * <p>Set this parameter to a JSON array. Separate database accounts with commas (,). Example: [\&quot;Database account 1\&quot;,\&quot;Database account 2\&quot;].</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,11 +49,13 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     /**
      * <p>Specifies whether to terminate all sessions.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set this parameter to <strong>true</strong>, sessions of the accounts that are specified by <strong>IgnoredUsers</strong>, sessions of internal O\&amp;M accounts of Alibaba Cloud, and <strong>Binlog Dump</strong> sessions are not terminated.</p>
+     * <p>If you set this parameter to <strong>true</strong>, sessions of the accounts that are specified by <strong>IgnoredUsers</strong>, sessions of internal O\&amp;M accounts of Alibaba Cloud, and <strong>Binlog Dump</strong> sessions are not terminated.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,7 +68,7 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster. If you do not specify a node ID and set <strong>KillAllSessions</strong> to <strong>true</strong>, the system traverses all nodes in the PolarDB for MySQL cluster and terminates the active sessions on each node.</p>
+     * <p>This parameter must be specified if the database instance is a PolarDB for MySQL cluster. If you do not specify a node ID and set <strong>KillAllSessions</strong> to <strong>true</strong>, the system traverses all nodes in the PolarDB for MySQL cluster and terminates the active sessions on each node.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,7 +80,7 @@ public class CreateKillInstanceSessionTaskRequest extends TeaModel {
     /**
      * <p>The IDs of sessions that need to be terminated.</p>
      * <blockquote>
-     * <p> Set this parameter to a JSON array. Separate session IDs with commas (,). Example: [\&quot;Session ID1\&quot;,\&quot;Session ID2\&quot;]. If <strong>KillAllSessions</strong> is set to <strong>true</strong>, this parameter does not take effect.</p>
+     * <p>Set this parameter to a JSON array. Separate session IDs with commas (,). Example: [\&quot;Session ID1\&quot;,\&quot;Session ID2\&quot;]. If <strong>KillAllSessions</strong> is set to <strong>true</strong>, this parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

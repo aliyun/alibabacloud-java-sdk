@@ -40,8 +40,10 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,8 +110,10 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
         /**
          * <p>The metric name. Valid values:</p>
          * <ul>
-         * <li><strong>sqlExecuteCount</strong>: the number of slow SQL executions.</li>
-         * <li><strong>optimizedSqlExecuteCount</strong>: the number of slow SQL executions that need to be optimized.</li>
+         * <li><p><strong>sqlExecuteCount</strong>: the number of slow SQL executions.</p>
+         * </li>
+         * <li><p><strong>optimizedSqlExecuteCount</strong>: the number of slow SQL executions that need to be optimized.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

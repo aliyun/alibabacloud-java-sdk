@@ -40,8 +40,10 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,14 +101,22 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
         /**
          * <p>The name of the metric. Valid values:</p>
          * <ul>
-         * <li><strong>sqlExecuteCount</strong>: the number of executions of slow SQL queries.</li>
-         * <li><strong>sqlExecuteCountDiff</strong>: the difference in the number of executions of slow SQL queries compared to the previous day.</li>
-         * <li><strong>sqlCount</strong>: the number of slow SQL templates.</li>
-         * <li><strong>sqlCountDiff</strong>: the difference in the number of slow SQL templates compared to the previous day.</li>
-         * <li><strong>optimizedSqlExecuteCount</strong>: the number of optimizable executions of slow SQL queries.</li>
-         * <li><strong>optimizedSqlExecuteCountDiff</strong>: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</li>
-         * <li><strong>optimizedSqlCount</strong>: the number of optimizable slow SQL templates.</li>
-         * <li><strong>optimizedSqlCountDiff</strong>: the difference in the number of optimizable slow SQL templates compared to the previous day.</li>
+         * <li><p><strong>sqlExecuteCount</strong>: the number of executions of slow SQL queries.</p>
+         * </li>
+         * <li><p><strong>sqlExecuteCountDiff</strong>: the difference in the number of executions of slow SQL queries compared to the previous day.</p>
+         * </li>
+         * <li><p><strong>sqlCount</strong>: the number of slow SQL templates.</p>
+         * </li>
+         * <li><p><strong>sqlCountDiff</strong>: the difference in the number of slow SQL templates compared to the previous day.</p>
+         * </li>
+         * <li><p><strong>optimizedSqlExecuteCount</strong>: the number of optimizable executions of slow SQL queries.</p>
+         * </li>
+         * <li><p><strong>optimizedSqlExecuteCountDiff</strong>: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</p>
+         * </li>
+         * <li><p><strong>optimizedSqlCount</strong>: the number of optimizable slow SQL templates.</p>
+         * </li>
+         * <li><p><strong>optimizedSqlCountDiff</strong>: the difference in the number of optimizable slow SQL templates compared to the previous day.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

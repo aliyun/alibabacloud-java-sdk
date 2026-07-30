@@ -40,8 +40,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,8 +110,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>Predefined</strong></li>
-         * <li><strong>UserDefined</strong></li>
+         * <li><p><strong>Predefined</strong></p>
+         * </li>
+         * <li><p><strong>UserDefined</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditLogsRequest extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2c548e83-1473-4fda-b3dc-5a189074ead5</p>
      */
@@ -12,16 +14,26 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String asyncRequestId;
 
     /**
+     * <p>The IP address of the request client.</p>
+     * 
      * <strong>example:</strong>
      * <p>11.26.118.7</p>
      */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <p>The client type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
+     */
     @NameInMap("ClientUa")
     public String clientUa;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -29,6 +41,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestDB</p>
      */
@@ -36,6 +50,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String databaseName;
 
     /**
+     * <p>The range of affected rows.</p>
+     * 
      * <strong>example:</strong>
      * <p>in[1 33]</p>
      */
@@ -43,6 +59,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String effectRowRange;
 
     /**
+     * <p>The end time of the alert log. The value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>15682887991222</p>
      */
@@ -50,6 +68,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The range of execution time.</p>
+     * 
      * <strong>example:</strong>
      * <p>in[1000 2000]</p>
      */
@@ -57,6 +77,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String executeTimeRange;
 
     /**
+     * <p>The name of the asset instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-t4ni1cezz5y3xxxx</p>
      */
@@ -64,6 +86,14 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The network type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>default</strong> (default): non-Alibaba Cloud service.</p>
+     * </li>
+     * <li><p><strong>aliyun</strong>: Alibaba Cloud service.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>aliyun</p>
      */
@@ -71,6 +101,12 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ipType;
 
     /**
+     * <p>The language type for sending and receiving messages. Default value: zh_cn. Valid values:</p>
+     * <ul>
+     * <li>zh_cn: Chinese.</li>
+     * <li>en_us: English.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
      */
@@ -78,13 +114,20 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Specifies whether to load the whitelist status.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("LoadWhiteList")
     public Boolean loadWhiteList;
 
+    @NameInMap("LogQueryOpJson")
+    public String logQueryOpJson;
+
     /**
+     * <p>The data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>SLOW_SQL</p>
      */
@@ -92,6 +135,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String logSource;
 
     /**
+     * <p>The operation type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Insert</p>
      */
@@ -99,6 +144,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String operateType;
 
     /**
+     * <p>The key of the OSS storage object.</p>
+     * 
      * <strong>example:</strong>
      * <p>N.A</p>
      */
@@ -106,6 +153,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ossObjectKey;
 
     /**
+     * <p>The maximum number of records per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -113,6 +162,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the product to which the data asset belongs. Valid values: <strong>RDS, PolarDB, PolarDB-X 2.0</strong>, and others.</p>
+     * 
      * <strong>example:</strong>
      * <p>RDS</p>
      */
@@ -120,6 +171,17 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
+     * <ul>
+     * <li>3: ADB-MYSQL</li>
+     * <li>5: RDS</li>
+     * <li>7: PolarDB-X</li>
+     * <li>8: PolarDB</li>
+     * <li>9: ADB-PG</li>
+     * <li>11: MongoDB</li>
+     * <li>25: Redis</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -127,6 +189,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long productId;
 
     /**
+     * <p>Specifies whether to perform an aggregate query.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -134,6 +198,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Boolean ruleAggQuery;
 
     /**
+     * <p>The rule type.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -141,6 +207,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleCategory;
 
     /**
+     * <p>The ID of the audit policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>9953411</p>
      */
@@ -148,6 +216,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleID;
 
     /**
+     * <p>The rule ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>867028</p>
      */
@@ -155,6 +225,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleId;
 
     /**
+     * <p>The name of the audit policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_rule</p>
      */
@@ -162,6 +234,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>The content of the SQL statement.</p>
+     * 
      * <strong>example:</strong>
      * <p>SELECT * FROM test where name = \&quot;das\&quot;</p>
      */
@@ -169,6 +243,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public String sqlText;
 
     /**
+     * <p>The start time of the alert log, in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1608888296000</p>
      */
@@ -176,6 +252,8 @@ public class DescribeAuditLogsRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -281,6 +359,14 @@ public class DescribeAuditLogsRequest extends TeaModel {
     }
     public Boolean getLoadWhiteList() {
         return this.loadWhiteList;
+    }
+
+    public DescribeAuditLogsRequest setLogQueryOpJson(String logQueryOpJson) {
+        this.logQueryOpJson = logQueryOpJson;
+        return this;
+    }
+    public String getLogQueryOpJson() {
+        return this.logQueryOpJson;
     }
 
     public DescribeAuditLogsRequest setLogSource(String logSource) {

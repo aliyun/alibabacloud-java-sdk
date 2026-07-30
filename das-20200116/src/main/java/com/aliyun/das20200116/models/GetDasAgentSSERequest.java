@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDasAgentSSERequest extends TeaModel {
     /**
+     * <p>The ID of the agent to use. This parameter is optional. If you do not specify this parameter, the service uses the default agent. You can provide the ID of an agent that was generated when you enabled the DAS Agent service or that you manually created.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag-472T0DxtmjIxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class GetDasAgentSSERequest extends TeaModel {
     public String agentId;
 
     /**
+     * <p>This parameter is deprecated. Specify the instance ID in the Query parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-xxxx</p>
      */
@@ -19,6 +23,7 @@ public class GetDasAgentSSERequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The natural language query for the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,8 +33,10 @@ public class GetDasAgentSSERequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The session ID, which must be in the UUID format. This parameter is optional. If you do not provide a session ID, the service creates a new session. To continue an existing conversation, use the same session ID in subsequent requests.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxx-xxx-xxx</p>
+     * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

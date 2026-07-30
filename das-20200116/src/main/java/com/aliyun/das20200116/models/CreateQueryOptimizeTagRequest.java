@@ -9,7 +9,7 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
      * <p>The remarks can be 1 to 300 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Slow SQL queries of offline synchronization. No optimization is required.</p>
+     * <p>Slow SQL from offline synchronization. No optimization needed.</p>
      */
     @NameInMap("Comments")
     public String comments;
@@ -17,9 +17,12 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
-     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
-     * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * <li><p><strong>MySQL</strong>: ApsaraDB RDS for MySQL</p>
+     * </li>
+     * <li><p><strong>PolarDBMySQL</strong>: PolarDB for MySQL</p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +47,7 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0e941</p>
+     * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0****</p>
      */
     @NameInMap("SqlIds")
     public String sqlIds;
@@ -52,8 +55,10 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The status of <strong>Tags</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: removes all tags added to the SQL templates that are specified by <strong>SqlIds</strong> and leaves <strong>Tags</strong> empty.</li>
-     * <li><strong>1</strong>: adds the tags specified by <strong>Tags</strong> to the SQL templates that are specified by <strong>SqlIds</strong>.</li>
+     * <li><p><strong>0</strong>: removes all tags added to the SQL templates that are specified by <strong>SqlIds</strong> and leaves <strong>Tags</strong> empty.</p>
+     * </li>
+     * <li><p><strong>1</strong>: adds the tags specified by <strong>Tags</strong> to the SQL templates that are specified by <strong>SqlIds</strong>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -66,10 +71,14 @@ public class CreateQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The SQL tags. Separate multiple SQL tags with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>DAS_IMPORTANT</strong>: The SQL template is important.</li>
-     * <li><strong>DAS_NOT_IMPORTANT</strong>: The SQL template is unimportant.</li>
-     * <li><strong>USER_IGNORE</strong>: The scheduling of the SQL template does not need to be optimized.</li>
-     * <li><strong>DAS_IN_PLAN</strong>: The scheduling of the SQL template needs to be optimized.</li>
+     * <li><p><strong>DAS_IMPORTANT</strong>: The SQL template is important.</p>
+     * </li>
+     * <li><p><strong>DAS_NOT_IMPORTANT</strong>: The SQL template is unimportant.</p>
+     * </li>
+     * <li><p><strong>USER_IGNORE</strong>: The scheduling of the SQL template does not need to be optimized.</p>
+     * </li>
+     * <li><p><strong>DAS_IN_PLAN</strong>: The scheduling of the SQL template needs to be optimized.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

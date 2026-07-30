@@ -17,7 +17,7 @@ public class GetKillInstanceSessionTaskResultRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> You must specify this parameter if your database instance is a PolarDB for MySQL cluster.</p>
+     * <p>You must specify this parameter if your database instance is a PolarDB for MySQL cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

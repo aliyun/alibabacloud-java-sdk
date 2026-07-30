@@ -16,7 +16,7 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the task that terminated the sessions.</p>
      * <blockquote>
-     * <p> If the sessions of a PolarDB for MySQL cluster were terminated, <strong>NodeId</strong> is left empty, and <strong>KillAllSessions</strong> is set to <strong>true</strong>, the task IDs are returned based on the number of nodes. Example: [&quot;f77d535b45405bd462b21caa3ee8\<em>\</em>\<em>\</em>&quot;, &quot;e93ab549abb081eb5dcd5396a29b\<em>\</em>\<em>\</em>&quot;].</p>
+     * <p>If the sessions of a PolarDB for MySQL cluster were terminated, <strong>NodeId</strong> is left empty, and <strong>KillAllSessions</strong> is set to <strong>true</strong>, the task IDs are returned based on the number of nodes. Example: [&quot;f77d535b45405bd462b21caa3ee8\<em>\</em>\<em>\</em>&quot;, &quot;e93ab549abb081eb5dcd5396a29b\<em>\</em>\<em>\</em>&quot;].</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,8 +49,10 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

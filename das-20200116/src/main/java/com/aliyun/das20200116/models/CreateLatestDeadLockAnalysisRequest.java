@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLatestDeadLockAnalysisRequest extends TeaModel {
     /**
+     * <p>The ID of the database instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class CreateLatestDeadLockAnalysisRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The node ID.</p>
+     * <blockquote>
+     * <p>Required for PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pi-bp16v3824rt73****</p>
      */

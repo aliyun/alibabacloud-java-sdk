@@ -25,7 +25,7 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,8 +46,10 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,8 +166,10 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asynchronous request was complete.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,8 +181,10 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asynchronous request failed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,8 +196,10 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,9 +226,12 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         /**
          * <p>The state of the asynchronous request. Valid values:</p>
          * <ul>
-         * <li><strong>RUNNING</strong></li>
-         * <li><strong>SUCCESS</strong></li>
-         * <li><strong>FAIL</strong></li>
+         * <li><p><strong>RUNNING</strong></p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong></p>
+         * </li>
+         * <li><p><strong>FAIL</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

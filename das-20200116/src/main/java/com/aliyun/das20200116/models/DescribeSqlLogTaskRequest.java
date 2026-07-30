@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the database instance.</p>
+     * <p>The database instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1nti25tc7bq5****</p>
@@ -14,7 +14,7 @@ public class DescribeSqlLogTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages are numbered starting from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeSqlLogTaskRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The page size. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

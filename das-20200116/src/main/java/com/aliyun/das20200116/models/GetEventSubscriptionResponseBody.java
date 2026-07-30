@@ -22,7 +22,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,7 +105,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
          * <p>The members of the alert contact group.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;[\&quot;Mr. Zhang\&quot;,\&quot;Ms. Wang\&quot;,\&quot;Mr. Li\&quot;]&quot;</p>
+         * <p>&quot;[\&quot;Mr. Zhang\&quot;,\&quot;Mr. Wang\&quot;,\&quot;Mr. Li\&quot;]&quot;</p>
          */
         @NameInMap("contacts")
         public String contacts;
@@ -121,7 +123,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
          * <p>The name of the alert contact group.</p>
          * 
          * <strong>example:</strong>
-         * <p>Mr. Zhang</p>
+         * <p>张先生</p>
          */
         @NameInMap("name")
         public String name;
@@ -195,6 +197,9 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
 
         /**
          * <p>The contact groups to which the alert contact belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mr. Zhang</p>
          */
         @NameInMap("groups")
         public java.util.List<String> groups;
@@ -202,8 +207,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the alert contact name is the same as the contact name on CloudMonitor.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,8 +313,10 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The event subscription feature is disabled.</li>
-         * <li><strong>1</strong>: The event subscription feature is enabled.</li>
+         * <li><p><strong>0</strong>: The event subscription feature is disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The event subscription feature is enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,10 +328,14 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * <p>The notification method. Valid values:</p>
          * <ul>
-         * <li><strong>hdm_alarm_sms</strong>: text message.</li>
-         * <li><strong>dingtalk</strong>: DingTalk chatbot.</li>
-         * <li><strong>hdm_alarm_sms_and_email</strong>: text message and email.</li>
-         * <li><strong>hdm_alarm_sms,dingtalk</strong>: text message and DingTalk chatbot.</li>
+         * <li><p><strong>hdm_alarm_sms</strong>: text message.</p>
+         * </li>
+         * <li><p><strong>dingtalk</strong>: DingTalk chatbot.</p>
+         * </li>
+         * <li><p><strong>hdm_alarm_sms_and_email</strong>: text message and email.</p>
+         * </li>
+         * <li><p><strong>hdm_alarm_sms,dingtalk</strong>: text message and DingTalk chatbot.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -424,10 +437,14 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * <p>The risk level of the events that trigger notifications. Valid values:</p>
          * <ul>
-         * <li><strong>Notice</strong></li>
-         * <li><strong>Optimization</strong></li>
-         * <li><strong>Warn</strong></li>
-         * <li><strong>Critical</strong></li>
+         * <li><p><strong>Notice</strong></p>
+         * </li>
+         * <li><p><strong>Optimization</strong></p>
+         * </li>
+         * <li><p><strong>Warn</strong></p>
+         * </li>
+         * <li><p><strong>Critical</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

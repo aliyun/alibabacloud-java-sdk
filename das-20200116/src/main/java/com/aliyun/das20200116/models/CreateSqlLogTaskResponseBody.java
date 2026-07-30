@@ -22,7 +22,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, error information such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, error information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,14 +149,19 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         /**
          * <p>The state of the task. Valid values:</p>
          * <ul>
-         * <li><strong>INIT</strong>: The task is to be scheduled.</li>
-         * <li><strong>RUNNING</strong>: The task is running.</li>
-         * <li><strong>FAILED</strong>: The task failed.</li>
-         * <li><strong>CANCELED</strong>: The task is canceled.</li>
-         * <li><strong>COMPLETED</strong>: The task is complete.</li>
+         * <li><p><strong>INIT</strong>: The task is to be scheduled.</p>
+         * </li>
+         * <li><p><strong>RUNNING</strong>: The task is running.</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: The task failed.</p>
+         * </li>
+         * <li><p><strong>CANCELED</strong>: The task is canceled.</p>
+         * </li>
+         * <li><p><strong>COMPLETED</strong>: The task is complete.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You can view the result of a task that is in the <strong>COMPLETED</strong> state.</p>
+         * <p>You can view the result of a task that is in the <strong>COMPLETED</strong> state.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDasSQLLogHotDataRequest extends TeaModel {
     /**
-     * <p>The account of the database.</p>
+     * <p>The database account.</p>
      * <blockquote>
-     * <p> You can specify multiple database accounts that are separated by spaces. Example: <code>user1 user2 user3</code>.</p>
+     * <p>You can specify multiple database accounts. Separate multiple accounts with a space. For example: <code>user1 user2 user3</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</p>
+     * <p>This parameter is required if the database instance is a PolarDB for MySQL cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String childDBInstanceIDs;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * <blockquote>
-     * <p> You can specify multiple database names that are separated by spaces. Example: <code>DB1 DB2 DB3</code>.</p>
+     * <p>You can specify multiple database names. Separate multiple names with a space. For example: <code>DB1 DB2 DB3</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. This value must be a Unix timestamp in milliseconds.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+     * <p>The end time must be later than the start time. The time range cannot exceed one day.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -54,7 +54,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long end;
 
     /**
-     * <p>The error code of SQL execution. You can call the <a href="https://help.aliyun.com/document_detail/409804.html">GetAsyncErrorRequestStatByCode</a> operation to query MySQL error codes in SQL Explorer data.</p>
+     * <p>The SQL execution error code. You can call the <a href="https://help.aliyun.com/document_detail/409804.html">GetAsyncErrorRequestStatByCode</a> operation to obtain the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>1064</p>
@@ -63,9 +63,9 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String fail;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * <blockquote>
-     * <p> You can specify multiple IP addresses that are separated by spaces. Example: <code>IP1 IP2 IP3</code>.</p>
+     * <p>You can specify multiple client IP addresses. Separate multiple IP addresses with a space. For example: <code>IP1 IP2 IP3</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,10 +85,12 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The logical relationship among multiple keywords.</p>
+     * <p>The logical operator to use with multiple keywords. Valid values:</p>
      * <ul>
-     * <li><strong>or</strong></li>
-     * <li><strong>and</strong></li>
+     * <li><p><strong>or</strong></p>
+     * </li>
+     * <li><p><strong>and</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,7 +100,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String logicalOperator;
 
     /**
-     * <p>The maximum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is smaller than the value of this parameter.</p>
+     * <p>The maximum execution time in microseconds. Returns SQL statements that have an execution time less than this value.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -116,7 +118,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long maxRecordsPerPage;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -125,7 +127,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long maxRows;
 
     /**
-     * <p>The maximum number of scanned rows. You can specify this parameter to query the SQL statements that scan a smaller number of rows than the value of this parameter.</p>
+     * <p>The maximum number of scanned rows. Returns SQL statements that scanned fewer than this number of rows.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -134,7 +136,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long maxScanRows;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -143,7 +145,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long maxSpillCnt;
 
     /**
-     * <p>The minimum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is greater than or equal to the value of this parameter.</p>
+     * <p>The minimum execution time in microseconds. Returns SQL statements with an execution time greater than or equal to this value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -152,7 +154,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long minLatancy;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -161,7 +163,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long minRows;
 
     /**
-     * <p>The minimum number of scanned rows. You can specify this parameter to query the SQL statements that scan a larger or an equal number of rows than the value of this parameter.</p>
+     * <p>The minimum number of scanned rows. Returns SQL statements that scanned at least this number of rows.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -170,7 +172,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long minScanRows;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -179,7 +181,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long minSpillCnt;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number to return. Pages start from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -188,19 +190,19 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long pageNumbers;
 
     /**
-     * <p>The keyword that is used for the query.</p>
+     * <p>The query keyword.</p>
      * <blockquote>
-     * <p> Fuzzy search is not supported. You can query data by using multiple keywords. Separate keywords with spaces.</p>
+     * <p>Fuzzy search is supported. You can specify up to 10 keywords. Separate multiple keywords with a space. For example: a1 b2 c3.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>a1 b2</p>
      */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -209,51 +211,54 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The basis on which you want to sort the query results.</p>
+     * <p>The sort key. Valid values:</p>
      * <ul>
-     * <li><strong>SCAN_ROWS</strong>: the number of scanned rows.</li>
-     * <li><strong>UPDATE_ROWS</strong>: the number of updated rows.</li>
-     * <li><strong>CONSUME</strong>: the time consumed.</li>
-     * <li><strong>ORIGIN_TIME</strong>: the execution duration.</li>
+     * <li><p><strong>ScanRows</strong>: scanned rows.</p>
+     * </li>
+     * <li><p><strong>UpdateRows</strong>: updated rows.</p>
+     * </li>
+     * <li><p><strong>Consume</strong>: execution time.</p>
+     * </li>
+     * <li><p><strong>OriginTime</strong>: The execution start time.</p>
+     * </li>
+     * <li><p><strong>ReturnRows</strong>: returned rows.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>SCAN_ROWS</p>
+     * <p>ScanRows</p>
      */
     @NameInMap("SortKey")
     public String sortKey;
 
     /**
-     * <p>The order in which you want to sort the query results.</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>ase</strong>: ascending order.</li>
-     * <li><strong>desc</strong>: descending order.</li>
+     * <li><p><strong>ASC</strong>: ascending</p>
+     * </li>
+     * <li><p><strong>DESC</strong>: descending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ase</p>
+     * <p>ASC</p>
      */
     @NameInMap("SortMethod")
     public String sortMethod;
 
     /**
-     * <p>The type of the SQL statement. Valid values:</p>
-     * <ul>
-     * <li><strong>SELECT</strong></li>
-     * <li><strong>UPDATE</strong></li>
-     * <li><strong>DELETE</strong></li>
-     * </ul>
+     * <p>The SQL type.</p>
      * 
      * <strong>example:</strong>
-     * <p>SELECT</p>
+     * <p>select</p>
      */
     @NameInMap("SqlType")
     public String sqlType;
 
     /**
-     * <p>The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start of the time range to query. This value must be a Unix timestamp in milliseconds.</p>
      * <blockquote>
-     * <p> The beginning of the time range to query must be later than the time when DAS Enterprise Edition is enabled, and can be up to seven days earlier than the current time.</p>
+     * <p>You can query only data that is generated after you enable DAS Enterprise Edition. The start time cannot be earlier than seven days before the current time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -264,7 +269,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public Long start;
 
     /**
-     * <p>The execution results. You can specify <strong>0</strong> to query the SQL statements that are successfully executed. You can also specify an error code to query the corresponding SQL statements that fail to be executed.</p>
+     * <p>The execution state. Set this parameter to <strong>0</strong> to query for successfully executed SQL statements. You can also specify an error code to query for the corresponding SQL statements.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -275,7 +280,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     /**
      * <p>The thread ID.</p>
      * <blockquote>
-     * <p> You can specify multiple thread IDs that are separated by spaces. Example: <code>Thread ID1 Thread ID2 Thread ID3</code>.</p>
+     * <p>You can specify multiple thread IDs. Separate multiple IDs with a space. For example: <code>657 658 659</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -285,7 +290,7 @@ public class GetDasSQLLogHotDataRequest extends TeaModel {
     public String threadID;
 
     /**
-     * <p>The reserved parameter. This parameter is not supported.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>

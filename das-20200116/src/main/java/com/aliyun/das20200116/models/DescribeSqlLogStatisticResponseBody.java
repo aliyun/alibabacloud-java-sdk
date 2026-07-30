@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,9 +20,9 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     public DescribeSqlLogStatisticResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
 
     public static class DescribeSqlLogStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.</p>
+         * <p>The total size of data in cold storage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>8585901</p>
@@ -109,7 +111,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long coldSqlSize;
 
         /**
-         * <p>The free quota for cold data storage. Unit: bytes.</p>
+         * <p>The amount of free-of-charge cold storage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>5041450</p>
@@ -118,7 +120,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long freeColdSqlSize;
 
         /**
-         * <p>The free quota for hot data storage. Unit: bytes.</p>
+         * <p>The amount of free-of-charge hot storage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>297245</p>
@@ -127,7 +129,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long freeHotSqlSize;
 
         /**
-         * <p>The size of the SQL Explorer and Audit data that is stored in hot storage. Unit: bytes.</p>
+         * <p>The total size of data in hot storage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1118042</p>
@@ -136,16 +138,16 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         public Long hotSqlSize;
 
         /**
-         * <p>The size of the SQL Explorer and Audit data that was generated in the most recent day. Unit: bytes.</p>
+         * <p>The amount of data imported in the last 24 hours, in bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>23</p>
+         * <p>297245</p>
          */
         @NameInMap("ImportSqlSize")
         public Long importSqlSize;
 
         /**
-         * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1712568564928</p>
@@ -153,6 +155,12 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The total storage size. This is the sum of the data in hot storage and cold storage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9703943</p>
+         */
         @NameInMap("TotalSqlSize")
         public Long totalSqlSize;
 

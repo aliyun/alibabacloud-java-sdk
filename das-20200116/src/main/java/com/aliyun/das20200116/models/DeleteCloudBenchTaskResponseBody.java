@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudBenchTaskResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteCloudBenchTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The reserved parameter.</p>
+     * <p>Reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -23,9 +23,9 @@ public class DeleteCloudBenchTaskResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned message of the request.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>When the request is successful, this parameter returns <strong>Successful</strong>. When the request fails, it returns exception information (such as error codes).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,12 @@ public class DeleteCloudBenchTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

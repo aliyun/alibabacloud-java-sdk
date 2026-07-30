@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditLogsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3926fba5-1774-44f4-af2d-ac7b33e86c3b</p>
      */
@@ -12,16 +14,23 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
     public String asyncRequestId;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The client IP addresses in the SQL log records.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAuditLogsResponseBodyItems> items;
 
     /**
+     * <p>The page size for the paged query. This parameter indicates the number of entries per page for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A7021857-AFD9-5AD6-979D-AA7DFC5AFADF</p>
      */
@@ -36,6 +47,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records. This parameter is valid only for the Redis engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -97,6 +110,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
 
     public static class DescribeAuditLogsResponseBodyItems extends TeaModel {
         /**
+         * <p>The client IP address in the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.104.16.251</p>
          */
@@ -104,6 +119,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
+         * <p>The client port number in the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>53815</p>
          */
@@ -111,6 +128,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String clientPort;
 
         /**
+         * <p>The client type.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql</p>
          */
@@ -118,6 +137,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String clientUa;
 
         /**
+         * <p>The column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds</p>
          */
@@ -125,6 +146,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String columnName;
 
         /**
+         * <p>The alert time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1536751124000</p>
          */
@@ -132,6 +155,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>chngc_b2b_migration_sh</p>
          */
@@ -139,6 +164,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>The number of affected rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -146,6 +173,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long effectRow;
 
         /**
+         * <p>The execution status. Valid values: 0: failed. 1: succeeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,16 +182,26 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Integer executeStatus;
 
         /**
+         * <p>The execution duration, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751870592000</p>
          */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
+        /**
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         /**
+         * <p>Indicates whether the alert is in the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -170,6 +209,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Boolean inWhiteList;
 
         /**
+         * <p>The instance audit status.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -177,6 +218,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String instanceAuditStatus;
 
         /**
+         * <p>The description of the data asset instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance dscription</p>
          */
@@ -184,6 +227,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
+         * <p>The instance alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-instance-003</p>
          */
@@ -191,6 +236,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
+         * <p>The network type. Valid values:</p>
+         * <p><strong>default</strong> (default): non-Alibaba Cloud service.</p>
+         * <p><strong>aliyun</strong>: Alibaba Cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun</p>
          */
@@ -198,6 +247,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ipType;
 
         /**
+         * <p>The data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>SLOW_SQL</p>
          */
@@ -205,6 +256,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String logSource;
 
         /**
+         * <p>The log execution time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1751870592000</p>
          */
@@ -212,6 +265,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long logTime;
 
         /**
+         * <p>The raw log content.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -219,16 +274,26 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The operation type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Drop</p>
          */
         @NameInMap("OperateType")
         public String operateType;
 
+        /**
+         * <p>The key of the OSS storage object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N.A</p>
+         */
         @NameInMap("OssObjectKey")
         public String ossObjectKey;
 
         /**
+         * <p>The MaxCompute package name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test01</p>
          */
@@ -236,6 +301,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String packageName;
 
         /**
+         * <p>The name of the product to which the data asset belongs. Valid values: RDS, PolarDB, PolarDB-X 2.0, and others.</p>
+         * 
          * <strong>example:</strong>
          * <p>RDS</p>
          */
@@ -243,6 +310,17 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
+         * <ul>
+         * <li>3: ADB-MYSQL</li>
+         * <li>5: RDS</li>
+         * <li>7: PolarDB-X</li>
+         * <li>8: PolarDB</li>
+         * <li>9: ADB-PG</li>
+         * <li>11: MongoDB</li>
+         * <li>25: Redis</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -250,6 +328,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public Long productId;
 
         /**
+         * <p>The rule type.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -257,6 +337,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ruleCategory;
 
         /**
+         * <p>The ID of the audit policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>9953411</p>
          */
@@ -264,6 +346,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The name of the audit policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -271,6 +355,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The SQL statement.</p>
+         * 
          * <strong>example:</strong>
          * <p>select * from test03</p>
          */
@@ -278,6 +364,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String sqlText;
 
         /**
+         * <p>The table name used in the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>it_table</p>
          */
@@ -285,6 +373,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The user UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>19********94</p>
          */
@@ -292,6 +382,8 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin</p>
          */
@@ -299,12 +391,30 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: low-risk.</li>
+         * <li><strong>2</strong>: medium-risk.</li>
+         * <li><strong>3</strong>: high-risk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("WarnLevel")
         public String warnLevel;
 
+        /**
+         * <p>The name of the risk level. Valid values:</p>
+         * <ul>
+         * <li>Low-risk.</li>
+         * <li>Medium-risk.</li>
+         * <li>High-risk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("WarnLevelName")
         public String warnLevelName;
 

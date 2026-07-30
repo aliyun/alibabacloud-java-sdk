@@ -22,7 +22,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -127,14 +129,22 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The optimization suggestion. Valid values:</p>
          * <ul>
-         * <li><strong>NEED_ANALYZE_TABLE</strong>: You can execute the <code>ANALYZE TABLE</code> statement on the table during off-peak hours. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-         * <li><strong>NEED_OPTIMIZE_TABLE</strong>: You can reclaim fragments during off-peak hours.</li>
-         * <li><strong>CHANGE_TABLE_ENGINE_IF_NECESSARY</strong>: Change the storage engine type of a table after risk assessment. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-         * <li><strong>AUTO_INCREMENT_ID_BE_TO_RUN_OUT</strong>: Pay attention to the usage of auto-increment IDs. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-         * <li><strong>DUPLICATE_INDEX</strong>: Optimize indexes of tables. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-         * <li><strong>TABLE_SIZE</strong>: Pay attention to the table size. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-         * <li><strong>TABLE_ROWS_AND_AVG_ROW_LENGTH</strong>: Pay attention to the number of rows in a table and the average row length. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</li>
-         * <li><strong>STORAGE_USED_PERCENT</strong>: Pay attention to the space usage to prevent the instance from being locked if the instance is full.</li>
+         * <li><p><strong>NEED_ANALYZE_TABLE</strong>: You can execute the <code>ANALYZE TABLE</code> statement on the table during off-peak hours. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * </li>
+         * <li><p><strong>NEED_OPTIMIZE_TABLE</strong>: You can reclaim fragments during off-peak hours.</p>
+         * </li>
+         * <li><p><strong>CHANGE_TABLE_ENGINE_IF_NECESSARY</strong>: Change the storage engine type of a table after risk assessment. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * </li>
+         * <li><p><strong>AUTO_INCREMENT_ID_BE_TO_RUN_OUT</strong>: Pay attention to the usage of auto-increment IDs. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * </li>
+         * <li><p><strong>DUPLICATE_INDEX</strong>: Optimize indexes of tables. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * </li>
+         * <li><p><strong>TABLE_SIZE</strong>: Pay attention to the table size. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * </li>
+         * <li><p><strong>TABLE_ROWS_AND_AVG_ROW_LENGTH</strong>: Pay attention to the number of rows in a table and the average row length. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * </li>
+         * <li><p><strong>STORAGE_USED_PERCENT</strong>: Pay attention to the space usage to prevent the instance from being locked if the instance is full.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,8 +160,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
          * </li>
          * <li><p><strong>NEED_OPTIMIZE_TABLE</strong>: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formulas:</p>
          * <ul>
-         * <li>ApsaraDB RDS for MySQL and PolarDB for MySQL: <code>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</code>. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: <code>Fragmentation rate = DataFree/PhyTotalSize</code>.</li>
-         * <li>ApsaraDB for MongoDB: <code>Fragmentation rate = FragmentSize/PhyTotalSize</code>.</li>
+         * <li><p>ApsaraDB RDS for MySQL and PolarDB for MySQL: <code>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</code>. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: <code>Fragmentation rate = DataFree/PhyTotalSize</code>.</p>
+         * </li>
+         * <li><p>ApsaraDB for MongoDB: <code>Fragmentation rate = FragmentSize/PhyTotalSize</code>.</p>
+         * </li>
          * </ul>
          * </li>
          * <li><p><strong>TABLE_ENGINE</strong>: tables whose storage engines are not InnoDB or XEngine. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
@@ -245,7 +257,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The size of space fragments. Unit: bytes.</p>
          * <blockquote>
-         * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. The fragmentation rate of a table is generally calculated based on the following formula: <code>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</code>. In this topic, <code>Fragmentation rate = DataFree/PhyTotalSize</code>.</p>
+         * <p>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. The fragmentation rate of a table is generally calculated based on the following formula: <code>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</code>. In this topic, <code>Fragmentation rate = DataFree/PhyTotalSize</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -256,8 +268,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by data. Unit: bytes.</li>
-         * <li>For ApsaraDB for MongoDB instances, this parameter indicates the size of uncompressed data, that is, the amount of data. Unit: bytes.</li>
+         * <li><p>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by data. Unit: bytes.</p>
+         * </li>
+         * <li><p>For ApsaraDB for MongoDB instances, this parameter indicates the size of uncompressed data, that is, the amount of data. Unit: bytes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +292,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The type of the storage engine used by the table.</p>
          * <blockquote>
-         * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * <p>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -290,7 +304,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The size of space that can be reclaimed. Unit: bytes.</p>
          * <blockquote>
-         * <p> This parameter is applicable only to ApsaraDB for MongoDB instances. <code>Fragmentation rate = FragmentSize/PhyTotalSize</code>.</p>
+         * <p>This parameter is applicable only to ApsaraDB for MongoDB instances. <code>Fragmentation rate = FragmentSize/PhyTotalSize</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,7 +325,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The storage space of the table. Unit: bytes.</p>
          * <blockquote>
-         * <p> For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, the value of the parameter is the sum of <strong>DataSize</strong>, <strong>IndexSize</strong>, and <strong>DataFree</strong>. For ApsaraDB for MongoDB instances, the value of this parameter is the sum of <strong>DataSize</strong> and <strong>IndexSize</strong>.</p>
+         * <p>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, the value of the parameter is the sum of <strong>DataSize</strong>, <strong>IndexSize</strong>, and <strong>DataFree</strong>. For ApsaraDB for MongoDB instances, the value of this parameter is the sum of <strong>DataSize</strong> and <strong>IndexSize</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -323,7 +337,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The physical file size of the table. Unit: bytes.</p>
          * <blockquote>
-         * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. Data of specific database instances cannot be obtained due to deployment mode.</p>
+         * <p>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. Data of specific database instances cannot be obtained due to deployment mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -353,7 +367,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The type of the table.</p>
          * <blockquote>
-         * <p> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
+         * <p>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -364,8 +378,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by table data and indexes. Unit: bytes. The value is the sum of <strong>DataSize</strong> and <strong>IndexSize</strong>.</li>
-         * <li>For ApsaraDB for MongoDB instances, this parameter indicates the actual size of space allocated by Block Manager. Unit: Bytes. The compression ratio of an ApsaraDB for MongoDB instance is calculated based on the following formula: <code>Compression ratio = TotalSize/DataSize</code>.</li>
+         * <li><p>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by table data and indexes. Unit: bytes. The value is the sum of <strong>DataSize</strong> and <strong>IndexSize</strong>.</p>
+         * </li>
+         * <li><p>For ApsaraDB for MongoDB instances, this parameter indicates the actual size of space allocated by Block Manager. Unit: Bytes. The compression ratio of an ApsaraDB for MongoDB instance is calculated based on the following formula: <code>Compression ratio = TotalSize/DataSize</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -489,8 +505,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The reason why the analysis on the database and table fails.</p>
          * <ul>
-         * <li><strong>DB_OR_TABLE_NOT_EXIST</strong>: The specified database or table does not exist.</li>
-         * <li><strong>DB_NOT_EXIST</strong>: The specified database does not exist.</li>
+         * <li><p><strong>DB_OR_TABLE_NOT_EXIST</strong>: The specified database or table does not exist.</p>
+         * </li>
+         * <li><p><strong>DB_NOT_EXIST</strong>: The specified database does not exist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -541,7 +559,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The size of remaining storage.</p>
          * <blockquote>
-         * <p> Unit: bytes.</p>
+         * <p>Unit: bytes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -553,7 +571,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The total size of instance storage.</p>
          * <blockquote>
-         * <p> Unit: bytes.</p>
+         * <p>Unit: bytes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -565,7 +583,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The size of used storage.</p>
          * <blockquote>
-         * <p> Unit: bytes.</p>
+         * <p>Unit: bytes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -690,11 +708,11 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The task progress.</p>
          * <blockquote>
-         * <p> Valid values are integers that range from 0 to 100.</p>
+         * <p>Valid values are integers that range from 0 to 100.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>50</p>
+         * <p>100</p>
          */
         @NameInMap("TaskProgress")
         public Long taskProgress;
@@ -702,17 +720,24 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * <p>The status of the storage analysis task. Valid values:</p>
          * <ul>
-         * <li><strong>INIT</strong>: The task is being initialized.</li>
-         * <li><strong>PENDING</strong>: The task is being queued for execution.</li>
-         * <li><strong>RECEIVED</strong>: The task is received for execution.</li>
-         * <li><strong>RUNNING</strong>: The task is being executed.</li>
-         * <li><strong>RETRY</strong>: The task is being retried.</li>
-         * <li><strong>SUCCESS</strong>: The task succeeds.</li>
-         * <li><strong>FAILURE</strong>: The task fails.</li>
+         * <li><p><strong>INIT</strong>: The task is being initialized.</p>
+         * </li>
+         * <li><p><strong>PENDING</strong>: The task is being queued for execution.</p>
+         * </li>
+         * <li><p><strong>RECEIVED</strong>: The task is received for execution.</p>
+         * </li>
+         * <li><p><strong>RUNNING</strong>: The task is being executed.</p>
+         * </li>
+         * <li><p><strong>RETRY</strong>: The task is being retried.</p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong>: The task succeeds.</p>
+         * </li>
+         * <li><p><strong>FAILURE</strong>: The task fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>RUNNING</p>
+         * <p>SUCCESS</p>
          */
         @NameInMap("TaskState")
         public String taskState;

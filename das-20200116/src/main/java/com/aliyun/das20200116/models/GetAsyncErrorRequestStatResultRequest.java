@@ -14,9 +14,9 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time of the query, specified as a Unix timestamp in milliseconds.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+     * <p>The end time must be later than the start time. The interval between the start time and the end time cannot exceed 1 day.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
     public Long end;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,9 +36,9 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The node ID.</p>
+     * <p>The ID of the node.</p>
      * <blockquote>
-     * <p> This parameter must be specified for PolarDB for MySQL instances.</p>
+     * <p>This parameter is required for PolarDB for MySQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The ID of the SQL template. Separate multiple SQL IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/410746.html">GetAsyncErrorRequestListByCode</a> operation to query the ID of the SQL query for which MySQL error code is returned.</p>
+     * <p>One or more SQL IDs. Separate multiple SQL IDs with commas. You can call the <a href="https://help.aliyun.com/document_detail/410746.html">GetAsyncErrorRequestListByCode</a> operation to query the SQL IDs that generated MySQL error codes on the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ad78a4e7d3ce81590c9dc2d5f4bc****,0f92feacd92c048b06a16617a633****</p>
@@ -57,9 +57,9 @@ public class GetAsyncErrorRequestStatResultRequest extends TeaModel {
     public String sqlIdList;
 
     /**
-     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the query, specified as a Unix timestamp in milliseconds.</p>
      * <blockquote>
-     * <p> The beginning of the time range to query must be within the storage duration of the database instance and can be up to 90 days earlier than the current time.</p>
+     * <p>The start time must be within the data retention period of SQL Explorer for the database instance. The start time cannot be earlier than 90 days before the current time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

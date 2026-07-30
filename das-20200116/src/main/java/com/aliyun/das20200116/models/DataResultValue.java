@@ -4,12 +4,30 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DataResultValue extends TeaModel {
+    /**
+     * <p>The SQL template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61f45ee381b2fa4e8a6545e3bee9</p>
+     */
     @NameInMap("sqlId")
     public String sqlId;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-xxx</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of errors.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Integer count;
 

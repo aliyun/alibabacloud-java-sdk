@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetYaoChiAgentRequest extends TeaModel {
     /**
+     * <p>The additional information in JSON string format. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
+    @NameInMap("ImageKeys")
+    public String imageKeys;
+
     /**
+     * <p>The natural language description of the question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,8 @@ public class GetYaoChiAgentRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The session ID in UUID string format. This parameter is optional. If you do not specify this parameter, a new session is created. To maintain context across a conversation, use the same session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
      */
@@ -28,6 +36,8 @@ public class GetYaoChiAgentRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The cloud service source that specifies which cloud service the question belongs to. This parameter is optional. Default value: yaochi.</p>
+     * 
      * <strong>example:</strong>
      * <p>yaochi</p>
      */
@@ -45,6 +55,14 @@ public class GetYaoChiAgentRequest extends TeaModel {
     }
     public String getExtraInfo() {
         return this.extraInfo;
+    }
+
+    public GetYaoChiAgentRequest setImageKeys(String imageKeys) {
+        this.imageKeys = imageKeys;
+        return this;
+    }
+    public String getImageKeys() {
+        return this.imageKeys;
     }
 
     public GetYaoChiAgentRequest setQuery(String query) {

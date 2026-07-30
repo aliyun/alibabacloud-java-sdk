@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     * <p>The list of detailed information, including the total number of information items, error codes, and other details.</p>
      */
     @NameInMap("Data")
     public DescribeCloudbenchTaskConfigResponseBodyData data;
@@ -22,7 +22,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>When the request is successful, this parameter returns <strong>Successful</strong>. When the request fails, this parameter returns exception information (such as error codes).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,10 +41,12 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +102,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
 
     public static class DescribeCloudbenchTaskConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The path in which the files are archived.</p>
+         * <p>The path of archived objects.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/das/cloudbench/archive-sqls/</p>
@@ -109,7 +111,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String archiveFolder;
 
         /**
-         * <p>The command that was run to start the stress testing task.</p>
+         * <p>The stress testing command.</p>
          * 
          * <strong>example:</strong>
          * <p>java -jar /tmp/das/cloudbench/CloudBenchClient.jar --bench --rocksdb /tmp/das/cloudbench/rocksdb --meta /tmp/das/cloudbench/cl-1621353601000-360****.meta --task_name 2777bba9-a836-49e6-9f70-1c3822fc9239 --result_file /tmp/das/cloudbench/null.result --user cloudb**** --pwd \&quot;cloudbench@<strong><strong>\&quot; --host rm-bp1j5f8s5x26kq79216</strong></strong>.mysql.rds.aliyuncs.com --port 3306 --charset utf8mb4 --interval 1 --bench_time 3600 --rate_factor 1.0 --start_time 1621353601 --rt &gt; /tmp/das/cloudbench/null.log</p>
@@ -118,7 +120,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String benchCmd;
 
         /**
-         * <p>The path to the JAR file that is used for stress testing.</p>
+         * <p>The path of the stress testing JAR package.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/das/cloudbench/CloudBenchClient.jar</p>
@@ -127,7 +129,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String clientJarPath;
 
         /**
-         * <p>The path to the JAR file that is stored in OSS. The JAR file is used for stress testing.</p>
+         * <p>The path of the stress testing JAR package in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudbench-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/CloudBenchClient.jar?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&Expires=1622441372&Signature=28p%2BCe4tNHpr9VPOcHc3Si9iOb">https://cloudbench-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/CloudBenchClient.jar?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&amp;Expires=1622441372&amp;Signature=28p%2BCe4tNHpr9VPOcHc3Si9iOb</a>****</p>
@@ -136,7 +138,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String jarOnOss;
 
         /**
-         * <p>The command that was run to preload the file that stores the analysis result of full SQL statistics.</p>
+         * <p>The command for preloading the SQL file.</p>
          * 
          * <strong>example:</strong>
          * <p>java -jar /tmp/das/cloudbench/CloudBenchClient.jar --load --out /tmp/das/cloudbench/cl-1621353601000-360****.sc --meta /tmp/das/cloudbench/cl-1621353601000-360****.meta --task_name 2777bba9-<strong><strong>-49e6-9f70-1c3822fc</strong></strong> --rocksdb /tmp/das/cloudbench/rocksdb</p>
@@ -154,7 +156,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String metaFileName;
 
         /**
-         * <p>The name of the metadata file stored in Object Storage Service (OSS).</p>
+         * <p>The name of the metadata file in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;<a href="https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.meta?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&Expires=1622441372&Signature=Qsehg3tzeA57M%2BIixAbWPWAtvl">https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.meta?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&amp;Expires=1622441372&amp;Signature=Qsehg3tzeA57M%2BIixAbWPWAtvl</a>****</p>
@@ -163,7 +165,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String metaFileOnOss;
 
         /**
-         * <p>The path to the metadata file.</p>
+         * <p>The path of the metadata file.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/das/cloudbench/cl-1621353601000-360****.meta</p>
@@ -172,7 +174,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String metaFilePath;
 
         /**
-         * <p>The command that was run to parse the file that stores the analysis result of full SQL statistics.</p>
+         * <p>The command for parsing the SQL file.</p>
          * 
          * <strong>example:</strong>
          * <p>cd /tmp/das/cloudbench &amp;&amp; java -jar CloudBenchClient.jar --parse --threads 32 --file /tmp/das/cloudbench/2777bba9-a836-49e6-9f70-1c3822fc9239.archiveSql --meta /tmp/das/cloudbench/cl-1621353601000-360****.meta --out /tmp/das/cloudbench/cl-1621353601000-360****.sc --parent_patmp/das/cloudbench --source RDS --h /thost rm-bp1j5f8s5x266****.mysql.rds.aliyuncs.com --port 3306 --user cloudb**** --pwd \&quot;cloudbench@****\&quot; --cutSqlLen 8192 --db_black_list=information_schema,test,unknow,null</p>
@@ -181,7 +183,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String parseCmd;
 
         /**
-         * <p>The path to the file that is parsed. The file stores the analysis result of full SQL statistics.</p>
+         * <p>The path of the parsed SQL file.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/das/cloudbench/2777bba9-a836-49e6-9f70-1c3822fc****.archiveSql</p>
@@ -190,7 +192,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String parseFilePath;
 
         /**
-         * <p>The location where the RocksDB storage system is deployed in the stress testing client.</p>
+         * <p>The location of the RocksDB storage system in the stress testing machine.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/das/cloudbench/rocksdb</p>
@@ -199,7 +201,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String rocksDbPath;
 
         /**
-         * <p>The name of the file that stores the analysis result of full SQL statistics.</p>
+         * <p>The name of the full SQL file.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-1621353601000-360****.sc</p>
@@ -208,7 +210,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String sqlFileName;
 
         /**
-         * <p>The name of the file that stores the analysis result of full SQL statistics and that is stored in OSS.</p>
+         * <p>The name of the full SQL file in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.sc?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&Expires=1622441372&Signature=LYMADwo%2BRrJeqR3e4d8OlIkVmw">https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.sc?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&amp;Expires=1622441372&amp;Signature=LYMADwo%2BRrJeqR3e4d8OlIkVmw</a>****</p>
@@ -217,7 +219,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String sqlFileOnOss;
 
         /**
-         * <p>The path to the file that stores the analysis result of full SQL statistics.</p>
+         * <p>The path of the SQL file.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/das/cloudbench/cl-1621353601000-360****.sc</p>
@@ -244,7 +246,7 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The path of the temporary directory that is generated for stress testing.</p>
+         * <p>The temporary directory generated for stress testing.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp/bench/</p>

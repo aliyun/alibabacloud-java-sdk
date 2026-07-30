@@ -33,7 +33,7 @@ public class CreateSqlLogTaskRequest extends TeaModel {
      * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
-     * <p>test01</p>
+     * <p>SQL audit export 1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -41,11 +41,11 @@ public class CreateSqlLogTaskRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</p>
+     * <p>This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>pi-uf6k5f6g3912i0dqz</p>
+     * <p>pi-uf6k5f6g3912i****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -53,8 +53,10 @@ public class CreateSqlLogTaskRequest extends TeaModel {
     /**
      * <p>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</p>
      * <ul>
-     * <li><strong>polarx_cn</strong>: compute node</li>
-     * <li><strong>polarx_dn</strong>: data node</li>
+     * <li><p><strong>polarx_cn</strong>: compute node</p>
+     * </li>
+     * <li><p><strong>polarx_dn</strong>: data node</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,9 +78,12 @@ public class CreateSqlLogTaskRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <ul>
-     * <li><strong>Export</strong></li>
-     * <li><strong>Query</strong></li>
-     * <li><strong>Insight</strong></li>
+     * <li><p><strong>Export</strong></p>
+     * </li>
+     * <li><p><strong>Query</strong></p>
+     * </li>
+     * <li><p><strong>Insight</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,7 +165,7 @@ public class CreateSqlLogTaskRequest extends TeaModel {
         /**
          * <p>The name of the filter parameter.</p>
          * <blockquote>
-         * <p> For more information about the supported filter parameters and their valid values, see the following <strong>supplement about the Key parameter</strong>.</p>
+         * <p>For more information about the supported filter parameters and their valid values, see the following <strong>supplement about the Key parameter</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

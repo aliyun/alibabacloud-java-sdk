@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHotBigKeysResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of hot keys and large keys.</p>
+     * <p>The details.</p>
      */
     @NameInMap("Data")
     public DescribeHotBigKeysResponseBodyData data;
@@ -480,7 +480,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
     public static class DescribeHotBigKeysResponseBodyData extends TeaModel {
         /**
-         * <p>The reason why the large key failed to be queried.</p>
+         * <p>The reason why the big keys sorted by the number of child elements failed to be retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>current version doesn\&quot;t support</p>
@@ -491,6 +491,12 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @NameInMap("BigKeys")
         public DescribeHotBigKeysResponseBodyDataBigKeys bigKeys;
 
+        /**
+         * <p>The reason why the hot keys sorted by traffic failed to be retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>current version doesn\&quot;t support</p>
+         */
         @NameInMap("HighTrafficKeyMsg")
         public String highTrafficKeyMsg;
 
@@ -498,7 +504,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         public DescribeHotBigKeysResponseBodyDataHighTrafficKeys highTrafficKeys;
 
         /**
-         * <p>The reason why the hot key failed to be queried.</p>
+         * <p>The reason why the hot keys sorted by QPS failed to be retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>current version doesn\&quot;t support</p>
@@ -509,6 +515,12 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @NameInMap("HotKeys")
         public DescribeHotBigKeysResponseBodyDataHotKeys hotKeys;
 
+        /**
+         * <p>The reason why the big keys sorted by memory usage failed to be retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>current version doesn\&quot;t support</p>
+         */
         @NameInMap("LargeKeyMsg")
         public String largeKeyMsg;
 

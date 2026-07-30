@@ -7,15 +7,24 @@ public class AddHDMInstanceRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
-     * <li><strong>SQLServer</strong></li>
-     * <li><strong>PolarDBMySQL</strong></li>
-     * <li><strong>PolarDBPostgreSQL</strong></li>
-     * <li><strong>Redis</strong></li>
-     * <li><strong>MongoDB</strong></li>
-     * <li><strong>PolarDBOracle</strong></li>
-     * <li><strong>PolarDBX</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>SQLServer</strong></p>
+     * </li>
+     * <li><p><strong>PolarDBMySQL</strong></p>
+     * </li>
+     * <li><p><strong>PolarDBPostgreSQL</strong></p>
+     * </li>
+     * <li><p><strong>Redis</strong></p>
+     * </li>
+     * <li><p><strong>MongoDB</strong></p>
+     * </li>
+     * <li><p><strong>PolarDBOracle</strong></p>
+     * </li>
+     * <li><p><strong>PolarDBX</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,12 +54,15 @@ public class AddHDMInstanceRequest extends TeaModel {
     /**
      * <p>The type of the instance on which the database is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
-     * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</li>
-     * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+     * <li><p><strong>RDS</strong>: an Alibaba Cloud database instance.</p>
+     * </li>
+     * <li><p><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</p>
+     * </li>
+     * <li><p><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> IDC refers to your data center.</p>
+     * <p>IDC refers to your data center.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

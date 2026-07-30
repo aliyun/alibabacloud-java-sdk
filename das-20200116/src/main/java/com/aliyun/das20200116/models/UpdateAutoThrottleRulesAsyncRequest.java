@@ -17,8 +17,10 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>The threshold for the number of active sessions.</p>
      * <ul>
-     * <li>If this parameter and CpuUsage are in the <strong>OR</strong> relationship, set this parameter to an integer that is greater than or equal to 16.</li>
-     * <li>If this parameter and CpuUsage are in the <strong>AND</strong> relationship, set this parameter to an integer that is greater than or equal to 2.</li>
+     * <li><p>If this parameter and CpuUsage are in the <strong>OR</strong> relationship, set this parameter to an integer that is greater than or equal to 16.</p>
+     * </li>
+     * <li><p>If this parameter and CpuUsage are in the <strong>AND</strong> relationship, set this parameter to an integer that is greater than or equal to 2.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -51,11 +53,13 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:</p>
      * <blockquote>
-     * <p> Abnormal SQL statements use the same template as the SQL statements to be throttled.</p>
+     * <p>Abnormal SQL statements use the same template as the SQL statements to be throttled.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -77,8 +81,10 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
      * <ul>
-     * <li><strong>AND</strong></li>
-     * <li><strong>OR</strong></li>
+     * <li><p><strong>AND</strong></p>
+     * </li>
+     * <li><p><strong>OR</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -101,7 +107,7 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>The database instance IDs.</p>
      * <blockquote>
-     * <p> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</code>.</p>
+     * <p>Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -124,7 +130,7 @@ public class UpdateAutoThrottleRulesAsyncRequest extends TeaModel {
     /**
      * <p>The ID of the asynchronous request.</p>
      * <blockquote>
-     * <p> You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</p>
+     * <p>You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

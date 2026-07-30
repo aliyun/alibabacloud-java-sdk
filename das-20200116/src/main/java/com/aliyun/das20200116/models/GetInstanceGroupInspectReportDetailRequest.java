@@ -4,10 +4,17 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceGroupInspectReportDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the agent that the user purchased.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ag-472T0DxtmjIxxxxx</p>
+     */
     @NameInMap("AgentId")
     public String agentId;
 
     /**
+     * <p>The ID of the automated operations report.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +22,15 @@ public class GetInstanceGroupInspectReportDetailRequest extends TeaModel {
      */
     @NameInMap("ReportId")
     public String reportId;
+
+    /**
+     * <p>The type of the report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>daily</p>
+     */
+    @NameInMap("ReportType")
+    public String reportType;
 
     public static GetInstanceGroupInspectReportDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceGroupInspectReportDetailRequest self = new GetInstanceGroupInspectReportDetailRequest();
@@ -35,6 +51,14 @@ public class GetInstanceGroupInspectReportDetailRequest extends TeaModel {
     }
     public String getReportId() {
         return this.reportId;
+    }
+
+    public GetInstanceGroupInspectReportDetailRequest setReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    public String getReportType() {
+        return this.reportType;
     }
 
 }

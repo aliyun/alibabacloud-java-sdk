@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>{         &quot;fail&quot;: false,         &quot;data&quot;: {             &quot;ad78a4e7d3ce81590c9dc2d5f4bc****&quot;: {                 &quot;sqlId&quot;: &quot;ad78a4e7d3ce81590c9dc2d5f4bc****&quot;,                 &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,                 &quot;count&quot;: 1             },             &quot;0f92feacd92c048b06a16617a633****&quot;: {                 &quot;sqlId&quot;: &quot;0f92feacd92c048b06a16617a633****&quot;,                 &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,                 &quot;count&quot;: 2             }         },         &quot;resultId&quot;: &quot;async__61f45ee381b2fa4e8a6545e3bee9****&quot;,         &quot;isFinish&quot;: true,         &quot;state&quot;: &quot;SUCCESS&quot;,         &quot;complete&quot;: true,         &quot;timestamp&quot;: 1644558576717     }</p>
@@ -23,9 +23,9 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
     public GetAsyncErrorRequestStatResultResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request succeeds, this parameter returns <strong>Successful</strong>. If the request fails, this parameter returns an error message.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,12 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,10 +105,12 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
 
     public static class GetAsyncErrorRequestStatResultResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the asynchronous request was complete.</p>
+         * <p>Indicates whether the asynchronous request is complete.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The request is complete.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request is in progress.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,10 +120,12 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         public Boolean complete;
 
         /**
-         * <p>Indicates whether the request failed. Valid values:</p>
+         * <p>Indicates whether the request failed.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The request failed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request succeeded.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,10 +135,12 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         public Boolean fail;
 
         /**
-         * <p>Indicates whether the asynchronous request was successful. Valid values:</p>
+         * <p>Indicates whether the asynchronous request is complete.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The request is complete.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request is in progress.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,13 +150,13 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         public Boolean isFinish;
 
         /**
-         * <p>The returned data of the asynchronous request.</p>
+         * <p>The data returned by the asynchronous request.</p>
          */
         @NameInMap("result")
         public java.util.Map<String, DataResultValue> result;
 
         /**
-         * <p>The ID of the asynchronous request.</p>
+         * <p>The asynchronous request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>async__61f45ee381b2fa4e8a6545e3bee9****</p>
@@ -159,9 +167,12 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         /**
          * <p>The state of the asynchronous request. Valid values:</p>
          * <ul>
-         * <li><strong>RUNNING</strong>: The asynchronous request is running.</li>
-         * <li><strong>SUCCESS</strong>: The asynchronous request is successful.</li>
-         * <li><strong>FAIL</strong>: The asynchronous request fails.</li>
+         * <li><p><strong>RUNNING</strong>: The request is running.</p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong>: The request succeeded.</p>
+         * </li>
+         * <li><p><strong>FAIL</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +182,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the asynchronous request was complete. The time is a Unix timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1644558576717</p>

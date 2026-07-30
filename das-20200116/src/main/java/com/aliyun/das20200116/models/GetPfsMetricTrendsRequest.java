@@ -7,7 +7,7 @@ public class GetPfsMetricTrendsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
+     * <p>The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,14 @@ public class GetPfsMetricTrendsRequest extends TeaModel {
     /**
      * <p>The metric whose trend you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>count</strong>: the number of executions.</li>
-     * <li><strong>avgRt</strong>: the average execution duration.</li>
-     * <li><strong>rtRate</strong>: the execution duration percentage.</li>
-     * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
+     * <li><p><strong>count</strong>: the number of executions.</p>
+     * </li>
+     * <li><p><strong>avgRt</strong>: the average execution duration.</p>
+     * </li>
+     * <li><p><strong>rtRate</strong>: the execution duration percentage.</p>
+     * </li>
+     * <li><p><strong>rowsExamined</strong>: the total number of scanned rows.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +47,7 @@ public class GetPfsMetricTrendsRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL clusters.</p>
+     * <p>This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

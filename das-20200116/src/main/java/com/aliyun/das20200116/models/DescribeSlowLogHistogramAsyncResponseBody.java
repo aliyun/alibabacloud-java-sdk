@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,17 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>AsyncResult<Histogram>。</p>
+     * <p>The detailed data of the asynchronous task.</p>
      */
     @NameInMap("Data")
     public DescribeSlowLogHistogramAsyncResponseBodyData data;
 
     /**
+     * <p>The message returned.</p>
+     * <blockquote>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -25,6 +32,8 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
@@ -32,6 +41,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,10 +101,18 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogHistogramAsyncResponseBodyDataDataItemInsItems extends TeaModel {
+        /**
+         * <p>The number of executions.</p>
+         */
         @NameInMap("Count")
         public java.util.List<Long> count;
 
         /**
+         * <p>The ID of the instance role.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2492</p>
          */
@@ -95,12 +120,23 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public String insId;
 
         /**
+         * <p>The role of the instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>userAdmin</p>
          */
         @NameInMap("InsRole")
         public String insRole;
 
+        /**
+         * <p>The number of slow query logs on the physical node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -144,22 +180,45 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogHistogramAsyncResponseBodyDataDataItem extends TeaModel {
+        /**
+         * <p>The number of slow query logs.</p>
+         */
         @NameInMap("Count")
         public java.util.List<Long> count;
 
+        /**
+         * <p>The trend metrics.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("InsItems")
         public java.util.List<DescribeSlowLogHistogramAsyncResponseBodyDataDataItemInsItems> insItems;
 
+        /**
+         * <p>The role of the instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("InsRole")
         public String insRole;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>r-bp1hi0wg57s3n0i3n8-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The total number of slow query logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -211,169 +270,426 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogHistogramAsyncResponseBodyDataData extends TeaModel {
+        /**
+         * <p>The average CPU time, in seconds.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgCPUTime")
         public java.util.List<Double> avgCPUTime;
 
+        /**
+         * <p>The average number of scanned documents.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgDocExamined")
         public java.util.List<Double> avgDocExamined;
 
+        /**
+         * <p>The average number of pulled rows.</p>
+         */
         @NameInMap("AvgFrows")
         public java.util.List<Double> avgFrows;
 
+        /**
+         * <p>The average number of I/O writes.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgIOWrites")
         public java.util.List<Double> avgIOWrites;
 
+        /**
+         * <p>The average number of scanned index rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgKeysExamined")
         public java.util.List<Double> avgKeysExamined;
 
+        /**
+         * <p>The average number of rows affected by the last statement.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgLastRowsCountAffected")
         public java.util.List<Double> avgLastRowsCountAffected;
 
+        /**
+         * <p>The average lock wait duration, in seconds.</p>
+         */
         @NameInMap("AvgLockTime")
         public java.util.List<Double> avgLockTime;
 
+        /**
+         * <p>The average number of logical reads.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgLogicalIOReads")
         public java.util.List<Double> avgLogicalIOReads;
 
+        /**
+         * <p>The average number of physical reads.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgPhysicalIOReads")
         public java.util.List<Double> avgPhysicalIOReads;
 
+        /**
+         * <p>The average number of returned rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgReturnNum")
         public java.util.List<Double> avgReturnNum;
 
+        /**
+         * <p>The average number of rows.</p>
+         */
         @NameInMap("AvgRows")
         public java.util.List<Double> avgRows;
 
+        /**
+         * <p>The average number of affected rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("AvgRowsCountAffected")
         public java.util.List<Double> avgRowsCountAffected;
 
+        /**
+         * <p>The average number of scanned rows.</p>
+         */
         @NameInMap("AvgRowsExamined")
         public java.util.List<Double> avgRowsExamined;
 
+        /**
+         * <p>The average number of returned rows.</p>
+         */
         @NameInMap("AvgRowsSent")
         public java.util.List<Double> avgRowsSent;
 
+        /**
+         * <p>The average execution duration.</p>
+         */
         @NameInMap("AvgRt")
         public java.util.List<Double> avgRt;
 
+        /**
+         * <p>The average number of requests.</p>
+         */
         @NameInMap("AvgScnt")
         public java.util.List<Double> avgScnt;
 
+        /**
+         * <p>The CPU time, in seconds.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("CPUTime")
         public java.util.List<Double> CPUTime;
 
+        /**
+         * <p>The number of slow query logs in the trend chart.</p>
+         */
         @NameInMap("Count")
         public java.util.List<Long> count;
 
+        /**
+         * <p>The number of scanned documents.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("DocExamined")
         public java.util.List<Long> docExamined;
 
+        /**
+         * <p>The number of rows pulled by the compute nodes (CNs) of a PolarDB-X 2.0 instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for PolarDB-X 2.0 instances.</p>
+         * </blockquote>
+         */
         @NameInMap("Frows")
         public java.util.List<Long> frows;
 
+        /**
+         * <p>The number of I/O writes.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("IOWrites")
         public java.util.List<Long> IOWrites;
 
+        /**
+         * <p>The trend metrics.</p>
+         */
         @NameInMap("Item")
         public java.util.List<DescribeSlowLogHistogramAsyncResponseBodyDataDataItem> item;
 
+        /**
+         * <p>The number of scanned index rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("KeysExamined")
         public java.util.List<Long> keysExamined;
 
+        /**
+         * <p>The number of rows affected by the last statement.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("LastRowsCountAffected")
         public java.util.List<Long> lastRowsCountAffected;
 
+        /**
+         * <p>The total lock wait duration, in seconds.</p>
+         */
         @NameInMap("LockTime")
         public java.util.List<Double> lockTime;
 
+        /**
+         * <p>The number of logical reads.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("LogicalIOReads")
         public java.util.List<Long> logicalIOReads;
 
+        /**
+         * <p>The maximum CPU time, in seconds.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxCPUTime")
         public java.util.List<Double> maxCPUTime;
 
+        /**
+         * <p>The maximum number of scanned documents.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxDocExamined")
         public java.util.List<Long> maxDocExamined;
 
+        /**
+         * <p>The maximum number of pulled rows.</p>
+         */
         @NameInMap("MaxFrows")
         public java.util.List<Long> maxFrows;
 
+        /**
+         * <p>The maximum number of I/O writes.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxIOWrites")
         public java.util.List<Long> maxIOWrites;
 
+        /**
+         * <p>The maximum number of scanned index rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxKeysExamined")
         public java.util.List<Long> maxKeysExamined;
 
+        /**
+         * <p>The maximum number of rows affected by the last statement.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxLastRowsCountAffected")
         public java.util.List<Long> maxLastRowsCountAffected;
 
+        /**
+         * <p>The maximum lock wait duration, in seconds.</p>
+         */
         @NameInMap("MaxLockTime")
         public java.util.List<Double> maxLockTime;
 
+        /**
+         * <p>The maximum number of logical reads.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxLogicalIOReads")
         public java.util.List<Long> maxLogicalIOReads;
 
+        /**
+         * <p>The maximum number of physical reads.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxPhysicalIOReads")
         public java.util.List<Long> maxPhysicalIOReads;
 
+        /**
+         * <p>The maximum number of returned rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxReturnNum")
         public java.util.List<Long> maxReturnNum;
 
+        /**
+         * <p>The maximum number of rows.</p>
+         */
         @NameInMap("MaxRows")
         public java.util.List<Long> maxRows;
 
+        /**
+         * <p>The maximum number of affected rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("MaxRowsCountAffected")
         public java.util.List<Long> maxRowsCountAffected;
 
+        /**
+         * <p>The maximum number of scanned rows.</p>
+         */
         @NameInMap("MaxRowsExamined")
         public java.util.List<Long> maxRowsExamined;
 
+        /**
+         * <p>The maximum number of returned rows.</p>
+         */
         @NameInMap("MaxRowsSent")
         public java.util.List<Long> maxRowsSent;
 
+        /**
+         * <p>The maximum execution duration, in seconds.</p>
+         */
         @NameInMap("MaxRt")
         public java.util.List<Double> maxRt;
 
+        /**
+         * <p>The maximum number of requests.</p>
+         */
         @NameInMap("MaxScnt")
         public java.util.List<Long> maxScnt;
 
+        /**
+         * <p>The number of physical reads.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("PhysicalIOReads")
         public java.util.List<Long> physicalIOReads;
 
+        /**
+         * <p>The number of returned rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB for MongoDB instances.</p>
+         * </blockquote>
+         */
         @NameInMap("ReturnNum")
         public java.util.List<Long> returnNum;
 
+        /**
+         * <p>The total number of updated or returned rows on the compute nodes of a PolarDB-X 2.0 instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for PolarDB-X 2.0 instances.</p>
+         * </blockquote>
+         */
         @NameInMap("Rows")
         public java.util.List<Long> rows;
 
+        /**
+         * <p>The number of affected rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
+         * </blockquote>
+         */
         @NameInMap("RowsCountAffected")
         public java.util.List<Long> rowsCountAffected;
 
+        /**
+         * <p>The total number of scanned rows.</p>
+         * <blockquote>
+         * <p>This parameter is returned for the following database engines: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
+         * </blockquote>
+         */
         @NameInMap("RowsExamined")
         public java.util.List<Long> rowsExamined;
 
+        /**
+         * <p>The number of returned rows.</p>
+         */
         @NameInMap("RowsSent")
         public java.util.List<Long> rowsSent;
 
+        /**
+         * <p>The total execution duration, in seconds.</p>
+         */
         @NameInMap("Rt")
         public java.util.List<Double> rt;
 
+        /**
+         * <p>The number of requests sent from the compute nodes (CNs) to the data nodes (DNs) of a PolarDB-X 2.0 instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for PolarDB-X 2.0 instances.</p>
+         * </blockquote>
+         */
         @NameInMap("Scnt")
         public java.util.List<Long> scnt;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;
 
+        /**
+         * <p>The total number of slow query logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>This parameter is returned only for relational databases.</p>
+         */
         @NameInMap("Ts")
         public java.util.List<Long> ts;
 
+        /**
+         * <p>This parameter is reserved.</p>
+         */
         @NameInMap("TsEnd")
         public java.util.List<Long> tsEnd;
 
@@ -817,10 +1133,15 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogHistogramAsyncResponseBodyData extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Data")
         public DescribeSlowLogHistogramAsyncResponseBodyDataData data;
 
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>10910</p>
          */
@@ -828,6 +1149,8 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public Integer errorCode;
 
         /**
+         * <p>Indicates whether the asynchronous task is complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -835,16 +1158,26 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public Boolean isFinish;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Successful</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The key of the request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("RequestKey")
         public String requestKey;
 
         /**
+         * <p>The ID of the asynchronous task result.</p>
+         * 
          * <strong>example:</strong>
          * <p>async__20ee808e72257f16a4fe024057ca****</p>
          */
@@ -852,6 +1185,16 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public String resultId;
 
         /**
+         * <p>The state of the asynchronous task. Valid values:</p>
+         * <ul>
+         * <li><p><strong>RUNNING</strong>: The task is running.</p>
+         * </li>
+         * <li><p><strong>SUCCESS</strong>: The task is successful.</p>
+         * </li>
+         * <li><p><strong>FAIL</strong>: The task failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -859,6 +1202,8 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The time when the request was made.</p>
+         * 
          * <strong>example:</strong>
          * <p>1645668213000</p>
          */

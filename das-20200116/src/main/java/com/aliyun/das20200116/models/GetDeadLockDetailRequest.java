@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeadLockDetailRequest extends TeaModel {
     /**
+     * <p>The ID of the database instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class GetDeadLockDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The node ID.</p>
+     * <blockquote>
+     * <p>Required for PolarDB for MySQL cluster instances.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pi-bp16v3824rt73****</p>
      */
@@ -21,6 +27,14 @@ public class GetDeadLockDetailRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The source of the analysis task:</p>
+     * <ul>
+     * <li><p><strong>MANUAL</strong> or <strong>not specified</strong>: queries the recent deadlock analysis task.</p>
+     * </li>
+     * <li><p><strong>AUTO</strong>: queries the full deadlock analysis task.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AUTO</p>
      */
@@ -28,6 +42,7 @@ public class GetDeadLockDetailRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The ID of the deadlock text. This value is returned from the GetDeadLockHistory operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

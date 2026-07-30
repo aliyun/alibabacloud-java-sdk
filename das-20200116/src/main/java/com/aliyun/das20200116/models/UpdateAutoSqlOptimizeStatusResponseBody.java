@@ -22,7 +22,7 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,8 +104,10 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
         /**
          * <p>The error code. Valid values:</p>
          * <ul>
-         * <li><strong>-1001</strong>: indicates that the specified parameter is invalid.</li>
-         * <li><strong>-91029</strong>: indicates that a system error occurred.</li>
+         * <li><p><strong>-1001</strong>: indicates that the specified parameter is invalid.</p>
+         * </li>
+         * <li><p><strong>-91029</strong>: indicates that a system error occurred.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,8 +128,10 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request initiated to configure the automatic SQL optimization feature was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPfsSqlSummariesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>false</strong>. Valid values:</p>
+     * <p>Sort in ascending order. Default is <strong>false</strong>.</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Yes.</p>
+     * </li>
+     * <li><p><strong>false</strong>: No.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,9 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public Boolean asc;
 
     /**
-     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>End time of the query, in Unix timestamp format, in milliseconds.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. You can view the data of up to seven days within the last month.</p>
+     * <p>The end time must be later than the start time. You can query data for any seven-day period within the last 30 days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +32,7 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>Database instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-uf61swc4cru0b****</p>
@@ -39,7 +41,7 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The keywords of the SQL template. Separate multiple keywords with spaces.</p>
+     * <p>Keywords in the SQL text. Separate multiple keywords with spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>select update</p>
@@ -48,9 +50,9 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public String keywords;
 
     /**
-     * <p>The node ID.</p>
+     * <p>Node ID.</p>
      * <blockquote>
-     * <p> This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+     * <p>Provide a node ID for RDS MySQL Cluster Edition or PolarDB for MySQL database instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,14 +62,18 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>.</p>
+     * <p>Field to sort by. Default is <strong>count</strong>.</p>
      * <ul>
-     * <li><strong>count</strong>: the number of executions.</li>
-     * <li><strong>avgRt</strong>: the average execution duration.</li>
-     * <li><strong>rtRate</strong>: the execution duration percentage.</li>
-     * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
-     * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
-     * <li><strong>avgRowsReturned</strong>: the average number of returned rows.</li>
+     * <li><p><strong>count</strong>: Number of executions.</p>
+     * </li>
+     * <li><p><strong>avgLatency</strong>: Average execution time.</p>
+     * </li>
+     * <li><p><strong>rowsExamined</strong>: Total number of scanned rows.</p>
+     * </li>
+     * <li><p><strong>rowsExaminedAvg</strong>: Average number of scanned rows.</p>
+     * </li>
+     * <li><p><strong>rowsSentAvg</strong>: Average number of returned rows.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +83,7 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>Page number for paged queries. Start from 1. Default is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,7 +92,7 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * <p>Maximum number of records per page for paged queries. Default is 10. Maximum is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -95,9 +101,9 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The SQL ID.</p>
+     * <p>SQL ID.</p>
      * <blockquote>
-     * <p> If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
+     * <p>If you specify an SQL ID, the system returns statistics for that SQL ID only. If you leave this parameter empty, the system returns statistics for the entire database instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,7 +113,7 @@ public class GetPfsSqlSummariesRequest extends TeaModel {
     public String sqlId;
 
     /**
-     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>Start time of the query, in Unix timestamp format, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1675833788056</p>

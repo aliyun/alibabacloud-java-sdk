@@ -22,7 +22,7 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,8 +122,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic bandwidth downgrade feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,13 +137,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The observation window of the automatic bandwidth adjustment feature. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
          * <ul>
-         * <li><strong>s</strong>: seconds.</li>
-         * <li><strong>m</strong>: minutes.</li>
-         * <li><strong>h</strong>: hours.</li>
-         * <li><strong>d</strong>: days.</li>
+         * <li><p><strong>s</strong>: seconds.</p>
+         * </li>
+         * <li><p><strong>m</strong>: minutes.</p>
+         * </li>
+         * <li><p><strong>h</strong>: hours.</p>
+         * </li>
+         * <li><p><strong>d</strong>: days.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+         * <p>A value of <strong>5m</strong> indicates 5 minutes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -151,8 +159,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic bandwidth adjustment feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,13 +240,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The observation window of the automatic scale-in feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
          * <ul>
-         * <li><strong>s</strong>: seconds.</li>
-         * <li><strong>m</strong>: minutes.</li>
-         * <li><strong>h</strong>: hours.</li>
-         * <li><strong>d</strong>: days.</li>
+         * <li><p><strong>s</strong>: seconds.</p>
+         * </li>
+         * <li><p><strong>m</strong>: minutes.</p>
+         * </li>
+         * <li><p><strong>h</strong>: hours.</p>
+         * </li>
+         * <li><p><strong>d</strong>: days.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+         * <p>A value of <strong>5m</strong> indicates 5 minutes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -248,8 +262,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the auto scaling feature is enabled for local resources. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,13 +277,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The observation window of the automatic scale-out feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
          * <ul>
-         * <li><strong>s</strong>: seconds.</li>
-         * <li><strong>m</strong>: minutes.</li>
-         * <li><strong>h</strong>: hours.</li>
-         * <li><strong>d</strong>: days.</li>
+         * <li><p><strong>s</strong>: seconds.</p>
+         * </li>
+         * <li><p><strong>m</strong>: minutes.</p>
+         * </li>
+         * <li><p><strong>h</strong>: hours.</p>
+         * </li>
+         * <li><p><strong>d</strong>: days.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+         * <p>A value of <strong>5m</strong> indicates 5 minutes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -327,8 +347,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the feature of automatically removing shards is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,13 +362,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The observation window of the feature of automatically removing shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
          * <ul>
-         * <li><strong>s</strong>: seconds.</li>
-         * <li><strong>m</strong>: minutes.</li>
-         * <li><strong>h</strong>: hours.</li>
-         * <li><strong>d</strong>: days.</li>
+         * <li><p><strong>s</strong>: seconds.</p>
+         * </li>
+         * <li><p><strong>m</strong>: minutes.</p>
+         * </li>
+         * <li><p><strong>h</strong>: hours.</p>
+         * </li>
+         * <li><p><strong>d</strong>: days.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of <strong>1d</strong> indicates one day.</p>
+         * <p>A value of <strong>1d</strong> indicates one day.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -394,8 +420,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the feature of automatically adding shards is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -407,13 +435,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The observation window of the feature of automatically adding shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
          * <ul>
-         * <li><strong>s</strong>: seconds.</li>
-         * <li><strong>m</strong>: minutes.</li>
-         * <li><strong>h</strong>: hours.</li>
-         * <li><strong>d</strong>: days.</li>
+         * <li><p><strong>s</strong>: seconds.</p>
+         * </li>
+         * <li><p><strong>m</strong>: minutes.</p>
+         * </li>
+         * <li><p><strong>h</strong>: hours.</p>
+         * </li>
+         * <li><p><strong>d</strong>: days.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+         * <p>A value of <strong>5m</strong> indicates 5 minutes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -497,13 +529,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The quiescent period. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
          * <ul>
-         * <li><strong>s</strong>: seconds.</li>
-         * <li><strong>m</strong>: minutes.</li>
-         * <li><strong>h</strong>: hours.</li>
-         * <li><strong>d</strong>: days.</li>
+         * <li><p><strong>s</strong>: seconds.</p>
+         * </li>
+         * <li><p><strong>m</strong>: minutes.</p>
+         * </li>
+         * <li><p><strong>h</strong>: hours.</p>
+         * </li>
+         * <li><p><strong>d</strong>: days.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+         * <p>A value of <strong>5m</strong> indicates 5 minutes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -524,8 +560,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic specification scale-down feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -546,8 +584,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The maximum specifications to which the cluster can be scaled up. For more information about the specifications of each type of supported database instances, see the following topics:</p>
          * <ul>
-         * <li>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications of PolarDB for MySQL Enterprise Edition</a></li>
-         * <li>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></li>
+         * <li><p>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications of PolarDB for MySQL Enterprise Edition</a></p>
+         * </li>
+         * <li><p>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -568,13 +608,17 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>The observation window. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
          * <ul>
-         * <li><strong>s</strong>: seconds.</li>
-         * <li><strong>m</strong>: minutes.</li>
-         * <li><strong>h</strong>: hours.</li>
-         * <li><strong>d</strong>: days.</li>
+         * <li><p><strong>s</strong>: seconds.</p>
+         * </li>
+         * <li><p><strong>m</strong>: minutes.</p>
+         * </li>
+         * <li><p><strong>h</strong>: hours.</p>
+         * </li>
+         * <li><p><strong>d</strong>: days.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> A value of <strong>5m</strong> indicates 5 minutes.</p>
+         * <p>A value of <strong>5m</strong> indicates 5 minutes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -586,8 +630,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic specification scale-up feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -689,8 +735,10 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic storage expansion feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

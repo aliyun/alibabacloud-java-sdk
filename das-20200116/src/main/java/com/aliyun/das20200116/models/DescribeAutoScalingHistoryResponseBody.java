@@ -43,8 +43,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,10 +104,14 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         /**
          * <p>The error code returned by the scaling task. Valid values:</p>
          * <ul>
-         * <li><strong>Insufficient_Balance</strong>: The account has insufficient balance or an unpaid order.</li>
-         * <li><strong>REACH_SPEC_UPPERBOUND</strong>: The instance type reaches the upper limit.</li>
-         * <li><strong>Control_Error_Timeout_Msg</strong>: The management task timed out.</li>
-         * <li><strong>Invoke_Rds_Api_Error_Msg</strong>: Failed to call the ApsaraDB RDS API.</li>
+         * <li><p><strong>Insufficient_Balance</strong>: The account has insufficient balance or an unpaid order.</p>
+         * </li>
+         * <li><p><strong>REACH_SPEC_UPPERBOUND</strong>: The instance type reaches the upper limit.</p>
+         * </li>
+         * <li><p><strong>Control_Error_Timeout_Msg</strong>: The management task timed out.</p>
+         * </li>
+         * <li><p><strong>Invoke_Rds_Api_Error_Msg</strong>: Failed to call the ApsaraDB RDS API.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,8 +150,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         /**
          * <p>The type of the automatic performance scaling task. Valid values:</p>
          * <ul>
-         * <li><strong>SCALE_UP</strong>: automatic instance type scale-up task.</li>
-         * <li><strong>SCALE_DOWN</strong>: automatic instance type scale-down task.</li>
+         * <li><p><strong>SCALE_UP</strong>: automatic instance type scale-up task.</p>
+         * </li>
+         * <li><p><strong>SCALE_DOWN</strong>: automatic instance type scale-down task.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,8 +192,10 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The task was successful.</li>
-         * <li><strong>false</strong>: The task failed.</li>
+         * <li><p><strong>true</strong>: The task was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The task failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

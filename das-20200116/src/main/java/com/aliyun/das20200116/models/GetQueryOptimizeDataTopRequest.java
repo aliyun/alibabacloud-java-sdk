@@ -7,9 +7,12 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>PolarDBMySQL</strong></li>
-     * <li><strong>PostgreSQL</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>PolarDBMySQL</strong></p>
+     * </li>
+     * <li><p><strong>PostgreSQL</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,13 +34,16 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
     /**
      * <p>The region in which the instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-china</strong>: Chinese mainland</li>
-     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><p><strong>cn-china</strong>: Chinese mainland</p>
+     * </li>
+     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Singapore</p>
+     * </li>
      * </ul>
-     * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
+     * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.\<em>\</em>\<em>\</em></p>
      * <blockquote>
-     * <p> Set this parameter to <strong>cn-china</strong> for all your instances that reside in the regions in the Chinese mainland.</p>
+     * <p>Set this parameter to <strong>cn-china</strong> for all your instances that reside in the regions in the Chinese mainland.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,8 +74,10 @@ public class GetQueryOptimizeDataTopRequest extends TeaModel {
     /**
      * <p>The type of instances that you want to query. Valid values:</p>
      * <ul>
-     * <li><strong>RED</strong>: the best-performing instances</li>
-     * <li><strong>BLACK</strong>: the worst-performing instances</li>
+     * <li><p><strong>RED</strong>: the best-performing instances</p>
+     * </li>
+     * <li><p><strong>BLACK</strong>: the worst-performing instances</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

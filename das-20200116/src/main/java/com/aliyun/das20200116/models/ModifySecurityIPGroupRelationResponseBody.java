@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,17 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>ListResult<InstanceSSL></p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ModifySecurityIPGroupRelationResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * <blockquote>
+     * <p>If the request is successful, Successful is returned. If the request fails, an error message, such as an error code, is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -25,6 +32,8 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>840F51F7-9C01-538D-94F6-AE712905****</p>
      */
@@ -32,6 +41,14 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,6 +102,11 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
 
     public static class ModifySecurityIPGroupRelationResponseBodyDataGlobalSecurityIPGroupRel extends TeaModel {
         /**
+         * <p>The IP addresses in the whitelist template.</p>
+         * <blockquote>
+         * <p>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.1,192.168.100.0/24</p>
          */
@@ -92,6 +114,16 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         public String GIpList;
 
         /**
+         * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li><p>It must consist of lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a letter and end with a letter or a digit.</p>
+         * </li>
+         * <li><p>It must be 2 to 120 characters in length.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>saas_jump</p>
          */
@@ -99,6 +131,8 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
+         * <p>The ID of the IP address whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-v8kwereyd6u7kx****</p>
          */
@@ -106,6 +140,8 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         public String globalSecurityGroupId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -152,10 +188,15 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
     }
 
     public static class ModifySecurityIPGroupRelationResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the cross-product IP address whitelist template that is attached to the instance.</p>
+         */
         @NameInMap("GlobalSecurityIPGroupRel")
         public java.util.List<ModifySecurityIPGroupRelationResponseBodyDataGlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-2ze1jdv45i7l6****</p>
          */

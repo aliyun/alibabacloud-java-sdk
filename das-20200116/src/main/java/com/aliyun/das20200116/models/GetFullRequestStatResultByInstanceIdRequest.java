@@ -8,7 +8,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
      * <p>Specifies whether to sort the results in ascending order. By default, the results are not sorted in ascending order.</p>
      * 
      * <strong>example:</strong>
-     * <p>Disabled</p>
+     * <p>False</p>
      */
     @NameInMap("Asc")
     public Boolean asc;
@@ -25,7 +25,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. The interval cannot exceed one day.</p>
+     * <p>The end time must be later than the start time. The interval cannot exceed one day.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -57,7 +57,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <blockquote>
-     * <p> You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
+     * <p>You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,12 +69,18 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>count</strong>: the number of executions.</li>
-     * <li><strong>avgRt</strong>: the average execution duration.</li>
-     * <li><strong>rtRate</strong>: the execution duration percentage.</li>
-     * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
-     * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
-     * <li><strong>avgRowsReturned</strong>: the average number of returned rows.</li>
+     * <li><p><strong>count</strong>: the number of executions.</p>
+     * </li>
+     * <li><p><strong>avgRt</strong>: the average execution duration.</p>
+     * </li>
+     * <li><p><strong>rtRate</strong>: the execution duration percentage.</p>
+     * </li>
+     * <li><p><strong>rowsExamined</strong>: the total number of scanned rows.</p>
+     * </li>
+     * <li><p><strong>avgRowsExamined</strong>: the average number of scanned rows.</p>
+     * </li>
+     * <li><p><strong>avgRowsReturned</strong>: the average number of returned rows.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +92,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The IP address of the client that executes the SQL statement.</p>
      * <blockquote>
-     * <p> This parameter is optional. If this parameter is specified, the full request statistics of the specified IP address are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
+     * <p>This parameter is optional. If this parameter is specified, the full request statistics of the specified IP address are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -118,8 +124,10 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The role of the node in the PolarDB-X 2.0 instance. Valid values:</p>
      * <ul>
-     * <li><strong>polarx_cn</strong>: compute node.</li>
-     * <li><strong>polarx_dn</strong>: data node.</li>
+     * <li><p><strong>polarx_cn</strong>: compute node.</p>
+     * </li>
+     * <li><p><strong>polarx_dn</strong>: data node.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +139,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The SQL ID.</p>
      * <blockquote>
-     * <p> If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
+     * <p>If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -143,7 +151,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The type of the SQL statement. Valid values: <strong>SELECT</strong>, <strong>INSERT</strong>, <strong>UPDATE</strong>, <strong>DELETE</strong>, <strong>LOGIN</strong>, <strong>LOGOUT</strong>, <strong>MERGE</strong>, <strong>ALTER</strong>, <strong>CREATEINDEX</strong>, <strong>DROPINDEX</strong>, <strong>CREATE</strong>, <strong>DROP</strong>, <strong>SET</strong>, <strong>DESC</strong>, <strong>REPLACE</strong>, <strong>CALL</strong>, <strong>BEGIN</strong>, <strong>DESCRIBE</strong>, <strong>ROLLBACK</strong>, <strong>FLUSH</strong>, <strong>USE</strong>, <strong>SHOW</strong>, <strong>START</strong>, <strong>COMMIT</strong>, and <strong>RENAME</strong>.</p>
      * <blockquote>
-     * <p> If your database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, or a PolarDB-X 2.0 instance, the statistics can be collected based on the SQL statement type.</p>
+     * <p>If your database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, or a PolarDB-X 2.0 instance, the statistics can be collected based on the SQL statement type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -155,7 +163,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> The start time can be up to 90 days earlier than the current time.</p>
+     * <p>The start time can be up to 90 days earlier than the current time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -168,7 +176,7 @@ public class GetFullRequestStatResultByInstanceIdRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account that was used to create the database instance.</p>
      * <blockquote>
-     * <p> This parameter is optional. The system can automatically obtain the Alibaba Cloud account ID based on the value of InstanceId when you call the GetFullRequestOriginStatByInstanceId operation.</p>
+     * <p>This parameter is optional. The system can automatically obtain the Alibaba Cloud account ID based on the value of InstanceId when you call the GetFullRequestOriginStatByInstanceId operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</p>
+     * </notice>
+     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +20,17 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The filter conditions.</p>
+     * <blockquote>
+     * <p>Error log filtering is supported only for RDS MySQL, RDS PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (compatible with Oracle).</p>
+     * </blockquote>
+     */
     @NameInMap("Filters")
     public java.util.List<DescribeErrorLogRecordsRequestFilters> filters;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +40,8 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pi-bp16v3824rt73****</p>
      */
@@ -33,6 +49,8 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public String nodeId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +58,8 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -47,6 +67,15 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The node role:</p>
+     * <ul>
+     * <li>db</li>
+     * <li>mongos</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is supported only for ApsaraDB for MongoDB instances.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>db</p>
      */
@@ -54,6 +83,13 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     public String role;
 
     /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</p>
+     * </notice>
+     * 
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,6 +169,8 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
 
     public static class DescribeErrorLogRecordsRequestFilters extends TeaModel {
         /**
+         * <p>The filter parameter. Set the value to filters.</p>
+         * 
          * <strong>example:</strong>
          * <p>filters</p>
          */
@@ -140,6 +178,8 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The content of the error log to filter.</p>
+         * 
          * <strong>example:</strong>
          * <p>deadlock</p>
          */

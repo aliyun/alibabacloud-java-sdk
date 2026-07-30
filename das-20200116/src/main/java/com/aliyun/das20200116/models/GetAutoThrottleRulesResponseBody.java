@@ -22,7 +22,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,8 +143,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
          * <p>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,8 +158,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
          * <ul>
-         * <li><strong>AND</strong></li>
-         * <li><strong>OR</strong></li>
+         * <li><p><strong>AND</strong></p>
+         * </li>
+         * <li><p><strong>OR</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,8 +209,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,8 +359,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
          * <p>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,8 +374,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
          * <ul>
-         * <li><strong>AND</strong></li>
-         * <li><strong>OR</strong></li>
+         * <li><p><strong>AND</strong></p>
+         * </li>
+         * <li><p><strong>OR</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -413,8 +425,10 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -537,7 +551,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * <p>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</p>
          * <blockquote>
-         * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+         * <p>If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -549,7 +563,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * <p>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</p>
          * <blockquote>
-         * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+         * <p>If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
          * </blockquote>
          */
         @NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")

@@ -7,7 +7,7 @@ public class EnableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The duration within which the SQL throttling rule takes effect. Unit: seconds.</p>
      * <blockquote>
-     * <p> The throttling rule takes effect only within this duration.</p>
+     * <p>The throttling rule takes effect only within this duration.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +29,7 @@ public class EnableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+     * <p>You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class EnableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The maximum number of concurrent SQL statements. Set this parameter to a positive integer.</p>
      * <blockquote>
-     * <p> When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
+     * <p>When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -55,7 +55,7 @@ public class EnableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The keywords that are used to identify the SQL statements that need to be throttled.</p>
      * <blockquote>
-     * <p> If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
+     * <p>If you specify multiple SQL keywords, separate them with tildes (\~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -68,9 +68,12 @@ public class EnableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The type of the SQL statements. Valid values:</p>
      * <ul>
-     * <li><strong>SELECT</strong></li>
-     * <li><strong>UPDATE</strong></li>
-     * <li><strong>DELETE</strong></li>
+     * <li><p><strong>SELECT</strong></p>
+     * </li>
+     * <li><p><strong>UPDATE</strong></p>
+     * </li>
+     * <li><p><strong>DELETE</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDasAgentSSEResponseBody extends TeaModel {
     /**
+     * <p>The content of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
     public String answer;
 
     /**
+     * <p>The type of the response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>summary</p>
      */
@@ -19,12 +23,17 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
     public String event;
 
     /**
+     * <p>The session ID. This is the same as the SessionId in the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxx-xxx-xxx</p>
+     * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The metadata.</p>
+     */
     @NameInMap("Metadata")
     public GetDasAgentSSEResponseBodyMetadata metadata;
 
@@ -67,16 +76,26 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
 
     public static class GetDasAgentSSEResponseBodyMetadata extends TeaModel {
         /**
+         * <p>The number of characters in the response.</p>
+         * 
          * <strong>example:</strong>
          * <p>1403</p>
          */
         @NameInMap("CharCount")
         public Long charCount;
 
+        /**
+         * <p>The error code. This parameter is empty if no exception occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1810001</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>04930480-9404-50CB-8252-Axxxxxxxx</p>
          */
@@ -84,12 +103,17 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The name of the tool used.</p>
+         * 
          * <strong>example:</strong>
          * <p>SqlFilter</p>
          */
         @NameInMap("ToolName")
         public String toolName;
 
+        /**
+         * <p>The tool parameters.</p>
+         */
         @NameInMap("ToolParams")
         public java.util.List<String> toolParams;
 

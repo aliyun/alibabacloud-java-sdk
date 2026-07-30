@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChatResponseBody extends TeaModel {
     /**
+     * <p>Indicates the current activity status of the agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>waiting_for_agent_thinking</p>
      */
@@ -12,6 +14,8 @@ public class ChatResponseBody extends TeaModel {
     public String activityType;
 
     /**
+     * <p>The content of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>I see you have several PolarDB instances, and I will query them for you shortly</p>
      */
@@ -19,6 +23,8 @@ public class ChatResponseBody extends TeaModel {
     public String content;
 
     /**
+     * <p>The incremental content of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>hello</p>
      */
@@ -26,6 +32,8 @@ public class ChatResponseBody extends TeaModel {
     public String delta;
 
     /**
+     * <p>The message ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>61820b594664275c4429****</p>
      */
@@ -33,6 +41,8 @@ public class ChatResponseBody extends TeaModel {
     public String messageId;
 
     /**
+     * <p>The key for the additional information.</p>
+     * 
      * <strong>example:</strong>
      * <p>summary</p>
      */
@@ -40,6 +50,8 @@ public class ChatResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the parent message.</p>
+     * 
      * <strong>example:</strong>
      * <p>76bee207-31ee-4707-8851-6b9d4da033aa</p>
      */
@@ -47,6 +59,8 @@ public class ChatResponseBody extends TeaModel {
     public String parentMessageId;
 
     /**
+     * <p>The role in the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>assistant</p>
      */
@@ -54,6 +68,8 @@ public class ChatResponseBody extends TeaModel {
     public String role;
 
     /**
+     * <p>The run ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ed7cb7b1-ddc8-45d7-9ff3-b315726cb5f7</p>
      */
@@ -61,6 +77,8 @@ public class ChatResponseBody extends TeaModel {
     public String runId;
 
     /**
+     * <p>The name of the execution step.</p>
+     * 
      * <strong>example:</strong>
      * <p>sub_agent_performance_diagnose_mysql</p>
      */
@@ -68,6 +86,8 @@ public class ChatResponseBody extends TeaModel {
     public String stepName;
 
     /**
+     * <p>The identifier of the callback tool.</p>
+     * 
      * <strong>example:</strong>
      * <p>das_api</p>
      */
@@ -75,6 +95,8 @@ public class ChatResponseBody extends TeaModel {
     public String taskTrackerId;
 
     /**
+     * <p>The thread ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8e481be1-21d5-4a92-a2fb-fb54be0ab4f6</p>
      */
@@ -82,6 +104,8 @@ public class ChatResponseBody extends TeaModel {
     public String threadId;
 
     /**
+     * <p>The tool call ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>call_edf9cdb69e0e4c9796a6a5a6</p>
      */
@@ -89,6 +113,8 @@ public class ChatResponseBody extends TeaModel {
     public String toolCallId;
 
     /**
+     * <p>The name of the tool.</p>
+     * 
      * <strong>example:</strong>
      * <p>das_api</p>
      */
@@ -96,6 +122,8 @@ public class ChatResponseBody extends TeaModel {
     public String toolCallName;
 
     /**
+     * <p>The event type.</p>
+     * 
      * <strong>example:</strong>
      * <p>TEXT_MESSAGE_CONTENT</p>
      */
@@ -103,6 +131,8 @@ public class ChatResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The value of the additional information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;CharCount&quot;:393,&quot;End&quot;:1777428785996,&quot;RequestId&quot;:&quot;BE59AED5-D831-5811-BBAD-590B917B2089&quot;,&quot;SessionId&quot;:&quot;123e4567-e89b-12d3-a456-xxxxxxxxxxxx&quot;,&quot;Start&quot;:1777428707927}</p>
      */

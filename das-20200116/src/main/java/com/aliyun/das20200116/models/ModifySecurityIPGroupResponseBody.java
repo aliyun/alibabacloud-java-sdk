@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIPGroupResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,17 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>ListResult<InstanceSSL></p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ModifySecurityIPGroupResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * <blockquote>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -25,6 +32,8 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
@@ -32,6 +41,14 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,6 +102,11 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
 
     public static class ModifySecurityIPGroupResponseBodyDataGlobalSecurityIPGroup extends TeaModel {
         /**
+         * <p>The IP addresses in the whitelist template.</p>
+         * <blockquote>
+         * <p>Separate multiple IP addresses with commas. All IP address whitelists support a combined total of 1,000 IP addresses or address segments.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
          */
@@ -92,6 +114,8 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
         public String GIpList;
 
         /**
+         * <p>The name of the IP address whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -99,6 +123,8 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
+         * <p>The ID of the IP address whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-b1asblm5ae****</p>
          */
@@ -106,6 +132,9 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
         public String globalSecurityGroupId;
 
         /**
+         * <p>The region ID.</p>
+         * <p>Example: cn-hangzhou</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -113,6 +142,8 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The IP type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipv4</p>
          */
@@ -120,6 +151,8 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
         public String securityIpType;
 
         /**
+         * <p>The network type of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>mix</p>
          */
@@ -182,6 +215,9 @@ public class ModifySecurityIPGroupResponseBody extends TeaModel {
     }
 
     public static class ModifySecurityIPGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the cross-product whitelist template.</p>
+         */
         @NameInMap("GlobalSecurityIPGroup")
         public java.util.List<ModifySecurityIPGroupResponseBodyDataGlobalSecurityIPGroup> globalSecurityIPGroup;
 

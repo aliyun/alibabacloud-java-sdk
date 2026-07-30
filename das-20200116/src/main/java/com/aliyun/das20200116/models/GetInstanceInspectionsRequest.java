@@ -7,7 +7,7 @@ public class GetInstanceInspectionsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time.</p>
+     * <p>The end time must be later than the start time.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,9 +20,12 @@ public class GetInstanceInspectionsRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong></li>
-     * <li><strong>Redis</strong></li>
-     * <li><strong>PolarDBMySQL</strong></li>
+     * <li><p><strong>MySQL</strong></p>
+     * </li>
+     * <li><p><strong>Redis</strong></p>
+     * </li>
+     * <li><p><strong>PolarDBMySQL</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,12 +38,15 @@ public class GetInstanceInspectionsRequest extends TeaModel {
     /**
      * <p>The type of the instance on which the database is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
-     * <li><strong>ECS</strong>: an ECS instance on which a self-managed database is deployed.</li>
-     * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+     * <li><p><strong>RDS</strong>: an Alibaba Cloud database instance.</p>
+     * </li>
+     * <li><p><strong>ECS</strong>: an ECS instance on which a self-managed database is deployed.</p>
+     * </li>
+     * <li><p><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The value IDC specifies that the instance is deployed in a data center.</p>
+     * <p>The value IDC specifies that the instance is deployed in a data center.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -82,9 +88,12 @@ public class GetInstanceInspectionsRequest extends TeaModel {
     /**
      * <p>The filter condition, which can be specified in one of the following formats:</p>
      * <ul>
-     * <li>Specify the ID of a single instance in the {&quot;InstanceId&quot;:&quot;Instance ID&quot;} format.</li>
-     * <li>Specify the IDs of multiple instances in the {&quot;InstanceIds&quot;:[&quot;Instance ID1&quot;,&quot;Instance ID2&quot;]} format. Separate the instance IDs with commas (,).</li>
-     * <li>Specify the region in which the instance resides in the {&quot;region&quot;:&quot;Region of the instance&quot;} format.</li>
+     * <li><p>Specify the ID of a single instance in the {&quot;InstanceId&quot;:&quot;Instance ID&quot;} format.</p>
+     * </li>
+     * <li><p>Specify the IDs of multiple instances in the {&quot;InstanceIds&quot;:[&quot;Instance ID1&quot;,&quot;Instance ID2&quot;]} format. Separate the instance IDs with commas (,).</p>
+     * </li>
+     * <li><p>Specify the region in which the instance resides in the {&quot;region&quot;:&quot;Region of the instance&quot;} format.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

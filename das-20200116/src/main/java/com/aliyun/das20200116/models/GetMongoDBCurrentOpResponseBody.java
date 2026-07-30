@@ -22,7 +22,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p> If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,8 +104,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the operation is active. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +120,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
          * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
-         * <p>219.143.177.4:52324</p>
+         * <p>219.143.XX.XX:52324</p>
          */
         @NameInMap("Client")
         public String client;
@@ -168,7 +172,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
          * <p>The host.</p>
          * 
          * <strong>example:</strong>
-         * <p>a79******.cloud.et15:3328</p>
+         * <p>a79****.cloud.et15:3328</p>
          */
         @NameInMap("Host")
         public String host;
@@ -176,8 +180,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the operation is marked as terminated.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,7 +223,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
          * <p>The architecture of the operating system.</p>
          * 
          * <strong>example:</strong>
-         * <p>amd64</p>
+         * <p>AMD64</p>
          */
         @NameInMap("OsArch")
         public String osArch;
@@ -270,7 +276,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         /**
          * <p>The ID of the data shard.</p>
          * <blockquote>
-         * <p> This parameter is returned for sharded cluster instances.</p>
+         * <p>This parameter is returned for sharded cluster instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -465,7 +471,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
          * <p>The total number of sessions.</p>
          * 
          * <strong>example:</strong>
-         * <p>55</p>
+         * <p>11</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

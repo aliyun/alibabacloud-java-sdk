@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIPGroupResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,17 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>ListResult<InstanceSSL></p>
+     * <p>ListResult</p>
      */
     @NameInMap("Data")
     public DescribeSecurityIPGroupResponseBodyData data;
 
     /**
+     * <p>The message returned for the request.</p>
+     * <blockquote>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message is returned, such as an error code.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Successful</p>
      */
@@ -25,6 +32,8 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAC553F1-C669-53F1-A295-2CF050E****</p>
      */
@@ -32,6 +41,14 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -85,16 +102,23 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
 
     public static class DescribeSecurityIPGroupResponseBodyDataSecurityIpGroupsEngineInfoList extends TeaModel {
         /**
+         * <p>The database type of the destination instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>PolarDBMySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>A list of database instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
+         * <p>The number of instances that belong to the current logon account.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -133,16 +157,33 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIPGroupResponseBodyDataSecurityIpGroups extends TeaModel {
+        /**
+         * <p>The database instances that are attached to the whitelist template.</p>
+         */
         @NameInMap("DbInstances")
         public java.util.List<String> dbInstances;
 
+        /**
+         * <p>The information about the instances of each product that are attached to the template.</p>
+         */
         @NameInMap("EngineInfoList")
         public java.util.List<DescribeSecurityIPGroupResponseBodyDataSecurityIpGroupsEngineInfoList> engineInfoList;
 
+        /**
+         * <p>The ID of the ECS security group. This parameter is deprecated and is retained for compatibility. It will be removed in a future version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("GEcsSgIdList")
         public String GEcsSgIdList;
 
         /**
+         * <p>The IP addresses in the whitelist template.</p>
+         * <blockquote>
+         * <p>Separate multiple IP addresses with commas (,).</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.28/32</p>
          */
@@ -150,6 +191,16 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         public String GIpList;
 
         /**
+         * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li><p>It must consist of lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a letter and end with a letter or a digit.</p>
+         * </li>
+         * <li><p>It must be 2 to 120 characters in length.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>test_123</p>
          */
@@ -157,6 +208,8 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         public String globalIgName;
 
         /**
+         * <p>The ID of the IP address whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-1no2rzybnqcv****</p>
          */
@@ -164,6 +217,8 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         public String globalSecurityGroupId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -171,6 +226,8 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The IP address type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipv4</p>
          */
@@ -178,6 +235,8 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         public String securityIpType;
 
         /**
+         * <p>The account ID. You can obtain the ID of your logon account on the <strong>Security Settings</strong> page of <strong>Account Management</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>160-79abe3f4****</p>
          */
@@ -185,6 +244,8 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         public String uid;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>641***</p>
          */
@@ -192,6 +253,8 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The network type of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>mix</p>
          */
@@ -294,6 +357,9 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIPGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of all cross-product whitelist templates in the specified region.</p>
+         */
         @NameInMap("SecurityIpGroups")
         public java.util.List<DescribeSecurityIPGroupResponseBodyDataSecurityIpGroups> securityIpGroups;
 

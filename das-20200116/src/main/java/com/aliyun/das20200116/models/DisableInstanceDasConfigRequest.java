@@ -27,9 +27,12 @@ public class DisableInstanceDasConfigRequest extends TeaModel {
     /**
      * <p>The type of auto scaling. Valid values:</p>
      * <ul>
-     * <li><strong>specScale</strong>: The specifications of a database instance are automatically scaled up or down.</li>
-     * <li><strong>shardScale</strong>: The number of shards for a database instance is automatically increased or decreased.</li>
-     * <li><strong>bandwidthScale</strong>: The bandwidth of a database instance is automatically increased or decreased.</li>
+     * <li><p><strong>specScale</strong>: The specifications of a database instance are automatically scaled up or down.</p>
+     * </li>
+     * <li><p><strong>shardScale</strong>: The number of shards for a database instance is automatically increased or decreased.</p>
+     * </li>
+     * <li><p><strong>bandwidthScale</strong>: The bandwidth of a database instance is automatically increased or decreased.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

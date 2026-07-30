@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudbenchTaskConfigRequest extends TeaModel {
     /**
-     * <p>The task ID. You can call the <a href="https://help.aliyun.com/document_detail/230670.html">DescribeCloudBenchTasks</a> operation to query the task ID.</p>
+     * <p>The unique ID of the stress test task. You can call the <a href="https://help.aliyun.com/document_detail/230670.html">DescribeCloudBenchTasks</a> API to get the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

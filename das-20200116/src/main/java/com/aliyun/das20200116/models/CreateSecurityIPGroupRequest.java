@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityIPGroupRequest extends TeaModel {
     /**
+     * <p>The IP addresses in the whitelist template.</p>
+     * <blockquote>
+     * <p>Separate multiple IP addresses with commas (,). The IP addresses cannot be repeated. You can add up to 1,000 IP addresses.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,15 @@ public class CreateSecurityIPGroupRequest extends TeaModel {
     public String GIpList;
 
     /**
+     * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
+     * <ul>
+     * <li><p>Consists of lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * <li><p>Starts with a letter and ends with a letter or a digit.</p>
+     * </li>
+     * <li><p>Is 2 to 120 characters in length.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +36,7 @@ public class CreateSecurityIPGroupRequest extends TeaModel {
     public String globalIgName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
