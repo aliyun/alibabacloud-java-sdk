@@ -5,20 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetConfigResponseBody extends TeaModel {
     /**
-     * <p>The classification of the configuration item. The following classifications are supported:</p>
+     * <p>The category of the configuration item. The following categories are supported:</p>
      * <ul>
-     * <li><p>CommonResourceConfig: common resource configurations</p>
-     * </li>
-     * <li><p>DLCAutoRecycle: automatic DLC resource recycling</p>
-     * </li>
-     * <li><p>DLCPriorityConfig: DLC priority settings</p>
-     * </li>
-     * <li><p>DSWPriorityConfig: DSW priority settings</p>
-     * </li>
-     * <li><p>QuotaMaximumDuration: the maximum runtime of a DLC task for a quota</p>
-     * </li>
-     * <li><p>CommonTagConfig: tag settings</p>
-     * </li>
+     * <li>CommonResourceConfig: common resource configuration</li>
+     * <li>DLCAutoRecycle: DLC automatic reclamation</li>
+     * <li>DLCPriorityConfig: DLC priority settings</li>
+     * <li>DSWPriorityConfig: DSW priority settings</li>
+     * <li>QuotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota</li>
+     * <li>CommonTagConfig: tag settings</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,16 +24,11 @@ public class GetConfigResponseBody extends TeaModel {
     /**
      * <p>The key of the configuration item. The following keys are supported:</p>
      * <ul>
-     * <li><p>tempStoragePath: the temporary storage path. This key applies only when CategoryName is CommonResourceConfig.</p>
-     * </li>
-     * <li><p>isAutoRecycle: the automatic recycling configuration. This key applies only when CategoryName is DLCAutoRecycle.</p>
-     * </li>
-     * <li><p>priorityConfig: the priority configuration. This key applies only when CategoryName is DLCPriorityConfig or DSWPriorityConfig.</p>
-     * </li>
-     * <li><p>quotaMaximumDuration: the maximum runtime of a DLC task for a quota. This key applies only when CategoryName is QuotaMaximumDuration.</p>
-     * </li>
-     * <li><p>predefinedTags: the predefined tags for the workspace. Resources that you create must have tags.</p>
-     * </li>
+     * <li>tempStoragePath: the temporary storage path. This key is valid only when CategoryName is set to CommonResourceConfig.</li>
+     * <li>isAutoRecycle: the automatic reclamation configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</li>
+     * <li>priorityConfig: the priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+     * <li>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</li>
+     * <li>predefinedTags: the preset tags for the workspace. Resources created in the workspace must include these tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,14 +46,26 @@ public class GetConfigResponseBody extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    /**
+     * <p>The time when the configuration item was created, in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-07-17T06:53:04.000Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>The time when the configuration item was last modified, in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-07-17T06:55:04.000Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     /**
-     * <p>The list of tags for the configuration item.</p>
+     * <p>The list of labels for the configuration item.</p>
      */
     @NameInMap("Labels")
     public java.util.List<GetConfigResponseBodyLabels> labels;
@@ -158,7 +159,7 @@ public class GetConfigResponseBody extends TeaModel {
 
     public static class GetConfigResponseBodyLabels extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -167,7 +168,7 @@ public class GetConfigResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

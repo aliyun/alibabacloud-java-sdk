@@ -7,9 +7,9 @@ public class ModelVersion extends TeaModel {
     /**
      * <p>The approval status. Valid values:</p>
      * <ul>
-     * <li>Pending</li>
-     * <li>Approved</li>
-     * <li>Rejected</li>
+     * <li>Pending: pending.</li>
+     * <li>Approved: approved for going live.</li>
+     * <li>Rejected: not approved for going live.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ModelVersion extends TeaModel {
     public java.util.Map<String, ?> compressionSpec;
 
     /**
-     * <p>蒸馏配置。</p>
+     * <p>The distillation configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -97,7 +97,7 @@ public class ModelVersion extends TeaModel {
     public String frameworkType;
 
     /**
-     * <p>The time when the model was created, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The UTC time of model creation, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
@@ -106,7 +106,7 @@ public class ModelVersion extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the model was last modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The UTC time when the model was last updated, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
@@ -115,7 +115,8 @@ public class ModelVersion extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The inference configurations applied to the downstream, such as the configuration of the processor or container of Elastic Algorithm Service (EAS). Example: <code>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code></p>
+     * <p>Describes how to apply the model to downstream inference applications, such as specifying the EAS processor or container. Example:
+     * <code>{     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</code></p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -126,7 +127,7 @@ public class ModelVersion extends TeaModel {
     public java.util.Map<String, ?> inferenceSpec;
 
     /**
-     * <p>The labels.</p>
+     * <p>The label list.</p>
      */
     @NameInMap("Labels")
     public java.util.List<ModelVersionLabels> labels;
@@ -157,7 +158,7 @@ public class ModelVersion extends TeaModel {
     public java.util.Map<String, ?> metrics;
 
     /**
-     * <p>The extended field. The value is a JSON string.</p>
+     * <p>The extended fields. JsonString type.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -166,7 +167,7 @@ public class ModelVersion extends TeaModel {
     public String options;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>155770209******</p>
@@ -177,14 +178,14 @@ public class ModelVersion extends TeaModel {
     /**
      * <p>The source ID.</p>
      * <ul>
-     * <li>If the source type is Custom, this field is not limited.</li>
-     * <li>If the source type is PAIFlow or TrainingService, the format is:</li>
+     * <li><p>If the source type is Custom, this field has no restrictions.</p>
+     * </li>
+     * <li><p>If the source type is PAIFlow or TrainingService, the format is:</p>
+     * </li>
      * </ul>
-     * <!---->
-     * 
      * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
      * </code></pre>
-     * <p>region is the ID of the Alibaba Cloud region. workspacceId is the ID of the workspace. kind is the type. Valid values: PipelineRun (PAIFlow pipeline) and ServiceJob (training service). id is the unique identifier.</p>
+     * <p>region is the Alibaba Cloud region ID. workspaceId is the workspace ID. kind specifies the type. Valid values: PipelineRun (PAI workflow) and ServiceJob (training service). id is the unique identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
@@ -193,11 +194,11 @@ public class ModelVersion extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The source type of the model. Default value: Custom.</p>
+     * <p>The model source type. Default value: Custom.</p>
      * <ul>
-     * <li>Custom</li>
-     * <li>PAIFlow</li>
-     * <li>TrainingService</li>
+     * <li>Custom: custom.</li>
+     * <li>PAIFlow: PAI workflow.</li>
+     * <li>TrainingService: PAI training service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -207,7 +208,7 @@ public class ModelVersion extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The training configuration, used for fine-tuning and incremental training.</p>
+     * <p>The training configuration. Used for fine-tuning and incremental training.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -216,7 +217,7 @@ public class ModelVersion extends TeaModel {
     public java.util.Map<String, ?> trainingSpec;
 
     /**
-     * <p>The URI of the model version, which is the location where the model is stored. The value can be the HTTP(S) address of the model, such as <code>https://myweb.com/mymodel.tar.gz</code>. If the model is stored in an Object Storage Service (OSS) bucket, the value is in the <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code> format. The endpoint can be queried in the OSS console, such as <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</p>
+     * <p>The model version URI, which specifies the model storage location. This can be an HTTP(S) address of the model, such as <code>https://myweb.com/mymodel.tar.gz</code>. If the model is stored in OSS, the format is <code>oss://&lt;bucket&gt;.&lt;endpoint&gt;/object</code>. You can query the endpoint in the OSS console. Example: <code>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://mybucket.oss-cn-beijing.aliyuncs.com/mypath/</p>
@@ -237,15 +238,15 @@ public class ModelVersion extends TeaModel {
      * <p>The model version description.</p>
      * 
      * <strong>example:</strong>
-     * <p>情感分析。</p>
+     * <p>Sentiment analysis</p>
      */
     @NameInMap("VersionDescription")
     public String versionDescription;
 
     /**
-     * <p>The model version, which is unique for the model. If you leave this parameter empty, <code>0.1.0</code> is the first version by default. Then, the minor version number incremented by 1 is used as the second version <code>0.2.0</code>.</p>
-     * <p>The version consists of a major version number, a minor version number, and a patch version number. The version numbers are separated with periods (<code>.</code>). The major and minor version numbers are digits, and the patch version number starts with a digit followed by an underscore (<code>_</code>) and a letter. such as 1.1.0 or 2.3.4_beta.</p>
-     * <p>Regular expression: <code>&quot;^\\\\d+\\\\.\\\\d+\\\\.\\\\d+(_\\\\w+)?$&quot;</code></p>
+     * <p>The model version, unique within the model. If not specified, the first version defaults to <code>0.1.0</code>, and subsequent versions increment the minor version number by 1. For example, the second version defaults to <code>0.2.0</code>.</p>
+     * <p>The version number consists of a major version number, a minor version number, and a stage version number, separated by <code>.</code>. The major and minor version numbers are numeric. The stage version number starts with a digit, followed by <code>_</code> and letters. Examples: 1.1.0 or 2.3.4_beta.</p>
+     * <p>Regular expression reference: <code>&quot;^\\d+\\.\\d+\\.\\d+(_\\w+)?$&quot;</code></p>
      * 
      * <strong>example:</strong>
      * <p>0.1.0</p>
@@ -428,7 +429,7 @@ public class ModelVersion extends TeaModel {
 
     public static class ModelVersionLabels extends TeaModel {
         /**
-         * <p>标签的key</p>
+         * <p>The key of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>k1</p>
@@ -437,7 +438,7 @@ public class ModelVersion extends TeaModel {
         public String key;
 
         /**
-         * <p>标签的value</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

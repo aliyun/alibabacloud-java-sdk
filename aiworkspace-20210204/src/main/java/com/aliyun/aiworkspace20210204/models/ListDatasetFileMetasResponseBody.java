@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetFileMetasResponseBody extends TeaModel {
     /**
-     * <p>The detailed metadata of the dataset files.</p>
+     * <p>The list of dataset file metadata details.</p>
      */
     @NameInMap("DatasetFileMetas")
     public java.util.List<DatasetFileMeta> datasetFileMetas;
@@ -20,7 +20,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String datasetId;
 
     /**
-     * <p>The version name of the dataset.</p>
+     * <p>The dataset version name.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -29,7 +29,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The maximum number of results returned per page when you use the \<code>NextToken\\</code> parameter.</p>
+     * <p>The maximum number of results returned per request when using NextToken-based pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. If the number of results that match the query exceeds the page size, this token is returned. To retrieve the next page of data, use the returned token in your next request. Repeat this process until no token is returned, which indicates that all data has been retrieved.</p>
+     * <p>The pagination token. If the results that match the query conditions exceed the page size, this pagination token is returned. Pass the returned token value as a request parameter to retrieve the next page, until no token is returned, which indicates that all data has been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</p>
@@ -47,7 +47,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The current page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Model extends TeaModel {
     /**
-     * <p>The workspace accessibility. Valid values:</p>
+     * <p>The workspace visibility. Valid values:</p>
      * <ul>
-     * <li>PRIVATE (default): The model is accessible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: The model is accessible to all members of the workspace.</li>
+     * <li>PRIVATE (default): visible only to yourself and administrators within the workspace.</li>
+     * <li>PUBLIC: visible to all users in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class Model extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The domain where the model is applied, such as nlp (Natural Language Processing) and cv (Computer Vision).</p>
+     * <p>The domain. Describes the domain of the problem that the model solves, such as nlp (natural language processing) or cv (computer vision).</p>
      * 
      * <strong>example:</strong>
      * <p>nlp</p>
@@ -44,7 +44,7 @@ public class Model extends TeaModel {
     public java.util.Map<String, ?> extraInfo;
 
     /**
-     * <p>The time when the model was created, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The UTC time of model creation, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
@@ -53,7 +53,7 @@ public class Model extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>最后版本更新时间。</p>
+     * <p>The time when the latest version was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
@@ -62,7 +62,7 @@ public class Model extends TeaModel {
     public String gmtLatestVersionModifiedTime;
 
     /**
-     * <p>The time when the model was last modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * <p>The time when the model was last updated in UTC, in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35Z</p>
@@ -71,7 +71,7 @@ public class Model extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The labels.</p>
+     * <p>The label list. This parameter will be deprecated and replaced by Tag.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
@@ -86,13 +86,13 @@ public class Model extends TeaModel {
      * <p>The model description.</p>
      * 
      * <strong>example:</strong>
-     * <p>情感分析。</p>
+     * <p>Sentiment analysis</p>
      */
     @NameInMap("ModelDescription")
     public String modelDescription;
 
     /**
-     * <p>The model document.</p>
+     * <p>The model documentation.</p>
      * 
      * <strong>example:</strong>
      * <p>https://***.md</p>
@@ -113,13 +113,13 @@ public class Model extends TeaModel {
      * <p>The model name.</p>
      * 
      * <strong>example:</strong>
-     * <p>情感分析</p>
+     * <p>Sentiment Analysis</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
-     * <p>The model type, such as checkpoint and LoRA.</p>
+     * <p>The model type, such as Checkpoint or LoRA.</p>
      * 
      * <strong>example:</strong>
      * <p>Checkpoint</p>
@@ -128,7 +128,7 @@ public class Model extends TeaModel {
     public String modelType;
 
     /**
-     * <p>The sequence number of the model.</p>
+     * <p>The model sequence number.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -137,7 +137,7 @@ public class Model extends TeaModel {
     public Long orderNumber;
 
     /**
-     * <p>The community or organization to which the source model belongs, such as ModelScope or Hugging Face.</p>
+     * <p>The model origin. Describes the community or organization to which the source model belongs, such as ModelScope or HuggingFace.</p>
      * 
      * <strong>example:</strong>
      * <p>ModelScope</p>
@@ -146,7 +146,7 @@ public class Model extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1557702098******</p>
@@ -155,7 +155,7 @@ public class Model extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>参数量，单位M。</p>
+     * <p>The number of parameters, in millions (M).</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -173,13 +173,13 @@ public class Model extends TeaModel {
     public String provider;
 
     /**
-     * <p>标签列表</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Label> tags;
 
     /**
-     * <p>The task. The specific issue that the model resolves, such as text-classification.</p>
+     * <p>The task. Describes the specific problem that the model solves, such as text-classification (text categorization).</p>
      * 
      * <strong>example:</strong>
      * <p>text-classifiaction</p>

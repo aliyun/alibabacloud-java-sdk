@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCodeSourcesRequest extends TeaModel {
     /**
-     * <p>The display name of the code source configuration. Fuzzy match is supported.</p>
+     * <p>The display name of the code configuration. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>MyDataSource</p>
@@ -14,12 +14,10 @@ public class ListCodeSourcesRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sort order for the specified field in a paged query. Valid values:</p>
      * <ul>
-     * <li><p>ASC (default): Ascending order.</p>
-     * </li>
-     * <li><p>DESC: Descending order.</p>
-     * </li>
+     * <li>ASC (default): ascending order.</li>
+     * <li>DESC: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class ListCodeSourcesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. The value starts from 1. The default value is 1.</p>
+     * <p>The page number of the code configuration list. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +36,7 @@ public class ListCodeSourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The default value is 20.</p>
+     * <p>The number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,16 +45,12 @@ public class ListCodeSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field to use for sorting. Valid values:</p>
+     * <p>The field used for sorting. Valid values:</p>
      * <ul>
-     * <li><p>GmtModifyTime: The time when the code source was last modified.</p>
-     * </li>
-     * <li><p>DisplayName: The display name.</p>
-     * </li>
-     * <li><p>CodeSourceId: The code source ID.</p>
-     * </li>
-     * <li><p>GmtCreateTime (default): The time when the code source was created.</p>
-     * </li>
+     * <li>GmtModifyTime: the time when the code source was last modified.</li>
+     * <li>DisplayName: the display name.</li>
+     * <li>CodeSourceId: the code source ID.</li>
+     * <li>GmtCreateTime (default): the time when the code source was created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +60,7 @@ public class ListCodeSourcesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The workspace ID. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID. This parameter is required. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

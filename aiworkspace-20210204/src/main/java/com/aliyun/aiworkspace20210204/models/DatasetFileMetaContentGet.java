@@ -17,7 +17,7 @@ public class DatasetFileMetaContentGet extends TeaModel {
      * <p>The MIME type of the file. It includes a type and a subtype.</p>
      * 
      * <strong>example:</strong>
-     * <p>image/png</p>
+     * <p>text/png</p>
      */
     @NameInMap("ContentType")
     public String contentType;
@@ -101,8 +101,12 @@ public class DatasetFileMetaContentGet extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     *     &quot;ImageHeight&quot;: 1080,
-     *     &quot;ImageWidth&quot;: 1920
+     *     &quot;Image&quot;:
+     *     {
+     *         &quot;Width&quot;: 1920,
+     *         &quot;Height&quot;: 1080,
+     *         &quot;Channel&quot;: 3
+     *     }
      * }</p>
      */
     @NameInMap("MetaAttributes")
@@ -162,19 +166,13 @@ public class DatasetFileMetaContentGet extends TeaModel {
      * <p>{
      *     &quot;ai&quot;:
      *     [
-     *         &quot;Lane line&quot;,
-     *         &quot;Water horse&quot;,
-     *         &quot;Sunny day&quot;
+     *         &quot;Felis catus&quot;,
+     *         &quot;Shorthair&quot;
      *     ],
      *     &quot;user&quot;:
      *     [
-     *         &quot;Everett&quot;,
-     *         &quot;Intelligent driving Dataset 1&quot;,
-     *         &quot;Cloudy day&quot;
-     *     ],
-     *     &quot;user-delete-ai-tags&quot;:
-     *     [
-     *         &quot;Sunny day&quot;
+     *         &quot;cat&quot;,
+     *         &quot;White&quot;
      *     ]
      * }</p>
      */

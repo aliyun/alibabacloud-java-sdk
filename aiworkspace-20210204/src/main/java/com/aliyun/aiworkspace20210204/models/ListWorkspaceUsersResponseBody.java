@@ -14,7 +14,7 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of users that meet the filter condition.</p>
+     * <p>The number of users that match the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

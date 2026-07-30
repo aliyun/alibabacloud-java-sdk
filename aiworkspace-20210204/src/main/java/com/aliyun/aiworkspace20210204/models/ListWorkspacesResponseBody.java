@@ -113,17 +113,20 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the workspace.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The list of environments in the workspace.</p>
+         * <p>The list of environments contained in the workspace.</p>
          */
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
 
         /**
-         * <p>The extended information. Currently, this includes TenantId, which represents the tenant ID.</p>
+         * <p>The extended information. Currently includes TenantId, which indicates the tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
@@ -132,7 +135,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public java.util.Map<String, ?> extraInfos;
 
         /**
-         * <p>The time when the workspace was created. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</p>
+         * <p>The time when the workspace was created. The time is in the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
@@ -141,7 +144,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the workspace was last modified. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</p>
+         * <p>The time when the workspace was last modified. The time is in the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>

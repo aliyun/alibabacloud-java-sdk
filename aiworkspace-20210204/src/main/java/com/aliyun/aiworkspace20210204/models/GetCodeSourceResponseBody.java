@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCodeSourceResponseBody extends TeaModel {
     /**
-     * <p>The visibility of the code configuration. Valid values:</p>
-     * <ul>
-     * <li><p>PRIVATE: The configuration is visible only to you and the administrator in the workspace.</p>
-     * </li>
-     * <li><p>PUBLIC: The configuration is visible to everyone in the workspace.</p>
-     * </li>
-     * </ul>
+     * <p>The visibility of the code source configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
@@ -19,11 +13,21 @@ public class GetCodeSourceResponseBody extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The clone mode. Valid values:</p>
+     * <ul>
+     * <li>0: Create a new subdirectory.</li>
+     * <li>1: Tile to the current directory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CloneType")
     public Integer cloneType;
 
     /**
-     * <p>The branch of the code repository.</p>
+     * <p>The code repository branch.</p>
      * 
      * <strong>example:</strong>
      * <p>master</p>
@@ -32,7 +36,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeBranch;
 
     /**
-     * <p>The commit ID of the code.</p>
+     * <p>The code commit ID.</p>
      * 
      * <strong>example:</strong>
      * <p>44da10***********</p>
@@ -41,7 +45,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeCommit;
 
     /**
-     * <p>The URL of the code repository.</p>
+     * <p>The code repository URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
@@ -50,7 +54,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeRepo;
 
     /**
-     * <p>The token used to access the code repository.</p>
+     * <p>The access code repository token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -59,7 +63,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeRepoAccessToken;
 
     /**
-     * <p>The username for the code repository.</p>
+     * <p>The username of the code repository.</p>
      * 
      * <strong>example:</strong>
      * <p>user1</p>
@@ -68,7 +72,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeRepoUserName;
 
     /**
-     * <p>The ID of the code source configuration.</p>
+     * <p>The code source configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>code-202**********</p>
@@ -77,7 +81,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeSourceId;
 
     /**
-     * <p>The detailed description of the code configuration.</p>
+     * <p>The detailed description of the code source configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my data source 1.</p>
@@ -86,7 +90,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the code source configuration.</p>
+     * <p>The code source configuration name.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCodeSource1</p>
@@ -95,7 +99,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The time when the code configuration was created. The time is in the ISO 8601 format.</p>
+     * <p>The creation time of the code source configuration. The time is in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T23:36:01.123Z</p>
@@ -104,7 +108,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the code configuration was last modified. The time is in the ISO 8601 format.</p>
+     * <p>The modification time of the code source configuration. The time is in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T23:36:01.123Z</p>
@@ -113,7 +117,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>The local mount path for the code.</p>
+     * <p>The local mount directory of the code.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/code</p>
@@ -131,7 +135,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the user who created the code source configuration.</p>
+     * <p>The creator ID of the code source configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>1722********</p>
@@ -140,7 +144,7 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String userId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

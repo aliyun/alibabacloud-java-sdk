@@ -4,11 +4,21 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateCodeSourceRequest extends TeaModel {
+    /**
+     * <p>The clone mode. Valid values:</p>
+     * <ul>
+     * <li>0 (default): creates a new subdirectory.</li>
+     * <li>1: tiles to the current directory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CloneType")
     public Integer cloneType;
 
     /**
-     * <p>The name of the code branch.</p>
+     * <p>The branch name of the code.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -17,7 +27,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeBranch;
 
     /**
-     * <p>The commit ID.</p>
+     * <p>The commit ID of the code.</p>
      * 
      * <strong>example:</strong>
      * <p>3a6*****</p>
@@ -35,7 +45,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepo;
 
     /**
-     * <p>The access token for the username.</p>
+     * <p>The access token associated with the username.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -44,7 +54,7 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepoAccessToken;
 
     /**
-     * <p>The username for the code repository.</p>
+     * <p>The username used to access the access code repository.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-user</p>
@@ -53,16 +63,16 @@ public class UpdateCodeSourceRequest extends TeaModel {
     public String codeRepoUserName;
 
     /**
-     * <p>The description of the code source.</p>
+     * <p>The description of the code source configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Training code for XX</p>
+     * <p>用于XX的训练代码</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the code source.</p>
+     * <p>The name of the code source configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>MyCodeSource1</p>

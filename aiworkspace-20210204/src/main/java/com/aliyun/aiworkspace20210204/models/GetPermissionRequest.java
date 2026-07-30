@@ -7,10 +7,8 @@ public class GetPermissionRequest extends TeaModel {
     /**
      * <p>The access type. Valid values:</p>
      * <ul>
-     * <li><p>PUBLIC: All members in the workspace can perform the operation.</p>
-     * </li>
-     * <li><p>PRIVATE: Only the creator can perform the operation.</p>
-     * </li>
+     * <li>PUBLIC: All members in the current workspace can access the instance.</li>
+     * <li>PRIVATE: Only the creator can access the instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,6 +17,12 @@ public class GetPermissionRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CallerAccessKeyId")
+    public String callerAccessKeyId;
+
+    @NameInMap("CallerSecurityToken")
+    public String callerSecurityToken;
+
     @NameInMap("CallerType")
     public String callerType;
 
@@ -26,7 +30,7 @@ public class GetPermissionRequest extends TeaModel {
     public String callerUid;
 
     /**
-     * <p>The UID of the Alibaba Cloud account that created the workspace permission.</p>
+     * <p>The Alibaba Cloud account UID of the workspace permission creator.</p>
      * 
      * <strong>example:</strong>
      * <p>17915******4216</p>
@@ -38,12 +42,10 @@ public class GetPermissionRequest extends TeaModel {
     public java.util.Map<String, ?> labels;
 
     /**
-     * <p>Optional configurations. Separate multiple configurations with commas (,). Valid values:</p>
+     * <p>The optional configurations. Separate multiple configurations with commas (,). Valid values:</p>
      * <ul>
-     * <li><p>ResourceEmpty: The resource is empty. This value is used if you do not set the Resource parameter.</p>
-     * </li>
-     * <li><p>DisableRam: RAM verification is disabled.</p>
-     * </li>
+     * <li>ResourceEmpty: The resource is empty. The resource is empty if Resource is not specified.</li>
+     * <li>DisableRam: RAM authentication is not performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,6 +77,22 @@ public class GetPermissionRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public GetPermissionRequest setCallerAccessKeyId(String callerAccessKeyId) {
+        this.callerAccessKeyId = callerAccessKeyId;
+        return this;
+    }
+    public String getCallerAccessKeyId() {
+        return this.callerAccessKeyId;
+    }
+
+    public GetPermissionRequest setCallerSecurityToken(String callerSecurityToken) {
+        this.callerSecurityToken = callerSecurityToken;
+        return this;
+    }
+    public String getCallerSecurityToken() {
+        return this.callerSecurityToken;
     }
 
     public GetPermissionRequest setCallerType(String callerType) {

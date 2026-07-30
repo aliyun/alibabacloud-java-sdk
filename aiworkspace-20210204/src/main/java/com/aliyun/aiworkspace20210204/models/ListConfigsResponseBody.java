@@ -11,7 +11,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public java.util.List<ListConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A******C83E</p>
@@ -20,7 +20,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned configuration items.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -101,18 +101,20 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigs extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>wc-95******o36ylr</p>
+         */
+        @NameInMap("ConfigId")
+        public String configId;
+
+        /**
          * <p>The key of the configuration item. The following keys are supported:</p>
          * <ul>
-         * <li><p>tempStoragePath: The path for temporary storage. This key is valid only when CategoryName is set to CommonResourceConfig.</p>
-         * </li>
-         * <li><p>isAutoRecycle: The automatic recycling configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</p>
-         * </li>
-         * <li><p>priorityConfig: The priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</p>
-         * </li>
-         * <li><p>quotaMaximumDuration: The configuration for the maximum runtime of a DLC task in a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</p>
-         * </li>
-         * <li><p>predefinedTags: The predefined labels for the workspace. Resources that you create must have these labels.</p>
-         * </li>
+         * <li>tempStoragePath: temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: automatic reclamation configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+         * <li>predefinedTags: preset tags for the workspace. Resources that are created must include these tags.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +124,7 @@ public class ListConfigsResponseBody extends TeaModel {
         public String configKey;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration value.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://***</p>
@@ -130,9 +132,21 @@ public class ListConfigsResponseBody extends TeaModel {
         @NameInMap("ConfigValue")
         public String configValue;
 
+        /**
+         * <p>The UTC time when the configuration item was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-12T07:59:41.000Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <p>The UTC time when the configuration item was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-28T03:44:10.000Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
@@ -145,6 +159,14 @@ public class ListConfigsResponseBody extends TeaModel {
         public static ListConfigsResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListConfigsResponseBodyConfigs self = new ListConfigsResponseBodyConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public ListConfigsResponseBodyConfigs setConfigId(String configId) {
+            this.configId = configId;
+            return this;
+        }
+        public String getConfigId() {
+            return this.configId;
         }
 
         public ListConfigsResponseBodyConfigs setConfigKey(String configKey) {

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListWorkspacesRequest extends TeaModel {
     /**
      * <p>The list of return fields for workspace details. This parameter limits the workspace properties returned in the result.
-     * Separate multiple properties with commas (,). Currently, only Id is supported, which represents the workspace ID.</p>
+     * Separate multiple properties with commas (,). Currently, only Id is supported, which indicates the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>Id</p>
@@ -37,7 +37,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String option;
 
     /**
-     * <p>The sort order for the specified sort field in a paged query. Valid values:</p>
+     * <p>The sorting order for the specified sorting field during paging. Valid values:</p>
      * <ul>
      * <li>ASC (default): ascending order.</li>
      * <li>DESC: descending order.</li>
@@ -59,7 +59,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: 20.</p>
+     * <p>The number of entries per page for paging. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -77,7 +77,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The field used for sorting in a paged query. Default value: GmtCreateTime. Valid values:</p>
+     * <p>The sorting field for paging. Default value: GmtCreateTime. Valid values:</p>
      * <ul>
      * <li>GmtCreateTime (default): sorts by creation time.</li>
      * <li>GmtModifiedTime: sorts by modification time.</li>
@@ -106,6 +106,12 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17*****1743</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

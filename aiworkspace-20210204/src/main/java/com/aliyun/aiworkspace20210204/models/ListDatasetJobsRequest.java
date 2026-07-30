@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetJobsRequest extends TeaModel {
     /**
-     * <p>The name of the dataset version.</p>
+     * <p>The dataset version name.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -14,7 +14,7 @@ public class ListDatasetJobsRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The job action.</p>
+     * <p>The task action.</p>
      * 
      * <strong>example:</strong>
      * <p>SemanticIndex</p>
@@ -23,12 +23,10 @@ public class ListDatasetJobsRequest extends TeaModel {
     public String jobAction;
 
     /**
-     * <p>The order in which to sort the results. This parameter is used with <code>SortBy</code>. Default: DESC.</p>
+     * <p>The sorting order for the specified sorting field in a paged query. Used together with SortBy. Default value: DESC. Valid values:</p>
      * <ul>
-     * <li><p>ASC: ascending order.</p>
-     * </li>
-     * <li><p>DESC: descending order.</p>
-     * </li>
+     * <li>ASC: ascending order.</li>
+     * <li>DESC: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListDatasetJobsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages are 1-indexed. Default: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +45,7 @@ public class ListDatasetJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -56,7 +54,7 @@ public class ListDatasetJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field by which to sort the results. By default, the results are sorted by <code>CreateTime</code> in descending order.</p>
+     * <p>The sort field. By default, results are sorted by creation time in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -65,7 +63,7 @@ public class ListDatasetJobsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The job status.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -73,11 +71,14 @@ public class ListDatasetJobsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Specifies whether to return task logs.</p>
+     */
     @NameInMap("WithLogs")
     public Boolean withLogs;
 
     /**
-     * <p>The ID of the workspace. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>

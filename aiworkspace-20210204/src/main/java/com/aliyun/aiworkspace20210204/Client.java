@@ -374,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</p>
+     * <p>Creates a code configuration in PAI. You can configure a Git code branch and CommitId. After the configuration is created, it can be referenced in DLC jobs.</p>
      * 
      * @param request CreateCodeSourceRequest
      * @param headers map
@@ -448,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</p>
+     * <p>Creates a code configuration in PAI. You can configure a Git code branch and CommitId. After the configuration is created, it can be referenced in DLC jobs.</p>
      * 
      * @param request CreateCodeSourceRequest
      * @return CreateCodeSourceResponse
@@ -2900,7 +2900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified code source configuration.</p>
+     * <p>Retrieves the details of a code source configuration.</p>
      * 
      * @param request GetCodeSourceRequest
      * @param headers map
@@ -2928,7 +2928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified code source configuration.</p>
+     * <p>Retrieves the details of a code source configuration.</p>
      * 
      * @param request GetCodeSourceRequest
      * @return GetCodeSourceResponse
@@ -2941,7 +2941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configurations of a workspace.</p>
+     * <p>Retrieves the workspace configuration.</p>
      * 
      * @param request GetConfigRequest
      * @param headers map
@@ -2983,7 +2983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configurations of a workspace.</p>
+     * <p>Retrieves the workspace configuration.</p>
      * 
      * @param request GetConfigRequest
      * @return GetConfigResponse
@@ -3668,6 +3668,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Accessibility", request.accessibility);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callerAccessKeyId)) {
+            query.put("CallerAccessKeyId", request.callerAccessKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerSecurityToken)) {
+            query.put("CallerSecurityToken", request.callerSecurityToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callerType)) {
             query.put("CallerType", request.callerType);
         }
@@ -3864,7 +3872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of code source configurations with support for paging, sorting, and filtering.</p>
+     * <p>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</p>
      * 
      * @param request ListCodeSourcesRequest
      * @param headers map
@@ -3918,7 +3926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of code source configurations with support for paging, sorting, and filtering.</p>
+     * <p>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</p>
      * 
      * @param request ListCodeSourcesRequest
      * @return ListCodeSourcesResponse
@@ -3931,7 +3939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the configurations for a workspace.</p>
+     * <p>Retrieves the list of workspace configurations.</p>
      * 
      * @param request ListConfigsRequest
      * @param headers map
@@ -3977,7 +3985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the configurations for a workspace.</p>
+     * <p>Retrieves the list of workspace configurations.</p>
      * 
      * @param request ListConfigsRequest
      * @return ListConfigsResponse
@@ -4103,7 +4111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files in a dataset.</p>
+     * <p>Queries the list of dataset files.</p>
      * 
      * @param tmpReq ListDatasetFileMetasRequest
      * @param headers map
@@ -4271,7 +4279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the files in a dataset.</p>
+     * <p>Queries the list of dataset files.</p>
      * 
      * @param request ListDatasetFileMetasRequest
      * @return ListDatasetFileMetasResponse
@@ -4347,7 +4355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists dataset jobs.</p>
+     * <p>Retrieves a list of dataset tasks.</p>
      * 
      * @param request ListDatasetJobsRequest
      * @param headers map
@@ -4413,7 +4421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists dataset jobs.</p>
+     * <p>Retrieves a list of dataset tasks.</p>
      * 
      * @param request ListDatasetJobsRequest
      * @return ListDatasetJobsResponse
@@ -5703,7 +5711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists users that can be added as members to a workspace.</p>
+     * <p>Lists users who have not joined a workspace and can be added as workspace members.</p>
      * 
      * @param request ListWorkspaceUsersRequest
      * @param headers map
@@ -5741,7 +5749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists users that can be added as members to a workspace.</p>
+     * <p>Lists users who have not joined a workspace and can be added as workspace members.</p>
      * 
      * @param request ListWorkspaceUsersRequest
      * @return ListWorkspaceUsersResponse
@@ -6293,7 +6301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a code source.</p>
+     * <p>Updates a code source configuration.</p>
      * 
      * @param request UpdateCodeSourceRequest
      * @param headers map
@@ -6359,7 +6367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a code source.</p>
+     * <p>Updates a code source configuration.</p>
      * 
      * @param request UpdateCodeSourceRequest
      * @return UpdateCodeSourceResponse

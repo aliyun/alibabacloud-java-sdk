@@ -4,11 +4,17 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspaceUsersRequest extends TeaModel {
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1611******3000</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
     /**
-     * <p>The display name of the user that can be added as a workspace member.</p>
+     * <p>The display name of the user who can be added as a workspace member.</p>
      * 
      * <strong>example:</strong>
      * <p>doctest****</p>
