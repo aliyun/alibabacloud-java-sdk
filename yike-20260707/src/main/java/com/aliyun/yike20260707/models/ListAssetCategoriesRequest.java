@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAssetCategoriesRequest extends TeaModel {
     /**
+     * <p>The current page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAssetCategoriesRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The page size. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

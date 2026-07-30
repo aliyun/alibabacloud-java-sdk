@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoGenerationJobRequest extends TeaModel {
     /**
+     * <p>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, and 1:1.</p>
+     * 
      * <strong>example:</strong>
      * <p>9:16</p>
      */
@@ -12,6 +14,8 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String aspectRatio;
 
     /**
+     * <p>The idempotency token.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
      */
@@ -19,6 +23,8 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The output duration. Valid values: 4 to 15 seconds. Default value: 5s.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -26,13 +32,29 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String duration;
 
     /**
+     * <p>The task input in JSON string format. Fields include:</p>
+     * <ul>
+     * <li>Prompt: String. Required. The prompt.</li>
+     * <li>Medias: The list of media items.<ul>
+     * <li>When JobType is image_to_video, this field is required and only 1 Media item is needed.</li>
+     * <li>When JobType is first_last_frame, this field is required and exactly 2 Media items are needed.</li>
+     * <li>When JobType is reference_to_video, this field is required and up to 9 Media items are allowed.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>The Media structure contains: Type, the media type (String, valid values: <code>image</code>/<code>video</code>/<code>audio</code>); URL, the media download URL (String); MediaId, the media asset ID (String).</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;Prompt&quot;:&quot;图1在篮球场上，用图2来了个灌篮&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
+     * <p>{&quot;Prompt&quot;:&quot;Person in image 1 dunks a basketball on the court using image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
+     * <p>The task feature parameters. No configuration is required at this time.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -40,6 +62,14 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String jobParameters;
 
     /**
+     * <p>The task type. Valid values:</p>
+     * <ul>
+     * <li>text_to_video: text-to-video</li>
+     * <li>image_to_video: image-to-video</li>
+     * <li>first_last_frame: first and last frame to video</li>
+     * <li>reference_to_video: reference-to-video</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>text_to_video</p>
      */
@@ -47,6 +77,13 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The model name. Valid values:</p>
+     * <ul>
+     * <li>happyhorse-1.1</li>
+     * <li>happyhorse-1.0</li>
+     * <li>wan2.7</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>happyhorse-1.1</p>
      */
@@ -54,6 +91,8 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The number of outputs. Valid values: 1 to 4. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +100,8 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public Integer n;
 
     /**
+     * <p>The resolution. Valid values: 720P (default) and 1080P.</p>
+     * 
      * <strong>example:</strong>
      * <p>720P</p>
      */
@@ -68,6 +109,8 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String resolution;
 
     /**
+     * <p>The scene type. Currently only <code>general</code> is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>general</p>
      */
@@ -75,6 +118,8 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The user business data in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;env&quot;:&quot;prd&quot;}</p>
      */

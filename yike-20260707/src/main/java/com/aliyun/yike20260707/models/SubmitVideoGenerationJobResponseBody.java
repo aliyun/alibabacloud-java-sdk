@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoGenerationJobResponseBody extends TeaModel {
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag_3e761e9d1140c42a1b7****</p>
      */
@@ -12,6 +14,8 @@ public class SubmitVideoGenerationJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */

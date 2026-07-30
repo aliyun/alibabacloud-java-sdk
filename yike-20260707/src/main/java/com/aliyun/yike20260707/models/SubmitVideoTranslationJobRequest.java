@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobRequest extends TeaModel {
     /**
+     * <p>The user-level idempotency key.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The job description.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -19,6 +23,13 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The input configuration JSON string:</p>
+     * <ul>
+     * <li>Video</li>
+     * <li>Audio</li>
+     * <li>Subtitle</li>
+     * </ul>
+     * <p><notice>Currently, only OSS addresses under the calling account are supported as input.</notice></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +39,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String input;
 
     /**
+     * <p>The job parameters JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +49,11 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String jobParameters;
 
     /**
+     * <p>The job type. Valid values:</p>
+     * <ul>
+     * <li>SubtitleTranslate</li>
+     * <li>VoiceTranslate</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +63,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The output configuration JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +73,8 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String output;
 
     /**
+     * <p>If not specified, the service generates a default title.</p>
+     * 
      * <strong>example:</strong>
      * <p>title</p>
      */
@@ -62,6 +82,8 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String title;
 
     /**
+     * <p>The custom user data JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

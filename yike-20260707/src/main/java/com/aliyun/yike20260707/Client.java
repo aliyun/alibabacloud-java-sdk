@@ -32,11 +32,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Retrieves information about multiple media assets in a batch.</p>
      * 
      * @param request BatchGetMediasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,11 +71,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>批量获取媒资信息</p>
+     * <p>Retrieves information about multiple media assets in a batch.</p>
      * 
      * @param request BatchGetMediasRequest
      * @return BatchGetMediasResponse
@@ -88,10 +86,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</p>
+     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建分类</p>
+     * <p>Creates a media asset category.</p>
      * 
      * @param request CreateAssetCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -127,10 +125,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</p>
+     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建分类</p>
+     * <p>Creates a media asset category.</p>
      * 
      * @param request CreateAssetCategoryRequest
      * @return CreateAssetCategoryResponse
@@ -142,10 +140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</p>
+     * <p>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除分类</p>
+     * <p>Deletes a media asset category.</p>
      * 
      * @param request DeleteAssetCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -177,10 +175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</p>
+     * <p>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除分类</p>
+     * <p>Deletes a media asset category.</p>
      * 
      * @param request DeleteAssetCategoryRequest
      * @return DeleteAssetCategoryResponse
@@ -192,7 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteMediasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -232,7 +230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除媒资信息</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteMediasRequest
      * @return DeleteMediasResponse
@@ -244,7 +242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分类</p>
+     * <p>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</p>
      * 
      * @param request GetAssetCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -276,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询分类</p>
+     * <p>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</p>
      * 
      * @param request GetAssetCategoryRequest
      * @return GetAssetCategoryResponse
@@ -288,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询图片生成任务</p>
+     * <p>Queries an image generation task.</p>
      * 
      * @param request GetImageGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -320,7 +318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询图片生成任务</p>
+     * <p>Queries an image generation task.</p>
      * 
      * @param request GetImageGenerationJobRequest
      * @return GetImageGenerationJobResponse
@@ -392,11 +390,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Description</h2>
+     * <p>This API is used to query a media asset content understanding job.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询媒资内容理解作业</p>
+     * <p>Queries a media asset content understanding job.</p>
      * 
      * @param request GetMediaComprehensionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -428,11 +426,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Description</h2>
+     * <p>This API is used to query a media asset content understanding job.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询媒资内容理解作业</p>
+     * <p>Queries a media asset content understanding job.</p>
      * 
      * @param request GetMediaComprehensionJobRequest
      * @return GetMediaComprehensionJobResponse
@@ -444,7 +442,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频生成任务</p>
+     * <p>Queries a creative script generation task.</p>
+     * 
+     * @param request GetRemakeScriptJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRemakeScriptJobResponse
+     */
+    public GetRemakeScriptJobResponse getRemakeScriptJobWithOptions(GetRemakeScriptJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRemakeScriptJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRemakeScriptJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a creative script generation task.</p>
+     * 
+     * @param request GetRemakeScriptJobRequest
+     * @return GetRemakeScriptJobResponse
+     */
+    public GetRemakeScriptJobResponse getRemakeScriptJob(GetRemakeScriptJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRemakeScriptJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -480,7 +522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询视频生成任务</p>
+     * <p>Queries a video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @return GetVideoGenerationJobResponse
@@ -492,7 +534,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻主账户会员计划及积分情况</p>
+     * <p>查询爆款新视频渲染任务</p>
+     * 
+     * @param request GetVideoRenderJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoRenderJobResponse
+     */
+    public GetVideoRenderJobResponse getVideoRenderJobWithOptions(GetVideoRenderJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoRenderJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoRenderJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询爆款新视频渲染任务</p>
+     * 
+     * @param request GetVideoRenderJobRequest
+     * @return GetVideoRenderJobResponse
+     */
+    public GetVideoRenderJobResponse getVideoRenderJob(GetVideoRenderJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoRenderJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the membership plan and credit information for a Yike primary account.</p>
      * 
      * @param request GetYikeAccountCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -517,7 +603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一刻主账户会员计划及积分情况</p>
+     * <p>Retrieves the membership plan and credit information for a Yike primary account.</p>
      * 
      * @param request GetYikeAccountCreditRequest
      * @return GetYikeAccountCreditResponse
@@ -529,7 +615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻任务实际消耗积分</p>
+     * <p>Queries the actual credit consumption of a task.</p>
      * 
      * @param request GetYikeJobCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -561,7 +647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一刻任务实际消耗积分</p>
+     * <p>Queries the actual credit consumption of a task.</p>
      * 
      * @param request GetYikeJobCreditRequest
      * @return GetYikeJobCreditResponse
@@ -573,11 +659,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Operation description</h2>
+     * <p>This API is used to query media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>导入媒资</p>
+     * <p>Imports a media asset.</p>
      * 
      * @param request ImportMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -657,11 +743,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Operation description</h2>
+     * <p>This API is used to query media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>导入媒资</p>
+     * <p>Imports a media asset.</p>
      * 
      * @param request ImportMediaRequest
      * @return ImportMediaResponse
@@ -673,7 +759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出分类</p>
+     * <p>Retrieves a paginated list of categories.</p>
      * 
      * @param request ListAssetCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -709,7 +795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出分类</p>
+     * <p>Retrieves a paginated list of categories.</p>
      * 
      * @param request ListAssetCategoriesRequest
      * @return ListAssetCategoriesResponse
@@ -721,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索媒资</p>
+     * <p>Returns media asset information that matches the specified filter conditions.</p>
      * 
      * @param request SearchMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -773,7 +859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索媒资</p>
+     * <p>Returns media asset information that matches the specified filter conditions.</p>
      * 
      * @param request SearchMediaRequest
      * @return SearchMediaResponse
@@ -785,7 +871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交图像生成接口</p>
+     * <p>Submits an image generation task.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -853,7 +939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交图像生成接口</p>
+     * <p>Submits an image generation task.</p>
      * 
      * @param request SubmitImageGenerationJobRequest
      * @return SubmitImageGenerationJobResponse
@@ -928,8 +1014,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</p>
+     * 
      * <b>summary</b> : 
-     * <p>提交视频生成接口</p>
+     * <p>提交爆款复刻新脚本生成任务</p>
+     * 
+     * @param request SubmitRemakeScriptJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitRemakeScriptJobResponse
+     */
+    public SubmitRemakeScriptJobResponse submitRemakeScriptJobWithOptions(SubmitRemakeScriptJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.remakeParams)) {
+            query.put("RemakeParams", request.remakeParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remakeType)) {
+            query.put("RemakeType", request.remakeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitRemakeScriptJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitRemakeScriptJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>提交爆款复刻新脚本生成任务</p>
+     * 
+     * @param request SubmitRemakeScriptJobRequest
+     * @return SubmitRemakeScriptJobResponse
+     */
+    public SubmitRemakeScriptJobResponse submitRemakeScriptJob(SubmitRemakeScriptJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitRemakeScriptJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a video generation task.</p>
      * 
      * @param request SubmitVideoGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1001,7 +1145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交视频生成接口</p>
+     * <p>Submits a video generation task.</p>
      * 
      * @param request SubmitVideoGenerationJobRequest
      * @return SubmitVideoGenerationJobResponse
@@ -1012,20 +1156,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>提交爆款新视频渲染任务</p>
+     * 
+     * @param request SubmitVideoRenderJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoRenderJobResponse
+     */
+    public SubmitVideoRenderJobResponse submitVideoRenderJobWithOptions(SubmitVideoRenderJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.script)) {
+            query.put("Script", request.script);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.settings)) {
+            query.put("Settings", request.settings);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoRenderJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoRenderJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交爆款新视频渲染任务</p>
+     * 
+     * @param request SubmitVideoRenderJobRequest
+     * @return SubmitVideoRenderJobResponse
+     */
+    public SubmitVideoRenderJobResponse submitVideoRenderJob(SubmitVideoRenderJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoRenderJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</li>
-     * <li><code>JobType</code> 参数定义了任务类型，如 <code>SubtitleTranslate</code>和<code>VoiceTranslate</code> 。</li>
-     * <li><code>Input</code> 和 <code>Output</code> 参数分别指定了输入资源和输出路径。</li>
-     * <li><code>JobParameters</code> 包含了语言配置和其他能力开关，如 <code>SourceLanguage</code>、<code>TargetLanguage</code>、<code>NeedDetext</code> 和 <code>NeedVisualTranslate</code> 等。</li>
-     * <li><code>EditingConfig</code> 可以用来指定最终剪辑合成的样式配置。</li>
-     * <li><code>ClientToken</code> 是一个可选参数，用于保证请求的幂等性。</li>
-     * <li>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</li>
+     * <li>This API supports multiple video translation features, including subtitle translation and voice translation.</li>
+     * <li>The <code>JobType</code> parameter defines the task type, such as <code>SubtitleTranslate</code> and <code>VoiceTranslate</code>.</li>
+     * <li>The <code>Input</code> and <code>Output</code> parameters specify the input resource and output path, respectively.</li>
+     * <li><code>JobParameters</code> contains language configuration and other feature switches, such as <code>SourceLanguage</code>, <code>TargetLanguage</code>, <code>NeedDetext</code>, and <code>NeedVisualTranslate</code>.</li>
+     * <li><code>EditingConfig</code> can be used to specify the style configuration for the final editing and compositing.</li>
+     * <li><code>ClientToken</code> is an optional parameter used to ensure the idempotence of the request.</li>
+     * <li>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>提交视频翻译任务</p>
+     * <p>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1085,19 +1281,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</li>
-     * <li><code>JobType</code> 参数定义了任务类型，如 <code>SubtitleTranslate</code>和<code>VoiceTranslate</code> 。</li>
-     * <li><code>Input</code> 和 <code>Output</code> 参数分别指定了输入资源和输出路径。</li>
-     * <li><code>JobParameters</code> 包含了语言配置和其他能力开关，如 <code>SourceLanguage</code>、<code>TargetLanguage</code>、<code>NeedDetext</code> 和 <code>NeedVisualTranslate</code> 等。</li>
-     * <li><code>EditingConfig</code> 可以用来指定最终剪辑合成的样式配置。</li>
-     * <li><code>ClientToken</code> 是一个可选参数，用于保证请求的幂等性。</li>
-     * <li>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</li>
+     * <li>This API supports multiple video translation features, including subtitle translation and voice translation.</li>
+     * <li>The <code>JobType</code> parameter defines the task type, such as <code>SubtitleTranslate</code> and <code>VoiceTranslate</code>.</li>
+     * <li>The <code>Input</code> and <code>Output</code> parameters specify the input resource and output path, respectively.</li>
+     * <li><code>JobParameters</code> contains language configuration and other feature switches, such as <code>SourceLanguage</code>, <code>TargetLanguage</code>, <code>NeedDetext</code>, and <code>NeedVisualTranslate</code>.</li>
+     * <li><code>EditingConfig</code> can be used to specify the style configuration for the final editing and compositing.</li>
+     * <li><code>ClientToken</code> is an optional parameter used to ensure the idempotence of the request.</li>
+     * <li>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>提交视频翻译任务</p>
+     * <p>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</p>
      * 
      * @param request SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse
@@ -1109,10 +1305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</p>
+     * <p>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新媒资分类</p>
+     * <p>Updates a media asset category.</p>
      * 
      * @param request UpdateAssetCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1148,10 +1344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</p>
+     * <p>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新媒资分类</p>
+     * <p>Updates a media asset category.</p>
      * 
      * @param request UpdateAssetCategoryRequest
      * @return UpdateAssetCategoryResponse
@@ -1163,11 +1359,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Request description</h2>
+     * <p>This API is used to query media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>UpdateMedia</p>
+     * <p>Updates media asset information.</p>
      * 
      * @param request UpdateMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1235,11 +1431,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Request description</h2>
+     * <p>This API is used to query media content understanding jobs.</p>
      * 
      * <b>summary</b> : 
-     * <p>UpdateMedia</p>
+     * <p>Updates media asset information.</p>
      * 
      * @param request UpdateMediaRequest
      * @return UpdateMediaResponse

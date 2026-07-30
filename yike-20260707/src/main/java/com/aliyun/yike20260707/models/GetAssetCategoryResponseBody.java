@@ -4,20 +4,30 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class GetAssetCategoryResponseBody extends TeaModel {
+    /**
+     * <p>The category details.</p>
+     */
     @NameInMap("Category")
     public GetAssetCategoryResponseBodyCategory category;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of subcategories.</p>
+     */
     @NameInMap("SubCategories")
     public java.util.List<GetAssetCategoryResponseBodySubCategories> subCategories;
 
     /**
+     * <p>The number of subcategories.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -63,6 +73,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
 
     public static class GetAssetCategoryResponseBodyCategory extends TeaModel {
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -70,6 +82,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
+         * <p>The category name.</p>
+         * 
          * <strong>example:</strong>
          * <p>scenery</p>
          */
@@ -77,6 +91,13 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         public String categoryName;
 
         /**
+         * <p>The category level. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: level-1 category.</li>
+         * <li><strong>1</strong>: level-2 category.</li>
+         * <li><strong>2</strong>: level-3 category.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -84,6 +105,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         public Long level;
 
         /**
+         * <p>The parent category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -131,6 +154,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
 
     public static class GetAssetCategoryResponseBodySubCategories extends TeaModel {
         /**
+         * <p>The category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>55</p>
          */
@@ -138,6 +163,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         public Long categoryId;
 
         /**
+         * <p>The category name.</p>
+         * 
          * <strong>example:</strong>
          * <p>sea</p>
          */
@@ -145,6 +172,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         public String categoryName;
 
         /**
+         * <p>The category level.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -152,6 +181,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         public Long level;
 
         /**
+         * <p>The parent category ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -159,6 +190,8 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         public Long parentId;
 
         /**
+         * <p>The total number of subcategories.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

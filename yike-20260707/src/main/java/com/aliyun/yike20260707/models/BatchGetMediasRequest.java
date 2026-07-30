@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetMediasRequest extends TeaModel {
     /**
+     * <p>The validity period of the signed file access URL. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class BatchGetMediasRequest extends TeaModel {
     public Long authTimeout;
 
     /**
+     * <p>The IDs of the media assets to query, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
      */

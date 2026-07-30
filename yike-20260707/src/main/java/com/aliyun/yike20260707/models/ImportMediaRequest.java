@@ -8,6 +8,8 @@ public class ImportMediaRequest extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The cover image URL. This parameter is valid only for video media assets.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png">https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png</a></p>
      */
@@ -15,6 +17,8 @@ public class ImportMediaRequest extends TeaModel {
     public String coverURL;
 
     /**
+     * <p>The description of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +26,8 @@ public class ImportMediaRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The dynamic metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -29,6 +35,8 @@ public class ImportMediaRequest extends TeaModel {
     public String dynamicMetaData;
 
     /**
+     * <p>The entity ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>urn:cruise:mock-saml-idp</p>
      */
@@ -36,6 +44,8 @@ public class ImportMediaRequest extends TeaModel {
     public String entityId;
 
     /**
+     * <p>The media asset source. Set this parameter to url.</p>
+     * 
      * <strong>example:</strong>
      * <p>url</p>
      */
@@ -43,6 +53,8 @@ public class ImportMediaRequest extends TeaModel {
     public String importSource;
 
     /**
+     * <p>The URL of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
      */
@@ -50,13 +62,17 @@ public class ImportMediaRequest extends TeaModel {
     public String inputURL;
 
     /**
+     * <p>The tags of the media asset. Separate multiple tags with commas.</p>
+     * 
      * <strong>example:</strong>
-     * <p>高级图生视频,AI生成</p>
+     * <p>AdvancedImageToVideo,AIGenerated.</p>
      */
     @NameInMap("MediaTags")
     public String mediaTags;
 
     /**
+     * <p>The type of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>video</p>
      */
@@ -64,6 +80,8 @@ public class ImportMediaRequest extends TeaModel {
     public String mediaType;
 
     /**
+     * <p>Specifies whether to overwrite existing media assets.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -71,6 +89,8 @@ public class ImportMediaRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
+     * <p>The configuration for registering the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;SearchLibName\&quot;:\&quot;AiSaasLib_34140718_MA\&quot;}</p>
      */
@@ -78,6 +98,8 @@ public class ImportMediaRequest extends TeaModel {
     public String registerConfig;
 
     /**
+     * <p>The title of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>title</p>
      */
@@ -85,6 +107,8 @@ public class ImportMediaRequest extends TeaModel {
     public String title;
 
     /**
+     * <p>The user data. The maximum size is 1024 bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportMediaResponseBody extends TeaModel {
     /**
+     * <p>The ICE media asset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class ImportMediaResponseBody extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to update the Tags field in append mode.</p>
+     */
     @NameInMap("AppendTags")
     public Boolean appendTags;
 
@@ -11,6 +14,8 @@ public class UpdateMediaRequest extends TeaModel {
     public Long categoryId;
 
     /**
+     * <p>The cover image URL. This parameter is valid only for video media assets.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg">https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg</a></p>
      */
@@ -18,6 +23,8 @@ public class UpdateMediaRequest extends TeaModel {
     public String coverURL;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -25,6 +32,8 @@ public class UpdateMediaRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The dynamic metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -32,6 +41,8 @@ public class UpdateMediaRequest extends TeaModel {
     public String dynamicMetaData;
 
     /**
+     * <p>The media type of the media asset.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
      */
@@ -39,6 +50,8 @@ public class UpdateMediaRequest extends TeaModel {
     public String inputURL;
 
     /**
+     * <p>The media asset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
@@ -46,13 +59,17 @@ public class UpdateMediaRequest extends TeaModel {
     public String mediaId;
 
     /**
+     * <p>The tags. Separate multiple tags with commas.</p>
+     * 
      * <strong>example:</strong>
-     * <p>剪映动画</p>
+     * <p>CapCut animation.</p>
      */
     @NameInMap("MediaTags")
     public String mediaTags;
 
     /**
+     * <p>The title.</p>
+     * 
      * <strong>example:</strong>
      * <p>title</p>
      */
@@ -60,6 +77,8 @@ public class UpdateMediaRequest extends TeaModel {
     public String title;
 
     /**
+     * <p>The user data. The maximum length is 1024 bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

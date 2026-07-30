@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     /**
+     * <p><code>data.JobId</code></p>
+     * 
      * <strong>example:</strong>
      * <p>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p><code>requestId</code></p>
+     * 
      * <strong>example:</strong>
      * <p>request-id</p>
      */
