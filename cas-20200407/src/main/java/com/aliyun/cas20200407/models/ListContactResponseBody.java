@@ -163,6 +163,9 @@ public class ListContactResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The webhook URL.</p>
+         */
         @NameInMap("WebhookList")
         public java.util.List<String> webhookList;
 

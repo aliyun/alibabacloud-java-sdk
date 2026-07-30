@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListContactRequest extends TeaModel {
     /**
-     * <p>The current page number for paged queries. Default value: <strong>1</strong>.</p>
+     * <p>The current page number for pagination. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListContactRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The search keyword, such as a keyword in the name, email address, or phone number.</p>
+     * <p>The search keyword. For example, a keyword in the name, email address, or phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>186</p>

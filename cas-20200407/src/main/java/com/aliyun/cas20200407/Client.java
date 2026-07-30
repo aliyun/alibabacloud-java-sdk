@@ -3100,7 +3100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of contacts.</p>
+     * <p>Retrieves the list of contacts.</p>
      * 
      * @param request ListContactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3140,7 +3140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of contacts.</p>
+     * <p>Retrieves the list of contacts.</p>
      * 
      * @param request ListContactRequest
      * @return ListContactResponse

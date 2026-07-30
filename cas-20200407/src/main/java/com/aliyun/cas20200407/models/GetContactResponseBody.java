@@ -32,7 +32,7 @@ public class GetContactResponseBody extends TeaModel {
     public Integer emailStatus;
 
     /**
-     * <p>The ID card number of the contact. This parameter is required for the CFCA certificate brand and is not required for other brands.</p>
+     * <p>The ID card number of the contact. This is required for the CFCA certificate brand and not required for other brands.</p>
      * 
      * <strong>example:</strong>
      * <p>142***************</p>
@@ -76,11 +76,14 @@ public class GetContactResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots, in list format.</p>
+     */
     @NameInMap("WebhookList")
     public java.util.List<String> webhookList;
 
     /**
-     * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots. The value is a string in list format.</p>
+     * <p>The webhook URLs of DingTalk, WeCom, or Lark chatbots, in list format as a string.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5\\&quot;]</a></p>
