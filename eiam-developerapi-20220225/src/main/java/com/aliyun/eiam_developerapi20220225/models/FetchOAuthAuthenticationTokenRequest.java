@@ -14,19 +14,28 @@ public class FetchOAuthAuthenticationTokenRequest extends TeaModel {
     @NameInMap("credentialProviderIdentifier")
     public String credentialProviderIdentifier;
 
+    /**
+     * <p>Custom key-value pairs appended to the OAuth authorization URL to pass additional parameters supported by the OAuth provider.</p>
+     */
     @NameInMap("customParameters")
     public java.util.Map<String, String> customParameters;
 
+    /**
+     * <p>Specifies whether to ignore existing valid tokens and force re-authorization. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("forceAuthentication")
     public Boolean forceAuthentication;
 
     /**
-     * <p>The scope in the OAuth protocol.</p>
+     * <p>The scope corresponding to the OAuth protocol.</p>
      * <blockquote>
-     * <p>If not specified, the scope of the issued OAuth Access Token defaults to the Scope configuration of the corresponding credential provider.</p>
+     * <p>If not specified, the scope of the issued OAuth Access Token defaults to the scope configuration of the corresponding credential provider.</p>
      * </blockquote>
      * <blockquote>
-     * <p>Notice: Multiple Scope values are separated by spaces.</p>
+     * <p>Notice: Multiple scope values are separated by spaces.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

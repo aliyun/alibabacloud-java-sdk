@@ -1421,6 +1421,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the current status and authorization result of an OAuth authorization session.</p>
+     * 
+     * @param request GetOAuthAuthorizationSessionRequest
+     * @param headers GetOAuthAuthorizationSessionHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetOAuthAuthorizationSessionResponse
+     */
+    public GetOAuthAuthorizationSessionResponse getOAuthAuthorizationSessionWithOptions(String instanceId, GetOAuthAuthorizationSessionRequest request, GetOAuthAuthorizationSessionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionUri)) {
+            body.put("sessionUri", request.sessionUri);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetOAuthAuthorizationSession"),
+            new TeaPair("version", "2022-02-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/oauthAuthorizationSessions/_/actions/get"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new GetOAuthAuthorizationSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the current status and authorization result of an OAuth authorization session.</p>
+     * 
+     * @param request GetOAuthAuthorizationSessionRequest
+     * @return GetOAuthAuthorizationSessionResponse
+     */
+    public GetOAuthAuthorizationSessionResponse getOAuthAuthorizationSession(String instanceId, GetOAuthAuthorizationSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetOAuthAuthorizationSessionHeaders headers = new GetOAuthAuthorizationSessionHeaders();
+        return this.getOAuthAuthorizationSessionWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the information about an organizational unit.</p>
      * 
      * @param request GetOrganizationalUnitRequest

@@ -1,3 +1,7 @@
+2026-07-30 Version: 1.8.0
+- Support API GetOAuthAuthorizationSession.
+
+
 2026-07-29 Version: 1.7.2
 - Update API CreateUserExclusiveCredential: add request parameters body.returnCiphertext.
 - Update API CreateUserExclusiveCredential: add response parameters Body.credentialCiphertext.

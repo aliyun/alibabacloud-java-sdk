@@ -35,11 +35,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>The consumer type of the authentication token. Valid values:</p>
-     * <ul>
-     * <li>application: application</li>
-     * <li>custom: custom type</li>
-     * </ul>
+     * <p>The consumer type of the authentication token.</p>
      * 
      * <strong>example:</strong>
      * <p>application</p>
@@ -66,10 +62,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The creator type of the authentication token. Valid values:</p>
-     * <ul>
-     * <li>application: application</li>
-     * </ul>
+     * <p>The creator type of the authentication token.</p>
      * 
      * <strong>example:</strong>
      * <p>application</p>
@@ -105,11 +98,14 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The authentication token content of the OAuth Access Token type.</p>
+     * <p>The content of the OAuth Access Token type authentication token.</p>
      */
     @NameInMap("oauthAccessTokenContent")
     public FetchOAuthAuthenticationTokenResponseBodyOauthAccessTokenContent oauthAccessTokenContent;
 
+    /**
+     * <p>The authorization session of the OAuth user_federation flow. Returned during first-time authorization or when user interaction is required.</p>
+     */
     @NameInMap("oauthAuthorizationSession")
     public FetchOAuthAuthenticationTokenResponseBodyOauthAuthorizationSession oauthAuthorizationSession;
 
@@ -250,7 +246,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
 
     public static class FetchOAuthAuthenticationTokenResponseBodyOauthAccessTokenContent extends TeaModel {
         /**
-         * <p>The access_token field in the OAuth protocol Token endpoint response.</p>
+         * <p>The access_token field in the OAuth protocol token endpoint response.</p>
          * 
          * <strong>example:</strong>
          * <p>DgEBAGP2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
@@ -259,7 +255,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         public String accessTokenValue;
 
         /**
-         * <p>The scope field in the OAuth protocol Token endpoint response.</p>
+         * <p>The scope field in the OAuth protocol token endpoint response.</p>
          * 
          * <strong>example:</strong>
          * <p>example:test_01 example:test_02</p>
@@ -268,7 +264,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The token_type field in the OAuth protocol Token endpoint response.</p>
+         * <p>The token_type field in the OAuth protocol token endpoint response.</p>
          * 
          * <strong>example:</strong>
          * <p>Bearer</p>
@@ -309,20 +305,26 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
 
     public static class FetchOAuthAuthenticationTokenResponseBodyOauthAuthorizationSession extends TeaModel {
         /**
+         * <p>The user authorization URL.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="https://auth.example.com">https://auth.example.com</a></p>
+         * <p><a href="https://login.dingtalk.com/oauth2/auth?client_id=">https://login.dingtalk.com/oauth2/auth?client_id=</a>...</p>
          */
         @NameInMap("authorizationUrl")
         public String authorizationUrl;
 
         /**
+         * <p>The authorization session ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>atpoas_yyy</p>
+         * <p>atpoas_01l6losojlojbbv01adsq56xxxxx</p>
          */
         @NameInMap("sessionId")
         public String sessionId;
 
         /**
+         * <p>The authorization session status.</p>
+         * 
          * <strong>example:</strong>
          * <p>pending</p>
          */
@@ -330,8 +332,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         public String sessionStatus;
 
         /**
+         * <p>The authorization session URI.</p>
+         * 
          * <strong>example:</strong>
-         * <p>urn:ietf:params:oauth:request_uri:atpoas_yyy</p>
+         * <p>urn:ietf:params:oauth:request_uri:atpoas_01l6ljnvrpc5niakl3gj3amxxxxxx</p>
          */
         @NameInMap("sessionUri")
         public String sessionUri;
