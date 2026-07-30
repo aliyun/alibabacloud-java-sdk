@@ -636,7 +636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -673,6 +673,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("input", request.input);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
+            body.put("pipelineName", request.pipelineName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
             body.put("planName", request.planName);
         }
@@ -705,7 +709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</p>
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an experiment plan.</p>
@@ -1848,10 +1852,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</p>
+     * <p>Calls GetExperimentPlan to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query an experiment plan</p>
+     * <p>Queries an experiment plan.</p>
      * 
      * @param request GetExperimentPlanRequest
      * @param headers map
@@ -1879,10 +1883,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</p>
+     * <p>Calls GetExperimentPlan to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query an experiment plan</p>
+     * <p>Queries an experiment plan.</p>
      * 
      * @param request GetExperimentPlanRequest
      * @return GetExperimentPlanResponse
@@ -2250,16 +2254,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of datasets.</p>
      * 
-     * @param request ListDatasetsRequest
+     * @param tmpReq ListDatasetsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDatasetsResponse
      */
-    public ListDatasetsResponse listDatasetsWithOptions(String agentSpace, ListDatasetsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListDatasetsResponse listDatasetsWithOptions(String agentSpace, ListDatasetsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListDatasetsShrinkRequest request = new ListDatasetsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labels)) {
+            request.labelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labels, "labels", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("datasetName", request.datasetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelsShrink)) {
+            query.put("labels", request.labelsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -3667,6 +3681,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.input)) {
             body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
+            body.put("pipelineName", request.pipelineName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.planName)) {

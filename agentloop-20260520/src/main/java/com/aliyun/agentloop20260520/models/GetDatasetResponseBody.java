@@ -44,6 +44,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("isFavorite")
     public Boolean isFavorite;
 
+    @NameInMap("labels")
+    public java.util.Map<String, java.util.List<String>> labels;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -121,6 +124,14 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public Boolean getIsFavorite() {
         return this.isFavorite;
+    }
+
+    public GetDatasetResponseBody setLabels(java.util.Map<String, java.util.List<String>> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.Map<String, java.util.List<String>> getLabels() {
+        return this.labels;
     }
 
     public GetDatasetResponseBody setRegionId(String regionId) {

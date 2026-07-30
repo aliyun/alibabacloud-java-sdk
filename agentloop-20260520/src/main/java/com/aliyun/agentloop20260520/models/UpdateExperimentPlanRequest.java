@@ -67,6 +67,9 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     @NameInMap("input")
     public java.util.Map<String, ?> input;
 
+    @NameInMap("pipelineName")
+    public String pipelineName;
+
     /**
      * <p>The experiment plan name.</p>
      * 
@@ -153,6 +156,14 @@ public class UpdateExperimentPlanRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getInput() {
         return this.input;
+    }
+
+    public UpdateExperimentPlanRequest setPipelineName(String pipelineName) {
+        this.pipelineName = pipelineName;
+        return this;
+    }
+    public String getPipelineName() {
+        return this.pipelineName;
     }
 
     public UpdateExperimentPlanRequest setPlanName(String planName) {

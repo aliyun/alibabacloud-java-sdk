@@ -19,6 +19,9 @@ public class ExperimentPlanData extends TeaModel {
     @NameInMap("experimentType")
     public String experimentType;
 
+    @NameInMap("pipelineName")
+    public String pipelineName;
+
     @NameInMap("planId")
     public String planId;
 
@@ -77,6 +80,14 @@ public class ExperimentPlanData extends TeaModel {
     }
     public String getExperimentType() {
         return this.experimentType;
+    }
+
+    public ExperimentPlanData setPipelineName(String pipelineName) {
+        this.pipelineName = pipelineName;
+        return this;
+    }
+    public String getPipelineName() {
+        return this.pipelineName;
     }
 
     public ExperimentPlanData setPlanId(String planId) {

@@ -3,7 +3,7 @@ package com.aliyun.agentloop20260520.models;
 
 import com.aliyun.tea.*;
 
-public class ListDatasetsRequest extends TeaModel {
+public class ListDatasetsShrinkRequest extends TeaModel {
     /**
      * <p>The dataset name.</p>
      * 
@@ -14,7 +14,7 @@ public class ListDatasetsRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("labels")
-    public java.util.Map<String, java.util.List<String>> labels;
+    public String labelsShrink;
 
     /**
      * <p>The maximum number of results to return.</p>
@@ -34,12 +34,12 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
-    public static ListDatasetsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDatasetsRequest self = new ListDatasetsRequest();
+    public static ListDatasetsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDatasetsShrinkRequest self = new ListDatasetsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDatasetsRequest setDatasetName(String datasetName) {
+    public ListDatasetsShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -47,15 +47,15 @@ public class ListDatasetsRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public ListDatasetsRequest setLabels(java.util.Map<String, java.util.List<String>> labels) {
-        this.labels = labels;
+    public ListDatasetsShrinkRequest setLabelsShrink(String labelsShrink) {
+        this.labelsShrink = labelsShrink;
         return this;
     }
-    public java.util.Map<String, java.util.List<String>> getLabels() {
-        return this.labels;
+    public String getLabelsShrink() {
+        return this.labelsShrink;
     }
 
-    public ListDatasetsRequest setMaxResults(Integer maxResults) {
+    public ListDatasetsShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -63,7 +63,7 @@ public class ListDatasetsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDatasetsRequest setNextToken(String nextToken) {
+    public ListDatasetsShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }

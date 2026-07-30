@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExperimentPlanResponseBody extends TeaModel {
     /**
-     * <p>The creation time, in millisecond Unix timestamp.</p>
+     * <p>The creation time. This value is a millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816000000</p>
@@ -26,7 +26,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>对比 checkout Agent 基线与优化版本</p>
+     * <p>Compare the checkout Agent baseline with the optimized version.</p>
      */
     @NameInMap("description")
     public String description;
@@ -62,10 +62,13 @@ public class GetExperimentPlanResponseBody extends TeaModel {
      * <p>Optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;question&quot;: &quot;如何退款？&quot;}</p>
+     * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
      */
     @NameInMap("input")
     public java.util.Map<String, ?> input;
+
+    @NameInMap("pipelineName")
+    public String pipelineName;
 
     /**
      * <p>The experiment plan ID.</p>
@@ -122,7 +125,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The update time, in millisecond Unix timestamp.</p>
+     * <p>The update time. This value is a millisecond-level UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1782816600000</p>
@@ -189,6 +192,14 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getInput() {
         return this.input;
+    }
+
+    public GetExperimentPlanResponseBody setPipelineName(String pipelineName) {
+        this.pipelineName = pipelineName;
+        return this;
+    }
+    public String getPipelineName() {
+        return this.pipelineName;
     }
 
     public GetExperimentPlanResponseBody setPlanId(String planId) {

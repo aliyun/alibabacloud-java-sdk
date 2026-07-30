@@ -32,7 +32,7 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The creation result. The value is <code>created</code> if the operation is successful.</p>
+     * <p>The creation result. The value is <code>created</code> upon success.</p>
      * 
      * <strong>example:</strong>
      * <p>created</p>

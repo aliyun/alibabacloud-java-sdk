@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentPlanRequest extends TeaModel {
     /**
-     * <p>The associated dataset ID. If this parameter is not specified, the execution phase processes in simple mode.</p>
+     * <p>The ID of the associated dataset. If this parameter is not specified, the execution phase processes in simple mode.</p>
      * 
      * <strong>example:</strong>
      * <p>rca_benckmark_eval</p>
@@ -23,7 +23,7 @@ public class CreateExperimentPlanRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The evaluator list. If configured, evaluation is automatically triggered when the experiment completes.</p>
+     * <p>The list of evaluators. After configuration, evaluation can be automatically triggered when the experiment completes.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_correctness&quot;, &quot;name&quot;: &quot;Builtin.agent_correctness&quot;, &quot;type&quot;: &quot;AGENT&quot;, &quot;resultName&quot;: &quot;Builtin.agent_correctness&quot;, &quot;resultType&quot;: &quot;score&quot;, &quot;variableMapping&quot;: {&quot;input&quot;: &quot;experiment_input&quot;, &quot;output&quot;: &quot;experiment_output&quot;, &quot;expected_output&quot;: &quot;dataset.ground_truth_json&quot;}, &quot;filters&quot;: {&quot;query&quot;: &quot;&quot;, &quot;sample&quot;: &quot;100&quot;}, &quot;config&quot;: {&quot;variables&quot;: [], &quot;prompt&quot;: &quot;&quot;}}, {&quot;evaluatorRef&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;name&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;type&quot;: &quot;AGENT&quot;, &quot;resultName&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;resultType&quot;: &quot;score&quot;, &quot;variableMapping&quot;: {&quot;input&quot;: &quot;experiment_input&quot;, &quot;output&quot;: &quot;experiment_output&quot;, &quot;question&quot;: &quot;dataset.question&quot;, &quot;expected_output&quot;: &quot;dataset.ground_truth_json&quot;, &quot;payload_json&quot;: &quot;dataset.payload_json&quot;}, &quot;filters&quot;: {&quot;query&quot;: &quot;&quot;, &quot;sample&quot;: &quot;100&quot;}, &quot;config&quot;: {&quot;variables&quot;: [], &quot;prompt&quot;: &quot;&quot;}}]</p>
@@ -42,7 +42,7 @@ public class CreateExperimentPlanRequest extends TeaModel {
     public String experimentType;
 
     /**
-     * <p>The experiment configuration list. A maximum of 5 entries are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one entry is required.</p>
+     * <p>The list of experiment configurations. A maximum of 5 configurations are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one configuration is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,13 +55,16 @@ public class CreateExperimentPlanRequest extends TeaModel {
      * <p>Optional.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</p>
+     * <p>{&quot;question&quot;: &quot;How do I get a refund?&quot;}</p>
      */
     @NameInMap("input")
     public java.util.Map<String, ?> input;
 
+    @NameInMap("pipelineName")
+    public String pipelineName;
+
     /**
-     * <p>The experiment plan name. The name must be unique within the same AgentSpace under the same account.</p>
+     * <p>The experiment plan name. The name must be unique within the same AgentSpace and account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +83,7 @@ public class CreateExperimentPlanRequest extends TeaModel {
     public String querySql;
 
     /**
-     * <p>The list of selected data item IDs in partial dataset mode. Use this parameter together with <code>datasetId</code>.</p>
+     * <p>The list of selected data item IDs in partial dataset mode. This parameter must be used together with <code>datasetId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;, &quot;019f1729-be9b-7769-a006-8e98023ad7ad&quot;]</p>
@@ -139,6 +142,14 @@ public class CreateExperimentPlanRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getInput() {
         return this.input;
+    }
+
+    public CreateExperimentPlanRequest setPipelineName(String pipelineName) {
+        this.pipelineName = pipelineName;
+        return this;
+    }
+    public String getPipelineName() {
+        return this.pipelineName;
     }
 
     public CreateExperimentPlanRequest setPlanName(String planName) {
