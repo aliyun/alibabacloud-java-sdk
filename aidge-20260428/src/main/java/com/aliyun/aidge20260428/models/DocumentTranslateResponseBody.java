@@ -38,7 +38,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
+     * <p>Indicates whether the call is successful. true: successful. false: failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

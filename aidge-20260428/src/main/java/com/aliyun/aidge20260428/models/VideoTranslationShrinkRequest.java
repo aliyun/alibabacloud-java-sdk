@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class VideoTranslationShrinkRequest extends TeaModel {
     /**
+     * <p>The array of translation capabilities. Valid values: [&quot;visual&quot;].</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Capabilities")
     public String capabilitiesShrink;
 
     /**
+     * <p>The source language. This parameter is optional. Default value: auto (automatic detection).</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -18,6 +21,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,7 @@ public class VideoTranslationShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>The video URL (MP4/MOV, ≤ 200 MB).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

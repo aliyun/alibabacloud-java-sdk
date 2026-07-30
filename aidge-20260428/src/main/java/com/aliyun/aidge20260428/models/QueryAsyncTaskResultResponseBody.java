@@ -127,7 +127,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
          * <p>The usage information.</p>
          */
         @NameInMap("UsageMap")
-        public java.util.Map<String, Long> usageMap;
+        public java.util.Map<String, ?> usageMap;
 
         public static QueryAsyncTaskResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAsyncTaskResultResponseBodyData self = new QueryAsyncTaskResultResponseBodyData();
@@ -158,11 +158,11 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public QueryAsyncTaskResultResponseBodyData setUsageMap(java.util.Map<String, Long> usageMap) {
+        public QueryAsyncTaskResultResponseBodyData setUsageMap(java.util.Map<String, ?> usageMap) {
             this.usageMap = usageMap;
             return this;
         }
-        public java.util.Map<String, Long> getUsageMap() {
+        public java.util.Map<String, ?> getUsageMap() {
             return this.usageMap;
         }
 

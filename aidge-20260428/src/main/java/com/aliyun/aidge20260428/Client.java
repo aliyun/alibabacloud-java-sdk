@@ -1029,22 +1029,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Structural integrity: overall layout continuity, page margin and layout preservation</li>
      * </ul>
      * <h2>Common scenarios</h2>
-     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.
-     * 3. Features</p>
+     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and other scenarios.</p>
+     * <h2>Features</h2>
      * <ul>
-     * <li>Supports PDF and Word formats. Supports source documents containing multiple languages. Refer to section 4.5 for the detailed language list.</li>
+     * <li>Supports PDF and Word formats. Supports source documents containing multiple languages. For a detailed language list, see section 4.5.</li>
      * <li>Supports translation of text within images in documents, as well as other complex translation scenarios such as charts and special symbols.</li>
      * <li>Supports high-fidelity layout preservation after translation.</li>
-     * <li>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</li>
-     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. Contact the platform for additional capacity.</li>
+     * <li>A single PDF supports up to 100 pages, and a single Word document supports up to 100 pages.</li>
+     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</p>
-     * <ul>
-     * <li>Content accuracy: translation accuracy, parameter and unit accuracy</li>
-     * <li>Structural integrity: overall layout continuity, page margin and layout preservation</li>
-     * </ul>
+     * <p>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas: - Content accuracy: translation accuracy, parameter and unit accuracy - Structural integrity: overall layout continuity, page margin and layout preservation.</p>
      * 
      * @param request DocumentTranslateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1096,22 +1092,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Structural integrity: overall layout continuity, page margin and layout preservation</li>
      * </ul>
      * <h2>Common scenarios</h2>
-     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.
-     * 3. Features</p>
+     * <p>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks and courseware, and other scenarios.</p>
+     * <h2>Features</h2>
      * <ul>
-     * <li>Supports PDF and Word formats. Supports source documents containing multiple languages. Refer to section 4.5 for the detailed language list.</li>
+     * <li>Supports PDF and Word formats. Supports source documents containing multiple languages. For a detailed language list, see section 4.5.</li>
      * <li>Supports translation of text within images in documents, as well as other complex translation scenarios such as charts and special symbols.</li>
      * <li>Supports high-fidelity layout preservation after translation.</li>
-     * <li>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</li>
-     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. Contact the platform for additional capacity.</li>
+     * <li>A single PDF supports up to 100 pages, and a single Word document supports up to 100 pages.</li>
+     * <li>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</p>
-     * <ul>
-     * <li>Content accuracy: translation accuracy, parameter and unit accuracy</li>
-     * <li>Structural integrity: overall layout continuity, page margin and layout preservation</li>
-     * </ul>
+     * <p>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas: - Content accuracy: translation accuracy, parameter and unit accuracy - Structural integrity: overall layout continuity, page margin and layout preservation.</p>
      * 
      * @param request DocumentTranslateRequest
      * @return DocumentTranslateResponse
@@ -3506,43 +3498,109 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>电商视频生成（异步提交）</p>
+     * 
+     * @param tmpReq VideoGenerationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VideoGenerationResponse
+     */
+    public VideoGenerationResponse videoGenerationWithOptions(VideoGenerationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        VideoGenerationShrinkRequest request = new VideoGenerationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.intent)) {
+            request.intentShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.intent, "Intent", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.output)) {
+            request.outputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.output, "Output", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputShrink)) {
+            query.put("Input", request.inputShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intentShrink)) {
+            query.put("Intent", request.intentShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputShrink)) {
+            query.put("Output", request.outputShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VideoGeneration"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VideoGenerationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>电商视频生成（异步提交）</p>
+     * 
+     * @param request VideoGenerationRequest
+     * @return VideoGenerationResponse
+     */
+    public VideoGenerationResponse videoGeneration(VideoGenerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.videoGenerationWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <h2>1. 产品简介</h2>
-     * <p>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
-     * API 采用异步调用模式：提交翻译任务后获取 <code>task_id</code>，通过查询接口轮询任务状态直至完成后获取结果。</p>
-     * <h2>2. 适用场景</h2>
+     * <h2>1. Product Introduction</h2>
+     * <p>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text. This API is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+     * The API uses an asynchronous call mode: after submitting a translation task, you obtain a <code>task_id</code>, then poll the query endpoint for the task status until the task is completed and results are available.</p>
+     * <h2>2. Common scenarios</h2>
      * <ul>
-     * <li><p><strong>跨境电商视频本地化</strong>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</p>
+     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates promotional text in product introduction videos into the target market language to facilitate overseas platform promotion.</p>
      * </li>
-     * <li><p><strong>国际社交媒体营销</strong>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</p>
+     * <li><p><strong>International social media marketing</strong>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube, improving comprehension and conversion rates among overseas users.</p>
      * </li>
-     * <li><p><strong>全球品牌广告投放</strong>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</p>
+     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the language of the target region, reducing manual production costs.</p>
      * </li>
-     * <li><p><strong>培训与产品说明</strong>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</p>
+     * <li><p><strong>Training and product documentation</strong>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</p>
      * </li>
      * </ul>
-     * <h2>3. 功能介绍</h2>
+     * <h2>3. Features</h2>
      * <table>
      * <thead>
      * <tr>
-     * <th>能力</th>
-     * <th>标识码</th>
-     * <th>说明</th>
+     * <th>Capability</th>
+     * <th>Identifier</th>
+     * <th>Description</th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>画面翻译</td>
+     * <td>Visual translation</td>
      * <td><code>visual</code></td>
-     * <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+     * <td>Translates embedded text (subtitles, promotional text, etc.) in video frames into the target language and erases the original text</td>
      * </tr>
      * </tbody></table>
-     * <h2>4. 开发指南</h2>
-     * <h3>4.1 提交翻译任务</h3>
-     * <h4>请求</h4>
-     * <p><code>POST /api/v1/video/translation</code></p>
+     * <h2>4. Developer guide.</h2>
+     * <h3>4.1 Submit a translation task.</h3>
+     * <h4>Request</h4>
+     * <p><code>POST /api/v1/video/translation</code></p>
      * 
      * <b>summary</b> : 
-     * <p>视频翻译</p>
+     * <p>Translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text.</p>
      * 
      * @param tmpReq VideoTranslationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3592,42 +3650,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>1. 产品简介</h2>
-     * <p>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
-     * API 采用异步调用模式：提交翻译任务后获取 <code>task_id</code>，通过查询接口轮询任务状态直至完成后获取结果。</p>
-     * <h2>2. 适用场景</h2>
+     * <h2>1. Product Introduction</h2>
+     * <p>The video translation API translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text. This API is applicable to scenarios such as multilingual distribution of e-commerce videos, international social media marketing, and global brand advertising.
+     * The API uses an asynchronous call mode: after submitting a translation task, you obtain a <code>task_id</code>, then poll the query endpoint for the task status until the task is completed and results are available.</p>
+     * <h2>2. Common scenarios</h2>
      * <ul>
-     * <li><p><strong>跨境电商视频本地化</strong>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</p>
+     * <li><p><strong>Cross-border e-commerce video localization</strong>: Translates promotional text in product introduction videos into the target market language to facilitate overseas platform promotion.</p>
      * </li>
-     * <li><p><strong>国际社交媒体营销</strong>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</p>
+     * <li><p><strong>International social media marketing</strong>: Localizes text content in video frames with one click for platforms such as TikTok, Instagram, and YouTube, improving comprehension and conversion rates among overseas users.</p>
      * </li>
-     * <li><p><strong>全球品牌广告投放</strong>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</p>
+     * <li><p><strong>Global brand advertising</strong>: Automatically generates video versions in the language of the target region, reducing manual production costs.</p>
      * </li>
-     * <li><p><strong>培训与产品说明</strong>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</p>
+     * <li><p><strong>Training and product documentation</strong>: Translates on-screen text in training courses or product demonstration videos into multiple languages for use by global teams.</p>
      * </li>
      * </ul>
-     * <h2>3. 功能介绍</h2>
+     * <h2>3. Features</h2>
      * <table>
      * <thead>
      * <tr>
-     * <th>能力</th>
-     * <th>标识码</th>
-     * <th>说明</th>
+     * <th>Capability</th>
+     * <th>Identifier</th>
+     * <th>Description</th>
      * </tr>
      * </thead>
      * <tbody><tr>
-     * <td>画面翻译</td>
+     * <td>Visual translation</td>
      * <td><code>visual</code></td>
-     * <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+     * <td>Translates embedded text (subtitles, promotional text, etc.) in video frames into the target language and erases the original text</td>
      * </tr>
      * </tbody></table>
-     * <h2>4. 开发指南</h2>
-     * <h3>4.1 提交翻译任务</h3>
-     * <h4>请求</h4>
-     * <p><code>POST /api/v1/video/translation</code></p>
+     * <h2>4. Developer guide.</h2>
+     * <h3>4.1 Submit a translation task.</h3>
+     * <h4>Request</h4>
+     * <p><code>POST /api/v1/video/translation</code></p>
      * 
      * <b>summary</b> : 
-     * <p>视频翻译</p>
+     * <p>Translates embedded text (subtitles, promotional text, etc.) in video frames into a target language and erases the original text.</p>
      * 
      * @param request VideoTranslationRequest
      * @return VideoTranslationResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DocumentTranslateRequest extends TeaModel {
     /**
-     * <p>The supported document types: PDF or Word. Size limits: Word 200 MB/300 pages, PDF 200 MB/300 pages, maximum 200 MB per file.</p>
+     * <p>The supported document types: PDF/Word. Size limits: Word 200 MB/100 pages, PDF 200 MB/100 pages, maximum 200 MB per file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DocumentTranslateRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The glossary ID to use when the glossary feature is required. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios.</p>
+     * <p>The intervention glossary ID. Specify this parameter when you need the intervention feature. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>

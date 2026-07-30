@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class VideoTranslationResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Processing</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The asynchronous task submit status.</p>
+     */
     @NameInMap("Data")
     public VideoTranslationResponseBodyData data;
 
     /**
+     * <p>The description message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Translation processing</p>
      */
@@ -22,6 +29,8 @@ public class VideoTranslationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request trace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>req_20260608_jkl012</p>
      */
@@ -29,6 +38,8 @@ public class VideoTranslationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class VideoTranslationResponseBody extends TeaModel {
 
     public static class VideoTranslationResponseBodyData extends TeaModel {
         /**
+         * <p>The asynchronous task ID, used for subsequent queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>0ea3b66e88a543658520c994f08896a0</p>
          */
