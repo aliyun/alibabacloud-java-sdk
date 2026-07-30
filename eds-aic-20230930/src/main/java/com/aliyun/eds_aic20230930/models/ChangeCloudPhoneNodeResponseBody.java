@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
     /**
-     * <p>Information about the modified cloud phone matrix.</p>
+     * <p>The cloud phone matrix information.</p>
      */
     @NameInMap("NodeInfos")
     public java.util.List<ChangeCloudPhoneNodeResponseBodyNodeInfos> nodeInfos;
 
     /**
-     * <p>The ID of the order for this change.</p>
+     * <p>The generated order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>223684716098****</p>
@@ -68,7 +68,7 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The internal storage capacity, in GiB.</p>
+         * <p>The dedicated device storage capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -101,13 +101,13 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
 
     public static class ChangeCloudPhoneNodeResponseBodyNodeInfos extends TeaModel {
         /**
-         * <p>Information about the cloud phone instances.</p>
+         * <p>The cloud phone instance information.</p>
          */
         @NameInMap("InstanceInfos")
         public java.util.List<ChangeCloudPhoneNodeResponseBodyNodeInfosInstanceInfos> instanceInfos;
 
         /**
-         * <p>The ID of the cloud phone matrix.</p>
+         * <p>The cloud phone matrix ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cpn-e5kxgjyt8s1mb****</p>
@@ -116,7 +116,7 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The size of the shared storage, in GiB. If the matrix uses independent internal storage, this defaults to a fixed 64 GiB for global files, such as images. If the matrix was configured with shared storage at purchase, this indicates the size of that storage.</p>
+         * <p>When the matrix uses dedicated device storage, a 64 GiB shared storage space is allocated by default (not modifiable) for storing images and other matrix-wide files. When the matrix uses shared device storage (with the size specified at purchase), this storage space is shared by all instances.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyJVSInstanceRequest extends TeaModel {
     /**
+     * <p>The target version, such as 2607W1. Set this parameter to latest to automatically resolve to the latest available version.</p>
+     */
+    @NameInMap("AgentVersion")
+    public String agentVersion;
+
+    /**
      * <p>Specifies whether to apply the configuration to all instances.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +20,7 @@ public class ModifyJVSInstanceRequest extends TeaModel {
     public Boolean applyToAll;
 
     /**
-     * <p>The credit limit configuration. Subsequent configurations overwrite previous ones.</p>
+     * <p>The credit quota configuration. If you submit the configuration multiple times, the latest configuration overwrites the previous one.</p>
      */
     @NameInMap("CreditConfig")
     public java.util.List<ModifyJVSInstanceRequestCreditConfig> creditConfig;
@@ -40,6 +46,14 @@ public class ModifyJVSInstanceRequest extends TeaModel {
     public static ModifyJVSInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyJVSInstanceRequest self = new ModifyJVSInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyJVSInstanceRequest setAgentVersion(String agentVersion) {
+        this.agentVersion = agentVersion;
+        return this;
+    }
+    public String getAgentVersion() {
+        return this.agentVersion;
     }
 
     public ModifyJVSInstanceRequest setApplyToAll(Boolean applyToAll) {
@@ -84,7 +98,7 @@ public class ModifyJVSInstanceRequest extends TeaModel {
 
     public static class ModifyJVSInstanceRequestCreditConfig extends TeaModel {
         /**
-         * <p>The credit limit.</p>
+         * <p>The quota limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -95,9 +109,9 @@ public class ModifyJVSInstanceRequest extends TeaModel {
         /**
          * <p>The dimension of the current credit. Valid values:</p>
          * <ul>
-         * <li>total: total usage limit.</li>
-         * <li>month: monthly. The limit resets based on the resource activation time cycle.</li>
-         * <li>day: daily. The limit resets at 00:00.</li>
+         * <li>total: Total usage limit.</li>
+         * <li>month: Monthly. The quota resets based on the resource activation time cycle.</li>
+         * <li>day: Daily. The quota resets at 00:00.</li>
          * </ul>
          * 
          * <strong>example:</strong>

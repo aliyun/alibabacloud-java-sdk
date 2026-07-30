@@ -1,3 +1,10 @@
+2026-07-30 Version: 3.29.1
+- Update API DescribeJVSInstance: add response parameters Body.PendingUpgradeCount.
+- Update API DescribeJVSInstance: add response parameters Body.Data.$.AgentVersion.
+- Update API DescribeJVSInstance: add response parameters Body.Data.$.InstalledSkills.
+- Update API ModifyJVSInstance: add request parameters AgentVersion.
+
+
 2026-07-24 Version: 3.29.0
 - Support API CreateAICloudPhone.
 - Update API DescribeCreditDetail: add request parameters MaxResults.

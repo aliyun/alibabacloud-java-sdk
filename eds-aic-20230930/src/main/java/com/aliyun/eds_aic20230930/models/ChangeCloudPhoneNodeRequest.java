@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeCloudPhoneNodeRequest extends TeaModel {
     /**
-     * <p>Indicates if automatic payment is enabled. Default: false.</p>
+     * <p>Specifies whether to enable automatic payment. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -17,7 +17,7 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     public String displayConfig;
 
     /**
-     * <p>The downstream bandwidth limit, in Mbps.</p>
+     * <p>The downstream bandwidth throttling. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -35,7 +35,7 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the cloud phone matrix.</p>
+     * <p>The cloud phone matrix ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cpn-0ugbptfu473fy****</p>
@@ -44,7 +44,7 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The number of cloud phone instances. Call the <a href="t2729804.xdita#"></a>operation to query the minimum and maximum number of allowed instances.</p>
+     * <p>The number of cloud phone instances. Call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the maximum and minimum instance count limits.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,7 +53,7 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     public Integer phoneCount;
 
     /**
-     * <p>The capacity of the internal storage, in GiB. Valid values: 10 to 4000. If you do not specify this parameter, the current capacity is retained.</p>
+     * <p>The device storage size. Valid values: 10 GiB to 4000 GiB. If this parameter is left empty, the current size is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +77,7 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     public Integer swapSize;
 
     /**
-     * <p>The upstream bandwidth limit, in Mbps.</p>
+     * <p>The upstream bandwidth throttling. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeJVSInstanceResponseBody extends TeaModel {
     /**
-     * <p>A list of JVS instances.</p>
+     * <p>The returned result object.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeJVSInstanceResponseBodyData> data;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,13 +20,16 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If this field is empty, there are no more results.</p>
+     * <p>The token that indicates the current position from which to start reading. An empty value indicates reading from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("PendingUpgradeCount")
+    public Integer pendingUpgradeCount;
 
     /**
      * <p>The request ID.</p>
@@ -75,6 +78,14 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    public DescribeJVSInstanceResponseBody setPendingUpgradeCount(Integer pendingUpgradeCount) {
+        this.pendingUpgradeCount = pendingUpgradeCount;
+        return this;
+    }
+    public Integer getPendingUpgradeCount() {
+        return this.pendingUpgradeCount;
+    }
+
     public DescribeJVSInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -91,9 +102,47 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeJVSInstanceResponseBodyDataAgentVersion extends TeaModel {
+        @NameInMap("UpgradeStatus")
+        public String upgradeStatus;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static DescribeJVSInstanceResponseBodyDataAgentVersion build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJVSInstanceResponseBodyDataAgentVersion self = new DescribeJVSInstanceResponseBodyDataAgentVersion();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeJVSInstanceResponseBodyDataAgentVersion setUpgradeStatus(String upgradeStatus) {
+            this.upgradeStatus = upgradeStatus;
+            return this;
+        }
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
+        }
+
+        public DescribeJVSInstanceResponseBodyDataAgentVersion setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class DescribeJVSInstanceResponseBodyDataCreditConfig extends TeaModel {
         /**
-         * <p>The Credit limit.</p>
+         * <p>The quota limit. Valid values:</p>
+         * <ul>
+         * <li>0: not available for use.</li>
+         * <li><blockquote>
+         * <p>0: the quota is configured based on the numeric value.</p>
+         * </blockquote>
+         * </li>
+         * <li>-1: unlimited.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -102,7 +151,12 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public Long creditLimit;
 
         /**
-         * <p>The limit period.</p>
+         * <p>The quota period. Valid values:</p>
+         * <ul>
+         * <li>total: The total usage limit.</li>
+         * <li>month: Monthly. The quota resets based on the resource activation time as one cycle.</li>
+         * <li>day: Daily. The quota resets at 00:00.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -133,9 +187,83 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeJVSInstanceResponseBodyDataInstalledSkills extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("IconUrl")
+        public String iconUrl;
+
+        @NameInMap("InstalledAt")
+        public String installedAt;
+
+        @NameInMap("SkillId")
+        public String skillId;
+
+        @NameInMap("SkillName")
+        public String skillName;
+
+        @NameInMap("SkillType")
+        public String skillType;
+
+        public static DescribeJVSInstanceResponseBodyDataInstalledSkills build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJVSInstanceResponseBodyDataInstalledSkills self = new DescribeJVSInstanceResponseBodyDataInstalledSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeJVSInstanceResponseBodyDataInstalledSkills setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeJVSInstanceResponseBodyDataInstalledSkills setIconUrl(String iconUrl) {
+            this.iconUrl = iconUrl;
+            return this;
+        }
+        public String getIconUrl() {
+            return this.iconUrl;
+        }
+
+        public DescribeJVSInstanceResponseBodyDataInstalledSkills setInstalledAt(String installedAt) {
+            this.installedAt = installedAt;
+            return this;
+        }
+        public String getInstalledAt() {
+            return this.installedAt;
+        }
+
+        public DescribeJVSInstanceResponseBodyDataInstalledSkills setSkillId(String skillId) {
+            this.skillId = skillId;
+            return this;
+        }
+        public String getSkillId() {
+            return this.skillId;
+        }
+
+        public DescribeJVSInstanceResponseBodyDataInstalledSkills setSkillName(String skillName) {
+            this.skillName = skillName;
+            return this;
+        }
+        public String getSkillName() {
+            return this.skillName;
+        }
+
+        public DescribeJVSInstanceResponseBodyDataInstalledSkills setSkillType(String skillType) {
+            this.skillType = skillType;
+            return this;
+        }
+        public String getSkillType() {
+            return this.skillType;
+        }
+
+    }
+
     public static class DescribeJVSInstanceResponseBodyDataUsedCredit extends TeaModel {
         /**
-         * <p>The amount of Credit.</p>
+         * <p>The number of credits.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -144,7 +272,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public Long credit;
 
         /**
-         * <p>The calculation period for used Credit.</p>
+         * <p>The dimension of the current credit.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -176,8 +304,11 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeJVSInstanceResponseBodyData extends TeaModel {
+        @NameInMap("AgentVersion")
+        public DescribeJVSInstanceResponseBodyDataAgentVersion agentVersion;
+
         /**
-         * <p>The time the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -186,7 +317,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The Credit limit configuration. If you apply multiple configurations, the latest one overwrites the others.</p>
+         * <p>The credit quota configuration. Subsequent quota configurations overwrite previous configurations.</p>
          */
         @NameInMap("CreditConfig")
         public java.util.List<DescribeJVSInstanceResponseBodyDataCreditConfig> creditConfig;
@@ -199,6 +330,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
          */
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        @NameInMap("InstalledSkills")
+        public java.util.List<DescribeJVSInstanceResponseBodyDataInstalledSkills> installedSkills;
 
         /**
          * <p>The instance ID.</p>
@@ -219,7 +353,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String jvsPackageId;
 
         /**
-         * <p>The time the instance was last modified.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -237,7 +371,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The amount of used Credit.</p>
+         * <p>The used credits.</p>
          */
         @NameInMap("UsedCredit")
         public java.util.List<DescribeJVSInstanceResponseBodyDataUsedCredit> usedCredit;
@@ -245,6 +379,14 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public static DescribeJVSInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeJVSInstanceResponseBodyData self = new DescribeJVSInstanceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeJVSInstanceResponseBodyData setAgentVersion(DescribeJVSInstanceResponseBodyDataAgentVersion agentVersion) {
+            this.agentVersion = agentVersion;
+            return this;
+        }
+        public DescribeJVSInstanceResponseBodyDataAgentVersion getAgentVersion() {
+            return this.agentVersion;
         }
 
         public DescribeJVSInstanceResponseBodyData setCreateTime(String createTime) {
@@ -269,6 +411,14 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeJVSInstanceResponseBodyData setInstalledSkills(java.util.List<DescribeJVSInstanceResponseBodyDataInstalledSkills> installedSkills) {
+            this.installedSkills = installedSkills;
+            return this;
+        }
+        public java.util.List<DescribeJVSInstanceResponseBodyDataInstalledSkills> getInstalledSkills() {
+            return this.installedSkills;
         }
 
         public DescribeJVSInstanceResponseBodyData setInstanceId(String instanceId) {

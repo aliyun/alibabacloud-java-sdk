@@ -576,7 +576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</p>
+     * <p>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</p>
      * 
      * @param request ChangeCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -648,7 +648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</p>
+     * <p>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</p>
      * 
      * @param request ChangeCloudPhoneNodeRequest
      * @return ChangeCloudPhoneNodeResponse
@@ -1768,7 +1768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建定时任务</p>
+     * <p>Creates a scheduled task for an agent.</p>
      * 
      * @param tmpReq CreateScheduledTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1826,7 +1826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建定时任务</p>
+     * <p>Creates a scheduled task for an agent.</p>
      * 
      * @param request CreateScheduledTaskRequest
      * @return CreateScheduledTaskResponse
@@ -3410,7 +3410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details of JVS instances.</p>
+     * <p>Queries JVS instance information.</p>
      * 
      * @param request DescribeJVSInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3450,7 +3450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details of JVS instances.</p>
+     * <p>Queries JVS instance information.</p>
      * 
      * @param request DescribeJVSInstanceRequest
      * @return DescribeJVSInstanceResponse
@@ -5717,6 +5717,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyJVSInstanceResponse modifyJVSInstanceWithOptions(ModifyJVSInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applyToAll)) {
             query.put("ApplyToAll", request.applyToAll);
         }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -19,16 +23,23 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9A51B1DF-96FF-3BCC-B08C-783161D3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of creation results.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<CreateScheduledTaskResponseBodyTasks> tasks;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
 
     public static class CreateScheduledTaskResponseBodyTasksInstanceResults extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>privateAccount not exist.</p>
          */
@@ -89,6 +102,8 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-iuyb1zv1ap6nb****</p>
          */
@@ -96,6 +111,8 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Indicates whether the operation is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,10 +151,15 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     }
 
     public static class CreateScheduledTaskResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The list of batch delivery results for instance scheduled tasks.</p>
+         */
         @NameInMap("InstanceResults")
         public java.util.List<CreateScheduledTaskResponseBodyTasksInstanceResults> instanceResults;
 
         /**
+         * <p>The scheduled task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sch-260705-agb*****</p>
          */
@@ -145,6 +167,8 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         public String scheduledId;
 
         /**
+         * <p>The task configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tsk-260705-0jj*****</p>
          */

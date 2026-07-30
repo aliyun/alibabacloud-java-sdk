@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeJVSInstanceRequest extends TeaModel {
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeJVSInstanceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token from a previous request to retrieve the next page of results. Omit this parameter for the first request.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskRequest extends TeaModel {
     /**
+     * <p>The cron expression.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public String cronExpression;
 
     /**
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The maximum number of executions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public Integer maxExecutions;
 
     /**
+     * <p>The run configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;maxSteps&quot;:10,&quot;timeoutSeconds&quot;:3600}</p>
      */
@@ -37,19 +43,21 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public CreateScheduledTaskRequestRunConfig runConfig;
 
     /**
+     * <p>The task name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>自动回复钉钉消息</p>
+     * <p>Auto-reply to DingTalk messages.</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>The user prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>打开钉钉，回复前5个未读消息</p>
+     * <p>Open DingTalk and reply to the first 5 unread messages.</p>
      */
     @NameInMap("UserPrompt")
     public String userPrompt;
@@ -109,6 +117,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
 
     public static class CreateScheduledTaskRequestRunConfig extends TeaModel {
         /**
+         * <p>The extended parameter JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
          */
@@ -116,6 +126,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public String extraParams;
 
         /**
+         * <p>The maximum number of execution steps.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -123,6 +135,8 @@ public class CreateScheduledTaskRequest extends TeaModel {
         public Integer maxSteps;
 
         /**
+         * <p>The timeout period, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
