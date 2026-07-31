@@ -8,7 +8,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends TeaModel {
      * <p>The name of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>DataWorks</p>
+     * <p>Dataworks。</p>
      */
     @NameInMap("Agency")
     public String agency;

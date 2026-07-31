@@ -4,30 +4,75 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class CstoreIndexModel extends TeaModel {
+    /**
+     * <p>The order of index columns.</p>
+     */
     @NameInMap("ColumnOrds")
     public java.util.List<String> columnOrds;
 
+    /**
+     * <p>The time when the index was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The logical name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exampleDatabase</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The index columns.</p>
+     */
     @NameInMap("IndexColumns")
     public java.util.List<FieldSchemaModel> indexColumns;
 
+    /**
+     * <p>The name of the index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>indexName</p>
+     */
     @NameInMap("IndexName")
     public String indexName;
 
+    /**
+     * <p>The type of the index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("IndexType")
     public String indexType;
 
+    /**
+     * <p>The properties.</p>
+     */
     @NameInMap("Options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>The physical name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>physicalDatabase</p>
+     */
     @NameInMap("PhysicalTableName")
     public String physicalTableName;
 
+    /**
+     * <p>The time when the index was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

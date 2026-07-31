@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsHiveJobResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The API status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
@@ -14,7 +14,7 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned for the workload.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -25,7 +25,7 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -34,10 +34,10 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The additional information about the result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a success message is returned.</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li>If the request was successful, <strong>Success</strong> is returned.</li>
+     * <li>If the request failed, the specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,8 +58,8 @@ public class CreateApsHiveJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>True</strong>: The request was successful.</li>
+     * <li><strong>False</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -25,7 +25,7 @@ public class DescribeApsActionLogsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-02-11T09:30:00Z</p>
+     * <p>2023-02-11T09:30Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -109,7 +109,7 @@ public class DescribeApsActionLogsRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2023-02-11T08:30:00Z</p>
+     * <p>2023-02-11T08:30Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

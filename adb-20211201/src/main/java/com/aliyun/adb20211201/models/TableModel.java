@@ -4,27 +4,72 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class TableModel extends TeaModel {
+    /**
+     * <p>The archive type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ArchiveType</p>
+     */
     @NameInMap("ArchiveType")
     public String archiveType;
 
+    /**
+     * <p>The block size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
     @NameInMap("BlockSize")
     public Long blockSize;
 
+    /**
+     * <p>The bucket ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("Bucket")
     public Long bucket;
 
+    /**
+     * <p>The number of buckets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("BucketCount")
     public Long bucketCount;
 
+    /**
+     * <p>The column information.</p>
+     */
     @NameInMap("Cols")
     public java.util.List<FieldSchemaModel> cols;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The compression method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Compression</p>
+     */
     @NameInMap("Compression")
     public String compression;
 
+    /**
+     * <p>The time when the table was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -34,123 +79,342 @@ public class TableModel extends TeaModel {
     @NameInMap("CreatedByUser")
     public String createdByUser;
 
+    /**
+     * <p>The current version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CurrentVersion")
     public Long currentVersion;
 
+    /**
+     * <p>The name of the logical database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>Indicates whether the dictionary is encrypted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DictEncode")
     public Boolean dictEncode;
 
+    /**
+     * <p>The distribution columns.</p>
+     */
     @NameInMap("DistributeColumns")
     public java.util.List<FieldSchemaModel> distributeColumns;
 
+    /**
+     * <p>The distribution type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DistributeType</p>
+     */
     @NameInMap("DistributeType")
     public String distributeType;
 
+    /**
+     * <p>Indicates whether DFS is allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableDfs")
     public Boolean enableDfs;
 
+    /**
+     * <p>The number of hot partitions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("HotPartitionCount")
     public Long hotPartitionCount;
 
+    /**
+     * <p>The indexes.</p>
+     */
     @NameInMap("Indexes")
     public java.util.List<CstoreIndexModel> indexes;
 
+    /**
+     * <p>Indicates whether the index is a full index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAllIndex")
     public Boolean isAllIndex;
 
+    /**
+     * <p>Indicates whether the table is a full-text index dictionary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsFulltextDict")
     public Boolean isFulltextDict;
 
+    /**
+     * <p>The maximum column ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxColumnId</p>
+     */
     @NameInMap("MaxColumnId")
     public Long maxColumnId;
 
+    /**
+     * <p>The parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <p>The information about the partition key column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>colName</p>
+     */
     @NameInMap("PartitionColumn")
     public String partitionColumn;
 
+    /**
+     * <p>The number of partitions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("PartitionCount")
     public Long partitionCount;
 
+    /**
+     * <p>The partition keys.</p>
+     */
     @NameInMap("PartitionKeys")
     public java.util.List<FieldSchemaModel> partitionKeys;
 
+    /**
+     * <p>The partition type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PartitionType</p>
+     */
     @NameInMap("PartitionType")
     public String partitionType;
 
+    /**
+     * <p>The name of the physical database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>physicalDatabaseName</p>
+     */
     @NameInMap("PhysicalDatabaseName")
     public String physicalDatabaseName;
 
+    /**
+     * <p>The name of the physical table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>physicalTableName</p>
+     */
     @NameInMap("PhysicalTableName")
     public String physicalTableName;
 
+    /**
+     * <p>The previous version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PreviousVersion")
     public Long previousVersion;
 
+    /**
+     * <p>The raw table name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RawTableName</p>
+     */
     @NameInMap("RawTableName")
     public String rawTableName;
 
+    /**
+     * <p>The routing columns.</p>
+     */
     @NameInMap("RouteColumns")
     public java.util.List<FieldSchemaModel> routeColumns;
 
+    /**
+     * <p>The effective routing column.</p>
+     */
     @NameInMap("RouteEffectiveColumn")
     public FieldSchemaModel routeEffectiveColumn;
 
+    /**
+     * <p>The routing type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>routeType</p>
+     */
     @NameInMap("RouteType")
     public String routeType;
 
+    /**
+     * <p>The routing engine type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RtEngineType</p>
+     */
     @NameInMap("RtEngineType")
     public String rtEngineType;
 
+    /**
+     * <p>Indicates whether to route all indexes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RtIndexAll")
     public Boolean rtIndexAll;
 
+    /**
+     * <p>The routing mode type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RtModeType</p>
+     */
     @NameInMap("RtModeType")
     public String rtModeType;
 
+    /**
+     * <p>The description of the storage.</p>
+     */
     @NameInMap("Sd")
     public StorageDescriptorModel sd;
 
+    /**
+     * <p>The storage policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StoragePolicy</p>
+     */
     @NameInMap("StoragePolicy")
     public String storagePolicy;
 
+    /**
+     * <p>The information about the subpartition column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SubpartitionColumn</p>
+     */
     @NameInMap("SubpartitionColumn")
     public String subpartitionColumn;
 
+    /**
+     * <p>The number of subpartitions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
     @NameInMap("SubpartitionCount")
     public Long subpartitionCount;
 
+    /**
+     * <p>The subpartition type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SubpartitionColumn</p>
+     */
     @NameInMap("SubpartitionType")
     public String subpartitionType;
 
+    /**
+     * <p>The name of the table engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("TableEngineName")
     public String tableEngineName;
 
+    /**
+     * <p>The name of the logical table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tableName</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The table type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>external_table</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 
+    /**
+     * <p>The table ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("TblId")
     public Long tblId;
 
+    /**
+     * <p>Indicates whether the table is a temporary table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Temporary")
     public Boolean temporary;
 
+    /**
+     * <p>The time when the table was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The normalized SQL statement that is used to create the view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ViewExpandedText</p>
+     */
     @NameInMap("ViewExpandedText")
     public String viewExpandedText;
 
+    /**
+     * <p>The SQL statement used to create the view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ViewOriginalText</p>
+     */
     @NameInMap("ViewOriginalText")
     public String viewOriginalText;
 
+    /**
+     * <p>The security mode of the view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ViewSecurityMode</p>
+     */
     @NameInMap("ViewSecurityMode")
     public String viewSecurityMode;
 

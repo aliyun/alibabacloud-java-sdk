@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of an enterprise edition, basic edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of a Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all clusters in a specific region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +19,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * <p>The end of the time range. The time is in UTC and must be in the <em>yyyy-MM-ddTHH:mmZ</em> format.</p>
      * <blockquote>
-     * <p>The end time must be later than the start time. The maximum time range that can be specified is two days.</p>
+     * <p>The end time must be later than the start time. The time range cannot exceed two days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +31,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The key of the performance metric that you want to query. Separate multiple keys with commas (,). For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</p>
+     * <p>The key of the performance metric. Separate multiple keys with commas (,). For a list of supported metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">metric overview</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AnalyticDB_CPU_Usage_Percentage</p>
@@ -39,9 +40,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the regions and availability zones supported by AnalyticDB for MySQL, including the region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +53,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The name of the resource pool.</p>
      * 
      * <strong>example:</strong>
      * <p>user_default</p>
@@ -61,7 +62,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String resourcePools;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * <p>The start of the time range. The time is in UTC and must be in the <em>yyyy-MM-ddTHH:mmZ</em> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-10T23:56Z</p>

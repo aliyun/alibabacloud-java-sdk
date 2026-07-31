@@ -4,84 +4,246 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class FieldSchemaModel extends TeaModel {
+    /**
+     * <p>Indicates whether the column is auto-incremented.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoIncrement")
     public Boolean autoIncrement;
 
+    /**
+     * <p>The original name of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ColumnRawName</p>
+     */
     @NameInMap("ColumnRawName")
     public String columnRawName;
 
+    /**
+     * <p>The description of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>Indicates whether FLOAT data is compressed to SHORT data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CompressFloatUseShort")
     public Boolean compressFloatUseShort;
 
+    /**
+     * <p>The compression method of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>compression</p>
+     */
     @NameInMap("Compression")
     public String compression;
 
+    /**
+     * <p>The time when the column was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The data type of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>long</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <p>The logical name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>databaseName</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The default value of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
+    /**
+     * <p>The delimiter of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>delimiter</p>
+     */
     @NameInMap("Delimiter")
     public String delimiter;
 
+    /**
+     * <p>The encryption method of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>encode</p>
+     */
     @NameInMap("Encode")
     public String encode;
 
+    /**
+     * <p>Indicates whether the column is the partition key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsPartitionKey")
     public Boolean isPartitionKey;
 
+    /**
+     * <p>The mapping name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mappedName</p>
+     */
     @NameInMap("MappedName")
     public String mappedName;
 
+    /**
+     * <p>The name of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Indicates whether the column can be empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Nullable")
     public Boolean nullable;
 
+    /**
+     * <p>The update condition of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>onUpdate</p>
+     */
     @NameInMap("OnUpdate")
     public String onUpdate;
 
+    /**
+     * <p>The location of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("OrdinalPosition")
     public Long ordinalPosition;
 
+    /**
+     * <p>The physical name of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PhysicalColumnName</p>
+     */
     @NameInMap("PhysicalColumnName")
     public String physicalColumnName;
 
+    /**
+     * <p>The location of the primary key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("PkPosition")
     public Long pkPosition;
 
+    /**
+     * <p>The precision of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Precision")
     public Long precision;
 
+    /**
+     * <p>Indicates whether the column is the primary key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Primarykey")
     public Boolean primarykey;
 
+    /**
+     * <p>The scale of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Scale")
     public Long scale;
 
+    /**
+     * <p>The logical name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tableName</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>The token of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tokenizer</p>
+     */
     @NameInMap("Tokenizer")
     public String tokenizer;
 
+    /**
+     * <p>The type of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>long</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The time when the index was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The value type of the column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>valueType</p>
+     */
     @NameInMap("ValueType")
     public String valueType;
 

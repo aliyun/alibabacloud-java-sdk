@@ -9,7 +9,7 @@ public class SetSparkAppLogRootPathRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>am-dbclusterid</p>
+     * <p>amv-bp169ea59k****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,7 +18,7 @@ public class SetSparkAppLogRootPathRequest extends TeaModel {
      * <p>The path of Object Storage Service (OSS) logs.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://path/to/log</p>
+     * <p>oss://testBucketname/to/log</p>
      */
     @NameInMap("OssLogPath")
     public String ossLogPath;

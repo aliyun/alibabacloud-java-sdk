@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadInstanceCACertificateResponseBody extends TeaModel {
     /**
-     * <p>The OSS URL of the downloaded certificate.</p>
+     * <p>The certificate download path.</p>
      */
     @NameInMap("DownloadUrl")
     public String downloadUrl;

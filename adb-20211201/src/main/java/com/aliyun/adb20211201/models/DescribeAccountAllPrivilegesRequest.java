@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAllPrivilegesRequest extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The database account name for the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class DescribeAccountAllPrivilegesRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID for the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+     * &lt;props=&quot;intl&quot;&gt;The cluster ID for the Data Lakehouse Edition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +26,7 @@ public class DescribeAccountAllPrivilegesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies the start position marker from which to return results. If you receive a response indicating that the results are truncated, set this parameter to the value of the <code>Marker</code> parameter in the response that you received.</p>
+     * <p>If the response is truncated, use the <code>Marker</code> value from the response in this field to retrieve the next set of results.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
@@ -34,7 +35,7 @@ public class DescribeAccountAllPrivilegesRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

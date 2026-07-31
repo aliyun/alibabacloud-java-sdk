@@ -14,7 +14,7 @@ public class DescribeDBClusterStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried cluster states.</p>
+     * <p>The cluster status list.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobResourceUsageResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The API status or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The queried resource usage.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeJobResourceUsageResponseBodyData data;
@@ -59,7 +59,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
 
     public static class DescribeJobResourceUsageResponseBodyDataJobAcuUsageAcuUsageDetail extends TeaModel {
         /**
-         * <p>The number of ACUs for the elastic resources.</p>
+         * <p>The number of elastic ACU resources.</p>
          * 
          * <strong>example:</strong>
          * <p>16ACU</p>
@@ -68,7 +68,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public Float elasticAcuNumber;
 
         /**
-         * <p>The number of ACUs for the reserved resources.</p>
+         * <p>The number of reserved ACU resources.</p>
          * 
          * <strong>example:</strong>
          * <p>16ACU</p>
@@ -77,7 +77,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public Float reservedAcuNumber;
 
         /**
-         * <p>The number of spot ACUs.</p>
+         * <p>The number of spot instance ACU resources.</p>
          * 
          * <strong>example:</strong>
          * <p>16ACU</p>
@@ -86,7 +86,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public Float spotAcuNumber;
 
         /**
-         * <p>The percent of spot ACUs.</p>
+         * <p>The percentage of spot instance resources in the total elastic resources.</p>
          * 
          * <strong>example:</strong>
          * <p>0.9</p>
@@ -95,7 +95,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public Float spotAcuPercentage;
 
         /**
-         * <p>The total number of ACUs.</p>
+         * <p>The total number of ACU resources.</p>
          * 
          * <strong>example:</strong>
          * <p>32ACU</p>
@@ -152,13 +152,13 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
 
     public static class DescribeJobResourceUsageResponseBodyDataJobAcuUsage extends TeaModel {
         /**
-         * <p>The ACU usage.</p>
+         * <p>The ACU resource usage details.</p>
          */
         @NameInMap("AcuUsageDetail")
         public DescribeJobResourceUsageResponseBodyDataJobAcuUsageAcuUsageDetail acuUsageDetail;
 
         /**
-         * <p>The end time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-23T16:00:00Z</p>
@@ -176,7 +176,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The start time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-22T16:00:00Z</p>
@@ -193,6 +193,15 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        @NameInMap("SparkAppName")
+        public String sparkAppName;
+
+        /**
+         * <p>Indicates whether the hot pool is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UseCachePool")
         public Boolean useCachePool;
 
@@ -241,6 +250,14 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             return this.resourceGroupName;
         }
 
+        public DescribeJobResourceUsageResponseBodyDataJobAcuUsage setSparkAppName(String sparkAppName) {
+            this.sparkAppName = sparkAppName;
+            return this;
+        }
+        public String getSparkAppName() {
+            return this.sparkAppName;
+        }
+
         public DescribeJobResourceUsageResponseBodyDataJobAcuUsage setUseCachePool(Boolean useCachePool) {
             this.useCachePool = useCachePool;
             return this;
@@ -253,7 +270,8 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
 
     public static class DescribeJobResourceUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+         * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-clusterxxx</p>
@@ -262,7 +280,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The end time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-23T16:00:00Z</p>
@@ -271,19 +289,31 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The AnalyticDB compute unit (ACU) usage of the job resource group.</p>
+         * <p>The ACU usage of the job resource group.</p>
          */
         @NameInMap("JobAcuUsage")
         public java.util.List<DescribeJobResourceUsageResponseBodyDataJobAcuUsage> jobAcuUsage;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-22T16:00:00Z</p>
@@ -291,6 +321,12 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAppliedAdvicesRequest extends TeaModel {
     /**
-     * <p>The type of the suggestion. Valid values:</p>
+     * <p>The type of the advice. Valid values:</p>
      * <ul>
-     * <li><strong>INDEX</strong>: index optimization.</li>
-     * <li><strong>TIERING</strong>: hot and cold data optimization.</li>
+     * <li><p><strong>INDEX</strong>: index optimization</p>
+     * </li>
+     * <li><p><strong>TIERING</strong>: hot/cold data optimization</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end date of the time range to query. Specify the date in the yyyyMMdd format.</p>
+     * <p>The end date of the query. The date is in the <code>yyyyMMdd</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>20220824</p>
@@ -37,7 +39,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The keyword that is used to query information by table name.</p>
+     * <p>The keyword for the query. Fuzzy match by table name is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>you_table_name</p>
@@ -46,12 +48,16 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The display language of the suggestion. Valid values:</p>
+     * <p>The language of the query results. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): simplified Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
-     * <li><strong>ja</strong>: Japanese.</li>
-     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * <li><p><strong>ja</strong>: Japanese</p>
+     * </li>
+     * <li><p><strong>zh-tw</strong>: Traditional Chinese</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,26 +67,33 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+     * <p>The order by which to sort the query results. The value is a JSON string. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Fields:</p>
      * <ul>
-     * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+     * <li><p><code>Field</code>: The field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li><code>SchemaName</code>: the name of the database.</li>
-     * <li><code>TableName</code>: the name of the table.</li>
-     * <li><code>JobStatus</code>: the status of the BUILD job that is triggered on the table.</li>
-     * <li><code>SubmitTime</code>: the time when the suggestion was submitted.</li>
-     * <li><code>Benefit</code>: the expected benefits of the applied optimization suggestion.</li>
+     * <li><p><code>SchemaName</code>: the database name</p>
+     * </li>
+     * <li><p><code>TableName</code>: the table name</p>
+     * </li>
+     * <li><p><code>JobStatus</code>: the status of the build job for the table</p>
+     * </li>
+     * <li><p><code>SubmitTime</code>: the time when the advice was submitted</p>
+     * </li>
+     * <li><p><code>Benefit</code>: the estimated benefit</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+     * <li><p><code>Type</code>: The sort order. Valid values:</p>
      * <ul>
-     * <li><code>Asc</code>: ascending order.</li>
-     * <li><code>Desc</code>: descending order.</li>
+     * <li><p><code>Asc</code>: ascending</p>
+     * </li>
+     * <li><p><code>Desc</code>: descending</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, optimization suggestions are sorted in descending order based on the submission time.</p>
+     * <p>If you do not set this parameter, the query results are sorted by advice submission time in descending order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,7 +103,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -99,11 +112,14 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong>(Default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +139,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the table in the <strong>DatabaseName.TableName</strong> format.</p>
+     * <p>The name of the database and table. Format: <strong>database.table</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>tpch.lineitem</p>
@@ -132,7 +148,7 @@ public class DescribeAppliedAdvicesRequest extends TeaModel {
     public String schemaTableName;
 
     /**
-     * <p>The start date of the time range to query. Specify the date in the yyyyMMdd format.</p>
+     * <p>The start date of the query. The date is in the <code>yyyyMMdd</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>20220811</p>

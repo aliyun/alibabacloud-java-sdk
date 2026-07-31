@@ -32,9 +32,6 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
@@ -54,12 +51,10 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public Long resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -148,14 +143,6 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeHistoryTasksStatRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public DescribeHistoryTasksStatRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -170,22 +157,6 @@ public class DescribeHistoryTasksStatRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeHistoryTasksStatRequest setResourceOwnerAccount(Long resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public Long getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeHistoryTasksStatRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeHistoryTasksStatRequest setSecurityToken(String securityToken) {

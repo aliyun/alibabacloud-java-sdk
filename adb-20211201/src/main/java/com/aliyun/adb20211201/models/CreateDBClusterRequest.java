@@ -5,9 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDBClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set that you want to use to restore data.</p>
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("AINodeNumber")
+    public Integer AINodeNumber;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ADB.MLPlus.4</p>
+     */
+    @NameInMap("AINodeSpec")
+    public String AINodeSpec;
+
+    /**
+     * <p>The ID of the backup set used for restoration from a backup set.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612318.html">DescribeBackups</a> operation to query the backup sets of the cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612318.html">DescribeBackups</a> operation to query the backup list of the cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +31,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>The region ID of the source cluster.</p>
+     * <p>The region of the source cluster.</p>
      * <blockquote>
-     * <p> This parameter must be specified for cloning clusters across regions.</p>
+     * <p>This parameter is required for cross-region cloning.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,9 +43,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String cloneSourceRegionId;
 
     /**
-     * <p>The amount of reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+     * <p>The compute reserved resources. Valid values: 0 ACU to 4096 ACU, in increments of 16. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
      * <blockquote>
-     * <p> This parameter must be specified with a unit.</p>
+     * <p>Include the unit when specifying this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +58,7 @@ public class CreateDBClusterRequest extends TeaModel {
      * <p>The description of the cluster.</p>
      * <ul>
      * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description must be 2 to 256 characters in length</li>
+     * <li>The description must be 2 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +68,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The network type of the cluster. Set the value to <strong>VPC</strong>.</p>
+     * <p>The network type of the cluster. Only <strong>VPC</strong> (Virtual Private Cloud) is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -63,7 +77,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBClusterNetworkType;
 
     /**
-     * <p>The version of the cluster. Set the value to <strong>5.0</strong>.</p>
+     * <p>The version of the Data Lakehouse Edition cluster. Valid values: <strong>5.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +87,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String DBClusterVersion;
 
     /**
-     * <p>Specifies whether to enable disk encryption.</p>
+     * <p>Specifies whether to enable cloud disk encryption.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -82,10 +96,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public Boolean diskEncryption;
 
     /**
-     * <p>Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:</p>
+     * <p>Specifies whether to allocate all compute reserved resources to the default resource group (user_default). Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default)</li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong> (default): All compute reserved resources are allocated to the default resource group.</li>
+     * <li><strong>false</strong>: Not all compute reserved resources are allocated to the default resource group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,13 +108,23 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("EnableDefaultResourcePool")
     public Boolean enableDefaultResourcePool;
 
+    /**
+     * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: SSL encryption is enabled.</li>
+     * <li><strong>false</strong>: SSL encryption is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableSSL")
     public Boolean enableSSL;
 
     /**
-     * <p>The ID of the key that is used to encrypt disk data.</p>
+     * <p>The ID of the key used to encrypt cloud disk data.</p>
      * <blockquote>
-     * <p> This parameter must be specified only when disk encryption is enabled.</p>
+     * <p>This parameter is used only when cloud disk encryption is enabled for the AnalyticDB for MySQL cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -110,7 +134,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String kmsId;
 
     /**
-     * <p>The billing method of the cluster. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
      * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
      * <li><strong>Prepaid</strong>: subscription.</li>
@@ -130,7 +154,7 @@ public class CreateDBClusterRequest extends TeaModel {
      * <li><strong>Month</strong>: subscription on a monthly basis.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter must be specified when PayType is set to Prepaid.</p>
+     * <p>This parameter is required when PayType is set to Prepaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -140,9 +164,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The product form of the cluster. Valid values:</p>
+     * <p>The product form. Valid values:</p>
      * <ul>
-     * <li><strong>IntegrationForm</strong>: integrated.</li>
+     * <li><strong>IntegrationForm</strong>: integrated form.</li>
      * <li><strong>LegacyForm</strong>: Data Lakehouse Edition.</li>
      * </ul>
      * 
@@ -153,14 +177,14 @@ public class CreateDBClusterRequest extends TeaModel {
     public String productForm;
 
     /**
-     * <p>The edition of the cluster. Valid values:</p>
+     * <p>The product version. Valid values:</p>
      * <ul>
      * <li><strong>BasicVersion</strong>: Basic Edition.</li>
-     * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter must be specified only when ProductForm is set to IntegrationForm.</p>
+     * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.<blockquote>
+     * <p>This parameter is required only when ProductForm is set to IntegrationForm.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>BasicVersion</p>
@@ -169,9 +193,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String productVersion;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specific Data Lakehouse Edition cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -182,14 +206,14 @@ public class CreateDBClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of reserved resource nodes.</p>
+     * <p>The number of reserved nodes. </p>
      * <ul>
-     * <li>For Enterprise Edition, the default value is 3 and the step size is 3.</li>
-     * <li>For Basic Edition, the default value is 1.</li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter must be specified only when ProductForm is set to IntegrationForm.</p>
+     * <li>Enterprise Edition uses 3 nodes by default, in increments of 3.</li>
+     * <li>Basic Edition uses 1 node by default.<blockquote>
+     * <p>This parameter is required only when ProductForm is set to IntegrationForm.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -198,7 +222,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public Integer reservedNodeCount;
 
     /**
-     * <p>The specifications of reserved resource nodes. Unit: ACUs.</p>
+     * <p>The node specifications of reserved nodes, in ACUs.</p>
      * 
      * <strong>example:</strong>
      * <p>8ACU</p>
@@ -225,10 +249,10 @@ public class CreateDBClusterRequest extends TeaModel {
     public String restoreToTime;
 
     /**
-     * <p>The method that you want to use to restore data. Valid values:</p>
+     * <p>The restoration method. Valid values:</p>
      * <ul>
      * <li><strong>backup</strong>: restores data from a backup set. You must also specify the <strong>BackupSetId</strong> and <strong>SourceDBClusterId</strong> parameters.</li>
-     * <li><strong>timepoint</strong>: restores data to a point in time. You must also specify the <strong>RestoreToTime</strong> and <strong>SourceDBClusterId</strong> parameters.</li>
+     * <li><strong>timepoint</strong>: restores data to a specific point in time. You must also specify the <strong>RestoreToTime</strong> and <strong>SourceDBClusterId</strong> parameters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -238,9 +262,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>The ID of the secondary vSwitch.</p>
+     * <p>The secondary vSwitch ID.</p>
      * <blockquote>
-     * <p> You cannot set this parameter to a value that is the same as that of the VSwitchId parameter.</p>
+     * <p>The value of this parameter must be different from the value of the VSwitchId parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -250,9 +274,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String secondaryVSwitchId;
 
     /**
-     * <p>The ID of the secondary zone.</p>
+     * <p>The secondary zone ID.</p>
      * <blockquote>
-     * <p> You cannot set this parameter to a value that is the same as that of the ZoneId parameter.</p>
+     * <p>The value of this parameter must be different from the value of the ZoneId parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -262,7 +286,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String secondaryZoneId;
 
     /**
-     * <p>The ID of the source AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <p>The instance ID of the source AnalyticDB for MySQL Data Warehouse Edition cluster. If this parameter is specified, the Data Lakehouse Edition cluster is used to recover from the Data Warehouse Edition cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-bp1r053byu48p****</p>
@@ -271,9 +295,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String sourceDbClusterId;
 
     /**
-     * <p>The amount of reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+     * <p>The storage reserved resources. Valid values: 0 ACU to 2064 ACU, in increments of 24. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
      * <blockquote>
-     * <p> This parameter must be specified with a unit.</p>
+     * <p>Include the unit when specifying this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -283,32 +307,29 @@ public class CreateDBClusterRequest extends TeaModel {
     public String storageResource;
 
     /**
-     * <p>The tags to add to the cluster.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDBClusterRequestTag> tag;
 
     /**
-     * <p>The subscription period of the subscription cluster.</p>
+     * <p>The subscription duration of the subscription cluster. Valid values:</p>
      * <ul>
-     * <li>Valid values when Period is set to Year: 1, 2, and 3 (integer)</li>
-     * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
+     * <li>When <strong>Period</strong> is set to Year, the value of UsedTime ranges from 1 to 3 (integer).</li>
+     * <li>When <strong>Period</strong> is set to Month, the value of UsedTime ranges from 1 to 9 (integer).</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>This parameter is required if the PayType parameter is set to Prepaid.</li>
-     * <li>Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</li>
-     * </ul>
+     * <p>This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>3</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;
 
     /**
-     * <p>The virtual private cloud (VPC) ID of the cluster.</p>
+     * <p>The virtual private cloud (VPC) ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -318,7 +339,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the cluster.</p>
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -328,9 +349,9 @@ public class CreateDBClusterRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the cluster.</p>
+     * <p>The zone ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the zone ID of a specific Data Lakehouse Edition cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -343,6 +364,22 @@ public class CreateDBClusterRequest extends TeaModel {
     public static CreateDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterRequest self = new CreateDBClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBClusterRequest setAINodeNumber(Integer AINodeNumber) {
+        this.AINodeNumber = AINodeNumber;
+        return this;
+    }
+    public Integer getAINodeNumber() {
+        return this.AINodeNumber;
+    }
+
+    public CreateDBClusterRequest setAINodeSpec(String AINodeSpec) {
+        this.AINodeSpec = AINodeSpec;
+        return this;
+    }
+    public String getAINodeSpec() {
+        return this.AINodeSpec;
     }
 
     public CreateDBClusterRequest setBackupSetId(String backupSetId) {
@@ -579,9 +616,9 @@ public class CreateDBClusterRequest extends TeaModel {
 
     public static class CreateDBClusterRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of <code>Tag.N.Key</code> is paired with a value of <code>Tag.N.Value</code>.</p>
+         * <p>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The value of N for each tag pair must be unique and must be a consecutive integer that starts from 1. The value of <code>Tag.N.Key</code> corresponds to the value of <code>Tag.N.Value</code>.</p>
          * <blockquote>
-         * <p> The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -591,9 +628,9 @@ public class CreateDBClusterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of <code>Tag.N.Key</code> is paired with a value of <code>Tag.N.Value</code>.</p>
+         * <p>The tag value. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The value of N for each tag pair must be unique and must be a consecutive integer that starts from 1. The value of <code>Tag.N.Key</code> corresponds to the value of <code>Tag.N.Value</code>.</p>
          * <blockquote>
-         * <p> The tag value can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * <p>The tag value can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

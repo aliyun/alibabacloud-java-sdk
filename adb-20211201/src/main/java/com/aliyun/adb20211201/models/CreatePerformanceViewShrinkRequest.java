@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreatePerformanceViewShrinkRequest extends TeaModel {
     /**
-     * <p>The type of the view.</p>
+     * <p>The type of the original monitoring dashboard from which the current monitoring dashboard is copied. Valid values:</p>
+     * <ul>
+     * <li><strong>Basic</strong>: basic dashboard.</li>
+     * <li><strong>Advanced</strong>: advanced dashboard.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Basic</p>
@@ -14,9 +18,10 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     public String createFromViewType;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +32,7 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</p>
+     * <p>Specifies whether to populate the keys from the original monitoring dashboard when viewing the monitoring dashboard. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
@@ -48,7 +53,7 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -65,18 +70,18 @@ public class CreatePerformanceViewShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about the monitoring view.</p>
+     * <p>The details of the monitoring dashboard.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ViewDetail")
     public String viewDetailShrink;
 
     /**
-     * <p>The name of the view.</p>
+     * <p>The name of the monitoring dashboard.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>viewname</p>
+     * <p>Custom-All metrics-2 columns-Linked</p>
      */
     @NameInMap("ViewName")
     public String viewName;

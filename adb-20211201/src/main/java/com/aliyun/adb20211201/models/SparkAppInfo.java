@@ -5,37 +5,50 @@ import com.aliyun.tea.*;
 
 public class SparkAppInfo extends TeaModel {
     /**
+     * <p>The ID of the Spark application.</p>
+     * 
      * <strong>example:</strong>
-     * <p>s202207151211hz0cb4*****</p>
+     * <p>s202207151211hz0c****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
+     * <p>The name of the Spark application.</p>
+     * 
      * <strong>example:</strong>
-     * <p>Spark Test</p>
+     * <p>SparkTest</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
+     * <p>The database ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-23xxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The information about the Spark application.</p>
+     */
     @NameInMap("Detail")
     public Detail detail;
 
     /**
+     * <p>The alert message returned, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+     * 
      * <strong>example:</strong>
-     * <p>WARN: Disk is full</p>
+     * <p>WARN: Disk is full.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The priority of the Spark application.</p>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -43,8 +56,23 @@ public class SparkAppInfo extends TeaModel {
     public String priority;
 
     /**
+     * <p>The state of the Spark application. Valid values:</p>
+     * <ul>
+     * <li><strong>SUBMITTED</strong></li>
+     * <li><strong>STARTING</strong></li>
+     * <li><strong>RUNNING</strong></li>
+     * <li><strong>FAILING</strong></li>
+     * <li><strong>FAILED</strong></li>
+     * <li><strong>KILLING</strong></li>
+     * <li><strong>KILLED</strong></li>
+     * <li><strong>SUCCEEDING</strong></li>
+     * <li><strong>COMPLETED</strong></li>
+     * <li><strong>FATAL</strong></li>
+     * <li><strong>UNKNOWN</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>FAILED</p>
+     * <p>SUBMITTED</p>
      */
     @NameInMap("State")
     public String state;

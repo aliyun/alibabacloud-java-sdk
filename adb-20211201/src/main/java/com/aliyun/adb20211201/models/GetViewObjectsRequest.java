@@ -15,7 +15,7 @@ public class GetViewObjectsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The owner of the view.</p>
+     * <p>The owner.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -24,7 +24,7 @@ public class GetViewObjectsRequest extends TeaModel {
     public String filterOwner;
 
     /**
-     * <p>The name of the view.</p>
+     * <p>The view name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_filter</p>
@@ -33,10 +33,12 @@ public class GetViewObjectsRequest extends TeaModel {
     public String filterViewName;
 
     /**
-     * <p>The type of the view.</p>
+     * <p>The view type.</p>
      * <p>Valid values:</p>
-     * <p>\-VIRTUAL_VIEW</p>
-     * <p>\-MATERIALIZED_VIEW</p>
+     * <ul>
+     * <li>VIRTUAL_VIEW</li>
+     * <li>MATERIALIZED_VIEW</li>
+     * </ul>
      * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
@@ -46,14 +48,18 @@ public class GetViewObjectsRequest extends TeaModel {
     public String filterViewType;
 
     /**
-     * <p>The order in which you want to sort the query results. Valid values for Type:</p>
+     * <p>The sorting field.</p>
+     * <p>Valid values for Type:</p>
      * <ul>
      * <li>Asc</li>
      * <li>Desc</li>
      * </ul>
-     * <p>Valid values for Field: -ViewName</p>
-     * <p>\-CreateTime</p>
-     * <p>\-UpdateTime</p>
+     * <p>Valid values for Field:</p>
+     * <ul>
+     * <li>ViewName</li>
+     * <li>CreateTime</li>
+     * <li>UpdateTime</li>
+     * </ul>
      * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;ViewName&quot;}.</p>
      * 
      * <strong>example:</strong>
@@ -74,9 +80,9 @@ public class GetViewObjectsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><strong>30</strong> (default).</li>
+     * <li><strong>50</strong>.</li>
+     * <li><strong>100</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +92,7 @@ public class GetViewObjectsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +102,7 @@ public class GetViewObjectsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
@@ -105,6 +111,8 @@ public class GetViewObjectsRequest extends TeaModel {
     public String schemaName;
 
     /**
+     * <p>Specifies whether to display the base table information of materialized views.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

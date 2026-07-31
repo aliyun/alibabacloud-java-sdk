@@ -7,23 +7,21 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The description of the account.</p>
      * <ul>
-     * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can be up to 256 characters in length.</li>
+     * <li>Cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>Cannot exceed 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>数据库连接测试账号</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
-     * <p>The name of the database account.</p>
+     * <p>The name of the database account. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
-     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must be 2 to 16 characters in length.</li>
-     * <li>Reserved account names such as root, admin, and opsadmin cannot be used.</li>
+     * <li>Starts with a lowercase letter and ends with a lowercase letter or digit.</li>
+     * <li>Contains only lowercase letters, digits, or underscores (_).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,9 +34,9 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The password of the database account.</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
-     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li>Must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Special characters include: <code>!@#$%^&amp;*()_+-=</code></li>
+     * <li>Must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +47,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The type of the database account. Valid values:</p>
+     * <p>The type of the account. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong>: standard account.</li>
      * <li><strong>Super</strong>: privileged account.</li>
@@ -63,7 +61,8 @@ public class CreateAccountRequest extends TeaModel {
     public String accountType;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,10 +72,10 @@ public class CreateAccountRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database engine of the cluster. Valid values:</p>
+     * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: wide table engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,6 +83,12 @@ public class CreateAccountRequest extends TeaModel {
      */
     @NameInMap("Engine")
     public String engine;
+
+    /**
+     * <p>The list of Alibaba Cloud Resource Access Management (RAM) user IDs to attach. Currently, only one RAM user can be attached.</p>
+     */
+    @NameInMap("RamUserList")
+    public java.util.List<String> ramUserList;
 
     public static CreateAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountRequest self = new CreateAccountRequest();
@@ -136,6 +141,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public CreateAccountRequest setRamUserList(java.util.List<String> ramUserList) {
+        this.ramUserList = ramUserList;
+        return this;
+    }
+    public java.util.List<String> getRamUserList() {
+        return this.ramUserList;
     }
 
 }

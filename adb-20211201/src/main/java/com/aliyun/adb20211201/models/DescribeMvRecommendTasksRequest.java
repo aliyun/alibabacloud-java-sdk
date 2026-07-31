@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMvRecommendTasksRequest extends TeaModel {
     /**
-     * <p>Fixed system value (non-modifiable).</p>
+     * <p>A static field. This parameter cannot be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Modification is not supported.</p>
      */
     @NameInMap("ActionInner")
     public String actionInner;
@@ -20,7 +23,10 @@ public class DescribeMvRecommendTasksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Fixed system value (non-modifiable).</p>
+     * <p>A static field. This parameter cannot be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Modification is not supported.</p>
      */
     @NameInMap("From")
     public String from;
@@ -35,7 +41,7 @@ public class DescribeMvRecommendTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -53,7 +59,7 @@ public class DescribeMvRecommendTasksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the recommendation task.</p>
+     * <p>The name of the materialized view recommendation task.</p>
      * 
      * <strong>example:</strong>
      * <p>my_task_1</p>

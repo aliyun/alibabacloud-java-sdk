@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApsWebhookResponseBody extends TeaModel {
     /**
-     * <p>The code of the returned result.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -44,12 +44,15 @@ public class UpdateApsWebhookResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Operation succeeded</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleRequestId</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSparkAppAttemptsRequest extends TeaModel {
     /**
-     * <p>The ID of the Spark application.</p>
+     * <p>The application ID.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
      * </blockquote>
@@ -18,7 +18,8 @@ public class ListSparkAppAttemptsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-uf6o6m8p6x***</p>
@@ -27,7 +28,7 @@ public class ListSparkAppAttemptsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

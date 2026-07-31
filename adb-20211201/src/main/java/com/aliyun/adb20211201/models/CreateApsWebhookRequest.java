@@ -15,7 +15,8 @@ public class CreateApsWebhookRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The type of the task. Valid value: Task type. SLS or OSS Export Task: ResultExport.</p>
+     * <p>The task type. Valid values:</p>
+     * <p>ResultExport: SLS/OSS export task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +26,7 @@ public class CreateApsWebhookRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The ID of the region in which to create the dedicated block storage cluster.</p>
+     * <p>The region ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +36,7 @@ public class CreateApsWebhookRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The array of webhooks.</p>
+     * <p>The webhook array.</p>
      */
     @NameInMap("Webhook")
     public java.util.List<CreateApsWebhookRequestWebhook> webhook;
@@ -79,7 +80,7 @@ public class CreateApsWebhookRequest extends TeaModel {
 
     public static class CreateApsWebhookRequestWebhook extends TeaModel {
         /**
-         * <p>Signed key.</p>
+         * <p>The signing key.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -88,7 +89,7 @@ public class CreateApsWebhookRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The name of the webhook.</p>
+         * <p>The webhook name.</p>
          * 
          * <strong>example:</strong>
          * <p>MyWebhookName</p>
@@ -97,7 +98,7 @@ public class CreateApsWebhookRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The request path.</p>
+         * <p>The request URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,7 +108,11 @@ public class CreateApsWebhookRequest extends TeaModel {
         public String url;
 
         /**
-         * <p>The notification method. Valid values: dingtalk. lark.</p>
+         * <p>The notification method. Valid values:</p>
+         * <ul>
+         * <li>dingtalk: DingTalk.</li>
+         * <li>lark: Lark.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

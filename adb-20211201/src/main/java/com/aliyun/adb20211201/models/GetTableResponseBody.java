@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class GetTableResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class GetTableResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -32,7 +32,7 @@ public class GetTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the query succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class GetTableResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The information about the table.</p>
+     * <p>The table details.</p>
      */
     @NameInMap("Table")
     public TableModel table;

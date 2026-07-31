@@ -4,9 +4,6 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    /**
-     * <p>The queried database accounts.</p>
-     */
     @NameInMap("AccountList")
     public DescribeAccountsResponseBodyAccountList accountList;
 
@@ -40,71 +37,44 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeAccountsResponseBodyAccountListDBAccountRamUserList extends TeaModel {
+        @NameInMap("RamUserList")
+        public java.util.List<String> ramUserList;
+
+        public static DescribeAccountsResponseBodyAccountListDBAccountRamUserList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountListDBAccountRamUserList self = new DescribeAccountsResponseBodyAccountListDBAccountRamUserList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccountRamUserList setRamUserList(java.util.List<String> ramUserList) {
+            this.ramUserList = ramUserList;
+            return this;
+        }
+        public java.util.List<String> getRamUserList() {
+            return this.ramUserList;
+        }
+
+    }
+
     public static class DescribeAccountsResponseBodyAccountListDBAccount extends TeaModel {
-        /**
-         * <p>The description of the database account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_accout_des</p>
-         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        /**
-         * <p>The name of the database account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_accout</p>
-         */
         @NameInMap("AccountName")
         public String accountName;
 
-        /**
-         * <p>The status of the database account. Valid values:</p>
-         * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
-        /**
-         * <p>The type of the database account. Valid values:</p>
-         * <ul>
-         * <li><strong>Normal</strong>: standard account.</li>
-         * <li><strong>Super</strong>: privileged account.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Normal</p>
-         */
         @NameInMap("AccountType")
         public String accountType;
 
-        /**
-         * <p>The database engine of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>AnalyticDB</strong>: the AnalyticDB for MySQL engine.</li>
-         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Clickhouse</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <p>The ID of the Resource Access Management (RAM) user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1958134230****</p>
-         */
+        @NameInMap("RamUserList")
+        public DescribeAccountsResponseBodyAccountListDBAccountRamUserList ramUserList;
+
         @NameInMap("RamUsers")
         public String ramUsers;
 
@@ -151,6 +121,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccount setRamUserList(DescribeAccountsResponseBodyAccountListDBAccountRamUserList ramUserList) {
+            this.ramUserList = ramUserList;
+            return this;
+        }
+        public DescribeAccountsResponseBodyAccountListDBAccountRamUserList getRamUserList() {
+            return this.ramUserList;
         }
 
         public DescribeAccountsResponseBodyAccountListDBAccount setRamUsers(String ramUsers) {

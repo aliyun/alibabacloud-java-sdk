@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsDatasoureResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code.</p>
+     * <p>The API status or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The information about the cluster resource usage.</p>
+     * <p>The detailed resource usage of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>69</p>
@@ -32,7 +32,7 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code returned. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,10 +41,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The additional information of the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a success message is returned.****</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li>If the request was successful, <strong>Success</strong> is returned. </li>
+     * <li>If the request failed, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class CreateApsDatasoureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the dry run succeeds. Valid values:</p>
+     * <p>The precheck result. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>success</strong>: The check passed.</li>
+     * <li><strong>false</strong>: The check failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNetInfoResponseBody extends TeaModel {
     /**
-     * <p>The network type of the cluster. Only the Virtual Private Cloud (VPC) network type is supported. <strong>VPC</strong> is returned.</p>
+     * <p>The network type of the cluster. The value is always <strong>VPC</strong>, as this is the only supported network type.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -13,9 +13,6 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
     @NameInMap("ClusterNetworkType")
     public String clusterNetworkType;
 
-    /**
-     * <p>The queried network information about the cluster.</p>
-     */
     @NameInMap("Items")
     public DescribeClusterNetInfoResponseBodyItems items;
 
@@ -58,27 +55,9 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNetInfoResponseBodyItemsAddressPortsPorts extends TeaModel {
-        /**
-         * <p>The port.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The type of the protocol. Valid values:</p>
-         * <ul>
-         * <li><strong>tcp</strong></li>
-         * <li><strong>http</strong></li>
-         * <li><strong>https</strong></li>
-         * <li><strong>mysql</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql</p>
-         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -125,94 +104,27 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNetInfoResponseBodyItemsAddress extends TeaModel {
-        /**
-         * <p>The endpoint of the cluster.</p>
-         * <ul>
-         * <li>If NetType is set to VPC, the VPC endpoint of the cluster is returned.</li>
-         * <li>If NetType is set to Public, the public endpoint of the cluster is returned.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-wz9dqvn0o7****.ads.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        /**
-         * <p>The prefix of the endpoint.</p>
-         * <ul>
-         * <li>If NetType is set to VPC, the prefix of the VPC endpoint is returned.</li>
-         * <li>If NetType is set to Public, the prefix of the public endpoint is returned.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-wz9dqvn0o7****</p>
-         */
         @NameInMap("ConnectionStringPrefix")
         public String connectionStringPrefix;
 
-        /**
-         * <p>The IP address of the endpoint.</p>
-         * <ul>
-         * <li>If NetType is set to VPC, the private IP address of the cluster is returned.</li>
-         * <li>If NetType is set to Public, the public IP address of the cluster is returned.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.xx.xx</p>
-         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
-        /**
-         * <p>The network type of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>Public</strong>: Internet.</li>
-         * <li><strong>VPC</strong>: VPC.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("NetType")
         public String netType;
 
-        /**
-         * <p>The port number that is used to connect to the cluster. <strong>3306</strong> is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The ports.</p>
-         */
         @NameInMap("Ports")
         public DescribeClusterNetInfoResponseBodyItemsAddressPorts ports;
 
-        /**
-         * <p>The VPC ID.</p>
-         * <blockquote>
-         * <p> If NetType is set to Public, an empty string is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-8vbhucmd5b****</p>
-         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        /**
-         * <p>The vSwitch ID of the cluster.</p>
-         * <blockquote>
-         * <p> If NetType is set to Public, an empty string is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp1syh8vvw8yec****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

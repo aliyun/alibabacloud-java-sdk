@@ -4,30 +4,78 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class StorageDescriptorModel extends TeaModel {
+    /**
+     * <p>Indicates whether the storage description is compressed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Compressed")
     public Boolean compressed;
 
+    /**
+     * <p>The input format of the storage description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
+     */
     @NameInMap("InputFormat")
     public String inputFormat;
 
+    /**
+     * <p>The location of the storage description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://**************</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>The number of buckets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NumBuckets")
     public Long numBuckets;
 
+    /**
+     * <p>The output format of the storage description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
+     */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    /**
+     * <p>The storage configuration parameter.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <p>The ID of the storage description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SdId")
     public Long sdId;
 
+    /**
+     * <p>The information about serialization or deserialization.</p>
+     */
     @NameInMap("SerDeInfo")
     public SerDeInfoModel serDeInfo;
 
+    /**
+     * <p>Indicates whether the storage description is stored in subdirectories.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("StoredAsSubDirectories")
     public Boolean storedAsSubDirectories;
 

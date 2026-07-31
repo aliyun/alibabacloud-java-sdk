@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableObjectsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetTableObjectsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The description of the table.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -24,7 +24,7 @@ public class GetTableObjectsRequest extends TeaModel {
     public String filterDescription;
 
     /**
-     * <p>The owner of the table.</p>
+     * <p>The owner.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -33,7 +33,7 @@ public class GetTableObjectsRequest extends TeaModel {
     public String filterOwner;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_tbl</p>
@@ -42,11 +42,13 @@ public class GetTableObjectsRequest extends TeaModel {
     public String filterTblName;
 
     /**
-     * <p>The type of the table.</p>
-     * <p>Valid values:</p>
-     * <p>DIMENSION_TABLE</p>
-     * <p>FACT_TABLE</p>
-     * <p>EXTERNAL_TABLE</p>
+     * <p>The table type.
+     * Valid values:</p>
+     * <ul>
+     * <li>DIMENSION_TABLE</li>
+     * <li>FACT_TABLE</li>
+     * <li>EXTERNAL_TABLE</li>
+     * </ul>
      * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
@@ -56,18 +58,20 @@ public class GetTableObjectsRequest extends TeaModel {
     public String filterTblType;
 
     /**
-     * <p>The order in which the fields to be returned are sorted.</p>
-     * <p>Valid values:</p>
+     * <p>The sorting field.</p>
+     * <p>Valid values for Type:</p>
      * <ul>
      * <li>Asc</li>
      * <li>Desc</li>
      * </ul>
-     * <p>Values for fields:</p>
-     * <p>TableName</p>
-     * <p>TableSize</p>
-     * <p>CreateTime</p>
-     * <p>UpdateTime</p>
-     * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;};</p>
+     * <p>Valid values for Field:</p>
+     * <ul>
+     * <li>TableName</li>
+     * <li>TableSize</li>
+     * <li>CreateTime</li>
+     * <li>UpdateTime</li>
+     * </ul>
+     * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;}.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;}</p>
@@ -76,7 +80,7 @@ public class GetTableObjectsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of the page to return. The value is an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +89,7 @@ public class GetTableObjectsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li>30</li>
      * <li>50</li>
@@ -100,7 +104,7 @@ public class GetTableObjectsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the region in which the cluster resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DatabaseSummaryModel extends TeaModel {
+    /**
+     * <p>Creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -16,18 +22,42 @@ public class DatabaseSummaryModel extends TeaModel {
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>Owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>logical database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSchema</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>Update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

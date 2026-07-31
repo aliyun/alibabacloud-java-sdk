@@ -32,7 +32,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The cluster ID. You can specify N cluster IDs. Valid values of N: 1 to 50.</p>
      * <blockquote>
-     * <p> You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</p>
+     * <p>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</p>
      * </blockquote>
      */
     @NameInMap("ResourceId")
@@ -141,7 +141,7 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag key. You can specify N tag keys. The tag key cannot be an empty string. Valid values of N: 1 to 20.</p>
          * <blockquote>
-         * <p> You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</p>
+         * <p>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The database account.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the information about all database accounts in the cluster is returned.</p>
+     * <p>If you do not specify this parameter, information about all database accounts is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,8 @@ public class DescribeAccountsRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +28,12 @@ public class DescribeAccountsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database engine of the cluster. Valid values:</p>
+     * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * <li><p><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine</p>
+     * </li>
+     * <li><p><strong>Clickhouse</strong>: the LindormTable engine</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

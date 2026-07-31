@@ -54,7 +54,7 @@ public class ModifyPerformanceViewRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Basic</p>
+     * <p>Custom-All metrics-2 columns-Linked</p>
      */
     @NameInMap("ViewName")
     public String viewName;

@@ -4,30 +4,84 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class OpenStructMvRecommendTaskModel extends TeaModel {
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-12-12 23:59</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task desc</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Last execution time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-12-13 00:10</p>
+     */
     @NameInMap("LastRunAt")
     public String lastRunAt;
 
+    /**
+     * <p>The minimum number of slow queries that match the pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MinRewriteQueryCount")
     public Integer minRewriteQueryCount;
 
+    /**
+     * <p>The number of minimum acceleration patterns.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MinRewriteQueryPattern")
     public Integer minRewriteQueryPattern;
 
+    /**
+     * <p>The time range for scanning data. Unit: days. Default value: 3.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ScanQueriesRange")
     public Integer scanQueriesRange;
 
+    /**
+     * <p>The execution schedule of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The 12:30 every day</p>
+     */
     @NameInMap("SchedulingSettings")
     public String schedulingSettings;
 
+    /**
+     * <p>The wait threshold for slow queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SlowQueryThreshold")
     public Integer slowQueryThreshold;
 
+    /**
+     * <p>The name of the recommendation task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mv_task1</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

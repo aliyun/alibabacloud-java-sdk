@@ -15,7 +15,8 @@ public class CreateApsWebhookShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The type of the task. Valid value: Task type. SLS or OSS Export Task: ResultExport.</p>
+     * <p>The task type. Valid values:</p>
+     * <p>ResultExport: SLS/OSS export task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +26,7 @@ public class CreateApsWebhookShrinkRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The ID of the region in which to create the dedicated block storage cluster.</p>
+     * <p>The region ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +36,7 @@ public class CreateApsWebhookShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The array of webhooks.</p>
+     * <p>The webhook array.</p>
      */
     @NameInMap("Webhook")
     public String webhookShrink;

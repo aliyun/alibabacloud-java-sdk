@@ -15,8 +15,7 @@ public class ListApsWebhookRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p><strong>JobType</strong>\
-     * Job type. SLS or OSS Export Task: ResultExport.</p>
+     * <p><strong>JobType</strong><br>The task type. Set this parameter to ResultExport for SLS or OSS export tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>ResultExport</p>

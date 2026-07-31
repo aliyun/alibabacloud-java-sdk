@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class AllocateClusterPublicConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the public endpoint.</p>
+     * <p>The prefix of the public connection address.</p>
      * <ul>
-     * <li>The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</li>
-     * <li>The prefix can be up to 30 characters in length.</li>
+     * <li><p>It must begin with a lowercase letter and can contain only lowercase letters, digits, and hyphens (-).</p>
+     * </li>
+     * <li><p>It must be no more than 30 characters long.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,8 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The cluster ID of a Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +31,12 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database engine of the cluster. Valid values:</p>
+     * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * <li><p><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</p>
+     * </li>
+     * <li><p><strong>Clickhouse</strong>: the wide table engine.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,9 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
      */
     @NameInMap("Engine")
     public String engine;
+
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
 
     public static AllocateClusterPublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateClusterPublicConnectionRequest self = new AllocateClusterPublicConnectionRequest();
@@ -67,6 +75,14 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public AllocateClusterPublicConnectionRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
     }
 
 }

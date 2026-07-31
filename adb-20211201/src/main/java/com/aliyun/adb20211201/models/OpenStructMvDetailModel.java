@@ -4,54 +4,162 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class OpenStructMvDetailModel extends TeaModel {
+    /**
+     * <p>All direct parent base tables of the materialized view.</p>
+     */
     @NameInMap("BaseTableInfos")
     public java.util.List<OpenStructMvDetailModelBaseTableInfos> baseTableInfos;
 
+    /**
+     * <p>All direct parent base tables of the materialized view.</p>
+     */
     @NameInMap("BaseTableNames")
     public java.util.List<java.util.List<String>> baseTableNames;
 
+    /**
+     * <p>Indicates whether to enable alerting for refresh latency. Valid values:</p>
+     * <ul>
+     * <li><p>true: Yes.</p>
+     * </li>
+     * <li><p>false: No.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableDelayAlert")
     public Integer enableDelayAlert;
 
+    /**
+     * <p>Indicates whether to enable alerting for refresh task failures. Valid values:</p>
+     * <ul>
+     * <li><p>true: Yes.</p>
+     * </li>
+     * <li><p>false: No.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableFailureAlert")
     public Integer enableFailureAlert;
 
+    /**
+     * <p>The total number of explicit query hits in the last 7 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ExplicitHit")
     public Long explicitHit;
 
+    /**
+     * <p>The time of the first refresh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-01 09:00:00</p>
+     */
     @NameInMap("FirstRefreshTime")
     public String firstRefreshTime;
 
+    /**
+     * <p>The total number of implicit query hits in the last 7 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("ImplicitHit")
     public Long implicitHit;
 
+    /**
+     * <p>Indicates whether the materialized view has not been accessed by explicit or implicit queries for more than 30 days since its creation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsInactive")
     public Boolean isInactive;
 
+    /**
+     * <p>The refresh latency toleration, in minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("LatencyTolerance")
     public Integer latencyTolerance;
 
+    /**
+     * <p>The disk space that the materialized view occupies for hot data, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("LocalSize")
     public Long localSize;
 
+    /**
+     * <p>Whether query rewrite is enabled for the materialized view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("QueryRewriteEnabled")
     public Boolean queryRewriteEnabled;
 
+    /**
+     * <p>The refresh interval.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(now() + INTERVAL \&quot;10\&quot; SECOND)</p>
+     */
     @NameInMap("RefreshInterval")
     public String refreshInterval;
 
+    /**
+     * <p>The refresh model of the materialized view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAST</p>
+     */
     @NameInMap("RefreshState")
     public String refreshState;
 
+    /**
+     * <p>The disk space that the materialized view occupies for cold data, in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("RemoteSize")
     public Long remoteSize;
 
+    /**
+     * <p>The resource group on which the refresh depends.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_default</p>
+     */
     @NameInMap("ResourceGroup")
     public String resourceGroup;
 
+    /**
+     * <p>The table engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XUANWU</p>
+     */
     @NameInMap("TableEngine")
     public String tableEngine;
 
+    /**
+     * <p>The time of the last refresh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-01 10:00:00</p>
+     */
     @NameInMap("UpdatedAt")
     public String updatedAt;
 
@@ -197,15 +305,39 @@ public class OpenStructMvDetailModel extends TeaModel {
     }
 
     public static class OpenStructMvDetailModelBaseTableInfos extends TeaModel {
+        /**
+         * <p>Whether the base table is a materialized view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("BaseTableIsMv")
         public Boolean baseTableIsMv;
 
+        /**
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The table engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XUANWU</p>
+         */
         @NameInMap("TableEngine")
         public String tableEngine;
 
+        /**
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tbl</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

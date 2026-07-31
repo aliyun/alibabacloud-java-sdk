@@ -12,7 +12,7 @@ public class LoadSampleDataSetRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>amv-2ze0z517o1mgp66a</p>
+     * <p>amv-2ze0z517o1mg****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

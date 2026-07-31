@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SparkAnalyzeLogTask extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-adbxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The analysis result of the task.</p>
+     */
     @NameInMap("Result")
     public LogAnalyzeResult result;
 
     /**
+     * <p>Indicates whether the task matched a rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +29,8 @@ public class SparkAnalyzeLogTask extends TeaModel {
     public Boolean ruleMatched;
 
     /**
+     * <p>The time when the task was started. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1672123543000</p>
      */
@@ -29,6 +38,8 @@ public class SparkAnalyzeLogTask extends TeaModel {
     public Long startedTimeInMillis;
 
     /**
+     * <p>The time when the task was submitted. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1672123543000</p>
      */
@@ -36,6 +47,8 @@ public class SparkAnalyzeLogTask extends TeaModel {
     public Long submittedTimeInMillis;
 
     /**
+     * <p>The error message returned if the task fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Driver log not found</p>
      */
@@ -43,6 +56,8 @@ public class SparkAnalyzeLogTask extends TeaModel {
     public String taskErrMsg;
 
     /**
+     * <p>The ID of the Spark log analysis task.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +65,8 @@ public class SparkAnalyzeLogTask extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The state of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>WAITING</p>
      */
@@ -57,6 +74,8 @@ public class SparkAnalyzeLogTask extends TeaModel {
     public String taskState;
 
     /**
+     * <p>The time when the task was terminated. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1672123543000</p>
      */
@@ -64,6 +83,8 @@ public class SparkAnalyzeLogTask extends TeaModel {
     public Long terminatedTimeInMillis;
 
     /**
+     * <p>The ID of the user who submitted the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>13719918xxx</p>
      */

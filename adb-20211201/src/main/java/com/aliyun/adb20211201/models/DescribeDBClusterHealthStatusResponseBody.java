@@ -4,30 +4,39 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
+    /**
+     * <p>Details of the authentication failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Authentication failed.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The access nodes of the queried cluster.</p>
+     * <p>The health status of the instance access nodes.</p>
      */
     @NameInMap("CS")
     public DescribeDBClusterHealthStatusResponseBodyCS CS;
 
     /**
-     * <p>The compute node groups of the queried cluster.</p>
+     * <p>The health status of the executor groups.</p>
      */
     @NameInMap("Executor")
     public DescribeDBClusterHealthStatusResponseBodyExecutor executor;
 
     /**
-     * <p>The health state of the cluster. Valid values:</p>
+     * <p>The health status of the cluster. Valid values:</p>
      * <ul>
-     * <li><strong>RISK</strong></li>
-     * <li><strong>NORMAL</strong></li>
-     * <li><strong>UNAVAILABLE</strong></li>
+     * <li><p><strong>RISK</strong>: The cluster is at risk.</p>
+     * </li>
+     * <li><p><strong>NORMAL</strong>: The cluster is healthy.</p>
+     * </li>
+     * <li><p><strong>UNAVAILABLE</strong>: The cluster is unavailable.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> When the states of the access nodes, compute node groups, and storage node groups of a cluster are all <strong>NORMAL</strong> and a connection to the cluster is established, the state of the cluster is <strong>NORMAL</strong>. When the state of the access nodes, compute node groups, or storage node groups of the cluster is <strong>RISK</strong>, the state of the cluster is <strong>RISK</strong>. When the state of the access nodes, compute node groups, or storage node groups of the cluster is <strong>UNAVAILABLE</strong>, the state of the cluster is <strong>UNAVAILABLE</strong>.</p>
+     * <p>The cluster health status is considered <strong>NORMAL</strong> only if the instance access nodes, executor groups, and worker node groups are all <strong>NORMAL</strong>, and the instance is responsive. If any of these components has a <strong>RISK</strong> status, the cluster status is <strong>RISK</strong>. If any component has an <strong>UNAVAILABLE</strong> status, the cluster status is <strong>UNAVAILABLE</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,13 +49,13 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEA</p>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CAV</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The storage node groups of the queried cluster.</p>
+     * <p>The health status of the worker node groups.</p>
      */
     @NameInMap("Worker")
     public DescribeDBClusterHealthStatusResponseBodyWorker worker;
@@ -106,25 +115,25 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static class DescribeDBClusterHealthStatusResponseBodyCS extends TeaModel {
         /**
-         * <p>The number of healthy access nodes.</p>
+         * <p>The number of healthy instance access nodes.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>0</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
-         * <p>The total number of access nodes.</p>
+         * <p>The total number of instance access nodes.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("ExpectedCount")
         public Long expectedCount;
 
         /**
-         * <p>The number of risky nodes.</p>
+         * <p>The number of instance access nodes at risk.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -133,24 +142,27 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>The health state of access nodes. Valid values:</p>
+         * <p>The health status of the instance access nodes. Valid values:</p>
          * <ul>
-         * <li><strong>RISK</strong></li>
-         * <li><strong>NORMAL</strong></li>
-         * <li><strong>UNAVAILABLE</strong></li>
+         * <li><p><strong>RISK</strong>: The instance access nodes are at risk.</p>
+         * </li>
+         * <li><p><strong>NORMAL</strong>: The instance access nodes are healthy.</p>
+         * </li>
+         * <li><p><strong>UNAVAILABLE</strong>: The instance access nodes are unavailable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>NORMAL</p>
+         * <p>UNAVAILABLE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The number of unavailable access nodes.</p>
+         * <p>The number of unavailable instance access nodes.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("UnavailableCount")
         public Long unavailableCount;
@@ -204,25 +216,25 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static class DescribeDBClusterHealthStatusResponseBodyExecutor extends TeaModel {
         /**
-         * <p>The number of healthy access nodes.</p>
+         * <p>The number of healthy executor nodes.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>0</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
-         * <p>The total number of compute nodes.</p>
+         * <p>The total number of executor nodes.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("ExpectedCount")
         public Long expectedCount;
 
         /**
-         * <p>The number of risky nodes.</p>
+         * <p>The number of executor nodes at risk.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -231,24 +243,27 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>The health state of compute node groups. Valid values:</p>
+         * <p>The health status of the executor groups. Valid values:</p>
          * <ul>
-         * <li><strong>RISK</strong></li>
-         * <li><strong>NORMAL</strong></li>
-         * <li><strong>UNAVAILABLE</strong></li>
+         * <li><p><strong>RISK</strong>: The executor groups are at risk.</p>
+         * </li>
+         * <li><p><strong>NORMAL</strong>: The executor groups are healthy.</p>
+         * </li>
+         * <li><p><strong>UNAVAILABLE</strong>: The executor groups are unavailable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>NORMAL</p>
+         * <p>UNAVAILABLE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The number of unavailable access nodes.</p>
+         * <p>The number of unavailable executor nodes.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("UnavailableCount")
         public Long unavailableCount;
@@ -302,51 +317,54 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static class DescribeDBClusterHealthStatusResponseBodyWorker extends TeaModel {
         /**
-         * <p>The number of healthy storage node groups.</p>
+         * <p>The number of healthy worker node groups.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>0</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
-         * <p>The total number of storage node groups.</p>
+         * <p>The total number of worker node groups.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>1</p>
          */
         @NameInMap("ExpectedCount")
         public Long expectedCount;
 
         /**
-         * <p>The number of risky storage node groups.</p>
+         * <p>The number of worker node groups at risk.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("RiskCount")
         public Long riskCount;
 
         /**
-         * <p>The health state of storage node groups. Valid values:</p>
+         * <p>The health status of the worker node groups. Valid values:</p>
          * <ul>
-         * <li><strong>RISK</strong></li>
-         * <li><strong>NORMAL</strong></li>
-         * <li><strong>UNAVAILABLE</strong></li>
+         * <li><p><strong>RISK</strong>: The worker node groups are at risk.</p>
+         * </li>
+         * <li><p><strong>NORMAL</strong>: The worker node groups are healthy.</p>
+         * </li>
+         * <li><p><strong>UNAVAILABLE</strong>: The worker node groups are unavailable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>NORMAL</p>
+         * <p>UNAVAILABLE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The number of unavailable storage node groups.</p>
+         * <p>The number of unavailable worker node groups.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("UnavailableCount")
         public Long unavailableCount;

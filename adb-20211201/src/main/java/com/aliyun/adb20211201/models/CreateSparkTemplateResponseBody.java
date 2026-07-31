@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSparkTemplateResponseBody extends TeaModel {
     /**
-     * <p>The creation result.</p>
+     * <p>The result of creating the application template.</p>
      */
     @NameInMap("Data")
     public CreateSparkTemplateResponseBodyData data;
@@ -42,10 +42,10 @@ public class CreateSparkTemplateResponseBody extends TeaModel {
 
     public static class CreateSparkTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the application template is created. Valid values:</p>
+         * <p>Indicates whether the creation is successful. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong></li>
-         * <li><strong>False</strong></li>
+         * <li><strong>True</strong>: Successful.</li>
+         * <li><strong>False</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

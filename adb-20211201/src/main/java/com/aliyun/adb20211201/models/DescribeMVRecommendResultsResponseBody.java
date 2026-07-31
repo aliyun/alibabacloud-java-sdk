@@ -29,7 +29,7 @@ public class DescribeMVRecommendResultsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -38,7 +38,7 @@ public class DescribeMVRecommendResultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -92,11 +92,14 @@ public class DescribeMVRecommendResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeMVRecommendResultsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of materialized view recommendation results.</p>
+         */
         @NameInMap("MvRecommendResultModels")
         public java.util.List<OpenStructMVRecommendResultModel> mvRecommendResultModels;
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The default value is <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -105,11 +108,14 @@ public class DescribeMVRecommendResultsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default).</li>
-         * <li><strong>50</strong>.</li>
-         * <li><strong>100</strong>.</li>
+         * <li><p><strong>30</strong> (Default)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

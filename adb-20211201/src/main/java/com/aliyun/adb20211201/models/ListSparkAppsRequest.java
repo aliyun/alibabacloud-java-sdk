@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSparkAppsRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +15,44 @@ public class ListSparkAppsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The filter conditions defined as a JSON-formatted string. The following valid KEY values and their meanings are supported in the JSON string:</p>
+     * <ul>
+     * <li>SubmittedTimeRange: the start time.</li>
+     * <li>TerminatedTimeRange: the end time.</li>
+     * <li>AppStates: the status of the Spark job.</li>
+     * <li>AppId: the ID of the Spark job.</li>
+     * <li>AppNameRegex: the regular expression for the name of the Spark job.</li>
+     * <li>Tag: the tag information.</li>
+     * <li>ResourceGroupName: the name of the resource group.</li>
+     * </ul>
+     * <p>For the start time and end time filter conditions, specify the range by using the following substructure:</p>
+     * <ul>
+     * <li>Min: the lower bound of the time range. A value of null indicates no limit.</li>
+     * <li>Max: the upper bound of the time range. A value of null indicates no limit.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     * &quot;SubmittedTimeRang&quot;: {
+     *     &quot;Max&quot;: 10000,
+     *     &quot;Min&quot;: 0
+     *   },
+     *   &quot;TerminatedTimeRange&quot;: {
+     *     &quot;Max&quot;: 10000,
+     *     &quot;Min&quot;: 0
+     *   },
+     *   &quot;AppStates&quot;: [&quot;STARTING&quot;],
+     *   &quot;AppId&quot;: &quot;adc&quot;,
+     *   &quot;AppNameRegex&quot;: &quot;cde&quot;,
+     *   &quot;AttemptId&quot;: &quot;abc-001&quot;
+     * }</p>
+     */
     @NameInMap("Filters")
     public String filters;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,9 +62,9 @@ public class ListSparkAppsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>10</strong></li>
+     * <li><strong>10</strong> (default)</li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
      * </ul>

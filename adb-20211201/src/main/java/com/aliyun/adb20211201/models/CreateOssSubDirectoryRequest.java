@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateOssSubDirectoryRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the information about all clusters in a region, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +19,7 @@ public class CreateOssSubDirectoryRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The OSS path where you want to create a subdirectory.</p>
+     * <p>The full OSS path of the directory to create.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

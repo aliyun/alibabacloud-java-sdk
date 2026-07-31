@@ -91,7 +91,7 @@ public class DescribePerformanceViewsResponseBody extends TeaModel {
          * <p>The name of the view.</p>
          * 
          * <strong>example:</strong>
-         * <p>Basic</p>
+         * <p>Custom-1</p>
          */
         @NameInMap("ViewName")
         public String viewName;

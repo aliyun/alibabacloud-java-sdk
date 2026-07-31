@@ -13,9 +13,6 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    /**
-     * <p>The queried table statistics.</p>
-     */
     @NameInMap("Items")
     public DescribeTableStatisticsResponseBodyItems items;
 
@@ -126,124 +123,39 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeTableStatisticsResponseBodyItemsTableStatisticRecords extends TeaModel {
-        /**
-         * <p>The size of cold data. Unit: bytes.</p>
-         * <blockquote>
-         * <p> This parameter is supported only for AnalyticDB for MySQL clusters of V3.1.3.4 or later.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>4428120064</p>
-         */
         @NameInMap("ColdDataSize")
         public Long coldDataSize;
 
-        /**
-         * <p>The data size of the table. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15592</p>
-         */
         @NameInMap("DataSize")
         public Long dataSize;
 
-        /**
-         * <p>The size of hot data. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1048576</p>
-         */
         @NameInMap("HotDataSize")
         public Long hotDataSize;
 
-        /**
-         * <p>The data size of indexes. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3076</p>
-         */
         @NameInMap("IndexSize")
         public Long indexSize;
 
-        /**
-         * <p>The data size of other data. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1048576</p>
-         */
         @NameInMap("OtherSize")
         public Long otherSize;
 
-        /**
-         * <p>The number of partitions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PartitionCount")
         public Long partitionCount;
 
-        /**
-         * <p>The data size of the primary key index. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16340</p>
-         */
         @NameInMap("PrimaryKeyIndexSize")
         public Long primaryKeyIndexSize;
 
-        /**
-         * <p>The number of rows in the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("RowCount")
         public Long rowCount;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_schema</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The percentage of the table size. Unit: %.</p>
-         * <blockquote>
-         * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>66.23</p>
-         */
         @NameInMap("SpaceRatio")
         public Double spaceRatio;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_table</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The total data size of the table. Unit: bytes.</p>
-         * <blockquote>
-         * <p> The following formulas can be used to calculate the total data size:</p>
-         * </blockquote>
-         * <ul>
-         * <li>Formula 1: Total data size = Hot data size + Cold data size.</li>
-         * <li>Formula 2: Total data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1577</p>
-         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

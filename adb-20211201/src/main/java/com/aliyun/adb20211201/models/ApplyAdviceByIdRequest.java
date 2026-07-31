@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyAdviceByIdRequest extends TeaModel {
     /**
-     * <p>The date on which you want to apply the suggestion. Format: yyyyMMdd.</p>
+     * <p>The date when the suggestion was generated. Format: yyyyMMdd.</p>
      * 
      * <strong>example:</strong>
      * <p>20221101</p>
@@ -22,9 +22,21 @@ public class ApplyAdviceByIdRequest extends TeaModel {
     @NameInMap("AdviceId")
     public String adviceId;
 
+    /**
+     * <p>The adoption type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DROP_INDEX</p>
+     */
     @NameInMap("ApplyType")
     public String applyType;
 
+    /**
+     * <p>Specifies whether to immediately start the build task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("BuildImmediately")
     public Boolean buildImmediately;
 

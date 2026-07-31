@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     /**
-     * <p>The queried execution information, including the SQL statement, statistics, execution plan, and operator information.</p>
+     * <p>The execution details of the SQL statement, including the detailed SQL statement, statistics information, execution plan, and operator information.</p>
      */
     @NameInMap("DiagnosisSQLInfo")
     public String diagnosisSQLInfo;
@@ -20,7 +20,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried execution information by stage.</p>
+     * <p>The stage-level execution information of the query.</p>
      */
     @NameInMap("StageInfos")
     public java.util.List<DescribeDiagnosisSQLInfoResponseBodyStageInfos> stageInfos;
@@ -59,7 +59,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         public String executionType;
 
         /**
-         * <p>The total amount of input data in the stage. Unit: bytes.</p>
+         * <p>The total input data size of the stage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2341</p>
@@ -77,7 +77,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         public Long inputRows;
 
         /**
-         * <p>The total amount of time consumed by all operators in the stage. Unit: milliseconds.</p>
+         * <p>The cumulative operator duration of the stage, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2341</p>
@@ -86,7 +86,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         public Long operatorCost;
 
         /**
-         * <p>The total amount of output data in the stage. Unit: bytes.</p>
+         * <p>The total output data size of the stage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2341</p>
@@ -104,7 +104,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         public Long outputRows;
 
         /**
-         * <p>The total peak memory of the stage. Unit: bytes.</p>
+         * <p>The total peak memory of the stage, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2341</p>
@@ -122,7 +122,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         public Double progress;
 
         /**
-         * <p>The stage ID.</p>
+         * <p>StageID。</p>
          * 
          * <strong>example:</strong>
          * <p>Stage[26]</p>
@@ -131,7 +131,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         public String stageId;
 
         /**
-         * <p>The state of the stage.</p>
+         * <p>The status of the stage.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>

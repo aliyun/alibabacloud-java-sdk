@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The number of days for which data backup files are retained.</p>
+     * <p>The number of days to retain data backups.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -14,10 +14,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>Indicates whether log backup is enabled. Valid values:</p>
+     * <p>Indicates whether real-time log backup is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong></li>
-     * <li><strong>Disable</strong></li>
+     * <li><p><strong>Enable</strong>: enabled.</p>
+     * </li>
+     * <li><p><strong>Disable</strong>: disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +29,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>The number of days for which the log backup files are retained.</p>
+     * <p>The number of days to retain log backups.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -36,15 +38,22 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer logBackupRetentionPeriod;
 
     /**
-     * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid value:</p>
+     * <p>The data backup cycle. Separate multiple values with commas (,). Valid values:</p>
      * <ul>
-     * <li>Monday</li>
-     * <li>Tuesday</li>
-     * <li>Wednesday</li>
-     * <li>Thursday</li>
-     * <li>Friday</li>
-     * <li>Saturday</li>
-     * <li>Sunday</li>
+     * <li><p>Monday</p>
+     * </li>
+     * <li><p>Tuesday</p>
+     * </li>
+     * <li><p>Wednesday</p>
+     * </li>
+     * <li><p>Thursday</p>
+     * </li>
+     * <li><p>Friday</p>
+     * </li>
+     * <li><p>Saturday</p>
+     * </li>
+     * <li><p>Sunday</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +63,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The data backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.</p>
+     * <p>The data backup time. The time is in the HH:mmZ-HH:mmZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>15:00Z-16:00Z</p>

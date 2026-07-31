@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class SparkBatchSQL extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>amv-xxx</p>
+     * <p>amv-bp17s73f016****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
+     * <p>The error message for the query execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>schema is not found</p>
      */
@@ -19,13 +23,17 @@ public class SparkBatchSQL extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The text of the query.</p>
+     * 
      * <strong>example:</strong>
-     * <p>query</p>
+     * <p>SELECT * FROM db.tb</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The execution end timestamp of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1723521767000</p>
      */
@@ -33,13 +41,17 @@ public class SparkBatchSQL extends TeaModel {
     public Long queryEndTime;
 
     /**
+     * <p>The query ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>amv-202401-xx</p>
+     * <p>sq172352176****</p>
      */
     @NameInMap("QueryId")
     public String queryId;
 
     /**
+     * <p>The execution start timestamp of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1723521767000</p>
      */
@@ -47,6 +59,16 @@ public class SparkBatchSQL extends TeaModel {
     public Long queryStartTime;
 
     /**
+     * <p>The execution status of the query. Valid values:</p>
+     * <ul>
+     * <li>FAILED</li>
+     * <li>RUNNING</li>
+     * <li>CANCELED</li>
+     * <li>PENDING</li>
+     * <li>SUBMITTED</li>
+     * <li>FINISHED</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -54,6 +76,8 @@ public class SparkBatchSQL extends TeaModel {
     public String queryState;
 
     /**
+     * <p>The submission timestamp of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1723521767000</p>
      */
@@ -61,6 +85,8 @@ public class SparkBatchSQL extends TeaModel {
     public Long querySubmissionTime;
 
     /**
+     * <p>The name of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>spark_rg</p>
      */
@@ -68,18 +94,25 @@ public class SparkBatchSQL extends TeaModel {
     public String resourceGroupName;
 
     /**
+     * <p>The name of the database for the query execution.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("Schema")
     public String schema;
 
+    /**
+     * <p>The execution results of the SQL statements.</p>
+     */
     @NameInMap("Statements")
     public java.util.List<SparkBatchSQLStatement> statements;
 
     /**
+     * <p>The Alibaba Cloud account ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>12222222</p>
+     * <p>2198002412336****</p>
      */
     @NameInMap("Uid")
     public Long uid;

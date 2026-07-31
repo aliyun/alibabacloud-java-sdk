@@ -4,6 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class TableSummaryModel extends TeaModel {
+    /**
+     * <p>Creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -13,30 +19,78 @@ public class TableSummaryModel extends TeaModel {
     @NameInMap("CreatedByUser")
     public String createdByUser;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>descrtiption</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("MvDetailModel")
     public OpenStructMvDetailModel mvDetailModel;
 
+    /**
+     * <p>Owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>SQL for creating the table or view.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>create table(a varchar)</p>
+     */
     @NameInMap("SQL")
     public String SQL;
 
+    /**
+     * <p>Logical database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schemaName</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>Logical table name or logical view name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tableName</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>Table size in bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("TableSize")
     public Long tableSize;
 
+    /**
+     * <p>Table or view type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PHYSICAL_SCHEMA_NAME</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 
+    /**
+     * <p>Update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

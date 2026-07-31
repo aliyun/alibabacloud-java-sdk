@@ -4,10 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class LogAnalyzeResult extends TeaModel {
+    /**
+     * <p>The solution for the error log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Please increase cpu quota for your resource group</p>
+     */
     @NameInMap("AppErrorAdvice")
     public String appErrorAdvice;
 
     /**
+     * <p>The error type if an analysis error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>EXCEEDED_QUOTA</p>
      */
@@ -15,8 +23,10 @@ public class LogAnalyzeResult extends TeaModel {
     public String appErrorCode;
 
     /**
+     * <p>The error log of the Spark log analysis task.</p>
+     * 
      * <strong>example:</strong>
-     * <p>exception: xxxx</p>
+     * <p>exception: cpu is exceeded limits 12/10</p>
      */
     @NameInMap("AppErrorLog")
     public String appErrorLog;

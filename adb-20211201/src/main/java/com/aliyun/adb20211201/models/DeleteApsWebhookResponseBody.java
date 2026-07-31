@@ -42,6 +42,9 @@ public class DeleteApsWebhookResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Operation succeeded</p>
      */
     @NameInMap("Message")
     public String message;

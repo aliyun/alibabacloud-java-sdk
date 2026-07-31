@@ -4,9 +4,6 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllDataSourceResponseBody extends TeaModel {
-    /**
-     * <p>The queried columns.</p>
-     */
     @NameInMap("Columns")
     public DescribeAllDataSourceResponseBodyColumns columns;
 
@@ -19,15 +16,9 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The queried databases.</p>
-     */
     @NameInMap("Schemas")
     public DescribeAllDataSourceResponseBodySchemas schemas;
 
-    /**
-     * <p>The queried tables.</p>
-     */
     @NameInMap("Tables")
     public DescribeAllDataSourceResponseBodyTables tables;
 
@@ -69,74 +60,24 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourceResponseBodyColumnsColumn extends TeaModel {
-        /**
-         * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
-        /**
-         * <p>The name of the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>id</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp1pke2pcfavw****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
-        /**
-         * <p>The logical name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>adb_demo</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The logical name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The data type of the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bigint</p>
-         */
         @NameInMap("Type")
         public String type;
 
@@ -223,21 +164,9 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourceResponseBodySchemasSchema extends TeaModel {
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp1pke2pcfavw****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <p>The logical name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>adb_demo</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
@@ -284,30 +213,12 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp1pke2pcfavw****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>adb_demo</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The logical name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 

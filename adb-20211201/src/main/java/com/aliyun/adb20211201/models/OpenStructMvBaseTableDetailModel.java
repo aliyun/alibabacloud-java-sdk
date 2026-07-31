@@ -4,15 +4,39 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class OpenStructMvBaseTableDetailModel extends TeaModel {
+    /**
+     * <p>The data volume.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>321233</p>
+     */
     @NameInMap("DataVolumn")
     public String dataVolumn;
 
+    /**
+     * <p>Indicates whether binary logging is enabled for the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableBinlog")
     public Boolean enableBinlog;
 
+    /**
+     * <p>The database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adb_demo</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>The table name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

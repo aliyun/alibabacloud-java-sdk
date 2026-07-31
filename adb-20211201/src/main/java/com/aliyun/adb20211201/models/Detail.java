@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Detail extends TeaModel {
     /**
+     * <p>The type of the Spark application.</p>
+     * 
      * <strong>example:</strong>
      * <p>BATCH</p>
      */
@@ -12,13 +14,17 @@ public class Detail extends TeaModel {
     public String appType;
 
     /**
+     * <p>The ID of the cluster that runs the Spark application.</p>
+     * 
      * <strong>example:</strong>
-     * <p>amv-bp11q28kv****</p>
+     * <p>amv-bp11q28kvl688****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
+     * <p>The configuration content of the Spark application.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;name&quot;: &quot;SparkPi&quot;,     &quot;file&quot;: &quot;local:///tmp/spark-examples.jar&quot;,     &quot;className&quot;: &quot;org.apache.spark.examples.SparkPi&quot;,     &quot;args&quot;: [         &quot;1000000&quot;     ],     &quot;conf&quot;: {         &quot;spark.driver.resourceSpec&quot;: &quot;small&quot;,         &quot;spark.executor.instances&quot;: 1,         &quot;spark.executor.resourceSpec&quot;: &quot;small&quot;     } }</p>
      */
@@ -26,6 +32,8 @@ public class Detail extends TeaModel {
     public String data;
 
     /**
+     * <p>The execution duration of the Spark application, in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,6 +41,8 @@ public class Detail extends TeaModel {
     public Long durationInMillis;
 
     /**
+     * <p>The CPU time consumed by the Spark application, in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -40,6 +50,8 @@ public class Detail extends TeaModel {
     public Long estimateExecutionCpuTimeInSeconds;
 
     /**
+     * <p>The execution duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>36000</p>
      */
@@ -47,13 +59,17 @@ public class Detail extends TeaModel {
     public Long executionDurationInMillis;
 
     /**
+     * <p>The ID of the last retry of the Spark application.</p>
+     * 
      * <strong>example:</strong>
-     * <p>s202204291426hzpre60cfa*****-0003</p>
+     * <p>s202204291426hzpre60****-0003</p>
      */
     @NameInMap("LastAttemptId")
     public String lastAttemptId;
 
     /**
+     * <p>The time when the Spark application was last updated. This value is a UNIX timestamp, in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>1651213645200</p>
      */
@@ -61,6 +77,8 @@ public class Detail extends TeaModel {
     public Long lastUpdatedTimeInMillis;
 
     /**
+     * <p>The storage path of the log file.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://<bucket-name>/logs/driver</p>
      */
@@ -68,6 +86,8 @@ public class Detail extends TeaModel {
     public String logRootPath;
 
     /**
+     * <p>The name of the job resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>spark-rg</p>
      */
@@ -75,6 +95,8 @@ public class Detail extends TeaModel {
     public String resourceGroupName;
 
     /**
+     * <p>The duration of resource provisioning for the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>36000</p>
      */
@@ -82,6 +104,8 @@ public class Detail extends TeaModel {
     public Long resourceProvisioningDurationInMillis;
 
     /**
+     * <p>The timestamp when the job started running.</p>
+     * 
      * <strong>example:</strong>
      * <p>36000</p>
      * 
@@ -92,6 +116,8 @@ public class Detail extends TeaModel {
     public Long runningStartTimeInMillis;
 
     /**
+     * <p>The time when the Spark application was created. This value is a UNIX timestamp, in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>1651213645010</p>
      */
@@ -99,6 +125,8 @@ public class Detail extends TeaModel {
     public Long startedTimeInMillis;
 
     /**
+     * <p>The time when the Spark application was submitted. This value is a UNIX timestamp, in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>1651213645000</p>
      */
@@ -106,6 +134,8 @@ public class Detail extends TeaModel {
     public Long submittedTimeInMillis;
 
     /**
+     * <p>The time when the Spark application was terminated. This value is a UNIX timestamp, in milliseconds (ms).</p>
+     * 
      * <strong>example:</strong>
      * <p>1651213645300</p>
      */
@@ -113,8 +143,10 @@ public class Detail extends TeaModel {
     public Long terminatedTimeInMillis;
 
     /**
+     * <p>The Web UI address.</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="https://sparkui.aliyuncs.com/token=xxx">https://sparkui.aliyuncs.com/token=xxx</a></p>
+     * <p><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</p>
      */
     @NameInMap("WebUiAddress")
     public String webUiAddress;

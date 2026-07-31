@@ -41,7 +41,10 @@ public class GetDatabaseObjectsRequest extends TeaModel {
      * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DatabaseName&quot;}.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DbName&quot;}</p>
+     * <p>{
+     *       &quot;Type&quot;: &quot;Desc&quot;,
+     *       &quot;Field&quot;: &quot;DatabaseName&quot;
+     * }</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;

@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNetInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of clusters in a specific region, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +19,12 @@ public class DescribeClusterNetInfoRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database engine of the cluster. Valid values:</p>
+     * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * <li><p><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</p>
+     * </li>
+     * <li><p><strong>ClickHouse</strong>: the wide table engine.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,9 @@ public class DescribeClusterNetInfoRequest extends TeaModel {
      */
     @NameInMap("Engine")
     public String engine;
+
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
 
     public static DescribeClusterNetInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterNetInfoRequest self = new DescribeClusterNetInfoRequest();
@@ -49,6 +55,14 @@ public class DescribeClusterNetInfoRequest extends TeaModel {
     }
     public String getEngine() {
         return this.engine;
+    }
+
+    public DescribeClusterNetInfoRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
     }
 
 }

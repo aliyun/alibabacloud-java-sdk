@@ -8,7 +8,7 @@ public class LoadSampleDataSetResponseBody extends TeaModel {
      * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * 
      * <strong>example:</strong>
-     * <p>amv-2ze0z517o1mgp66a</p>
+     * <p>amv-2ze0z517o1mg****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

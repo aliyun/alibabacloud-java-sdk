@@ -4,9 +4,6 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersResponseBody extends TeaModel {
-    /**
-     * <p>The queried clusters.</p>
-     */
     @NameInMap("Items")
     public DescribeDBClustersResponseBodyItems items;
 
@@ -92,24 +89,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClustersResponseBodyItemsDBClusterTagsTag extends TeaModel {
-        /**
-         * <p>The tag key.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/179253.html">TagResources</a> operation to add tags to a cluster.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>tag1</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test1</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -156,62 +138,21 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepListStepList extends TeaModel {
-        /**
-         * <p>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-10T10:28:34Z</p>
-         */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The start time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-10T09:28:34Z</p>
-         */
         @NameInMap("StartTime")
         public String startTime;
 
-        /**
-         * <p>The description of the job step.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Apply resource</p>
-         */
         @NameInMap("StepDesc")
         public String stepDesc;
 
-        /**
-         * <p>The name of the job step.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ApplyResource</p>
-         */
         @NameInMap("StepName")
         public String stepName;
 
-        /**
-         * <p>The progress of the job step. Unit: %.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("StepProgress")
         public String stepProgress;
 
-        /**
-         * <p>The status of the job step. Valid values:</p>
-         * <ul>
-         * <li><strong>NOT_RUN</strong></li>
-         * <li><strong>RUNNING</strong></li>
-         * <li><strong>SUCCEED</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SUCCEED</p>
-         */
         @NameInMap("StepStatus")
         public String stepStatus;
 
@@ -290,41 +231,15 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClustersResponseBodyItemsDBClusterTaskInfo extends TeaModel {
-        /**
-         * <p>The name of the job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>analyticDBFlexibleScaleOut</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The progress of the job. Unit: %.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("Progress")
         public String progress;
 
-        /**
-         * <p>The status of the job. Valid values:</p>
-         * <ul>
-         * <li><strong>NOT_RUN</strong></li>
-         * <li><strong>RUNNING</strong></li>
-         * <li><strong>SUCCEED</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>RUNNING</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The job steps.</p>
-         */
         @NameInMap("StepList")
         public DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepList stepList;
 
@@ -374,462 +289,132 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("AINodeSpec")
         public String AINodeSpec;
 
-        /**
-         * <p>The mode of the cluster. This parameter is returned only for Data Warehouse Edition clusters. Valid values:</p>
-         * <ul>
-         * <li><strong>BASIC</strong>: reserved mode for Basic Edition.</li>
-         * <li><strong>CLUSTER</strong>: reserved mode for Cluster Edition.</li>
-         * <li><strong>MIXED_STORAGE</strong>: elastic mode for Cluster Edition.</li>
-         * </ul>
-         * <blockquote>
-         * <p> For more information about cluster editions, see <a href="https://help.aliyun.com/document_detail/205001.html">Editions</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>MIXED_STORAGE</p>
-         */
         @NameInMap("Category")
         public String category;
 
-        /**
-         * <p>The billing method of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>ads</strong>: pay-as-you-go.</li>
-         * <li><strong>ads_pre</strong>: subscription.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ads_pre</p>
-         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        /**
-         * <p>The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16ACU</p>
-         */
         @NameInMap("ComputeResource")
         public String computeResource;
 
-        /**
-         * <p>The public endpoint that is used to connect to the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp163885f8q21****.ads.aliyuncs.com</p>
-         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        /**
-         * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the <em>yyyy-mm-ddThh:mm:ssZ</em> format. The time is displayed in UTC.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-04-01T09:50:18Z</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The description of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>adb_test</p>
-         */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp163885f8q21****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <p>The network type of the cluster. Only <strong>VPC</strong> is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
         @NameInMap("DBClusterNetworkType")
         public String DBClusterNetworkType;
 
-        /**
-         * <p>The status of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>Preparing</strong></li>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Deleting</strong></li>
-         * <li><strong>Restoring</strong></li>
-         * <li><strong>ClassChanging</strong></li>
-         * <li><strong>NetAddressCreating</strong></li>
-         * <li><strong>NetAddressDeleting</strong></li>
-         * <li><strong>NetAddressModifying</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
-        /**
-         * <p>The type of the cluster. By default, <strong>Common</strong> is returned, which indicates a common cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Common</p>
-         */
         @NameInMap("DBClusterType")
         public String DBClusterType;
 
-        /**
-         * <p>The node specifications of the cluster. This parameter is returned only for Data Warehouse Edition clusters.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>E8</p>
-         */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
-        /**
-         * <p>The number of node groups.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("DBNodeCount")
         public Long DBNodeCount;
 
-        /**
-         * <p>The storage capacity of the cluster. Unit: GB.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>300</p>
-         */
         @NameInMap("DBNodeStorage")
         public Long DBNodeStorage;
 
-        /**
-         * <p>The version number corresponding to the edition of the cluster. Only <strong>5.0</strong> is supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5.0</p>
-         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
-        /**
-         * <p>The disk type of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>local_ssd</strong>: local disk.</li>
-         * <li><strong>cloud</strong>: basic disk.</li>
-         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-         * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
-         * <li><strong>cloud_essd</strong>: PL1 Enterprise SSD (ESSD).</li>
-         * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
-         * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
-         * </ul>
-         * <blockquote>
-         * <p> For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_essd</p>
-         */
         @NameInMap("DiskType")
         public String diskType;
 
-        /**
-         * <p>The ID of the Data Transmission Service (DTS) synchronization job This parameter is returned only for MySQL analytic instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dtsb1578j90XXXX</p>
-         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
-        /**
-         * <p>The number of elastic I/O units (EIUs). For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/189505.html">EIUs</a>&quot; section of the Scale out elastic I/O resources topic.</p>
-         * <blockquote>
-         * <p> This parameter is returned only for clusters in elastic mode.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("ElasticIOResource")
         public Integer elasticIOResource;
 
-        /**
-         * <p>The engine of the cluster. <strong>AnalyticDB</strong> is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AnalyticDB</p>
-         */
         @NameInMap("Engine")
         public String engine;
 
-        /**
-         * <p>The number of compute nodes that are used by the cluster in elastic mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ExecutorCount")
         public String executorCount;
 
-        /**
-         * <p>The time when the cluster expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>If the billing method of the cluster is subscription, the actual expiration time is returned.</p>
-         * </li>
-         * <li><p>If the billing method of the cluster is pay-as-you-go, null is returned.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-01T09:50:18Z</p>
-         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        /**
-         * <p>Indicates whether the subscription cluster has expired. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see <a href="https://help.aliyun.com/document_detail/135246.html">Renewal policy</a>.</p>
-         * </li>
-         * <li><p>This parameter is not returned for pay-as-you-go clusters.</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("Expired")
         public String expired;
 
-        /**
-         * <p>The internal IP address of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.1.xx.xx</p>
-         */
         @NameInMap("InnerIp")
         public String innerIp;
 
-        /**
-         * <p>The internal port of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("InnerPort")
         public String innerPort;
 
-        /**
-         * <p>The lock status of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>Unlock</strong>: The cluster is not locked.</li>
-         * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
-         * <li><strong>LockByExpiration</strong>: The cluster is automatically locked due to cluster expiration.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Unlock</p>
-         */
         @NameInMap("LockMode")
         public String lockMode;
 
-        /**
-         * <p>The reason why the cluster is locked.</p>
-         * <blockquote>
-         * <p> This parameter is returned only when the cluster was locked. <strong>instance_expire</strong> is returned.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>instance_expire</p>
-         */
         @NameInMap("LockReason")
         public String lockReason;
 
-        /**
-         * <p>The mode of the cluster. By default, <strong>flexible</strong> is returned, which indicates that the cluster is in elastic mode.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>flexible</p>
-         */
         @NameInMap("Mode")
         public String mode;
 
-        /**
-         * <p>The billing method of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Prepaid</p>
-         */
         @NameInMap("PayType")
         public String payType;
 
-        /**
-         * <p>The port number that is used to connect to the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3306</p>
-         */
         @NameInMap("Port")
         public String port;
 
-        /**
-         * <p>The service type of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>LegacyForm</strong></li>
-         * <li><strong>IntegrationForm</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>IntegrationForm</p>
-         */
         @NameInMap("ProductForm")
         public String productForm;
 
-        /**
-         * <p>The edition of the cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>BasicVersion</strong>: Basic Edition.</li>
-         * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>EnterpriseVersion</p>
-         */
         @NameInMap("ProductVersion")
         public String productVersion;
 
-        /**
-         * <p>The ID of the ApsaraDB RDS instance from which data is synchronized to the cluster. This parameter is returned only for MySQL analytic instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-bp11q28kvl688****</p>
-         */
         @NameInMap("RdsInstanceId")
         public String rdsInstanceId;
 
-        /**
-         * <p>The region ID of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32ACU</p>
-         */
         @NameInMap("ReservedACU")
         public String reservedACU;
 
-        /**
-         * <p>The number of reserved resource nodes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("ReservedNodeCount")
         public Integer reservedNodeCount;
 
-        /**
-         * <p>The single-node specifications of reserved resources.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8ACU</p>
-         */
         @NameInMap("ReservedNodeSize")
         public String reservedNodeSize;
 
-        /**
-         * <p>The resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmyiu4ekp****</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24ACU</p>
-         */
         @NameInMap("StorageResource")
         public String storageResource;
 
-        /**
-         * <p>The tags that are added to the cluster.</p>
-         */
         @NameInMap("Tags")
         public DescribeDBClustersResponseBodyItemsDBClusterTags tags;
 
-        /**
-         * <p>The information about the job.</p>
-         */
         @NameInMap("TaskInfo")
         public DescribeDBClustersResponseBodyItemsDBClusterTaskInfo taskInfo;
 
-        /**
-         * <p>The VPC endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>am-bp163885f8q21****-controller</p>
-         */
         @NameInMap("VPCCloudInstanceId")
         public String VPCCloudInstanceId;
 
-        /**
-         * <p>The virtual private cloud (VPC) ID of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp13h7uzhulpuxvnp****</p>
-         */
         @NameInMap("VPCId")
         public String VPCId;
 
-        /**
-         * <p>The vSwitch ID of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-bp1syh8vvw8yech7n****</p>
-         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>The zone ID of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
-         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetADBSparkNecessaryRAMPermissionsResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>642F3512-C628-5D0C-8815-F6670C****</p>
@@ -42,7 +42,7 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
 
     public static class GetADBSparkNecessaryRAMPermissionsResponseBodyDataDeniedDetail extends TeaModel {
         /**
-         * <p>The name of the RAM action that failed the authentication.</p>
+         * <p>The name of the RAM action for which authentication failed.</p>
          * 
          * <strong>example:</strong>
          * <p>ListSparkApps</p>
@@ -51,10 +51,10 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The type of the policy denial. Valid values:</p>
+         * <p>The type of access policy denial. Valid values:</p>
          * <ul>
-         * <li>ImplicitDeny: Resource owner has not configured relevant permission policies for the current user, default denial of unauthorized operations.</li>
-         * <li>ExplicitDeny: RAM policies configured by the resource owner explicitly deny the current user access to corresponding resources</li>
+         * <li>ImplicitDeny: The resource owner has not configured a relevant access policy for the current user. Unauthorized operations are denied by default.</li>
+         * <li>ExplicitDeny: The RAM policy configured by the resource owner explicitly denies the current user authorization to access the corresponding resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,13 +64,13 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The type of the policy that causes the access denied error.</p>
+         * <p>The type of the policy that caused the permission denial. Valid values:</p>
          * <ul>
-         * <li>ControlPolicy: control policy</li>
-         * <li>SessionPolicy: Temporary Token additional permission policy</li>
-         * <li>AssumeRolePolicy: RAM role trust policy</li>
-         * <li>AccountLevelIdentityBasedPolicy: Principal policy within account authorization scope, including custom policies and system policies</li>
-         * <li>ResourceGroupLevelIdentityBasedPolicy: Principal policy within resource group authorization scope, including custom policies and system policies.</li>
+         * <li>ControlPolicy: control policy.</li>
+         * <li>SessionPolicy: an additional permission policy attached to a temporary token.</li>
+         * <li>AssumeRolePolicy: the trust policy of a RAM role.</li>
+         * <li>AccountLevelIdentityBasedPolicy: an identity-access policy at the account authorization scope, including custom policies and system policies.</li>
+         * <li>ResourceGroupLevelIdentityBasedPolicy: an identity-access policy at the resource group authorization scope, including custom policies and system policies.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,8 +82,8 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         /**
          * <p>The identity type of the current user. Valid values:</p>
          * <ul>
-         * <li>SubUser: a RAM user</li>
-         * <li>AssumedRoleUser: a RAM role</li>
+         * <li>SubUser: Resource Access Management (RAM) user.</li>
+         * <li>AssumedRoleUser: RAM role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public String principalType;
 
         /**
-         * <p>Authentication object information, can be the current user\&quot;s RAM account ID, or the role information corresponding to the current visitor.</p>
+         * <p>The information about the authentication target, which can be the Resource Access Management (RAM) users ID of the current user or the role information of the current accessor.</p>
          * 
          * <strong>example:</strong>
          * <p>223345695632****</p>
@@ -167,16 +167,16 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
 
     public static class GetADBSparkNecessaryRAMPermissionsResponseBodyData extends TeaModel {
         /**
-         * <p>When permission check fails, returns diagnostic information related to permission check failure.</p>
+         * <p>The diagnostic information returned when the permission check fails.</p>
          */
         @NameInMap("DeniedDetail")
         public GetADBSparkNecessaryRAMPermissionsResponseBodyDataDeniedDetail deniedDetail;
 
         /**
-         * <p>Check whether the use has the basic permissions to use Analytic DB for Spark.</p>
+         * <p>Indicates whether the current user has the basic permissions to use ADB Spark. Valid values:</p>
          * <ul>
-         * <li>true: The check is passed and the basic permissions are granted.</li>
-         * <li>false: The check fails and some permissions are missing.</li>
+         * <li>true: The check is passed. The user has the basic permissions.</li>
+         * <li>false: The check failed. The user is missing some permissions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public Boolean passed;
 
         /**
-         * <p>Based on diagnostic information, recommends configurations for customers to perform in the RAM system.</p>
+         * <p>The recommended RAM configuration based on the diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>Grant the system RAM policy \&quot;AliyunADBDeveloperAccess\&quot; to current RAM user can quickly solve this issue.</p>

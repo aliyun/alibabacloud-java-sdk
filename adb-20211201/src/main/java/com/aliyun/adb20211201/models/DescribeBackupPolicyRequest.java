@@ -7,7 +7,7 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the details of all AnalyticDB for MySQL clusters in the destination region, including the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -4,9 +4,6 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSchemasResponseBody extends TeaModel {
-    /**
-     * <p>The queried databases.</p>
-     */
     @NameInMap("Items")
     public DescribeSchemasResponseBodyItems items;
 
@@ -41,21 +38,9 @@ public class DescribeSchemasResponseBody extends TeaModel {
     }
 
     public static class DescribeSchemasResponseBodyItemsSchema extends TeaModel {
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp11q28kvl688****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>adb_demo</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 

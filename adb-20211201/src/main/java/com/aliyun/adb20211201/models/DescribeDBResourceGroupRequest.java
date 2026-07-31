@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +16,9 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the resource group.</p>
+     * <p>The resource group name.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the information about all resource groups in the cluster is returned.</p>
+     * <p>If this parameter is not specified, information about all resource groups in the specified cluster is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,14 +28,14 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The type of the resource group. Valid values:</p>
+     * <p>The resource group type. Valid values:</p>
      * <ul>
      * <li><strong>Interactive</strong></li>
-     * <li><strong>Job</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+     * <li><strong>Job</strong><blockquote>
+     * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Job</p>
@@ -43,9 +44,9 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the region ID of the cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

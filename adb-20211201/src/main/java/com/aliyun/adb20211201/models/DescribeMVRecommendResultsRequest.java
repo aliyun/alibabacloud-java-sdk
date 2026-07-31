@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMVRecommendResultsRequest extends TeaModel {
     /**
-     * <p>Fixed system value (non-modifiable).</p>
+     * <p>A static value. This parameter cannot be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Modification is not supported.</p>
      */
     @NameInMap("ActionInner")
     public String actionInner;
@@ -20,7 +23,10 @@ public class DescribeMVRecommendResultsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Fixed system value (non-modifiable).</p>
+     * <p>A static value. This parameter cannot be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Modification is not supported.</p>
      */
     @NameInMap("From")
     public String from;
@@ -44,7 +50,7 @@ public class DescribeMVRecommendResultsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -62,6 +68,8 @@ public class DescribeMVRecommendResultsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The subquery ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

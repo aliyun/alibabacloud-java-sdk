@@ -7,7 +7,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     /**
      * <p>The source IP address.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String clientIp;
 
     /**
-     * <p>The Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster ID.</p>
+     * <p>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to view the details of all clusters in your account, including cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,9 +30,9 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database on which the SQL statements are executed.</p>
+     * <p>The database where the SQL statement is executed.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,15 +42,15 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. The time must be in milliseconds.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
      * <li><p>The end time must be later than the start time.</p>
      * </li>
-     * <li><p>The maximum time range that can be specified is 24 hours.</p>
+     * <li><p>The interval between the start time and the end time cannot exceed 24 hours.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1633017540000</p>
@@ -59,7 +59,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The query keyword of the SQL statements.</p>
+     * <p>Filters the queries by the keywords contained in the SQL statements.</p>
      * 
      * <strong>example:</strong>
      * <p>select</p>
@@ -68,12 +68,16 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language of file titles and error messages. Valid values:</p>
+     * <p>The language of the file title and some error messages in the downloaded file. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): simplified Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
-     * <li><strong>ja</strong>: Japanese.</li>
-     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * <li><p><strong>zh</strong>: Simplified Chinese (default).</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * <li><p><strong>ja</strong>: Japanese.</p>
+     * </li>
+     * <li><p><strong>zh-tw</strong>: Traditional Chinese.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +87,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum peak memory of the SQL statements. Unit: bytes.</p>
+     * <p>The maximum peak memory of the SQL statement. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>89000000</p>
@@ -92,7 +96,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public Long maxPeakMemory;
 
     /**
-     * <p>The maximum scan size of the SQL statements. Unit: bytes.</p>
+     * <p>The maximum scan size of the target SQL statement. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>1024000000</p>
@@ -101,7 +105,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public Long maxScanSize;
 
     /**
-     * <p>The minimum peak memory of the SQL statements. Unit: bytes.</p>
+     * <p>The minimum peak memory of the SQL statement. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -110,7 +114,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public Long minPeakMemory;
 
     /**
-     * <p>The minimum scan size of the SQL statements. Unit: bytes.</p>
+     * <p>The minimum scan size of the SQL statement. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -119,29 +123,44 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public Long minScanSize;
 
     /**
-     * <p>The order in which to sort the SQL statements by field, which contains the <code>Field</code> and <code>Type</code> fields. Specify the order in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;StartTime&quot;, &quot;Type&quot;: &quot;desc&quot;}]</code>. Fields:</p>
+     * <p>The sorting order of the SQL statements. This parameter is a JSON array that is ordered by the sequence of the input array. It contains the <code>Field</code> and <code>Type</code> fields. Example: <code>[{&quot;Field&quot;:&quot;StartTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</code>. The fields are described as follows:</p>
      * <ul>
-     * <li><p><code>Field</code> specifies the field that is used to sort the SQL statements. Valid values:</p>
+     * <li><p><code>Field</code> specifies the field by which to sort the SQL statements. Valid values:</p>
      * <ul>
-     * <li><code>StartTime</code>: the execution start time.</li>
-     * <li><code>Status</code>: the execution status.</li>
-     * <li><code>UserName</code>: the username.</li>
-     * <li><code>Cost</code>: the execution duration.</li>
-     * <li><code>PeakMemory</code>: the peak memory.</li>
-     * <li><code>ScanSize</code>: the amount of data that is scanned.</li>
-     * <li><code>Database</code>: the name of the database.</li>
-     * <li><code>ClientIp</code>: the source IP address.</li>
-     * <li><code>ResourceGroup</code>: the name of the resource group.</li>
-     * <li><code>QueueTime</code>: the amount of time that is consumed for queuing.</li>
-     * <li><code>OutputRows</code>: the number of output rows.</li>
-     * <li><code>OutputDataSize</code>: the amount of output data.</li>
-     * <li><code>ResourceCostRank</code>: the execution duration rank of operators that are used in the SQL statements. This value takes effect only when <code>QueryCondition</code> is set to <code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>.</li>
+     * <li><p><code>StartTime</code>: the start time of the execution.</p>
+     * </li>
+     * <li><p><code>Status</code>: the execution state.</p>
+     * </li>
+     * <li><p><code>UserName</code>: the username.</p>
+     * </li>
+     * <li><p><code>Cost</code>: the execution duration.</p>
+     * </li>
+     * <li><p><code>PeakMemory</code>: the peak memory.</p>
+     * </li>
+     * <li><p><code>ScanSize</code>: the amount of scanned data.</p>
+     * </li>
+     * <li><p><code>Database</code>: the database name.</p>
+     * </li>
+     * <li><p><code>ClientIp</code>: the source IP address.</p>
+     * </li>
+     * <li><p><code>ResourceGroup</code>: the resource group.</p>
+     * </li>
+     * <li><p><code>QueueTime</code>: the amount of time that the query waited in a queue.</p>
+     * </li>
+     * <li><p><code>OutputRows</code>: the number of output rows.</p>
+     * </li>
+     * <li><p><code>OutputDataSize</code>: the amount of output data.</p>
+     * </li>
+     * <li><p><code>ResourceCostRank</code>: the ranking of the execution duration of an operator in the SQL statement. This field is returned only when <code>QueryCondition</code> is set to <code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>.</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code> specifies the sorting order. Valid values (case-insensitive):</p>
+     * <li><p><code>Type</code> specifies the sorting type. Valid values (case-insensitive):</p>
      * <ul>
-     * <li><code>Desc</code>: descending order.</li>
-     * <li><code>Asc</code>: ascending order.</li>
+     * <li><p><code>Desc</code>: descending order.</p>
+     * </li>
+     * <li><p><code>Asc</code>: ascending order.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -153,7 +172,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -164,9 +183,12 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -176,7 +198,7 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The SQL pattern ID.</p>
+     * <p>The ID of the SQL pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>5575924945138******</p>
@@ -185,11 +207,14 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String patternId;
 
     /**
-     * <p>The query condition for SQL statements, which can contain the <code>Type</code>, <code>Value</code>, <code>Min</code>, and <code>Max</code> fields. Specify the condition in the JSON format. <code>Type</code> specifies the query dimension. Valid values for Type: <code>maxCost</code>, <code>status</code>, and <code>cost</code>. <code>Value</code>, <code>Min</code>, or <code>Max</code> specifies the query range for the dimension. Valid values:</p>
+     * <p>The conditions for the SQL query. This parameter is a JSON string that contains fields such as Type, <code>Value</code>, <code>Min</code>, and <code>Max</code>. The <code>Type</code> field indicates the query dimension. Valid values for <code>Type</code>: <code>maxCost</code>, <code>status</code>, and <code>cost</code>. The <code>Value</code>, <code>Min</code>, and <code>Max</code> fields specify the query range for the dimension. Valid values:</p>
      * <ul>
-     * <li><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</code>: queries the top 100 most time-consuming SQL statements. Set <code>Value</code> to 100.</li>
-     * <li><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: queries the executed SQL statements. You can set <code>Value</code> to <code>running</code> to query the SQL statements that are being executed. You can also set Value to <code>failed</code> to query the SQL statements that failed to be executed.</li>
-     * <li><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: queries the SQL statements whose execution duration is in the range of 10 to 200 milliseconds. You can also specify custom values for the Min and Max fields.</li>
+     * <li><p><code>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</code>: queries the details of the top 100 SQL statements that have the longest execution durations. The <code>Value</code> field can only be set to 100.</p>
+     * </li>
+     * <li><p><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: queries the details of completed SQL statements. You can also set <code>Value</code> to <code>running</code> or <code>failed</code> to query SQL statements that are running or have failed.</p>
+     * </li>
+     * <li><p><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</code>: queries the details of SQL statements whose execution durations are between 10 ms and 200 ms. You can customize the minimum and maximum execution durations. Unit: milliseconds.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,9 +224,9 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String queryCondition;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to view the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -212,9 +237,9 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group to which the SQL statements belong.</p>
+     * <p>The resource group to which the SQL statement belongs.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -224,9 +249,9 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String resourceGroup;
 
     /**
-     * <p>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start of the time range to query. Specify the time in the UNIX timestamp format. The time must be in milliseconds.</p>
      * <blockquote>
-     * <p> You can query data only within the last 14 days.</p>
+     * <p>Only data from the last 14 days can be queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -236,7 +261,8 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The username that is used to execute the SQL statements. You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</p>
+     * <p>The username used to execute the SQL statement.
+     * Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>test_user</p>

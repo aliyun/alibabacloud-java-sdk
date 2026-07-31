@@ -8,7 +8,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
      * <p>The available elastic AnalyticDB compute units (ACUs).</p>
      * 
      * <strong>example:</strong>
-     * <p>512ACU</p>
+     * <p>512 ACU</p>
      */
     @NameInMap("ElasticACU")
     public String elasticACU;
@@ -26,7 +26,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
      * <p>The available reserved computing resources.</p>
      * 
      * <strong>example:</strong>
-     * <p>48ACU</p>
+     * <p>48 ACU</p>
      */
     @NameInMap("ReserverdCompteACU")
     public String reserverdCompteACU;
@@ -35,7 +35,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
      * <p>The available reserved storage resources.</p>
      * 
      * <strong>example:</strong>
-     * <p>24ACU</p>
+     * <p>24 ACU</p>
      */
     @NameInMap("ReserverdStorageACU")
     public String reserverdStorageACU;

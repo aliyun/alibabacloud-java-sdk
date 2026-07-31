@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The language that is used for the region and zone names indicated by the LocalName parameter in the response parameters. Valid values:</p>
+     * <p>The language used for the names of regions and zones (the LocalName values in the response). Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong> (default): simplified Chinese.</li>
+     * <li><strong>zh-CN</strong>: simplified Chinese (default).</li>
      * <li><strong>en-US</strong>: English.</li>
      * <li><strong>ja</strong>: Japanese.</li>
      * </ul>
@@ -24,6 +24,12 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -20,7 +20,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that are returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>44</p>
@@ -93,7 +93,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
 
     public static class DescribeViewJobsResponseBodyData extends TeaModel {
         /**
-         * <p>The refresh tasks.</p>
+         * <p>The list of refresh tasks.</p>
          */
         @NameInMap("MvRefreshJobModels")
         public java.util.List<OpenStructRefreshJobModel> mvRefreshJobModels;
@@ -108,7 +108,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -117,7 +117,7 @@ public class DescribeViewJobsResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>44</p>

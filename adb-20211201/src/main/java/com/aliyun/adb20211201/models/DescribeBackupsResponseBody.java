@@ -4,12 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The free backup space. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FreeBackupSize")
     public Long freeBackupSize;
 
-    /**
-     * <p>The queried backup sets.</p>
-     */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
 
@@ -23,7 +26,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of backup sets on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -40,11 +43,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total size of the backup sets. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64953700</p>
+     */
     @NameInMap("TotalBackupSize")
     public Long totalBackupSize;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -114,79 +123,33 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
-        /**
-         * <p>The end time of the backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-06-02T16:00Z</p>
-         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         @NameInMap("BackupExpiredTime")
         public String backupExpiredTime;
 
-        /**
-         * <p>The backup set ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32732****</p>
-         */
         @NameInMap("BackupId")
         public String backupId;
 
-        /**
-         * <p>The backup method. Snapshot is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Snapshot</p>
-         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
         @NameInMap("BackupRegion")
         public String backupRegion;
 
-        /**
-         * <p>The size of the backup set. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2167808</p>
-         */
         @NameInMap("BackupSize")
         public Integer backupSize;
 
-        /**
-         * <p>The start time of the backup.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-06-01T16:00Z</p>
-         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         @NameInMap("BackupStatus")
         public String backupStatus;
 
-        /**
-         * <p>The backup type. Valid values:</p>
-         * <ul>
-         * <li><strong>FullBackup</strong></li>
-         * <li><strong>IncrementalBackup</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>FullBackup</p>
-         */
         @NameInMap("BackupType")
         public String backupType;
 
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>am-bp11q28kvl688****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 

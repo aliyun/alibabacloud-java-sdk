@@ -4,10 +4,20 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
+    @NameInMap("AINodeNumber")
+    public Integer AINodeNumber;
+
     /**
-     * <p>The reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+     * <strong>example:</strong>
+     * <p>ADB.MLPlus.4</p>
+     */
+    @NameInMap("AINodeSpec")
+    public String AINodeSpec;
+
+    /**
+     * <p>The compute reserved resources. Valid values: 0 ACU to 4096 ACU, in increments of 16. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
      * <blockquote>
-     * <p> This parameter must be specified with a unit.</p>
+     * <p>Include the unit when you specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +27,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String computeResource;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID of a Data Lakehouse Edition cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,10 +40,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:</p>
+     * <p>Specifies whether to allocate all compute reserved resources to the default resource group (user_default). Valid values:</p>
      * <ul>
-     * <li>true (default)</li>
-     * <li>false</li>
+     * <li>true (default): All compute reserved resources are allocated to the default resource group.</li>
+     * <li>false: Not all compute reserved resources are allocated to the default resource group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,6 +53,12 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Boolean enableDefaultResourcePool;
 
     /**
+     * <p>The product form. Valid values:</p>
+     * <ul>
+     * <li><strong>IntegrationForm</strong>: integrated form.</li>
+     * <li><strong>LegacyForm</strong>: Data Lakehouse Edition.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>LegacyForm</p>
      */
@@ -50,9 +66,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String productForm;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,20 +77,38 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The number of reserved nodes. </p>
+     * <ul>
+     * <li>Enterprise Edition: The default value is 3. The value increases in increments of 3.</li>
+     * <li>Basic Edition: The default value is 1.<blockquote>
+     * <p>This parameter is required only when ProductForm is set to IntegrationForm.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ReservedNodeCount")
     public Integer reservedNodeCount;
 
     /**
+     * <p>The node specifications of storage reserved resources. Valid values: 8ACU, 12ACU, and 16ACU.</p>
+     * <blockquote>
+     * <p>Include the unit when you specify this parameter. This parameter is required only when ProductForm is set to IntegrationForm.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>LegacyForm</p>
+     * <p>8ACU</p>
      */
     @NameInMap("ReservedNodeSize")
     public String reservedNodeSize;
 
     /**
-     * <p>The reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
+     * <p>The storage reserved resources. Valid values: 0 ACU to 2064 ACU, in increments of 24. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
      * <blockquote>
-     * <p> This parameter must be specified with a unit.</p>
+     * <p>Include the unit when you specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,6 +120,22 @@ public class ModifyDBClusterRequest extends TeaModel {
     public static ModifyDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterRequest self = new ModifyDBClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterRequest setAINodeNumber(Integer AINodeNumber) {
+        this.AINodeNumber = AINodeNumber;
+        return this;
+    }
+    public Integer getAINodeNumber() {
+        return this.AINodeNumber;
+    }
+
+    public ModifyDBClusterRequest setAINodeSpec(String AINodeSpec) {
+        this.AINodeSpec = AINodeSpec;
+        return this;
+    }
+    public String getAINodeSpec() {
+        return this.AINodeSpec;
     }
 
     public ModifyDBClusterRequest setComputeResource(String computeResource) {

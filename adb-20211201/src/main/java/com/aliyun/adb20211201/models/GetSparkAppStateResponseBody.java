@@ -63,7 +63,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>amv-clusterxxx</p>
+         * <p>amv-bp1h405854m****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;

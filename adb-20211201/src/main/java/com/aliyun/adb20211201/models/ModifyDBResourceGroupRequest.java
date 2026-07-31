@@ -4,7 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBResourceGroupRequest extends TeaModel {
+    @NameInMap("AtmConfig")
+    public ModifyDBResourceGroupRequestAtmConfig atmConfig;
+
     /**
+     * <p>The idle duration after which the resource group is automatically stopped.</p>
+     * 
      * <strong>example:</strong>
      * <p>5m</p>
      */
@@ -12,25 +17,26 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public String autoStopInterval;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("ClusterMode")
     public String clusterMode;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("ClusterSizeResource")
     public String clusterSizeResource;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Data Lakehouse Edition, Enterprise Edition, or Basic Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,32 +46,39 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:</p>
+     * <p>Specifies whether to enable the spot instance feature for the resource group. This feature provides resources at a lower unit price, but they can be reclaimed at any time. Only <code>Job</code> resource groups support this feature. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><p><strong>True</strong>: enables the spot instance feature.</p>
+     * </li>
+     * <li><p><strong>False</strong>: disables the spot instance feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>True</p>
      */
     @NameInMap("EnableSpot")
     public Boolean enableSpot;
 
     /**
+     * <p>The engine configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
      */
     @NameInMap("EngineParams")
     public java.util.Map<String, ?> engineParams;
 
+    /**
+     * <p>The time-based scaling plan for GPUs.</p>
+     */
     @NameInMap("GpuElasticPlan")
     public ModifyDBResourceGroupRequestGpuElasticPlan gpuElasticPlan;
 
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group in a cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name for a specific cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -78,11 +91,13 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
-     * <li><strong>Interactive</strong></li>
-     * <li><strong>Job</strong></li>
+     * <li><p><strong>Interactive</strong></p>
+     * </li>
+     * <li><p><strong>Job</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>For information about resource groups of Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+     * <p>For more information about resource groups in Data Lakehouse Edition clusters, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -93,19 +108,21 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("MaxClusterCount")
     public Integer maxClusterCount;
 
     /**
-     * <p>The maximum amount of reserved computing resources.</p>
+     * <p>The maximum amount of reserved computing resources. The value cannot exceed the unallocated computing resources of the cluster.</p>
      * <ul>
-     * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16ACU.</li>
-     * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8ACU.</li>
+     * <li><p>If the resource group type is <code>Interactive</code>, the value is specified in increments of 16 ACU.</p>
+     * </li>
+     * <li><p>If the resource group type is <code>Job</code>, the value is specified in increments of 8 ACU.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,14 +131,20 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("MaxComputeResource")
     public String maxComputeResource;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("MaxGpuQuantity")
     public Integer maxGpuQuantity;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("MinClusterCount")
     public Integer minClusterCount;
@@ -129,8 +152,10 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The minimum amount of reserved computing resources.</p>
      * <ul>
-     * <li>If the GroupType parameter is set to Interactive, set the value to 16ACU.</li>
-     * <li>If GroupType is set to Job, set the value to 0ACU.</li>
+     * <li><p>If the resource group type is <code>Interactive</code>, the minimum amount of reserved computing resources is 16 ACU.</p>
+     * </li>
+     * <li><p>If the resource group type is <code>Job</code>, the minimum amount of reserved computing resources is 0 ACU.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,16 +164,25 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("MinComputeResource")
     public String minComputeResource;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
+    /**
+     * <p>The Ray configuration. This parameter is required if the resource group is an AI group and uses a Ray cluster as its engine.</p>
+     */
     @NameInMap("RayConfig")
     public ModifyDBResourceGroupRequestRayConfig rayConfig;
 
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -158,27 +192,49 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The job resubmission rules.</p>
+     * <p>The job submission rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ModifyDBResourceGroupRequestRules> rules;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("SpecName")
     public String specName;
 
     /**
+     * <p>The desired state of the resource group. Specify <strong>starting</strong> to start the resource group or <strong>stopping</strong> to stop it.</p>
+     * 
      * <strong>example:</strong>
      * <p>starting</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("TargetResourceGroupName")
     public String targetResourceGroupName;
 
     public static ModifyDBResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBResourceGroupRequest self = new ModifyDBResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBResourceGroupRequest setAtmConfig(ModifyDBResourceGroupRequestAtmConfig atmConfig) {
+        this.atmConfig = atmConfig;
+        return this;
+    }
+    public ModifyDBResourceGroupRequestAtmConfig getAtmConfig() {
+        return this.atmConfig;
     }
 
     public ModifyDBResourceGroupRequest setAutoStopInterval(String autoStopInterval) {
@@ -349,10 +405,195 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.targetResourceGroupName;
     }
 
+    public static class ModifyDBResourceGroupRequestAtmConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("AuthNodeNum")
+        public Integer authNodeNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8ACU</p>
+         */
+        @NameInMap("AuthNodeSpec")
+        public String authNodeSpec;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("InsertNodeNum")
+        public Integer insertNodeNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8ACU</p>
+         */
+        @NameInMap("InsertNodeSpec")
+        public String insertNodeSpec;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("SelectNodeCacheSize")
+        public Integer selectNodeCacheSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("SelectNodeNum")
+        public Integer selectNodeNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8ACU</p>
+         */
+        @NameInMap("SelectNodeSpec")
+        public String selectNodeSpec;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("StorageNodeDiskSize")
+        public Integer storageNodeDiskSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>essd_pl1</p>
+         */
+        @NameInMap("StorageNodeDiskType")
+        public String storageNodeDiskType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("StorageNodeNum")
+        public Integer storageNodeNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8ACU</p>
+         */
+        @NameInMap("StorageNodeSpec")
+        public String storageNodeSpec;
+
+        public static ModifyDBResourceGroupRequestAtmConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBResourceGroupRequestAtmConfig self = new ModifyDBResourceGroupRequestAtmConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setAuthNodeNum(Integer authNodeNum) {
+            this.authNodeNum = authNodeNum;
+            return this;
+        }
+        public Integer getAuthNodeNum() {
+            return this.authNodeNum;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setAuthNodeSpec(String authNodeSpec) {
+            this.authNodeSpec = authNodeSpec;
+            return this;
+        }
+        public String getAuthNodeSpec() {
+            return this.authNodeSpec;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setInsertNodeNum(Integer insertNodeNum) {
+            this.insertNodeNum = insertNodeNum;
+            return this;
+        }
+        public Integer getInsertNodeNum() {
+            return this.insertNodeNum;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setInsertNodeSpec(String insertNodeSpec) {
+            this.insertNodeSpec = insertNodeSpec;
+            return this;
+        }
+        public String getInsertNodeSpec() {
+            return this.insertNodeSpec;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setSelectNodeCacheSize(Integer selectNodeCacheSize) {
+            this.selectNodeCacheSize = selectNodeCacheSize;
+            return this;
+        }
+        public Integer getSelectNodeCacheSize() {
+            return this.selectNodeCacheSize;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setSelectNodeNum(Integer selectNodeNum) {
+            this.selectNodeNum = selectNodeNum;
+            return this;
+        }
+        public Integer getSelectNodeNum() {
+            return this.selectNodeNum;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setSelectNodeSpec(String selectNodeSpec) {
+            this.selectNodeSpec = selectNodeSpec;
+            return this;
+        }
+        public String getSelectNodeSpec() {
+            return this.selectNodeSpec;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setStorageNodeDiskSize(Integer storageNodeDiskSize) {
+            this.storageNodeDiskSize = storageNodeDiskSize;
+            return this;
+        }
+        public Integer getStorageNodeDiskSize() {
+            return this.storageNodeDiskSize;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setStorageNodeDiskType(String storageNodeDiskType) {
+            this.storageNodeDiskType = storageNodeDiskType;
+            return this;
+        }
+        public String getStorageNodeDiskType() {
+            return this.storageNodeDiskType;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setStorageNodeNum(Integer storageNodeNum) {
+            this.storageNodeNum = storageNodeNum;
+            return this;
+        }
+        public Integer getStorageNodeNum() {
+            return this.storageNodeNum;
+        }
+
+        public ModifyDBResourceGroupRequestAtmConfig setStorageNodeSpec(String storageNodeSpec) {
+            this.storageNodeSpec = storageNodeSpec;
+            return this;
+        }
+        public String getStorageNodeSpec() {
+            return this.storageNodeSpec;
+        }
+
+    }
+
     public static class ModifyDBResourceGroupRequestGpuElasticPlanRules extends TeaModel {
+        /**
+         * <p>The end time of the scaling window, specified as a cron expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 3 * * ?</p>
+         */
         @NameInMap("EndCronExpression")
         public String endCronExpression;
 
+        /**
+         * <p>The start time of the scaling window, specified as a cron expression. The duration between the start and end times must be at least one hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 2 * * ?</p>
+         */
         @NameInMap("StartCronExpression")
         public String startCronExpression;
 
@@ -380,9 +621,25 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
 
     public static class ModifyDBResourceGroupRequestGpuElasticPlan extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the scaling plan immediately upon creation.
+         * Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The plan is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The plan is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>A list of rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<ModifyDBResourceGroupRequestGpuElasticPlanRules> rules;
 
@@ -411,6 +668,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
 
     public static class ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector extends TeaModel {
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>lab2.10.0-ray2.43.0</p>
          */
@@ -418,6 +677,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String image;
 
         /**
+         * <p>The inference engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>vLLM</p>
          */
@@ -425,6 +686,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String inferenceEngine;
 
         /**
+         * <p>The large language model (LLM).</p>
+         * 
          * <strong>example:</strong>
          * <p>Deepseek-R1</p>
          */
@@ -464,6 +727,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
 
     public static class ModifyDBResourceGroupRequestRayConfigAppConfig extends TeaModel {
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>app01</p>
          */
@@ -471,12 +736,17 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String appName;
 
         /**
+         * <p>The application type.</p>
+         * 
          * <strong>example:</strong>
          * <p>IsaacLab</p>
          */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The image configuration.</p>
+         */
         @NameInMap("ImageSelector")
         public ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector imageSelector;
 
@@ -513,6 +783,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
 
     public static class ModifyDBResourceGroupRequestRayConfigStorageMounts extends TeaModel {
         /**
+         * <p>The mount path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data01</p>
          */
@@ -520,6 +792,8 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String mountPath;
 
         /**
+         * <p>The storage ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -550,24 +824,66 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
 
     public static class ModifyDBResourceGroupRequestRayConfigWorkerGroups extends TeaModel {
+        /**
+         * <p>The allocation unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AllocateUnit")
         public String allocateUnit;
 
+        /**
+         * <p>The name of the worker group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The maximum number of worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaxWorkerQuantity")
         public Integer maxWorkerQuantity;
 
+        /**
+         * <p>The minimum number of worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinWorkerQuantity")
         public Integer minWorkerQuantity;
 
+        /**
+         * <p>The disk size of a worker node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100G</p>
+         */
         @NameInMap("WorkerDiskCapacity")
         public String workerDiskCapacity;
 
+        /**
+         * <p>The specifications of a worker node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xlarge</p>
+         */
         @NameInMap("WorkerSpecName")
         public String workerSpecName;
 
+        /**
+         * <p>The resource type of a worker node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GPU</p>
+         */
         @NameInMap("WorkerSpecType")
         public String workerSpecType;
 
@@ -635,30 +951,81 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
 
     public static class ModifyDBResourceGroupRequestRayConfig extends TeaModel {
+        /**
+         * <p>The Ray application configuration.</p>
+         */
         @NameInMap("AppConfig")
         public ModifyDBResourceGroupRequestRayConfigAppConfig appConfig;
 
+        /**
+         * <p>The type of the Ray cluster. Valid values:</p>
+         * <ul>
+         * <li><p><strong>BASIC</strong>: A basic, non-high-availability cluster.</p>
+         * </li>
+         * <li><p><strong>HIGH_AVAILABILITY</strong>: A high-availability cluster.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>Specifies whether to enable the ENI.</p>
+         */
         @NameInMap("EnableUserEni")
         public Boolean enableUserEni;
 
+        /**
+         * <p>The allocation unit of the head node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HeadAllocateUnit")
         public String headAllocateUnit;
 
+        /**
+         * <p>The disk size of the head node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100G</p>
+         */
         @NameInMap("HeadDiskCapacity")
         public String headDiskCapacity;
 
+        /**
+         * <p>The specifications of the head node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xlarge</p>
+         */
         @NameInMap("HeadSpec")
         public String headSpec;
 
+        /**
+         * <p>The resource type of the head node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
         @NameInMap("HeadSpecType")
         public String headSpecType;
 
+        /**
+         * <p>A list of storage mounts.</p>
+         */
         @NameInMap("StorageMounts")
         public java.util.List<ModifyDBResourceGroupRequestRayConfigStorageMounts> storageMounts;
 
+        @NameInMap("UserDefinedRequirements")
+        public String userDefinedRequirements;
+
+        /**
+         * <p>A list of configurations for Ray worker groups.</p>
+         */
         @NameInMap("WorkerGroups")
         public java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> workerGroups;
 
@@ -731,6 +1098,14 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
             return this.storageMounts;
         }
 
+        public ModifyDBResourceGroupRequestRayConfig setUserDefinedRequirements(String userDefinedRequirements) {
+            this.userDefinedRequirements = userDefinedRequirements;
+            return this;
+        }
+        public String getUserDefinedRequirements() {
+            return this.userDefinedRequirements;
+        }
+
         public ModifyDBResourceGroupRequestRayConfig setWorkerGroups(java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> workerGroups) {
             this.workerGroups = workerGroups;
             return this;
@@ -752,7 +1127,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The execution duration of the query. Unit: milliseconds.</p>
+         * <p>The query execution time threshold, in milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -761,7 +1136,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         public String queryTime;
 
         /**
-         * <p>The name of the destination resource group.</p>
+         * <p>The name of the target resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>

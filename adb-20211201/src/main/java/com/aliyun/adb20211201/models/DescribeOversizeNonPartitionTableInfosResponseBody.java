@@ -141,7 +141,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
          * <p>The name of the detection item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Oversized non-partitioned tables</p>
+         * <p>Oversized non-partitioned table</p>
          */
         @NameInMap("Name")
         public String name;

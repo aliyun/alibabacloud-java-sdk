@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specific region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
+     * <p>The end time of the query. The time is in UTC and uses the <em>yyyy-MM-ddTHH:mmZ</em> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-11T15:01Z</p>
@@ -26,7 +26,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The queried performance metrics.</p>
+     * <p>The cluster performance metrics.</p>
      */
     @NameInMap("Performances")
     public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformances> performances;
@@ -41,7 +41,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</p>
+     * <p>The start time of the query. The time is in UTC and uses the <em>yyyy-MM-ddTHH:mmZ</em> format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-10T23:56Z</p>
@@ -96,7 +96,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformancesSeries extends TeaModel {
         /**
-         * <p>The name of the performance metric value. For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</p>
+         * <p>The name of the performance metric. This parameter is the Value Name of the monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/2863211.html">Overview of Monitoring Items</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>AnalyticDB_Storage_CPU_Avg_Usage_Percentage</p>
@@ -105,7 +105,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The tags that are added to the cluster.</p>
+         * <p>A JSON string that contains the tags for the metric series.</p>
          * 
          * <strong>example:</strong>
          * <p>{instance_name: &quot;am-***&quot;}</p>
@@ -113,11 +113,17 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>A key for internal internationalization (i18n). You can safely ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AnalyticDB_RP_WaitTime</p>
+         */
         @NameInMap("TranslateKey")
         public String translateKey;
 
         /**
-         * <p>The values of the performance metric at different points in time.</p>
+         * <p>An array of data points for the time series.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -172,13 +178,13 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The queried performance metric data.</p>
+         * <p>The time series data for the metric.</p>
          */
         @NameInMap("Series")
         public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> series;
 
         /**
-         * <p>The unit of the performance metric.</p>
+         * <p>The unit of the monitoring metric.</p>
          * 
          * <strong>example:</strong>
          * <p>%</p>

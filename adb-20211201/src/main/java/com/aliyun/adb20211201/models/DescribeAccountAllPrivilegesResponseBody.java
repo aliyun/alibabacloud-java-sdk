@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
     /**
-     * <p>Details of the permissions.</p>
+     * <p>Permission details.</p>
      */
     @NameInMap("Data")
     public DescribeAccountAllPrivilegesResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3BB185E9-BB54-1727-B876-13243E4C0EB5</p>
@@ -42,7 +42,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
 
     public static class DescribeAccountAllPrivilegesResponseBodyDataResultPrivilegeObject extends TeaModel {
         /**
-         * <p>The name of the column.</p>
+         * <p>The column name.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -51,7 +51,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         public String column;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>tdb1</p>
@@ -60,7 +60,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         public String database;
 
         /**
-         * <p>The description of the permission object.</p>
+         * <p>Description of the permission object.</p>
          * 
          * <strong>example:</strong>
          * <p>id of table</p>
@@ -69,7 +69,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>table1</p>
@@ -118,13 +118,13 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
 
     public static class DescribeAccountAllPrivilegesResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The objects on which the permission takes effect, including databases, tables, and columns. If Global is returned for the PrivilegeType parameter, an empty string is returned for this parameter.</p>
+         * <p>The permission object, represented as a trituple of database, table, and column. All fields are empty for Global-level permissions.</p>
          */
         @NameInMap("PrivilegeObject")
         public DescribeAccountAllPrivilegesResponseBodyDataResultPrivilegeObject privilegeObject;
 
         /**
-         * <p>The permission level of the database account. You can call the <code>DescribeEnabledPrivileges</code> operation to query the permission level of the database account.</p>
+         * <p>The permission level, returned by the <code>DescribeEnabledPrivileges</code> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Global</p>
@@ -133,7 +133,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         public String privilegeType;
 
         /**
-         * <p>The name of the permission, which is the same as the permission name returned by the <code>DescribeEnabledPrivileges</code> operation.</p>
+         * <p>List of permissions.</p>
          */
         @NameInMap("Privileges")
         public java.util.List<String> privileges;
@@ -171,7 +171,7 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
 
     public static class DescribeAccountAllPrivilegesResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates the position where the results are truncated. When a value of <code>true</code> is returned for the <code>Truncated</code> parameter, this parameter is present and contains the value to use for the Marker parameter in a subsequent call.</p>
+         * <p>If the <code>Truncated</code> field in the response is <code>true</code>, pass this value in subsequent calls to retrieve the next set of results.</p>
          * 
          * <strong>example:</strong>
          * <p>0573e74fd1ccb01739993a691e876074db6e1b6ad79f54115f0e98528432ba6a523cfec5780ade5189299cc3396f6ff7</p>
@@ -180,13 +180,13 @@ public class DescribeAccountAllPrivilegesResponseBody extends TeaModel {
         public String marker;
 
         /**
-         * <p>The permissions.</p>
+         * <p>List of permissions.</p>
          */
         @NameInMap("Result")
         public java.util.List<DescribeAccountAllPrivilegesResponseBodyDataResult> result;
 
         /**
-         * <p>Indicates whether the results are truncated. If the results are truncated, a value of <code>true</code> is returned. In this case, you must call this operation again to obtain all the results until a value of <code>false</code> is returned for this parameter.</p>
+         * <p>If the response is truncated, this field is <code>true</code>. Continue calling this operation until this field becomes <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

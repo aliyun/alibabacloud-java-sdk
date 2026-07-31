@@ -4,12 +4,27 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class TableDetailModel extends TeaModel {
+    /**
+     * <p>External data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("Catalog")
     public String catalog;
 
+    /**
+     * <p>Column information.</p>
+     */
     @NameInMap("Columns")
     public java.util.List<ColDetailModel> columns;
 
+    /**
+     * <p>Creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -19,27 +34,63 @@ public class TableDetailModel extends TeaModel {
     @NameInMap("CreatedByUser")
     public String createdByUser;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <p>Owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <p>Logical database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schemaName</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>Logical table name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tableName</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <p>Table type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PHYSICAL_SCHEMA_NAME</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 
+    /**
+     * <p>Update time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-05 13:17:55</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

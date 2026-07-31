@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMvRecommendSubTasksRequest extends TeaModel {
     /**
-     * <p>Fixed system value (non-modifiable).</p>
+     * <p>A static value. This parameter cannot be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Modification is not supported.</p>
      */
     @NameInMap("ActionInner")
     public String actionInner;
@@ -20,21 +23,29 @@ public class DescribeMvRecommendSubTasksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Fixed system value (non-modifiable).</p>
+     * <p>A static value. This parameter cannot be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Modification is not supported.</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>The sorting field. Valid values for Type:</p>
+     * <p>The sorting criteria.
+     * Valid values for \<code>Type\\</code>:</p>
      * <ul>
-     * <li>Asc.</li>
-     * <li>Desc.</li>
+     * <li><p>Asc</p>
+     * </li>
+     * <li><p>Desc</p>
+     * </li>
      * </ul>
-     * <p>Valid values for Field:</p>
+     * <p>Valid values for \<code>Field\\</code>:</p>
      * <ul>
-     * <li>StartTime;</li>
-     * <li>EndTime;</li>
+     * <li><p>StartTime</p>
+     * </li>
+     * <li><p>EndTime</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +64,7 @@ public class DescribeMvRecommendSubTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -80,7 +91,7 @@ public class DescribeMvRecommendSubTasksRequest extends TeaModel {
     public Long subtaskId;
 
     /**
-     * <p>The name of the recommendation task.</p>
+     * <p>The name of the materialized view recommendation task.</p>
      * 
      * <strong>example:</strong>
      * <p>my_task_1</p>

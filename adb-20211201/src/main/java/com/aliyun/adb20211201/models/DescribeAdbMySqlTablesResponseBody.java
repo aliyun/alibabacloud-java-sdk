@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
     /**
-     * <p>The message returned for the operation. Valid values:</p>
+     * <p>Additional information about the call. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong> is returned if the operation is successful.</li>
-     * <li>An error message is returned if the operation fails.</li>
+     * <li><p><strong>Success</strong> is returned if the request is successful.</p>
+     * </li>
+     * <li><p>A specific error code is returned if the request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7A7D49E3-5585-5DF8-B62C-75C46B4991DC</p>
@@ -36,10 +38,12 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
     public String schema;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The operation is successful.</li>
-     * <li><strong>false</strong>: The operation fails.</li>
+     * <li><p><strong>true</strong>: The call was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +53,7 @@ public class DescribeAdbMySqlTablesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The names of tables.</p>
+     * <p>Information about the tables.</p>
      */
     @NameInMap("Tables")
     public java.util.List<String> tables;

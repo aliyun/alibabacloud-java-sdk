@@ -45,7 +45,7 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
          * <p>The default log path.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://aliyun-oa-adb-spark-1111-oss-cn-hanghzou/spark-logs</p>
+         * <p>oss://aliyun-oa-adb-spark-****-oss-cn-hanghzou/spark-logs</p>
          */
         @NameInMap("DefaultLogPath")
         public String defaultLogPath;

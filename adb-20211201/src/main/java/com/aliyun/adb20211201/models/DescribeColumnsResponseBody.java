@@ -4,9 +4,6 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnsResponseBody extends TeaModel {
-    /**
-     * <p>The queried columns.</p>
-     */
     @NameInMap("Items")
     public DescribeColumnsResponseBodyItems items;
 
@@ -41,74 +38,24 @@ public class DescribeColumnsResponseBody extends TeaModel {
     }
 
     public static class DescribeColumnsResponseBodyItemsColumn extends TeaModel {
-        /**
-         * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
-        /**
-         * <p>The name of the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>id</p>
-         */
         @NameInMap("ColumnName")
         public String columnName;
 
-        /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp111m2cfrdl1****</p>
-         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
-        /**
-         * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
-        /**
-         * <p>The name of the database.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>adb_demo</p>
-         */
         @NameInMap("SchemaName")
         public String schemaName;
 
-        /**
-         * <p>The name of the table.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("TableName")
         public String tableName;
 
-        /**
-         * <p>The data type of the column.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>bigint</p>
-         */
         @NameInMap("Type")
         public String type;
 

@@ -14,7 +14,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The queried detection items and detection results.</p>
+     * <p>The list of detection items and detection results.</p>
      */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItems> detectionItems;
@@ -29,7 +29,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -94,7 +94,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long maxValue;
 
         /**
-         * <p>The number of occurrences of the operator.</p>
+         * <p>The number of times the operator appears.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -103,7 +103,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long operatorCount;
 
         /**
-         * <p>The name of the operator.</p>
+         * <p>The operator name.</p>
          * 
          * <strong>example:</strong>
          * <p>Aggregation</p>
@@ -169,16 +169,16 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorAgg extends TeaModel {
         /**
-         * <p>The detection result items of operator metric aggregation.</p>
+         * <p>The name of the aggregated operator metric detection item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Peak memory</p>
+         * <p>峰值内存</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
-         * <p>The detection result items of operator metric aggregation.</p>
+         * <p>The collection of aggregated operator metric search results.</p>
          */
         @NameInMap("SearchResults")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorAggSearchResults> searchResults;
@@ -208,7 +208,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults extends TeaModel {
         /**
-         * <p>The number of rows input by the operator.</p>
+         * <p>The number of input rows of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -217,7 +217,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long inputRows;
 
         /**
-         * <p>The amount of data input by the operator. Unit: bytes.</p>
+         * <p>The input data size of the operator. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -226,7 +226,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long inputSize;
 
         /**
-         * <p>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</p>
+         * <p>The total operator duration within the stage, which is equivalent to the CPU time of the stage. You can use this value to determine which parts of the query consume more compute resources. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>
@@ -235,16 +235,16 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long operatorCost;
 
         /**
-         * <p>The property information about the operator.</p>
+         * <p>The operator property information.</p>
          * 
          * <strong>example:</strong>
-         * <p>GROUP BY field: id</p>
+         * <p>Group By field: id</p>
          */
         @NameInMap("OperatorInfo")
         public String operatorInfo;
 
         /**
-         * <p>The name of the operator.</p>
+         * <p>The operator name.</p>
          * 
          * <strong>example:</strong>
          * <p>TableScan</p>
@@ -253,7 +253,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String operatorName;
 
         /**
-         * <p>The number of rows output by the operator.</p>
+         * <p>The number of output rows of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -262,7 +262,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long outputRows;
 
         /**
-         * <p>The amount of data output by the operator. Unit: bytes.</p>
+         * <p>The output data size of the operator. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -271,7 +271,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long outputSize;
 
         /**
-         * <p>The peak memory. Unit: bytes.</p>
+         * <p>The peak memory consumed by the operator. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>
@@ -280,7 +280,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long peakMemory;
 
         /**
-         * <p>The query ID that can be used for diagnostics.</p>
+         * <p>The SQL query ID, which can be used for diagnostics.</p>
          * 
          * <strong>example:</strong>
          * <p>2024041909301402103302422803151411141</p>
@@ -386,7 +386,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetails extends TeaModel {
         /**
-         * <p>The name of the detection metric.</p>
+         * <p>The metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>PeakMemory</p>
@@ -395,7 +395,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The detection result items of abnormal operators.</p>
+         * <p>The collection of search results.</p>
          */
         @NameInMap("SearchResults")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults> searchResults;
@@ -425,7 +425,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsPartitionedTables extends TeaModel {
         /**
-         * <p>The SQL statement that is used to create the table.</p>
+         * <p>The CREATE TABLE statement.</p>
          * 
          * <strong>example:</strong>
          * <p>create table test(id varchar)</p>
@@ -443,7 +443,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String partitionCount;
 
         /**
-         * <p>The ID of the improper partition.</p>
+         * <p>The IDs of unreasonable partitions.</p>
          * 
          * <strong>example:</strong>
          * <p>[2024,2025]</p>
@@ -452,7 +452,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String partitionIds;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>nxg</p>
@@ -461,7 +461,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String schemaName;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>zhw_place_order</p>
@@ -535,7 +535,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsSkewedTables extends TeaModel {
         /**
-         * <p>The SQL statement that is used to create the table.</p>
+         * <p>The CREATE TABLE statement.</p>
          * 
          * <strong>example:</strong>
          * <p>create table test(id varchar)</p>
@@ -553,7 +553,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Integer partitionCount;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>platfunc</p>
@@ -571,7 +571,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String shardSkewedRows;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>sls_log_cheat_action</p>
@@ -589,7 +589,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long totalDataSize;
 
         /**
-         * <p>The size of hot data. Unit: bytes.</p>
+         * <p>The local data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2345</p>
@@ -598,7 +598,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String totalLocalDataSize;
 
         /**
-         * <p>The data size of the primary key. Unit: bytes.</p>
+         * <p>The total primary key data size of the table. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -607,7 +607,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long totalPkSize;
 
         /**
-         * <p>The size of cold data. Unit: bytes.</p>
+         * <p>The cold data size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -616,7 +616,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long totalRemoteDataSize;
 
         /**
-         * <p>The number of rows in the table.</p>
+         * <p>The total number of rows in the table.</p>
          * 
          * <strong>example:</strong>
          * <p>34</p>
@@ -713,7 +713,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsTopAccessTablesSearchResults extends TeaModel {
         /**
-         * <p>The number of accesses to the table.</p>
+         * <p>The number of times the table was accessed.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -722,7 +722,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long accessCount;
 
         /**
-         * <p>The average amount of time for scanning. Unit: milliseconds.</p>
+         * <p>The average scan duration. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -731,7 +731,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Double avgScanCost;
 
         /**
-         * <p>The average data size for scanning. Unit: bytes.</p>
+         * <p>The average table read size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -740,7 +740,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Double avgScanSize;
 
         /**
-         * <p>The maximum amount of time for scanning. Unit: milliseconds.</p>
+         * <p>The maximum scan duration. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>345</p>
@@ -749,7 +749,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long maxScanCost;
 
         /**
-         * <p>The maximum data size for scanning. Unit: bytes.</p>
+         * <p>The maximum data read size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2345</p>
@@ -758,7 +758,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public Long maxScanSize;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>tiberias_2copt_origin_order_goods_info</p>
@@ -832,7 +832,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The detection result items of table access.</p>
+         * <p>The collection of table access search results.</p>
          */
         @NameInMap("SearchResults")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsTopAccessTablesSearchResults> searchResults;
@@ -862,31 +862,31 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResults extends TeaModel {
         /**
-         * <p>The detection result items of operator metric aggregation.</p>
+         * <p>The aggregated operator metric detection results.</p>
          */
         @NameInMap("OperatorAgg")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorAgg> operatorAgg;
 
         /**
-         * <p>The detection result items of abnormal operators.</p>
+         * <p>The collection of operator detection results.</p>
          */
         @NameInMap("OperatorDetails")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetails> operatorDetails;
 
         /**
-         * <p>The detection result items of improper partitioned tables.</p>
+         * <p>The collection of tables with unreasonable partitions.</p>
          */
         @NameInMap("PartitionedTables")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsPartitionedTables> partitionedTables;
 
         /**
-         * <p>The detection result items of skewed tables.</p>
+         * <p>The table skew detection results.</p>
          */
         @NameInMap("SkewedTables")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsSkewedTables> skewedTables;
 
         /**
-         * <p>The detection result items of table access.</p>
+         * <p>The collection of table access detection results.</p>
          */
         @NameInMap("TopAccessTables")
         public java.util.List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsTopAccessTables> topAccessTables;
@@ -940,7 +940,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
     public static class DescribeWorkerDetectionResponseBodyDetectionItems extends TeaModel {
         /**
-         * <p>The information about the detection result.</p>
+         * <p>The detection result message.</p>
          * 
          * <strong>example:</strong>
          * <p>There are a total of 10 tables with an excessive number of primary keys.</p>
@@ -952,19 +952,19 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
          * <p>The name of the detection item.</p>
          * 
          * <strong>example:</strong>
-         * <p>Metric detection</p>
+         * <p>指标检测</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The detection result items.</p>
+         * <p>The detection result.</p>
          */
         @NameInMap("Results")
         public DescribeWorkerDetectionResponseBodyDetectionItemsResults results;
 
         /**
-         * <p>The severity level of the detection result. Valid values:</p>
+         * <p>The detection result status. Valid values:</p>
          * <ul>
          * <li>NORMAL</li>
          * <li>WARNING</li>

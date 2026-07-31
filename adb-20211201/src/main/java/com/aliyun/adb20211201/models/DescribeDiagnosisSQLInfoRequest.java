@@ -7,18 +7,18 @@ public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of AnalyticDB for MySQL clusters in a specific region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>amv-bp1r053byu48p</p>
+     * <p>amv-bp1r053by****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The language of file titles and error messages. Valid values:</p>
+     * <p>The language of the file title and error messages in the downloaded file. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: simplified Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -35,19 +35,19 @@ public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
     /**
      * <p>The query ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL cluster, including the query ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the query ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2021070216432217201616806503453</p>
+     * <p>20210702164322172016168****</p>
      */
     @NameInMap("ProcessId")
     public String processId;
 
     /**
-     * <p>The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+     * <p>The IP address and port number of the AnalyticDB for MySQL frontend node that executes the SQL statement.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster, including the IP address and port number of the frontend node.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the IP address and port number of the frontend node.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,9 +57,9 @@ public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
     public String processRcHost;
 
     /**
-     * <p>The execution start time of the SQL statement. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the SQL statement execution. Specify the value as a UNIX timestamp in milliseconds.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL cluster, including the execution start time of the SQL statement.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the start time of the SQL statement execution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,13 +71,13 @@ public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
     /**
      * <p>The status of the SQL statement. Valid values:</p>
      * <ul>
-     * <li><strong>running</strong></li>
-     * <li><strong>finished</strong></li>
-     * <li><strong>failed</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the diagnostic information about SQL statements for an AnalyticDB for MySQL cluster, including the status of the SQL statement.</p>
+     * <li><strong>running</strong>: The SQL statement is being executed.</li>
+     * <li><strong>finished</strong>: The SQL statement has been executed.</li>
+     * <li><strong>failed</strong>: The SQL statement failed to be executed.<blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the status of the SQL statement.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>running</p>
@@ -86,9 +86,9 @@ public class DescribeDiagnosisSQLInfoRequest extends TeaModel {
     public String processState;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region IDs supported by AnalyticDB for MySQL.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

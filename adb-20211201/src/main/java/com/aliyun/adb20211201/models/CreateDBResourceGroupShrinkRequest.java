@@ -4,7 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourceGroupShrinkRequest extends TeaModel {
+    @NameInMap("AtmConfig")
+    public String atmConfigShrink;
+
     /**
+     * <p>The automatic stop interval. Unit: minutes (m).</p>
+     * 
      * <strong>example:</strong>
      * <p>5m</p>
      */
@@ -12,25 +17,44 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String autoStopInterval;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The classification of the resource group. Valid values:</p>
+     * <ul>
+     * <li>SQL</li>
+     * <li>SparkSQL</li>
+     * <li>MultiCluster</li>
+     * <li>AI</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>SQL</p>
+     */
+    @NameInMap("Classification")
+    public String classification;
+
+    /**
+     * <p>A reserved parameter (not applicable).</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("ClusterMode")
     public String clusterMode;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("ClusterSizeResource")
     public String clusterSizeResource;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +64,10 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:</p>
+     * <p>Specifies whether to enable the spot instance feature for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Only Job resource groups support this feature. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><strong>True</strong>: enables the spot instance feature.</li>
+     * <li><strong>False</strong>: disables the spot instance feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,6 +77,12 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public Boolean enableSpot;
 
     /**
+     * <p>The database engine. Valid values:</p>
+     * <ul>
+     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+     * <li><strong>SparkWarehouse</strong>: the SparkWarehouse engine.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SparkWarehouse</p>
      */
@@ -60,12 +90,17 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The engine configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
      */
     @NameInMap("EngineParams")
     public String engineParamsShrink;
 
+    /**
+     * <p>The GPU time-sharing elastic plan.</p>
+     */
     @NameInMap("GpuElasticPlan")
     public String gpuElasticPlanShrink;
 
@@ -73,8 +108,8 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
      * <p>The name of the resource group.</p>
      * <ul>
      * <li>The name can be up to 255 characters in length.</li>
-     * <li>The name must start with a letter or a digit.</li>
-     * <li>The name can contain letters, digits, hyphens (<em>), and underscores (</em>).</li>
+     * <li>The name must start with a digit, an uppercase letter, or a lowercase letter.</li>
+     * <li>The name can contain digits, uppercase letters, lowercase letters, hyphens (-), and underscores (_).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,11 +123,11 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
      * <li><strong>Interactive</strong></li>
-     * <li><strong>Job</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
+     * <li><strong>Job</strong><blockquote>
+     * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,19 +137,21 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("MaxClusterCount")
     public Integer maxClusterCount;
 
     /**
-     * <p>The maximum reserved computing resources.</p>
+     * <p>The maximum amount of reserved computing resources. Unit: ACUs.</p>
      * <ul>
-     * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16ACU.</li>
-     * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8ACU.</li>
+     * <li>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 16 ACUs.</li>
+     * <li>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 8 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,25 +161,30 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String maxComputeResource;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The maximum number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("MaxGpuQuantity")
     public Integer maxGpuQuantity;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter (not applicable).</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("MinClusterCount")
     public Integer minClusterCount;
 
     /**
-     * <p>The minimum reserved computing resources.</p>
+     * <p>The minimum amount of reserved computing resources. Unit: ACUs.</p>
      * <ul>
-     * <li>When GroupType is set to Interactive, set this parameter to 16ACU.</li>
-     * <li>When GroupType is set to Job, set this parameter to 0ACU.</li>
+     * <li>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</li>
+     * <li>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,18 +194,27 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String minComputeResource;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The minimum number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
+    /**
+     * <p>The Ray configuration.</p>
+     * <blockquote>
+     * <p>This parameter is required when the resource group is an AI resource group and the corresponding engine is RayCluster.</p>
+     * </blockquote>
+     */
     @NameInMap("RayConfig")
     public String rayConfigShrink;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the region IDs of AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -173,19 +224,39 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The job resubmission rules.</p>
+     * <p>The job routing rules.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The scaling policy of the resource group. Valid values:</p>
+     * <ul>
+     * <li>AutoScaling: enables the AutoScaling automatic scaling policy.</li>
+     * <li>Disable: disables automatic scaling.</li>
+     * <li>MultiCluster: enables the MultiCluster automatic scaling policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoScaling</p>
+     */
+    @NameInMap("ScalePolicy")
+    public String scalePolicy;
+
+    /**
+     * <p>The specification name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADB.MLLarge.2</p>
      */
     @NameInMap("SpecName")
     public String specName;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The name of the destination resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TargetResourceGroupName")
     public String targetResourceGroupName;
@@ -195,12 +266,28 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDBResourceGroupShrinkRequest setAtmConfigShrink(String atmConfigShrink) {
+        this.atmConfigShrink = atmConfigShrink;
+        return this;
+    }
+    public String getAtmConfigShrink() {
+        return this.atmConfigShrink;
+    }
+
     public CreateDBResourceGroupShrinkRequest setAutoStopInterval(String autoStopInterval) {
         this.autoStopInterval = autoStopInterval;
         return this;
     }
     public String getAutoStopInterval() {
         return this.autoStopInterval;
+    }
+
+    public CreateDBResourceGroupShrinkRequest setClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
+    public String getClassification() {
+        return this.classification;
     }
 
     public CreateDBResourceGroupShrinkRequest setClusterMode(String clusterMode) {
@@ -345,6 +432,14 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     }
     public String getRulesShrink() {
         return this.rulesShrink;
+    }
+
+    public CreateDBResourceGroupShrinkRequest setScalePolicy(String scalePolicy) {
+        this.scalePolicy = scalePolicy;
+        return this;
+    }
+    public String getScalePolicy() {
+        return this.scalePolicy;
     }
 
     public CreateDBResourceGroupShrinkRequest setSpecName(String specName) {

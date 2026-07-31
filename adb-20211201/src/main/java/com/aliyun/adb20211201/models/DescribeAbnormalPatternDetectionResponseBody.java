@@ -88,7 +88,7 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
          * <p>The description of the detection result.</p>
          * 
          * <strong>example:</strong>
-         * <p>Two SQL patterns that have abnormal totalTime metric values are detected. This may result in increased CPU utilization, query slowdown, and degraded system stability. Go to the monitoring page to diagnose the issue and then perform optimization.</p>
+         * <p>Two SQL patterns that have abnormal totalTime metric values are detected. This may cause high CPU usage or slow queries, which affects system stability. Go to the monitoring page and use one-click diagnostics to view details and optimize the queries.</p>
          */
         @NameInMap("Detail")
         public String detail;
@@ -126,7 +126,7 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>Maximum query duration: 1.43s
          * Maximum peak memory: 20.73 MB
-         * Maximum read table data: 10.12 MB</p>
+         * Maximum table read data volume: 10.12 MB</p>
          */
         @NameInMap("RelatedMetrics")
         public String relatedMetrics;

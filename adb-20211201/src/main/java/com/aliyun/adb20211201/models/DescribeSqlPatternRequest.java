@@ -113,7 +113,7 @@ public class DescribeSqlPatternRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>2022-08-30T12:10:00Z</p>
+     * <p>2022-08-30</p>
      */
     @NameInMap("StartTime")
     public String startTime;

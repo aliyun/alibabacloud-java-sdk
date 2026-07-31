@@ -4,7 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
+    @NameInMap("AtmConfig")
+    public String atmConfigShrink;
+
     /**
+     * <p>The idle duration after which the resource group is automatically stopped.</p>
+     * 
      * <strong>example:</strong>
      * <p>5m</p>
      */
@@ -12,25 +17,26 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String autoStopInterval;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("ClusterMode")
     public String clusterMode;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("ClusterSizeResource")
     public String clusterSizeResource;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Data Lakehouse Edition, Enterprise Edition, or Basic Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,32 +46,39 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:</p>
+     * <p>Specifies whether to enable the spot instance feature for the resource group. This feature provides resources at a lower unit price, but they can be reclaimed at any time. Only <code>Job</code> resource groups support this feature. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><p><strong>True</strong>: enables the spot instance feature.</p>
+     * </li>
+     * <li><p><strong>False</strong>: disables the spot instance feature.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>True</p>
      */
     @NameInMap("EnableSpot")
     public Boolean enableSpot;
 
     /**
+     * <p>The engine configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
      */
     @NameInMap("EngineParams")
     public String engineParamsShrink;
 
+    /**
+     * <p>The time-based scaling plan for GPUs.</p>
+     */
     @NameInMap("GpuElasticPlan")
     public String gpuElasticPlanShrink;
 
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group in a cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name for a specific cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -78,11 +91,13 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
-     * <li><strong>Interactive</strong></li>
-     * <li><strong>Job</strong></li>
+     * <li><p><strong>Interactive</strong></p>
+     * </li>
+     * <li><p><strong>Job</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>For information about resource groups of Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
+     * <p>For more information about resource groups in Data Lakehouse Edition clusters, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -93,19 +108,21 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("MaxClusterCount")
     public Integer maxClusterCount;
 
     /**
-     * <p>The maximum amount of reserved computing resources.</p>
+     * <p>The maximum amount of reserved computing resources. The value cannot exceed the unallocated computing resources of the cluster.</p>
      * <ul>
-     * <li>If GroupType is set to Interactive, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 16ACU.</li>
-     * <li>If GroupType is set to Job, the maximum amount of reserved computing resources refers to the amount of resources that are not allocated in the cluster. Set this parameter to a value in increments of 8ACU.</li>
+     * <li><p>If the resource group type is <code>Interactive</code>, the value is specified in increments of 16 ACU.</p>
+     * </li>
+     * <li><p>If the resource group type is <code>Job</code>, the value is specified in increments of 8 ACU.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,14 +131,20 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("MaxComputeResource")
     public String maxComputeResource;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("MaxGpuQuantity")
     public Integer maxGpuQuantity;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>This parameter is reserved.</p>
      * 
      * <strong>example:</strong>
-     * <p>N/A</p>
+     * <p>无</p>
      */
     @NameInMap("MinClusterCount")
     public Integer minClusterCount;
@@ -129,8 +152,10 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The minimum amount of reserved computing resources.</p>
      * <ul>
-     * <li>If the GroupType parameter is set to Interactive, set the value to 16ACU.</li>
-     * <li>If GroupType is set to Job, set the value to 0ACU.</li>
+     * <li><p>If the resource group type is <code>Interactive</code>, the minimum amount of reserved computing resources is 16 ACU.</p>
+     * </li>
+     * <li><p>If the resource group type is <code>Job</code>, the minimum amount of reserved computing resources is 0 ACU.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,16 +164,25 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("MinComputeResource")
     public String minComputeResource;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
+    /**
+     * <p>The Ray configuration. This parameter is required if the resource group is an AI group and uses a Ray cluster as its engine.</p>
+     */
     @NameInMap("RayConfig")
     public String rayConfigShrink;
 
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query available regions.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -158,27 +192,49 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The job resubmission rules.</p>
+     * <p>The job submission rules.</p>
      */
     @NameInMap("Rules")
     public String rulesShrink;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("SpecName")
     public String specName;
 
     /**
+     * <p>The desired state of the resource group. Specify <strong>starting</strong> to start the resource group or <strong>stopping</strong> to stop it.</p>
+     * 
      * <strong>example:</strong>
      * <p>starting</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter. Not applicable.</p>
+     */
     @NameInMap("TargetResourceGroupName")
     public String targetResourceGroupName;
 
     public static ModifyDBResourceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBResourceGroupShrinkRequest self = new ModifyDBResourceGroupShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setAtmConfigShrink(String atmConfigShrink) {
+        this.atmConfigShrink = atmConfigShrink;
+        return this;
+    }
+    public String getAtmConfigShrink() {
+        return this.atmConfigShrink;
     }
 
     public ModifyDBResourceGroupShrinkRequest setAutoStopInterval(String autoStopInterval) {

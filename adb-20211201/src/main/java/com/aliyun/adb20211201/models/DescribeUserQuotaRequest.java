@@ -9,7 +9,7 @@ public class DescribeUserQuotaRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>amv-bp1qjt3o18d86987</p>
+     * <p>amv-bp1qjt3o18d8****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

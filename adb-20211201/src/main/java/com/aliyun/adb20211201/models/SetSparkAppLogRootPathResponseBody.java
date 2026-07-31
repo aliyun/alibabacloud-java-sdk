@@ -45,7 +45,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
          * <p>The default log path.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://path/to/log</p>
+         * <p>oss://testBucketname/to/log</p>
          */
         @NameInMap("DefaultLogPath")
         public String defaultLogPath;
@@ -72,7 +72,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
          * <p>The modifier ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1111111</p>
+         * <p>11111111</p>
          */
         @NameInMap("ModifiedUid")
         public String modifiedUid;
@@ -81,7 +81,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
          * <p>The recorded log path.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://path/to/log</p>
+         * <p>oss://testBucketname/to/log</p>
          */
         @NameInMap("RecordedLogPath")
         public String recordedLogPath;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeApsResourceGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to view the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class DescribeApsResourceGroupsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to view the region ID of a cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeApsResourceGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the data synchronization job.</p>
+     * <p>The ID of the data synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>aps-hz1686v37sx****</p>

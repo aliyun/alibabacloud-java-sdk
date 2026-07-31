@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAccountRequest extends TeaModel {
     /**
-     * <p>The standard account of the cluster.</p>
+     * <p>A standard database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class BindAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>ID of the cluster. Applies to Enterprise Edition, Basic Edition, or Data Lakehouse Edition clusters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,14 +25,19 @@ public class BindAccountRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the RAM user.</p>
-     * <p>This parameter is required.</p>
+     * <p>ID of the Alibaba Cloud RAM user to bind.</p>
      * 
      * <strong>example:</strong>
      * <p>1444832459****</p>
      */
     @NameInMap("RamUser")
     public String ramUser;
+
+    /**
+     * <p>List of Alibaba Cloud RAM user IDs to bind. You can bind only one RAM user at a time. If you specify this parameter, the RamUser parameter is ignored.</p>
+     */
+    @NameInMap("RamUserList")
+    public java.util.List<String> ramUserList;
 
     public static BindAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         BindAccountRequest self = new BindAccountRequest();
@@ -61,6 +66,14 @@ public class BindAccountRequest extends TeaModel {
     }
     public String getRamUser() {
         return this.ramUser;
+    }
+
+    public BindAccountRequest setRamUserList(java.util.List<String> ramUserList) {
+        this.ramUserList = ramUserList;
+        return this;
+    }
+    public java.util.List<String> getRamUserList() {
+        return this.ramUserList;
     }
 
 }

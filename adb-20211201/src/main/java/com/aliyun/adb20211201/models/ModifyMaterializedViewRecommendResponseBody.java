@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMaterializedViewRecommendResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>F0983B43-B2EC-536A-8791-142B5CF1E9B6</p>

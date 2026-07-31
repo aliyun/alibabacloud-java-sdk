@@ -4,21 +4,54 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class OpenStructMVRecommendResultModel extends TeaModel {
+    /**
+     * <p>The number of accelerated queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("AcceleratedQueriesCount")
     public Long acceleratedQueriesCount;
 
+    /**
+     * <p>The base table associated with the subquery.</p>
+     */
     @NameInMap("BaseTables")
     public java.util.List<OpenStructMvBaseTableDetailModel> baseTables;
 
+    /**
+     * <p>Estimated bytes scanned reduction by current materialized view from correlated parent queries (posterior calculation).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>321321223</p>
+     */
     @NameInMap("SavedScanbytes")
     public Long savedScanbytes;
 
+    /**
+     * <p>The extracted public subquery.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT * FROM demo.tbl</p>
+     */
     @NameInMap("Subquery")
     public String subquery;
 
+    /**
+     * <p>The ID of the subquery.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SubqueryId")
     public Long subqueryId;
 
+    /**
+     * <p>Whether the current subquery supports incremental refresh.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SupportIncrementalRefresh")
     public Boolean supportIncrementalRefresh;
 

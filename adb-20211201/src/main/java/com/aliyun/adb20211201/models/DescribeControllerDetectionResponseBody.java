@@ -88,7 +88,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
          * <p>The name of the detection item.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU increase detection</p>
+         * <p>CPU增高检测</p>
          */
         @NameInMap("Name")
         public String name;

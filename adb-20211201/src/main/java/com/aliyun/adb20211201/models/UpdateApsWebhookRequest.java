@@ -25,7 +25,7 @@ public class UpdateApsWebhookRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The array of webhooks.</p>
+     * <p>The webhook array.</p>
      */
     @NameInMap("Webhook")
     public java.util.List<UpdateApsWebhookRequestWebhook> webhook;
@@ -61,7 +61,7 @@ public class UpdateApsWebhookRequest extends TeaModel {
 
     public static class UpdateApsWebhookRequestWebhook extends TeaModel {
         /**
-         * <p>Signed key.</p>
+         * <p>The signing key.</p>
          * 
          * <strong>example:</strong>
          * <p>ABC**</p>
@@ -70,7 +70,7 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The name of the webhook.</p>
+         * <p>The webhook name.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleWebhookName</p>
@@ -79,7 +79,7 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The URL of the request.</p>
+         * <p>The request URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/webhook">https://example.com/webhook</a></p>
@@ -88,7 +88,7 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public String url;
 
         /**
-         * <p>The ID of the webhook.</p>
+         * <p>Webhook ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,7 +98,11 @@ public class UpdateApsWebhookRequest extends TeaModel {
         public Long webhookId;
 
         /**
-         * <p>The notification method. Valid values: dingtalk. lark.</p>
+         * <p>The notification method. Valid values:</p>
+         * <ul>
+         * <li>dingtalk: DingTalk.</li>
+         * <li>lark: Lark.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>dingtalk</p>

@@ -41,9 +41,6 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <p>The number of the page to return. Valid range: positive integers. Default value: 1</p>
      * 
@@ -79,9 +76,6 @@ public class DescribeHistoryTasksRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
 
     /**
      * <p>The state of the task. Valid values:</p>
@@ -176,14 +170,6 @@ public class DescribeHistoryTasksRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public DescribeHistoryTasksRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public DescribeHistoryTasksRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -214,14 +200,6 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeHistoryTasksRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeHistoryTasksRequest setStatus(String status) {

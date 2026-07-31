@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTableAccessCountResponseBody extends TeaModel {
     /**
-     * <p>The queried tables.</p>
+     * <p>The table usage details.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeTableAccessCountResponseBodyItems> items;
@@ -93,7 +93,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
 
     public static class DescribeTableAccessCountResponseBodyItems extends TeaModel {
         /**
-         * <p>The number of accesses to the table.</p>
+         * <p>The number of times the table was accessed.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -102,7 +102,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         public String accessCount;
 
         /**
-         * <p>The ID of the cluster to which the table belongs.</p>
+         * <p>The cluster ID of the cluster to which the table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-2ze627uzpkh8a8****</p>
@@ -111,7 +111,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The date when the table was accessed.</p>
+         * <p>The date on which the table was used.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-26</p>
@@ -120,7 +120,7 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
         public String reportDate;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOMER</p>

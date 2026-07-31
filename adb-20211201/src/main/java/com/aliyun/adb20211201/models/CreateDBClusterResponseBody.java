@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-bp1r053byu48p****</p>
@@ -32,7 +32,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The default resource group ID.</p>
+     * <p>The ID of the default resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>

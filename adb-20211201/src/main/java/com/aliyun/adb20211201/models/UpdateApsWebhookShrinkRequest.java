@@ -25,7 +25,7 @@ public class UpdateApsWebhookShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The array of webhooks.</p>
+     * <p>The webhook array.</p>
      */
     @NameInMap("Webhook")
     public String webhookShrink;

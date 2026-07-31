@@ -4,30 +4,84 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class OpenStructMvRecommendSubTaskModel extends TeaModel {
+    /**
+     * <p>The end time of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-10-16 16:56</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The minimum number of slow queries that match the pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MinRewriteQueryCount")
     public Integer minRewriteQueryCount;
 
+    /**
+     * <p>The number of minimum acceleration patterns.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MinRewriteQueryPattern")
     public Integer minRewriteQueryPattern;
 
+    /**
+     * <p>The number of queries scanned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
+     */
     @NameInMap("ScanQueriesCount")
     public Long scanQueriesCount;
 
+    /**
+     * <p>The wait threshold for slow queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SlowQueryThreshold")
     public Integer slowQueryThreshold;
 
+    /**
+     * <p>The start time of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-10-16 16:55</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>Current execution status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The number of newly generated MV recommendations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70</p>
+     */
     @NameInMap("SubQueriesCount")
     public Long subQueriesCount;
 
+    /**
+     * <p>The record ID of the task execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("SubtaskId")
     public Long subtaskId;
 

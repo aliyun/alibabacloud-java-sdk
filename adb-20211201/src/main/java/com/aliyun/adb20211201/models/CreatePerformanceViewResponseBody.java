@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePerformanceViewResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
-     * <blockquote>
-     * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
-     * </blockquote>
+     * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -27,8 +24,8 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
     /**
      * <p>The creation result. Valid values:</p>
      * <ul>
-     * <li><strong>SUCCESS</strong></li>
-     * <li><strong>FAILED</strong></li>
+     * <li><strong>SUCCESS</strong>: succeeded.</li>
+     * <li><strong>FAILED</strong>: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
