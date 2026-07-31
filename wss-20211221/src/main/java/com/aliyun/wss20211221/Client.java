@@ -32,14 +32,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.
-     * &lt;props=&quot;intl&quot;&gt;
-     * Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a>.
-     * If you do not specify automatic payment, this API does not handle the payment. You must use the returned order ID to construct a payment URL. The order becomes active and the resource is provisioned only after the payment is complete.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
+     * &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
+     * If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use this API to order, renew, and modify specific products, such as monthly resource plans for Elastic Desktop Service (EDS) Enterprise Edition.</p>
+     * <p>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</p>
      * 
      * @param tmpReq CreateMultiOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -93,14 +91,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.
-     * &lt;props=&quot;intl&quot;&gt;
-     * Before calling this API, make sure you understand how Wuying Workspace is billed and its <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a>.
-     * If you do not specify automatic payment, this API does not handle the payment. You must use the returned order ID to construct a payment URL. The order becomes active and the resource is provisioned only after the payment is complete.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
+     * &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
+     * If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use this API to order, renew, and modify specific products, such as monthly resource plans for Elastic Desktop Service (EDS) Enterprise Edition.</p>
+     * <p>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</p>
      * 
      * @param request CreateMultiOrderRequest
      * @return CreateMultiOrderResponse
@@ -387,11 +383,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before using this interface, ensure you understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> for Wuying Workspace.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries prices for Elastic Desktop Service products, covering order types such as purchase, renewal, configuration change, and cancellation.</p>
+     * <p>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</p>
      * 
      * @param request DescribeMultiPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -435,11 +430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before using this interface, ensure you understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> for Wuying Workspace.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries prices for Elastic Desktop Service products, covering order types such as purchase, renewal, configuration change, and cancellation.</p>
+     * <p>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</p>
      * 
      * @param request DescribeMultiPriceRequest
      * @return DescribeMultiPriceResponse

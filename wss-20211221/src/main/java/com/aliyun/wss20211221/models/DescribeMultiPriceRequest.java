@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMultiPriceRequest extends TeaModel {
     /**
-     * <p>The order items.</p>
+     * <p>The product information.</p>
      */
     @NameInMap("OrderItems")
     public java.util.List<DescribeMultiPriceRequestOrderItems> orderItems;
@@ -20,7 +20,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The package code. This parameter is not required for non-package types.</p>
+     * <p>The package code. You do not need to specify this parameter for non-package types.</p>
      * 
      * <strong>example:</strong>
      * <p>pacakge</p>
@@ -29,7 +29,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String packageCode;
 
     /**
-     * <p>The ID of the user who owns the resource in the reseller model. This parameter is not required in non-reseller mode.</p>
+     * <p>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter in the non-reseller pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>182864463481****</p>
@@ -76,7 +76,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
     public static class DescribeMultiPriceRequestOrderItemsComponents extends TeaModel {
         /**
-         * <p>The key of the component.</p>
+         * <p>The key of the module.</p>
          * 
          * <strong>example:</strong>
          * <p>RegionId</p>
@@ -85,59 +85,38 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the component.</p>
-         * <p>The following are the keys and their sample or enumerated values for a monthly duration package of the enterprise edition:</p>
+         * <p>The value of the module.</p>
+         * <p>The following example values and valid values are for the Enterprise Edition monthly duration package:</p>
          * <ul>
-         * <li><p><code>RegionId</code>: cn-shanghai</p>
-         * </li>
-         * <li><p><code>InstanceType</code>: eds.enterprise_office.4c8g</p>
-         * </li>
-         * <li><p><code>DurationType</code> (in hours): [enum]</p>
-         * <ul>
-         * <li><p>120</p>
-         * </li>
-         * <li><p>250</p>
-         * </li>
+         * <li>RegionId: cn-shanghai</li>
+         * <li>InstanceType: eds.enterprise_office.4c8g</li>
+         * <li>DurationType (hours): Valid values: <ul>
+         * <li>120</li>
+         * <li>250</li>
          * </ul>
          * </li>
-         * <li><p><code>OsType</code>: [enum]</p>
-         * <ul>
-         * <li><p>Windows</p>
-         * </li>
-         * <li><p>Linux</p>
-         * </li>
+         * <li>OsType: Valid values: <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
          * </ul>
          * </li>
-         * <li><p><code>RootDiskSize</code> (in GiB): 80</p>
-         * </li>
-         * <li><p><code>RootDiskCategory</code>: [enum]</p>
-         * <ul>
-         * <li><p><code>cloud_efficiency</code> (Ultra Cloud Disk)</p>
-         * </li>
-         * <li><p><code>cloud_auto</code> (AutoPL Cloud Disk)</p>
-         * </li>
-         * <li><p><code>cloud_essd</code> (Enhanced SSD (ESSD), available only for specific instance types)</p>
-         * </li>
+         * <li>RootDiskSize (GiB): 80</li>
+         * <li>RootDiskCategory: Valid values: <ul>
+         * <li>cloud_efficiency: ultra cloud disk</li>
+         * <li>cloud_auto: ESSD AutoPL cloud disk</li>
+         * <li>cloud_essd: enhanced standard SSD. Only specific instance types support this value.</li>
          * </ul>
          * </li>
-         * <li><p><code>RootPerformanceLevel</code>: [enum]</p>
-         * <ul>
-         * <li><p>PL0</p>
-         * </li>
-         * <li><p>PL1</p>
-         * </li>
-         * <li><p>PL2</p>
-         * </li>
-         * <li><p>PL3</p>
-         * </li>
+         * <li>RootPerformanceLevel: Valid values: <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
          * </ul>
          * </li>
-         * <li><p><code>DataDiskSize</code> (in GiB): Same as <code>RootDiskSize</code>.</p>
-         * </li>
-         * <li><p><code>DataDiskCategory</code>: Same as <code>RootDiskCategory</code>.</p>
-         * </li>
-         * <li><p><code>DataPerformanceLevel</code>: Same as <code>RootPerformanceLevel</code>.</p>
-         * </li>
+         * <li>DataDiskSize (GiB): same as RootDiskSize</li>
+         * <li>DataDiskCategory: same as RootDiskCategory</li>
+         * <li>DataPerformanceLevel: same as RootPerformanceLevel</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +150,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
     public static class DescribeMultiPriceRequestOrderItems extends TeaModel {
         /**
-         * <p>The quantity to purchase.</p>
+         * <p>The purchase quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -180,7 +159,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>A list of components.</p>
+         * <p>The list of product modules.</p>
          */
         @NameInMap("Components")
         public java.util.List<DescribeMultiPriceRequestOrderItemsComponents> components;
@@ -189,17 +168,17 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public String data;
 
         /**
-         * <p>A list of instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The subscription period. Valid values:</p>
+         * <p>The subscription duration. Valid values:</p>
          * <ul>
-         * <li><p>If <code>PeriodUnit</code> is <code>Year</code>, the valid values are 1, 2, and 3.</p>
+         * <li><p>If PeriodUnit is set to Year: 1, 2, or 3.</p>
          * </li>
-         * <li><p>If <code>PeriodUnit</code> is <code>Month</code>, the valid values are 1, 2, 3, and 6.</p>
+         * <li><p>If PeriodUnit is set to Month: 1, 2, 3, or 6.</p>
          * </li>
          * </ul>
          * 
@@ -210,7 +189,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The unit of the subscription period.</p>
+         * <p>The unit of the subscription duration.</p>
          * 
          * <strong>example:</strong>
          * <p>Year</p>
@@ -228,7 +207,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
         public String promotionId;
 
         /**
-         * <p>A list of resource IDs.</p>
+         * <p>The list of resource IDs.</p>
          */
         @NameInMap("ResourceIds")
         public java.util.List<String> resourceIds;
@@ -236,7 +215,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
         /**
          * <p>The resource type.</p>
          * <blockquote>
-         * <p>The value is case-sensitive.</p>
+         * <p>This parameter is case-sensitive. Make sure that the spelling is correct.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
