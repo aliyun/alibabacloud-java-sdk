@@ -1,3 +1,9 @@
+2026-07-31 Version: 1.5.0
+- Support API ListVoice.
+- Support API QuerySelectOptions.
+- Support API UpdateMmAppAndBinding.
+
+
 2026-07-28 Version: 1.4.0
 - Support API ListDomain.
 - Update API CreateMmApp: add request parameters ModelConfig.AppType.
