@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The attribute to query. Valid values:</p>
-     * <p><code>attachment</code>: The attachment details for member network interfaces associated with a trunk network interface. This is an invitation-only parameter.</p>
-     * <p><code>connectionTrackingConfiguration</code>: The connection tracking configuration.</p>
+     * <p>The network interface controller (NIC) attribute. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>attachment</p>
@@ -16,7 +14,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public String attribute;
 
     /**
-     * <p>The ID of the elastic network interface.</p>
+     * <p>The network interface controller (NIC) ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +30,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the elastic network interface resides. Call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the network interface controller (NIC). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +47,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not yet available for use.</p>
      * </blockquote>
      */
     @NameInMap("Tag")
@@ -127,7 +125,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -138,7 +136,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not publicly available.</p>
+         * <p>This parameter is not yet available for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

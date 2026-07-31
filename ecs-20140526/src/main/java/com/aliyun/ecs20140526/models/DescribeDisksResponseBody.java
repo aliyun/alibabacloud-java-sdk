@@ -18,7 +18,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging operations.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults for paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging operations.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults for paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     /**
      * <p>The total number of entries returned.</p>
      * <blockquote>
-     * <p>When you use MaxResults and NextToken parameters for paging, the returned TotalCount parameter value is invalid.</p>
+     * <p>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

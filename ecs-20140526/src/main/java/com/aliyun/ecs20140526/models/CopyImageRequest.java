@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
     /**
-     * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the value, but you ensure sure that the value is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class CopyImageRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the image copy. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the copied image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a description example.</p>
@@ -23,7 +23,7 @@ public class CopyImageRequest extends TeaModel {
     public String destinationDescription;
 
     /**
-     * <p>The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot contain <code>http://</code> or <code>https://</code>. The name cannot start with <code>acs:</code> or <code>aliyun</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the copied image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain digits, periods (.), colons (:), underscores (_), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>YourImageName</p>
@@ -32,7 +32,7 @@ public class CopyImageRequest extends TeaModel {
     public String destinationImageName;
 
     /**
-     * <p>The ID of the destination region to which the source custom image is copied.</p>
+     * <p>The ID of the destination region to which the image is copied.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -41,12 +41,10 @@ public class CopyImageRequest extends TeaModel {
     public String destinationRegionId;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * </li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -58,7 +56,7 @@ public class CopyImageRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is unavailable.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,14 +66,13 @@ public class CopyImageRequest extends TeaModel {
     public String encryptAlgorithm;
 
     /**
-     * <p>Specifies whether to encrypt the new image.</p>
+     * <p>Specifies whether to encrypt the copied image.</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: encrypts the copied image.</li>
+     * <li>false: does not encrypt the copied image.</li>
+     * <li>Not specified: determined by the backend. For more information, see the supplementary description below.</li>
      * </ul>
-     * <p>Default value: false.</p>
+     * <p>Default value: not specified.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -94,7 +91,7 @@ public class CopyImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The ID of the key used to encrypt the image copy.</p>
+     * <p>The ID of the key used to encrypt the image.</p>
      * 
      * <strong>example:</strong>
      * <p>e522b26d-abf6-4e0d-b5da-04b7******3c</p>
@@ -109,7 +106,7 @@ public class CopyImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the source custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the source custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,9 +116,9 @@ public class CopyImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the new image. If you do not specify this parameter, the new image is assigned to the default resource group.</p>
+     * <p>The resource group ID of the copied image. If you do not set this parameter, the copied image belongs to the default resource group.</p>
      * <blockquote>
-     * <p>If you call the CopyImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify <code>ResourceGroupId</code>, the <code>Forbidden: User not authorized to operate on the specified resource</code> error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CopyImage operation again.</p>
+     * <p>If you are a Resource Access Management (RAM) user and invoke this operation with <code>ResourceGroupId</code> left empty, and the RAM user does not have permissions on the default resource group, the error message <code>Forbidden: User not authorized to operate on the specified resource</code> is returned. Settings a resource group ID that the RAM user has permissions on, or grant the RAM user permissions on the default resource group by using the corresponding Alibaba Cloud account before you invoke this operation again.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,7 +134,7 @@ public class CopyImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CopyImageRequestTag> tag;
@@ -277,7 +274,7 @@ public class CopyImageRequest extends TeaModel {
 
     public static class CopyImageRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key of the copied image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -286,7 +283,7 @@ public class CopyImageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the copied image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class StartInstancesRequest extends TeaModel {
     /**
-     * <p>The batch operation mode. Valid values:</p>
+     * <p>The batch operation pattern. Valid values:</p>
      * <ul>
-     * <li><p>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</p>
+     * <li><p>AllTogether: In this pattern, if all instances are started, a success message is returned. If any instance fails validation, all instances fail to start and a failed message is returned.</p>
      * </li>
-     * <li><p>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</p>
+     * <li><p>SuccessFirst: In this pattern, each instance is started separately. The response contains the operation result for each instance.</p>
      * </li>
      * </ul>
      * <p>Default value: AllTogether.</p>
@@ -21,15 +21,15 @@ public class StartInstancesRequest extends TeaModel {
     public String batchOptimization;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
-     * </ul>
+     * <li><p>true: performs only a dry run. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding fault is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
      * <blockquote>
-     * <p>If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned regardless of whether the request passes the dry run.</p>
+     * <p>If the BatchOptimization parameter is set to <code>SuccessFirst</code>, the dry run with <code>DryRun=true</code> returns only <code>DRYRUN.SUCCESS</code>.</p>
      * </blockquote>
-     * <ul>
-     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</li>
+     * </li>
+     * <li><p>false: sends a Normal request. After the check succeeds, the instances are started.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -40,7 +40,7 @@ public class StartInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The IDs of ECS instances. Valid values of N: 1 to 100.</p>
+     * <p>The list of instance IDs. Valid values of the array length: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class StartInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ECS instance. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

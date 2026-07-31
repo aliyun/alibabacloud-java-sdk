@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesRequest extends TeaModel {
     /**
-     * <p>An array of one or more launch template IDs.</p>
+     * <p>The IDs of one or more launch templates.</p>
      * <ul>
      * <li><p>You can query up to 100 launch templates at a time.</p>
      * </li>
-     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</p>
+     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
      * </li>
      * </ul>
      * 
@@ -20,11 +20,11 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public java.util.List<String> launchTemplateId;
 
     /**
-     * <p>An array of one or more launch template names.</p>
+     * <p>The names of one or more launch templates.</p>
      * <ul>
      * <li><p>You can query up to 100 launch templates at a time.</p>
      * </li>
-     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</p>
+     * <li><p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
      * </li>
      * </ul>
      * 
@@ -51,7 +51,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paginated query.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the resource group to which the launch template belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1000.</p>
+     * <p>The ID of the resource group to which the launch template belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -89,9 +89,9 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public String templateResourceGroupId;
 
     /**
-     * <p>The list of tag key-value pairs of the launch template.</p>
+     * <p>The list of tag key-value pairs of the launch template itself.</p>
      * <blockquote>
-     * <p>Currently, you can create and query launch template tags only by calling API operations. The console does not support creating or viewing launch template tags.</p>
+     * <p>Currently, you can create and query tags of launch templates only by calling API operations. You cannot create or view tags in the console.</p>
      * </blockquote>
      */
     @NameInMap("TemplateTag")
@@ -193,7 +193,7 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public static class DescribeLaunchTemplatesRequestTemplateTag extends TeaModel {
         /**
          * <p>The tag key of the launch template. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the number of resources with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the number of resources that are bound with all the specified tags cannot exceed 1000. If the number of resources exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query them.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

@@ -8,7 +8,7 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The ID of the instance for which you want to modify the attributes of the private pool.</p>
+     * <p>The instance ID of the instance for which you want to modify the private pool matching property.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the private pool. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the private pool. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,12 +102,10 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
 
     public static class ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</p>
+         * <p>The private pool ID, which is the elasticity assurance ID or capacity reservation ID.</p>
          * <ul>
-         * <li><p>This parameter is required when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Target</code>.</p>
-         * </li>
-         * <li><p>This parameter must be empty when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Open</code> or <code>None</code>.</p>
-         * </li>
+         * <li>This parameter is required when PrivatePoolOptions.MatchCriteria is set to <code>Target</code>.</li>
+         * <li>Leave this parameter empty when PrivatePoolOptions.MatchCriteria is set to <code>Open</code> or <code>None</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,14 +115,11 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The new type of private pool. Valid values:</p>
+         * <p>The private pool matching mode of the instance. Valid values:</p>
          * <ul>
-         * <li><p>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</p>
-         * </li>
-         * <li><p>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <code>PrivatePoolOptions.Id</code> to specify the ID of a private pool.</p>
-         * </li>
-         * <li><p>None: no private pool. The capacity in private pools is not used to start the instance.</p>
-         * </li>
+         * <li>Open: open mode. The system automatically matches the instance with an open private pool. If no matching private pool capacity is available, public pool resources are used to launch the instance.</li>
+         * <li>Target: targeted mode. The instance is launched by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instance fails to be launched. If you set this parameter to Target, you must also specify the PrivatePoolOptions.Id parameter to specify the private pool ID.</li>
+         * <li>None: none. The instance is launched normally without using a private pool.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

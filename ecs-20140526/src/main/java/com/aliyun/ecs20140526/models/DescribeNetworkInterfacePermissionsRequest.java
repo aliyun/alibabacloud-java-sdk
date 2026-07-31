@@ -14,7 +14,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The list of NIC permission IDs. Number of elements in the list: 1 to 100.</p>
+     * <p>The list of network interface controller (NIC) permission IDs. Number of elements in the list: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-perm-bp1cs4lwn56lfb****</p>
@@ -29,9 +29,9 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the NIC permission list.</p>
+     * <p>The page number of the network interface controller (NIC) permission list.</p>
      * <p>Minimum value: 1</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,9 +40,9 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page for the paged query.</p>
      * <p>Maximum value: 100</p>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 10</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -51,7 +51,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region of the network interface controller (NIC) permissions. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region of the network interface controller (NIC) permissions. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

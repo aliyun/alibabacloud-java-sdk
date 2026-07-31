@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewDedicatedHostsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence?</a></p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class RenewDedicatedHostsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The IDs of dedicated hosts. You can specify the IDs of up to 100 subscription dedicated hosts. Specify the dedicated host IDs in a JSON array. Example: <code>[&quot;dh-xxxxxxxxx&quot;, &quot;dh-yyyyyyyyy&quot;, … &quot;dh-zzzzzzzzz&quot;]</code>. Separate the IDs with commas (,).</p>
+     * <p>The list of dedicated host IDs. You can specify up to 100 subscription dedicated host IDs. Specify multiple dedicated host IDs in a JSON array in the format of <code>[&quot;dh-xxxxxxxxx&quot;, &quot;dh-yyyyyyyyy&quot;, … &quot;dh-zzzzzzzzz&quot;]</code>. Separate IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,12 +30,17 @@ public class RenewDedicatedHostsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal duration. Valid values:</p>
+     * <p>The renewal period. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
-     * </li>
-     * <li><p>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</p>
-     * </li>
+     * <li>If PeriodUnit is set to Week: 1, 2, 3, and 4.</li>
+     * <li>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * <li>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * <li>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,11 +52,16 @@ public class RenewDedicatedHostsRequest extends TeaModel {
 
     /**
      * <p>The unit of the renewal period. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>Month</p>
-     * </li>
-     * <li><p>Year</p>
-     * </li>
+     * <li>Week</li>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
      * </ul>
      * <p>Default value: Month.</p>
      * 
@@ -62,7 +72,7 @@ public class RenewDedicatedHostsRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

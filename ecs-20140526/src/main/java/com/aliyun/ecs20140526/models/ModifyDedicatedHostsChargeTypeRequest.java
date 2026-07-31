@@ -5,16 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid value:</p>
+     * <p>Specifies whether to automatically complete automatic payment. Valid values:</p>
      * <ul>
-     * <li><p>true: The payment is automatically completed. Ensure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</p>
-     * </li>
-     * <li><p>false: An order is generated but no payment is made.</p>
-     * </li>
+     * <li>true: Automatic payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, abnormal orders are generated, and you can only cancel the orders.</li>
+     * <li>false: An order is generated but no payment is made.</li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>
-     * <p>If you do not have sufficient balance in your account, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can pay for the order.</p>
+     * <p>If your payment method has insufficient balance, set AutoPay to false. An unpaid order is generated, and you can pay for the order on your own.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,7 +22,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>e4567-e89b-12d3-a456-426655440000</p>
@@ -33,12 +31,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new billing method for the dedicated host. Valid value:</p>
+     * <p>The new billable methods of the dedicated hosts. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid: changes the billing method from pay-as-you-go to subscription.</p>
-     * </li>
-     * <li><p>PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
-     * </li>
+     * <li>PrePaid: transforms the billing method from pay-as-you-go to subscription.</li>
+     * <li>PostPaid: transforms the billing method from subscription to pay-as-you-go.</li>
      * </ul>
      * <p>Default value: PrePaid.</p>
      * 
@@ -49,7 +45,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public String dedicatedHostChargeType;
 
     /**
-     * <p>The IDs of the dedicated hosts. The value can be a JSON array that consists of up to 20 dedicated host IDs. Separate the IDs with commas (,).</p>
+     * <p>The IDs of dedicated hosts. The value can be a JSON array that consists of up to 20 dedicated host IDs. Separate the IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,8 +55,8 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public String dedicatedHostIds;
 
     /**
-     * <p>Specifies whether to return the billing details of the order when the billing method is changed from subscription to pay-as-you-go.</p>
-     * <p>Indicates whether the nfs volume is set to the read-only mode. Default value: false.</p>
+     * <p>Specifies whether to return the billing details when the billing method is changed from subscription to pay-as-you-go.</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -69,14 +65,12 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public Boolean detailFee;
 
     /**
-     * <p>Specifies whether to perform only a dry run. Valid value:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * </li>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</li>
      * </ul>
-     * <p>Indicates whether the nfs volume is set to the read-only mode. Default value: false.</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -91,12 +85,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal duration of the subscription dedicated hosts. Valid values:</p>
+     * <p>The subscription renewal period. Valid values:</p>
      * <ul>
-     * <li><p>If you set <code>PeriodUnit</code> to Week, valid values of <code>Period</code> are 1, 2, 3, and 4.</p>
-     * </li>
-     * <li><p>If you set <code>PeriodUnit</code> to Month, valid values of <code>Period</code> are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
-     * </li>
+     * <li>If you set PeriodUnit to Week, the valid values of Period are 1, 2, 3, and 4.</li>
+     * <li>If you set PeriodUnit to Month, the valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,12 +98,10 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration specified by <code>Period</code>. Valid values:</p>
+     * <p>The unit of the renewal period, which is the unit of the Period parameter. Valid values:</p>
      * <ul>
-     * <li><p>Week</p>
-     * </li>
-     * <li><p>Month</p>
-     * </li>
+     * <li>Week</li>
+     * <li>Month</li>
      * </ul>
      * <p>Default value: Month.</p>
      * 
@@ -122,7 +112,7 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the dedicated hosts. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated hosts. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

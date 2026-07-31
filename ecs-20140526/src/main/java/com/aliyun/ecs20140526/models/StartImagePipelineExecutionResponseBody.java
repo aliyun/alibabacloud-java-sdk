@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartImagePipelineExecutionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image creation task.</p>
+     * <p>The ID of the building task.</p>
      * 
      * <strong>example:</strong>
      * <p>exec-5fb8facb8ed7427c****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the diagnostic metric set, which is the unique identifier of the set.</p>
+     * <p>The unique ID of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
      * <p>dms-o7ymuutup5l*****</p>

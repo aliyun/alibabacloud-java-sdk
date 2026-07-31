@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListPluginStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can specify up to 50 instances in a single request. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Valid values: 1 to 50.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
+     * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -22,13 +22,14 @@ public class ListPluginStatusRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</p>
+     * <p>The plugin name. The full character set is supported. The name can be up to 255 characters in length.</p>
      * <ul>
-     * <li><p>If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong> If this parameter is not specified, only a single instance ID can be specified.</p>
+     * <li><p>If you do not specify this parameter, the status of all installed plugins on the instance is queried.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, you can specify only one instance ID.</p>
+     * </blockquote>
      * </li>
-     * <li><p>If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</p>
+     * <li><p>If you specify this parameter, the status of the specified plugin on the instances is queried.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +40,7 @@ public class ListPluginStatusRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -55,7 +56,7 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +67,7 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,7 +77,7 @@ public class ListPluginStatusRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

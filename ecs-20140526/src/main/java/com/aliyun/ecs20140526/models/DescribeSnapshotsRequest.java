@@ -8,17 +8,17 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
     /**
-     * <p>The category of the snapshot. Valid values:</p>
+     * <p>The snapshot type. Valid values:</p>
      * <ul>
-     * <li>Standard: standard snapshot.</li>
+     * <li>Standard: Normal snapshot.</li>
      * <li>Flash: local snapshot. This value is about to be deprecated. Local snapshots have been replaced by the snapshot instant access feature. The metric description is as follows:<ul>
-     * <li>If you used local snapshots before December 14, 2020, you can use this parameter. The parameter is active.</li>
+     * <li>If you used local snapshots before December 14, 2020, you can use this parameter as it is active.</li>
      * <li>If you did not use local snapshots before December 14, 2020, you cannot use this parameter.</li>
      * </ul>
      * </li>
      * <li>archive: archive snapshot.</li>
      * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/noticelist/articleid/1060755542.html">Chinese site notice on snapshot service upgrade and new billing items on December 14</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/noticelist/articleid/1060755542.html">Chinese notice on Alibaba Cloud snapshot service upgrade and new billing items on December 14</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -36,10 +36,10 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
      * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the resource status is queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Key Management Service (KMS) key used by the data disk.</p>
+     * <p>The Key Management Service (KMS) key ID for the data disk.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -76,7 +76,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String KMSKeyId;
 
     /**
-     * <p>The maximum number of entries per page for paging. Maximum value: 100.</p>
+     * <p>The maximum number of entries per page for paging query. Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+     * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
      * <p>Filtering by default resource group is not supported.</p>
      * </blockquote>
@@ -151,7 +151,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of snapshots. The value is a JSON array that consists of up to 100 snapshot IDs. Separate the IDs with commas (,).</p>
+     * <p>The snapshot IDs. The value is a JSON array that consists of up to 100 snapshot IDs. Separate the IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;s-bp67acfmxazb4p****&quot;, &quot;s-bp67acfmxazb5p****&quot;, … &quot;s-bp67acfmxazb6p****&quot;]</p>
@@ -160,7 +160,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotIds;
 
     /**
-     * <p>The ID of the snapshot chain.</p>
+     * <p>The snapshot chain ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sl-bp1grgphbcc9brb5****</p>
@@ -169,7 +169,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotLinkId;
 
     /**
-     * <p>The name of the snapshot.</p>
+     * <p>The snapshot name.</p>
      * 
      * <strong>example:</strong>
      * <p>testSnapshotName</p>
@@ -178,11 +178,11 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotName;
 
     /**
-     * <p>The type of automatic creation. Valid values: </p>
+     * <p>The automatic creation type. Valid values: </p>
      * <ul>
      * <li>auto: automatic snapshot.</li>
      * <li>user: manual snapshot.</li>
-     * <li>all (default): All automatic creation types.</li>
+     * <li>all (default): all automatic creation types.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
      * <li>data: data disk.</li>
      * </ul>
      * <blockquote>
-     * <p>The value is case-insensitive.</p>
+     * <p>The values are case-insensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -208,12 +208,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String sourceDiskType;
 
     /**
-     * <p>The status of the snapshot. Valid values: </p>
+     * <p>The snapshot status. Valid values: </p>
      * <ul>
      * <li>progressing: The snapshot is being created.</li>
      * <li>accomplished: The snapshot is created.</li>
      * <li>failed: The snapshot failed to be created.</li>
-     * <li>all (default): All snapshot statuses.</li>
+     * <li>all (default): all snapshot statuses.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -493,7 +493,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public static class DescribeSnapshotsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the snapshot. Valid values of N: 1 to 20.</p>
-         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

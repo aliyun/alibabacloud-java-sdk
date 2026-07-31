@@ -32,8 +32,8 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends TeaModel {
      * <p>The maximum number of entries per page for paging queries. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li>If this parameter is not set or is set to a value less than 10, the default value is 10.</li>
-     * <li>If the value is set to a value greater than 100, the default value is 100.</li>
+     * <li>When no value is set or the value is set to less than 10, the default value is 10.</li>
+     * <li>When the value is set to greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeAutoSnapshotPolicyAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>

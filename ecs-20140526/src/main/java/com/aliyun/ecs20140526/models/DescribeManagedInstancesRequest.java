@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the activation code.</p>
+     * <p>The activation code ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4ECEEE12-56F1-4FBC-9AB1-890F7494****</p>
@@ -14,9 +14,9 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String activationId;
 
     /**
-     * <p>Indicates whether the managed instance is connected.</p>
-     * <p>true: The managed instance is connected, and you can manage it by using Cloud Assistant.</p>
-     * <p>false: The managed instance is not connected. The server may be shut down or the Cloud Assistant Agent may not be installed correctly.</p>
+     * <p>Specifies whether the managed instance is connected.</p>
+     * <p>true: The managed instance is connected. You can manage the managed instance by using Cloud Assistant.</p>
+     * <p>false: The managed instance is not connected. The server may be shut down or Cloud Assistant Agent may not be properly installed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -25,7 +25,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String connected;
 
     /**
-     * <p>The ID of managed instance N. Valid values of N: 1 to 50.</p>
+     * <p>The ID of the managed instance. Valid values of N: 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>mi-hz018jrc1o0****</p>
@@ -34,7 +34,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The internal or public IP address of the managed instance.</p>
+     * <p>The internal IP address or public IP address of the managed instance.</p>
      * 
      * <strong>example:</strong>
      * <p><code>192.168.**.**</code></p>
@@ -52,21 +52,19 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The value of the MachineId parameter that you specify when you register a managed instance. A maximum of 36 characters are allowed. Sample registration script:</p>
+     * <p>The value of the MachineId parameter specified when registering the managed instance. A maximum of 36 characters are allowed.
+     * Example registration script:</p>
      * <pre><code>aliyun-service --register \\
-     *   --RegionId=cn-hangznou \\
+     *   --RegionId=ap-southeast-1 \\
      *   --ActivationId=xxxxxxxxxxx \\
      *   --ActivationCode=xxxxxxxxx \\
-     * --MachineId=xxxxxx \\ # Optional. The unique identifier of the machine.
+     *   --MachineId=xxxxxx \\ # Optional parameter that specifies the unique identifier of the machine
      *   --ForceResue                 
      * </code></pre>
      * <ul>
-     * <li><p>If the MachineId and ForceResult parameters are specified during registration, the Cloud Assistant generates a fixed managed instance ID for this MachineId.</p>
-     * </li>
-     * <li><p>If the MachineId parameter is not explicitly specified, the Cloud Assistant will automatically generate a MachineId value based on the hardware information of the machine.</p>
-     * </li>
-     * <li><p>We recommend that you explicitly specify the MachineId and ForceResult parameters to mark the mapping between a managed instance and an on-premises machine.</p>
-     * </li>
+     * <li>If MachineId and ForceResult are specified during registration, Cloud Assistant generates a fixed managed instance ID for this MachineId.</li>
+     * <li>If MachineId is not explicitly specified, Cloud Assistant automatically generates a MachineId value based on the hardware information of the machine.</li>
+     * <li>Recommendation: Explicitly specify MachineId and ForceResult to mark the mapping between managed instances and on-premises machines.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,8 +74,8 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String machineId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Valid values: 1 to 50.</p>
+     * <p>The maximum number of entries per page for a paging query.</p>
+     * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +85,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -98,12 +96,9 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     /**
      * <p>The operating system type of the managed instance. Valid values:</p>
      * <ul>
-     * <li><p>windows</p>
-     * </li>
-     * <li><p>linux</p>
-     * </li>
-     * <li><p>FreeBSD</p>
-     * </li>
+     * <li>windows</li>
+     * <li>linux</li>
+     * <li>FreeBSD</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +115,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,7 +126,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,8 +136,8 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. Currently supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query region IDs and other information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -167,7 +162,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the managed instance.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeManagedInstancesRequestTag> tag;
@@ -323,9 +318,9 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     public static class DescribeManagedInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -334,7 +329,7 @@ public class DescribeManagedInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The internal network connectivity policy of the security group. Valid values: </p>
+     * <p>The network connectivity policy within the security group. Valid values: </p>
      * <ul>
      * <li>Accept: service interconnection.</li>
      * <li>Drop: internal isolation.</li>
@@ -27,7 +27,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public String innerAccessPolicy;
 
     /**
-     * <p>The paging token returned in this call. When you use <code>MaxResults</code> and <code>NextToken</code> for paging query, if this value is empty, no more data is available.</p>
+     * <p>The query token (Token) returned in this call. When you use <code>MaxResults</code> and <code>NextToken</code> for paged query, if this value is empty, no more data is available. This indicates that paging is complete.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>

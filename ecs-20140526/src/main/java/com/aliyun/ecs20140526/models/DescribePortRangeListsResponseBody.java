@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePortRangeListsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. If the return value is empty, no more data is returned.</p>
+     * <p>The pagination token returned in this call. If this value is empty, no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -14,7 +14,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Details of the port lists.</p>
+     * <p>The port range list information.</p>
      */
     @NameInMap("PortRangeLists")
     public java.util.List<DescribePortRangeListsResponseBodyPortRangeLists> portRangeLists;
@@ -59,7 +59,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
 
     public static class DescribePortRangeListsResponseBodyPortRangeListsTags extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key of the port range list.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -68,7 +68,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value of the port range list.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -110,7 +110,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public Integer associationCount;
 
         /**
-         * <p>The time when the port list was created.</p>
+         * <p>The time when the port range list was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-04T07:11Z</p>
@@ -119,7 +119,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the port list.</p>
+         * <p>The description of the port range list.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -128,7 +128,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The maximum number of entries in the port list.</p>
+         * <p>The maximum number of entries supported by the port range list.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -137,7 +137,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public Integer maxEntries;
 
         /**
-         * <p>The ID of the port list.</p>
+         * <p>The ID of the port range list.</p>
          * 
          * <strong>example:</strong>
          * <p>prl-2ze9743****</p>
@@ -146,7 +146,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public String portRangeListId;
 
         /**
-         * <p>The name of the port list.</p>
+         * <p>The name of the port range list.</p>
          * 
          * <strong>example:</strong>
          * <p>PortRangeListNameSample</p>
@@ -155,7 +155,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public String portRangeListName;
 
         /**
-         * <p>The ID of the resource group to which to assign the port list.</p>
+         * <p>The ID of the resource group to which the port range list belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-2zeg82g****</p>
@@ -164,7 +164,7 @@ public class DescribePortRangeListsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags of the port list.</p>
+         * <p>The tags of the port range list.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribePortRangeListsResponseBodyPortRangeListsTags> tags;

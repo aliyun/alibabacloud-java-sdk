@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDedicatedHostClusterRequest extends TeaModel {
     /**
-     * <p>The name of the host group. It must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <p>This parameter is left empty by default.</p>
+     * <p>The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters that are categorized as letter characters. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
      * <p>myDDHCluster</p>
@@ -15,8 +15,8 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public String dedicatedHostClusterName;
 
     /**
-     * <p>The description of the host group. It must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>This parameter is left empty by default.</p>
+     * <p>The description of the dedicated host cluster. The description must be 2 to 256 characters in length. The description cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
      * <p>This-is-my-DDHCluster</p>
@@ -25,12 +25,10 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * </li>
+     * <li>true: sends a check request without querying resource status. The system checks the request for potential issues, including invalid AccessKey pairs, the authorization status of the Resource Access Management (RAM) user, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: sends a Normal request. If the request passes the check, a 2XX HTTP status code is returned and the resource status is queried.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -47,7 +45,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +55,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID of the host group.</p>
+     * <p>The ID of the resource group to which the dedicated host cluster belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -72,13 +70,13 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the host group.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDedicatedHostClusterRequestTag> tag;
 
     /**
-     * <p>The zone ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the zones in a region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -182,7 +180,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
 
     public static class CreateDedicatedHostClusterRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be no more than 64 characters in length, and can neither contain <code>http://</code> or <code>https://</code> nor start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -191,7 +189,7 @@ public class CreateDedicatedHostClusterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be no more than 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

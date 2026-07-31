@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique value for this parameter from your client to guarantee that the value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and must not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. Generate a parameter value from your client that is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -30,8 +30,8 @@ public class DeregisterManagedInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the region IDs and other information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

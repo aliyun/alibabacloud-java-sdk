@@ -14,7 +14,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the security group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the security group. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters that are categorized as letter in Unicode, including Chinese characters and English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters that are categorized as letters in Unicode, including letters in English and Chinese, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testSecurityGroupName</p>
@@ -87,7 +87,7 @@ public class CreateSecurityGroupRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The tags to bind to the security group. Array length: 0 to 20.</p>
+     * <p>The tags to add to the security group. Array length: 0 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateSecurityGroupRequestTag> tag;

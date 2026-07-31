@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceByTagsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     public DescribeResourceByTagsResponseBodyResources resources;
 
     /**
-     * <p>The total number of resources.</p>
+     * <p>The total number of returned resources.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

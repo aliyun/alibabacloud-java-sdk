@@ -9,7 +9,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li>Build</li>
-     * <li>Test.</li>
+     * <li>Test</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken returned by the previous call. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -97,7 +97,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
+     * <p>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -119,7 +119,7 @@ public class DescribeImageComponentsRequest extends TeaModel {
      * <p>Valid values:</p>
      * <ul>
      * <li>Linux</li>
-     * <li>Windows.</li>
+     * <li>Windows</li>
      * </ul>
      * 
      * <strong>example:</strong>

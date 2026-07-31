@@ -7,8 +7,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: permanently retained.</li>
-     * <li>1 to 65535: the specified number of days for which snapshot replicas are retained.</li>
+     * <li>-1: Snapshot replicas are permanently retained.</li>
+     * <li>1 to 65535: the number of days for which snapshot replicas are retained.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -25,10 +25,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
     /**
-     * <p>Specifies whether to allow automatic cross-region replication.</p>
+     * <p>Specifies whether to allow automatic cross-region replication. Valid values:</p>
      * <ul>
-     * <li>true: allowed.</li>
-     * <li>false: not allowed.</li>
+     * <li>true: Allowed.</li>
+     * <li>false: Not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. If this parameter is left empty, the name is not modified.</p>
+     * <p>The name of the automatic snapshot policy. If this parameter is empty, the name is not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>SPTestName</p>
@@ -101,8 +101,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: permanently retained.</li>
-     * <li>1 to 65536: the specified number of days for which snapshots are retained.</li>
+     * <li>-1: Automatic snapshots are permanently retained.</li>
+     * <li>1 to 65536: the number of days for which automatic snapshots are retained.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -304,8 +304,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
          * <ul>
-         * <li>true: enabled. </li>
-         * <li>false: disabled.</li>
+         * <li>true: Enabled. </li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 

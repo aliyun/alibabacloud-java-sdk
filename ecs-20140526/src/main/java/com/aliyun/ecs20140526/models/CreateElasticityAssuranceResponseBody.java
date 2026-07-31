@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateElasticityAssuranceResponseBody extends TeaModel {
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the generated order.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -14,7 +14,7 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The elasticity assurance ID.</p>
+     * <p>The ID of the elasticity assurance service.</p>
      * 
      * <strong>example:</strong>
      * <p>eap-bp67acfmxazb4****</p>

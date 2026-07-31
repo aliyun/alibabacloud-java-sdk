@@ -7,7 +7,7 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If you configure this parameter, you cannot configure <code>NetworkInterfaceId</code>.</p>
+     * <p>If you specify this parameter, leave NetworkInterfaceId empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ENI ID.</p>
+     * <p>The Elastic Network Interface (ENI) ID.</p>
      * <blockquote>
-     * <p>If you configure this parameter, you cannot configure <code>InstanceId</code>.</p>
+     * <p>If you specify this parameter, leave InstanceId empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,12 +35,10 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <ul>
-     * <li><p>If you want to remove an instance from a security group, you do not need to specify a region ID.</p>
-     * </li>
-     * <li><p>If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.</p>
-     * </li>
+     * <li>You do not need to specify the region ID when removing an instance from a security group.</li>
+     * <li>You must specify the region ID of the Elastic Network Interface (ENI) when removing an ENI from a security group.</li>
      * </ul>
      * 
      * <strong>example:</strong>

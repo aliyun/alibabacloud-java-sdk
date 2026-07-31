@@ -8,7 +8,7 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return. The minimum value is 1.</p>
+     * <p>The page number of the results. Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the resource is located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,28 +46,18 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><code>instance</code>: ECS instance.</p>
-     * </li>
-     * <li><p><code>disk</code>: disk.</p>
-     * </li>
-     * <li><p><code>snapshot</code>: snapshot.</p>
-     * </li>
-     * <li><p><code>image</code>: image.</p>
-     * </li>
-     * <li><p><code>securitygroup</code>: security group.</p>
-     * </li>
-     * <li><p><code>volume</code>: volume.</p>
-     * </li>
-     * <li><p><code>eni</code>: elastic network interface.</p>
-     * </li>
-     * <li><p><code>ddh</code>: dedicated host.</p>
-     * </li>
-     * <li><p><code>keypair</code>: key pair.</p>
-     * </li>
-     * <li><p><code>launchtemplate</code>: launch template.</p>
-     * </li>
+     * <li>instance: ECS instance.</li>
+     * <li>disk: cloud disk.</li>
+     * <li>snapshot: snapshot.</li>
+     * <li>image: image.</li>
+     * <li>securitygroup: security group.</li>
+     * <li>volume: storage volume.</li>
+     * <li>eni: Elastic Network Interface (ENI).</li>
+     * <li>ddh: dedicated host.</li>
+     * <li>keypair: SSH key pair.</li>
+     * <li>launchtemplate: launch template.</li>
      * </ul>
-     * <p>All values must be in lowercase.</p>
+     * <p>All valid values are in lowercase.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -76,7 +66,7 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeResourceByTagsRequestTag> tag;
@@ -152,10 +142,7 @@ public class DescribeResourceByTagsRequest extends TeaModel {
 
     public static class DescribeResourceByTagsRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <blockquote>
-         * <p>For best compatibility, we recommend that you use the <code>Tag.N.Key</code> parameter.</p>
-         * </blockquote>
+         * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -164,7 +151,7 @@ public class DescribeResourceByTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. An empty string is allowed. The value can be up to 128 characters in length.</p>
+         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

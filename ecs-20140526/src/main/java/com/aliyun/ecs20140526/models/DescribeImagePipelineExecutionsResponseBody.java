@@ -4,14 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
-    /**
-     * <p>The details of the image pipeline executions.</p>
-     */
     @NameInMap("ImagePipelineExecution")
     public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution imagePipelineExecution;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +17,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned in this call. Use this token to retrieve the next page of results. For more information, see the operation description.</p>
+     * <p>The pagination token returned in this call. For more information about how to use this token, see the operation description.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -38,7 +35,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of image pipeline executions.</p>
+     * <p>The total number of image components returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

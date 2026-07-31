@@ -11,7 +11,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     public java.util.List<DescribeDiagnosticMetricsResponseBodyMetrics> metrics;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -68,7 +68,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
+         * <p>Indicates whether a script needs to be executed in the guest OS.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -113,14 +113,11 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
+         * <p>The supported operating system. Valid values:</p>
          * <ul>
-         * <li><p>Windows</p>
-         * </li>
-         * <li><p>Linux</p>
-         * </li>
-         * <li><p>All: Windows and Linux</p>
-         * </li>
+         * <li>Windows: Windows operating systems are supported.</li>
+         * <li>Linux: Linux operating systems are supported.</li>
+         * <li>All: both Windows and Linux operating systems are supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

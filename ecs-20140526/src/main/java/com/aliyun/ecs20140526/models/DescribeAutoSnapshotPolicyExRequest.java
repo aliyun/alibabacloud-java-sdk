@@ -40,7 +40,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page when automatic snapshot policies are displayed in paging mode.</p>
+     * <p>The number of entries per page when automatic snapshot policies are returned with pagination.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 

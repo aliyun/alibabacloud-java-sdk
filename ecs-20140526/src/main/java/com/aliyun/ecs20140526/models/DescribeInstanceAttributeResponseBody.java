@@ -69,7 +69,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public DescribeInstanceAttributeResponseBodyEipAddress eipAddress;
 
     /**
-     * <p>Indicates whether the Jumbo Frame feature is enabled for the ECS instance. Valid values:</p>
+     * <p>Indicates whether the Jumbo frame feature is enabled for the ECS instance. Valid values:</p>
      * <ul>
      * <li><p>true: enabled.</p>
      * </li>
@@ -164,7 +164,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values: </p>
      * <ul>
-     * <li>vpc: virtual private cloud (VPC).</li>
+     * <li>vpc: Virtual Private Cloud (VPC).</li>
      * <li>classic: classic network. The classic network is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Deprecation notice</a>.</li>
      * </ul>
      * 
@@ -190,7 +190,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      * <li>PayByTraffic: pay-by-traffic.</li>
      * </ul>
      * <blockquote>
-     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits for bandwidths and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance metrics. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -277,6 +277,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public DescribeInstanceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
+    @NameInMap("SecurityOptions")
+    public DescribeInstanceAttributeResponseBodySecurityOptions securityOptions;
+
     /**
      * <p>The serial number of the instance.</p>
      * 
@@ -305,9 +308,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the instance continues to be billed after it is stopped. Valid values:</p>
      * <ul>
-     * <li>KeepCharging: The instance continues to be billed after it is stopped. Inventory resources are reserved for the instance.</li>
-     * <li>StopCharging: The instance is not billed after it is stopped. After the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on resource availability in the current region.</li>
-     * <li>Not-applicable: The instance does not support the No Fees for Stopped Instances feature.</li>
+     * <li>KeepCharging: The instance continues to be billed after it is stopped. Resources such as vCPUs, memory, and public IP addresses are retained.</li>
+     * <li>StopCharging: The instance is not billed after it is stopped. Resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on resource availability in the current region.</li>
+     * <li>Not-applicable: The instance does not support the economical mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -580,6 +583,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         return this.securityGroupIds;
     }
 
+    public DescribeInstanceAttributeResponseBody setSecurityOptions(DescribeInstanceAttributeResponseBodySecurityOptions securityOptions) {
+        this.securityOptions = securityOptions;
+        return this;
+    }
+    public DescribeInstanceAttributeResponseBodySecurityOptions getSecurityOptions() {
+        return this.securityOptions;
+    }
+
     public DescribeInstanceAttributeResponseBody setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -696,7 +707,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
          * <blockquote>
-         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits for bandwidths and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance metrics. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -706,7 +717,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The EIP.</p>
+         * <p>The EIP address.</p>
          * 
          * <strong>example:</strong>
          * <p><code>30.21.**.**</code></p>
@@ -775,7 +786,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAttributeResponseBodyNetworkOptions extends TeaModel {
         /**
          * <p>The bandwidth weight.</p>
-         * <p>Different instance types support different values. Call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the current instance type.</p>
+         * <p>Different instance types support different values. You can call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the current instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>Vpc-L1</p>
@@ -784,7 +795,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String bandwidthWeighting;
 
         /**
-         * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
+         * <p>Indicates whether the Jumbo frame feature is enabled for the instance. Valid values:</p>
          * <ul>
          * <li><p>true: enabled.</p>
          * </li>
@@ -921,6 +932,25 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+    }
+
+    public static class DescribeInstanceAttributeResponseBodySecurityOptions extends TeaModel {
+        @NameInMap("EnableSecureBoot")
+        public Boolean enableSecureBoot;
+
+        public static DescribeInstanceAttributeResponseBodySecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodySecurityOptions self = new DescribeInstanceAttributeResponseBodySecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodySecurityOptions setEnableSecureBoot(Boolean enableSecureBoot) {
+            this.enableSecureBoot = enableSecureBoot;
+            return this;
+        }
+        public Boolean getEnableSecureBoot() {
+            return this.enableSecureBoot;
         }
 
     }

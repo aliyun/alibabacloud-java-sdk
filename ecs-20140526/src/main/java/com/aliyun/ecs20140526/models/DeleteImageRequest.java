@@ -8,10 +8,10 @@ public class DeleteImageRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcibly delete the custom image. Valid values:</p>
+     * <p>Specifies whether to force delete the custom image. Valid values: </p>
      * <ul>
-     * <li>true: Forcibly deletes the custom image, ignoring whether the image is currently used by other instances.</li>
-     * <li>false: Normally deletes the custom image. Before deletion, the system checks whether the image is currently used by other instances.</li>
+     * <li>true: Force deletes the custom image, regardless of whether the image is being used by other instances.</li>
+     * <li>false: Deletes the custom image only after checking that the image is not being used by other instances.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -22,7 +22,7 @@ public class DeleteImageRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The image ID. If the specified custom image does not exist, the request will be ignored.</p>
+     * <p>The image ID. If the specified custom image does not exist, the request is ignored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a JSON array.</p>
+     * <p>The list of dedicated host IDs. You can specify up to 100 IDs, separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;dh-bp165p6xk2tlw61e****&quot;, &quot;dh-bp1f9vxmno7emy96****&quot;]</p>
@@ -32,7 +32,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostName;
 
     /**
-     * <p>The dedicated host type. Call the <a href="https://help.aliyun.com/document_detail/134240.html"><code>DescribeDedicatedHostTypes</code></a> operation to get the latest list of dedicated host types.</p>
+     * <p>The type of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> to query the most recent list of dedicated host types.</p>
      * 
      * <strong>example:</strong>
      * <p>ddh.g5</p>
@@ -41,12 +41,10 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostType;
 
     /**
-     * <p>The reason that the dedicated host is locked. Valid values:</p>
+     * <p>The reason why the dedicated host is locked. Valid values:</p>
      * <ul>
-     * <li><p><code>financial</code>: The dedicated host is locked due to an overdue payment.</p>
-     * </li>
-     * <li><p><code>security</code>: The dedicated host is locked for security reasons.</p>
-     * </li>
+     * <li>financial: The dedicated host is locked due to an overdue payment.</li>
+     * <li>security: The dedicated host is locked for security reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The maximum number of results to return per page.</p>
+     * <p>The maximum number of entries per page for a paging query. If you set this parameter, it indicates that you are using the MaxResults and NextToken paging method.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -67,7 +65,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. Do not set this parameter for the first request. For subsequent requests, set this parameter to the <code>NextToken</code> value returned from the previous response.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -83,7 +81,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is deprecated. Use <code>NextToken</code> and <code>MaxResults</code> for pagination.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -94,7 +92,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is deprecated. Use <code>NextToken</code> and <code>MaxResults</code> for pagination.</p>
+     * <p>This parameter is about to go offline. Use NextToken and MaxResults to perform paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,7 +105,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Boolean queryInventory;
 
     /**
-     * <p>The ID of the region where the dedicated host resides. Call the <a href="https://help.aliyun.com/document_detail/25609.html"><code>DescribeRegions</code></a> operation to get the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +115,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the dedicated host belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.</p>
+     * <p>The ID of the resource group to which the dedicated host belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -135,22 +133,18 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to return socket-level capacity information. You can use the information to check the remaining vCPU and memory resources and determine whether an ECS instance of a specific instance type can be created on the dedicated host. Valid values:</p>
+     * <p>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPU, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: returns the information. Only specific dedicated host types support this feature. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export information about dedicated hosts</a>.</p>
-     * </li>
-     * <li><p><code>false</code>: does not return the information.</p>
-     * </li>
+     * <li>true: Display socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</li>
+     * <li>false: Do not display socket-level capacity information.</li>
      * </ul>
      * <blockquote>
      * <p>Notice: </p>
      * </blockquote>
-     * <p>A dedicated host typically has two CPUs, which correspond to Socket 0 and Socket 1. To maximize performance, an ECS instance created on a dedicated host is allocated to a single socket and does not span sockets.</p>
+     * <p>Each dedicated host typically has two CPUs, numbered Socket 0 and Socket 1. On a dedicated host, ECS instances are not created across sockets to ensure maximum performance. An ECS instance is created based on a single socket only.</p>
      * <ul>
-     * <li><p>If the remaining resources on a socket are sufficient for the specified ECS instance type, the instance can be created.</p>
-     * </li>
-     * <li><p>If the remaining resources on each socket are insufficient for the specified ECS instance type, the instance cannot be created, even if the total remaining resources on both sockets are sufficient.</p>
-     * </li>
+     * <li>If the remaining computing resources of one socket are greater than or equal to the instance type to be created, the ECS instance is created.</li>
+     * <li>If the remaining computing resources of each socket are less than the instance type to be created, the ECS instance fails to be created, even if the combined remaining resources of both sockets exceed the instance type requirements.</notice></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,20 +154,20 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String socketDetails;
 
     /**
-     * <p>The state of the dedicated host. Valid values:</p>
+     * <p>The usage status of the dedicated host. Valid values:</p>
      * <ul>
-     * <li><p><code>Available</code>: The dedicated host is running as expected.</p>
+     * <li><p>Available: The dedicated host is running normally.</p>
      * </li>
-     * <li><p><code>UnderAssessment</code>: The dedicated host is being assessed for physical hardware risks. The host is available but may have hardware issues that could affect its ECS instances.</p>
+     * <li><p>UnderAssessment: The physical machine is at risk. The physical machine is available but may cause issues for ECS instances on the dedicated host.</p>
      * </li>
-     * <li><p><code>PermanentFailure</code>: The dedicated host has a permanent failure and is unavailable.</p>
+     * <li><p>PermanentFailure: The dedicated host has a permanent failure and is unavailable.</p>
      * </li>
-     * <li><p><code>TempUnavailable</code>: The dedicated host is temporarily unavailable.</p>
+     * <li><p>TempUnavailable: The dedicated host is temporarily unavailable.</p>
      * </li>
-     * <li><p><code>Redeploying</code>: The dedicated host is being redeployed.</p>
+     * <li><p>Redeploying: The dedicated host is being restored.</p>
      * </li>
      * </ul>
-     * <p>The default value is <code>Available</code>.</p>
+     * <p>Default value: Available.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -182,13 +176,13 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags used to filter dedicated hosts. You can specify up to 20 tags.</p>
+     * <p>The list of tags. Valid values of N: 0 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
 
     /**
-     * <p>The zone ID. Call the <a href="https://help.aliyun.com/document_detail/25610.html"><code>DescribeZones</code></a> operation to get the latest list of Alibaba Cloud zones.</p>
+     * <p>The zone ID. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the most recent zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -363,7 +357,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The key can be up to 128 characters long. It cannot be an empty string, start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the dedicated host. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -372,7 +366,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be up to 128 characters long and cannot contain <code>http://</code> or <code>https://</code>. You can leave the value empty.</p>
+         * <p>The tag value of the dedicated host. If you specify this parameter, the value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -8,7 +8,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
     /**
-     * <p>The token used to retrieve the next page of results. An empty value indicates that no more results are available.</p>
+     * <p>The paging token returned in this call. When you use MaxResults and NextToken for paging query, an empty value indicates that no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -17,7 +17,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number of the dedicated host list.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -26,7 +26,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

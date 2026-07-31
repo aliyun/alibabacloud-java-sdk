@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     /**
-     * <p>The version numbers of the launch template to delete.</p>
+     * <p>The version numbers of the template to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the launch template. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list of Alibaba Cloud.</p>
+     * <p>The region ID of the launch template. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

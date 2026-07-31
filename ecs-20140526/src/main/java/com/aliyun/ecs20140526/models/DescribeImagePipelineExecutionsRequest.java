@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     /**
-     * <p>The ID of the image building task.</p>
+     * <p>The ID of the image build task.</p>
      * 
      * <strong>example:</strong>
      * <p>exec-5fb8facb8ed7427c****</p>
@@ -23,7 +23,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String imagePipelineId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page for paging. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned from a previous call to this operation. This parameter is not required for the first call.</p>
+     * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -48,7 +48,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,35 +64,23 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the image building task. You can specify multiple values, separated by commas. Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
+     * <p>The status of the image build task. You can specify multiple values at the same time. Separate multiple values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
      * <ul>
-     * <li><p>PREPARING: The system is preparing resources, such as a temporary transit instance.</p>
-     * </li>
-     * <li><p>REPAIRING: The system is repairing the source image.</p>
-     * </li>
-     * <li><p>BUILDING: The system is building the image. This includes executing user-defined commands and creating the image.</p>
-     * </li>
-     * <li><p>TESTING: The system is testing the created image by running user-defined test commands.</p>
-     * </li>
-     * <li><p>DISTRIBUTING: The system is distributing the image. This includes copying and sharing the image.</p>
-     * </li>
-     * <li><p>RELEASING: The system is releasing temporary resources generated during the build process.</p>
-     * </li>
-     * <li><p>SUCCESS: The task completed successfully.</p>
-     * </li>
-     * <li><p>PARTITION_SUCCESS: The task is partially successful. The image was created, but an error may have occurred during distribution or resource cleanup.</p>
-     * </li>
-     * <li><p>FAILED: The image building task failed.</p>
-     * </li>
-     * <li><p>TEST_FAILED: The image was created successfully, but it failed the user-defined tests.</p>
-     * </li>
-     * <li><p>CANCELLING: The system is canceling the image building task.</p>
-     * </li>
-     * <li><p>CANCELLED: The image building task was canceled.</p>
-     * </li>
+     * <li>PREPARING: The task is being prepared. Resources such as the temporary intermediate instance are being created.</li>
+     * <li>REPAIRING: The task is being repaired. The source image is being repaired.</li>
+     * <li>BUILDING: The task is being built. Custom commands are being run and the image is being created.</li>
+     * <li>TESTING: The task is being tested. Custom test commands are being run.</li>
+     * <li>DISTRIBUTING: The task is being distributed. Image copying and sharing are being performed.</li>
+     * <li>RELEASING: Resources are being reclaimed. Temporary resources generated during the build process are being released.</li>
+     * <li>SUCCESS: The task succeeded.</li>
+     * <li>PARTITION_SUCCESS: The task partially succeeded. The image was built, but exceptions may have occurred during distribution or resource cleanup.</li>
+     * <li>FAILED: The task failed.</li>
+     * <li>TEST_FAILED: The test failed. The image was created, but the test failed.</li>
+     * <li>CANCELLING: The task is being canceled.</li>
+     * <li>CANCELLED: The task was canceled.</li>
      * </ul>
      * <blockquote>
-     * <p>If you omit this parameter, the operation returns image building tasks of all statuses.</p>
+     * <p>If this parameter is empty, image build tasks in all states are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,7 +90,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
@@ -202,7 +190,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. The value of N can be from 1 to 20.</p>
+         * <p>The key of the tag. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -211,7 +199,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. The value of N can be from 1 to 20.</p>
+         * <p>The value of the tag. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

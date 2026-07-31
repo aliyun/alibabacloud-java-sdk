@@ -46,7 +46,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     /**
      * <p>The total number of snapshot chains.</p>
      * <blockquote>
-     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for a paged query, the returned <code>TotalCount</code> value is invalid. For paging, use <code>MaxResults</code> and <code>NextToken</code> instead.</p>
+     * <p>When you use the <code>MaxResults</code> and <code>NextToken</code> parameters for a paged query, the returned <code>TotalCount</code> value is invalid. For paging, use <code>NextToken</code> and <code>MaxResults</code> instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

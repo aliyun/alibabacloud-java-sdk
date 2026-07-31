@@ -11,7 +11,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this response.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -29,7 +29,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -110,7 +110,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     public static class DescribeActivationsResponseBodyActivationListTags extends TeaModel {
         /**
-         * <p>The tag key of the activation code.</p>
+         * <p>The tag key of the managed instance activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -119,7 +119,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value of the activation code.</p>
+         * <p>The tag value of the managed instance activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -152,7 +152,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     public static class DescribeActivationsResponseBodyActivationList extends TeaModel {
         /**
-         * <p>The ID of the activation code.</p>
+         * <p>The activation code ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
@@ -161,7 +161,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String activationId;
 
         /**
-         * <p>The time when the activation code was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T06:00:00Z</p>
@@ -170,7 +170,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The number of instances that were deregistered.</p>
+         * <p>The number of deregistered instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +224,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String ipAddressRange;
 
         /**
-         * <p>The number of instances that were registered.</p>
+         * <p>The number of registered instances.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +242,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags of the activation code.</p>
+         * <p>The tags of the managed instance activation code.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeActivationsResponseBodyActivationListTags> tags;

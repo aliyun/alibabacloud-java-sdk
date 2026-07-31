@@ -23,7 +23,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The end of the diagnostic time range. This value corresponds to the <code>EndTime</code> parameter you provided when calling the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation.</p>
+     * <p>The end time. This parameter was specified when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00:00Z</p>
@@ -32,7 +32,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time when the diagnosis was complete.</p>
+     * <p>The time when the diagnostic report was completed.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00:00Z</p>
@@ -40,14 +40,11 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     @NameInMap("FinishedTime")
     public String finishedTime;
 
-    /**
-     * <p>The diagnostic results for the metrics.</p>
-     */
     @NameInMap("MetricResults")
     public DescribeDiagnosticReportAttributesResponseBodyMetricResults metricResults;
 
     /**
-     * <p>The metric set ID.</p>
+     * <p>The ID of the diagnostic metric set.</p>
      * 
      * <strong>example:</strong>
      * <p>dms-bp17p0qwtr72zmu*****</p>
@@ -56,7 +53,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The unique ID of the diagnostic report.</p>
+     * <p>The diagnostic report ID. The unique identifier of the resource diagnostic report.</p>
      * 
      * <strong>example:</strong>
      * <p>dr-uf6i0tv2refv8wz*****</p>
@@ -83,7 +80,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource type. Only <code>instance</code> is supported.</p>
+     * <p>The resource type. The supported type is instance.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -92,18 +89,13 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The overall severity level of the diagnostic report. This is the highest severity level among all metrics in the report. Valid values are listed below, from lowest to highest severity:</p>
+     * <p>The severity level of the report. This value represents the most severe level among all metrics. The severity levels in ascending order are:</p>
      * <ul>
-     * <li><p>Unknown: The initial state. The diagnosis has not started or exited unexpectedly, so the result is inconclusive.</p>
-     * </li>
-     * <li><p>Normal: The resource is healthy, and no issues were found.</p>
-     * </li>
-     * <li><p>Info: Informational messages were found that may be relevant to an issue.</p>
-     * </li>
-     * <li><p>Warn: Warnings were found that may lead to an issue.</p>
-     * </li>
-     * <li><p>Critical: Critical issues were found.</p>
-     * </li>
+     * <li>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnosis process exited abnormally. No diagnostic conclusion is available.</li>
+     * <li>Normal: The diagnosis is normal. No issues were found.</li>
+     * <li>Info: Related information is available and may be associated with an exception.</li>
+     * <li>Warn: Related information is available and may cause an exception.</li>
+     * <li>Critical: A critical exception exists.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,7 +105,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String severity;
 
     /**
-     * <p>The start of the diagnostic time range. This value corresponds to the <code>StartTime</code> parameter you provided when calling the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation.</p>
+     * <p>The start time. This parameter was specified when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00:00Z</p>
@@ -122,14 +114,11 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the diagnostic report. Possible values:</p>
+     * <p>The status of the diagnostic report. Valid values:</p>
      * <ul>
-     * <li><p>InProgress: The diagnosis is in progress.</p>
-     * </li>
-     * <li><p>Finished: The diagnosis is complete.</p>
-     * </li>
-     * <li><p>Failed: The diagnosis failed.</p>
-     * </li>
+     * <li>InProgress: The diagnosis is in progress.</li>
+     * <li>Finished: The diagnosis is complete.</li>
+     * <li>Failed: The diagnosis failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

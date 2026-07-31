@@ -14,11 +14,11 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
     public Long ownerId;
 
     /**
-     * <p>The auto-renewal period for the elasticity assurance.</p>
+     * <p>The auto-renewal period of the instance.</p>
      * <ul>
-     * <li><p>Valid values when <code>PeriodUnit</code> is set to <code>Year</code>: 1, 3, and 5.</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values: 1, 3, and 5.</p>
      * </li>
-     * <li><p>Valid values when <code>PeriodUnit</code> is set to <code>Month</code>: 1.</p>
+     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values: 1.</p>
      * </li>
      * </ul>
      * <p>Default value: 1.</p>
@@ -30,11 +30,11 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration. Valid values:</p>
+     * <p>The unit of the renewal period. Valid values:</p>
      * <ul>
-     * <li><p>Month</p>
+     * <li><p>Month: month</p>
      * </li>
-     * <li><p>Year</p>
+     * <li><p>Year: year</p>
      * </li>
      * </ul>
      * <p>Default value: Month.</p>
@@ -46,7 +46,7 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
     public String periodUnit;
 
     /**
-     * <p>The ID of the region to which the elasticity assurance belongs. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance service. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,13 +56,13 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
     public String regionId;
 
     /**
-     * <p>The auto-renewal status of the elasticity assurance. Valid values:</p>
+     * <p>The auto-renewal status of the instance. Valid values:</p>
      * <ul>
-     * <li><p>AutoRenewal: Auto-renewal is enabled for the elasticity assurance.</p>
+     * <li><p>AutoRenewal: Auto-renewal is enabled.</p>
      * </li>
-     * <li><p>Normal: Auto-renewal is disabled for the elasticity assurance.</p>
+     * <li><p>Normal: Auto-renewal is disabled.</p>
      * </li>
-     * <li><p>NotRenewal: The elasticity assurance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the elasticity assurance expires. You can change the value of this parameter from NotRenewal to <code>Normal</code> for an elasticity assurance, and then manually renew the elasticity assurance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</p>
+     * <li><p>NotRenewal: The instance will not be renewed. After this value is specified, the system no longer sends expiration reminders and sends only a non-renewal reminder three days before the expiration date. You can change the value for an elasticity assurance service from NotRenewal to Normal and then manually renew the service or enable auto-renewal.</p>
      * </li>
      * </ul>
      * 
@@ -157,9 +157,9 @@ public class ModifyElasticityAssuranceAutoRenewAttributeRequest extends TeaModel
 
     public static class ModifyElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The IDs of elasticity assurances.</p>
+         * <p>The list of elasticity assurance service IDs to modify.</p>
          * <blockquote>
-         * <p>You can renew up to 50 elasticity assurances at a time.</p>
+         * <p>You can modify up to 50 elasticity assurance services at a time.</p>
          * </blockquote>
          */
         @NameInMap("Id")

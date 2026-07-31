@@ -8,7 +8,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public PurchaseElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -23,12 +23,10 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The validity period of the elasticity assurance. The unit of the validity period is determined by the PeriodUnit value. Valid values:</p>
+     * <p>The purchase duration. The unit of the duration is determined by the PeriodUnit parameter. Valid values:</p>
      * <ul>
-     * <li><p>When PeriodUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-     * </li>
-     * <li><p>When PeriodUnit is set to Year, valid values are 1, 2, 3, 4, and 5.</p>
-     * </li>
+     * <li>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+     * <li>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -39,12 +37,10 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the validity period of the elasticity assurance. Valid values:</p>
+     * <p>The unit of the purchase duration. Valid values:</p>
      * <ul>
-     * <li><p>Month</p>
-     * </li>
-     * <li><p>Year</p>
-     * </li>
+     * <li>Month: month.</li>
+     * <li>Year: year.</li>
      * </ul>
      * <p>Default value: Year.</p>
      * 
@@ -55,7 +51,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the region in which to purchase the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the elastic capacity reservation service. You can call <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +67,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time when the elasticity assurance takes effect. The default value is the time when the elasticity assurance is created. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * <p>The effective period of the elastic capacity reservation service. By default, the service takes effect when this operation is invoked. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-18T00:00:00Z</p>
@@ -166,7 +162,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
 
     public static class PurchaseElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The ID of the elasticity assurance.</p>
+         * <p>The ID of the elastic capacity reservation service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,12 +172,10 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</p>
+         * <p>The matching mode of the elastic capacity reservation service. Valid values:</p>
          * <ul>
-         * <li><p>Open: open private pool. If you use the elasticity assurance to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</p>
-         * </li>
-         * <li><p>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</p>
-         * </li>
+         * <li>Open: open mode. The system automatically matches the capacity of open private pools when instances are started. If no matching private pool capacity is available, public pool resources are used to start the instances.</li>
+         * <li>Target: targeted mode. Instances are started by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instances fail to start.</li>
          * </ul>
          * <p>Default value: Open.</p>
          * 

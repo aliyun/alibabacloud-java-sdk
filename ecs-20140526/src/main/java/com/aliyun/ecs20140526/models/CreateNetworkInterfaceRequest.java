@@ -16,7 +16,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>A client token to ensure request idempotence. Your client generates this token, which must be unique across requests. The token can contain only ASCII characters and must not exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -25,20 +25,13 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The connection tracking settings.</p>
-     * <p>Before using this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</p>
+     * <p>The network connectivity tracking configuration of the ENI.</p>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public CreateNetworkInterfaceRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
 
     /**
-     * <p>Specifies whether to release the elastic network interface when its attached instance is released. Valid values:</p>
-     * <ul>
-     * <li><p><code>true</code>: The elastic network interface is released.</p>
-     * </li>
-     * <li><p><code>false</code>: The elastic network interface is retained.</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -47,14 +40,16 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Boolean deleteOnRelease;
 
     /**
-     * <p>The description of the elastic network interface. The description must be 2 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>Default value: empty.</p>
+     * <p>The description of the network interface controller (NIC). The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("EnablePrimaryIPv6")
+    public Boolean enablePrimaryIPv6;
 
     /**
      * <blockquote>
@@ -65,14 +60,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public CreateNetworkInterfaceRequestEnhancedNetwork enhancedNetwork;
 
     /**
-     * <p>The type of the elastic network interface. Valid values:</p>
-     * <ul>
-     * <li><p><code>Secondary</code>: a secondary elastic network interface.</p>
-     * </li>
-     * <li><p><code>Trunk</code>: a trunk network interface. (This feature is available by invitation only.)</p>
-     * </li>
-     * </ul>
-     * <p>Default value: <code>Secondary</code>.</p>
+     * <p>The type of the network interface controller (NIC). Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Secondary</p>
@@ -81,19 +69,13 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>One or more IPv4 prefixes to assign to the elastic network interface. Valid values of N: 1 to 10.</p>
-     * <blockquote>
-     * <p>You must specify either <code>Ipv4Prefix.N</code> or <code>Ipv4PrefixCount</code>, but not both, to assign IPv4 prefixes.</p>
-     * </blockquote>
+     * <p>One or more IPv4 prefixes to assign to the network interface controller (NIC). Valid values of N: 1 to 10.</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>The number of IPv4 prefixes to assign to the elastic network interface. Valid values: 1 to 10.</p>
-     * <blockquote>
-     * <p>You must specify either <code>Ipv4Prefix.N</code> or <code>Ipv4PrefixCount</code>, but not both, to assign IPv4 prefixes.</p>
-     * </blockquote>
+     * <p>The number of IPv4 prefixes to assign to the network interface controller (NIC). Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,11 +84,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv4PrefixCount;
 
     /**
-     * <p>One or more IPv6 addresses to assign to the elastic network interface. You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
-     * <p>Example: <code>Ipv6Address.1=2001:db8:1234:1a00::****</code></p>
-     * <blockquote>
-     * <p>You must specify either <code>Ipv6Address.N</code> or <code>Ipv6AddressCount</code>, but not both, to assign IPv6 addresses.</p>
-     * </blockquote>
+     * <p>One or more IPv6 addresses to assign to the network interface controller (NIC). You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:db8:1234:1a00::****</p>
@@ -115,10 +93,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>The number of random IPv6 addresses to assign to the elastic network interface. Valid values: 1 to 10.</p>
-     * <blockquote>
-     * <p>You must specify either <code>Ipv6Address.N</code> or <code>Ipv6AddressCount</code>, but not both, to assign IPv6 addresses.</p>
-     * </blockquote>
+     * <p>The number of randomly generated IPv6 addresses to assign to the network interface controller (NIC). Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -127,19 +102,13 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
-     * <p>One or more IPv6 prefixes to assign to the elastic network interface. Valid values of N: 1 to 10.</p>
-     * <blockquote>
-     * <p>You must specify either <code>Ipv6Prefix.N</code> or <code>Ipv6PrefixCount</code>, but not both, to assign IPv6 prefixes.</p>
-     * </blockquote>
+     * <p>One or more IPv6 prefixes to assign to the network interface controller (NIC). Valid values of N: 1 to 10.</p>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
     /**
-     * <p>The number of IPv6 prefixes to assign to the elastic network interface. Valid values: 1 to 10.</p>
-     * <blockquote>
-     * <p>You must specify either <code>Ipv6Prefix.N</code> or <code>Ipv6PrefixCount</code>, but not both, to assign IPv6 prefixes.</p>
-     * </blockquote>
+     * <p>The number of IPv6 prefixes to assign to the network interface controller (NIC). Valid values: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -148,8 +117,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer ipv6PrefixCount;
 
     /**
-     * <p>The name of the elastic network interface. The name must be 2 to 128 characters long and can contain Unicode letters (such as English and Chinese characters), digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <p>Default value: empty.</p>
+     * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain letters in the Unicode letter categorization (including English and Chinese characters) and ASCII digits (0-9). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testNetworkInterfaceName</p>
@@ -158,23 +126,13 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The communication parameters of the elastic network interface.</p>
+     * <p>The communication parameter set of the network interface controller (NIC).</p>
      */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
 
     /**
-     * <p>The traffic mode of the elastic network interface. Valid values:</p>
-     * <ul>
-     * <li><p><code>Standard</code>: uses the TCP traffic mode.</p>
-     * </li>
-     * <li><p><code>HighPerformance</code>: enables the Elastic RDMA Interface (ERI) and uses the RDMA traffic mode.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>An elastic network interface in RDMA traffic mode can be attached only to an ERI-supported instance type. The number of these elastic network interfaces that can be attached is limited by the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>, <a href="https://help.aliyun.com/document_detail/336853.html">Configure eRDMA on an enterprise-level instance</a>&lt;props=&quot;china&quot;&gt;, and <a href="https://help.aliyun.com/document_detail/2248432.html">Configure eRDMA on a GPU instance</a>.</p>
-     * </blockquote>
-     * <p>Default value: <code>Standard</code>.</p>
+     * <p>The communication mode of the network interface controller (NIC). Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -189,8 +147,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The primary private IP address of the elastic network interface.</p>
-     * <p>The IP address must be an available IP address within the CIDR block of the VSwitch. If this parameter is not specified, the system randomly assigns an available IP address from the VSwitch\&quot;s CIDR block.</p>
+     * <p>The primary private IP address of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p><code>172.17.**.**</code></p>
@@ -199,10 +156,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String primaryIpAddress;
 
     /**
-     * <p>One or more secondary private IP addresses to assign to the elastic network interface. The IP addresses must be available addresses from the CIDR block of the VSwitch to which the elastic network interface belongs. Valid values of N: 0 to 10.</p>
-     * <blockquote>
-     * <p>You cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code> to assign secondary private IP addresses.</p>
-     * </blockquote>
+     * <p>One or more secondary private IP addresses selected from the idle IP addresses within the CIDR block of the vSwitch to which the network interface controller (NIC) belongs. Valid values of N: 0 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p><code>172.17.**.**</code></p>
@@ -211,9 +165,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The number of queues for the elastic network interface. Valid values: 1 to 2048.</p>
-     * <p>When attached to an instance, this value must be less than the maximum number of queues per elastic network interface that the instance type supports. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> value in the response to query this limit.</p>
-     * <p>If you do not specify this parameter, the default queue number for the instance type is used upon attachment.</p>
+     * <p>The number of queues for the network interface controller (NIC). Valid values: 1 to 2048.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -222,12 +174,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer queueNumber;
 
     /**
-     * <p>The number of queue pairs for the RDMA-enabled elastic network interface.</p>
-     * <p>If you want to attach multiple RDMA-enabled elastic network interfaces to an instance, we recommend that you specify a <code>QueuePairNumber</code> value for each elastic network interface. The value should be based on the maximum <code>QueuePairNumber</code> value supported by the instance type and the number of elastic network interfaces that you plan to use. The total number of queue pairs for all elastic network interfaces cannot exceed the maximum value for the instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to query the maximum value.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>If you do not specify <code>QueuePairNumber</code> for an RDMA-enabled elastic network interface, the system defaults to the maximum value that the instance type supports. Consequently, you cannot attach any more RDMA-enabled elastic network interfaces to that instance. This does not affect standard elastic network interfaces.</p>
+     * <p>The number of queues for the RDMA ENI.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -236,7 +183,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer queuePairNumber;
 
     /**
-     * <p>The ID of the region in which to create the elastic network interface. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the network interface controller (NIC) to be created. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -246,7 +193,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+     * <p>The resource group ID. You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -261,16 +208,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The receive (Rx) queue depth of the elastic network interface.</p>
-     * <ul>
-     * <li><p>The receive (Rx) and transmit (Tx) queue depths must be equal. The value must be a power of 2 between 8,192 and 16,384.</p>
-     * </li>
-     * <li><p>A larger Rx queue depth can improve receive throughput but consumes more memory.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is not publicly available.</p>
-     * </blockquote>
+     * <p>The inbound queue depth of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>8192</p>
@@ -279,7 +217,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer rxQueueSize;
 
     /**
-     * <p>The number of secondary private IP addresses to automatically assign to the elastic network interface. Valid values: 1 to 49.</p>
+     * <p>The number of private IP addresses for automatic creation by ECS. Valid values: 1 to 49.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -288,10 +226,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer secondaryPrivateIpAddressCount;
 
     /**
-     * <p>The ID of the security group for the elastic network interface. The security group and the elastic network interface must be in the same VPC.</p>
-     * <blockquote>
-     * <p>You must specify either <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>, but not both.</p>
-     * </blockquote>
+     * <p>The ID of the security group to which the network interface controller (NIC) is added. The security group and the network interface controller (NIC) must belong to the same VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1fg655nh68xyz9i****</p>
@@ -300,10 +235,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The IDs of one or more security groups to which to add the elastic network interface. The security groups and the elastic network interface must be in the same VPC. The valid values of N depend on the maximum number of security groups to which an elastic network interface can be added. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
-     * <blockquote>
-     * <p>You must specify either <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code>, but not both.</p>
-     * </blockquote>
+     * <p>The IDs of one or more security groups to which the network interface controller (NIC) is added. The security groups and the network interface controller (NIC) must belong to the same VPC. The valid values of N depend on the quota for the maximum number of security groups to which an ENI can be added. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp1fg655nh68xyz9i****</p>
@@ -312,17 +244,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>Specifies whether to enable source/destination check. Enabling this feature enhances network security. Valid values:</p>
-     * <ul>
-     * <li><p><code>true</code>: enabled.</p>
-     * </li>
-     * <li><p><code>false</code>: disabled.</p>
-     * </li>
-     * </ul>
-     * <p>Default value: false.</p>
-     * <blockquote>
-     * <p>This feature is available only in some regions. Before you use this feature, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source/destination check</a>.</p>
-     * </blockquote>
+     * <p>Specifies whether to enable source/destination checking. We recommend that you enable this feature to improve network security. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -331,22 +253,13 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Boolean sourceDestCheck;
 
     /**
-     * <p>The tags to add to the elastic network interface.</p>
+     * <p>The tags of the network interface controller (NIC).</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateNetworkInterfaceRequestTag> tag;
 
     /**
-     * <p>The transmit (Tx) queue depth of the elastic network interface.</p>
-     * <ul>
-     * <li><p>The transmit (Tx) and receive (Rx) queue depths must be equal. The value must be a power of 2 between 8,192 and 16,384.</p>
-     * </li>
-     * <li><p>A larger Tx queue depth can improve transmit throughput but consumes more memory.</p>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is not publicly available.</p>
-     * </blockquote>
+     * <p>The outbound queue depth of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>8192</p>
@@ -355,11 +268,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer txQueueSize;
 
     /**
-     * <p>The ID of the VSwitch for the elastic network interface. The private IP addresses for the elastic network interface are assigned from the available CIDR block of the VSwitch.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>The elastic network interface and the instance to be attached must be in the same availability zone but can belong to different VSwitches.</p>
+     * <p>The vSwitch ID of the network interface controller (NIC). The private IP address of the network interface controller (NIC) is allocated from the idle IP addresses within the CIDR block of the vSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -422,6 +331,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateNetworkInterfaceRequest setEnablePrimaryIPv6(Boolean enablePrimaryIPv6) {
+        this.enablePrimaryIPv6 = enablePrimaryIPv6;
+        return this;
+    }
+    public Boolean getEnablePrimaryIPv6() {
+        return this.enablePrimaryIPv6;
     }
 
     public CreateNetworkInterfaceRequest setEnhancedNetwork(CreateNetworkInterfaceRequestEnhancedNetwork enhancedNetwork) {
@@ -666,11 +583,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout for a TCP connection in the TIME_WAIT or closing state, in seconds. Valid values: integers from 3 to 15.</p>
-         * <p>Default value: 3.</p>
-         * <blockquote>
-         * <p>If your ECS instance works with NLB or CLB, the default timeout period for connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
-         * </blockquote>
+         * <p>The timeout period for TCP connections in the closed or time-wait state. Unit: seconds. Valid values: integers from 3 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -679,8 +592,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>The timeout for an established TCP connection, in seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
-         * <p>Default value: 910.</p>
+         * <p>The timeout period for established TCP connections. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
          * 
          * <strong>example:</strong>
          * <p>910</p>
@@ -689,11 +601,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer tcpEstablishedTimeout;
 
         /**
-         * <p>The timeout for a UDP stream, in seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
-         * <p>Default value: 30.</p>
-         * <blockquote>
-         * <p>If your ECS instance works with NLB or CLB, the default value is 100 seconds.</p>
-         * </blockquote>
+         * <p>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -802,7 +710,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig extends TeaModel {
         /**
-         * <p>The traffic mode of the elastic network interface.</p>
+         * <p>The communication mode of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>HighPerformance</p>
@@ -811,7 +719,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>The number of queues for the elastic network interface.</p>
+         * <p>The number of queues for the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -820,7 +728,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queue pairs for the RDMA-enabled elastic network interface.</p>
+         * <p>The number of queues for the RDMA ENI.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -829,23 +737,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer queuePairNumber;
 
         /**
-         * <p>The receive (Rx) queue depth of the elastic network interface.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <blockquote>
-         * <p>This parameter is available by invitation only. To request access, submit a ticket.</p>
-         * </blockquote>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <blockquote>
-         * <p>This parameter is available by invitation only. To request access, submit a ticket.</p>
-         * </blockquote>
-         * <ul>
-         * <li><p>This parameter is applicable only to seventh-generation or later ECS instance types.</p>
-         * </li>
-         * <li><p>This parameter is applicable only to Linux images.</p>
-         * </li>
-         * <li><p>A larger Rx queue depth can improve receive throughput and reduce the packet loss rate, but consumes more memory.</p>
-         * </li>
-         * </ul>
+         * <p>The inbound queue depth of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -854,23 +746,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer rxQueueSize;
 
         /**
-         * <p>The transmit (Tx) queue depth of the elastic network interface.</p>
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <blockquote>
-         * <p>This parameter is available by invitation only. To request access, submit a ticket.</p>
-         * </blockquote>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <blockquote>
-         * <p>This parameter is available by invitation only. To request access, submit a ticket.</p>
-         * </blockquote>
-         * <ul>
-         * <li><p>This parameter is applicable only to seventh-generation or later ECS instance types.</p>
-         * </li>
-         * <li><p>This parameter is applicable only to Linux images.</p>
-         * </li>
-         * <li><p>A larger Tx queue depth can improve transmit throughput and reduce the packet loss rate, but consumes more memory.</p>
-         * </li>
-         * </ul>
+         * <p>The outbound queue depth of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -927,7 +803,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values for N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters long and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag for the network interface controller (NIC). Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -936,7 +812,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values for N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters long and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag for the network interface controller (NIC). Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

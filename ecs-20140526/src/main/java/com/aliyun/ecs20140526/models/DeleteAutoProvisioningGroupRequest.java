@@ -21,7 +21,7 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the auto provisioning group.</p>
+     * <p>The ID of the region where the auto provisioning group resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,15 +37,13 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release instances in the auto provisioning group. Valid values:</p>
+     * <p>Specifies whether to release the instances in the auto-provisioning group when the group is deleted. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Releases the instances auto provisioning group.</li>
+     * <li>false: The instances auto provisioning group continue to run.</li>
      * </ul>
      * <blockquote>
-     * <p>By default, this parameter inherits the value of <code>TerminateInstances</code> that you specified when you call the <code>CreateAutoProvisioningGroup</code> operation to create an auto provisioning group. You can also change the value of <code>TerminateInstances</code> when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.</p>
+     * <p>The default value of this parameter is inherited from the TerminateInstances parameter that you specified when you called the CreateAutoProvisioningGroup operation to create the auto-provisioning group. You can also set the TerminateInstances parameter to a new value when you call this operation to delete the auto-provisioning group.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

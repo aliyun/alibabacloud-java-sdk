@@ -15,7 +15,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * <p>The total number of snapshots.</p>
      * <blockquote>
-     * <p>When you use <code>MaxResults</code> and <code>NextToken</code> parameters for paging, the returned <code>TotalCount</code> parameter value is invalid.</p>
+     * <p>When you use <code>MaxResults</code> and <code>NextToken</code> parameters for paging query, the returned <code>TotalCount</code> parameter value is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

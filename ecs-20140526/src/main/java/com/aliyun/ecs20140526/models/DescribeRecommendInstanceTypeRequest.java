@@ -19,8 +19,8 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the ECS instance. For details, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
      * <ul>
-     * <li>PrePaid: subscription.</li>
-     * <li>PostPaid: pay-as-you-go.</li>
+     * <li>PrePaid: subscription</li>
+     * <li>PostPaid: pay-as-you-go</li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -45,7 +45,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceFamilyLevel;
 
     /**
-     * <p>The specified instance type. For details, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+     * <p>The specified instance type. For details, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
      * <blockquote>
      * <p>If you specify InstanceType, you cannot specify Cores or Memory.</p>
      * </blockquote>
@@ -57,7 +57,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Settings for the collection of alternative instance families from which alternative instance types are selected. You can specify up to 10 instance families.</p>
+     * <p>The set of alternative instance families from which alternative instance types are selected. You can specify up to 10 instance families.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.hfg6</p>
@@ -68,10 +68,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance is I/O optimized. If the instance type supports only non-I/O optimized instances, you cannot set the IoOptimized parameter. Valid values:</p>
      * <ul>
-     * <li>optimized: I/O optimized.</li>
-     * <li>none: non-I/O optimized.</li>
+     * <li>optimized: I/O optimized</li>
+     * <li>none: non-I/O optimized</li>
      * </ul>
-     * <p>Default value: optimized.</p>
+     * <p>Default value: optimized</p>
      * <p>If you specify a retired instance type, the default value is none.</p>
      * 
      * <strong>example:</strong>
@@ -81,9 +81,9 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The maximum acceptable hourly price for pay-as-you-go or spot instances.</p>
+     * <p>The maximum hourly price for pay-as-you-go or spot instances.</p>
      * <blockquote>
-     * <p>To set the maximum hourly price for a spot instance, set SpotStrategy to SpotWithPriceLimit.</p>
+     * <p>When you set the maximum price for a spot instance, SpotStrategy must be set to SpotWithPriceLimit.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <p>The priority-based recommendation strategy. Valid values:</p>
      * <ul>
      * <li>InventoryFirst: inventory first.</li>
-     * <li>PriceFirst: price first. Instance types are sorted by the hourly vCPU unit price in ascending order.</li>
+     * <li>PriceFirst: price first. Instance types are sorted by the hourly price per vCPU in ascending order.</li>
      * <li>NewProductFirst: newest product first.</li>
      * </ul>
      * <p>Default value: InventoryFirst.</p>
@@ -178,7 +178,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <li>SpotAsPriceGo: a spot instance for which the system automatically bids at up to the pay-as-you-go price.</li>
      * </ul>
      * <blockquote>
-     * <p>When you use SpotStrategy, set InstanceChargerType to PostPaid.</p>
+     * <p>When you use SpotStrategy, InstanceChargerType must be set to PostPaid.</p>
      * </blockquote>
      * <p>Default value: NoSpot.</p>
      * 
@@ -191,12 +191,12 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The category of the system disk. Valid values:</p>
      * <ul>
-     * <li>cloud_efficiency: ultra disk.</li>
-     * <li>cloud_ssd: standard SSD.</li>
-     * <li>cloud_essd: enterprise SSD (ESSD).</li>
-     * <li>cloud: basic disk.</li>
+     * <li>cloud_efficiency: ultra disk</li>
+     * <li>cloud_ssd: standard SSD</li>
+     * <li>cloud_essd: enterprise SSD (ESSD)</li>
+     * <li>cloud: basic disk</li>
      * </ul>
-     * <p>Default value for non-I/O optimized instances: cloud.</p>
+     * <p>Default value for non-I/O optimized instances: cloud</p>
      * <p>Default value for I/O optimized instances: cloud_efficiency.</p>
      * 
      * <strong>example:</strong>

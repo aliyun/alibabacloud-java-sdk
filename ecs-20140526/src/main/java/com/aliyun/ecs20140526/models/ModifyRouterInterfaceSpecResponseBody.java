@@ -4,15 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The new specification of the router interface.</p>
-     */
     @NameInMap("Spec")
     public String spec;
 

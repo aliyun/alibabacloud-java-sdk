@@ -15,7 +15,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The end of the time range to query the scheduling history. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * <p>The end of the time range to query scheduling history. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-06-20T15:10:20Z</p>
@@ -30,7 +30,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The current page number in a paging query. Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Settings for paging query. Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the Auto Provisioning Group is located.</p>
+     * <p>The ID of the region where the auto provisioning group resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query the scheduling history. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range to query scheduling history. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-04-01T15:10:20Z</p>

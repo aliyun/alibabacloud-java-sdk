@@ -8,7 +8,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of entries per page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +17,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The pagination token for the next query of the elasticity assurance.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -35,7 +35,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

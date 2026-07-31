@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     /**
-     * <p>The configurations of upgrading the Cloud Assistant agent.</p>
+     * <p>The Cloud Assistant Agent upgrade configuration.</p>
      */
     @NameInMap("AgentUpgradeConfig")
     public String agentUpgradeConfigShrink;
 
     /**
-     * <p>The configurations of delivering records to OSS.</p>
+     * <p>The OSS delivery configuration.</p>
      */
     @NameInMap("OssDeliveryConfig")
     public String ossDeliveryConfigShrink;
@@ -23,7 +23,7 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The configurations of resource usage for Cloud Assistant. This setting takes effect only when the version of the Cloud Assistant agent is not earlier than the following versions:</p>
+     * <p>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</p>
      * <ul>
      * <li><p>Windows: 2.1.4.1065</p>
      * </li>
@@ -51,22 +51,18 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public String resourceUsageConfigShrink;
 
     /**
-     * <p>The configurations of the Session Manager feature.</p>
+     * <p>The Cloud Assistant session feature configuration.</p>
      */
     @NameInMap("SessionManagerConfig")
     public String sessionManagerConfigShrink;
 
     /**
-     * <p>The type of the service configurations. Valid values:</p>
+     * <p>The service configuration type. Valid values:</p>
      * <ul>
-     * <li><p><code>SessionManagerDelivery</code>: the configurations of delivering session records.</p>
-     * </li>
-     * <li><p><code>InvocationDelivery</code>: the configurations of delivering command execution records.</p>
-     * </li>
-     * <li><p><code>AgentUpgradeConfig</code>: the configurations of upgrading the Cloud Assistant agent.</p>
-     * </li>
-     * <li><p><code>SessionManagerConfig</code>: the configurations of Cloud Assistant Session Manager.</p>
-     * </li>
+     * <li>SessionManagerDelivery: session operation log delivery.</li>
+     * <li>InvocationDelivery: task execution log delivery.</li>
+     * <li>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration.</li>
+     * <li>SessionManagerConfig: Cloud Assistant SessionManager configuration.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -77,7 +73,7 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
     public String settingType;
 
     /**
-     * <p>The configurations of delivering records to SLS.</p>
+     * <p>The Simple Log Service (SLS) delivery configuration.</p>
      */
     @NameInMap("SlsDeliveryConfig")
     public String slsDeliveryConfigShrink;

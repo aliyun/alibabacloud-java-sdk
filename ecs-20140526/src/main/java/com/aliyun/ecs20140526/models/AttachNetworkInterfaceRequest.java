@@ -17,7 +17,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The index of the network card specified for the ENI.</p>
      * <blockquote>
-     * <p>Valid values of NetworkCardIndex depend on the instance family. If the instance type does not support network cards, you cannot specify this parameter. If the instance type supports network cards, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</p>
+     * <p>The valid values of NetworkCardIndex depend on the instance family. If the instance type does not support NetworkCard, you cannot specify this parameter. If the instance type supports NetworkCard, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the trunk ENI.</p>
+     * <p>The trunk ENI ID.</p>
      * <blockquote>
      * <p>This parameter is not yet available.</p>
      * </blockquote>

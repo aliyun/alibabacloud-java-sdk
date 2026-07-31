@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk that you want to roll back.</p>
+     * <p>The ID of the cloud disk to be rolled back.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,12 @@ public class ResetDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</p>
-     * </li>
+     * <li>true: performs a dry run without actually rolling back the cloud disk. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li>false: performs a dry run and sends the request. If the check succeeds, the cloud disk rollback operation is initiated.</li>
      * </ul>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -43,7 +41,7 @@ public class ResetDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot that you want to use to roll back the cloud disk.</p>
+     * <p>The ID of the snapshot to use for rolling back the cloud disk.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

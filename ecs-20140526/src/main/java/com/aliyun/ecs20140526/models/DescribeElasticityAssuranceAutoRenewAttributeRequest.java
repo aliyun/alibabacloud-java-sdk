@@ -84,8 +84,8 @@ public class DescribeElasticityAssuranceAutoRenewAttributeRequest extends TeaMod
 
     public static class DescribeElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>弹性保障服务ID列表。</p>
-         * <p><strong>限制</strong>：单次查询的弹性保障服务数量最多不超过50个。</p>
+         * <p>The list of elasticity assurance service IDs.</p>
+         * <p><strong>Limit</strong>: You can query up to 50 elasticity assurance services at a time.</p>
          */
         @NameInMap("Id")
         public java.util.List<String> id;

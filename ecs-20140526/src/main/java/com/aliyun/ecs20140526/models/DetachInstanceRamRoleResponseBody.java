@@ -8,7 +8,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResults detachInstanceRamRoleResults;
 
     /**
-     * <p>The number of ECS instances from which instance RAM roles failed to be detached.</p>
+     * <p>The number of instances from which the RAM role failed to be detached.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -17,7 +17,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     public Integer failCount;
 
     /**
-     * <p>The name of the instance RAM role.</p>
+     * <p>The name of the detached instance RAM role.</p>
      * 
      * <strong>example:</strong>
      * <p>RamRoleTest</p>
@@ -35,7 +35,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of ECS instances from which you attempted to detach instance RAM roles.</p>
+     * <p>The total number of instances from which the RAM role was detached.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

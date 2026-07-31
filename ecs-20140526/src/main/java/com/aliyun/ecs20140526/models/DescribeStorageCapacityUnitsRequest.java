@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     /**
-     * <p>The allocation type. Valid values:</p>
+     * <p>The allocate type. Valid values:</p>
      * <ul>
-     * <li><p>Normal: queries SCUs that belong to the current Alibaba Cloud account.</p>
-     * </li>
-     * <li><p>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</p>
-     * </li>
+     * <li>Normal: queries SCUs that belong to the current Alibaba Cloud account.</li>
+     * <li>Shared: queries SCUs that are shared between the Alibaba Cloud account and a Resource Access Management (RAM) user.</li>
      * </ul>
      * <p>Default value: Normal.</p>
      * 
@@ -21,7 +19,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public String allocationType;
 
     /**
-     * <p>The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.</p>
+     * <p>The capacity of the SCU. Unit: GiB. Valid values: {20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, 51200}.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -30,7 +28,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Integer capacity;
 
     /**
-     * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the SCU. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testScuName</p>
@@ -45,8 +43,8 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1.</p>
+     * <p>The page number of the SCU list.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -56,8 +54,8 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The number of entries per page for a paged query.</p>
+     * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +65,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the SCU. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the SCU. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +81,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The states of SCUs. The array is 1 to 4 in length.</p>
+     * <p>The statuses of SCUs. Array length: 1 to 4.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -92,7 +90,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The IDs of the SCUs. You can specify 1 to 100 SCU IDs.</p>
+     * <p>The IDs of SCUs. Array length: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>scu-bp67acfmxazb4p****</p>
@@ -101,7 +99,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public java.util.List<String> storageCapacityUnitId;
 
     /**
-     * <p>The tags to add to the SCU. You can add up to 20 tags.</p>
+     * <p>The tags. Array length: 0 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeStorageCapacityUnitsRequestTag> tag;
@@ -217,7 +215,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
 
     public static class DescribeStorageCapacityUnitsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to be added to the SCU.</p>
+         * <p>The tag key of the SCU.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -226,7 +224,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to be added to the SCU.</p>
+         * <p>The tag value of the SCU.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

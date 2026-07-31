@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageComponentRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -32,7 +32,7 @@ public class CreateImageComponentRequest extends TeaModel {
     public String componentType;
 
     /**
-     * <p>The component version number. This parameter is used together with the component name. The format is major.minor.patch, where all values are non-negative integers.</p>
+     * <p>The component version number, which is used together with the component name. The format is major.minor.patch, and all values are non-negative integers.</p>
      * <p>Default value: (x+1).0.0, where x is the current maximum major version number of the component.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateImageComponentRequest extends TeaModel {
     public String componentVersion;
 
     /**
-     * <p>The component content. The content consists of multiple commands and cannot exceed 16 KB. For more information about supported commands and command formats, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
+     * <p>The component content, which consists of multiple commands. The content cannot exceed 16 KB. For more information about supported commands and command formats, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Tasks:</p>
@@ -66,9 +66,9 @@ public class CreateImageComponentRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The component name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot start with http:// or https://. The name can contain letters, Chinese characters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The component name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot start with http:// or https://. The name can contain letters, Chinese characters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <blockquote>
-     * <p>If you do not specify <code>Name</code>, the <code>ImageComponentId</code> return value is used by default.</p>
+     * <p>If you do not specify Name, the ImageComponentId return value is used by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class CreateImageComponentRequest extends TeaModel {
 
     public static class CreateImageComponentRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -257,7 +257,7 @@ public class CreateImageComponentRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs:. The tag value cannot contain http:// or https://.</p>
+         * <p>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs:. The tag value cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

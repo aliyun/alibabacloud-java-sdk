@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKeyPairsRequest extends TeaModel {
     /**
-     * <p>The names of SSH key pairs. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate multiple names with commas (,).</p>
+     * <p>The names of the SSH key pairs. The value is a JSON array of SSH key pair names. You can specify up to 100 SSH key pairs. Separate multiple names with commas (,).</p>
      * <blockquote>
      * <p>Before you delete SSH key pairs, you can call <a href="https://help.aliyun.com/document_detail/51773.html">DescribeKeyPairs</a> to query existing key pairs.</p>
      * </blockquote>
@@ -21,7 +21,7 @@ public class DeleteKeyPairsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the SSH key pairs reside. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the SSH key pairs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

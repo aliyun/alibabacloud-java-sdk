@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableNetworkInterfaceQoSRequest extends TeaModel {
     /**
-     * <p>The ID of the Elastic Network Interface (ENI).</p>
+     * <p>The ID of the network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,13 +21,13 @@ public class EnableNetworkInterfaceQoSRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>QoS Speed Limit Settings</p>
+     * <p>The QoS rate limiting settings.</p>
      */
     @NameInMap("QoS")
     public EnableNetworkInterfaceQoSRequestQoS qoS;
 
     /**
-     * <p>The Region ID. You can invoke DescribeRegions to view the latest Alibaba Cloud Region list.</p>
+     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,8 +105,8 @@ public class EnableNetworkInterfaceQoSRequest extends TeaModel {
 
     public static class EnableNetworkInterfaceQoSRequestQoS extends TeaModel {
         /**
-         * <p>The maximum inbound internal bandwidth.</p>
-         * <p>Unit: kbit/s, step size: 1000 (1Mbps), value range: [50000, +♾️)</p>
+         * <p>The maximum inbound internal bandwidth limit.</p>
+         * <p>Unit: kbit/s. Increment: 1000 (1 Mbit/s). Value range: [50000, +∞).</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -115,8 +115,8 @@ public class EnableNetworkInterfaceQoSRequest extends TeaModel {
         public Long bandwidthRx;
 
         /**
-         * <p>The maximum outbound internal bandwidth.</p>
-         * <p>Unit: kbit/s, step size: 1000 (1Mbps), value range: [50000, +♾️)</p>
+         * <p>The maximum outbound internal bandwidth limit.</p>
+         * <p>Unit: kbit/s. Increment: 1000 (1 Mbit/s). Value range: [50000, +∞).</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -125,8 +125,8 @@ public class EnableNetworkInterfaceQoSRequest extends TeaModel {
         public Long bandwidthTx;
 
         /**
-         * <p>Maximum Number of Sessions</p>
-         * <p>Step size: 10000, value range: [10000, +♾️)</p>
+         * <p>The maximum number of sessions.</p>
+         * <p>Increment: 10000. Value range: [10000, +∞).</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -135,8 +135,8 @@ public class EnableNetworkInterfaceQoSRequest extends TeaModel {
         public Long concurrentConnections;
 
         /**
-         * <p>The inbound packet forwarding rate over the internal network.</p>
-         * <p>Unit: pps, step size: 10000, value range: [10000, +♾️)</p>
+         * <p>The inbound internal packet forwarding rate.</p>
+         * <p>Unit: pps. Increment: 10000. Value range: [10000, +∞).</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>
@@ -145,8 +145,8 @@ public class EnableNetworkInterfaceQoSRequest extends TeaModel {
         public Long ppsRx;
 
         /**
-         * <p>The outbound packet forwarding rate over the internal network.</p>
-         * <p>Unit: pps, step size: 10000, value range: [10000, +♾️)</p>
+         * <p>The outbound internal packet forwarding rate.</p>
+         * <p>Unit: pps. Increment: 10000. Value range: [10000, +∞).</p>
          * 
          * <strong>example:</strong>
          * <p>50000</p>

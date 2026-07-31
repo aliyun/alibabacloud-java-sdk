@@ -11,7 +11,7 @@ public class JoinResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</p>
+     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -29,7 +29,7 @@ public class JoinResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the resource. For example, when ResourceType is set to instance, ResourceId can be interpreted as the InstanceId.</p>
+     * <p>The ID of the resource. For example, when ResourceType is set to instance, ResourceId is the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp67acfmxazb4p****</p>
@@ -53,14 +53,14 @@ public class JoinResourceGroupRequest extends TeaModel {
      * <li>securitygroup: security group.</li>
      * <li>ddh: dedicated host.</li>
      * <li>ddhcluster: dedicated host cluster.</li>
-     * <li>eni: elastic network interface.</li>
-     * <li>keypair: SSH key pair.</li>
+     * <li>eni: network interface controller (NIC).</li>
+     * <li>keypair: key pair.</li>
      * <li>launchtemplate: launch template.</li>
      * <li>command: Cloud Assistant command.</li>
      * <li>activation: Cloud Assistant managed instance activation code.</li>
      * <li>managedinstance: Cloud Assistant managed instance.</li>
      * </ul>
-     * <p>The preceding values are case-sensitive.</p>
+     * <p>The preceding parameter values are case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>securitygroup</p>

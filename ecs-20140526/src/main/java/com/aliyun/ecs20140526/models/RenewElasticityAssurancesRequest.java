@@ -108,7 +108,7 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the elasticity assurance service.</p>
+     * <p>The ID of the region in which the elasticity assurance service resides.</p>
      * <p>You can call <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>

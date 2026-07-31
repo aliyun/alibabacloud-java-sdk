@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
-     * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+     * <p>The billing method of the instance. For more details, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </p>
      * <ul>
      * <li>PrePaid: subscription.</li>
      * <li>PostPaid: pay-as-you-go.</li>
@@ -19,7 +19,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The operation type for querying public bandwidth limits. Valid values:</p>
+     * <p>The type of operation for which to query the public bandwidth limits. Valid values: </p>
      * <ul>
      * <li>Upgrade: upgrades the public bandwidth.</li>
      * <li>Downgrade: downgrades the public bandwidth.</li>
@@ -62,7 +62,7 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
      * <p>The resource ID.</p>
      * <blockquote>
-     * <p>When you set the OperationType parameter to Upgrade or Downgrade, the ResourceId parameter is required.</p>
+     * <p>The ResourceId parameter is required when you set OperationType to Upgrade or Downgrade.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,15 +78,15 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The bidding strategy for pay-as-you-go instances. Valid values:</p>
+     * <p>The bidding policy for the pay-as-you-go instance. Valid values: </p>
      * <ul>
-     * <li>NoSpot: a regular pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: a preemptible instance with a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: a preemptible instance priced at the market price at the time of purchase.</li>
+     * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instance is a spot instance with a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * <blockquote>
-     * <p>The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
+     * <p>The SpotStrategy parameter takes effect only when InstanceChargeType is set to PostPaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

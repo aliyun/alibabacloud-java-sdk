@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the auto provisioning group.</p>
+     * <p>The ID of the auto-provisioning group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number for the paging query.</p>
+     * <p>The page number of the paging query.</p>
      * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
@@ -32,7 +32,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in the paging query. You can use this parameter to configure paging settings.</p>
+     * <p>The number of entries per page. Settings for the paging query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the auto provisioning group resides. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the auto-provisioning group. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

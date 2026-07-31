@@ -11,7 +11,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public DescribeInstancesFullStatusRequestNotBefore notBefore;
 
     /**
-     * <p>The IDs of the system events. You can specify up to 100 event IDs in a single request.</p>
+     * <p>The list of event IDs. You can specify up to 100 event IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>e-bp1hygp5b04o56l0****</p>
@@ -20,22 +20,15 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public java.util.List<String> eventId;
 
     /**
-     * <p>The type of the system event. This parameter is valid only when InstanceEventType.N is not specified. Valid values:</p>
+     * <p>The type of a system event. The EventType parameter takes effect only when InstanceEventType.N is not specified. Valid values: </p>
      * <ul>
-     * <li><p>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
-     * </li>
-     * <li><p>SystemFailure.Reboot: The instance is restarted due to a system failure.</p>
-     * </li>
-     * <li><p>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</p>
-     * </li>
-     * <li><p>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</p>
-     * </li>
-     * <li><p>InstanceExpiration.Delete: The subscription instance is released due to expiration.</p>
-     * </li>
-     * <li><p>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</p>
-     * </li>
-     * <li><p>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</p>
-     * </li>
+     * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance. </li>
+     * <li>SystemFailure.Reboot: The instance is restarted due to a system failure.</li>
+     * <li>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</li>
+     * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
+     * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
+     * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+     * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,22 +38,16 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The health status of the instance. Valid values:</p>
+     * <p>The health status of the instance. Valid values: </p>
      * <ul>
-     * <li><p>Impaired</p>
-     * </li>
-     * <li><p>Warning: The instance performance may be degraded due to maintenance or technical issues.</p>
-     * </li>
-     * <li><p>Maintaining</p>
-     * </li>
-     * <li><p>Initializing</p>
-     * </li>
-     * <li><p>InsufficientData</p>
-     * </li>
-     * <li><p>NotApplicable</p>
-     * </li>
+     * <li>Impaired: The service is impaired. </li>
+     * <li>Warning: The instance performance may be degraded due to maintenance.</li>
+     * <li>Maintaining: The instance is under maintenance.</li>
+     * <li>Initializing: The instance is being initialized. </li>
+     * <li>InsufficientData: The data is insufficient. </li>
+     * <li>NotApplicable: Not applicable.</li>
      * </ul>
-     * <p>All the values are case-sensitive.</p>
+     * <p>The values are case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>Initializing</p>
@@ -69,7 +56,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>The types of system events. You can specify up to 30 event types in a single request.</p>
+     * <p>The list of instance system event types. You can specify up to 30 instance event types.</p>
      * 
      * <strong>example:</strong>
      * <p>InstanceExpiration.Stop</p>
@@ -78,7 +65,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public java.util.List<String> instanceEventType;
 
     /**
-     * <p>The IDs of the instances. You can specify up to 100 instance IDs in a single request.</p>
+     * <p>The list of instance IDs. You can specify up to 100 instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp67acfmxazb4p****</p>
@@ -93,7 +80,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer.</p>
+     * <p>The page number of the results. Valid values: positive integers.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -113,7 +100,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,14 +116,11 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The lifecycle status of the instance. Valid values:</p>
+     * <p>The lifecycle status of the instance. Valid values: </p>
      * <ul>
-     * <li><p>Starting</p>
-     * </li>
-     * <li><p>Running</p>
-     * </li>
-     * <li><p>Stopped</p>
-     * </li>
+     * <li>Starting: The instance is being started.</li>
+     * <li>Running: The instance is running.</li>
+     * <li>Stopped: The instance is stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -272,7 +256,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
 
     public static class DescribeInstancesFullStatusRequestEventPublishTime extends TeaModel {
         /**
-         * <p>The end of the time range during which system events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>
@@ -281,7 +265,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>The beginning of the time range during which system events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T00:00:00Z</p>
@@ -314,7 +298,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
 
     public static class DescribeInstancesFullStatusRequestNotBefore extends TeaModel {
         /**
-         * <p>The end of the time range during which O\&amp;M tasks related to scheduled system events are executed. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T00:00:00Z</p>
@@ -323,7 +307,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>The beginning of the time range during which O\&amp;M tasks related to scheduled system events are executed. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-07T00:00:00Z</p>

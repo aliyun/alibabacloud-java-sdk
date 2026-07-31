@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeSecurityGroupEgressRequest extends TeaModel {
     /**
-     * <p>A client token used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -64,7 +64,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public Long destGroupOwnerId;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.DestPrefixListId</code> to specify the source prefix list ID.</p>
+     * <p>Deprecated. Use <code>Permissions.N.DestPrefixListId</code> to specify the destination prefix list ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -126,7 +126,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public java.util.List<RevokeSecurityGroupEgressRequestPermissions> permissions;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.Policy</code> to configure the Settings for access permissions.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Policy</code> to configure the access permissions in Settings.</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -430,7 +430,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination IPv4 Classless Inter-Domain Routing (CIDR) block for which you want to revoke access permissions. The format supports both CIDR blocks and IPv4 address ranges.</p>
+         * <p>The destination IPv4 Classless Inter-Domain Routing (CIDR) block for which you want to revoke access permissions. CIDR format and IPv4 format address ranges are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -460,7 +460,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The Alibaba Cloud account that manages the destination security group when you revoke a cross-account authorization security group rule.</p>
          * <ul>
-         * <li>If neither <code>DestGroupOwnerAccount</code> nor <code>DestGroupOwnerId</code> is specified, the access permissions for another security group within your account are revoked. Settings for cross-account scenarios require this parameter.</li>
+         * <li>If neither <code>DestGroupOwnerAccount</code> nor <code>DestGroupOwnerId</code> is configured in Settings, the access permissions for another security group within your account are revoked. </li>
          * <li>If <code>DestCidrIp</code> is specified, this parameter is ignored.</li>
          * </ul>
          * 
@@ -473,7 +473,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that manages the destination security group when you revoke a cross-account authorization security group rule.</p>
          * <ul>
-         * <li>If neither <code>DestGroupOwnerId</code> nor <code>DestGroupOwnerAccount</code> is specified, the access permissions for another security group within your account are revoked. Settings for cross-account scenarios require this parameter.</li>
+         * <li>If neither <code>DestGroupOwnerId</code> nor <code>DestGroupOwnerAccount</code> is configured in Settings, the access permissions for another security group within your account are revoked.  </li>
          * <li>If <code>DestCidrIp</code> is specified, this parameter is ignored.</li>
          * </ul>
          * 
@@ -498,12 +498,12 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The protocol type. The value is case-insensitive. Valid values: </p>
          * <ul>
-         * <li>TCP.</li>
-         * <li>UDP.</li>
-         * <li>ICMP.</li>
-         * <li>ICMPv6.</li>
-         * <li>GRE.</li>
-         * <li>ALL: all protocols.</li>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * <li>ICMP</li>
+         * <li>ICMPv6</li>
+         * <li>GRE</li>
+         * <li>ALL: all protocols</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -513,9 +513,9 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The destination IPv6 Classless Inter-Domain Routing (CIDR) block for which you want to revoke access permissions. The format supports both CIDR blocks and IPv6 address ranges.</p>
+         * <p>The destination IPv6 Classless Inter-Domain Routing (CIDR) block for which you want to revoke access permissions. CIDR format and IPv6 format address ranges are supported.</p>
          * <blockquote>
-         * <p>This parameter is valid only for VPC-connected ECS instances that support IPv6 and cannot be specified together with the <code>DestCidrIp</code> parameter. Settings for IPv6 destinations use this parameter exclusively.</p>
+         * <p>This parameter is valid only for VPC-connected ECS instances that support IPv6 and cannot be configured together with the <code>DestCidrIp</code> parameter. Settings for both parameters at the same time are not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -526,9 +526,9 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
 
         /**
          * <p>The source IPv6 CIDR block. CIDR blocks and IPv6 address ranges are supported.</p>
-         * <p>This parameter is used for quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
-         * <p>This parameter is valid only for VPC-connected ECS instances that support IPv6 and cannot be specified together with the <code>DestCidrIp</code> parameter. Settings for IPv6 sources use this parameter exclusively.</p>
+         * <p>This parameter is valid only for VPC-connected ECS instances that support IPv6. Settings for this parameter and the <code>DestCidrIp</code> parameter cannot be configured at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -538,7 +538,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The network interface controller (NIC) type of the security group rule. For VPC-type security groups, you do not need to configure the network interface controller (NIC) type. The default value is intranet and only intranet is supported. Settings for VPC-type security groups ignore this parameter.</p>
+         * <p>The network interface controller (NIC) type of the security group rule. For VPC-type security groups, you do not need to configure the network interface controller (NIC) type. The default value is intranet and only intranet is supported. Settings default to intranet.</p>
          * <blockquote>
          * <p>The classic network feature has been taken offline. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Discontinuation notice</a>. The network interface controller (NIC) type for classic network-type security group rules. Valid values:</p>
          * <ul>
@@ -557,7 +557,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
          * <p>The access permissions. Valid values: </p>
          * <ul>
          * <li>accept: Accepts access.</li>
-         * <li>drop: Denies access and returns no deny information. The request timeout or the connection cannot be established.</li>
+         * <li>drop: Denies access and does not return deny information. The request times out or the connection cannot be established.</li>
          * </ul>
          * <p>Default value: accept.</p>
          * 
@@ -568,7 +568,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The range of destination ports that correspond to the transport layer protocol. Valid values: </p>
+         * <p>The range of destination ports that correspond to the transport layer protocol for the security group. Valid values: </p>
          * <ul>
          * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
          * <li>ICMP: -1/-1.</li>
@@ -606,7 +606,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
 
         /**
          * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 address ranges are supported.</p>
-         * <p>This parameter is used for quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -615,14 +615,14 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The range of source ports that correspond to the transport layer protocol. Valid values:</p>
+         * <p>The range of source ports that correspond to the transport layer protocol for the security group. Valid values:</p>
          * <ul>
          * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
          * <li>ICMP: -1/-1.</li>
          * <li>GRE: -1/-1.</li>
          * <li>ALL: -1/-1.</li>
          * </ul>
-         * <p>This parameter is used for quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>22/22</p>

@@ -17,7 +17,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The page number of the returned results.</p>
+     * <p>The page number of the query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

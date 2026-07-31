@@ -11,21 +11,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public ModifyInstanceSpecRequestTemporary temporary;
 
     /**
-     * <p>Specifies whether cross-cluster upgrade of instance types is supported.</p>
-     * <ul>
-     * <li>true: supported.</li>
-     * <li>false: not supported.</li>
-     * </ul>
-     * <p>Default value: false.</p>
-     * <p>If you set the <code>AllowMigrateAcrossZone</code> parameter to true and upgrade the Elastic Compute Service instance based on the response, note the following:</p>
-     * <p>Classic network type instances:</p>
-     * <ul>
-     * <li><p>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (<code>cloud</code>) are identified as <strong>xvda</strong> or <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as <strong>vda</strong> or <strong>vdb</strong>.</p>
-     * </li>
-     * <li><p>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families that are available for purchase</a>, the private IP address of the instance changes.</p>
-     * </li>
-     * </ul>
-     * <p>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (<code>cloud</code>) are identified as <strong>xvda</strong> or <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as <strong>vda</strong> or <strong>vdb</strong>.</p>
+     * <p>Specifies whether cross-cluster instance type upgrades are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -35,11 +21,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to submit an asynchronous request. Valid values:</p>
-     * <ul>
-     * <li>true: The request is submitted asynchronously.</li>
-     * <li>false: The request is not submitted asynchronously.</li>
-     * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -66,10 +47,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
-     * <ul>
-     * <li>true: performs only a dry run. The instance type and public bandwidth are not modified. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false (default): performs a dry run and sends the request. If the check succeeds, the instance type and public bandwidth are modified.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -88,7 +65,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</p>
+     * <p>The target instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -97,14 +74,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
-     * <ul>
-     * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
-     * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>InternetMaxBandwidthOut</code>. Default value: the value of <code>InternetMaxBandwidthOut</code>.</li>
-     * </ul>
-     * <blockquote>
-     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be throttled. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
-     * </blockquote>
+     * <p>The maximum inbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,10 +83,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Integer internetMaxBandwidthIn;
 
     /**
-     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
-     * <blockquote>
-     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be throttled. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
-     * </blockquote>
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -283,15 +250,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public static class ModifyInstanceSpecRequestSystemDisk extends TeaModel {
         /**
          * <p>The new system disk category. Valid values:</p>
-         * <ul>
-         * <li><p>cloud_efficiency: ultra disk</p>
-         * </li>
-         * <li><p>cloud_ssd: standard SSD</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">instance family that is available for purchase</a> and change a non-I/O optimized instance to an I/O optimized instance.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssd</p>

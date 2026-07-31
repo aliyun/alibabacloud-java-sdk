@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     /**
-     * <p>The information about the ENI permission.</p>
+     * <p>The information about the network interface controller (NIC) permissions.</p>
      */
     @NameInMap("NetworkInterfacePermission")
     public CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission networkInterfacePermission;
@@ -51,7 +51,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The ENI ID.</p>
+         * <p>The ID of the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp14v2sdd3v8htln****</p>
@@ -60,7 +60,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The ENI permission ID.</p>
+         * <p>The ID of the network interface controller (NIC) permission.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-perm-bp1cs4lwn56lfb****</p>
@@ -69,7 +69,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String networkInterfacePermissionId;
 
         /**
-         * <p>The ENI permission.</p>
+         * <p>The network interface controller (NIC) permission.</p>
          * 
          * <strong>example:</strong>
          * <p>InstanceAttach</p>
@@ -78,12 +78,12 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         public String permission;
 
         /**
-         * <p>The ENI permission state. Valid values:</p>
+         * <p>The status of the network interface controller (NIC) permission. Valid values:</p>
          * <ul>
-         * <li>Pending: The permission is being granted.</li>
-         * <li>Granted: The permission has been granted.</li>
-         * <li>Revoking: The permission is being revoked.</li>
-         * <li>Revoked: The permission has been revoked.</li>
+         * <li>Pending: Authorization in progress.</li>
+         * <li>Granted: Authorization granted.</li>
+         * <li>Revoking: Authorization being revoked.</li>
+         * <li>Revoked: Authorization revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>

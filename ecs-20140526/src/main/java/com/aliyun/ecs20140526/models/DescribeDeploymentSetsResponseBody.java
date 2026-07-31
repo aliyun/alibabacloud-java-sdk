@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
-    /**
-     * <p>Details of deployment sets.</p>
-     */
     @NameInMap("DeploymentSets")
     public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
 
@@ -20,7 +17,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +26,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the deployment set.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -47,7 +44,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of deployment sets.</p>
+     * <p>The total number of queried deployment sets.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

@@ -16,8 +16,8 @@ public class DeleteInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
      * <ul>
-     * <li>true: sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DRYRUN.SUCCESS error code is returned.</li>
-     * <li>false: sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the resource status is queried directly.</li>
+     * <li>true: sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the error code DRYRUN.SUCCESS is returned.</li>
+     * <li>false: sends a Normal request. After the check passes, a 2xx HTTP status code is returned and the resource status is queried.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -28,14 +28,14 @@ public class DeleteInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release an instance that is in the <strong>Running</strong> (<code>Running</code>) state.</p>
+     * <p>Specifies whether to forcefully release ECS instance that is in the <strong>Running</strong> state.</p>
      * <ul>
-     * <li>true: forcefully releases ECS instance that is in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * <li>false: releases ECS instance only when it is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>true: forcefully releases ECS instance in the <strong>Running</strong> state.</li>
+     * <li>false: releases ECS instance only when it is in the <strong>Stopped</strong> state.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>Warning: Forceful release is equivalent to powering off ECS instance. All in-memory data and temporary data in the storage are erased and cannot be recovered..</p>
+     * <p>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary storage data of the instance is erased and cannot be recovered.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,13 +45,13 @@ public class DeleteInstancesRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>Specifies whether to forcefully shut down the instance before release when the instance is in the <strong>Running</strong> (<code>Running</code>) state. This parameter takes effect only when <code>Force=true</code>. Valid values:</p>
+     * <p>Specifies whether to forcefully stop an instance in the <strong>Running</strong> state before release. This parameter takes effect only when <code>Force=true</code>. Valid values:</p>
      * <ul>
-     * <li>true: forcefully shuts down and releases the instance. This is equivalent to a power-off operation. The instance directly enters the resource release process.<blockquote>
-     * <p>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary data in the storage are erased and cannot be recovered.</p>
+     * <li>true: forcefully stops and releases the instance. This is equivalent to a power-off operation. The instance directly enters the resource release process.<blockquote>
+     * <p>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary storage data of the instance is erased and cannot be recovered.</p>
      * </blockquote>
      * </li>
-     * <li>false: performs a standard shutdown before releasing the instance. This mode causes the release process to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</li>
+     * <li>false: performs a graceful shutdown before releasing the instance. This mode causes the release operation to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 

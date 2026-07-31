@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
-     * <p>The IDs of the deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs. Sample format: <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, … &quot;ds-zzzzzzzzz&quot;]</code>.</p>
+     * <p>The IDs of deployment sets. The value can be a JSON array that consists of multiple deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, … &quot;ds-zzzzzzzzz&quot;]</code>. A maximum of 100 IDs are supported. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ds-bp67acfmxazb4ph****&quot;, &quot;ds-bp67acfmxazb4pi****&quot;, … &quot;ds-bp67acfmxazb4pj****&quot;]</p>
@@ -14,7 +14,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public String deploymentSetIds;
 
     /**
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including English letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testDeploymentSetName</p>
@@ -62,8 +62,8 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Starts at 1.</p>
+     * <p>The page number of the deployment set list.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -84,7 +84,7 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the deployment set is located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,12 +102,9 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
      * <p>The deployment strategy. Valid values:</p>
      * <ul>
-     * <li><p>Availability: high availability strategy.</p>
-     * </li>
-     * <li><p>AvailabilityGroup: high availability group strategy.</p>
-     * </li>
-     * <li><p>LowLatency: low-latency strategy.</p>
-     * </li>
+     * <li>Availability: high availability.</li>
+     * <li>AvailabilityGroup: high availability for deployment set groups.</li>
+     * <li>LowLatency: low network latency.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,12 +116,9 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
      * <p>The deployment type. Valid values:</p>
      * <ul>
-     * <li><p>host: Ensures that the instances in the deployment set are deployed on different hosts.</p>
-     * </li>
-     * <li><p>sw: Ensures that the instances in the deployment set are deployed on different switches.</p>
-     * </li>
-     * <li><p>rack: Ensures that the instances in the deployment set are deployed on different racks.</p>
-     * </li>
+     * <li>host: physical server</li>
+     * <li>sw: vSwitch</li>
+     * <li>rack: rack</li>
      * </ul>
      * <p>Default value: host.</p>
      * 

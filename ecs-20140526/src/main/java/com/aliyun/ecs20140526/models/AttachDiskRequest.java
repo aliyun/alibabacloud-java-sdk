@@ -30,11 +30,11 @@ public class AttachDiskRequest extends TeaModel {
      * <li>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>When you set this parameter, take note of the following items:</p>
+     * <p>Take note of the following items when you set this parameter:</p>
      * <ul>
-     * <li><p>If you set <code>DeleteWithInstance</code> to <code>false</code> and the ECS instance is locked for security reasons, meaning that <code>OperationLocks</code> contains <code>&quot;LockReason&quot; : &quot;security&quot;</code>, this parameter is ignored when the instance is released, and the disk is released together with the instance.</p>
+     * <li><p>If you set <code>DeleteWithInstance</code> to <code>false</code> and the ECS instance is locked for security reasons, meaning that <code>OperationLocks</code> contains <code>&quot;LockReason&quot; : &quot;security&quot;</code>, this attribute is ignored when the ECS instance is released, and the disk is released together with the instance.</p>
      * </li>
-     * <li><p>If the disk to be attached is an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
+     * <li><p>If the destination disk is an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
      * </li>
      * <li><p>Disks with the multi-attach feature enabled do not support this parameter.</p>
      * </li>
@@ -61,7 +61,7 @@ public class AttachDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk to be attached. The disk (<code>DiskId</code>) and the instance (<code>InstanceId</code>) must be in the same zone.</p>
      * <blockquote>
-     * <p>Both data disks and system disks can be attached. For related constraints, see the operation description section above.</p>
+     * <p>You can attach data disks and system disks. For related constraints, see the operation description section above.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -103,7 +103,7 @@ public class AttachDiskRequest extends TeaModel {
      * <ul>
      * <li><p>Windows Server instances: SSH key pairs are not supported. Even if this parameter is specified, only the <code>Password</code> configuration takes effect.</p>
      * </li>
-     * <li><p>Linux instances: The password-based logon method is disabled by default.</p>
+     * <li><p>Linux instances: The password logon method is disabled by default.</p>
      * </li>
      * </ul>
      * 

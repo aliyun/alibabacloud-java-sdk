@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance to which the ENI is attached.</p>
+     * <p>The instance ID of the instance to which the network interface controller (NIC) is attached.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1e2l6djkndyuli****</p>
@@ -14,7 +14,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+     * <p>The IPv6 address of the network interface controller (NIC). N indicates that you can configure multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
@@ -23,14 +23,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public java.util.List<String> ipv6Address;
 
     /**
-     * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
-     * <p>Default values:</p>
-     * <ul>
-     * <li><p>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</p>
-     * </li>
-     * <li><p>If this parameter is set to a value greater than 500, the default value is 500.</p>
-     * </li>
-     * </ul>
+     * <p>The maximum number of entries per page for paging query. Valid values: 10 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -39,7 +32,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.</p>
+     * <p>The network interface controller (NIC) ID. Valid values of N: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp125p95hhdhn3ot****</p>
@@ -48,7 +41,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public java.util.List<String> networkInterfaceId;
 
     /**
-     * <p>The name of the ENI.</p>
+     * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain characters under the Unicode letter categorization (including English letters, Chinese characters, and digits). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test-eni-name</p>
@@ -57,8 +50,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to this operation.</p>
-     * <p>For more information about how to check the responses returned by this operation, see the preceding &quot;Description&quot; section.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -73,12 +65,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
-     * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
-     * </blockquote>
+     * <p><strong>[Deprecated]</strong> Use MaxResults or NextToken for pagination instead.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -88,12 +75,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 1000.</p>
-     * <p>Default value: 10.</p>
-     * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
-     * </blockquote>
+     * <p><strong>[Deprecated]</strong> Use MaxResults or NextToken for pagination instead.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -103,7 +85,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The primary private IPv4 address of the ENI.</p>
+     * <p>The primary private IP address of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p><code>192.168.**.**</code></p>
@@ -112,7 +94,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String primaryIpAddress;
 
     /**
-     * <p>An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</p>
+     * <p>The secondary private IP address of the network interface controller (NIC). Valid values of N: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p><code>192.168.**.**</code></p>
@@ -121,7 +103,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,10 +113,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
-     * <blockquote>
-     * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
-     * </blockquote>
+     * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -149,13 +128,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group to which the secondary ENI belongs.</p>
-     * <ul>
-     * <li><p>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</p>
-     * </li>
-     * <li><p>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <code>SecurityGroupId</code> parameter.</p>
-     * </li>
-     * </ul>
+     * <p>The security group ID associated with the secondary ENI.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp144yr32sx6ndw****</p>
@@ -164,7 +137,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
+     * <p>Specifies whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a Virtual Network Operator (VNO).</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -173,20 +146,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The state of the ENI. Valid values:</p>
-     * <ul>
-     * <li><p>Available: The ENI is available.</p>
-     * </li>
-     * <li><p>Attaching: The ENI is being attached to an instance.</p>
-     * </li>
-     * <li><p>InUse: The ENI is attached to an instance.</p>
-     * </li>
-     * <li><p>Detaching: The ENI is being detached from an instance.</p>
-     * </li>
-     * <li><p>Deleting: The ENI is being deleted.</p>
-     * </li>
-     * </ul>
-     * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
+     * <p>The status of the network interface controller (NIC). Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -195,20 +155,13 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags to use for query.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkInterfacesRequestTag> tag;
 
     /**
-     * <p>The type of the ENI. Valid values:</p>
-     * <ul>
-     * <li><p>Primary</p>
-     * </li>
-     * <li><p>Secondary</p>
-     * </li>
-     * </ul>
-     * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
+     * <p>The type of the network interface controller (NIC). Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Secondary</p>
@@ -217,7 +170,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the vSwitch with which the ENI is associated.</p>
+     * <p>The vSwitch ID of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp16usj2p27htro3****</p>
@@ -226,7 +179,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</p>
+     * <p>The virtual private cloud (VPC) ID of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1j7w3gc1cexjqd****</p>
@@ -427,7 +380,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     public static class DescribeNetworkInterfacesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the ENI. Valid values of N: 1 to 20.</p>
+         * <p>The tag key of the network interface controller (NIC). Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -436,8 +389,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the ENI. Valid values of N: 1 to 20.</p>
-         * <p>If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag value of the network interface controller (NIC). Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -14,13 +14,13 @@ public class ModifyDiagnosticMetricSetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The IDs of diagnostic metrics.</p>
+     * <p>The list of diagnostic metrics.</p>
      */
     @NameInMap("MetricIds")
     public java.util.List<String> metricIds;
 
     /**
-     * <p>The IDs of the diagnostic metric sets.</p>
+     * <p>The ID of the diagnostic metric set.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ModifyDiagnosticMetricSetRequest extends TeaModel {
     public String metricSetName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

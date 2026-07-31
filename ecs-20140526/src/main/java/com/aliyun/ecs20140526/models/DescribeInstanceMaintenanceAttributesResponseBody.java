@@ -8,7 +8,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the maintenance attribute list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

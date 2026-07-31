@@ -14,8 +14,8 @@ public class ModifyInstanceNetworkOptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task for which the bandwidth weight is modified.</p>
-     * <p>You can use the <a href="https://help.aliyun.com/document_detail/2679968.html">DescribeTaskAttribute</a> interface to modify the bandwidth weight result.</p>
+     * <p>The ID of the task for modifying the bandwidth weight.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2679968.html">DescribeTaskAttribute</a> to query the result of the bandwidth weight modification.</p>
      * 
      * <strong>example:</strong>
      * <p>t-bp198jigq7l0h5ac****</p>

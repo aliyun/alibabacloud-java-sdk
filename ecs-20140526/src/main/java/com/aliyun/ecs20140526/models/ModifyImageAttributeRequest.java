@@ -7,17 +7,14 @@ public class ModifyImageAttributeRequest extends TeaModel {
     /**
      * <p>The boot mode of the image. Valid values:</p>
      * <ul>
-     * <li><p><code>BIOS</code>: BIOS boot mode.</p>
-     * </li>
-     * <li><p><code>UEFI</code>: UEFI boot mode.</p>
-     * </li>
-     * <li><p><code>UEFI-Preferred</code>: UEFI-preferred boot mode.</p>
-     * </li>
+     * <li>BIOS: Basic Input/Output System (BIOS) boot mode.</li>
+     * <li>UEFI: Unified Extensible Firmware Interface (UEFI) boot mode.</li>
+     * <li>UEFI-Preferred: dual boot mode.</li>
      * </ul>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>To prevent startup failures, verify the boot modes that the image supports before you change its boot mode. For more information, see <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes</a>.</p>
+     * <notice>
+     * 
+     * <p>   To prevent instances from failing to start due to an unsupported boot mode, make sure that you understand the boot modes supported by the image before you modify this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
+     * </notice>
      * 
      * <strong>example:</strong>
      * <p>BIOS</p>
@@ -26,8 +23,8 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public String bootMode;
 
     /**
-     * <p>The new description of the custom image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>If you do not specify this parameter, the original description is retained.</p>
+     * <p>The description of the custom image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>Default value: null, which indicates that the original description is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -35,18 +32,11 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>Specifies whether to perform a dry run to check whether the request is valid. Valid values:</p>
-     * <ul>
-     * <li><code>true</code>: performs a dry run to check the request for validity, syntax, and required permissions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><code>false</code> (default): sends the request. If the request passes the validation checks, the operation is performed.</li>
-     * </ul>
-     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The features of the image.</p>
+     * <p>The image feature attributes.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -55,8 +45,8 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public ModifyImageAttributeRequestFeatures features;
 
     /**
-     * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character. The name cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
-     * <p>By default, this parameter is empty.</p>
+     * <p>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), or hyphens (-).</p>
+     * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
      * <p>hangzhou-daily-update</p>
@@ -75,8 +65,8 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character. The name cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
-     * <p>If you do not specify this parameter, the original name is retained.</p>
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>. It can contain digits, periods (.), colons (:), underscores (_), or hyphens (-).</p>
+     * <p>Default value: null, which indicates that the original name is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>testImageName</p>
@@ -85,8 +75,8 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The license type for activating the operating system after you import the image. The only valid value is <code>BYOL</code>.</p>
-     * <p><code>BYOL</code>: Bring Your Own License. If you use the BYOL license type, you must ensure that your license key is supported for use on Alibaba Cloud.</p>
+     * <p>The license type used to activate the operating system after the image is imported. Currently, only BYOL is supported.</p>
+     * <p>BYOL: the license that comes with the source operating system. When you use BYOL, make sure that your license key supports use on Alibaba Cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>BYOL</p>
@@ -101,7 +91,7 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the custom image is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,13 +109,11 @@ public class ModifyImageAttributeRequest extends TeaModel {
     /**
      * <p>The image status. Valid values:</p>
      * <ul>
-     * <li><p><code>Deprecated</code>: Deprecates the image. If a custom image that you want to deprecate is shared, you must unshare it first. You cannot share or copy a deprecated image. However, you can use the image to create an instance or replace a system disk.</p>
-     * </li>
-     * <li><p><code>Available</code>: Makes the image available. You can change the status of a deprecated image to <code>Available</code>.</p>
-     * </li>
+     * <li>Deprecated: sets the image to the deprecated state. If you have shared the custom image, you must unshare it before you can set it to the deprecated state. You cannot share or copy a deprecated image. However, you can use the image to create instances or replace system disks.</li>
+     * <li>Available: sets the image to the available state. You can restore a deprecated image to the available state.</li>
      * </ul>
      * <blockquote>
-     * <p>However, if this is the only available custom image in the image family, deprecating it prevents the creation of instances from any image in that family. Use this option with caution.</p>
+     * <p>To roll back a custom image in an image family to the previous version, you can set the latest available custom image to the deprecated state. However, if the image is the only available custom image in the image family, the image family will have no available custom image for creating instances after the image is deprecated. Proceed with caution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -255,15 +243,12 @@ public class ModifyImageAttributeRequest extends TeaModel {
         /**
          * <p>The metadata access mode of the image. Valid values:</p>
          * <ul>
-         * <li><p><code>v1</code>: When you create an ECS instance from this image, you cannot set the metadata access mode to <code>enforced mode</code>.</p>
-         * </li>
-         * <li><p><code>v2</code>: When you create an ECS instance from this image, you can set the metadata access mode to <code>enforced mode</code>.</p>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>You cannot change the value of <code>ImdsSupport</code> from <code>v2</code> to <code>v1</code>. To use the <code>v1</code> mode, create a new image from a snapshot that is associated with the image and set <code>ImdsSupport</code> to <code>v1</code>.</p>
-         * </li>
+         * <li>v1: when you create an ECS instance from this image, you cannot set the metadata access mode to IMDSv2 only (hardened mode).</li>
+         * <li>v2: when you create an ECS instance from this image, you can set the metadata access mode to IMDSv2 only (hardened mode).<notice>
+         * 
+         * ImdsSupport cannot be changed from v2 to v1. If you need to change it, create a new image from the snapshot associated with this image and set the value to v1.</li>
          * </ul>
+         * </notice>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -272,13 +257,10 @@ public class ModifyImageAttributeRequest extends TeaModel {
         public String imdsSupport;
 
         /**
-         * <p>Specifies whether the image supports NVMe. Valid values:</p>
-         * <ul>
-         * <li><p><code>supported</code>: The image supports NVMe. Instances that you create from this image support the NVMe protocol.</p>
-         * </li>
-         * <li><p><code>unsupported</code>: The image does not support NVMe. Instances that you create from this image do not support the NVMe protocol.</p>
-         * </li>
-         * </ul>
+         * <p>Modifies the NVMe support attribute of the image. If this parameter is not specified, the current value is retained.</p>
+         * <blockquote>
+         * <p>Notice: Before enabling this feature, make sure that the NVMe driver is pre-installed in the operating system. Recommended procedure: install the driver on an instance, create a custom image, and then call this operation. Forcibly enabling this feature without the driver will cause instance startup failures.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>supported</p>

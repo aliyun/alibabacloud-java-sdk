@@ -11,7 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>The IDs of the resources. Array length: 1 to 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,46 +34,27 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The type of the resource to which the tags are added. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><p>instance: ECS instance</p>
-     * </li>
-     * <li><p>disk: disk</p>
-     * </li>
-     * <li><p>snapshot: snapshot</p>
-     * </li>
-     * <li><p>image: image</p>
-     * </li>
-     * <li><p>securitygroup: security group</p>
-     * </li>
-     * <li><p>volume: storage volume</p>
-     * </li>
-     * <li><p>eni: ENI</p>
-     * </li>
-     * <li><p>ddh: dedicated host</p>
-     * </li>
-     * <li><p>ddhcluster: dedicated host cluster</p>
-     * </li>
-     * <li><p>keypair: SSH key pair</p>
-     * </li>
-     * <li><p>launchtemplate: launch template</p>
-     * </li>
-     * <li><p>reservedinstance</p>
-     * </li>
-     * <li><p>snapshotpolicy: automatic snapshot policy</p>
-     * </li>
-     * <li><p>elasticityassurance: elasticity assurance</p>
-     * </li>
-     * <li><p>capacityreservation: capacity reservation</p>
-     * </li>
-     * <li><p>command: Cloud Assistant command</p>
-     * </li>
-     * <li><p>invocation: Cloud Assistant command execution result or file delivery result</p>
-     * </li>
-     * <li><p>activation: activation code for a Cloud Assistant managed instance</p>
-     * </li>
-     * <li><p>managedinstance: Cloud Assistant managed instance</p>
-     * </li>
+     * <li>instance: ECS instance.</li>
+     * <li>disk: cloud disk.</li>
+     * <li>snapshot: snapshot.</li>
+     * <li>image: image.</li>
+     * <li>securitygroup: security group.</li>
+     * <li>volume: storage volume.</li>
+     * <li>eni: Elastic Network Interface (ENI).</li>
+     * <li>ddh: dedicated host.</li>
+     * <li>ddhcluster: dedicated host cluster.</li>
+     * <li>keypair: SSH key pair.</li>
+     * <li>launchtemplate: launch template.</li>
+     * <li>reservedinstance: reserved instance.</li>
+     * <li>snapshotpolicy: automatic snapshot policy.</li>
+     * <li>elasticityassurance: elasticity assurance.</li>
+     * <li>capacityreservation: capacity reservation.</li>
+     * <li>command: Cloud Assistant command.</li>
+     * <li>invocation: Cloud Assistant command execution or file sending result.</li>
+     * <li>activation: Cloud Assistant managed instance activation code.</li>
+     * <li>managedinstance: Cloud Assistant managed instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -84,7 +65,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags of the reserved instance. You can specify up to 20 tags. If you specify multiple tags, the tag keys cannot be duplicated.\<code>\\</code></p>
+     * <p>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key <code>Key</code> must be unique.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -153,7 +134,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key cannot be null or an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +144,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. The tag value cannot be null and can be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The tag value cannot be null but can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

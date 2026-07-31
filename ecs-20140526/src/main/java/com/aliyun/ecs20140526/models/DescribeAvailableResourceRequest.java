@@ -92,8 +92,8 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance is an I/O optimized instance. Valid values:</p>
      * <ul>
-     * <li>none: non-I/O optimized instance.</li>
-     * <li>optimized: I/O optimized instance.</li>
+     * <li>none: non-I/O optimization.</li>
+     * <li>optimized: I/O optimization.</li>
      * </ul>
      * <p>Default value: optimized.</p>
      * 
@@ -179,8 +179,8 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After 1 hour, the system compares the bid price with the market price and checks the inventory to determine whether to retain automatic release the instance.</li>
-     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the inventory to determine whether to retain automatic release the instance.</li>
+     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After 1 hour, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
+     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
      * </ul>
      * <p>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Select an appropriate protection period based on the expected task execution duration.</p>
      * <blockquote>
@@ -197,11 +197,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
      * <p>The bidding policy for pay-as-you-go instances. Valid values: </p>
      * <ul>
      * <li>NoSpot: a regular pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: a spot instance with a maximum price limit.</li>
-     * <li>SpotAsPriceGo: a spot instance priced at the market price with the pay-as-you-go price as the upper limit.</li>
+     * <li>SpotWithPriceLimit: a spot instance with a maximum bid price.</li>
+     * <li>SpotAsPriceGo: a spot instance for which the system automatically bids at up to the pay-as-you-go price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
-     * <p>This parameter takes effect only when InstanceChargeType is set to <code>PostPaid</code>.</p>
+     * <p>This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PostPaid</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>NoSpot</p>
@@ -224,7 +224,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
      * <p>Default value description:</p>
      * <ul>
      * <li>If InstanceType is set to a retired instance type, the default value is <code>cloud</code>.</li>
-     * <li>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, for instance types that support only cloud_essd, the default value is changed from cloud_efficiency to cloud_essd PL0. For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
+     * <li>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt; After January 30, 2026, for instance types that support only cloud_essd, the default value is changed from cloud_efficiency to cloud_essd PL0. For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
      * </ul>
      * <blockquote>
      * <p>When ResourceType is set to instance and DestinationResource is set to DataDisk, the SystemDiskCategory parameter is required. If you do not specify this parameter, the default value takes effect.</p>
@@ -238,7 +238,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The zone ID.</p>
-     * <p>Default value: null. The operation returns resources that match the query conditions across all zones in the specified region (RegionId).</p>
+     * <p>Default value: null. All zones in the specified region (RegionId) that match the query conditions are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>

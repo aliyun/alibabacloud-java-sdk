@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: 100.</p>
      * <p>Default value:</p>
      * <ul>
-     * <li><p>If this parameter is left empty, the default value is 10.</p>
-     * </li>
-     * <li><p>If you set this parameter to a value that is greater than 100, the default value is 100.</p>
-     * </li>
+     * <li>If this parameter is not set, the default value is 10.</li>
+     * <li>If the value is set to a number greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,13 +19,13 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of diagnostic metrics.</p>
+     * <p>The list of diagnostic metrics.</p>
      */
     @NameInMap("MetricIds")
     public java.util.List<String> metricIds;
 
     /**
-     * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The pagination token. Set this parameter to the <code>NextToken</code> value returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -36,7 +34,7 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID pf the diagnostic metric. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +44,7 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource type supported by the diagnostic metric.</p>
+     * <p>The supported resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>

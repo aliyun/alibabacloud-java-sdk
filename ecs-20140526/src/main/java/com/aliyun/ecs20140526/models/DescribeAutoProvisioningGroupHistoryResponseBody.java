@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
-    /**
-     * <p>An array of scheduled task history records.</p>
-     */
     @NameInMap("AutoProvisioningGroupHistories")
     public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
@@ -38,7 +35,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of scheduled tasks.</p>
+     * <p>The total number of scheduling tasks queried.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

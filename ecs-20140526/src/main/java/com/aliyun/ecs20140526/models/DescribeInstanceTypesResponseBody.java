@@ -8,7 +8,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     public DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
     /**
-     * <p>The pagination token returned by this call.</p>
+     * <p>The query token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -414,6 +414,25 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions extends TeaModel {
+        @NameInMap("SecureBootSupport")
+        public String secureBootSupport;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions setSecureBootSupport(String secureBootSupport) {
+            this.secureBootSupport = secureBootSupport;
+            return this;
+        }
+        public String getSecureBootSupport() {
+            return this.secureBootSupport;
+        }
+
+    }
+
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes extends TeaModel {
         @NameInMap("SupportedBootMode")
         public java.util.List<String> supportedBootMode;
@@ -562,6 +581,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         @NameInMap("SecondaryEniQueueNumber")
         public Integer secondaryEniQueueNumber;
+
+        @NameInMap("SecurityOptions")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions securityOptions;
 
         @NameInMap("SupportedBootModes")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes supportedBootModes;
@@ -916,6 +938,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getSecondaryEniQueueNumber() {
             return this.secondaryEniQueueNumber;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setSecurityOptions(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions securityOptions) {
+            this.securityOptions = securityOptions;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions getSecurityOptions() {
+            return this.securityOptions;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setSupportedBootModes(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes supportedBootModes) {

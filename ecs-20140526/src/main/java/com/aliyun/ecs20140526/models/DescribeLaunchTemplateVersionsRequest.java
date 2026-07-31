@@ -16,9 +16,9 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query detailed template configuration information. Valid values:</p>
      * <ul>
-     * <li><p>true: Queries detailed template configuration information. In addition to basic template information, detailed configuration such as image ID and system disk size is returned.</p>
+     * <li><p>true: Queries detailed template configuration information. In addition to basic template information, detailed configuration information is returned, such as the image ID and system disk size.</p>
      * </li>
-     * <li><p>false: Queries only basic template information, such as template ID, template name, and default version.</p>
+     * <li><p>false: Queries only basic template information, such as the template ID, template name, and default version.</p>
      * </li>
      * </ul>
      * <p>Default value: true.</p>
@@ -31,7 +31,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
 
     /**
      * <p>The launch template ID.</p>
-     * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to determine the template.</p>
+     * <p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
      * 
      * <strong>example:</strong>
      * <p>lt-bp168lnahrdwl39p****</p>
@@ -41,7 +41,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
 
     /**
      * <p>The launch template name.</p>
-     * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to determine the template.</p>
+     * <p>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</p>
      * 
      * <strong>example:</strong>
      * <p>testLaunchTemplateName</p>
@@ -59,7 +59,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     public java.util.List<Long> launchTemplateVersion;
 
     /**
-     * <p>The maximum version number used to filter query results. Used together with <code>MinVersion</code> to query version information within the range between the minimum and maximum version numbers.</p>
+     * <p>The maximum version number used to filter query results. Use this parameter together with MinVersion to query version information within the range between the minimum and maximum version numbers.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     public Long maxVersion;
 
     /**
-     * <p>The minimum version number used to filter query results. Used together with <code>MaxVersion</code> to query version information within the range between the minimum and maximum version numbers.</p>
+     * <p>The minimum version number used to filter query results. Use this parameter together with MaxVersion to query version information within the range between the minimum and maximum version numbers.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -94,7 +94,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings this parameter for paging. </p>
+     * <p>The number of entries per page when paging is used. </p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>

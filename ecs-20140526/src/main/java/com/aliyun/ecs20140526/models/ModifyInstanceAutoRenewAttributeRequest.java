@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically renew the instance before it expires.</p>
+     * <p>Specifies whether to enable auto-renewal before the instance expires.</p>
      * <ul>
      * <li>true: enables auto-renewal.</li>
      * <li>false: disables auto-renewal.</li>
@@ -22,19 +22,19 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
      * <p>The auto-renewal duration of the instance.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>When <code>PeriodUnit</code> is set to <code>Year</code>, the valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}</li>
-     * <li>When <code>PeriodUnit</code> is set to <code>Month</code>, the valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}</li>
-     * <li>When <code>PeriodUnit</code> is set to <code>Week</code>, the valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;}</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Week</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;}.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <ul>
-     * <li>When <code>PeriodUnit</code> is set to <code>Year</code>, the valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}</li>
-     * <li>When <code>PeriodUnit</code> is set to <code>Month</code>, the valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</li>
      * </ul>
      * <p>&lt;props=&quot;partner&quot;&gt;</p>
      * <ul>
-     * <li>When <code>PeriodUnit</code> is set to <code>Year</code>, the valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}</li>
-     * <li>When <code>PeriodUnit</code> is set to <code>Month</code>, the valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</li>
+     * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of <code>Duration</code> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>Instance ID. You can specify up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</p>
+     * <p>The instance IDs. You can specify up to 100 subscription instance IDs at a time. Separate multiple instance IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the renewal duration, that is, the unit of the <code>Duration</code> parameter. Valid values:</p>
+     * <p>The unit of the renewal duration specified by the <code>Duration</code> parameter. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>Week</li>
@@ -85,7 +85,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,17 +95,17 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The auto-renewal status of the instance. Valid values:</p>
+     * <p>The auto-renewal status of ECS instance. Valid values:</p>
      * <ul>
      * <li><p>AutoRenewal: enables auto-renewal.</p>
      * </li>
      * <li><p>Normal: disables auto-renewal.</p>
      * </li>
-     * <li><p>NotRenewal: does not renew the instance. After this value is set, the system no longer sends expiration reminders and only sends a non-renewal reminder three days before the instance expires. ECS instances that are set to not renew can be changed to pending renewal (<code>Normal</code>), and then manually renewed or set to auto-renewal.</p>
+     * <li><p>NotRenewal: does not renew ECS instance. After this value is specified, the system no longer sends expiration notifications. Only a non-renewal reminder is sent three days before ECS instance expires. You can change the value for an instance from NotRenewal to <code>Normal</code> and then manually renew ECS instance or configure auto-renewal.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The <code>RenewalStatus</code> parameter takes precedence over the <code>AutoRenew</code> parameter. If the <code>RenewalStatus</code> parameter is not specified, the <code>AutoRenew</code> parameter takes effect by default.</p>
+     * <p>The <code>RenewalStatus</code> parameter takes precedence over the <code>AutoRenew</code> parameter. If <code>RenewalStatus</code> is not specified, the <code>AutoRenew</code> parameter is used by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

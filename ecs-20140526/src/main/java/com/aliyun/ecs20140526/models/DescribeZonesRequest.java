@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The natural language that is used to filter response results. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </p>
+     * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </p>
      * <ul>
-     * <li>zh-CN: simplified Chinese.</li>
-     * <li>zh-TW: traditional Chinese.</li>
+     * <li>zh-CN: Simplified Chinese.</li>
+     * <li>zh-TW: Traditional Chinese.</li>
      * <li>en-US: English.</li>
      * <li>ja: Japanese.</li>
      * <li>fr: French.</li>
@@ -24,7 +24,7 @@ public class DescribeZonesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The billing method supported by resources in the active zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </p>
+     * <p>The billing method supported by resources in the zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </p>
      * <ul>
      * <li>PrePaid: subscription.</li>
      * <li>PostPaid: pay-as-you-go.</li>

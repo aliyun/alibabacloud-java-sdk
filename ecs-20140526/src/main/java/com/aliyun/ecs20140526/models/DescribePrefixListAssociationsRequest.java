@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListAssociationsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The number of entries per page for paging.</p>
+     * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DescribePrefixListAssociationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -31,7 +31,7 @@ public class DescribePrefixListAssociationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The prefix list ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribePrefixListAssociationsRequest extends TeaModel {
     public String prefixListId;
 
     /**
-     * <p>The region ID of the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

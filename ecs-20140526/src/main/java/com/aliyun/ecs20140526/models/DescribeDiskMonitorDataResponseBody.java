@@ -17,7 +17,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned for disk usage information, which is the number of periods.</p>
+     * <p>The total number of returned entries of cloud disk usage information, which is the number of periods.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

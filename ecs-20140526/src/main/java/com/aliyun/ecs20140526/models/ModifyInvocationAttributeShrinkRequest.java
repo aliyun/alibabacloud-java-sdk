@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client to guarantee uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,60 +14,42 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The content of the command after modification. The command content can be plaintext or Base64-encoded. Take note of the following items:</p>
+     * <p>The modified command content. The command content can be plaintext or Base64-encoded. Note the following items:</p>
      * <ul>
-     * <li><p>You can specify whether to retain the command after the command is run when you created the command. If you specified to retain the command, the Base64-encoded command content cannot exceed 18 KB in size. If you specified not to retain the command, the Base64-encoded command content cannot exceed 24 KB in size.</p>
+     * <li><p>If the command was saved when the task was created, the command content after Base64 encoding cannot exceed 18 KB. If the command was not saved, the command content after Base64 encoding cannot exceed 24 KB.</p>
      * </li>
-     * <li><p>If the command content is Base64-encoded, set <code>ContentEncoding</code> to Base64.</p>
+     * <li><p>If your command content is Base64-encoded, you must set <code>ContentEncoding=Base64</code>.</p>
      * </li>
-     * <li><p>If you set <code>EnableParameter</code> to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:</p>
+     * <li><p>Set <code>EnableParameter=true</code> to enable the custom parameter feature in the command content:</p>
      * <ul>
-     * <li><p>You can define custom parameters in the <code>{{}}</code> format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</p>
-     * </li>
-     * <li><p>The number of custom parameters cannot exceed 20.</p>
-     * </li>
-     * <li><p>A custom parameter name can contain letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</p>
-     * </li>
-     * <li><p>Each custom parameter name cannot exceed 64 bytes in length.</p>
-     * </li>
+     * <li>Define custom parameters by enclosing them in <code>{{}}</code>. Spaces and line breaks before and after the parameter name within <code>{{}}</code> are ignored.</li>
+     * <li>The number of custom parameters cannot exceed 20.</li>
+     * <li>Custom parameter names can contain a-zA-Z0-9-_. The acs:: prefix for specifying non-built-in environment parameters is not supported. Other characters are not supported. Parameter names are case-insensitive.</li>
+     * <li>Each custom parameter name cannot exceed 64 bytes.</li>
      * </ul>
      * </li>
-     * <li><p>You can specify built-in environment parameters as custom parameters. Then, when you run the command, these parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</p>
+     * <li><p>You can specify built-in environment parameters as custom parameters. When the command is executed, you do not need to manually assign values to these parameters. Cloud Assistant automatically replaces them with the corresponding values in the environment. The following built-in environment parameters are supported:</p>
      * <ul>
-     * <li><p><code>{{ACS::RegionId}}</code>: the region ID.</p>
-     * </li>
-     * <li><p><code>{{ACS::AccountId}}</code>: the UID of the Alibaba Cloud account.</p>
-     * </li>
-     * <li><p><code>{{ACS::InstanceId}}</code>: the instance ID. If you want to specify <code>{{ACS::InstanceId}}</code> as a built-in environment variable, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
-     * <ul>
-     * <li><p>Linux: 2.2.3.309</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.309</p>
-     * </li>
+     * <li><code>{{ACS::RegionId}}</code>: The region ID.</li>
+     * <li><code>{{ACS::AccountId}}</code>: The UID of the Alibaba Cloud account.</li>
+     * <li><code>{{ACS::InstanceId}}</code>: The instance ID. When the command is sent to multiple instances, to specify <code>{{ACS::InstanceId}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent is not earlier than the following versions:<ul>
+     * <li>Linux: 2.2.3.309</li>
+     * <li>Windows: 2.1.3.309</li>
      * </ul>
      * </li>
-     * <li><p><code>{{ACS::InstanceName}}</code>: the instance name. When the command is run on multiple instances, if you want to specify <code>{{ACS::InstanceName}}</code> as a built-in environment variable, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
-     * <ul>
-     * <li><p>Linux: 2.2.3.344</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.344</p>
-     * </li>
+     * <li><code>{{ACS::InstanceName}}</code>: The instance name. When the command is sent to multiple instances, to specify <code>{{ACS::InstanceName}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent is not earlier than the following versions:<ul>
+     * <li>Linux: 2.2.3.344</li>
+     * <li>Windows: 2.1.3.344</li>
      * </ul>
      * </li>
-     * <li><p><code>{{ACS::InvokeId}}</code>: the ID of the task. If you want to specify <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
-     * <ul>
-     * <li><p>Linux: 2.2.3.309</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.309</p>
-     * </li>
+     * <li><code>{{ACS::InvokeId}}</code>: The command execution ID. To specify <code>{{ACS::InvokeId}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent is not earlier than the following versions:<ul>
+     * <li>Linux: 2.2.3.309</li>
+     * <li>Windows: 2.1.3.309</li>
      * </ul>
      * </li>
-     * <li><p><code>{{ACS::CommandId}}</code>: the command ID. If you want to specify <code>{{ACS::CommandId}}</code> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</p>
-     * <ul>
-     * <li><p>Linux: 2.2.3.309</p>
-     * </li>
-     * <li><p>Windows: 2.1.3.309</p>
-     * </li>
+     * <li><code>{{ACS::CommandId}}</code>: The command ID. When you call this operation to execute a command, to specify <code>{{ACS::CommandId}}</code> as a built-in environment parameter, ensure that the Cloud Assistant Agent is not earlier than the following versions: <ul>
+     * <li>Linux: 2.2.3.309</li>
+     * <li>Windows: 2.1.3.309</li>
      * </ul>
      * </li>
      * </ul>
@@ -81,14 +63,12 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
     public String commandContent;
 
     /**
-     * <p>The encoding mode of the command content that is specified by <code>CommandContent</code>. Valid values (case-insensitive):</p>
+     * <p>The encoding type of the command content (<code>CommandContent</code>). Valid values (case-insensitive):</p>
      * <ul>
-     * <li><p>PlainText: The command content is not encoded.</p>
-     * </li>
-     * <li><p>Base64: The command content is encoded in Base64.</p>
-     * </li>
+     * <li>PlainText: not encoded. The content is transmitted in plaintext.</li>
+     * <li>Base64: Base64-encoded.</li>
      * </ul>
-     * <p>Default value: PlainText. If the value is invalid, the PlainText mode is used.</p>
+     * <p>Default value: PlainText. If an invalid value is specified, it is treated as PlainText.</p>
      * 
      * <strong>example:</strong>
      * <p>PlainText</p>
@@ -97,12 +77,10 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>Specifies whether to include custom parameters in the command.</p>
+     * <p>Specifies whether the modified command contains custom parameters.</p>
      * <ul>
-     * <li><p>If you want to enable the custom parameter feature, or configure <code>Parameters</code> to modify the custom parameters in the command, set EnableParameter to <code>true</code>.</p>
-     * </li>
-     * <li><p>If you do not want to configure <code>Parameters</code> to modify the custom parameters in the command, leave EnableParameter empty or set it to <code>false</code>.</p>
-     * </li>
+     * <li>When you enable custom parameters or modify the custom parameters <code>Parameters</code>, set this parameter to <code>true</code>.</li>
+     * <li>When you do not modify the custom parameters <code>Parameters</code>, do not set this parameter or set it to <code>false</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,40 +90,33 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
     public Boolean enableParameter;
 
     /**
-     * <p>The frequency at which to run the command. This parameter takes effect only when <code>RepeatMode</code> is set to <code>Period</code>. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specific point in time, or run at designated points in time based on a cron expression.</p>
+     * <p>The modified scheduled execution frequency. This parameter takes effect only when <code>RepeatMode</code> is set to <code>Period</code>. Three types of scheduled execution are supported: fixed interval execution (based on Rate expressions), one-time execution at a specified time, and clock-based scheduled execution (based on Cron expressions).</p>
      * <ul>
-     * <li><p>To run the command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: <code>rate(&lt;Execution interval value&gt; &lt;Execution interval unit&gt;)</code>. For example, specify <code>rate(5m)</code> to run the command every 5 minutes. Take note of the following limits when you specify an interval:</p>
+     * <li><p>Fixed interval execution: Based on Rate expressions, the command is executed at the specified time interval. The time interval can be specified in seconds (s), minutes (m), hours (h), or days (d). This is applicable to scenarios where tasks are executed at fixed intervals. Format: <code>rate(&lt;interval value&gt;&lt;interval unit&gt;)</code>. For example, to execute every 5 minutes, use <code>rate(5m)</code>. Fixed interval execution has the following limits:</p>
      * <ul>
-     * <li><p>The specified interval must be in the range of 60 seconds to 7 days and must be longer than the timeout period specified when you created the scheduled task.</p>
-     * </li>
-     * <li><p>The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, you set the interval to 5 minutes and the command requires 2 minutes to run once. Each time the command running is complete, the system waits 3 minutes instead of 5 minutes before the system runs the command again.</p>
-     * </li>
-     * <li><p>The point in time at which the command is run the next time is calculated based on the creation time of the task (the <a href="https://help.aliyun.com/document_detail/64840.html">CreationTime</a> value returned by the <code>DescribeInvocations</code> operation) and the modified execution interval.</p>
-     * </li>
+     * <li>The interval cannot exceed 7 days or be less than 60 seconds, and must be greater than the timeout period specified when the scheduled task was created.</li>
+     * <li>The execution interval is based only on the fixed frequency and is not related to the actual execution time of the task. For example, if the command is set to execute every 5 minutes and the task takes 2 minutes to complete, the next round starts 3 minutes after the task completes.</li>
+     * <li>The next execution time is calculated based on the task creation time (see <a href="https://help.aliyun.com/document_detail/64840.html">CreationTime</a> returned by <code>DescribeInvocations</code>, note that this is not the modification time) and the modified execution interval.</li>
      * </ul>
      * </li>
-     * <li><p>To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the <code>at(yyyy-MM-dd HH:mm:ss &lt;Time zone&gt;)</code> format, which indicates <code>at(Year-Month-Day Hours:Minutes:Seconds &lt;Time zone&gt;)</code>. If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. You can specify a time zone in the following forms:</p>
+     * <li><p>One-time execution at a specified time: The command is executed once at the specified time zone and time point. Format: <code>at(yyyy-MM-dd HH:mm:ss &lt;time zone&gt;)</code>, that is, <code>at(year-month-day hour:minute:second &lt;time zone&gt;)</code>. If no time zone is specified, the default is UTC. The time zone supports the following three formats:</p>
      * <ul>
-     * <li><p>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</p>
-     * </li>
-     * <li><p>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</p>
-     * </li>
-     * <li><p>The time zone abbreviation. Only UTC is supported.</p>
-     * </li>
+     * <li>Full time zone name: such as <code>Asia/Shanghai</code> (China/Shanghai time) or <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
+     * <li>GMT offset from Greenwich Mean Time: such as <code>GMT+8:00</code> (East 8th time zone) or <code>GMT-7:00</code> (West 7th time zone). When using GMT format, leading zeros are not supported in the hour position.</li>
+     * <li>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.</li>
      * </ul>
-     * <p>For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
+     * <p>For example, to execute once at 13:15:30 on June 6, 2022 in China/Shanghai time, use: <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To execute once at 13:15:30 on June 6, 2022 in the West 7th time zone, use: <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
      * </li>
-     * <li><p>To run a command at designated points in time, use a cron expression to define the schedule. Specify a schedule in the <code>&lt;Cron expression&gt; &lt;Time zone&gt;</code> format. The cron expression is in the <code>&lt;Seconds&gt; &lt;Minutes&gt; &lt;Hours&gt; &lt;Day of the month&gt; &lt;Month&gt; &lt;Day of the week&gt; &lt;Year (optional)&gt;</code> format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zones of the instances on which you want to run the command are used by default. For information about cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. You can specify the time zone in the following forms:</p>
+     * <li><p>Clock-based scheduled execution (based on Cron expressions): Based on Cron expressions, the command is executed according to the scheduled task settings. Format: <code>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of month&gt; &lt;month&gt; &lt;day of week&gt; &lt;year (optional)&gt; &lt;time zone&gt;</code>, that is, <code>&lt;Cron expression&gt; &lt;time zone&gt;</code>. The scheduled task execution time is calculated based on the Cron expression in the specified time zone. If no time zone is specified, the default is the internal system time zone of the instance running the scheduled task. For more information about Cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. The time zone supports the following three formats:</p>
      * <ul>
-     * <li><p>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</p>
-     * </li>
-     * <li><p>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</p>
-     * </li>
-     * <li><p>The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</p>
-     * </li>
+     * <li>Full time zone name: such as <code>Asia/Shanghai</code> (China/Shanghai time) or <code>America/Los_Angeles</code> (US/Los Angeles time).</li>
+     * <li>GMT offset from Greenwich Mean Time: such as <code>GMT+8:00</code> (East 8th time zone) or <code>GMT-7:00</code> (West 7th time zone). When using GMT format, leading zeros are not supported in the hour position.</li>
+     * <li>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.
+     * For example, to execute once every day at 10:15 AM in 2022 in China/Shanghai time, use <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To execute every half hour from 10:00 AM to 11:30 AM every day in 2022 in the East 8th time zone, use <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To execute every 5 minutes from 2:00 PM to 2:55 PM every day in October every two years starting from 2022 in UTC, use <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</li>
      * </ul>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong> The minimum interval must be 10 seconds or longer and cannot be shorter than the timeout period of scheduled executions.</p>
+     * <blockquote>
+     * <p>The minimum time interval must be greater than or equal to the timeout period specified when the scheduled task was created, and must not be less than 10 seconds.</p>
+     * </blockquote>
      * </li>
      * </ul>
      */
@@ -153,13 +124,13 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
     public String frequency;
 
     /**
-     * <p>The IDs of the ECS instances or managed instances that you want to add to the scheduled command task.</p>
+     * <p>The instance ID of the ECS instance or managed instance to add to the task.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The execution ID of the command.</p>
+     * <p>The execution ID of the task to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -175,19 +146,15 @@ public class ModifyInvocationAttributeShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key-value pairs of the custom parameters that are passed in if custom parameters are included in the command.</p>
-     * <p>You can specify 0 to 10 custom parameters. Take note of the following items:</p>
+     * <p>The key-value pairs of custom parameters to modify when the command contains custom parameters.</p>
+     * <p>The number of custom parameters ranges from 0 to 10. Note the following items:</p>
      * <ul>
-     * <li><p>The key of a custom parameter can be up to 64 characters in length and cannot be an empty string.</p>
-     * </li>
-     * <li><p>The value of a custom parameter can be an empty string.</p>
-     * </li>
-     * <li><p>If you specified to retain the command when you create the command task, the total size of the custom parameters and original command content that are encoded in Base64 cannot exceed 18 KB. If you specified not to retain the command when you create the command task, the total size of the custom parameters and original command content that are encoded in Base64 cannot exceed 24 KB.</p>
-     * </li>
-     * <li><p>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</p>
-     * </li>
+     * <li>Keys cannot be empty strings and can contain up to 64 characters.</li>
+     * <li>Values can be empty strings.</li>
+     * <li>If the command was saved when the task was created, the combined size of custom parameters and original command content after Base64 encoding cannot exceed 18 KB. If the command was not saved, the combined size cannot exceed 24 KB.</li>
+     * <li>The set of custom parameter names must be a subset of the parameter set defined when the command was created. For parameters that are not passed in, you can use empty strings as substitutes.</li>
      * </ul>
-     * <p>This parameter is empty by default, which indicates not to modify the key-value pairs of the custom parameters.</p>
+     * <p>Default value: empty, which indicates that no custom parameter key-value pairs are modified.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</p>

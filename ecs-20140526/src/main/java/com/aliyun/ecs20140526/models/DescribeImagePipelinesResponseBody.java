@@ -8,7 +8,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
 
     /**
-     * <p>The number of entries per page for a paginated query.</p>
+     * <p>The maximum number of entries per page for paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -17,7 +17,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. This value is returned if the results are paginated.</p>
+     * <p>The pagination token returned in this call. For more information about how to use it, refer to the operation description.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -35,7 +35,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of image pipelines that match the query criteria.</p>
+     * <p>The total number of image templates returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -569,6 +569,25 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems extends TeaModel {
+        @NameInMap("RepairItem")
+        public java.util.List<String> repairItem;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems setRepairItem(java.util.List<String> repairItem) {
+            this.repairItem = repairItem;
+            return this;
+        }
+        public java.util.List<String> getRepairItem() {
+            return this.repairItem;
+        }
+
+    }
+
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
@@ -691,6 +710,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("NvmeSupport")
         @Deprecated
         public String nvmeSupport;
+
+        @NameInMap("RepairItems")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems repairItems;
 
         @NameInMap("RepairMode")
         public String repairMode;
@@ -855,6 +877,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public String getNvmeSupport() {
             return this.nvmeSupport;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setRepairItems(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems repairItems) {
+            this.repairItems = repairItems;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems getRepairItems() {
+            return this.repairItems;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setRepairMode(String repairMode) {

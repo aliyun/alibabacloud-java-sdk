@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     /**
-     * <p>The upgrade settings for the Cloud Assistant agent.</p>
+     * <p>The Cloud Assistant Agent upgrade configuration.</p>
      */
     @NameInMap("AgentUpgradeConfig")
     public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfig agentUpgradeConfig;
@@ -23,13 +23,13 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource usage settings for the Cloud Assistant agent.</p>
+     * <p>The Cloud Assistant resource usage configuration.</p>
      */
     @NameInMap("ResourceUsageConfig")
     public DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig resourceUsageConfig;
 
     /**
-     * <p>Configurations for the Session Manager feature.</p>
+     * <p>The Cloud Assistant session feature configuration.</p>
      */
     @NameInMap("SessionManagerConfig")
     public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig sessionManagerConfig;
@@ -114,7 +114,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public DescribeCloudAssistantSettingsResponseBodyAgentUpgradeConfigAllowedUpgradeWindows allowedUpgradeWindows;
 
         /**
-         * <p>Indicates whether the Cloud Assistant agent checks for and applies updates upon startup.</p>
+         * <p>Indicates whether Cloud Assistant Agent checks for and performs updates immediately upon startup.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,7 +123,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean bootstrapUpgrade;
 
         /**
-         * <p>Indicates whether to prevent the Cloud Assistant agent from automatically updating.</p>
+         * <p>Indicates whether Cloud Assistant Agent is prohibited from checking for and performing updates.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -132,7 +132,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean disableUpgrade;
 
         /**
-         * <p>Indicates whether custom agent upgrade settings are enabled. If this parameter is not specified or is set to <code>false</code>, the system attempts to upgrade the agent every 30 minutes by default.</p>
+         * <p>Indicates whether the custom Agent upgrade configuration is enabled. If the value is false or empty, the default behavior is to attempt an upgrade every 30 minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +141,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The time zone of the allowed upgrade windows.</p>
+         * <p>The time zone of the allowed upgrade time windows.</p>
          * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
@@ -302,7 +302,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig extends TeaModel {
         /**
-         * <p>The maximum CPU usage limit for the main process of the Cloud Assistant agent.</p>
+         * <p>The maximum CPU usage allowed for the Cloud Assistant Agent main process.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -311,7 +311,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Integer cpuLimit;
 
         /**
-         * <p>Indicates whether to retain the script file in the Cloud Assistant directory after a command invocation is complete.</p>
+         * <p>Indicates whether the script file is retained in the Cloud Assistant directory after command execution is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -329,7 +329,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public Integer logFileCountLimit;
 
         /**
-         * <p>The maximum size for a single Cloud Assistant log file.</p>
+         * <p>The size limit of Cloud Assistant log files.</p>
          * 
          * <strong>example:</strong>
          * <p>100MB</p>
@@ -338,7 +338,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public String logSizeLimit;
 
         /**
-         * <p>The maximum memory usage limit for the main process of the Cloud Assistant agent.</p>
+         * <p>The maximum memory usage allowed for the Cloud Assistant Agent main process.</p>
          * 
          * <strong>example:</strong>
          * <p>35MB</p>
@@ -347,7 +347,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         public String memoryLimit;
 
         /**
-         * <p>The number of consecutive times CPU or memory usage can exceed the configured limits before the Cloud Assistant agent process is terminated.</p>
+         * <p>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit. When this limit is reached, Cloud Assistant Agent automatically stops running.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -412,16 +412,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig extends TeaModel {
         /**
-         * <p>Indicates whether the Session Manager feature is enabled. Valid values:</p>
+         * <p>Specifies whether the Cloud Assistant session feature is enabled. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: enabled</p>
-         * </li>
-         * <li><p><code>false</code>: disabled</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
-         * <p><strong>Note</strong>:</p>
+         * <p>Note:</p>
          * <ul>
-         * <li>This setting takes effect in all regions.</li>
+         * <li>Enabling or disabling the session feature takes effect across all regions.</li>
          * </ul>
          * 
          * <strong>example:</strong>

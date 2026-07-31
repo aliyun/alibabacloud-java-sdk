@@ -18,7 +18,7 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public String actionType;
 
     /**
-     * <p>The list of filter conditions for querying resources.</p>
+     * <p>The list of filter conditions used to query resources.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter;

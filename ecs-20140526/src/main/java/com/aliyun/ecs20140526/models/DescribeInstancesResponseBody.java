@@ -26,7 +26,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page as specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,9 +45,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of queried instances.</p>
-     * <blockquote>
-     * <p>When you use <code>MaxResults</code> and <code>NextToken</code> parameters for paging query, the returned <code>TotalCount</code> parameter value is meaningless.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -621,6 +618,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        @NameInMap("Primary")
+        public Boolean primary;
+
         public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set();
             return TeaModel.build(map, self);
@@ -632,6 +632,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getIpv6Address() {
             return this.ipv6Address;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
         }
 
     }
@@ -999,6 +1007,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceSecurityOptions extends TeaModel {
+        @NameInMap("EnableSecureBoot")
+        public Boolean enableSecureBoot;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceSecurityOptions self = new DescribeInstancesResponseBodyInstancesInstanceSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityOptions setEnableSecureBoot(Boolean enableSecureBoot) {
+            this.enableSecureBoot = enableSecureBoot;
+            return this;
+        }
+        public Boolean getEnableSecureBoot() {
+            return this.enableSecureBoot;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceTagsTag extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
@@ -1291,6 +1318,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("SecurityGroupIds")
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
+
+        @NameInMap("SecurityOptions")
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityOptions securityOptions;
 
         @NameInMap("SerialNumber")
         public String serialNumber;
@@ -1779,6 +1809,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setSecurityOptions(DescribeInstancesResponseBodyInstancesInstanceSecurityOptions securityOptions) {
+            this.securityOptions = securityOptions;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityOptions getSecurityOptions() {
+            return this.securityOptions;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setSerialNumber(String serialNumber) {

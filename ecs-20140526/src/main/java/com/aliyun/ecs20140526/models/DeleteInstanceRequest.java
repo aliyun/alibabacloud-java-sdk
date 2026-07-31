@@ -7,8 +7,8 @@ public class DeleteInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: Sends a check request without releasing the instance. The system checks whether the required parameters are specified, the request format is valid, business requirements are met, and ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li>false (default): Sends a normal request. After the request passes the check, the instance is directly deleted.</li>
+     * <li>true: Sends a check request without releasing the instance. The system checks whether the required parameters are specified, the request format is valid, business limitations are met, and ECS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li>false (default): Sends a normal request. After the check succeeds, the instance is directly deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,11 +21,11 @@ public class DeleteInstanceRequest extends TeaModel {
      * <p>Specifies whether to forcefully release a <strong>running</strong> (<code>Running</code>) instance.</p>
      * <ul>
      * <li>true: Forcefully releases a <strong>running</strong> (<code>Running</code>) instance.</li>
-     * <li>false: Releases the instance in the normal way. The instance must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>false: Releases the instance normally. The instance must be in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered..</p>
+     * <p>Warning: A forceful release is equivalent to a power-off. All in-memory data and temporary data in storage are erased and cannot be recovered.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,10 +38,10 @@ public class DeleteInstanceRequest extends TeaModel {
      * <p>Specifies whether to use the forced shutdown policy when releasing a <strong>running</strong> (<code>Running</code>) instance. This parameter takes effect only when <code>Force=true</code>. Valid values:</p>
      * <ul>
      * <li>true: Forcefully shuts down and releases the instance. This is equivalent to a typical power-off operation. The instance directly enters the resource release process.<blockquote>
-     * <p>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered.</p>
+     * <p>Warning: A forceful release is equivalent to a power-off. All in-memory data and temporary data in storage are erased and cannot be recovered.</p>
      * </blockquote>
      * </li>
-     * <li>false: Before the instance is released, the system preferentially performs a standard shutdown process. This mode causes the instance release to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</li>
+     * <li>false: Before the instance is released, the system preferentially performs a standard shutdown process. This mode causes the instance release to take several minutes. You can configure business draining actions during the operating system shutdown to reduce noise in the business system.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 

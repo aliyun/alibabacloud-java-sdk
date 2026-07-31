@@ -14,7 +14,7 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of snapshots stored in the current region.</p>
+     * <p>The total number of snapshots in the current region.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class DescribeSnapshotsUsageResponseBody extends TeaModel {
     public Integer snapshotCount;
 
     /**
-     * <p>The total size of snapshots stored in the current region. Unit: bytes.</p>
+     * <p>The total snapshot size in the current region. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>122</p>

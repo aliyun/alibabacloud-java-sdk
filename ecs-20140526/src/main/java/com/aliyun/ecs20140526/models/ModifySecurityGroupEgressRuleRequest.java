@@ -33,11 +33,11 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String destCidrIp;
 
     /**
-     * <p>The ID of the destination security group to which you want to grant access permissions. Specify at least one of <code>DestGroupId</code> and <code>DestCidrIp</code>.</p>
+     * <p>The ID of the destination security group for which you want to configure access permissions. Set at least one of <code>DestGroupId</code> and <code>DestCidrIp</code>.</p>
      * <ul>
-     * <li>Specify at least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId.</li>
-     * <li>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can only be set to intranet.</li>
-     * <li>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.</li>
+     * <li>Set at least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId.</li>
+     * <li>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</li>
+     * <li>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String destGroupId;
 
     /**
-     * <p>The Alibaba Cloud account that owns the destination security group when you set a cross-account security group rule.</p>
+     * <p>The Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:EcsforCloud@Alibaba.com">EcsforCloud@Alibaba.com</a></p>
@@ -56,7 +56,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String destGroupOwnerAccount;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that owns the destination security group when you set a cross-account security group rule.</p>
+     * <p>The ID of the Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -108,7 +108,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     /**
      * <p>The destination IPv6 Classless Inter-Domain Routing (CIDR) block. CIDR format and IPv6 format IP address range are supported.</p>
      * <blockquote>
-     * <p>Only VPC-type IP addresses are supported. This parameter and <code>DestCidrIp</code> cannot be specified at the same time. Settings for both parameters simultaneously are not allowed.</p>
+     * <p>Only VPC-type IP addresses are supported. This parameter and <code>DestCidrIp</code> cannot be specified at the same time. Settings for this parameter and <code>DestCidrIp</code> are mutually exclusive.</p>
      * </blockquote>
      * <p>Default value: null.</p>
      * 
@@ -121,7 +121,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     /**
      * <p>The source IPv6 Classless Inter-Domain Routing (CIDR) block. CIDR format and IPv6 format IP address range are supported.</p>
      * <blockquote>
-     * <p>Only VPC-type IP addresses are supported. This parameter and <code>SourceCidrIp</code> cannot be specified at the same time. Settings for both parameters simultaneously are not allowed.</p>
+     * <p>Only VPC-type IP addresses are supported. Settings for this parameter and <code>SourceCidrIp</code> are mutually exclusive.</p>
      * </blockquote>
      * <p>Default value: null.</p>
      * 
@@ -132,7 +132,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>The network interface type.</p>
+     * <p>The network interface controller (NIC) type.</p>
      * <blockquote>
      * <p>When you modify a rule by specifying the security group rule ID, this parameter cannot be modified. To make such a change, add a new rule and then delete the current rule.</p>
      * </blockquote>
@@ -227,7 +227,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The security group rule ID. You can call <a href="https://help.aliyun.com/document_detail/2679845.html">DescribeSecurityGroupAttribute</a> to query the security group rule ID.</p>
+     * <p>The security group rule ID. You can call <a href="https://help.aliyun.com/document_detail/2679845.html">DescribeSecurityGroupAttribute</a> to query security group rule IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>sgr-bp67acfmxazb4q****</p>

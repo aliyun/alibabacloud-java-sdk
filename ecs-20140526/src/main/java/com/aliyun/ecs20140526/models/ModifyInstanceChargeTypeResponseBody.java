@@ -8,7 +8,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
     public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The order ID. This parameter is returned only when the billing method is changed to subscription.</p>
      * 
      * <strong>example:</strong>
      * <p>20413515388****</p>

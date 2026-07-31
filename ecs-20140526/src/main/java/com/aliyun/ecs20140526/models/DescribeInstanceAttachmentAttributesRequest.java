@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
+     * <p>The instance IDs. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,8 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Page starts from page 1.</p>
+     * <p>The page number of the instance status list.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -32,8 +32,8 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The number of entries per page for the paged query.</p>
+     * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePlanMaintenanceWindowRequest extends TeaModel {
     /**
-     * <p>The ID of the maintenance window to delete.</p>
+     * <p>The ID of the O&amp;M window to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeletePlanMaintenanceWindowRequest extends TeaModel {
     public String planWindowId;
 
     /**
-     * <p>The ID of the region. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to retrieve the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeTagsRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is about to be deprecated. To ensure compatibility, use other parameters.</p>
+     * <p>This parameter is about to be deprecated. To ensure compatibility, use other parameters instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource to which the tag is attached. For example, if the resource type (ResourceType) is instance, the resource ID is the instance ID.</p>
+     * <p>The ID of the resource to which the tag is attached. For example, if ResourceType is set to instance, ResourceId indicates the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>s-946ntx4wr****</p>
@@ -74,7 +74,7 @@ public class DescribeTagsRequest extends TeaModel {
      * <li>image: image.</li>
      * <li>securitygroup: security group.</li>
      * <li>volume: storage volume.</li>
-     * <li>eni: network interface controller (NIC).</li>
+     * <li>eni: Elastic Network Interface (ENI).</li>
      * <li>ddh: dedicated host.</li>
      * <li>keypair: SSH key pair.</li>
      * <li>launchtemplate: launch template.</li>
@@ -90,7 +90,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeTagsRequestTag> tag;

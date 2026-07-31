@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     /**
-     * <p>The type of the snapshot. Valid values:</p>
+     * <p>The snapshot type. Valid values:</p>
      * <ul>
-     * <li><p>Standard: standard snapshot</p>
-     * </li>
-     * <li><p>Flash: local snapshot</p>
-     * </li>
-     * <li><p>Archive: archive snapshot</p>
-     * </li>
+     * <li>Standard: standard snapshot.</li>
+     * <li>Flash: local snapshot.</li>
+     * <li>Archive: archive snapshot.</li>
      * </ul>
      * <p>Default value: Standard.</p>
      * 
@@ -23,7 +20,7 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The end of the time range to query snapshot size change data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is automatically rounded up to the next minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,14 +36,11 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:</p>
+     * <p>The interval at which to query snapshot size change data. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><p>60</p>
-     * </li>
-     * <li><p>600</p>
-     * </li>
-     * <li><p>3600</p>
-     * </li>
+     * <li>60</li>
+     * <li>600</li>
+     * <li>3600</li>
      * </ul>
      * <p>Default value: 60.</p>
      * 
@@ -57,7 +51,7 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +67,7 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The beginning of the time range to query snapshot size change data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is automatically rounded up to the next minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -35,7 +35,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of EBS devices for which full status information is returned.</p>
+     * <p>The total number of full status entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

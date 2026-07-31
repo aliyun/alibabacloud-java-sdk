@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
-     * <p>The unified expiration date. After you specify this parameter, the price for renewing the instance to the unified expiration date is returned. Valid values: 1 to 28.</p>
-     * <p>For more information about the unified expiration date feature, see <a href="https://help.aliyun.com/document_detail/108486.html">Settings for instance expires</a>.</p>
+     * <p>The unified expiration date. After you specify this parameter, the price for renewing the instance to the unified expiration date is queried. Valid values: 1 to 28.</p>
+     * <p>For more information about the unified expiration date feature, see <a href="https://help.aliyun.com/document_detail/108486.html">Synchronize the expiration dates of instances</a>.</p>
      * <blockquote>
-     * <p>The renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration date parameter (<code>ExpectedRenewDay</code>) cannot be set at the same time.</p>
+     * <p>The renewal duration parameters (Period and PeriodUnit) and the unified expiration date parameter (ExpectedRenewDay) cannot be set at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,12 +26,12 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     /**
      * <p>The renewal duration. Valid values:</p>
      * <ul>
-     * <li>When <code>PriceUnit</code> is set to <code>Month</code>: 1 to 9.</li>
-     * <li>When <code>PriceUnit</code> is set to <code>Year</code>: 1 to 3.</li>
+     * <li>When PriceUnit is set to Month: 1 to 9.</li>
+     * <li>When PriceUnit is set to Year: 1 to 3.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * <blockquote>
-     * <p>The renewal duration parameters (<code>Period</code> and <code>PeriodUnit</code>) and the unified expiration date parameter (<code>ExpectedRenewDay</code>) cannot be set at the same time.</p>
+     * <p>The renewal duration parameters (Period and PeriodUnit) and the unified expiration date parameter (ExpectedRenewDay) cannot be set at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +43,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     /**
      * <p>The unit of the renewal duration. Valid values:</p>
      * <ul>
-     * <li>Month: the renewal duration is measured in months.</li>
-     * <li>Year: the renewal duration is measured in years.</li>
+     * <li>Month: The renewal duration is measured in months.</li>
+     * <li>Year: The renewal duration is measured in years.</li>
      * </ul>
      * <p>Default value: Month.</p>
      * 
@@ -65,7 +65,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource whose renewal price you want to query. When <code>ResourceType</code> is set to <code>instance</code>, <code>ResourceId</code> is equivalent to <code>InstanceId</code>.</p>
+     * <p>The ID of the resource whose renewal price you want to query. When ResourceType is set to instance, ResourceId is equivalent to InstanceId.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

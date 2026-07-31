@@ -47,7 +47,7 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters that are categorized as letters in Unicode, including Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters that are categorized as letter in Unicode, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * <p>Default value: null. The name is not modified.</p>
      * 
      * <strong>example:</strong>

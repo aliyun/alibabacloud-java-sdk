@@ -35,7 +35,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances to which you attempted to attach the instance RAM role.</p>
+     * <p>The total number of instances to which the instance RAM role is attached.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster to which the ECS instances belong.</p>
+     * <p>The cluster ID of the instances.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. We recommend that you do not use this parameter.</p>
+     * <p>Notice: This parameter is deprecated and is not recommended.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,8 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</p>
-     * <p>Example: [&quot;i-bp1j4i2jdf3owlhe\<em>\</em>\<em>\</em>&quot;, &quot;i-bp1j4i2jdf3o1234\<em>\</em>\<em>\</em>&quot;].</p>
+     * <p>The instance ID array. Array length: 1 to 100.</p>
+     * <p>Example: [&quot;i-bp1j4i2jdf3owlhe****&quot;, &quot;i-bp1j4i2jdf3o1234****&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1j4i2jdf3owlhe****</p>
@@ -33,8 +33,8 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1.</p>
+     * <p>The page number of the instance status list.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <p>The number of entries per page for paging. Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone to which the instances belong. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the most recent zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-d</p>

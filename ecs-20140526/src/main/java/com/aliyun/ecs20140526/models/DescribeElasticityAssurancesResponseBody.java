@@ -8,7 +8,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSet elasticityAssuranceSet;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for the elasticity assurance service query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +17,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results.</p>
+     * <p>The pagination token for the next query of elasticity assurance services.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -35,7 +35,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching entries.</p>
+     * <p>The total number of entries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

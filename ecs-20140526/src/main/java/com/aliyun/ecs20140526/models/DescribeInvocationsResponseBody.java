@@ -17,7 +17,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the query results.</p>
+     * <p>The page number of the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

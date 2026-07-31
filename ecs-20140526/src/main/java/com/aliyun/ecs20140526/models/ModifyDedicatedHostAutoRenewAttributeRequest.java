@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically renew the subscription. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the subscription dedicated host. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Enables auto-renewal for the subscription dedicated host.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Disables auto-renewal for the subscription dedicated host.</p>
      * </li>
      * </ul>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -21,21 +21,18 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>Specifies whether to automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</p>
-     * <p>If auto-renewal is enabled for the subscription ECS instances hosted on the subscription dedicated hosts, you can specify this parameter to automatically renew the dedicated hosts along with the subscription ECS instances. When the subscription ECS instances hosted on your dedicated hosts are automatically renewed, the subscription dedicated hosts are also automatically renewed if the expiration time of the dedicated hosts is earlier than the expiration time of the renewed instances. Take note of the following items:</p>
-     * <p>When the subscription dedicated hosts are configured to be automatically renewed along with the subscription ECS instances hosted on the dedicated hosts, the system checks the expiration time of the renewed instances and selects a minimum renewal duration for the dedicated hosts so that the dedicated hosts are renewed by a duration that ends later than the expiration time of the renewed instances. For more information about supported renewal durations, see the descriptions of the <code>PeriodUnit</code> and <code>Duration</code> parameters.</p>
-     * <p>For example, assume that a dedicated host expires on January 15 of the current year. Subscription ECS instances hosted on the dedicated host are configured to be automatically renewed to November 15 of the same year. The expiration time of the dedicated host is earlier than the expiration time of the ECS instances by 10 months. In this case, the system selects a renewal duration of 12 months (a minimum duration calculated based on a <code>Duration</code> value of 12 and a <code>PeriodUnit</code> value of Month) for the dedicated host. This ensures that the dedicated host expires later than the ECS instances.</p>
+     * <p>Specifies whether to enable auto-renewal for the dedicated host to follow the subscription ECS instances on the host.</p>
+     * <p>If your dedicated host (DDH) uses the subscription billing method and the subscription ECS instances on the DDH have auto-renewal enabled, you can use this parameter to configure the DDH to automatically renew along with the ECS instances. When an ECS instance on the DDH is automatically renewed, if the DDH expires earlier than the new expiration time of the ECS instance, the DDH is also automatically renewed. The principle of DDH auto-renewal following ECS instances is as follows:</p>
+     * <p>The DDH automatically determines the new expiration time of the corresponding ECS instance, and then selects the minimum renewal period that is greater than the ECS instance expiration time and meets the DDH renewal cycle. For details about the supported renewal cycles of DDHs, see the metric descriptions of the PeriodUnit and Duration parameters.</p>
+     * <p>Example: A subscription DDH expires on January 15 of the current year. After a subscription ECS instance on the DDH is automatically renewed, the ECS instance expiration is extended to November 15 of the current year. The DDH lifecycle is 10 months shorter than the ECS instance lifecycle. In this case, the DDH selects the minimum renewal period that is greater than 10 months and meets the DDH renewal cycle, which is 12 months (PeriodUnit=Month and Duration=12).</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>AutoRenewWithEcs: automatically renews the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</p>
-     * </li>
-     * <li><p>StopRenewWithEcs: does not automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</p>
-     * </li>
-     * <li><p>NoOperation: does not change the current settings for the dedicated hosts.</p>
-     * </li>
+     * <li>AutoRenewWithEcs: Enables auto-renewal following the subscription ECS instances on the dedicated host.</li>
+     * <li>StopRenewWithEcs: Disables auto-renewal following the subscription ECS instances on the dedicated host.</li>
+     * <li>NoOperation: Does not change the current settings of the dedicated host.</li>
      * </ul>
      * <blockquote>
-     * <p>If you set this parameter to AutoRenewWithEcs, make sure that <code>AutoRenew</code> is set to true to enable auto-renewal for the dedicated hosts. Otherwise, the subscription dedicated hosts are not automatically renewed along with the subscription ECS instances hosted on the dedicated hosts.</p>
+     * <p>If you set this parameter to AutoRenewWithEcs, make sure that auto-renewal is enabled for the dedicated host (AutoRenew=true). Otherwise, this parameter only changes the parameter value, and the actual auto-renewal feature following ECS instances does not take effect.</p>
      * </blockquote>
      * <p>Default value: NoOperation.</p>
      * 
@@ -46,7 +43,7 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
     public String autoRenewWithEcs;
 
     /**
-     * <p>The IDs of dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate the IDs with commas (,).</p>
+     * <p>The IDs of dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,12 +53,17 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
     public String dedicatedHostIds;
 
     /**
-     * <p>The renewal duration.</p>
+     * <p>The renewal period. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>Valid values when PeriodUnit is set to Month: 1 and 12</p>
-     * </li>
-     * <li><p>Valid values when PeriodUnit is set to Year: 1 and 12</p>
-     * </li>
+     * <li>If PeriodUnit is set to Week: 1, 2, 3, and 4.</li>
+     * <li>If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
+     * <li>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>If PeriodUnit is set to Month: 1 and 12.</li>
+     * <li>If PeriodUnit is set to Year: 1 and 12.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,13 +80,18 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The unit of the renewal period. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>Month</p>
-     * </li>
-     * <li><p>Year</p>
-     * </li>
+     * <li>Week</li>
+     * <li>Month</li>
+     * <li>Year</li>
      * </ul>
-     * <p>Default value: Month</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * <p>Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -103,13 +110,13 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to automatically renew the subscription dedicated host. The <code>RenewalStatus</code> parameter takes precedence over the <code>AutoRenew</code> parameter. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the subscription dedicated host. The RenewalStatus parameter takes precedence over the AutoRenew parameter. Valid values:</p>
      * <ul>
-     * <li><p>AutoRenewal: The dedicated hosts are automatically renewed.</p>
+     * <li><p>AutoRenewal: Enables auto-renewal.</p>
      * </li>
-     * <li><p>Normal: The dedicated hosts are not automatically renewed, and renewal notifications are sent.</p>
+     * <li><p>Normal: Disables auto-renewal but the system still sends expiration notifications.</p>
      * </li>
-     * <li><p>NotRenewal: The dedicated hosts are not automatically renewed, and no expiration notification is sent. A notification of no renewal is automatically sent three days before the end of the current subscription cycle. You can change the value of this parameter from NotRenewal to Normal and manually renew the dedicated hosts by calling the <a href="https://help.aliyun.com/document_detail/134250.html">RenewDedicatedHosts</a> operation. Alternatively, you can renew the dedicated hosts by setting this parameter to AutoRenewal.</p>
+     * <li><p>NotRenewal: Disables auto-renewal and the system does not send expiration notifications. Three days before expiration, the system automatically sends a non-renewal notification. You can change the value of this parameter to Normal for a dedicated host, and then manually renew the host by calling <a href="https://help.aliyun.com/document_detail/134250.html">RenewDedicatedHosts</a> or set the value to AutoRenewal to enable auto-renewal.</p>
      * </li>
      * </ul>
      * 

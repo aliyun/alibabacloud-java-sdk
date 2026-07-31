@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to allocate a public IP address.</p>
+     * <p>Specifies whether to assign a public IP address. Valid values:</p>
      * <ul>
-     * <li>true: allocates a public IP address.</li>
-     * <li>false: does not allocate a public IP address.</li>
+     * <li>true: A public IP address is assigned.</li>
+     * <li>false: No public IP address is assigned.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -19,17 +19,17 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Boolean allocatePublicIp;
 
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to automatically complete the payment. Valid values: </p>
      * <ul>
-     * <li>true: After the bandwidth configuration is modified, the payment is automatically deducted. When you set the AutoPay parameter to true, make sure that your account has sufficient balance. If your account balance is insufficient, an abnormal order is generated. You cannot pay for the order on the ECS console. You can only cancel the order.</li>
+     * <li>true: The payment is automatically completed after the bandwidth configuration is changed. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated. You cannot pay for this order through the ECS console. You can only void the order.</li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>false: After the bandwidth configuration is modified, only an order is generated and no payment is made. If your payment method has insufficient balance, you can set the AutoPay parameter to false to disable automatic payment. In this case, the API generates a normal unpaid order. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</li>
+     * <li>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, you can set the Autopay parameter to false to cancel automatic payment. In this case, an unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <ul>
-     * <li>false: After the bandwidth configuration is modified, only an order is generated and no payment is made. If your payment method has insufficient balance, you can set the AutoPay parameter to false to disable automatic payment. In this case, the API generates a normal unpaid order. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</li>
+     * <li>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, you can set the Autopay parameter to false to cancel automatic payment. In this case, an unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</li>
      * </ul>
      * <p>Default value: true.</p>
      * 
@@ -40,7 +40,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -49,7 +49,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The end time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in UTC+0 time in the yyyy-MM-ddTHHZ format. The time must be accurate to the <strong>hour</strong> (HH).</p>
+     * <p>The end time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC+0. The value is accurate to the <strong>hour</strong> (HH).</p>
      * <blockquote>
      * <p>The interval between the end time and the start time of the temporary bandwidth upgrade must be greater than or equal to 3 hours.</p>
      * </blockquote>
@@ -62,7 +62,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not yet available for use.</p>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public String ISP;
 
     /**
-     * <p>The ID of the instance for which you want to modify the network configuration.</p>
+     * <p>The instance ID of the instance for which you want to modify the network configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,8 +84,8 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>The maximum inbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</p>
      * <ul>
-     * <li>If the purchased maximum outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
-     * <li>If the purchased maximum outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>InternetMaxBandwidthOut</code>. Default value: the value of <code>InternetMaxBandwidthOut</code>.</li>
+     * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</li>
+     * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <code>InternetMaxBandwidthOut</code>. Default value: the value of <code>InternetMaxBandwidthOut</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,17 +97,17 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</p>
      * <ul>
-     * <li><p>Pay-by-traffic: 0 to 100.</p>
+     * <li><p>Pay-by-traffic billing: 0 to 100.</p>
      * </li>
-     * <li><p>Pay-by-bandwidth:</p>
+     * <li><p>Pay-by-bandwidth billing:</p>
      * <ul>
-     * <li>Subscription instance: 0 to 200.</li>
-     * <li>Pay-as-you-go instance: 0 to 100.</li>
+     * <li>Subscription instances: 0 to 200.</li>
+     * <li>Pay-as-you-go instances: 0 to 100.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The maximum outbound bandwidth per instance is also limited by the <strong>Network Bandwidth Baseline/Burstable (Gbit/s)</strong> metric of the ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * <p>The maximum outbound bandwidth per instance is also limited by the <strong>Network bandwidth baseline/burst (Gbit/s)</strong> metric of the ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,13 +117,13 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>The conversion target for the network billing method. Valid values:</p>
+     * <p>Transforms the network billing method. Valid values:</p>
      * <ul>
      * <li>PayByBandwidth: pay-by-bandwidth.</li>
      * <li>PayByTraffic: pay-by-traffic.</li>
      * </ul>
      * <blockquote>
-     * <p>In <strong>pay-by-traffic</strong> mode, the inbound and outbound bandwidth peaks are both bandwidth upper limits and are not guaranteed as committed service metrics. When resource contention occurs, the bandwidth peaks may be throttled. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+     * <p>In the <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance metrics. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in UTC+0 time in the yyyy-MM-ddTHH:mmZ format. The time must be accurate to the <strong>minute</strong> (mm).</p>
+     * <p>The start time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC+0. The value is accurate to the <strong>minute</strong> (mm).</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-05T22:40Z</p>

@@ -7,12 +7,9 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     /**
      * <p>The maintenance action. Valid values:</p>
      * <ul>
-     * <li><p>Stop: stops the instance.</p>
-     * </li>
-     * <li><p>AutoRecover: automatically recovers the instance.</p>
-     * </li>
-     * <li><p>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</p>
-     * </li>
+     * <li>Stop: The instance is stopped (that is, the instance goes down).</li>
+     * <li>AutoRecover: The instance is automatically recovered.</li>
+     * <li>AutoRedeploy: The instance is redeployed upon downtime, with possible data disk loss.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     public String actionOnMaintenance;
 
     /**
-     * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
+     * <p>The instance ID. Valid values of N: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp67acfmxazb4ph****</p>
@@ -31,18 +28,16 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The maintenance windows.</p>
+     * <p>The list of maintenance time windows.</p>
      */
     @NameInMap("MaintenanceWindow")
     public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow;
 
     /**
-     * <p>Specifies whether to send an event notification before maintenance. Valid values:</p>
+     * <p>Specifies whether to send an event notification before instance downtime maintenance. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: An event notification is sent.</li>
+     * <li>false: No event notification is sent.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -59,7 +54,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -153,7 +148,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
 
     public static class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow extends TeaModel {
         /**
-         * <p>The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+         * <p>The end time of the time window. The time must be on the hour. Minutes and seconds cannot be specified. The start time and end time must be specified together, and the interval between them must be 1 to 23 hours. The time is in the UTC+8 time zone and in the <code>HH:mm:ss</code> format. Valid values of N: 1. Only one time window can be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>18:00:00</p>
@@ -162,7 +157,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+         * <p>The start time of the time window. The time must be on the hour. Minutes and seconds cannot be specified. The start time and end time must be specified together, and the interval between them must be 1 to 23 hours. The time is in the UTC+8 time zone and in the <code>HH:mm:ss</code> format. Valid values of N: 1. Only one time window can be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>02:00:00</p>

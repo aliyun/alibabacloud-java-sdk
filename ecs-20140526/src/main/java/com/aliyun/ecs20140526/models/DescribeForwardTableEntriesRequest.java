@@ -4,14 +4,10 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesRequest extends TeaModel {
-    /**
-     * <p>The ID of the DNAT entry.</p>
-     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
     /**
-     * <p>The ID of the DNAT table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardTableId")
@@ -23,20 +19,13 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region that contains the DNAT table. Call the DescribeRegions operation to get the latest list of regions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")

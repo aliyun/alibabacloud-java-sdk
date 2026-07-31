@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class JoinSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If you specify this parameter, you must leave <code>NetworkInterfaceId</code> empty.</p>
+     * <p>If this parameter is specified, NetworkInterfaceId must be left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the elastic network interface.</p>
+     * <p>The Elastic Network Interface (ENI) ID.</p>
      * <blockquote>
-     * <p>If you specify this parameter, you must leave <code>InstanceId</code> empty.</p>
+     * <p>If this parameter is specified, InstanceId must be left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,12 +35,10 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. Call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <ul>
-     * <li><p>This parameter is optional when you add an instance to a security group.</p>
-     * </li>
-     * <li><p>This parameter is required when you add an elastic network interface to a security group. The value must be the ID of the region where the elastic network interface is located.</p>
-     * </li>
+     * <li>The region ID is optional when adding an instance to a security group.</li>
+     * <li>The region ID is required when adding an Elastic Network Interface (ENI) to a security group. Specify the region where the network interface controller (NIC) resides.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group. Call <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> to view your available security groups.</p>
+     * <p>The security group ID. You can call <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> to query available security groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

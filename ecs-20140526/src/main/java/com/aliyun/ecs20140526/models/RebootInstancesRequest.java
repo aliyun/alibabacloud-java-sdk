@@ -7,9 +7,9 @@ public class RebootInstancesRequest extends TeaModel {
     /**
      * <p>The batch operation mode. Valid values:</p>
      * <ul>
-     * <li><p>AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted and an error message is returned.</p>
+     * <li><p>AllTogether: In this mode, a success message is returned if all instances are restarted. If any instance fails validation, all instances fail to restart and an error message is returned.</p>
      * </li>
-     * <li><p>SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.</p>
+     * <li><p>SuccessFirst: In this mode, each instance is restarted separately. The response includes the operation result for each instance.</p>
      * </li>
      * </ul>
      * <p>Default value: AllTogether.</p>
@@ -21,15 +21,15 @@ public class RebootInstancesRequest extends TeaModel {
     public String batchOptimization;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
-     * </ul>
+     * <li><p>true: performs only a dry run without restarting the instance. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <code>DRYRUN.SUCCESS</code> is returned.</p>
      * <blockquote>
-     * <p>If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned regardless of whether the request passes the dry run.</p>
+     * <p>If the BatchOptimization parameter is set to <code>SuccessFirst</code>, the dry run result for <code>DryRun=true</code> returns only <code>DRYRUN.SUCCESS</code>.</p>
      * </blockquote>
-     * <ul>
-     * <li>false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</li>
+     * </li>
+     * <li><p>false: performs a dry run and sends the request. After the check passes, the instance is restarted.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -40,11 +40,11 @@ public class RebootInstancesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully restart the instance. Valid values:</p>
+     * <p>Specifies whether to force restart the instance. Valid values:</p>
      * <ul>
-     * <li><p>true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance is lost.</p>
+     * <li><p>true: forces a restart. This is equivalent to a power-off operation. Cached data that has not been written to storage devices is lost.</p>
      * </li>
-     * <li><p>false: normally restarts the instance.</p>
+     * <li><p>false: performs a normal restart.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -56,7 +56,7 @@ public class RebootInstancesRequest extends TeaModel {
     public Boolean forceReboot;
 
     /**
-     * <p>The IDs of ECS instances. Valid values of N: 1 to 100.</p>
+     * <p>The instance ID array. Array length: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class RebootInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

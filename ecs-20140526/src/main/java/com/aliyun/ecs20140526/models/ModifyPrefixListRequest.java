@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPrefixListRequest extends TeaModel {
     /**
-     * <p>The entries to be added to the prefix list.</p>
+     * <p>The prefix list entries to add.</p>
      */
     @NameInMap("AddEntry")
     public java.util.List<ModifyPrefixListRequestAddEntry> addEntry;
@@ -26,7 +26,7 @@ public class ModifyPrefixListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The prefix list ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ModifyPrefixListRequest extends TeaModel {
     public String prefixListId;
 
     /**
-     * <p>The name of the prefix list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code>, <code>https://</code>, <code>com.aliyun</code>, or <code>com.alibabacloud</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the prefix list. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code>, <code>https://</code>, <code>com.aliyun</code>, or <code>com.alibabacloud</code>. It can contain letters, Chinese characters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>PrefixListNameSample</p>
@@ -45,7 +45,7 @@ public class ModifyPrefixListRequest extends TeaModel {
     public String prefixListName;
 
     /**
-     * <p>The region ID of the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ModifyPrefixListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The entries to be deleted from the prefix list.</p>
+     * <p>The prefix list entries to delete.</p>
      */
     @NameInMap("RemoveEntry")
     public java.util.List<ModifyPrefixListRequestRemoveEntry> removeEntry;
@@ -153,15 +153,12 @@ public class ModifyPrefixListRequest extends TeaModel {
 
     public static class ModifyPrefixListRequestAddEntry extends TeaModel {
         /**
-         * <p>The CIDR block in entry N to be added to the prefix list. Valid values of N: 0 to 200.</p>
-         * <p>Take note of the following items when you add the entries:</p>
+         * <p>The Classless Inter-Domain Routing (CIDR) block of the prefix list entry to add. Valid values of N: 0 to 200.</p>
+         * <p>Take note of the following items:</p>
          * <ul>
-         * <li><p>The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> operation to query the maximum number of entries that the prefix list can contain.</p>
-         * </li>
-         * <li><p>You cannot specify duplicate CIDR blocks.</p>
-         * </li>
-         * <li><p>The CIDR blocks cannot be the same as the <code>RemoveEntry.N.Cidr</code> values.</p>
-         * </li>
+         * <li>The total number of entries in the prefix list cannot exceed the maximum number of entries supported by the prefix list. You can invoke <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> to query the maximum number of entries supported by a specified prefix list.</li>
+         * <li>Duplicate CIDR blocks are not allowed in Settings.</li>
+         * <li>The value cannot be the same as the value of the <code>RemoveEntry.N.Cidr</code> parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -172,7 +169,7 @@ public class ModifyPrefixListRequest extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The description in entry N. The description must be 2 to 32 characters in length and cannot start with <code>http://</code> or <code>https://</code>. Valid values of N: 0 to 200.</p>
+         * <p>The description of the prefix list entry. The description must be 2 to 32 characters in length and cannot start with <code>http://</code> or <code>https://</code>. Valid values of N: 0 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>Description Sample 01</p>
@@ -205,13 +202,11 @@ public class ModifyPrefixListRequest extends TeaModel {
 
     public static class ModifyPrefixListRequestRemoveEntry extends TeaModel {
         /**
-         * <p>The CIDR block in entry N to be deleted from the prefix list. Valid values of N: 0 to 200.</p>
-         * <p>Take note of the following items when you delete the entries:</p>
+         * <p>The Classless Inter-Domain Routing (CIDR) block of the prefix list entry to delete. Valid values of N: 0 to 200.</p>
+         * <p>Take note of the following items:</p>
          * <ul>
-         * <li><p>You cannot specify duplicate CIDR blocks.</p>
-         * </li>
-         * <li><p>The CIDR blocks cannot be the same as the <code>AddEntry.N.Cidr</code> values.</p>
-         * </li>
+         * <li>Duplicate CIDR blocks are not allowed in Settings.</li>
+         * <li>The value cannot be the same as the value of the <code>AddEntry.N.Cidr</code> parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

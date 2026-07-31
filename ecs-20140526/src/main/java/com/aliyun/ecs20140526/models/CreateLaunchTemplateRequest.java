@@ -27,8 +27,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li>true: enables auto-renewal.</li>
-     * <li>false: does not enable auto-renewal.</li>
+     * <li>true: Auto-renewal is enabled.</li>
+     * <li>false: Auto-renewal is disabled.</li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
@@ -71,22 +71,22 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>The list of data disk information.</p>
+     * <p>The list of data disk configurations.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<CreateLaunchTemplateRequestDataDisk> dataDisk;
 
     /**
-     * <p>The release protection attribute of the instance. Specifies whether the instance can be released from the console or by calling <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a>. Valid values:</p>
+     * <p>The release protection property of the instance. Specifies whether the instance can be released from the console or by calling <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a>. Valid values:</p>
      * <ul>
-     * <li><p>true: enables release protection.</p>
+     * <li><p>true: Release protection is enabled.</p>
      * </li>
-     * <li><p>false: disables release protection.</p>
+     * <li><p>false: Release protection is disabled.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>This attribute applies only to pay-as-you-go instances. It can only restrict manual release operations and does not affect system-initiated releases.</p>
+     * <p>This property applies only to pay-as-you-go instances and can only restrict manual release operations. System-initiated release operations are not affected.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the operating system configuration of the instance.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated. For better compatibility, use other parameters.</p>
+     * <p>This parameter will be deprecated. Use other parameters for better compatibility.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,9 +128,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>The hostname of the Elastic Compute Service server.</p>
      * <ul>
-     * <li>The hostname cannot start or end with a period (.) or a hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</li>
-     * <li>Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.) or consist entirely of digits. It can contain letters, digits, and hyphens (-).</li>
-     * <li>Other instances (such as Linux): The hostname must be 2 to 64 characters in length. It can contain multiple periods (.), with each segment between periods allowing letters, digits, and hyphens (-).</li>
+     * <li>The hostname cannot start or end with a period (.) or a hyphen (-), and cannot contain consecutive periods or hyphens.</li>
+     * <li>Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.) or consist entirely of digits. The hostname can contain letters, digits, and hyphens (-).</li>
+     * <li>Other instances (such as Linux): The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment separated by a period can contain letters, digits, and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,8 +142,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
      * <ul>
-     * <li>enabled: enables the access channel.</li>
-     * <li>disabled: disables the access channel.</li>
+     * <li>enabled: The access channel is enabled.</li>
+     * <li>disabled: The access channel is disabled.</li>
      * </ul>
      * <p>Default value: enabled.</p>
      * <blockquote>
@@ -158,7 +158,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not available for use.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -170,13 +170,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully use the security-hardened mode (IMDSv2) to access instance metadata. Valid values:</p>
      * <ul>
-     * <li>optional: does not forcefully use the security-hardened mode.</li>
-     * <li>required: forcefully uses the security-hardened mode. After you set this value, instance metadata cannot be accessed in normal mode.</li>
+     * <li>optional: The security-hardened mode is not forcefully used.</li>
+     * <li>required: The security-hardened mode is forcefully used. After you set this value, instance metadata cannot be accessed in normal mode.</li>
      * </ul>
      * <p>Default value: optional.</p>
      * <blockquote>
-     * <p>For more information about the modes for
-     * <a href="https://help.aliyun.com/document_detail/108460.html">Instance metadata overview</a></p>
+     * <p>For more information about the modes for accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Overview of instance metadata</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -203,10 +202,10 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>The source of the image. Valid values:</p>
      * <ul>
-     * <li>system: a public image provided by Alibaba Cloud.</li>
-     * <li>self: a custom image that you created.</li>
-     * <li>others: a shared image from another Alibaba Cloud account.</li>
-     * <li>marketplace: an image from &lt;props=&quot;china&quot;&gt;<ph><a href="https://market.aliyun.com/">Alibaba Cloud Marketplace</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://marketplace.alibabacloud.com/">Alibaba Cloud Marketplace</a></ph>. You can use Alibaba Cloud Marketplace images directly without subscribing to them first. Check the billing details of the Alibaba Cloud Marketplace image on your own.</li>
+     * <li>system: public images provided by Alibaba Cloud.</li>
+     * <li>self: custom images that you created.</li>
+     * <li>others: shared images from other Alibaba Cloud accounts.</li>
+     * <li>marketplace: images available from &lt;props=&quot;china&quot;&gt;<ph><a href="https://market.aliyun.com/">Alibaba Cloud Marketplace</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://marketplace.alibabacloud.com/">Alibaba Cloud Marketplace</a></ph>. You can use Alibaba Cloud Marketplace images directly without subscribing to them first. Check the billing details of the Alibaba Cloud Marketplace image on your own.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -229,7 +228,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, and characters from the Unicode letter category (including Chinese characters). The name can contain colons (:), underscores (_), periods (.), and hyphens (-). The default value is the <code>InstanceId</code> of the instance.</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, and other characters in the Unicode letter category. The name can contain colons (:), underscores (_), periods (.), and hyphens (-). The default value is the <code>InstanceId</code> of the instance.</p>
      * <p>When you create multiple ECS instances, you can specify sequential instance names. The names can contain brackets ([]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Specify sequential instance names or hostnames</a>.</p>
      * 
      * <strong>example:</strong>
@@ -254,7 +253,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
      * <li>PayByTraffic: pay-by-traffic.</li>
      * </ul>
      * <blockquote>
-     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as bandwidth upper limits instead of guaranteed service metrics. When resource contention occurs, the peak bandwidth may be limited. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+     * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are both upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your workloads require guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -288,8 +287,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
      * <ul>
-     * <li>none: not I/O optimized.</li>
-     * <li>optimized: I/O optimized.</li>
+     * <li>none: The instance is not I/O optimized.</li>
+     * <li>optimized: The instance is I/O optimized.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -308,7 +307,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public Integer ipv6AddressCount;
 
     /**
-     * <p>The name of the key pair.</p>
+     * <p>The name of the SSH key pair.</p>
      * <ul>
      * <li>For Windows instances, this parameter is ignored. Even if you specify this parameter, only the <code>Password</code> content is used.</li>
      * <li>For Linux instances, password-based logon is disabled during initialization.</li>
@@ -321,7 +320,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The name of the launch template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the launch template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -331,7 +330,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String launchTemplateName;
 
     /**
-     * <p>The network interface controller (NIC) information.</p>
+     * <p>The network interface controller (NIC) configurations.</p>
      */
     @NameInMap("NetworkInterface")
     public java.util.List<CreateLaunchTemplateRequestNetworkInterface> networkInterface;
@@ -356,9 +355,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to use the password preset in the image.</p>
+     * <p>Specifies whether to use the preset password of the image.</p>
      * <blockquote>
-     * <p>When you use this parameter, the Password parameter must be empty. Make sure that the image you use has a password configured.</p>
+     * <p>When you use this parameter, the Password parameter must be empty. Make sure that the image you use has a password preset.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -377,7 +376,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription billable methods duration. Valid values: </p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>Week.</li>
@@ -393,7 +392,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     /**
      * <p>The private IP address of the instance.</p>
-     * <p>When you specify a private IP address for a VPC-connected ECS instance, the IP address must be from the idle CIDR block of the vSwitch (<code>VSwitchId</code>).</p>
+     * <p>When you set a private IP address for a VPC-connected ECS instance, the address must be from the idle CIDR block of the vSwitch specified by <code>VSwitchId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p><code>10.1.**.**</code></p>
@@ -421,7 +420,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance, block storage, and elastic network interface controller (NIC) belong.</p>
+     * <p>The ID of the resource group to which the instance, block storage devices, and Elastic Network Interfaces (ENIs) belong.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -438,8 +437,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable security hardening for the operating system. Valid values:</p>
      * <ul>
-     * <li>Active: enables security hardening. This value is applicable only to public images.</li>
-     * <li>Deactive: does not enable security hardening. This value is applicable to all image types.</li>
+     * <li>Active: Security hardening is enabled. This value is applicable only to public images.</li>
+     * <li>Deactive: Security hardening is disabled. This value is applicable to all image types.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -449,7 +448,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String securityEnhancementStrategy;
 
     /**
-     * <p>The ID of the security group to which the instance belongs. Instances in the same security group can communicate with each other. A security group can contain up to 1,000 instances.</p>
+     * <p>The ID of the security group to which the new instance belongs. Instances in the same security group can communicate with each other. A security group can contain up to 1,000 instances.</p>
      * <blockquote>
      * <p>You cannot specify both <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code>.</p>
      * </blockquote>
@@ -481,12 +480,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     /**
      * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
-     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
+     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period, the system compares the bid price with the market price and checks resource inventory to determine whether to retain automatic release the instance.</li>
+     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks resource inventory to determine whether to retain automatic release the instance.</li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Select an appropriate protection period based on the expected task execution duration.</p>
+     * <p>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Set the protection period based on the expected task execution duration.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * <p>This parameter takes effect when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -522,7 +521,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
      * <p>The tags for instances, disks, and primary ENIs created from this template version.</p>
      * <details>
      * <summary>Scenarios</summary>
-     * After you call CreateLaunchTemplate to create a template, the auto-generated default version uses these tags to tag instances, disks, and primary ENIs when you create instances.
+     * After you call CreateLaunchTemplate to create a template, the auto-generated default version uses these tags to tag instances, disks, and primary ENIs when instances are created.
      * </details>
      */
     @NameInMap("Tag")
@@ -1049,8 +1048,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
          * <ul>
-         * <li>true: enables the performance burst feature.</li>
-         * <li>false: does not enable the performance burst feature.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1065,7 +1064,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * <li>cloud: basic disk.</li>
          * <li>cloud_efficiency: ultra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD). You can use the <code>SystemDisk.PerformanceLevel</code> parameter to set the performance level of the disk.</li>
+         * <li>cloud_essd: enterprise SSD. You can use the <code>SystemDisk.PerformanceLevel</code> parameter to set the performance level of the disk.</li>
          * <li>cloud_auto: ESSD AutoPL disk.</li>
          * <li>cloud_essd_entry: ESSD Entry disk.</li>
          * </ul>
@@ -1080,8 +1079,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         /**
          * <p>Specifies whether to release the system disk when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: releases the system disk when the instance is released.</li>
-         * <li>false: does not release the system disk when the instance is released.</li>
+         * <li>true: The system disk is released together with the instance.</li>
+         * <li>false: The system disk is not released together with the instance.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -1101,7 +1100,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testSystemDiskName</p>
@@ -1112,12 +1111,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt the system disk. Valid values:</p>
          * <ul>
-         * <li>true: encrypts the system disk.</li>
-         * <li>false: does not encrypt the system disk.</li>
+         * <li>true: The system disk is encrypted.</li>
+         * <li>false: The system disk is not encrypted.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <blockquote>
-         * <p>Zone D in Hong Kong (China) and Zone A in Singapore do not support system disk encryption when you create instances.</p>
+         * <p>Zone D in Hong Kong (China) and Zone A in Singapore do not support system disk encryption during instance creation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1147,14 +1146,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The performance level of the ESSD used as the system disk. Valid values:</p>
+         * <p>The performance level of the enterprise SSD used as the system disk. Valid values:</p>
          * <ul>
          * <li>PL0 (default): a single disk can deliver up to 10,000 random read/write IOPS.</li>
          * <li>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</li>
          * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
          * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -1305,8 +1304,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
          * <ul>
-         * <li>true: enables the performance burst feature.</li>
-         * <li>false: does not enable the performance burst feature.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1325,16 +1324,16 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * <li>cloud_auto: ESSD AutoPL disk.</li>
          * <li>cloud_regional_disk_auto: regional ESSD.</li>
          * <li>cloud_essd_entry: ESSD Entry disk.<blockquote>
-         * <p>The cloud_essd_entry value is supported only when <code>InstanceType</code> is set to the <code>ecs.u1</code> or <code>ecs.e</code> instance family.</p>
+         * <p>The <code>cloud_essd_entry</code> value is supported only when <code>InstanceType</code> is set to an instance type in the <code>ecs.u1</code> or <code>ecs.e</code> family.</p>
          * </blockquote>
          * </li>
-         * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - standard.</li>
+         * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard.</li>
          * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium Edition.</li>
          * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
-         * Default value description:</p>
+         * Default value details:</p>
          * <ul>
-         * <li>If InstanceType is a retired instance type that is not I/O optimized, the default value of this parameter is <code>cloud</code>.</li>
+         * <li>If InstanceType is set to a retired instance type that is not I/O optimized, the default parameter value is <code>cloud</code>.</li>
          * <li>In other cases, the default value is <code>cloud_efficiency</code>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, if the I/O optimized instance type does not support cloud_auto, the default value is cloud_efficiency. Otherwise, the default value is cloud_auto, and the performance burst feature is enabled by default (which incurs additional fees. For details, see <a href="~~368372#p_75k_2hp_7gp~~">Billing examples</a>). For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</li>
          * </ul>
          * 
@@ -1345,10 +1344,10 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to release the data disk when the instance is released. Valid values:</p>
+         * <p>Specifies whether the data disk is released when the instance is released. Valid values:</p>
          * <ul>
-         * <li>true: releases the data disk when the instance is released.</li>
-         * <li>false: does not release the data disk when the instance is released.</li>
+         * <li>true: The data disk is released together with the instance.</li>
+         * <li>false: The data disk is not released together with the instance.</li>
          * </ul>
          * <p>Default value: true.</p>
          * 
@@ -1376,7 +1375,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is intended only for full image (whole-machine image) scenarios. You can set this parameter to the mount point of a data disk in the full image and modify the corresponding <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the disk category and size of the data disk in the full image.</p>
+         * <p>This parameter is intended only for full image (system image) scenarios. You can set this parameter to the mount point of a data disk in the full image and modify the corresponding <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the disk category and size of the data disk in the full image.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1386,7 +1385,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testDataDiskName</p>
@@ -1395,7 +1394,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String diskName;
 
         /**
-         * <p>Specifies whether to encrypt the data disk.</p>
+         * <p>Specifies whether the data disk is encrypted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1413,14 +1412,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The performance level of the ESSD used as a data disk. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+         * <p>The performance level of the enterprise SSD used as a data disk. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
          * <ul>
          * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
          * <li>PL1 (default): a single disk can deliver up to 50,000 random read/write IOPS.</li>
          * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
          * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
          * </ul>
-         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</p>
+         * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -1466,9 +1465,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot used to create data disk N. Valid values of N: 1 to 16. After you specify <code>DataDisk.N.SnapshotId</code>, the <code>DataDisk.N.Size</code> parameter is ignored. The actual size of the created disk is the size of the specified snapshot.</p>
+         * <p>The snapshot ID used to create data disk N. Valid values of N: 1 to 16. After you specify <code>DataDisk.N.SnapshotId</code>, the <code>DataDisk.N.Size</code> parameter is ignored. The actual size of the created disk is the size of the specified snapshot.</p>
          * <blockquote>
-         * <p>You cannot use snapshots created on or before July 15, 2013. Such requests are rejected.</p>
+         * <p>Snapshots created on or before July 15, 2013 cannot be used. Requests that use such snapshots are rejected.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1590,11 +1589,10 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     public static class CreateLaunchTemplateRequestImageOptions extends TeaModel {
         /**
-         * <p>Indicates whether the instance that uses this image supports logon with the ecs-user account.
-         * Valid values:</p>
+         * <p>Specifies whether instances that use this image support logon with the ecs-user account. Valid values:</p>
          * <ul>
-         * <li>true: supported.</li>
-         * <li>false: not supported.</li>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1622,9 +1620,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         /**
          * <p>Specifies whether to retain the ENI when the instance is released. Valid values:</p>
          * <ul>
-         * <li><p>true: does not retain the ENI.</p>
+         * <li><p>true: The ENI is not retained.</p>
          * </li>
-         * <li><p>false: retains the ENI.</p>
+         * <li><p>false: The ENI is retained.</p>
          * </li>
          * </ul>
          * <p>Default value: true.</p>
@@ -1648,7 +1646,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of the network interface controller (NIC). Valid values of N: 1 to 2. If you set N to 1, you can configure a primary or secondary NIC. If you set N to 2, you must configure one primary NIC and one secondary NIC.</p>
+         * <p>The type of the network interface controller (NIC). Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Primary: primary NIC.</li>
@@ -1664,9 +1662,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
         /**
          * <p>The name of the network interface controller (NIC).</p>
-         * <p>Take note of the following items:</p>
+         * <p>Note the following items:</p>
          * <ul>
-         * <li><p>Valid values of N: 1 to 2. If you set N to 1, you can configure a primary or secondary NIC. If you set N to 2, you must configure one primary NIC and one secondary NIC.</p>
+         * <li><p>Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you do not need to set this parameter.</p>
          * </li>
@@ -1693,21 +1691,21 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
         /**
          * <p>Adds a network interface controller (NIC) and sets the primary IP address.</p>
-         * <p>Take note of the following items:</p>
+         * <p>Note the following items:</p>
          * <ul>
          * <li><p>Valid values of N: 1 to 2.</p>
          * <ul>
-         * <li>If you set N to 1, you can configure a primary or secondary NIC. If the <code>Amount</code> parameter is set to a value greater than 1 and you configure a primary NIC with this parameter specified, consecutive primary IP addresses starting from the specified IP address are allocated to multiple ECS instances in batch. In this case, you cannot attach a secondary NIC to the instances.</li>
-         * <li>If you set N to 2, you must configure one primary NIC and one secondary NIC. If the <code>Amount</code> parameter is set to a value greater than 1 and this parameter is specified for the primary NIC, you cannot configure a secondary NIC (that is, you cannot set <code>NetworkInterface.2.InstanceType=Secondary</code>).</li>
+         * <li>If you set 1 NIC, you can set either a primary or secondary NIC. If <code>Amount</code> is greater than 1 and you set a primary NIC with this parameter specified, the specified primary IP address is used as the starting address to sequentially allocate consecutive primary IP addresses to multiple ECS instances in batch. In this case, you cannot attach a secondary NIC to the instance.</li>
+         * <li>If you set 2 NICs, you must set one primary NIC and one secondary NIC. If <code>Amount</code> is greater than 1 and this parameter is set for the primary NIC, you cannot set a secondary NIC (that is, you cannot set <code>NetworkInterface.2.InstanceType=Secondary</code>).</li>
          * </ul>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter has the same effect as <code>PrivateIpAddress</code>, but you cannot specify both this parameter and <code>PrivateIpAddress</code>.</p>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter specifies the primary IP address of the secondary NIC. By default, an IP address is randomly selected from the vSwitch CIDR block to which the NIC belongs.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter sets the primary IP address for the secondary NIC. By default, an IP address is randomly selected from the vSwitch CIDR block to which the NIC belongs.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>When you create an ECS instance, you can attach up to one secondary NIC. After the instance is created, you can invoke <a href="https://help.aliyun.com/document_detail/58504.html">CreateNetworkInterface</a> and <a href="https://help.aliyun.com/document_detail/58515.html">AttachNetworkInterface</a> to attach more secondary NICs.</p>
+         * <p>When you invoke the CreateLaunchTemplate operation, you can attach up to one secondary NIC. After the instance is created, you can call <a href="https://help.aliyun.com/document_detail/58504.html">CreateNetworkInterface</a> and <a href="https://help.aliyun.com/document_detail/58515.html">AttachNetworkInterface</a> to attach more secondary NICs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1717,12 +1715,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String primaryIpAddress;
 
         /**
-         * <p>The ID of the security group to which the network interface controller (NIC) belongs.</p>
-         * <p>Take note of the following items:</p>
+         * <p>The security group ID of the network interface controller (NIC).</p>
+         * <p>Note the following items:</p>
          * <ul>
-         * <li><p>Valid values of N: 1 to 2. If you set N to 1, you can configure a primary or secondary NIC. If you set N to 2, you must configure one primary NIC and one secondary NIC.</p>
+         * <li><p>Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
          * </li>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter. This parameter has the same effect as <code>SecurityGroupId</code>, but you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is required. This parameter has the same effect as <code>SecurityGroupId</code>, but you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code> at the same time.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. Default value: the security group of the ECS instance.</p>
          * </li>
@@ -1737,12 +1735,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         /**
          * <p>The IDs of one or more security groups to which the network interface controller (NIC) belongs.</p>
          * <ul>
-         * <li>The first N has a valid value range of 1 to 2. If you set N to 1, you can configure a primary or secondary NIC. If you set N to 2, you must configure one primary NIC and one secondary NIC.</li>
-         * <li>The second N specifies one or more security group IDs. The valid value range of N depends on the maximum number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
+         * <li>The first N has a valid value range of 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</li>
+         * <li>The second N indicates that you can specify one or more security group IDs. The valid value range of N depends on the maximum number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
          * </ul>
-         * <p>Take note of the following items:</p>
+         * <p>Note the following items:</p>
          * <ul>
-         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. This parameter has the same effect as <code>SecurityGroupIds.N</code>, but you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code>.</p>
+         * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must set this parameter or <code>NetworkInterface.N.SecurityGroupId</code>. This parameter has the same effect as <code>SecurityGroupIds.N</code>, but you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupId</code> at the same time.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, this parameter is optional. Default value: the security group of the ECS instance.</p>
          * </li>
@@ -1756,9 +1754,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
         /**
          * <p>The vSwitch ID of the network interface controller (NIC).</p>
-         * <p>Take note of the following items:</p>
+         * <p>Note the following items:</p>
          * <ul>
-         * <li><p>Valid values of N: 1 to 2. If you set N to 1, you can configure a primary or secondary NIC. If you set N to 2, you must configure one primary NIC and one secondary NIC.</p>
+         * <li><p>Valid values of N: 1 to 2. If you set 1 NIC, you can set either a primary or secondary NIC. If you set 2 NICs, you must set one primary NIC and one secondary NIC.</p>
          * </li>
          * <li><p>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, this parameter is required. This parameter has the same effect as <code>VSwitchId</code>, but you cannot specify both this parameter and <code>VSwitchId</code>.</p>
          * </li>
@@ -1852,6 +1850,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     }
 
     public static class CreateLaunchTemplateRequestSecurityOptions extends TeaModel {
+        @NameInMap("EnableSecureBoot")
+        public Boolean enableSecureBoot;
+
         /**
          * <p>The trusted system mode. Set the value to vTPM.</p>
          * <p>The following instance families support trusted system mode:</p>
@@ -1859,11 +1860,11 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          * <li>g7, c7, and r7.</li>
          * <li>Enhanced instance families (g7t, c7t, and r7t).</li>
          * </ul>
-         * <p>When you create ECS instances of the preceding instance types, you must configure this parameter. Take note of the following items:</p>
+         * <p>When you create ECS instances of the preceding instance types, you must set this parameter. Take note of the following items:</p>
          * <ul>
-         * <li>To use Alibaba Cloud Trusted System, set this parameter to vTPM. Then, Alibaba Cloud Trusted System performs trusted verification when the instance starts.</li>
-         * <li>If you do not use Alibaba Cloud Trusted System, you do not need to configure this parameter. However, if the ECS instance that you create uses the Enclave-based confidential computing pattern (<code>SecurityOptions.ConfidentialComputingMode=Enclave</code>), the trusted system is also enabled for the instance.</li>
-         * <li>When you use OpenAPI to create a trusted ECS instance, you can only invoke <code>RunInstances</code>. <code>CreateInstance</code> does not support the <code>SecurityOptions.TrustedSystemMode</code> parameter.<blockquote>
+         * <li>If you use the Alibaba Cloud Trusted System, set this parameter to vTPM. The Alibaba Cloud Trusted System performs trusted verification when the instance starts.</li>
+         * <li>If you do not use the Alibaba Cloud Trusted System, you do not need to set this parameter. However, if the ECS instance that you create uses the Enclave-based confidential computing mode (<code>SecurityOptions.ConfidentialComputingMode=Enclave</code>), the trusted system is also enabled for the instance.</li>
+         * <li>When you use an OpenAPI operation to create a trusted ECS instance, you can invoke only <code>RunInstances</code>. <code>CreateInstance</code> does not support the <code>SecurityOptions.TrustedSystemMode</code> parameter.<blockquote>
          * <p>If you specify the instance as a trusted instance during creation, you can replace the system disk only with an image that supports the trusted system.</p>
          * </blockquote>
          * </li>
@@ -1879,6 +1880,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public static CreateLaunchTemplateRequestSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateRequestSecurityOptions self = new CreateLaunchTemplateRequestSecurityOptions();
             return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateRequestSecurityOptions setEnableSecureBoot(Boolean enableSecureBoot) {
+            this.enableSecureBoot = enableSecureBoot;
+            return this;
+        }
+        public Boolean getEnableSecureBoot() {
+            return this.enableSecureBoot;
         }
 
         public CreateLaunchTemplateRequestSecurityOptions setTrustedSystemMode(String trustedSystemMode) {

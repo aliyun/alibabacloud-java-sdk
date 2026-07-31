@@ -8,7 +8,6 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the router interface.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -21,7 +20,6 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the router interface.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RouterInterfaceId")

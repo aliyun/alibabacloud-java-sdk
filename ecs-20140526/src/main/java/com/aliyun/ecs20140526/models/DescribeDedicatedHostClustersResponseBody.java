@@ -8,7 +8,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the dedicated host cluster list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of dedicated host clusters.</p>
+     * <p>The total number of dedicated hosts.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

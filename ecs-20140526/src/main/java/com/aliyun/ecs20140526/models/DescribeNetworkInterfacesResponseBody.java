@@ -8,7 +8,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -17,10 +17,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the returned page.</p>
-     * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
-     * </blockquote>
+     * <p>The paging query parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,10 +26,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
-     * <blockquote>
-     * <p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
-     * </blockquote>
+     * <p>The paging query parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,10 +44,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of ENIs.</p>
-     * <blockquote>
-     * <p>If you specify the <code>MaxResults</code> and <code>NextToken</code> parameters to perform a paged query, the value of the <code>TotalCount</code> response parameter is invalid.</p>
-     * </blockquote>
+     * <p>The total number of Elastic Network Interfaces (ENIs) returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -276,6 +267,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        @NameInMap("Primary")
+        public Boolean primary;
+
         public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set();
             return TeaModel.build(map, self);
@@ -287,6 +281,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getIpv6Address() {
             return this.ipv6Address;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
         }
 
     }

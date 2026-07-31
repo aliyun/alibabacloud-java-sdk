@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVscResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>DD38F-12VBW2-**EKX</p>
      */
@@ -12,6 +14,8 @@ public class CreateVscResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the Virtual Storage Channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsc-b*d31dq</p>
      */

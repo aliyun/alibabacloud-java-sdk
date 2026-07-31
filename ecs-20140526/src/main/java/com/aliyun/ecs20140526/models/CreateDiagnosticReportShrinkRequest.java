@@ -8,7 +8,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String additionalOptionsShrink;
 
     /**
-     * <p>The end time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</p>
+     * <p>The end time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T14:00Z</p>
@@ -17,7 +17,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The diagnostic metric set ID. If this parameter is omitted, the default diagnostic metric set for ECS instances, <code>dms-instancedefault</code>, is used.</p>
+     * <p>The diagnostic metric set ID. If left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</p>
      * 
      * <strong>example:</strong>
      * <p>dms-uf6i0tv2refv8wz*****</p>
@@ -26,7 +26,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String metricSetId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to get the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateDiagnosticReportShrinkRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The start time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</p>
+     * <p>The start time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-11T12:00Z</p>

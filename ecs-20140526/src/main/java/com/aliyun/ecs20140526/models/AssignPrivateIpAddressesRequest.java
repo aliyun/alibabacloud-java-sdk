@@ -14,18 +14,18 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>One or more IPv4 prefixes to allocate to the network interface controller (NIC). Valid values of N: 1 to 10.</p>
+     * <p>One or more IPv4 prefixes to assign to the network interface controller (NIC). Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>To configure IPv4 prefixes for the ENI, you must specify either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
+     * <p>To set IPv4 prefixes for the NIC, you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
      * </blockquote>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>The number of randomly generated IPv4 prefixes to allocate to the network interface controller (NIC). Valid values: 1 to 10.</p>
+     * <p>The number of randomly generated IPv4 prefixes to assign to the network interface controller (NIC). Valid values: 1 to 10.</p>
      * <blockquote>
-     * <p>To configure IPv4 prefixes for the ENI, you must specify either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
+     * <p>To set IPv4 prefixes for the NIC, you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,12 +51,12 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>One or more secondary private IP addresses selected from the available IP addresses of the vSwitch to which the network interface controller (NIC) belongs. Valid values of N:</p>
+     * <p>One or more secondary private IP addresses selected from the idle IP addresses within the vSwitch to which the network interface controller (NIC) belongs. Valid values of N:</p>
      * <ul>
-     * <li>When the ENI is in the Available (<code>Available</code>) state: 1 to 32.</li>
-     * <li>When the ENI is in the <code>InUse</code> state: limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+     * <li>When the NIC is in the active (<code>Available</code>) state: 1 to 32.</li>
+     * <li>When the NIC is in the <code>InUse</code> state: subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
      * </ul>
-     * <p>When you allocate secondary private IP addresses, you cannot specify both PrivateIpAddress.N and SecondaryPrivateIpAddressCount.</p>
+     * <p>When you allocate secondary private IP addresses, you cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code>.</p>
      * 
      * <strong>example:</strong>
      * <p><code>10.1.**.**</code></p>
@@ -65,7 +65,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the network interface controller (NIC). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the network interface controller (NIC). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,8 +81,8 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The number of private IP addresses to be automatically assigned from the available IP addresses of the vSwitch.</p>
-     * <p>When you assign secondary private IP addresses, you cannot specify both PrivateIpAddress.N and SecondaryPrivateIpAddressCount.</p>
+     * <p>The number of private IP addresses to be automatically assigned from the idle IP addresses within the vSwitch.</p>
+     * <p>When you assign secondary private IP addresses, you cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

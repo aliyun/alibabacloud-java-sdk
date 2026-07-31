@@ -15,7 +15,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public Boolean includePublicKey;
 
     /**
-     * <p>The fingerprint of the key pair. The fingerprint uses the message-digest algorithm 5 (MD5) based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
+     * <p>The fingerprint of the key pair. The public key fingerprint format is defined in RFC 4716 and uses the MD5 message digest algorithm. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ABC1234567</p>
@@ -24,11 +24,11 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public String keyPairFingerPrint;
 
     /**
-     * <p>The name of the key pair. You can use regular expressions for fuzzy search, with the asterisk (*) to match child table expressions. Examples:</p>
+     * <p>The name of the key pair. Fuzzy search with regular expressions is supported. You can use an asterisk (*) to match subexpressions. Examples:</p>
      * <ul>
-     * <li><code>*SshKey</code>: searches for key pair names that end with SshKey, including SshKey.</li>
-     * <li><code>SshKey*</code>: searches for key pair names that start with SshKey, including SshKey.</li>
-     * <li><code>*SshKey*</code>: searches for key pair names that contain SshKey, including SshKey.</li>
+     * <li><code>*SshKey</code>: queries key pair names that end with SshKey, including SshKey.</li>
+     * <li><code>SshKey*</code>: queries key pair names that start with SshKey, including SshKey.</li>
+     * <li><code>*SshKey*</code>: queries key pair names that contain SshKey, including SshKey.</li>
      * <li><code>SshKey</code>: exact match of SshKey.</li>
      * </ul>
      * 
@@ -52,7 +52,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in paging queries. Settings: Maximum value: 50.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>

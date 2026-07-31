@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).</p>
+     * <p>The instance IDs. You can specify up to 100 instance IDs, separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1a5zr3u7nq9cxh****</p>
@@ -17,7 +17,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page for paging queries. Settings: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see <a href="https://help.aliyun.com/document_detail/65413.html">Establish a ClassicLink connection</a>.</p>
+     * <p>The VPC ID. The target VPC must have the enable ClassicLink feature turned on. For more information, see <a href="https://help.aliyun.com/document_detail/65413.html">Create a ClassicLink connection</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1vwnn14rqpyiczj****</p>

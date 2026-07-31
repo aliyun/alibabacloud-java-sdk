@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportAttributesRequest extends TeaModel {
     /**
-     * <p>The ID of the region. Call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to get the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDiagnosticReportAttributesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the diagnostic report.</p>
+     * <p>The diagnostic report ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

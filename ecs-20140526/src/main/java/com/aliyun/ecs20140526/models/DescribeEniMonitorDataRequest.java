@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEniMonitorDataRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The end of the time range to query. Specify the time in <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is automatically rounded up to the next minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The secondary ENI ID. By default, all secondary ENIs that are bound to the specified instance are queried.</p>
+     * <p>The ID of the secondary ENI. By default, all secondary ENIs that are attached to the specified instance are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp19da36d6xdwey****</p>
@@ -24,7 +24,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public String eniId;
 
     /**
-     * <p>The ID of the instance to which the secondary ENI is bound.</p>
+     * <p>The ID of the instance to which the secondary ENI is attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,16 +40,22 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Default value: Month. Valid values:</p>
+     * <p>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><p>60</p>
+     * <li><ol start="60">
+     * <li></li>
+     * </ol>
      * </li>
-     * <li><p>600</p>
+     * <li><ol start="600">
+     * <li></li>
+     * </ol>
      * </li>
-     * <li><p>3600</p>
+     * <li><ol start="3600">
+     * <li></li>
+     * </ol>
      * </li>
      * </ul>
-     * <p>Default: 60.</p>
+     * <p>Default value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -58,7 +64,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +80,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The beginning of the time range to query. Specify the time in <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is automatically rounded up to the next minute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

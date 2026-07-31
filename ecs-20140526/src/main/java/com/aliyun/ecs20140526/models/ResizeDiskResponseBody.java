@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The order ID.</p>
+     * <blockquote>
+     * <p>An order ID is returned only when you expand a subscription disk.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20413515388****</p>
@@ -14,7 +17,7 @@ public class ResizeDiskResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F3CD6886-D8D0-4FEE-B93E-1B732396****</p>

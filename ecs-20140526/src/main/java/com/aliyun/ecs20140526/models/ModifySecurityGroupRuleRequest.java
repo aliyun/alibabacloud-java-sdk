@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupRuleRequest extends TeaModel {
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -23,7 +23,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination IPv4 Classless Inter-Domain Routing (CIDR) block. CIDR format and IPv4 format IP address ranges are supported.</p>
+     * <p>The destination IPv4 Classless Inter-Domain Routing (CIDR) block. CIDR format and IPv4 format IP address range are supported.</p>
      * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String destCidrIp;
 
     /**
-     * <p>The network-layer or transport-layer protocol. Two types of values are supported:</p>
+     * <p>The network layer or transport layer protocol. Two types of values are supported:</p>
      * <ol>
      * <li>Case-insensitive protocol names. Valid values:</li>
      * </ol>
@@ -42,7 +42,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
      * <li>GRE</li>
      * <li>TCP</li>
      * <li>UDP</li>
-     * <li>ALL: all protocols are supported.</li>
+     * <li>ALL: All protocols are supported.</li>
      * </ul>
      * <ol start="2">
      * <li>Protocol numbers that comply with IANA specifications, which are integers from 0 to 255. The following regions currently support this feature:</li>
@@ -64,7 +64,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>Settings for the destination IPv6 CIDR block. Classless Inter-Domain Routing (CIDR) format and IPv6 format IP address ranges are supported.</p>
+     * <p>Settings for the destination IPv6 CIDR block. Classless Inter-Domain Routing (CIDR) format and IPv6 format IP address range are supported.</p>
      * <blockquote>
      * <p>Only VPC-type IP addresses are supported. This parameter and <code>DestCidrIp</code> cannot be specified at the same time.</p>
      * </blockquote>
@@ -77,7 +77,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String ipv6DestCidrIp;
 
     /**
-     * <p>Settings for the source IPv6 CIDR block for the access permissions. Classless Inter-Domain Routing (CIDR) format and IPv6 format IP address ranges are supported.</p>
+     * <p>Settings for the source IPv6 CIDR block for the access permissions. Classless Inter-Domain Routing (CIDR) format and IPv6 format IP address range are supported.</p>
      * <blockquote>
      * <p>Only VPC-type IP addresses are supported. This parameter and <code>SourceCidrIp</code> cannot be specified at the same time.</p>
      * </blockquote>
@@ -111,7 +111,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
      * <p>The access permissions. Valid values: </p>
      * <ul>
      * <li>accept: Accepts access.</li>
-     * <li>drop: Denies access and does not return a deny response.</li>
+     * <li>drop: Denies access without returning a deny response.</li>
      * </ul>
      * <p>Default value: accept.</p>
      * 
@@ -122,9 +122,9 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>The range of destination ports that correspond to the transport-layer protocol of the security group. Valid values: </p>
+     * <p>The range of destination ports for the transport layer protocol. Valid values: </p>
      * <ul>
-     * <li>TCP/UDP: valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+     * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
      * <li>ICMP: -1/-1.</li>
      * <li>GRE: -1/-1.</li>
      * <li>ALL: -1/-1.</li>
@@ -194,7 +194,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String securityGroupRuleId;
 
     /**
-     * <p>Settings for the source IPv4 CIDR block for the access permissions. Classless Inter-Domain Routing (CIDR) format and IPv4 format IP address ranges are supported.</p>
+     * <p>Settings for the source IPv4 CIDR block for the access permissions. Classless Inter-Domain Routing (CIDR) format and IPv4 format IP address range are supported.</p>
      * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
@@ -217,10 +217,10 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String sourceGroupId;
 
     /**
-     * <p>Settings for the Alibaba Cloud account that owns the source security group when you configure a cross-account security group rule for access permissions. </p>
+     * <p>Settings for the Alibaba Cloud account that owns the source security group when you configure access permissions for a cross-account security group rule. </p>
      * <ul>
-     * <li>If neither <code>SourceGroupOwnerAccount</code> nor <code>SourceGroupOwnerId</code> is configured, the rule is configured for the access permissions of your other security groups.</li>
-     * <li>If the <code>SourceCidrIp</code> parameter is specified, the <code>SourceGroupOwnerAccount</code> parameter is invalid.</li>
+     * <li>If neither <code>SourceGroupOwnerAccount</code> nor <code>SourceGroupOwnerID</code> is specified, the rule is configured for access permissions of another security group that you own.</li>
+     * <li>If the <code>SourceCidrIp</code> parameter is specified, the <code>SourceGroupOwnerAccount</code> parameter is ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -230,10 +230,10 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public String sourceGroupOwnerAccount;
 
     /**
-     * <p>Settings for the Alibaba Cloud account ID that owns the source security group when you configure a cross-account security group rule for access permissions. </p>
+     * <p>Settings for the Alibaba Cloud account that owns the source security group when you configure access permissions for a cross-account security group rule. </p>
      * <ul>
-     * <li>If neither <code>SourceGroupOwnerId</code> nor <code>SourceGroupOwnerAccount</code> is configured, the rule is configured for the access permissions of your other security groups.</li>
-     * <li>If the <code>SourceCidrIp</code> parameter is specified, the <code>SourceGroupOwnerId</code> parameter is invalid.</li>
+     * <li>If neither <code>SourceGroupOwnerId</code> nor <code>SourceGroupOwnerAccount</code> is specified, the rule is configured for access permissions of another security group that you own.</li>
+     * <li>If the <code>SourceCidrIp</code> parameter is specified, the <code>SourceGroupOwnerId</code> parameter is ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -243,9 +243,9 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     public Long sourceGroupOwnerId;
 
     /**
-     * <p>The range of source ports that correspond to the transport-layer protocol of the security group. Valid values: </p>
+     * <p>The range of source ports for the transport layer protocol. Valid values: </p>
      * <ul>
-     * <li>TCP/UDP: valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+     * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
      * <li>ICMP: -1/-1.</li>
      * <li>GRE: -1/-1.</li>
      * <li>ALL: -1/-1.</li>
@@ -259,7 +259,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
 
     /**
      * <p>Settings for the ID of the source prefix list for the access permissions. You can invoke <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</p>
-     * <p>This parameter is ignored if you specify one of <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>.</p>
+     * <p>This parameter is ignored if you specify one of the <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code> parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-x1j1k5ykzqlixdcy****</p>

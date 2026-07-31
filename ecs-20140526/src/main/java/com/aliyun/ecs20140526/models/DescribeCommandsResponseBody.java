@@ -8,7 +8,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public DescribeCommandsResponseBodyCommands commands;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, all results have been retrieved.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -17,7 +17,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the command list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

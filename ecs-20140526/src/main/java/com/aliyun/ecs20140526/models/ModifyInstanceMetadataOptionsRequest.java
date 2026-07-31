@@ -7,14 +7,12 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
      * <ul>
-     * <li><p>enabled</p>
-     * </li>
-     * <li><p>disabled</p>
-     * </li>
+     * <li>enabled: Enable the access channel.</li>
+     * <li>disabled: Disable the access channel.</li>
      * </ul>
      * <p>Default value: enabled.</p>
      * <blockquote>
-     * <p>For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Obtain instance metadata</a>.</p>
+     * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of instance metadata</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -26,7 +24,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not publicly available.</p>
+     * <p>This parameter is not available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,16 +34,14 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <p>Specifies whether to forcefully use the security hardening mode when you access instance metadata. Valid values:</p>
      * <ul>
-     * <li><p>optional: does not forcefully use the security hardening mode (IMDSv2).</p>
-     * </li>
-     * <li><p>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
-     * </li>
+     * <li>optional: The security hardening mode is not forcefully used.</li>
+     * <li>required: The security hardening mode is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
      * </ul>
      * <p>Default value: optional.</p>
      * <blockquote>
-     * <p>For more information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Obtain instance metadata</a>.</p>
+     * <p>For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/150575.html">Instance metadata access modes</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +51,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public String httpTokens;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp67acfmxaz****</p>
@@ -64,17 +60,15 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
+     * <p>Specifies whether to enable the access tag feature for instance metadata. Valid values:</p>
      * <ul>
-     * <li><p>enabled</p>
-     * </li>
-     * <li><p>disabled</p>
-     * </li>
+     * <li>enabled: Enable the feature.</li>
+     * <li>disabled: Disable the feature.</li>
      * </ul>
-     * <p>Default value: disabled.</p>
-     * <blockquote>
-     * <p>The tag key must be a combination of letters, digits, @, colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). The tag key cannot be &quot;.&quot; or &quot;..&quot;. Otherwise, the tag key cannot be accessed in the metadata.</p>
-     * </blockquote>
+     * <p>Default value: disabled.
+     * <notice>
+     * Tag keys must be combinations of letters, digits, at signs (@), colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). Tag keys cannot be &quot;.&quot; or &quot;..&quot;, or the tags cannot be accessed in the metadata.
+     * </notice></p>
      * 
      * <strong>example:</strong>
      * <p>disabled</p>
@@ -86,7 +80,7 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region in which the instance resides. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

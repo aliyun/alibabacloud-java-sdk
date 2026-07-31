@@ -15,9 +15,6 @@ public class CreateDiskResponseBody extends TeaModel {
 
     /**
      * <p>The order ID.</p>
-     * <blockquote>
-     * <p>An order ID is returned only when you create a subscription disk.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20413515388****</p>

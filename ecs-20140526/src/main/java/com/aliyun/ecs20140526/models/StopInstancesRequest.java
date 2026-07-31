@@ -7,7 +7,7 @@ public class StopInstancesRequest extends TeaModel {
     /**
      * <p>The batch operation mode. Valid values:</p>
      * <ul>
-     * <li><p>AllTogether: All operations must succeed for the entire batch operation to be considered successful. If any operation fails, the entire batch operation fails and all completed operations are rolled back to the previous state.</p>
+     * <li><p>AllTogether: All operations must succeed for the entire batch operation to be considered successful. If any operation fails, the entire batch operation fails and all executed operations are rolled back to the pre-operation state.</p>
      * </li>
      * <li><p>SuccessFirst: Each operation in the batch is executed independently. If an operation fails, other operations can still be executed and confirmed as successful. Successful operations are committed, and failed operations are marked as failed without affecting the results of other operations.</p>
      * </li>
@@ -25,7 +25,7 @@ public class StopInstancesRequest extends TeaModel {
      * <ul>
      * <li><p>true: sends a dry run request without stopping the instances. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, <code>DRYRUN.SUCCESS</code> is returned.</p>
      * <blockquote>
-     * <p>If the BatchOptimization parameter is set to <code>SuccessFirst</code>, the dry run result for <code>DryRun=true</code> returns only <code>DRYRUN.SUCCESS</code>.</p>
+     * <p>If the <code>BatchOptimization</code> parameter is set to <code>SuccessFirst</code>, the dry run result for <code>DryRun=true</code> returns only <code>DRYRUN.SUCCESS</code>.</p>
      * </blockquote>
      * </li>
      * <li><p>false: sends a normal request. After the request passes the check, the instances are stopped.</p>
@@ -73,7 +73,7 @@ public class StopInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the instances. Call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class StopInstancesRequest extends TeaModel {
      * <ul>
      * <li>Billing for compute resources (vCPUs, memory, and GPUs), image license fees, and fixed bandwidth of static public IP addresses is suspended.</li>
      * <li>Billing for system disks, data disks, and fixed bandwidth of Elastic IP Addresses (EIPs) continues.</li>
-     * <li>Because compute resources are released, the instance may fail to start due to insufficient resources. Try again later or change the instance type.</li>
+     * <li>Because compute resources are released, the instance may fail to restart due to insufficient resources. Try again later or change the instance type.</li>
      * <li>If an EIP is associated with the instance before it is stopped, the IP address remains unchanged after the instance is restarted. Otherwise, the static public IP address may change, but the private IP address remains unchanged.</li>
      * </ul>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
@@ -106,7 +106,7 @@ public class StopInstancesRequest extends TeaModel {
      * </ul>
      * <p>If the instance does not support economical mode, the API does not return an error. Stopping the instance takes priority. Instance types that do not support economical mode include instances with local SSDs and subscription instances.</p>
      * <ul>
-     * <li>KeepCharging: standard stop mode. After the instance is stopped, resources are retained and billing continues. The instance type inventory and public IP address are also retained. If you stop the instance to replace the operating system, reinitialize a disk, change the instance type, or modify the private IP address, select this mode to avoid startup failures.</li>
+     * <li>KeepCharging: standard stop mode. After the instance is stopped, its resources are retained and billing continues. The instance type inventory and public IP address are also retained. If you stop the instance to replace the operating system, reinitialize a disk, change the instance type, or modify the private IP address, select this mode to avoid restart failures.</li>
      * </ul>
      * <p>Default value: If you <a href="~~63353#default~~">enable economical mode for VPC-connected instances</a> and the conditions are met, the default value is <code>StopCharging</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
      * 

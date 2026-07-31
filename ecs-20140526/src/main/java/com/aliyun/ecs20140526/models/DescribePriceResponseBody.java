@@ -205,7 +205,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The hourly price of a reserved instance with the no upfront or partial upfront payment option.</p>
+         * <p>The hourly price of a reserved instance with no upfront or partial upfront payment.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

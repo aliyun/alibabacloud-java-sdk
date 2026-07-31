@@ -14,7 +14,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -34,7 +34,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
     /**
      * <p>The user data of the instance.</p>
      * <blockquote>
-     * <p>If no user data is configured for the instance, an empty string is returned.</p>
+     * <p>If no user data exists for the instance, an empty string is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -8,15 +8,15 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public ModifyDedicatedHostAttributeRequestNetworkAttributes networkAttributes;
 
     /**
-     * <p>The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</p>
+     * <p>The migration plan for the instances on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</p>
      * <ul>
-     * <li><p>Migrate: The instances are migrated to another physical machine and then restarted.</p>
+     * <li><p>Migrate: The instances are migrated to another physical server and restarted.</p>
      * </li>
-     * <li><p>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</p>
+     * <li><p>Stop: The instances are stopped on the current dedicated host. After the dedicated host is confirmed to be irreparable, the instances are migrated to another physical server and restarted.</p>
      * </li>
      * </ul>
-     * <p>If the dedicated host has cloud disks attached, the default value is Migrate.</p>
-     * <p>If the dedicated host has local disks attached, the default value is Stop.</p>
+     * <p>Default value when cloud disks are attached to the dedicated host: Migrate.</p>
+     * <p>Default value when local disks are attached to the dedicated host: Stop.</p>
      * 
      * <strong>example:</strong>
      * <p>Migrate</p>
@@ -25,14 +25,14 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public String actionOnMaintenance;
 
     /**
-     * <p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify <strong>DedicatedHostId</strong> when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values:</p>
+     * <p>Specifies whether the dedicated host is added to the automatic deployment resource pool. If you do not specify DedicatedHostId when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values:</p>
      * <ul>
-     * <li><p>on: adds the dedicated host to the resource pool for automatic deployment.</p>
+     * <li><p>on: The dedicated host is added to the automatic deployment resource pool.</p>
      * </li>
-     * <li><p>off: does not add the dedicated host to the resource pool for automatic deployment.</p>
+     * <li><p>off: The dedicated host is not added to the automatic deployment resource pool.</p>
      * </li>
      * </ul>
-     * <p>For information about automatic deployment, see <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</p>
+     * <p>For more information about the automatic deployment feature, see <a href="https://help.aliyun.com/document_detail/118938.html">Features</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -41,8 +41,8 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public String autoPlacement;
 
     /**
-     * <p>The CPU overcommit ratio. You can configure CPU overcommit ratios only for the following dedicated host types: g6s, c6s, and r6s. Valid values: 1 to 5.</p>
-     * <p>The CPU overcommit ratio affects the number of available vCPUs on a dedicated host. You can use the following formula to calculate the number of available vCPUs on a dedicated host: Number of available vCPUs = Number of physical CPU cores × 2 × CPU overcommit ratio. For example, the number of physical CPU cores on each g6s dedicated host is 52. If you change the CPU overcommit ratio of a g6s dedicated host to 4, the number of available vCPUs on the dedicated host is 416. For scenarios that have minimal requirements for CPU stability or where CPU load is not heavy, such as development and test environments, you can increase the number of available vCPUs on a dedicated host by increasing the CPU overcommit ratio. This allows you to deploy more ECS instances of the same specifications on the dedicated host and reduce the unit deployment cost.</p>
+     * <p>The CPU overcommit ratio. Only the custom instance families g6s, c6s, and r6s support CPU overcommit ratios. Valid values: 1 to 5.</p>
+     * <p>The CPU overcommit ratio affects the number of available vCPUs on a dedicated host. Available vCPUs on a dedicated host = Number of physical CPU cores × 2 × CPU overcommit ratio. For example, the number of physical CPU cores on a g6s dedicated host is 52. If you set the CPU overcommit ratio to 4, the total number of vCPUs becomes 416. For scenarios that do not require absolute CPU stability or have low CPU loads, such as development and testing environments, you can increase the overcommit ratio to increase the number of available vCPUs. This way, you can deploy more ECS instances of the same specifications and reduce the unit deployment cost.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public Float cpuOverCommitRatio;
 
     /**
-     * <p>The ID of the dedicated host cluster to which to assign the dedicated host.</p>
+     * <p>The ID of the dedicated host cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dc-bp165p6xk2tlw61e****</p>
@@ -70,7 +70,7 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testDedicatedHostName</p>
@@ -94,7 +94,7 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the dedicated host resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
 
     public static class ModifyDedicatedHostAttributeRequestNetworkAttributes extends TeaModel {
         /**
-         * <p>The timeout period for a UDP session between a Server Load Balancer (SLB) instance and the dedicated host. Unit: seconds. Valid values: 15 to 310.</p>
+         * <p>The timeout period of UDP sessions for load balancing connections. Unit: seconds. Valid values: 15 to 310.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -229,7 +229,7 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
         public Integer slbUdpTimeout;
 
         /**
-         * <p>The timeout period for a UDP session between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid values: 15 to 310.</p>
+         * <p>The timeout period of UDP sessions for user access to cloud services running on the dedicated host. Unit: seconds. Valid values: 15 to 310.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

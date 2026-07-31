@@ -10,9 +10,6 @@ public class ModifyUserBusinessBehaviorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -23,14 +20,12 @@ public class ModifyUserBusinessBehaviorRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The key of the attribute to modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("statusKey")
     public String statusKey;
 
     /**
-     * <p>The new value of the attribute.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("statusValue")

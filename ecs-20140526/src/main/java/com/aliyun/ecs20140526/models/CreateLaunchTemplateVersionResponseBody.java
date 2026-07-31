@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+     * <p>The launch template ID. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
      * <p>When you use a launch template to create an instance, you must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to determine the launch template.</p>
      * 
      * <strong>example:</strong>

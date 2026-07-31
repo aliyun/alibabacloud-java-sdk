@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupRequest extends TeaModel {
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -86,7 +86,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public java.util.List<AuthorizeSecurityGroupRequestPermissions> permissions;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.Policy</code> to set access permissions.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Policy</code> to set access permissions. Settings configured through this parameter are no longer supported.</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -106,7 +106,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public String portRange;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.Priority</code> to specify the security group rule priority.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Priority</code> to specify the priority of the security group rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -426,7 +426,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String destCidrIp;
 
         /**
-         * <p>The network layer or transport layer protocol. Two types of values are supported:</p>
+         * <p>The network-layer or transport-layer protocol. Two types of values are supported:</p>
          * <ol>
          * <li>Case-insensitive protocol names. Valid values:</li>
          * </ol>
@@ -435,7 +435,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * <li>GRE</li>
          * <li>TCP</li>
          * <li>UDP</li>
-         * <li>ALL: all protocols.</li>
+         * <li>ALL: All protocols are supported.</li>
          * </ul>
          * <ol start="2">
          * <li>Protocol numbers that comply with IANA specifications, which are integers from 0 to 255. The following regions currently support this feature:</li>
@@ -444,9 +444,9 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * <li>Philippines</li>
          * <li>UK</li>
          * <li>Malaysia</li>
-         * <li>China (Hohhot)</li>
-         * <li>China (Qingdao)</li>
-         * <li>US (Virginia)</li>
+         * <li>Hohhot</li>
+         * <li>Qingdao</li>
+         * <li>US West</li>
          * <li>Singapore</li>
          * </ul>
          * 
@@ -457,10 +457,10 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The destination IPv6 CIDR block. CIDR format and IPv6 format address ranges are supported.</p>
+         * <p>The destination IPv6 CIDR block. Settings support CIDR format and IPv6 format address ranges.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
-         * <p>This parameter is valid only for VPC-connected ECS instances that support IPv6. This parameter and <code>DestCidrIp</code> cannot be specified at the same time.</p>
+         * <p>This parameter takes effect only for VPC-connected ECS instances that support IPv6. This parameter and <code>DestCidrIp</code> cannot be specified at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -470,9 +470,9 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String ipv6DestCidrIp;
 
         /**
-         * <p>The source IPv6 CIDR block for which you want to set access permissions. Settings for CIDR format and IPv6 format address ranges are supported.</p>
+         * <p>The source IPv6 CIDR block for which you want to set access permissions. Settings support CIDR format and IPv6 format address ranges.</p>
          * <blockquote>
-         * <p>This parameter is valid only for VPC-connected ECS instances that support IPv6. This parameter and <code>SourceCidrIp</code> cannot be specified at the same time.</p>
+         * <p>This parameter takes effect only for VPC-connected ECS instances that support IPv6. This parameter and <code>SourceCidrIp</code> cannot be specified at the same time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -482,15 +482,15 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The network interface controller (NIC) type for a classic network type security group rule. Valid values:</p>
+         * <p>The network interface controller (NIC) type for a classic network security group rule. Settings include the following valid values:</p>
          * <ul>
          * <li><p>internet: public network interface controller (NIC).</p>
          * </li>
          * <li><p>intranet: internal network interface controller (NIC).</p>
          * </li>
          * </ul>
-         * <p>For VPC security group rules, you do not need to set the network interface controller (NIC) type parameter. The default value is intranet, and only intranet is supported.</p>
-         * <p>When you set security groups to access each other (only DestGroupId is specified), only intranet is supported.</p>
+         * <p>For VPC security group rules, you do not need to set the network interface controller (NIC) type. The default value is intranet, and only intranet is supported.</p>
+         * <p>When you set security groups to access each other, meaning only the DestGroupId parameter is specified, only intranet is supported.</p>
          * <p>Default value: internet.</p>
          * 
          * <strong>example:</strong>
@@ -502,9 +502,9 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>Settings for access permissions. Valid values:</p>
          * <ul>
-         * <li><p>accept: accepts access.</p>
+         * <li><p>accept: Accepts access.</p>
          * </li>
-         * <li><p>drop: denies access and does not return a deny message. The request appears to timeout or the connection cannot be established.</p>
+         * <li><p>drop: Denies access without returning a deny response. The request appears to timeout or the connection cannot be established.</p>
          * </li>
          * </ul>
          * <p>Default value: accept.</p>
@@ -521,9 +521,9 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the stop port with a forward slash (/). Example: 1/200.</li>
          * <li>ICMP: -1/-1.</li>
          * <li>GRE: -1/-1.</li>
-         * <li>ALL: -1/-1.</li>
+         * <li>If IpProtocol is set to ALL: -1/-1.</li>
          * </ul>
-         * <p>For more information about common ports, see <a href="https://help.aliyun.com/document_detail/40724.html">Common scenarios for ports</a>.</p>
+         * <p>For more information about common scenarios of ports, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>
@@ -536,7 +536,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * You can invoke <code>DescribePortRangeLists</code> to query available port address book IDs.</p>
          * <ul>
          * <li>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</li>
-         * <li>Port address books are not supported for security groups with the classic network type. For more information about security group and port address book limits, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>. Settings for port address books are not available for classic network security groups.</li>
+         * <li>Port address books are not supported when the security group network type is classic network. For more information about security group and port address book limits, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>. Settings for port address books are subject to these limits.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,7 +556,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String priority;
 
         /**
-         * <p>The source IPv4 CIDR block for which you want to set access permissions. Settings for CIDR format and IPv4 format address ranges are supported.</p>
+         * <p>The source IPv4 CIDR block for which you want to set access permissions. Settings support CIDR format and IPv4 format address ranges.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -567,7 +567,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The ID of the source security group for which you want to set access permissions.</p>
          * <ul>
-         * <li><p>You must specify at least one of the following parameters: <code>SourceGroupId</code>, <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourcePrefixListId</code>.</p>
+         * <li><p>Specify at least one of the following parameters: <code>SourceGroupId</code>, <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourcePrefixListId</code>.</p>
          * </li>
          * <li><p>If <code>SourceGroupId</code> is specified but <code>SourceCidrIp</code> or <code>Ipv6SourceCidrIp</code> is not specified, the <code>NicType</code> parameter can only be set to <code>intranet</code>.</p>
          * </li>
@@ -582,11 +582,11 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String sourceGroupId;
 
         /**
-         * <p>The Alibaba Cloud account that owns the source security group when you set a cross-account security group rule.</p>
+         * <p>The Alibaba Cloud account that owns the source security group when you set a cross-account security group rule. Settings apply as follows:</p>
          * <ul>
-         * <li><p>If neither <code>SourceGroupOwnerAccount</code> nor <code>SourceGroupOwnerId</code> is set, access permissions are configured for another security group within your account.</p>
+         * <li><p>If neither <code>SourceGroupOwnerAccount</code> nor <code>SourceGroupOwnerId</code> is set, the rule is created to set access permissions for another security group within your account.</p>
          * </li>
-         * <li><p>If the <code>SourceCidrIp</code> parameter is set, the <code>SourceGroupOwnerAccount</code> parameter is ignored.</p>
+         * <li><p>If the <code>SourceCidrIp</code> parameter is specified, the <code>SourceGroupOwnerAccount</code> parameter is ignored.</p>
          * </li>
          * </ul>
          * 
@@ -597,11 +597,11 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String sourceGroupOwnerAccount;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the source security group when you set a cross-account security group rule.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the source security group when you set a cross-account security group rule. Settings apply as follows:</p>
          * <ul>
-         * <li><p>If neither <code>SourceGroupOwnerAccount</code> nor <code>SourceGroupOwnerId</code> is set, access permissions are configured for another security group within your account.</p>
+         * <li><p>If neither <code>SourceGroupOwnerAccount</code> nor <code>SourceGroupOwnerId</code> is set, the rule is created to set access permissions for another security group within your account.</p>
          * </li>
-         * <li><p>If the <code>SourceCidrIp</code> parameter is set, the <code>SourceGroupOwnerAccount</code> parameter is ignored.</p>
+         * <li><p>If the <code>SourceCidrIp</code> parameter is specified, the <code>SourceGroupOwnerAccount</code> parameter is ignored.</p>
          * </li>
          * </ul>
          * 
@@ -617,7 +617,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
          * <li>ICMP: -1/-1.</li>
          * <li>GRE: -1/-1.</li>
-         * <li>ALL: -1/-1.</li>
+         * <li>If IpProtocol is set to ALL: -1/-1.</li>
          * </ul>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
@@ -629,8 +629,8 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
 
         /**
          * <p>The ID of the source prefix list for which you want to set access permissions. You can call <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</p>
-         * <p>Notes:</p>
-         * <p>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</p>
+         * <p>Usage notes:</p>
+         * <p>If you specify one of the <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code> parameters, this parameter is ignored.</p>
          * <p>For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</p>
          * 
          * <strong>example:</strong>

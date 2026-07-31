@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -16,7 +16,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
      * <p>The command to run after the session is initiated. The command can be up to 512 characters in length.</p>
      * <blockquote>
-     * <p>After you specify <code>CommandLine</code>, you cannot specify <code>PortNumber</code> or <code>TargetServer</code>.</p>
+     * <p>After you specify CommandLine, you cannot specify PortNumber or TargetServer.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,8 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
      * <p>The network type of the WebSocket URL required for the remote connection to the instance. Valid values:</p>
      * <ul>
-     * <li>Internet: the Internet. This is the default value.</li>
-     * <li>Intranet: the internal network.</li>
+     * <li>Internet: public network. This is the default value.</li>
+     * <li>Intranet: internal network.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public String encryptionOptionsShrink;
 
     /**
-     * <p>The instance ID list.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
@@ -58,7 +58,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the password for the user when you use Session Manager on a Windows instance. The name can be up to 255 characters in length.
+     * <p>The name of the password for the user when using Session Manager on a Windows instance. The name can be up to 255 characters in length.
      * When you want to use Session Manager on a Windows instance as a non-default user (System), specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</p>
      * 
      * <strong>example:</strong>
@@ -68,8 +68,8 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     public String passwordName;
 
     /**
-     * <p>The port number of the ECS instance for data forwarding. After this parameter is specified, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</p>
-     * <p>Default value: empty, which indicates that no port number is specified for data forwarding.</p>
+     * <p>The port number of the ECS instance for data forwarding. After this parameter is set, the Cloud Assistant Agent forwards data to the specified port number for port forwarding. For example, SSH uses port 22.</p>
+     * <p>Default value: empty, which indicates that no port number is set for data forwarding.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -96,7 +96,7 @@ public class StartTerminalSessionShrinkRequest extends TeaModel {
     /**
      * <p>The address of the destination server in the VPC that you want to access through the instance.</p>
      * <blockquote>
-     * <p>If this parameter is not empty, <code>PortNumber</code> specifies the port number of the destination server in the VPC that you want to access through the managed instance.</p>
+     * <p>When this parameter is not empty, PortNumber specifies the port number of the destination server in the VPC that you want to access through the managed instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

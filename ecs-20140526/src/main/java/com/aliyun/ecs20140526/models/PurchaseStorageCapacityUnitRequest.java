@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     /**
-     * <p>The number of SCUs that you want to purchase. Valid values: 1 to 20.</p>
+     * <p>The number of SCUs to purchase. Valid values: 1 to 20.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public Integer capacity;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -43,7 +43,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The source of the request. The value is automatically set to OpenAPI and does not need to be changed. Default value: OpenAPI.</p>
+     * <p>The source of the request. The default value is OpenAPI. You do not need to manually set this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
@@ -52,7 +52,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the SCU. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ScuPurchaseDemo</p>
@@ -69,10 +69,8 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     /**
      * <p>The validity period of the SCU. Valid values:</p>
      * <ul>
-     * <li><p>Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.</p>
-     * </li>
-     * <li><p>Valid values when PeriodUnit is set to Year: 1, 3, and 5.</p>
-     * </li>
+     * <li>When PeriodUnit is set to Month, valid values of Period are 1, 2, 3, and 6.</li>
+     * <li>When PeriodUnit is set to Year, valid values of Period are 1, 3, and 5.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -85,10 +83,8 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     /**
      * <p>The unit of the validity period of the SCU. Valid values:</p>
      * <ul>
-     * <li><p>Month</p>
-     * </li>
-     * <li><p>Year</p>
-     * </li>
+     * <li>Month: month.</li>
+     * <li>Year: year.</li>
      * </ul>
      * <p>Default value: Month.</p>
      * 
@@ -99,7 +95,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The ID of the region in which to purchase the SCU. The purchased SCU can offset the bills of pay-as-you-go disks that reside in the specified region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the SCU. After you specify a region, the SCU can only offset pay-as-you-go bills for cloud disks in that region. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +105,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to add the SCU. You can specify only the IDs of the resource groups that you have permissions to access.</p>
+     * <p>The ID of the resource group to which the storage capacity unit (SCU) belongs. You can specify only a resource group ID to which you have permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -124,8 +120,8 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time at which the SCU takes effect. The time can be up to 180 days from the creation time of the SCU. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</p>
-     * <p>This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.</p>
+     * <p>The effective period of the SCU. The effective period cannot be more than 180 days after the creation time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</p>
+     * <p>Default value: null, which indicates that the SCU takes effect immediately after it is created.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-09-09T02Z</p>
@@ -134,7 +130,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The tags to add to the SCU. You can specify up to 20 tags.</p>
+     * <p>The tags. Array length: 1 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<PurchaseStorageCapacityUnitRequestTag> tag;
@@ -274,7 +270,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
 
     public static class PurchaseStorageCapacityUnitRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the SCU. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag key of the SCU. If you specify this parameter, the tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -283,7 +279,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the SCU. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+         * <p>The tag value of the SCU. If you specify this parameter, the tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

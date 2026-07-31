@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
@@ -14,10 +14,10 @@ public class RenewInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies the <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</p>
-     * <p>To use this parameter, you must <a href="~~63396#694cb636c0rp6~~">specify a unified expiration date for the ECS instance</a>. The value of this parameter must be the same as the specified unified expiration date. Otherwise, the call fails.</p>
+     * <p>The day on which to renew the instance to a <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</p>
+     * <p>To use this parameter, you must first <a href="~~63396#694cb636c0rp6~~">set a unified expiration date for ECS instances</a>. The value of this parameter must match the unified expiration date that you have set. Otherwise, the call fails.</p>
      * <blockquote>
-     * <p>You must specify the renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) or <code>ExpectedRenewDay</code>, but not both.</p>
+     * <p>You must specify either the renewal period parameters (Period and PeriodUnit) or the unified expiration date parameter (ExpectedRenewDay), but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,10 +43,15 @@ public class RenewInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal period of the subscription instance. If <code>DedicatedHostId</code> is specified, the value of Period cannot exceed the subscription period of the specified dedicated host.</p>
-     * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
+     * <p>The renewal period for the subscription instance. If you specify DedicatedHostId, the value of Period cannot exceed the remaining subscription period of the dedicated host. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>If you set PeriodUnit to Week, valid values of Period are 1, 2, 3, and 4.</li>
+     * <li>If you set PeriodUnit to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;If you set PeriodUnit to Month, valid values of Period are 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
      * <blockquote>
-     * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and <code>ExpectedRenewDay</code> are mutually exclusive.</p>
+     * <p>You must specify either the renewal period parameters (Period and PeriodUnit) or the unified expiration date parameter (ExpectedRenewDay), but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,8 +61,13 @@ public class RenewInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal period. Valid values:</p>
-     * <p>Month</p>
+     * <p>The unit of the renewal period. This parameter specifies the unit for the Period parameter. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li>Week.</li>
+     * <li>Month.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;Month.</p>
      * <p>Default value: Month.</p>
      * 
      * <strong>example:</strong>

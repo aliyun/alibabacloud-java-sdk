@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the performance burst feature for disks that support this feature. Valid values:</p>
+     * <p>Specifies whether to enable the performance burst feature for disks that support burst. Valid values:</p>
      * <ul>
      * <li>true: Enabled.</li>
      * <li>false: Disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>An error is returned if you specify this parameter for a disk that does not support the performance burst feature.</p>
+     * <p>If you specify this parameter for a disk that does not support the burst feature, an error is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
      * <li><p>false: Disabled.</p>
      * </li>
      * </ul>
-     * <p>Default value: null, which indicates that the current value is not changed.</p>
+     * <p>Default value: null, which indicates that the current value remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -37,15 +37,15 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Boolean deleteAutoSnapshot;
 
     /**
-     * <p>Specifies whether to release the disk along with the instance. Default value: null, which indicates that the current value is not changed.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;This parameter is not supported for disks that have the multi-attach feature enabled.</p>
-     * <p>An error is returned if you set DeleteWithInstance to <code>false</code> in either of the following cases: </p>
+     * <p>Specifies whether to release the disk along with the instance. Default value: null, which indicates that the current value remains unchanged.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Disks that have the multi-attach feature enabled do not support this parameter.</p>
+     * <p>Setting <code>DeleteWithInstance</code> to <code>false</code> returns an error in the following cases: </p>
      * <ul>
-     * <li>The category of the disk is local disk (ephemeral).  </li>
-     * <li>The category of the disk is basic disk (cloud) and the disk is not detachable (Portable=false).</li>
+     * <li>The disk category is local disk (ephemeral).  </li>
+     * <li>The disk category is basic disk (cloud) and the disk is not detachable (Portable=false).</li>
      * </ul>
      * <blockquote>
-     * <p>Warning: If you set DeleteWithInstance to false and the ECS instance to which the disk is attached is security-locked with &quot;LockReason&quot; : &quot;security&quot; in OperationLocks, the DeleteWithInstance attribute is ignored and the disk is released along with the instance..</p>
+     * <p>Warning: If you set DeleteWithInstance to false, when the ECS instance to which the disk is attached is security-locked and the OperationLocks parameter contains &quot;LockReason&quot; : &quot;security&quot;, the DeleteWithInstance attribute is ignored and the disk is released along with the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the disk whose attributes you want to modify.</p>
      * <blockquote>
-     * <p>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</p>
+     * <p>The <code>DiskId</code> and <code>DiskIds.N</code> parameters cannot be specified at the same time. Specify one of them as needed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     /**
      * <p>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</p>
      * <blockquote>
-     * <p>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</p>
+     * <p>The <code>DiskId</code> and <code>DiskIds.N</code> parameters cannot be specified at the same time. Specify one of them as needed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,9 +102,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
      * <li>true: Enabled.</li>
      * <li>false: Disabled.</li>
      * </ul>
-     * <p>Default value: null, which indicates that the current value is not changed.</p>
+     * <p>Default value: null, which indicates that the current value remains unchanged.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. The automatic snapshot policy is enabled by default for disks after they are created. You only need to associate an automatic snapshot policy with the disk.</p>
+     * <p>This parameter is deprecated. The automatic snapshot policy is enabled by default for disks after creation. You only need to associate an automatic snapshot policy with the disk.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

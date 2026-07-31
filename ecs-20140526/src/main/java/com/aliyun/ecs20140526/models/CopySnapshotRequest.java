@@ -13,7 +13,7 @@ public class CopySnapshotRequest extends TeaModel {
     public java.util.List<CopySnapshotRequestArn> arn;
 
     /**
-     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -116,8 +116,8 @@ public class CopySnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the new snapshot, in days. The snapshot undergoes automatic release when the retention period expires. Valid values: 1 to 65536.</p>
-     * <p>Default value: null, which indicates that the snapshot does not undergo automatic release.</p>
+     * <p>The retention period of the new snapshot, in days. The snapshot is subject to automatic release when the retention period expires. Valid values: 1 to 65536.</p>
+     * <p>Default value: null, which indicates that the snapshot is not subject to automatic release.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

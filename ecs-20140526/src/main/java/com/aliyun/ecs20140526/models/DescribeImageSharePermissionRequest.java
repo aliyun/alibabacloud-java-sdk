@@ -21,7 +21,7 @@ public class DescribeImageSharePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the returned results.</p>
+     * <p>The page number of the query results to return.</p>
      * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
@@ -32,7 +32,7 @@ public class DescribeImageSharePermissionRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in the returned results.</p>
+     * <p>The number of entries per page in the query results.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 

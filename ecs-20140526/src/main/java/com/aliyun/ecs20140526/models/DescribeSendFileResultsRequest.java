@@ -14,13 +14,13 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The overall sending status of the file. The overall status depends on the combined execution status of all target instances. Valid values:</p>
+     * <p>The overall sending status of the file. The overall status depends on the combined execution status of all instances in the sending task. Valid values:</p>
      * <ul>
      * <li>Pending: The system is validating or sending the file. The overall status is Pending if the file sending status of at least one instance is Pending.</li>
-     * <li>Running: The file is being sent to the instance. The overall status is Running if the file sending status of at least one instance is Running.</li>
-     * <li>Success: The file is sent successfully. The overall status is Success if the file sending status of all instances is Success.</li>
+     * <li>Running: The file is being sent on instances. The overall status is Running if the file sending status of at least one instance is Running.</li>
+     * <li>Success: The file is sent. The overall status is Success if the file sending status of all instances is Success.</li>
      * <li>Failed: The file failed to be sent. The overall status is Failed if the file sending status of all instances is Failed.</li>
-     * <li>PartialFailed: The file is sent to some instances but fails on others. The overall status is PartialFailed if the file sending status of all instances is Success or Failed.</li>
+     * <li>PartialFailed: The file is sent on some instances but failed on others. The overall status is PartialFailed if the file sending status of all instances is Success or Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * <p>Maximum value: 50.</p>
      * <p>Default value: 10.</p>
      * 
@@ -75,7 +75,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSendFileResultsRequestTag> tag;
@@ -253,7 +253,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
 
     public static class DescribeSendFileResultsRequestTag extends TeaModel {
         /**
-         * <p>The tag key for the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
@@ -264,7 +264,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value for the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

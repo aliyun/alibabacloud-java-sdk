@@ -14,10 +14,10 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The encoding method of the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
+     * <p>The encoding method for the <code>CommandContent</code> and <code>Output</code> fields in the response. Valid values:</p>
      * <ul>
      * <li>PlainText: Returns the original command content and output.</li>
-     * <li>Base64: Returns the Base64-encoded command content and output.</li>
+     * <li>Base64: Returns Base64-encoded command content and output.</li>
      * </ul>
      * <p>Default value: Base64.</p>
      * 
@@ -30,7 +30,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the execution history of scheduled commands. Valid values:</p>
      * <ul>
-     * <li>true: Returns the execution results of scheduled commands. When this parameter is set to true, the InvokeId parameter is required and must be the execution ID of a scheduled command (RepeatMode is Period) or a command that runs at each system startup (RepeatMode is EveryReboot).</li>
+     * <li>true: Returns the execution results of scheduled commands. When this parameter is set to true, the InvokeId parameter cannot be empty and must be the execution ID of a scheduled command (RepeatMode is Period) or a command that runs on each system startup (RepeatMode is EveryReboot).</li>
      * <li>false: Does not return the execution history.</li>
      * </ul>
      * <p>Default value: false.</p>
@@ -60,14 +60,14 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The execution status of the command. Valid values:</p>
+     * <p>The command execution status. Valid values:</p>
      * <ul>
      * <li>Running: The command is running.<ul>
      * <li>Scheduled execution: The execution status remains running until you manually stop the scheduled command.</li>
-     * <li>One-time execution: The overall execution status is running as long as any command process is running.</li>
+     * <li>One-time execution: The overall execution status is running as long as any command process is in progress.</li>
      * </ul>
      * </li>
-     * <li>Finished: The command execution is complete.<ul>
+     * <li>Finished: The execution is complete.<ul>
      * <li>Scheduled execution: The command process cannot have a status of finished.</li>
      * <li>One-time execution: All instances have completed execution, or you manually stopped the command process on some instances and the remaining instances have completed execution.</li>
      * </ul>
@@ -77,14 +77,14 @@ public class DescribeInvocationResultsRequest extends TeaModel {
      * <li>Scheduled execution: The last execution succeeded with an exit code of 0, and the specified execution time has ended.</li>
      * </ul>
      * </li>
-     * <li>Failed: The command execution failed.<ul>
+     * <li>Failed: The execution failed.<ul>
      * <li>Scheduled execution: The command process cannot have a status of failed.</li>
-     * <li>One-time execution: The command execution failed on all instances.</li>
+     * <li>One-time execution: All instances failed to execute the command.</li>
      * </ul>
      * </li>
-     * <li>PartialFailed: The command execution partially failed.<ul>
+     * <li>PartialFailed: The execution partially failed.<ul>
      * <li>Scheduled execution: The command process cannot have a status of partially failed.</li>
-     * <li>One-time execution: The command execution failed on some instances, so the overall execution status is partially failed.</li>
+     * <li>One-time execution: Some instances have failed command processes, so the overall execution status is partially failed.</li>
      * </ul>
      * </li>
      * <li>Stopped: The command execution has been stopped.</li>
@@ -109,7 +109,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set this to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
@@ -125,7 +125,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is about to go offline. Use NextToken and MaxResults to complete paging query operations.</p>
+     * <p>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging query operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID of the command execution. After you specify this parameter, the resource group ID must also be specified when you run the command. This parameter filters the corresponding command execution results.</p>
+     * <p>The resource group ID for command execution. After you specify this parameter, you must also specify ResourceGroupId when running the command. This parameter filters the corresponding command execution results.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -171,7 +171,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInvocationResultsRequestTag> tag;
@@ -320,8 +320,8 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public static class DescribeInvocationResultsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <p>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources with all specified tags attached cannot exceed 1,000. If the number of resources exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to execute the query.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to execute the query.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

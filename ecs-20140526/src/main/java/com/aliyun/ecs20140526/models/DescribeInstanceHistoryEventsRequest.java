@@ -18,7 +18,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
      * <li>Executing: The event is being executed.</li>
      * <li>Executed: The event has been executed.</li>
      * <li>Canceled: The event has been canceled.</li>
-     * <li>Failed: The event execution failed.</li>
+     * <li>Failed: The event failed to be executed.</li>
      * <li>Inquiring: The event is being inquired.</li>
      * </ul>
      * 
@@ -52,7 +52,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
      * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter must be an instance system event, not a disk system event.</p>
+     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not yet available for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,14 +73,14 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public String impactLevel;
 
     /**
-     * <p>One or more lifecycle statuses of the system event. Valid values of N: 1 to 7. Specify multiple values in a repeated list format. Valid values:</p>
+     * <p>One or more lifecycle statuses of system events. Valid values of N: 1 to 7. Specify multiple values in a repeated list format. Valid values:</p>
      * <ul>
      * <li>Scheduled: The event is waiting to be executed.</li>
      * <li>Avoided: The event has been avoided.</li>
      * <li>Executing: The event is being executed.</li>
      * <li>Executed: The event has been executed.</li>
      * <li>Canceled: The event has been canceled.</li>
-     * <li>Failed: The event execution failed.</li>
+     * <li>Failed: The event failed to be executed.</li>
      * <li>Inquiring: The event is being inquired.</li>
      * </ul>
      * 
@@ -91,7 +91,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public java.util.List<String> instanceEventCycleStatus;
 
     /**
-     * <p>One or more types of the system event. Valid values of N: 1 to 30. Specify multiple values in a repeated list format. Valid values:</p>
+     * <p>One or more types of system events. Valid values of N: 1 to 30. Specify multiple values in a repeated list format. Valid values:</p>
      * <ul>
      * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
      * <li>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</li>
@@ -105,7 +105,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
      * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
      * </ul>
      * <blockquote>
-     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter must be an instance system event, not a disk system event.</p>
+     * <p>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>f1c9fa9de5752***</p>
@@ -154,7 +154,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated. Use MaxResults or NextToken for paginated queries instead.</p>
+     * <p>This parameter will be deprecated. Use MaxResults and NextToken for pagination queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be deprecated. Use MaxResults or NextToken for paginated queries instead.</p>
+     * <p>This parameter will be deprecated. Use MaxResults and NextToken for pagination queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -421,7 +421,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     public static class DescribeInstanceHistoryEventsRequestEventPublishTime extends TeaModel {
         /**
-         * <p>The end of the time range during which the system event is published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range to query the publish time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-01T06:32:31Z</p>
@@ -430,7 +430,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>The start of the time range during which the system event is published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start of the time range to query the publish time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T06:32:31Z</p>
@@ -463,7 +463,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     public static class DescribeInstanceHistoryEventsRequestNotBefore extends TeaModel {
         /**
-         * <p>The end of the time range during which the system event is scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range to query the scheduled execution time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-12-01T06:32:31Z</p>
@@ -472,7 +472,7 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>The start of the time range during which the system event is scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start of the time range to query the scheduled execution time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-11-30T06:32:31Z</p>

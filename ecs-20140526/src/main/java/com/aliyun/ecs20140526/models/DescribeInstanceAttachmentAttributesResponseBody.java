@@ -8,7 +8,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the instance status list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

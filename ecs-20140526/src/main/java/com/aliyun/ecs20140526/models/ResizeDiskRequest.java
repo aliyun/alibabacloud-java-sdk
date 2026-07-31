@@ -5,62 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskRequest extends TeaModel {
     /**
-     * <p>The new disk capacity. Unit: GiB. Valid values:</p>
-     * <ul>
-     * <li><p>For a system disk:</p>
-     * <ul>
-     * <li><p>Basic disk (cloud): 20 to 500.</p>
-     * </li>
-     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</p>
-     * <ul>
-     * <li><p>PL0 ESSD: 1 to 2048.</p>
-     * </li>
-     * <li><p>PL1 ESSD: 20 to 2048.</p>
-     * </li>
-     * <li><p>PL2 ESSD: 461 to 2048.</p>
-     * </li>
-     * <li><p>PL3 ESSD: 1261 to 2048.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>ESSD AutoPL disk: 1 to 2048.</p>
-     * </li>
-     * <li><p>Other disk categories: 20 to 2048.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>For a data disk:</p>
-     * <ul>
-     * <li><p>Ultra disk (cloud_efficiency): 20 to 32768.</p>
-     * </li>
-     * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
-     * </li>
-     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.\<code>\\</code> To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <code>PerformanceLevel</code> value in the response.</p>
-     * <ul>
-     * <li><p>PL0 ESSD: 1 to 65536.</p>
-     * </li>
-     * <li><p>PL1 ESSD: 20 to 65536.</p>
-     * </li>
-     * <li><p>PL2 ESSD: 461 to 65536.</p>
-     * </li>
-     * <li><p>PL3 ESSD: 1261 to 65536.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li><p>Basic disk (cloud): 5 to 2000.</p>
-     * </li>
-     * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.</p>
-     * </li>
-     * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
-     * </li>
-     * <li><p>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</p>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</p>
-     * </blockquote>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -69,7 +14,7 @@ public class ResizeDiskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query available disk IDs.</p>
+     * <p>The disk ID. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,28 +24,20 @@ public class ResizeDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The new disk capacity. Unit: GiB. Valid values:</p>
+     * <p>The new disk capacity that you want to expand to. Unit: GiB. Valid values:</p>
      * <ul>
      * <li><p>System disk:</p>
      * <ul>
-     * <li><p>Basic disk (cloud): 20 to 500.</p>
-     * </li>
-     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</p>
-     * <ul>
-     * <li><p>Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.</p>
-     * </li>
-     * <li><p>Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.</p>
-     * </li>
-     * <li><p>Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.</p>
-     * </li>
-     * <li><p>Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.</p>
-     * </li>
+     * <li>Basic disk: 20 to 500.</li>
+     * <li>Enterprise SSD:<ul>
+     * <li>PL0: 1 to 2048.</li>
+     * <li>PL1: 20 to 2048.</li>
+     * <li>PL2: 461 to 2048.</li>
+     * <li>PL3: 1261 to 2048.</li>
      * </ul>
      * </li>
-     * <li><p>ESSD AutoPL disk: 1 to 2048.</p>
-     * </li>
-     * <li><p>Other disk categories: 20 to 2048.</p>
-     * </li>
+     * <li>ESSD AutoPL disk: 1 to 2048.</li>
+     * <li>Other disk types: 20 to 2048.</li>
      * </ul>
      * </li>
      * <li><p>Data disk:</p>
@@ -109,31 +46,30 @@ public class ResizeDiskRequest extends TeaModel {
      * </li>
      * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
      * </li>
-     * <li><p>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.\<code>\\</code> To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <code>PerformanceLevel</code> value in the response.</p>
+     * <li><p>Enterprise SSD (cloud_essd): The valid values depend on the value of <code>PerformanceLevel</code>. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk information and then check the valid values based on the <code>PerformanceLevel</code> parameter in the response.</p>
      * <ul>
-     * <li><p>PL0 ESSD: 1 to 65536.</p>
-     * </li>
-     * <li><p>PL1 ESSD: 20 to 65536.</p>
-     * </li>
-     * <li><p>PL2 ESSD: 461 to 65536.</p>
-     * </li>
-     * <li><p>PL3 ESSD: 1261 to 65536.</p>
-     * </li>
+     * <li>PL0: 1 to 65536.</li>
+     * <li>PL1: 20 to 65536.</li>
+     * <li>PL2: 461 to 65536.</li>
+     * <li>PL3: 1261 to 65536.</li>
      * </ul>
      * </li>
      * <li><p>Basic disk (cloud): 5 to 2000.</p>
      * </li>
-     * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.</p>
+     * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 65536.
+     * &lt;props=&quot;china&quot;&gt;</p>
      * </li>
-     * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
+     * <li><p>ESSD Entry disk (cloud_essd_entry): 10 to 32768.</p>
      * </li>
-     * <li><p>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</p>
+     * <li><p>Elastic ephemeral disk - Standard (elastic_ephemeral_disk_standard): 64 to 8,192.</p>
+     * </li>
+     * <li><p>Elastic ephemeral disk - Premium (elastic_ephemeral_disk_premium): 64 to 8,192.</p>
      * </li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</p>
+     * <p>The specified new disk capacity must be greater than the original disk capacity. Otherwise, an error is returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -156,11 +92,11 @@ public class ResizeDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The method that you want to use to resize the disk. Valid values:</p>
+     * <p>The method used to expand the disk. Valid values:</p>
      * <ul>
-     * <li><p>offline (default): resizes the disk offline. After resizing a disk offline, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the console or call an API operation <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> make the operation take effect.</p>
+     * <li><p>offline (default): offline expansion. After the expansion, you must restart the instance in the console by following the instructions in <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a> or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the changes to take effect.</p>
      * </li>
-     * <li><p>online: resizes the disk online without the need to restart the instance. You can resize ultra disks, standard SSDs, ESSDs, and elastic ephemeral disks online.</p>
+     * <li><p>online: online expansion. The expansion takes effect without restarting the instance. Supported disk types include ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</p>
      * </li>
      * </ul>
      * 

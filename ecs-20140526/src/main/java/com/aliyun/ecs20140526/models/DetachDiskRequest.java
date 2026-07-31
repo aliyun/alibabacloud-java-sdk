@@ -5,22 +5,17 @@ import com.aliyun.tea.*;
 
 public class DetachDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:</p>
+     * <p>Specifies whether to configure the automatic release attribute when detaching a system disk or data disk. This attribute determines whether the system disk or data disk is released together with the ECS instance.</p>
      * <ul>
-     * <li><p>true: releases the disk when the instance is released.</p>
-     * </li>
-     * <li><p>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</p>
-     * </li>
+     * <li>true: The disk is released together with the instance.</li>
+     * <li>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</li>
      * </ul>
      * <p>Default value: true.</p>
      * <p>Take note of the following items:</p>
      * <ul>
-     * <li><p>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</p>
-     * </li>
-     * <li><p>If a data disk is to be detached, the default value is <code>false</code>.</p>
-     * </li>
-     * <li><p>If you want to detach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</p>
-     * </li>
+     * <li>Disks with the multi-attach feature enabled do not support this parameter.</li>
+     * <li>If the disk to be detached is a data disk, the default value is <code>false</code>.</li>
+     * <li>If the disk to be detached is an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,11 +27,11 @@ public class DetachDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk that you want to detach.</p>
      * <ul>
-     * <li><p>The disk that you want to detach must be attached to an ECS instance and in the In Use (<code>In_use</code>) state.</p>
+     * <li><p>The disk must be attached to an instance and in the In Use (<code>In_use</code>) state.</p>
      * </li>
-     * <li><p>The instance from which you want to detach a data disk must be in the <code>Running</code> or <code>Stopped</code> state.</p>
+     * <li><p>When you detach a data disk, the instance to which the disk is attached must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</p>
      * </li>
-     * <li><p>The instance from which you want to detach the system disk must be in the <code>Stopped</code> state.</p>
+     * <li><p>When you detach a system disk, the instance to which the disk is attached must be in the Stopped (<code>Stopped</code>) state.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -48,7 +43,7 @@ public class DetachDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of the ECS instance from which you want to detach the disk.</p>
+     * <p>The ID of the ECS instance to which the disk to be detached is attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

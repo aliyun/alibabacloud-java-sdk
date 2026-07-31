@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallCloudAssistantRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The IDs of the instances. You can specify 1 to 50 instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class InstallCloudAssistantRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IDs of instances. You can specify up to 50 instance IDs in a single request.</p>
+     * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

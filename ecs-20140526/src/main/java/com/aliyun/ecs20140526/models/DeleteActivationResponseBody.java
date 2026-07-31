@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteActivationResponseBody extends TeaModel {
     /**
-     * <p>Details about the activation code and its usage information.</p>
+     * <p>The information about the activation code and its usage.</p>
      */
     @NameInMap("Activation")
     public DeleteActivationResponseBodyActivation activation;
@@ -42,7 +42,7 @@ public class DeleteActivationResponseBody extends TeaModel {
 
     public static class DeleteActivationResponseBodyActivation extends TeaModel {
         /**
-         * <p>The ID of the activation code.</p>
+         * <p>The activation code ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
@@ -51,7 +51,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String activationId;
 
         /**
-         * <p>The time when the activation code was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-20T06:00:00Z</p>
@@ -60,7 +60,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The number of instances that were deregistered.</p>
+         * <p>The number of deregistered instances.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -96,7 +96,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The IP addresses of the hosts that are allowed to use the activation code.</p>
+         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -105,7 +105,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         public String ipAddressRange;
 
         /**
-         * <p>The number of instances that were registered.</p>
+         * <p>The number of registered instances.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

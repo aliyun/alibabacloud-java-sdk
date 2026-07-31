@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesRequest extends TeaModel {
     /**
-     * <p>The allocation type of the reserved instances. Valid values:</p>
+     * <p>The allocation type. Valid values:</p>
      * <ul>
-     * <li><p>Normal: queries all reserved instances that belong to the current account.</p>
-     * </li>
-     * <li><p>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</p>
-     * </li>
+     * <li>Normal: queries reserved instances under the current account.</li>
+     * <li>Shared: queries reserved instances that have been shared between the current account and linked accounts.</li>
      * </ul>
      * <p>Default value: Normal.</p>
      * 
@@ -21,9 +19,9 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String allocationType;
 
     /**
-     * <p>The instance type of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+     * <p>The instance type that the reserved instance can be applied to. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. </p>
      * <blockquote>
-     * <p>Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</p>
+     * <p>This is the instance type selected when you purchased the reserved instance. During actual deduction, region-level reserved instances support size-flexible deduction within the same instance family.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +31,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The instance family of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+     * <p>The instance family that the reserved instance can be applied to. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g5</p>
@@ -42,12 +40,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>The reason why the reserved instance is locked. Valid values:</p>
+     * <p>The lock type. Valid values:</p>
      * <ul>
-     * <li><p>financial: The reserved instance is locked because the account has overdue payments or the service expires.</p>
-     * </li>
-     * <li><p>security: The reserved instance is locked due to security reasons.</p>
-     * </li>
+     * <li>financial: The account has an overdue payment or the service has expired.</li>
+     * <li>security: Locked for security reasons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,14 +53,11 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String lockReason;
 
     /**
-     * <p>The payment option of the reserved instance. Valid values:</p>
+     * <p>The payment type of the reserved instance. Valid values:</p>
      * <ul>
-     * <li><p>No Upfront</p>
-     * </li>
-     * <li><p>Partial Upfront</p>
-     * </li>
-     * <li><p>All Upfront</p>
-     * </li>
+     * <li>No Upfront: no upfront.</li>
+     * <li>Partial Upfront: partial upfront.</li>
+     * <li>All Upfront: all upfront.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +73,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number of the reserved instance list. Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +83,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +93,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the reserved instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +103,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of reserved instances. You can specify up to 100 IDs of reserved instances.</p>
+     * <p>The IDs of reserved instances. Array length: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>ri-bpzhex2ulpzf53****</p>
@@ -121,7 +114,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The name of the reserved instance.</p>
      * <blockquote>
-     * <p>Only exact search is supported.</p>
+     * <p>Only exact match is supported. Fuzzy match is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,12 +130,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scope level of the reserved instance. Valid values:</p>
+     * <p>The scope of the reserved instance. Valid values:</p>
      * <ul>
-     * <li><p>Region: regional</p>
-     * </li>
-     * <li><p>Zone: zonal</p>
-     * </li>
+     * <li>Region: regional.</li>
+     * <li>Zone: zonal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -152,7 +143,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The status of the reserved instances.</p>
+     * <p>The statuses of reserved instances.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -161,13 +152,13 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The tags of the reserved instance. You can specify up to 20 tags.</p>
+     * <p>The tags. Array length: 1 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
 
     /**
-     * <p>The zone ID of the reserved instance. This parameter is valid and required if you set Scope to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. This parameter is required and takes effect only when Scope is set to Zone. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-z</p>
@@ -326,9 +317,9 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</p>
+         * <p>The tag key of the reserved instance. The tag key cannot be an empty string and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
          * <blockquote>
-         * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -338,7 +329,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the reserved instance. The tag value cannot be empty and can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the reserved instance. The tag value cannot be an empty string and can be up to 128 characters in length. It cannot start with acs: and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

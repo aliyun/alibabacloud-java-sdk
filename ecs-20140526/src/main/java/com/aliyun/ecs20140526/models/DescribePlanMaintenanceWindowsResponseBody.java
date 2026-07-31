@@ -38,7 +38,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned under the current query conditions. This parameter is optional and may not be returned by default.</p>
+     * <p>The total number of entries that match the query conditions. This parameter is optional and may not be returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -144,7 +144,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The type of resources for which the O&amp;M window is configured.</p>
+         * <p>The resource type for which the O&amp;M window is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>Tag</p>
@@ -233,7 +233,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
 
     public static class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod extends TeaModel {
         /**
-         * <p>The type of the recurrence cycle. Valid values:</p>
+         * <p>The cycle type. Valid values:</p>
          * <ul>
          * <li>Daily: daily recurrence.</li>
          * <li>Weekly: weekly recurrence.</li>
@@ -246,7 +246,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The time ranges within the recurrence cycle of the O&amp;M window (in UTC).</p>
+         * <p>The time ranges within the recurring cycle of the O&amp;M window (UTC time zone).</p>
          */
         @NameInMap("RangeList")
         public java.util.List<DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriodRangeList> rangeList;
@@ -341,7 +341,7 @@ public class DescribePlanMaintenanceWindowsResponseBody extends TeaModel {
         public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTargetResource targetResource;
 
         /**
-         * <p>The recurrence cycle of the window.</p>
+         * <p>The recurring cycle of the window.</p>
          */
         @NameInMap("TimePeriod")
         public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod timePeriod;

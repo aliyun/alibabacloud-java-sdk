@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
     /**
-     * <p>The name of the key pair. The name must be unique. The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with http:// or https://. The name can contain characters that are categorized as letter in Unicode, including letters, Chinese characters, and digits. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the key pair. The name must be unique. The name must be 2 to 128 characters in length and must start with a letter, either uppercase or lowercase, or a Chinese character. It cannot start with http:// or https://. The name can contain characters that are classified as letters in Unicode, including letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ImportKeyPairRequest extends TeaModel {
 
     public static class ImportKeyPairRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>The tag key of the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -138,7 +138,7 @@ public class ImportKeyPairRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot contain http:// or https://.</p>
+         * <p>The tag value of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

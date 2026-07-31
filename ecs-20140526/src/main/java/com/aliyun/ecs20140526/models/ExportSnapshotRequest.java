@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ExportSnapshotRequest extends TeaModel {
     /**
-     * <p>The name of the destination OSS bucket. The bucket must be in the same region as the snapshot.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OssBucket")
@@ -15,7 +14,6 @@ public class ExportSnapshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the snapshot is located. You can call the <code>DescribeRegions</code> operation to query the latest region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -27,14 +25,10 @@ public class ExportSnapshotRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The name of the RAM role that authorizes ECS to export the snapshot. This role must grant ECS permission to write to the specified OSS bucket. If you omit this parameter, ECS uses its default service-linked role.</p>
-     */
     @NameInMap("RoleName")
     public String roleName;
 
     /**
-     * <p>The ID of the snapshot to export.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SnapshotId")

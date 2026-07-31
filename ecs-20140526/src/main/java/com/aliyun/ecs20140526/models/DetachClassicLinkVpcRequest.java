@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachClassicLinkVpcRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that resides in the classic network.</p>
+     * <p>The instance ID of the classic network type instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DetachClassicLinkVpcRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

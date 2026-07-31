@@ -7,7 +7,7 @@ public class ModifySnapshotCategoryRequest extends TeaModel {
     /**
      * <p>The snapshot type.</p>
      * <ul>
-     * <li>Archive: archive snapshot.</li>
+     * <li>Archive: archived snapshot</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,8 +29,8 @@ public class ModifySnapshotCategoryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The number of days for which the snapshot is retained. The retention period starts from the snapshot creation time (CreationTime). A standard snapshot must have been retained for at least 14 days after creation before it can be archived.</p>
-     * <p>Archive snapshots must be retained for at least 60 days. When the retention period of an archive snapshot is calculated, the retention period of the standard snapshot is deducted. If an archive snapshot is deleted before 60 days, you are charged for 60 days of archive storage. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</p>
+     * <p>The number of days for which the snapshot is retained. The retention period starts from the snapshot creation time (CreationTime). A standard snapshot can be archived only after it has been retained for at least 14 days since its creation.</p>
+     * <p>Archived snapshots must be retained for at least 60 days. When calculating the retention period of an archived snapshot, the time already retained as a standard snapshot is deducted. If an archived snapshot is deleted before 60 days, you are charged for 60 days of archive storage. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</p>
      * <p>Valid values: [74, 65536].</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the snapshot is permanently retained.</p>

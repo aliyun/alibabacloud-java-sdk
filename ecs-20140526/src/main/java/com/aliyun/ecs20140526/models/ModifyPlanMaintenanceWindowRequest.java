@@ -188,7 +188,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource type for the O&amp;M window configuration.</p>
+         * <p>The type of resource to which the O&amp;M window applies.</p>
          * 
          * <strong>example:</strong>
          * <p>Tag</p>
@@ -287,7 +287,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
 
     public static class ModifyPlanMaintenanceWindowRequestTimePeriod extends TeaModel {
         /**
-         * <p>The cycle type. Valid values: Daily and Weekly.</p>
+         * <p>The type of the cycle. Valid values: Daily and Weekly.</p>
          * 
          * <strong>example:</strong>
          * <p>Year</p>
@@ -296,7 +296,7 @@ public class ModifyPlanMaintenanceWindowRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The time ranges of the O&amp;M window recurring cycle (UTC time zone).</p>
+         * <p>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</p>
          */
         @NameInMap("RangeList")
         public java.util.List<ModifyPlanMaintenanceWindowRequestTimePeriodRangeList> rangeList;

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The auto provisioning groups.</p>
-     */
     @NameInMap("AutoProvisioningGroups")
     public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups autoProvisioningGroups;
 
@@ -38,7 +35,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of auto provisioning groups found.</p>
+     * <p>The total number of queried auto-provisioning groups.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

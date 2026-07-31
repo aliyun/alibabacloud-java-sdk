@@ -8,7 +8,7 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -26,7 +26,7 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The total number of instances for which you want to reserve capacity. Valid values: the number of created instances to 1000. This parameter is mutually exclusive with other parameters in the same request.</p>
+     * <p>The total number of instances to be reserved by the elasticity assurance. Valid values: number of used instances to 1000. This parameter cannot be modified together with other parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,16 +41,13 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The assurance schedules of the time-segmented elasticity assurance.</p>
-     * <blockquote>
-     * <p>Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
-     * </blockquote>
+     * <p>The list of recurrence rules for the time-sharing elasticity assurance.</p>
      */
     @NameInMap("RecurrenceRules")
     public java.util.List<ModifyElasticityAssuranceRequestRecurrenceRules> recurrenceRules;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -162,7 +159,7 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>eapTestName</p>
@@ -195,7 +192,7 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
 
     public static class ModifyElasticityAssuranceRequestRecurrenceRules extends TeaModel {
         /**
-         * <p>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+         * <p>The end time of the time-sharing assurance. The value must be on the hour.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -204,17 +201,14 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         public Integer endHour;
 
         /**
-         * <p>The type of the assurance schedule. Valid values:</p>
+         * <p>The policy type of the recurrence rule. Valid values:</p>
          * <ul>
-         * <li><p>Daily</p>
-         * </li>
-         * <li><p>Weekly</p>
-         * </li>
-         * <li><p>Monthly</p>
-         * </li>
+         * <li>Daily: repeats on a daily basis.</li>
+         * <li>Weekly: repeats on a weekly basis.</li>
+         * <li>Monthly: repeats on a monthly basis.</li>
          * </ul>
          * <blockquote>
-         * <p>If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -224,17 +218,14 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         public String recurrenceType;
 
         /**
-         * <p>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
+         * <p>The value of the recurrence rule.</p>
          * <ul>
-         * <li><p>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</p>
-         * </li>
-         * <li><p>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</p>
-         * </li>
-         * <li><p>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <code>1-5</code>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</p>
-         * </li>
+         * <li>If <code>RecurrenceType</code> is set to <code>Daily</code>, you can specify only one value. Valid values: 1 to 31. The value specifies the interval in days between recurrences.</li>
+         * <li>If <code>RecurrenceType</code> is set to <code>Weekly</code>, you can specify multiple values separated by commas (,). The values for Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> specifies Monday and Tuesday.</li>
+         * <li>If <code>RecurrenceType</code> is set to <code>Monthly</code>, the format is <code>A-B</code>. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> specifies the 1st to 5th day of each month.</li>
          * </ul>
          * <blockquote>
-         * <p>If this parameter is specified, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p>You must specify both <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,9 +235,9 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         public String recurrenceValue;
 
         /**
-         * <p>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
+         * <p>The effective period start time of the time-sharing assurance. The value must be on the hour.</p>
          * <blockquote>
-         * <p>You must specify both <code>StartHour</code> and <code>EndHour</code>. The EndHour value must be at least 4 hours later than the StartHour value.</p>
+         * <p>You must specify both <code>StartHour</code> and <code>EndHour</code>, and the difference between them must be at least 4 hours.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

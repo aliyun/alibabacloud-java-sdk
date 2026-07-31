@@ -8,8 +8,8 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The billing method of the instances. Only <code>PostPaid</code> (pay-as-you-go) is supported.</p>
-     * <p>Default value: <code>PostPaid</code>.</p>
+     * <p>The billing method of instances. Valid values: PostPaid. Only pay-as-you-go is supported.</p>
+     * <p>Default value: PostPaid.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -18,7 +18,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. You can use this parameter to query only active elasticity assurances. To query released elasticity assurances, you must use <code>PrivatePoolOptions.Ids</code>.</p>
+     * <p>The instance type. You can use the instance type to query only active elasticity assurance services. Released services can only be queried by using <code>PrivatePoolOptions.Ids</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -27,7 +27,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -38,7 +38,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token for the elasticity assurance service query. Obtain the value from the result of the previous request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -53,11 +53,11 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The type of the Elasticity Assurance. Valid values:</p>
+     * <p>The type of the elasticity assurance service. Valid values:</p>
      * <ul>
-     * <li><p><code>ElasticityAssurance</code>: a standard elasticity assurance. This type of elasticity assurance is created when you do not specify <code>RecurrenceRules</code>.</p>
+     * <li><p>ElasticityAssurance: standard elasticity assurance (used when RecurrenceRules is not specified).</p>
      * </li>
-     * <li><p><code>TimeDivisionElasticityAssurance</code>: a time-division elasticity assurance. This type of elasticity assurance is created when you specify <code>RecurrenceRules</code>.</p>
+     * <li><p>TimeDivisionElasticityAssurance: time-division elasticity assurance (used when RecurrenceRules is specified).</p>
      * </li>
      * </ul>
      * 
@@ -79,7 +79,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The ID of the region where the Elasticity Assurance is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The ID of the region to which the elasticity assurance service belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. When you use this parameter to filter resources, the number of matching resources cannot exceed 1,000.</p>
+     * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -107,22 +107,16 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the Elasticity Assurance. Valid values:</p>
+     * <p>The status of the elasticity assurance service. Valid values:</p>
      * <ul>
-     * <li><p><code>All</code>: all statuses.</p>
-     * </li>
-     * <li><p><code>Deactivated</code>: The Elasticity Assurance is pending activation. This status is available only for invitational preview.</p>
-     * </li>
-     * <li><p><code>Preparing</code>: The Elasticity Assurance is being prepared.</p>
-     * </li>
-     * <li><p><code>Prepared</code>: The Elasticity Assurance is ready to take effect.</p>
-     * </li>
-     * <li><p><code>Active</code>: The Elasticity Assurance is active.</p>
-     * </li>
-     * <li><p><code>Released</code>: The Elasticity Assurance is released.</p>
-     * </li>
+     * <li>All: all states.</li>
+     * <li>Deactived: pending activation (this state is in invitational preview).</li>
+     * <li>Preparing: being prepared.</li>
+     * <li>Prepared: pending effectiveness.</li>
+     * <li>Active: active.</li>
+     * <li>Released: released.</li>
      * </ul>
-     * <p>If you do not specify this parameter, elasticity assurances in all states are returned, except for those in the <code>Pending</code> and <code>Released</code> states.</p>
+     * <p>If you do not specify this parameter, elasticity assurance services in all states except Pending and Released are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -131,13 +125,13 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags used to filter Elasticity Assurances.</p>
+     * <p>The list of tag key-value pairs bound to the elasticity assurance service.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeElasticityAssurancesRequestTag> tag;
 
     /**
-     * <p>The ID of the zone where the Elasticity Assurance is located.</p>
+     * <p>The zone ID in the region to which the elasticity assurance service belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -280,7 +274,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
 
     public static class DescribeElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The IDs of the elasticity assurances. You can specify a JSON array of up to 100 elasticity assurance IDs.</p>
+         * <p>The list of elasticity assurance service IDs. The value can be a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;eap-bp67acfmxazb4****&quot;, &quot;eap-bp67acfmxazb5****&quot;]</p>
@@ -305,8 +299,8 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
 
     public static class DescribeElasticityAssurancesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify up to 20 tag keys to filter resources.</p>
-         * <p>The query returns a maximum of 1,000 resources that match the specified tags. If more than 1,000 resources match the tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query all the resources.</p>
+         * <p>The tag key. N indicates that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -315,7 +309,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values.</p>
+         * <p>The tag value. N indicates that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

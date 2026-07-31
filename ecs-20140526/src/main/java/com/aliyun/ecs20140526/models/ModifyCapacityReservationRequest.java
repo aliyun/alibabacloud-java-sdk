@@ -8,7 +8,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -17,7 +17,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The expiration time of the capacity reservation. This parameter takes effect only when <code>EndTimeType</code> is set to Limited. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * <p>The expiration time of the capacity reservation. This parameter takes effect only when <code>EndTimeType=Limited</code>. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-30T06:32:00Z</p>
@@ -26,12 +26,10 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The release mode of the capacity reservation. Valid values:</p>
+     * <p>The expiration method of the capacity reservation. Valid values:</p>
      * <ul>
-     * <li><p>Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure <code>EndTime</code>.</p>
-     * </li>
-     * <li><p>Unlimited: The capacity reservation must be manually released. You can release it anytime.</p>
-     * </li>
+     * <li>Limited: The capacity reservation is released at a specified time. You must also specify the <code>EndTime</code> parameter.</li>
+     * <li>Unlimited: The capacity reservation is released by manual release. No time limit is imposed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,9 +39,9 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String endTimeType;
 
     /**
-     * <p>The total number of instances for which capacity is reserved. Valid values: the number of used instances to 1000.</p>
+     * <p>The total number of instances that the capacity reservation needs to reserve. Valid values: the number of used instances to 1000.</p>
      * <blockquote>
-     * <p>When you increase the number of instances, the increase may fail due to insufficient resources.</p>
+     * <p>When you increase the total number of instances, the operation may fail due to insufficient inventory.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,15 +57,13 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operating system of the image used by the instance. Valid values:</p>
+     * <p>The operating system type of the image used by the instance. Valid values:</p>
      * <ul>
-     * <li><p>Windows</p>
-     * </li>
-     * <li><p>Linux</p>
-     * </li>
+     * <li>Windows: Windows Server operating system.</li>
+     * <li>Linux: Linux and Unix-like operating system.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is unavailable.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,7 +73,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the capacity reservation resides. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,9 +89,9 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The mode in which the capacity reservation takes effect. Only immediate capacity reservations are supported. You do not need to specify a value for this parameter.</p>
+     * <p>The method by which the capacity reservation takes effect. Currently, only immediate activation is supported, and you do not need to specify a value for this parameter.</p>
      * <blockquote>
-     * <p>If you do not specify a value for this parameter, the capacity reservation immediately takes effect.</p>
+     * <p>If you leave this parameter empty, the capacity reservation takes effect immediately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -207,7 +203,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
 
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The capacity reservation ID.</p>
+         * <p>The ID of the capacity reservation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +213,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>eapTestName</p>

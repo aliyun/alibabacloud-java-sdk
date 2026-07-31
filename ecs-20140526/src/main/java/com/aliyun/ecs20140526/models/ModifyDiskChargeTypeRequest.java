@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values: </p>
      * <ul>
-     * <li><p>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</p>
-     * </li>
-     * <li><p>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</p>
-     * </li>
+     * <li>true (default): Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated, and you can only void the order. </li>
+     * <li>false: An order is generated without automatic payment. If your account balance is insufficient, an unpaid order is generated. You can log on to the Alibaba Cloud <strong>Expenses and Costs</strong> console and go to the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page to complete the payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -29,15 +27,13 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The new billing method of the disk. Valid values:</p>
+     * <p>The billing method of the disk. Valid values: </p>
      * <ul>
-     * <li><p>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</p>
-     * </li>
-     * <li><p>PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
-     * </li>
+     * <li>PrePaid (default): The pay-as-you-go data disk is converted to a subscription data disk. </li>
+     * <li>PostPaid: The subscription data disk is converted to a pay-as-you-go data disk.</li>
      * </ul>
      * <blockquote>
-     * <p>When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</p>
+     * <p>When you convert a pay-as-you-go disk to subscription, the billing cycle of the capacity fee is automatically synchronized with the associated ECS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +43,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public String diskChargeType;
 
     /**
-     * <p>The IDs of disks. The value is a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The list of disk IDs. The value is a JSON array that contains up to 16 IDs separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +53,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public String diskIds;
 
     /**
-     * <p>The ID of the instance to which disks are attached.</p>
+     * <p>The instance ID of the instance to which the disk is attached.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +69,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     /**
-     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client token used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -24,7 +24,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 Classless Inter-Domain Routing (CIDR) block.</p>
+     * <p>Deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/8</p>
@@ -44,7 +44,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String destGroupId;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.DestGroupOwnerAccount</code> to specify the Alibaba Cloud account that manages the destination security group.</p>
+     * <p>Deprecated. Use <code>Permissions.N.DestGroupOwnerAccount</code> to specify the Alibaba Cloud account that owns the destination security group.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
@@ -54,7 +54,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String destGroupOwnerAccount;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.DestGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that manages the destination security group.</p>
+     * <p>Deprecated. Use <code>Permissions.N.DestGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that owns the destination security group.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
@@ -64,7 +64,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public Long destGroupOwnerId;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.DestPrefixListId</code> to specify the source prefix list ID.</p>
+     * <p>Deprecated. Use <code>Permissions.N.DestPrefixListId</code> to specify the destination prefix list ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-x1j1k5ykzqlixdcy****</p>
@@ -84,7 +84,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 Classless Inter-Domain Routing (CIDR) block.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:db8:1233:1a00::***</p>
@@ -126,7 +126,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public java.util.List<AuthorizeSecurityGroupEgressRequestPermissions> permissions;
 
     /**
-     * <p>Deprecated. Use <code>Permissions.N.Policy</code> to configure the access permission settings.</p>
+     * <p>Deprecated. Use <code>Permissions.N.Policy</code> to configure the access permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>accept</p>
@@ -416,7 +416,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination IPv4 Classless Inter-Domain Routing (CIDR) block for which you want to configure access permission settings. Both CIDR format and IPv4 format address ranges are supported.</p>
+         * <p>The destination IPv4 CIDR block for which you want to configure access permissions. CIDR format and IPv4 format IP address ranges are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/8</p>
@@ -425,9 +425,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String destCidrIp;
 
         /**
-         * <p>The ID of the destination security group for which you want to set access permissions.</p>
+         * <p>The ID of the destination security group for which you want to configure access permissions.</p>
          * <ul>
-         * <li><p>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestPrefixListId</code>.</p>
+         * <li><p>Specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestPrefixListId</code>.</p>
          * </li>
          * <li><p>If <code>DestGroupId</code> is specified but <code>DestCidrIp</code> is not, the <code>NicType</code> parameter can only be set to intranet.</p>
          * </li>
@@ -442,9 +442,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String destGroupId;
 
         /**
-         * <p>The Alibaba Cloud account that manages the destination security group when you configure a cross-account security group rule settings. </p>
+         * <p>The Alibaba Cloud account that owns the destination security group when you configure cross-account security group rules. </p>
          * <ul>
-         * <li>If neither <code>DestGroupOwnerAccount</code> nor <code>DestGroupOwnerId</code> is specified, the access permissions are configured for another security group within your account.</li>
+         * <li>If neither <code>DestGroupOwnerAccount</code> nor <code>DestGroupOwnerId</code> parameter is specified, the rule is configured for access permissions to another security group within your account.</li>
          * <li>If the <code>DestCidrIp</code> parameter is specified, the <code>DestGroupOwnerAccount</code> parameter is ignored.</li>
          * </ul>
          * 
@@ -455,9 +455,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String destGroupOwnerAccount;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that manages the destination security group when you configure a cross-account security group rule settings. </p>
+         * <p>The ID of the Alibaba Cloud account that owns the destination security group when you configure cross-account security group rules. </p>
          * <ul>
-         * <li>If neither <code>DestGroupOwnerId</code> nor <code>DestGroupOwnerAccount</code> is specified, the access permissions are configured for another security group within your account.</li>
+         * <li>If neither <code>DestGroupOwnerId</code> nor <code>DestGroupOwnerAccount</code> parameter is specified, the rule is configured for access permissions to another security group within your account.</li>
          * <li>If the <code>DestCidrIp</code> parameter is specified, the <code>DestGroupOwnerId</code> parameter is ignored.</li>
          * </ul>
          * 
@@ -468,7 +468,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public Long destGroupOwnerId;
 
         /**
-         * <p>The ID of the destination prefix list for which you want to set access permissions. You can call <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</p>
+         * <p>The ID of the destination prefix list for which you want to configure access permissions. You can call <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</p>
          * <p>Notes:</p>
          * <p>If you specify one of the <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code> parameters, this parameter is ignored.</p>
          * <p>For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</p>
@@ -511,7 +511,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The destination IPv6 Classless Inter-Domain Routing (CIDR) block for which you want to configure access permission settings. Both CIDR format and IPv6 format address ranges are supported.</p>
+         * <p>The destination IPv6 CIDR block for which you want to configure access permissions. CIDR format and IPv6 format IP address ranges are supported.</p>
          * <blockquote>
          * <p>This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and <code>DestCidrIp</code> cannot be specified at the same time.</p>
          * </blockquote>
@@ -523,7 +523,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String ipv6DestCidrIp;
 
         /**
-         * <p>The source IPv6 CIDR block. Both CIDR format and IPv6 format address ranges are supported. </p>
+         * <p>The source IPv6 CIDR block. CIDR blocks and IPv6 address ranges are supported. </p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
          * <p>This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and <code>DestCidrIp</code> cannot be specified at the same time.</p>
@@ -536,12 +536,12 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The network interface controller (NIC) type settings for a classic network security group rule. Valid values: </p>
+         * <p>The network interface controller (NIC) type of the security group rule for classic network type security groups. Valid values: </p>
          * <ul>
-         * <li>internet: public network interface controller (NIC).</li>
-         * <li>intranet: internal network interface controller (NIC).<ul>
-         * <li>For VPC-type security group rules, you do not need to configure the network interface controller (NIC) type settings. The default value is intranet.</li>
-         * <li>When you configure security groups to access each other, meaning only the DestGroupId parameter is specified, the value can only be intranet.</li>
+         * <li>internet: public NIC.</li>
+         * <li>intranet: internal network NIC.<ul>
+         * <li>For VPC-type security group rules, the network interface controller (NIC) type does not need to be specified and the parameter can only be set to intranet.</li>
+         * <li>When configuring mutual access between security groups (only the DestGroupId parameter is specified), the value can only be intranet.</li>
          * </ul>
          * </li>
          * </ul>
@@ -554,10 +554,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String nicType;
 
         /**
-         * <p>The access permission settings. Valid values: </p>
+         * <p>The access permission. Valid values: </p>
          * <ul>
          * <li>accept: Accepts access.</li>
-         * <li>drop: Denies access and does not return a deny message. The request times out or a timeout error similar to a connection failure is returned.</li>
+         * <li>drop: Denies access without returning a deny response. The request appears to timeout or the connection cannot be established.</li>
          * </ul>
          * <p>Default value: accept.</p>
          * 
@@ -568,9 +568,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The range of destination ports that correspond to the protocol for the security group. Valid values:</p>
+         * <p>The range of destination ports that correspond to the protocol. Valid values:</p>
          * <ul>
-         * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+         * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
          * <li>ICMP: -1/-1.</li>
          * <li>GRE: -1/-1.</li>
          * <li>ALL: -1/-1.</li>
@@ -584,10 +584,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
 
         /**
          * <p>The port list ID.
-         * You can invoke <code>DescribePortRangeLists</code> to query available port list IDs.</p>
+         * You can call <code>DescribePortRangeLists</code> to query available port list IDs.</p>
          * <ul>
-         * <li>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</li>
-         * <li>Port lists are not supported for classic network security group settings. For more information about security group and port list limits, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
+         * <li>If <code>Permissions.N.PortRange</code> is specified, this parameter is ignored.</li>
+         * <li>Port lists are not supported for security groups with the classic network type. For more information about security group and port list limits, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -597,7 +597,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String portRangeListId;
 
         /**
-         * <p>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 100.</p>
+         * <p>The priority of the security group rule. A smaller number indicates a higher priority. Valid values: 1 to 100.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -607,7 +607,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String priority;
 
         /**
-         * <p>The source IPv4 CIDR block. Both CIDR format and IPv4 format address ranges are supported.</p>
+         * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 address ranges are supported.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
@@ -617,9 +617,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The range of source ports that correspond to the protocol for the security group. Valid values:</p>
+         * <p>The range of source ports that correspond to the protocol. Valid values:</p>
          * <ul>
-         * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</li>
+         * <li>TCP/UDP: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</li>
          * <li>ICMP: -1/-1.</li>
          * <li>GRE: -1/-1.</li>
          * <li>ALL: -1/-1.</li>

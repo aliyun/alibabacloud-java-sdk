@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachInstanceRamRoleRequest extends TeaModel {
     /**
-     * <p>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</p>
+     * <p>The instance IDs of the instances from which to detach the RAM role. Array length: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DetachInstanceRamRoleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the instance RAM role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation of RAM to query the names of available instance RAM roles.</p>
+     * <p>The name of the instance RAM role to detach. You can call the RAM API <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> to query the names of instance RAM roles that you have created.</p>
      * 
      * <strong>example:</strong>
      * <p>RamRoleTest</p>
@@ -27,7 +27,7 @@ public class DetachInstanceRamRoleRequest extends TeaModel {
     public String ramRoleName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

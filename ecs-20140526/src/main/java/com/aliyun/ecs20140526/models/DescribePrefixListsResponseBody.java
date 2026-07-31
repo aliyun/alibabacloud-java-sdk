@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListsResponseBody extends TeaModel {
     /**
-     * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
+     * <p>The pagination token returned in this call. If the return value is empty, no more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>

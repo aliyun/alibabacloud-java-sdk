@@ -8,7 +8,7 @@ public class RemoveTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region to which the resource belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class RemoveTagsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource from which you want to unbind tags. For example, when the resource type (ResourceType) is instance, the resource ID is the instance ID.</p>
+     * <p>The ID of the resource from which you want to unbind tags. For example, when ResourceType is set to instance, ResourceId refers to the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,12 @@ public class RemoveTagsRequest extends TeaModel {
      * <p>The type of the resource. Valid values:</p>
      * <ul>
      * <li>instance: ECS instance.</li>
-     * <li>disk: disk.</li>
+     * <li>disk: cloud disk.</li>
      * <li>snapshot: snapshot.</li>
      * <li>image: image.</li>
      * <li>securitygroup: security group.</li>
      * <li>volume: storage volume.</li>
-     * <li>eni: elastic network interface (ENI).</li>
+     * <li>eni: Elastic Network Interface (ENI).</li>
      * <li>ddh: dedicated host.</li>
      * <li>keypair: SSH key pair.</li>
      * <li>launchtemplate: launch template.</li>
@@ -59,7 +59,7 @@ public class RemoveTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
@@ -127,7 +127,7 @@ public class RemoveTagsRequest extends TeaModel {
 
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string once specified. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -136,7 +136,7 @@ public class RemoveTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string once specified. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

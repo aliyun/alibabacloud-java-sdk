@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the OSS storage plan list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
 
     /**
-     * <p>The total number of OSS storage plans.</p>
+     * <p>The total number of OSS storage plans returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

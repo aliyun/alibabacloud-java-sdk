@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyCommandRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is no longer used and does not take effect.</p>
+     * <p>This parameter is deprecated and does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String commandContent;
 
     /**
-     * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+     * <p>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyCommandRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+     * <p>The bootstrap program for script execution. The value can be up to 1 KB in length.</p>
      * 
      * <strong>example:</strong>
      * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
@@ -59,7 +59,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.</p>
+     * <p>The maximum timeout period for the command to run on ECS instances. Unit: seconds. If the command cannot be completed within the specified timeout period, the command process is forcefully terminated by canceling the PID of the command.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -84,7 +84,7 @@ public class ModifyCommandRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>The working directory of the command. The value can be up to 200 characters in length.</p>
+     * <p>The execution path. The path can be up to 200 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>/home/</p>

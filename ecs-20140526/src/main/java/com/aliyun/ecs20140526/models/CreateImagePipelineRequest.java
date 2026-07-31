@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImagePipelineRequest extends TeaModel {
     /**
-     * <p>The IDs of the Alibaba Cloud accounts to share the destination images with. You can specify up to 20 account IDs.</p>
+     * <p>The Alibaba Cloud account ID to which to share the destination image through image sharing. Valid values of N: 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -14,21 +14,13 @@ public class CreateImagePipelineRequest extends TeaModel {
     public java.util.List<Long> addAccount;
 
     /**
-     * <p>The advanced settings.</p>
+     * <p>The advanced configuration.</p>
      */
     @NameInMap("AdvancedOptions")
     public CreateImagePipelineRequestAdvancedOptions advancedOptions;
 
     /**
-     * <p>The base image. The value of this parameter varies based on the value of <code>BaseImageType</code>:</p>
-     * <ul>
-     * <li><p>If <code>BaseImageType</code> is <code>IMAGE</code>, specify the ID of the base image.</p>
-     * </li>
-     * <li><p>If <code>BaseImageType</code> is <code>IMAGE_FAMILY</code>, specify the name of the base image family.</p>
-     * </li>
-     * <li><p>If <code>BaseImageType</code> is <code>OSS</code>, this parameter is not required.</p>
-     * </li>
-     * </ul>
+     * <p>The source image.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp67acfmxazb4p****</p>
@@ -37,15 +29,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String baseImage;
 
     /**
-     * <p>The type of the base image. Valid values:</p>
-     * <ul>
-     * <li><p>IMAGE: An ECS image.</p>
-     * </li>
-     * <li><p>IMAGE_FAMILY: An image family.</p>
-     * </li>
-     * <li><p>OSS: An OSS object.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the source image. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +39,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String baseImageType;
 
     /**
-     * <p>The content of the image build template. The content can be up to 16 KB in size. For more information about the supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Command reference for Image Builder</a>.</p>
+     * <p>The content of the image build template. The content size cannot exceed 16 KB. For information about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>COMPONENT ic-bp12dvdzvr9k9*****
@@ -65,7 +49,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String buildContent;
 
     /**
-     * <p>A client-generated, globally unique token to ensure the idempotence of the request. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -74,17 +58,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Determines whether to release the intermediate instance when the image build fails. Valid values:</p>
-     * <ul>
-     * <li><p>true: The instance is released.</p>
-     * </li>
-     * <li><p>false: The instance is not released.</p>
-     * </li>
-     * </ul>
-     * <p>Default value: true.</p>
-     * <blockquote>
-     * <p>If an intermediate instance cannot be started, it is not retained by default.</p>
-     * </blockquote>
+     * <p>Specifies whether to release the intermediate instance if the image build fails. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +67,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Boolean deleteInstanceOnFailure;
 
     /**
-     * <p>The description of the image pipeline template. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is description.</p>
@@ -102,10 +76,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the destination image family.</p>
-     * <blockquote>
-     * <p>Notice: This parameter is deprecated. Use <code>ImageOptions.ImageFamily</code> instead.</p>
-     * </blockquote>
+     * <p>The destination image family.</p>
      * 
      * <strong>example:</strong>
      * <p>family</p>
@@ -116,9 +87,6 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     /**
      * <p>The prefix of the destination image name.</p>
-     * <blockquote>
-     * <p>Notice: This parameter is deprecated. Use <code>ImageOptions.ImageName</code> instead.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>testImageName</p>
@@ -128,20 +96,19 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The properties of the destination image.</p>
+     * <p>The destination image properties.</p>
      */
     @NameInMap("ImageOptions")
     public CreateImagePipelineRequestImageOptions imageOptions;
 
     /**
-     * <p>The settings for importing an image. This parameter is required when <code>BaseImageType</code> is set to <code>OSS</code>.</p>
+     * <p>The properties and settings for importing the image. This parameter is required when <code>BaseImageType=OSS</code>.</p>
      */
     @NameInMap("ImportImageOptions")
     public CreateImagePipelineRequestImportImageOptions importImageOptions;
 
     /**
-     * <p>The instance type of the intermediate instance. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query instance types.</p>
-     * <p>If you do not specify this parameter, the system automatically selects an instance type with the minimum vCPUs and memory, subject to inventory. For example, <code>ecs.g6.large</code> is selected by default. If <code>ecs.g6.large</code> is out of stock, <code>ecs.g6.xlarge</code> is selected.</p>
+     * <p>The instance type. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query available instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -151,7 +118,6 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     /**
      * <p>The outbound public bandwidth of the intermediate instance. Unit: Mbit/s. Valid values: 0 to 100.</p>
-     * <p>Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -160,10 +126,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>The name of the image pipeline. It must be 2 to 128 characters long, start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>. Allowed characters include letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <blockquote>
-     * <p>If you do not specify this parameter, the value of <code>ImagePipelineId</code> is used as the name.</p>
-     * </blockquote>
+     * <p>The template name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot start with <code>http://</code> or <code>https://</code>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>testImagePipeline</p>
@@ -173,9 +136,6 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the destination image supports NVMe.</p>
-     * <blockquote>
-     * <p>Notice: This parameter is deprecated. Use <code>ImageOptions.ImageFeatures.NvmeSupport</code> instead.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -191,7 +151,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -200,42 +160,11 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RepairItem")
+    public java.util.List<String> repairItem;
+
     /**
-     * <p>The image repair mode in the image template.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Standard: The standard mode.</p>
-     * <p>The check items for Linux systems include the following:</p>
-     * <ul>
-     * <li><p>GUESTOS.CloudInit</p>
-     * </li>
-     * <li><p>GUESTOS.Dhcp</p>
-     * </li>
-     * <li><p>GUESTOS.Virtio</p>
-     * </li>
-     * <li><p>GUESTOS.OnlineResizeFS</p>
-     * </li>
-     * <li><p>GUESTOS.Grub</p>
-     * </li>
-     * <li><p>GUESTOS.Fstab</p>
-     * </li>
-     * </ul>
-     * <p>The check items for Windows systems include the following:</p>
-     * <ul>
-     * <li><p>GUESTOS.Virtio</p>
-     * </li>
-     * <li><p>GUESTOS.Update</p>
-     * </li>
-     * <li><p>GUESTOS.Hotfix</p>
-     * </li>
-     * <li><p>GUESTOS.Server</p>
-     * </li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>The repair items may change as the check and repair capabilities are improved. For more information about each repair item, see <a href="https://help.aliyun.com/document_detail/439819.html">Image check overview</a>.</p>
-     * </blockquote>
+     * <p>The repair options in the image template.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -244,7 +173,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String repairMode;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the enterprise resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -259,8 +188,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The size of the system disk of the intermediate instance. Unit: GiB. Valid values: 20 to 500.</p>
-     * <p>Default value: 40.</p>
+     * <p>The system disk size of the intermediate instance. Unit: GiB. Valid values: 20 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -269,13 +197,13 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Integer systemDiskSize;
 
     /**
-     * <p>The tags to add to the image pipeline.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateImagePipelineRequestTag> tag;
 
     /**
-     * <p>The content of the image test template. The content can be up to 16 KB in size. For more information about the supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Command reference for Image Builder</a>.</p>
+     * <p>The content of the image test template. The content size cannot exceed 16 KB. For information about supported commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>COMPONENT ic-bp12dvdzvr9k9*****
@@ -285,8 +213,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String testContent;
 
     /**
-     * <p>The IDs of destination regions for image distribution. You can specify up to 20 region IDs.</p>
-     * <p>If you do not specify this parameter, the images are created only in the current region.</p>
+     * <p>The regions to which to distribute the destination image. Valid values of N: 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -295,8 +222,7 @@ public class CreateImagePipelineRequest extends TeaModel {
     public java.util.List<String> toRegionId;
 
     /**
-     * <p>The ID of the VSwitch in the VPC that is used to launch the intermediate instance.</p>
-     * <p>If you do not specify this parameter, a new VPC and VSwitch are created. Ensure that you have a sufficient quota of VPC resources. For more information, see <a href="https://help.aliyun.com/document_detail/27750.html">Usage limits</a>.</p>
+     * <p>The vSwitch ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp67acfmxazb4p****</p>
@@ -464,6 +390,14 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateImagePipelineRequest setRepairItem(java.util.List<String> repairItem) {
+        this.repairItem = repairItem;
+        return this;
+    }
+    public java.util.List<String> getRepairItem() {
+        return this.repairItem;
+    }
+
     public CreateImagePipelineRequest setRepairMode(String repairMode) {
         this.repairMode = repairMode;
         return this;
@@ -538,10 +472,7 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestAdvancedOptions extends TeaModel {
         /**
-         * <p>Specifies whether to disable the feature that automatically appends a suffix to the destination image name. Valid values:</p>
-         * <ul>
-         * <li>disable: Disables the feature.</li>
-         * </ul>
+         * <p>Specifies whether to disable the automatic suffix for the destination image name. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>disable</p>
@@ -550,17 +481,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String imageNameSuffix;
 
         /**
-         * <p>Specifies whether to retain Cloud Assistant in the destination image. During the image building process, Cloud Assistant is automatically installed on the intermediate instance to run commands. You can select whether to retain Cloud Assistant after the process is complete. Valid values:</p>
-         * <ul>
-         * <li><p>true: Retain Cloud Assistant.</p>
-         * </li>
-         * <li><p>false: Do not retain Cloud Assistant.</p>
-         * </li>
-         * </ul>
-         * <p>Default value: false.</p>
-         * <blockquote>
-         * <p>This setting does not affect the Cloud Assistant client that is already installed in your image.</p>
-         * </blockquote>
+         * <p>Specifies whether to retain Cloud Assistant. During the build process, the system automatically installs Cloud Assistant on the intermediate instance to run commands. You can choose whether to retain Cloud Assistant in the destination image. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -594,14 +515,6 @@ public class CreateImagePipelineRequest extends TeaModel {
     public static class CreateImagePipelineRequestImageOptionsImageFeatures extends TeaModel {
         /**
          * <p>Specifies whether the destination image supports NVMe. Valid values:</p>
-         * <ul>
-         * <li><p>supported: Instances created from this image support the NVMe protocol.</p>
-         * </li>
-         * <li><p>unsupported: Instances created from this image do not support the NVMe protocol.</p>
-         * </li>
-         * <li><p>auto: The system automatically checks whether the NVMe driver is installed on your image. This check is performed before the build phase. If you install or uninstall the NVMe driver during the build, the result may be inaccurate. We recommend that you set this parameter to supported or unsupported based on the build content.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
@@ -626,7 +539,7 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestImageOptionsImageTags extends TeaModel {
         /**
-         * <p>The key of the tag. The tag key must be 1 to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -635,7 +548,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. The tag value can be empty or up to 128 characters long. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -668,7 +581,7 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestImageOptions extends TeaModel {
         /**
-         * <p>The description of the destination image. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>This is description.</p>
@@ -677,7 +590,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the destination image family. The name must be 2 to 128 characters long and start with a letter or a Chinese character. It cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>. Allowed characters include letters, digits, Chinese characters, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The destination image family. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot start with aliyun or acs:. The name cannot contain http:// or https://. The name can contain digits, colons (:), underscores (_), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>family</p>
@@ -686,14 +599,13 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String imageFamily;
 
         /**
-         * <p>The feature attributes of the destination image.</p>
+         * <p>The feature properties of the destination image.</p>
          */
         @NameInMap("ImageFeatures")
         public CreateImagePipelineRequestImageOptionsImageFeatures imageFeatures;
 
         /**
-         * <p>The prefix of the destination image name. The prefix must be 2 to 64 characters in length. It must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-         * <p>The complete image name is automatically generated by concatenating the prefix and the build task ID (<code>ExecutionId</code>) in the <code>{ImageName}_{ExecutionId}</code> format.</p>
+         * <p>The prefix of the destination image name. The name must be 2 to 64 characters in length and must start with a letter or a Chinese character. The name cannot start with <code>http://</code> or <code>https://</code>. The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testImageName</p>
@@ -756,15 +668,7 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings extends TeaModel {
         /**
-         * <p>The size of the disk to create from the image file, in GiB. For the system disk, this value must be greater than or equal to the size of the image file.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>When N is 1, the disk is the system disk. The size of the system disk can range from 1 GiB to 2,048 GiB.</p>
-         * </li>
-         * <li><p>When N is a value from 2 to 17, the disk is a data disk. The size of a data disk can range from 1 GiB to 2,048 GiB.</p>
-         * </li>
-         * </ul>
-         * <p>After you upload the base image file to an OSS bucket, you can view the size of the image file in the bucket.</p>
+         * <p>The size of the custom image after the image is imported.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -773,16 +677,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public Integer diskImageSize;
 
         /**
-         * <p>The format of the image. Valid values:</p>
-         * <ul>
-         * <li><p>RAW</p>
-         * </li>
-         * <li><p>VHD</p>
-         * </li>
-         * <li><p>QCOW2</p>
-         * </li>
-         * </ul>
-         * <p>Default value: If left empty, the system automatically detects the image format.</p>
+         * <p>The image format. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>RAW</p>
@@ -791,7 +686,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The OSS bucket that contains the image file.</p>
+         * <p>The OSS bucket in which the image file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>ecsimageos</p>
@@ -800,7 +695,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String OSSBucket;
 
         /**
-         * <p>The name (key) of the image file that is stored in the OSS bucket.</p>
+         * <p>The name (key) of the image file stored in the OSS bucket after the image is uploaded.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS_5.4_32.raw</p>
@@ -852,14 +747,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String imdsSupport;
 
         /**
-         * <p>Specifies whether the base image to be imported supports NVMe. Valid values:</p>
-         * <ul>
-         * <li><p>supported: Instances created from this image support the NVMe protocol.</p>
-         * </li>
-         * <li><p>unsupported: Instances created from this image do not support the NVMe protocol.</p>
-         * </li>
-         * </ul>
-         * <p>Default value: unsupported.</p>
+         * <p>Specifies whether the imported source image supports NVMe. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>supported</p>
@@ -922,14 +810,7 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestImportImageOptions extends TeaModel {
         /**
-         * <p>The architecture of the image to import. Valid values:</p>
-         * <ul>
-         * <li><p>x86_64</p>
-         * </li>
-         * <li><p>arm64</p>
-         * </li>
-         * </ul>
-         * <p>Default value: x86_64.</p>
+         * <p>The system architecture of the system disk. You must specify this parameter when you use a data disk snapshot to create a system disk image. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -939,17 +820,6 @@ public class CreateImagePipelineRequest extends TeaModel {
 
         /**
          * <p>The boot mode of the image. Valid values:</p>
-         * <ul>
-         * <li><p>BIOS: BIOS boot mode.</p>
-         * </li>
-         * <li><p>UEFI: UEFI boot mode.</p>
-         * </li>
-         * </ul>
-         * <p>Default value: BIOS. If <code>Architecture</code> is set to <code>arm64</code>, the default value is UEFI and this parameter can be set only to UEFI.</p>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>To prevent startup failures, ensure the boot mode is supported by the image.</p>
          * 
          * <strong>example:</strong>
          * <p>BIOS</p>
@@ -961,19 +831,13 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The information about the disks of the custom image.</p>
-         * <ul>
-         * <li><p>When N is 1, the disk is a system disk.</p>
-         * </li>
-         * <li><p>When N is a value from 2 to 17, the disk is a data disk.</p>
-         * </li>
-         * </ul>
+         * <p>The information about the custom images.</p>
          */
         @NameInMap("DiskDeviceMappings")
         public java.util.List<CreateImagePipelineRequestImportImageOptionsDiskDeviceMappings> diskDeviceMappings;
 
         /**
-         * <p>The image feature attributes.</p>
+         * <p>The image feature properties.</p>
          */
         @NameInMap("Features")
         public CreateImagePipelineRequestImportImageOptionsFeatures features;
@@ -986,15 +850,6 @@ public class CreateImagePipelineRequest extends TeaModel {
 
         /**
          * <p>The license type used to activate the operating system after the image is imported. Valid values:</p>
-         * <ul>
-         * <li><p>Auto: Alibaba Cloud attempts to assign a license based on the detected operating system. If an official Alibaba Cloud license for the specified <code>Platform</code> is unavailable, the system defaults to BYOL.</p>
-         * </li>
-         * <li><p>Aliyun: A license from an official Alibaba Cloud channel is used based on the specified <code>Platform</code>.</p>
-         * </li>
-         * <li><p>BYOL: The license that comes with the base operating system is used. When you use the BYOL mode, you must make sure that your license key is supported in Alibaba Cloud.</p>
-         * </li>
-         * </ul>
-         * <p>Default value: Auto.</p>
          * 
          * <strong>example:</strong>
          * <p>Auto</p>
@@ -1003,14 +858,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String licenseType;
 
         /**
-         * <p>The type of the operating system. Valid values:</p>
-         * <ul>
-         * <li><p>windows</p>
-         * </li>
-         * <li><p>linux</p>
-         * </li>
-         * </ul>
-         * <p>Default value: linux.</p>
+         * <p>The operating system type. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>linux</p>
@@ -1019,64 +867,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String OSType;
 
         /**
-         * <p>The operating system distribution. Valid values:</p>
-         * <ul>
-         * <li><p>Aliyun</p>
-         * </li>
-         * <li><p>Anolis</p>
-         * </li>
-         * <li><p>CentOS</p>
-         * </li>
-         * <li><p>Ubuntu</p>
-         * </li>
-         * <li><p>CoreOS</p>
-         * </li>
-         * <li><p>SUSE</p>
-         * </li>
-         * <li><p>Debian</p>
-         * </li>
-         * <li><p>OpenSUSE</p>
-         * </li>
-         * <li><p>FreeBSD</p>
-         * </li>
-         * <li><p>RedHat</p>
-         * </li>
-         * <li><p>Kylin</p>
-         * </li>
-         * <li><p>UOS</p>
-         * </li>
-         * <li><p>Fedora</p>
-         * </li>
-         * <li><p>Fedora CoreOS</p>
-         * </li>
-         * <li><p>CentOS Stream</p>
-         * </li>
-         * <li><p>AlmaLinux</p>
-         * </li>
-         * <li><p>Rocky Linux</p>
-         * </li>
-         * <li><p>Gentoo</p>
-         * </li>
-         * <li><p>Customized Linux</p>
-         * </li>
-         * <li><p>Others Linux</p>
-         * </li>
-         * <li><p>Windows Server 2022</p>
-         * </li>
-         * <li><p>Windows Server 2019</p>
-         * </li>
-         * <li><p>Windows Server 2016</p>
-         * </li>
-         * <li><p>Windows Server 2012</p>
-         * </li>
-         * <li><p>Windows Server 2008</p>
-         * </li>
-         * <li><p>Windows Server 2003</p>
-         * </li>
-         * <li><p>Other Windows</p>
-         * </li>
-         * </ul>
-         * <p>Default value: Others Linux if OSType is set to Linux, or Other Windows if OSType is set to Windows.</p>
+         * <p>The operating system version. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Aliyun</p>
@@ -1214,7 +1005,7 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N, where N is from 1 to 20. The tag key must be 1 to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1223,7 +1014,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N, where N is from 1 to 20. The tag value can be empty or up to 128 characters long. It cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

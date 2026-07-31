@@ -11,7 +11,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Tea
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,11 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Tea
     /**
      * <p>The deployment strategy. Valid values:</p>
      * <ul>
-     * <li><p>Availability: high availability strategy</p>
+     * <li><p>Availability: high availability strategy.</p>
      * </li>
-     * <li><p>AvailabilityGroup: high availability group strategy</p>
+     * <li><p>AvailabilityGroup: high availability strategy for deployment set groups.</p>
      * </li>
-     * <li><p>LowLatency: low latency strategy</p>
+     * <li><p>LowLatency: low network latency strategy.</p>
      * </li>
      * </ul>
      * <p>Default value: Availability.</p>

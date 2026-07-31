@@ -8,7 +8,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
      * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
-     * <li>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the authorization is verified.</li>
+     * <li>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the authorization is verified.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -42,7 +42,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Boolean isQueryEcsCount;
 
     /**
-     * <p>The maximum number of entries per page for paging query. If you set this parameter, the <code>MaxResults</code> and <code>NextToken</code> paging method is used.</p>
+     * <p>The maximum number of entries per page for a paged query. Settings this parameter indicates that the <code>MaxResults</code> and <code>NextToken</code> combination is used for paging.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -66,7 +66,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous request. You do not need to set this parameter for the first request.</p>
+     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>e71d8a535bd9cc11</p>
@@ -82,7 +82,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be offline. Use NextToken and MaxResults for paging.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter will be offline. Use NextToken and MaxResults for paging.</p>
+     * <p>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp67acfmxazb4p****</p>

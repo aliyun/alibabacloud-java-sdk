@@ -11,9 +11,9 @@ public class DeletePortRangeListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the port list.</p>
+     * <p>The port list ID.</p>
      * <blockquote>
-     * <p>If the port list is associated with other resources, you cannot delete the port list. You must disassociate the port list from the resources and then delete the port list.</p>
+     * <p>If the port list is associated with other resources, it cannot be deleted. Dissociate the port list from the resources before you delete it.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +24,7 @@ public class DeletePortRangeListRequest extends TeaModel {
     public String portRangeListId;
 
     /**
-     * <p>The region ID of the port list. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the port list. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

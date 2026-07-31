@@ -11,7 +11,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     public java.util.List<DescribeDiagnosticMetricSetsResponseBodyMetricSets> metricSets;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -68,7 +68,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The IDs of the diagnostic metrics.</p>
+         * <p>The list of diagnostic metrics.</p>
          */
         @NameInMap("MetricIds")
         public java.util.List<String> metricIds;
@@ -92,7 +92,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         public String metricSetName;
 
         /**
-         * <p>The resource type supported by the diagnostic metric set.</p>
+         * <p>The supported resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -103,10 +103,8 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         /**
          * <p>The type of the diagnostic metric set. Valid values:</p>
          * <ul>
-         * <li><p>User: user-defined diagnostic metric set</p>
-         * </li>
-         * <li><p>Common: common diagnostic metric set</p>
-         * </li>
+         * <li>User: user.</li>
+         * <li>Common: common.</li>
          * </ul>
          * 
          * <strong>example:</strong>

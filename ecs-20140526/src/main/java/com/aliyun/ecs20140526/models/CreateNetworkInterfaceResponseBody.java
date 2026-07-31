@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfaceResponseBody extends TeaModel {
     /**
-     * <p>The description of the elastic network interface.</p>
+     * <p>The description of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -13,26 +13,17 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The IPv4 prefixes that are assigned to the elastic network interface.</p>
-     */
     @NameInMap("Ipv4PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
-    /**
-     * <p>The IPv6 prefixes that are assigned to the elastic network interface.</p>
-     */
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
 
-    /**
-     * <p>The IPv6 addresses that are assigned to the elastic network interface.</p>
-     */
     @NameInMap("Ipv6Sets")
     public CreateNetworkInterfaceResponseBodyIpv6Sets ipv6Sets;
 
     /**
-     * <p>The MAC address of the elastic network interface.</p>
+     * <p>The MAC address of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>00:16:3e:12:<strong>:</strong></p>
@@ -41,7 +32,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String macAddress;
 
     /**
-     * <p>The ID of the elastic network interface.</p>
+     * <p>The ID of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp14v2sdd3v8htln****</p>
@@ -50,7 +41,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The name of the elastic network interface.</p>
+     * <p>The name of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>my-eni-name</p>
@@ -59,7 +50,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The ID of the account that owns the elastic network interface.</p>
+     * <p>The ID of the account that owns the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -68,7 +59,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The primary private IP address of the elastic network interface.</p>
+     * <p>The private IP address of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p><code>172.17.**.**</code></p>
@@ -76,9 +67,6 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    /**
-     * <p>The private IP addresses that are assigned to the elastic network interface.</p>
-     */
     @NameInMap("PrivateIpSets")
     public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
 
@@ -100,14 +88,11 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    /**
-     * <p>The IDs of the security groups to which the elastic network interface belongs.</p>
-     */
     @NameInMap("SecurityGroupIds")
     public CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds;
 
     /**
-     * <p>The ID of the distributor for the elastic network interface.</p>
+     * <p>The Virtual Network Operator (VNO) ID associated with the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
@@ -116,7 +101,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public Long serviceID;
 
     /**
-     * <p>Specifies whether the elastic network interface is managed by a cloud service or a distributor.</p>
+     * <p>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -136,7 +121,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public Boolean sourceDestCheck;
 
     /**
-     * <p>The status of the elastic network interface.</p>
+     * <p>The status of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -144,14 +129,11 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>The tags of the elastic network interface.</p>
-     */
     @NameInMap("Tags")
     public CreateNetworkInterfaceResponseBodyTags tags;
 
     /**
-     * <p>The type of the elastic network interface.</p>
+     * <p>The type of the network interface controller (NIC).</p>
      * 
      * <strong>example:</strong>
      * <p>Secondary</p>
@@ -160,7 +142,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the vSwitch in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp16usj2p27htro3****</p>
@@ -169,7 +151,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC to which the elastic network interface belongs.</p>
+     * <p>The ID of the VPC to which the ENI belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1j7w3gc1cexjqd****</p>
@@ -178,7 +160,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>
@@ -447,6 +429,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        @NameInMap("Primary")
+        public Boolean primary;
+
         public static CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set self = new CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set();
             return TeaModel.build(map, self);
@@ -458,6 +443,14 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
         public String getIpv6Address() {
             return this.ipv6Address;
+        }
+
+        public CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
         }
 
     }

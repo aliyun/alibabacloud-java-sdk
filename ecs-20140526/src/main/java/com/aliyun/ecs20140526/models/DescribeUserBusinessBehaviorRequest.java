@@ -10,9 +10,6 @@ public class DescribeUserBusinessBehaviorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the region. Call the <code>DescribeRegions</code> operation to query the latest list of regions.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -23,7 +20,6 @@ public class DescribeUserBusinessBehaviorRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The key of the business attribute to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("statusKey")

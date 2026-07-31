@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud partner (certified ISV) account or individual user.</p>
+     * <p>The ID of the Alibaba Cloud partner (certified ISV) account or individual user account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long accountId;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,8 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ENI permission. Only InstanceAttach is currently supported.</p>
-     * <p>InstanceAttach: allows the authorized user to attach your ENI to their ECS instance. The ECS instance must be in the same zone as the ENI.</p>
+     * <p>The network interface controller (NIC) permission action. Only InstanceAttach is supported.</p>
+     * <p>InstanceAttach: allows the authorized user to attach your NIC to their ECS instance. The ECS instance must be in the same zone as the NIC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public String permission;
 
     /**
-     * <p>The region of the ENI permission. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list of Alibaba Cloud.</p>
+     * <p>The region of the network interface controller (NIC) permission. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

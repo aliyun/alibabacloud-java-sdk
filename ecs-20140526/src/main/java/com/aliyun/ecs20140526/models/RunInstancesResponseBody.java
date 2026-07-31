@@ -8,7 +8,7 @@ public class RunInstancesResponseBody extends TeaModel {
     public RunInstancesResponseBodyInstanceIdSets instanceIdSets;
 
     /**
-     * <p>The ID of the order. This parameter is returned only when <code>InstanceChargeType</code> is set to PrePaid.</p>
+     * <p>The order ID. This parameter is returned only when you create subscription ECS instances (request parameter <code>InstanceChargeType=PrePaid</code>).</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -17,7 +17,7 @@ public class RunInstancesResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -26,7 +26,7 @@ public class RunInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The transaction price.</p>
+     * <p>The transaction price of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>0.165</p>

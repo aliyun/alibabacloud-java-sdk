@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class RenewReservedInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal.</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: enables auto-renewal.</li>
+     * <li>false: does not enable auto-renewal.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -21,8 +19,15 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
-     * <p>Valid values: 12 and 36. Default value: 12.</p>
+     * <p>The auto-renewal period, in months. This parameter takes effect only when AutoRenew is set to true.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;Valid values: 12 and 36. Default value: 12.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><p>If PeriodUnit is set to Month, valid values are 1, 12, 36, and 60. Default value: 1.</p>
+     * </li>
+     * <li><p>If PeriodUnit is set to Year, valid values are 12, 36, and 60. Default value: 12.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -31,7 +36,7 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -46,8 +51,15 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The validity period of the reserved instance.</p>
-     * <p>Valid values: 1 and 3.</p>
+     * <p>The duration of the reserved instance.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;Valid values: 1 and 3.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><p>If PeriodUnit is set to Year, valid values are 1, 3, and 5.</p>
+     * </li>
+     * <li><p>If PeriodUnit is set to Month, the valid value is 1.</p>
+     * </li>
+     * </ul>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -57,8 +69,11 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the validity period of the reserved instance.</p>
-     * <p>Set the value to Year.</p>
+     * <p>The unit of the duration of the reserved instance.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;Valid values: Year.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;Default value: Year.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Valid values: Year and Month.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Year</p>
@@ -68,7 +83,7 @@ public class RenewReservedInstancesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the reserved instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -77,7 +92,7 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the reserved instances.</p>
+     * <p>The reserved instance ID.</p>
      */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;

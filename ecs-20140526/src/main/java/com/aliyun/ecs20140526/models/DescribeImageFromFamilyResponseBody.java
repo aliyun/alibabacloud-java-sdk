@@ -11,7 +11,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     public DescribeImageFromFamilyResponseBodyImage image;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -195,12 +195,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     public static class DescribeImageFromFamilyResponseBodyImage extends TeaModel {
         /**
-         * <p>The architecture of the image. Valid values:</p>
+         * <p>The system architecture type of the image. Valid values:</p>
          * <ul>
-         * <li><p>i386</p>
-         * </li>
-         * <li><p>x86_64</p>
-         * </li>
+         * <li>i386</li>
+         * <li>x86_64</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +217,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the volume.</p>
+         * <p>The description of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -231,7 +229,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings;
 
         /**
-         * <p>The name of the image family.</p>
+         * <p>The image family.</p>
          * 
          * <strong>example:</strong>
          * <p>testImageFamily</p>
@@ -260,14 +258,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>The alias of the image owner. Valid values:</p>
          * <ul>
-         * <li><p>system: public images provided by Alibaba Cloud</p>
-         * </li>
-         * <li><p>self: your custom images</p>
-         * </li>
-         * <li><p>others: shared images from other Alibaba Cloud accounts</p>
-         * </li>
-         * <li><p>marketplace: Alibaba Cloud Marketplace images</p>
-         * </li>
+         * <li>system: public image.</li>
+         * <li>self: your custom image.</li>
+         * <li>others: shared image from other users.</li>
+         * <li>marketplace: Alibaba Cloud Marketplace image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,7 +289,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Boolean isCopied;
 
         /**
-         * <p>Indicates whether the custom image was shared to other Alibaba Cloud accounts.</p>
+         * <p>Indicates whether the custom image has been shared with other users.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -304,7 +298,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String isSelfShared;
 
         /**
-         * <p>Indicates whether you have subscribed to the service terms of the image product corresponding to the image product code.</p>
+         * <p>Indicates whether you have subscribed to the Terms of Service for the image product that corresponds to the product code.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -322,7 +316,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Boolean isSupportCloudinit;
 
         /**
-         * <p>Indicates whether the image can be used on I/O optimized instances.</p>
+         * <p>Indicates whether the image can run on an I/O optimized instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -331,7 +325,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Boolean isSupportIoOptimized;
 
         /**
-         * <p>The display name of the operating system in Chinese.</p>
+         * <p>The China-locale display name of the operating system.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Linux 2.1903</p>
@@ -342,10 +336,8 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         /**
          * <p>The type of the operating system. Valid values:</p>
          * <ul>
-         * <li><p>windows</p>
-         * </li>
-         * <li><p>linux</p>
-         * </li>
+         * <li>windows</li>
+         * <li>linux</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -355,7 +347,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String OSType;
 
         /**
-         * <p>The operating system.</p>
+         * <p>The operating system platform.</p>
          * 
          * <strong>example:</strong>
          * <p>Aliyun</p>
@@ -373,7 +365,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The image creation progress in percentage.</p>
+         * <p>The image creation progress, in percent.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -391,16 +383,12 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The state of the image. Valid values:</p>
+         * <p>The status of the image. Valid values:</p>
          * <ul>
-         * <li><p>UnAvailable</p>
-         * </li>
-         * <li><p>Available</p>
-         * </li>
-         * <li><p>Creating</p>
-         * </li>
-         * <li><p>CreateFailed</p>
-         * </li>
+         * <li>UnAvailable: unavailable</li>
+         * <li>Available: available</li>
+         * <li>Creating: being created</li>
+         * <li>CreateFailed: failed to be created</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -413,12 +401,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         public DescribeImageFromFamilyResponseBodyImageTags tags;
 
         /**
-         * <p>Indicates whether the image has been used to create ECS instances. Valid values:</p>
+         * <p>The type of resource that references the image. Valid values:</p>
          * <ul>
-         * <li><p>instance: The image was used to create one or more ECS instances.</p>
-         * </li>
-         * <li><p>none: The image was not used to create ECS instances.</p>
-         * </li>
+         * <li>instance: One or more ECS instances have been created from the image.</li>
+         * <li>none: No ECS instances have been created from the image.</li>
          * </ul>
          * 
          * <strong>example:</strong>

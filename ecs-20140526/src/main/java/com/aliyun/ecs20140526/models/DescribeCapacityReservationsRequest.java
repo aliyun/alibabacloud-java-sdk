@@ -10,10 +10,8 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p>PostPaid: pay-as-you-go.</p>
-     * </li>
-     * <li><p>PrePaid: subscription.</p>
-     * </li>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * <li>PrePaid: subscription.</li>
      * </ul>
      * <p>Default value: PostPaid.</p>
      * 
@@ -24,7 +22,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. You can use this parameter to query only active capacity reservations. To query released capacity reservations, you must specify <code>PrivatePoolOptions.Ids</code>.</p>
+     * <p>The instance type. You can use the instance type to query only active capacity reservations. Released capacity reservations can be queried only by using PrivatePoolOptions.Ids.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -33,7 +31,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -44,7 +42,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the previous call to retrieve the next page of results.</p>
+     * <p>The pagination token for the capacity reservation query. Obtain the value from the result of the previous request.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -61,12 +59,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     /**
      * <p>The operating system of the instance. Valid values:</p>
      * <ul>
-     * <li><p>windows: Returns only capacity reservations for Windows.</p>
-     * </li>
-     * <li><p>linux: Returns only capacity reservations for Linux.</p>
-     * </li>
-     * <li><p>all: Returns all capacity reservations.</p>
-     * </li>
+     * <li>windows: queries only capacity reservations for Windows instances.</li>
+     * <li>linux: queries only capacity reservations for Linux instances.</li>
+     * <li>all: queries all capacity reservations.</li>
      * </ul>
      * <p>Default value: all.</p>
      * 
@@ -77,7 +72,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the capacity reservation. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +82,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. When you use this parameter to filter resources, the operation returns a maximum of 1,000 resources.</p>
+     * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
      * <blockquote>
      * <p>Filtering by the default resource group is not supported.</p>
      * </blockquote>
@@ -107,20 +102,14 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     /**
      * <p>The status of the capacity reservation. Valid values:</p>
      * <ul>
-     * <li><p>All: all statuses.</p>
-     * </li>
-     * <li><p>Pending: The capacity reservation is initializing. This is the initial status of a scheduled capacity reservation.</p>
-     * </li>
-     * <li><p>Preparing: The system is preparing resources for the scheduled capacity reservation.</p>
-     * </li>
-     * <li><p>Prepared: The resources are prepared, and the scheduled capacity reservation is waiting to take effect.</p>
-     * </li>
-     * <li><p>Active: The capacity reservation is active.</p>
-     * </li>
-     * <li><p>Released: The capacity reservation is released, either manually or automatically upon expiration.</p>
-     * </li>
+     * <li>All: all states.</li>
+     * <li>Pending: initializing. A capacity reservation that takes effect at a specified time enters the initializing state first.</li>
+     * <li>Preparing: being prepared. A capacity reservation that takes effect at a specified time is in the Preparing state during the resource delivery phase.</li>
+     * <li>Prepared: to take effect. A capacity reservation that takes effect at a specified time is in the Prepared state after resource delivery is complete but before the service takes effect.</li>
+     * <li>Active: active.</li>
+     * <li>Released: released, including manual release and automatic release upon expiration.</li>
      * </ul>
-     * <p>If you do not specify this parameter, the operation returns capacity reservations in all states except <code>Pending</code> and <code>Released</code>.</p>
+     * <p>If you do not specify this parameter, capacity reservations in all states except Pending and Released are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>Active</p>
@@ -129,7 +118,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags attached to the capacity reservations.</p>
+     * <p>The tags bound to the capacity reservation.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCapacityReservationsRequestTag> tag;
@@ -270,7 +259,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     public static class DescribeCapacityReservationsRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The IDs of the capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs.</p>
+         * <p>The list of capacity reservation IDs. The value can be a JSON array that consists of up to 100 IDs. Separate the IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;crp-bp1gubrkqutenqdd****&quot;, &quot;crp-bp67acfmxazb5****&quot;]</p>
@@ -295,8 +284,8 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     public static class DescribeCapacityReservationsRequestTag extends TeaModel {
         /**
-         * <p>The key of the Nth tag. You can specify up to 20 tags.</p>
-         * <p>A maximum of 1,000 resources that match the specified tags can be returned. If you specify multiple tags, only resources that have all of these tags are returned. If the number of matching resources exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</p>
+         * <p>The tag key. N indicates that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</p>
+         * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -305,7 +294,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the Nth tag. You can specify up to 20 tags.</p>
+         * <p>The tag value. N indicates that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

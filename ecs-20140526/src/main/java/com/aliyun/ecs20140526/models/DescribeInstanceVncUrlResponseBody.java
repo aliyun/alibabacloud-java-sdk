@@ -16,7 +16,7 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
     /**
      * <p>The VNC logon URL.</p>
      * <blockquote>
-     * <p>Notice: <strong>The VNC logon URL is time-sensitive and valid for 15 seconds. If you do not use the URL within 15 seconds after a successful call, the URL expires and you must call this operation again to obtain a new one.</strong>.</p>
+     * <p>Notice: <strong>The VNC logon URL is time-sensitive and expires after 15 seconds. If you do not use the URL within 15 seconds after a successful call, the URL becomes invalid and you must call this operation again to obtain a new URL.</strong></p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -29,7 +29,7 @@ public class CloneDisksRequest extends TeaModel {
     public Boolean burstingEnabled;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -48,8 +48,8 @@ public class CloneDisksRequest extends TeaModel {
      * <blockquote>
      * <p>Disk category restrictions for disk cloning:</p>
      * <ul>
-     * <li>Non-regional disks can be cloned only to non-regional types.</li>
-     * <li>Regional disks can be cloned only to regional types.</li>
+     * <li>Non-regional disks can only be cloned to non-regional types.</li>
+     * <li>Regional disks can only be cloned to regional types.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -73,8 +73,8 @@ public class CloneDisksRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: sends a check request without querying the filing status. The check items include whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
-     * <li>false (default): sends a Normal request. After the check succeeds, a 2XX HTTP status code is returned and the filing status is directly queried.</li>
+     * <li>true: sends a check request without querying the filing status. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check passes, the DryRunOperation error code is returned.</li>
+     * <li>false (default): sends a Normal request. After the check passes, a 2XX HTTP status code is returned and the filing status is queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,8 +86,8 @@ public class CloneDisksRequest extends TeaModel {
     /**
      * <p>Specifies whether the new disk is encrypted. Valid values:</p>
      * <ul>
-     * <li>true: The new disk is encrypted.</li>
-     * <li>false: The new disk is not encrypted.</li>
+     * <li>true: The disk is encrypted.</li>
+     * <li>false: The disk is not encrypted.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -110,7 +110,7 @@ public class CloneDisksRequest extends TeaModel {
      * <p>Specifies whether to enable the multi-attach attribute for the new disk. Valid values:</p>
      * <ul>
      * <li>Disabled: disables the multi-attach attribute.</li>
-     * <li>Enabled: enables the multi-attach attribute. Currently, only enterprise SSDs support Settings to <code>Enabled</code>.</li>
+     * <li>Enabled: enables the multi-attach attribute. Only enterprise SSDs support settings this to <code>Enabled</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -124,7 +124,7 @@ public class CloneDisksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level of the standard SSD. Settings for this parameter depend on the disk category. Valid values:</p>
+     * <p>The performance level of the enterprise SSD. Settings this parameter when you create an enterprise SSD. Valid values:</p>
      * <ul>
      * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
      * <li>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</li>
@@ -182,7 +182,7 @@ public class CloneDisksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The capacity of the new disk. Unit: GiB. You must specify a value for this parameter. Valid values:</p>
+     * <p>The capacity of the new disk. Unit: GiB. You must specify this parameter. Valid values:</p>
      * <ul>
      * <li>cloud_essd: The valid values depend on the performance level.<ul>
      * <li>PL0: 1 to 65,536.</li>
@@ -435,7 +435,7 @@ public class CloneDisksRequest extends TeaModel {
 
     public static class CloneDisksRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         * <p>The tag key of the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>

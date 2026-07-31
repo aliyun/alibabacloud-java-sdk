@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAttributesRequest extends TeaModel {
     /**
-     * <p>The type of resource quota N. Valid values of N: 1 to 8. Valid values:</p>
+     * <p>The type of resource quota to query in the specified region. Valid values of N: 1 to 8. Valid values:</p>
      * <ul>
-     * <li><p>instance-network-type: the available network types.</p>
+     * <li><p>instance-network-type: available network types.</p>
      * </li>
      * <li><p>max-security-groups: the maximum number of security groups.</p>
      * </li>
-     * <li><p>max-elastic-network-interfaces: the maximum number of ENIs.</p>
+     * <li><p>max-elastic-network-interfaces: the maximum number of Elastic Network Interfaces (ENIs).</p>
      * </li>
      * <li><p>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</p>
      * </li>
      * <li><p>max-spot-instance-vcpu-count: the maximum number of vCPUs for spot instances.</p>
      * </li>
-     * <li><p>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances.</p>
+     * <li><p>used-postpaid-instance-vcpu-count: the number of vCPUs that have been used by pay-as-you-go instances.</p>
      * </li>
-     * <li><p>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to spot instances.</p>
+     * <li><p>used-spot-instance-vcpu-count: the number of vCPUs that have been used by spot instances.</p>
      * </li>
-     * <li><p>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</p>
+     * <li><p>max-postpaid-yundisk-capacity: the maximum total capacity of pay-as-you-go cloud disks used as data disks. (This parameter value is deprecated.)</p>
      * </li>
-     * <li><p>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that have been created. (The value is deprecated.)</p>
+     * <li><p>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go cloud disks that have been used as data disks. (This parameter value is deprecated.)</p>
      * </li>
      * <li><p>max-dedicated-hosts: the maximum number of dedicated hosts.</p>
      * </li>
@@ -31,16 +31,17 @@ public class DescribeAccountAttributesRequest extends TeaModel {
      * </li>
      * <li><p>max-axt-command-count: the maximum number of Cloud Assistant commands.</p>
      * </li>
-     * <li><p>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</p>
+     * <li><p>max-axt-invocation-daily: the maximum number of Cloud Assistant commands that can be executed per day.</p>
      * </li>
-     * <li><p>real-name-authentication: whether the account has completed the real-name verification.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong> To create an ECS instance in a region in the Chinese mainland, you must complete the real-name verification.</p>
+     * <li><p>real-name-authentication: whether the account has completed real-name registration.</p>
+     * <blockquote>
+     * <p>You must complete real-name registration before you can create ECS instances in regions in the Chinese mainland.</p>
+     * </blockquote>
      * </li>
-     * <li><p>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</p>
+     * <li><p>max-cloud-assistant-activation-count: the maximum number of Cloud Assistant managed instance dynamic codes that can be created.</p>
      * </li>
      * </ul>
-     * <p>This parameter is empty by default.</p>
+     * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
      * <p>max-security-groups</p>
@@ -52,7 +53,7 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +69,7 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the zone in which the resource resides.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-b</p>

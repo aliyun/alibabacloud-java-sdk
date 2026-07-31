@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysRequest extends TeaModel {
-    /**
-     * <p>The ID of the nat gateway.</p>
-     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
@@ -16,20 +13,13 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The page number. Default: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries per page. The valid range is 1 to 100. Default: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the nat gateways belong. Call the DescribeRegions operation to obtain the latest region list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RegionId")
@@ -41,9 +31,6 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the VPC to which the nat gateway belongs.</p>
-     */
     @NameInMap("VpcId")
     public String vpcId;
 

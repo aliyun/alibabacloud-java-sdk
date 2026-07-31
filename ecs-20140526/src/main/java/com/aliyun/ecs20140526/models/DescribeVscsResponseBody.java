@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVscsResponseBody extends TeaModel {
     /**
+     * <p>The query token. The value is the NextToken parameter value returned by the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2</p>
      */
@@ -12,12 +14,17 @@ public class DescribeVscsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-**-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>VSC</p>
+     */
     @NameInMap("Vscs")
     public java.util.List<DescribeVscsResponseBodyVscs> vscs;
 
@@ -52,6 +59,8 @@ public class DescribeVscsResponseBody extends TeaModel {
 
     public static class DescribeVscsResponseBodyVscsTags extends TeaModel {
         /**
+         * <p>The tag key of the key pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>name</p>
          */
@@ -59,6 +68,8 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -90,6 +101,8 @@ public class DescribeVscsResponseBody extends TeaModel {
 
     public static class DescribeVscsResponseBodyVscs extends TeaModel {
         /**
+         * <p>The description of the port list.</p>
+         * 
          * <strong>example:</strong>
          * <p>ali***-post-cn-j4g45iqze00f</p>
          */
@@ -97,6 +110,8 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-uf69***21l8zuoizdq</p>
          */
@@ -104,6 +119,11 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+         * <blockquote>
+         * <p>Filtering by the default resource group is not supported.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek2zex4ehdyjvq</p>
          */
@@ -111,16 +131,30 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The status of the VSC. Valid values:</p>
+         * <ul>
+         * <li>In_use: in use.</li>
+         * <li>Attaching: being attached.</li>
+         * <li>Detaching: being detached.</li>
+         * <li>AttachFailed: failed to attach.</li>
+         * <li>DetachFailed: failed to detach.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>In_use</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag keys of snapshots in the snapshot-consistent group. The default values of Key and Value provide the snapshot source information.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeVscsResponseBodyVscsTags> tags;
 
         /**
+         * <p>VSC ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>vsc-hp34ue**g0wmycb27bwal</p>
          */
@@ -128,6 +162,8 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String vscId;
 
         /**
+         * <p>The custom name of the VSC.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-vsc</p>
          */
@@ -135,6 +171,8 @@ public class DescribeVscsResponseBody extends TeaModel {
         public String vscName;
 
         /**
+         * <p>The type of the VSC. Valid values: Primary or Secondary.</p>
+         * 
          * <strong>example:</strong>
          * <p>Primary</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RedeployDedicatedHostResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FCED4B7A-53D5-4C04-ABE3-26D4F3890D57</p>

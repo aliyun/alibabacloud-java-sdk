@@ -17,7 +17,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page set for the paged query. This is the paging settings value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

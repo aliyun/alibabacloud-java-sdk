@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyImageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image copy.</p>
+     * <p>The ID of the copied image.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp1h46wfpjsjastd****</p>

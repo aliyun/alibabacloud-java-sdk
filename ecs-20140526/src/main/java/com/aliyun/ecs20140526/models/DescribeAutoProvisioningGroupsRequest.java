@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     /**
-     * <p>The IDs of the auto provisioning groups. You can specify up to 20 IDs.</p>
+     * <p>The IDs of auto-provisioning groups. You can specify up to 20 auto-provisioning group IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>apg-sn54avj8htgvtyh8****</p>
@@ -23,7 +23,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public String autoProvisioningGroupName;
 
     /**
-     * <p>The statuses of the auto provisioning groups.</p>
+     * <p>The list of statuses of auto-provisioning groups.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>
@@ -41,8 +41,8 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return.</p>
-     * <p>Start value: 1.</p>
+     * <p>The page number of the paging query to return.</p>
+     * <p>Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries per page in the paging query. Settings:</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -63,7 +63,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the auto provisioning group is located.</p>
+     * <p>The ID of the region where the auto-provisioning group resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+     * <p>The ID of the resource group to which the auto-provisioning group belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -88,7 +88,7 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags used to filter auto provisioning groups. You can specify up to 20 tags.</p>
+     * <p>The tags attached to the auto-provisioning group.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAutoProvisioningGroupsRequestTag> tag;
@@ -204,7 +204,8 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
 
     public static class DescribeAutoProvisioningGroupsRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. The key can be up to 128 characters in length and cannot be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code> or contain http\:// or https\://.</p>
+         * <p>The tag key of the auto-provisioning group.</p>
+         * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -213,7 +214,8 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. The value can be up to 128 characters in length and can be an empty string. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the auto-provisioning group.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

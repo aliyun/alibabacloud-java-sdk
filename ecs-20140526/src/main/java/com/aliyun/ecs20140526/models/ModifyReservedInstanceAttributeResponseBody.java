@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>Modifies the attributes of a reserved instance, such as its name and description.</p>
+     * <p>The error code returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message for this instance operation. The return value Success indicates that this operation is successful. For more information, see the &quot;Error codes&quot; section in this topic.</p>
+     * <p>The error message returned for the instance operation. A return value of Success indicates success. For more information, see the error codes section.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -32,7 +32,7 @@ public class ModifyReservedInstanceAttributeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
     /**
-     * <p>This parameter will be deprecated soon and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</p>
+     * <p>This parameter is about to be deprecated and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -16,7 +16,7 @@ public class StopInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The instance is not stopped. The system checks whether required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>true: performs only a dry run. The instance is not stopped. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether the ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
      * <li>false: performs a dry run and sends the request. The instance is stopped after the check succeeds.</li>
      * </ul>
      * <p>Default value: false.</p>
@@ -43,7 +43,7 @@ public class StopInstanceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is in invitational preview and is not available for use.</p>
+     * <p>This parameter is in invitational preview and is not available for general use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class StopInstanceRequest extends TeaModel {
      * </blockquote>
      * </li>
      * </ul>
-     * <p>If the instance does not support the economical mode, no error is returned on the API side. Stopping the instance takes priority. Instance types that do not support the economical mode include instances with local disks and subscription instances.</p>
+     * <p>If the instance does not support the economical mode, the API does not return an error. Stopping the instance takes priority. Instance types that do not support the economical mode include instances with local disks and subscription instances.</p>
      * <ul>
      * <li>KeepCharging: standard stop mode. The instance continues to be billed after it is stopped.</li>
      * </ul>
