@@ -5,9 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlColumnsRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Catalog")
+    public String catalog;
+
+    /**
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +28,7 @@ public class DescribeAdbMySqlColumnsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specified cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +39,7 @@ public class DescribeAdbMySqlColumnsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
@@ -40,7 +48,7 @@ public class DescribeAdbMySqlColumnsRequest extends TeaModel {
     public String schema;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -51,6 +59,14 @@ public class DescribeAdbMySqlColumnsRequest extends TeaModel {
     public static DescribeAdbMySqlColumnsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAdbMySqlColumnsRequest self = new DescribeAdbMySqlColumnsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAdbMySqlColumnsRequest setCatalog(String catalog) {
+        this.catalog = catalog;
+        return this;
+    }
+    public String getCatalog() {
+        return this.catalog;
     }
 
     public DescribeAdbMySqlColumnsRequest setDBClusterId(String DBClusterId) {

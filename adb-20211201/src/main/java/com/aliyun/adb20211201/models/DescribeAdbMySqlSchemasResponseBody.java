@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information about the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a <strong>success</strong> message is returned.</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li>If the request was successful, <strong>Success</strong> is returned. </li>
+     * <li>If the request failed, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,16 +27,16 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried databases.</p>
+     * <p>The list of databases.</p>
      */
     @NameInMap("Schemas")
     public java.util.List<String> schemas;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

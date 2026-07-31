@@ -1511,7 +1511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <p>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</p>
      * 
      * @param tmpReq CreateApsSlsADBJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1681,7 +1681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <p>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</p>
      * 
      * @param request CreateApsSlsADBJobRequest
      * @return CreateApsSlsADBJobResponse
@@ -4105,13 +4105,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about table columns for an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the column information of a specified table in a cluster.</p>
      * 
      * @param request DescribeAdbMySqlColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4120,6 +4120,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAdbMySqlColumnsResponse describeAdbMySqlColumnsWithOptions(DescribeAdbMySqlColumnsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -4155,13 +4159,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about table columns for an AnalyticDB for MySQL cluster.</p>
+     * <p>Queries the column information of a specified table in a cluster.</p>
      * 
      * @param request DescribeAdbMySqlColumnsRequest
      * @return DescribeAdbMySqlColumnsResponse
@@ -4229,13 +4233,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of databases for an AnalyticDB for MySQL cluster.</p>
+     * <p>Lists all databases in a specified cluster.</p>
      * 
      * @param request DescribeAdbMySqlSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4244,6 +4248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAdbMySqlSchemasResponse describeAdbMySqlSchemasWithOptions(DescribeAdbMySqlSchemasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -4271,13 +4279,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of databases for an AnalyticDB for MySQL cluster.</p>
+     * <p>Lists all databases in a specified cluster.</p>
      * 
      * @param request DescribeAdbMySqlSchemasRequest
      * @return DescribeAdbMySqlSchemasResponse
@@ -4346,12 +4354,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. For example, <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. For example, <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists information about all tables in a specified database of a cluster.</p>
+     * <p>Lists all tables in a specified database of a cluster.</p>
      * 
      * @param request DescribeAdbMySqlTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4360,6 +4368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAdbMySqlTablesResponse describeAdbMySqlTablesWithOptions(DescribeAdbMySqlTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalog)) {
+            query.put("Catalog", request.catalog);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -4392,12 +4404,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Public endpoint for a region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. For example, <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>VPC endpoint for a region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. For example, <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Public endpoint of the region: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.ap-southeast-1.aliyuncs.com</code>.</li>
+     * <li>VPC endpoint of the region: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.ap-southeast-1.aliyuncs.com</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists information about all tables in a specified database of a cluster.</p>
+     * <p>Lists all tables in a specified database of a cluster.</p>
      * 
      * @param request DescribeAdbMySqlTablesRequest
      * @return DescribeAdbMySqlTablesResponse

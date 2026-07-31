@@ -5,7 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlSchemasRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Catalog")
+    public String catalog;
+
+    /**
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +25,7 @@ public class DescribeAdbMySqlSchemasRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specified cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,6 +38,14 @@ public class DescribeAdbMySqlSchemasRequest extends TeaModel {
     public static DescribeAdbMySqlSchemasRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAdbMySqlSchemasRequest self = new DescribeAdbMySqlSchemasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAdbMySqlSchemasRequest setCatalog(String catalog) {
+        this.catalog = catalog;
+        return this;
+    }
+    public String getCatalog() {
+        return this.catalog;
     }
 
     public DescribeAdbMySqlSchemasRequest setDBClusterId(String DBClusterId) {
