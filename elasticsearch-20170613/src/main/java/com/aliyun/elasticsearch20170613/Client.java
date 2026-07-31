@@ -2747,8 +2747,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
-     * <li>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</li>
+     * <li>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
+     * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2769,6 +2769,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.endpointName)) {
             body.put("endpointName", request.endpointName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managedSecurityGroup)) {
+            body.put("managedSecurityGroup", request.managedSecurityGroup);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroups)) {
@@ -2805,8 +2809,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
-     * <li>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</li>
+     * <li>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
+     * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -5304,7 +5308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of Elasticsearch instances.</p>
+     * <p>Retrieves a list of Elasticsearch instances.</p>
      * 
      * @param request ListInstanceRequest
      * @param headers map
@@ -5382,7 +5386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of Elasticsearch instances.</p>
+     * <p>Retrieves a list of Elasticsearch instances.</p>
      * 
      * @param request ListInstanceRequest
      * @return ListInstanceResponse

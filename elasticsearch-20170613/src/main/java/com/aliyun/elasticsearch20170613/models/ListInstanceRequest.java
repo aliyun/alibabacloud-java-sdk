@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
-     * <p>The instance name. Fuzzy match is supported. For example, if you search for <strong>abc</strong>, instances named <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong> may be returned.</p>
+     * <p>The instance name. Fuzzy match is supported. For example, if you search for <strong>abc</strong>, all instances whose names contain <strong>abc</strong> may be returned, such as <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyunes_test1</p>
@@ -23,15 +23,7 @@ public class ListInstanceRequest extends TeaModel {
     public String esVersion;
 
     /**
-     * <p>The instance edition. Valid values:</p>
-     * <ul>
-     * <li><p>x-pack: Commercial Edition</p>
-     * </li>
-     * <li><p>advanced/IS: Advanced Edition</p>
-     * </li>
-     * <li><p>community: Basic Edition</p>
-     * </li>
-     * </ul>
+     * <p>The edition of the instance. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>advanced</p>
@@ -49,8 +41,7 @@ public class ListInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number of the instance list.
-     * Minimum value: <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the instance list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,12 +51,6 @@ public class ListInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <ul>
-     * <li><p>postpaid: pay-as-you-go</p>
-     * </li>
-     * <li><p>prepaid: subscription</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>postpaid</p>
@@ -83,7 +68,7 @@ public class ListInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The number of entries per page for paging queries. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Settings the number of entries per page for paging. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

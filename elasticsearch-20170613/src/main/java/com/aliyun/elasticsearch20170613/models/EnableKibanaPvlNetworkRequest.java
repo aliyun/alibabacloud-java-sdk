@@ -13,9 +13,11 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
     @NameInMap("endpointName")
     public String endpointName;
 
+    @NameInMap("managedSecurityGroup")
+    public Boolean managedSecurityGroup;
+
     /**
      * <p>The security groups.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("securityGroups")
     public java.util.List<String> securityGroups;
@@ -55,6 +57,14 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
     }
     public String getEndpointName() {
         return this.endpointName;
+    }
+
+    public EnableKibanaPvlNetworkRequest setManagedSecurityGroup(Boolean managedSecurityGroup) {
+        this.managedSecurityGroup = managedSecurityGroup;
+        return this;
+    }
+    public Boolean getManagedSecurityGroup() {
+        return this.managedSecurityGroup;
     }
 
     public EnableKibanaPvlNetworkRequest setSecurityGroups(java.util.List<String> securityGroups) {

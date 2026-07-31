@@ -113,10 +113,8 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         /**
          * <p>The endpoint status. Valid values:</p>
          * <ul>
-         * <li><p>Disconnected: disconnected.</p>
-         * </li>
-         * <li><p>Connected: connected.</p>
-         * </li>
+         * <li>Disconnected: disconnected</li>
+         * <li>Connected: connected</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,6 +122,9 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
          */
         @NameInMap("endpointStatus")
         public String endpointStatus;
+
+        @NameInMap("managedSecurityGroup")
+        public Boolean managedSecurityGroup;
 
         /**
          * <p>The Kibana private network connection ID.</p>
@@ -190,6 +191,14 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         }
         public String getEndpointStatus() {
             return this.endpointStatus;
+        }
+
+        public ListKibanaPvlNetworkResponseBodyResult setManagedSecurityGroup(Boolean managedSecurityGroup) {
+            this.managedSecurityGroup = managedSecurityGroup;
+            return this;
+        }
+        public Boolean getManagedSecurityGroup() {
+            return this.managedSecurityGroup;
         }
 
         public ListKibanaPvlNetworkResponseBodyResult setPvlId(String pvlId) {
