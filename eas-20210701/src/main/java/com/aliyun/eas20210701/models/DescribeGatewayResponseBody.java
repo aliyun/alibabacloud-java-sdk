@@ -14,7 +14,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The time when the private gateway was created. The time is in Coordinated Universal Time (UTC).</p>
+     * <p>The time when the dedicated gateway was created. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-05-19T14:19:42Z</p>
@@ -23,7 +23,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The ID of the self-managed cluster.</p>
+     * <p>The self-managed cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c935eadf284c14c2da57a2a13ad6******</p>
@@ -32,7 +32,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String externalClusterId;
 
     /**
-     * <p>The ID of the private gateway.</p>
+     * <p>The dedicated gateway ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******</p>
@@ -41,7 +41,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The alias of the private gateway.</p>
+     * <p>The alias of the dedicated gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>mygateway1</p>
@@ -50,7 +50,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String gatewayName;
 
     /**
-     * <p>The instance type of the private gateway.</p>
+     * <p>The instance type used by the dedicated gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>2c4g</p>
@@ -59,7 +59,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The public endpoint.</p>
+     * <p>The public network access domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</p>
@@ -77,7 +77,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean internetEnabled;
 
     /**
-     * <p>The status of public network access.</p>
+     * <p>The status of public network access enablement or disablement.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -86,7 +86,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String internetStatus;
 
     /**
-     * <p>The private endpoint.</p>
+     * <p>The internal access domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</p>
@@ -98,7 +98,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean intranetEnabled;
 
     /**
-     * <p>Indicates whether the gateway is the default private gateway.</p>
+     * <p>Indicates whether the dedicated gateway is the default one.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public java.util.List<DescribeGatewayResponseBodyLabels> labels;
 
     /**
-     * <p>The number of private gateway nodes.</p>
+     * <p>The number of nodes in the dedicated gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -128,7 +128,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether HTTP to HTTPS redirection is enabled.</p>
+     * <p>Indicates whether HTTP-to-HTTPS redirection is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -137,7 +137,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public Boolean SSLRedirectionEnabled;
 
     /**
-     * <p>The status of the private gateway.</p>
+     * <p>The status of the dedicated gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -146,7 +146,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the private gateway was last updated. The time is in UTC.</p>
+     * <p>The time when the dedicated gateway was last updated. The time is in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-02-24T11:52:17Z</p>
