@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateCredentialProviderRequest extends TeaModel {
     /**
      * <p>The idempotency token that ensures the idempotence of the request.</p>
-     * <p>Generate a unique parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>Generate a unique parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,14 +105,14 @@ public class UpdateCredentialProviderRequest extends TeaModel {
          * <p>The list cannot contain more than 200 entries.</p>
          * </blockquote>
          * <blockquote>
-         * <p>Notice: To clear the issuer list, pass an empty list or an empty string.</p>
+         * <p>Notice: To clear the issuer list, pass an empty list or an empty string when calling the API.</p>
          * </blockquote>
          */
         @NameInMap("AllowedTokenIssuers")
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>Specifies whether to enable the JWT derived short token feature.</p>
+         * <p>Specifies whether to enable the JWT derived short token capability.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -179,7 +179,23 @@ public class UpdateCredentialProviderRequest extends TeaModel {
 
     public static class UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig extends TeaModel {
         /**
-         * <p>The client_secret in the OAuth protocol, which is the client secret.</p>
+         * <p>The endpoint URL used to guide users through authorization. Conditionally required: this parameter is required when AuthorizationFlow is set to user_federation and ProviderVendor is set to custom. For preset vendors, this value can be automatically populated through DiscoveryUrl.</p>
+         */
+        @NameInMap("AuthorizationEndpoint")
+        public String authorizationEndpoint;
+
+        /**
+         * <p>The OAuth authorization flow type. Valid values:</p>
+         * <ul>
+         * <li>m2m: Machine-to-machine (2LO, Client Credentials).</li>
+         * <li>user_federation: User federation (3LO, Authorization Code).</li>
+         * </ul>
+         */
+        @NameInMap("AuthorizationFlow")
+        public String authorizationFlow;
+
+        /**
+         * <p>The client_secret in the OAuth protocol.</p>
          * <blockquote>
          * <p>The value cannot exceed 1024 characters in length.</p>
          * </blockquote>
@@ -191,14 +207,41 @@ public class UpdateCredentialProviderRequest extends TeaModel {
         public String clientSecret;
 
         /**
+         * <p>The Discovery document URL used to automatically retrieve OAuth endpoint configurations. Conditionally optional: this parameter is used when AuthorizationFlow is set to user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</p>
+         */
+        @NameInMap("DiscoveryUrl")
+        public String discoveryUrl;
+
+        @NameInMap("Issuer")
+        public String issuer;
+
+        /**
+         * <p>The PKCE code_challenge generation method. Default value: s256.</p>
+         */
+        @NameInMap("PkceChallengeMethod")
+        public String pkceChallengeMethod;
+
+        /**
+         * <p>Specifies whether to use the PKCE extension for enhanced security. We recommend that you always enable this feature.</p>
+         */
+        @NameInMap("PkceEnabled")
+        public Boolean pkceEnabled;
+
+        /**
+         * <p>The preset vendor or custom configuration. This parameter is optional. Default value: custom.</p>
+         */
+        @NameInMap("ProviderVendor")
+        public String providerVendor;
+
+        /**
          * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
          * <blockquote>
-         * <p>The Scope configuration at the credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration at the credential provider is used for issuance.</p>
+         * <p>The Scope configuration on the OAuth credential provider serves as a fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for token issuance.</p>
          * </blockquote>
          * <blockquote>
          * <p>Notice: Separate multiple Scope values with spaces. To clear the Scope configuration, pass an empty string.</p>
          * </blockquote>
-         * <p>Restrictions on a single Scope value:</p>
+         * <p>Restrictions for each individual Scope value:</p>
          * <ol>
          * <li>Allowed characters: lowercase letters, digits, and special characters <code>|/:_-.</code></li>
          * <li>Must contain at least one lowercase letter or digit.</li>
@@ -229,12 +272,68 @@ public class UpdateCredentialProviderRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setAuthorizationEndpoint(String authorizationEndpoint) {
+            this.authorizationEndpoint = authorizationEndpoint;
+            return this;
+        }
+        public String getAuthorizationEndpoint() {
+            return this.authorizationEndpoint;
+        }
+
+        public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setAuthorizationFlow(String authorizationFlow) {
+            this.authorizationFlow = authorizationFlow;
+            return this;
+        }
+        public String getAuthorizationFlow() {
+            return this.authorizationFlow;
+        }
+
         public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setClientSecret(String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
         public String getClientSecret() {
             return this.clientSecret;
+        }
+
+        public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setDiscoveryUrl(String discoveryUrl) {
+            this.discoveryUrl = discoveryUrl;
+            return this;
+        }
+        public String getDiscoveryUrl() {
+            return this.discoveryUrl;
+        }
+
+        public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setPkceChallengeMethod(String pkceChallengeMethod) {
+            this.pkceChallengeMethod = pkceChallengeMethod;
+            return this;
+        }
+        public String getPkceChallengeMethod() {
+            return this.pkceChallengeMethod;
+        }
+
+        public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setPkceEnabled(Boolean pkceEnabled) {
+            this.pkceEnabled = pkceEnabled;
+            return this;
+        }
+        public Boolean getPkceEnabled() {
+            return this.pkceEnabled;
+        }
+
+        public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setProviderVendor(String providerVendor) {
+            this.providerVendor = providerVendor;
+            return this;
+        }
+        public String getProviderVendor() {
+            return this.providerVendor;
         }
 
         public UpdateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig setScope(String scope) {

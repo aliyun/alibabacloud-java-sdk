@@ -120,10 +120,6 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public static class ListCredentialProvidersRequestFilter extends TeaModel {
         /**
          * <p>The filter condition name. Valid values:</p>
-         * <ul>
-         * <li>CredentialProviderName: the credential provider name.</li>
-         * <li>CredentialProviderIdentifier: the credential provider identifier.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CredentialProviderName</p>
