@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterCreateConversationResponseBody extends TeaModel {
     /**
-     * <p>Data object.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterCreateConversationResponseBody extends TeaModel {
     public ConversationDTO data;
 
     /**
-     * <p>Error code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,16 +23,16 @@ public class ModelRouterCreateConversationResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class ModelRouterCreateConversationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>

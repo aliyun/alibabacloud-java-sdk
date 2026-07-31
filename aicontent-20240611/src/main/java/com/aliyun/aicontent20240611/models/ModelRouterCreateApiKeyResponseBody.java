@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterCreateApiKeyResponseBody extends TeaModel {
     /**
-     * <p>The returned data object.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterCreateApiKeyResponseBody extends TeaModel {
     public ApiKeyDTO data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,10 +23,10 @@ public class ModelRouterCreateApiKeyResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class ModelRouterCreateApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

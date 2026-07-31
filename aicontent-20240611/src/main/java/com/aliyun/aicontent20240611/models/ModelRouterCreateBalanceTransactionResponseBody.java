@@ -26,7 +26,7 @@ public class ModelRouterCreateBalanceTransactionResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Unknown error.</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;

@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModelRouterConfigureClientBalanceRequest extends TeaModel {
     /**
-     * <p>The balance type. Valid values: <code>amount</code> or <code>tokens</code>. This parameter is required when you first enable balance throttling and cannot be changed afterward.</p>
+     * <p>The balance type. Valid values:</p>
+     * <ul>
+     * <li>amount: monetary amount.</li>
+     * <li>tokens: token count.</li>
+     * </ul>
+     * <p>This parameter is required when you enable balance throttling for the first time. Once set, it cannot be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>amount</p>
@@ -14,7 +19,7 @@ public class ModelRouterConfigureClientBalanceRequest extends TeaModel {
     public String balanceType;
 
     /**
-     * <p>Specifies whether to enable balance throttling. Once enabled, this feature cannot be disabled.</p>
+     * <p>Specifies whether to enable balance-based throttling. Once enabled, balance throttling cannot be disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +28,7 @@ public class ModelRouterConfigureClientBalanceRequest extends TeaModel {
     public Boolean enableBalance;
 
     /**
-     * <p>The initial balance. This parameter is only applicable when you first enable balance throttling.</p>
+     * <p>The initial balance. This parameter takes effect only when balance throttling is enabled for the first time.</p>
      * 
      * <strong>example:</strong>
      * <p>100.00</p>

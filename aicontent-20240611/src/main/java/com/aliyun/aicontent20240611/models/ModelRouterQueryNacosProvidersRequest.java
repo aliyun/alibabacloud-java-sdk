@@ -23,7 +23,7 @@ public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether to return the total count.</p>
+     * <p>Specifies whether the total count is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ModelRouterQueryNacosProvidersRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The pagination token used for paginated queries. Specify this parameter to retrieve the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

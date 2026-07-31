@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryClientTreeRequest extends TeaModel {
     /**
-     * <p>The maximum number of items to return per page.</p>
+     * <p>maxResults</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryClientTreeRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>

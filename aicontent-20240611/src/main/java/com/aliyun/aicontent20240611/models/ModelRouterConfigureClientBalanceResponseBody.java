@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterConfigureClientBalanceResponseBody extends TeaModel {
     /**
-     * <p>The returned data object.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ModelRouterConfigureClientBalanceResponseBody extends TeaModel {
     public ClientBalanceDTO data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterConfigureClientBalanceResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class ModelRouterConfigureClientBalanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

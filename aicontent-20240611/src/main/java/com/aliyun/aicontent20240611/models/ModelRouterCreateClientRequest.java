@@ -8,13 +8,22 @@ public class ModelRouterCreateClientRequest extends TeaModel {
      * <p>The company address.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("address")
     public String address;
 
     /**
-     * <p>A comma-separated list of model IDs that the client can use. If this parameter is empty, the client can use all available models.</p>
+     * <p>The allowed model group configuration in JSON string format: {&quot;model_ids&quot;:[101],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}. If both this field and allowedModels are specified, this field takes precedence.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;model_ids&quot;:[101],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
+     */
+    @NameInMap("allowedModelGroupConfig")
+    public String allowedModelGroupConfig;
+
+    /**
+     * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
@@ -32,6 +41,8 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     public String contact;
 
     /**
+     * <p>The discount coefficient. A value of 1.0 indicates no discount, and 0.8 indicates a 20% discount. Default value: 1.0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -39,26 +50,28 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     public Double discount;
 
     /**
-     * <p>The client name.</p>
+     * <p>The customer name.</p>
      * 
      * <strong>example:</strong>
-     * <p>我的客户</p>
+     * <p>MyCustomer</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The ID of the parent department. If not specified, a top-level department is created.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>292090</p>
      */
     @NameInMap("parentId")
     public Long parentId;
 
     /**
-     * <p>Additional remarks.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>Remarks</p>
      */
     @NameInMap("remark")
     public String remark;
@@ -74,6 +87,14 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     }
     public String getAddress() {
         return this.address;
+    }
+
+    public ModelRouterCreateClientRequest setAllowedModelGroupConfig(String allowedModelGroupConfig) {
+        this.allowedModelGroupConfig = allowedModelGroupConfig;
+        return this;
+    }
+    public String getAllowedModelGroupConfig() {
+        return this.allowedModelGroupConfig;
     }
 
     public ModelRouterCreateClientRequest setAllowedModels(String allowedModels) {

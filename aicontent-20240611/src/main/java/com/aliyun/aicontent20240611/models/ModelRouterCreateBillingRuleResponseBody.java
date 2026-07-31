@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
     /**
-     * <p>Contains the details of the billing rule.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ModelRouterCreateBillingRuleResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,7 +23,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -119,7 +119,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String billingType;
 
         /**
-         * <p>The delete marker.</p>
+         * <p>The deletion tag.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -128,7 +128,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public Integer deleteTag;
 
         /**
-         * <p>The effective time of the rule.</p>
+         * <p>The effective period.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
@@ -137,7 +137,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The expiration time of the rule.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
@@ -146,7 +146,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The creation time of the rule.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
@@ -155,7 +155,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time of the rule.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
@@ -218,7 +218,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public Object pricingConfig;
 
         /**
-         * <p>The provider identifier.</p>
+         * <p>The vendor identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba</p>
@@ -227,7 +227,7 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String symbol;
 
         /**
-         * <p>The version of the rule.</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     /**
-     * <p>Filters the results by API key ID.</p>
+     * <p>The API key ID used to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>Filters the results by client ID.</p>
+     * <p>The client ID used to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The end time for a custom time range.</p>
+     * <p>The custom end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-02T00:00:00Z</p>
@@ -32,7 +32,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The grouping field.</p>
+     * <p>The field by which to group the results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Filters the results by model ID.</p>
+     * <p>The model ID used to filter the results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Long modelId;
 
     /**
-     * <p>Specifies whether to return the total count of results.</p>
+     * <p>Specifies whether to return the total count.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
-     * <p>The pagination token from a previous response to retrieve the next page of results.</p>
+     * <p>The pagination token. An empty value indicates that no more pages are available.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +77,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The sort field.</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>resourceId</p>
@@ -104,7 +104,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The number of results to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,7 +113,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time for a custom time range.</p>
+     * <p>The custom start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
@@ -122,7 +122,7 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The time range for the query. Valid values are <code>1h</code>, <code>6h</code>, <code>24h</code>, <code>7d</code>, and <code>30d</code>.</p>
+     * <p>The time range for the query. Valid values: 1h, 6h, 24h, 7d, 30d.</p>
      * 
      * <strong>example:</strong>
      * <p>24h</p>

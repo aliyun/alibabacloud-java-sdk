@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     /**
-     * <p>An array of objects that form the customer tree.</p>
+     * <p>The response data. The customer tree structure list.</p>
      */
     @NameInMap("data")
     public java.util.List<ClientTreeDTO> data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The fault information code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -20,10 +20,10 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -38,7 +38,7 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The maximum number of entries returned on the current page.</p>
+     * <p>maxResults</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is not returned, it indicates that there are no more results.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -56,7 +56,7 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>

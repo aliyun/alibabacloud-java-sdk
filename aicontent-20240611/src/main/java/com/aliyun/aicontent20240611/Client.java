@@ -2237,8 +2237,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Binds model groups to departments in batches.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the tab configuration for usage monitoring.</p>
+     * <p>Binds model groups to departments in batches.</p>
+     * 
+     * @param request ModelRouterBatchBindModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBatchBindModelGroupResponse
+     */
+    public ModelRouterBatchBindModelGroupResponse modelRouterBatchBindModelGroupWithOptions(ModelRouterBatchBindModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedModelGroupConfig)) {
+            body.put("allowedModelGroupConfig", request.allowedModelGroupConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIdList)) {
+            body.put("clientIdList", request.clientIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBatchBindModelGroup"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/batch-bind-model-group"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBatchBindModelGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Binds model groups to departments in batches.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds model groups to departments in batches.</p>
+     * 
+     * @param request ModelRouterBatchBindModelGroupRequest
+     * @return ModelRouterBatchBindModelGroupResponse
+     */
+    public ModelRouterBatchBindModelGroupResponse modelRouterBatchBindModelGroup(ModelRouterBatchBindModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBatchBindModelGroupWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the usage monitoring tab configuration.</p>
      * 
      * @param request ModelRouterBillingCostTabsRequest
      * @param headers map
@@ -2276,7 +2333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the tab configuration for usage monitoring.</p>
+     * <p>Retrieves the usage monitoring tab configuration.</p>
      * 
      * @param request ModelRouterBillingCostTabsRequest
      * @return ModelRouterBillingCostTabsResponse
@@ -2289,7 +2346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a chat completion.</p>
+     * <p>Initiates a chat conversation.</p>
      * 
      * @param request ModelRouterChatCompletionsRequest
      * @param headers map
@@ -2318,7 +2375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a chat completion.</p>
+     * <p>Initiates a chat conversation.</p>
      * 
      * @param request ModelRouterChatCompletionsRequest
      * @return ModelRouterChatCompletionsResponse
@@ -2331,7 +2388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures balance throttling for a department.</p>
+     * <p>Enables balance-based throttling for a department.</p>
      * 
      * @param request ModelRouterConfigureClientBalanceRequest
      * @param headers map
@@ -2373,7 +2430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures balance throttling for a department.</p>
+     * <p>Enables balance-based throttling for a department.</p>
      * 
      * @param request ModelRouterConfigureClientBalanceRequest
      * @return ModelRouterConfigureClientBalanceResponse
@@ -2423,7 +2480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API key management / Create an API key</p>
+     * <p>Creates an API key.</p>
      * 
      * @param request ModelRouterCreateApiKeyRequest
      * @param headers map
@@ -2457,7 +2514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API key management / Create an API key</p>
+     * <p>Creates an API key.</p>
      * 
      * @param request ModelRouterCreateApiKeyRequest
      * @return ModelRouterCreateApiKeyResponse
@@ -2469,9 +2526,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is deprecated. Do not use it.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates a balance transaction for customer management.</p>
      * 
@@ -2522,9 +2576,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is deprecated. Do not use it.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates a balance transaction for customer management.</p>
      * 
@@ -2539,7 +2590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Billing Management/Create Billing Rule</p>
+     * <p>Creates a billing rule.</p>
      * 
      * @param request ModelRouterCreateBillingRuleRequest
      * @param headers map
@@ -2593,7 +2644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Billing Management/Create Billing Rule</p>
+     * <p>Creates a billing rule.</p>
      * 
      * @param request ModelRouterCreateBillingRuleRequest
      * @return ModelRouterCreateBillingRuleResponse
@@ -2606,7 +2657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Client management / Create client</p>
+     * <p>Creates a customer.</p>
      * 
      * @param request ModelRouterCreateClientRequest
      * @param headers map
@@ -2618,6 +2669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.address)) {
             body.put("address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedModelGroupConfig)) {
+            body.put("allowedModelGroupConfig", request.allowedModelGroupConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.allowedModels)) {
@@ -2664,7 +2719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Client management / Create client</p>
+     * <p>Creates a customer.</p>
      * 
      * @param request ModelRouterCreateClientRequest
      * @return ModelRouterCreateClientResponse
@@ -2677,7 +2732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Conversation management / Create conversation</p>
+     * <p>Creates a conversation.</p>
      * 
      * @param request ModelRouterCreateConversationRequest
      * @param headers map
@@ -2719,7 +2774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Conversation management / Create conversation</p>
+     * <p>Creates a conversation.</p>
      * 
      * @param request ModelRouterCreateConversationRequest
      * @return ModelRouterCreateConversationResponse
@@ -2732,7 +2787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model.</p>
+     * <p>Performs model creation.</p>
      * 
      * @param request ModelRouterCreateModelRequest
      * @param headers map
@@ -2810,7 +2865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model.</p>
+     * <p>Performs model creation.</p>
      * 
      * @param request ModelRouterCreateModelRequest
      * @return ModelRouterCreateModelResponse
@@ -2823,10 +2878,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口已弃用，请勿使用</p>
+     * <p>Creates a manual model group.</p>
      * 
      * <b>summary</b> : 
-     * <p>客户管理/创建周期充值订阅</p>
+     * <p>Creates a manual model group.</p>
+     * 
+     * @param request ModelRouterCreateModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateModelGroupResponse
+     */
+    public ModelRouterCreateModelGroupResponse modelRouterCreateModelGroupWithOptions(ModelRouterCreateModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modelList)) {
+            body.put("modelList", request.modelList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateModelGroup"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateModelGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a manual model group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a manual model group.</p>
+     * 
+     * @param request ModelRouterCreateModelGroupRequest
+     * @return ModelRouterCreateModelGroupResponse
+     */
+    public ModelRouterCreateModelGroupResponse modelRouterCreateModelGroup(ModelRouterCreateModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateModelGroupWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a periodic recharge subscription for customer management.</p>
      * 
      * @param request ModelRouterCreateSubscriptionRequest
      * @param headers map
@@ -2871,11 +2980,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>该接口已弃用，请勿使用</p>
-     * 
      * <b>summary</b> : 
-     * <p>客户管理/创建周期充值订阅</p>
+     * <p>Creates a periodic recharge subscription for customer management.</p>
      * 
      * @param request ModelRouterCreateSubscriptionRequest
      * @return ModelRouterCreateSubscriptionResponse
@@ -2888,7 +2994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API Key Management / Delete API Key</p>
+     * <p>Deletes an API key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2914,7 +3020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API Key Management / Delete API Key</p>
+     * <p>Deletes an API key.</p>
      * @return ModelRouterDeleteApiKeyResponse
      */
     public ModelRouterDeleteApiKeyResponse modelRouterDeleteApiKey(String id) throws Exception {
@@ -2925,7 +3031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a client.</p>
+     * <p>Deletes a customer.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2951,7 +3057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a client.</p>
+     * <p>Deletes a customer.</p>
      * @return ModelRouterDeleteClientResponse
      */
     public ModelRouterDeleteClientResponse modelRouterDeleteClient(String id) throws Exception {
@@ -2962,7 +3068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Conversation management/Delete conversation</p>
+     * <p>Deletes a conversation.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2988,7 +3094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Conversation management/Delete conversation</p>
+     * <p>Deletes a conversation.</p>
      * @return ModelRouterDeleteConversationResponse
      */
     public ModelRouterDeleteConversationResponse modelRouterDeleteConversation(String id) throws Exception {
@@ -2999,7 +3105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Management / Delete Model</p>
+     * <p>Deletes a model.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3025,13 +3131,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Management / Delete Model</p>
+     * <p>Deletes a model.</p>
      * @return ModelRouterDeleteModelResponse
      */
     public ModelRouterDeleteModelResponse modelRouterDeleteModel(String id) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterDeleteModelWithOptions(id, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a manual group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a manual group.</p>
+     * 
+     * @param request ModelRouterDeleteModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterDeleteModelGroupResponse
+     */
+    public ModelRouterDeleteModelGroupResponse modelRouterDeleteModelGroupWithOptions(String groupId, ModelRouterDeleteModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterDeleteModelGroup"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterDeleteModelGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a manual group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a manual group.</p>
+     * 
+     * @param request ModelRouterDeleteModelGroupRequest
+     * @return ModelRouterDeleteModelGroupResponse
+     */
+    public ModelRouterDeleteModelGroupResponse modelRouterDeleteModelGroup(String groupId, ModelRouterDeleteModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterDeleteModelGroupWithOptions(groupId, request, headers, runtime);
     }
 
     /**
@@ -3077,7 +3230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the balance change log for a specified department.</p>
+     * <p>Retrieves the balance change logs of a department.</p>
      * 
      * @param request ModelRouterGetClientBalanceLogsRequest
      * @param headers map
@@ -3127,7 +3280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the balance change log for a specified department.</p>
+     * <p>Retrieves the balance change logs of a department.</p>
      * 
      * @param request ModelRouterGetClientBalanceLogsRequest
      * @return ModelRouterGetClientBalanceLogsResponse
@@ -3140,10 +3293,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口已弃用，请勿使用</p>
+     * <p>This API operation is deprecated. Do not use it.</p>
      * 
      * <b>summary</b> : 
-     * <p>客户管理/查询周期充值订阅列表</p>
+     * <p>Queries balance change records.</p>
+     * 
+     * @param request ModelRouterListBalanceOrdersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterListBalanceOrdersResponse
+     */
+    public ModelRouterListBalanceOrdersResponse modelRouterListBalanceOrdersWithOptions(String id, ModelRouterListBalanceOrdersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            query.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("orderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterListBalanceOrders"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/orders"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterListBalanceOrdersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is deprecated. Do not use it.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries balance change records.</p>
+     * 
+     * @param request ModelRouterListBalanceOrdersRequest
+     * @return ModelRouterListBalanceOrdersResponse
+     */
+    public ModelRouterListBalanceOrdersResponse modelRouterListBalanceOrders(String id, ModelRouterListBalanceOrdersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterListBalanceOrdersWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation is deprecated. Do not use it.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of periodic recharge subscriptions.</p>
      * 
      * @param request ModelRouterListSubscriptionsRequest
      * @param headers map
@@ -3189,10 +3419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口已弃用，请勿使用</p>
+     * <p>This operation is deprecated. Do not use it.</p>
      * 
      * <b>summary</b> : 
-     * <p>客户管理/查询周期充值订阅列表</p>
+     * <p>Queries the list of periodic recharge subscriptions.</p>
      * 
      * @param request ModelRouterListSubscriptionsRequest
      * @return ModelRouterListSubscriptionsResponse
@@ -3205,7 +3435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific API key.</p>
+     * <p>Retrieves the details of an API key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3231,7 +3461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific API key.</p>
+     * <p>Retrieves the details of an API key.</p>
      * @return ModelRouterQueryApiKeyResponse
      */
     public ModelRouterQueryApiKeyResponse modelRouterQueryApiKey(String id) throws Exception {
@@ -3629,7 +3859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a hierarchical tree of customers.</p>
+     * <p>Retrieves the customer tree structure.</p>
      * 
      * @param request ModelRouterQueryClientTreeRequest
      * @param headers map
@@ -3667,7 +3897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a hierarchical tree of customers.</p>
+     * <p>Retrieves the customer tree structure.</p>
      * 
      * @param request ModelRouterQueryClientTreeRequest
      * @return ModelRouterQueryClientTreeResponse
@@ -4148,6 +4378,307 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a model group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a model group.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryModelGroupResponse
+     */
+    public ModelRouterQueryModelGroupResponse modelRouterQueryModelGroupWithOptions(String groupId, ModelRouterQueryModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryModelGroup"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryModelGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the details of a model group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a model group.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupRequest
+     * @return ModelRouterQueryModelGroupResponse
+     */
+    public ModelRouterQueryModelGroupResponse modelRouterQueryModelGroup(String groupId, ModelRouterQueryModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryModelGroupWithOptions(groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the departments bound to a model group by paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the departments bound to a model group by paging.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupClientsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryModelGroupClientsResponse
+     */
+    public ModelRouterQueryModelGroupClientsResponse modelRouterQueryModelGroupClientsWithOptions(String groupId, ModelRouterQueryModelGroupClientsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryModelGroupClients"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + "/clients"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryModelGroupClientsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the departments bound to a model group by paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the departments bound to a model group by paging.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupClientsRequest
+     * @return ModelRouterQueryModelGroupClientsResponse
+     */
+    public ModelRouterQueryModelGroupClientsResponse modelRouterQueryModelGroupClients(String groupId, ModelRouterQueryModelGroupClientsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryModelGroupClientsWithOptions(groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of model groups by paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of model groups by paging.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryModelGroupListResponse
+     */
+    public ModelRouterQueryModelGroupListResponse modelRouterQueryModelGroupListWithOptions(ModelRouterQueryModelGroupListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryModelGroupList"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryModelGroupListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of model groups by paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of model groups by paging.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupListRequest
+     * @return ModelRouterQueryModelGroupListResponse
+     */
+    public ModelRouterQueryModelGroupListResponse modelRouterQueryModelGroupList(ModelRouterQueryModelGroupListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryModelGroupListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries models within a group with pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for models within a model group.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupModelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryModelGroupModelsResponse
+     */
+    public ModelRouterQueryModelGroupModelsResponse modelRouterQueryModelGroupModelsWithOptions(String groupId, ModelRouterQueryModelGroupModelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryModelGroupModels"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + "/models"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryModelGroupModelsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries models within a group with pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a paging query for models within a model group.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupModelsRequest
+     * @return ModelRouterQueryModelGroupModelsResponse
+     */
+    public ModelRouterQueryModelGroupModelsResponse modelRouterQueryModelGroupModels(String groupId, ModelRouterQueryModelGroupModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryModelGroupModelsWithOptions(groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the groups and models bound to a specified API key.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the model groups and models bound to a specified API key.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupsByApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryModelGroupsByApiKeyResponse
+     */
+    public ModelRouterQueryModelGroupsByApiKeyResponse modelRouterQueryModelGroupsByApiKeyWithOptions(String id, ModelRouterQueryModelGroupsByApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryModelGroupsByApiKey"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/apikeys/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/model-groups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryModelGroupsByApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the groups and models bound to a specified API key.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the model groups and models bound to a specified API key.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupsByApiKeyRequest
+     * @return ModelRouterQueryModelGroupsByApiKeyResponse
+     */
+    public ModelRouterQueryModelGroupsByApiKeyResponse modelRouterQueryModelGroupsByApiKey(String id, ModelRouterQueryModelGroupsByApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryModelGroupsByApiKeyWithOptions(id, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Model management/Get model list</p>
      * 
@@ -4235,11 +4766,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is deprecated. Do not use it.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Configures Nacos or retrieves the list of Nacos service providers.</p>
+     * <p>Queries the list of Nacos service providers through Nacos configuration.</p>
      * 
      * @param request ModelRouterQueryNacosProvidersRequest
      * @param headers map
@@ -4300,11 +4828,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This operation is deprecated. Do not use it.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Configures Nacos or retrieves the list of Nacos service providers.</p>
+     * <p>Queries the list of Nacos service providers through Nacos configuration.</p>
      * 
      * @param request ModelRouterQueryNacosProvidersRequest
      * @return ModelRouterQueryNacosProvidersResponse
@@ -4463,7 +4988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Observation / Observation Logs</p>
+     * <p>Retrieves a list of model observation logs.</p>
      * 
      * @param request ModelRouterQueryObservationLogsRequest
      * @param headers map
@@ -4549,7 +5074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Observation / Observation Logs</p>
+     * <p>Retrieves a list of model observation logs.</p>
      * 
      * @param request ModelRouterQueryObservationLogsRequest
      * @return ModelRouterQueryObservationLogsResponse
@@ -4562,7 +5087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Observation &gt; Get Observation Metric Data</p>
+     * <p>Retrieves observability metric data for models.</p>
      * 
      * @param request ModelRouterQueryObservationMetricsRequest
      * @param headers map
@@ -4648,7 +5173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Model Observation &gt; Get Observation Metric Data</p>
+     * <p>Retrieves observability metric data for models.</p>
      * 
      * @param request ModelRouterQueryObservationMetricsRequest
      * @return ModelRouterQueryObservationMetricsResponse
@@ -4799,7 +5324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/停止周期充值订阅</p>
+     * <p>Stops a periodic recharge subscription for customer management.</p>
      * 
      * @param request ModelRouterStopSubscriptionRequest
      * @param headers map
@@ -4833,7 +5358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/停止周期充值订阅</p>
+     * <p>Stops a periodic recharge subscription for customer management.</p>
      * 
      * @param request ModelRouterStopSubscriptionRequest
      * @return ModelRouterStopSubscriptionResponse
@@ -4913,7 +5438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a specified client\&quot;s information.</p>
+     * <p>Updates customer information.</p>
      * 
      * @param request ModelRouterUpdateClientRequest
      * @param headers map
@@ -4925,6 +5450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.address)) {
             body.put("address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedModelGroupConfig)) {
+            body.put("allowedModelGroupConfig", request.allowedModelGroupConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.allowedModels)) {
@@ -4971,7 +5500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a specified client\&quot;s information.</p>
+     * <p>Updates customer information.</p>
      * 
      * @param request ModelRouterUpdateClientRequest
      * @return ModelRouterUpdateClientResponse
@@ -5126,6 +5655,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterUpdateModelWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Edits a manual group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Edits a manual model group.</p>
+     * 
+     * @param request ModelRouterUpdateModelGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterUpdateModelGroupResponse
+     */
+    public ModelRouterUpdateModelGroupResponse modelRouterUpdateModelGroupWithOptions(String groupId, ModelRouterUpdateModelGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modelList)) {
+            body.put("modelList", request.modelList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterUpdateModelGroup"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterUpdateModelGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Edits a manual group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Edits a manual model group.</p>
+     * 
+     * @param request ModelRouterUpdateModelGroupRequest
+     * @return ModelRouterUpdateModelGroupResponse
+     */
+    public ModelRouterUpdateModelGroupResponse modelRouterUpdateModelGroup(String groupId, ModelRouterUpdateModelGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterUpdateModelGroupWithOptions(groupId, request, headers, runtime);
     }
 
     /**

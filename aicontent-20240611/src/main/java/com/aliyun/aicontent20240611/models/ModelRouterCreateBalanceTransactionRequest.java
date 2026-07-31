@@ -16,8 +16,8 @@ public class ModelRouterCreateBalanceTransactionRequest extends TeaModel {
     /**
      * <p>The target balance pool type. Default value: permanent. Valid values:</p>
      * <ul>
-     * <li>permanent: permanent balance pool (the amount never expires).</li>
-     * <li>monthly: monthly balance pool (automatically reset to zero at the beginning of each month).</li>
+     * <li>permanent: permanent balance pool. The balance never expires.</li>
+     * <li>monthly: monthly balance pool. The balance is automatically reset to zero at the beginning of each month.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ModelRouterCreateBalanceTransactionRequest extends TeaModel {
     public String balanceType;
 
     /**
-     * <p>The idempotency key. UUID v4 format is recommended. Maximum length: 32 characters. Repeated submissions with the same key are not executed again.</p>
+     * <p>The idempotency key. UUID v4 format is recommended. Maximum length: 32 characters. Duplicate submissions with the same key are not executed repeatedly.</p>
      * 
      * <strong>example:</strong>
      * <p>550e8400e29b41d4a716446655440000</p>
@@ -39,7 +39,7 @@ public class ModelRouterCreateBalanceTransactionRequest extends TeaModel {
      * <p>The remark.</p>
      * 
      * <strong>example:</strong>
-     * <p>Top-up.</p>
+     * <p>Top-up</p>
      */
     @NameInMap("remark")
     public String remark;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterChatCompletionsRequest extends TeaModel {
     /**
-     * <p>The request body, which must be a JSON object.</p>
+     * <p>The chat request body.</p>
      * 
      * <strong>example:</strong>
      * <p>{

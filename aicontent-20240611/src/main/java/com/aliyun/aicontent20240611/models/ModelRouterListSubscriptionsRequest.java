@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterListSubscriptionsRequest extends TeaModel {
     /**
+     * <p>Filters by balance type (permanent/monthly).</p>
+     * 
      * <strong>example:</strong>
      * <p>permanent</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterListSubscriptionsRequest extends TeaModel {
     public String balanceType;
 
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,13 +23,17 @@ public class ModelRouterListSubscriptionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the value returned from the previous query. Set to &quot;&quot; when no more data is available. Set to &quot;5&quot; when there is a next page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>&quot;5&quot; 或 &quot;&quot;</p>
+     * <p>&quot;5&quot; or &quot;&quot;</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
+     * <p>Filters by status (active/stopped).</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */

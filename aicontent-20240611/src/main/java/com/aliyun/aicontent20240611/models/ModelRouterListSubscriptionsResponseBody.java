@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
+    /**
+     * <p>The subscription information.</p>
+     */
     @NameInMap("data")
     public ModelRouterListSubscriptionsResponseBodyData data;
 
     /**
+     * <p>The fault error message encoding.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -15,13 +20,17 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error.</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -36,6 +47,8 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,15 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ModelRouterListSubscriptionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of subscription information.</p>
+         */
         @NameInMap("list")
         public java.util.List<SubscriptionDTO> list;
 
         /**
+         * <p>The maximum number of results per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -107,6 +125,8 @@ public class ModelRouterListSubscriptionsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The pagination token. Do not specify this parameter for the first query. For subsequent queries, specify the value returned from the previous query. Set to &quot;&quot; when no more data is available. Set to &quot;5&quot; when there is a next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>5&quot; or &quot;&quot;</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
     /**
+     * <p>The subscription information.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
     public SubscriptionDTO data;
 
     /**
+     * <p>The fault encoding for the error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterCreateSubscriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

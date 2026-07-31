@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     /**
-     * <p>The response payload.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public ModelRouterQueryObservationLogsResponseBodyData data;
 
     /**
-     * <p>The error code for a failed request.</p>
+     * <p>The fault information code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,10 +23,10 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message for a failed request.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -41,7 +41,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>maxResults</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -59,7 +59,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>

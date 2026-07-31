@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public ModelRouterGetClientBalanceLogsResponseBodyData data;
 
     /**
-     * <p>The error code returned on failure.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -20,10 +20,10 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned on failure.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -38,7 +38,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page of results. An empty value indicates that no more results are available.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -144,7 +144,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
 
     public static class ModelRouterGetClientBalanceLogsResponseBodyData extends TeaModel {
         /**
-         * <p>A list of balance change log entries.</p>
+         * <p>The list of balance change logs.</p>
          */
         @NameInMap("list")
         public java.util.List<ClientBalanceLogDTO> list;
@@ -159,7 +159,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -168,7 +168,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of matching entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

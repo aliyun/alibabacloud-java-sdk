@@ -8,13 +8,22 @@ public class ModelRouterUpdateClientRequest extends TeaModel {
      * <p>The company address.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("address")
     public String address;
 
     /**
-     * <p>A comma-separated list of model IDs that the client can use. If this parameter is left empty, the client can use all models.</p>
+     * <p>The allowed model group configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;model_ids&quot;:[101],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
+     */
+    @NameInMap("allowedModelGroupConfig")
+    public String allowedModelGroupConfig;
+
+    /**
+     * <p>The list of allowed model IDs, separated by commas. An empty value indicates all models are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
@@ -32,6 +41,8 @@ public class ModelRouterUpdateClientRequest extends TeaModel {
     public String contact;
 
     /**
+     * <p>The discount coefficient.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -39,25 +50,25 @@ public class ModelRouterUpdateClientRequest extends TeaModel {
     public Double discount;
 
     /**
-     * <p>The client name.</p>
+     * <p>The customer name.</p>
      * 
      * <strong>example:</strong>
-     * <p>我的客户</p>
+     * <p>MyCustomer</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>A remark about the client.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>Remarks</p>
      */
     @NameInMap("remark")
     public String remark;
 
     /**
-     * <p>The client\&quot;s status.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,6 +87,14 @@ public class ModelRouterUpdateClientRequest extends TeaModel {
     }
     public String getAddress() {
         return this.address;
+    }
+
+    public ModelRouterUpdateClientRequest setAllowedModelGroupConfig(String allowedModelGroupConfig) {
+        this.allowedModelGroupConfig = allowedModelGroupConfig;
+        return this;
+    }
+    public String getAllowedModelGroupConfig() {
+        return this.allowedModelGroupConfig;
     }
 
     public ModelRouterUpdateClientRequest setAllowedModels(String allowedModels) {

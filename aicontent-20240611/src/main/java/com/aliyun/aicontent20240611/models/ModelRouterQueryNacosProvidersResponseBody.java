@@ -14,7 +14,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public java.util.List<ModelRouterQueryNacosProvidersResponseBodyData> data;
 
     /**
-     * <p>The error message code.</p>
+     * <p>The fault message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -112,6 +112,9 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extends TeaModel {
+        /**
+         * <p>The asynchronous call identifier.</p>
+         */
         @NameInMap("async")
         public Boolean async;
 
@@ -131,6 +134,9 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryNacosProvidersResponseBodyDataModels extends TeaModel {
+        /**
+         * <p>The extension configuration parameters of the model, stored as key-value pairs for additional model behavior configuration.</p>
+         */
         @NameInMap("extensions")
         public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extensions;
 
@@ -144,6 +150,8 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         public String identifier;
 
         /**
+         * <p>The input type and output type.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -169,6 +177,8 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         public String outputToken;
 
         /**
+         * <p>The feature type or capability category of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>Chat</p>
          */

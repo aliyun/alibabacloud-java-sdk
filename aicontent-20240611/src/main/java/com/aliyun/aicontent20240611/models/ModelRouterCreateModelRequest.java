@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterCreateModelRequest extends TeaModel {
     /**
-     * <p>The API key.</p>
+     * <p>API Key</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxxx</p>
@@ -14,7 +14,7 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The base URL.</p>
+     * <p>Base URL</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
@@ -32,7 +32,7 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The model\&quot;s extended configuration parameters, provided as a JSON string.</p>
+     * <p>The extension configuration parameters of the model, stored as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,7 +41,7 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String extensions;
 
     /**
-     * <p>The supported input and output data types for the model.</p>
+     * <p>The input and output data types supported by the model.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -104,7 +104,7 @@ public class ModelRouterCreateModelRequest extends TeaModel {
     public String symbol;
 
     /**
-     * <p>Tags for the model. Separate multiple tags with commas.</p>
+     * <p>The tags, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>TXT_GEN,DEEP_THINK</p>

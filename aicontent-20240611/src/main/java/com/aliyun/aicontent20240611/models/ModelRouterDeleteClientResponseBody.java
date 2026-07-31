@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterDeleteClientResponseBody extends TeaModel {
     /**
-     * <p>Whether the client was deleted successfully.</p>
+     * <p>Indicates whether the customer was deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class ModelRouterDeleteClientResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterDeleteClientResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -50,7 +50,7 @@ public class ModelRouterDeleteClientResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
