@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned per page. Valid values: 1 to 200. Default value: 20.</p>
+     * <p>The number of entries per page for paging. Valid values: 1 to 200. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,9 +14,9 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. This parameter is returned if a next page exists.</p>
+     * <p>The pagination token for the next page. If a next page exists, this field has a return value.</p>
      * <blockquote>
-     * <p>If a value is returned for this parameter, it indicates that more results are available. Use the returned <strong>NextToken</strong> value in the next request to retrieve the next page of results. Repeat this process until no value is returned for this parameter. This indicates that all results have been retrieved.</p>
+     * <p>If this parameter has a return value, a next page exists. You can use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
@@ -35,7 +35,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of bot management rule labels.</p>
+     * <p>The list of bot management rule tags.</p>
      */
     @NameInMap("RuleLabels")
     public java.util.List<DescribeBotRuleLabelsResponseBodyRuleLabels> ruleLabels;
@@ -96,14 +96,11 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
 
     public static class DescribeBotRuleLabelsResponseBodyRuleLabels extends TeaModel {
         /**
-         * <p>The bot behavior that corresponds to the rule label. Valid values:</p>
+         * <p>The crawler behavior corresponding to the rule tag.</p>
          * <ul>
-         * <li><p><strong>malicious</strong>: malicious bot.</p>
-         * </li>
-         * <li><p><strong>suspicious</strong>: suspected bot.</p>
-         * </li>
-         * <li><p><strong>normal</strong>: normal bot.</p>
-         * </li>
+         * <li><strong>malicious</strong>: malicious crawler.</li>
+         * <li><strong>suspicious</strong>: suspected crawler.</li>
+         * <li><strong>normal</strong>: normal crawler.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,7 +110,46 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         public String botBehavior;
 
         /**
-         * <p>The key of the bot management rule label.</p>
+         * <p>The default action. Valid values:</p>
+         * <ul>
+         * <li><strong>block</strong>: Block.</li>
+         * <li><strong>monitor</strong>: Monitor.</li>
+         * <li><strong>js</strong>: JavaScript verification.</li>
+         * <li><strong>captcha</strong>: Slider CAPTCHA.</li>
+         * <li><strong>captcha_strict</strong>: Strict slider CAPTCHA.</li>
+         * <li><strong>bypass</strong>: Allow.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
+        @NameInMap("DefaultAction")
+        public String defaultAction;
+
+        /**
+         * <p>The default configurations corresponding to the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;crawlerStatusMap&quot;:{&quot;360&quot;:1,&quot;bytedance&quot;:1}}</p>
+         */
+        @NameInMap("DefaultConfig")
+        public String defaultConfig;
+
+        /**
+         * <p>The default status of the tag rule.</p>
+         * <ul>
+         * <li><strong>1</strong>: The rule is enabled.</li>
+         * <li><strong>0</strong>: The rule is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DefaultStatus")
+        public Integer defaultStatus;
+
+        /**
+         * <p>The bot management rule tag.</p>
          * 
          * <strong>example:</strong>
          * <p>malicious_crawler_python</p>
@@ -122,7 +158,20 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         public String labelKey;
 
         /**
-         * <p>The type of the bot rule label.</p>
+         * <p>The tag status.</p>
+         * <ul>
+         * <li><strong>online</strong>: Online.</li>
+         * <li><strong>wait_offline</strong>: Pending offline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
+        @NameInMap("LabelStatus")
+        public String labelStatus;
+
+        /**
+         * <p>The type of the bot rule tag.</p>
          * 
          * <strong>example:</strong>
          * <p>human_machine_challenge</p>
@@ -131,12 +180,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         public String labelType;
 
         /**
-         * <p>The bot management scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</p>
+         * <p>The set of bot management protection scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li><p><strong>web</strong>: web protection.</p>
-         * </li>
-         * <li><p><strong>app</strong>: app protection.</p>
-         * </li>
+         * <li><strong>web</strong>: Web protection scenario.</li>
+         * <li><strong>app</strong>: App protection scenario.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,12 +205,44 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             return this.botBehavior;
         }
 
+        public DescribeBotRuleLabelsResponseBodyRuleLabels setDefaultAction(String defaultAction) {
+            this.defaultAction = defaultAction;
+            return this;
+        }
+        public String getDefaultAction() {
+            return this.defaultAction;
+        }
+
+        public DescribeBotRuleLabelsResponseBodyRuleLabels setDefaultConfig(String defaultConfig) {
+            this.defaultConfig = defaultConfig;
+            return this;
+        }
+        public String getDefaultConfig() {
+            return this.defaultConfig;
+        }
+
+        public DescribeBotRuleLabelsResponseBodyRuleLabels setDefaultStatus(Integer defaultStatus) {
+            this.defaultStatus = defaultStatus;
+            return this;
+        }
+        public Integer getDefaultStatus() {
+            return this.defaultStatus;
+        }
+
         public DescribeBotRuleLabelsResponseBodyRuleLabels setLabelKey(String labelKey) {
             this.labelKey = labelKey;
             return this;
         }
         public String getLabelKey() {
             return this.labelKey;
+        }
+
+        public DescribeBotRuleLabelsResponseBodyRuleLabels setLabelStatus(String labelStatus) {
+            this.labelStatus = labelStatus;
+            return this;
+        }
+        public String getLabelStatus() {
+            return this.labelStatus;
         }
 
         public DescribeBotRuleLabelsResponseBodyRuleLabels setLabelType(String labelType) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page when using paging. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -16,7 +16,7 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
     /**
      * <p>The pagination token (<strong>Token</strong>) for the next page. If a next page exists, this field has a return value.</p>
      * <blockquote>
-     * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to obtain the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+     * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
 
     public static class DescribeRelatedDefenseRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The protection scenario of the protection rule. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a>.</p>
+         * <p>The protection scenario of the protection rule. For more information, refer to the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_acl</p>

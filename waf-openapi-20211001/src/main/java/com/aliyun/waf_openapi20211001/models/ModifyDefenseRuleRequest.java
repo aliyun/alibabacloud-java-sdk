@@ -14,15 +14,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String defenseScene;
 
     /**
-     * <p>The type of the protection rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>template</strong> (default): a template protection rule.</p>
-     * </li>
-     * <li><p><strong>resource</strong>: a rule for a specific protected object.</p>
-     * </li>
-     * <li><p><strong>global</strong>: a global rule.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the protection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>template</p>
@@ -31,9 +23,9 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String defenseType;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +36,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -59,7 +51,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The protected object for which you want to modify the rule.</p>
+     * <p>The protected object associated with the rule to modify.</p>
      * <blockquote>
      * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
      * </blockquote>
@@ -71,7 +63,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -80,11 +72,11 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The details of the protection rule, in a JSON string format. Specify the rule ID and the configuration of the protection rule to modify. The details include the following:</p>
+     * <p>The details of the protection rule. The value is a string that is converted from a JSON object constructed by a series of parameters. When you configure this parameter, you must specify the rule ID and the protection rule configuration to modify. The following parameters are included:</p>
      * <ul>
-     * <li><p><strong>id</strong>: The ID of the rule. This parameter is required. Data type: Long.</p>
+     * <li><p><strong>id</strong>: Long | Required | The rule ID.</p>
      * </li>
-     * <li><p>Configuration of the protection rule: The parameters are the same as the <strong>Rules</strong> parameter of the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation. For more information, see the description of the protection rule parameters in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+     * <li><p>Protection rule configuration: Same as the <strong>Rules</strong> parameter of the <strong>CreateDefenseRule</strong> operation. For more information, see the <strong>protection rule parameter description</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -102,7 +94,7 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     public String rules;
 
     /**
-     * <p>The ID of the protection template.</p>
+     * <p>The ID of the protection rule template.</p>
      * <blockquote>
      * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.</p>
      * </blockquote>

@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     /**
-     * <p>The WAF protection scenario. Only the following value is supported:</p>
-     * <ul>
-     * <li><strong>address_book</strong>: address book.</li>
-     * </ul>
+     * <p>The WAF protection scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +41,7 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page when using paging. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -55,7 +52,7 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     /**
      * <p>The pagination token (<strong>Token</strong>) for the next page. If a next page exists, this field has a return value.</p>
      * <blockquote>
-     * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to obtain the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+     * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +62,7 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region in which the WAF instance resides. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -80,7 +77,7 @@ public class DescribeRelatedDefenseRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

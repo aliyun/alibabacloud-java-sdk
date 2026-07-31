@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudServerRegionsRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeHybridCloudServerRegionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region code. Use this parameter to filter results by a specific continent or area.&gt;Notice: This parameter is required when <code>RegionType</code> is set to <code>region</code>. Set the value to the code of the continent that you want to query.</p>
+     * <p>The region code.&gt;Notice: This parameter is required when RegionType is set to region. Set this parameter to the code of the selected continent.</p>
      * 
      * <strong>example:</strong>
      * <p>410</p>
@@ -27,7 +27,7 @@ public class DescribeHybridCloudServerRegionsRequest extends TeaModel {
     public String regionCode;
 
     /**
-     * <p>The region in which the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -42,15 +42,7 @@ public class DescribeHybridCloudServerRegionsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the region. Valid values:</p>
-     * <ul>
-     * <li><p><strong>operator</strong>: queries carriers.</p>
-     * </li>
-     * <li><p><strong>continents</strong>: queries continents.</p>
-     * </li>
-     * <li><p><strong>region</strong>: queries cities.</p>
-     * </li>
-     * </ul>
+     * <p>The region type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +52,7 @@ public class DescribeHybridCloudServerRegionsRequest extends TeaModel {
     public String regionType;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

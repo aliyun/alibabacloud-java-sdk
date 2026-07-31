@@ -24,13 +24,7 @@ public class DeleteApisecEventsRequest extends TeaModel {
     public java.util.List<String> eventIds;
 
     /**
-     * <p>The dimension of the security event. Valid values:</p>
-     * <ul>
-     * <li><p><strong>ip</strong>: IP-dimension security events.</p>
-     * </li>
-     * <li><p><strong>account</strong>: account-dimension security events.</p>
-     * </li>
-     * </ul>
+     * <p>The dimension of the security event.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>

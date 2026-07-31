@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeProductInstancesResponseBody extends TeaModel {
     /**
-     * <p>The information about the instances.</p>
+     * <p>The list of cloud service information.</p>
      */
     @NameInMap("ProductInstances")
     public java.util.List<DescribeProductInstancesResponseBodyProductInstances> productInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FDCBAE1E-2B3F-5C13-AD20-844B9473****</p>
@@ -59,13 +59,13 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     public static class DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols extends TeaModel {
         /**
-         * <p>The certificates.</p>
+         * <p>The list of certificate IDs.</p>
          */
         @NameInMap("CertificateIds")
         public java.util.List<String> certificateIds;
 
         /**
-         * <p>The port of the cloud service added to WAF.</p>
+         * <p>The port of the cloud service that is added to WAF.</p>
          * 
          * <strong>example:</strong>
          * <p>443</p>
@@ -76,10 +76,8 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><p><strong>http</strong>: HTTP protocol.</p>
-         * </li>
-         * <li><p><strong>https</strong>: HTTPS protocol.</p>
-         * </li>
+         * <li><strong>http</strong>: HTTP.</li>
+         * <li><strong>https</strong>: HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +119,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     public static class DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates extends TeaModel {
         /**
-         * <p>The type of the HTTPS certificate. Valid values:</p>
+         * <p>The certificate type for the HTTPS protocol. Valid values:</p>
          * <ul>
          * <li><p><strong>default</strong>: Default certificate.</p>
          * </li>
@@ -145,7 +143,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String certificateId;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The SSL certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>demoCertName</p>
@@ -203,7 +201,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     public static class DescribeProductInstancesResponseBodyProductInstancesResourcePorts extends TeaModel {
         /**
-         * <p>The information about the certificates.</p>
+         * <p>The list of certificate information.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates> certificates;
@@ -218,12 +216,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The network protocol type. Valid values:</p>
          * <ul>
-         * <li><p><strong>http</strong>: HTTP protocol.</p>
-         * </li>
-         * <li><p><strong>https</strong>: HTTPS protocol.</p>
-         * </li>
+         * <li><strong>http</strong>: HTTP.</li>
+         * <li><strong>https</strong>: HTTPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +261,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     public static class DescribeProductInstancesResponseBodyProductInstances extends TeaModel {
         /**
-         * <p>The ID of the instance added to WAF.</p>
+         * <p>The instance ID of the instance that is added to WAF.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2ze1tm4pvghp****cluv</p>
@@ -274,19 +270,19 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String accessInstanceId;
 
         /**
-         * <p>The port and protocol information of the cloud service added to WAF.</p>
+         * <p>The port and protocol information of the cloud service that is added to WAF.</p>
          */
         @NameInMap("AccessPortAndProtocols")
         public java.util.List<DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols> accessPortAndProtocols;
 
         /**
-         * <p>The list of ports added to WAF.</p>
+         * <p>The list of ports that are added to WAF.</p>
          */
         @NameInMap("AccessPorts")
         public java.util.List<Integer> accessPorts;
 
         /**
-         * <p>The user ID (UID) of the Alibaba Cloud account to which the instance belongs.</p>
+         * <p>The UID of the resource ownership user.</p>
          * 
          * <strong>example:</strong>
          * <p>1704********9107</p>
@@ -294,17 +290,23 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
+        /**
+         * <p>The domain name that is added to WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.c**sw.net">www.c**sw.net</a></p>
+         */
         @NameInMap("ResourceDomain")
         public String resourceDomain;
 
         /**
-         * <p>The protection status of WAF. Valid values:</p>
+         * <p>The WAF protection status. Valid values:</p>
          * <ul>
-         * <li><p><strong>all</strong>: All protected.</p>
+         * <li><p><strong>all</strong>: Full protection.</p>
          * </li>
          * <li><p><strong>any</strong>: Protected.</p>
          * </li>
-         * <li><p><strong>part</strong>: Partially protected.</p>
+         * <li><p><strong>part</strong>: Partial protection.</p>
          * </li>
          * <li><p><strong>non</strong>: Not protected.</p>
          * </li>
@@ -317,7 +319,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceInstanceAccessStatus;
 
         /**
-         * <p>The edition of the instance.</p>
+         * <p>The edition of the cloud service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.e-c1m1.large</p>
@@ -326,7 +328,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceInstanceEdition;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2ze1tm4pvghp****cluv</p>
@@ -335,7 +337,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceInstanceId;
 
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>The IP address of the cloud service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1.X.X.1</p>
@@ -344,7 +346,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceInstanceIp;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>demoInstanceName</p>
@@ -353,7 +355,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
-         * <p>The public IP address of the instance.</p>
+         * <p>The public IP address of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>1.X.X.1</p>
@@ -363,7 +365,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceIp;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs-test</p>
@@ -373,7 +375,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The information about the ports.</p>
+         * <p>The list of port information.</p>
          */
         @NameInMap("ResourcePorts")
         public java.util.List<DescribeProductInstancesResponseBodyProductInstancesResourcePorts> resourcePorts;
@@ -398,23 +400,23 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public String resourceProduct;
 
         /**
-         * <p>The region ID of the instance. Valid values:</p>
+         * <p>The region ID of the cloud service. Valid values:</p>
          * <ul>
-         * <li><p><strong>cn-chengdu</strong>: China (Chengdu).</p>
+         * <li><p><strong>cn-chengdu</strong>: China Southwest 1 (Chengdu).</p>
          * </li>
-         * <li><p><strong>cn-beijing</strong>: China (Beijing).</p>
+         * <li><p><strong>cn-beijing</strong>: China North 2 (Beijing).</p>
          * </li>
-         * <li><p><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</p>
+         * <li><p><strong>cn-zhangjiakou</strong>: China North 3 (Zhangjiakou).</p>
          * </li>
-         * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou).</p>
+         * <li><p><strong>cn-hangzhou</strong>: China East 1 (Hangzhou).</p>
          * </li>
-         * <li><p><strong>cn-shanghai</strong>: China (Shanghai).</p>
+         * <li><p><strong>cn-shanghai</strong>: China East 2 (Shanghai).</p>
          * </li>
-         * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen).</p>
+         * <li><p><strong>cn-shenzhen</strong>: China South 1 (Shenzhen).</p>
          * </li>
-         * <li><p><strong>cn-qingdao</strong>: China (Qingdao).</p>
+         * <li><p><strong>cn-qingdao</strong>: China North 1 (Qingdao).</p>
          * </li>
-         * <li><p><strong>cn-hongkong</strong>: China (Hong Kong).</p>
+         * <li><p><strong>cn-hongkong</strong>: Hong Kong (China).</p>
          * </li>
          * <li><p><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</p>
          * </li>

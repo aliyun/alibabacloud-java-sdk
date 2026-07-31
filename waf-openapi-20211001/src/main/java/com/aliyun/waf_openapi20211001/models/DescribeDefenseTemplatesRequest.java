@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseTemplatesRequest extends TeaModel {
     /**
-     * <p>The protection scenario. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> topic.</p>
+     * <p>The protection scenario. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>region_block</p>
@@ -16,14 +16,10 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     /**
      * <p>The sub-scenario of the protection template. Valid values:</p>
      * <ul>
-     * <li><p><strong>web</strong>: the web protection template for bot management.</p>
-     * </li>
-     * <li><p><strong>app</strong>: the app protection template for bot management.</p>
-     * </li>
-     * <li><p><strong>basic</strong>: the basic protection template for bot management.</p>
-     * </li>
-     * <li><p><strong>bot_custom_acl</strong>: the advanced custom protection rule template for bot management.</p>
-     * </li>
+     * <li><strong>web</strong>: BOT management web protection scenario template.</li>
+     * <li><strong>app</strong>: BOT management app protection scenario template.</li>
+     * <li><strong>basic</strong>: BOT management basic protection template.</li>
+     * <li><strong>bot_custom_acl</strong>: BOT management advanced custom rule protection template.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +31,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +42,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paging query request. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +51,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page in a paging query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,7 +60,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -79,9 +75,9 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the protected object or protected object group, or the ID of the protected asset.</p>
+     * <p>The name of the protected object, protection group, or the ID of the protected asset.</p>
      * <blockquote>
-     * <p>You must specify the Resource and ResourceType parameters to filter query results.</p>
+     * <p>This parameter is used together with the ResourceType parameter. Both parameters must have values for filtering to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,7 +87,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmvyknl****fa</p>
@@ -100,17 +96,9 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of the protected resource. Valid values:</p>
-     * <ul>
-     * <li><p><strong>single</strong> (default): a protected object.</p>
-     * </li>
-     * <li><p><strong>group</strong>: a protected object group.</p>
-     * </li>
-     * <li><p><strong>asset</strong>: a protected asset.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the protected resource.</p>
      * <blockquote>
-     * <p>You must specify the Resource and ResourceType parameters to filter query results.</p>
+     * <p>This parameter is used together with the Resource parameter. Both parameters must have values for filtering to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,7 +117,7 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The IDs of the protection templates that you want to query. You can specify this parameter to query the protected objects for which multiple protection templates take effect. Separate multiple template IDs with commas (,).</p>
+     * <p>The IDs of the protection templates to query. You can specify this parameter to query the protected resources associated with multiple protection templates. Separate multiple template IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>189731,189539,189538,189531,189540,189542,189541</p>
@@ -147,12 +135,10 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The type of the protection template that you want to create. Valid values:</p>
+     * <p>The templatetype of the protection template. Valid values:</p>
      * <ul>
-     * <li><p><strong>user_default</strong>: default protection template.</p>
-     * </li>
-     * <li><p><strong>user_custom</strong>: custom protection template.</p>
-     * </li>
+     * <li><strong>user_default</strong>: user default protection.</li>
+     * <li><strong>user_custom</strong>: user custom protection.</li>
      * </ul>
      * 
      * <strong>example:</strong>

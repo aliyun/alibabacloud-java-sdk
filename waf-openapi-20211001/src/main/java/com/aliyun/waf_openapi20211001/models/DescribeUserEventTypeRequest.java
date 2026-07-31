@@ -7,7 +7,7 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. Call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain information about hybrid cloud clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp (UTC) in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1726113600</p>
@@ -26,13 +26,7 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The dimension of the security event. Valid values:</p>
-     * <ul>
-     * <li><p><strong>ip</strong> (default): IP security events.</p>
-     * </li>
-     * <li><p><strong>account</strong>: account security events.</p>
-     * </li>
-     * </ul>
+     * <p>The dimension of the security event.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -43,7 +37,7 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -54,11 +48,11 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: regions outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -69,7 +63,7 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek***ktt3y</p>
@@ -78,7 +72,7 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The start time of the query. The value is a UNIX timestamp in UTC. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp (UTC) in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1723435200</p>
@@ -87,9 +81,9 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>A list of security event statuses.</p>
+     * <p>The list of statuses for security event statistics.</p>
      * <blockquote>
-     * <p>By default, statistics are collected for security events in the <strong>toBeConfirmed</strong>, <strong>confirmed</strong>, and <strong>actioned</strong> states.</p>
+     * <p>By default, security event data in the <strong>toBeConfirmed</strong>, <strong>confirmed</strong>, and <strong>actioned</strong> statuses is included in the statistics.</p>
      * </blockquote>
      */
     @NameInMap("UserStatusList")

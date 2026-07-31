@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecEventDetailResponseBody extends TeaModel {
     /**
-     * <p>The total number of attacks in the security event.</p>
+     * <p>The number of attacks.</p>
      * 
      * <strong>example:</strong>
      * <p>345</p>
@@ -14,13 +14,13 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String attackCnt;
 
     /**
-     * <p>The list of attackers associated with the security event.</p>
+     * <p>The attacker list.</p>
      */
     @NameInMap("AttackerList")
     public java.util.List<String> attackerList;
 
     /**
-     * <p>The details of the security event.</p>
+     * <p>The detailed information about the security event. The value is a string converted from a JSON object constructed by a series of parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;location\&quot;:[\&quot;FR\&quot;,\&quot;CN\&quot;],\&quot;location_type\&quot;:\&quot;country\&quot;}</p>
@@ -29,7 +29,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String detailValue;
 
     /**
-     * <p>The end of the time range during which the security event occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683703260</p>
@@ -47,14 +47,11 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The severity level of the security event. Valid values:</p>
+     * <p>The event level. Valid values:</p>
      * <ul>
-     * <li><p><strong>high</strong>: high severity.</p>
-     * </li>
-     * <li><p><strong>medium</strong>: medium severity.</p>
-     * </li>
-     * <li><p><strong>low</strong>: low severity.</p>
-     * </li>
+     * <li><strong>high</strong>: high risk.</li>
+     * <li><strong>medium</strong>: medium risk.</li>
+     * <li><strong>low</strong>: low risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +76,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String eventScope;
 
     /**
-     * <p>The type of the security event.</p>
+     * <p>The event type.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</p>
      * </blockquote>
@@ -91,7 +88,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String eventTag;
 
     /**
-     * <p>The remarks added to the security event.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>already confirmed.</p>
@@ -100,12 +97,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String note;
 
     /**
-     * <p>The source of the event type rule. Valid values:</p>
+     * <p>The origin of the event type. Valid values:</p>
      * <ul>
-     * <li><p><strong>custom</strong>: a user-defined rule.</p>
-     * </li>
-     * <li><p><strong>default</strong>: a built-in rule.</p>
-     * </li>
+     * <li><strong>custom</strong>: custom.</li>
+     * <li><strong>default</strong>: built-in.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,7 +110,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
@@ -124,7 +119,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which the security event occurred. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683648000</p>
@@ -135,14 +130,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
     /**
      * <p>The event status. Valid values:</p>
      * <ul>
-     * <li><p><strong>toBeConfirmed</strong>: to be confirmed.</p>
-     * </li>
-     * <li><p><strong>confirmed</strong>: confirmed.</p>
-     * </li>
-     * <li><p><strong>actioned</strong>: handled.</p>
-     * </li>
-     * <li><p><strong>ignored</strong>: ignored.</p>
-     * </li>
+     * <li><strong>toBeConfirmed</strong>: to be confirmed.</li>
+     * <li><strong>confirmed</strong>: confirmed.</li>
+     * <li><strong>actioned</strong>: handled.</li>
+     * <li><strong>ignored</strong>: ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>

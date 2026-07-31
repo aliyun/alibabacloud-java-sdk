@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeBotRuleLabelsRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of bot rule label to query.</p>
+     * <p>The type of bot rule tag to query.</p>
      * 
      * <strong>example:</strong>
      * <p>human_machine_challenge</p>
@@ -27,7 +27,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public String labelType;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 200. Default value: 20.</p>
+     * <p>The number of entries per page for paging. Valid values: 1 to 200. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -36,9 +36,9 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. This parameter is returned if a next page exists.</p>
+     * <p>The pagination token for the next page. If a next page exists, this field has a return value.</p>
      * <blockquote>
-     * <p>If a value is returned for this parameter, it indicates that more results are available. Use the returned <strong>NextToken</strong> value in the next request to retrieve the next page of results. Repeat this process until no value is returned for this parameter. This indicates that all results have been retrieved.</p>
+     * <p>If this parameter has a return value, a next page exists. You can use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -72,13 +72,7 @@ public class DescribeBotRuleLabelsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of bot management scenario. Valid values:</p>
-     * <ul>
-     * <li><p><strong>web</strong>: web protection.</p>
-     * </li>
-     * <li><p><strong>app</strong>: app protection.</p>
-     * </li>
-     * </ul>
+     * <p>The bot management protection scenario type.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>

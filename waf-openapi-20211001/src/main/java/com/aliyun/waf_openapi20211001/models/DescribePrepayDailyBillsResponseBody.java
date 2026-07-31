@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayDailyBillsResponseBody extends TeaModel {
     /**
-     * <p>The list of WAF elastic billing records.</p>
+     * <p>The list of WAF burstable billing records.</p>
      */
     @NameInMap("Bills")
     public java.util.List<DescribePrepayDailyBillsResponseBodyBills> bills;
@@ -68,7 +68,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long elasticQpsSetValue;
 
         /**
-         * <p>The end time of the billing period. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * <p>The end time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687591200</p>
@@ -80,8 +80,8 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
          * <p>The overuse status of the current period. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: Normal.</li>
-         * <li><strong>1</strong>: Overused.</li>
-         * <li><strong>2</strong>: Sandboxed.</li>
+         * <li><strong>1</strong>: overused.</li>
+         * <li><strong>2</strong>: sandboxed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,9 +90,25 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         @NameInMap("ExceedStatus")
         public Integer exceedStatus;
 
+        /**
+         * <p>Indicates whether the extension plug-in is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The extension plug-in is enabled.</li>
+         * <li><strong>false</strong>: The extension plug-in is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ExtensionPlugin")
         public Boolean extensionPlugin;
 
+        /**
+         * <p>The number of requests processed by the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ExtensionPluginRequest")
         public Long extensionPluginRequest;
 
@@ -106,7 +122,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long maxQps;
 
         /**
-         * <p>The unit price for elastic billing. Unit: CNY for the China site and USD for the international site.</p>
+         * <p>The unit price for burstable billing. Unit: CNY for the China site and USD for the international site.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -155,7 +171,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long riskTraffic;
 
         /**
-         * <p>The start time of the billing period. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * <p>The start time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687822980</p>
@@ -173,7 +189,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long total;
 
         /**
-         * <p>The elastic billing type.</p>
+         * <p>The burstable billing type.</p>
          */
         @NameInMap("Type")
         public java.util.List<String> type;

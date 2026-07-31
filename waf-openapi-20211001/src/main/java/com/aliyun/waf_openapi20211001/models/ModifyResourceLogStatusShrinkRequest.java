@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceLogStatusShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,11 +18,11 @@ public class ModifyResourceLogStatusShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -33,7 +33,7 @@ public class ModifyResourceLogStatusShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The protected object on which you want to manage the log collection feature.</p>
+     * <p>The protected object to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,11 +52,11 @@ public class ModifyResourceLogStatusShrinkRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>Specifies whether to enable the log collection feature for the protected object. Valid values:</p>
+     * <p>The log enabling status of the protected object. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables the feature.</p>
+     * <li><p><strong>true</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>false</strong>: Disables the feature.</p>
+     * <li><p><strong>false</strong>: Not enabled.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -67,9 +67,30 @@ public class ModifyResourceLogStatusShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public Boolean status;
 
+    /**
+     * <p>The Tracing Analysis configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Workspace&quot;:&quot;cms-test&quot;,&quot;RatePerMille&quot;:90}</p>
+     */
     @NameInMap("TraceConfig")
     public String traceConfigShrink;
 
+    /**
+     * <p>The Tracing Analysis status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>To enable Tracing Analysis, you must first enable the log status <strong>Status</strong> for the protected object.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TraceStatus")
     public Boolean traceStatus;
 

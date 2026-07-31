@@ -15,19 +15,16 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String defenseScene;
 
     /**
-     * <p>The sub-scenario of the protection template. Valid values:</p>
-     * <ul>
-     * <li><strong>bot_custom_acl</strong>: a protection template for advanced custom rules for Bot management.</li>
-     * </ul>
+     * <p>The sub-scenario of the protection template. This parameter is supported only for advanced bot management scenarios.</p>
      * 
      * <strong>example:</strong>
-     * <p>bot_custom_acl</p>
+     * <p>web</p>
      */
     @NameInMap("DefenseSubScene")
     public String defenseSubScene;
 
     /**
-     * <p>The description of the protection template.</p>
+     * <p>The description of the protection template to create.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -36,9 +33,9 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,9 +46,9 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: Chinese mainland.</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
      * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
@@ -64,7 +61,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -73,7 +70,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The name of the protection template. The name must be 1 to 255 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the protection template to create. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), or hyphens (-).</p>
      * <blockquote>
      * <p>Template names must be unique within the same protection scenario (<strong>DefenseScene</strong>).</p>
      * </blockquote>
@@ -86,7 +83,7 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The origin of the protection template. The value must be <strong>custom</strong>, which indicates a user-defined template.</p>
+     * <p>The source of the protection template to create. Set the value to <strong>custom</strong>, which indicates user-defined.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,12 +93,10 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String templateOrigin;
 
     /**
-     * <p>The status of the protection template. Valid values:</p>
+     * <p>The status of the protection template to create. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -112,12 +107,10 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public Integer templateStatus;
 
     /**
-     * <p>The type of the protection template. Valid values:</p>
+     * <p>The templatetype of the protection template to create. Valid values:</p>
      * <ul>
-     * <li><p><strong>user_default</strong>: a default template created by the user.</p>
-     * </li>
-     * <li><p><strong>user_custom</strong>: a custom template created by the user.</p>
-     * </li>
+     * <li><strong>user_default</strong>: default protection.</li>
+     * <li><strong>user_custom</strong>: custom protection.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -128,18 +121,18 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     public String templateType;
 
     /**
-     * <p>The protected object groups to unbind from the default protection template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
+     * <p>The protected object groups to unbind when creating a default protection template. Use the format [<strong>&quot;group1&quot;,&quot;group2&quot;,……</strong>].</p>
      * <blockquote>
-     * <p>This parameter takes effect only when you create a <strong>default template</strong> (<strong>TemplateType</strong> is set to <strong>user_default</strong>).</p>
+     * <p>This parameter takes effect only when you create a <strong>default template</strong> (the value of <strong>TemplateType</strong> is <strong>user_default</strong>).</p>
      * </blockquote>
      */
     @NameInMap("UnbindResourceGroups")
     public java.util.List<String> unbindResourceGroups;
 
     /**
-     * <p>The protected objects to unbind from the default protection template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+     * <p>The protected objects to unbind when creating a default protection template. Use the format [<strong>&quot;XX1&quot;,&quot;XX2&quot;,……</strong>].</p>
      * <blockquote>
-     * <p>This parameter takes effect only when you create a <strong>default template</strong> (<strong>TemplateType</strong> is set to <strong>user_default</strong>).</p>
+     * <p>This parameter takes effect only when you create a <strong>default template</strong> (the value of <strong>TemplateType</strong> is <strong>user_default</strong>).</p>
      * </blockquote>
      */
     @NameInMap("UnbindResources")

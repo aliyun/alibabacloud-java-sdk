@@ -17,11 +17,7 @@ public class DescribeUserEventTrendRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The dimension of security events. Valid values:</p>
-     * <ul>
-     * <li><strong>ip</strong> (default): IP security events.</li>
-     * <li><strong>account</strong>: account security events.</li>
-     * </ul>
+     * <p>The dimension of security events.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>

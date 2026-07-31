@@ -5,15 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDefenseRuleRequest extends TeaModel {
     /**
-     * <p>The type of the protection rule. Valid values:</p>
-     * <ul>
-     * <li><p><strong>template</strong> (default): a protection rule template.</p>
-     * </li>
-     * <li><p><strong>resource</strong>: a rule for a protected object.</p>
-     * </li>
-     * <li><p><strong>global</strong>: a global rule.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the protection rule.</p>
      * 
      * <strong>example:</strong>
      * <p>template</p>
@@ -24,7 +16,7 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -50,9 +42,9 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The protected object of the rule that you want to delete.</p>
+     * <p>The protection object associated with the rule to delete.</p>
      * <blockquote>
-     * <p>This parameter is required only when you set <strong>DefenseType</strong> to <strong>resource</strong>.</p>
+     * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +54,7 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -71,7 +63,7 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The IDs of the protection rules that you want to delete. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the protection rules to delete. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,9 +73,9 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     public String ruleIds;
 
     /**
-     * <p>The ID of the protection rule template that you want to delete.</p>
+     * <p>The ID of the protection template to delete.</p>
      * <blockquote>
-     * <p>This parameter is required only when you set <strong>DefenseType</strong> to <strong>template</strong>.</p>
+     * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -15,15 +15,7 @@ public class ModifyDomainCertRequest extends TeaModel {
     public String certId;
 
     /**
-     * <p>The type of the cipher suite. Valid values:</p>
-     * <ul>
-     * <li><p><strong>1</strong>: all cipher suites.</p>
-     * </li>
-     * <li><p><strong>2</strong>: strong cipher suites.</p>
-     * </li>
-     * <li><p><strong>99</strong>: custom cipher suites.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the cipher suite.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,13 +24,13 @@ public class ModifyDomainCertRequest extends TeaModel {
     public String cipherSuite;
 
     /**
-     * <p>The custom cipher suites. This parameter is available only when you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
+     * <p>The specific custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
      */
     @NameInMap("CustomCiphers")
     public java.util.List<String> customCiphers;
 
     /**
-     * <p>The domain name that is added to WAF in CNAME record mode.</p>
+     * <p>The domain name that you want to manage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,13 +40,16 @@ public class ModifyDomainCertRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>Indicates whether to enable TLS 1.3. Valid values:</p>
+     * <p>Specifies whether TLS 1.3 is supported. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: TLS 1.3 is enabled.</p>
+     * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
      * </li>
-     * <li><p><strong>false</strong>: TLS 1.3 is disabled.</p>
+     * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be true.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -65,7 +60,7 @@ public class ModifyDomainCertRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -92,15 +87,7 @@ public class ModifyDomainCertRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Transport Layer Security (TLS) version. Valid values:</p>
-     * <ul>
-     * <li><p><strong>tlsv1</strong></p>
-     * </li>
-     * <li><p><strong>tlsv1.1</strong></p>
-     * </li>
-     * <li><p><strong>tlsv1.2</strong></p>
-     * </li>
-     * </ul>
+     * <p>The TLS version.</p>
      * 
      * <strong>example:</strong>
      * <p>tlsv1</p>

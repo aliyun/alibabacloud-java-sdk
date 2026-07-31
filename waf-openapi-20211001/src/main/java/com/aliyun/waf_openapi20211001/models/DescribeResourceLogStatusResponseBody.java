@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceLogStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0DABF8AB-2321-5F8D-A8D7-922D757FBFFE</p>
@@ -14,7 +14,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The log status information of protected objects.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public java.util.List<DescribeResourceLogStatusResponseBodyResult> result;
@@ -41,9 +41,21 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceLogStatusResponseBodyResultTraceConfig extends TeaModel {
+        /**
+         * <p>The per-mille sampling ratio for Tracing Analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("RatePerMille")
         public Integer ratePerMille;
 
+        /**
+         * <p>The Hybrid Cloud Monitoring 2.0 workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cms-test</p>
+         */
         @NameInMap("Workspace")
         public String workspace;
 
@@ -72,7 +84,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
 
     public static class DescribeResourceLogStatusResponseBodyResult extends TeaModel {
         /**
-         * <p>The name of the protected object.</p>
+         * <p>The queried protected object.</p>
          * 
          * <strong>example:</strong>
          * <p>alb-wewbb23dfsetetcic****</p>
@@ -81,11 +93,11 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>Indicates whether log collection is enabled for the protected object. Valid values:</p>
+         * <p>The log enabling status of the protected object. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Log collection is enabled.</p>
+         * <li><p><strong>true</strong>: Logging is enabled.</p>
          * </li>
-         * <li><p><strong>false</strong>: Log collection is disabled.</p>
+         * <li><p><strong>false</strong>: Logging is disabled.</p>
          * </li>
          * </ul>
          * 
@@ -95,9 +107,24 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         @NameInMap("Status")
         public Boolean status;
 
+        /**
+         * <p>The Tracing Analysis configuration.</p>
+         */
         @NameInMap("TraceConfig")
         public DescribeResourceLogStatusResponseBodyResultTraceConfig traceConfig;
 
+        /**
+         * <p>The Tracing Analysis status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Tracing Analysis is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Tracing Analysis is shutdown.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TraceStatus")
         public Boolean traceStatus;
 

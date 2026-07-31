@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyApisecEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The hybrid cloud cluster ID.</p>
      * <blockquote>
-     * <p>This parameter is available only for hybrid cloud scenarios. Call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain information about hybrid cloud clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,20 +17,14 @@ public class ModifyApisecEventsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>A list of API security event IDs.</p>
+     * <p>The list of API security event IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EventIds")
     public java.util.List<String> eventIds;
 
     /**
-     * <p>The dimension of the security event. Valid values:</p>
-     * <ul>
-     * <li><p><strong>ip</strong> (default): IP security event.</p>
-     * </li>
-     * <li><p><strong>account</strong>: account security event.</p>
-     * </li>
-     * </ul>
+     * <p>The dimension of the security event.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -41,7 +35,7 @@ public class ModifyApisecEventsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +55,7 @@ public class ModifyApisecEventsRequest extends TeaModel {
     public String note;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -76,7 +70,7 @@ public class ModifyApisecEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -85,14 +79,11 @@ public class ModifyApisecEventsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The status of the event. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li><p><strong>toBeConfirmed</strong>: The event is pending confirmation.</p>
-     * </li>
-     * <li><p><strong>confirmed</strong>: The event is confirmed.</p>
-     * </li>
-     * <li><p><strong>ignored</strong>: The event is ignored.</p>
-     * </li>
+     * <li><strong>toBeConfirmed</strong>: To be confirmed.</li>
+     * <li><strong>confirmed</strong>: Confirmed.</li>
+     * <li><strong>ignored</strong>: Ignored.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

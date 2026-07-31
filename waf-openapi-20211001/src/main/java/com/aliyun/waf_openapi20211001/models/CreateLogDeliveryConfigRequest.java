@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateLogDeliveryConfigRequest extends TeaModel {
     /**
-     * <p>The details of the log delivery configuration. The value is a JSON string that is generated from a series of parameters.</p>
+     * <p>The content of the forwarding delivery configuration. The value is a JSON string constructed from a series of parameters.</p>
      * <blockquote>
-     * <p>The parameters vary based on the value of <strong>DeliveryType</strong>. For more information, see <strong>Parameters for log delivery configuration details</strong>.</p>
+     * <p>The parameters vary based on the specified <strong>forwarding delivery configuration type</strong> (<strong>DeliveryType</strong>). For more information, see <strong>Parameter description of the forwarding delivery configuration content</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class CreateLogDeliveryConfigRequest extends TeaModel {
     public String deliveryDetail;
 
     /**
-     * <p>The name of the log delivery configuration.</p>
+     * <p>The name of the forwarding delivery configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,10 @@ public class CreateLogDeliveryConfigRequest extends TeaModel {
     public String deliveryName;
 
     /**
-     * <p>The type of the log delivery configuration. Valid values:</p>
+     * <p>The type of the forwarding delivery configuration. Valid values:</p>
      * <ul>
-     * <li><p><strong>syslog</strong>: Delivers logs to a syslog service.</p>
-     * </li>
-     * <li><p><strong>kafka</strong>: Delivers logs to a Kafka service.</p>
-     * </li>
+     * <li><strong>syslog</strong>: forwards logs to a syslog service.</li>
+     * <li><strong>kafka</strong>: forwards logs to a Kafka service.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -55,7 +53,7 @@ public class CreateLogDeliveryConfigRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -81,7 +79,7 @@ public class CreateLogDeliveryConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

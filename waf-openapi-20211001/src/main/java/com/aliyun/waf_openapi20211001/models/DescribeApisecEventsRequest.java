@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecEventsRequest extends TeaModel {
     /**
-     * <p>The account that you want to use to filter events.</p>
+     * <p>The account information.</p>
      * 
      * <strong>example:</strong>
      * <p>1818743389962696</p>
@@ -14,7 +14,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String account;
 
     /**
-     * <p>The path of the API that is associated with the security event.</p>
+     * <p>The API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>/apisec/v1/***.php</p>
@@ -34,7 +34,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     /**
      * <p>The business purpose of the API.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported business purposes.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String apiTag;
 
     /**
-     * <p>The IP address of the attacker that you want to use to filter events.</p>
+     * <p>The attack IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>42.224.<em>.</em></p>
@@ -53,9 +53,9 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String attackIp;
 
     /**
-     * <p>The ID of the hybrid cloud WAF cluster.</p>
+     * <p>The hybrid cloud cluster ID.</p>
      * <blockquote>
-     * <p>This parameter is required only in hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the IDs of hybrid cloud WAF clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683703260</p>
@@ -83,14 +83,11 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The severity level of the event. Valid values:</p>
+     * <p>The event level. Valid values:</p>
      * <ul>
-     * <li><p><strong>high</strong>: high severity.</p>
-     * </li>
-     * <li><p><strong>medium</strong>: medium severity.</p>
-     * </li>
-     * <li><p><strong>low</strong>: low severity.</p>
-     * </li>
+     * <li><strong>high</strong>: High-risk.</li>
+     * <li><strong>medium</strong>: Medium-risk.</li>
+     * <li><strong>low</strong>: Low-risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,13 +97,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String eventLevel;
 
     /**
-     * <p>The dimension by which security events are categorized. Valid values:</p>
-     * <ul>
-     * <li><p><strong>ip</strong>: IP security event. This is the default value.</p>
-     * </li>
-     * <li><p><strong>account</strong>: account security event.</p>
-     * </li>
-     * </ul>
+     * <p>The dimension of the security event.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -117,7 +108,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     /**
      * <p>The event type.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -127,9 +118,9 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String eventTag;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -140,7 +131,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The domain name or IP address that is protected by WAF.</p>
+     * <p>The domain name or IP address to which the API operation belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>a.***.com</p>
@@ -149,14 +140,11 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String matchedHost;
 
     /**
-     * <p>The field that is used to sort the query results. Valid values:</p>
+     * <p>The name of the field used for sorting. Valid values:</p>
      * <ul>
-     * <li><p><strong>allCnt</strong>: the number of attacks.</p>
-     * </li>
-     * <li><p><strong>startTs</strong>: the start time of the event.</p>
-     * </li>
-     * <li><p><strong>endTs</strong>: the end time of the event.</p>
-     * </li>
+     * <li><strong>allCnt</strong>: attack count.</li>
+     * <li><strong>startTs</strong>: event start time.</li>
+     * <li><strong>endTs</strong>: event end time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -166,12 +154,10 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String orderKey;
 
     /**
-     * <p>The order in which the query results are sorted. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><strong>desc</strong>: descending order. This is the default value.</p>
-     * </li>
-     * <li><p><strong>asc</strong>: ascending order.</p>
-     * </li>
+     * <li><strong>desc</strong>: Descending order (default).</li>
+     * <li><strong>asc</strong>: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,10 +169,8 @@ public class DescribeApisecEventsRequest extends TeaModel {
     /**
      * <p>The source of the event type. Valid values:</p>
      * <ul>
-     * <li><p><strong>custom</strong>: a user-defined event type.</p>
-     * </li>
-     * <li><p><strong>default</strong>: a built-in event type.</p>
-     * </li>
+     * <li><strong>custom</strong>: Custom.</li>
+     * <li><strong>default</strong>: Built-in.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -196,7 +180,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -205,7 +189,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -214,7 +198,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -229,7 +213,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -238,7 +222,7 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1683648000</p>
@@ -247,16 +231,12 @@ public class DescribeApisecEventsRequest extends TeaModel {
     public Long startTs;
 
     /**
-     * <p>The handling status of the event. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li><p><strong>toBeConfirmed</strong>: pending confirmation.</p>
-     * </li>
-     * <li><p><strong>confirmed</strong>: confirmed but not yet handled.</p>
-     * </li>
-     * <li><p><strong>actioned</strong>: handled.</p>
-     * </li>
-     * <li><p><strong>ignored</strong>: ignored.</p>
-     * </li>
+     * <li><strong>toBeConfirmed</strong>: To be confirmed.</li>
+     * <li><strong>confirmed</strong>: Confirmed.</li>
+     * <li><strong>actioned</strong>: Handled.</li>
+     * <li><strong>ignored</strong>: Ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>

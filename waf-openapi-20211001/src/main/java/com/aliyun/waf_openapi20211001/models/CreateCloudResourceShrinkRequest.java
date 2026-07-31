@@ -7,7 +7,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,14 +18,14 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The listener configuration.</p>
+     * <p>The listening configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
-     * <p>The UID that indicates the resource ownership.</p>
+     * <p>The UID of the current resource ownership.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -40,7 +40,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String redirectShrink;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -56,7 +56,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

@@ -5,54 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeBaseSystemRulesRequest extends TeaModel {
     /**
-     * <p>The type of attack that the system protection rule detects. Valid values:</p>
+     * <p>The detection module. Valid values:</p>
      * <ul>
-     * <li><p><strong>sqli</strong>: SQL injection.</p>
-     * </li>
-     * <li><p><strong>xss</strong>: cross-site scripting (XSS).</p>
-     * </li>
-     * <li><p><strong>cmdi</strong>: OS command injection.</p>
-     * </li>
-     * <li><p><strong>expression_injection</strong>: expression injection.</p>
-     * </li>
-     * <li><p><strong>java_deserialization</strong>: Java deserialization.</p>
-     * </li>
-     * <li><p><strong>dot_net_deserialization</strong>: .NET deserialization.</p>
-     * </li>
-     * <li><p><strong>php_deserialization</strong>: PHP deserialization.</p>
-     * </li>
-     * <li><p><strong>code_exec</strong>: code execution.</p>
-     * </li>
-     * <li><p><strong>ssrf</strong>: server-side request forgery (SSRF).</p>
-     * </li>
-     * <li><p><strong>path_traversal</strong>: path traversal.</p>
-     * </li>
-     * <li><p><strong>arbitrary_file_uploading</strong>: arbitrary file upload.</p>
-     * </li>
-     * <li><p><strong>webshell</strong>: webshell.</p>
-     * </li>
-     * <li><p><strong>rfilei</strong>: remote file inclusion (RFI).</p>
-     * </li>
-     * <li><p><strong>lfilei</strong>: local file inclusion (LFI).</p>
-     * </li>
-     * <li><p><strong>protocol_violation</strong>: protocol violation.</p>
-     * </li>
-     * <li><p><strong>scanner_behavior</strong>: scanner behavior.</p>
-     * </li>
-     * <li><p><strong>logic_flaw</strong>: logic flaw.</p>
-     * </li>
-     * <li><p><strong>arbitrary_file_reading</strong>: arbitrary file read.</p>
-     * </li>
-     * <li><p><strong>arbitrary_file_download</strong>: arbitrary file download.</p>
-     * </li>
-     * <li><p><strong>xxe</strong>: external entity injection.</p>
-     * </li>
-     * <li><p><strong>csrf</strong>: cross-site request forgery (CSRF).</p>
-     * </li>
-     * <li><p><strong>crlf</strong>: CRLF injection.</p>
-     * </li>
-     * <li><p><strong>other</strong>: other.</p>
-     * </li>
+     * <li><strong>sqli</strong>: SQL injection.</li>
+     * <li><strong>xss</strong>: cross-site scripting (XSS).</li>
+     * <li><strong>cmdi</strong>: OS command injection.</li>
+     * <li><strong>expression_injection</strong>: expression injection.</li>
+     * <li><strong>java_deserialization</strong>: Java deserialization.</li>
+     * <li><strong>dot_net_deserialization</strong>: .NET deserialization.</li>
+     * <li><strong>php_deserialization</strong>: PHP deserialization.</li>
+     * <li><strong>code_exec</strong>: code execution.</li>
+     * <li><strong>ssrf</strong>: server-side request forgery (SSRF).</li>
+     * <li><strong>path_traversal</strong>: path traversal.</li>
+     * <li><strong>arbitrary_file_uploading</strong>: arbitrary file upload.</li>
+     * <li><strong>webshell</strong>: webshell.</li>
+     * <li><strong>rfilei</strong>: remote file inclusion (RFI).</li>
+     * <li><strong>lfilei</strong>: local file inclusion (LFI).</li>
+     * <li><strong>protocol_violation</strong>: protocol violation.</li>
+     * <li><strong>scanner_behavior</strong>: scanner behavior.</li>
+     * <li><strong>logic_flaw</strong>: business logic bug.</li>
+     * <li><strong>arbitrary_file_reading</strong>: arbitrary file reading.</li>
+     * <li><strong>arbitrary_file_download</strong>: arbitrary file download.</li>
+     * <li><strong>xxe</strong>: XML external entity injection.</li>
+     * <li><strong>csrf</strong>: cross-site request forgery.</li>
+     * <li><strong>crlf</strong>: CRLF.</li>
+     * <li><strong>other</strong>: other.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +41,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -75,12 +52,10 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the returned rule content. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +65,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page. For more information about paging, see the PageSize parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -99,7 +74,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 100.</p>
+     * <p>The number of entries per page in a paged query. Default value: 100, which indicates 100 entries per page. For more information about paging, see the PageNumber parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -108,7 +83,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -132,9 +107,9 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The risk level of the system protection rule. Valid values:</p>
+     * <p>The risk level. Valid values:</p>
      * <ul>
-     * <li><p><strong>super_strict</strong>: Very Strict.</p>
+     * <li><p><strong>super_strict</strong>: Super strict.</p>
      * </li>
      * <li><p><strong>strict</strong>: Strict.</p>
      * </li>
@@ -151,7 +126,7 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The action of the system protection rule. Valid values:</p>
+     * <p>The rule action. Valid values:</p>
      * <ul>
      * <li><p><strong>block</strong>: Block.</p>
      * </li>
@@ -174,6 +149,9 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
+    /**
+     * <p>The list of system protection rule IDs to query.</p>
+     */
     @NameInMap("RuleIds")
     public java.util.List<Long> ruleIds;
 
@@ -187,12 +165,10 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The status of the system protection rule. Valid values:</p>
+     * <p>The rule status. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: disabled.</p>
-     * </li>
-     * <li><p><strong>0</strong>: enabled.</p>
-     * </li>
+     * <li><strong>1</strong>: Disabled.</li>
+     * <li><strong>0</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -205,10 +181,8 @@ public class DescribeBaseSystemRulesRequest extends TeaModel {
      * <p>The ID of the protection template.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Specify this parameter to query the system protection rules in a specific WAF protection template.</p>
-     * </li>
-     * <li><p>If you leave this parameter empty, the default configurations of the system protection rules are queried.</p>
-     * </li>
+     * <li>You can specify this parameter to query the system protection rules in a specific Web core protection rule template.</li>
+     * <li>If this parameter is left empty, the default settings of system protection rules are queried.</li>
      * </ul>
      * </blockquote>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the connected resource.</p>
+     * <p>The connected resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>lb-xxx-80-clb7</p>

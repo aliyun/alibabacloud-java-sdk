@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeProductInstancesRequest extends TeaModel {
     /**
-     * <p>The Web Application Firewall (WAF) instance ID.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
+     * <p>The UID of the resource ownership user.</p>
      * 
      * <strong>example:</strong>
      * <p>1704********9107</p>
@@ -27,7 +27,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String ownerUserId;
 
     /**
-     * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page when paging. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,7 +45,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
@@ -59,21 +59,20 @@ public class DescribeProductInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The domain name that is added to WAF.</p>
+     * <blockquote>
+     * <p>This parameter is supported only when the cloud service type is ddos.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.c**sw.net">www.c**sw.net</a></p>
+     */
     @NameInMap("ResourceDomain")
     public String resourceDomain;
 
     /**
-     * <p>The protection status of WAF. Valid values:</p>
-     * <ul>
-     * <li><p><strong>all</strong>: All protected.</p>
-     * </li>
-     * <li><p><strong>any</strong>: Protected.</p>
-     * </li>
-     * <li><p><strong>part</strong>: Partially protected.</p>
-     * </li>
-     * <li><p><strong>non</strong>: Not protected.</p>
-     * </li>
-     * </ul>
+     * <p>The WAF protection status.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>
@@ -91,7 +90,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceInstanceId;
 
     /**
-     * <p>The IP address of the instance added to WAF.</p>
+     * <p>The IP address of the instance that is added to WAF.</p>
      * 
      * <strong>example:</strong>
      * <p>1.X.X.1</p>
@@ -100,7 +99,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceInstanceIp;
 
     /**
-     * <p>The name of the instance added to WAF.</p>
+     * <p>The name of the instance that is added to WAF.</p>
      * 
      * <strong>example:</strong>
      * <p>demoInstanceName</p>
@@ -109,7 +108,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceInstanceName;
 
     /**
-     * <p>The public IP address of the instance.</p>
+     * <p>The public IP address of the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>1.X.X.1</p>
@@ -119,7 +118,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceIp;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekz6ql****5uzi</p>
@@ -128,7 +127,7 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name of the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>exampleResourceName</p>
@@ -144,9 +143,11 @@ public class DescribeProductInstancesRequest extends TeaModel {
      * </li>
      * <li><p><strong>clb7</strong>: Layer 7 CLB.</p>
      * </li>
-     * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS).</p>
+     * <li><p><strong>ecs</strong>: ECS.</p>
      * </li>
-     * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+     * <li><p><strong>nlb</strong>: NLB.</p>
+     * </li>
+     * <li><p><strong>ddos</strong>: Anti-DDoS.</p>
      * </li>
      * </ul>
      * 
@@ -157,23 +158,23 @@ public class DescribeProductInstancesRequest extends TeaModel {
     public String resourceProduct;
 
     /**
-     * <p>The region ID of the instance. Valid values:</p>
+     * <p>The region ID of the cloud service. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-chengdu</strong>: China (Chengdu).</p>
+     * <li><p><strong>cn-chengdu</strong>: China Southwest 1 (Chengdu).</p>
      * </li>
-     * <li><p><strong>cn-beijing</strong>: China (Beijing).</p>
+     * <li><p><strong>cn-beijing</strong>: China North 2 (Beijing).</p>
      * </li>
-     * <li><p><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</p>
+     * <li><p><strong>cn-zhangjiakou</strong>: China North 3 (Zhangjiakou).</p>
      * </li>
-     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou).</p>
+     * <li><p><strong>cn-hangzhou</strong>: China East 1 (Hangzhou).</p>
      * </li>
-     * <li><p><strong>cn-shanghai</strong>: China (Shanghai).</p>
+     * <li><p><strong>cn-shanghai</strong>: China East 2 (Shanghai).</p>
      * </li>
-     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen).</p>
+     * <li><p><strong>cn-shenzhen</strong>: China South 1 (Shenzhen).</p>
      * </li>
-     * <li><p><strong>cn-qingdao</strong>: China (Qingdao).</p>
+     * <li><p><strong>cn-qingdao</strong>: China North 1 (Qingdao).</p>
      * </li>
-     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong).</p>
+     * <li><p><strong>cn-hongkong</strong>: Hong Kong (China).</p>
      * </li>
      * <li><p><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</p>
      * </li>

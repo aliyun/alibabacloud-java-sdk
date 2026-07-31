@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeChargeResultRequest extends TeaModel {
     /**
-     * <p>The billing cycle for the WAF instance. Valid values:</p>
+     * <p>The billing cycle for the calculation. Valid values:</p>
      * <ul>
-     * <li><p><strong>Year</strong>: yearly billing cycle.</p>
-     * </li>
-     * <li><p><strong>Month</strong>: monthly billing cycle.</p>
-     * </li>
-     * <li><p><strong>Day</strong>: daily billing cycle.</p>
-     * </li>
+     * <li><strong>Year</strong>: Calculates the billing result for one year.</li>
+     * <li><strong>Month</strong>: Calculates the billing result for one month.</li>
+     * <li><strong>Day</strong>: Calculates the billing result for one day.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,16 +19,25 @@ public class DescribeChargeResultRequest extends TeaModel {
     public String chargeCycle;
 
     /**
-     * <p>The billing modules to calculate.</p>
+     * <p>The list of billing modules to calculate.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChargeModules")
     public java.util.List<DescribeChargeResultRequestChargeModules> chargeModules;
 
     /**
-     * <p>The billing method of the WAF instance. Valid value:</p>
+     * <p>The metering unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SeCU</p>
+     */
+    @NameInMap("ChargeUnit")
+    public String chargeUnit;
+
+    /**
+     * <p>The billing type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go WAF instance.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,7 +63,7 @@ public class DescribeChargeResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -86,6 +92,14 @@ public class DescribeChargeResultRequest extends TeaModel {
         return this.chargeModules;
     }
 
+    public DescribeChargeResultRequest setChargeUnit(String chargeUnit) {
+        this.chargeUnit = chargeUnit;
+        return this;
+    }
+    public String getChargeUnit() {
+        return this.chargeUnit;
+    }
+
     public DescribeChargeResultRequest setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -112,7 +126,7 @@ public class DescribeChargeResultRequest extends TeaModel {
 
     public static class DescribeChargeResultRequestChargeModules extends TeaModel {
         /**
-         * <p>The ID of the billing module.</p>
+         * <p>The pricing module identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>domainCount</p>
@@ -121,7 +135,7 @@ public class DescribeChargeResultRequest extends TeaModel {
         public String moduleCode;
 
         /**
-         * <p>The usage amount of the billing module.</p>
+         * <p>The usage of the pricing module.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

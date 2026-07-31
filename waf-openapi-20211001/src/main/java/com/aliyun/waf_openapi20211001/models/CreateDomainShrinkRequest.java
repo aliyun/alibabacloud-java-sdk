@@ -6,12 +6,6 @@ import com.aliyun.tea.*;
 public class CreateDomainShrinkRequest extends TeaModel {
     /**
      * <p>The access type of the WAF instance. Valid values:</p>
-     * <ul>
-     * <li><p><strong>share</strong> (default): CNAME access.</p>
-     * </li>
-     * <li><p><strong>hybrid_cloud_cname</strong>: hybrid cloud CNAME access.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>share</p>
@@ -31,9 +25,6 @@ public class CreateDomainShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the WAF instance.</p>
-     * <blockquote>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,13 +48,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String redirectShrink;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
-     * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
-     * </li>
-     * </ul>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +67,7 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tag list, which contains a maximum of 20 items.</p>
+     * <p>The tag list, which contains up to 20 items.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDomainShrinkRequestTag> tag;

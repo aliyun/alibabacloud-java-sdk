@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecEventDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the Hybrid Cloud WAF cluster.</p>
+     * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud WAF clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,23 +17,7 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the detailed information about the security event. Valid values:</p>
-     * <ul>
-     * <li><p><strong>event_info</strong> (default): attack details.</p>
-     * </li>
-     * <li><p><strong>api_info</strong>: API information.</p>
-     * </li>
-     * <li><p><strong>cnt_info</strong>: attack trend.</p>
-     * </li>
-     * <li><p><strong>ip_info</strong>: attacker IP information.</p>
-     * </li>
-     * <li><p><strong>sensitive_info</strong>: information about access to sensitive data.</p>
-     * </li>
-     * <li><p><strong>request_data</strong>: request information.</p>
-     * </li>
-     * <li><p><strong>response_data</strong>: response information.</p>
-     * </li>
-     * </ul>
+     * <p>The type of detailed information about the security event.</p>
      * 
      * <strong>example:</strong>
      * <p>event_info</p>
@@ -52,13 +36,7 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The dimension of the security event. Valid values:</p>
-     * <ul>
-     * <li><p><strong>ip</strong> (default): IP security event.</p>
-     * </li>
-     * <li><p><strong>account</strong>: account security event.</p>
-     * </li>
-     * </ul>
+     * <p>The dimension of the security event.</p>
      * 
      * <strong>example:</strong>
      * <p>ip</p>
@@ -67,9 +45,9 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String eventScope;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -80,7 +58,7 @@ public class DescribeApisecEventDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>

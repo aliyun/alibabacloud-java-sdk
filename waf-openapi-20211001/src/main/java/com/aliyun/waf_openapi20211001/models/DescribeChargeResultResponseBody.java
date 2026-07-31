@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeChargeResultResponseBody extends TeaModel {
     /**
-     * <p>The billing calculation results for each module.</p>
+     * <p>The calculation results.</p>
      */
     @NameInMap("ModuleDetails")
     public java.util.List<DescribeChargeResultResponseBodyModuleDetails> moduleDetails;
@@ -20,7 +20,16 @@ public class DescribeChargeResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of calculated Security Capacity Units (SeCUs).</p>
+     * <p>The total number of calculated Credits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("TotalCredit")
+    public Double totalCredit;
+
+    /**
+     * <p>The total number of calculated SeCUs.</p>
      * 
      * <strong>example:</strong>
      * <p>1080</p>
@@ -49,6 +58,14 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeChargeResultResponseBody setTotalCredit(Double totalCredit) {
+        this.totalCredit = totalCredit;
+        return this;
+    }
+    public Double getTotalCredit() {
+        return this.totalCredit;
+    }
+
     public DescribeChargeResultResponseBody setTotalSeCu(Double totalSeCu) {
         this.totalSeCu = totalSeCu;
         return this;
@@ -59,7 +76,16 @@ public class DescribeChargeResultResponseBody extends TeaModel {
 
     public static class DescribeChargeResultResponseBodyModuleDetails extends TeaModel {
         /**
-         * <p>The ID of the billing module.</p>
+         * <p>The number of Credits for the pricing module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Credit")
+        public Double credit;
+
+        /**
+         * <p>The pricing module identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>domainCount</p>
@@ -68,7 +94,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         public String moduleCode;
 
         /**
-         * <p>The number of SeCUs for the billing module.</p>
+         * <p>The number of SeCUs for the pricing module.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -79,6 +105,14 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         public static DescribeChargeResultResponseBodyModuleDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeChargeResultResponseBodyModuleDetails self = new DescribeChargeResultResponseBodyModuleDetails();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeChargeResultResponseBodyModuleDetails setCredit(Double credit) {
+            this.credit = credit;
+            return this;
+        }
+        public Double getCredit() {
+            return this.credit;
         }
 
         public DescribeChargeResultResponseBodyModuleDetails setModuleCode(String moduleCode) {

@@ -69,7 +69,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
         public Long eventMedium;
 
         /**
-         * <p>The statistics time, in UNIX timestamp format (UTC). Unit: seconds.</p>
+         * <p>The statistics time in UNIX timestamp format (UTC). Unit: seconds.</p>
          * <blockquote>
          * <p>Notice: This parameter is deprecated. Use the Timestamp parameter instead.</p>
          * </blockquote>
@@ -82,7 +82,7 @@ public class DescribeUserEventTrendResponseBody extends TeaModel {
         public Long timeStamp;
 
         /**
-         * <p>The statistics time, in UNIX timestamp format (UTC). Unit: seconds.</p>
+         * <p>The statistics time in UNIX timestamp format (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723435200</p>

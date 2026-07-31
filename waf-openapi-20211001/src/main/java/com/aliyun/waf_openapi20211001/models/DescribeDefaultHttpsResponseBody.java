@@ -55,9 +55,9 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
          * <ul>
          * <li><p><strong>1</strong>: All cipher suites are added.</p>
          * </li>
-         * <li><p><strong>2</strong>: Strong cipher suites are added.</p>
+         * <li><p><strong>2</strong>: Strong cipher suites are added. This value is available only when TLSVersion is set to tlsv1.2.</p>
          * </li>
-         * <li><p><strong>99</strong>: Custom cipher suites are added.</p>
+         * <li><p><strong>99</strong>: Custom cipher suites are added. This value is available only when TLSVersion is not set to tlsv1.3.</p>
          * </li>
          * </ul>
          * 
@@ -84,6 +84,9 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
          * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be true.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -94,11 +97,13 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
         /**
          * <p>The TLS version. Valid values:</p>
          * <ul>
-         * <li><p><strong>tlsv1</strong></p>
+         * <li><p><strong>tlsv1</strong>: TLS 1.0 and later are supported. This value provides the highest compatibility and the lowest security.</p>
          * </li>
-         * <li><p><strong>tlsv1.1</strong></p>
+         * <li><p><strong>tlsv1.1</strong>: TLS 1.1 and later are supported. This value provides good compatibility and security.</p>
          * </li>
-         * <li><p><strong>tlsv1.2</strong></p>
+         * <li><p><strong>tlsv1.2</strong>: TLS 1.2 and later are supported. This value provides good compatibility and the highest security.</p>
+         * </li>
+         * <li><p><strong>tlsv1.3</strong>: Only TLS 1.3 is supported. This value provides the highest security and the lowest compatibility.</p>
          * </li>
          * </ul>
          * 

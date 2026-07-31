@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplateResourcesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page. Valid values: 1 to 500. Default value: 500.</p>
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,9 +14,9 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. This parameter is returned if a next page exists.</p>
+     * <p>The pagination token (Token) for the next page. If a next page exists, this field contains a value.</p>
      * <blockquote>
-     * <p>If a value is returned for this parameter, a next page exists. You can use the returned <strong>NextToken</strong> value as a request parameter to retrieve the data on the next page. When no value is returned, all data has been retrieved.</p>
+     * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of the names of the attached protected objects or protected object groups, or the IDs of the protected assets.</p>
+     * <p>The list of bound protected object names, protected object group names, or protected asset IDs.</p>
      */
     @NameInMap("Resources")
     public java.util.List<String> resources;
@@ -50,7 +50,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>25</p>

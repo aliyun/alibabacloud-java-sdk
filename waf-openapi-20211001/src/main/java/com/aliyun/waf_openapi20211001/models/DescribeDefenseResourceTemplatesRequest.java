@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the instance ID.</p>
+     * <p> You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,11 +18,11 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland</p>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
      * </li>
-     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland</p>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
      * </li>
      * </ul>
      * 
@@ -52,15 +52,7 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of protected resource. Valid values:</p>
-     * <ul>
-     * <li><p><strong>single</strong> (default): A protected object.</p>
-     * </li>
-     * <li><p><strong>group</strong>: A protected object group.</p>
-     * </li>
-     * <li><p><strong>asset</strong>: A protected asset.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the protected resource.</p>
      * 
      * <strong>example:</strong>
      * <p>single</p>
@@ -87,12 +79,10 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of protection rule. Valid values:</p>
+     * <p>The type of the protection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>defense</strong> (default): A protection rule.</p>
-     * </li>
-     * <li><p><strong>whitelist</strong>: A whitelist rule.</p>
-     * </li>
+     * <li><strong>defense</strong> (default): protection rule.</li>
+     * <li><strong>whitelist</strong>: whitelist rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>

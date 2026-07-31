@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDefenseRuleResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>26E46541-7AAB-5565-801D-F14DBDC5****</p>
@@ -14,7 +14,7 @@ public class CreateDefenseRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The comma-separated IDs of the created protection rules.</p>
+     * <p>The IDs of the created protection rules. Multiple IDs are separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>22215,23354,462165</p>
