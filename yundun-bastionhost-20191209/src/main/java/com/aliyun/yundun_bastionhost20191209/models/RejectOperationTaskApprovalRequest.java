@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RejectOperationTaskApprovalRequest extends TeaModel {
     /**
-     * <p>The ID of the O&amp;M task approval.</p>
+     * <p>The O&amp;M task approval ID.</p>
      * <blockquote>
      * <p>You can call the ListTodoOpsTaskApprovals operation to query this parameter.</p>
      * </blockquote>
@@ -33,7 +33,7 @@ public class RejectOperationTaskApprovalRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

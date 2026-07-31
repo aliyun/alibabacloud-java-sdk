@@ -117,7 +117,7 @@ public class ListTodoOpsTaskApprovalsResponseBody extends TeaModel {
          * <ul>
          * <li><strong>FixTime</strong>: scheduled execution.</li>
          * <li><strong>CycleInterval</strong>: periodic execution.</li>
-         * <li><strong>Manual</strong>: manually triggered by a user.</li>
+         * <li><strong>Manual</strong>: manually triggered by the user.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -69,7 +69,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhengzhou-nebula-1", "yundun-bastionhost.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "yundun-bastionhost.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "yundun-bastionhost.aliyuncs.com"),
+            new TeaPair("na-south-1", "bastionhost.na-south-1.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-jva", "yundun-bastionhost.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "bastionhost.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "bastionhost.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "bastionhost.ap-northeast-2.aliyuncs.com")
         );
@@ -470,7 +472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approves an O&amp;M task request.</p>
+     * <p>Approves an O&amp;M task execution request.</p>
      * 
      * @param request AllowOperationTaskApprovalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -510,7 +512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Approves an O&amp;M task request.</p>
+     * <p>Approves an O&amp;M task execution request.</p>
      * 
      * @param request AllowOperationTaskApprovalRequest
      * @return AllowOperationTaskApprovalResponse
@@ -2744,7 +2746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns all instance attributes, such as its instance ID and description.</p>
+     * <p>Queries all attribute information of an instance, such as the instance ID and instance description.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2780,7 +2782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns all instance attributes, such as its instance ID and description.</p>
+     * <p>Queries all attribute information of an instance, such as the instance ID and instance description.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
      * @return DescribeInstanceAttributeResponse
@@ -3404,7 +3406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables public network access for a specified Bastionhost instance.</p>
+     * <p>Enables the public access switch for a specified Bastionhost instance.</p>
      * 
      * @param request EnableInstancePublicAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3440,7 +3442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables public network access for a specified Bastionhost instance.</p>
+     * <p>Enables the public access switch for a specified Bastionhost instance.</p>
      * 
      * @param request EnableInstancePublicAccessRequest
      * @return EnableInstancePublicAccessResponse
@@ -3596,7 +3598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified O&amp;M task for an administrator.</p>
+     * <p>Queries the details of a specified O&amp;M task.</p>
      * 
      * @param request GetAutoOpsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3638,7 +3640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified O&amp;M task for an administrator.</p>
+     * <p>Queries the details of a specified O&amp;M task.</p>
      * 
      * @param request GetAutoOpsTaskRequest
      * @return GetAutoOpsTaskResponse
@@ -4492,7 +4494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a user of a bastion host.</p>
+     * <p>Retrieves the details of a specified Bastionhost user.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4532,7 +4534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a user of a bastion host.</p>
+     * <p>Retrieves the details of a specified Bastionhost user.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -6486,11 +6488,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
-     * The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</p>
+     * <p>Retrieves the list of O&amp;M applications that require approval for an administrator.
+     * The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the O&amp;M requests that require approval.</p>
+     * <p>Retrieves the list of O&amp;M applications that require approval.</p>
      * 
      * @param request ListOperationTicketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6538,11 +6540,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
-     * The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</p>
+     * <p>Retrieves the list of O&amp;M applications that require approval for an administrator.
+     * The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the O&amp;M requests that require approval.</p>
+     * <p>Retrieves the list of O&amp;M applications that require approval.</p>
      * 
      * @param request ListOperationTicketsRequest
      * @return ListOperationTicketsResponse
@@ -6802,7 +6804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves pending automated O&amp;M approval requests.</p>
+     * <p>Retrieves the list of pending automated O&amp;M approval requests.</p>
      * 
      * @param request ListTodoOpsTaskApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6854,7 +6856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves pending automated O&amp;M approval requests.</p>
+     * <p>Retrieves the list of pending automated O&amp;M approval requests.</p>
      * 
      * @param request ListTodoOpsTaskApprovalsRequest
      * @return ListTodoOpsTaskApprovalsResponse
@@ -6986,7 +6988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of users of a bastion host.</p>
+     * <p>Retrieves the list of users for a specified bastion host.</p>
      * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7058,7 +7060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of users of a bastion host.</p>
+     * <p>Retrieves the list of users for a specified bastion host.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -7808,7 +7810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a specified Bastionhost instance.</p>
+     * <p>Modifies the information of a specified bastion host instance.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7848,7 +7850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a specified Bastionhost instance.</p>
+     * <p>Modifies the information of a specified bastion host instance.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
@@ -8692,7 +8694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rejects an O&amp;M task approval.</p>
+     * <p>Rejects an O&amp;M task execution request.</p>
      * 
      * @param request RejectOperationTaskApprovalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8732,7 +8734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rejects an O&amp;M task approval.</p>
+     * <p>Rejects an O&amp;M task execution request.</p>
      * 
      * @param request RejectOperationTaskApprovalRequest
      * @return RejectOperationTaskApprovalResponse

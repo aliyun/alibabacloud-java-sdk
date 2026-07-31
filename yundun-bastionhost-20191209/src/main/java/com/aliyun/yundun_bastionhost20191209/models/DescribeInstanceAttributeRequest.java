@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the Bastionhost instance.</p>
+     * <p>The ID of the bastion host instance to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the ID of the Bastionhost instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the bastion host instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeInstanceAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region in which the Bastionhost instance resides.</p>
+     * <p>The region ID of the bastion host instance to query.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

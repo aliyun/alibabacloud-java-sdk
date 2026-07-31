@@ -7,7 +7,7 @@ public class EnableInstancePublicAccessRequest extends TeaModel {
     /**
      * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the ID of the Bastionhost instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The attributes of the instance.</p>
+     * <p>The instance attribute information.</p>
      */
     @NameInMap("InstanceAttribute")
     public DescribeInstanceAttributeResponseBodyInstanceAttribute instanceAttribute;
 
     /**
-     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>
@@ -42,9 +42,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttributePorts extends TeaModel {
         /**
-         * <p>The custom O\&amp;M port.</p>
+         * <p>The custom port defined by the user.</p>
          * <blockquote>
-         * <p>Only SSH and RDP ports can be customized. If no custom port is set, this parameter returns the value of the <code>StandardPort</code> parameter.</p>
+         * <p>Only SSH and RDP ports can be modified. If no custom O&amp;M port is configured for the bastion host, the value is the same as the standard port.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -54,14 +54,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Integer customPort;
 
         /**
-         * <p>The standard O\&amp;M port number. The following are the default standard ports for specific protocols:</p>
+         * <p>The standard port of the bastion host. Valid values:</p>
          * <ul>
-         * <li><p><strong>SSH</strong>: 60022</p>
-         * </li>
-         * <li><p><strong>RDP</strong>: 63389</p>
-         * </li>
-         * <li><p><strong>HTTPS</strong>: 443</p>
-         * </li>
+         * <li><strong>SSH</strong>: 60022 </li>
+         * <li><strong>RDP</strong>: 63389</li>
+         * <li><strong>HTTPS</strong>: 443</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +101,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>An IP address or CIDR block in the whitelist.</p>
+         * <p>The IP address whitelist to configure. A maximum of 50 IP addresses are supported. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>94.74.xx.xx/32</p>
@@ -136,8 +133,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttribute extends TeaModel {
+        @NameInMap("AiCreditStatus")
+        public String aiCreditStatus;
+
+        @NameInMap("AiOpsModule")
+        public String aiOpsModule;
+
         /**
-         * <p>Indicates whether the application O\&amp;M module is enabled. Valid values are <code>Enable</code> and <code>Disable</code>.</p>
+         * <p>The application O&amp;M module. Valid values: Enable (enabled) and Disable (disabled).</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -146,13 +149,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String appOperationModule;
 
         /**
-         * <p>A list of authorized security group IDs.</p>
+         * <p>The list of authorized security group IDs.</p>
          */
         @NameInMap("AuthorizedSecurityGroups")
         public java.util.List<String> authorizedSecurityGroups;
 
         /**
-         * <p>The total bandwidth of the Bastionhost instance, in Mbit/s.</p>
+         * <p>The total bandwidth of the bastion host instance.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -161,7 +164,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String bandwidth;
 
         /**
-         * <p>The extra bandwidth package of the Bastionhost instance, in Mbit/s.</p>
+         * <p>The extended bandwidth package of the bastion host.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -170,12 +173,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String bandwidthPackage;
 
         /**
-         * <p>The status of the database O\&amp;M feature.</p>
+         * <p>The status of the database O&amp;M feature.</p>
          * <ul>
-         * <li><p><strong>Enable</strong>: The database O\&amp;M feature is enabled.</p>
-         * </li>
-         * <li><p><strong>Disable</strong>: The database O\&amp;M feature is disabled.</p>
-         * </li>
+         * <li><strong>Enable</strong>: Database O&amp;M is supported.</li>
+         * <li><strong>Disable</strong>: Database O&amp;M is not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +195,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the elastic network interface (ENI).</p>
+         * <p>The ID of the elastic network interface (ENI). An ENI is a virtual network interface controller (NIC) that can be attached to the bastion host instance.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-bp1455jrzwm7moaxxxxx</p>
@@ -203,7 +204,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String eniInstanceId;
 
         /**
-         * <p>The expiration timestamp, in milliseconds, of the Bastionhost instance.</p>
+         * <p>The timestamp when the bastion host instance expires. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1578326400000</p>
@@ -212,13 +213,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>Indicates whether the Bastionhost instance is integrated with a Hardware Security Module (HSM).</p>
+         * <p>The status of the HSM hardware encryption module. Indicates whether the bastion host is integrated with HSM.</p>
          */
         @NameInMap("HSMModule")
         public String HSMModule;
 
         /**
-         * <p>Indicates whether the IDaaS integration module is enabled. Valid values are <code>Enable</code> and <code>Disable</code>.</p>
+         * <p>The IDaaS integration module. Valid values: Enable (enabled) and Disable (disabled).</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -227,7 +228,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String IDaaSModule;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bastionhost-cn-78v1ghxxxxx</p>
@@ -236,22 +237,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p><strong>PENDING</strong>: The instance is being initialized.</p>
-         * </li>
-         * <li><p><strong>CREATING</strong>: The instance is being created.</p>
-         * </li>
-         * <li><p><strong>RUNNING</strong>: The instance is running.</p>
-         * </li>
-         * <li><p><strong>EXPIRED</strong>: The instance has expired.</p>
-         * </li>
-         * <li><p><strong>CREATE_FAILED</strong>: Instance creation failed.</p>
-         * </li>
-         * <li><p><strong>UPGRADING</strong>: The instance is being upgraded.</p>
-         * </li>
-         * <li><p><strong>UPGRADE_FAILED</strong>: Instance upgrade failed.</p>
-         * </li>
+         * <li><strong>PENDING</strong>: Not initialized.</li>
+         * <li><strong>CREATING</strong>: Being created. </li>
+         * <li><strong>RUNNING</strong>: Running. </li>
+         * <li><strong>EXPIRED</strong>: Expired. </li>
+         * <li><strong>CREATE_FAILED</strong>: Creation failed.</li>
+         * <li><strong>UPGRADING</strong>: Being upgraded.</li>
+         * <li><strong>UPGRADE_FAILED</strong>: Upgrade failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +255,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>The public domain name of the instance.</p>
+         * <p>The public domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>******lwb-public.bastionhost.aliyuncs.com</p>
@@ -270,7 +264,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String internetEndpoint;
 
         /**
-         * <p>The internal endpoint of the instance.</p>
+         * <p>The internal domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>******xalwb.bastionhost.aliyuncs.com</p>
@@ -279,7 +273,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String intranetEndpoint;
 
         /**
-         * <p>Indicates whether the instance is integrated with Key Management Service (KMS) and Secrets Manager. Valid values are <code>Enable</code> and <code>Disable</code>.</p>
+         * <p>The KMS Secrets Manager integration module. Valid values: Enable (enabled) and Disable (disabled).</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -297,12 +291,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String licenseCode;
 
         /**
-         * <p>The status of the password change feature.</p>
+         * <p>The status of the password change task feature.</p>
          * <ul>
-         * <li><p><strong>Enable</strong>: The feature is enabled.</p>
-         * </li>
-         * <li><p><strong>Disable</strong>: The feature is disabled.</p>
-         * </li>
+         * <li><strong>Enable</strong>: Enabled.</li>
+         * <li><strong>Disable</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,10 +306,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The status of the network domain proxy feature.</p>
          * <ul>
-         * <li><p><strong>Enable</strong>: The network domain proxy feature is enabled.</p>
-         * </li>
-         * <li><p><strong>Disable</strong>: The network domain proxy feature is disabled.</p>
-         * </li>
+         * <li><strong>Enable</strong>: The network domain proxy mode is supported.</li>
+         * <li><strong>Disable</strong>: The network domain proxy mode is not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,42 +317,40 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String networkProxyModule;
 
         /**
-         * <p>The O\&amp;M ports of the Bastionhost instance.</p>
+         * <p>The O&amp;M ports of the bastion host.</p>
          */
         @NameInMap("Ports")
         public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> ports;
 
         /**
-         * <p>A list of private egress IP addresses of the Bastionhost instance.</p>
+         * <p>The list of internal egress IP addresses of the bastion host.</p>
          */
         @NameInMap("PrivateExportIps")
         public java.util.List<String> privateExportIps;
 
         /**
-         * <p>The private whitelist of the instance.</p>
+         * <p>The list of IP addresses in the internal whitelist.</p>
          */
         @NameInMap("PrivateWhiteList")
         public java.util.List<String> privateWhiteList;
 
         /**
-         * <p>A list of public egress IP addresses of the Bastionhost instance.</p>
+         * <p>The list of public egress IP addresses of the bastion host.</p>
          */
         @NameInMap("PublicExportIps")
         public java.util.List<String> publicExportIps;
 
         /**
-         * <p>A list of public IP addresses of the Bastionhost instance.</p>
+         * <p>The list of public IP addresses of the bastion host.</p>
          */
         @NameInMap("PublicIps")
         public java.util.List<String> publicIps;
 
         /**
-         * <p>Indicates whether the Bastionhost instance is accessible over the public network. Valid values:</p>
+         * <p>Indicates whether the bastion host instance is accessible over the Internet. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The Bastionhost instance is accessible over the public network.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The Bastionhost instance is not accessible over the public network.</p>
-         * </li>
+         * <li><strong>true</strong>: The bastion host is accessible over the Internet.</li>
+         * <li><strong>false</strong>: The bastion host is not accessible over the Internet.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,13 +360,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Boolean publicNetworkAccess;
 
         /**
-         * <p>The public whitelist of the Bastionhost instance.</p>
+         * <p>The public whitelist of the bastion host.</p>
          */
         @NameInMap("PublicWhiteList")
         public java.util.List<String> publicWhiteList;
 
         /**
-         * <p>Indicates whether the multi-account module is enabled. Valid values are <code>Enable</code> and <code>Disable</code>.</p>
+         * <p>The multi-account module. Valid values: Enable (enabled) and Disable (disabled).</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -387,7 +375,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String RDModule;
 
         /**
-         * <p>The ID of the region where the Bastionhost instance is located.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -396,7 +384,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the instance\&quot;s resource group.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzc427db******</p>
@@ -405,13 +393,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>A list of routing rules for the Bastionhost instance.</p>
+         * <p>The list of rules for the bastion host instance.</p>
          */
         @NameInMap("RouterRules")
         public java.util.List<String> routerRules;
 
         /**
-         * <p>Indicates whether the script-based O\&amp;M module is enabled. Valid values are <code>Enable</code> and <code>Disable</code>.</p>
+         * <p>The script O&amp;M module. Valid values: Enable (enabled) and Disable (disabled).</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -420,13 +408,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String scriptDeliverModule;
 
         /**
-         * <p>A list of the instance\&quot;s security group IDs.</p>
+         * <p>The list of security group IDs to which the instance belongs.</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The ID of the standby VSwitch for the Bastionhost instance.</p>
+         * <p>The ID of the secondary vSwitch associated with the bastion host instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6cmnae7hu5****</p>
@@ -435,7 +423,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String slaveVswitchId;
 
         /**
-         * <p>The timestamp, in milliseconds, when the Bastionhost instance was purchased or renewed.</p>
+         * <p>The timestamp when the bastion host instance was purchased or renewed. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1577681345000</p>
@@ -444,7 +432,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The total storage capacity of the Bastionhost instance, in bytes.</p>
+         * <p>The total storage capacity of the purchased bastion host. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2199023255552</p>
@@ -453,7 +441,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public Long storage;
 
         /**
-         * <p>The ID of the instance\&quot;s Virtual Private Cloud (VPC).</p>
+         * <p>The VPC ID associated with the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1c85tzgqu1bf5bxxxxx</p>
@@ -462,7 +450,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the instance\&quot;s VSwitch.</p>
+         * <p>The vSwitch ID associated with the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1xfwzzfti0kjbfxxxxx</p>
@@ -471,12 +459,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The status of the web terminal.</p>
+         * <p>The status of the Web Terminal feature.</p>
          * <ul>
-         * <li><p><strong>Enable</strong>: Supports web-based remote connections.</p>
-         * </li>
-         * <li><p><strong>Disable</strong>: Does not support web-based remote connections.</p>
-         * </li>
+         * <li><strong>Enable</strong>: Web remote connection is supported.</li>
+         * <li><strong>Disable</strong>: Web remote connection is not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -486,7 +472,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String webTerminalModule;
 
         /**
-         * <p>The configured IP address whitelist policies.</p>
+         * <p>The IP address whitelist to configure.</p>
          */
         @NameInMap("WhiteListPolicies")
         public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies> whiteListPolicies;
@@ -494,6 +480,22 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static DescribeInstanceAttributeResponseBodyInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAttributeResponseBodyInstanceAttribute self = new DescribeInstanceAttributeResponseBodyInstanceAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setAiCreditStatus(String aiCreditStatus) {
+            this.aiCreditStatus = aiCreditStatus;
+            return this;
+        }
+        public String getAiCreditStatus() {
+            return this.aiCreditStatus;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setAiOpsModule(String aiOpsModule) {
+            this.aiOpsModule = aiOpsModule;
+            return this;
+        }
+        public String getAiOpsModule() {
+            return this.aiOpsModule;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setAppOperationModule(String appOperationModule) {

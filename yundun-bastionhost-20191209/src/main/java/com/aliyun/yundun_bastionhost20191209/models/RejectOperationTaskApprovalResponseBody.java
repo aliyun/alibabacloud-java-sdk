@@ -41,6 +41,10 @@ public class RejectOperationTaskApprovalResponseBody extends TeaModel {
     }
 
     public static class RejectOperationTaskApprovalResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Code")
         public String code;
 

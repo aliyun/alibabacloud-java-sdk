@@ -27,7 +27,7 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number of the page to return in a paging query. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page in a paging query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +64,7 @@ public class ListTodoOpsTaskApprovalsRequest extends TeaModel {
      * <ul>
      * <li><strong>FixTime</strong>: scheduled execution.</li>
      * <li><strong>CycleInterval</strong>: periodic execution.</li>
-     * <li><strong>Manual</strong>: manually triggered by a user.</li>
+     * <li><strong>Manual</strong>: manually triggered by the user.</li>
      * </ul>
      * 
      * <strong>example:</strong>

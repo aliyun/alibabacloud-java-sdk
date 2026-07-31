@@ -23,7 +23,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The users returned.</p>
+     * <p>The list of users returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListUsersResponseBodyUsers> users;
@@ -77,7 +77,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The end time of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the validity period of the user, in seconds (UNIX timestamp format).</p>
          * 
          * <strong>example:</strong>
          * <p>1672502400</p>
@@ -86,7 +86,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Long effectiveEndTime;
 
         /**
-         * <p>The start time of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the validity period of the user, in seconds (UNIX timestamp format).</p>
          * 
          * <strong>example:</strong>
          * <p>1669630029</p>
@@ -104,12 +104,10 @@ public class ListUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>This parameter is required if LanguageStatus is set to Custom. Valid values:</p>
+         * <p>The language for message notifications. This parameter is required when LanguageStatus is set to Custom. Valid values:</p>
          * <ul>
-         * <li><p><strong>zh-cn</strong>: simplified Chinese.</p>
-         * </li>
-         * <li><p><strong>en</strong>: English.</p>
-         * </li>
+         * <li><strong>zh-cn</strong>: Simplified Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,12 +117,10 @@ public class ListUsersResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>Indicates whether notifications are sent in the language specified in the global settings or a custom language.</p>
+         * <p>The language setting for message notifications. Valid values:</p>
          * <ul>
-         * <li><p><strong>Global</strong></p>
-         * </li>
-         * <li><p><strong>Custom</strong></p>
-         * </li>
+         * <li><strong>Global</strong>: follows the global settings</li>
+         * <li><strong>Custom</strong>: custom</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,46 +139,27 @@ public class ListUsersResponseBody extends TeaModel {
         public String mobile;
 
         /**
-         * <p>The location where the mobile phone number of the user is registered. Valid values:</p>
+         * <p>The country code of the mobile phone number of the user. Valid values:</p>
          * <ul>
-         * <li><p><strong>CN</strong>: the Chinese mainland, whose international dialing code is +86.</p>
-         * </li>
-         * <li><p><strong>HK</strong>: Hong Kong (China), whose international dialing code is +852.</p>
-         * </li>
-         * <li><p><strong>MO</strong>: Macao (China), whose international dialing code is +853.</p>
-         * </li>
-         * <li><p><strong>TW</strong>: Taiwan (China), whose international dialing code is +886.</p>
-         * </li>
-         * <li><p><strong>RU</strong>: Russia, whose international dialing code is +7.</p>
-         * </li>
-         * <li><p><strong>SG</strong>: Singapore, whose international dialing code is +65.</p>
-         * </li>
-         * <li><p><strong>MY</strong>: Malaysia, whose international dialing code is +60.</p>
-         * </li>
-         * <li><p><strong>ID</strong>: Indonesia, whose international dialing code is +62.</p>
-         * </li>
-         * <li><p><strong>DE</strong>: Germany, whose international dialing code is +49.</p>
-         * </li>
-         * <li><p><strong>AU</strong>: Australia, whose international dialing code is +61.</p>
-         * </li>
-         * <li><p><strong>US</strong>: US, whose international dialing code is +1.</p>
-         * </li>
-         * <li><p><strong>AE</strong>: United Arab Emirates, whose international dialing code is +971.</p>
-         * </li>
-         * <li><p><strong>JP:</strong> Japan, whose international dialing code is +81.</p>
-         * </li>
-         * <li><p><strong>GB</strong>: UK, whose international dialing code is +44.</p>
-         * </li>
-         * <li><p><strong>IN</strong>: India, whose international dialing code is +91.</p>
-         * </li>
-         * <li><p><strong>KR</strong>: Republic of Korea, whose international dialing code is +82.</p>
-         * </li>
-         * <li><p><strong>PH</strong>: Philippines, whose international dialing code is +63.</p>
-         * </li>
-         * <li><p><strong>CH</strong>: Switzerland, whose international dialing code is +41.</p>
-         * </li>
-         * <li><p><strong>SE</strong>: Sweden, whose international dialing code is +46.</p>
-         * </li>
+         * <li><strong>CN</strong>: the Chinese mainland (+86)</li>
+         * <li><strong>HK</strong>: Hong Kong (China) (+852)</li>
+         * <li><strong>MO</strong>: Macao (China) (+853)</li>
+         * <li><strong>TW</strong>: Taiwan (China) (+886)</li>
+         * <li><strong>RU</strong>: Russia (+7)</li>
+         * <li><strong>SG</strong>: Singapore (+65)</li>
+         * <li><strong>MY</strong>: Malaysia (+60)</li>
+         * <li><strong>ID</strong>: Indonesia (+62)</li>
+         * <li><strong>DE</strong>: Germany (+49)</li>
+         * <li><strong>AU</strong>: Australia (+61)</li>
+         * <li><strong>US</strong>: United States (+1)</li>
+         * <li><strong>AE</strong>: Dubai (+971)</li>
+         * <li><strong>JP</strong>: Japan (+81)</li>
+         * <li><strong>GB</strong>: United Kingdom (+44)</li>
+         * <li><strong>IN</strong>: India (+91)</li>
+         * <li><strong>KR</strong>: South Korea (+82)</li>
+         * <li><strong>PH</strong>: Philippines (+63)</li>
+         * <li><strong>CH</strong>: Switzerland (+41)</li>
+         * <li><strong>SE</strong>: Sweden (+46)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,12 +169,10 @@ public class ListUsersResponseBody extends TeaModel {
         public String mobileCountryCode;
 
         /**
-         * <p>Indicates whether password reset is required upon the next logon. Valid values:</p>
+         * <p>Indicates whether the password must be reset upon next logon. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: The password must be reset.</li>
+         * <li><strong>false</strong>: The password does not need to be reset.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,16 +182,12 @@ public class ListUsersResponseBody extends TeaModel {
         public Boolean needResetPassword;
 
         /**
-         * <p>The type of the user. Valid values:</p>
+         * <p>The source of the user. Valid values:</p>
          * <ul>
-         * <li><p><strong>Local</strong>: a local user.</p>
-         * </li>
-         * <li><p><strong>Ram</strong>: a RAM user.</p>
-         * </li>
-         * <li><p><strong>AD</strong>: an AD-authenticated user.</p>
-         * </li>
-         * <li><p><strong>LDAP</strong>: an LDAP-authenticated user.</p>
-         * </li>
+         * <li><strong>Local</strong>: local user</li>
+         * <li><strong>Ram</strong>: Resource Access Management (RAM) user</li>
+         * <li><strong>AD</strong>: AD user</li>
+         * <li><strong>LDAP</strong>: LDAP user</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,9 +197,9 @@ public class ListUsersResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The unique ID of the user.</p>
+         * <p>The unique identity of the user.</p>
          * <blockquote>
-         * <p>This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if <strong>Source</strong> is set to <strong>Ram</strong>. No value is returned for this parameter if <strong>Source</strong> is set to <strong>Local</strong>.</p>
+         * <p>This parameter is the unique identity of the Resource Access Management (RAM) user that corresponds to the bastion host user. This parameter is returned when the user source is a RAM user (that is, <strong>Source</strong> is set to <strong>Ram</strong>). If the user source is a local user (that is, <strong>Source</strong> is set to <strong>Local</strong>), this parameter is empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,20 +209,17 @@ public class ListUsersResponseBody extends TeaModel {
         public String sourceUserId;
 
         /**
-         * <p>An array of the enabled two-factor authentication methods.</p>
+         * <p>The array of enabled two-factor authentication methods.</p>
          */
         @NameInMap("TwoFactorMethods")
         public java.util.List<String> twoFactorMethods;
 
         /**
-         * <p>Indicates whether two-factor authentication is enabled for the user. Valid values:</p>
+         * <p>The two-factor authentication status of the user. Valid values:</p>
          * <ul>
-         * <li><p><strong>Global</strong>: The global setting applies.</p>
-         * </li>
-         * <li><p><strong>Disable</strong>: Two-factor authentication is disabled.</p>
-         * </li>
-         * <li><p><strong>Enable</strong>: Two-factor authentication is enabled. The user-specific setting for the authentication method applies.</p>
-         * </li>
+         * <li><strong>Global</strong>: follows the global settings</li>
+         * <li><strong>Disable</strong>: two-factor authentication disabled</li>
+         * <li><strong>Enable</strong>: two-factor authentication enabled, follows individual user settings</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,7 +247,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>An array that lists the states of users.</p>
+         * <p>The user status array.</p>
          */
         @NameInMap("UserState")
         public java.util.List<String> userState;

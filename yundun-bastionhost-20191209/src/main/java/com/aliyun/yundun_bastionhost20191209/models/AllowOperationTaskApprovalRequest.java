@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllowOperationTaskApprovalRequest extends TeaModel {
     /**
-     * <p>The ID of the O&amp;M task approval.</p>
+     * <p>The approval ID of the O&amp;M task.</p>
      * <blockquote>
      * <p>You can call the ListTodoOpsTaskApprovals operation to query this parameter.</p>
      * </blockquote>
@@ -18,9 +18,9 @@ public class AllowOperationTaskApprovalRequest extends TeaModel {
     public String approveId;
 
     /**
-     * <p>The instance ID of the bastion host.</p>
+     * <p>The ID of the bastion host instance.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
