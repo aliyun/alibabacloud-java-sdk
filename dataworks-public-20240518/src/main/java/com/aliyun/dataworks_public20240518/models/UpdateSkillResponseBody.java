@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSkillResponseBody extends TeaModel {
+public class UpdateSkillResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
@@ -19,14 +19,14 @@ public class CreateSkillResponseBody extends TeaModel {
      * </ul>
      */
     @NameInMap("Skill")
-    public CreateSkillResponseBodySkill skill;
+    public UpdateSkillResponseBodySkill skill;
 
-    public static CreateSkillResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateSkillResponseBody self = new CreateSkillResponseBody();
+    public static UpdateSkillResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateSkillResponseBody self = new UpdateSkillResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateSkillResponseBody setRequestId(String requestId) {
+    public UpdateSkillResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -34,15 +34,15 @@ public class CreateSkillResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSkillResponseBody setSkill(CreateSkillResponseBodySkill skill) {
+    public UpdateSkillResponseBody setSkill(UpdateSkillResponseBodySkill skill) {
         this.skill = skill;
         return this;
     }
-    public CreateSkillResponseBodySkill getSkill() {
+    public UpdateSkillResponseBodySkill getSkill() {
         return this.skill;
     }
 
-    public static class CreateSkillResponseBodySkillVisibilityScope extends TeaModel {
+    public static class UpdateSkillResponseBodySkillVisibilityScope extends TeaModel {
         /**
          * <p>The list of visible project IDs.</p>
          */
@@ -50,17 +50,17 @@ public class CreateSkillResponseBody extends TeaModel {
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+         * <p>The list of visible user IDs.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
-        public static CreateSkillResponseBodySkillVisibilityScope build(java.util.Map<String, ?> map) throws Exception {
-            CreateSkillResponseBodySkillVisibilityScope self = new CreateSkillResponseBodySkillVisibilityScope();
+        public static UpdateSkillResponseBodySkillVisibilityScope build(java.util.Map<String, ?> map) throws Exception {
+            UpdateSkillResponseBodySkillVisibilityScope self = new UpdateSkillResponseBodySkillVisibilityScope();
             return TeaModel.build(map, self);
         }
 
-        public CreateSkillResponseBodySkillVisibilityScope setProjectIds(java.util.List<String> projectIds) {
+        public UpdateSkillResponseBodySkillVisibilityScope setProjectIds(java.util.List<String> projectIds) {
             this.projectIds = projectIds;
             return this;
         }
@@ -68,7 +68,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.projectIds;
         }
 
-        public CreateSkillResponseBodySkillVisibilityScope setUserIds(java.util.List<String> userIds) {
+        public UpdateSkillResponseBodySkillVisibilityScope setUserIds(java.util.List<String> userIds) {
             this.userIds = userIds;
             return this;
         }
@@ -78,14 +78,12 @@ public class CreateSkillResponseBody extends TeaModel {
 
     }
 
-    public static class CreateSkillResponseBodySkill extends TeaModel {
+    public static class UpdateSkillResponseBodySkill extends TeaModel {
         /**
          * <p>The SKILL.md body content.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>把大象放冰箱分为三步，把冰箱门打开，把大象放进去，把冰箱门关上。</p>
          */
         @NameInMap("Body")
         public String body;
@@ -109,7 +107,7 @@ public class CreateSkillResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The creation time, in millisecond-level UNIX timestamp.</p>
+         * <p>The creation time (millisecond timestamp).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -119,17 +117,17 @@ public class CreateSkillResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The last modification time, in millisecond-level UNIX timestamp.</p>
+         * <p>The last modification time (millisecond timestamp).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
-         * <p>12345678901</p>
+         * <p>1780555634000</p>
          */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
         /**
-         * <p>The ID of the user who last modified the Skill.</p>
+         * <p>The last modifier ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -159,14 +157,14 @@ public class CreateSkillResponseBody extends TeaModel {
          * <p>The visibility scope.</p>
          */
         @NameInMap("VisibilityScope")
-        public CreateSkillResponseBodySkillVisibilityScope visibilityScope;
+        public UpdateSkillResponseBodySkillVisibilityScope visibilityScope;
 
-        public static CreateSkillResponseBodySkill build(java.util.Map<String, ?> map) throws Exception {
-            CreateSkillResponseBodySkill self = new CreateSkillResponseBodySkill();
+        public static UpdateSkillResponseBodySkill build(java.util.Map<String, ?> map) throws Exception {
+            UpdateSkillResponseBodySkill self = new UpdateSkillResponseBodySkill();
             return TeaModel.build(map, self);
         }
 
-        public CreateSkillResponseBodySkill setBody(String body) {
+        public UpdateSkillResponseBodySkill setBody(String body) {
             this.body = body;
             return this;
         }
@@ -174,7 +172,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.body;
         }
 
-        public CreateSkillResponseBodySkill setCreatorId(String creatorId) {
+        public UpdateSkillResponseBodySkill setCreatorId(String creatorId) {
             this.creatorId = creatorId;
             return this;
         }
@@ -182,7 +180,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.creatorId;
         }
 
-        public CreateSkillResponseBodySkill setDescription(String description) {
+        public UpdateSkillResponseBodySkill setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -190,7 +188,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.description;
         }
 
-        public CreateSkillResponseBodySkill setGmtCreateTime(String gmtCreateTime) {
+        public UpdateSkillResponseBodySkill setGmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
             return this;
         }
@@ -198,7 +196,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.gmtCreateTime;
         }
 
-        public CreateSkillResponseBodySkill setGmtModifiedTime(String gmtModifiedTime) {
+        public UpdateSkillResponseBodySkill setGmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
             return this;
         }
@@ -206,7 +204,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.gmtModifiedTime;
         }
 
-        public CreateSkillResponseBodySkill setModifierId(String modifierId) {
+        public UpdateSkillResponseBodySkill setModifierId(String modifierId) {
             this.modifierId = modifierId;
             return this;
         }
@@ -214,7 +212,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.modifierId;
         }
 
-        public CreateSkillResponseBodySkill setName(String name) {
+        public UpdateSkillResponseBodySkill setName(String name) {
             this.name = name;
             return this;
         }
@@ -222,7 +220,7 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.name;
         }
 
-        public CreateSkillResponseBodySkill setVisibility(String visibility) {
+        public UpdateSkillResponseBodySkill setVisibility(String visibility) {
             this.visibility = visibility;
             return this;
         }
@@ -230,11 +228,11 @@ public class CreateSkillResponseBody extends TeaModel {
             return this.visibility;
         }
 
-        public CreateSkillResponseBodySkill setVisibilityScope(CreateSkillResponseBodySkillVisibilityScope visibilityScope) {
+        public UpdateSkillResponseBodySkill setVisibilityScope(UpdateSkillResponseBodySkillVisibilityScope visibilityScope) {
             this.visibilityScope = visibilityScope;
             return this;
         }
-        public CreateSkillResponseBodySkillVisibilityScope getVisibilityScope() {
+        public UpdateSkillResponseBodySkillVisibilityScope getVisibilityScope() {
             return this.visibilityScope;
         }
 

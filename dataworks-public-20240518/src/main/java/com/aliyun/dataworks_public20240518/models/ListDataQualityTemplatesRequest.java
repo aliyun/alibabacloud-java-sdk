@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityTemplatesRequest extends TeaModel {
     /**
-     * <p>The directory path to which the data quality template belongs.</p>
+     * <p>The catalog path to which the data quality template belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>/timeliness/ods_layer</p>
@@ -14,7 +14,7 @@ public class ListDataQualityTemplatesRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>Fuzzy match for the template rule name.</p>
+     * <p>The template rule name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>table_rows</p>
@@ -23,7 +23,7 @@ public class ListDataQualityTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of records per page. Default value: 10.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListDataQualityTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the results. Default value: 1.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

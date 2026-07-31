@@ -19,6 +19,12 @@ public class RerunTaskInstancesShrinkRequest extends TeaModel {
     @NameInMap("Ids")
     public String idsShrink;
 
+    /**
+     * <p>Specifies whether to rerun instances with the latest configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseLatestConfig")
     public Boolean useLatestConfig;
 

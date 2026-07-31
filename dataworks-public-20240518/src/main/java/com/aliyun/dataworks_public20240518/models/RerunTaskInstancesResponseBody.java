@@ -14,7 +14,7 @@ public class RerunTaskInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result information of the batch operation. The structure is a map in which the key is the node instance ID and the value is the result information.</p>
+     * <p>The result of the batch operation. The structure is a map in which the key is the node instance ID and the value is the result information.</p>
      */
     @NameInMap("SuccessInfo")
     public java.util.Map<String, SuccessInfoValue> successInfo;

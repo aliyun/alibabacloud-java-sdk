@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentResponseBody extends TeaModel {
     /**
-     * <p>Details of the created Agent.</p>
+     * <p>The details of the created Agent.</p>
      */
     @NameInMap("Agent")
     public CreateAgentResponseBodyAgent agent;
@@ -42,7 +42,7 @@ public class CreateAgentResponseBody extends TeaModel {
 
     public static class CreateAgentResponseBodyAgent extends TeaModel {
         /**
-         * <p>The creation time (millisecond timestamp).</p>
+         * <p>The creation time, in milliseconds (UNIX timestamp).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The last modification time (millisecond timestamp).</p>
+         * <p>The last modification time, in milliseconds (UNIX timestamp).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class CreateAgentResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The name of the Agent.</p>
+         * <p>The Agent name.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PromptAgentSessionShrinkRequest extends TeaModel {
     /**
-     * <p>The ID passed in by the caller. The value is returned as-is in the response.</p>
+     * <p>The ID passed by the requester. The value is returned as-is.</p>
      * 
      * <strong>example:</strong>
      * <p>1021418411</p>

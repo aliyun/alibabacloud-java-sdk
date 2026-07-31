@@ -60,7 +60,7 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The error message returned when the asynchronous task fails.</p>
+         * <p>The error message when the asynchronous task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>target folder already exists: XXXX</p>
@@ -89,7 +89,7 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
         /**
          * <p>The content that the asynchronous task is expected to return.</p>
          * <blockquote>
-         * <p>This field currently contains the ID of the workflow created by the asynchronous task.</p>
+         * <p>This field currently stores the ID of the workflow created in the asynchronous task.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class ImportWorkflowDefinitionResponseBody extends TeaModel {
          * <p>Valid values:</p>
          * <ul>
          * <li>Create: creates a resource. </li>
-         * <li>Cancel: cancels a creation job.</li>
+         * <li>Cancel: cancels a creation task.</li>
          * </ul>
          * 
          * <strong>example:</strong>

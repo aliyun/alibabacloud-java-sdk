@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentSessionRequest extends TeaModel {
     /**
-     * <p>The request ID provided by the client. This ID is returned in the response without modification.</p>
+     * <p>The request ID passed by the caller. The value is returned as-is.</p>
      * 
      * <strong>example:</strong>
      * <p>4758330557805415712</p>
@@ -14,7 +14,7 @@ public class CreateAgentSessionRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The JSON-RPC version. The value is fixed at <code>2.0</code>.</p>
+     * <p>The JSON-RPC version. Fixed value: 2.0.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -59,10 +59,15 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaAgent extends TeaModel {
         /**
-         * <p>The agent name to bind to the session. This parameter is required.</p>
+         * <p>The name of the agent bound to the session. This parameter is required.</p>
+         * <ul>
+         * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</li>
+         * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</li>
+         * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>chat_cli_chatbi</p>
+         * <p>dataworks_data_agent</p>
          */
         @NameInMap("AgentName")
         public String agentName;
@@ -84,7 +89,7 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaConfigSessionTags extends TeaModel {
         /**
-         * <p>The session tag. You can use session tags to filter sessions. For example, if your application calls the API with a fixed RAM sub-account but maintains its own user account system, you can pass a user\&quot;s account ID as a tag. This allows you to filter the session list by your internal account IDs. The tag can be up to 128 characters and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI operations but your calling system has its own account system, you can pass the account ID of your calling system as this tag to filter the session list by account ID. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>chatbi</p>
@@ -109,7 +114,7 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaConfig extends TeaModel {
         /**
-         * <p>The identifier for the session source. This allows you to search for sessions by their source. For example, if you use an agent on multiple pages, such as Page A and Page B, you can use this parameter to filter and display only the sessions created on Page A. The identifier can be up to 128 characters and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * <p>The session source identifier for retrieval by source. For example, if an agent is used on both page A and page B, and you want page A to display only sessions created from page A, you can filter based on this parameter. The value can be up to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>openapi_sdk</p>
@@ -118,7 +123,7 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String sessionSource;
 
         /**
-         * <p>A list of session tags. You can use these tags to search and filter sessions.</p>
+         * <p>The list of session tags. You can use session tags for search and filtering.</p>
          */
         @NameInMap("SessionTags")
         public java.util.List<CreateAgentSessionRequestParamsMetaConfigSessionTags> sessionTags;
@@ -148,6 +153,12 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMetaInitialConfigOptions extends TeaModel {
         /**
+         * <p>The exec mode. Valid values:</p>
+         * <ul>
+         * <li>chat: conversation mode only. Suitable for simple Q&amp;A scenarios. Advantages: fast response and low token consumption. Disadvantages: cannot handle complex problems.</li>
+         * <li>cli: sandbox mode. Suitable for complex data analytics, data processing, and code writing scenarios. Advantages: can handle complex problems with the model autonomously performing analysis and problem resolution. Disadvantages: slower processing speed and higher token consumption compared to chat mode.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>chat，cli</p>
          */
@@ -155,6 +166,11 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String executionLane;
 
         /**
+         * <p>The authorization mode for script execution. OpenAPI currently supports only the yolo mode. Valid values:</p>
+         * <ul>
+         * <li>yolo: automatic authorization. No human intervention is required, and the model can process tasks automatically.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>yolo</p>
          */
@@ -162,6 +178,8 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String mode;
 
         /**
+         * <p>The ID of the resource group used for initialization.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless_res_group_123123123_564657857</p>
          */
@@ -169,6 +187,8 @@ public class CreateAgentSessionRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The names of custom skills to load. Separate multiple names with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>skill-name-1,skill-name2,skill-name-3</p>
          */
@@ -216,17 +236,20 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParamsMeta extends TeaModel {
         /**
-         * <p>The agent configuration for this session. The value must be one of the agents returned by the <code>ListAgents</code> API.</p>
+         * <p>The agent configuration for the session. Valid values are the results returned by the ListAgents operation.</p>
          */
         @NameInMap("Agent")
         public CreateAgentSessionRequestParamsMetaAgent agent;
 
         /**
-         * <p>The configuration parameters for the session, such as filters based on session source and session tags.</p>
+         * <p>The session parameter settings, such as filtering parameter settings based on session source and session tags.</p>
          */
         @NameInMap("Config")
         public CreateAgentSessionRequestParamsMetaConfig config;
 
+        /**
+         * <p>The advanced parameter settings for the agent execution environment.</p>
+         */
         @NameInMap("InitialConfigOptions")
         public CreateAgentSessionRequestParamsMetaInitialConfigOptions initialConfigOptions;
 
@@ -263,7 +286,7 @@ public class CreateAgentSessionRequest extends TeaModel {
 
     public static class CreateAgentSessionRequestParams extends TeaModel {
         /**
-         * <p>The extended metadata, which includes information such as agent binding, session source, and session tags.</p>
+         * <p>The extended metadata that carries agent binding, session source, tags, and other information.</p>
          */
         @NameInMap("Meta")
         public CreateAgentSessionRequestParamsMeta meta;

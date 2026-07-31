@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class CreateFileRequest extends TeaModel {
     /**
      * <p>The advanced settings of the node.</p>
-     * <p>This parameter corresponds to the Advanced Settings section in the right-side navigation pane on the configuration tab of EMR Spark Streaming and EMR Streaming SQL nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
-     * <p>Only EMR Spark Streaming and EMR Streaming SQL nodes support this parameter. The value must be in the JSON format.</p>
+     * <p>This parameter corresponds to the &quot;Advanced Settings&quot; in the right-side navigation bar on the editing page of EMR Spark Streaming and EMR Streaming SQL DataStudio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>Currently, only EMR Spark Streaming and EMR Streaming SQL nodes support this parameter. The parameter value is in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;queue&quot;:&quot;default&quot;,&quot;SPARK_CONF&quot;:&quot;--conf spark.driver.memory=2g&quot;}</p>
@@ -16,7 +16,7 @@ public class CreateFileRequest extends TeaModel {
     public String advancedSettings;
 
     /**
-     * <p>Specifies whether to apply the scheduling configuration immediately after the file is published.</p>
+     * <p>Specifies whether the scheduling configuration takes effect immediately after publishing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,12 +27,10 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic parsing for the file. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The file automatically parses code.</li>
+     * <li>false: The file does not automatically parse code.</li>
      * </ul>
-     * <p>This parameter corresponds to the Analyze Code setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter corresponds to the code parsing setting in the &quot;Schedule Configuration &gt; Scheduling Dependencies&quot; section of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,8 +39,9 @@ public class CreateFileRequest extends TeaModel {
     public Boolean autoParsing;
 
     /**
-     * <p>The interval at which the node is automatically rerun after a failure. Unit: milliseconds. Maximum value: 1800000 milliseconds (30 minutes).</p>
-     * <p>This parameter corresponds to the Rerun interval parameter in Properties &gt; Schedule &gt; Auto Rerun upon Failure for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. In the console, the unit of the rerun interval is minutes. Convert the time unit when you call this operation.</p>
+     * <p>The interval between automatic reruns upon failure, in milliseconds. The maximum value is 1800000 milliseconds (30 minutes).</p>
+     * <p>This parameter corresponds to the &quot;Rerun Interval&quot; setting in the &quot;Schedule Configuration &gt; Time Properties &gt; Auto Rerun upon Error&quot; section of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The &quot;Rerun Interval&quot; in the console uses minutes as the unit. Convert the time accordingly when calling this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>120000</p>
@@ -51,7 +50,7 @@ public class CreateFileRequest extends TeaModel {
     public Integer autoRerunIntervalMillis;
 
     /**
-     * <p>The number of automatic reruns after an error occurs. Maximum value: 10.</p>
+     * <p>The number of automatic reruns after an error occurs. The maximum value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -60,8 +59,8 @@ public class CreateFileRequest extends TeaModel {
     public Integer autoRerunTimes;
 
     /**
-     * <p>The data source used when the task published from the file is run.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/211432.html">UpdateDataSource</a> operation to query the available data sources in the workspace.</p>
+     * <p>The data source that the node connects to when the file is published as a node and the node runs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/211432.html">UpdateDataSource</a> operation to obtain the list of available data sources in the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>odps_source</p>
@@ -70,7 +69,8 @@ public class CreateFileRequest extends TeaModel {
     public String connectionName;
 
     /**
-     * <p>The file code content. Different code types (fileType) have different code formats. In Operation Center, you can find a task of the corresponding type, right-click it, and select View Code to view the specific code format.</p>
+     * <p>The code content of the file. Different code types (fileType) have different code formats.</p>
+     * <p>You can find the node of the corresponding type in Operation Center, right-click the node, and then click View Code to view the specific code format.</p>
      * 
      * <strong>example:</strong>
      * <p>SHOW TABLES;</p>
@@ -79,12 +79,10 @@ public class CreateFileRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>Specifies whether to automatically create the directory specified by FileFolderPath if the directory does not exist. Valid values:</p>
+     * <p>Specifies whether to automatically create the directory if the specified directory (FileFolderPath) does not exist in the system. Valid values:</p>
      * <ul>
-     * <li><p>true: If the directory does not exist, automatically create it.</p>
-     * </li>
-     * <li><p>false: If the directory does not exist, the call fails.</p>
-     * </li>
+     * <li>true: Automatically create the directory if it does not exist.</li>
+     * <li>false: The invocation fails if the directory does not exist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,25 +92,25 @@ public class CreateFileRequest extends TeaModel {
     public Boolean createFolderIfNotExists;
 
     /**
-     * <p>The cron expression for scheduled execution. This parameter corresponds to the Cron Expression setting in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure Scheduling Cycle and Scheduled Time, DataWorks automatically generates a cron expression.</p>
+     * <p>The cron expression for timed scheduling on an epoch basis. This parameter corresponds to the &quot;Schedule Configuration &gt; Time Property &gt; Cron Expression&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the scheduling epoch and timed scheduling time, DataWorks automatically generates the corresponding cron expression.</p>
      * <p>Examples:</p>
      * <ul>
-     * <li><p>Scheduled at 05:30 every day: <code>00 30 05 * * ?</code></p>
+     * <li><p>Timed scheduling at 05:30 every day: <code>00 30 05 * * ?</code></p>
      * </li>
-     * <li><p>Scheduled at the 15th minute of every hour: <code>00 15 00-23/1 * * ?</code></p>
+     * <li><p>Timed scheduling at the 15th minute of every hour: <code>00 15 00-23/1 * * ?</code></p>
      * </li>
-     * <li><p>Scheduled every 10 minutes: <code>00 00/10 * * * ?</code></p>
+     * <li><p>Schedule every 10 minutes: <code>00 00/10 * * * ?</code></p>
      * </li>
-     * <li><p>Scheduled every 10 minutes between 08:00 and 17:00 every day: <code>00 00-59/10 8-17 * * * ?</code></p>
+     * <li><p>Schedule every 10 minutes from 08:00 to 17:00 every day: <code>00 00-59/10 8-17 * * * ?</code></p>
      * </li>
-     * <li><p>Scheduled at 00:20 on the 1st day of every month: <code>00 20 00 1 * ?</code></p>
+     * <li><p>Timed scheduling at 00:20 on the 1st of every month: <code>00 20 00 1 * ?</code></p>
      * </li>
-     * <li><p>Scheduled every 3 months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code></p>
+     * <li><p>Schedule every 3 months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code></p>
      * </li>
-     * <li><p>Scheduled at 00:05 on every Tuesday and Friday: <code>00 05 00 * * 2,5</code></p>
+     * <li><p>Timed scheduling at 00:05 every Tuesday and Friday: <code>00 05 00 * * 2,5</code></p>
      * </li>
      * </ul>
-     * <p>Due to the rules of the DataWorks scheduling system, cron expressions have the following restrictions:</p>
+     * <p>Due to the rules of the DataWorks scheduling system, cron expressions have the following limits:</p>
      * <ul>
      * <li><p>The minimum scheduling interval is 5 minutes.</p>
      * </li>
@@ -127,8 +125,8 @@ public class CreateFileRequest extends TeaModel {
     public String cronExpress;
 
     /**
-     * <p>The type of scheduling cycle. Valid values: NOT_DAY (minute, hour) and DAY (day, week, month).</p>
-     * <p>This parameter corresponds to the Scheduling Cycle setting in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The type of the scheduling cycle. Valid values: NOT_DAY (minute or hour) and DAY (day, week, or month).</p>
+     * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Time Properties &gt; Scheduling Cycle&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>DAY</p>
@@ -137,8 +135,8 @@ public class CreateFileRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The IDs of the nodes on which the current node depends. This parameter takes effect only when the DependentType parameter is set to USER_DEFINE. Separate multiple node IDs with commas (,).</p>
-     * <p>This parameter corresponds to the Other Nodes option in Properties &gt; Dependencies &gt; Cross-cycle Dependency (Original Previous-cycle Dependency) for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The IDs of the nodes that the current file depends on when DependentType is set to USER_DEFINE. Separate multiple node IDs with commas (,).</p>
+     * <p>This parameter corresponds to the node IDs specified when you select &quot;Other Nodes&quot; as the dependency after the parameter settings of &quot;Schedule Configuration &gt; Scheduling Dependencies&quot; are set to &quot;Cross-Epoch Dependency (Previous Epoch)&quot; for a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -147,20 +145,14 @@ public class CreateFileRequest extends TeaModel {
     public String dependentNodeIdList;
 
     /**
-     * <p>The dependency mode on the previous cycle. Valid values:</p>
+     * <p>The type of cross-cycle dependency. Valid values:</p>
      * <ul>
-     * <li><p>SELF: Depends on the current node.</p>
-     * </li>
-     * <li><p>CHILD: Depends on the child nodes.</p>
-     * </li>
-     * <li><p>USER_DEFINE: Depends on other nodes.</p>
-     * </li>
-     * <li><p>NONE: No dependencies. Does not depend on the previous cycle.</p>
-     * </li>
-     * <li><p>USER_DEFINE_AND_SELF: Depends on both the current node and other nodes in the previous cycle.</p>
-     * </li>
-     * <li><p>CHILD_AND_SELF: Depends on both the current node and its child nodes in the previous cycle.</p>
-     * </li>
+     * <li>SELF: The dependency is the current node.</li>
+     * <li>CHILD: The dependency is the first-level child nodes.</li>
+     * <li>USER_DEFINE: The dependency is other specified nodes.</li>
+     * <li>NONE: No dependency is selected. The node does not depend on the previous cycle.   </li>
+     * <li>USER_DEFINE_AND_SELF: The dependency is a combination of the current node and other specified nodes across cycles.</li>
+     * <li>CHILD_AND_SELF: The dependency is a combination of the first-level child nodes and the current node across cycles.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,8 +162,8 @@ public class CreateFileRequest extends TeaModel {
     public String dependentType;
 
     /**
-     * <p>The timestamp (in milliseconds) when automatic scheduling stops.</p>
-     * <p>This parameter corresponds to the end time of Effective Period in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The timestamp in milliseconds when automatic scheduling stops.</p>
+     * <p>This parameter corresponds to the end time (in milliseconds) of the &quot;Schedule Configuration &gt; Time Properties &gt; Effective Date&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1671694850000</p>
@@ -198,7 +190,7 @@ public class CreateFileRequest extends TeaModel {
     public String fileFolderPath;
 
     /**
-     * <p>The file name.</p>
+     * <p>The name of the file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -208,7 +200,9 @@ public class CreateFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The code type of the file. Different file types have different code. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node types</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the code types of files.</p>
+     * <p>The code type of the file.</p>
+     * <p>Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the code types of files.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -218,11 +212,11 @@ public class CreateFileRequest extends TeaModel {
     public Integer fileType;
 
     /**
-     * <p>Specifies whether to inherit the dry-run status from the previous cycle. Valid values:</p>
+     * <p>Specifies whether to inherit the dry-run property from the previous cycle. Valid values:</p>
      * <ul>
-     * <li><p>true: Inherit the dry-run status from the previous cycle.</p>
+     * <li><p>true: Inherit the dry-run property from the previous cycle.</p>
      * </li>
-     * <li><p>false: Do not inherit the dry-run status from the previous cycle.</p>
+     * <li><p>false: Do not inherit the dry-run property from the previous cycle.</p>
      * </li>
      * </ul>
      * 
@@ -233,7 +227,7 @@ public class CreateFileRequest extends TeaModel {
     public Boolean ignoreParentSkipRunningProperty;
 
     /**
-     * <p>The custom image ID.</p>
+     * <p>The ID of the custom image.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp1h4b5a8ogkbll2f3tr</p>
@@ -242,8 +236,8 @@ public class CreateFileRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The output names of the ancestor nodes on which the current node depends. Separate multiple output names with commas (,).</p>
-     * <p>This parameter corresponds to the Output Name of Ancestor Node setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The output names of the upstream files on which the current file depends. Separate multiple output names with commas (,).</p>
+     * <p>This parameter corresponds to the &quot;Upstream Node Output Name&quot; configured in the &quot;Schedule Configuration &gt; Scheduling Dependencies&quot; section of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>project_root,project.file1,project.001_out</p>
@@ -252,8 +246,8 @@ public class CreateFileRequest extends TeaModel {
     public String inputList;
 
     /**
-     * <p>The input context parameters of the node. The value must be in the JSON format. For more information about the parameter structure, see the InputContextParameterList parameter in the response parameters of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-     * <p>This parameter corresponds to the Input Parameters setting in Properties &gt; Input and Output Parameters for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The context input parameters of the node. The parameter value is in JSON format. For the fields included, see the InputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
+     * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Node Context Parameters &gt; Input Parameters of This Node&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;ValueSource&quot;: &quot;project_001.first_node:bizdate_param&quot;,&quot;ParameterName&quot;: &quot;bizdate_input&quot;}]</p>
@@ -261,9 +255,12 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("InputParameters")
     public String inputParameters;
 
+    @NameInMap("OutputList")
+    public String outputList;
+
     /**
-     * <p>The output context parameters of the node. The value must be in the JSON format. For more information about the parameter structure, see the OutputContextParameterList parameter in the response parameters of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-     * <p>This parameter corresponds to the Output Parameters setting in Properties &gt; Input and Output Parameters for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The context output parameters of the node. The parameter value is in JSON format. For the fields included, see the OutputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
+     * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Node Context Parameters &gt; Output Parameters of This Node&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Type&quot;: 1,&quot;Value&quot;: &quot;${bizdate}&quot;,&quot;ParameterName&quot;: &quot;bizdate_param&quot;}]</p>
@@ -272,7 +269,7 @@ public class CreateFileRequest extends TeaModel {
     public String outputParameters;
 
     /**
-     * <p>The Alibaba Cloud account ID of the file owner. If this parameter is not specified, the Alibaba Cloud account ID of the caller is used by default.</p>
+     * <p>The Alibaba Cloud user ID of the file owner. If this parameter is left empty, the Alibaba Cloud user ID of the caller is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000000001</p>
@@ -281,8 +278,8 @@ public class CreateFileRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The scheduling parameters of the node. Separate multiple parameters with spaces.</p>
-     * <p>This parameter corresponds to the Scheduling Parameter setting in Properties for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</p>
+     * <p>The scheduling parameters. Separate multiple parameters with spaces.</p>
+     * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Scheduling Parameters&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>a=x b=y</p>
@@ -291,7 +288,8 @@ public class CreateFileRequest extends TeaModel {
     public String paraValue;
 
     /**
-     * <p>The DataWorks workspace ID. To obtain the workspace ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</p>
+     * <p>You must specify either this parameter or ProjectIdentifier to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -300,8 +298,8 @@ public class CreateFileRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The DataWorks workspace name. To obtain the workspace name, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</p>
-     * <p>You must specify either this parameter or ProjectId to identify the target DataWorks workspace for this API call.</p>
+     * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace name.</p>
+     * <p>You must specify either this parameter or ProjectId to determine the DataWorks workspace for this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>dw_project</p>
@@ -310,16 +308,13 @@ public class CreateFileRequest extends TeaModel {
     public String projectIdentifier;
 
     /**
-     * <p>The rerun policy. Valid values:</p>
+     * <p>The rerun property. Valid values:</p>
      * <ul>
-     * <li><p>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</p>
-     * </li>
-     * <li><p>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</p>
-     * </li>
-     * <li><p>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</p>
-     * </li>
+     * <li>ALL_ALLOWED: The node can be rerun regardless of whether it runs successfully or fails.</li>
+     * <li>FAILURE_ALLOWED: The node can be rerun only after it fails.</li>
+     * <li>ALL_DENIED: The node cannot be rerun regardless of whether it runs successfully or fails.</li>
      * </ul>
-     * <p>This parameter corresponds to the Support for Rerun setting in Scheduling &gt; Scheduling Policies for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Time Properties &gt; Rerun Property&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_ALLOWED</p>
@@ -328,7 +323,7 @@ public class CreateFileRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This field is deprecated. Do not use it.</p>
      * 
      * <strong>example:</strong>
      * <p>375827434852437</p>
@@ -337,7 +332,7 @@ public class CreateFileRequest extends TeaModel {
     public Long resourceGroupId;
 
     /**
-     * <p>The resource group for the task published from the file. To obtain the ID, log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, navigate to the workspace configuration page, and click Resource Groups in the left-side navigation pane to view the IDs of resource groups bound to the current workspace.</p>
+     * <p>The schedule resource used when the file is published as a node and the node runs. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Workspace Settings page, and click <strong>Resource Groups</strong> in the left-side navigation pane to obtain the ID of the resource group bound to the current workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>S_res_group_559_1613715566828</p>
@@ -348,14 +343,10 @@ public class CreateFileRequest extends TeaModel {
     /**
      * <p>The scheduling type. Valid values:</p>
      * <ul>
-     * <li><p>NORMAL: Normal scheduled task.</p>
-     * </li>
-     * <li><p>MANUAL: Manually triggered node. Not scheduled for daily execution. Corresponds to nodes in manually triggered workflows.</p>
-     * </li>
-     * <li><p>PAUSE: Paused task.</p>
-     * </li>
-     * <li><p>SKIP: Dry-run task. Scheduled for daily execution but is directly marked as successful when scheduling starts.</p>
-     * </li>
+     * <li>NORMAL: A normal scheduling node.</li>
+     * <li>MANUAL: A manual node that is not scheduled on a daily basis. This corresponds to nodes in manual workflows.</li>
+     * <li>PAUSE: A paused node.</li>
+     * <li>SKIP: A dry-run node that is scheduled on a daily basis but is directly set to successful when scheduling starts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -365,8 +356,8 @@ public class CreateFileRequest extends TeaModel {
     public String schedulerType;
 
     /**
-     * <p>The timestamp (in milliseconds) when automatic scheduling starts.</p>
-     * <p>This parameter corresponds to the start time of Effective Period in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>The timestamp in milliseconds when automatic scheduling starts.</p>
+     * <p>This parameter corresponds to the start time (in milliseconds) of the &quot;Schedule Configuration &gt; Time Properties &gt; Effective Date&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1671608450000</p>
@@ -375,8 +366,8 @@ public class CreateFileRequest extends TeaModel {
     public Long startEffectDate;
 
     /**
-     * <p>Specifies whether to immediately run the node after the node is deployed.</p>
-     * <p>This parameter corresponds to the Start Method setting in Settings &gt; Schedule in the right-side navigation pane on the configuration tab of EMR Spark Streaming and EMR Streaming SQL nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>Specifies whether to start the node immediately after it is published.</p>
+     * <p>This parameter corresponds to the &quot;Configuration &gt; Time Properties &gt; Startup Method&quot; setting in the right-side navigation bar on the editing page of EMR Spark Streaming and EMR Streaming SQL DataStudio nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -385,14 +376,12 @@ public class CreateFileRequest extends TeaModel {
     public Boolean startImmediately;
 
     /**
-     * <p>Specifies whether to skip execution. Valid values:</p>
+     * <p>Specifies whether to suspend scheduling. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Suspend scheduling.</li>
+     * <li>false: Do not suspend scheduling.</li>
      * </ul>
-     * <p>This parameter corresponds to the Skip Execution option in Properties &gt; Schedule &gt; Recurrence for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+     * <p>This parameter corresponds to setting the &quot;Schedule Configuration &gt; Time Properties &gt; Scheduling Type&quot; to &quot;Suspend Scheduling&quot; for a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -401,7 +390,7 @@ public class CreateFileRequest extends TeaModel {
     public Boolean stop;
 
     /**
-     * <p>The timeout settings for scheduling configuration.</p>
+     * <p>The timeout value defined in the scheduling configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -580,6 +569,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getInputParameters() {
         return this.inputParameters;
+    }
+
+    public CreateFileRequest setOutputList(String outputList) {
+        this.outputList = outputList;
+        return this;
+    }
+    public String getOutputList() {
+        return this.outputList;
     }
 
     public CreateFileRequest setOutputParameters(String outputParameters) {

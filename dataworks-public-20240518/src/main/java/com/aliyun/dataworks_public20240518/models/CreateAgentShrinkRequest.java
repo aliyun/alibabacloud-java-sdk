@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentShrinkRequest extends TeaModel {
     /**
-     * <p>The list of sub-Agents that can be called by this Agent.</p>
+     * <p>The list of child Agents that can be called by this Agent.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -19,7 +19,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
      * <p>The description of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>数据分析助手</p>
+     * <p>Data analytics assistant</p>
      */
     @NameInMap("Description")
     public String description;
@@ -28,13 +28,13 @@ public class CreateAgentShrinkRequest extends TeaModel {
      * <p>The display name of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>我的助手</p>
+     * <p>MyAssistant.</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>Extended metadata (key-value pairs).</p>
+     * <p>The extended metadata (key-value pairs).</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -54,7 +54,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String modelShrink;
 
     /**
-     * <p>The name of the Agent. It must be unique under the current account.</p>
+     * <p>The Agent name, which must be unique within the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>你是一个数据分析助手。</p>
+     * <p>You are a data analytics assistant.</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
@@ -107,7 +107,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The corresponding field is selected based on Visibility.</p>
+     * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
      */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;

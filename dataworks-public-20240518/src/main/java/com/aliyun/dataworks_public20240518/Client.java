@@ -986,17 +986,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>Agent Name</strong>: Must be unique under the current account.</li>
-     * <li><strong>Model Configuration</strong>: An optional parameter used to specify the model used by the Agent and its related settings.</li>
-     * <li><strong>Visibility Level</strong>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</li>
-     * <li><strong>Visibility Scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, the specific project ID or user ID list must be further specified.</li>
-     * <li><strong>Other Parameters</strong>: Items such as display name and description are optional and can be filled in based on actual needs.</li>
+     * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
+     * <li><strong>Model configuration</strong>: An optional parameter that specifies the model used by the Agent and its related settings.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</li>
+     * <li><strong>Visibility scope</strong>: When you set the visibility level to <code>PROJECT</code> or <code>USER</code>, you must specify the list of project IDs or user IDs.</li>
+     * <li><strong>Other parameters</strong>: Parameters such as display name and description are optional. Set them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Agent</p>
+     * <p>Creates an Agent.</p>
      * 
      * @param tmpReq CreateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1094,17 +1094,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li><strong>Agent Name</strong>: Must be unique under the current account.</li>
-     * <li><strong>Model Configuration</strong>: An optional parameter used to specify the model used by the Agent and its related settings.</li>
-     * <li><strong>Visibility Level</strong>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</li>
-     * <li><strong>Visibility Scope</strong>: When <code>PROJECT</code> or <code>USER</code> is selected as the visibility level, the specific project ID or user ID list must be further specified.</li>
-     * <li><strong>Other Parameters</strong>: Items such as display name and description are optional and can be filled in based on actual needs.</li>
+     * <li><strong>Agent name</strong>: Must be unique within the current account.</li>
+     * <li><strong>Model configuration</strong>: An optional parameter that specifies the model used by the Agent and its related settings.</li>
+     * <li><strong>Visibility level</strong>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</li>
+     * <li><strong>Visibility scope</strong>: When you set the visibility level to <code>PROJECT</code> or <code>USER</code>, you must specify the list of project IDs or user IDs.</li>
+     * <li><strong>Other parameters</strong>: Parameters such as display name and description are optional. Set them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create Agent</p>
+     * <p>Creates an Agent.</p>
      * 
      * @param request CreateAgentRequest
      * @return CreateAgentResponse
@@ -1116,16 +1116,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a new agent session.</li>
-     * <li>You must specify the agent name to bind to the session using the <code>_meta.agent.agentName</code> parameter.</li>
-     * <li>You can specify a session source identifier in the <code>_meta.config.sessionSource</code> parameter. This allows you to search for sessions by source later.</li>
-     * <li>You can add session tags using the <code>_meta.config.sessionTags[].sessionTagCode</code> parameter.</li>
+     * <li>This operation creates a new agent session.</li>
+     * <li>Use <code>_meta.agent.agentName</code> to specify the bound agent name. This parameter is required.<ul>
+     * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</li>
+     * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</li>
+     * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</li>
+     * </ul>
+     * </li>
+     * <li>Use <code>_meta.config.sessionSource</code> to pass through a session source identifier for subsequent retrieval by source.</li>
+     * <li>Use <code>_meta.config.sessionTags[].sessionTagCode</code> to pass in session tags.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new agent session and returns a session ID.</p>
+     * <p>Creates a new agent session and returns the session ID.</p>
      * 
      * @param tmpReq CreateAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1171,16 +1176,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a new agent session.</li>
-     * <li>You must specify the agent name to bind to the session using the <code>_meta.agent.agentName</code> parameter.</li>
-     * <li>You can specify a session source identifier in the <code>_meta.config.sessionSource</code> parameter. This allows you to search for sessions by source later.</li>
-     * <li>You can add session tags using the <code>_meta.config.sessionTags[].sessionTagCode</code> parameter.</li>
+     * <li>This operation creates a new agent session.</li>
+     * <li>Use <code>_meta.agent.agentName</code> to specify the bound agent name. This parameter is required.<ul>
+     * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</li>
+     * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</li>
+     * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</li>
+     * </ul>
+     * </li>
+     * <li>Use <code>_meta.config.sessionSource</code> to pass through a session source identifier for subsequent retrieval by source.</li>
+     * <li>Use <code>_meta.config.sessionTags[].sessionTagCode</code> to pass in session tags.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new agent session and returns a session ID.</p>
+     * <p>Creates a new agent session and returns the session ID.</p>
      * 
      * @param request CreateAgentSessionRequest
      * @return CreateAgentSessionResponse
@@ -2800,7 +2810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</p>
+     * <p>Creates a file in DataStudio. This operation does not support creating Data Integration nodes.</p>
      * 
      * @param request CreateFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2893,6 +2903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InputParameters", request.inputParameters);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outputList)) {
+            body.put("OutputList", request.outputList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outputParameters)) {
             body.put("OutputParameters", request.outputParameters);
         }
@@ -2964,7 +2978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</p>
+     * <p>Creates a file in DataStudio. This operation does not support creating Data Integration nodes.</p>
      * 
      * @param request CreateFileRequest
      * @return CreateFileResponse
@@ -4660,15 +4674,99 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <p>Creates a semantic task definition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</p>
+     * 
+     * @param tmpReq CreateSemanticJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSemanticJobResponse
+     */
+    public CreateSemanticJobResponse createSemanticJobWithOptions(CreateSemanticJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSemanticJobShrinkRequest request = new CreateSemanticJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.referenceFileIds)) {
+            request.referenceFileIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.referenceFileIds, "ReferenceFileIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.referenceFileUris)) {
+            request.referenceFileUrisShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.referenceFileUris, "ReferenceFileUris", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.source)) {
+            request.sourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.source, "Source", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.referenceFileIdsShrink)) {
+            body.put("ReferenceFileIds", request.referenceFileIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.referenceFileUrisShrink)) {
+            body.put("ReferenceFileUris", request.referenceFileUrisShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceShrink)) {
+            body.put("Source", request.sourceShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSemanticJob"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSemanticJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a semantic task definition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</p>
+     * 
+     * @param request CreateSemanticJobRequest
+     * @return CreateSemanticJobResponse
+     */
+    public CreateSemanticJobResponse createSemanticJob(CreateSemanticJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSemanticJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>SkillMdOverride</code> 与 <code>BundleUrl</code> 参数二选一，必须提供其中之一。</li>
-     * <li><code>Visibility</code> 可设置为 <code>TENANT</code>、<code>PROJECT</code> 或 <code>USER</code>，分别表示账号内可见、指定项目可见或指定用户可见。</li>
-     * <li>当 <code>Visibility</code> 设置为 <code>PROJECT</code> 时，需要通过 <code>VisibilityScope.ProjectIds</code> 指定可见的项目 ID 列表；当设置为 <code>USER</code> 时，则需通过 <code>VisibilityScope.UserIds</code> 指定可见的用户 ID 列表。</li>
+     * <li>You must provide either SkillMdOverride or BundleUrl. One of the two parameters is required.</li>
+     * <li>Visibility can be set to <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>, which indicate visibility within the account, visibility to specified projects, or visibility to specified users, respectively.</li>
+     * <li>When Visibility is set to <code>PROJECT</code>, specify the list of visible project IDs by using VisibilityScope.ProjectIds. When Visibility is set to <code>USER</code>, specify the list of visible user IDs by using VisibilityScope.UserIds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 Skill</p>
+     * <p>Creates a new Skill in DataWorks.</p>
      * 
      * @param tmpReq CreateSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4738,15 +4836,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>SkillMdOverride</code> 与 <code>BundleUrl</code> 参数二选一，必须提供其中之一。</li>
-     * <li><code>Visibility</code> 可设置为 <code>TENANT</code>、<code>PROJECT</code> 或 <code>USER</code>，分别表示账号内可见、指定项目可见或指定用户可见。</li>
-     * <li>当 <code>Visibility</code> 设置为 <code>PROJECT</code> 时，需要通过 <code>VisibilityScope.ProjectIds</code> 指定可见的项目 ID 列表；当设置为 <code>USER</code> 时，则需通过 <code>VisibilityScope.UserIds</code> 指定可见的用户 ID 列表。</li>
+     * <li>You must provide either SkillMdOverride or BundleUrl. One of the two parameters is required.</li>
+     * <li>Visibility can be set to <code>TENANT</code>, <code>PROJECT</code>, or <code>USER</code>, which indicate visibility within the account, visibility to specified projects, or visibility to specified users, respectively.</li>
+     * <li>When Visibility is set to <code>PROJECT</code>, specify the list of visible project IDs by using VisibilityScope.ProjectIds. When Visibility is set to <code>USER</code>, specify the list of visible user IDs by using VisibilityScope.UserIds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>创建 Skill</p>
+     * <p>Creates a new Skill in DataWorks.</p>
      * 
      * @param request CreateSkillRequest
      * @return CreateSkillResponse
@@ -5022,11 +5120,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation deletes an Agent with the specified name from DataWorks. When calling this operation, you must provide the name of the Agent to delete.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除 Agent</p>
+     * <p>Deletes an Agent.</p>
      * 
      * @param request DeleteAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5058,11 +5156,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation deletes an Agent with the specified name from DataWorks. When calling this operation, you must provide the name of the Agent to delete.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除 Agent</p>
+     * <p>Deletes an Agent.</p>
      * 
      * @param request DeleteAgentRequest
      * @return DeleteAgentResponse
@@ -6422,10 +6520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>需要购买 DataWorks 专业版及以上版本才能使用。</p>
+     * <p>DataWorks Professional Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除自定义实体定义</p>
+     * <p>Deletes a metadata entity definition, including custom entity types and extension table types.</p>
      * 
      * @param request DeleteMetaEntityDefRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6461,10 +6559,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>需要购买 DataWorks 专业版及以上版本才能使用。</p>
+     * <p>DataWorks Professional Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除自定义实体定义</p>
+     * <p>Deletes a metadata entity definition, including custom entity types and extension table types.</p>
      * 
      * @param request DeleteMetaEntityDefRequest
      * @return DeleteMetaEntityDefResponse
@@ -7076,6 +7174,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Operation description for deleting a semantic task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</p>
+     * 
+     * @param request DeleteSemanticJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSemanticJobResponse
+     */
+    public DeleteSemanticJobResponse deleteSemanticJobWithOptions(DeleteSemanticJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSemanticJob"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSemanticJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for deleting a semantic task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</p>
+     * 
+     * @param request DeleteSemanticJobRequest
+     * @return DeleteSemanticJobResponse
+     */
+    public DeleteSemanticJobResponse deleteSemanticJob(DeleteSemanticJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSemanticJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request Description</h2>
      * <p>This API is used to delete a Skill with the specified name from DataWorks. The exact name of the Skill to delete must be provided when invoking this API.</p>
      * <h3>Notes</h3>
@@ -7630,6 +7778,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DissociateProjectFromResourceGroupResponse dissociateProjectFromResourceGroup(DissociateProjectFromResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dissociateProjectFromResourceGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for retrieving the download URL of semantic task results.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</p>
+     * 
+     * @param request DownloadSemanticResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DownloadSemanticResultsResponse
+     */
+    public DownloadSemanticResultsResponse downloadSemanticResultsWithOptions(DownloadSemanticResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            body.put("JobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobRunId)) {
+            body.put("JobRunId", request.jobRunId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DownloadSemanticResults"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DownloadSemanticResultsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for retrieving the download URL of semantic task results.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</p>
+     * 
+     * @param request DownloadSemanticResultsRequest
+     * @return DownloadSemanticResultsResponse
+     */
+    public DownloadSemanticResultsResponse downloadSemanticResults(DownloadSemanticResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.downloadSemanticResultsWithOptions(request, runtime);
     }
 
     /**
@@ -10880,6 +11082,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Operation description for querying semantic job run details.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</p>
+     * 
+     * @param request GetSemanticJobDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSemanticJobDetailResponse
+     */
+    public GetSemanticJobDetailResponse getSemanticJobDetailWithOptions(GetSemanticJobDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.executorJobId)) {
+            query.put("ExecutorJobId", request.executorJobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSemanticJobDetail"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSemanticJobDetailResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for querying semantic job run details.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</p>
+     * 
+     * @param request GetSemanticJobDetailRequest
+     * @return GetSemanticJobDetailResponse
+     */
+    public GetSemanticJobDetailResponse getSemanticJobDetail(GetSemanticJobDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSemanticJobDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for querying semantic job run logs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</p>
+     * 
+     * @param request GetSemanticJobLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSemanticJobLogResponse
+     */
+    public GetSemanticJobLogResponse getSemanticJobLogWithOptions(GetSemanticJobLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.executorJobId)) {
+            query.put("ExecutorJobId", request.executorJobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSemanticJobLog"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSemanticJobLogResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for querying semantic job run logs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</p>
+     * 
+     * @param request GetSemanticJobLogRequest
+     * @return GetSemanticJobLogResponse
+     */
+    public GetSemanticJobLogResponse getSemanticJobLog(GetSemanticJobLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSemanticJobLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Overview</h2>
      * <ul>
      * <li><strong>request parameters</strong>: The name of the target Skill.</li>
@@ -11478,12 +11788,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</li>
-     * <li>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</li>
+     * <li>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows after the first one are ignored.</li>
+     * <li>This is an asynchronous operation. Calling this operation returns an asynchronous task object. To query the execution status of the task, call GetJobStatus.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</p>
+     * <p>Imports a workflow node defined by FlowSpec and its internal child nodes into DataStudio.</p>
      * 
      * @param request ImportWorkflowDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11527,12 +11837,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Notice: </p>
      * </blockquote>
      * <ul>
-     * <li>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</li>
-     * <li>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</li>
+     * <li>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows after the first one are ignored.</li>
+     * <li>This is an asynchronous operation. Calling this operation returns an asynchronous task object. To query the execution status of the task, call GetJobStatus.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</p>
+     * <p>Imports a workflow node defined by FlowSpec and its internal child nodes into DataStudio.</p>
      * 
      * @param request ImportWorkflowDefinitionRequest
      * @return ImportWorkflowDefinitionResponse
@@ -11540,6 +11850,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportWorkflowDefinitionResponse importWorkflowDefinition(ImportWorkflowDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for stopping a semantic job run.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</p>
+     * 
+     * @param request KillSemanticJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return KillSemanticJobResponse
+     */
+    public KillSemanticJobResponse killSemanticJobWithOptions(KillSemanticJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.executorJobId)) {
+            body.put("ExecutorJobId", request.executorJobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryTimes)) {
+            body.put("RetryTimes", request.retryTimes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "KillSemanticJob"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new KillSemanticJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Operation description for stopping a semantic job run.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</p>
+     * 
+     * @param request KillSemanticJobRequest
+     * @return KillSemanticJobResponse
+     */
+    public KillSemanticJobResponse killSemanticJob(KillSemanticJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.killSemanticJobWithOptions(request, runtime);
     }
 
     /**
@@ -13235,10 +13603,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of data quality rule templates in a project.</p>
+     * <p>Queries the list of data quality rule templates in a specified project.</p>
      * 
      * @param request ListDataQualityTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13286,10 +13654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or a higher edition is required.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of data quality rule templates in a project.</p>
+     * <p>Queries the list of data quality rule templates in a specified project.</p>
      * 
      * @param request ListDataQualityTemplatesRequest
      * @return ListDataQualityTemplatesResponse
@@ -16375,6 +16743,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Queries the run records of a semantic job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</p>
+     * 
+     * @param request ListSemanticJobRunsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSemanticJobRunsResponse
+     */
+    public ListSemanticJobRunsResponse listSemanticJobRunsWithOptions(ListSemanticJobRunsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            body.put("JobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSemanticJobRuns"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSemanticJobRunsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the run records of a semantic job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</p>
+     * 
+     * @param request ListSemanticJobRunsRequest
+     * @return ListSemanticJobRunsResponse
+     */
+    public ListSemanticJobRunsResponse listSemanticJobRuns(ListSemanticJobRunsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSemanticJobRunsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of semantic task definitions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
+     * 
+     * @param request ListSemanticJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSemanticJobsResponse
+     */
+    public ListSemanticJobsResponse listSemanticJobsWithOptions(ListSemanticJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSemanticJobs"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSemanticJobsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of semantic task definitions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
+     * 
+     * @param request ListSemanticJobsRequest
+     * @return ListSemanticJobsResponse
+     */
+    public ListSemanticJobsResponse listSemanticJobs(ListSemanticJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSemanticJobsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Request</h2>
      * <p>This operation lists the Skills in your account. You can filter the results by criteria such as a search keyword and visibility level.</p>
      * <ul>
@@ -17523,20 +18003,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</li>
-     * <li>The response may include message chunks, thought process, and tool calling status updates.</li>
-     * <li>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</li>
-     * <li>The <code>stopReason</code> field indicates why the agent ended the turn.</li>
-     * <li>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</li>
-     * <li>You can provide additional metadata in the <code>Meta</code> parameter to pass more context to the server.</li>
-     * <li>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</li>
-     * <li>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</li>
+     * <li>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</li>
+     * <li>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</li>
+     * <li>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</li>
+     * <li>The <code>stopReason</code> field indicates why the Agent stopped the current conversation turn.</li>
+     * <li>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</li>
+     * <li>You can optionally provide additional meta information <code>Meta</code> to pass more context to the server.</li>
+     * <li>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></li>
+     * <li><strong>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a prompt to an existing session and streams the agent response.</p>
+     * <p>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</p>
      * 
      * @param tmpReq PromptAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17582,20 +18062,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</li>
-     * <li>The response may include message chunks, thought process, and tool calling status updates.</li>
-     * <li>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</li>
-     * <li>The <code>stopReason</code> field indicates why the agent ended the turn.</li>
-     * <li>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</li>
-     * <li>You can provide additional metadata in the <code>Meta</code> parameter to pass more context to the server.</li>
-     * <li>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</li>
-     * <li>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</li>
+     * <li>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</li>
+     * <li>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</li>
+     * <li>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</li>
+     * <li>The <code>stopReason</code> field indicates why the Agent stopped the current conversation turn.</li>
+     * <li>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</li>
+     * <li>You can optionally provide additional meta information <code>Meta</code> to pass more context to the server.</li>
+     * <li>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></li>
+     * <li><strong>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</strong>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a prompt to an existing session and streams the agent response.</p>
+     * <p>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</p>
      * 
      * @param request PromptAgentSessionRequest
      * @return PromptAgentSessionResponse
@@ -18273,6 +18753,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RollbackParameterResponse rollbackParameter(RollbackParameterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rollbackParameterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
+     * 
+     * @param request RunSemanticJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunSemanticJobResponse
+     */
+    public RunSemanticJobResponse runSemanticJobWithOptions(RunSemanticJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunSemanticJob"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunSemanticJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
+     * 
+     * @param request RunSemanticJobRequest
+     * @return RunSemanticJobResponse
+     */
+    public RunSemanticJobResponse runSemanticJob(RunSemanticJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runSemanticJobWithOptions(request, runtime);
     }
 
     /**
@@ -21819,6 +22349,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API allows you to update an existing Skill and create a new version based on the current highest version or a specified version. Fields not provided in the request retain their original values. You can update the Skill content by providing either <code>SkillMdOverride</code> or <code>BundleUrl</code>. You can also set additional information such as the visibility scope.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a specified Skill and generates a new version.</p>
+     * 
+     * @param tmpReq UpdateSkillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSkillResponse
+     */
+    public UpdateSkillResponse updateSkillWithOptions(UpdateSkillRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateSkillShrinkRequest request = new UpdateSkillShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "Extra", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.visibilityScope)) {
+            request.visibilityScopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.visibilityScope, "VisibilityScope", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bundleUrl)) {
+            body.put("BundleUrl", request.bundleUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedVersion)) {
+            body.put("ExpectedVersion", request.expectedVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            body.put("Extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillMdOverride)) {
+            body.put("SkillMdOverride", request.skillMdOverride);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionNote)) {
+            body.put("VersionNote", request.versionNote);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visibilityScopeShrink)) {
+            body.put("VisibilityScope", request.visibilityScopeShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSkill"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSkillResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API allows you to update an existing Skill and create a new version based on the current highest version or a specified version. Fields not provided in the request retain their original values. You can update the Skill content by providing either <code>SkillMdOverride</code> or <code>BundleUrl</code>. You can also set additional information such as the visibility scope.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a specified Skill and generates a new version.</p>
+     * 
+     * @param request UpdateSkillRequest
+     * @return UpdateSkillResponse
+     */
+    public UpdateSkillResponse updateSkill(UpdateSkillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSkillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <ol>
      * <li>You must purchase DataWorks Basic Edition or a later version to use this operation.</li>
      * </ol>
@@ -22365,5 +22985,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateWorkflowDefinitionResponse updateWorkflowDefinition(UpdateWorkflowDefinitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateWorkflowDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Requests an upload URL for semantic job attachments.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</p>
+     * 
+     * @param request UploadSemanticFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadSemanticFileResponse
+     */
+    public UploadSemanticFileResponse uploadSemanticFileWithOptions(UploadSemanticFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            body.put("ContentType", request.contentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sizeBytes)) {
+            body.put("SizeBytes", request.sizeBytes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadSemanticFile"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadSemanticFileResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Requests an upload URL for semantic job attachments.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</p>
+     * 
+     * @param request UploadSemanticFileRequest
+     * @return UploadSemanticFileResponse
+     */
+    public UploadSemanticFileResponse uploadSemanticFile(UploadSemanticFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uploadSemanticFileWithOptions(request, runtime);
     }
 }

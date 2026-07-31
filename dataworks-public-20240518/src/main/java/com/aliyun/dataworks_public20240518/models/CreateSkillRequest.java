@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillRequest extends TeaModel {
     /**
+     * <p>The <strong>downloadable URL (HTTP/HTTPS) of the bundle.zip file</strong>. This parameter is mutually exclusive with SkillMdOverride.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></p>
      */
@@ -12,6 +14,8 @@ public class CreateSkillRequest extends TeaModel {
     public String bundleUrl;
 
     /**
+     * <p>The <strong>Skill description</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>数据分析技能</p>
      */
@@ -19,6 +23,8 @@ public class CreateSkillRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The extension metadata in key-value pairs.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;appId&quot;:&quot;APP_CWJMV36CT9SAFW1QEHX7&quot;}</p>
      */
@@ -26,6 +32,7 @@ public class CreateSkillRequest extends TeaModel {
     public java.util.Map<String, ?> extra;
 
     /**
+     * <p>The <strong>Skill name</strong>, which must be unique within the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class CreateSkillRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The SKILL.md body content. This parameter is mutually exclusive with BundleUrl. If no bundle is provided, use this field to create a lightweight Skill that contains only a SKILL.md file.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -44,6 +53,8 @@ public class CreateSkillRequest extends TeaModel {
     public String skillMdOverride;
 
     /**
+     * <p>The <strong>version note</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>初版</p>
      */
@@ -51,12 +62,22 @@ public class CreateSkillRequest extends TeaModel {
     public String versionNote;
 
     /**
+     * <p>The <strong>visibility level</strong>. Valid values:</p>
+     * <ul>
+     * <li>TENANT: Visible within the account.</li>
+     * <li>PROJECT: Visible to specified projects.</li>
+     * <li>USER: Visible to specified users.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>TENANT</p>
      */
     @NameInMap("Visibility")
     public String visibility;
 
+    /**
+     * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
+     */
     @NameInMap("VisibilityScope")
     public CreateSkillRequestVisibilityScope visibilityScope;
 
@@ -130,9 +151,15 @@ public class CreateSkillRequest extends TeaModel {
     }
 
     public static class CreateSkillRequestVisibilityScope extends TeaModel {
+        /**
+         * <p>The list of visible project IDs. This parameter takes effect only when Visibility is set to <code>PROJECT</code>.</p>
+         */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
+        /**
+         * <p>The list of visible user IDs. This parameter takes effect only when Visibility is set to <code>USER</code>.</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 

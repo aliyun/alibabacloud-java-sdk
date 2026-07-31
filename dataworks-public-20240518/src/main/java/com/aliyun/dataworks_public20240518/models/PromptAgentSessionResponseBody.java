@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PromptAgentSessionResponseBody extends TeaModel {
     /**
-     * <p>The error information returned in the SSE frame. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * <p>The SSE frame error message. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</p>
@@ -14,7 +14,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
     public Object error;
 
     /**
-     * <p>The ID passed in by the caller. The value is returned as-is in the response.</p>
+     * <p>The ID passed by the requester. The value is returned as-is.</p>
      * 
      * <strong>example:</strong>
      * <p>631478864897630XXXX</p>
@@ -32,7 +32,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
     public String jsonrpc;
 
     /**
-     * <p>The SSE method. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * <p>The SSE method. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>session/update</p>
@@ -41,7 +41,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
     public String method;
 
     /**
-     * <p>The SSE params. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * <p>The SSE params. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</p>
@@ -59,7 +59,7 @@ public class PromptAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The SSE frame result set. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</p>
+     * <p>The SSE frame result set. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;stopReason&quot;:&quot;end_turn&quot;}</p>

@@ -3,9 +3,9 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class CreateSkillShrinkRequest extends TeaModel {
+public class UpdateSkillShrinkRequest extends TeaModel {
     /**
-     * <p>The <strong>downloadable URL (HTTP/HTTPS) of the bundle.zip file</strong>. This parameter is mutually exclusive with SkillMdOverride.</p>
+     * <p>The downloadable URL (HTTP/HTTPS) of the bundle.zip file. Mutually exclusive with SkillMdOverride. If specified, the bundle is replaced.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></p>
@@ -14,7 +14,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
     public String bundleUrl;
 
     /**
-     * <p>The <strong>Skill description</strong>.</p>
+     * <p>The Skill description.</p>
      * 
      * <strong>example:</strong>
      * <p>数据分析技能</p>
@@ -23,16 +23,27 @@ public class CreateSkillShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The extension metadata in key-value pairs.</p>
+     * <p>The expected version number for optimistic locking. If not specified, the update is based on the current highest version.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;appId&quot;:&quot;APP_CWJMV36CT9SAFW1QEHX7&quot;}</p>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
+    @NameInMap("ExpectedVersion")
+    public Integer expectedVersion;
+
+    /**
+     * <p>The extended metadata (key-value pairs).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;appId\&quot;:\&quot;APP_Q2SDWKIGFWNZTR68K1GQ\&quot;}</p>
      */
     @NameInMap("Extra")
     public String extraShrink;
 
     /**
-     * <p>The <strong>Skill name</strong>, which must be unique within the current account.</p>
+     * <p>The name of the Skill to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,51 +53,35 @@ public class CreateSkillShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The SKILL.md body content. This parameter is mutually exclusive with BundleUrl. If no bundle is provided, use this field to create a lightweight Skill that contains only a SKILL.md file.</p>
+     * <p>The SKILL.md body content. Mutually exclusive with BundleUrl.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>把大象放冰箱分为三步，把冰箱门打开，把大象放进去，把冰箱门关上。</p>
      */
     @NameInMap("SkillMdOverride")
     public String skillMdOverride;
 
     /**
-     * <p>The <strong>version note</strong>.</p>
+     * <p>The version note.</p>
      * 
      * <strong>example:</strong>
-     * <p>初版</p>
+     * <p>修订说明</p>
      */
     @NameInMap("VersionNote")
     public String versionNote;
 
     /**
-     * <p>The <strong>visibility level</strong>. Valid values:</p>
-     * <ul>
-     * <li>TENANT: Visible within the account.</li>
-     * <li>PROJECT: Visible to specified projects.</li>
-     * <li>USER: Visible to specified users.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>TENANT</p>
-     */
-    @NameInMap("Visibility")
-    public String visibility;
-
-    /**
-     * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
+     * <p>The visibility scope. The corresponding field is used based on the visibility level.</p>
      */
     @NameInMap("VisibilityScope")
     public String visibilityScopeShrink;
 
-    public static CreateSkillShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateSkillShrinkRequest self = new CreateSkillShrinkRequest();
+    public static UpdateSkillShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateSkillShrinkRequest self = new UpdateSkillShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSkillShrinkRequest setBundleUrl(String bundleUrl) {
+    public UpdateSkillShrinkRequest setBundleUrl(String bundleUrl) {
         this.bundleUrl = bundleUrl;
         return this;
     }
@@ -94,7 +89,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
         return this.bundleUrl;
     }
 
-    public CreateSkillShrinkRequest setDescription(String description) {
+    public UpdateSkillShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -102,7 +97,15 @@ public class CreateSkillShrinkRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateSkillShrinkRequest setExtraShrink(String extraShrink) {
+    public UpdateSkillShrinkRequest setExpectedVersion(Integer expectedVersion) {
+        this.expectedVersion = expectedVersion;
+        return this;
+    }
+    public Integer getExpectedVersion() {
+        return this.expectedVersion;
+    }
+
+    public UpdateSkillShrinkRequest setExtraShrink(String extraShrink) {
         this.extraShrink = extraShrink;
         return this;
     }
@@ -110,7 +113,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
         return this.extraShrink;
     }
 
-    public CreateSkillShrinkRequest setName(String name) {
+    public UpdateSkillShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -118,7 +121,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateSkillShrinkRequest setSkillMdOverride(String skillMdOverride) {
+    public UpdateSkillShrinkRequest setSkillMdOverride(String skillMdOverride) {
         this.skillMdOverride = skillMdOverride;
         return this;
     }
@@ -126,7 +129,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
         return this.skillMdOverride;
     }
 
-    public CreateSkillShrinkRequest setVersionNote(String versionNote) {
+    public UpdateSkillShrinkRequest setVersionNote(String versionNote) {
         this.versionNote = versionNote;
         return this;
     }
@@ -134,15 +137,7 @@ public class CreateSkillShrinkRequest extends TeaModel {
         return this.versionNote;
     }
 
-    public CreateSkillShrinkRequest setVisibility(String visibility) {
-        this.visibility = visibility;
-        return this;
-    }
-    public String getVisibility() {
-        return this.visibility;
-    }
-
-    public CreateSkillShrinkRequest setVisibilityScopeShrink(String visibilityScopeShrink) {
+    public UpdateSkillShrinkRequest setVisibilityScopeShrink(String visibilityScopeShrink) {
         this.visibilityScopeShrink = visibilityScopeShrink;
         return this;
     }

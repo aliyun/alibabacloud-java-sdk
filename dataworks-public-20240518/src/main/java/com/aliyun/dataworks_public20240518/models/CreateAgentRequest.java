@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgentRequest extends TeaModel {
     /**
-     * <p>The list of sub-Agents that can be called by this Agent.</p>
+     * <p>The list of child Agents that can be called by this Agent.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -13,13 +13,13 @@ public class CreateAgentRequest extends TeaModel {
      * </ul>
      */
     @NameInMap("CallableAgents")
-    public java.util.List<String> callableAgents;
+    public java.util.List<CreateAgentRequestCallableAgents> callableAgents;
 
     /**
      * <p>The description of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>数据分析助手</p>
+     * <p>Data analytics assistant</p>
      */
     @NameInMap("Description")
     public String description;
@@ -28,13 +28,13 @@ public class CreateAgentRequest extends TeaModel {
      * <p>The display name of the Agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>我的助手</p>
+     * <p>MyAssistant.</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>Extended metadata (key-value pairs).</p>
+     * <p>The extended metadata (key-value pairs).</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -54,7 +54,7 @@ public class CreateAgentRequest extends TeaModel {
     public java.util.Map<String, ?> model;
 
     /**
-     * <p>The name of the Agent. It must be unique under the current account.</p>
+     * <p>The Agent name, which must be unique within the current account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,13 +72,13 @@ public class CreateAgentRequest extends TeaModel {
      * </ul>
      */
     @NameInMap("Skills")
-    public java.util.List<String> skills;
+    public java.util.List<CreateAgentRequestSkills> skills;
 
     /**
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>你是一个数据分析助手。</p>
+     * <p>You are a data analytics assistant.</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
@@ -92,7 +92,7 @@ public class CreateAgentRequest extends TeaModel {
      * </ul>
      */
     @NameInMap("Tools")
-    public java.util.List<String> tools;
+    public java.util.List<CreateAgentRequestTools> tools;
 
     /**
      * <p>The visibility level.<br>
@@ -107,7 +107,7 @@ public class CreateAgentRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The visibility scope. The corresponding field is selected based on Visibility.</p>
+     * <p>The visibility scope. The corresponding field is determined by the Visibility parameter.</p>
      */
     @NameInMap("VisibilityScope")
     public CreateAgentRequestVisibilityScope visibilityScope;
@@ -117,11 +117,11 @@ public class CreateAgentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateAgentRequest setCallableAgents(java.util.List<String> callableAgents) {
+    public CreateAgentRequest setCallableAgents(java.util.List<CreateAgentRequestCallableAgents> callableAgents) {
         this.callableAgents = callableAgents;
         return this;
     }
-    public java.util.List<String> getCallableAgents() {
+    public java.util.List<CreateAgentRequestCallableAgents> getCallableAgents() {
         return this.callableAgents;
     }
 
@@ -165,11 +165,11 @@ public class CreateAgentRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateAgentRequest setSkills(java.util.List<String> skills) {
+    public CreateAgentRequest setSkills(java.util.List<CreateAgentRequestSkills> skills) {
         this.skills = skills;
         return this;
     }
-    public java.util.List<String> getSkills() {
+    public java.util.List<CreateAgentRequestSkills> getSkills() {
         return this.skills;
     }
 
@@ -181,11 +181,11 @@ public class CreateAgentRequest extends TeaModel {
         return this.systemPrompt;
     }
 
-    public CreateAgentRequest setTools(java.util.List<String> tools) {
+    public CreateAgentRequest setTools(java.util.List<CreateAgentRequestTools> tools) {
         this.tools = tools;
         return this;
     }
-    public java.util.List<String> getTools() {
+    public java.util.List<CreateAgentRequestTools> getTools() {
         return this.tools;
     }
 
@@ -205,15 +205,90 @@ public class CreateAgentRequest extends TeaModel {
         return this.visibilityScope;
     }
 
+    public static class CreateAgentRequestCallableAgents extends TeaModel {
+        /**
+         * <p>The Agent name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-1</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static CreateAgentRequestCallableAgents build(java.util.Map<String, ?> map) throws Exception {
+            CreateAgentRequestCallableAgents self = new CreateAgentRequestCallableAgents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAgentRequestCallableAgents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class CreateAgentRequestSkills extends TeaModel {
+        /**
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skill-1</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static CreateAgentRequestSkills build(java.util.Map<String, ?> map) throws Exception {
+            CreateAgentRequestSkills self = new CreateAgentRequestSkills();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAgentRequestSkills setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class CreateAgentRequestTools extends TeaModel {
+        /**
+         * <p>The McpServer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>server-1</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static CreateAgentRequestTools build(java.util.Map<String, ?> map) throws Exception {
+            CreateAgentRequestTools self = new CreateAgentRequestTools();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAgentRequestTools setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class CreateAgentRequestVisibilityScope extends TeaModel {
         /**
-         * <p>The list of visible project IDs. Takes effect when Visibility is <code>PROJECT</code>.</p>
+         * <p>The list of project IDs that have visibility. This parameter takes effect when Visibility is set to <code>PROJECT</code>.</p>
          */
         @NameInMap("ProjectIds")
         public java.util.List<String> projectIds;
 
         /**
-         * <p>The list of visible user IDs. Takes effect when Visibility is <code>USER</code>.</p>
+         * <p>The list of user IDs that have visibility. This parameter takes effect when Visibility is set to <code>USER</code>.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;

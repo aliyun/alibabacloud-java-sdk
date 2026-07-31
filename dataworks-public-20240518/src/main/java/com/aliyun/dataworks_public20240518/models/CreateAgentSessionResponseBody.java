@@ -11,7 +11,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
     public CreateAgentSessionResponseBodyJsonRpcResponse jsonRpcResponse;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8A9D5E6C-5817-5837-9715-6E3967EC6123</p>
@@ -67,7 +67,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
 
     public static class CreateAgentSessionResponseBodyJsonRpcResponse extends TeaModel {
         /**
-         * <p>The request ID provided by the client. This ID is returned in the response without modification.</p>
+         * <p>The request ID passed by the caller. The value is returned as-is.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -76,7 +76,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The JSON-RPC version. The value is fixed at <code>2.0</code>.</p>
+         * <p>The JSON-RPC version. Fixed value: 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -85,7 +85,7 @@ public class CreateAgentSessionResponseBody extends TeaModel {
         public String jsonrpc;
 
         /**
-         * <p>The business data. This field is <code>null</code> if an error occurs.</p>
+         * <p>The business data. The value is null if an error occurs.</p>
          */
         @NameInMap("Result")
         public CreateAgentSessionResponseBodyJsonRpcResponseResult result;

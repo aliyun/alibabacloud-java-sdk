@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ImportWorkflowDefinitionRequest extends TeaModel {
     /**
+     * <p>Specifies whether to call this operation in validation mode. If this parameter is set to true, only the legality of the input workflow spec is validated. The same preprocessing and validation logic as the actual import is reused (with identical rules), but no data is persisted and no write operations are performed. The validation result is returned through an asynchronous task. If validation fails, the asynchronous task fails, and the error details include the error code, error message, and a JSONPath that locates the specific node (such as $.spec.workflows[0].nodes[1]).</p>
+     * <p>Default value: false. In this case, the workflow is imported normally.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,8 +15,8 @@ public class ImportWorkflowDefinitionRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can logon to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
-     * <p>This parameter specifies the DataWorks workspace for this API invoke.</p>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+     * <p>This parameter specifies the DataWorks workspace used for this API invoke.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +28,13 @@ public class ImportWorkflowDefinitionRequest extends TeaModel {
     /**
      * <p>The FlowSpec information that describes the workflow. For the specification details, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</p>
      * <blockquote>
-     * <p>How do I quickly obtain a FlowSpec template?</p>
+     * <p>How to quickly obtain a FlowSpec template?</p>
      * <ul>
-     * <li>Open a workflow in DataStudio, and then click <strong>Show Spec</strong> in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
+     * <li>Open a workflow in DataStudio, and then click &quot;Show Spec&quot; in the upper-right corner to obtain the FlowSpec description of the current workflow. You can use this FlowSpec description to quickly build a template that meets your requirements.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
-     * <p>Notice: This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If an ID already exists, the operation becomes an update. The operation becomes a create only when no ID is specified or the ID does not exist.</p>
+     * <p>Notice: This operation supports creating a workflow and its internal nodes at the same time. Pay attention to the IDs specified in the FlowSpec. If a specified ID already exists, the operation becomes an update. Only when no ID is specified or the ID does not exist does the operation become a create.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

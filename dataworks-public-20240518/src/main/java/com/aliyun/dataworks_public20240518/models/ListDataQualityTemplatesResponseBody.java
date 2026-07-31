@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Paged query results of data quality rule templates.</p>
+     * <p>The paging query result of data quality rule templates.</p>
      */
     @NameInMap("PageInfo")
     public ListDataQualityTemplatesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The API request ID, which is generated as a UUID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc14115***159376359</p>
@@ -51,7 +51,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The creator of the data quality rule template.</p>
+         * <p>The user who created the data quality rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>7892346529452</p>
@@ -69,7 +69,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The time when the data quality rule template was updated.</p>
+         * <p>The time when the data quality rule template was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1729816478147</p>
@@ -78,7 +78,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The last updater of the data quality rule template.</p>
+         * <p>The user who last updated the data quality rule template.</p>
          * 
          * <strong>example:</strong>
          * <p>205250754596036836</p>
@@ -105,7 +105,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Specific configurations of the data quality rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</p>
+         * <p>The specific configuration of the data quality rule template. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -207,7 +207,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of pages.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -216,7 +216,7 @@ public class ListDataQualityTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
