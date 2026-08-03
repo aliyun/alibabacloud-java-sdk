@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveAfterAnswerDelayPlaybackRequest extends TeaModel {
     /**
-     * <p>Delay before playback starts, in seconds. Default is 0 if not specified.</p>
+     * <p>The playback time for delayed playback. If this parameter is not specified, the default value 0 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class SaveAfterAnswerDelayPlaybackRequest extends TeaModel {
     public Integer afterAnswerDelayPlayback;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class SaveAfterAnswerDelayPlaybackRequest extends TeaModel {
     public String entryId;
 
     /**
-     * <p>Policy level (required)</p>
+     * <p>The policy level (required). Valid values:</p>
      * <ul>
-     * <li>2: Instance</li>
+     * <li>2: instance</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -128,7 +128,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         public String industry;
 
         /**
-         * <p>Indicates whether the debug version is a draft.</p>
+         * <p>Indicates whether the debug version is in draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -137,7 +137,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         public Boolean isDebugDrafted;
 
         /**
-         * <p>Indicates whether the application version is a draft.</p>
+         * <p>Indicates whether the application version is in draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -146,7 +146,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         public Boolean isDrafted;
 
         /**
-         * <p>The scenario.</p>
+         * <p>The scene.</p>
          * 
          * <strong>example:</strong>
          * <p>电销</p>
@@ -191,7 +191,7 @@ public class WithdrawScriptReviewResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the script was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1578881227000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeJobRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the job.</p>
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>Specifies whether to return the script.</p>
+     * <p>Specifies whether to return task scenario information.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

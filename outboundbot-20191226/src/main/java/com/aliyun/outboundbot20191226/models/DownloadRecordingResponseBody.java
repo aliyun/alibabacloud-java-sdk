@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadRecordingResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The interface status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Download parameters for the recording file.</p>
+     * <p>The download URL of the file.</p>
      */
     @NameInMap("DownloadParams")
     public DownloadRecordingResponseBodyDownloadParams downloadParams;
@@ -29,7 +29,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The interface prompt message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -109,8 +109,11 @@ public class DownloadRecordingResponseBody extends TeaModel {
     }
 
     public static class DownloadRecordingResponseBodyDownloadParams extends TeaModel {
+        @NameInMap("EarlyMediaSignatureUrl")
+        public String earlyMediaSignatureUrl;
+
         /**
-         * <p>The name of the recording file, typically a universally unique identifier (UUID).</p>
+         * <p>The recording file name, which is typically a UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>281eb174-3865-41c1-9274-7b6813edadab.wav</p>
@@ -119,7 +122,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The signed URL for downloading the recording file.</p>
+         * <p>A URL that points to the recording file. Use HTTP to download the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&OSSAccessKeyId=LTAI****cqw&Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D">http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&amp;OSSAccessKeyId=LTAI****cqw&amp;Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D</a></p>
@@ -128,7 +131,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
         public String signatureUrl;
 
         /**
-         * <p>A JSON-formatted string that contains a list of voice slice recordings. Each item in the list includes the file name and URL of a slice.</p>
+         * <p>The list of segmented recordings, including file names and file URLs.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;fileName&quot;:&quot;10a17c447415424c99491884abe27d8a-1.wav&quot;,&quot;filePath&quot;:&quot;<a href="https://ssml-test.oss-cn-shanghai.aliyuncs.com/7253/voiceSlice/10a17c447415424c99491884abe27d8a/10a17c447415424c99491884abe27d8a-1.wav?Expires=1686645470&OSSAccessKeyId=LTA*********kr8M9&Signature=V23OhiV5yIOoouriu6SiWkO9h8E%3D%22%7D%5D">https://ssml-test.oss-cn-shanghai.aliyuncs.com/7253/voiceSlice/10a17c447415424c99491884abe27d8a/10a17c447415424c99491884abe27d8a-1.wav?Expires=1686645470&amp;OSSAccessKeyId=LTA*********kr8M9&amp;Signature=V23OhiV5yIOoouriu6SiWkO9h8E%3D&quot;}]</a></p>
@@ -139,6 +142,14 @@ public class DownloadRecordingResponseBody extends TeaModel {
         public static DownloadRecordingResponseBodyDownloadParams build(java.util.Map<String, ?> map) throws Exception {
             DownloadRecordingResponseBodyDownloadParams self = new DownloadRecordingResponseBodyDownloadParams();
             return TeaModel.build(map, self);
+        }
+
+        public DownloadRecordingResponseBodyDownloadParams setEarlyMediaSignatureUrl(String earlyMediaSignatureUrl) {
+            this.earlyMediaSignatureUrl = earlyMediaSignatureUrl;
+            return this;
+        }
+        public String getEarlyMediaSignatureUrl() {
+            return this.earlyMediaSignatureUrl;
         }
 
         public DownloadRecordingResponseBodyDownloadParams setFileName(String fileName) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobDataParsingTaskProgressRequest extends TeaModel {
     /**
-     * <p>ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DescribeJobDataParsingTaskProgressRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>ID of the job data parsing task.</p>
+     * <p>The job data analytics node ID.</p>
      * <blockquote>
-     * <p>Get this value from the CreateJobDataParsingTask operation.</p>
+     * <p>This parameter value is obtained from the CreateJobDataParsingTask operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

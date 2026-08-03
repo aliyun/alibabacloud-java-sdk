@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateJobGroupRequest extends TeaModel {
     /**
-     * <p>List of caller numbers. If not specified, all numbers attached to the instance are selected by default.</p>
+     * <p>The list of calling numbers. If not specified, all numbers bound to the instance are selected by default.</p>
      */
     @NameInMap("CallingNumber")
     public java.util.List<String> callingNumber;
 
     /**
-     * <p>Configuration parameters for flash SMS push, in JSON format, containing third-party flash SMS configuration information.  </p>
+     * <p>The configuration parameters for flash SMS in JSON format, including third-party flash SMS configuration information.  </p>
      * <ul>
-     * <li>templateId: Flash SMS Template ID.  </li>
-     * <li>configId: Flash SMS configuration ID.  </li>
-     * <li>templateContent: Flash SMS Content.</li>
+     * <li>templateId: the flash SMS template ID.  </li>
+     * <li>configId: the flash SMS configuration ID.</li>
+     * <li>templateContent: the flash SMS content.</li>
      * </ul>
      * <blockquote>
-     * <p>Obtain the value of templateContent from the partner providing the flash SMS capability.</p>
+     * <p>Obtain the value of templateContent from the corresponding flash SMS capability provider.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateJobGroupRequest extends TeaModel {
     public String flashSmsExtras;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateJobGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Task description.</p>
+     * <p>The task description.</p>
      * 
      * <strong>example:</strong>
      * <p>任务描述</p>
@@ -47,7 +47,7 @@ public class CreateJobGroupRequest extends TeaModel {
     public String jobGroupDescription;
 
     /**
-     * <p>Task name.</p>
+     * <p>The task name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,11 +57,11 @@ public class CreateJobGroupRequest extends TeaModel {
     public String jobGroupName;
 
     /**
-     * <p>Concurrent guarantee value.  </p>
+     * <p>The guaranteed concurrency value.  </p>
      * <ul>
-     * <li>When a job starts, it is guaranteed a minimum of N concurrent executions.  </li>
-     * <li>The sum of concurrent guarantee values for jobs with the same priority must not exceed the instance concurrency limit.  </li>
-     * <li>If the concurrent guarantee value is configured as 0, the system intelligently assigns idle concurrency resources.</li>
+     * <li>When the task starts, a minimum of N concurrent calls are guaranteed.</li>
+     * <li>The sum of guaranteed concurrency values for tasks with the same priority cannot exceed the instance concurrency.  </li>
+     * <li>If the guaranteed concurrency value is set to 0, the system intelligently allocates idle concurrency.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,10 +71,10 @@ public class CreateJobGroupRequest extends TeaModel {
     public Long minConcurrency;
 
     /**
-     * <p>Job group priority. Valid values:</p>
+     * <p>The job group priority. Valid values:</p>
      * <ul>
-     * <li><strong>Urgent</strong>: Urgent job.</li>
-     * <li><strong>Daily</strong>: Daily job.</li>
+     * <li><strong>Urgent</strong>: urgent task.</li>
+     * <li><strong>Daily</strong>: daily task.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,17 +84,17 @@ public class CreateJobGroupRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>List of caller numbers for redial.</p>
+     * <p>The list of redial calling numbers.</p>
      */
     @NameInMap("RecallCallingNumber")
     public java.util.List<String> recallCallingNumber;
 
     /**
-     * <p>Redial policy in JSON format. The default value of parameters in the JSON is false.</p>
+     * <p>The redial strategy in JSON format. Parameter values default to false.</p>
      * <ul>
-     * <li><strong>emptyNumberIgnore</strong>: Do not make outbound calls to nonexistent numbers.</li>
-     * <li><strong>inArrearsIgnore</strong>: Do not make outbound calls for overdue payments.</li>
-     * <li><strong>outOfServiceIgnore</strong>: Do not make outbound calls to out-of-service numbers.</li>
+     * <li><strong>emptyNumberIgnore</strong>: does not call nonexistent numbers.</li>
+     * <li><strong>inArrearsIgnore</strong>: does not call numbers with overdue payments.</li>
+     * <li><strong>outOfServiceIgnore</strong>: does not call numbers that are out of service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class CreateJobGroupRequest extends TeaModel {
     public String recallStrategyJson;
 
     /**
-     * <p>Optimal ringing duration. Default value is 25.</p>
+     * <p>The optimal ringing duration. Default value: 25.</p>
      * 
      * <strong>example:</strong>
      * <p>25</p>
@@ -113,7 +113,7 @@ public class CreateJobGroupRequest extends TeaModel {
     public Long ringingDuration;
 
     /**
-     * <p>Deprecated</p>
+     * <p>Deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
@@ -122,7 +122,7 @@ public class CreateJobGroupRequest extends TeaModel {
     public String scenarioId;
 
     /**
-     * <p>Scenario ID.</p>
+     * <p>The scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</p>
@@ -131,24 +131,24 @@ public class CreateJobGroupRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>Job execution policy.  </p>
+     * <p>The task execution strategy.  </p>
      * <ul>
-     * <li>repeatBy: Recurrence type. Options are Once (no recurrence), Week (weekly recurrence), and Month (monthly recurrence).  </li>
-     * <li>startTime: Policy start time for time-based execution.  </li>
-     * <li>endTime: Policy end time for time-based execution.  <blockquote>
-     * <p>Execution modes are as follows:  </p>
+     * <li>repeatBy: the repeat type. Valid values: Once (no repeat), Week (repeat weekly), and Month (repeat monthly).  </li>
+     * <li>startTime: the strategy start time for time-based execution.</li>
+     * <li>endTime: the strategy end time for time-based execution.  <blockquote>
+     * <p>The execution mode is determined as follows:</p>
      * <ul>
-     * <li>If no start or end time is specified, the job executes immediately.  </li>
-     * <li>If start and end times are provided, the job executes based on the schedule, and a recurrence type (repeatBy) must be selected.</li>
+     * <li>If no strategy start time or end time is specified, the task is executed immediately.</li>
+     * <li>If a strategy time is specified, the task is executed based on the schedule. You must also specify the repeat type repeatBy.</li>
      * </ul>
      * </blockquote>
      * </li>
-     * <li>workingTime: Allowed outbound calling time segment.  </li>
-     * <li>maxAttemptsPerDay: Maximum number of call attempts per day for numbers under this job.  </li>
-     * <li>minAttemptInterval: Minimum time interval between retry calls for a number, in minutes.  </li>
-     * <li>routingStrategy: Number routing strategy. Options are None (not specified), LocalFirst (local city numbers prioritized), and LocalProvinceFirst (local province numbers prioritized).  </li>
-     * <li>repeatDays: Execution dates corresponding to the recurrence type. If repeatBy is Week, 0 represents Sunday and 1–6 represent Monday through Saturday. If repeatBy is Month, values 1–31 represent the 1st through the 31st day of the month; months without the specified date skip execution (for example, if the 30th is selected, February skips execution).  </li>
-     * <li>repeatable: Whether loop task is enabled, true/false.</li>
+     * <li>workingTime: the time window during which outbound calls can be made.</li>
+     * <li>maxAttemptsPerDay: the maximum number of call attempts per day for each number in the task.</li>
+     * <li>minAttemptInterval: the retry interval for a number, in minutes.</li>
+     * <li>routingStrategy: the number strategy. Valid values: None (not specified), LocalFirst (local city numbers preferred), and LocalProvinceFirst (local province numbers preferred).</li>
+     * <li>repeatDays: the execution days corresponding to the repeat type. If RepeatBy is set to Week, 0 indicates Sunday and 1-6 indicate Monday through Saturday. If RepeatBy is set to Month, 1-31 indicate the 1st through 31st day. The task is not executed in months that do not have the specified day. For example, if the 30th is selected, the task is not executed in February.</li>
+     * <li>repeatable: specifies whether to enable cyclic tasks. Valid values: true and false.</li>
      * </ul>
      * 
      * <strong>example:</strong>

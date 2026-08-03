@@ -23,7 +23,7 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the script voice configuration.</p>
+     * <p>The scene voice configuration information.</p>
      */
     @NameInMap("ScriptVoiceConfig")
     public DescribeScriptVoiceConfigResponseBodyScriptVoiceConfig scriptVoiceConfig;
@@ -110,7 +110,7 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
 
     public static class DescribeScriptVoiceConfigResponseBodyScriptVoiceConfig extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>291cfc6a-8703-4bdd-a99d-9cba32d5288a</p>
@@ -122,13 +122,13 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
          * <p>The script content.</p>
          * 
          * <strong>example:</strong>
-         * <p>你的花呗欠款逾期了需要处理，你现在能处理一下吗？</p>
+         * <p>Your Huabei payment is overdue and needs to be processed. Can you handle it now?</p>
          */
         @NameInMap("ScriptContent")
         public String scriptContent;
 
         /**
-         * <p>The ID of the script.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</p>
@@ -137,7 +137,7 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>The ID of the script voice configuration.</p>
+         * <p>The scene voice configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2a07b634-e15d-445f-bbcb-fc4ea2df7b87</p>
@@ -146,16 +146,16 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
         public String scriptVoiceConfigId;
 
         /**
-         * <p>The script waveform relation data. Returned only when <code>Type</code> is <code>WAVEFORM</code>.</p>
+         * <p>The script recording data. This parameter has a value only when Type is set to WAVEFORM.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;ScriptContent&quot;:&quot;请问你是&quot;,&quot;ScriptWaveformId&quot;:&quot;07db2f0a-acb2-4e68-b9f4-66397414f50c&quot;},{&quot;ScriptContent&quot;:&quot;吗？&quot;,&quot;ScriptWaveformId&quot;:&quot;c2a69440-03e3-406e-b0a9-a9791fccb31b&quot;}]</p>
+         * <p>[{&quot;ScriptContent&quot;:&quot;May I ask if you are&quot;,&quot;ScriptWaveformId&quot;:&quot;07db2f0a-acb2-4e68-b9f4-66397414f50c&quot;},{&quot;ScriptContent&quot;:&quot;?&quot;,&quot;ScriptWaveformId&quot;:&quot;c2a69440-03e3-406e-b0a9-a9791fccb31b&quot;}]</p>
          */
         @NameInMap("ScriptWaveformRelation")
         public String scriptWaveformRelation;
 
         /**
-         * <p>The source of the script.</p>
+         * <p>The script source.</p>
          * 
          * <strong>example:</strong>
          * <p>DIALOGUE_FLOW</p>
@@ -164,12 +164,10 @@ public class DescribeScriptVoiceConfigResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The type of the voice configuration. Valid values:</p>
+         * <p>The recording type. Valid values:</p>
          * <ul>
-         * <li><p><code>WAVEFORM</code>: A recording.</p>
-         * </li>
-         * <li><p><code>TTS</code>: Text-to-speech.</p>
-         * </li>
+         * <li>WAVEFORM: recording.</li>
+         * <li>TTS: text-to-speech.</li>
          * </ul>
          * 
          * <strong>example:</strong>

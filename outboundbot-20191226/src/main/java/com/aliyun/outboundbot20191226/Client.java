@@ -901,7 +901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a URL for a Download Hub task.</p>
+     * <p>Creates a URL for a download center task.</p>
      * 
      * @param request CreateDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -929,7 +929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a URL for a Download Hub task.</p>
+     * <p>Creates a URL for a download center task.</p>
      * 
      * @param request CreateDownloadUrlRequest
      * @return CreateDownloadUrlResponse
@@ -1229,7 +1229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a job group.</p>
+     * <p>Creates a job group.</p>
      * 
      * @param request CreateJobGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1309,7 +1309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a job group.</p>
+     * <p>Creates a job group.</p>
      * 
      * @param request CreateJobGroupRequest
      * @return CreateJobGroupResponse
@@ -1615,7 +1615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an asynchronous task to export outbound call history.</p>
+     * <p>Creates an asynchronous task to export outbound call history.</p>
      * 
      * @param request CreateTaskExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1643,7 +1643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an asynchronous task to export outbound call history.</p>
+     * <p>Creates an asynchronous task to export outbound call history.</p>
      * 
      * @param request CreateTaskExportTaskRequest
      * @return CreateTaskExportTaskResponse
@@ -2295,7 +2295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an outbound call number. This API is deprecated.</p>
+     * <p>Deletes an outbound call number. This operation is deprecated.</p>
      * 
      * @param request DeleteOutboundCallNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2331,7 +2331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an outbound call number. This API is deprecated.</p>
+     * <p>Deletes an outbound call number. This operation is deprecated.</p>
      * 
      * @param request DeleteOutboundCallNumberRequest
      * @return DeleteOutboundCallNumberResponse
@@ -2391,7 +2391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes uploaded recordings for a small-model scenario.</p>
+     * <p>Deletes uploaded recordings in a small model scenario.</p>
      * 
      * @param request DeleteScriptRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2431,7 +2431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes uploaded recordings for a small-model scenario.</p>
+     * <p>Deletes uploaded recordings in a small model scenario.</p>
      * 
      * @param request DeleteScriptRecordingRequest
      * @return DeleteScriptRecordingResponse
@@ -2605,7 +2605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes DS reports.</p>
+     * <p>Queries the tag statistics of hits for a job group.</p>
      * 
      * @param request DescribeDsReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2641,7 +2641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes DS reports.</p>
+     * <p>Queries the tag statistics of hits for a job group.</p>
      * 
      * @param request DescribeDsReportsRequest
      * @return DescribeDsReportsResponse
@@ -2759,7 +2759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Outbound Calling instance.</p>
+     * <p>Queries the information of an outbound robot business instance.</p>
      * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2791,7 +2791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an Outbound Calling instance.</p>
+     * <p>Queries the information of an outbound robot business instance.</p>
      * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -2907,7 +2907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the conversation data for a specific job.</p>
+     * <p>Returns the conversation data of a job.</p>
      * 
      * @param request DescribeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2947,7 +2947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the conversation data for a specific job.</p>
+     * <p>Returns the conversation data of a job.</p>
      * 
      * @param request DescribeJobRequest
      * @return DescribeJobResponse
@@ -2959,7 +2959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the parsing progress of an uploaded job file.</p>
+     * <p>Retrieves the parsing progress of an uploaded job file.</p>
      * 
      * @param request DescribeJobDataParsingTaskProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2995,7 +2995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the parsing progress of an uploaded job file.</p>
+     * <p>Retrieves the parsing progress of an uploaded job file.</p>
      * 
      * @param request DescribeJobDataParsingTaskProgressRequest
      * @return DescribeJobDataParsingTaskProgressResponse
@@ -3155,7 +3155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes the voice configuration of a script created in the legacy canvas.</p>
+     * <p>Returns a scene voice configuration in the legacy canvas scenario.</p>
      * 
      * @param request DescribeScriptVoiceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3195,7 +3195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes the voice configuration of a script created in the legacy canvas.</p>
+     * <p>Returns a scene voice configuration in the legacy canvas scenario.</p>
      * 
      * @param request DescribeScriptVoiceConfigRequest
      * @return DescribeScriptVoiceConfigResponse
@@ -3399,7 +3399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the instances to which a phone number is bound in a tenant.</p>
+     * <p>Queries the list of number binding instances under a tenant.</p>
      * 
      * @param request DescribeTenantBindNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3431,7 +3431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the instances to which a phone number is bound in a tenant.</p>
+     * <p>Queries the list of number binding instances under a tenant.</p>
      * 
      * @param request DescribeTenantBindNumberRequest
      * @return DescribeTenantBindNumberResponse
@@ -3635,7 +3635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Duplicates an existing script. This operation applies only to the legacy canvas.</p>
+     * <p>Copies a new script from an existing script (for the legacy canvas only).</p>
      * 
      * @param request DuplicateScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3675,7 +3675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Duplicates an existing script. This operation applies only to the legacy canvas.</p>
+     * <p>Copies a new script from an existing script (for the legacy canvas only).</p>
      * 
      * @param request DuplicateScriptRequest
      * @return DuplicateScriptResponse
@@ -5814,7 +5814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <code>ListJobGroup</code> call that included the <code>Async</code> parameter.</p>
+     * <p>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</p>
      * 
      * @param request ListJobGroupsAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5842,7 +5842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <code>ListJobGroup</code> call that included the <code>Async</code> parameter.</p>
+     * <p>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</p>
      * 
      * @param request ListJobGroupsAsyncRequest
      * @return ListJobGroupsAsyncResponse
@@ -5854,7 +5854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple jobs.</p>
+     * <p>Queries multiple jobs.</p>
      * 
      * @param request ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5890,7 +5890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query multiple jobs.</p>
+     * <p>Queries multiple jobs.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -7308,7 +7308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an outbound call number. This API is deprecated.</p>
+     * <p>Modifies an outbound call number. This operation is deprecated.</p>
      * 
      * @param request ModifyOutboundCallNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7356,7 +7356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an outbound call number. This API is deprecated.</p>
+     * <p>Modifies an outbound call number. This operation is deprecated.</p>
      * 
      * @param request ModifyOutboundCallNumberRequest
      * @return ModifyOutboundCallNumberResponse
@@ -7798,7 +7798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can query the list of jobs.</p>
+     * <p>Queries a list of jobs.</p>
      * 
      * @param request QueryJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7866,7 +7866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can query the list of jobs.</p>
+     * <p>Queries a list of jobs.</p>
      * 
      * @param request QueryJobsRequest
      * @return QueryJobsResponse
@@ -7878,7 +7878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Find tasks by result.</p>
+     * <p>Queries tasks based on task results.</p>
      * 
      * @param request QueryJobsWithResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7962,7 +7962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Find tasks by result.</p>
+     * <p>Queries tasks based on task results.</p>
      * 
      * @param request QueryJobsWithResultRequest
      * @return QueryJobsWithResultResponse
@@ -8270,7 +8270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the delay before playback starts after the call is answered.</p>
+     * <p>Saves the delayed playback time after a call is answered.</p>
      * 
      * @param request SaveAfterAnswerDelayPlaybackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8310,7 +8310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the delay before playback starts after the call is answered.</p>
+     * <p>Saves the delayed playback time after a call is answered.</p>
      * 
      * @param request SaveAfterAnswerDelayPlaybackRequest
      * @return SaveAfterAnswerDelayPlaybackResponse
@@ -8822,7 +8822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a draft job group. This operation is deprecated.</p>
+     * <p>Submits a job group in draft status for execution. This operation is deprecated.</p>
      * 
      * @param request SubmitBatchJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8858,7 +8858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a draft job group. This operation is deprecated.</p>
+     * <p>Submits a job group in draft status for execution. This operation is deprecated.</p>
      * 
      * @param request SubmitBatchJobsRequest
      * @return SubmitBatchJobsResponse
@@ -9432,10 +9432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>**</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Revoke script review.</p>
+     * <p>Withdraws a script review.</p>
      * 
      * @param request WithdrawScriptReviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9471,10 +9471,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>**</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Revoke script review.</p>
+     * <p>Withdraws a script review.</p>
      * 
      * @param request WithdrawScriptReviewRequest
      * @return WithdrawScriptReviewResponse

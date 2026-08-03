@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScriptVoiceConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeScriptVoiceConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the script.</p>
+     * <p>The scene ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeScriptVoiceConfigRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>The ID of the script voice configuration.</p>
+     * <p>The scene voice configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

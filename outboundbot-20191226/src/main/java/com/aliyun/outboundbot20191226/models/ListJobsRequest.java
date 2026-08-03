@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Job ID list. Note: the number of child items must be less than or equal to 99.</p>
+     * <p>The list of job IDs. A maximum of 99 child items are allowed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

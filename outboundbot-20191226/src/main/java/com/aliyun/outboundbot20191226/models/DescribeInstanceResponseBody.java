@@ -23,7 +23,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the instance.</p>
+     * <p>The business instance information.</p>
      */
     @NameInMap("Instance")
     public DescribeInstanceResponseBodyInstance instance;
@@ -38,7 +38,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -110,7 +110,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static class DescribeInstanceResponseBodyInstance extends TeaModel {
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1578469042851</p>
@@ -119,7 +119,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The ID of the creator.</p>
+         * <p>The creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>435986</p>
@@ -137,7 +137,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The description of the business instance.</p>
          * 
          * <strong>example:</strong>
          * <p>这个是第一个实例</p>
@@ -146,7 +146,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The business instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
@@ -155,7 +155,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the business instance.</p>
          * 
          * <strong>example:</strong>
          * <p>第一个实例</p>
@@ -164,7 +164,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The maximum number of concurrent conversations for the instance.</p>
+         * <p>The maximum concurrency of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -173,7 +173,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Integer maxConcurrentConversation;
 
         /**
-         * <p>The name of the instance owner.</p>
+         * <p>The name of the business instance owner.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -182,7 +182,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String ownerName;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -32,7 +32,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Parsing progress.</p>
+     * <p>The progress information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -41,7 +41,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public DescribeJobDataParsingTaskProgressResponseBodyProgress progress;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -50,7 +50,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
 
     public static class DescribeJobDataParsingTaskProgressResponseBodyProgress extends TeaModel {
         /**
-         * <p>Error code for a failed parsing task.</p>
+         * <p>The error code for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Permission.JobStatus</p>
@@ -122,7 +122,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public String failErrorCode;
 
         /**
-         * <p>Reason for failure.</p>
+         * <p>The failure reason.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateCorpus</p>
@@ -131,7 +131,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public String failReason;
 
         /**
-         * <p>Download URL for the file that lists parsing failures. This field is deprecated.</p>
+         * <p>The download URL of the parsing failure record file. [Deprecated]</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -140,7 +140,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public String feedbackUrl;
 
         /**
-         * <p>Number of jobs processed so far.</p>
+         * <p>The number of jobs being processed.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -149,18 +149,13 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public Integer handledJobCount;
 
         /**
-         * <p>Status of the job.</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li><p>Pending: The job is waiting to start.</p>
-         * </li>
-         * <li><p>InProgress: The job is running.</p>
-         * </li>
-         * <li><p>Finished: The job completed successfully.</p>
-         * </li>
-         * <li><p>PartialFinished: The job completed partially.</p>
-         * </li>
-         * <li><p>Failed: The job failed.</p>
-         * </li>
+         * <li>Pending: pending.</li>
+         * <li>InProgress: in progress.</li>
+         * <li>Finished: finished.</li>
+         * <li>PartialFinished: partially finished.</li>
+         * <li>Failed: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +165,7 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Total number of jobs in the task.</p>
+         * <p>The total number of jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

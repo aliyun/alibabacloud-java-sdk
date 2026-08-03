@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DuplicateScriptResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +41,7 @@ public class DuplicateScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the new script.</p>
+     * <p>The scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6114e7e8-4140-48d9-b46d-65ea29f13fe8</p>
@@ -50,7 +50,7 @@ public class DuplicateScriptResponseBody extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of true indicates success, while false indicates failure.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

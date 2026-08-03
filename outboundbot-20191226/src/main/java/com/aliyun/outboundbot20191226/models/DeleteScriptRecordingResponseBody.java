@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScriptRecordingResponseBody extends TeaModel {
     /**
-     * <p>The API status code.</p>
+     * <p>The operation status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class DeleteScriptRecordingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned by the API.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class DeleteScriptRecordingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

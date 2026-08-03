@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScriptRecordingRequest extends TeaModel {
     /**
-     * <p>The ID of the instance to which the recording belongs.</p>
+     * <p>The instance ID to which the recordings belong.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteScriptRecordingRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the scenario to which the recording belongs.</p>
+     * <p>The ID of the scenario to which the recordings belong.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class DeleteScriptRecordingRequest extends TeaModel {
     public String scriptId;
 
     /**
-     * <p>A list of recording IDs. If this parameter is empty, all recordings are selected by default.</p>
+     * <p>The list of recording IDs. If this parameter is left empty, all recordings are selected by default.</p>
      * <blockquote>
-     * <p>Obtain the recording IDs from the ListScriptRecording operation.</p>
+     * <p>You can obtain recording IDs by calling the ListScriptRecording operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

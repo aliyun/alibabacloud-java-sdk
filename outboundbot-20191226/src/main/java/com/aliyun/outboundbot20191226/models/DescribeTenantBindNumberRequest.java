@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantBindNumberRequest extends TeaModel {
     /**
-     * <p>Phone number to query (required)</p>
+     * <p>The bound number (required).</p>
      * <blockquote>
-     * <p>Query the binding status of this number across all instances. Get the number from the response of ListAllTenantBindNumberBinding.</p>
+     * <p>Queries the binding status of the specified number across all instances. Obtain the number from the response parameters of ListAllTenantBindNumberBinding.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

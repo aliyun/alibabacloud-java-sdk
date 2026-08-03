@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOutboundCallNumberRequest extends TeaModel {
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyOutboundCallNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number to modify</p>
+     * <p>The number to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyOutboundCallNumberRequest extends TeaModel {
     public String number;
 
     /**
-     * <p>Number ID</p>
+     * <p>The number ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyOutboundCallNumberRequest extends TeaModel {
     public String outboundCallNumberId;
 
     /**
-     * <p>Number of rate limiting rules</p>
+     * <p>The number of rate limit rules.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ModifyOutboundCallNumberRequest extends TeaModel {
     public Integer rateLimitCount;
 
     /**
-     * <p>Rate limiting time window, in seconds</p>
+     * <p>The rate limit period. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

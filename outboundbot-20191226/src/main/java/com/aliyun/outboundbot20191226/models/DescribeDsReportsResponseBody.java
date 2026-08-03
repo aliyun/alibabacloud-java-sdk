@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDsReportsResponseBody extends TeaModel {
     /**
-     * <p>API status code</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,16 +14,16 @@ public class DescribeDsReportsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Conversation flow information, formatted as key:{value:count}</p>
+     * <p>The dialog flow information in the format: key:{value:aaa}}, where aaa indicates the number of occurrences.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;{\&quot;标签1\&quot;:{\&quot;标签值1\&quot;:2},\&quot;标签2\&quot;:{\&quot;标签值1\&quot;:2},\&quot;标签3\&quot;:{\&quot;标签值1\&quot;:1,\&quot;标签值2\&quot;:1}}&quot;</p>
+     * <p>&quot;{\&quot;Label1\&quot;:{\&quot;LabelValue1\&quot;:2},\&quot;Label2\&quot;:{\&quot;LabelValue1\&quot;:2},\&quot;Label3\&quot;:{\&quot;LabelValue1\&quot;:1,\&quot;LabelValue2\&quot;:1}}&quot;</p>
      */
     @NameInMap("DsReports")
     public String dsReports;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DescribeDsReportsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API message</p>
+     * <p>The API response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class DescribeDsReportsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1364f208-982d-4d0c-89aa-d56e22b47589</p>
@@ -50,7 +50,7 @@ public class DescribeDsReportsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

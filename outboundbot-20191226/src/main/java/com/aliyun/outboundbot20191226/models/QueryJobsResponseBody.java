@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryJobsResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class QueryJobsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,13 +23,13 @@ public class QueryJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Job data.</p>
+     * <p>The job data.</p>
      */
     @NameInMap("Jobs")
     public QueryJobsResponseBodyJobs jobs;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class QueryJobsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -47,7 +47,7 @@ public class QueryJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobsListContacts extends TeaModel {
         /**
-         * <p>Contact ID.</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
@@ -119,7 +119,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String contactId;
 
         /**
-         * <p>Contact name.</p>
+         * <p>The contact name.</p>
          * 
          * <strong>example:</strong>
          * <p>张三</p>
@@ -128,7 +128,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String contactName;
 
         /**
-         * <p>Honorific.</p>
+         * <p>The honorific title.</p>
          * 
          * <strong>example:</strong>
          * <p>张先生</p>
@@ -137,7 +137,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String honorific;
 
         /**
-         * <p>Job ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
@@ -146,7 +146,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Phone number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>135****8888</p>
@@ -155,7 +155,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Associated business ID.</p>
+         * <p>The associated business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
@@ -164,7 +164,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String referenceId;
 
         /**
-         * <p>Role.</p>
+         * <p>The role.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -175,16 +175,12 @@ public class QueryJobsResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>Status.</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><p>Available</p>
-         * </li>
-         * <li><p>WrongNumber</p>
-         * </li>
-         * <li><p>DoesNotExist</p>
-         * </li>
-         * <li><p>Suspended</p>
-         * </li>
+         * <li>Available: Normal.</li>
+         * <li>WrongNumber: Wrong number.</li>
+         * <li>DoesNotExist: Nonexistent number.</li>
+         * <li>Suspended: Call suspended.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,7 +262,7 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobsListExtras extends TeaModel {
         /**
-         * <p>Business data key.</p>
+         * <p>The business data key.</p>
          * 
          * <strong>example:</strong>
          * <p>djrq</p>
@@ -275,7 +271,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Business data value.</p>
+         * <p>The business data value.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-08-21 09:49:59.0</p>
@@ -308,7 +304,7 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobsListSummary extends TeaModel {
         /**
-         * <p>Category.</p>
+         * <p>The category.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -317,7 +313,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>Content.</p>
+         * <p>The content.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -326,7 +322,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Call record ID.</p>
+         * <p>The call record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>098b9b09-9223-4a8b-a422-99726f0457f3</p>
@@ -335,7 +331,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String conversationDetailId;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The job group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ba1ba502-d044-48c0-b710-0f1f840a7c53</p>
@@ -344,7 +340,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>Job ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
@@ -353,7 +349,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Summary ID.</p>
+         * <p>The summary ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dc67d544-df06-4625-ae48-13e3c9f72d8a</p>
@@ -362,7 +358,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String summaryId;
 
         /**
-         * <p>Summary name.</p>
+         * <p>The summary name.</p>
          * 
          * <strong>example:</strong>
          * <p>score</p>
@@ -371,7 +367,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String summaryName;
 
         /**
-         * <p>Call ID.</p>
+         * <p>The call ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9fdf7a81-6781-4ab8-92fb-1d4231ef365e</p>
@@ -452,7 +448,7 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobsListTagHits extends TeaModel {
         /**
-         * <p>Tag group name.</p>
+         * <p>The tag group name.</p>
          * 
          * <strong>example:</strong>
          * <p>意向收集</p>
@@ -461,7 +457,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String tagGroup;
 
         /**
-         * <p>Tag name.</p>
+         * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
          * <p>有意向</p>
@@ -494,7 +490,7 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobsListTasksContact extends TeaModel {
         /**
-         * <p>Contact ID.</p>
+         * <p>The contact ID.</p>
          * 
          * <strong>example:</strong>
          * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
@@ -503,7 +499,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String contactId;
 
         /**
-         * <p>Contact name.</p>
+         * <p>The contact name.</p>
          * 
          * <strong>example:</strong>
          * <p>张三</p>
@@ -512,7 +508,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String contactName;
 
         /**
-         * <p>Honorific.</p>
+         * <p>The honorific title.</p>
          * 
          * <strong>example:</strong>
          * <p>张先生</p>
@@ -521,7 +517,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String honorific;
 
         /**
-         * <p>Job ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
@@ -530,7 +526,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Contact phone number.</p>
+         * <p>The contact phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>135****8888</p>
@@ -539,7 +535,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Business association ID.</p>
+         * <p>The associated business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
@@ -548,7 +544,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String referenceId;
 
         /**
-         * <p>Role.</p>
+         * <p>The role.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -559,7 +555,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>Status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -640,7 +636,7 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobsListTasks extends TeaModel {
         /**
-         * <p>Actual call time.</p>
+         * <p>The actual outbound call time.</p>
          * 
          * <strong>example:</strong>
          * <p>1579068424883</p>
@@ -649,7 +645,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public Long actualTime;
 
         /**
-         * <p>Summary. This field is deprecated.</p>
+         * <p>The summary. This is a legacy field and is no longer in use.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -658,7 +654,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String brief;
 
         /**
-         * <p>SIP call ID.</p>
+         * <p>SIP call ID。</p>
          * 
          * <strong>example:</strong>
          * <p>1528189846043</p>
@@ -667,7 +663,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String callId;
 
         /**
-         * <p>Callee number.</p>
+         * <p>The called number.</p>
          * 
          * <strong>example:</strong>
          * <p>135****8888</p>
@@ -676,7 +672,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String calledNumber;
 
         /**
-         * <p>Caller number.</p>
+         * <p>The calling number.</p>
          * 
          * <strong>example:</strong>
          * <p>0571****3106</p>
@@ -685,7 +681,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
-         * <p>Chatbot ID.</p>
+         * <p>The chatbot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -694,13 +690,13 @@ public class QueryJobsResponseBody extends TeaModel {
         public String chatbotId;
 
         /**
-         * <p>Contact information.</p>
+         * <p>The contact information.</p>
          */
         @NameInMap("Contact")
         public QueryJobsResponseBodyJobsListTasksContact contact;
 
         /**
-         * <p>Call duration in seconds.</p>
+         * <p>The call duration.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -709,7 +705,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>Job ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
@@ -718,7 +714,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Scheduled call time.</p>
+         * <p>The planned outbound call time.</p>
          * 
          * <strong>example:</strong>
          * <p>1579068424883</p>
@@ -727,7 +723,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public Long planedTime;
 
         /**
-         * <p>Scenario ID.</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
@@ -736,73 +732,73 @@ public class QueryJobsResponseBody extends TeaModel {
         public String scenarioId;
 
         /**
-         * <p>The status of the task. Valid values are described below. Note that the Succeeded status is subdivided by reason. The generic Succeeded: 1 (Connected) status is no longer returned, and a specific success reason is provided instead.</p>
+         * <p>The task status. Note: The Succeeded status has been subdivided into specific reason types. The Succeeded:1 (Connected) status is no longer returned. Instead, the specific sub-reason type is returned. Valid values:</p>
          * <ul>
-         * <li><p>Executing: 0 (Calling).</p>
+         * <li><p>Executing: 0 (Dialing).</p>
          * </li>
          * <li><p>Succeeded: 1 (Connected).</p>
          * </li>
-         * <li><p>NoAnswer: 2 (Not connected – No answer).</p>
+         * <li><p>NoAnswer: 2 (Not connected - No answer).</p>
          * </li>
-         * <li><p>NotExist: 3 (Not connected – Nonexistent number).</p>
+         * <li><p>NotExist: 3 (Not connected - Nonexistent number).</p>
          * </li>
-         * <li><p>Busy: 4 (Not connected – Line busy).</p>
+         * <li><p>Busy: 4 (Not connected - Busy).</p>
          * </li>
-         * <li><p>Cancelled: 5 (Not dialed – Task stopped).</p>
+         * <li><p>Cancelled: 5 (Not dialed - Task stopped).</p>
          * </li>
          * <li><p>Failed: 6 (Failed).</p>
          * </li>
-         * <li><p>NotConnected: 7 (Not connected – Unreachable).</p>
+         * <li><p>NotConnected: 7 (Not connected - Unreachable).</p>
          * </li>
-         * <li><p>PoweredOff: 8 (Not connected – Powered off).</p>
+         * <li><p>PoweredOff: 8 (Not connected - Powered off).</p>
          * </li>
-         * <li><p>OutOfService: 9 (Not connected – Service suspended).</p>
+         * <li><p>OutOfService: 9 (Not connected - Called party out of service).</p>
          * </li>
-         * <li><p>InArrears: 10 (Not connected – Account has an overdue payment).</p>
+         * <li><p>InArrears: 10 (Not connected - Called party has overdue payment).</p>
          * </li>
-         * <li><p>EmptyNumber: 11 (Not dialed – Invalid number).</p>
+         * <li><p>EmptyNumber: 11 (Not dialed - Nonexistent number).</p>
          * </li>
-         * <li><p>PerDayCallCountLimit: 12 (Not dialed – Daily call limit exceeded).</p>
+         * <li><p>PerDayCallCountLimit: 12 (Not dialed - Daily limit exceeded).</p>
          * </li>
-         * <li><p>ContactBlockList: 13 (Not dialed – Number on blocklist).</p>
+         * <li><p>ContactBlockList: 13 (Not dialed - Blocked list).</p>
          * </li>
-         * <li><p>CallerNotRegistered: 14 (Not dialed – Caller ID not registered).</p>
+         * <li><p>CallerNotRegistered: 14 (Not dialed - Caller number not registered).</p>
          * </li>
-         * <li><p>Terminated: 15 (Not dialed – Terminated).</p>
+         * <li><p>Terminated: 15 (Not dialed - Terminated).</p>
          * </li>
-         * <li><p>VerificationCancelled: 16 (Not dialed – Canceled due to pre-call validation failure).</p>
+         * <li><p>VerificationCancelled: 16 (Not dialed - Pre-call verification failed).</p>
          * </li>
-         * <li><p>OutOfServiceNoCall: 17 (Not dialed – Service suspended).</p>
+         * <li><p>OutOfServiceNoCall: 17 (Not dialed - Called party out of service).</p>
          * </li>
-         * <li><p>InArrearsNoCall: 18 (Not dialed – Account has an overdue payment).</p>
+         * <li><p>InArrearsNoCall: 18 (Not dialed - Called party has overdue payment).</p>
          * </li>
-         * <li><p>CallingNumberNotExist: 19 (Not dialed – Caller ID does not exist).</p>
+         * <li><p>CallingNumberNotExist: 19 (Not dialed - Caller number does not exist).</p>
          * </li>
-         * <li><p>SucceededFinish: 20 (Connected – Completed normally).</p>
+         * <li><p>SucceededFinish: 20 (Connected - Completed normally).</p>
          * </li>
-         * <li><p>SucceededChatbotHangUpAfterNoAnswer: 21 (Connected – Bot hung up due to unrecognized input).</p>
+         * <li><p>SucceededChatbotHangUpAfterNoAnswer: 21 (Connected - Robot hung up after no recognition).</p>
          * </li>
-         * <li><p>SucceededChatbotHangUpAfterSilence: 22 (Connected – Bot hung up due to a silence timeout).</p>
+         * <li><p>SucceededChatbotHangUpAfterSilence: 22 (Connected - Silence timeout hang-up).</p>
          * </li>
-         * <li><p>SucceededClientHangUpAfterNoAnswer: 23 (Connected – User hung up due to unrecognized input).</p>
+         * <li><p>SucceededClientHangUpAfterNoAnswer: 23 (Connected - User hung up after no recognition).</p>
          * </li>
-         * <li><p>SucceededClientHangUp: 24 (Connected – User hung up).</p>
+         * <li><p>SucceededClientHangUp: 24 (Connected - User hung up without reason).</p>
          * </li>
-         * <li><p>SucceededTransferByIntent: 25 (Connected – Transferred to an agent based on an intent match).</p>
+         * <li><p>SucceededTransferByIntent: 25 (Connected - Transferred to agent by intent).</p>
          * </li>
-         * <li><p>SucceededTransferAfterNoAnswer: 26 (Connected – Transferred to an agent due to unrecognized input).</p>
+         * <li><p>SucceededTransferAfterNoAnswer: 26 (Connected - Transferred to agent after no recognition).</p>
          * </li>
-         * <li><p>SucceededInoInterAction: 27 (Connected – No user interaction).</p>
+         * <li><p>SucceededInoInterAction: 27 (Connected - No interaction from user side).</p>
          * </li>
-         * <li><p>SucceededError: 28 (Connected – Call interrupted by a system error).</p>
+         * <li><p>SucceededError: 28 (Connected - System exception interruption).</p>
          * </li>
-         * <li><p>SucceededSpecialInterceptVoiceAssistant: 29 (Connected – Intercepted by a voice assistant).</p>
+         * <li><p>SucceededSpecialInterceptVoiceAssistant: 29 (Connected - Special intercept - Voice assistant).</p>
          * </li>
-         * <li><p>SucceededSpecialInterceptExtensionNumberTransfer: 30 (Connected – Intercepted due to an extension transfer).</p>
+         * <li><p>SucceededSpecialInterceptExtensionNumberTransfer: 30 (Connected - Special intercept - Extension number transfer).</p>
          * </li>
-         * <li><p>SucceededSpecialInterceptCustomSpecialIntercept: 31 (Connected – Intercepted by a custom rule).</p>
+         * <li><p>SucceededSpecialInterceptCustomSpecialIntercept: 31 (Connected - Special intercept - Custom intercept).</p>
          * </li>
-         * <li><p>HighRiskSipCode: 32 (Not dialed – High-risk number).</p>
+         * <li><p>HighRiskSipCode: 32 (Not dialed - High risk).</p>
          * </li>
          * </ul>
          * 
@@ -813,7 +809,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Call ID.</p>
+         * <p>The call ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ff44709e-39a6-43ba-959b-20fcabe3e496</p>
@@ -934,60 +930,46 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobsList extends TeaModel {
         /**
-         * <p>Caller number list.</p>
+         * <p>The list of calling numbers.</p>
          */
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
         /**
-         * <p>Contact information. This parameter is deprecated.</p>
+         * <p>The contact information. This parameter has been deprecated.</p>
          * <blockquote>
-         * <p>Use the DescribeJob operation instead.</p>
+         * <p>You can retrieve this information by calling the DescribeJob operation.</p>
          * </blockquote>
          */
         @NameInMap("Contacts")
         public java.util.List<QueryJobsResponseBodyJobsListContacts> contacts;
 
         /**
-         * <p>Business data. Shows tag collection status for Large Language Model (LLM) scenarios.</p>
+         * <p>The business data. Displays tag collection results for large language model scenarios.</p>
          * <blockquote>
-         * <p>Keys TenantId and ServiceId are system parameters.</p>
+         * <p>Keys equal to TenantId or ServiceId are system parameters.</p>
          * </blockquote>
          */
         @NameInMap("Extras")
         public java.util.List<QueryJobsResponseBodyJobsListExtras> extras;
 
         /**
-         * <p>Failure reason.</p>
+         * <p>The failure reason. Valid values:</p>
          * <ul>
-         * <li><p>Unknown</p>
-         * </li>
-         * <li><p>NoAnswer</p>
-         * </li>
-         * <li><p>InvalidStrategy</p>
-         * </li>
-         * <li><p>TimeUp</p>
-         * </li>
-         * <li><p>NoStrategy</p>
-         * </li>
-         * <li><p>CallFailed</p>
-         * </li>
-         * <li><p>PerDayCallCountLimit</p>
-         * </li>
-         * <li><p>ContactBlockList</p>
-         * </li>
-         * <li><p>EmptyNumber</p>
-         * </li>
-         * <li><p>JobPerDayCallCountLimit</p>
-         * </li>
-         * <li><p>VerificationCancelled</p>
-         * </li>
-         * <li><p>ContactSuspended</p>
-         * </li>
-         * <li><p>InArrears</p>
-         * </li>
-         * <li><p>OutOfService</p>
-         * </li>
+         * <li>Unknown: Unknown error.  </li>
+         * <li>NoAnswer: No answer.</li>
+         * <li>InvalidStrategy: Invalid strategy. The strategy configuration is incorrect.</li>
+         * <li>TimeUp: Timeout detected during scheduling.</li>
+         * <li>NoStrategy: The strategy is empty or not found.</li>
+         * <li>CallFailed: Call failed.</li>
+         * <li>PerDayCallCountLimit: Daily call count limit for the number reached.</li>
+         * <li>ContactBlockList: The number is on the blocked list.</li>
+         * <li>EmptyNumber: Nonexistent number. No further outbound calls.</li>
+         * <li>JobPerDayCallCountLimit: Daily call count limit for the number reached.</li>
+         * <li>VerificationCancelled: Pre-call verification failed. The call was cancelled.</li>
+         * <li>ContactSuspended: Call suspended.</li>
+         * <li>InArrears: Overdue payment.</li>
+         * <li>OutOfService: Out of service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -997,7 +979,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String failureReason;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The job group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
@@ -1006,7 +988,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String jobGroupId;
 
         /**
-         * <p>Job ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
@@ -1015,7 +997,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Priority.</p>
+         * <p>The priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1024,7 +1006,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>Associated business ID.</p>
+         * <p>The associated business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
@@ -1033,7 +1015,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String referenceId;
 
         /**
-         * <p>Scenario ID. This parameter is deprecated.</p>
+         * <p>The scenario ID. This is a legacy parameter and has been deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
@@ -1042,22 +1024,15 @@ public class QueryJobsResponseBody extends TeaModel {
         public String scenarioId;
 
         /**
-         * <p>Job status.</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
-         * <li><p>Scheduling (0)</p>
-         * </li>
-         * <li><p>Executing (1)</p>
-         * </li>
-         * <li><p>Succeeded (2)</p>
-         * </li>
-         * <li><p>Paused (3)</p>
-         * </li>
-         * <li><p>Failed (4)</p>
-         * </li>
-         * <li><p>Cancelled (5)</p>
-         * </li>
-         * <li><p>Drafted (6)</p>
-         * </li>
+         * <li>Scheduling(0): Scheduling.</li>
+         * <li>Executing(1): Executing.</li>
+         * <li>Succeeded(2): Completed - Reached.</li>
+         * <li>Paused(3): Paused.</li>
+         * <li>Failed(4): Completed - Not reached.</li>
+         * <li>Cancelled(5): Cancelled - Manual intervention.</li>
+         * <li>Drafted(6): Draft.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1067,7 +1042,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Strategy ID.</p>
+         * <p>The strategy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c8a2b7f2-ad1a-4865-b872-d0080d9802d9</p>
@@ -1076,21 +1051,21 @@ public class QueryJobsResponseBody extends TeaModel {
         public String strategyId;
 
         /**
-         * <p>Conversation summary. This field is deprecated.</p>
+         * <p>The conversation summary. This is a legacy field and is no longer in use. Deprecated.</p>
          */
         @NameInMap("Summary")
         public java.util.List<QueryJobsResponseBodyJobsListSummary> summary;
 
         /**
-         * <p>Tags hit in small model scenarios.</p>
+         * <p>The tag hit information in small model scenarios.</p>
          */
         @NameInMap("TagHits")
         public java.util.List<QueryJobsResponseBodyJobsListTagHits> tagHits;
 
         /**
-         * <p>Call list. This parameter is deprecated.</p>
+         * <p>The call list. This parameter has been deprecated.</p>
          * <blockquote>
-         * <p>Use the searchTask operation instead.</p>
+         * <p>You can retrieve this information by calling the searchTask operation.</p>
          * </blockquote>
          */
         @NameInMap("Tasks")
@@ -1217,13 +1192,13 @@ public class QueryJobsResponseBody extends TeaModel {
 
     public static class QueryJobsResponseBodyJobs extends TeaModel {
         /**
-         * <p>Job array.</p>
+         * <p>The list of jobs.</p>
          */
         @NameInMap("List")
         public java.util.List<QueryJobsResponseBodyJobsList> list;
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1232,7 +1207,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1241,7 +1216,7 @@ public class QueryJobsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

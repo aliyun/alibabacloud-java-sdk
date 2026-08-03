@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantBindNumberResponseBody extends TeaModel {
     /**
-     * <p>API status code</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeTenantBindNumberResponseBodyData data;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API message</p>
+     * <p>The API response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1364f208-982d-4d0c-89aa-d56e22b47589</p>
@@ -47,7 +47,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call succeeded</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
 
     public static class DescribeTenantBindNumberResponseBodyDataList extends TeaModel {
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e2d7a184-7d6c-45d4-ac24-34ab48f54669</p>
@@ -119,7 +119,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Instance name</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -128,7 +128,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Indicates whether the number is bound to the instance</p>
+         * <p>Indicates whether the number is in a bound state.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,7 +169,7 @@ public class DescribeTenantBindNumberResponseBody extends TeaModel {
 
     public static class DescribeTenantBindNumberResponseBodyData extends TeaModel {
         /**
-         * <p>Job group description</p>
+         * <p>The job group description.</p>
          */
         @NameInMap("List")
         public java.util.List<DescribeTenantBindNumberResponseBodyDataList> list;

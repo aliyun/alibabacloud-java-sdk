@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the download task.</p>
+     * <p>The download task ID.</p>
      * <blockquote>
      * <p>This parameter is obtained from the TaskId response parameter of the ListDownloadTasks operation.</p>
      * </blockquote>
@@ -18,7 +18,7 @@ public class CreateDownloadUrlRequest extends TeaModel {
     public String downloadTaskId;
 
     /**
-     * <p>The ID of the file.</p>
+     * <p>The file ID.</p>
      * <blockquote>
      * <p>This parameter is obtained from the FileId response parameter of the ListDownloadTasks operation.</p>
      * </blockquote>

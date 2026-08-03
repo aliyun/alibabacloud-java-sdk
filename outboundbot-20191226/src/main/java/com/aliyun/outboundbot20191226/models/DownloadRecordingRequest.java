@@ -15,7 +15,7 @@ public class DownloadRecordingRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether to retrieve voice slice recordings.</p>
+     * <p>Specifies whether to query segmented recordings.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +24,7 @@ public class DownloadRecordingRequest extends TeaModel {
     public Boolean needVoiceSliceRecording;
 
     /**
-     * <p>Specifies whether to swap the left and right audio channels. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to swap left and right audio channels. Default value: false (not swapped).</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

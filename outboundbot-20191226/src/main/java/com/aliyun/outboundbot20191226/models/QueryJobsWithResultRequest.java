@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryJobsWithResultRequest extends TeaModel {
     /**
-     * <p>Filters for calls that ended on or before the specified time. Specify the time as a UNIX timestamp in milliseconds.</p>
+     * <p>The filter condition for the call end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1579055783000</p>
@@ -14,7 +14,7 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public Long endActualTimeFilter;
 
     /**
-     * <p>Filters jobs by whether the call was answered.</p>
+     * <p>Specifies whether the call was answered.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public Boolean hasAnsweredFilter;
 
     /**
-     * <p>Filters jobs by whether the call was disconnected due to a rejection.</p>
+     * <p>Specifies whether the call was hung up due to rejection.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public Boolean hasHangUpByRejectionFilter;
 
     /**
-     * <p>Filters jobs by whether the call flow was completed.</p>
+     * <p>Specifies whether the call reached the end of the flow.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,7 +51,7 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The job failure reasons to filter by.</p>
+     * <p>The list of job failure reasons.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;NoAnswer&quot;]</p>
@@ -70,20 +70,14 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public String jobGroupId;
 
     /**
-     * <p>The job status to filter by. Valid values:</p>
+     * <p>The job status filter. Valid values:</p>
      * <ul>
-     * <li><p><code>Scheduling</code>: The job is scheduled and awaiting execution.</p>
-     * </li>
-     * <li><p><code>Executing</code>: The job is in progress.</p>
-     * </li>
-     * <li><p><code>Succeeded</code>: The job is completed and the contact was reached.</p>
-     * </li>
-     * <li><p><code>Paused</code>: The job is paused.</p>
-     * </li>
-     * <li><p><code>Failed</code>: The job completed but failed to reach the contact.</p>
-     * </li>
-     * <li><p><code>Cancelled</code>: The job was canceled by a user.</p>
-     * </li>
+     * <li>Scheduling: scheduling.</li>
+     * <li>Executing: executing.</li>
+     * <li>Succeeded: ended - reached.</li>
+     * <li>Paused: paused.</li>
+     * <li>Failed: ended - not reached.</li>
+     * <li>Cancelled: cancelled - manual intervention.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,9 +87,9 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public String jobStatusFilter;
 
     /**
-     * <p>The filter conditions for calls, based on their labels.</p>
+     * <p>The filter condition for labels associated with calls.</p>
      * <blockquote>
-     * <p>This filter applies only to labels that are configured with a predefined set of values (enumerated values). These labels are typically used in large model scenarios.</p>
+     * <p>This condition only supports filtering by labels that have specific enumerated label values configured, that is, labels with specific label values configured in large language model scenarios.</p>
      * </blockquote>
      */
     @NameInMap("LabelsJson")
@@ -104,9 +98,8 @@ public class QueryJobsWithResultRequest extends TeaModel {
     /**
      * <p>The page number.</p>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is required.</notice></p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -115,9 +108,9 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size</p>
+     * <p>The page size.</p>
      * <blockquote>
-     * <p>Notice: This parameter is required.</p>
+     * <p>Notice: This parameter is required.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -127,7 +120,7 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search query for a specific job, such as the contact\&quot;s phone number.</p>
+     * <p>The search content. You can search by phone number.</p>
      * 
      * <strong>example:</strong>
      * <p>1882020****</p>
@@ -136,7 +129,7 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public String queryText;
 
     /**
-     * <p>Filters for calls that started on or after the specified time. Specify the time as a UNIX timestamp in milliseconds.</p>
+     * <p>The filter condition for the call start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1579055782000</p>
@@ -145,76 +138,43 @@ public class QueryJobsWithResultRequest extends TeaModel {
     public Long startActualTimeFilter;
 
     /**
-     * <p>The call statuses to filter by. You can specify multiple statuses as a JSON array of strings, such as <code>[&quot;Executing&quot;, &quot;Succeeded&quot;]</code>.
-     * Valid values:
-     * (Note: The <strong>Succeeded</strong> status is subdivided into more specific reasons. The general <strong>Succeeded</strong> (1: Connected) status is no longer returned. Instead, one of the more specific sub-statuses is returned.)</p>
+     * <p>The call status, such as [&quot;Executing&quot;,&quot;Succeeded&quot;]. Separate multiple values with commas (,).</p>
+     * <p>Valid values:</p>
+     * <p>(Note: The <strong>Succeeded</strong> status has been subdivided into specific reasons. The <strong>Succeeded</strong>: 1 (answered) status is no longer returned. Instead, specific sub-reason types are returned.)</p>
      * <ul>
-     * <li><p><strong>Executing</strong> (0): The call is being placed.</p>
-     * </li>
-     * <li><p><strong>Succeeded</strong> (1): The call was connected.</p>
-     * </li>
-     * <li><p><strong>NoAnswer</strong> (2): Not connected - No answer.</p>
-     * </li>
-     * <li><p><strong>NotExist</strong> (3): Not connected - The dialed number does not exist.</p>
-     * </li>
-     * <li><p><strong>Busy</strong> (4): Not connected - The line was busy.</p>
-     * </li>
-     * <li><p><strong>Cancelled</strong> (5): Not placed - The job was stopped before the call could be dialed.</p>
-     * </li>
-     * <li><p><strong>Failed</strong> (6): The call failed.</p>
-     * </li>
-     * <li><p><strong>NotConnected</strong> (7): Not connected - The call could not be connected.</p>
-     * </li>
-     * <li><p><strong>PoweredOff</strong> (8): Not connected - The recipient\&quot;s phone was powered off.</p>
-     * </li>
-     * <li><p><strong>OutOfService</strong> (9): Not connected - The recipient\&quot;s number is out of service.</p>
-     * </li>
-     * <li><p><strong>InArrears</strong> (10): Not connected - The recipient\&quot;s account is in arrears.</p>
-     * </li>
-     * <li><p><strong>EmptyNumber</strong> (11): Not placed - The number was identified as an empty number and was not dialed.</p>
-     * </li>
-     * <li><p><strong>PerDayCallCountLimit</strong> (12): Not placed - The daily call limit was reached.</p>
-     * </li>
-     * <li><p><strong>ContactBlockList</strong> (13): Not placed - The number is on a blocklist.</p>
-     * </li>
-     * <li><p><strong>CallerNotRegistered</strong> (14): Not placed - The calling number is not registered.</p>
-     * </li>
-     * <li><p><strong>Terminated</strong> (15): Not placed - The call was terminated.</p>
-     * </li>
-     * <li><p><strong>VerificationCancelled</strong> (16): Not placed - Canceled after failing a pre-call verification.</p>
-     * </li>
-     * <li><p><strong>OutOfServiceNoCall</strong> (17): Not placed - The number is out of service and was not dialed.</p>
-     * </li>
-     * <li><p><strong>InArrearsNoCall</strong> (18): Not placed - The recipient is in arrears and was not dialed.</p>
-     * </li>
-     * <li><p><strong>CallingNumberNotExist</strong> (19): Not placed - The calling number does not exist.</p>
-     * </li>
-     * <li><p><strong>SucceededFinish</strong> (20): Connected - The call completed normally.</p>
-     * </li>
-     * <li><p><strong>SucceededChatbotHangUpAfterNoAnswer</strong> (21): Connected - The chatbot hung up after a rejection.</p>
-     * </li>
-     * <li><p><strong>SucceededChatbotHangUpAfterSilence</strong> (22): Connected - The chatbot hung up due to a silence timeout.</p>
-     * </li>
-     * <li><p><strong>SucceededClientHangUpAfterNoAnswer</strong> (23): Connected - The user hung up after a rejection.</p>
-     * </li>
-     * <li><p><strong>SucceededClientHangUp</strong> (24): Connected - The user hung up for no specific reason.</p>
-     * </li>
-     * <li><p><strong>SucceededTransferByIntent</strong> (25): Connected - The call was transferred to an agent based on user intent.</p>
-     * </li>
-     * <li><p><strong>SucceededTransferAfterNoAnswer</strong> (26): Connected - The call was transferred to an agent after a rejection.</p>
-     * </li>
-     * <li><p><strong>SucceededInoInterAction</strong> (27): Connected - No interaction from the user.</p>
-     * </li>
-     * <li><p><strong>SucceededError</strong> (28): Connected - The call was interrupted by a system error.</p>
-     * </li>
-     * <li><p><strong>SucceededSpecialInterceptVoiceAssistant</strong> (29): Connected - Intercepted by a voice assistant.</p>
-     * </li>
-     * <li><p><strong>SucceededSpecialInterceptExtensionNumberTransfer</strong> (30): Connected - Intercepted for an extension number transfer.</p>
-     * </li>
-     * <li><p><strong>SucceededSpecialInterceptCustomSpecialIntercept</strong> (31): Connected - Intercepted by a custom rule.</p>
-     * </li>
-     * <li><p><strong>HighRiskSipCode</strong> (32): Not placed - High-risk SIP code.</p>
-     * </li>
+     * <li><strong>Executing</strong>: 0 (dialing).</li>
+     * <li><strong>Succeeded</strong>: 1 (answered).</li>
+     * <li><strong>NoAnswer</strong>: 2 (not answered - no one picked up).</li>
+     * <li><strong>NotExist</strong>: 3 (not answered - nonexistent number).</li>
+     * <li><strong>Busy</strong>: 4 (not answered - busy).</li>
+     * <li><strong>Cancelled</strong>: 5 (not dialed - task stopped).</li>
+     * <li><strong>Failed</strong>: 6 (failed).</li>
+     * <li><strong>NotConnected</strong>: 7 (not answered - unreachable).</li>
+     * <li><strong>PoweredOff</strong>: 8 (not answered - powered off).</li>
+     * <li><strong>OutOfService</strong>: 9 (not answered - callee out of service).</li>
+     * <li><strong>InArrears</strong>: 10 (not answered - callee has overdue payment).</li>
+     * <li><strong>EmptyNumber</strong>: 11 (not dialed - nonexistent number, no outbound call).</li>
+     * <li><strong>PerDayCallCountLimit</strong>: 12 (not dialed - daily limit exceeded).</li>
+     * <li><strong>ContactBlockList</strong>: 13 (not dialed - blacklisted).</li>
+     * <li><strong>CallerNotRegistered</strong>: 14 (not dialed - caller number not registered).</li>
+     * <li><strong>Terminated</strong>: 15 (not dialed - terminated).</li>
+     * <li><strong>VerificationCancelled</strong>: 16 (not dialed - cancelled due to pre-call verification failure).</li>
+     * <li><strong>OutOfServiceNoCall</strong>: 17 (not dialed - callee out of service, no outbound call).</li>
+     * <li><strong>InArrearsNoCall</strong>: 18 (not dialed - callee has overdue payment, no outbound call).</li>
+     * <li><strong>CallingNumberNotExist</strong>: 19 (not dialed - caller number does not exist).</li>
+     * <li><strong>SucceededFinish</strong>: 20 (answered - completed normally).</li>
+     * <li><strong>SucceededChatbotHangUpAfterNoAnswer</strong>: 21 (answered - robot hung up after rejection).</li>
+     * <li><strong>SucceededChatbotHangUpAfterSilence</strong>: 22 (answered - hung up due to silence timeout).</li>
+     * <li><strong>SucceededClientHangUpAfterNoAnswer</strong>: 23 (answered - user hung up after rejection).</li>
+     * <li><strong>SucceededClientHangUp</strong>: 24 (answered - user hung up without reason).</li>
+     * <li><strong>SucceededTransferByIntent</strong>: 25 (answered - transferred to agent by intent).</li>
+     * <li><strong>SucceededTransferAfterNoAnswer</strong>: 26 (answered - transferred to agent after rejection).</li>
+     * <li><strong>SucceededInoInterAction</strong>: 27 (answered - no interaction from user side).</li>
+     * <li><strong>SucceededError</strong>: 28 (answered - interrupted by system error).</li>
+     * <li><strong>SucceededSpecialInterceptVoiceAssistant</strong>: 29 (answered - special interception - voice assistant).</li>
+     * <li><strong>SucceededSpecialInterceptExtensionNumberTransfer</strong>: 30 (answered - special interception - extension number transfer).</li>
+     * <li><strong>SucceededSpecialInterceptCustomSpecialIntercept</strong>: 31 (answered - special interception - custom interception).</li>
+     * <li><strong>HighRiskSipCode</strong>: 32 (not dialed - high risk, no outbound call).</li>
      * </ul>
      * 
      * <strong>example:</strong>

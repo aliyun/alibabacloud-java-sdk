@@ -41,7 +41,7 @@ public class SubmitBatchJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
