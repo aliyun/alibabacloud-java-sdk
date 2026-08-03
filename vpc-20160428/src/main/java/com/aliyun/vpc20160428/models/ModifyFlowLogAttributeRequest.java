@@ -44,7 +44,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The IP address version of the traffic captured by the flow log.</p>
+     * <p>The IP version of the traffic captured by the flow log.</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>

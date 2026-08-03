@@ -17,7 +17,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page in paging queries.</p>
+     * <p>The number of entries per page in paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -115,7 +115,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
+     * <p>The type of the resource whose traffic you want to catch. Valid values:</p>
      * <ul>
      * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC).</p>
      * </li>
@@ -155,7 +155,7 @@ public class CreateFlowLogRequest extends TeaModel {
      * </li>
      * <li><p><strong>Allow</strong>: traffic allowed by access control.</p>
      * </li>
-     * <li><p><strong>Drop</strong>: traffic denied by access control.</p>
+     * <li><p><strong>Drop</strong>: traffic deny by access control.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -318,7 +318,7 @@ public class CreateFlowLogRequest extends TeaModel {
     public static class CreateFlowLogRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -328,7 +328,7 @@ public class CreateFlowLogRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

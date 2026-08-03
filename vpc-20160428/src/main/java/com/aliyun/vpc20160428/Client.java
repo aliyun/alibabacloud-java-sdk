@@ -56,8 +56,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "vpc.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "vpc.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhongwei", "vpc.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "vpc.cn-zhengzhou-jva.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "vpc.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "vpc.cn-wulanchabu-gic-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "vpc.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-wuhan-lr", "vpc.cn-wuhan-lr.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "vpc.cn-shenzhen.aliyuncs.com"),
@@ -5113,7 +5113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</p>
+     * <p><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</p>
      * <ul>
      * <li>If the flow log is in the <strong>Activating</strong> state, the flow log is being created.</li>
      * <li>If the flow log is in the <strong>Active</strong> state, the flow log is created and activated.</li>
@@ -5220,7 +5220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</p>
+     * <p><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</p>
      * <ul>
      * <li>If the flow log is in the <strong>Activating</strong> state, the flow log is being created.</li>
      * <li>If the flow log is in the <strong>Active</strong> state, the flow log is created and activated.</li>
@@ -5707,7 +5707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you purchase ports, you can select one of the following combination types to provide disaster recovery capabilities for your business or workloads.</p>
+     * <p>When you purchase ports, you can select one of the following three combination types to provide disaster recovery capabilities for your business or workloads.</p>
      * <ul>
      * <li>Maximum disaster recovery: You apply for resources in two access points and establish four independent Express Connect circuit connections. The SLA availability for maximum disaster recovery is no less than 99.99%.</li>
      * <li>Enhanced disaster recovery: You apply for resources in two access points and establish two independent Express Connect circuit connections. The SLA availability for enhanced disaster recovery is no less than 99.95%.</li>
@@ -5715,7 +5715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to avoid service disruption caused by single-line failures through multi-line disaster recovery.</p>
+     * <p>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to prevent service disruptions caused by single-line failures through multi-line disaster recovery.</p>
      * 
      * @param request CreateHighReliablePhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5803,7 +5803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you purchase ports, you can select one of the following combination types to provide disaster recovery capabilities for your business or workloads.</p>
+     * <p>When you purchase ports, you can select one of the following three combination types to provide disaster recovery capabilities for your business or workloads.</p>
      * <ul>
      * <li>Maximum disaster recovery: You apply for resources in two access points and establish four independent Express Connect circuit connections. The SLA availability for maximum disaster recovery is no less than 99.99%.</li>
      * <li>Enhanced disaster recovery: You apply for resources in two access points and establish two independent Express Connect circuit connections. The SLA availability for enhanced disaster recovery is no less than 99.95%.</li>
@@ -5811,7 +5811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to avoid service disruption caused by single-line failures through multi-line disaster recovery.</p>
+     * <p>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to prevent service disruptions caused by single-line failures through multi-line disaster recovery.</p>
      * 
      * @param request CreateHighReliablePhysicalConnectionRequest
      * @return CreateHighReliablePhysicalConnectionResponse
@@ -13311,10 +13311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete only Express Connect circuit connections that are in the <strong>Allocated</strong>, <strong>Confirmed</strong>, <strong>Rejected</strong>, <strong>Canceled</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.</p>
+     * <p>You can delete only Express Connect circuits that are in the <strong>Allocated</strong>, <strong>Confirmed</strong>, <strong>Rejected</strong>, <strong>Canceled</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect circuit connection.</p>
+     * <p>Deletes an Express Connect circuit.</p>
      * 
      * @param request DeletePhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13370,10 +13370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete only Express Connect circuit connections that are in the <strong>Allocated</strong>, <strong>Confirmed</strong>, <strong>Rejected</strong>, <strong>Canceled</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.</p>
+     * <p>You can delete only Express Connect circuits that are in the <strong>Allocated</strong>, <strong>Confirmed</strong>, <strong>Rejected</strong>, <strong>Canceled</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an Express Connect circuit connection.</p>
+     * <p>Deletes an Express Connect circuit.</p>
      * 
      * @param request DeletePhysicalConnectionRequest
      * @return DeletePhysicalConnectionResponse
@@ -17285,7 +17285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries flow logs by calling the DescribeFlowLogs operation.</p>
+     * <p>Queries flow logs.</p>
      * 
      * @param request DescribeFlowLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17389,7 +17389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries flow logs by calling the DescribeFlowLogs operation.</p>
+     * <p>Queries flow logs.</p>
      * 
      * @param request DescribeFlowLogsRequest
      * @return DescribeFlowLogsResponse
@@ -19127,7 +19127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For supported filter options, see the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
+     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries information about Express Connect circuits in a specified region.</p>
@@ -19206,7 +19206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For supported filter options, see the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
+     * <p>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <strong>DescribePhysicalConnections</strong> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <strong>Key</strong> in the <strong>request parameters</strong> section of this topic.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries information about Express Connect circuits in a specified region.</p>
@@ -27759,7 +27759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyFlowLogAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the flow log has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<ul>
+     * <li><strong>ModifyFlowLogAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<ul>
      * <li>If the flow log is in the <strong>Modifying</strong> state, the flow log is being modified.</li>
      * <li>If the flow log is in the <strong>Active</strong> or <strong>Inactive</strong> state, the flow log has been modified.</li>
      * </ul>
@@ -27841,7 +27841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>ModifyFlowLogAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID, but the flow log has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<ul>
+     * <li><strong>ModifyFlowLogAttribute</strong> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<ul>
      * <li>If the flow log is in the <strong>Modifying</strong> state, the flow log is being modified.</li>
      * <li>If the flow log is in the <strong>Active</strong> or <strong>Inactive</strong> state, the flow log has been modified.</li>
      * </ul>
@@ -29538,7 +29538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items: </p>
+     * <p>When you call this operation, note the following items: </p>
      * <ul>
      * <li>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <strong>Initial</strong>, <strong>Enabled</strong>, or <strong>Rejected</strong> state.  </li>
      * <li>You cannot modify Express Connect circuits in the <strong>Canceled</strong>, <strong>Allocating</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.  </li>
@@ -29546,7 +29546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an Express Connect circuit.</p>
+     * <p>Modifies the configuration of an Express Connect circuit.</p>
      * 
      * @param request ModifyPhysicalConnectionAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29569,6 +29569,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.downDelayTime)) {
+            query.put("DownDelayTime", request.downDelayTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lineOperator)) {
@@ -29638,7 +29642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items: </p>
+     * <p>When you call this operation, note the following items: </p>
      * <ul>
      * <li>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <strong>Initial</strong>, <strong>Enabled</strong>, or <strong>Rejected</strong> state.  </li>
      * <li>You cannot modify Express Connect circuits in the <strong>Canceled</strong>, <strong>Allocating</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.  </li>
@@ -29646,7 +29650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an Express Connect circuit.</p>
+     * <p>Modifies the configuration of an Express Connect circuit.</p>
      * 
      * @param request ModifyPhysicalConnectionAttributeRequest
      * @return ModifyPhysicalConnectionAttributeResponse

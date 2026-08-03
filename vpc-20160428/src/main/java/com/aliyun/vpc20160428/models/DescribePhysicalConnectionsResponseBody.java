@@ -250,6 +250,12 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DeviceFeaturesSelected")
+        public String deviceFeaturesSelected;
+
+        @NameInMap("DownDelayTime")
+        public Integer downDelayTime;
+
         @NameInMap("EnabledTime")
         public String enabledTime;
 
@@ -423,6 +429,22 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setDeviceFeaturesSelected(String deviceFeaturesSelected) {
+            this.deviceFeaturesSelected = deviceFeaturesSelected;
+            return this;
+        }
+        public String getDeviceFeaturesSelected() {
+            return this.deviceFeaturesSelected;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setDownDelayTime(Integer downDelayTime) {
+            this.downDelayTime = downDelayTime;
+            return this;
+        }
+        public Integer getDownDelayTime() {
+            return this.downDelayTime;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setEnabledTime(String enabledTime) {

@@ -15,9 +15,9 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,20 +31,23 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>物理专线的描述信息</p>
+     * <p>Description of the Express Connect circuit</p>
      */
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DownDelayTime")
+    public Integer downDelayTime;
+
     /**
-     * <p>The carrier that provides the access to the physical line. Valid values:</p>
+     * <p>The carrier that provides the access to the physical connection. Valid values:</p>
      * <ul>
-     * <li><strong>CT</strong>: China Telecom.</li>
-     * <li><strong>CU</strong>: China Unicom.</li>
-     * <li><strong>CM</strong>: China Mobile.</li>
-     * <li><strong>CO</strong>: other carriers in the Chinese mainland.</li>
-     * <li><strong>Equinix</strong>: Equinix.</li>
-     * <li><strong>Other</strong>: other carriers outside the Chinese mainland.</li>
+     * <li><strong>CT</strong>: China Telecom</li>
+     * <li><strong>CU</strong>: China Unicom</li>
+     * <li><strong>CM</strong>: China Mobile</li>
+     * <li><strong>CO</strong>: Other carriers in the Chinese mainland</li>
+     * <li><strong>Equinix</strong>: Equinix</li>
+     * <li><strong>Other</strong>: Other carriers outside the Chinese mainland</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +61,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>物理专线的名称</p>
+     * <p>Name of the Express Connect circuit</p>
      */
     @NameInMap("Name")
     public String name;
@@ -73,7 +76,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <p>The geographical location of the on-premises data center.</p>
      * 
      * <strong>example:</strong>
-     * <p>浙江省杭州市XX区XX街道XX号</p>
+     * <p>No. XX, XX Road, XX District, Hangzhou City, Zhejiang Province</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
@@ -92,15 +95,15 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
      * <p>The port type of the Express Connect circuit access point. Valid values:</p>
      * <ul>
      * <li><strong>100Base-T</strong>: 100M Ethernet port.</li>
-     * <li><strong>1000Base-T (default)</strong>: 1 GE port.</li>
+     * <li><strong>1000Base-T (default)</strong>: 1 GE electrical port.</li>
      * <li><strong>1000Base-LX</strong>: GE single-mode optical port (10 km).</li>
-     * <li><strong>10GBase-T</strong>: 10 GE port.</li>
+     * <li><strong>10GBase-T</strong>: 10 GE electrical port.</li>
      * <li><strong>10GBase-LR</strong>: 10 GE single-mode optical port (10 km).</li>
      * <li><strong>40GBase-LR</strong>: 40 GE single-mode optical port.</li>
      * <li><strong>100GBase-LR</strong>: 100 GE single-mode optical port.</li>
      * </ul>
      * <blockquote>
-     * <p>40GBase-LR and 100GBase-LR are subject to the availability of backend ports. Contact your account manager for more information.</p>
+     * <p>To create 40GBase-LR or 100GBase-LR ports, check the actual port availability on the backend. Contact your account manager for details.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -171,6 +174,14 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyPhysicalConnectionAttributeRequest setDownDelayTime(Integer downDelayTime) {
+        this.downDelayTime = downDelayTime;
+        return this;
+    }
+    public Integer getDownDelayTime() {
+        return this.downDelayTime;
     }
 
     public ModifyPhysicalConnectionAttributeRequest setLineOperator(String lineOperator) {

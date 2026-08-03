@@ -47,7 +47,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of device advanced capabilities.</p>
+     * <p>The list of advanced device capabilities.</p>
      */
     @NameInMap("DeviceAdvancedCapacity")
     public java.util.List<String> deviceAdvancedCapacity;
@@ -131,7 +131,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
      * <p>The geographical location of the on-premises data center.</p>
      * 
      * <strong>example:</strong>
-     * <p>XX街道</p>
+     * <p>XX Street</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
@@ -155,7 +155,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>40GBase-LR and 100GBase-LR are created based on the actual port availability. Contact your account manager for details.</p>
+     * <p>40GBase-LR and 100GBase-LR are subject to the availability of backend ports. Contact your account manager for more information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     public String portType;
 
     /**
-     * <p>The instance ID of the redundant Express Connect circuit. The redundant circuit must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
+     * <p>The instance ID of the redundant Express Connect circuit. The circuit must be in the <strong>Allocated</strong>, <strong>Confirmed</strong>, or <strong>Enabled</strong> state.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-119mfjzm****</p>
@@ -392,7 +392,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     public static class CreatePhysicalConnectionRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -402,7 +402,7 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

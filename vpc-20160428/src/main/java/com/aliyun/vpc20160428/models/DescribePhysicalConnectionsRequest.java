@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DescribePhysicalConnectionsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-001</p>
@@ -22,12 +21,6 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to return order data that has not taken effect. Valid values:</p>
-     * <ul>
-     * <li><p><strong>true</strong>: Returns order data that has not taken effect.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Does not return order data that has not taken effect.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -60,8 +53,7 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the Express Connect circuit. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -195,59 +187,6 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     public static class DescribePhysicalConnectionsRequestFilter extends TeaModel {
         /**
          * <p>The filter condition. Valid values:</p>
-         * <ul>
-         * <li><p><strong>PhysicalConnectionId</strong>: the ID of the Express Connect circuit.</p>
-         * </li>
-         * <li><p><strong>AccessPointId</strong>: the ID of the access point.</p>
-         * </li>
-         * <li><p><strong>Type</strong>: the type of the Express Connect circuit. This filter condition supports only the value <strong>VPC</strong>.</p>
-         * </li>
-         * <li><p><strong>LineOperator</strong>: the carrier of the Express Connect circuit. This filter condition supports the following values:</p>
-         * <ul>
-         * <li><strong>CT</strong>: China Telecom.</li>
-         * <li><strong>CU</strong>: China Unicom.</li>
-         * <li><strong>CM</strong>: China Mobile.</li>
-         * <li><strong>CO</strong>: Other carriers in China. </li>
-         * <li><strong>Equinix</strong>: Equinix.</li>
-         * <li><strong>Other</strong>: Other carriers outside China.</li>
-         * </ul>
-         * </li>
-         * <li><p><strong>Spec</strong>: the specification of the Express Connect circuit. This filter condition supports the following values:</p>
-         * <ul>
-         * <li><strong>1G and below</strong>.</li>
-         * <li><strong>10G</strong>.</li>
-         * <li><strong>40G</strong>.</li>
-         * <li><strong>100G</strong>.<blockquote>
-         * <p> The <strong>40G</strong> and <strong>100G</strong> specifications are not available by default. Only users who have submitted an application to their account manager and received approval can use these values.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * </li>
-         * <li><p><strong>Status</strong>: the status of the Express Connect circuit. This filter condition supports the following values:</p>
-         * <ul>
-         * <li><strong>Initial</strong>: pending application.</li>
-         * <li><strong>Approved</strong>: application approved.</li>
-         * <li><strong>Allocating</strong>: resources are being allocated.</li>
-         * <li><strong>Allocated</strong>: under construction.   </li>
-         * <li><strong>Confirmed</strong>: pending user confirmation.   </li>
-         * <li><strong>Enabled</strong>: enabled.</li>
-         * <li><strong>Rejected</strong>: application denied.</li>
-         * <li><strong>Canceled</strong>: canceled.</li>
-         * <li><strong>Allocation Failed</strong>: resource allocation failed.</li>
-         * <li><strong>Terminating</strong>: being terminated.</li>
-         * <li><strong>Terminated</strong>: terminated.</li>
-         * </ul>
-         * </li>
-         * <li><p><strong>Name</strong>: the name of the Express Connect circuit.</p>
-         * </li>
-         * <li><p><strong>ProductType</strong>: the type of the Express Connect circuit. Valid values:</p>
-         * <ul>
-         * <li><strong>VirtualPhysicalConnection</strong>: shared Express Connect circuits.</li>
-         * <li><strong>PhysicalConnection</strong>: dedicated Express Connect circuit.</li>
-         * </ul>
-         * </li>
-         * </ul>
-         * <p>You can specify up to 5 filter conditions at a time. The filter conditions have an <strong>AND</strong> relationship. Results are returned only when all filter conditions are met.</p>
          * 
          * <strong>example:</strong>
          * <p>Name</p>
@@ -290,7 +229,6 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     public static class DescribePhysicalConnectionsRequestTags extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -300,7 +238,6 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
