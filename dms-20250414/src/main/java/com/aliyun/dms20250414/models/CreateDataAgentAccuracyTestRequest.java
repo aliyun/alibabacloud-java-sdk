@@ -14,7 +14,7 @@ public class CreateDataAgentAccuracyTestRequest extends TeaModel {
     public String customAgentId;
 
     /**
-     * <p>The data source. We recommend that you configure this in the custom agent.</p>
+     * <p>Deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -23,6 +23,8 @@ public class CreateDataAgentAccuracyTestRequest extends TeaModel {
     public String dataset;
 
     /**
+     * <p>The data source. We recommend that you configure this in the custom agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;isInternal&quot;:&quot;N&quot;,&quot;TableIds&quot;:[&quot;51<em><strong>70&quot;,&quot;51</strong></em>71&quot;],&quot;DataSourceType&quot;:&quot;database&quot;,&quot;Database&quot;:&quot;internal_data_employees&quot;,&quot;DmsInstanceId&quot;:&quot;27<em><strong>5&quot;,&quot;DmsDatabaseId&quot;:&quot;71</strong></em>04&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;],&quot;FileId&quot;:&quot;rm-
      * ***&quot;,&quot;DbName&quot;:&quot;internal_data_employees&quot;,&quot;CatalogName&quot;:&quot;def&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;Engine&quot;:&quot;mysql&quot;}]</p>

@@ -23,7 +23,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token information.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>no use</p>
@@ -41,7 +41,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The name of the field by which to sort.</p>
+     * <p>The field name used for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -50,7 +50,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number to start from.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

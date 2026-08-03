@@ -313,6 +313,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</p>
+     * 
+     * @param request CheckDataAgentMemoryConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckDataAgentMemoryConfigResponse
+     */
+    public CheckDataAgentMemoryConfigResponse checkDataAgentMemoryConfigWithOptions(CheckDataAgentMemoryConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckDataAgentMemoryConfig"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckDataAgentMemoryConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</p>
+     * 
+     * @param request CheckDataAgentMemoryConfigRequest
+     * @return CheckDataAgentMemoryConfigResponse
+     */
+    public CheckDataAgentMemoryConfigResponse checkDataAgentMemoryConfig(CheckDataAgentMemoryConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkDataAgentMemoryConfigWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Configure the airflow\.cfg file for DMS Airflow.</p>
      * 
@@ -374,6 +418,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ConfigAirflowResponse configAirflow(ConfigAirflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.configAirflowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ConfigDataAgentMemory</p>
+     * 
+     * @param request ConfigDataAgentMemoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigDataAgentMemoryResponse
+     */
+    public ConfigDataAgentMemoryResponse configDataAgentMemoryWithOptions(ConfigDataAgentMemoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallEnabled)) {
+            query.put("RecallEnabled", request.recallEnabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConfigDataAgentMemory"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigDataAgentMemoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ConfigDataAgentMemory</p>
+     * 
+     * @param request ConfigDataAgentMemoryRequest
+     * @return ConfigDataAgentMemoryResponse
+     */
+    public ConfigDataAgentMemoryResponse configDataAgentMemory(ConfigDataAgentMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.configDataAgentMemoryWithOptions(request, runtime);
     }
 
     /**
@@ -1494,6 +1590,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDataAgentKnowledgeBaseResponse deleteDataAgentKnowledgeBase(DeleteDataAgentKnowledgeBaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDataAgentKnowledgeBaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the memory of a DataAgent.</p>
+     * 
+     * @param request DeleteDataAgentMemoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataAgentMemoryResponse
+     */
+    public DeleteDataAgentMemoryResponse deleteDataAgentMemoryWithOptions(DeleteDataAgentMemoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataAgentMemory"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataAgentMemoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the memory of a DataAgent.</p>
+     * 
+     * @param request DeleteDataAgentMemoryRequest
+     * @return DeleteDataAgentMemoryResponse
+     */
+    public DeleteDataAgentMemoryResponse deleteDataAgentMemory(DeleteDataAgentMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataAgentMemoryWithOptions(request, runtime);
     }
 
     /**
@@ -3732,6 +3876,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the DataAgent memory list (up to 50 memories per RAM user).</p>
+     * 
+     * @param request ListDataAgentMemoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentMemoryResponse
+     */
+    public ListDataAgentMemoryResponse listDataAgentMemoryWithOptions(ListDataAgentMemoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentPattern)) {
+            query.put("ContentPattern", request.contentPattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromId)) {
+            query.put("FromId", request.fromId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memFrom)) {
+            query.put("MemFrom", request.memFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryAll)) {
+            query.put("QueryAll", request.queryAll);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentMemory"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentMemoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the DataAgent memory list (up to 50 memories per RAM user).</p>
+     * 
+     * @param request ListDataAgentMemoryRequest
+     * @return ListDataAgentMemoryResponse
+     */
+    public ListDataAgentMemoryResponse listDataAgentMemory(ListDataAgentMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentMemoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the list of historical session descriptions for a Data Agent.</p>
      * 
      * @param request ListDataAgentSessionRequest
@@ -3816,7 +4036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the collaborative workspaces under the primary account with pagination.</p>
+     * <p>Retrieves the workspaces under the primary account with pagination.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3880,7 +4100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the collaborative workspaces under the primary account with pagination.</p>
+     * <p>Retrieves the workspaces under the primary account with pagination.</p>
      * 
      * @param request ListDataAgentWorkspaceRequest
      * @return ListDataAgentWorkspaceResponse
@@ -6150,6 +6370,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDataAgentAccuracyTestResponse updateDataAgentAccuracyTest(UpdateDataAgentAccuracyTestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataAgentAccuracyTestWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the memory of a DataAgent.</p>
+     * 
+     * @param request UpdateDataAgentMemoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataAgentMemoryResponse
+     */
+    public UpdateDataAgentMemoryResponse updateDataAgentMemoryWithOptions(UpdateDataAgentMemoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromId)) {
+            query.put("FromId", request.fromId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memFrom)) {
+            query.put("MemFrom", request.memFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataAgentMemory"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataAgentMemoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the memory of a DataAgent.</p>
+     * 
+     * @param request UpdateDataAgentMemoryRequest
+     * @return UpdateDataAgentMemoryResponse
+     */
+    public UpdateDataAgentMemoryResponse updateDataAgentMemory(UpdateDataAgentMemoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataAgentMemoryWithOptions(request, runtime);
     }
 
     /**

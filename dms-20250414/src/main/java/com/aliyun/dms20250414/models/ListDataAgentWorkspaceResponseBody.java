@@ -38,7 +38,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token information.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>no use</p>
@@ -127,10 +127,10 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The creation time of the workspace. This value is a UNIX timestamp in seconds.</p>
+         * <p>The creation time of the workspace, in UNIX timestamp format (milliseconds).</p>
          * 
          * <strong>example:</strong>
-         * <p>1765960516</p>
+         * <p>1765960516000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -153,14 +153,20 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether session sharing is enabled for the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSessionShareEnabled")
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</p>
+         * <p>The most recent modification time of the workspace, in UNIX timestamp format (milliseconds).</p>
          * 
          * <strong>example:</strong>
-         * <p>1765961516</p>
+         * <p>1765961516000</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
@@ -183,6 +189,12 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("TotalMember")
         public Long totalMember;
 
+        /**
+         * <p>The workspace type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>personal</p>
+         */
         @NameInMap("Type")
         public String type;
 
