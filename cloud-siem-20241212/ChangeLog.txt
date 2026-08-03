@@ -1,3 +1,8 @@
+2026-08-03 Version: 2.5.2
+- Update API ListIncidents: add request parameters DetectionRuleIds.
+- Update API ListIncidents: add response parameters Body.Incidents.$.DetectionRuleName.
+
+
 2026-07-30 Version: 2.5.1
 - Update API CreateDetectionRule: add request parameters DetectionRules.
 - Update API GetDataStorage: add response parameters Body.Data.LogProjectState.

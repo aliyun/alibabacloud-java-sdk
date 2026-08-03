@@ -13,6 +13,9 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     @NameInMap("AlertUuid")
     public String alertUuid;
 
+    @NameInMap("DetectionRuleIds")
+    public java.util.List<String> detectionRuleIds;
+
     /**
      * <p>The end time as a UNIX timestamp in milliseconds (ms).</p>
      * 
@@ -240,6 +243,14 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     }
     public String getAlertUuid() {
         return this.alertUuid;
+    }
+
+    public ListIncidentsShrinkRequest setDetectionRuleIds(java.util.List<String> detectionRuleIds) {
+        this.detectionRuleIds = detectionRuleIds;
+        return this;
+    }
+    public java.util.List<String> getDetectionRuleIds() {
+        return this.detectionRuleIds;
     }
 
     public ListIncidentsShrinkRequest setEndTime(Long endTime) {

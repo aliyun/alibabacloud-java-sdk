@@ -4185,6 +4185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlertUuid", request.alertUuid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.detectionRuleIds)) {
+            body.put("DetectionRuleIds", request.detectionRuleIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             body.put("EndTime", request.endTime);
         }

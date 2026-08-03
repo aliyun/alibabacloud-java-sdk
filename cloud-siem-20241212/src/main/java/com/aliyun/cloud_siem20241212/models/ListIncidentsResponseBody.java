@@ -150,6 +150,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("DetectionRuleId")
         public String detectionRuleId;
 
+        @NameInMap("DetectionRuleName")
+        public String detectionRuleName;
+
         @NameInMap("EntityInfos")
         public String entityInfos;
 
@@ -303,6 +306,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public String getDetectionRuleId() {
             return this.detectionRuleId;
+        }
+
+        public ListIncidentsResponseBodyIncidents setDetectionRuleName(String detectionRuleName) {
+            this.detectionRuleName = detectionRuleName;
+            return this;
+        }
+        public String getDetectionRuleName() {
+            return this.detectionRuleName;
         }
 
         public ListIncidentsResponseBodyIncidents setEntityInfos(String entityInfos) {
