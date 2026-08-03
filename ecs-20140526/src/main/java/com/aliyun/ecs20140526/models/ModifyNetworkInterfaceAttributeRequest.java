@@ -48,7 +48,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters under the letter categorization in Unicode, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. The name can contain characters under the letter categorization in Unicode, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>eniTestName</p>
@@ -57,7 +57,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String networkInterfaceName;
 
     /**
-     * <p>The communication parameters of the network interface controller (NIC).</p>
+     * <p>The communication parameter of the network interface controller (NIC).</p>
      */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
@@ -277,7 +277,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: integers from 3 to 15.</p>
+         * <p>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: integers from 3 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -335,6 +335,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
 
     public static class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork extends TeaModel {
+        @NameInMap("EnableExpress")
+        public Boolean enableExpress;
+
         /**
          * <blockquote>
          * <p>This parameter is not publicly available.</p>
@@ -364,6 +367,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         public static ModifyNetworkInterfaceAttributeRequestEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             ModifyNetworkInterfaceAttributeRequestEnhancedNetwork self = new ModifyNetworkInterfaceAttributeRequestEnhancedNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork setEnableExpress(Boolean enableExpress) {
+            this.enableExpress = enableExpress;
+            return this;
+        }
+        public Boolean getEnableExpress() {
+            return this.enableExpress;
         }
 
         public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork setEnableRss(Boolean enableRss) {

@@ -182,7 +182,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+     * <p>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -842,7 +842,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>The timeout period for a TCP connection in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: an integer from 3 to 15.</p>
+         * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: an integer from 3 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -851,7 +851,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>The timeout period for an established TCP connection. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
+         * <p>The timeout period for established TCP connections. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</p>
          * 
          * <strong>example:</strong>
          * <p>910</p>
@@ -860,7 +860,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer tcpEstablishedTimeout;
 
         /**
-         * <p>The timeout period for a UDP flow. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</p>
+         * <p>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -900,6 +900,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork extends TeaModel {
+        @NameInMap("EnableExpress")
+        public Boolean enableExpress;
+
         /**
          * <blockquote>
          * <p>This parameter is not yet available for use.</p>
@@ -929,6 +932,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public static DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork self = new DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork setEnableExpress(Boolean enableExpress) {
+            this.enableExpress = enableExpress;
+            return this;
+        }
+        public Boolean getEnableExpress() {
+            return this.enableExpress;
         }
 
         public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork setEnableRss(Boolean enableRss) {
@@ -1110,7 +1121,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues supported by the RDMA ENI.</p>
+         * <p>The number of queues supported by the RDMA network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

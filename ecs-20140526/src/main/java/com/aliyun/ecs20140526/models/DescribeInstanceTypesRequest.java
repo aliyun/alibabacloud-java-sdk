@@ -20,7 +20,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String cpuArchitecture;
 
     /**
-     * <p>The CPU architectures to query. Array length: 1 to 2.</p>
+     * <p>The specified CPU architectures to query. Array length: 1 to 2.</p>
      */
     @NameInMap("CpuArchitectures")
     public java.util.List<String> cpuArchitectures;
@@ -35,13 +35,13 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String GPUSpec;
 
     /**
-     * <p>The GPU types to query. Array length: 1 to 10.</p>
+     * <p>The specified GPU types to query. Array length: 1 to 10.</p>
      */
     @NameInMap("GpuSpecs")
     public java.util.List<String> gpuSpecs;
 
     /**
-     * <p>The instance type categories to query. Array length: 1 to 10.</p>
+     * <p>The specified instance type categories to query. Array length: 1 to 10.</p>
      */
     @NameInMap("InstanceCategories")
     public java.util.List<String> instanceCategories;
@@ -65,7 +65,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String instanceFamilyLevel;
 
     /**
-     * <p>The instance families to query. Array length: 1 to 10.</p>
+     * <p>The specified instance families to query. Array length: 1 to 10.</p>
      */
     @NameInMap("InstanceTypeFamilies")
     public java.util.List<String> instanceTypeFamilies;
@@ -89,7 +89,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>The local disk types to query. Array length: 1 to 2.</p>
+     * <p>The specified local disk types. Array length: 1 to 2.</p>
      */
     @NameInMap("LocalStorageCategories")
     public java.util.List<String> localStorageCategories;
@@ -104,7 +104,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String localStorageCategory;
 
     /**
-     * <p>The maximum number of entries per page for paging query. Maximum value: 1600.</p>
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 1600. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -206,7 +206,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumDiskQuantity;
 
     /**
-     * <p>The expected minimum number of IPv6 addresses per Elastic Network Interface (ENI) network interface controller (NIC) when querying instance types.</p>
+     * <p>The expected minimum number of IPv6 addresses per Elastic Network Interface (ENI) when querying instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -215,7 +215,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumEniIpv6AddressQuantity;
 
     /**
-     * <p>The expected minimum number of IPv4 addresses per Elastic Network Interface (ENI) network interface controller (NIC) when querying instance types.</p>
+     * <p>The expected minimum number of IPv4 addresses per Elastic Network Interface (ENI) when querying instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -224,7 +224,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumEniPrivateIpAddressQuantity;
 
     /**
-     * <p>The expected minimum number of Elastic Network Interfaces (ENIs) that can be attached per network interface controller (NIC) when querying instance types.</p>
+     * <p>The expected minimum number of Elastic Network Interfaces (ENIs) that can be attached when querying instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -233,7 +233,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumEniQuantity;
 
     /**
-     * <p>The expected minimum number of Elastic RDMA Interfaces (ERIs) per network interface controller (NIC) when querying instance types.</p>
+     * <p>The expected minimum number of Elastic RDMA Interfaces (ERIs) when querying instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -251,7 +251,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumGPUAmount;
 
     /**
-     * <p>The expected minimum initial vCPU CPU credits for burstable instances t5 and t6 when querying instance types.</p>
+     * <p>The expected minimum initial vCPU credits for burstable instances t5 and t6 when querying instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -341,7 +341,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public Integer minimumQueuePairNumber;
 
     /**
-     * <p>The expected minimum number of default queues for secondary Elastic Network Interfaces (ENIs) per network interface controller (NIC) when querying instance types.</p>
+     * <p>The expected minimum number of default queues for the secondary Elastic Network Interface (ENI) when querying instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -386,7 +386,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String physicalProcessorModel;
 
     /**
-     * <p>The processor models to query. Array length: 1 to 10.</p>
+     * <p>The specified processor models to query. Array length: 1 to 10.</p>
      */
     @NameInMap("PhysicalProcessorModels")
     public java.util.List<String> physicalProcessorModels;

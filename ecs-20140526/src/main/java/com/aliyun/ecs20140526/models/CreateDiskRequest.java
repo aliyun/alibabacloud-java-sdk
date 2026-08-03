@@ -40,7 +40,7 @@ public class CreateDiskRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The disk description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -58,7 +58,7 @@ public class CreateDiskRequest extends TeaModel {
     public String diskCategory;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including Chinese and English characters, and ASCII digits (0-9). The name can contain colons (:), underscores (_), periods (.), or hyphens (-). The name must start with a character that is categorized as letter in Unicode.</p>
+     * <p>The disk name. The name must be 2 to 128 characters in length and can contain characters that are classified as letter in Unicode (including English and Chinese characters) and ASCII digits (0-9). The name can contain colons (:), underscores (_), periods (.), or hyphens (-). The name must start with a character that is classified as letter in Unicode.</p>
      * 
      * <strong>example:</strong>
      * <p>testDiskName</p>
@@ -85,7 +85,7 @@ public class CreateDiskRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the subscription instance to which the subscription disk is automatically attached after the disk is created.</p>
+     * <p>Creates a subscription disk and automatically attaches it to the specified subscription instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp18pnlg1ds9rky4****</p>
@@ -118,7 +118,7 @@ public class CreateDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level of the enterprise SSD (ESSD) to create. Valid values:</p>
+     * <p>The performance level of the enterprise SSD (ESSD) disk. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -170,7 +170,7 @@ public class CreateDiskRequest extends TeaModel {
     public Integer size;
 
     /**
-     * <p>The ID of the snapshot to use to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</p>
+     * <p>The snapshot ID that is used to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</p>
      * 
      * <strong>example:</strong>
      * <p>s-bp67acfmxazb4p****</p>
@@ -188,7 +188,7 @@ public class CreateDiskRequest extends TeaModel {
     public String storageClusterId;
 
     /**
-     * <p>The ID of the storage set.</p>
+     * <p>The storage set ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ss-bp67acfmxazb4p****</p>
@@ -206,7 +206,7 @@ public class CreateDiskRequest extends TeaModel {
     public Integer storageSetPartitionNumber;
 
     /**
-     * <p>The list of tags for the disk.</p>
+     * <p>The tags of the disk.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDiskRequestTag> tag;

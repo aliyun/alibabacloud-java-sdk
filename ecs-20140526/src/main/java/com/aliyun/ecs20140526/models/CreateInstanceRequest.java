@@ -49,7 +49,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -58,7 +58,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster ID of the instance.</p>
+     * <p>The ID of the cluster to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>c-bp67acfmxazb4p****</p>
@@ -91,7 +91,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>The release protection attribute of the instance. Specifies whether the instance can be released from the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation.</p>
+     * <p>The release protection attribute of the instance. Specifies whether the instance can be released from the console or by calling the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -100,7 +100,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The group number of the instance in the deployment set. This parameter takes effect only when the deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
+     * <p>The number of the deployment set group to which to deploy the instance in the deployment set. This parameter takes effect only when the deployment set uses the high availability group strategy (AvailabilityGroup). Valid values: 1 to 7.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -192,7 +192,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String imageFamily;
 
     /**
-     * <p>The ID of the image used to start the instance. To use an Alibaba Cloud Marketplace image, you can view the <code>ImageId</code> on the image product page. If you do not specify <code>ImageFamily</code> to select the latest available image from an image family, this parameter is required.</p>
+     * <p>The ID of the image used to start the instance. To use an Alibaba Cloud Marketplace image, you can view the <code>ImageId</code> on the product page of the Alibaba Cloud Marketplace image. This parameter is required if you do not specify <code>ImageFamily</code> to select the latest available image from an image family.</p>
      * 
      * <strong>example:</strong>
      * <p>ubuntu_18_04_64_20G_alibase_20190624.vhd</p>
@@ -219,7 +219,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters classified under the letter category (including Chinese characters). The name can also contain colons (:), underscores (_), periods (.), and hyphens (-). If this parameter is not specified, the default value is the instance ID.</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name supports characters categorized as letters in Unicode, including Chinese characters. If this parameter is not specified, the default value is the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-node-[1,4]-alibabacloud</p>
@@ -228,7 +228,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance type.</p>
+     * <p>The instance type of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -265,8 +265,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Specifies whether the instance is an I/O optimized instance. The I/O optimization improves instance performance. Valid values:
-     * The default value for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> is none.</p>
+     * <p>Specifies whether the instance is I/O optimization enabled. Valid values:
+     * The default value for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> is none. For other instance types, the default value is optimized.</p>
      * 
      * <strong>example:</strong>
      * <p>optimized</p>
@@ -337,7 +337,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The private IP address of the instance. The IP address must be an available address within the CIDR block of the specified vSwitch (VSwitchId).</p>
+     * <p>The private IP address of the instance. The IP address must be an available address in the CIDR block of the specified vSwitch (VSwitchId).</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.236.*</p>
@@ -407,7 +407,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The interruption pattern of the spot instance. Valid values:</p>
+     * <p>The break mode of the spot instance. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Terminate</p>
@@ -416,7 +416,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String spotInterruptionBehavior;
 
     /**
-     * <p>The maximum hourly price of the instance. A maximum of three decimal places is supported. This parameter takes effect only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+     * <p>The maximum hourly price of the instance. A maximum of three decimal places are supported. This parameter takes effect only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>0.98</p>
@@ -476,7 +476,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean useAdditionalService;
 
     /**
-     * <p>The instance user data. The data must be encoded in Base64. The raw data can be up to 32 KB in size.</p>
+     * <p>Instance user data of the instance. Instance user data must be encoded in Base64. The raw data can be up to 32 KB in size.</p>
      * 
      * <strong>example:</strong>
      * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -485,7 +485,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The vSwitch ID. This parameter is required when you create a VPC-connected instance. You can call <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> to query created vSwitches.</p>
+     * <p>The vSwitch ID. This parameter is required if you create a VPC-connected instance. You can call <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> to query created vSwitches.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1s5fnvk4gn2tws0****</p>
@@ -1033,7 +1033,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The ID of the private pool. The ID of an elasticity assurance or capacity reservation.</p>
+         * <p>The ID of the private pool. The ID of the private pool is the same as that of the elasticity assurance or capacity reservation.</p>
          * 
          * <strong>example:</strong>
          * <p>eap-bp67acfmxazb4****</p>
@@ -1042,7 +1042,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The private pool option for the instance launch. A private pool is generated when an elasticity assurance or capacity reservation takes effect. You can select a private pool when you start an instance. Valid values:</p>
+         * <p>The private pool options for the instance launch. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool when you start an instance. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Open</p>
@@ -1093,7 +1093,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters classified under the letter category (including Chinese characters). The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name supports characters categorized as letters in Unicode, including Chinese characters.</p>
          * 
          * <strong>example:</strong>
          * <p>SystemDiskName</p>
@@ -1102,7 +1102,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String diskName;
 
         /**
-         * <p>The performance level (PL) of the enterprise SSD (ESSD) used as the system disk. Settings for the performance level. If the system disk is a standard SSD, this parameter is ignored. Valid values:</p>
+         * <p>The performance level of the enterprise SSD used as the system disk. Settings depend on the disk category. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -1286,7 +1286,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters classified under the letter category (including Chinese characters). The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name supports characters categorized as letters in Unicode, including Chinese characters.</p>
          * 
          * <strong>example:</strong>
          * <p>DataDiskName</p>
@@ -1315,7 +1315,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The Key Management Service (KMS) key ID for the disk.</p>
+         * <p>The ID of the Key Management Service (KMS) key used by the disk.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d****</p>
@@ -1324,7 +1324,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The performance level (PL) of the enterprise SSD used as a data disk. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Settings for the performance level. If the data disk is a standard SSD, this parameter is ignored. Valid values:</p>
+         * <p>The performance level of the enterprise SSD used as a data disk. Settings depend on the disk category. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>PL2</p>
@@ -1342,7 +1342,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The snapshot ID used to create data disk N. Valid values of N: 1 to 16.</p>
+         * <p>The ID of the snapshot used to create data disk N. Valid values of N: 1 to 16.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp17441ohwka0yuh****</p>
@@ -1351,7 +1351,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as data disks when you create an ECS instance, set this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as data disks when you create the ECS instance, set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -1464,7 +1464,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the instance, disk, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the instance, disk, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1473,7 +1473,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the instance, disk, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the instance, disk, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

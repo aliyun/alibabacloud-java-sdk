@@ -7,9 +7,9 @@ public class StopInstancesRequest extends TeaModel {
     /**
      * <p>The batch operation mode. Valid values:</p>
      * <ul>
-     * <li><p>AllTogether: All operations must succeed for the entire batch operation to be considered successful. If any operation fails, the entire batch operation fails and all executed operations are rolled back to the pre-operation state.</p>
+     * <li><p>AllTogether: all operations must succeed for the entire batch operation to be considered successful. If any operation fails, the entire batch operation fails and all executed operations are rolled back to the pre-operation state.</p>
      * </li>
-     * <li><p>SuccessFirst: Each operation in the batch is executed independently. If an operation fails, other operations can still be executed and confirmed as successful. Successful operations are committed, and failed operations are marked as failed without affecting the results of other operations.</p>
+     * <li><p>SuccessFirst: each operation in the batch is executed independently. If an operation fails, other operations can still be executed and confirmed as successful. Successful operations are committed, and failed operations are marked as failed without affecting the results of other operations.</p>
      * </li>
      * </ul>
      * <p>Default value: AllTogether.</p>
@@ -73,7 +73,7 @@ public class StopInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instances. Call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

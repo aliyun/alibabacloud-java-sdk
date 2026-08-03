@@ -13,7 +13,7 @@ public class CopySnapshotRequest extends TeaModel {
     public java.util.List<CopySnapshotRequestArn> arn;
 
     /**
-     * <p>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -43,7 +43,7 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http:// or https://. The name can contain letters, digits, and Unicode characters that are categorized under the letter classification. It can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http:// or https://. The name can contain characters that are classified as letters in Unicode, including letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * <p>Default value: null.</p>
      * <p>This parameter is required.</p>
      * 
@@ -116,8 +116,8 @@ public class CopySnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the new snapshot, in days. The snapshot is subject to automatic release when the retention period expires. Valid values: 1 to 65536.</p>
-     * <p>Default value: null, which indicates that the snapshot is not subject to automatic release.</p>
+     * <p>The retention period of the new snapshot, in days. The snapshot undergoes automatic release when the retention period expires. Valid values: 1 to 65536.</p>
+     * <p>Default value: null, which indicates that the snapshot does not undergo automatic release.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

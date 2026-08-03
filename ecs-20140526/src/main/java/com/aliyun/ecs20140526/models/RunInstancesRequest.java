@@ -133,7 +133,7 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>If the deployment set uses the high availability group strategy (AvailabilityGroup), you can use this parameter to specify the group number of the instance in the deployment set. Valid values: 1 to 7.</p>
+     * <p>If the deployment set policy is set to the high availability group policy (AvailabilityGroup), you can use this parameter to specify the group number of the instance in the deployment set. Valid values: 1 to 7.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -178,7 +178,7 @@ public class RunInstancesRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The hostnames of the instances. You can specify a different hostname for each instance when you create multiple instances.</p>
+     * <p>Specifies a different hostname for each instance when you create multiple instances.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs-host-01</p>
@@ -303,7 +303,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>Specifies whether the instance is an I/O optimized instance. The default value for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> is none, which indicates that I/O optimization is disabled. The default value for other instance types is optimized. Valid values:</p>
+     * <p>Specifies whether the instance is an I/O optimized instance. The default value for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> is none, which indicates that the instance is not I/O optimization enabled. The default value for other instance types is optimized. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>optimized</p>
@@ -312,7 +312,7 @@ public class RunInstancesRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The IPv6 addresses to assign to the primary ENI. You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
+     * <p>Specifies one or more IPv6 addresses for the primary ENI. You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.</p>
      * 
      * <strong>example:</strong>
      * <p>Ipv6Address.1=2001:db8:1234:1a00::***</p>
@@ -516,7 +516,7 @@ public class RunInstancesRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The IDs of the security groups to which to add the instance. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a>.</p>
+     * <p>Adds the instance to multiple security groups. Valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/101348.html">Security group limits</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-bp15ed6xe1yxeycg7****</p>
@@ -561,7 +561,7 @@ public class RunInstancesRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The storage set ID.</p>
+     * <p>The ID of the storage set.</p>
      * 
      * <strong>example:</strong>
      * <p>ss-bp67acfmxazb4p****</p>
@@ -1391,7 +1391,7 @@ public class RunInstancesRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The private pool options for instance startup. After an elasticity assurance or capacity reservation takes effect, a private pool is generated for instance startup. Valid values:</p>
+         * <p>The private pool capacity option for instance startup. A private pool is generated after an elasticity assurance or capacity reservation takes effect. You can select a private pool when you start an instance. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Open</p>
@@ -1424,7 +1424,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestSchedulerOptions extends TeaModel {
         /**
-         * <p>The ID of the dedicated host cluster to which the ECS instance belongs. The system automatically selects a dedicated host in the cluster to deploy the ECS instance.</p>
+         * <p>The ID of the dedicated host cluster to which the ECS instance belongs. The system automatically selects a dedicated host in the specified cluster to deploy the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dc-bp12wlf6am0vz9v2****</p>
@@ -1594,7 +1594,7 @@ public class RunInstancesRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - baseline performance}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - baseline performance}.</p>
          * 
          * <strong>example:</strong>
          * <p>40000</p>
@@ -1603,7 +1603,7 @@ public class RunInstancesRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. To use a disk in a dedicated block storage cluster as the system disk when you create an ECS instance, specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the system disk when you create an ECS instance, specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -1781,7 +1781,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestClockOptions extends TeaModel {
         /**
-         * <p>The Precision Time Protocol (PTP) status. Valid values:</p>
+         * <p>The PTP status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -1860,7 +1860,7 @@ public class RunInstancesRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters that are supported by the Unicode letter category. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized as letter in Unicode. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_ssdData</p>
@@ -1889,7 +1889,7 @@ public class RunInstancesRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key for the data disk.</p>
+         * <p>The KMS key ID for the data disk.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
@@ -1898,7 +1898,7 @@ public class RunInstancesRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The performance level of the data disk that is an enterprise SSD (ESSD). The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+         * <p>Settings for the performance level of the data disk when you create an enterprise SSD as a data disk. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>PL1</p>
@@ -1907,7 +1907,7 @@ public class RunInstancesRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - baseline performance}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1000 × Capacity - baseline performance}.</p>
          * 
          * <strong>example:</strong>
          * <p>40000</p>
@@ -1934,7 +1934,7 @@ public class RunInstancesRequest extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. To use a disk in a dedicated block storage cluster as the data disk when you create an ECS instance, specify this parameter.</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use a disk in a dedicated block storage cluster as the data disk when you create an ECS instance, specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>dbsc-j5e1sf2vaf5he8m2****</p>
@@ -2114,7 +2114,7 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of the network interface controller (NIC). The valid values of N cannot exceed the maximum number of NICs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of NICs supported by the target instance type.</p>
+         * <p>The type of the network interface controller (NIC). Valid values of N cannot exceed the number of NICs supported by the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or invoke <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the number of NICs supported by the target instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>Secondary</p>
@@ -2123,7 +2123,7 @@ public class RunInstancesRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The IPv6 addresses to assign to the primary ENI. You can specify up to 10 IPv6 addresses. Valid values of the second N: 1 to 10.</p>
+         * <p>Specifies one or more IPv6 addresses for the primary ENI. You can specify up to 10 IPv6 addresses. Valid values of the second N: 1 to 10.</p>
          */
         @NameInMap("Ipv6Address")
         public java.util.List<String> ipv6Address;
@@ -2156,7 +2156,7 @@ public class RunInstancesRequest extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain letters, digits, and characters that are supported by the Unicode letter categorization. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+         * <p>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized under the Unicode letter categorization (which includes characters from various languages such as English, Chinese, and digits). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>Network_Name</p>
@@ -2174,7 +2174,7 @@ public class RunInstancesRequest extends TeaModel {
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>Adds a network interface controller (NIC) and sets the primary IP address.</p>
+         * <p>Adds a network interface controller (NIC) and settings for the primary IP address.</p>
          * 
          * <strong>example:</strong>
          * <p><code>172.16.**.**</code></p>
@@ -2183,7 +2183,7 @@ public class RunInstancesRequest extends TeaModel {
         public String primaryIpAddress;
 
         /**
-         * <p>The number of queues supported by the network interface controller (NIC).</p>
+         * <p>The number of queues for the network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -2192,7 +2192,7 @@ public class RunInstancesRequest extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues supported by the RDMA ENI.</p>
+         * <p>The number of queues for the RDMA network interface.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2210,7 +2210,7 @@ public class RunInstancesRequest extends TeaModel {
         public Integer rxQueueSize;
 
         /**
-         * <p>The number of secondary private IPv4 addresses to assign to the ENI. Valid values: 1 to 49.</p>
+         * <p>The number of secondary private IPv4 addresses for the ENI. Valid values: 1 to 49.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -2424,7 +2424,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkOptions extends TeaModel {
         /**
-         * <p>The bandwidth weight value of the instance. The valid values vary by instance type. To query the supported bandwidth weight tiers for a specific instance type, call DescribeInstanceTypes. The BandwidthWeighting field in the response indicates the supported bandwidth weight tiers. You can use the name field in the returned dictionary values, such as Vpc-L1 and Ebs-L1.</p>
+         * <p>The bandwidth weight value of the instance. The valid values vary by instance type. To query the supported bandwidth weight levels for a specific instance type, call DescribeInstanceTypes. The BandwidthWeighting field in the response indicates the supported bandwidth weight levels. You can use the name field in the returned values as the dictionary value, such as Vpc-L1 or Ebs-L1.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -2433,7 +2433,7 @@ public class RunInstancesRequest extends TeaModel {
         public String bandwidthWeighting;
 
         /**
-         * <p>Specifies whether to enable the Jumbo Frame feature for the instance. Valid values:</p>
+         * <p>Specifies whether to enable the Jumbo frame feature for the instance. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

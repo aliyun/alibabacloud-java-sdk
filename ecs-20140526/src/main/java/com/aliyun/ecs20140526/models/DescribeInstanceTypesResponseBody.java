@@ -216,6 +216,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork extends TeaModel {
+        @NameInMap("ExpressSupport")
+        public Boolean expressSupport;
+
         @NameInMap("RssSupport")
         public Boolean rssSupport;
 
@@ -228,6 +231,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork setExpressSupport(Boolean expressSupport) {
+            this.expressSupport = expressSupport;
+            return this;
+        }
+        public Boolean getExpressSupport() {
+            return this.expressSupport;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork setRssSupport(Boolean rssSupport) {

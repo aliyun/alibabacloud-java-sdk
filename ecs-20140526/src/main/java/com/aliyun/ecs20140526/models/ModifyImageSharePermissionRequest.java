@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account ID to which you want to grant authorization to share the image. Valid values of N: 1 to 10. If you commit more than 10 Alibaba Cloud accounts at a time, the system processes only the first 10 accounts and ignores the rest.</p>
+     * <p>The Alibaba Cloud account ID for which you want to grant authorization to share the image. Valid values of N: 1 to 10. If you submit more than 10 Alibaba Cloud accounts in a single request, the system processes only the first 10 and ignores the rest.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -19,7 +19,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
      * <p>The ID of the custom image to be shared.</p>
      * <blockquote>
-     * <p>Notice: Sharing images encrypted with a service key is no longer supported. Only images encrypted with a customer master key (CMK) can be shared. An error is returned if you attempt to share an image encrypted with a service key.</p>
+     * <p>Notice: Images encrypted with a service key can no longer be shared. Only images encrypted with a customer master key (CMK) can be shared. An error is returned if you attempt to share an image that uses service key encryption.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -71,7 +71,7 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud account ID from which you want to delete image sharing. Valid values of N: 1 to 10. If you commit more than 10 Alibaba Cloud accounts at a time, the system processes only the first 10 accounts and ignores the rest.</p>
+     * <p>The Alibaba Cloud account ID from which you want to delete image sharing. Valid values of N: 1 to 10. If you submit more than 10 Alibaba Cloud accounts in a single request, the system processes only the first 10 and ignores the rest.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>

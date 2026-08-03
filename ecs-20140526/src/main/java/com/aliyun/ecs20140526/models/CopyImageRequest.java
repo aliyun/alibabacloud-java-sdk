@@ -23,7 +23,7 @@ public class CopyImageRequest extends TeaModel {
     public String destinationDescription;
 
     /**
-     * <p>The name of the copied image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain digits, periods (.), colons (:), underscores (_), or hyphens (-).</p>
+     * <p>The name of the copied image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>aliyun</code> or <code>acs:</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>YourImageName</p>
@@ -43,8 +43,8 @@ public class CopyImageRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the request for potential issues, including the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</li>
+     * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is complete, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is Normal.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -118,7 +118,7 @@ public class CopyImageRequest extends TeaModel {
     /**
      * <p>The resource group ID of the copied image. If you do not set this parameter, the copied image belongs to the default resource group.</p>
      * <blockquote>
-     * <p>If you are a Resource Access Management (RAM) user and invoke this operation with <code>ResourceGroupId</code> left empty, and the RAM user does not have permissions on the default resource group, the error message <code>Forbidden: User not authorized to operate on the specified resource</code> is returned. Settings a resource group ID that the RAM user has permissions on, or grant the RAM user permissions on the default resource group by using the corresponding Alibaba Cloud account before you invoke this operation again.</p>
+     * <p>If you are a Resource Access Management (RAM) user and invoke this operation with the <code>ResourceGroupId</code> parameter left empty, take note of the following: if the RAM user does not have permissions on the default resource group, the error message <code>Forbidden: User not authorized to operate on the specified resource</code> is returned. Set the <code>ResourceGroupId</code> parameter to a resource group ID that the RAM user has permissions on, or grant the RAM user permissions on the default resource group by using the corresponding Alibaba Cloud account before you invoke this operation again. The <code>ResourceGroupId</code> parameter determines which resource group the replicated image belongs to.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class CopyImageRequest extends TeaModel {
 
     public static class CopyImageRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the copied image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the copied image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -283,7 +283,7 @@ public class CopyImageRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the copied image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the copied image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

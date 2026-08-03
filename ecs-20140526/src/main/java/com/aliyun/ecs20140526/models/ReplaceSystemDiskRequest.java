@@ -65,7 +65,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>Notice: When you use a shared encrypted image to create a disk based on an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the disk uses the key of the image recipient.</p>
+     * <p>Notice: When you use a shared encrypted image to create a disk from an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the created disk uses the key of the image recipient.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -172,9 +172,9 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the free Security Center service after the system disk is replaced. Valid values: </p>
      * <ul>
-     * <li><p>Active: Security Center is enabled. This value is applicable only to public images.</p>
+     * <li><p>Active: Security Center is enabled. This value is valid only for public images.</p>
      * </li>
-     * <li><p>Deactive: Security Center is not enabled. This value is applicable to all images.</p>
+     * <li><p>Deactive: Security Center is not enabled. This value is valid for all images.</p>
      * </li>
      * </ul>
      * <p>Default value: Deactive.</p>
@@ -188,7 +188,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the virtual machine system configuration provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).</p>
      * <blockquote>
-     * <p>This parameter takes effect only when the system disk is attached (the device name is /dev/xvda).</p>
+     * <p>This parameter takes effect only when a system disk is attached (the device name is /dev/xvda).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

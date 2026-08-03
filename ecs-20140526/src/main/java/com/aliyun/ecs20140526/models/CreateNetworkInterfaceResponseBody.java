@@ -80,7 +80,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-2ze88m67qx5z****</p>
@@ -92,7 +92,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds;
 
     /**
-     * <p>The Virtual Network Operator (VNO) ID associated with the network interface controller (NIC).</p>
+     * <p>The ID of the Virtual Network Operator (VNO) to which the network interface controller (NIC) corresponds.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678910</p>
