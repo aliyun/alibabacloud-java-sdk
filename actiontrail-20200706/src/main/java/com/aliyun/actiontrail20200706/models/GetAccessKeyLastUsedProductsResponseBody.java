@@ -84,7 +84,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
          * <p>The Chinese name of the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>Elastic Compute Service (ECS)</p>
+         * <p>云服务器ECS</p>
          */
         @NameInMap("ServiceNameCn")
         public String serviceNameCn;
@@ -99,7 +99,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
         public String serviceNameEn;
 
         /**
-         * <p>The event source.</p>
+         * <p>The source of the last usage record.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li><p>Internal</p>
@@ -108,7 +108,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
          * <p>:</p>
          * <!-- -->
          * 
-         * <p>other events</p>
+         * <p>Other event</p>
          * <!-- -->
          * </li>
          * <li><p>ManagementEvent</p>
@@ -117,7 +117,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
          * <p>:</p>
          * <!-- -->
          * 
-         * <p>management events</p>
+         * <p>Management event</p>
          * <!-- -->
          * </li>
          * <li><p>DataEvent</p>
@@ -126,7 +126,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
          * <p>:</p>
          * <!-- -->
          * 
-         * <p>data events</p>
+         * <p>Data event</p>
          * <!-- --></li>
          * </ul>
          * 
@@ -137,7 +137,7 @@ public class GetAccessKeyLastUsedProductsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Unit: millisecond.</p>
+         * <p>The timestamp when the Alibaba Cloud service was used. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1657247532000</p>

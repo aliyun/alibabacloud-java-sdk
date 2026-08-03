@@ -7,8 +7,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether logging is enabled for the trail. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,8 +58,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the destination Object Storage Service (OSS) bucket is available. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,8 +82,10 @@ public class GetTrailStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the destination Log Service Logstore is available. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

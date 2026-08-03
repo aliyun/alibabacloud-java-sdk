@@ -7,8 +7,10 @@ public class DescribeTrailsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the information about multi-account trails. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (default)</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +22,10 @@ public class DescribeTrailsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the information about shadow trails. Valid values:</p>
      * <ul>
-     * <li>false: Do not return the information about shadow trails. It is the default value.</li>
-     * <li>true: Return the information about shadow trails.</li>
+     * <li><p>false: Do not return the information about shadow trails. It is the default value.</p>
+     * </li>
+     * <li><p>true: Return the information about shadow trails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

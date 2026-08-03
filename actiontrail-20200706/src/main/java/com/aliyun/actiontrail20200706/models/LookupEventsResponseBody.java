@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LookupEventsResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range when event details were queried.</p>
+     * <p>The end of the time range of the retrieved events.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-22T14:00:00Z</p>
@@ -14,16 +14,15 @@ public class LookupEventsResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The returned event details.</p>
-     * <p>For more information about the fields in an event log, see <a href="https://help.aliyun.com/document_detail/28819.html">ActionTrail event log reference</a>.</p>
+     * <p>The list of retrieved events.</p>
      */
     @NameInMap("Events")
     public java.util.List<java.util.Map<String, ?>> events;
 
     /**
-     * <p>The token used to return the next page of query results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p>This parameter is not returned if no more results are to be returned.</p>
+     * <p>If NextToken is empty, no next page exists.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,16 +32,16 @@ public class LookupEventsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>FD79665A-CE8B-49D4-82E6-5EE2E0E791DD</p>
+     * <p>FD79665A-CE8B-49D4-82E6-5EE2E0E7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range when event details were queried.</p>
+     * <p>The start of the time range of the retrieved events.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-15T14:00:00Z</p>

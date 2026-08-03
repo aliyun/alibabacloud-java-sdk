@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAdvancedQueryTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>145318BE-DEE1-4C57-AA7C-5BE7D34A6AE0</p>
      */
@@ -12,6 +14,8 @@ public class UpdateAdvancedQueryTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the simple query mode is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,16 +23,26 @@ public class UpdateAdvancedQueryTemplateResponseBody extends TeaModel {
     public String simpleQuery;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>utpl-QNL3dpYkQcyjZxrIQCciqQ</p>
+     * <p>utpl-QNL3dpYkQcyjZxrIQC****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The name of the template. The maximum length is 64 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-template</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The query statement of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>event.userIdentity.type: root-account AND event.userIdentity.accessKeyId: *</p>
      */

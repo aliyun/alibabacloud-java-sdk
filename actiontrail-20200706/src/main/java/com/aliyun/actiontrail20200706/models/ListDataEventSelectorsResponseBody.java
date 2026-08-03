@@ -4,10 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class ListDataEventSelectorsResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public ListDataEventSelectorsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8A74FD2E-A9B9-461C-BCE9-D9668DF1****</p>
      */
@@ -37,6 +42,8 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
 
     public static class ListDataEventSelectorsResponseBodyDataDataEventSelectorInfosSlsDeliveryConfigs extends TeaModel {
         /**
+         * <p>The time when the trail was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-09-30T16:11Z</p>
          */
@@ -44,16 +51,26 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The error code returned if the resource initialization fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>LogServiceException</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned if the resource initialization fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RequestError Web request failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the SLS project in the region where events are delivered.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:log:cn-shanghai:159498693826****:project/actiontrail-log-159498693826****-cn-shanghai</p>
          */
@@ -61,6 +78,8 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
         public String regionSlsProjectArn;
 
         /**
+         * <p>The initialization status of the tracked resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -68,6 +87,8 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The region of the trail.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -131,6 +152,23 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
 
     public static class ListDataEventSelectorsResponseBodyDataDataEventSelectorInfos extends TeaModel {
         /**
+         * <p>The configuration of the data event selector. This parameter is a JSON array that can contain a maximum of 20 elements.</p>
+         * <p>Each element in the JSON array includes the following fields:</p>
+         * <ul>
+         * <li><p><code>ServiceName</code>: The name of the Alibaba Cloud service that supports data events.</p>
+         * </li>
+         * <li><p><code>ReadWriteType</code>: The type of data event. Valid values: Read, Write, and All.</p>
+         * </li>
+         * <li><p><code>EventName</code>: This field contains the <code>Equals</code> and <code>NotEquals</code> subfields.</p>
+         * <p>For example, the following configuration specifies that only <code>GetObject</code>, <code>CopyObject</code>, and <code>AppendObject</code>events are delivered:</p>
+         * <p><code>{&quot;EventName&quot;:{&quot;Equals&quot;:[&quot;GetObject&quot;,&quot;CopyObject&quot;,&quot;AppendObject&quot;]}}</code></p>
+         * <p>If you specify <code>NotEquals</code>, events other than <code>GetObject</code>, <code>CopyObject</code>, and <code>AppendObject</code> are delivered.</p>
+         * </li>
+         * <li><p><code>ResourceArn</code>: This field also contains the <code>Equals</code> and <code>NotEquals</code> subfields, similar to <code>EventName</code>. For example:</p>
+         * <p><code>{&quot;ResourceArn&quot;:{&quot;Equals&quot;:[arn1,...,arnx]}}</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;EventName&quot;:{&quot;Equals&quot;:[&quot;GetObject&quot;,&quot;CopyObject&quot;,&quot;AppendObject&quot;]},&quot;ReadWriteType&quot;:&quot;All&quot;,&quot;ServiceName&quot;:&quot;Oss&quot;}]</p>
          */
@@ -138,16 +176,30 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
         public String eventSelectors;
 
         /**
+         * <p>Specifies whether the trail tracks data events in all regions.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsTrailAllRegion")
         public Boolean isTrailAllRegion;
 
+        /**
+         * <p>The list of configurations for delivering events to Simple Log Service (SLS).</p>
+         */
         @NameInMap("SlsDeliveryConfigs")
         public java.util.List<ListDataEventSelectorsResponseBodyDataDataEventSelectorInfosSlsDeliveryConfigs> slsDeliveryConfigs;
 
         /**
+         * <p>The ARN of the trail.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:actiontrail:cn-shanghai:159498693826****:trail/trail-name</p>
          */
@@ -155,6 +207,8 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
         public String trailArn;
 
         /**
+         * <p>The name of the trail.</p>
+         * 
          * <strong>example:</strong>
          * <p>trail-name</p>
          */
@@ -209,10 +263,15 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
     }
 
     public static class ListDataEventSelectorsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of data event selectors.</p>
+         */
         @NameInMap("DataEventSelectorInfos")
         public java.util.List<ListDataEventSelectorsResponseBodyDataDataEventSelectorInfos> dataEventSelectorInfos;
 
         /**
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -220,6 +279,8 @@ public class ListDataEventSelectorsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>VjE6bHJlTGoxdm1M****</p>
          */

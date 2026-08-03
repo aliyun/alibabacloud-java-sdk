@@ -7,8 +7,10 @@ public class GetTrailStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the status of a multi-account trail. Valid values:</p>
      * <ul>
-     * <li>true: Query the status of a multi-account trail.</li>
-     * <li>false: Query the status of a single-account trail. It is the default value.</li>
+     * <li><p>true: Query the status of a multi-account trail.</p>
+     * </li>
+     * <li><p>false: Query the status of a single-account trail. It is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

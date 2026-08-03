@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAdvancedQueryTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>95F2CD1D-9BD3-564A-A74A-743FFC5E46E5</p>
      */

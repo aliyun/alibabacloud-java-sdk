@@ -53,9 +53,12 @@ public class DescribeTrailsResponseBody extends TeaModel {
         /**
          * <p>The read/write type of the events that are delivered. Valid values:</p>
          * <ul>
-         * <li>Write: write events. This is the default value.</li>
-         * <li>Read: read events.</li>
-         * <li>All: read and write events.</li>
+         * <li><p>Write: write events. This is the default value.</p>
+         * </li>
+         * <li><p>Read: read events.</p>
+         * </li>
+         * <li><p>All: read and write events.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,8 +79,10 @@ public class DescribeTrailsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the trail is a multi-account trail. Valid values:</p>
          * <ul>
-         * <li>false (default)</li>
-         * <li>true</li>
+         * <li><p>false (default)</p>
+         * </li>
+         * <li><p>true</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +121,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
         /**
          * <p>The ID of the resource directory.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the trail is a multi-account trail.</p>
+         * <p>This parameter is returned only when the trail is a multi-account trail.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -156,7 +161,7 @@ public class DescribeTrailsResponseBody extends TeaModel {
          * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
+         * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
          */
         @NameInMap("OssWriteRoleArn")
         public String ossWriteRoleArn;
@@ -200,9 +205,12 @@ public class DescribeTrailsResponseBody extends TeaModel {
         /**
          * <p>The status of the trail. Valid values:</p>
          * <ul>
-         * <li>Disable: disabled.</li>
-         * <li>Enable: enabled.</li>
-         * <li>Fresh: The trail is created but is not enabled.</li>
+         * <li><p>Disable: disabled.</p>
+         * </li>
+         * <li><p>Enable: enabled.</p>
+         * </li>
+         * <li><p>Fresh: The trail is created but is not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -71,7 +71,7 @@ public class UpdateTrailResponseBody extends TeaModel {
      * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
+     * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
      */
     @NameInMap("OssWriteRoleArn")
     public String ossWriteRoleArn;
@@ -98,7 +98,7 @@ public class UpdateTrailResponseBody extends TeaModel {
      * <p>The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
+     * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
      */
     @NameInMap("SlsWriteRoleArn")
     public String slsWriteRoleArn;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInsightSelectorsRequest extends TeaModel {
     /**
+     * <p>The name of the trail.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

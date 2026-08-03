@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAdvancedQueryTemplateRequest extends TeaModel {
     /**
+     * <p>The page number. The value starts from 1.</p>
+     * <p>Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +15,22 @@ public class DescribeAdvancedQueryTemplateRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The maximum number of results to return.
+     * Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The name of the template. This operation performs a case-insensitive, fuzzy match. If you do not specify a name, all templates are returned.</p>
+     * <p>For example, if you specify <code>a</code>, templates named <code>a1</code> and <code>a2</code> are returned. If you leave this parameter empty, templates named <code>a1</code>, <code>a2</code>, <code>b1</code>, and <code>c1</code> are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-template</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

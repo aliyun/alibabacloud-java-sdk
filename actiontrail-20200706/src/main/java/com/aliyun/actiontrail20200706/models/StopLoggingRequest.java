@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class StopLoggingRequest extends TeaModel {
     /**
      * <p>The name of the trail that you want to disable.</p>
-     * <p>The name must be 6 to 36 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (_). It must start with a lowercase letter.</p>
+     * <p>The name must be 6 to 36 characters in length. It must start with a lowercase letter and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
      * <blockquote>
      * <p>The name must be unique within your Alibaba Cloud account.</p>
      * </blockquote>

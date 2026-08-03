@@ -5,16 +5,35 @@ import com.aliyun.tea.*;
 
 public class LookupInsightEventsRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The default value is the current time.</p>
+     * <p>Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-07T07:10:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>An array of fliter conditions.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can specify one or two query conditions. For more information, see <a href="https://help.aliyun.com/document_detail/3011147.html">Limitations</a>.</li>
+     * </ul>
+     * </blockquote>
+     */
     @NameInMap("LookupAttribute")
     public java.util.List<LookupInsightEventsRequestLookupAttribute> lookupAttribute;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * <ul>
+     * <li><p>Valid values: 1 to 50.</p>
+     * </li>
+     * <li><p>Default value: 20.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +41,14 @@ public class LookupInsightEventsRequest extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li><p>You do not need to specify this parameter for the first request.</p>
+     * </li>
+     * <li><p>You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VjE6dLbnNpVmbz06****</p>
      */
@@ -29,6 +56,14 @@ public class LookupInsightEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The beginning of the time range to query. The default value is seven days before the current time.</p>
+     * <p>Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The maximum time range that can be queried is 93 days. If the specified time range is longer than 93 days, only events from the last 93 days are returned.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-07T04:10:00Z</p>
      */
@@ -82,6 +117,8 @@ public class LookupInsightEventsRequest extends TeaModel {
 
     public static class LookupInsightEventsRequestLookupAttribute extends TeaModel {
         /**
+         * <p>The attribute key. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/3011147.html">How do I configure the LookupAttribute parameter when calling LookupInsightEvents?</a></p>
+         * 
          * <strong>example:</strong>
          * <p>InsightType</p>
          */
@@ -89,6 +126,8 @@ public class LookupInsightEventsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The attribute value. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/3011147.html">How do I configure the LookupAttribute parameter when calling LookupInsightEvents?</a></p>
+         * 
          * <strong>example:</strong>
          * <p>IpInsight</p>
          */

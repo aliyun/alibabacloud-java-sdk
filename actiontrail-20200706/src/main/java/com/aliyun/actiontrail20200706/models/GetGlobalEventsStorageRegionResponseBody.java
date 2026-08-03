@@ -8,7 +8,7 @@ public class GetGlobalEventsStorageRegionResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>0474CD9D-DF37-55D4-8383-D978CFBE13A4</p>
+     * <p>0474CD9D-DF37-55D4-8383-D265CFBE13A5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,7 +37,7 @@ public class GetGlobalEventsStorageRegionResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>ap-southeast-1</p>
      */
     @NameInMap("StorageRegion")
     public String storageRegion;

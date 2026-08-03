@@ -4,10 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrailDeliveryMetricDataResponseBody extends TeaModel {
+    /**
+     * <p>A list of data points for the delivery monitoring metric.</p>
+     */
     @NameInMap("MetricList")
     public java.util.List<DescribeTrailDeliveryMetricDataResponseBodyMetricList> metricList;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>851038F3-33AB-4C49-97D7-6AB37D35****</p>
      */
@@ -37,6 +42,9 @@ public class DescribeTrailDeliveryMetricDataResponseBody extends TeaModel {
 
     public static class DescribeTrailDeliveryMetricDataResponseBodyMetricList extends TeaModel {
         /**
+         * <p>The value of the metric. The meaning of this parameter depends on the value of the <code>MetricName</code> parameter in the request.</p>
+         * <p>For example, if <code>MetricName</code> is set to <code>delivery_sls_success_count</code>, <code>Count</code> indicates the number of logs successfully delivered to SLS.</p>
+         * 
          * <strong>example:</strong>
          * <p>21</p>
          */
@@ -44,6 +52,8 @@ public class DescribeTrailDeliveryMetricDataResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The Unix timestamp, in milliseconds, that marks the start of the time window for this data point.</p>
+         * 
          * <strong>example:</strong>
          * <p>1775721600000</p>
          */

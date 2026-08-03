@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class LookupEventsRequest extends TeaModel {
     /**
-     * <p>The order in which details of events are to be retrieved. Valid values:</p>
+     * <p>The order in which events are retrieved. Valid values:</p>
      * <ul>
-     * <li>FORWARD: ascending order.</li>
-     * <li>BACKWARD: descending order. This is the default value.</li>
+     * <li><p>FORWARD: Chronological order.</p>
+     * </li>
+     * <li><p>BACKWARD (default): Reverse chronological order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,10 @@ public class LookupEventsRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The end of the time range to query. The default time is the current time. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>You must specify both <code>StartTime</code> and <code>EndTime</code>, or leave both unspecified. If you leave them unspecified, the default value of <code>EndTime</code> is the current time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2020-10-15T11:00:00Z</p>
@@ -27,14 +32,16 @@ public class LookupEventsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Query conditions.</p>
+     * <p>The filter conditions.</p>
+     * <blockquote>
+     * <p>You can specify one or two filter conditions at a time. For more information, see <a href="https://help.aliyun.com/document_detail/2920829.html">Limitations</a>.</p>
+     * </blockquote>
      */
     @NameInMap("LookupAttribute")
     public java.util.List<LookupEventsRequestLookupAttribute> lookupAttribute;
 
     /**
-     * <p>The maximum number of entries to be returned.</p>
-     * <p>Valid values: 0 to 50.</p>
+     * <p>The maximum number of results to return.<br>Valid values: 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,9 +50,9 @@ public class LookupEventsRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The token used to request the next page of query results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p>The request parameters must be the same as those of the last request.</p>
+     * <p>You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +62,10 @@ public class LookupEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The beginning of the time range to query. The default time is seven days prior to the current time. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>You must specify both <code>StartTime</code> and <code>EndTime</code>, or leave both unspecified. If you leave them unspecified, the default value of <code>StartTime</code> is 7 days before the current time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2020-10-08T11:00:00Z</p>
@@ -118,20 +128,7 @@ public class LookupEventsRequest extends TeaModel {
 
     public static class LookupEventsRequestLookupAttribute extends TeaModel {
         /**
-         * <p>The key of the query condition. Valid values:</p>
-         * <ul>
-         * <li>ServiceName: the name of a specific Alibaba Cloud service.</li>
-         * <li>EventName: the name of a specific event.</li>
-         * <li>User: the name of the RAM user who calls a specific operation.</li>
-         * <li>EventId: the ID of a specific event.</li>
-         * <li>ResourceType: the type of resources.</li>
-         * <li>ResourceName: the name of a specific resource.</li>
-         * <li>EventRW: the read/write type of events.</li>
-         * <li>EventAccessKeyId: the AccessKey ID used in events.</li>
-         * </ul>
-         * <blockquote>
-         * <p>You can use only one query condition for each query.</p>
-         * </blockquote>
+         * <p>The attribute key. For information about valid values, see <a href="https://help.aliyun.com/document_detail/2920829.html">How do I configure the LookupAttribute parameter when calling LookupInsightEvents?</a></p>
          * 
          * <strong>example:</strong>
          * <p>ServiceName</p>
@@ -140,17 +137,7 @@ public class LookupEventsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the query condition. Valid values:</p>
-         * <ul>
-         * <li>When the LookupAttribute.N.Key parameter is set to ServiceName, you can set this parameter to a value such as <code>Ecs</code>.</li>
-         * <li>When the LookupAttribute.N.Key parameter is set to EventName, you can set this parameter to a value such as <code>ConsoleSignin</code>.</li>
-         * <li>When the LookupAttribute.N.Key parameter is set to User, you can set this parameter to a value such as <code>Alice</code>.</li>
-         * <li>When the LookupAttribute.N.Key parameter is set to EventId, you can set this parameter to a value such as <code>B702AFA3-FD4B-40E3-88E4-C0752FAA****</code>.</li>
-         * <li>When the LookupAttribute.N.Key parameter is set to ResourceType, you can set this parameter to a value such as <code>ACS::ECS::Instance</code>.</li>
-         * <li>When the LookupAttribute.N.Key parameter is set to ResourceName, you can set this parameter to a value such as <code>i-bp14664y88udkt45****</code>.</li>
-         * <li>When the LookupAttribute.N.Key parameter is set to EventRW, you can set this parameter to <code>Read</code> or <code>Write</code>.</li>
-         * <li>When the LookupAttribute.N.Key parameter is set to EventAccessKeyId, you can set this parameter to a value such as <code>LTAI****************</code>.</li>
-         * </ul>
+         * <p>The attribute value. For information about valid values, see <a href="https://help.aliyun.com/document_detail/2920829.html">How do I configure the LookupAttribute parameter when calling LookupInsightEvents?</a></p>
          * 
          * <strong>example:</strong>
          * <p>Ecs</p>

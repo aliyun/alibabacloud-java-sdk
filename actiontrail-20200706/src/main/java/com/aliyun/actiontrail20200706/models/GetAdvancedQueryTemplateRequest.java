@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAdvancedQueryTemplateRequest extends TeaModel {
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>utpl-N9fpjnFBSWauSXhVNP3erw</p>
+     * <p>utpl-N9fpjnFBSWauSXhVNP****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

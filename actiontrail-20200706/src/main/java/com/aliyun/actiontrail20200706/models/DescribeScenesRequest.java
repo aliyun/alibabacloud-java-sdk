@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeScenesRequest extends TeaModel {
     /**
+     * <p>The search keyword. This operation performs a case-insensitive, fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>ak</p>
      */

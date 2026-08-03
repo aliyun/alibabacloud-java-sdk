@@ -107,7 +107,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The event source.</p>
+         * <p>The source of the last usage record.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li><p>Internal</p>
@@ -116,7 +116,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
          * <p>:</p>
          * <!-- -->
          * 
-         * <p>other events</p>
+         * <p>Other event</p>
          * <!-- -->
          * </li>
          * <li><p>ManagementEvent</p>
@@ -125,7 +125,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
          * <p>:</p>
          * <!-- -->
          * 
-         * <p>management events</p>
+         * <p>Management event</p>
          * <!-- -->
          * </li>
          * <li><p>DataEvent</p>
@@ -134,7 +134,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
          * <p>:</p>
          * <!-- -->
          * 
-         * <p>data events</p>
+         * <p>Data event</p>
          * <!-- --></li>
          * </ul>
          * 
@@ -145,7 +145,7 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The timestamp when the resource was used. Unit: millisecond.</p>
+         * <p>The timestamp when the resource was used. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1657247532000</p>

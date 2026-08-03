@@ -43,10 +43,14 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>0: The task is initializing.</li>
-     * <li>1: The task is delivering historical events.</li>
-     * <li>2: The task is complete.</li>
-     * <li>3: The task fails.</li>
+     * <li><p>0: The task is initializing.</p>
+     * </li>
+     * <li><p>1: The task is delivering historical events.</p>
+     * </li>
+     * <li><p>2: The task is complete.</p>
+     * </li>
+     * <li><p>3: The task fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -195,10 +199,14 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
         /**
          * <p>The task status in each region. Valid values:</p>
          * <ul>
-         * <li>0: The task is initializing.</li>
-         * <li>1: The task is delivering historical events.</li>
-         * <li>2: The task is complete.</li>
-         * <li>3: The task fails.</li>
+         * <li><p>0: The task is initializing.</p>
+         * </li>
+         * <li><p>1: The task is delivering historical events.</p>
+         * </li>
+         * <li><p>2: The task is complete.</p>
+         * </li>
+         * <li><p>3: The task fails.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

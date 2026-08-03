@@ -12,7 +12,9 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
     public java.util.List<GetAccessKeyLastUsedEventsResponseBodyEvents> events;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The token that is used to retrieve the next page of results. If the value of this parameter is not empty, the next page exists. You must set the value to the NextToken value returned from the last call.</p>
+     * <p>colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</p>
+     * <p>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD\<em>\</em>\<em>\</em></p>
      * 
      * <strong>example:</strong>
      * <p>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</p>
@@ -21,7 +23,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +63,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
 
     public static class GetAccessKeyLastUsedEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>An array that consists of the details about the event.</p>
+         * <p>The event details.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -89,7 +91,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The name of the event.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>DescribeInstances</p>
@@ -98,7 +100,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The event source.</p>
+         * <p>The source of the last usage record.</p>
          * 
          * <strong>example:</strong>
          * <p>ManagementEvent</p>
@@ -107,7 +109,7 @@ public class GetAccessKeyLastUsedEventsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The timestamp when the event was generated.</p>
+         * <p>The timestamp when the event was generated. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1657247532000</p>

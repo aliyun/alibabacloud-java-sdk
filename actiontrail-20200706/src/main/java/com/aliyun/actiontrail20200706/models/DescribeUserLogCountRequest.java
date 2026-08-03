@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserLogCountRequest extends TeaModel {
     /**
+     * <p>The end time. Format: yyyy-MM-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-10</p>
      */
@@ -12,6 +14,8 @@ public class DescribeUserLogCountRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The start time. Format: yyyy-MM-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-12</p>
      */

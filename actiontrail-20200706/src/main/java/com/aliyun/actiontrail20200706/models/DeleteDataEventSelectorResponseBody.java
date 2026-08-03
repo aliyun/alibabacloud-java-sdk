@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDataEventSelectorResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1D9DD159-DFFF-4882-ACEC-B4A727E9****</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class ListDataEventServicesResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public ListDataEventServicesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>851038F3-33AB-4C49-97D7-6AB37D35****</p>
      */
@@ -36,10 +41,15 @@ public class ListDataEventServicesResponseBody extends TeaModel {
     }
 
     public static class ListDataEventServicesResponseBodyDataServiceInfos extends TeaModel {
+        /**
+         * <p>The data events supported by the service.</p>
+         */
         @NameInMap("EventNames")
         public java.util.List<String> eventNames;
 
         /**
+         * <p>The cloud service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Cms</p>
          */
@@ -71,6 +81,8 @@ public class ListDataEventServicesResponseBody extends TeaModel {
 
     public static class ListDataEventServicesResponseBodyData extends TeaModel {
         /**
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -78,12 +90,17 @@ public class ListDataEventServicesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
          * <strong>example:</strong>
          * <p>VjE6bHJlTGoxdm1M****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The supported Alibaba Cloud services and the data events for each service.</p>
+         */
         @NameInMap("ServiceInfos")
         public java.util.List<ListDataEventServicesResponseBodyDataServiceInfos> serviceInfos;
 

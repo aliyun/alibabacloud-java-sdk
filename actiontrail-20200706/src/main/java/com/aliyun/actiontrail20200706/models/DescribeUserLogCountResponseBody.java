@@ -4,10 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserLogCountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeUserLogCountResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>90D6CC31-947F-5D8A-BEDC-F312EE9B31EA</p>
      */
@@ -36,9 +41,15 @@ public class DescribeUserLogCountResponseBody extends TeaModel {
     }
 
     public static class DescribeUserLogCountResponseBodyData extends TeaModel {
+        /**
+         * <p>The statistics returned.</p>
+         */
         @NameInMap("Counts")
         public java.util.List<Long> counts;
 
+        /**
+         * <p>The dates of logs.</p>
+         */
         @NameInMap("Dates")
         public java.util.List<String> dates;
 

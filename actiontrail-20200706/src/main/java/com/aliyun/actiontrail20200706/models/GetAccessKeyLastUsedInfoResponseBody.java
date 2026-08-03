@@ -14,7 +14,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
     public String accessKeyId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>104758519118****</p>
@@ -32,7 +32,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
     public String accountType;
 
     /**
-     * <p>The details about the event.</p>
+     * <p>The event details.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -69,7 +69,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
      * <p>The Chinese name of the Alibaba Cloud service that was last accessed.</p>
      * 
      * <strong>example:</strong>
-     * <p>Elastic Compute Service (ECS)</p>
+     * <p>云服务器ECS</p>
      */
     @NameInMap("ServiceNameCn")
     public String serviceNameCn;
@@ -107,7 +107,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
     public String serviceNameEn;
 
     /**
-     * <p>The event source.</p>
+     * <p>The source of the last usage record.</p>
      * 
      * <strong>example:</strong>
      * <p>ManagementEvent</p>
@@ -116,7 +116,7 @@ public class GetAccessKeyLastUsedInfoResponseBody extends TeaModel {
     public String source;
 
     /**
-     * <p>The timestamp when the AccessKey pair was last called.</p>
+     * <p>The timestamp when the AccessKey pair was last used. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

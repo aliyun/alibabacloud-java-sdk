@@ -4,10 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class DescribeAdvancedQueryHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The list of advanced query records.</p>
+     */
     @NameInMap("QueryHistoryList")
     public java.util.List<DescribeAdvancedQueryHistoryResponseBodyQueryHistoryList> queryHistoryList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>19F032B7-5FD8-5AC9-97FD-ACF54371****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeAdvancedQueryHistoryResponseBody extends TeaModel {
 
     public static class DescribeAdvancedQueryHistoryResponseBodyQueryHistoryList extends TeaModel {
         /**
+         * <p>The ID of the advanced query record.</p>
+         * 
          * <strong>example:</strong>
          * <p>query-uIkIvLiVSuCKqg0yoa****</p>
          */
@@ -44,6 +51,8 @@ public class DescribeAdvancedQueryHistoryResponseBody extends TeaModel {
         public String queryId;
 
         /**
+         * <p>The conditional statement for the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>event.userIdentity.accessKeyId: *</p>
          */
@@ -51,6 +60,8 @@ public class DescribeAdvancedQueryHistoryResponseBody extends TeaModel {
         public String querySql;
 
         /**
+         * <p>Indicates whether simple query mode is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -58,6 +69,8 @@ public class DescribeAdvancedQueryHistoryResponseBody extends TeaModel {
         public Boolean simpleQuery;
 
         /**
+         * <p>The time when the advanced query record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1753695874000</p>
          */

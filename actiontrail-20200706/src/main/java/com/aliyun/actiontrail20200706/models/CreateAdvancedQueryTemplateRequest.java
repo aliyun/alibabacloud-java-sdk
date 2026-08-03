@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAdvancedQueryTemplateRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the simple query mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,14 +14,21 @@ public class CreateAdvancedQueryTemplateRequest extends TeaModel {
     @NameInMap("SimpleQuery")
     public Boolean simpleQuery;
 
+    /**
+     * <p>The name of the template, which can contain a maximum of 64 characters. Uniqueness is not required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The query statement of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>event.eventName: ConsoleSignin AND event.userIdentity.type: root-account</p>
+     * <p>event.errorCode: * AND event.userIdentity.accessKeyId: *</p>
      */
     @NameInMap("TemplateSql")
     public String templateSql;

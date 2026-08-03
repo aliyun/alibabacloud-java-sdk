@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAdvancedQueryTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4ABAEA6E-C740-5CE2-A003-643E551964F5</p>
      */
@@ -12,6 +14,8 @@ public class CreateAdvancedQueryTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the simple query mode is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,18 +23,28 @@ public class CreateAdvancedQueryTemplateResponseBody extends TeaModel {
     public String simpleQuery;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>x4a0Tw5dQy2J6IRJxf4kng</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The query statement.</p>
+     * 
      * <strong>example:</strong>
-     * <p>event.eventName: ConsoleSignin AND event.userIdentity.type: root-account</p>
+     * <p>event.errorCode: * AND event.userIdentity.accessKeyId: *</p>
      */
     @NameInMap("TemplateSql")
     public String templateSql;

@@ -7,8 +7,10 @@ public class ListDeliveryHistoryJobsRequest extends TeaModel {
     /**
      * <p>The page number.</p>
      * <ul>
-     * <li>Pages start from page 1.</li>
-     * <li>Default value: 1.</li>
+     * <li><p>The value must be greater than or equal to 1.</p>
+     * </li>
+     * <li><p>Default value: 1.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class ListDeliveryHistoryJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <ul>
-     * <li>Valid values: 1 to 100.</li>
-     * <li>Default value: 20.</li>
+     * <li><p>Valid values: 1 to 100.</p>
+     * </li>
+     * <li><p>Default value: 20.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

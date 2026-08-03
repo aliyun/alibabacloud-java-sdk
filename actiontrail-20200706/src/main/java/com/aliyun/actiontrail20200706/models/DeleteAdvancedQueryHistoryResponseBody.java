@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAdvancedQueryHistoryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04857D99-8B0C-53EB-85F1-E64198E7****</p>
      */

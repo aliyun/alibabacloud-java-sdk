@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAdvancedQueryTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32110C73-0004-5141-9DA7-4B8045C8173A</p>
      */
@@ -12,6 +14,12 @@ public class GetAdvancedQueryTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether simple search mode is enabled. Valid values:</p>
+     * <ul>
+     * <li>true: enabled.</li>
+     * <li>false: disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,16 +27,26 @@ public class GetAdvancedQueryTemplateResponseBody extends TeaModel {
     public Boolean simpleQuery;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>utpl-N9fpjnFBSWauSXhVNP3erw</p>
+     * <p>utpl-N9fpjnFBSWauSXhVNP****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-template</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The query statement.</p>
+     * 
      * <strong>example:</strong>
      * <p>event.userIdentity.type: root-account AND event.userIdentity.accessKeyId: *</p>
      */

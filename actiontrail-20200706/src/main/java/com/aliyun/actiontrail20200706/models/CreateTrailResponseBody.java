@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTrailResponseBody extends TeaModel {
     /**
-     * <p>The read/write type of the events to be delivered.</p>
+     * <p>The read/write type of events that the trail delivers.</p>
      * 
      * <strong>example:</strong>
      * <p>Write</p>
@@ -23,7 +23,7 @@ public class CreateTrailResponseBody extends TeaModel {
     public String homeRegion;
 
     /**
-     * <p>ARN of the Big Data Compute Service project for tracking delivery.</p>
+     * <p>The ARN of the MaxCompute project to which the trail delivers events.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:odps:cn-hangzhou:151266687691****:project/actiontrail_****</p>
@@ -32,7 +32,7 @@ public class CreateTrailResponseBody extends TeaModel {
     public String maxComputeProjectArn;
 
     /**
-     * <p>The ARN of the role that Operation Audit assumes when delivering operation events to the Big Data Compute Service project.</p>
+     * <p>The ARN of the RAM role that ActionTrail assumes to deliver events to the MaxCompute project.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
@@ -50,7 +50,7 @@ public class CreateTrailResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the OSS bucket to which events are to be delivered.</p>
+     * <p>The name of the destination OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>audit-log</p>
@@ -59,7 +59,7 @@ public class CreateTrailResponseBody extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The prefix of the log files to be stored in the destination OSS bucket.</p>
+     * <p>The prefix for the names of log files in the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>at-product-account-audit-B</p>
@@ -68,16 +68,16 @@ public class CreateTrailResponseBody extends TeaModel {
     public String ossKeyPrefix;
 
     /**
-     * <p>The ARN of the service-linked role that is assumed by ActionTrail to deliver events to the destination OSS bucket.</p>
+     * <p>The ARN of the RAM role that ActionTrail assumes to deliver events to the OSS bucket.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
+     * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
      */
     @NameInMap("OssWriteRoleArn")
     public String ossWriteRoleArn;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>442DDADF-DA58-4029-8E8B-82C73E9A7A70</p>
@@ -86,7 +86,7 @@ public class CreateTrailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ARN of the Log Service project to which events are to be delivered.</p>
+     * <p>The ARN of the SLS project to which the trail delivers events.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:log:cn-hangzhou:151266687691****:project/test-project</p>
@@ -95,16 +95,16 @@ public class CreateTrailResponseBody extends TeaModel {
     public String slsProjectArn;
 
     /**
-     * <p>The ARN of the service-linked role that is assumed by ActionTrail to deliver events to the destination Log Service project.</p>
+     * <p>The ARN of the RAM role that ActionTrail assumes to deliver events to the SLS project.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
+     * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
      */
     @NameInMap("SlsWriteRoleArn")
     public String slsWriteRoleArn;
 
     /**
-     * <p>The one or more regions from which the trail delivers events.</p>
+     * <p>The region in which the trail is created. A value of <code>All</code> indicates that the trail processes events from all regions.</p>
      * 
      * <strong>example:</strong>
      * <p>All</p>

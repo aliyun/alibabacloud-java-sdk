@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PutInsightSelectorsRequest extends TeaModel {
     /**
+     * <p>The types of Insights events that the trail should deliver.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;insightType&quot;:&quot;AkInsight&quot;},{&quot;insightType&quot;:&quot;IpInsight&quot;}]</p>
      */
@@ -12,6 +14,7 @@ public class PutInsightSelectorsRequest extends TeaModel {
     public String insightSelectors;
 
     /**
+     * <p>The name of the trail.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class GetGovernanceMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetGovernanceMetricsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>145318BE-DEE1-4C57-AA7C-5BE7D34A****</p>
      */
@@ -37,6 +42,9 @@ public class GetGovernanceMetricsResponseBody extends TeaModel {
 
     public static class GetGovernanceMetricsResponseBodyDataGovernanceMetrics extends TeaModel {
         /**
+         * <p>The details of the resource.</p>
+         * <p>This parameter contains the detailed configurations of all compliant resources for the governance item. This parameter is returned only if a resource instance exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;trailName&quot;: &quot;trail-test&quot;,
@@ -55,6 +63,8 @@ public class GetGovernanceMetricsResponseBody extends TeaModel {
         public String columnsSchema;
 
         /**
+         * <p>The governance item. This indicates a specific category of compliance check.</p>
+         * 
          * <strong>example:</strong>
          * <p>actiontrail_storage_audit_log</p>
          */
@@ -62,6 +72,9 @@ public class GetGovernanceMetricsResponseBody extends TeaModel {
         public String governanceItem;
 
         /**
+         * <p>The compliance score for the governance item.</p>
+         * <p>Valid values: 0 to 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -101,12 +114,17 @@ public class GetGovernanceMetricsResponseBody extends TeaModel {
 
     public static class GetGovernanceMetricsResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>195622768501****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>A collection of governance items that contain multiple compliance assessment dimensions.</p>
+         */
         @NameInMap("GovernanceMetrics")
         public java.util.List<GetGovernanceMetricsResponseBodyDataGovernanceMetrics> governanceMetrics;
 

@@ -98,12 +98,15 @@ public class GetAccessKeyLastUsedIpsResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The event source.</p>
+         * <p>The source of the last usage record.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Internal: other events.</li>
-         * <li>ManagementEvent: management events.</li>
-         * <li>DataEvent: data events.</li>
+         * <li><p>Internal: Other event</p>
+         * </li>
+         * <li><p>ManagementEvent: Management event</p>
+         * </li>
+         * <li><p>DataEvent: Data event</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

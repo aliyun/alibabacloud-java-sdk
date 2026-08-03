@@ -17,7 +17,7 @@ public class GetAccessKeyLastUsedIpsRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p> You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

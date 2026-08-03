@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceLifeCycleEventsRequest extends TeaModel {
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
      */
@@ -12,6 +14,8 @@ public class DescribeResourceLifeCycleEventsRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The name of the Alibaba Cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */

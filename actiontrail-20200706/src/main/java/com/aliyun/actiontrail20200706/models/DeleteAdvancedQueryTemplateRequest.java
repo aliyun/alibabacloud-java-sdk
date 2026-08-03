@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAdvancedQueryTemplateRequest extends TeaModel {
     /**
+     * <p>The ID of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>utpl-QNL3dpYkQcyjZxrIQCciqQ</p>
      */

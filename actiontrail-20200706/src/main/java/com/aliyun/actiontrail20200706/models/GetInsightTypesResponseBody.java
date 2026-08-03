@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInsightTypesResponseBody extends TeaModel {
     /**
+     * <p>The types of Insights events.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;ApiCallRateInsight\&quot;: \&quot;Enable\&quot;, \&quot;ApiErrorRateInsight\&quot;: \&quot;Enable\&quot;, \&quot;IpInsight\&quot;: \&quot;Enable\&quot;, \&quot;AkInsight\&quot;: \&quot;Enable\&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class GetInsightTypesResponseBody extends TeaModel {
     public java.util.Map<String, ?> insightTypes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC4A1F64-4927-5714-B205-5A0B16A2****</p>
      */

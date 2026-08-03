@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateTrailRequest extends TeaModel {
     /**
-     * <p>The read/write type of the events to be delivered. Valid values:</p>
+     * <p>Specifies the read/write type of events that the trail delivers. Valid values:</p>
      * <ul>
-     * <li>Write: write events. It is the default value.</li>
-     * <li>Read: read events.</li>
-     * <li>All: read and write events.</li>
+     * <li><p>Write: Write events.</p>
+     * </li>
+     * <li><p>Read: Read events.</p>
+     * </li>
+     * <li><p>All (default): All read and write events.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +22,14 @@ public class CreateTrailRequest extends TeaModel {
     public String eventRW;
 
     /**
-     * <p>Specifies whether to create a multi-account trail. Valid values:</p>
+     * <p>Specifies whether the trail is a multi-account trail. Valid values:</p>
      * <ul>
-     * <li>true: creates a multi-account trail.</li>
-     * <li>false (default): creates a single-account trail.</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false (default)</p>
+     * </li>
      * </ul>
+     * <p>To create a trail for an organization, set this parameter to <code>true</code>. The trail will collect events from all member accounts in the organization.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,12 +38,12 @@ public class CreateTrailRequest extends TeaModel {
     public Boolean isOrganizationTrail;
 
     /**
-     * <p>The ARN of the MaxCompute project to which you want to deliver events.</p>
+     * <p>The ARN of the MaxCompute project to which ActionTrail delivers events.</p>
      * <blockquote>
-     * <p> You must specify at least one of the following parameters: OssBucketName, SlsProjectArn, and MaxComputeProjectArn.</p>
+     * <p>You must specify a destination for the trail by providing at least one of the following parameters: <code>OssBucketName</code>, <code>SlsProjectArn</code>, or <code>MaxComputeProjectArn</code>.</p>
      * </blockquote>
      * <blockquote>
-     * <p> The name of the MaxCompute project must be prefixed with actiontrail_.</p>
+     * <p>The project name in the ARN must start with <code>actiontrail_</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,10 +53,12 @@ public class CreateTrailRequest extends TeaModel {
     public String maxComputeProjectArn;
 
     /**
-     * <p>The ARN of the role that is assumed by ActionTrail to deliver events to the MaxCompute project.</p>
+     * <p>The ARN of the RAM role that ActionTrail assumes to deliver events to the MaxCompute project.</p>
      * <ul>
-     * <li>If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</li>
-     * <li>If you specify this parameter and deliver events to the current account, you must grant the RAM role the permissions on the service-linked role for ActionTrail. If you want to deliver events to other accounts, you must attach a system policy to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</li>
+     * <li><p>If this parameter is not specified, ActionTrail creates a service-linked role to deliver events. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">ActionTrail service-linked role</a>.</p>
+     * </li>
+     * <li><p>If you specify a role, it must be a RAM role that you created. This role must have a trust policy that allows the ActionTrail service (\<code>actiontrail.aliyuncs.com\\</code>) to assume it. The role\&quot;s permission policy must grant permissions to write to the specified MaxCompute project. For more information about cross-account delivery, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events from multiple Alibaba Cloud accounts to the same account</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,10 +68,18 @@ public class CreateTrailRequest extends TeaModel {
     public String maxComputeWriteRoleArn;
 
     /**
-     * <p>The name of the trail to be created.</p>
-     * <p>The name must be 6 to 36 characters in length. The name must start with a lowercase letter and can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * <p>The name of the trail.</p>
      * <blockquote>
-     * <p>The name must be unique within your Alibaba Cloud account.</p>
+     * <ul>
+     * <li><p>Length: 6 to 36 characters.</p>
+     * </li>
+     * <li><p>Characters: Lowercase letters, digits, hyphens (-), and underscores (_).</p>
+     * </li>
+     * <li><p>Must start with a lowercase letter.</p>
+     * </li>
+     * <li><p>Must be uniquewithin an Alibaba Cloud account.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -74,10 +90,17 @@ public class CreateTrailRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The name of the OSS bucket to which events are to be delivered.</p>
-     * <p>The name must be 3 to 63 characters in length. The name must start with a lowercase letter or a digit and can contain lowercase letters, digits, and hyphens (-).</p>
+     * <p>The name of the OSS bucket to which ActionTrail delivers events.</p>
+     * <ul>
+     * <li><p>Length: 3 to 63 characters.</p>
+     * </li>
+     * <li><p>Characters: Lowercase letters, digits, and hyphens (-).</p>
+     * </li>
+     * <li><p>Must start with a lowercase letter or a digit.</p>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p>You must specify at least one of the OssBucketName and SlsProjectArn parameters.</p>
+     * <p>You must specify a destination for the trail by providing at least one of the following parameters: <code>OssBucketName</code>, <code>SlsProjectArn</code>, or <code>MaxComputeProjectArn</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,8 +110,15 @@ public class CreateTrailRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The prefix of the log files to be stored in the destination OSS bucket. This parameter can be left empty.</p>
-     * <p>The prefix must be 6 to 32 characters in length. The prefix must start with a letter and can contain letters, digits, hyphens (-), forward slashes (/), and underscores (_).</p>
+     * <p>The prefix for the names of log files that ActionTrail delivers to your OSS bucket.</p>
+     * <ul>
+     * <li><p>Length: 6 to 32 characters.</p>
+     * </li>
+     * <li><p>Characters: Letters, digits, hyphens (-), forward slashes (/), and underscores (_).</p>
+     * </li>
+     * <li><p>Must start with a letter.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>at-product-account-audit-B</p>
@@ -97,47 +127,49 @@ public class CreateTrailRequest extends TeaModel {
     public String ossKeyPrefix;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the service-linked role that is assumed by ActionTrail to deliver events to the destination Object Storage Service (OSS) bucket.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that ActionTrail assumes to deliver events to the OSS bucket.</p>
      * <ul>
-     * <li>If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</li>
-     * <li>If you specify this parameter and deliver events to the current account, you must grant the RAM role the permissions on the service-linked role for ActionTrail. If you want to deliver events to other accounts, you must attach a system policy to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</li>
+     * <li><p>If you do not specify this parameter, ActionTrail creates a service-linked role to deliver events. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">ActionTrail service-linked role</a>.</p>
+     * </li>
+     * <li><p>If you specify a role, it must be a RAM role that you created. This role must have a trust policy that allows the ActionTrail service (actiontrail.aliyuncs.com) to assume it. The role\&quot;s RAM policy must grant permissions to write to the specified OSS bucket. For more information about cross-account delivery, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events from multiple Alibaba Cloud accounts to the same account</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
+     * <p>acs:ram::15127787691****:role/aliyunserviceroleforactiontrail</p>
      */
     @NameInMap("OssWriteRoleArn")
     public String ossWriteRoleArn;
 
     /**
-     * <p>The ARN of the Log Service project to which events are to be delivered.</p>
+     * <p>The ARN of the SLS project to which ActionTrail delivers events.</p>
      * <blockquote>
-     * <p>You must specify at least one of the OssBucketName and SlsProjectArn parameters.</p>
+     * <p>You must specify a destination for the trail by providing at least one of the following parameters: <code>OssBucketName</code>, <code>SlsProjectArn</code>, or <code>MaxComputeProjectArn</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>acs:log:cn-shanghai::project/***</p>
+     * <p>acs:log:cn-shanghai:151266687691****:project/test-project</p>
      */
     @NameInMap("SlsProjectArn")
     public String slsProjectArn;
 
     /**
-     * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.</p>
+     * <p>The ARN of the RAM role that ActionTrail assumes to deliver events to the SLS project.</p>
      * <ul>
-     * <li>If you do not specify this parameter, ActionTrail creates a service-linked role to create the corresponding resource. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">Manage the service-linked role</a>.</li>
-     * <li>If you specify this parameter, you must grant the permissions of the service-linked role that is assumed by ActionTrail to the RAM role before you can deliver events to your Alibaba Cloud account. If you need to deliver events to other Alibaba Cloud accounts, you must attach the permission policy that is used to grant permissions related to event delivery to the RAM role. For more information about how to deliver events across Alibaba Cloud accounts, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events across Alibaba Cloud accounts</a>.</li>
+     * <li><p>If this parameter is not specified, ActionTrail creates a service-linked role to deliver events. For more information, see <a href="https://help.aliyun.com/document_detail/169244.html">ActionTrail service-linked role</a>.</p>
+     * </li>
+     * <li><p>If you specify a role, it must be a RAM role that you created. This role must have a trust policy that allows the ActionTrail service (actiontrail.aliyuncs.com) to assume it. The role\&quot;s permission policy must grant permissions to write to the specified SLS project. For more information about cross-account delivery, see <a href="https://help.aliyun.com/document_detail/207462.html">Deliver events from multiple Alibaba Cloud accounts to the same account</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
+     * <p>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</p>
      */
     @NameInMap("SlsWriteRoleArn")
     public String slsWriteRoleArn;
 
     /**
-     * <p>The one or more regions from which the trail delivers events.</p>
-     * <p>The default value is All, which indicates that the trail delivers events from all regions.</p>
-     * <p>You can also specify specific regions. You can call the <a href="https://help.aliyun.com/document_detail/213597.html">DescribeRegions</a> operation to query all the supported regions.</p>
+     * <p>The region in which the trail is created. By default, a trail is created in all regions and this parameter is set to <code>All</code>. To create a trail in a specific region, provide the region ID. For more information about regions, call the <a href="https://help.aliyun.com/document_detail/213597.html">DescribeRegions</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>All</p>

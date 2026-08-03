@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeAdvancedQueryTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1EC1FDC7-6D01-559F-852C-30D86E9EEB3F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The paginated list of templates.</p>
+     */
     @NameInMap("TemplatePage")
     public DescribeAdvancedQueryTemplateResponseBodyTemplatePage templatePage;
 
@@ -37,6 +42,8 @@ public class DescribeAdvancedQueryTemplateResponseBody extends TeaModel {
 
     public static class DescribeAdvancedQueryTemplateResponseBodyTemplatePageTemplateList extends TeaModel {
         /**
+         * <p>Indicates whether the simple query mode is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -44,16 +51,26 @@ public class DescribeAdvancedQueryTemplateResponseBody extends TeaModel {
         public Boolean simpleQuery;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>utpl-7OaxbyJATDaoLOgZRcV5RQ</p>
+         * <p>utpl-7OaxbyJATDaoLOgZRc****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-template</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The query statement.</p>
+         * 
          * <strong>example:</strong>
          * <p>event.userIdentity.type: root-account AND event.userIdentity.accessKeyId: *</p>
          */
@@ -101,6 +118,8 @@ public class DescribeAdvancedQueryTemplateResponseBody extends TeaModel {
 
     public static class DescribeAdvancedQueryTemplateResponseBodyTemplatePage extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -108,16 +127,24 @@ public class DescribeAdvancedQueryTemplateResponseBody extends TeaModel {
         public String pageNumber;
 
         /**
+         * <p>The maximum number of results returned.
+         * Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The list of template details.</p>
+         */
         @NameInMap("TemplateList")
         public java.util.List<DescribeAdvancedQueryTemplateResponseBodyTemplatePageTemplateList> templateList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

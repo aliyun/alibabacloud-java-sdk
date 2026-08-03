@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAdvancedQueryHistoryRequest extends TeaModel {
     /**
+     * <p>The ID of the advanced query record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

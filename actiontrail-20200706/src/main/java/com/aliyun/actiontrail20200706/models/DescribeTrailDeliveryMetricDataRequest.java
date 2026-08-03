@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTrailDeliveryMetricDataRequest extends TeaModel {
     /**
+     * <p>The end of the time window for the query. Specify the time in ISO 8601 format: \&quot;YYYY-MM-DDThh:mm:ssZ\&quot;. The \&quot;Z\&quot; indicates UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,17 @@ public class DescribeTrailDeliveryMetricDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The name of the delivery monitoring metric. Valid values:</p>
+     * <ul>
+     * <li><p><code>delivery_sls_success_count</code>: The number of logs successfully delivered to SLS.</p>
+     * </li>
+     * <li><p><code>delivery_sls_fail_count</code>: The number of logs that failed to be delivered to SLS.</p>
+     * </li>
+     * <li><p><code>delivery_oss_success_count</code>: The number of logs successfully delivered to OSS.</p>
+     * </li>
+     * <li><p><code>delivery_oss_fail_count</code>: The number of logs that failed to be delivered to OSS.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +35,8 @@ public class DescribeTrailDeliveryMetricDataRequest extends TeaModel {
     public String metricName;
 
     /**
+     * <p>The statistical period for the metric data, in seconds. The value must be 60 or a multiple of 60.</p>
+     * <p>Recommended values: 60, 900, and 3600.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +46,7 @@ public class DescribeTrailDeliveryMetricDataRequest extends TeaModel {
     public Long period;
 
     /**
+     * <p>The start of the time window for the query. Specify the time in ISO 8601 format: \&quot;YYYY-MM-DDThh:mm:ssZ\&quot;. The \&quot;Z\&quot; indicates UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +56,7 @@ public class DescribeTrailDeliveryMetricDataRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The name of the trail.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

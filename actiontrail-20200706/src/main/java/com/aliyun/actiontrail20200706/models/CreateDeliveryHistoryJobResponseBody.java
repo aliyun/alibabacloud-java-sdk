@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeliveryHistoryJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the historical event delivery task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16602</p>
@@ -14,7 +14,7 @@ public class CreateDeliveryHistoryJobResponseBody extends TeaModel {
     public Integer jobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9D356A34-D5A9-41CD-9915-837B7F9D8722</p>

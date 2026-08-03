@@ -41,7 +41,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "actiontrail.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "actiontrail.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "actiontrail.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "actiontrail.ap-northeast-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "actiontrail.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "actiontrail.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "actiontrail.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "actiontrail.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "actiontrail.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "actiontrail.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "actiontrail.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "actiontrail.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-west-1", "actiontrail.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "actiontrail.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "actiontrail.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "actiontrail.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "actiontrail.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "actiontrail.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "actiontrail.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "actiontrail.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "actiontrail.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "actiontrail.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "actiontrail.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "actiontrail.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "actiontrail.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "actiontrail.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "actiontrail.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "actiontrail.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "actiontrail.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "actiontrail.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "actiontrail.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "actiontrail.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "actiontrail.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "actiontrail.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "actiontrail.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "actiontrail.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "actiontrail.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "actiontrail.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("actiontrail", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -61,8 +94,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides a demo of how to save a conditional statement as an advanced event query history record. The conditional statement is used to query all <code>AccessKey</code> access management events in logs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建高级查询历史记录</p>
+     * <p>Creates an advanced event query history record that saves a custom query conditional statement for reuse and management.</p>
      * 
      * @param request CreateAdvancedQueryHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -71,6 +107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAdvancedQueryHistoryResponse createAdvancedQueryHistoryWithOptions(CreateAdvancedQueryHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.querySql)) {
             query.put("QuerySql", request.querySql);
         }
@@ -97,8 +137,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides a demo of how to save a conditional statement as an advanced event query history record. The conditional statement is used to query all <code>AccessKey</code> access management events in logs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建高级查询历史记录</p>
+     * <p>Creates an advanced event query history record that saves a custom query conditional statement for reuse and management.</p>
      * 
      * @param request CreateAdvancedQueryHistoryRequest
      * @return CreateAdvancedQueryHistoryResponse
@@ -110,7 +153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建高级查询模板</p>
+     * <p>Creates an advanced query template.</p>
      * 
      * @param request CreateAdvancedQueryTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -150,7 +193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建高级查询模板</p>
+     * <p>Creates an advanced query template.</p>
      * 
      * @param request CreateAdvancedQueryTemplateRequest
      * @return CreateAdvancedQueryTemplateResponse
@@ -162,11 +205,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Limits</p>
+     * <p>Limitations</p>
      * <ul>
-     * <li>Make sure that you have created a single-account trail to deliver events to Simple Log Service by calling the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation.</li>
-     * <li>Only one data backfill task can run at a time within an Alibaba Cloud account.
-     * This topic provides an example on how to create a data backfill task for a trail named <code>trail-name</code>.</li>
+     * <li>You must first call the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation to create a single-account trail that delivers events to Simple Log Service (SLS).</li>
+     * <li>An Alibaba Cloud account can have only one data backfill task running at a time.
+     * This topic provides an example of how to create data backfill task for the trail <code>trail-name</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -206,11 +249,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Limits</p>
+     * <p>Limitations</p>
      * <ul>
-     * <li>Make sure that you have created a single-account trail to deliver events to Simple Log Service by calling the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation.</li>
-     * <li>Only one data backfill task can run at a time within an Alibaba Cloud account.
-     * This topic provides an example on how to create a data backfill task for a trail named <code>trail-name</code>.</li>
+     * <li>You must first call the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation to create a single-account trail that delivers events to Simple Log Service (SLS).</li>
+     * <li>An Alibaba Cloud account can have only one data backfill task running at a time.
+     * This topic provides an example of how to create data backfill task for the trail <code>trail-name</code>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -226,40 +269,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Operation description</em>*</p>
      * <blockquote>
-     * <p>By default, a trail that is created by calling an operation is in the Disabled state. You must call the StartLogging operation to enable the trail. This way, ActionTrail can deliver events to the destination cloud service.
-     * <strong>Prerequisites</strong>
-     * Before you create a trail, make sure that at least one of the following storage configurations is complete:</p>
+     * <p>By default, a trail that you create by using this API is in a <strong>disabled</strong> state. You must call the <a href="https://help.aliyun.com/document_detail/432246.html">StartLogging</a> operation operation to enable the trail. After a trail is enabled, ActionTrail begins delivering events to your specified destination.</p>
      * </blockquote>
+     * <h3>Prerequisites</h3>
+     * <p>Before you create a trail, you must have at least one of the following resources configured as a destination:</p>
      * <ul>
-     * <li><p>Deliver events to OSS</p>
-     * <ul>
-     * <li>OSS is activated and a bucket is created.</li>
-     * </ul>
-     * </li>
-     * <li><p>Deliver events to Simple Log Service</p>
-     * <ul>
-     * <li>Simple Log Service is activated and a project is created.<blockquote>
-     * <p>When a trail is created, ActionTrail automatically creates a Logstore named <code>actiontrail_&lt;Trail name&gt;</code> in the project. You cannot write data other than the audit data to the Logstore. This ensures the accuracy of the audit data.</p>
+     * <li>OSS
+     * You must activate OSS and create a bucket.</li>
+     * <li>SLS
+     * You must activate SLS and create a Logstore.<blockquote>
+     * <p>When you create a trail with an SLS destination, ActionTrail automatically creates a Logstore named <code>actiontrail_&lt;trail_name&gt;</code> in your specified project. To ensure the integrity of your audit data, this Logstore only accepts events delivered by ActionTrail.</p>
      * </blockquote>
      * </li>
-     * </ul>
-     * </li>
-     * <li><p>Deliver events to MaxCompute</p>
-     * <ul>
-     * <li>MaxCompute is activated.<blockquote>
-     * <p>When a trail is created, ActionTrail automatically creates a project named <code>actiontrail_&lt;Account ID&gt;</code> on the Projects page. You cannot write data other than the audit data to the project. This ensures the accuracy of the audit data.
-     * <strong>Usage Notes</strong>
-     * This topic provides an example on how to create a single-account trail named <code>trail-test</code> to deliver events to an OSS bucket named <code>audit-log</code>.</p>
+     * <li>MaxCompute
+     * You must activate MaxCompute.<blockquote>
+     * <p>When you create a trail with a MaxCompute destination, ActionTrail automatically creates a project named <code>actiontrail_&lt;account_ID&gt;</code>. To ensure the integrity of your audit data, this project only accepts events delivered by ActionTrail.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * </li>
-     * </ul>
+     * <h3>Usage notes</h3>
+     * <p>This example shows how to create a single-account trail named <code>trail-test</code> that delivers events to an OSS bucket named <code>audit-log</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a trail. By default, ActionTrail allows you to query events generated within your Alibaba Cloud account in the last 90 days. To query and analyze events generated more than 90 days ago, create a trail to deliver events to Object Storage Service (OSS), Simple Log Service, or MaxCompute.</p>
+     * <p>Creates a trail to deliver events to a destination for long-term storage and analysis, such as an Object Storage Service (OSS) bucket, a Simple Log Service (SLS) Logstore, or a MaxCompute project.</p>
      * 
      * @param request CreateTrailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -331,40 +364,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Operation description</em>*</p>
      * <blockquote>
-     * <p>By default, a trail that is created by calling an operation is in the Disabled state. You must call the StartLogging operation to enable the trail. This way, ActionTrail can deliver events to the destination cloud service.
-     * <strong>Prerequisites</strong>
-     * Before you create a trail, make sure that at least one of the following storage configurations is complete:</p>
+     * <p>By default, a trail that you create by using this API is in a <strong>disabled</strong> state. You must call the <a href="https://help.aliyun.com/document_detail/432246.html">StartLogging</a> operation operation to enable the trail. After a trail is enabled, ActionTrail begins delivering events to your specified destination.</p>
      * </blockquote>
+     * <h3>Prerequisites</h3>
+     * <p>Before you create a trail, you must have at least one of the following resources configured as a destination:</p>
      * <ul>
-     * <li><p>Deliver events to OSS</p>
-     * <ul>
-     * <li>OSS is activated and a bucket is created.</li>
-     * </ul>
-     * </li>
-     * <li><p>Deliver events to Simple Log Service</p>
-     * <ul>
-     * <li>Simple Log Service is activated and a project is created.<blockquote>
-     * <p>When a trail is created, ActionTrail automatically creates a Logstore named <code>actiontrail_&lt;Trail name&gt;</code> in the project. You cannot write data other than the audit data to the Logstore. This ensures the accuracy of the audit data.</p>
+     * <li>OSS
+     * You must activate OSS and create a bucket.</li>
+     * <li>SLS
+     * You must activate SLS and create a Logstore.<blockquote>
+     * <p>When you create a trail with an SLS destination, ActionTrail automatically creates a Logstore named <code>actiontrail_&lt;trail_name&gt;</code> in your specified project. To ensure the integrity of your audit data, this Logstore only accepts events delivered by ActionTrail.</p>
      * </blockquote>
      * </li>
-     * </ul>
-     * </li>
-     * <li><p>Deliver events to MaxCompute</p>
-     * <ul>
-     * <li>MaxCompute is activated.<blockquote>
-     * <p>When a trail is created, ActionTrail automatically creates a project named <code>actiontrail_&lt;Account ID&gt;</code> on the Projects page. You cannot write data other than the audit data to the project. This ensures the accuracy of the audit data.
-     * <strong>Usage Notes</strong>
-     * This topic provides an example on how to create a single-account trail named <code>trail-test</code> to deliver events to an OSS bucket named <code>audit-log</code>.</p>
+     * <li>MaxCompute
+     * You must activate MaxCompute.<blockquote>
+     * <p>When you create a trail with a MaxCompute destination, ActionTrail automatically creates a project named <code>actiontrail_&lt;account_ID&gt;</code>. To ensure the integrity of your audit data, this project only accepts events delivered by ActionTrail.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * </li>
-     * </ul>
+     * <h3>Usage notes</h3>
+     * <p>This example shows how to create a single-account trail named <code>trail-test</code> that delivers events to an OSS bucket named <code>audit-log</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a trail. By default, ActionTrail allows you to query events generated within your Alibaba Cloud account in the last 90 days. To query and analyze events generated more than 90 days ago, create a trail to deliver events to Object Storage Service (OSS), Simple Log Service, or MaxCompute.</p>
+     * <p>Creates a trail to deliver events to a destination for long-term storage and analysis, such as an Object Storage Service (OSS) bucket, a Simple Log Service (SLS) Logstore, or a MaxCompute project.</p>
      * 
      * @param request CreateTrailRequest
      * @return CreateTrailResponse
@@ -376,7 +399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除高级查询历史记录</p>
+     * <p>Deletes an advanced query record.</p>
      * 
      * @param request DeleteAdvancedQueryHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -408,7 +431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除高级查询历史记录</p>
+     * <p>Deletes an advanced query record.</p>
      * 
      * @param request DeleteAdvancedQueryHistoryRequest
      * @return DeleteAdvancedQueryHistoryResponse
@@ -420,7 +443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除高级查询模板</p>
+     * <p>Deletes an advanced query template.</p>
      * 
      * @param request DeleteAdvancedQueryTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -452,7 +475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除高级查询模板</p>
+     * <p>Deletes an advanced query template.</p>
      * 
      * @param request DeleteAdvancedQueryTemplateRequest
      * @return DeleteAdvancedQueryTemplateResponse
@@ -464,7 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据事件选择器</p>
+     * <p>Deletes the data event selector for a specified trail.</p>
      * 
      * @param request DeleteDataEventSelectorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -496,7 +519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据事件选择器</p>
+     * <p>Deletes the data event selector for a specified trail.</p>
      * 
      * @param request DeleteDataEventSelectorRequest
      * @return DeleteDataEventSelectorResponse
@@ -608,7 +631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高级查询历史记录</p>
+     * <p>Queries all advanced query records.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAdvancedQueryHistoryResponse
@@ -631,7 +654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高级查询历史记录</p>
+     * <p>Queries all advanced query records.</p>
      * @return DescribeAdvancedQueryHistoryResponse
      */
     public DescribeAdvancedQueryHistoryResponse describeAdvancedQueryHistory() throws Exception {
@@ -641,7 +664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高级查询模板</p>
+     * <p>Queries advanced query templates.</p>
      * 
      * @param request DescribeAdvancedQueryTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -681,7 +704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询高级查询模板</p>
+     * <p>Queries advanced query templates.</p>
      * 
      * @param request DescribeAdvancedQueryTemplateRequest
      * @return DescribeAdvancedQueryTemplateResponse
@@ -743,7 +766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举资源生命周期事件</p>
+     * <p>Queries the lifecycle events of a specified resource.</p>
      * 
      * @param request DescribeResourceLifeCycleEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -779,7 +802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举资源生命周期事件</p>
+     * <p>Queries the lifecycle events of a specified resource.</p>
      * 
      * @param request DescribeResourceLifeCycleEventsRequest
      * @return DescribeResourceLifeCycleEventsResponse
@@ -791,7 +814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有场景</p>
+     * <p>Queries all advanced query scenarios.</p>
      * 
      * @param request DescribeScenesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -823,7 +846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询所有场景</p>
+     * <p>Queries all advanced query scenarios.</p>
      * 
      * @param request DescribeScenesRequest
      * @return DescribeScenesResponse
@@ -835,7 +858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举所有模版</p>
+     * <p>Queries advanced query templates for a specified scenario.</p>
      * 
      * @param request DescribeSearchTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -875,7 +898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举所有模版</p>
+     * <p>Queries advanced query templates for a specified scenario.</p>
      * 
      * @param request DescribeSearchTemplatesRequest
      * @return DescribeSearchTemplatesResponse
@@ -887,7 +910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取投递监控指标</p>
+     * <p>Retrieves data for delivery monitoring metrics.</p>
      * 
      * @param request DescribeTrailDeliveryMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -915,7 +938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取投递监控指标</p>
+     * <p>Retrieves data for delivery monitoring metrics.</p>
      * 
      * @param request DescribeTrailDeliveryMetricDataRequest
      * @return DescribeTrailDeliveryMetricDataResponse
@@ -985,7 +1008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户告警量</p>
+     * <p>Queries the number of daily alerts within a specific time range.</p>
      * 
      * @param request DescribeUserAlertCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1021,7 +1044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户告警量</p>
+     * <p>Queries the number of daily alerts within a specific time range.</p>
      * 
      * @param request DescribeUserAlertCountRequest
      * @return DescribeUserAlertCountResponse
@@ -1033,7 +1056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户日志量</p>
+     * <p>Queries the number of daily logs within a specific time range.</p>
      * 
      * @param request DescribeUserLogCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1069,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户日志量</p>
+     * <p>Queries the number of daily logs within a specific time range.</p>
      * 
      * @param request DescribeUserLogCountRequest
      * @return DescribeUserLogCountResponse
@@ -1081,7 +1104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户跟踪量</p>
+     * <p>Queries the number of enabled trails, including organization trails.</p>
      * 
      * @param request DescribeUserTrailCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1106,7 +1129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户跟踪量</p>
+     * <p>Queries the number of enabled trails, including organization trails.</p>
      * 
      * @param request DescribeUserTrailCountRequest
      * @return DescribeUserTrailCountResponse
@@ -1118,7 +1141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭insight</p>
+     * <p>Disables a specific type of Insights event.</p>
      * 
      * @param request DisableInsightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1150,7 +1173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭insight</p>
+     * <p>Disables a specific type of Insights event.</p>
      * 
      * @param request DisableInsightRequest
      * @return DisableInsightResponse
@@ -1162,7 +1185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the Insights feature</p>
+     * <p>Enables the Insights feature.</p>
      * 
      * @param request EnableInsightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1194,7 +1217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the Insights feature</p>
+     * <p>Enables the Insights feature.</p>
      * 
      * @param request EnableInsightRequest
      * @return EnableInsightResponse
@@ -1209,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about the most recent events that are generated within 400 days after February 1, 2022 when a specified AccessKey pair is called to access Alibaba Cloud services. For more information about supported events, see <a href="https://help.aliyun.com/document_detail/419214.html">Alibaba Cloud services and events that are supported by the AccessKey pair audit feature</a>. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the most recent events that are generated when a specified AccessKey pair is called to access Alibaba Cloud services.</p>
+     * <p>Queries the most recent events associated with a specified AccessKey pair, including the event name, source, timestamp, and details.</p>
      * 
      * @param request GetAccessKeyLastUsedEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1256,7 +1279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about the most recent events that are generated within 400 days after February 1, 2022 when a specified AccessKey pair is called to access Alibaba Cloud services. For more information about supported events, see <a href="https://help.aliyun.com/document_detail/419214.html">Alibaba Cloud services and events that are supported by the AccessKey pair audit feature</a>. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the most recent events that are generated when a specified AccessKey pair is called to access Alibaba Cloud services.</p>
+     * <p>Queries the most recent events associated with a specified AccessKey pair, including the event name, source, timestamp, and details.</p>
      * 
      * @param request GetAccessKeyLastUsedEventsRequest
      * @return GetAccessKeyLastUsedEventsResponse
@@ -1271,7 +1294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about the most recent call of a specified AccessKey pair within 400 days after February 1, 2022. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the most recent call of a specified AccessKey pair.</p>
+     * <p>Queries the most recent usage record of a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1306,7 +1329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about the most recent call of a specified AccessKey pair within 400 days after February 1, 2022. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the most recent call of a specified AccessKey pair.</p>
+     * <p>Queries the most recent usage record of a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedInfoRequest
      * @return GetAccessKeyLastUsedInfoResponse
@@ -1321,7 +1344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about the IP addresses that are most recently used within 400 days after February 1, 2022 when a specified AccessKey pair is called to access Alibaba Cloud services. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the IP addresses that are most recently used when an AccessKey pair is called to access Alibaba Cloud services.</p>
+     * <p>Queries the IP addresses most recently used by a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1368,7 +1391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about the IP addresses that are most recently used within 400 days after February 1, 2022 when a specified AccessKey pair is called to access Alibaba Cloud services. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the IP addresses that are most recently used when an AccessKey pair is called to access Alibaba Cloud services.</p>
+     * <p>Queries the IP addresses most recently used by a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedIpsRequest
      * @return GetAccessKeyLastUsedIpsResponse
@@ -1383,7 +1406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair within 400 days after February 1, 2022. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair.</p>
+     * <p>Queries the Alibaba Cloud services most recently accessed by a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedProductsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1418,7 +1441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair within 400 days after February 1, 2022. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair.</p>
+     * <p>Queries the Alibaba Cloud services most recently accessed by a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedProductsRequest
      * @return GetAccessKeyLastUsedProductsResponse
@@ -1433,7 +1456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about resources that are most recently accessed by using a specified AccessKey pair within 400 days after February 1, 2022. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the resources that are most recently accessed by using a specified AccessKey pair.</p>
+     * <p>Queries the resources most recently used by a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1480,7 +1503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation to query only the information about resources that are most recently accessed by using a specified AccessKey pair within 400 days after February 1, 2022. Data is updated at 1-hour intervals, which can cause query latency. We recommend that you do not change an AccessKey pair unless required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the resources that are most recently accessed by using a specified AccessKey pair.</p>
+     * <p>Queries the resources most recently used by a specified AccessKey pair.</p>
      * 
      * @param request GetAccessKeyLastUsedResourcesRequest
      * @return GetAccessKeyLastUsedResourcesResponse
@@ -1492,7 +1515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个高级查询模板</p>
+     * <p>Retrieves information about a single advanced template.</p>
      * 
      * @param request GetAdvancedQueryTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1524,7 +1547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单个高级查询模板</p>
+     * <p>Retrieves information about a single advanced template.</p>
      * 
      * @param request GetAdvancedQueryTemplateRequest
      * @return GetAdvancedQueryTemplateResponse
@@ -1536,7 +1559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件选择器</p>
+     * <p>Queries the details about the data event selector for a specified trail.</p>
      * 
      * @param request GetDataEventSelectorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1568,7 +1591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询事件选择器</p>
+     * <p>Queries the details about the data event selector for a specified trail.</p>
      * 
      * @param request GetDataEventSelectorRequest
      * @return GetDataEventSelectorResponse
@@ -1671,7 +1694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>操作审计成熟度查询接口</p>
+     * <p>Queries the governance metrics of ActionTrail.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGovernanceMetricsResponse
@@ -1694,7 +1717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>操作审计成熟度查询接口</p>
+     * <p>Queries the governance metrics of ActionTrail.</p>
      * @return GetGovernanceMetricsResponse
      */
     public GetGovernanceMetricsResponse getGovernanceMetrics() throws Exception {
@@ -1704,7 +1727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取跟踪insights配置</p>
+     * <p>Queries the Insights event types to deliver for a trail.</p>
      * 
      * @param request GetInsightSelectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1736,7 +1759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取跟踪insights配置</p>
+     * <p>Queries the Insights event types to deliver for a trail.</p>
      * 
      * @param request GetInsightSelectorsRequest
      * @return GetInsightSelectorsResponse
@@ -1748,7 +1771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取查询账号开启insight的类型</p>
+     * <p>Queries all enabled types of Insights events.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInsightTypesResponse
@@ -1771,7 +1794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取查询账号开启insight的类型</p>
+     * <p>Queries all enabled types of Insights events.</p>
      * @return GetInsightTypesResponse
      */
     public GetInsightTypesResponse getInsightTypes() throws Exception {
@@ -1781,7 +1804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到当前账号的insights事件数量</p>
+     * <p>Queries the number of Insights events for the current account.</p>
      * 
      * @param request GetInsightsEventsCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1821,7 +1844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>得到当前账号的insights事件数量</p>
+     * <p>Queries the number of Insights events for the current account.</p>
      * 
      * @param request GetInsightsEventsCountRequest
      * @return GetInsightsEventsCountResponse
@@ -1887,7 +1910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询事件选择器</p>
+     * <p>Queries all data event selectors.</p>
      * 
      * @param request ListDataEventSelectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1923,7 +1946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询事件选择器</p>
+     * <p>Queries all data event selectors.</p>
      * 
      * @param request ListDataEventSelectorsRequest
      * @return ListDataEventSelectorsResponse
@@ -1935,7 +1958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据事件支持的服务与事件名称</p>
+     * <p>Queries the services that support data events and the names of these events.</p>
      * 
      * @param request ListDataEventServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1971,7 +1994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询数据事件支持的服务与事件名称</p>
+     * <p>Queries the services that support data events and the names of these events.</p>
      * 
      * @param request ListDataEventServicesRequest
      * @return ListDataEventServicesResponse
@@ -1983,7 +2006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query a list of data backfill tasks. The returned result shows that a data backfill task with the ID <code>16602</code> is used to deliver historical events for a trail named <code>trail-name</code> to Simple Log Service.</p>
+     * <p>This topic provides an example of how to query a list of data backfill tasks. The response shows a task with the ID <code>16602</code> that delivers historical events from the trail <code>trail-name</code> to Simple Log Service (SLS).</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of data backfill tasks.</p>
@@ -2022,7 +2045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query a list of data backfill tasks. The returned result shows that a data backfill task with the ID <code>16602</code> is used to deliver historical events for a trail named <code>trail-name</code> to Simple Log Service.</p>
+     * <p>This topic provides an example of how to query a list of data backfill tasks. The response shows a task with the ID <code>16602</code> that delivers historical events from the trail <code>trail-name</code> to Simple Log Service (SLS).</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of data backfill tasks.</p>
@@ -2037,13 +2060,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation to query event details, you can query the event details at most twice per second.</p>
      * <blockquote>
-     * <p>Do not frequently call this operation. You can create a trail to deliver events to Log Service. Then, you can query event details in near real time by using the real-time log consumption feature of Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Overview</a>.</p>
+     * <p>Do not call this operation frequently. To query events in near-real time, you can create a trail to deliver events to Simple Log Service (SLS) and use its real-time consumption feature. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Real-time consumption</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries event details.</p>
+     * <p>Queries detailed historical events.</p>
      * 
      * @param request LookupEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2095,13 +2117,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation to query event details, you can query the event details at most twice per second.</p>
      * <blockquote>
-     * <p>Do not frequently call this operation. You can create a trail to deliver events to Log Service. Then, you can query event details in near real time by using the real-time log consumption feature of Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Overview</a>.</p>
+     * <p>Do not call this operation frequently. To query events in near-real time, you can create a trail to deliver events to Simple Log Service (SLS) and use its real-time consumption feature. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Real-time consumption</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries event details.</p>
+     * <p>Queries detailed historical events.</p>
      * 
      * @param request LookupEventsRequest
      * @return LookupEventsResponse
@@ -2113,7 +2134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Insight事件</p>
+     * <p>Queries Insights events.</p>
      * 
      * @param request LookupInsightEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2161,7 +2182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Insight事件</p>
+     * <p>Queries Insights events.</p>
      * 
      * @param request LookupInsightEventsRequest
      * @return LookupInsightEventsResponse
@@ -2173,7 +2194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建事件选择器</p>
+     * <p>Creates or configures a data event selector. A trail must exist before you create a data event selector. If a trail does not exist, you can call the CreateTrail operation to create one.</p>
      * 
      * @param request PutDataEventSelectorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2217,7 +2238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建事件选择器</p>
+     * <p>Creates or configures a data event selector. A trail must exist before you create a data event selector. If a trail does not exist, you can call the CreateTrail operation to create one.</p>
      * 
      * @param request PutDataEventSelectorRequest
      * @return PutDataEventSelectorResponse
@@ -2229,7 +2250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改跟踪insights功能</p>
+     * <p>Specifies the types of Insights events to deliver for a trail.</p>
      * 
      * @param request PutInsightSelectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2265,7 +2286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改跟踪insights功能</p>
+     * <p>Specifies the types of Insights events to deliver for a trail.</p>
      * 
      * @param request PutInsightSelectorsRequest
      * @return PutInsightSelectorsResponse
@@ -2277,10 +2298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to enable logging for a sample trail named <code>trail-test</code>.</p>
+     * <p>This topic provides an example on how to enable a trail named <code>trail-test</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a trail to deliver events to an Object Storage Service (OSS) bucket or a Simple Log Service Logstore.</p>
+     * <p>Enables a trail to start delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</p>
      * 
      * @param request StartLoggingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2312,10 +2333,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to enable logging for a sample trail named <code>trail-test</code>.</p>
+     * <p>This topic provides an example on how to enable a trail named <code>trail-test</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a trail to deliver events to an Object Storage Service (OSS) bucket or a Simple Log Service Logstore.</p>
+     * <p>Enables a trail to start delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</p>
      * 
      * @param request StartLoggingRequest
      * @return StartLoggingResponse
@@ -2327,10 +2348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to disable logging for a sample trail named <code>trail-test</code>.</p>
+     * <p>This topic provides an example on how to disable a trail named <code>trail-test</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables a trail to stop the delivery of events to an Object Storage Service (OSS) bucket or a  Simple Log Service Logstore.</p>
+     * <p>Disables a trail to stop delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</p>
      * 
      * @param request StopLoggingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2358,10 +2379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to disable logging for a sample trail named <code>trail-test</code>.</p>
+     * <p>This topic provides an example on how to disable a trail named <code>trail-test</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables a trail to stop the delivery of events to an Object Storage Service (OSS) bucket or a  Simple Log Service Logstore.</p>
+     * <p>Disables a trail to stop delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</p>
      * 
      * @param request StopLoggingRequest
      * @return StopLoggingResponse
@@ -2373,7 +2394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新高级查询模板</p>
+     * <p>Updates an advanced query template.</p>
      * 
      * @param request UpdateAdvancedQueryTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2417,7 +2438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新高级查询模板</p>
+     * <p>Updates an advanced query template.</p>
      * 
      * @param request UpdateAdvancedQueryTemplateRequest
      * @return UpdateAdvancedQueryTemplateResponse

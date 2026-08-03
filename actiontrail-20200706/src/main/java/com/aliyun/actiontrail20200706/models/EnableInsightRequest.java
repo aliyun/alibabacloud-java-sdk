@@ -7,9 +7,20 @@ public class EnableInsightRequest extends TeaModel {
     /**
      * <p>The type of the Insights event. Valid values:</p>
      * <ul>
-     * <li>IpInsight: Insights event on IP address</li>
-     * <li>ApiCallRateInsight: Insights event on API call rate</li>
-     * <li>ApiErrorRateInsight: Insights event on API error rate</li>
+     * <li><p>IpInsight: IP address request events.</p>
+     * </li>
+     * <li><p>ApiCallRateInsight: Unusual API call events.</p>
+     * </li>
+     * <li><p>ApiErrorRateInsight: API error events.</p>
+     * </li>
+     * <li><p>AkInsight: Unusual AccessKey pair call events.</p>
+     * </li>
+     * <li><p>PolicyChangeInsight: Permission change events.</p>
+     * </li>
+     * <li><p>PasswordChangeInsight: Password change events.</p>
+     * </li>
+     * <li><p>TrailConcealmentInsight: Trail concealment events.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

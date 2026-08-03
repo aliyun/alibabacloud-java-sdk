@@ -4,10 +4,15 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class PutInsightSelectorsResponseBody extends TeaModel {
+    /**
+     * <p>An array of Insights event types.</p>
+     */
     @NameInMap("InsightSelectors")
     public java.util.List<String> insightSelectors;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7EC26DF0-35AC-5F37-82B3-F5545D0A****</p>
      */
@@ -15,6 +20,8 @@ public class PutInsightSelectorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the trail.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:actiontrail:cn-shanghai:159498693826****:trail/trail-name</p>
      */

@@ -9,7 +9,7 @@ public class GetAccessKeyLastUsedResourcesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI****************</p>
+     * <p>LTAI4Fz1ykT4qxgNMvN6****</p>
      */
     @NameInMap("AccessKey")
     public String accessKey;
@@ -29,8 +29,10 @@ public class GetAccessKeyLastUsedResourcesRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Valid values: 0 to 100.</li>
-     * <li>Default value: 20.</li>
+     * <li><p>Valid values: 0 to 100.</p>
+     * </li>
+     * <li><p>Default value: 20.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

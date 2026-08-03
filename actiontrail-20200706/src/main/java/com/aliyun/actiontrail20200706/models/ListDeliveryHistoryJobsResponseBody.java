@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of historical event delivery tasks.</p>
+     * <p>The list of data backfill tasks.</p>
      */
     @NameInMap("DeliveryHistoryJobs")
     public java.util.List<ListDeliveryHistoryJobsResponseBodyDeliveryHistoryJobs> deliveryHistoryJobs;
@@ -20,7 +20,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B190816C-6DCA-4DC5-9B8E-EE0367B57CFF</p>
@@ -38,7 +38,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of historical event delivery tasks returned.</p>
+     * <p>The total number of tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,7 +111,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The home region of the trail.</p>
+         * <p>The home region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -129,12 +129,16 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         public Long jobId;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li>0: The task is initializing.</li>
-         * <li>1: The task is delivering historical events.</li>
-         * <li>2: The task is complete.</li>
-         * <li>3: The task fails.</li>
+         * <li><p>0: The task is being initialized.</p>
+         * </li>
+         * <li><p>1: The task is delivering events.</p>
+         * </li>
+         * <li><p>2: The task is complete.</p>
+         * </li>
+         * <li><p>3: The task failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +166,7 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
         public String trailName;
 
         /**
-         * <p>The time when the task was updated.</p>
+         * <p>The time when the task was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-26T03:20:08Z</p>

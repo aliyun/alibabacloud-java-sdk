@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartLoggingResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>145318BE-DEE1-4C57-AA7C-5BE7D34A6AE0</p>

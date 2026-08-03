@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableInsightResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4ABAEA6E-C740-5CE2-A003-643E5519****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSearchTemplatesRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSearchTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The maximum number of entries to return. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,7 @@ public class DescribeSearchTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
