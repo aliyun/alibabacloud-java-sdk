@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class CheckIpExistsInSecurityIpListResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CheckIpExistsInSecurityIpListResponseBodyData data;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
      */
@@ -37,6 +42,8 @@ public class CheckIpExistsInSecurityIpListResponseBody extends TeaModel {
 
     public static class CheckIpExistsInSecurityIpListResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the IP address exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

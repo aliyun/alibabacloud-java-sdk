@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetModifyBEClusterInquiryResponseBodyData data;
@@ -42,6 +42,11 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
 
     public static class GetModifyBEClusterInquiryResponseBodyDataOptionalPromotions extends TeaModel {
         /**
+         * <p>The discount amount.</p>
+         * <blockquote>
+         * <p>This parameter is not applicable to the China site.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -49,6 +54,8 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String canPromFee;
 
         /**
+         * <p>The promotion rule description.</p>
+         * 
          * <strong>example:</strong>
          * <p>789asdf</p>
          */
@@ -56,13 +63,17 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String optionCode;
 
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>General coupon deducts 100</p>
+         * <p>General coupon can deduct 100</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>General coupon</p>
          */
@@ -70,6 +81,8 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>732211480132</p>
          */
@@ -133,14 +146,20 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The coupon codes.</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<GetModifyBEClusterInquiryResponseBodyDataOptionalPromotions> optionalPromotions;
 
+        /**
+         * <p>The unit price results of billing items.</p>
+         */
         @NameInMap("PricingRules")
         public java.util.Map<String, String> pricingRules;
 
         /**
-         * <p>The estimated refund amount when you change the billing method of a subscription cluster to pay-as-you-go.</p>
+         * <p>The estimated refund amount when converting a subscription cluster to a pay-as-you-go cluster under a subscription instance.</p>
          * 
          * <strong>example:</strong>
          * <p>-100</p>
@@ -149,7 +168,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String refundAmount;
 
         /**
-         * <p>The amount.</p>
+         * <p>The trade amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.76</p>

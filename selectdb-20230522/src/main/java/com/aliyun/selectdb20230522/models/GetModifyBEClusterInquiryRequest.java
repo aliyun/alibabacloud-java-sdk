@@ -14,7 +14,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public Long cacheSize;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billing type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The elastic computing resources.</p>
+     * <p>The elastic compute resources.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -62,7 +62,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>Specifies whether this is an inquiry for changing the billing method of the cluster.</p>
+     * <p>Specifies whether to query the price for converting the cluster billing type.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -80,7 +80,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public Long preCacheSize;
 
     /**
-     * <p>The reserved computing resources.</p>
+     * <p>The reserved compute resources.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -99,6 +99,8 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>The coupon code.</p>
+     * 
      * <strong>example:</strong>
      * <p>123412345</p>
      */

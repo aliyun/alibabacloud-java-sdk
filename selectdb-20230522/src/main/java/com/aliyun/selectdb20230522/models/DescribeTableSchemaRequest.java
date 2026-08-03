@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTableSchemaRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeTableSchemaRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The database name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeTableSchemaRequest extends TeaModel {
     public String database;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class DescribeTableSchemaRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The table name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

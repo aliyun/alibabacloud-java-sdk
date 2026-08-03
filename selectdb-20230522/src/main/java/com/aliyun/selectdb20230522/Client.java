@@ -278,6 +278,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether a specified IP address already exists in a network whitelist group.</p>
+     * 
      * @param request CheckIpExistsInSecurityIpListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckIpExistsInSecurityIpListResponse
@@ -303,6 +306,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Checks whether a specified IP address already exists in a network whitelist group.</p>
+     * 
      * @param request CheckIpExistsInSecurityIpListRequest
      * @return CheckIpExistsInSecurityIpListResponse
      */
@@ -629,6 +635,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
             query.put("EngineVersion", request.engineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.FEClassCode)) {
+            query.put("FEClassCode", request.FEClassCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.FENodeCount)) {
+            query.put("FENodeCount", request.FENodeCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.multiZoneShrink)) {
@@ -1437,7 +1451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified instance.</p>
+     * <p>Queries the details of an instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1477,7 +1491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified instance.</p>
+     * <p>Queries the details of an instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -1949,7 +1963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表结构</p>
+     * <p>Retrieves the CREATE TABLE statement.</p>
      * 
      * @param request DescribeTableSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1993,7 +2007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取表结构</p>
+     * <p>Retrieves the CREATE TABLE statement.</p>
      * 
      * @param request DescribeTableSchemaRequest
      * @return DescribeTableSchemaResponse
@@ -2229,7 +2243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Retrieves pricing information when creating a cluster under a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request GetModifyBEClusterInquiryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2257,7 +2271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</p>
+     * <p>Retrieves pricing information when creating a cluster under a specified ApsaraDB for SelectDB instance.</p>
      * 
      * @param request GetModifyBEClusterInquiryRequest
      * @return GetModifyBEClusterInquiryResponse

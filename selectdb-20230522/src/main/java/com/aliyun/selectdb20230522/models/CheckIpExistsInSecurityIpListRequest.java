@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckIpExistsInSecurityIpListRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckIpExistsInSecurityIpListRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The IP address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CheckIpExistsInSecurityIpListRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
