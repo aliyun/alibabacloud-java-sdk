@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTairSkvDdbTableRequest extends TeaModel {
     /**
-     * <p>The cluster backup set ID. Some new cluster architectures support cluster backup set IDs. You can call <a href="https://www.alibabacloud.com/help/en/redis/developer-reference/api-r-kvstore-2015-01-01-describeclusterbackuplist-redis">DescribeClusterBackupList</a> to obtain the ID.</p>
+     * <p>The cluster backup set ID. Some new cluster architectures support this parameter. You can call <a href="https://www.alibabacloud.com/help/en/redis/developer-reference/api-r-kvstore-2015-01-01-describeclusterbackuplist-redis">DescribeClusterBackupList</a> to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cb-hyxdof5x9kqb**</p>
@@ -14,7 +14,7 @@ public class CreateTairSkvDdbTableRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain up to 64 ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz**</p>
@@ -54,6 +54,9 @@ public class CreateTairSkvDdbTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RestoreTime")
+    public String restoreTime;
+
     /**
      * <p>The table schema configuration in JSON format.</p>
      * 
@@ -67,7 +70,7 @@ public class CreateTairSkvDdbTableRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>To create an instance from a backup set of an existing instance, specify the ID of the source instance in this parameter.</p>
+     * <p>To create an instance from a backup set of an existing instance, specify the source instance ID in this parameter.</p>
      * <blockquote>
      * <p>This parameter must be used together with BackupId.</p>
      * </blockquote>
@@ -174,6 +177,14 @@ public class CreateTairSkvDdbTableRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateTairSkvDdbTableRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
+        return this;
+    }
+    public String getRestoreTime() {
+        return this.restoreTime;
     }
 
     public CreateTairSkvDdbTableRequest setSchema(String schema) {

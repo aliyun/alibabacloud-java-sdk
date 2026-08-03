@@ -3,9 +3,8 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeTaskDetailRequest extends TeaModel {
+public class RetryInspectionTaskRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,22 +13,18 @@ public class DescribeTaskDetailRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The task ID.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>674546459</p>
-     */
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("TaskId")
     public String taskId;
 
-    public static DescribeTaskDetailRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeTaskDetailRequest self = new DescribeTaskDetailRequest();
+    public static RetryInspectionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        RetryInspectionTaskRequest self = new RetryInspectionTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTaskDetailRequest setInstanceId(String instanceId) {
+    public RetryInspectionTaskRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -37,7 +32,15 @@ public class DescribeTaskDetailRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeTaskDetailRequest setTaskId(String taskId) {
+    public RetryInspectionTaskRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public RetryInspectionTaskRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

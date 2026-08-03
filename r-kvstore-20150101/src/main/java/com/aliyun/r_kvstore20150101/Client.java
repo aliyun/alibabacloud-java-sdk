@@ -53,28 +53,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("na-south-1", "r-kvstore.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "r-kvstore.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "r-kvstore.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "r-kvstore.eu-west-2.aliyuncs.com"),
             new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "r-kvstore.cn-zhongwei.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com"),
             new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "r-kvstore.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "r-kvstore.cn-heyuan-acdr-1.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "r-kvstore.ap-southeast-8.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com")
         );
@@ -441,6 +445,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelActiveOperationTasksResponse cancelActiveOperationTasks(CancelActiveOperationTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelActiveOperationTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭巡检任务</p>
+     * 
+     * @param request CancelInspectionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelInspectionTaskResponse
+     */
+    public CancelInspectionTaskResponse cancelInspectionTaskWithOptions(CancelInspectionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelInspectionTask"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelInspectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>关闭巡检任务</p>
+     * 
+     * @param request CancelInspectionTaskRequest
+     * @return CancelInspectionTaskResponse
+     */
+    public CancelInspectionTaskResponse cancelInspectionTask(CancelInspectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelInspectionTaskWithOptions(request, runtime);
     }
 
     /**
@@ -944,15 +1000,155 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建定时巡检任务配置</p>
+     * 
+     * @param request CreateInspectionScheduleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInspectionScheduleResponse
+     */
+    public CreateInspectionScheduleResponse createInspectionScheduleWithOptions(CreateInspectionScheduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cronExpression)) {
+            query.put("CronExpression", request.cronExpression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionItems)) {
+            query.put("InspectionItems", request.inspectionItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionWindow)) {
+            query.put("InspectionWindow", request.inspectionWindow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            query.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleName)) {
+            query.put("ScheduleName", request.scheduleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            query.put("Timezone", request.timezone);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInspectionSchedule"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInspectionScheduleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建定时巡检任务配置</p>
+     * 
+     * @param request CreateInspectionScheduleRequest
+     * @return CreateInspectionScheduleResponse
+     */
+    public CreateInspectionScheduleResponse createInspectionSchedule(CreateInspectionScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createInspectionScheduleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动创建巡检任务</p>
+     * 
+     * @param request CreateInspectionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInspectionTaskResponse
+     */
+    public CreateInspectionTaskResponse createInspectionTaskWithOptions(CreateInspectionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionItems)) {
+            query.put("InspectionItems", request.inspectionItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            query.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInspectionTask"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInspectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动创建巡检任务</p>
+     * 
+     * @param request CreateInspectionTaskRequest
+     * @return CreateInspectionTaskResponse
+     */
+    public CreateInspectionTaskResponse createInspectionTask(CreateInspectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createInspectionTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
-     * This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</p>
+     * <p>Before you invoke this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis® OSS-Compatible).
+     * This operation creates Redis Community Edition instances and Tair memory-optimized classic instances. To create a Tair cloud-native instance, invoke the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
      * <blockquote>
-     * <p>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</p>
+     * <p>For the corresponding console operations and instance selection recommendations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <code>CreateTairInstance</code> API.</p>
+     * <p>Creates a Redis Community Edition classic instance, a Redis Community Edition cloud-native architecture instance, or a Tair memory-optimized classic instance. To create a cloud-native architecture Tair instance, call the CreateTairInstance operation.</p>
      * 
      * @param request CreateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1184,14 +1380,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
-     * This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</p>
+     * <p>Before you invoke this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis® OSS-Compatible).
+     * This operation creates Redis Community Edition instances and Tair memory-optimized classic instances. To create a Tair cloud-native instance, invoke the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</p>
      * <blockquote>
-     * <p>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</p>
+     * <p>For the corresponding console operations and instance selection recommendations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <code>CreateTairInstance</code> API.</p>
+     * <p>Creates a Redis Community Edition classic instance, a Redis Community Edition cloud-native architecture instance, or a Tair memory-optimized classic instance. To create a cloud-native architecture Tair instance, call the CreateTairInstance operation.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -2025,7 +2221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * <li>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2068,6 +2264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.restoreTime)) {
+            query.put("RestoreTime", request.restoreTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
@@ -2115,7 +2315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * <li>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2133,12 +2333,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * <li>Before you call this operation, make sure that you understand the billing rules and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
      * <li>To create a Tair Serverless KV table instance, call the <code>CreateTairSkvDdbTable</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Tair Serverless KV workspace instance.</p>
+     * <p>Activates a Tair Serverless KV workspace instance.</p>
      * 
      * @param request CreateTairSkvDdbWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2228,12 +2428,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
+     * <li>Before you call this operation, make sure that you understand the billing rules and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</li>
      * <li>To create a Tair Serverless KV table instance, call the <code>CreateTairSkvDdbTable</code> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Tair Serverless KV workspace instance.</p>
+     * <p>Activates a Tair Serverless KV workspace instance.</p>
      * 
      * @param request CreateTairSkvDdbWorkspaceRequest
      * @return CreateTairSkvDdbWorkspaceResponse
@@ -2477,6 +2677,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteGlobalSecurityIPGroupResponse deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteGlobalSecurityIPGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43882.html">释放实例</a>。
+     * 调用本接口时，实例必须满足以下条件：</p>
+     * <ul>
+     * <li>实例状态为运行中。</li>
+     * <li>实例的付费方式为后付费（按量付费）。<blockquote>
+     * <p>预付费（包年包月）实例无法调用此接口主动删除，到期后将自动释放。 如需提前释放，请在控制台进行操作。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除定时巡检任务</p>
+     * 
+     * @param request DeleteInspectionScheduleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInspectionScheduleResponse
+     */
+    public DeleteInspectionScheduleResponse deleteInspectionScheduleWithOptions(DeleteInspectionScheduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
+            query.put("ScheduleId", request.scheduleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInspectionSchedule"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInspectionScheduleResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43882.html">释放实例</a>。
+     * 调用本接口时，实例必须满足以下条件：</p>
+     * <ul>
+     * <li>实例状态为运行中。</li>
+     * <li>实例的付费方式为后付费（按量付费）。<blockquote>
+     * <p>预付费（包年包月）实例无法调用此接口主动删除，到期后将自动释放。 如需提前释放，请在控制台进行操作。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除定时巡检任务</p>
+     * 
+     * @param request DeleteInspectionScheduleRequest
+     * @return DeleteInspectionScheduleResponse
+     */
+    public DeleteInspectionScheduleResponse deleteInspectionSchedule(DeleteInspectionScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteInspectionScheduleWithOptions(request, runtime);
     }
 
     /**
@@ -3381,7 +3655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</p>
+     * <p>Queries the backup policy of a Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3433,7 +3707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</p>
+     * <p>Queries the backup policy of a Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -5269,6 +5543,246 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查看定时调度历次巡检报告</p>
+     * 
+     * @param request DescribeInspectionScheduleReportsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInspectionScheduleReportsResponse
+     */
+    public DescribeInspectionScheduleReportsResponse describeInspectionScheduleReportsWithOptions(DescribeInspectionScheduleReportsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
+            query.put("ScheduleId", request.scheduleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInspectionScheduleReports"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInspectionScheduleReportsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看定时调度历次巡检报告</p>
+     * 
+     * @param request DescribeInspectionScheduleReportsRequest
+     * @return DescribeInspectionScheduleReportsResponse
+     */
+    public DescribeInspectionScheduleReportsResponse describeInspectionScheduleReports(DescribeInspectionScheduleReportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInspectionScheduleReportsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看定时巡检任务配置</p>
+     * 
+     * @param request DescribeInspectionSchedulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInspectionSchedulesResponse
+     */
+    public DescribeInspectionSchedulesResponse describeInspectionSchedulesWithOptions(DescribeInspectionSchedulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
+            query.put("ScheduleId", request.scheduleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInspectionSchedules"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInspectionSchedulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看定时巡检任务配置</p>
+     * 
+     * @param request DescribeInspectionSchedulesRequest
+     * @return DescribeInspectionSchedulesResponse
+     */
+    public DescribeInspectionSchedulesResponse describeInspectionSchedules(DescribeInspectionSchedulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInspectionSchedulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询某个巡检任务的报告</p>
+     * 
+     * @param request DescribeInspectionTaskReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInspectionTaskReportResponse
+     */
+    public DescribeInspectionTaskReportResponse describeInspectionTaskReportWithOptions(DescribeInspectionTaskReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionInsId)) {
+            query.put("InspectionInsId", request.inspectionInsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInspectionTaskReport"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInspectionTaskReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询某个巡检任务的报告</p>
+     * 
+     * @param request DescribeInspectionTaskReportRequest
+     * @return DescribeInspectionTaskReportResponse
+     */
+    public DescribeInspectionTaskReportResponse describeInspectionTaskReport(DescribeInspectionTaskReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInspectionTaskReportWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询智能巡检任务列表</p>
+     * 
+     * @param request DescribeInspectionTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInspectionTasksResponse
+     */
+    public DescribeInspectionTasksResponse describeInspectionTasksWithOptions(DescribeInspectionTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInspectionTasks"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInspectionTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询智能巡检任务列表</p>
+     * 
+     * @param request DescribeInspectionTasksRequest
+     * @return DescribeInspectionTasksResponse
+     */
+    public DescribeInspectionTasksResponse describeInspectionTasks(DescribeInspectionTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInspectionTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the details of a Tair (Redis-compatible) instance.</p>
      * 
      * @param request DescribeInstanceAttributeRequest
@@ -5473,10 +5987,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>关于多LB，详情参见</p>
+     * <p>For more information about multiple LBs, see.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询实例的多 VIP 信息</p>
+     * <p>Queries the load balancer (LB) information of an instance.</p>
      * 
      * @param request DescribeInstanceMultiVIPRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5524,10 +6038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>关于多LB，详情参见</p>
+     * <p>For more information about multiple LBs, see.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询实例的多 VIP 信息</p>
+     * <p>Queries the load balancer (LB) information of an instance.</p>
      * 
      * @param request DescribeInstanceMultiVIPRequest
      * @return DescribeInstanceMultiVIPResponse
@@ -5849,13 +6363,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.</p>
+     * <p>If you do not specify any request parameters, the overview information of all instances is returned.</p>
      * <blockquote>
-     * <p>This operation returns non-paged results.</p>
+     * <p>This operation does not support pagination for the returned results.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</p>
+     * <p>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request DescribeInstancesOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5898,6 +6412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
             query.put("NetworkType", request.networkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -5967,13 +6485,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.</p>
+     * <p>If you do not specify any request parameters, the overview information of all instances is returned.</p>
      * <blockquote>
-     * <p>This operation returns non-paged results.</p>
+     * <p>This operation does not support pagination for the returned results.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</p>
+     * <p>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
      * 
      * @param request DescribeInstancesOverviewRequest
      * @return DescribeInstancesOverviewResponse
@@ -6417,7 +6935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available parameter templates.</p>
+     * <p>Queries the list of available parameter templates.</p>
      * 
      * @param request DescribeParameterGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6428,6 +6946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
             query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
+            query.put("EngineVersion", request.engineVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -6473,7 +6995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available parameter templates.</p>
+     * <p>Queries the list of available parameter templates.</p>
      * 
      * @param request DescribeParameterGroupsRequest
      * @return DescribeParameterGroupsResponse
@@ -7863,7 +8385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务详情</p>
+     * <p>Queries the details of a task.</p>
      * 
      * @param request DescribeTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7899,7 +8421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询任务详情</p>
+     * <p>Queries the details of a task.</p>
      * 
      * @param request DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
@@ -10049,6 +10571,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyGlobalSecurityIPGroupRelationResponse modifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyGlobalSecurityIPGroupRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改定时巡检配置</p>
+     * 
+     * @param request ModifyInspectionScheduleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInspectionScheduleResponse
+     */
+    public ModifyInspectionScheduleResponse modifyInspectionScheduleWithOptions(ModifyInspectionScheduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cronExpression)) {
+            query.put("CronExpression", request.cronExpression);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("Enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionItems)) {
+            query.put("InspectionItems", request.inspectionItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inspectionWindow)) {
+            query.put("InspectionWindow", request.inspectionWindow);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportLanguage)) {
+            query.put("ReportLanguage", request.reportLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleId)) {
+            query.put("ScheduleId", request.scheduleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleName)) {
+            query.put("ScheduleName", request.scheduleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            query.put("Timezone", request.timezone);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInspectionSchedule"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInspectionScheduleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改定时巡检配置</p>
+     * 
+     * @param request ModifyInspectionScheduleRequest
+     * @return ModifyInspectionScheduleResponse
+     */
+    public ModifyInspectionScheduleResponse modifyInspectionSchedule(ModifyInspectionScheduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInspectionScheduleWithOptions(request, runtime);
     }
 
     /**
@@ -12719,6 +13321,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>手动重试巡检任务</p>
+     * 
+     * @param request RetryInspectionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryInspectionTaskResponse
+     */
+    public RetryInspectionTaskResponse retryInspectionTaskWithOptions(RetryInspectionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryInspectionTask"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryInspectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动重试巡检任务</p>
+     * 
+     * @param request RetryInspectionTaskRequest
+     * @return RetryInspectionTaskResponse
+     */
+    public RetryInspectionTaskResponse retryInspectionTask(RetryInspectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.retryInspectionTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>启动TairCustom的主机</p>
      * 
      * @param request StartTairKVCacheCustomInstanceRequest
@@ -13037,6 +13691,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SwitchInstanceProxyResponse switchInstanceProxy(SwitchInstanceProxyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.switchInstanceProxyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>当前接口仅支持云原生架构实例</p>
+     * 
+     * <b>summary</b> : 
+     * <p>实例指定目标可用区切换</p>
+     * 
+     * @param request SwitchInstanceToTargetZoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SwitchInstanceToTargetZoneResponse
+     */
+    public SwitchInstanceToTargetZoneResponse switchInstanceToTargetZoneWithOptions(SwitchInstanceToTargetZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchType)) {
+            query.put("SwitchType", request.switchType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetZoneId)) {
+            query.put("TargetZoneId", request.targetZoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SwitchInstanceToTargetZone"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchInstanceToTargetZoneResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>当前接口仅支持云原生架构实例</p>
+     * 
+     * <b>summary</b> : 
+     * <p>实例指定目标可用区切换</p>
+     * 
+     * @param request SwitchInstanceToTargetZoneRequest
+     * @return SwitchInstanceToTargetZoneResponse
+     */
+    public SwitchInstanceToTargetZoneResponse switchInstanceToTargetZone(SwitchInstanceToTargetZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.switchInstanceToTargetZoneWithOptions(request, runtime);
     }
 
     /**

@@ -63,7 +63,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The current status of the instance. The value is fixed to Creating.</p>
+     * <p>The current status of the instance. The value is fixed as Creating.</p>
      * 
      * <strong>example:</strong>
      * <p>Creating</p>
@@ -90,7 +90,7 @@ public class CreateTairSkvDdbTableResponseBody extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The queries per second (QPS). This value is the theoretical value for the current instance specification.</p>
+     * <p>The queries per second (QPS). This value is the theoretical maximum for the current instance specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>

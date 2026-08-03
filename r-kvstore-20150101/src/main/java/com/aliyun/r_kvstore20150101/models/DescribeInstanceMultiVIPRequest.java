@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMultiVIPRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

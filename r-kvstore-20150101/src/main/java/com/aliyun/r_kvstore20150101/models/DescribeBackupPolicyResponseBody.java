@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The following parameters are no longer used. Ignore the parameters.</p>
+     * <p>This parameter is deprecated. Ignore this parameter.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeBackupPolicyResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    @NameInMap("BackupLogStartTime")
+    public String backupLogStartTime;
+
     /**
-     * <p>The retention period of the backup data. Unit: days.</p>
+     * <p>The number of days for which backup data is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -20,10 +23,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String backupRetentionPeriod;
 
     /**
-     * <p>Indicates whether the backup-as-a-service feature is enabled for the instance. Valid values:</p>
+     * <p>Indicates whether the backup service is enabled for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: The backup-as-a-service feature is enabled for the instance.</li>
-     * <li><strong>0</strong>: The backup-as-a-service feature is disabled for the instance.</li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,10 +36,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String dbsInstance;
 
     /**
-     * <p>Indicates whether incremental data backup is enabled. Valid values:</p>
+     * <p>Indicates whether incremental backup is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Incremental data backup is enabled.</li>
-     * <li><strong>0</strong>: Incremental data backup is disabled.</li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,7 +67,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The time range during which the backup was created. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The backup time. The time is in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>05:00Z-06:00Z</p>
@@ -73,7 +76,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupTime;
 
     /**
-     * <p>The next backup time. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The next backup time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2019-03-14T05:28Z</p>
@@ -82,7 +85,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredNextBackupTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90B82DB7-FB28-4CC2-ADBF-1F8659F3****</p>
@@ -101,6 +104,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public DescribeBackupPolicyResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
         return this.accessDeniedDetail;
+    }
+
+    public DescribeBackupPolicyResponseBody setBackupLogStartTime(String backupLogStartTime) {
+        this.backupLogStartTime = backupLogStartTime;
+        return this;
+    }
+    public String getBackupLogStartTime() {
+        return this.backupLogStartTime;
     }
 
     public DescribeBackupPolicyResponseBody setBackupRetentionPeriod(String backupRetentionPeriod) {
@@ -161,7 +172,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static class DescribeBackupPolicyResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -172,7 +183,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -183,7 +194,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -194,7 +205,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -205,7 +216,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -216,7 +227,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -227,7 +238,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>This parameter is no longer used. Ignore this parameter.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <ul>

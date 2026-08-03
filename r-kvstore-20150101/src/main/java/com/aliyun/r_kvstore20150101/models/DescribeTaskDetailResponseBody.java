@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskDetailResponseBody extends TeaModel {
     /**
+     * <p>The time when the task started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-12T07:18:57Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTaskDetailResponseBody extends TeaModel {
     public String beginTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>561AFBF1-BE20-44DB-9BD1-6988B53E****</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTaskDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

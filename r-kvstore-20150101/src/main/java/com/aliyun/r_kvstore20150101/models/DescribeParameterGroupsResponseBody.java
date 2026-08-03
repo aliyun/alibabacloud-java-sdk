@@ -42,10 +42,10 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
 
     public static class DescribeParameterGroupsResponseBodyParameterGroups extends TeaModel {
         /**
-         * <p>The service category. Valid values:</p>
+         * <p>The product category. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Redis Open-Source Edition</li>
-         * <li><strong>1</strong>: Tair (Enterprise Edition)</li>
+         * <li><strong>0</strong>: Redis Community Edition</li>
+         * <li><strong>1</strong>: Tair (Enhanced Edition)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public Long category;
 
         /**
-         * <p>The time when the parameter template was created.</p>
+         * <p>The creation time of the parameter template.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-18 16:32:45</p>
@@ -66,9 +66,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
-         * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
-         * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
+         * <li><strong>redis</strong>: Redis Community Edition or Tair (Enhanced Edition) in-memory type.</li>
+         * <li><strong>tair_pena</strong>: Tair (Enhanced Edition) persistent memory type.</li>
+         * <li><strong>tair_pdb</strong>: Tair (Enhanced Edition) cloud disk type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The compatible engine version.</p>
+         * <p>The engine-compatible version.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -87,7 +87,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The time when the parameter template was last modified.</p>
+         * <p>The most recent modification time of the parameter template.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-18 16:32:45</p>

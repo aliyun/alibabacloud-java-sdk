@@ -7,9 +7,9 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     /**
      * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
-     * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
-     * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
+     * <li><strong>redis</strong>: Redis Community Edition or Tair (Enhanced Edition) in-memory type.</li>
+     * <li><strong>tair_pena</strong>: Tair (Enhanced Edition) persistent memory type.</li>
+     * <li><strong>tair_pdb</strong>: Tair (Enhanced Edition) cloud disk type (ESSD/SSD).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,6 +18,9 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     @NameInMap("DbType")
     public String dbType;
 
+    @NameInMap("EngineVersion")
+    public String engineVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -25,7 +28,7 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +57,14 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     }
     public String getDbType() {
         return this.dbType;
+    }
+
+    public DescribeParameterGroupsRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public DescribeParameterGroupsRequest setOwnerAccount(String ownerAccount) {

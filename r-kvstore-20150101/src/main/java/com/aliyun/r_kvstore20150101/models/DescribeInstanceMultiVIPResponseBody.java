@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
     /**
+     * <p>The IP address of the primary DNS server.</p>
+     * 
      * <strong>example:</strong>
      * <p>r-8vb30e8n0m4nvu7tff.redis.zhangbei.rds.aliyuncs.com</p>
      */
     @NameInMap("MasterDns")
     public String masterDns;
 
+    /**
+     * <p>The list of IP addresses corresponding to all LBs of the current instance.</p>
+     */
     @NameInMap("MasterDnsRecord")
     public java.util.List<String> masterDnsRecord;
 
     /**
+     * <p>The maximum number of VIPs that can be created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("MaxQuota")
     public Long maxQuota;
 
+    /**
+     * <p>The list of multiple LB VIPs.</p>
+     */
     @NameInMap("MultiVIPList")
     public java.util.List<DescribeInstanceMultiVIPResponseBodyMultiVIPList> multiVIPList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>
      */
@@ -78,6 +90,8 @@ public class DescribeInstanceMultiVIPResponseBody extends TeaModel {
 
     public static class DescribeInstanceMultiVIPResponseBodyMultiVIPList extends TeaModel {
         /**
+         * <p>The endpoint of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>r-bp1p4pzsr2rtubcvns-conn1.redis.rds.aliyuncs.com</p>
          */
