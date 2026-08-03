@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class StopLifecyclePolicyExecutionRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****.</p>
+     * <blockquote>
+     * <p>This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class DescribeAccessRulesRequest extends TeaModel {
     public String accessGroupName;
 
     /**
-     * <p>The rule ID.</p>
+     * <p>The ID of the permission rule.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,8 +27,8 @@ public class DescribeAccessRulesRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
-     * <li>extreme: Extreme NAS file system.</li>
+     * <li>standard (default): General-purpose NAS.</li>
+     * <li>extreme: Extreme NAS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +38,8 @@ public class DescribeAccessRulesRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the file system list.</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeAccessRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of file systems on each page during a paged query.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 

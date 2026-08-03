@@ -8,7 +8,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
     public DescribeAutoSnapshotPoliciesResponseBodyAutoSnapshotPolicies autoSnapshotPolicies;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the automatic snapshot policy list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

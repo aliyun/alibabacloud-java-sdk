@@ -8,7 +8,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     public DescribeAccessRulesResponseBodyAccessRules accessRules;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the file system list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of permission rules on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of rules.</p>
+     * <p>The total number of permission rules.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

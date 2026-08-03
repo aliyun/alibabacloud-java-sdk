@@ -15,8 +15,8 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The IDs of advanced Extreme NAS file systems.</p>
-     * <p>You can specify a maximum of 100 file system IDs at a time. If you want to apply an automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).</p>
+     * <p>The IDs of Advanced Extreme NAS file systems.</p>
+     * <p>You can specify up to 100 file system IDs in a single request. Separate multiple file system IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

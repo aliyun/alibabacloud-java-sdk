@@ -10,9 +10,9 @@ public class DescribeFilesetsResponseBody extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+     * <li><p>CPFS: The ID starts with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
      * </li>
-     * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+     * <li><p>CPFS for Lingjun: The ID starts with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
      * </li>
      * </ul>
      * 
@@ -24,7 +24,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the response is truncated, you can use this token in the next request to retrieve the remaining results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate a new request to retrieve the content after the truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>

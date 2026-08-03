@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     /**
-     * <p>The details about the data retrieval tasks.</p>
+     * <p>The collection of data retrieval task information.</p>
      */
     @NameInMap("LifecycleRetrieveJobs")
     public java.util.List<ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs> lifecycleRetrieveJobs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of data retrieval tasks on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
@@ -94,7 +94,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     public static class ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
-         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * <p>The time follows the ISO 8601 standard in the format of <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-30T10:08:08Z</p>
@@ -103,7 +103,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The total number of files that are read in the data retrieval task.</p>
+         * <p>The total number of files read by the data retrieval task.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -112,7 +112,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         public Long discoveredFileCount;
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>31a8e4****</p>
@@ -121,7 +121,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The ID of the data retrieval task.</p>
+         * <p>The data retrieval task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lrj-nfstest-ia-160****853-hshvw</p>
@@ -130,13 +130,13 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The execution path of the data retrieval task.</p>
+         * <p>The execution paths of the data retrieval task.</p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
         /**
-         * <p>The total number of files that are retrieved.</p>
+         * <p>The number of files successfully retrieved by the data retrieval task.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -147,10 +147,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         /**
          * <p>The status of the data retrieval task. Valid values:</p>
          * <ul>
-         * <li>active: The task is running.</li>
-         * <li>canceled: The task is canceled.</li>
-         * <li>completed: The task is completed.</li>
-         * <li>failed: The task has failed.</li>
+         * <li>active: running.</li>
+         * <li>canceled: canceled.</li>
+         * <li>completed: completed.</li>
+         * <li>failed: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,10 +160,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage class.</p>
+         * <p>The storage class. Valid values:</p>
          * <ul>
-         * <li>InfrequentAccess: the IA storage class.</li>
-         * <li>Archive: the Archive storage class.</li>
+         * <li>InfrequentAccess: IA storage class.</li>
+         * <li>Archive: Archive storage class.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,8 +173,8 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The time when the task was updated.</p>
-         * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * <p>The time when the task was last updated.</p>
+         * <p>The time follows the ISO 8601 standard in the format of <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-30T11:08:08Z</p>

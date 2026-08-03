@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataFlowSubTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the data streaming task.</p>
+     * <p>The data flow streaming task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>subTaskId-370kyfmyknxcyzw****</p>

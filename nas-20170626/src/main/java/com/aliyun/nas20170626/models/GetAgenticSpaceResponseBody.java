@@ -62,7 +62,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
          * <ul>
          * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
          * <li>Maximum value: 1,099,511,627,776,000 (1024000 GiB).</li>
-         * <li>Step: 1,073,741,824 (1 GiB).</li>
+         * <li>Increment: 1,073,741,824 (1 GiB).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String azone;
 
         /**
-         * <p>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The time when the AgenticSpace was created.
+         * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>
@@ -132,7 +133,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The number of files used.</p>
+         * <p>The file count usage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -150,7 +151,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The absolute path of the file.</p>
+         * <p>The absolute file path.</p>
          * 
          * <strong>example:</strong>
          * <p>/test/</p>
@@ -186,7 +187,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the AgenticSpace was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The time when the AgenticSpace was last updated.
+         * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>

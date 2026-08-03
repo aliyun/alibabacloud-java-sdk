@@ -43,19 +43,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1-oxs", "nas.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "nas.aliyuncs.com"),
             new TeaPair("us-west-1", "nas.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "nas.us-southeast-1.aliyuncs.com"),
             new TeaPair("us-east-1", "nas.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "nas.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "nas.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "nas.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "nas.eu-west-2.aliyuncs.com"),
             new TeaPair("eu-west-1", "nas.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "nas.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "nas.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "nas.cn-zhongwei.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "nas.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-shanghai", "nas.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "nas.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "nas.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-heyuan", "nas.cn-heyuan.aliyuncs.com"),
@@ -64,12 +66,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-chengdu", "nas.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "nas.cn-beijing-finance-1.aliyuncs.com"),
             new TeaPair("cn-beijing", "nas.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "nas.ap-southeast-8.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "nas.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com")
         );
@@ -162,12 +164,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
-     * <li>You can apply only one automatic snapshot policy to each file system.</li>
-     * <li>Each automatic snapshot policy can be applied to multiple file systems.</li>
-     * <li>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
+     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
+     * <li>Each file system can have only one automatic snapshot policy applied.</li>
+     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
+     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
+     * <li>Each file system can have only one automatic snapshot policy applied.</li>
+     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -207,12 +218,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
-     * <li>You can apply only one automatic snapshot policy to each file system.</li>
-     * <li>Each automatic snapshot policy can be applied to multiple file systems.</li>
-     * <li>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
+     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
+     * <li>Each file system can have only one automatic snapshot policy applied.</li>
+     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</li>
+     * <li>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</li>
+     * <li>Each file system can have only one automatic snapshot policy applied.</li>
+     * <li>One automatic snapshot policy can be applied to multiple file systems.</li>
+     * <li>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -392,15 +412,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.
-     * .
-     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.
-     * .</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -436,15 +456,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.
-     * .
-     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
+     * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS supports this feature.
-     * .</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -537,13 +557,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持在 CREATED和RUNNING状态下取消数据流动流式任务。</li>
-     * <li>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</li>
+     * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
+     * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</li>
+     * <li>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a data streaming task.</p>
+     * <p>Cancels a data flow streaming task.</p>
      * 
      * @param request CancelDataFlowSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -596,13 +617,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持在 CREATED和RUNNING状态下取消数据流动流式任务。</li>
-     * <li>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</li>
+     * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
+     * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</li>
+     * <li>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a data streaming task.</p>
+     * <p>Cancels a data flow streaming task.</p>
      * 
      * @param request CancelDataFlowSubTaskRequest
      * @return CancelDataFlowSubTaskResponse
@@ -615,14 +637,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Data flow tasks are supported only by CPFS 2.2.0 or later and CPFS for AI Computing 2.4.0 or later. The file system details page in the console displays the version information.</li>
-     * <li>A data flow task can be canceled only if it is in the <code>Pending or Executing</code> state.</li>
-     * <li>Canceling a data flow task typically takes 5 to 10 minutes. Call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status.</li>
-     * <li>You cannot cancel a streaming task if it has running streaming subtasks. Otherwise, the system returns an InvalidStatus.ResourceMismatch error.</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</li>
+     * <li>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</li>
+     * <li>Only data flow tasks in the <code>Pending</code> state can be canceled.</li>
+     * <li>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</li>
+     * <li>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a batch or streaming data flow task that is in the Pending or Executing state.</p>
+     * <p>Cancels a data flow batch task or streaming task that is in the Pending or Executing state.</p>
      * 
      * @param request CancelDataFlowTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -671,14 +694,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Data flow tasks are supported only by CPFS 2.2.0 or later and CPFS for AI Computing 2.4.0 or later. The file system details page in the console displays the version information.</li>
-     * <li>A data flow task can be canceled only if it is in the <code>Pending or Executing</code> state.</li>
-     * <li>Canceling a data flow task typically takes 5 to 10 minutes. Call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status.</li>
-     * <li>You cannot cancel a streaming task if it has running streaming subtasks. Otherwise, the system returns an InvalidStatus.ResourceMismatch error.</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</li>
+     * <li>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</li>
+     * <li>Only data flow tasks in the <code>Pending</code> state can be canceled.</li>
+     * <li>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</li>
+     * <li>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a batch or streaming data flow task that is in the Pending or Executing state.</p>
+     * <p>Cancels a data flow batch task or streaming task that is in the Pending or Executing state.</p>
      * 
      * @param request CancelDataFlowTaskRequest
      * @return CancelDataFlowTaskResponse
@@ -1497,17 +1521,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><strong>CPFS General-purpose</strong></td>
-     * <td>Starts with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-     * <td>2.2.0 and later</td>
+     * <td>Starts with <code>cpfs-</code>, such as cpfs-125487****</td>
+     * <td>2.2.0 or later</td>
      * </tr>
      * <tr>
      * <td><strong>CPFS for Lingjun</strong></td>
-     * <td>Starts with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-     * <td>2.4.0 and later</td>
+     * <td>Starts with <code>bmcpfs-</code>, such as bmcpfs-0015****</td>
+     * <td>2.4.0 or later</td>
      * </tr>
      * </tbody></table>
      * <blockquote>
-     * <p>CPFS General-purpose and CPFS for Lingjun share the same set of API operations, but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</p>
+     * <p>CPFS General-purpose and CPFS for Lingjun share the same set of APIs but differ in parameter values and feature support. Refer to the corresponding section based on your product type.</p>
      * </blockquote>
      * </li>
      * <li>Basic operations<ul>
@@ -1526,8 +1550,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li>Data flow specifications<ul>
-     * <li>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</li>
-     * <li>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Make sure that sufficient vSwitch IP resources are available.</li>
+     * <li>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</li>
+     * <li>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Ensure that sufficient vSwitch IP resources are available.</li>
      * <li>Inventory check: When DryRun is set to true, you can verify whether the resources required to create a data flow of the specified specification are available.</li>
      * </ul>
      * </li>
@@ -1543,10 +1567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Auto-refresh<ul>
      * <li>After auto-refresh (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage General-purpose file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow task to load data.</li>
      * <li>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</li>
-     * <li>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh folders can be configured for a data flow.</li>
-     * <li>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, automatic synchronization tasks accumulate, metadata updates are delayed, and the data flow status changes to <code>Misconfigured</code>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</li>
-     * <li>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<blockquote>
-     * <p>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <code>Create for cpfs auto refresh</code>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly. The data flow status changes to Normal only when auto-refresh is working properly.</p>
+     * <li>The scope of auto-refresh is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh directories can be configured for a data flow.</li>
+     * <li>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an auto-refresh task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, auto-refresh tasks accumulate, metadata updates are delayed, and the data flow status becomes <code>Misconfigured</code>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</li>
+     * <li>When auto-refresh is configured for a prefix in the Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<blockquote>
+     * <p>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <code>Create for cpfs auto refresh</code>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1554,9 +1578,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Source storage<ul>
      * <li>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</li>
      * <li>Cloud Parallel File Storage General-purpose data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, confirm that the encryption in transit settings of the OSS bucket support encrypted access.</li>
-     * <li>If data flows of multiple Cloud Parallel File Storage General-purpose file systems, or multiple data flows of the same Cloud Parallel File Storage General-purpose file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source. This procedure is required to avoid conflicts during the process.</li>
+     * <li>If multiple Cloud Parallel File Storage General-purpose data flows or multiple data flows of the same Cloud Parallel File Storage General-purpose file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source.</li>
      * <li>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage General-purpose file system.<blockquote>
-     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</p>
+     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1567,33 +1591,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *    This section applies to CPFS for Lingjun file systems whose IDs start with <code>bmcpfs-</code>.<ul>
      * <li>Source storage<ul>
      * <li>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</li>
-     * <li>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</li>
-     * <li>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</li>
+     * <li>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, ensure that the encryption in transit of the OSS bucket supports encrypted access.</li>
+     * <li>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</li>
      * <li>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</li>
-     * <li>CPFS for Lingjun 2.6.0 and later support creating data flows with cross-account OSS.</li>
+     * <li>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</li>
      * <li>The account ID parameter is required only when you use cross-account OSS.</li>
-     * <li>When you use cross-account OSS, authorize the account first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<blockquote>
-     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</p>
+     * <li>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<blockquote>
+     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</p>
      * </blockquote>
      * </li>
      * </ul>
      * </li>
-     * <li>Data flow restrictions on file systems.<ul>
-     * <li>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</li>
-     * <li>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</li>
+     * <li>Data flow restrictions on the file system.<ul>
+     * <li>In the file system path associated with the data flow, you cannot rename non-empty directories. Otherwise, a Permission Denied or directory not empty error is returned.</li>
+     * <li>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</li>
      * <li>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</li>
      * </ul>
      * </li>
      * <li>Data flow import restrictions.<ul>
-     * <li>After symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the symlink information is lost.</li>
+     * <li>After Symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the Symlink information is lost.</li>
      * <li>If the OSS bucket has multiple versions, only the latest version is copied.</li>
      * <li>File names or subdirectory names longer than 255 bytes are not supported.</li>
      * </ul>
      * </li>
      * <li>Data flow export restrictions<ul>
-     * <li>After symlink files are synchronized to OSS, the files pointed to by the symlinks are not synchronized. Instead, the symlinks become regular empty objects with no data.</li>
-     * <li>Hardlink files are synchronized to OSS as regular files only.</li>
-     * <li>Socket, Device, and Pipe files become regular empty objects with no data when exported to an OSS bucket.</li>
+     * <li>After Symlink files are synchronized to OSS, the files pointed to by the Symlink are not synchronized. Instead, the Symlink becomes a regular empty object with no data.</li>
+     * <li>Hardlink files are synchronized to OSS as regular files.</li>
+     * <li>Socket, Device, and Pipe files exported to the OSS bucket become regular empty objects with no data.</li>
      * <li>Directory paths longer than 1023 characters are not supported.</li>
      * </ul>
      * </li>
@@ -1693,17 +1717,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </thead>
      * <tbody><tr>
      * <td><strong>CPFS General-purpose</strong></td>
-     * <td>Starts with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-     * <td>2.2.0 and later</td>
+     * <td>Starts with <code>cpfs-</code>, such as cpfs-125487****</td>
+     * <td>2.2.0 or later</td>
      * </tr>
      * <tr>
      * <td><strong>CPFS for Lingjun</strong></td>
-     * <td>Starts with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-     * <td>2.4.0 and later</td>
+     * <td>Starts with <code>bmcpfs-</code>, such as bmcpfs-0015****</td>
+     * <td>2.4.0 or later</td>
      * </tr>
      * </tbody></table>
      * <blockquote>
-     * <p>CPFS General-purpose and CPFS for Lingjun share the same set of API operations, but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</p>
+     * <p>CPFS General-purpose and CPFS for Lingjun share the same set of APIs but differ in parameter values and feature support. Refer to the corresponding section based on your product type.</p>
      * </blockquote>
      * </li>
      * <li>Basic operations<ul>
@@ -1722,8 +1746,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * </li>
      * <li>Data flow specifications<ul>
-     * <li>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</li>
-     * <li>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Make sure that sufficient vSwitch IP resources are available.</li>
+     * <li>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</li>
+     * <li>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Ensure that sufficient vSwitch IP resources are available.</li>
      * <li>Inventory check: When DryRun is set to true, you can verify whether the resources required to create a data flow of the specified specification are available.</li>
      * </ul>
      * </li>
@@ -1739,10 +1763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Auto-refresh<ul>
      * <li>After auto-refresh (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage General-purpose file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow task to load data.</li>
      * <li>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</li>
-     * <li>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh folders can be configured for a data flow.</li>
-     * <li>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, automatic synchronization tasks accumulate, metadata updates are delayed, and the data flow status changes to <code>Misconfigured</code>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</li>
-     * <li>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<blockquote>
-     * <p>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <code>Create for cpfs auto refresh</code>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly. The data flow status changes to Normal only when auto-refresh is working properly.</p>
+     * <li>The scope of auto-refresh is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh directories can be configured for a data flow.</li>
+     * <li>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an auto-refresh task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, auto-refresh tasks accumulate, metadata updates are delayed, and the data flow status becomes <code>Misconfigured</code>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</li>
+     * <li>When auto-refresh is configured for a prefix in the Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<blockquote>
+     * <p>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <code>Create for cpfs auto refresh</code>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1750,9 +1774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>Source storage<ul>
      * <li>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</li>
      * <li>Cloud Parallel File Storage General-purpose data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, confirm that the encryption in transit settings of the OSS bucket support encrypted access.</li>
-     * <li>If data flows of multiple Cloud Parallel File Storage General-purpose file systems, or multiple data flows of the same Cloud Parallel File Storage General-purpose file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source. This procedure is required to avoid conflicts during the process.</li>
+     * <li>If multiple Cloud Parallel File Storage General-purpose data flows or multiple data flows of the same Cloud Parallel File Storage General-purpose file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source.</li>
      * <li>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage General-purpose file system.<blockquote>
-     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</p>
+     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1763,33 +1787,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *    This section applies to CPFS for Lingjun file systems whose IDs start with <code>bmcpfs-</code>.<ul>
      * <li>Source storage<ul>
      * <li>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</li>
-     * <li>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</li>
-     * <li>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</li>
+     * <li>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, ensure that the encryption in transit of the OSS bucket supports encrypted access.</li>
+     * <li>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</li>
      * <li>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</li>
-     * <li>CPFS for Lingjun 2.6.0 and later support creating data flows with cross-account OSS.</li>
+     * <li>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</li>
      * <li>The account ID parameter is required only when you use cross-account OSS.</li>
-     * <li>When you use cross-account OSS, authorize the account first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<blockquote>
-     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</p>
+     * <li>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<blockquote>
+     * <p>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</p>
      * </blockquote>
      * </li>
      * </ul>
      * </li>
-     * <li>Data flow restrictions on file systems.<ul>
-     * <li>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</li>
-     * <li>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</li>
+     * <li>Data flow restrictions on the file system.<ul>
+     * <li>In the file system path associated with the data flow, you cannot rename non-empty directories. Otherwise, a Permission Denied or directory not empty error is returned.</li>
+     * <li>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</li>
      * <li>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</li>
      * </ul>
      * </li>
      * <li>Data flow import restrictions.<ul>
-     * <li>After symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the symlink information is lost.</li>
+     * <li>After Symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the Symlink information is lost.</li>
      * <li>If the OSS bucket has multiple versions, only the latest version is copied.</li>
      * <li>File names or subdirectory names longer than 255 bytes are not supported.</li>
      * </ul>
      * </li>
      * <li>Data flow export restrictions<ul>
-     * <li>After symlink files are synchronized to OSS, the files pointed to by the symlinks are not synchronized. Instead, the symlinks become regular empty objects with no data.</li>
-     * <li>Hardlink files are synchronized to OSS as regular files only.</li>
-     * <li>Socket, Device, and Pipe files become regular empty objects with no data when exported to an OSS bucket.</li>
+     * <li>After Symlink files are synchronized to OSS, the files pointed to by the Symlink are not synchronized. Instead, the Symlink becomes a regular empty object with no data.</li>
+     * <li>Hardlink files are synchronized to OSS as regular files.</li>
+     * <li>Socket, Device, and Pipe files exported to the OSS bucket become regular empty objects with no data.</li>
      * <li>Directory paths longer than 1023 characters are not supported.</li>
      * </ul>
      * </li>
@@ -1811,14 +1835,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持状态为Executing（执行中）的数据流动流式任务创建子任务。</li>
-     * <li>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</li>
-     * <li>当数据流动任务类型为流式任务时，运行中状态仅代表可以创建流式导入任务或流式导出任务（并不代表导入或导出任务运行中）。</li>
+     * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
+     * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</li>
+     * <li>You can create subtasks only for data flow streaming tasks in the Executing state.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</li>
+     * <li>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data streaming subtask.</p>
+     * <p>Creates a subtask for a data flow streaming task.</p>
      * 
      * @param request CreateDataFlowSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1879,14 +1904,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持状态为Executing（执行中）的数据流动流式任务创建子任务。</li>
-     * <li>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</li>
-     * <li>当数据流动任务类型为流式任务时，运行中状态仅代表可以创建流式导入任务或流式导出任务（并不代表导入或导出任务运行中）。</li>
+     * <li>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</li>
+     * <li>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</li>
+     * <li>You can create subtasks only for data flow streaming tasks in the Executing state.</li>
+     * <li>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</li>
+     * <li>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data streaming subtask.</p>
+     * <p>Creates a subtask for a data flow streaming task.</p>
      * 
      * @param request CreateDataFlowSubTaskRequest
      * @return CreateDataFlowSubTaskResponse
@@ -1899,26 +1925,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>CPFS usage notes<ul>
-     * <li>Data flow is supported only on CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</li>
-     * <li>You can create data flow tasks only on a data flow that is in the Running state.</li>
-     * <li>Manually running a data flow task pauses the corresponding automatic data update task.</li>
-     * <li>When you create an export task, ensure that the absolute path of each file to be exported from CPFS does not exceed 1,023 characters.</li>
+     * <li>Usage notes for CPFS<ul>
+     * <li>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>You can create a data flow task only on a data flow in the Running state.</li>
+     * <li>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</li>
+     * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</li>
      * </ul>
      * </li>
-     * <li>CPFS AI-Computing Edition usage notes<ul>
-     * <li>Data flow is supported only on CPFS AI-Computing Edition 2.4.0 and later. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</li>
-     * <li>You can create data flow tasks only on a data flow that is in the Running state.</li>
-     * <li>When you create an export task, ensure that the absolute path of each file to be exported from CPFS AI-Computing Edition does not exceed 1,023 characters.</li>
-     * <li>CPFS AI-Computing Edition supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</li>
+     * <li>Usage notes for CPFS for Lingjun<ul>
+     * <li>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>You can create a data flow task only on a data flow in the Running state.</li>
+     * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</li>
+     * <li>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a data flow task.</p>
+     * <p>Creates a data flow task.</p>
      * 
      * @param request CreateDataFlowTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2003,26 +2029,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>CPFS usage notes<ul>
-     * <li>Data flow is supported only on CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</li>
-     * <li>You can create data flow tasks only on a data flow that is in the Running state.</li>
-     * <li>Manually running a data flow task pauses the corresponding automatic data update task.</li>
-     * <li>When you create an export task, ensure that the absolute path of each file to be exported from CPFS does not exceed 1,023 characters.</li>
+     * <li>Usage notes for CPFS<ul>
+     * <li>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>You can create a data flow task only on a data flow in the Running state.</li>
+     * <li>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</li>
+     * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</li>
      * </ul>
      * </li>
-     * <li>CPFS AI-Computing Edition usage notes<ul>
-     * <li>Data flow is supported only on CPFS AI-Computing Edition 2.4.0 and later. You can view the version information on the file system details page in the console.</li>
-     * <li>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</li>
-     * <li>You can create data flow tasks only on a data flow that is in the Running state.</li>
-     * <li>When you create an export task, ensure that the absolute path of each file to be exported from CPFS AI-Computing Edition does not exceed 1,023 characters.</li>
-     * <li>CPFS AI-Computing Edition supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</li>
+     * <li>Usage notes for CPFS for Lingjun<ul>
+     * <li>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</li>
+     * <li>You can create a data flow task only on a data flow in the Running state.</li>
+     * <li>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</li>
+     * <li>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a data flow task.</p>
+     * <p>Creates a data flow task.</p>
      * 
      * @param request CreateDataFlowTaskRequest
      * @return CreateDataFlowTaskResponse
@@ -2177,9 +2203,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you use this operation, make sure that you understand the billing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</li>
-     * <li>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
-     * <li>When you call this operation, the system automatically creates the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
+     * <li>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</li>
+     * <li>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2292,9 +2318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you use this operation, make sure that you understand the billing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</li>
-     * <li>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
-     * <li>When you call this operation, the system automatically creates the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</li>
+     * <li>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</li>
+     * <li>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
+     * <li>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2496,8 +2522,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</li>
-     * <li>Each CPFS for Lingjun file system supports a maximum of 10 Auto-type and 100 OnDemand-type lifecycle management policies.</li>
-     * <li>A maximum of 20 lifecycle management policies can be created for General-purpose NAS in each region.</li>
+     * <li>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</li>
+     * <li>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2510,6 +2536,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLifecyclePolicyResponse createLifecyclePolicyWithOptions(CreateLifecyclePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteRules)) {
+            query.put("DeleteRules", request.deleteRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -2571,8 +2601,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</li>
-     * <li>Each CPFS for Lingjun file system supports a maximum of 10 Auto-type and 100 OnDemand-type lifecycle management policies.</li>
-     * <li>A maximum of 20 lifecycle management policies can be created for General-purpose NAS in each region.</li>
+     * <li>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</li>
+     * <li>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3714,8 +3744,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</li>
-     * <li>If deletion protection is enabled, disable it before you delete the fileset.</li>
-     * <li>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</li>
+     * <li>If deletion protection is enabled, you must disable deletion protection before you can delete the fileset.</li>
+     * <li>All filesets on the target file system must be in the CREATED desired state before you can perform the delete operation.</li>
      * <li>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
@@ -3766,8 +3796,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</li>
-     * <li>If deletion protection is enabled, disable it before you delete the fileset.</li>
-     * <li>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</li>
+     * <li>If deletion protection is enabled, you must disable deletion protection before you can delete the fileset.</li>
+     * <li>All filesets on the target file system must be in the CREATED desired state before you can perform the delete operation.</li>
      * <li>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
@@ -4138,14 +4168,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.
-     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.
-     * .</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4181,14 +4210,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.
-     * &lt;props=&quot;intl&quot;&gt;.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * &lt;props=&quot;intl&quot;&gt;</li>
      * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
-     * <li>Only Advanced Extreme NAS file systems support this feature.
-     * .</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4264,7 +4292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
+     * <p>Only General-purpose NAS file systems that use the NFS protocol support this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an access point.</p>
@@ -4303,7 +4331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS NFS file systems support this feature.</p>
+     * <p>Only General-purpose NAS file systems that use the NFS protocol support this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an access point.</p>
@@ -4392,7 +4420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about rules in a permission group.</p>
+     * <p>Queries the description of a permission rule.</p>
      * 
      * @param request DescribeAccessRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4440,7 +4468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about rules in a permission group.</p>
+     * <p>Queries the description of a permission rule.</p>
      * 
      * @param request DescribeAccessRulesRequest
      * @return DescribeAccessRulesResponse
@@ -4452,10 +4480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p>Applicable to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries an Agentic space.</p>
+     * <p>Queries Agentic spaces.</p>
      * 
      * @param request DescribeAgenticSpacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4499,10 +4527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p>Applicable to agentic-type file systems.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries an Agentic space.</p>
+     * <p>Queries Agentic spaces.</p>
      * 
      * @param request DescribeAgenticSpacesRequest
      * @return DescribeAgenticSpacesResponse
@@ -4514,13 +4542,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries automatic snapshot policies.</p>
+     * <p>Queries the automatic snapshot policies that have been created.</p>
      * 
      * @param request DescribeAutoSnapshotPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4564,13 +4596,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries automatic snapshot policies.</p>
+     * <p>Queries the automatic snapshot policies that have been created.</p>
      * 
      * @param request DescribeAutoSnapshotPoliciesRequest
      * @return DescribeAutoSnapshotPoliciesResponse
@@ -4582,13 +4618,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries automatic snapshot tasks.</p>
+     * <p>Queries the list of automatic snapshot tasks.</p>
      * 
      * @param request DescribeAutoSnapshotTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4636,13 +4676,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS supports this feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries automatic snapshot tasks.</p>
+     * <p>Queries the list of automatic snapshot tasks.</p>
      * 
      * @param request DescribeAutoSnapshotTasksRequest
      * @return DescribeAutoSnapshotTasksResponse
@@ -4852,10 +4896,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</p>
+     * <p>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data flow subtasks in batches.</p>
+     * <p>Queries data flow batch subtasks.</p>
      * 
      * @param request DescribeDataFlowSubTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4899,10 +4943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</p>
+     * <p>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data flow subtasks in batches.</p>
+     * <p>Queries data flow batch subtasks.</p>
      * 
      * @param request DescribeDataFlowSubTasksRequest
      * @return DescribeDataFlowSubTasksResponse
@@ -4914,10 +4958,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Querying data flow tasks is supported only on CPFS 2.2.0 or later and CPFS AI Computing Edition 2.4.0 or later. You can find the version information on the file system details page in the console.</p>
+     * <p>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves data flow task details.</p>
+     * <p>Queries the details of data flow tasks.</p>
      * 
      * @param request DescribeDataFlowTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4965,10 +5009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Querying data flow tasks is supported only on CPFS 2.2.0 or later and CPFS AI Computing Edition 2.4.0 or later. You can find the version information on the file system details page in the console.</p>
+     * <p>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves data flow task details.</p>
+     * <p>Queries the details of data flow tasks.</p>
      * 
      * @param request DescribeDataFlowTasksRequest
      * @return DescribeDataFlowTasksResponse
@@ -4981,13 +5025,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS 2.2.0及以上版本、CPFS智算版2.4.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>筛选键（Filters）中，FsetIds、DataFlowlds、SourceStorage、ThroughputList、Status需要做全字匹配，FileSystemPath、Description、SourceStoragePath支持模糊匹配。</li>
-     * <li>支持组合查询。</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</li>
+     * <li>Combined queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the dataflows of a CPFS file system.</p>
+     * <p>Queries data flow information of a CPFS file system.</p>
      * 
      * @param request DescribeDataFlowsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5032,13 +5076,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS 2.2.0及以上版本、CPFS智算版2.4.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>筛选键（Filters）中，FsetIds、DataFlowlds、SourceStorage、ThroughputList、Status需要做全字匹配，FileSystemPath、Description、SourceStoragePath支持模糊匹配。</li>
-     * <li>支持组合查询。</li>
+     * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</li>
+     * <li>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</li>
+     * <li>Combined queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the dataflows of a CPFS file system.</p>
+     * <p>Queries data flow information of a CPFS file system.</p>
      * 
      * @param request DescribeDataFlowsRequest
      * @return DescribeDataFlowsResponse
@@ -5242,8 +5286,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
-     * <li>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
-     * <li>Combination queries are supported.</li>
+     * <li>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
+     * <li>Combined queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5301,8 +5345,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
-     * <li>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
-     * <li>Combination queries are supported.</li>
+     * <li>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</li>
+     * <li>Combined queries are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5455,7 +5499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of lifecycle management policies.</p>
+     * <p>Retrieves the list of lifecycle management policies.</p>
      * 
      * @param request DescribeLifecyclePoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5486,7 +5530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only General-purpose NAS file systems and CPFS for Lingjun support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of lifecycle management policies.</p>
+     * <p>Retrieves the list of lifecycle management policies.</p>
      * 
      * @param request DescribeLifecyclePoliciesRequest
      * @return DescribeLifecyclePoliciesResponse
@@ -5498,10 +5542,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the execution logs of a lifecycle policy. You can query up to 1,000 log entries from the last 90 days. Only CPFS (AI Computing Edition) supports this operation.</p>
+     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution logs of a lifecycle policy, returning up to 1,000 entries from the last 90 days. This feature is only available for CPFS AI Computing Edition.</p>
+     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * @param request DescribeLifecyclePolicyLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5545,10 +5589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the execution logs of a lifecycle policy. You can query up to 1,000 log entries from the last 90 days. Only CPFS (AI Computing Edition) supports this operation.</p>
+     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the execution logs of a lifecycle policy, returning up to 1,000 entries from the last 90 days. This feature is only available for CPFS AI Computing Edition.</p>
+     * <p>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</p>
      * 
      * @param request DescribeLifecyclePolicyLogsRequest
      * @return DescribeLifecyclePolicyLogsResponse
@@ -5997,8 +6041,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you begin: Before calling this API, ensure that the KMS service is activated in the target region. You can activate it by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. This restriction also applies to unencrypted file systems with EncryptType=0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Queries the SMB AD ACL feature.</p>
      * 
      * @param request DescribeSmbAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6029,8 +6078,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you begin: Before calling this API, ensure that the KMS service is activated in the target region. You can activate it by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. This restriction also applies to unencrypted file systems with EncryptType=0.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Queries the SMB AD ACL feature.</p>
      * 
      * @param request DescribeSmbAclRequest
      * @return DescribeSmbAclResponse
@@ -6405,8 +6459,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Disables the SMB AD ACL feature.</p>
      * 
      * @param request DisableSmbAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6437,8 +6496,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Disables the SMB AD ACL feature.</p>
      * 
      * @param request DisableSmbAclRequest
      * @return DisableSmbAclResponse
@@ -6553,8 +6617,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</li>
+     * <li>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Enables the SMB AD ACL feature.</p>
      * 
      * @param request EnableSmbAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6593,8 +6663,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</li>
+     * <li>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Enables the SMB AD ACL feature.</p>
      * 
      * @param request EnableSmbAclRequest
      * @return EnableSmbAclResponse
@@ -6878,10 +6954,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型 NAS NFS 协议文件系统支持。</p>
+     * <p>Only General-purpose NAS NFS file systems are supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询接入点信息</p>
+     * <p>Queries access point information.</p>
      * 
      * @param request ListAccessPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6925,10 +7001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型 NAS NFS 协议文件系统支持。</p>
+     * <p>Only General-purpose NAS NFS file systems are supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询接入点信息</p>
+     * <p>Queries access point information.</p>
      * 
      * @param request ListAccessPointsRequest
      * @return ListAccessPointsResponse
@@ -6940,10 +7016,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only general-purpose NAS file systems support this feature.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists Infrequent Access files and the subdirectories that contain them from a specified directory on a General-purpose NAS file system.</p>
+     * <p>Retrieves the list of IA storage class files and subdirectories that contain IA storage class files under a specified directory in a General-purpose NAS file system.</p>
      * 
      * @param request ListDirectoriesAndFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6995,10 +7071,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only general-purpose NAS file systems support this feature.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists Infrequent Access files and the subdirectories that contain them from a specified directory on a General-purpose NAS file system.</p>
+     * <p>Retrieves the list of IA storage class files and subdirectories that contain IA storage class files under a specified directory in a General-purpose NAS file system.</p>
      * 
      * @param request ListDirectoriesAndFilesRequest
      * @return ListDirectoriesAndFilesResponse
@@ -7010,10 +7086,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data retrieval tasks.</p>
+     * <p>Retrieves the list of created data retrieval tasks.</p>
      * 
      * @param request ListLifecycleRetrieveJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7061,10 +7137,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data retrieval tasks.</p>
+     * <p>Retrieves the list of created data retrieval tasks.</p>
      * 
      * @param request ListLifecycleRetrieveJobsRequest
      * @return ListLifecycleRetrieveJobsResponse
@@ -7076,10 +7152,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the directories that are recently deleted.</p>
+     * <p>Queries directories on which delete operations were recently performed.</p>
      * 
      * @param request ListRecentlyRecycledDirectoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7107,10 +7183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the directories that are recently deleted.</p>
+     * <p>Queries directories on which delete operations were recently performed.</p>
      * 
      * @param request ListRecentlyRecycledDirectoriesRequest
      * @return ListRecentlyRecycledDirectoriesResponse
@@ -7122,13 +7198,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only General-purpose NAS file systems support this operation.</p>
      * <ul>
-     * <li>You can query a maximum of 50 jobs that are recently executed.</li>
+     * <li>Only General-purpose NAS file systems support this feature.</li>
+     * <li>You can query up to 50 most recently executed tasks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the jobs of the recycle bin.</p>
+     * <p>Queries information about one or more tasks in the recycle bin.</p>
      * 
      * @param request ListRecycleBinJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7156,13 +7232,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only General-purpose NAS file systems support this operation.</p>
      * <ul>
-     * <li>You can query a maximum of 50 jobs that are recently executed.</li>
+     * <li>Only General-purpose NAS file systems support this feature.</li>
+     * <li>You can query up to 50 most recently executed tasks.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the jobs of the recycle bin.</p>
+     * <p>Queries information about one or more tasks in the recycle bin.</p>
      * 
      * @param request ListRecycleBinJobsRequest
      * @return ListRecycleBinJobsResponse
@@ -7174,7 +7250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries deleted files or directories.</p>
@@ -7205,7 +7281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries deleted files or directories.</p>
@@ -7276,7 +7352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持修改。</p>
+     * <p>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies a permission group.</p>
@@ -7319,7 +7395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持修改。</p>
+     * <p>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies a permission group.</p>
@@ -7400,10 +7476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持修改。</p>
+     * <p>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a rule in a permission group.</p>
+     * <p>Modifies a permission rule in a permission group.</p>
      * 
      * @param request ModifyAccessRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7463,10 +7539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持修改。</p>
+     * <p>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a rule in a permission group.</p>
+     * <p>Modifies a permission rule in a permission group.</p>
      * 
      * @param request ModifyAccessRuleRequest
      * @return ModifyAccessRuleResponse
@@ -7679,17 +7755,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows.</li>
-     * <li>You can modify the properties of a data flow only when the data flow is in the <code>Running (Normal)</code> state.</li>
-     * <li>Modifying a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data flow modification.</li>
-     * <li>CPFS data flow specifications:<ul>
-     * <li>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow bandwidth refers to the maximum transmission bandwidth that can be achieved when the data flow imports or exports data.</li>
-     * <li>Inventory check: When DryRun is set to true, you can verify whether the resources required to modify the data flow with the specified specifications are sufficient.</li>
+     * <li>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data streams.</li>
+     * <li>Only data streams in the <code>Running (Normal)</code> state can have their properties modified.</li>
+     * <li>Modifying a data stream typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data stream modification.</li>
+     * <li>CPFS data stream specifications:<ul>
+     * <li>Data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data stream bandwidth refers to the maximum transmission bandwidth that can be achieved when the data stream imports or exports data.</li>
+     * <li>Inventory query: When you set DryRun to true, you can verify whether the resources required to modify the data stream with the specified specifications are sufficient.</li>
      * </ul>
      * </li>
      * <li>CPFS billing
-     * Modifying the data flow bandwidth (Throughput) involves data flow bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.
-     * Settings for the data stream property can affect billing.</li>
+     * Modifying the data stream bandwidth (Throughput) involves data stream bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7746,17 +7821,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows.</li>
-     * <li>You can modify the properties of a data flow only when the data flow is in the <code>Running (Normal)</code> state.</li>
-     * <li>Modifying a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data flow modification.</li>
-     * <li>CPFS data flow specifications:<ul>
-     * <li>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow bandwidth refers to the maximum transmission bandwidth that can be achieved when the data flow imports or exports data.</li>
-     * <li>Inventory check: When DryRun is set to true, you can verify whether the resources required to modify the data flow with the specified specifications are sufficient.</li>
+     * <li>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data streams.</li>
+     * <li>Only data streams in the <code>Running (Normal)</code> state can have their properties modified.</li>
+     * <li>Modifying a data stream typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data stream modification.</li>
+     * <li>CPFS data stream specifications:<ul>
+     * <li>Data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data stream bandwidth refers to the maximum transmission bandwidth that can be achieved when the data stream imports or exports data.</li>
+     * <li>Inventory query: When you set DryRun to true, you can verify whether the resources required to modify the data stream with the specified specifications are sufficient.</li>
      * </ul>
      * </li>
      * <li>CPFS billing
-     * Modifying the data flow bandwidth (Throughput) involves data flow bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.
-     * Settings for the data stream property can affect billing.</li>
+     * Modifying the data stream bandwidth (Throughput) involves data stream bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7773,14 +7847,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>该接口仅适用于CPFS文件系统。</li>
-     * <li>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持修改<code>Running（正常</code>）、<code>Stopped（停止）</code>状态数据流动的自动更新配置。</li>
-     * <li>修改自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a>查询修改自动更新任务的状态。</li>
+     * <li>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>Only CPFS 2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
+     * <li>You can modify the automatic update configuration only for dataflows in the <code>Running</code> or <code>Stopped</code> state.</li>
+     * <li>Modifying the automatic update configuration typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the automatic update task modification.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an AutoRefresh configuration of a dataflow.</p>
+     * <p>Modifies the automatic update configuration of a dataflow.</p>
      * 
      * @param request ModifyDataFlowAutoRefreshRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7833,14 +7907,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>该接口仅适用于CPFS文件系统。</li>
-     * <li>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</li>
-     * <li>仅支持修改<code>Running（正常</code>）、<code>Stopped（停止）</code>状态数据流动的自动更新配置。</li>
-     * <li>修改自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a>查询修改自动更新任务的状态。</li>
+     * <li>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</li>
+     * <li>Only CPFS 2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
+     * <li>You can modify the automatic update configuration only for dataflows in the <code>Running</code> or <code>Stopped</code> state.</li>
+     * <li>Modifying the automatic update configuration typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the automatic update task modification.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an AutoRefresh configuration of a dataflow.</p>
+     * <p>Modifies the automatic update configuration of a dataflow.</p>
      * 
      * @param request ModifyDataFlowAutoRefreshRequest
      * @return ModifyDataFlowAutoRefreshResponse
@@ -8050,10 +8124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS文件系统支持该功能。</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a lifecycle policy.</p>
+     * <p>Modifies a lifecycle management policy.</p>
      * 
      * @param request ModifyLifecyclePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8105,10 +8179,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>仅通用型NAS文件系统支持该功能。</p>
+     * <p>Only General-purpose NAS file systems support this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a lifecycle policy.</p>
+     * <p>Modifies a lifecycle management policy.</p>
      * 
      * @param request ModifyLifecyclePolicyRequest
      * @return ModifyLifecyclePolicyResponse
@@ -8120,10 +8194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation applies only to mount targets on General-purpose NAS and Extreme NAS file systems.</p>
+     * <p>Only mount target information of General-purpose NAS or Extreme NAS file systems can be modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the properties of a mount target.</p>
+     * <p>Modifies mount target information.</p>
      * 
      * @param request ModifyMountTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8175,10 +8249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation applies only to mount targets on General-purpose NAS and Extreme NAS file systems.</p>
+     * <p>Only mount target information of General-purpose NAS or Extreme NAS file systems can be modified.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the properties of a mount target.</p>
+     * <p>Modifies mount target information.</p>
      * 
      * @param request ModifyMountTargetRequest
      * @return ModifyMountTargetResponse
@@ -8325,8 +8399,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Updates the SMB AD ACL feature.</p>
      * 
      * @param request ModifySmbAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8385,8 +8462,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</p>
+     * <p>Updates the SMB AD ACL feature.</p>
      * 
      * @param request ModifySmbAclRequest
      * @return ModifySmbAclResponse
@@ -8501,15 +8581,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
-     * <li>The file system must be in the Running state.</li>
-     * <li>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>The file system must be in the Normal state.</li>
+     * <li>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</li>
+     * <li>Dependency chain:</li>
+     * <li>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</li>
+     * <li>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</li>
+     * <li>(3) Call DescribeFileSystems and poll until Status=Running.</li>
+     * <li>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</li>
+     * <li>(5) Call DescribeSnapshots and poll until Status=available.</li>
+     * <li>(6) Call ResetFileSystem (FileSystemId, SnapshotId).
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>The file system must be in the Normal state.</li>
+     * <li>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</li>
+     * <li>Dependency chain:</li>
+     * <li>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</li>
+     * <li>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</li>
+     * <li>(3) Call DescribeFileSystems and poll until Status=Running.</li>
+     * <li>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</li>
+     * <li>(5) Call DescribeSnapshots and poll until Status=available.</li>
+     * <li>(6) Call ResetFileSystem (FileSystemId, SnapshotId).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rolls back a file system to a snapshot of the file system.</p>
+     * <p>Rolls back a file system to the state of a specified historical snapshot.</p>
      * 
      * @param request ResetFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8545,15 +8645,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>Only advanced Extreme NAS file systems support this feature.</li>
-     * <li>The file system must be in the Running state.</li>
-     * <li>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>The file system must be in the Normal state.</li>
+     * <li>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</li>
+     * <li>Dependency chain:</li>
+     * <li>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</li>
+     * <li>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</li>
+     * <li>(3) Call DescribeFileSystems and poll until Status=Running.</li>
+     * <li>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</li>
+     * <li>(5) Call DescribeSnapshots and poll until Status=available.</li>
+     * <li>(6) Call ResetFileSystem (FileSystemId, SnapshotId).
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</li>
+     * <li>Only Advanced Extreme NAS file systems support this feature.</li>
+     * <li>The file system must be in the Normal state.</li>
+     * <li>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</li>
+     * <li>Dependency chain:</li>
+     * <li>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</li>
+     * <li>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</li>
+     * <li>(3) Call DescribeFileSystems and poll until Status=Running.</li>
+     * <li>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</li>
+     * <li>(5) Call DescribeSnapshots and poll until Status=available.</li>
+     * <li>(6) Call ResetFileSystem (FileSystemId, SnapshotId).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rolls back a file system to a snapshot of the file system.</p>
+     * <p>Rolls back a file system to the state of a specified historical snapshot.</p>
      * 
      * @param request ResetFileSystemRequest
      * @return ResetFileSystemResponse
@@ -8615,7 +8735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p>Applies to agentic file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the quota for an Agentic space.</p>
@@ -8670,7 +8790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applies to agentic-type file systems.</p>
+     * <p>Applies to agentic file systems.</p>
      * 
      * <b>summary</b> : 
      * <p>Sets the quota for an Agentic space.</p>
@@ -8685,10 +8805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose File Storage NAS (NAS) file systems support the directory quota feature.</p>
+     * <p>Only General-purpose NAS file systems support the directory quota feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a directory quota for a file system.</p>
+     * <p>Sets a directory quota for a file system.</p>
      * 
      * @param request SetDirQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8744,10 +8864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose File Storage NAS (NAS) file systems support the directory quota feature.</p>
+     * <p>Only General-purpose NAS file systems support the directory quota feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a directory quota for a file system.</p>
+     * <p>Sets a directory quota for a file system.</p>
      * 
      * @param request SetDirQuotaRequest
      * @return SetDirQuotaResponse
@@ -8760,16 +8880,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版2.7.0及以上版本支持为文件集设置配额。</li>
-     * <li>Fileset容量配额，最小起步10 GiB，扩容单位为1 GiB。</li>
-     * <li>Fileset最多支持100亿个文件或目录，最小起步10000，扩容单位为1。</li>
-     * <li>修改目录配额时，设置的配额容量或文件数必须高于已使用容量或文件数。</li>
-     * <li>容量限制和文件数限制至少填写其中一项。</li>
-     * <li>配额的统计有15分钟的延迟，当前的实际使用量15分钟之后才会生效。</li>
+     * <li>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</li>
+     * <li>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</li>
+     * <li>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</li>
+     * <li>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</li>
+     * <li>You must specify at least one of the capacity limit and file count limit.</li>
+     * <li>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets the quota for a fileset.</p>
+     * <p>Sets a quota for a fileset.</p>
      * 
      * @param request SetFilesetQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8822,16 +8942,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>仅CPFS智算版2.7.0及以上版本支持为文件集设置配额。</li>
-     * <li>Fileset容量配额，最小起步10 GiB，扩容单位为1 GiB。</li>
-     * <li>Fileset最多支持100亿个文件或目录，最小起步10000，扩容单位为1。</li>
-     * <li>修改目录配额时，设置的配额容量或文件数必须高于已使用容量或文件数。</li>
-     * <li>容量限制和文件数限制至少填写其中一项。</li>
-     * <li>配额的统计有15分钟的延迟，当前的实际使用量15分钟之后才会生效。</li>
+     * <li>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</li>
+     * <li>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</li>
+     * <li>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</li>
+     * <li>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</li>
+     * <li>You must specify at least one of the capacity limit and file count limit.</li>
+     * <li>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets the quota for a fileset.</p>
+     * <p>Sets a quota for a fileset.</p>
      * 
      * @param request SetFilesetQuotaRequest
      * @return SetFilesetQuotaResponse
@@ -9047,7 +9167,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation applies only when the LifecyclePolicyType parameter of a lifecycle management policy for a CPFS file system is set to OnDemand.</p>
+     * <p>Stops the execution of a lifecycle policy.
+     * This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
      * <p>Stops the execution of a lifecycle policy.</p>
@@ -9086,7 +9207,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation applies only when the LifecyclePolicyType parameter of a lifecycle management policy for a CPFS file system is set to OnDemand.</p>
+     * <p>Stops the execution of a lifecycle policy.
+     * This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
      * 
      * <b>summary</b> : 
      * <p>Stops the execution of a lifecycle policy.</p>
@@ -9209,7 +9331,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the rules of a lifecycle policy. This operation is supported only for CPFS for AI file systems. The <code>UpdateLifecyclePolicy</code> operation overwrites the entire policy. Omitting an optional parameter deletes its corresponding configuration. To add a rule to an existing policy, call the <code>DescribeLifecyclePolicies</code> operation to retrieve the current policy, append the new rule, and then call <code>UpdateLifecyclePolicy</code> with the updated configuration.</p>
+     * <p>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
+     * UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</p>
      * 
      * @param request UpdateLifecyclePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9218,6 +9341,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateLifecyclePolicyResponse updateLifecyclePolicyWithOptions(UpdateLifecyclePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteRules)) {
+            query.put("DeleteRules", request.deleteRules);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -9265,7 +9392,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the rules of a lifecycle policy. This operation is supported only for CPFS for AI file systems. The <code>UpdateLifecyclePolicy</code> operation overwrites the entire policy. Omitting an optional parameter deletes its corresponding configuration. To add a rule to an existing policy, call the <code>DescribeLifecyclePolicies</code> operation to retrieve the current policy, append the new rule, and then call <code>UpdateLifecyclePolicy</code> with the updated configuration.</p>
+     * <p>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
+     * UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</p>
      * 
      * @param request UpdateLifecyclePolicyRequest
      * @return UpdateLifecyclePolicyResponse

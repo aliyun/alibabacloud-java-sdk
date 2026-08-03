@@ -17,7 +17,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of file systems on each page.</p>
+     * <p>The number of file systems per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -368,6 +368,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("EnableABE")
         public Boolean enableABE;
 
+        @NameInMap("EnableDataInsight")
+        public Boolean enableDataInsight;
+
         @NameInMap("EnableOplock")
         public Boolean enableOplock;
 
@@ -385,6 +388,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public Boolean getEnableABE() {
             return this.enableABE;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions setEnableDataInsight(Boolean enableDataInsight) {
+            this.enableDataInsight = enableDataInsight;
+            return this;
+        }
+        public Boolean getEnableDataInsight() {
+            return this.enableDataInsight;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemOptions setEnableOplock(Boolean enableOplock) {

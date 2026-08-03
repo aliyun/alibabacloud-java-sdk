@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class SetFilesetQuotaRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,14 @@ public class SetFilesetQuotaRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. The dry run checks parameter validity and prerequisites. The dry run does not delete the specified quota or incur fees.</p>
+     * <p>Specifies whether to perform a dry run for this request.
+     * A dry run checks parameter validity and dependencies without actually deleting the instance or incurring charges.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
-     * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, the quota is deleted.</li>
+     * <li><p>true: Sends a check request without deleting the export directory. The check items include whether required parameters are specified, the request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</p>
+     * </li>
+     * <li><p>false (default): Sends a normal request. After the check passes, the instance is directly deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,13 +35,15 @@ public class SetFilesetQuotaRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The number of files of the quota. Valid values:</p>
+     * <p>The file count limit of the quota. Valid values:</p>
      * <ul>
-     * <li>Minimum value: 10,000.</li>
-     * <li>Maximum value: 10,000,000,000.</li>
+     * <li><p>Minimum value: 10,000.</p>
+     * </li>
+     * <li><p>Maximum value: 10,000,000,000.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the number of files is unlimited.</p>
+     * <p>If this parameter is not specified, the file count is unlimited.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,7 +53,7 @@ public class SetFilesetQuotaRequest extends TeaModel {
     public Long fileCountLimit;
 
     /**
-     * <p>The ID of the CPFS for LINGJUN file system. The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</p>
+     * <p>The ID of the CPFS for Lingjun file system. The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> (FileSystemType=bmcpfs) to query existing file systems.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +63,7 @@ public class SetFilesetQuotaRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The fileset ID.</p>
+     * <p>Fileset ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,14 +73,16 @@ public class SetFilesetQuotaRequest extends TeaModel {
     public String fsetId;
 
     /**
-     * <p>The total capacity of the quota. Unit: bytes.</p>
+     * <p>The total capacity limit of the quota. Unit: bytes.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
-     * <li>Step size: 1,073,741,824 (1 GiB).</li>
+     * <li><p>Minimum value: 10,737,418,240 (10 GiB).</p>
+     * </li>
+     * <li><p>Increment: 1,073,741,824 (1 GiB).</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the capacity is unlimited.</p>
+     * <p>If this parameter is not specified, the capacity is unlimited.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

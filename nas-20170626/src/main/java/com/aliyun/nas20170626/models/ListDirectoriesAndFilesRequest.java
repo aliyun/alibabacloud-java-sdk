@@ -5,17 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListDirectoriesAndFilesRequest extends TeaModel {
     /**
-     * <p>Whether to list only directories.</p>
+     * <p>Specifies whether to query only directories.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>false</code> (default): Lists both directories and files.</p>
-     * </li>
-     * <li><p><code>true</code>: Lists only directories.</p>
+     * <li>false (default): No. Both directories and files can be queried.</li>
+     * <li>true: Yes. Only directories are queried.<blockquote>
+     * <p>When StorageType is set to All, DirectoryOnly must be set to true and cannot be set to false.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you set <code>StorageType</code> to <code>All</code>, you must set <code>DirectoryOnly</code> to <code>true</code>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +22,7 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public Boolean directoryOnly;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,9 +32,9 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The maximum number of directories or files to return per page.</p>
-     * <p>Value range: 10–128</p>
-     * <p>Default value: 100</p>
+     * <p>The number of directories or files included in each query result.</p>
+     * <p>Valid values: 10 to 128.</p>
+     * <p>Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -45,7 +43,7 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>A continuation token used to retrieve the next page of results when the response is truncated.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation position.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -54,8 +52,8 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The absolute path of the directory.</p>
-     * <p>The path must start with a forward slash (/) and exist on the mount target.</p>
+     * <p>The absolute path of the specified directory.</p>
+     * <p>The path must start with a forward slash (/) and must be an existing path in the mount target.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,18 +63,15 @@ public class ListDirectoriesAndFilesRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The storage type.</p>
+     * <p>The storage class type.</p>
      * <ul>
-     * <li><p><code>InfrequentAccess</code>: infrequent access.</p>
-     * </li>
-     * <li><p><code>Archive</code>: archive storage.</p>
-     * </li>
-     * <li><p><code>All</code>: all storage types.</p>
+     * <li>InfrequentAccess: IA storage class.</li>
+     * <li>Archive: Archive storage class.</li>
+     * <li>All: queries data of all storage classes.<blockquote>
+     * <p>When StorageType is set to All, you must set DirectoryOnly to true.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you set <code>StorageType</code> to <code>All</code>, you must set <code>DirectoryOnly</code> to <code>true</code>.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLifecyclePolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the lifecycle policy.</p>
+     * <p>The lifecycle policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>lsp-bp1234567890ab****</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDirectoriesAndFilesResponseBody extends TeaModel {
     /**
-     * <p>The list of directory and file entries.</p>
+     * <p>The collection of directory or file information.</p>
      */
     @NameInMap("Entries")
     public java.util.List<ListDirectoriesAndFilesResponseBodyEntries> entries;
 
     /**
-     * <p>The pagination token. If the response is truncated, include this token in the next request to retrieve the next page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation position.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -59,9 +59,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
 
     public static class ListDirectoriesAndFilesResponseBodyEntries extends TeaModel {
         /**
-         * <p>The last access time (atime) of the file.</p>
-         * <p>The time is in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>File</code>.</p>
+         * <p>The query time.</p>
+         * <p>The time follows the ISO 8601 standard and is returned in the format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to File.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-01T10:08:08Z</p>
@@ -70,9 +70,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String atime;
 
         /**
-         * <p>The metadata change time (ctime) of the file.</p>
-         * <p>The time is in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>File</code>.</p>
+         * <p>The time when the metadata was modified.</p>
+         * <p>The time follows the ISO 8601 standard and is returned in the format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to File.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-11T10:08:10Z</p>
@@ -81,7 +81,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String ctime;
 
         /**
-         * <p>The ID of the file or directory.</p>
+         * <p>The FileId of the directory or file.</p>
          * 
          * <strong>example:</strong>
          * <p>66</p>
@@ -90,14 +90,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>Specifies whether the directory contains any archive files.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>Directory</code>.</p>
+         * <p>Indicates whether the directory contains archive storage class files.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to Directory.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Yes</p>
-         * </li>
-         * <li><p><code>false</code>: No</p>
-         * </li>
+         * <li>true: The directory contains archive storage class files.</li>
+         * <li>false: The directory does not contain archive storage class files.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,14 +105,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String hasArchiveFile;
 
         /**
-         * <p>Specifies whether the directory contains any infrequent access files.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>Directory</code>.</p>
+         * <p>Indicates whether the directory contains IA storage class files.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to Directory.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Yes</p>
-         * </li>
-         * <li><p><code>false</code>: No</p>
-         * </li>
+         * <li>true: The directory contains IA storage class files.</li>
+         * <li>false: The directory does not contain IA storage class files.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,9 +129,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String inode;
 
         /**
-         * <p>The last modification time (mtime) of the file.</p>
-         * <p>The time is in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>File</code>.</p>
+         * <p>The time when the file was modified.</p>
+         * <p>The time follows the ISO 8601 standard and is returned in the format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to File.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-11T10:08:08Z</p>
@@ -144,7 +140,7 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String mtime;
 
         /**
-         * <p>The name of the file or directory.</p>
+         * <p>The file name or directory name.</p>
          * 
          * <strong>example:</strong>
          * <p>file.txt</p>
@@ -152,14 +148,27 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The total duration for which the file has been stored as an archive file. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("OfflineDuration")
         public Long offlineDuration;
 
+        /**
+         * <p>The total duration for which the file has remained unchanged since it was stored as an archive file. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("OfflineUnchangedDuration")
         public Long offlineUnchangedDuration;
 
         /**
-         * <p>The owner of the file or directory. This parameter is returned only when <code>ProtocolType</code> is <code>SMB</code> and access control is enabled.</p>
+         * <p>The portable account ID.
+         * This parameter is meaningful only when ProtocolType is set to SMB and access control is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>37862c****</p>
@@ -168,9 +177,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The last data retrieval time.</p>
-         * <p>The time is in the ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>File</code>.</p>
+         * <p>The time when the most recent data retrieval task was run.</p>
+         * <p>The time follows the ISO 8601 standard and is returned in the format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to File.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-02-11T10:08:08Z</p>
@@ -179,9 +188,9 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String retrieveTime;
 
         /**
-         * <p>The size of the file, in bytes.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>File</code>.</p>
-         * <p>This value is returned and is meaningful only when Type is File.</p>
+         * <p>The size of the file.</p>
+         * <p>Unit: bytes.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to File.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -190,14 +199,12 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The storage class of the file.</p>
-         * <p>This parameter is returned only when <code>Type</code> is <code>File</code>.</p>
+         * <p>The storage class type of the returned file.</p>
+         * <p>This parameter is returned and meaningful only when Type is set to File.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>InfrequentAccess</code></p>
-         * </li>
-         * <li><p><code>Archive</code></p>
-         * </li>
+         * <li>InfrequentAccess: IA storage class.</li>
+         * <li>Archive: Archive storage class.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,13 +214,11 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The type of the entry.</p>
+         * <p>The type of the returned result.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>File</code>: a file</p>
-         * </li>
-         * <li><p><code>Directory</code>: a directory</p>
-         * </li>
+         * <li>File: file.</li>
+         * <li>Directory: directory.</li>
          * </ul>
          * 
          * <strong>example:</strong>

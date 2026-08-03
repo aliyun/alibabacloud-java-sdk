@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateLifecyclePolicyRequest extends TeaModel {
     /**
-     * <p>The description of the lifecycle policy.</p>
+     * <p>The file data expiration and deletion rules. You can configure up to one rule.</p>
+     */
+    @NameInMap("DeleteRules")
+    public java.util.List<CreateLifecyclePolicyRequestDeleteRules> deleteRules;
+
+    /**
+     * <p>The lifecycle policy description.</p>
      * <p>Format:
      * The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <blockquote>
@@ -13,7 +19,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -29,7 +35,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The Policy Name of the lifecycle management policy. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
+     * <p>The lifecycle management policy name. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <blockquote>
      * <p>This parameter is required for General-purpose NAS but not required for CPFS for Lingjun.</p>
      * </blockquote>
@@ -104,7 +110,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public java.util.List<String> paths;
 
     /**
-     * <p>The file data retrieval rules. A maximum of one rule can be configured.</p>
+     * <p>The file data retrieval rules. You can configure up to one rule.</p>
      * <blockquote>
      * <p>Only CPFS for Lingjun file systems are supported.</p>
      * </blockquote>
@@ -116,7 +122,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public java.util.List<CreateLifecyclePolicyRequestRetrieveRules> retrieveRules;
 
     /**
-     * <p>The storage type.</p>
+     * <p>The storage tiering type.</p>
      * <ul>
      * <li>InfrequentAccess: IA storage class.</li>
      * <li>Archive: Archive storage.</li>
@@ -133,9 +139,9 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The file data transit rules. A maximum of one rule can be configured.</p>
+     * <p>The file data transit rules. You can configure up to one rule.</p>
      * <blockquote>
-     * <p>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
+     * <p>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
      * </blockquote>
      */
     @NameInMap("TransitRules")
@@ -144,6 +150,14 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public static CreateLifecyclePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLifecyclePolicyRequest self = new CreateLifecyclePolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLifecyclePolicyRequest setDeleteRules(java.util.List<CreateLifecyclePolicyRequestDeleteRules> deleteRules) {
+        this.deleteRules = deleteRules;
+        return this;
+    }
+    public java.util.List<CreateLifecyclePolicyRequestDeleteRules> getDeleteRules() {
+        return this.deleteRules;
     }
 
     public CreateLifecyclePolicyRequest setDescription(String description) {
@@ -226,6 +240,56 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
         return this.transitRules;
     }
 
+    public static class CreateLifecyclePolicyRequestDeleteRules extends TeaModel {
+        /**
+         * <p>The rule attribute.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Atime: the access time of the file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Atime</p>
+         */
+        @NameInMap("Attribute")
+        public String attribute;
+
+        /**
+         * <p>The rule threshold.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 1 to 365.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static CreateLifecyclePolicyRequestDeleteRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateLifecyclePolicyRequestDeleteRules self = new CreateLifecyclePolicyRequestDeleteRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLifecyclePolicyRequestDeleteRules setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public CreateLifecyclePolicyRequestDeleteRules setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
     public static class CreateLifecyclePolicyRequestRetrieveRules extends TeaModel {
         /**
          * <p>The rule attribute. Valid values:</p>
@@ -296,7 +360,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
          * <p>The rule threshold.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 0 to 365.</li>
+         * <li>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 0 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>

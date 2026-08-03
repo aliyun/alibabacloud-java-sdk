@@ -7,7 +7,7 @@ public class DescribeAccessPointsRequest extends TeaModel {
     /**
      * <p>The permission group name.</p>
      * <p>This parameter is required if the file system is a General-purpose NAS file system.</p>
-     * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</p>
+     * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
      * 
      * <strong>example:</strong>
      * <p>DEFAULT_VPC_GROUP_NAME</p>

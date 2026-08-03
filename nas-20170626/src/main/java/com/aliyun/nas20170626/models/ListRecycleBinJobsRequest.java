@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRecycleBinJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListRecycleBinJobsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rb-15<strong><strong>ed-r-1625</strong></strong>2441</p>
@@ -24,8 +24,8 @@ public class ListRecycleBinJobsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the current page in a paged query.</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,7 +34,7 @@ public class ListRecycleBinJobsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -45,15 +45,15 @@ public class ListRecycleBinJobsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The job status. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Running: The job is running.</li>
-     * <li>Defragmenting: The job is defragmenting data.</li>
-     * <li>PartialSuccess: The job is partially completed.</li>
-     * <li>Success: The job is completed.</li>
-     * <li>Fail: The job failed.</li>
-     * <li>Cancelled: The job is canceled.</li>
-     * <li>all (default)</li>
+     * <li>Running: The task is running.</li>
+     * <li>Defragmenting: Data is being defragmented.</li>
+     * <li>PartialSuccess: The task partially succeeded.</li>
+     * <li>Success: The task succeeded.</li>
+     * <li>Fail: The task failed.</li>
+     * <li>Cancelled: The task is canceled.</li>
+     * <li>All (default): All statuses.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMountTargetRequest extends TeaModel {
     /**
-     * <p>The name of the access group that is associated with the mount target.</p>
+     * <p>The permission group attached to the mount target.</p>
      * 
      * <strong>example:</strong>
      * <p>classic-test</p>
@@ -13,13 +13,19 @@ public class ModifyMountTargetRequest extends TeaModel {
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
+    /**
+     * <p>Specifies whether the VPC mount target supports access only through access points. This parameter applies only to CPFS for Lingjun file systems.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AccessPointAccessOnly")
     public Boolean accessPointAccessOnly;
 
     /**
-     * <p>The domain name of the dual-stack mount target.</p>
+     * <p>The IPv4/IPv6 dual-stack mount target.</p>
      * <blockquote>
-     * <p>The IPv6 feature is available only for Extreme NAS file systems in the Chinese mainland.</p>
+     * <p>Currently, only Extreme NAS in regions in the Chinese mainland supports IPv6.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,12 +35,10 @@ public class ModifyMountTargetRequest extends TeaModel {
     public String dualStackMountTargetDomain;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <ul>
-     * <li><p>For a General-purpose NAS file system, the ID is similar to <code>31a8e4****</code>.</p>
-     * </li>
-     * <li><p>For an Extreme NAS file system, the ID must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</p>
-     * </li>
+     * <li>General-purpose NAS: <code>31a8e4****</code>.</li>
+     * <li>Extreme NAS: Must start with <code>extreme-</code>, such as <code>extreme-0015****</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +49,7 @@ public class ModifyMountTargetRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The domain name of the IPv4 mount target.</p>
+     * <p>The IPv4 mount target.</p>
      * 
      * <strong>example:</strong>
      * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -54,16 +58,14 @@ public class ModifyMountTargetRequest extends TeaModel {
     public String mountTargetDomain;
 
     /**
-     * <p>The status of the mount target.</p>
+     * <p>The mount target status.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>Active: The mount target is available.</p>
-     * </li>
-     * <li><p>Inactive: The mount target is unavailable.</p>
-     * </li>
+     * <li>Active: active</li>
+     * <li>Inactive: inactive</li>
      * </ul>
      * <blockquote>
-     * <p>You can change the status of a mount target only if the mount target is attached to a General-purpose NAS file system.</p>
+     * <p>Only General-purpose NAS supports changing the mount target status.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

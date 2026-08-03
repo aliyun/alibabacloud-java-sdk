@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataFlowTasksResponseBody extends TeaModel {
     /**
-     * <p>If the response is truncated, use NextToken to retrieve the remaining results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the truncation point.</p>
      * 
      * <strong>example:</strong>
      * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -225,6 +225,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("EntryList")
+        public String entryList;
+
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
@@ -333,6 +336,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeDataFlowTasksResponseBodyTaskInfoTask setEntryList(String entryList) {
+            this.entryList = entryList;
+            return this;
+        }
+        public String getEntryList() {
+            return this.entryList;
         }
 
         public DescribeDataFlowTasksResponseBodyTaskInfoTask setErrorMsg(String errorMsg) {

@@ -91,6 +91,56 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules extends TeaModel {
+        /**
+         * <p>The attribute of the rule.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Atime: The access time of the file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Atime</p>
+         */
+        @NameInMap("Attribute")
+        public String attribute;
+
+        /**
+         * <p>The threshold of the rule.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules self = new DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules setAttribute(String attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
     public static class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules extends TeaModel {
         /**
          * <p>The attribute of the retrieval rule.</p>
@@ -187,10 +237,16 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The file data expiration and deletion rules. A maximum of one rule can be configured.</p>
+         */
+        @NameInMap("DeleteRules")
+        public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules> deleteRules;
+
+        /**
          * <p>The description of the policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -214,7 +270,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String lifecyclePolicyId;
 
         /**
-         * <p>The lifecycle management policy name.</p>
+         * <p>The name of the lifecycle management policy.</p>
          * 
          * <strong>example:</strong>
          * <p>lifecyclepolicy_01</p>
@@ -235,10 +291,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
          * <p>The management rule associated with the lifecycle management policy.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DEFAULT_ATIME_14: files not accessed in the last 14 days</li>
-         * <li>DEFAULT_ATIME_30: files not accessed in the last 30 days</li>
-         * <li>DEFAULT_ATIME_60: files not accessed in the last 60 days</li>
-         * <li>DEFAULT_ATIME_90: files not accessed in the last 90 days.</li>
+         * <li>DEFAULT_ATIME_14: Files not accessed in the last 14 days.</li>
+         * <li>DEFAULT_ATIME_30: Files not accessed in the last 30 days.</li>
+         * <li>DEFAULT_ATIME_60: Files not accessed in the last 60 days.</li>
+         * <li>DEFAULT_ATIME_90: Files not accessed in the last 90 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -263,13 +319,13 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public java.util.List<String> paths;
 
         /**
-         * <p>The data retrieval rules for files.</p>
+         * <p>The file data retrieval rules.</p>
          */
         @NameInMap("RetrieveRules")
         public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> retrieveRules;
 
         /**
-         * <p>The storage class type. Valid values:</p>
+         * <p>The storage type. Valid values:</p>
          * <ul>
          * <li>InfrequentAccess: IA storage class.</li>
          * <li>Archive: Archive storage class.</li>
@@ -282,7 +338,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The data transit rules for files.</p>
+         * <p>The file data transit rules.</p>
          */
         @NameInMap("TransitRules")
         public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> transitRules;
@@ -298,6 +354,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setDeleteRules(java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules> deleteRules) {
+            this.deleteRules = deleteRules;
+            return this;
+        }
+        public java.util.List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules> getDeleteRules() {
+            return this.deleteRules;
         }
 
         public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setDescription(String description) {

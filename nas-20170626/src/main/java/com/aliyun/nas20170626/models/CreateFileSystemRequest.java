@@ -7,11 +7,11 @@ public class CreateFileSystemRequest extends TeaModel {
     /**
      * <p>The maximum throughput of the file system.</p>
      * <p>Unit: MB/s.</p>
-     * <p>For available specification values, see the actual specifications on the buy page.</p>
+     * <p>For available specification values, refer to the actual specifications on the purchase page.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go buy page</a></p>
+     * <p><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go buy page</a></p>
+     * <p><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></p>
      * 
      * <strong>example:</strong>
      * <p>150</p>
@@ -21,18 +21,18 @@ public class CreateFileSystemRequest extends TeaModel {
 
     /**
      * <p>The capacity of the file system. Unit: GiB.
-     * This parameter is required and takes effect only when FileSystemType is set to extreme, cpfs, or cpfsse.</p>
-     * <p>For available values, see the actual specifications on the buy page:</p>
+     * This parameter is required and valid only when FileSystemType is set to extreme, cpfs, or cpfsse.</p>
+     * <p>For available values, refer to the actual specifications on the purchase page:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><a href="https://common-buy.aliyun.com/?commodityCode=nas_extreme_post#/buy">Extreme NAS pay-as-you-go buy page</a></li>
-     * <li><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go buy page</a></li>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=nas_extreme_post#/buy">Extreme NAS pay-as-you-go purchase page</a></li>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=nas_cpfs_post#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <ul>
-     * <li><p><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS pay-as-you-go buy page</a></p>
+     * <li><p><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS pay-as-you-go purchase page</a></p>
      * </li>
-     * <li><p><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go buy page</a></p>
+     * <li><p><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui&commodityCode=nas_cpfspost_public_intl#/buy">Parallel file system CPFS pay-as-you-go purchase page</a></p>
      * </li>
      * </ul>
      * 
@@ -46,8 +46,8 @@ public class CreateFileSystemRequest extends TeaModel {
      * <p>The billing method.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo (default): Pay-as-you-go.</li>
-     * <li>Subscription: Subscription.</li>
+     * <li>PayAsYouGo (default): pay-as-you-go.</li>
+     * <li>Subscription: subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class CreateFileSystemRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>Ensures the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
      * </blockquote>
@@ -78,18 +78,18 @@ public class CreateFileSystemRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>此文件系统的描述。</p>
+     * <p>Description of this file system</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to perform a dry run for this request.</p>
-     * <p>A dry run checks parameter validity and resource availability without actually creating the instance or incurring charges.</p>
+     * <p>A dry run checks parameter validity, verifies inventory, and performs other validations without actually creating the instance or incurring charges.</p>
      * <p>Valid values:  </p>
      * <ul>
-     * <li>true: Sends a dry run request without creating the instance. The check items include required parameters, request format, service limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but FileSystemId is empty.  </li>
-     * <li>false (default): Sends a normal request. After the check succeeds, the instance is created.</li>
+     * <li>true: Sends a dry run request without creating the instance. The check items include required parameters, request format, service limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.  </li>
+     * <li>false (default): Sends a normal request. After the check passes, the instance is directly created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,8 +100,8 @@ public class CreateFileSystemRequest extends TeaModel {
 
     /**
      * <p>The subscription duration.</p>
-     * <p>Unit: months. This parameter is required and takes effect only when ChargeType is set to Subscription.</p>
-     * <p>If a subscription instance is not renewed upon expiration, the instance is automatically released.</p>
+     * <p>Unit: months. This parameter is required and valid only when ChargeType is set to Subscription.</p>
+     * <p>If a subscription instance is not renewed upon instance expiration, the instance expires and is automatically released.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,17 +111,17 @@ public class CreateFileSystemRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to encrypt the file system.</p>
-     * <p>Uses keys managed by Key Management Service (KMS) to encrypt data stored on the file system. No decryption is required when reading or writing encrypted data.</p>
+     * <p>Uses keys managed by Key Management Service (KMS) to encrypt data stored on the file system. Decryption is not required when reading or writing encrypted data.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>0 (default): Not encrypted.</li>
      * <li>1: NAS-managed key. Supported when FileSystemType is set to standard or extreme.</li>
-     * <li>2: Custom Key (KMS). Supported when FileSystemType is set to standard or extreme.</li>
+     * <li>2: Custom key encryption. Supported when FileSystemType is set to standard or extreme.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Extreme NAS: The Custom Key (KMS) feature is supported in all regions except China (Hangzhou) Finance Cloud.</li>
-     * <li>General-purpose NAS: The Custom Key (KMS) feature is supported in all regions.</li>
+     * <li>Extreme NAS: Custom Key (KMS) is supported in all regions except China (Hangzhou) Finance Cloud.</li>
+     * <li>General-purpose NAS: Custom Key (KMS) is supported in all regions.</li>
      * </ul>
      * </blockquote>
      * 
@@ -132,13 +132,13 @@ public class CreateFileSystemRequest extends TeaModel {
     public Integer encryptType;
 
     /**
-     * <p>The type of the file system.</p>
+     * <p>The file system type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>standard (default): General-purpose NAS file system.</li>
-     * <li>extreme: Extreme NAS file system.</li>
-     * <li>cpfs: Cloud Parallel File Storage (CPFS) (locally redundant).</li>
-     * <li>cpfsse: Cloud Parallel File Storage (CPFS) SE (zone-redundant).</li>
+     * <li>standard (default): General-purpose NAS.</li>
+     * <li>extreme: Extreme NAS.</li>
+     * <li>cpfs: Cloud Parallel File Storage (locally redundant).</li>
+     * <li>cpfsse: Cloud Parallel File Storage SE (zone-redundant).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class CreateFileSystemRequest extends TeaModel {
 
     /**
      * <p>The list of zone-redundant vSwitch IDs.
-     * If RedundancyType is set to ZRS, this parameter is required. You must specify three vSwitch IDs, each from a different zone.</p>
+     * When RedundancyType is set to ZRS, this parameter is required. You must specify three vSwitch IDs from three different zones.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -208,9 +208,9 @@ public class CreateFileSystemRequest extends TeaModel {
 
     /**
      * <p>The snapshot ID.</p>
-     * <p>This parameter is supported only for Extreme NAS file systems with the Advanced storage type.</p>
+     * <p>This parameter is supported only for Extreme NAS file systems with the advanced storage type.</p>
      * <blockquote>
-     * <p>A file system created from a snapshot has the same version as the source file system of the snapshot. For example, if the source file system version is 1 and you want to create a version 2 file system, first create file system A from the snapshot, then create file system B that meets the version 2 configuration. Copy the data from file system A to file system B, and migrate your workloads to file system B after the copy is complete.</p>
+     * <p>A file system created from a snapshot has the same version as the source file system of the snapshot. For example, if the source file system version is 1 and you want to create a version 2 file system, first create file system A from the snapshot, then create file system B that meets version 2 configurations, copy data from file system A to file system B, and migrate your workloads to file system B after the copy is complete.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class CreateFileSystemRequest extends TeaModel {
     /**
      * <p>The storage type.</p>
      * <ul>
-     * <li>If FileSystemType is set to standard, valid values: Performance, Capacity, and Premium.</li>
+     * <li>If FileSystemType is set to standard, valid values: Performance, Capacity, Premium, and Agentic (AgenticFS).</li>
      * <li>If FileSystemType is set to extreme, valid values: standard and advance.</li>
      * <li>If FileSystemType is set to cpfs, valid values: advance_100 (100 MB/s/TiB baseline), advance_200 (200 MB/s/TiB baseline), and economic.</li>
      * <li>If FileSystemType is set to cpfsse, valid values: advance_100 (100 MB/s/TiB baseline).</li>
@@ -246,7 +246,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * <p>The vSwitch ID.</p>
      * <ul>
      * <li>If FileSystemType is set to cpfs, this parameter is required.</li>
-     * <li>If FileSystemType is not set to cpfs, this parameter is reserved and does not take effect. You do not need to configure it.</li>
+     * <li>If FileSystemType is not set to cpfs, this parameter is reserved for future use and does not take effect. You do not need to configure it.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class CreateFileSystemRequest extends TeaModel {
      * <p>The VPC ID.</p>
      * <ul>
      * <li>If FileSystemType is set to cpfs or cpfsse, this parameter is required.</li>
-     * <li>If FileSystemType is set to standard or extreme, this parameter is reserved and does not take effect. You do not need to configure it.</li>
+     * <li>If FileSystemType is set to standard or extreme, this parameter is reserved for future use and does not take effect. You do not need to configure it.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -271,12 +271,12 @@ public class CreateFileSystemRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <p>A zone is an independent physical area within a region that has its own power supply and network.</p>
-     * <p>If FileSystemType is set to standard, this parameter is optional. By default, an active zone that matches the conditional ProtocolType and StorageType is randomly selected.</p>
+     * <p>If FileSystemType is set to standard, this parameter is optional. By default, an active zone that meets the conditional requirements is randomly selected based on ProtocolType and StorageType.</p>
      * <p>If FileSystemType is set to extreme or cpfs, this parameter is required.</p>
      * <blockquote>
      * <ul>
-     * <li>File systems and Elastic Computing Service (ECS) instances in different zones of the same region can communicate with each other.</li>
-     * <li>Place the file system and the ECS server in the same zone to avoid cross-zone latency.</li>
+     * <li>File systems and Elastic Compute Service (ECS) instances in different zones within the same region can communicate with each other.</li>
+     * <li>The file system and the ECS instance should reside in the same zone to avoid cross-zone latency.</li>
      * </ul>
      * </blockquote>
      * 

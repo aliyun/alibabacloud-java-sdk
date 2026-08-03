@@ -77,7 +77,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
     public static class DescribeAccessPointsResponseBodyAccessPointsPosixUser extends TeaModel {
         /**
-         * <p>The POSIX group ID.</p>
+         * <p>The POSIX user group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -86,7 +86,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public Integer posixGroupId;
 
         /**
-         * <p>The secondary group ID.</p>
+         * <p>The secondary user group ID.</p>
          */
         @NameInMap("PosixSecondaryGroupIds")
         public java.util.List<Integer> posixSecondaryGroupIds;
@@ -270,7 +270,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String accessPointName;
 
         /**
-         * <p>The time when the access point was created.</p>
+         * <p>The time when the access point was created. Format: Unix/POSIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1709619668276167</p>
@@ -279,7 +279,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The domain name of the access point.</p>
+         * <p>The access point domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -306,7 +306,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The time when the access point was last modified.</p>
+         * <p>The time when the access point was last modified. Format: Unix/POSIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1709619668276167</p>
@@ -330,7 +330,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String rootPath;
 
         /**
-         * <p>The root directory permissions.</p>
+         * <p>The root directory permission.</p>
          */
         @NameInMap("RootPathPermission")
         public DescribeAccessPointsResponseBodyAccessPointsRootPathPermission rootPathPermission;
@@ -360,7 +360,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
          * <li>Deleting: being deleted.</li>
          * </ul>
          * <blockquote>
-         * <p>You can mount a file system only when the status is Active.</p>
+         * <p>You can mount the file system only when the status is Active.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyFileSystemShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the file system.</p>
+     * <p>The file system description.</p>
      * <p>Limits:</p>
      * <ul>
-     * <li><p>The description must be 2 to 128 characters.</p>
-     * </li>
-     * <li><p>It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
-     * </li>
+     * <li>The description must be 2 to 128 characters in length.</li>
+     * <li>The description must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,13 +20,13 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <ul>
-     * <li><p>General-purpose NAS: For example, <code>31a8e4****</code>.</p>
+     * <li><p>General-purpose NAS: <code>31a8e4****</code>.</p>
      * </li>
-     * <li><p>Extreme NAS: The ID must start with <code>extreme-</code>. For example, <code>extreme-0015****</code>.</p>
+     * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</p>
      * </li>
-     * <li><p>CPFS: The ID must start with <code>cpfs-</code>. For example, <code>cpfs-125487****</code>.</p>
+     * <li><p>CPFS: must start with <code>cpfs-</code>, for example, <code>cpfs-125487****</code>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -41,7 +38,7 @@ public class ModifyFileSystemShrinkRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>Additional options for the file system.</p>
+     * <p>The options.</p>
      */
     @NameInMap("Options")
     public String optionsShrink;

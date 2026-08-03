@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * 
      * <strong>example:</strong>
      * <p>31a8e4****</p>
@@ -14,8 +14,8 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the list.</p>
+     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of data retrieval tasks on each page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -37,10 +37,10 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     /**
      * <p>The status of the data retrieval task. Valid values:</p>
      * <ul>
-     * <li>active: The task is running.</li>
-     * <li>canceled: The task is canceled.</li>
-     * <li>completed: The task is completed.</li>
-     * <li>failed: The task has failed.</li>
+     * <li>active: running.</li>
+     * <li>canceled: canceled.</li>
+     * <li>completed: completed.</li>
+     * <li>failed: failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,14 +50,14 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage class. Valid values:</p>
      * <ul>
-     * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
-     * <li>Archive: the Archive storage class.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</p>
+     * <li>InfrequentAccess: IA storage class.</li>
+     * <li>Archive: Archive storage class.<blockquote>
+     * <p>If StorageType is not specified, data retrieval tasks of all storage classes are returned.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>InfrequentAccess</p>

@@ -15,7 +15,7 @@ public class DescribeLifecyclePolicyLogsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The lifecycle policy ID.</p>
+     * <p>The ID of the lifecycle policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +25,8 @@ public class DescribeLifecyclePolicyLogsRequest extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Starts from 1. Default: 1.</p>
+     * <p>The page number of the list.</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,8 +35,8 @@ public class DescribeLifecyclePolicyLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of log entries to return on each page.</p>
-     * <p>Value range: 1–100. Default: 10.</p>
+     * <p>The number of log entries per page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

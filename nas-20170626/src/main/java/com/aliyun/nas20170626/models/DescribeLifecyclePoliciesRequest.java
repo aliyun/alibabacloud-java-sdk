@@ -11,7 +11,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -36,7 +36,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
 
     /**
      * <p>The lifecycle policy name. Naming rules:</p>
-     * <p>The name must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
+     * <p>The name must be 3 to 64 characters in length, must start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <blockquote>
      * <p>Optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</p>
      * </blockquote>
@@ -51,8 +51,8 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
      * <p>The policy type.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Auto: automatic execution</li>
-     * <li>OnDemand: on-demand execution<blockquote>
+     * <li>Auto: Automatic execution.</li>
+     * <li>OnDemand: On-demand execution.<blockquote>
      * <p>Only CPFS for Lingjun supports this parameter.</p>
      * </blockquote>
      * </li>
@@ -98,7 +98,7 @@ public class DescribeLifecyclePoliciesRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The storage class type. Valid values:</p>
+     * <p>The storage type. Valid values:</p>
      * <ul>
      * <li>InfrequentAccess: IA storage class.</li>
      * <li>Archive: Archive storage class.<blockquote>

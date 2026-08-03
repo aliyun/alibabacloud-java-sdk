@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccessPointsRequest extends TeaModel {
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,20 @@ public class ListAccessPointsRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The filter information.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<ListAccessPointsRequestFilters> filters;
 
     /**
+     * <p>The maximum number of results to return per query.</p>
+     * <ul>
+     * <li>Maximum value: 100.</li>
+     * <li>Minimum value: 10.</li>
+     * <li>Default value: 20.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -24,6 +35,8 @@ public class ListAccessPointsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The query token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
      */
@@ -69,6 +82,13 @@ public class ListAccessPointsRequest extends TeaModel {
 
     public static class ListAccessPointsRequestFilters extends TeaModel {
         /**
+         * <p>The name of the filter key. Valid values:</p>
+         * <ul>
+         * <li>AccessGroup (not supported for agentic)</li>
+         * <li>AccessPointId</li>
+         * <li>AgenticSpaceId</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AccessPointId</p>
          */
@@ -76,6 +96,8 @@ public class ListAccessPointsRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the filter key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

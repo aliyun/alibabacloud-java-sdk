@@ -14,13 +14,11 @@ public class UpdateLifecyclePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>The request status.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>true: The request succeeded.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

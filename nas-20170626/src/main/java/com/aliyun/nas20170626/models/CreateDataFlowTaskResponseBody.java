@@ -14,7 +14,7 @@ public class CreateDataFlowTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Dataflow task ID.</p>
+     * <p>The data flow task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>task-38aa8e890f45****</p>

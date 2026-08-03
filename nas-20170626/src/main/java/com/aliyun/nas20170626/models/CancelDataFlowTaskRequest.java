@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CancelDataFlowTaskRequest extends TeaModel {
     /**
-     * <p>A client-generated token that you can use to ensure the idempotence of the request. The token must be unique across different requests.</p>
-     * <p>The <code>ClientToken</code> value must be an ASCII string of 64 characters or less. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the <code>ClientToken</code>. The request ID is unique for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,14 +28,12 @@ public class CancelDataFlowTaskRequest extends TeaModel {
     public String dataFlowId;
 
     /**
-     * <p>Specifies whether to perform a dry run for the request.</p>
-     * <p>A dry run checks for parameter validity and resource availability without actually canceling the task or incurring charges.</p>
+     * <p>Specifies whether to perform a dry run for this request.</p>
+     * <p>A dry run checks parameter validity and resource availability without actually creating an instance or incurring fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Performs a dry run. The system checks the request for potential issues, including missing parameters, invalid formats, and service limits. If the check fails, the system returns an error message; otherwise, it returns a success code.</p>
-     * </li>
-     * <li><p><code>false</code> (default): Sends a normal request. After the request passes the check, the task is canceled.</p>
-     * </li>
+     * <li>true: sends a dry run request without creating an instance. The check items include required parameters, request format, service limits, and NAS resource availability. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</li>
+     * <li>false (default): sends a normal request. After the check passes, the instance is directly created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,9 +45,9 @@ public class CancelDataFlowTaskRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
      * <ul>
-     * <li><p>For a general-purpose CPFS instance, the ID must start with <code>cpfs-</code>, for example, <code>cpfs-125487****</code>.</p>
+     * <li><p>General-purpose CPFS: must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
      * </li>
-     * <li><p>For a CPFS for AI Computing instance, the ID must start with <code>bmcpfs-</code>, for example, <code>bmcpfs-0015****</code>.</p>
+     * <li><p>CPFS for Lingjun: must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

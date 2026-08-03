@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLifecyclePolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,8 @@ public class ModifyLifecyclePolicyRequest extends TeaModel {
     public String lifecyclePolicyId;
 
     /**
-     * <p>The name of the lifecycle policy.</p>
-     * <p>The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The Policy Name of the lifecycle management policy.</p>
+     * <p>The name must be 3 to 64 characters in length, must start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>lifecyclepolicy_01</p>
@@ -34,18 +34,18 @@ public class ModifyLifecyclePolicyRequest extends TeaModel {
     public String lifecyclePolicyName;
 
     /**
-     * <p>The management rule that is associated with the lifecycle policy.</p>
+     * <p>The management rule associated with the lifecycle management policy.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>DEFAULT_ATIME_14: Files not accessed for 14 days.</li>
-     * <li>DEFAULT_ATIME_30: Files not accessed for 30 days.</li>
-     * <li>DEFAULT_ATIME_60: Files not accessed for 60 days.</li>
-     * <li>DEFAULT_ATIME_90: Files not accessed for 90 days.</li>
-     * <li>DEFAULT_ATIME_180: Files not accessed for 180 days. DEFAULT_ATIME_180 is supported only when the StorageType parameter is set to Archive.</li>
-     * </ul>
-     * <blockquote>
-     * <p> If an IA policy has already been set for the directory, any subsequent archival policy must have a longer duration than the IA policy.</p>
+     * <li>DEFAULT_ATIME_14: files that have not been accessed for 14 days.</li>
+     * <li>DEFAULT_ATIME_30: files that have not been accessed for 30 days.</li>
+     * <li>DEFAULT_ATIME_60: files that have not been accessed for 60 days.</li>
+     * <li>DEFAULT_ATIME_90: files that have not been accessed for 90 days.</li>
+     * <li>DEFAULT_ATIME_180: files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<blockquote>
+     * <p>If an IA storage class policy has already been configured for the directory, the time period specified for the archive policy must be longer than that of the IA storage class policy.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DEFAULT_ATIME_14</p>
@@ -54,8 +54,8 @@ public class ModifyLifecyclePolicyRequest extends TeaModel {
     public String lifecycleRuleName;
 
     /**
-     * <p>The absolute path of a directory with which the lifecycle policy is associated.</p>
-     * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+     * <p>The absolute path of a single directory configured in the lifecycle management policy.</p>
+     * <p>The path must start with a forward slash (/) and must be an existing path in the mount target.</p>
      * 
      * <strong>example:</strong>
      * <p>/pathway/to/folder</p>
@@ -64,10 +64,10 @@ public class ModifyLifecyclePolicyRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage type.</p>
      * <ul>
-     * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
-     * <li>Archive: the Archive storage class.</li>
+     * <li>InfrequentAccess: IA storage class.</li>
+     * <li>Archive: Archive storage class.</li>
      * </ul>
      * 
      * <strong>example:</strong>

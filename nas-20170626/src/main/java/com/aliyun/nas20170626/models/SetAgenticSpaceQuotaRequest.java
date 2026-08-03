@@ -72,7 +72,7 @@ public class SetAgenticSpaceQuotaRequest extends TeaModel {
      * <ul>
      * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
      * <li>Maximum value: 1,099,511,627,776,000 (1,024,000 GiB).</li>
-     * <li>Step: 1,073,741,824 (1 GiB).</li>
+     * <li>Increment: 1,073,741,824 (1 GiB).</li>
      * </ul>
      * 
      * <strong>example:</strong>

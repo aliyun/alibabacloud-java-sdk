@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
     /**
-     * <p>The information about the directories that are recently deleted.</p>
+     * <p>The information about directories on which delete operations were recently performed.</p>
      */
     @NameInMap("Entries")
     public java.util.List<ListRecentlyRecycledDirectoriesResponseBodyEntries> entries;
 
     /**
-     * <p>A pagination token.</p>
-     * <p>If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
+     * <p>The pagination token for the next page.</p>
+     * <p>If the query results are not completely returned, the NextToken parameter is returned with a value. You can specify the NextToken value in the next request to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1256****25</p>
@@ -60,7 +60,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
 
     public static class ListRecentlyRecycledDirectoriesResponseBodyEntries extends TeaModel {
         /**
-         * <p>The ID of the directory.</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04***08</p>
@@ -69,7 +69,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The time when the directory was last deleted.</p>
+         * <p>The most recent time when a delete operation was performed on the directory. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-30T10:08:08Z</p>
@@ -87,7 +87,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The absolute path to the directory.</p>
+         * <p>The absolute path of the directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/a/b</p>

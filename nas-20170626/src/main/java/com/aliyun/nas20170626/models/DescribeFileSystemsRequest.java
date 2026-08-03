@@ -6,12 +6,6 @@ import com.aliyun.tea.*;
 public class DescribeFileSystemsRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
-     * <ul>
-     * <li>General-purpose NAS: 31a8e4****.</li>
-     * <li>Extreme NAS: must start with extreme-, such as extreme-0015****.</li>
-     * <li>Cloud Parallel File Storage (CPFS) (locally redundant): must start with cpfs-, such as cpfs-125487****.</li>
-     * <li>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>31a8e4****</p>
@@ -21,17 +15,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The file system type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>all (default): queries all types.</li>
-     * <li>standard: General-purpose NAS.</li>
-     * <li>extreme: Extreme NAS.</li>
-     * <li>cpfs: Cloud Parallel File Storage (CPFS) (locally redundant).</li>
-     * <li>cpfsse: CPFS SE (zone-redundant).</li>
-     * </ul>
-     * <blockquote>
-     * <p>To query multiple types, separate them with commas (,).</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -41,7 +24,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The page number of the file system list.</p>
-     * <p>Start value (default value): 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,8 +33,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The number of file systems on each page during a paged query.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +42,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
-     * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwavnfef****</p>
@@ -70,18 +49,23 @@ public class DescribeFileSystemsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The storage type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Capacity</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
     /**
-     * <p>The tag information.</p>
+     * <p>The collection of tag information.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeFileSystemsRequestTag> tag;
 
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
-     * <p>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which you want to mount the file system.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1sevsgtqvk5gxbl****</p>
@@ -161,13 +145,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public static class DescribeFileSystemsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <p>Limits:</p>
-         * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag key can be up to 128 characters in length.</li>
-         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>testKey</p>
@@ -177,13 +154,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
-         * <p>Limits:</p>
-         * <ul>
-         * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag value can be up to 128 characters in length.</li>
-         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
-         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>

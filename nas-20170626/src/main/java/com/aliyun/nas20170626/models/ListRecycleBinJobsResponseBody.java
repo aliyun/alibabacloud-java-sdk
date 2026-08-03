@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRecycleBinJobsResponseBody extends TeaModel {
     /**
-     * <p>The information about the jobs of the recycle bin.</p>
+     * <p>The collection of task information in the recycle bin.</p>
      */
     @NameInMap("Jobs")
     public java.util.List<ListRecycleBinJobsResponseBodyJobs> jobs;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of jobs returned per page.</p>
+     * <p>The number of tasks per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of jobs.</p>
+     * <p>The total number of tasks in the recycle bin.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
 
     public static class ListRecycleBinJobsResponseBodyJobs extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-30T10:08:08Z</p>
@@ -102,8 +102,8 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The error code returned.</p>
-         * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
+         * <p>The error code.</p>
+         * <p>This value is valid only when Status is Fail or PartialSuccess.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidFileId.NotFound</p>
@@ -113,7 +113,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message.</p>
-         * <p>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</p>
+         * <p>This value is valid only when JobStatus is Fail or PartialSuccess.</p>
          * 
          * <strong>example:</strong>
          * <p>The Target File or Directory does not exist.</p>
@@ -122,7 +122,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The ID of the file or directory in the job.</p>
+         * <p>The FileId of the file or directory associated with the task.</p>
          * 
          * <strong>example:</strong>
          * <p>04***08</p>
@@ -131,7 +131,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The name of the file or directory that is associated with the job.</p>
+         * <p>The name of the file or directory associated with the task.</p>
          * 
          * <strong>example:</strong>
          * <p>test001</p>
@@ -140,7 +140,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8C****C54</p>
@@ -149,7 +149,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The progress of the job.</p>
+         * <p>The execution progress of the task.</p>
          * <p>Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
@@ -159,14 +159,14 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Running: The job is running.</li>
-         * <li>Defragmenting: The job is defragmenting data.</li>
-         * <li>PartialSuccess: The job is partially completed.</li>
-         * <li>Success: The job is completed.</li>
-         * <li>Fail: The job failed.</li>
-         * <li>Cancelled: The job is canceled.</li>
+         * <li>Running: The task is running.</li>
+         * <li>Defragmenting: Data is being defragmented.</li>
+         * <li>PartialSuccess: The task partially succeeded.</li>
+         * <li>Success: The task succeeded.</li>
+         * <li>Fail: The task failed.</li>
+         * <li>Cancelled: The task is canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,10 +176,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the job. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>Restore: a file restoration job</li>
-         * <li>Delete: a file deletion job</li>
+         * <li>Restore: A file restoration task.</li>
+         * <li>Delete: A file deletion task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
