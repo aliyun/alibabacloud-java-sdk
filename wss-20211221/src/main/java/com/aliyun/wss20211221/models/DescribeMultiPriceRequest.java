@@ -29,7 +29,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String packageCode;
 
     /**
-     * <p>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter in the non-reseller pattern.</p>
+     * <p>The user ID of the resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>182864463481****</p>
@@ -215,7 +215,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
         /**
          * <p>The resource type.</p>
          * <blockquote>
-         * <p>This parameter is case-sensitive. Make sure that the spelling is correct.</p>
+         * <p>This parameter is case-sensitive. Make sure that the value is spelled correctly.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
