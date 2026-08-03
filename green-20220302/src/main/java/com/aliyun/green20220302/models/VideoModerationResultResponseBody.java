@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VideoModerationResultResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates success.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
     public VideoModerationResultResponseBodyData data;
 
     /**
-     * <p>The return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success finished</p>
@@ -76,10 +76,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataAudioResultAudioSummarys extends TeaModel {
         /**
-         * <p>The label descriptions.</p>
+         * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>疑似违禁内容</p>
+         * <p>Suspected prohibited content</p>
          */
         @NameInMap("Description")
         public String description;
@@ -94,7 +94,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times the label was detected.</p>
+         * <p>The number of times the label appears.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -147,7 +147,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
          * <p>The name of the custom library.</p>
          * 
          * <strong>example:</strong>
-         * <p>备用词库02</p>
+         * <p>Backup_Lexicon_02</p>
          */
         @NameInMap("LibName")
         public String libName;
@@ -254,7 +254,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>疑似违禁内容</p>
+         * <p>Suspected prohibited content</p>
          */
         @NameInMap("Description")
         public String description;
@@ -357,10 +357,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetails extends TeaModel {
         /**
-         * <p>The label descriptions.</p>
+         * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>疑似违禁内容</p>
+         * <p>Suspected prohibited content</p>
          */
         @NameInMap("Descriptions")
         public String descriptions;
@@ -409,16 +409,6 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         /**
          * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
-         * <ul>
-         * <li><p>high: High risk.</p>
-         * </li>
-         * <li><p>medium: Medium risk.</p>
-         * </li>
-         * <li><p>low: Low risk.</p>
-         * </li>
-         * <li><p>none: No risk detected.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -445,7 +435,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String riskWords;
 
         /**
-         * <p>The risk score. Default range: 0 to 99.</p>
+         * <p>The risk score. The default range is 0 to 99.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -463,7 +453,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The start timestamp, in milliseconds.</p>
+         * <p>The start timestamp, accurate to milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1659935002123</p>
@@ -475,13 +465,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
          * <p>The transcribed text of the audio segment.</p>
          * 
          * <strong>example:</strong>
-         * <p>今天天气真不错</p>
+         * <p>The weather is really nice today</p>
          */
         @NameInMap("Text")
         public String text;
 
         /**
-         * <p>The temporary URL of the audio segment file.</p>
+         * <p>The temporary URL of the segmented audio file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx.abc.img">http://xxxx.abc.img</a></p>
@@ -617,16 +607,6 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         /**
          * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
-         * <ul>
-         * <li><p>high: High risk.</p>
-         * </li>
-         * <li><p>medium: Medium risk.</p>
-         * </li>
-         * <li><p>low: Low risk.</p>
-         * </li>
-         * <li><p>none: No risk detected.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -682,7 +662,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String contentProducer;
 
         /**
-         * <p>The name, code, or identifier of the propagation platform. For services that provide artificial intelligence-generated content, this value can be the same as ContentProducer.</p>
+         * <p>The name, ID, or code of the propagation platform. For services that provide artificial intelligence generated or synthesized content, this value can be the same as ContentProducer.</p>
          * 
          * <strong>example:</strong>
          * <p>001191******M000100Y43</p>
@@ -691,15 +671,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String contentPropagator;
 
         /**
-         * <p>Indicates whether the content is generated by artificial intelligence (AI). Valid values:</p>
-         * <ul>
-         * <li><p>1: The content is AI-generated content (AIGC).</p>
-         * </li>
-         * <li><p>2: (Propagation platforms only) The content may be AI-generated content generation.</p>
-         * </li>
-         * <li><p>3: (Propagation platforms only) The content is suspected to be AI-generated content generation.</p>
-         * </li>
-         * </ul>
+         * <p>Indicates whether the content is generated by AI. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -708,7 +680,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The content production ID, a unique identifier used by the production platform to trace synthesized content.</p>
+         * <p>The content production ID, which is the unique identifier used by the production platform to trace synthesized content.</p>
          * 
          * <strong>example:</strong>
          * <p>123******456</p>
@@ -717,7 +689,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String produceID;
 
         /**
-         * <p>The content propagation ID, a unique identifier assigned by the propagation platform to the distributed AI-generated content.</p>
+         * <p>The content propagation ID, which is the unique identifier assigned by the propagation platform to the distributed generated or synthesized content.</p>
          * 
          * <strong>example:</strong>
          * <p>123******456</p>
@@ -726,8 +698,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String propagateID;
 
         /**
-         * <p>A reserved field.</p>
-         * <p>This field can store information used by the content generation service provider for self-initiated security protection and content/identifier integrity assurance. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>d41d**********427e</p>
@@ -736,8 +707,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String reservedCode1;
 
         /**
-         * <p>A reserved field.</p>
-         * <p>This field can be used by the content propagation service provider for self-initiated security protection and content/identifier integrity assurance. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</p>
+         * <p>The reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>d41d**********427e</p>
@@ -874,13 +844,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
          * <p>The description of the Label field.</p>
          * 
          * <strong>example:</strong>
-         * <p>未检测出风险</p>
+         * <p>No risk detected</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The video frame label.</p>
+         * <p>The video frame capture label.</p>
          * 
          * <strong>example:</strong>
          * <p>violent_armedForces</p>
@@ -889,7 +859,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The number of times the label was detected.</p>
+         * <p>The number of times the label appears.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -949,7 +919,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage extends TeaModel {
         /**
-         * <p>The ID of the hit custom image.</p>
+         * <p>The ID of the matched custom image.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -958,7 +928,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The ID of the hit custom image library.</p>
+         * <p>The ID of the matched custom image library.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678</p>
@@ -1076,7 +1046,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Long confidence;
 
         /**
-         * <p>The hit label.</p>
+         * <p>The matched label.</p>
          * 
          * <strong>example:</strong>
          * <p>pt_logotoSocialNetwork</p>
@@ -1088,7 +1058,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
          * <p>The logo name.</p>
          * 
          * <strong>example:</strong>
-         * <p>**卫视</p>
+         * <p>**TV</p>
          */
         @NameInMap("name")
         public String name;
@@ -1132,7 +1102,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation location;
 
         /**
-         * <p>The logo information.</p>
+         * <p>The logo identification information.</p>
          */
         @NameInMap("Logo")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> logo;
@@ -1250,7 +1220,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
          * <p>The name of the identified public figure.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John Smith</p>
          */
         @NameInMap("FigureName")
         public String figureName;
@@ -1306,7 +1276,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
          * <p>The description of the Label field.</p>
          * 
          * <strong>example:</strong>
-         * <p>未检测出风险</p>
+         * <p>No risk detected</p>
          */
         @NameInMap("Description")
         public String description;
@@ -1353,7 +1323,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent extends TeaModel {
         /**
-         * <p>The output text from the large model.</p>
+         * <p>The output text generated by the large model.</p>
          * 
          * <strong>example:</strong>
          * <p>in the picture XXX</p>
@@ -1381,13 +1351,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData aigcData;
 
         /**
-         * <p>The custom image library information returned when a custom image library is hit.</p>
+         * <p>The custom image library information returned when a custom image library is matched.</p>
          */
         @NameInMap("CustomImage")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage;
 
         /**
-         * <p>The logo information returned when a logo is detected in the video.</p>
+         * <p>The logo information returned when the video contains logos.</p>
          */
         @NameInMap("LogoData")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> logoData;
@@ -1414,7 +1384,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The text information detected in the hit image.</p>
+         * <p>The text information in the image that was hit.</p>
          */
         @NameInMap("TextInImage")
         public java.util.Map<String, ?> textInImage;
@@ -1498,7 +1468,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyDataFrameResultFrames extends TeaModel {
         /**
-         * <p>The offset of the captured frame.</p>
+         * <p>The offset value of the captured frame.</p>
          * 
          * <strong>example:</strong>
          * <p>338</p>
@@ -1514,16 +1484,6 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         /**
          * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
-         * <ul>
-         * <li><p>high: High risk.</p>
-         * </li>
-         * <li><p>medium: Medium risk.</p>
-         * </li>
-         * <li><p>low: Low risk.</p>
-         * </li>
-         * <li><p>none: No risk detected.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -1607,7 +1567,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public Integer frameNum;
 
         /**
-         * <p>The video frame label summary.</p>
+         * <p>The summary of video frame capture labels.</p>
          */
         @NameInMap("FrameSummarys")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> frameSummarys;
@@ -1620,16 +1580,6 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         /**
          * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
-         * <ul>
-         * <li><p>high: High risk.</p>
-         * </li>
-         * <li><p>medium: Medium risk.</p>
-         * </li>
-         * <li><p>low: Low risk.</p>
-         * </li>
-         * <li><p>none: No risk detected.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -1678,7 +1628,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     public static class VideoModerationResultResponseBodyData extends TeaModel {
         /**
-         * <p>The segmented results of video audio moderation.</p>
+         * <p>The segmented moderation results for video audio.</p>
          */
         @NameInMap("AudioResult")
         public VideoModerationResultResponseBodyDataAudioResult audioResult;
@@ -1724,16 +1674,6 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         /**
          * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
-         * <ul>
-         * <li><p>high: High risk.</p>
-         * </li>
-         * <li><p>medium: Medium risk.</p>
-         * </li>
-         * <li><p>low: Low risk.</p>
-         * </li>
-         * <li><p>none: No risk detected.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>high</p>
