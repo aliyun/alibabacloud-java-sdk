@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditLogRecordsRequest extends TeaModel {
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
      * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster IDs of all clusters in a region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,13 +28,11 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The time must be in UTC and in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+     * <p>The end of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</p>
      * <blockquote>
      * <ul>
-     * <li><p>The end time must be later than the start time.</p>
-     * </li>
-     * <li><p>The time range cannot exceed 24 hours.</p>
-     * </li>
+     * <li>The end time must be later than the start time.</li>
+     * <li>The interval between the start time and the end time cannot exceed 24 hours.</li>
      * </ul>
      * </blockquote>
      * 
@@ -44,8 +42,11 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("EngineType")
+    public String engineType;
+
     /**
-     * <p>The client IP address and port number.</p>
+     * <p>The IP address and port number of the client that executed the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>100.104.XX.XX:43908</p>
@@ -54,40 +55,27 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String hostAddress;
 
     /**
-     * <p>Specifies the fields for sorting the results. The value is a JSON string that is an array of objects. The order of objects in the array defines the sort priority. Each object contains the<code>Field</code> and<code>Type</code> parameters. Example: <code>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+     * <p>The sorting order based on specified fields. The value is in JSON format and is an ordered JSON array. Compound sorting is performed in the order of the input array. The array contains the <code>Field</code> and <code>Type</code> fields. Example: <code>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
      * <ul>
-     * <li><p><code>Field</code>: the field by which to sort the results. Valid values:</p>
+     * <li><p><code>Field</code> specifies the field name for sorting. Valid values:</p>
      * <ul>
-     * <li><p><strong>HostAddress</strong>: the client IP address.</p>
-     * </li>
-     * <li><p><strong>UserName</strong>: the username.</p>
-     * </li>
-     * <li><p><strong>ExecutionStartTime</strong>: the execution start time of the SQL statement.</p>
-     * </li>
-     * <li><p><strong>QueryTime</strong>: the execution duration.</p>
-     * </li>
-     * <li><p><strong>PeakMemoryUsage</strong>: the peak memory usage of the SQL statement.</p>
-     * </li>
-     * <li><p><strong>ScanRows</strong>: the number of rows scanned by a task that involves a data source.</p>
-     * </li>
-     * <li><p><strong>ScanSize</strong>: the amount of data scanned.</p>
-     * </li>
-     * <li><p><strong>ScanTime</strong>: the time taken for the data scan.</p>
-     * </li>
-     * <li><p><strong>PlanningTime</strong>: the time taken to generate the execution plan.</p>
-     * </li>
-     * <li><p><strong>WallTime</strong>: the total CPU time of all operators on all nodes.</p>
-     * </li>
-     * <li><p><strong>ProcessID</strong>: the process ID.</p>
-     * </li>
+     * <li><strong>HostAddress</strong>: the address of the client that connects to the database.</li>
+     * <li><strong>UserName</strong>: the username.</li>
+     * <li><strong>ExecutionStartTime</strong>: the execution start time of the SQL statement.</li>
+     * <li><strong>QueryTime</strong>: the execution duration of the SQL statement.</li>
+     * <li><strong>PeakMemoryUsage</strong>: the peak memory usage during the execution of the SQL statement.</li>
+     * <li><strong>ScanRows</strong>: the number of rows scanned by the task with a data source.</li>
+     * <li><strong>ScanSize</strong>: the amount of scanned data.</li>
+     * <li><strong>ScanTime</strong>: the total time consumed for scanning data.</li>
+     * <li><strong>PlanningTime</strong>: the time consumed for generating the execution plan.</li>
+     * <li><strong>WallTime</strong>: the cumulative CPU time of all operators across all nodes in the query.</li>
+     * <li><strong>ProcessID</strong>: the process ID.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code>: the sort order. Valid values:</p>
+     * <li><p><code>Type</code> specifies the sorting type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Desc</strong>: descending order.</p>
-     * </li>
-     * <li><p><strong>Asc</strong>: ascending order.</p>
-     * </li>
+     * <li><strong>Desc</strong>: descending order.</li>
+     * <li><strong>Asc</strong>: ascending order.</li>
      * </ul>
      * </li>
      * </ul>
@@ -99,12 +87,10 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The sort order for the results based on execution time. Valid values:</p>
+     * <p>The order in which the results are sorted by SQL execution time. Valid values:</p>
      * <ul>
-     * <li><p><strong>asc</strong>: ascending order.</p>
-     * </li>
-     * <li><p><strong>desc</strong>: descending order.</p>
-     * </li>
+     * <li><strong>asc</strong>: ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +106,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -129,16 +115,12 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>10</strong> (default)</p>
-     * </li>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>10</strong> (default)</li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,13 +133,13 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
      * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>无</p>
+     * <p>None</p>
      */
     @NameInMap("ProxyUser")
     public String proxyUser;
 
     /**
-     * <p>A keyword used to perform a fuzzy search on the returned results.</p>
+     * <p>The keyword used to filter the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>adb</p>
@@ -168,7 +150,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -187,23 +169,16 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     /**
      * <p>The type of the SQL statement. Valid values:</p>
      * <ul>
-     * <li><p><strong>DELETE</strong></p>
-     * </li>
-     * <li><p><strong>SELECT</strong></p>
-     * </li>
-     * <li><p><strong>UPDATE</strong></p>
-     * </li>
-     * <li><p><strong>INSERT INTO SELECT</strong></p>
-     * </li>
-     * <li><p><strong>ALTER</strong></p>
-     * </li>
-     * <li><p><strong>DROP</strong></p>
-     * </li>
-     * <li><p><strong>CREATE</strong></p>
-     * </li>
+     * <li><strong>DELETE</strong></li>
+     * <li><strong>SELECT</strong></li>
+     * <li><strong>UPDATE</strong></li>
+     * <li><strong>INSERT INTO SELECT</strong></li>
+     * <li><strong>ALTER</strong></li>
+     * <li><strong>DROP</strong></li>
+     * <li><strong>CREATE</strong></li>
      * </ul>
      * <blockquote>
-     * <p>You can specify only one type per request. If this parameter is not specified, all types are queried by default.</p>
+     * <p>Only one type can be specified per request. If this parameter is left empty, all types are queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -213,9 +188,9 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String sqlType;
 
     /**
-     * <p>The start of the time range to query. The time must be in UTC and in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
+     * <p>The beginning of the time range to query. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ format.</p>
      * <blockquote>
-     * <p>You can query SQL audit logs only when this feature is enabled. Logs are available for the last 30 days. If you disable and then re-enable SQL audit, only logs generated after the feature was re-enabled are returned.</p>
+     * <p>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is disabled and then re-enabled, only entries recorded after re-enabling are available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -225,12 +200,10 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Indicates whether the SQL statement was successfully executed. Valid values:</p>
+     * <p>Specifies whether the SQL statement was executed successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The SQL statement succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The SQL statement failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The SQL statement was executed successfully.</li>
+     * <li><strong>false</strong>: The SQL statement failed to be executed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -275,6 +248,14 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeAuditLogRecordsRequest setEngineType(String engineType) {
+        this.engineType = engineType;
+        return this;
+    }
+    public String getEngineType() {
+        return this.engineType;
     }
 
     public DescribeAuditLogRecordsRequest setHostAddress(String hostAddress) {

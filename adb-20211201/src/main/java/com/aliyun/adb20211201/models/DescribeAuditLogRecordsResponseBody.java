@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
      * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>A list of audit log records.</p>
+     * <p>The list.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeAuditLogRecordsResponseBodyItems> items;
@@ -30,7 +30,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +48,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>6974</p>
@@ -120,7 +120,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String connId;
 
         /**
-         * <p>The name of the database on which the SQL statement ran.</p>
+         * <p>The name of the database on which the SQL statement was executed.</p>
          * 
          * <strong>example:</strong>
          * <p>adb_demo</p>
@@ -129,7 +129,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The execution start time of the SQL statement. The time is in the <code>yyyy-MM-dd HH:mm:ss</code> format and in the local time zone.</p>
+         * <p>The execution start time of the SQL statement in local time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-12 10:10:00</p>
@@ -138,7 +138,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>The execution start time of the SQL statement, as a millisecond timestamp.</p>
+         * <p>The execution start time of the SQL statement, in millisecond-precision UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1774600396584</p>
@@ -147,7 +147,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public Long executeTimestamp;
 
         /**
-         * <p>Specifies whether the response contains diagnostic information.</p>
+         * <p>Indicates whether diagnostic information is included.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -159,7 +159,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public Boolean hasDiagnosticInfo;
 
         /**
-         * <p>The IP address and port of the client that ran the SQL statement.</p>
+         * <p>The IP address and port number of the client that executed the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>100.104.XX.XX:43908</p>
@@ -168,7 +168,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String hostAddress;
 
         /**
-         * <p>The process ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>202106081752021720161662490345362390</p>
@@ -177,7 +177,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String processID;
 
         /**
-         * <p>The SQL statement.</p>
+         * <p>The details of the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM adb_hdfs_import_source</p>
@@ -186,7 +186,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String SQLText;
 
         /**
-         * <p>The SQL type.</p>
+         * <p>The type of the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT</p>
@@ -195,12 +195,10 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String SQLType;
 
         /**
-         * <p>Indicates whether the SQL statement succeeded. Valid values:</p>
+         * <p>Indicates whether the SQL statement was executed successfully. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The SQL statement succeeded.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The SQL statement failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The SQL statement was executed successfully.</li>
+         * <li><strong>false</strong>: The SQL statement failed to be executed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +208,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String succeed;
 
         /**
-         * <p>The execution duration of the SQL statement in milliseconds (ms).</p>
+         * <p>The execution duration of the SQL statement. Unit: milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>216</p>
@@ -219,7 +217,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         public String totalTime;
 
         /**
-         * <p>The username of the account that ran the SQL statement.</p>
+         * <p>The username that executed the SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

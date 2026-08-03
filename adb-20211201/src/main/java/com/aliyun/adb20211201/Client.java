@@ -5210,12 +5210,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can query SQL audit logs only if SQL audit is enabled. Log data is retained for up to 30 days. If you disable and re-enable SQL audit, you can only query logs generated after it is re-enabled. SQL audit logs do not record <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, or <strong>UPSERT INTO VALUES</strong> operations.</li>
-     * <li>For a list of endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</li>
+     * <li>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, or <strong>UPSERT INTO VALUES</strong> operations.</li>
+     * <li>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query SQL audit logs for the cluster.</p>
+     * <p>Queries the SQL Audit Log of a cluster.</p>
      * 
      * @param request DescribeAuditLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5234,6 +5234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineType)) {
+            query.put("EngineType", request.engineType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostAddress)) {
@@ -5320,12 +5324,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can query SQL audit logs only if SQL audit is enabled. Log data is retained for up to 30 days. If you disable and re-enable SQL audit, you can only query logs generated after it is re-enabled. SQL audit logs do not record <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, or <strong>UPSERT INTO VALUES</strong> operations.</li>
-     * <li>For a list of endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</li>
+     * <li>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <strong>INSERT INTO VALUES</strong>, <strong>REPLACE INTO VALUES</strong>, or <strong>UPSERT INTO VALUES</strong> operations.</li>
+     * <li>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query SQL audit logs for the cluster.</p>
+     * <p>Queries the SQL Audit Log of a cluster.</p>
      * 
      * @param request DescribeAuditLogRecordsRequest
      * @return DescribeAuditLogRecordsResponse
