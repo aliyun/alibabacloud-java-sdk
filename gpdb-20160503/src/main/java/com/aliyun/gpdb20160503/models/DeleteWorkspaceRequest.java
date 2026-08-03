@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceRequest extends TeaModel {
     /**
+     * <p>The region ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,7 @@ public class DeleteWorkspaceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

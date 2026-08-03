@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceRequest extends TeaModel {
     /**
+     * <p>The region ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,7 @@ public class GetWorkspaceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the workspace where the service resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

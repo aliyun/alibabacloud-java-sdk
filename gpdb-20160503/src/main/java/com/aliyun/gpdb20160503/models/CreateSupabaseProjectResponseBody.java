@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSupabaseProjectResponseBody extends TeaModel {
     /**
-     * <p>The ID of the associated order.</p>
+     * <p>The associated order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>278880417310796</p>
@@ -14,7 +14,7 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The instance ID of the Supabase instance.</p>
+     * <p>The Supabase instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>spb-xxxx</p>

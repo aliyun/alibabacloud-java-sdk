@@ -34,14 +34,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "gpdb.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "gpdb.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "gpdb.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "gpdb.cn-beijing-finance-1.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "gpdb.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-south-1", "gpdb.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com")
         );
@@ -1211,10 +1210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建API密钥。</p>
+     * <p>Creates an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建API密钥</p>
+     * <p>Creates an API key.</p>
      * 
      * @param tmpReq CreateApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1268,10 +1267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>创建API密钥。</p>
+     * <p>Creates an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建API密钥</p>
+     * <p>Creates an API key.</p>
      * 
      * @param request CreateApiKeyRequest
      * @return CreateApiKeyResponse
@@ -1559,10 +1558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</p>
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Creates an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1774,10 +1773,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</p>
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Creates an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -3569,6 +3568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StorageSize", request.storageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }
@@ -3949,10 +3952,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除API密钥。</p>
+     * <p>Deletes an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除API密钥</p>
+     * <p>Deletes an API key.</p>
      * 
      * @param request DeleteApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3988,10 +3991,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除API密钥。</p>
+     * <p>Deletes an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除API密钥</p>
+     * <p>Deletes an API key.</p>
      * 
      * @param request DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
@@ -5693,10 +5696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>此接口为删除上下文服务工作空间</p>
+     * <p>Deletes a context service workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除SaaS工作空间</p>
+     * <p>Deletes a SaaS workspace.</p>
      * 
      * @param request DeleteWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5732,10 +5735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>此接口为删除上下文服务工作空间</p>
+     * <p>Deletes a context service workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除SaaS工作空间</p>
+     * <p>Deletes a SaaS workspace.</p>
      * 
      * @param request DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
@@ -11195,10 +11198,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取API密钥详情。</p>
+     * <p>Retrieves the details of an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取API密钥详情</p>
+     * <p>Retrieves the details of an API key.</p>
      * 
      * @param request GetApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11234,10 +11237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取API密钥详情。</p>
+     * <p>Retrieves the details of an API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取API密钥详情</p>
+     * <p>Retrieves the details of an API key.</p>
      * 
      * @param request GetApiKeyRequest
      * @return GetApiKeyResponse
@@ -11379,10 +11382,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除模型服务。</p>
+     * <p>Deletes a model service.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取SaaS服务信息</p>
+     * <p>Retrieves SaaS service information.</p>
      * 
      * @param request GetSaasServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11418,10 +11421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除模型服务。</p>
+     * <p>Deletes a model service.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取SaaS服务信息</p>
+     * <p>Retrieves SaaS service information.</p>
      * 
      * @param request GetSaasServiceRequest
      * @return GetSaasServiceResponse
@@ -11497,13 +11500,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>使用说明</h2>
-     * <p>本接口用于查看所有模型服务信息。</p>
-     * <h2>QPS限制</h2>
-     * <p>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about all model services.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取SaaS服务访问信息</p>
+     * <p>Retrieves access information for a SaaS service.</p>
      * 
      * @param request GetServiceAccessInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11539,13 +11542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>使用说明</h2>
-     * <p>本接口用于查看所有模型服务信息。</p>
-     * <h2>QPS限制</h2>
-     * <p>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about all model services.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>获取SaaS服务访问信息</p>
+     * <p>Retrieves access information for a SaaS service.</p>
      * 
      * @param request GetServiceAccessInfoRequest
      * @return GetServiceAccessInfoResponse
@@ -11957,11 +11960,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>使用说明</h2>
-     * <p>本接口用于查看指定工作空间信息。</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询SaaS工作空间</p>
+     * <p>Queries a SaaS workspace.</p>
      * 
      * @param request GetWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11997,11 +12000,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>使用说明</h2>
-     * <p>本接口用于查看指定工作空间信息。</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about a specified workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询SaaS工作空间</p>
+     * <p>Queries a SaaS workspace.</p>
      * 
      * @param request GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -12319,10 +12322,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询API密钥列表。</p>
+     * <p>Queries a list of API keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询API密钥列表</p>
+     * <p>Queries a list of API keys.</p>
      * 
      * @param request ListApiKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12370,10 +12373,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询API密钥列表。</p>
+     * <p>Queries a list of API keys.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询API密钥列表</p>
+     * <p>Queries a list of API keys.</p>
      * 
      * @param request ListApiKeysRequest
      * @return ListApiKeysResponse
@@ -13483,7 +13486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Usage notes</h2>
      * <p>This operation is used to query information about all SaaS services.</p>
      * 
      * <b>summary</b> : 
@@ -13535,7 +13538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Usage notes</h2>
      * <p>This operation is used to query information about all SaaS services.</p>
      * 
      * <b>summary</b> : 
@@ -14294,7 +14297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation is used to query information about all workspaces.</p>
+     * <p>This operation is used to view information about all workspaces.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of SaaS workspaces.</p>
@@ -14346,7 +14349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>This operation is used to query information about all workspaces.</p>
+     * <p>This operation is used to view information about all workspaces.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of SaaS workspaces.</p>
@@ -16453,10 +16456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除模型服务。</p>
+     * <p>Deletes a model service.</p>
      * 
      * <b>summary</b> : 
-     * <p>暂停SaaS服务</p>
+     * <p>Pauses a SaaS service.</p>
      * 
      * @param request PauseSaasServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16492,10 +16495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除模型服务。</p>
+     * <p>Deletes a model service.</p>
      * 
      * <b>summary</b> : 
-     * <p>暂停SaaS服务</p>
+     * <p>Pauses a SaaS service.</p>
      * 
      * @param request PauseSaasServiceRequest
      * @return PauseSaasServiceResponse
@@ -17833,10 +17836,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除模型服务。</p>
+     * <p>Deletes a model service.</p>
      * 
      * <b>summary</b> : 
-     * <p>恢复SaaS服务</p>
+     * <p>Resumes a SaaS service.</p>
      * 
      * @param request ResumeSaasServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17872,10 +17875,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>删除模型服务。</p>
+     * <p>Deletes a model service.</p>
      * 
      * <b>summary</b> : 
-     * <p>恢复SaaS服务</p>
+     * <p>Resumes a SaaS service.</p>
      * 
      * @param request ResumeSaasServiceRequest
      * @return ResumeSaasServiceResponse

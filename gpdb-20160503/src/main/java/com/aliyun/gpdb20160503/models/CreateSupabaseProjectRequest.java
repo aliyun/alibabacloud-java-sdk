@@ -21,7 +21,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value false is used.</p>
+     * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,7 +30,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public Boolean autoScale;
 
     /**
-     * <p>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</p>
+     * <p>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -72,9 +72,9 @@ public class CreateSupabaseProjectRequest extends TeaModel {
      * <p>The billing method. If this parameter is not specified, the default value Free is used.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Free: free tier.</li>
-     * <li>Postpaid: pay-as-you-go.</li>
-     * <li>Prepaid: subscription.</li>
+     * <li>Free: Free tier.</li>
+     * <li>Postpaid: Pay-as-you-go.</li>
+     * <li>Prepaid: Subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -150,6 +150,9 @@ public class CreateSupabaseProjectRequest extends TeaModel {
      */
     @NameInMap("StorageSize")
     public Long storageSize;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateSupabaseProjectRequestTags> tags;
 
     /**
      * <p>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</p>
@@ -291,6 +294,14 @@ public class CreateSupabaseProjectRequest extends TeaModel {
         return this.storageSize;
     }
 
+    public CreateSupabaseProjectRequest setTags(java.util.List<CreateSupabaseProjectRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateSupabaseProjectRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateSupabaseProjectRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -321,6 +332,36 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateSupabaseProjectRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateSupabaseProjectRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateSupabaseProjectRequestTags self = new CreateSupabaseProjectRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateSupabaseProjectRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateSupabaseProjectRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

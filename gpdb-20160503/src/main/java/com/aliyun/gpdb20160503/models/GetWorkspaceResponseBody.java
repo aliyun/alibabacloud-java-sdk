@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The list of workspace API keys.</p>
+     */
     @NameInMap("Apikeys")
     public java.util.List<GetWorkspaceResponseBodyApikeys> apikeys;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-01T00:00:00Z</p>
      */
@@ -15,16 +20,23 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of service details.</p>
+     */
     @NameInMap("Services")
     public java.util.List<GetWorkspaceResponseBodyServices> services;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-*****</p>
      */
@@ -32,6 +44,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-first-workspace</p>
      */
@@ -93,6 +107,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyApikeysAuthServices extends TeaModel {
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agdb-xxxxxx</p>
          */
@@ -100,6 +116,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li>memory</li>
+         * <li>drama</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>memory</p>
          */
@@ -130,10 +152,15 @@ public class GetWorkspaceResponseBody extends TeaModel {
     }
 
     public static class GetWorkspaceResponseBodyApikeys extends TeaModel {
+        /**
+         * <p>The service ID.</p>
+         */
         @NameInMap("AuthServices")
         public java.util.List<GetWorkspaceResponseBodyApikeysAuthServices> authServices;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>Sat Mar 14 14:44:27 GMT+08:00 2026</p>
          */
@@ -141,6 +168,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>my test key</p>
          */
@@ -148,6 +177,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-xxxxxx</p>
          */
@@ -155,6 +186,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String keyId;
 
         /**
+         * <p>The name of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>my test key</p>
          */
@@ -162,6 +195,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String keyName;
 
         /**
+         * <p>The prefix of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-1235*****</p>
          */
@@ -225,6 +260,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyServices extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-03-01T00:00:00Z</p>
          */
@@ -232,6 +269,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The compute resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -239,6 +278,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String cu;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-21T16:00:00Z</p>
          */
@@ -246,6 +287,18 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The billing type. Valid values:</p>
+         * <ul>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * <li><strong>PREPAY</strong>: subscription.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If this parameter is not specified, the default value is pay-as-you-go.</li>
+         * <li>In subscription billing mode, a discount is available when you purchase a duration of one year or longer. Select a billing type as needed.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
          */
@@ -253,6 +306,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agdb-xxx</p>
          */
@@ -260,6 +315,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>agdb-xxx</p>
          */
@@ -267,6 +324,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String serviceName;
 
         /**
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>memory</strong></li>
+         * <li><strong>drama</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>memory</p>
          */
@@ -274,6 +337,12 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String serviceType;
 
         /**
+         * <p>The service status. Valid values:</p>
+         * <ul>
+         * <li>creating: being created.</li>
+         * <li>active: running.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */

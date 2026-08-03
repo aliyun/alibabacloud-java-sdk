@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApiKeyShrinkRequest extends TeaModel {
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test secret</p>
      */
@@ -12,6 +14,7 @@ public class CreateApiKeyShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the API key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,16 +24,22 @@ public class CreateApiKeyShrinkRequest extends TeaModel {
     public String keyName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of service IDs to authorize.</p>
+     */
     @NameInMap("ServiceIds")
     public String serviceIdsShrink;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

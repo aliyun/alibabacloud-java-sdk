@@ -91,7 +91,84 @@ public class ListSaasServiceResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
+    public static class ListSaasServiceResponseBodyItemsComponents extends TeaModel {
+        @NameInMap("ComponentId")
+        public String componentId;
+
+        @NameInMap("ComponentType")
+        public String componentType;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Cu")
+        public String cu;
+
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static ListSaasServiceResponseBodyItemsComponents build(java.util.Map<String, ?> map) throws Exception {
+            ListSaasServiceResponseBodyItemsComponents self = new ListSaasServiceResponseBodyItemsComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSaasServiceResponseBodyItemsComponents setComponentId(String componentId) {
+            this.componentId = componentId;
+            return this;
+        }
+        public String getComponentId() {
+            return this.componentId;
+        }
+
+        public ListSaasServiceResponseBodyItemsComponents setComponentType(String componentType) {
+            this.componentType = componentType;
+            return this;
+        }
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+        public ListSaasServiceResponseBodyItemsComponents setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListSaasServiceResponseBodyItemsComponents setCu(String cu) {
+            this.cu = cu;
+            return this;
+        }
+        public String getCu() {
+            return this.cu;
+        }
+
+        public ListSaasServiceResponseBodyItemsComponents setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        public ListSaasServiceResponseBodyItemsComponents setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListSaasServiceResponseBodyItems extends TeaModel {
+        @NameInMap("Components")
+        public java.util.List<ListSaasServiceResponseBodyItemsComponents> components;
+
         /**
          * <p>The creation time.</p>
          * 
@@ -109,6 +186,9 @@ public class ListSaasServiceResponseBody extends TeaModel {
          */
         @NameInMap("Cu")
         public Integer cu;
+
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
 
         /**
          * <p>The expiration time.</p>
@@ -133,7 +213,7 @@ public class ListSaasServiceResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>[Deprecated]</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>deprecated</p>
@@ -190,6 +270,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListSaasServiceResponseBodyItems setComponents(java.util.List<ListSaasServiceResponseBodyItemsComponents> components) {
+            this.components = components;
+            return this;
+        }
+        public java.util.List<ListSaasServiceResponseBodyItemsComponents> getComponents() {
+            return this.components;
+        }
+
         public ListSaasServiceResponseBodyItems setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -204,6 +292,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
         }
         public Integer getCu() {
             return this.cu;
+        }
+
+        public ListSaasServiceResponseBodyItems setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public ListSaasServiceResponseBodyItems setExpireTime(String expireTime) {

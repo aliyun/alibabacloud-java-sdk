@@ -14,7 +14,7 @@ public class ListSaasServiceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query when paging. Use this token to start the next query.</p>
+     * <p>The token for the next page when performing a paging query. This specifies the starting token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

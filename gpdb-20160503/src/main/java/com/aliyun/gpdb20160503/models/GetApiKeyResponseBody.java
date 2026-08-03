@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The content of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-xxxxxxx</p>
      */
     @NameInMap("ApiKey")
     public String apiKey;
 
+    /**
+     * <p>The service IDs.</p>
+     */
     @NameInMap("AuthServices")
     public java.util.List<GetApiKeyResponseBodyAuthServices> authServices;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-09-08T16:00:00Z</p>
      */
@@ -22,6 +29,8 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test api key</p>
      */
@@ -29,6 +38,8 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-xxxxxxx</p>
      */
@@ -36,6 +47,8 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String keyId;
 
     /**
+     * <p>The name of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>test api key</p>
      */
@@ -43,6 +56,8 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String keyName;
 
     /**
+     * <p>The prefix of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-1235*****</p>
      */
@@ -50,6 +65,8 @@ public class GetApiKeyResponseBody extends TeaModel {
     public String keyPrefix;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7565770E-7C45-462D-BA4A-8A5396****</p>
      */
@@ -127,6 +144,8 @@ public class GetApiKeyResponseBody extends TeaModel {
 
     public static class GetApiKeyResponseBodyAuthServices extends TeaModel {
         /**
+         * <p>The service IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>agdb-2ze8x9278c9iizl</p>
          */
@@ -134,6 +153,12 @@ public class GetApiKeyResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li><strong>drama</strong></li>
+         * <li><strong>memroy</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>memory</p>
          */

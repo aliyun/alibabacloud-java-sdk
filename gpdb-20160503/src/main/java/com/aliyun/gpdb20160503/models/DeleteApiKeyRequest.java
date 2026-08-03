@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApiKeyRequest extends TeaModel {
     /**
+     * <p>API KEY ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteApiKeyRequest extends TeaModel {
     public String keyId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

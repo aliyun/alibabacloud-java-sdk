@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -12,6 +14,8 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-*****</p>
      */

@@ -278,7 +278,84 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     }
 
+    public static class ListWorkspacesResponseBodyItemsServicesComponents extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Cu")
+        public String cu;
+
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("componentId")
+        public String componentId;
+
+        @NameInMap("componentType")
+        public String componentType;
+
+        public static ListWorkspacesResponseBodyItemsServicesComponents build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkspacesResponseBodyItemsServicesComponents self = new ListWorkspacesResponseBodyItemsServicesComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesResponseBodyItemsServicesComponents setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListWorkspacesResponseBodyItemsServicesComponents setCu(String cu) {
+            this.cu = cu;
+            return this;
+        }
+        public String getCu() {
+            return this.cu;
+        }
+
+        public ListWorkspacesResponseBodyItemsServicesComponents setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        public ListWorkspacesResponseBodyItemsServicesComponents setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListWorkspacesResponseBodyItemsServicesComponents setComponentId(String componentId) {
+            this.componentId = componentId;
+            return this;
+        }
+        public String getComponentId() {
+            return this.componentId;
+        }
+
+        public ListWorkspacesResponseBodyItemsServicesComponents setComponentType(String componentType) {
+            this.componentType = componentType;
+            return this;
+        }
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+    }
+
     public static class ListWorkspacesResponseBodyItemsServices extends TeaModel {
+        @NameInMap("Components")
+        public java.util.List<ListWorkspacesResponseBodyItemsServicesComponents> components;
+
         /**
          * <p>The creation time.</p>
          * 
@@ -296,6 +373,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         @NameInMap("Cu")
         public String cu;
+
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
 
         /**
          * <p>The expiration time.</p>
@@ -326,7 +406,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>[Deprecated]</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>deprecated</p>
@@ -383,6 +463,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListWorkspacesResponseBodyItemsServices setComponents(java.util.List<ListWorkspacesResponseBodyItemsServicesComponents> components) {
+            this.components = components;
+            return this;
+        }
+        public java.util.List<ListWorkspacesResponseBodyItemsServicesComponents> getComponents() {
+            return this.components;
+        }
+
         public ListWorkspacesResponseBodyItemsServices setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -397,6 +485,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getCu() {
             return this.cu;
+        }
+
+        public ListWorkspacesResponseBodyItemsServices setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public ListWorkspacesResponseBodyItemsServices setExpireTime(String expireTime) {

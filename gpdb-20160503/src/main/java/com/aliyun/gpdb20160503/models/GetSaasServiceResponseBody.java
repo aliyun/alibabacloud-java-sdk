@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSaasServiceResponseBody extends TeaModel {
     /**
+     * <p>The compute resource of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,18 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String cu;
 
     /**
+     * <p>The billing type. Valid values:</p>
+     * <ul>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+     * <li><strong>PREPAY</strong>: subscription</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>If this parameter is not specified, the default value is pay-as-you-go.</li>
+     * <li>In subscription billing mode, a discount is available when you purchase a duration of one year or longer. Select a billing type as needed.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
      */
@@ -19,6 +33,8 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String payType;
 
     /**
+     * <p>The region ID where the service resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -26,6 +42,8 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -33,6 +51,8 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +60,8 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service name.</p>
+     * 
      * <strong>example:</strong>
      * <p>agdb-xxxxx</p>
      */
@@ -47,6 +69,12 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>The service type. Valid values:</p>
+     * <ul>
+     * <li><strong>drama</strong></li>
+     * <li><strong>memroy</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>drama</p>
      */
@@ -54,6 +82,12 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String serviceType;
 
     /**
+     * <p>The service status. Valid values:</p>
+     * <ul>
+     * <li><strong>creating</strong>: Being created.</li>
+     * <li><strong>active</strong>: Running.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>creating</p>
      */
@@ -61,6 +95,8 @@ public class GetSaasServiceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The workspace ID where the service resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-*****</p>
      */

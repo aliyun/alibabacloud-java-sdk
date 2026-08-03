@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceAccessInfoResponseBody extends TeaModel {
     /**
+     * <p>The redirect URL for logging on to the service console.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxxxxxx">http://xxxxxxxxx</a></p>
      */
@@ -12,6 +14,8 @@ public class GetServiceAccessInfoResponseBody extends TeaModel {
     public String callbackUrl;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -19,6 +23,8 @@ public class GetServiceAccessInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The verification code for the service console logon URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>dcwedsxcx</p>
      */

@@ -46,8 +46,8 @@ public class QueryContentResponseBody extends TeaModel {
     /**
      * <p>The status. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: Succeeded.</li>
-     * <li><strong>fail</strong>: Failed.</li>
+     * <li><strong>success</strong>: The operation is successful.</li>
+     * <li><strong>fail</strong>: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

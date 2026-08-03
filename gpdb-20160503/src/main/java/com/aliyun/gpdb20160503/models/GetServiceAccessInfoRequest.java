@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceAccessInfoRequest extends TeaModel {
     /**
+     * <p>The region ID where the SaaS service resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,7 @@ public class GetServiceAccessInfoRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

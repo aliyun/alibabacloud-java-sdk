@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
     /**
+     * <p>The name of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>my api</p>
      */
@@ -12,6 +14,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String keyName;
 
     /**
+     * <p>The maximum number of records to return in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +23,8 @@ public class ListApiKeysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
@@ -26,6 +32,8 @@ public class ListApiKeysRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -33,6 +41,7 @@ public class ListApiKeysRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>This parameter is deprecated and is no longer returned.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the connection string of the instance.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the endpoint of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</p>
@@ -33,7 +33,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>This parameter is deprecated and is no longer returned.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and no value is returned.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the port number of the instance.</p>
      * 
      * <strong>example:</strong>
