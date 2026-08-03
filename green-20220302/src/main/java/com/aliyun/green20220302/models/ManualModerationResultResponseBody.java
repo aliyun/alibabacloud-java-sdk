@@ -79,7 +79,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
          * <p>The label description.</p>
          * 
          * <strong>example:</strong>
-         * <p>未检测出风险</p>
+         * <p>No risk detected.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -142,7 +142,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         public String reviewCount;
 
         /**
-         * <p>The risk level, returned based on the configured high and low risk scores. Valid values:</p>
+         * <p>The risk level, returned based on the configured high and low risk thresholds. Valid values:</p>
          * <ul>
          * <li><p>high: High risk.</p>
          * </li>

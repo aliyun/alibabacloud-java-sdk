@@ -53,7 +53,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the document content moderation result.</p>
+     * <p>The document moderation result.</p>
      * 
      * @param request DescribeFileModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -89,7 +89,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the document content moderation result.</p>
+     * <p>The document moderation result.</p>
      * 
      * @param request DescribeFileModerationResultRequest
      * @return DescribeFileModerationResultResponse
@@ -742,7 +742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the manual review result.</p>
+     * <p>Retrieves the manual review result for content moderation.</p>
      * 
      * @param request ManualModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -774,7 +774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the manual review result.</p>
+     * <p>Retrieves the manual review result for content moderation.</p>
      * 
      * @param request ManualModerationResultRequest
      * @return ManualModerationResultResponse

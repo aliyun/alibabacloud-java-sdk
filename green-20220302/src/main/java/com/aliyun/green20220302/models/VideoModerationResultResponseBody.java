@@ -928,6 +928,25 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData extends TeaModel {
+        @NameInMap("Explain")
+        public String explain;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData setExplain(String explain) {
+            this.explain = explain;
+            return this;
+        }
+        public String getExplain() {
+            return this.explain;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage extends TeaModel {
         /**
          * <p>The ID of the hit custom image.</p>
@@ -1358,6 +1377,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResults extends TeaModel {
+        @NameInMap("AigcData")
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData aigcData;
+
         /**
          * <p>The custom image library information returned when a custom image library is hit.</p>
          */
@@ -1406,6 +1428,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public static VideoModerationResultResponseBodyDataFrameResultFramesResults build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataFrameResultFramesResults self = new VideoModerationResultResponseBodyDataFrameResultFramesResults();
             return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResults setAigcData(VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData aigcData) {
+            this.aigcData = aigcData;
+            return this;
+        }
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData getAigcData() {
+            return this.aigcData;
         }
 
         public VideoModerationResultResponseBodyDataFrameResultFramesResults setCustomImage(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage) {
