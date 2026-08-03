@@ -4,33 +4,15 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QueryTextStreamResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("end")
     public Boolean end;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("index")
     public Integer index;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("type")
     public Integer type;
 

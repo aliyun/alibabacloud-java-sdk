@@ -4,12 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchGetProjectTaskResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -41,38 +35,18 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
         @NameInMap("errorMsg")
         public String errorMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SUCCESS</p>
-         */
         @NameInMap("status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>http</p>
-         */
         @NameInMap("videoDownloadUrl")
         public String videoDownloadUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("videoDuration")
         public Integer videoDuration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>http</p>
-         */
         @NameInMap("videoUrl")
         public String videoUrl;
 

@@ -7,41 +7,21 @@ public class ListAICoachTaskPageRequest extends TeaModel {
     @NameInMap("endTime")
     public String endTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("startTime")
     public String startTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>FINISHED</p>
-     */
     @NameInMap("status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
     @NameInMap("studentId")
     public String studentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>313123123</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

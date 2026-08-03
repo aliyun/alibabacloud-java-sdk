@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateAICoachTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>7915125A-0D96-5A25-A54B-D3B739A86AFC</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("scriptRecordId")
     public String scriptRecordId;
 

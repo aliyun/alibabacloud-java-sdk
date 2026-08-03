@@ -7,17 +7,9 @@ public class CreateAICoachTaskReportRequest extends TeaModel {
     @NameInMap("dialogueList")
     public java.util.List<CreateAICoachTaskReportRequestDialogueList> dialogueList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456789</p>
-     */
     @NameInMap("idempotentId")
     public String idempotentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>874890065171169280</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 
@@ -51,17 +43,9 @@ public class CreateAICoachTaskReportRequest extends TeaModel {
     }
 
     public static class CreateAICoachTaskReportRequestDialogueList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>hello</p>
-         */
         @NameInMap("message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>coach</p>
-         */
         @NameInMap("role")
         public String role;
 

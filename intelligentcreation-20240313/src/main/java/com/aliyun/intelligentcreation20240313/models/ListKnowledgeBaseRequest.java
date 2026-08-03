@@ -4,24 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListKnowledgeBaseRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;186432649&quot;</p>
-     */
     @NameInMap("knowledgeBaseId")
     public String knowledgeBaseId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

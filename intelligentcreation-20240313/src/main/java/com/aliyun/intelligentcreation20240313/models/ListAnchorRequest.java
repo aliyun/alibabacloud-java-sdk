@@ -10,48 +10,24 @@ public class ListAnchorRequest extends TeaModel {
     @NameInMap("anchorId")
     public String anchorId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PUBLIC_MODEL</p>
-     */
     @NameInMap("anchorType")
     public String anchorType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>9:16</p>
-     */
     @NameInMap("coverRate")
     public String coverRate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>staticTransparency</p>
-     */
     @NameInMap("digitalHumanType")
     public String digitalHumanType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("resSpecType")
     public String resSpecType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>offlineSynthesis</p>
-     */
     @NameInMap("useScene")
     public String useScene;
 

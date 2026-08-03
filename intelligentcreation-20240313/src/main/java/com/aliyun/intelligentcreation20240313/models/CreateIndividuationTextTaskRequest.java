@@ -7,10 +7,6 @@ public class CreateIndividuationTextTaskRequest extends TeaModel {
     @NameInMap("crowdPack")
     public java.util.List<java.util.List<String>> crowdPack;
 
-    /**
-     * <strong>example:</strong>
-     * <p>840015278620459008</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 

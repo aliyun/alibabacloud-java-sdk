@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CountTextResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>6C9CB64D-E2D3-5BF2-A9E6-2445F952F178</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,17 +32,9 @@ public class CountTextResponseBody extends TeaModel {
     }
 
     public static class CountTextResponseBodyCountTextCmdList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("count")
         public Long count;
 
-        /**
-         * <strong>example:</strong>
-         * <p>RED_BOOK</p>
-         */
         @NameInMap("theme")
         public String theme;
 

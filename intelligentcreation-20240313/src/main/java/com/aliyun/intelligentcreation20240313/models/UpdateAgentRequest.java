@@ -4,55 +4,27 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgentRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p><a href="http://abc/1.jpg">http://abc/1.jpg</a></p>
-     */
     @NameInMap("agentIconUrl")
     public String agentIconUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("agentId")
     public String agentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>agent</p>
-     */
     @NameInMap("agentName")
     public String agentName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>18-20</p>
-     */
     @NameInMap("characterAgeStage")
     public String characterAgeStage;
 
     @NameInMap("characterGender")
     public String characterGender;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ZhangSan</p>
-     */
     @NameInMap("characterName")
     public String characterName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>He is a doctor.</p>
-     */
     @NameInMap("extraDescription")
     public String extraDescription;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Medical</p>
-     */
     @NameInMap("industry")
     public String industry;
 

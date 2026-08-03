@@ -7,17 +7,9 @@ public class QuerySessionInfoResponseBody extends TeaModel {
     @NameInMap("queryResourceInfoList")
     public java.util.List<QuerySessionInfoResponseBodyQueryResourceInfoList> queryResourceInfoList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>4D902811-B75C-5D1B-8882-D515F8E2F977</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>26</p>
-     */
     @NameInMap("total")
     public Long total;
 
@@ -51,17 +43,9 @@ public class QuerySessionInfoResponseBody extends TeaModel {
     }
 
     public static class QuerySessionInfoResponseBodyQueryResourceInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>a169e9ec18404edc9972afd80866dc97</p>
-         */
         @NameInMap("sessionId")
         public String sessionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>FREE</p>
-         */
         @NameInMap("status")
         public String status;
 

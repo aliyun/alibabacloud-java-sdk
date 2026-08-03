@@ -4,33 +4,15 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CountTextRequest extends TeaModel {
-    /**
-     * <p>API</p>
-     * 
-     * <strong>example:</strong>
-     * <p>PLATFORM</p>
-     */
     @NameInMap("generationSource")
     public String generationSource;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Garment</p>
-     */
     @NameInMap("industry")
     public String industry;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("publishStatus")
     public String publishStatus;
 
-    /**
-     * <strong>example:</strong>
-     * <p>RED_BOOK</p>
-     */
     @NameInMap("style")
     public String style;
 

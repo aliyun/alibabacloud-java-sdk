@@ -7,40 +7,18 @@ public class BuildAICoachScriptRecordResponseBody extends TeaModel {
     @NameInMap("data")
     public BuildAICoachScriptRecordResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PARAM_ERROR</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Deduct task already success,Please do not resubmit.token \&quot;369e8f2c-d283-424a-96c4-c83efe08c89e\&quot;</p>
-     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4830493A-728F-5F19-BBCC-1443292E9C49</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("scriptRecordId")
     public String scriptRecordId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -98,10 +76,6 @@ public class BuildAICoachScriptRecordResponseBody extends TeaModel {
     }
 
     public static class BuildAICoachScriptRecordResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1234567</p>
-         */
         @NameInMap("scriptId")
         public String scriptId;
 

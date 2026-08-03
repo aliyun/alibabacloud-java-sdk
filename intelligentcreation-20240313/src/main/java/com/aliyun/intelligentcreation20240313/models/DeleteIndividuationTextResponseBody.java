@@ -7,19 +7,9 @@ public class DeleteIndividuationTextResponseBody extends TeaModel {
     @NameInMap("desc")
     public String desc;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4830493A-728F-5F19-BBCC-1443292E9C49</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("status")
     public String status;
 

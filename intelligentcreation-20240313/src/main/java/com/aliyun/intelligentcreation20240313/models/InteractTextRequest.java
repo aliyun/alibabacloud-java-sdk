@@ -4,20 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class InteractTextRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1000222</p>
-     */
     @NameInMap("agentId")
     public String agentId;
 
     @NameInMap("content")
     public String content;
 
-    /**
-     * <strong>example:</strong>
-     * <p>144285195534941</p>
-     */
     @NameInMap("sessionId")
     public String sessionId;
 

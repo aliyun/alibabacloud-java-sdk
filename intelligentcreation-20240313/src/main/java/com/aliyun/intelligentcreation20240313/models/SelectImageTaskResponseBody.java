@@ -4,78 +4,36 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SelectImageTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>Failed to proxy flink ui request, message: An error occurred: Invalid UUID string: jobsn</p>
-     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("failed")
     public String failed;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PLATFORM</p>
-     */
     @NameInMap("generationSource")
     public String generationSource;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     @NameInMap("imageInfos")
     public java.util.List<SelectImageTaskResponseBodyImageInfos> imageInfos;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("scene")
     public String scene;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Successed</p>
-     */
     @NameInMap("status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("subtaskProcessing")
     public String subtaskProcessing;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("success")
     public String success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("total")
     public String total;
 
@@ -173,31 +131,15 @@ public class SelectImageTaskResponseBody extends TeaModel {
     }
 
     public static class SelectImageTaskResponseBodyImageInfos extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="http://www.ali.com">www.ali.com</a></p>
-         */
         @NameInMap("customImageUrl")
         public String customImageUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("imageH")
         public String imageH;
 
-        /**
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("imageW")
         public String imageW;
 

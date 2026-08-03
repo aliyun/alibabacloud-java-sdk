@@ -4,57 +4,36 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("duration")
     public Long duration;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2024-11-08 09:33:21</p>
-     */
     @NameInMap("endTime")
     public String endTime;
 
     @NameInMap("evaluationRating")
     public String evaluationRating;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("evaluationResult")
     public String evaluationResult;
+
+    @NameInMap("extendCustomNameMap")
+    public java.util.Map<String, String> extendCustomNameMap;
 
     @NameInMap("feedback")
     public Boolean feedback;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("scriptName")
     public String scriptName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2024-10-11 09:58:01</p>
-     */
     @NameInMap("startTime")
     public String startTime;
 
     @NameInMap("status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1276673855116835</p>
-     */
     @NameInMap("uid")
     public String uid;
 
@@ -93,6 +72,14 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     }
     public String getEvaluationResult() {
         return this.evaluationResult;
+    }
+
+    public GetAICoachTaskSessionReportResponseBody setExtendCustomNameMap(java.util.Map<String, String> extendCustomNameMap) {
+        this.extendCustomNameMap = extendCustomNameMap;
+        return this;
+    }
+    public java.util.Map<String, String> getExtendCustomNameMap() {
+        return this.extendCustomNameMap;
     }
 
     public GetAICoachTaskSessionReportResponseBody setFeedback(Boolean feedback) {

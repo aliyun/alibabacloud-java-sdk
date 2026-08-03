@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class InteractTextResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("end")
     public Boolean end;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("index")
     public Integer index;
 
@@ -27,17 +19,9 @@ public class InteractTextResponseBody extends TeaModel {
     @NameInMap("relatedVideos")
     public java.util.List<String> relatedVideos;
 
-    /**
-     * <strong>example:</strong>
-     * <p>79e954faffe2415ebd18188ba787d78e</p>
-     */
     @NameInMap("sessionId")
     public String sessionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("type")
     public Integer type;
 

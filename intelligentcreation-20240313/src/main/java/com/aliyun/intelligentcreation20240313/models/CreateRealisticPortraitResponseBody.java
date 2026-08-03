@@ -4,19 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateRealisticPortraitResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>D5798660-1531-5D12-9C20-16FEE9D22351</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>313123123</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

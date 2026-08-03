@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAICoachTaskSessionRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>821882330423951360</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1730530943640489</p>
-     */
     @NameInMap("uid")
     public String uid;
 

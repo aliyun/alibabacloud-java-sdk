@@ -4,24 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QuerySessionInfoShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNo")
     public Integer pageNo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>805800890535673856</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 

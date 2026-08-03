@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchGetTrainTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2226A26A-26E5-5AB9-A14A-54D612FCF96A</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -36,24 +32,12 @@ public class BatchGetTrainTaskResponseBody extends TeaModel {
     }
 
     public static class BatchGetTrainTaskResponseBodyVoiceListVoiceMaterial extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("voiceId")
         public Long voiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>zh</p>
-         */
         @NameInMap("voiceLanguage")
         public String voiceLanguage;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="http://www.voice.com">http://www.voice.com</a></p>
-         */
         @NameInMap("voiceUrl")
         public String voiceUrl;
 
@@ -89,75 +73,39 @@ public class BatchGetTrainTaskResponseBody extends TeaModel {
     }
 
     public static class BatchGetTrainTaskResponseBodyVoiceList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1524004782438111</p>
-         */
         @NameInMap("aliyunSubId")
         public String aliyunSubId;
 
         @NameInMap("auditFailMessage")
         public String auditFailMessage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>auditFail</p>
-         */
         @NameInMap("auditStatus")
         public String auditStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>yyyy-MM-dd HH:mm:ss</p>
-         */
         @NameInMap("createTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>M</p>
-         */
         @NameInMap("gender")
         public String gender;
 
         @NameInMap("name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BASIC_MODEL</p>
-         */
         @NameInMap("resSpecType")
         public String resSpecType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>837091359375048704</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CopyVoice</p>
-         */
         @NameInMap("taskType")
         public String taskType;
 
         @NameInMap("trainFailMessage")
         public String trainFailMessage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>trainFail</p>
-         */
         @NameInMap("trainStatus")
         public String trainStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>realTimeInteractivity</p>
-         */
         @NameInMap("useScene")
         public String useScene;
 

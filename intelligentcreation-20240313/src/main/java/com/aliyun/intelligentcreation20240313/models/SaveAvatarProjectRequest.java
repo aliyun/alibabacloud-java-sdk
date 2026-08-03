@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SaveAvatarProjectRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1000196</p>
-     */
     @NameInMap("agentId")
     public String agentId;
 
@@ -20,41 +16,21 @@ public class SaveAvatarProjectRequest extends TeaModel {
     @NameInMap("frames")
     public java.util.List<SaveAvatarProjectRequestFrames> frames;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CREATE</p>
-     */
     @NameInMap("operateType")
     public String operateType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>787594567117586432</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>df_cs_471437</p>
-     */
     @NameInMap("projectName")
     public String projectName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>STANDARD</p>
-     */
     @NameInMap("resSpecType")
     public String resSpecType;
 
     @NameInMap("resolution")
     public String resolution;
 
-    /**
-     * <strong>example:</strong>
-     * <p>9:16</p>
-     */
     @NameInMap("scaleType")
     public String scaleType;
 
@@ -166,24 +142,12 @@ public class SaveAvatarProjectRequest extends TeaModel {
     }
 
     public static class SaveAvatarProjectRequestFramesLayersMaterial extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>image/png</p>
-         */
         @NameInMap("format")
         public String format;
 
-        /**
-         * <strong>example:</strong>
-         * <p>434508</p>
-         */
         @NameInMap("id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://xxx">https://xxx</a></p>
-         */
         @NameInMap("url")
         public String url;
 
@@ -219,10 +183,6 @@ public class SaveAvatarProjectRequest extends TeaModel {
     }
 
     public static class SaveAvatarProjectRequestFramesLayers extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("height")
         public Integer height;
 
@@ -232,31 +192,15 @@ public class SaveAvatarProjectRequest extends TeaModel {
         @NameInMap("material")
         public SaveAvatarProjectRequestFramesLayersMaterial material;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("positionX")
         public Integer positionX;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("positionY")
         public Integer positionY;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ANCHOR</p>
-         */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("width")
         public Integer width;
 
@@ -330,10 +274,6 @@ public class SaveAvatarProjectRequest extends TeaModel {
         @NameInMap("pitchRate")
         public String pitchRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.0</p>
-         */
         @NameInMap("speedRate")
         public String speedRate;
 
@@ -343,17 +283,9 @@ public class SaveAvatarProjectRequest extends TeaModel {
         @NameInMap("voiceLanguage")
         public String voiceLanguage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("voiceTemplateId")
         public String voiceTemplateId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("volume")
         public String volume;
 

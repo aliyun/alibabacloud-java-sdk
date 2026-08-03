@@ -7,95 +7,45 @@ public class GetAICoachAssessmentPointResponseBody extends TeaModel {
     @NameInMap("answerList")
     public java.util.List<GetAICoachAssessmentPointResponseBodyAnswerList> answerList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("citations")
     public Integer citations;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("documentId")
     public String documentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("documentName")
     public String documentName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2025-02-24 12:00:00</p>
-     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2025-02-24 12:00:00</p>
-     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("kbId")
     public String kbId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Cloudcode</p>
-     */
     @NameInMap("kbType")
     public String kbType;
 
     @NameInMap("knowledgeList")
     public java.util.List<String> knowledgeList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("pointId")
     public String pointId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("questionDescription")
     public String questionDescription;
 
-    /**
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("questionSample")
     public String questionSample;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4830493A-728F-5F19-BBCC-1443292E9C49</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>DRAFT</p>
-     */
     @NameInMap("status")
     public String status;
 
@@ -225,17 +175,9 @@ public class GetAICoachAssessmentPointResponseBody extends TeaModel {
     }
 
     public static class GetAICoachAssessmentPointResponseBodyAnswerListAnswerValuesKeywordValues extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("weight")
         public Integer weight;
 
@@ -263,10 +205,6 @@ public class GetAICoachAssessmentPointResponseBody extends TeaModel {
     }
 
     public static class GetAICoachAssessmentPointResponseBodyAnswerListAnswerValuesScoringRules extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -286,27 +224,15 @@ public class GetAICoachAssessmentPointResponseBody extends TeaModel {
     }
 
     public static class GetAICoachAssessmentPointResponseBodyAnswerListAnswerValues extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("answerName")
         public String answerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("answerWeight")
         public Integer answerWeight;
 
         @NameInMap("keywordValues")
         public java.util.List<GetAICoachAssessmentPointResponseBodyAnswerListAnswerValuesKeywordValues> keywordValues;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("keywordWeight")
         public Integer keywordWeight;
 
@@ -361,17 +287,9 @@ public class GetAICoachAssessmentPointResponseBody extends TeaModel {
     }
 
     public static class GetAICoachAssessmentPointResponseBodyAnswerListParameters extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>441323200602114284</p>
-         */
         @NameInMap("value")
         public String value;
 
@@ -402,37 +320,21 @@ public class GetAICoachAssessmentPointResponseBody extends TeaModel {
         @NameInMap("answerValues")
         public java.util.List<GetAICoachAssessmentPointResponseBodyAnswerListAnswerValues> answerValues;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("enabledKeyword")
         public Boolean enabledKeyword;
 
         @NameInMap("nameList")
         public java.util.List<String> nameList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>and</p>
-         */
         @NameInMap("operators")
         public String operators;
 
         @NameInMap("parameters")
         public java.util.List<GetAICoachAssessmentPointResponseBodyAnswerListParameters> parameters;
 
-        /**
-         * <strong>example:</strong>
-         * <p>custom</p>
-         */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("weight")
         public Integer weight;
 

@@ -4,48 +4,24 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAICoachTaskSessionResponseBody extends TeaModel {
-    /**
-     * <p>rtctoken</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11</p>
-     */
     @NameInMap("channelToken")
     public String channelToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>4830493A-728F-5F19-BBCC-1443292E9C49</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("scriptInfo")
     public CreateAICoachTaskSessionResponseBodyScriptInfo scriptInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
     @NameInMap("sessionId")
     public String sessionId;
 
     @NameInMap("sessionStatus")
     public Long sessionStatus;
 
-    /**
-     * <p>Token</p>
-     * 
-     * <strong>example:</strong>
-     * <p>11</p>
-     */
     @NameInMap("token")
     public String token;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11</p>
-     */
     @NameInMap("webSocketUrl")
     public String webSocketUrl;
 
@@ -129,17 +105,9 @@ public class CreateAICoachTaskSessionResponseBody extends TeaModel {
         @NameInMap("inputTypeList")
         public java.util.List<String> inputTypeList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("maxDuration")
         public Long maxDuration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("scriptDesc")
         public String scriptDesc;
 

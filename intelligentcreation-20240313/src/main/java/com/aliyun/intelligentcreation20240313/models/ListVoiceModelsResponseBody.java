@@ -4,50 +4,24 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListVoiceModelsResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>040002</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Failed to proxy flink ui request, message: An error occurred: Invalid UUID string: jobsn</p>
-     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("list")
     public java.util.List<VoiceModelResponse> list;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>14878724-A835-578D-9DD5-4779ADCE9221</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("total")
     public Integer total;
 

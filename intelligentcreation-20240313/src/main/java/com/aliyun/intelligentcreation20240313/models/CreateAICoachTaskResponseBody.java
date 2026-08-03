@@ -4,36 +4,18 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAICoachTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>Deduct.DeductTaskAlreadySuccess</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>821882330423951360</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

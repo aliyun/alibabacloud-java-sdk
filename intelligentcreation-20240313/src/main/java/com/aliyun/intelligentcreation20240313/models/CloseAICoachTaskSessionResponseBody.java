@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CloseAICoachTaskSessionResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0E06E0AA-D5B6-538C-8CE9-BAB79C68B690</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

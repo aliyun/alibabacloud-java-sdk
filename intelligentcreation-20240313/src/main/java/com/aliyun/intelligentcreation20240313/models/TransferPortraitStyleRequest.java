@@ -4,45 +4,21 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class TransferPortraitStyleRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>500</p>
-     */
     @NameInMap("height")
     public Integer height;
 
-    /**
-     * <strong>example:</strong>
-     * <p>WWW</p>
-     */
     @NameInMap("imageUrl")
     public String imageUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>4</p>
-     */
     @NameInMap("numbers")
     public Integer numbers;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("redrawAmplitude")
     public Integer redrawAmplitude;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("style")
     public Integer style;
 
-    /**
-     * <strong>example:</strong>
-     * <p>500</p>
-     */
     @NameInMap("width")
     public Integer width;
 

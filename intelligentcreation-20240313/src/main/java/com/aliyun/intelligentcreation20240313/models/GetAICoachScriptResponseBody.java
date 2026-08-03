@@ -10,10 +10,6 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("appendQuestionFlag")
     public Boolean appendQuestionFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>point</p>
-     */
     @NameInMap("assessmentScope")
     public String assessmentScope;
 
@@ -26,48 +22,24 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("completeStrategy")
     public GetAICoachScriptResponseBodyCompleteStrategy completeStrategy;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://demo.com">https://demo.com</a></p>
-     */
     @NameInMap("coverUrl")
     public String coverUrl;
 
     @NameInMap("customReplyRules")
     public java.util.List<GetAICoachScriptResponseBodyCustomReplyRules> customReplyRules;
 
-    /**
-     * <strong>example:</strong>
-     * <p>500</p>
-     */
     @NameInMap("dialogueInputTextLimit")
     public Integer dialogueInputTextLimit;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("dialogueTextFlag")
     public Boolean dialogueTextFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("dialogueTipFlag")
     public Boolean dialogueTipFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>30</p>
-     */
     @NameInMap("dialogueVoiceLimit")
     public Integer dialogueVoiceLimit;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("evaluateReportFlag")
     public Boolean evaluateReportFlag;
 
@@ -77,64 +49,39 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("expressivenessList")
     public java.util.List<GetAICoachScriptResponseBodyExpressivenessList> expressivenessList;
 
+    @NameInMap("extendCustomNameMap")
+    public java.util.Map<String, String> extendCustomNameMap;
+
     @NameInMap("gifDynamicUrl")
     public String gifDynamicUrl;
 
     @NameInMap("gifStaticUrl")
     public String gifStaticUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2025-02-24 12:00:00</p>
-     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2025-02-24 12:00:00</p>
-     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
-    /**
-     * <strong>example:</strong>
-     * <p>coach</p>
-     */
     @NameInMap("initiator")
     public String initiator;
 
     @NameInMap("interactionInputTypes")
     public java.util.List<String> interactionInputTypes;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("interactionType")
     public Integer interactionType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("introduce")
     public String introduce;
 
-    /**
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("openingRemarks")
     public String openingRemarks;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("orderAckFlag")
     public Boolean orderAckFlag;
 
@@ -147,10 +94,6 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("points")
     public java.util.List<GetAICoachScriptResponseBodyPoints> points;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -160,10 +103,6 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("scoreConfig")
     public GetAICoachScriptResponseBodyScoreConfig scoreConfig;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("scriptRecordId")
     public String scriptRecordId;
 
@@ -173,31 +112,15 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("sparringTipTitle")
     public String sparringTipTitle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("status")
     public Integer status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("studentThinkTimeFlag")
     public Boolean studentThinkTimeFlag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("studentThinkTimeLimit")
     public Integer studentThinkTimeLimit;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("type")
     public Integer type;
 
@@ -333,6 +256,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
     public java.util.List<GetAICoachScriptResponseBodyExpressivenessList> getExpressivenessList() {
         return this.expressivenessList;
+    }
+
+    public GetAICoachScriptResponseBody setExtendCustomNameMap(java.util.Map<String, String> extendCustomNameMap) {
+        this.extendCustomNameMap = extendCustomNameMap;
+        return this;
+    }
+    public java.util.Map<String, String> getExtendCustomNameMap() {
+        return this.extendCustomNameMap;
     }
 
     public GetAICoachScriptResponseBody setGifDynamicUrl(String gifDynamicUrl) {
@@ -582,45 +513,21 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     public static class GetAICoachScriptResponseBodyCompleteStrategy extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("abnormalQuitSessionExpired")
         public Integer abnormalQuitSessionExpired;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("abnormalQuitSessionExpiredFlag")
         public Boolean abnormalQuitSessionExpiredFlag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("clickCompleteAutoEnd")
         public Boolean clickCompleteAutoEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>15</p>
-         */
         @NameInMap("duration")
         public Integer duration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("durationFlag")
         public Boolean durationFlag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("fullCoverageAutoEnd")
         public Boolean fullCoverageAutoEnd;
 
@@ -956,10 +863,6 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     public static class GetAICoachScriptResponseBodyPointDeductionRuleList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("description")
         public String description;
 
@@ -969,10 +872,6 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("ruleValue")
         public String ruleValue;
 
-        /**
-         * <strong>example:</strong>
-         * <p>90</p>
-         */
         @NameInMap("weight")
         public Integer weight;
 
@@ -1128,17 +1027,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     public static class GetAICoachScriptResponseBodyPointsAnswerListParameters extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>name</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>value</p>
-         */
         @NameInMap("value")
         public String value;
 
@@ -1184,17 +1075,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("parameters")
         public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListParameters> parameters;
 
-        /**
-         * <strong>example:</strong>
-         * <p>normalKnowledge</p>
-         */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("weight")
         public Integer weight;
 
@@ -1276,20 +1159,12 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("knowledgeList")
         public java.util.List<String> knowledgeList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("name")
         public String name;
 
         @NameInMap("pointId")
         public String pointId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("questionDescription")
         public String questionDescription;
 
@@ -1299,17 +1174,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("scriptPointId")
         public String scriptPointId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("sortNo")
         public Integer sortNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("weight")
         public Integer weight;
 
@@ -1396,10 +1263,6 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>coach</p>
-         */
         @NameInMap("role")
         public String role;
 
@@ -1520,24 +1383,12 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     public static class GetAICoachScriptResponseBodyWeights extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("abilityEvaluation")
         public Integer abilityEvaluation;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("abilityEvaluationEnabled")
         public Boolean abilityEvaluationEnabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("assessmentPoint")
         public Integer assessmentPoint;
 
@@ -1547,48 +1398,24 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("customReplyRuleEnabled")
         public Boolean customReplyRuleEnabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("expressiveness")
         public Integer expressiveness;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("expressivenessEnabled")
         public Boolean expressivenessEnabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("pointDeductionRule")
         public Integer pointDeductionRule;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("pointDeductionRuleEnabled")
         public Boolean pointDeductionRuleEnabled;
 
         @NameInMap("similarPronunciationScoringEnabled")
         public Boolean similarPronunciationScoringEnabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("standard")
         public Integer standard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("standardEnabled")
         public Boolean standardEnabled;
 

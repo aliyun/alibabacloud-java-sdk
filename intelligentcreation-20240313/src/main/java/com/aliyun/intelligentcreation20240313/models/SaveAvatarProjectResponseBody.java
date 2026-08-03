@@ -4,59 +4,27 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SaveAvatarProjectResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1000222</p>
-     */
     @NameInMap("agentId")
     public String agentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>040002</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Failed to proxy flink ui request, message: An error occurred: Invalid UUID string: jobsn</p>
-     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>error</p>
-     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>812907463682949120</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>doc_test_3</p>
-     */
     @NameInMap("projectName")
     public String projectName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>DRAFT</p>
-     */
     @NameInMap("status")
     public String status;
 

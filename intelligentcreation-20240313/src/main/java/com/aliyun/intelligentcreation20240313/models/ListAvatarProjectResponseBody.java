@@ -7,10 +7,6 @@ public class ListAvatarProjectResponseBody extends TeaModel {
     @NameInMap("queryAvatarProjectResultList")
     public java.util.List<ListAvatarProjectResponseBodyQueryAvatarProjectResultList> queryAvatarProjectResultList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>D7F2B74F-63F2-5DD6-95E4-F408EAD6617E</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -36,30 +32,18 @@ public class ListAvatarProjectResponseBody extends TeaModel {
     }
 
     public static class ListAvatarProjectResponseBodyQueryAvatarProjectResultList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1000206</p>
-         */
         @NameInMap("agentId")
         public String agentId;
 
         @NameInMap("errorMsg")
         public String errorMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12826084562688</p>
-         */
         @NameInMap("projectId")
         public String projectId;
 
         @NameInMap("projectName")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DEPLOYING</p>
-         */
         @NameInMap("status")
         public String status;
 

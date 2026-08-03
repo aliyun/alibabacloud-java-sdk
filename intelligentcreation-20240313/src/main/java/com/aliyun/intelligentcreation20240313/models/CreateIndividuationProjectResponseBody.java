@@ -4,19 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateIndividuationProjectResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>812907463682949120</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4D902811-B75C-5D1B-8882-D515F8E2F977</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

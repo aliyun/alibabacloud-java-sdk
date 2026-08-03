@@ -7,10 +7,6 @@ public class SelectResourceResponseBody extends TeaModel {
     @NameInMap("aliyunUid")
     public String aliyunUid;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -47,38 +43,18 @@ public class SelectResourceResponseBody extends TeaModel {
     }
 
     public static class SelectResourceResponseBodyResourceInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("expireTime")
         public String expireTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("lastExpire")
         public Integer lastExpire;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1249</p>
-         */
         @NameInMap("remainCount")
         public Integer remainCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("resourceType")
         public Integer resourceType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>second</p>
-         */
         @NameInMap("unit")
         public String unit;
 

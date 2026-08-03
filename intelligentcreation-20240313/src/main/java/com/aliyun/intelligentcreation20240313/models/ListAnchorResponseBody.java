@@ -4,52 +4,24 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListAnchorResponseBody extends TeaModel {
-    /**
-     * <p>code</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Deduct.DeductTaskAlreadySuccess</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Failed to proxy flink ui request, message: An error occurred: Invalid UUID string: jobsn</p>
-     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
     @NameInMap("list")
     public java.util.List<AnchorResponse> list;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>5389BE87-571B-573C-90ED-F07C5E68760B</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("total")
     public Integer total;
 

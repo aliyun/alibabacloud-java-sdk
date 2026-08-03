@@ -7,10 +7,6 @@ public class GetTextTemplateResponseBody extends TeaModel {
     @NameInMap("availableIndustry")
     public GetTextTemplateResponseBodyAvailableIndustry availableIndustry;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3239281273464326823</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -39,24 +35,12 @@ public class GetTextTemplateResponseBody extends TeaModel {
         @NameInMap("desc")
         public String desc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("disabled")
         public Boolean disabled;
 
-        /**
-         * <strong>example:</strong>
-         * <p>RED_BOOK</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("templateKey")
         public String templateKey;
 
@@ -100,10 +84,6 @@ public class GetTextTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTextTemplateResponseBodyAvailableIndustryTextModeTypes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Rewrite</p>
-         */
         @NameInMap("name")
         public String name;
 
@@ -134,10 +114,6 @@ public class GetTextTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTextTemplateResponseBodyAvailableIndustry extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Car</p>
-         */
         @NameInMap("name")
         public String name;
 

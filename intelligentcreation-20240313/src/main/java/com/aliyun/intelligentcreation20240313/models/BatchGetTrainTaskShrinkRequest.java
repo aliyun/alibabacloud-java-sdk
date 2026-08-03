@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchGetTrainTaskShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1524004782431111</p>
-     */
     @NameInMap("aliyunMainId")
     public String aliyunMainId;
 

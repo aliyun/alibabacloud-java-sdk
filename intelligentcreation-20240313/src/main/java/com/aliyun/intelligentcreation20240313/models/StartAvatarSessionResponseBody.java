@@ -7,17 +7,9 @@ public class StartAvatarSessionResponseBody extends TeaModel {
     @NameInMap("channelToken")
     public String channelToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>121dlsga4o7golrl1hoja</p>
-     */
     @NameInMap("sessionId")
     public String sessionId;
 

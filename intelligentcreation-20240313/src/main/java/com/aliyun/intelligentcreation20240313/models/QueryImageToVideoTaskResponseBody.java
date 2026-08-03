@@ -4,45 +4,21 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QueryImageToVideoTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://xxx/xxx.mp4">https://xxx/xxx.mp4</a></p>
-     */
     @NameInMap("originUrl")
     public String originUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CC2967CA-0114-57E0-A0CF-7DEEEDAB953D</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("status")
     public Integer status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>868125994191405056</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

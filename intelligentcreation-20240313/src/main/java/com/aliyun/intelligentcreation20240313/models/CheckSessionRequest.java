@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CheckSessionRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11111</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>121dlsga4o7golrl1hoja</p>
-     */
     @NameInMap("sessionId")
     public String sessionId;
 

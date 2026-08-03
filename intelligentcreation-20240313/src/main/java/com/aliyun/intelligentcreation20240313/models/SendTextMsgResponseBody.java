@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SendTextMsgResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>827BF714-19E7-51B5-A434-C21BFEE05983</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("status")
     public String status;
 

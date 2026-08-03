@@ -7,37 +7,21 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     @NameInMap("conversationList")
     public java.util.List<GetAICoachTaskSessionHistoryResponseBodyConversationList> conversationList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("duration")
     public Long duration;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2024-11-08 09:33:21</p>
-     */
     @NameInMap("endTime")
     public String endTime;
 
     @NameInMap("pauseDuration")
     public Long pauseDuration;
 
-    /**
-     * <strong>example:</strong>
-     * <p>D5798660-1531-5D12-9C20-16FEE9D22351</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("scriptName")
     public String scriptName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2024-08-21 05:00:01</p>
-     */
     @NameInMap("startTime")
     public String startTime;
 
@@ -47,10 +31,6 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     @NameInMap("total")
     public Integer total;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1579404690269235</p>
-     */
     @NameInMap("uid")
     public String uid;
 
@@ -149,10 +129,6 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         @NameInMap("evaluationFeedback")
         public String evaluationFeedback;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
         @NameInMap("evaluationResult")
         public String evaluationResult;
 

@@ -13,17 +13,9 @@ public class StartAvatarSessionRequest extends TeaModel {
     @NameInMap("customUserId")
     public String customUserId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>13534711288320</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>15ED6083-B0B8-5B2A-BEDB-94A5C687C812</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

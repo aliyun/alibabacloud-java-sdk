@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class DeleteAgentRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>840016700254633984</p>
-     */
     @NameInMap("agentId")
     public String agentId;
 

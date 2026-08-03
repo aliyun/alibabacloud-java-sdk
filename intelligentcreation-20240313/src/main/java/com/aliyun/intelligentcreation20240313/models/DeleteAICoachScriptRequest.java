@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class DeleteAICoachScriptRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("scriptId")
     public String scriptId;
 

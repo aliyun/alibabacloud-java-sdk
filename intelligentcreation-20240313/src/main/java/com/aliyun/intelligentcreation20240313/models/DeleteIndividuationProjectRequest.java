@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class DeleteIndividuationProjectRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>840015278620459008</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 

@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QueryAvatarResourceRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11111</p>
-     */
     @NameInMap("idempotentId")
     public String idempotentId;
 

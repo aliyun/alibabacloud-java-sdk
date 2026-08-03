@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateTrainTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>84657DE0-B68C-508B-AFE7-8ED921854E3C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>837091359375048704</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

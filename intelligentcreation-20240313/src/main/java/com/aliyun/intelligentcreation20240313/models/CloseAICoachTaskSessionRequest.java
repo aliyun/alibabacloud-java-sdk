@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CloseAICoachTaskSessionRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>11</p>
-     */
     @NameInMap("sessionId")
     public String sessionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>273610276967782972</p>
-     */
     @NameInMap("uid")
     public String uid;
 

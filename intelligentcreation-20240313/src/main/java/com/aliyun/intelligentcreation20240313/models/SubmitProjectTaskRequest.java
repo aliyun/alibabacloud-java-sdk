@@ -4,23 +4,12 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SubmitProjectTaskRequest extends TeaModel {
-    /**
-     * <p>frame</p>
-     */
     @NameInMap("frames")
     public java.util.List<SubmitProjectTaskRequestFrames> frames;
 
-    /**
-     * <strong>example:</strong>
-     * <p>9:16</p>
-     */
     @NameInMap("scaleType")
     public String scaleType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("subtitleTag")
     public Integer subtitleTag;
 
@@ -87,17 +76,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
         @NameInMap("anchorStyleLevel")
         public String anchorStyleLevel;
 
-        /**
-         * <strong>example:</strong>
-         * <p>video/mp4</p>
-         */
         @NameInMap("format")
         public String format;
 
-        /**
-         * <strong>example:</strong>
-         * <p>38863</p>
-         */
         @NameInMap("id")
         public String id;
 
@@ -107,10 +88,6 @@ public class SubmitProjectTaskRequest extends TeaModel {
         @NameInMap("speed")
         public String speed;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://xxx">https://xxx</a></p>
-         */
         @NameInMap("url")
         public String url;
 
@@ -181,48 +158,24 @@ public class SubmitProjectTaskRequest extends TeaModel {
     }
 
     public static class SubmitProjectTaskRequestFramesLayers extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>222</p>
-         */
         @NameInMap("height")
         public Integer height;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("index")
         public Integer index;
 
         @NameInMap("material")
         public SubmitProjectTaskRequestFramesLayersMaterial material;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("positionX")
         public Integer positionX;
 
-        /**
-         * <strong>example:</strong>
-         * <p>22</p>
-         */
         @NameInMap("positionY")
         public Integer positionY;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ANCHOR</p>
-         */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("width")
         public Integer width;
 
@@ -290,73 +243,33 @@ public class SubmitProjectTaskRequest extends TeaModel {
     }
 
     public static class SubmitProjectTaskRequestFramesSubtitle extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>BottomLeft</p>
-         */
         @NameInMap("alignment")
         public String alignment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>#ffffff</p>
-         */
         @NameInMap("backgroundColor")
         public String backgroundColor;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SimSun</p>
-         */
         @NameInMap("font")
         public String font;
 
-        /**
-         * <strong>example:</strong>
-         * <p>#ffffff</p>
-         */
         @NameInMap("fontColor")
         public String fontColor;
 
-        /**
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
         @NameInMap("fontSize")
         public Integer fontSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("maxCharLength")
         public Integer maxCharLength;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("positionX")
         public Integer positionX;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("positionY")
         public Integer positionY;
 
-        /**
-         * <strong>example:</strong>
-         * <p>22</p>
-         */
         @NameInMap("textHeight")
         public Integer textHeight;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("textWidth")
         public Integer textWidth;
 
@@ -448,10 +361,6 @@ public class SubmitProjectTaskRequest extends TeaModel {
     }
 
     public static class SubmitProjectTaskRequestFramesVideoScript extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://xxx">https://xxx</a></p>
-         */
         @NameInMap("audioUrl")
         public String audioUrl;
 
@@ -464,37 +373,21 @@ public class SubmitProjectTaskRequest extends TeaModel {
         @NameInMap("speechOpen")
         public Boolean speechOpen;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2.0</p>
-         */
         @NameInMap("speedRate")
         public String speedRate;
 
         @NameInMap("textContent")
         public String textContent;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TEXT</p>
-         */
         @NameInMap("type")
         public String type;
 
         @NameInMap("voiceLanguage")
         public String voiceLanguage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("voiceTemplateId")
         public Long voiceTemplateId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("volume")
         public Integer volume;
 
@@ -586,10 +479,6 @@ public class SubmitProjectTaskRequest extends TeaModel {
     }
 
     public static class SubmitProjectTaskRequestFrames extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("index")
         public Integer index;
 

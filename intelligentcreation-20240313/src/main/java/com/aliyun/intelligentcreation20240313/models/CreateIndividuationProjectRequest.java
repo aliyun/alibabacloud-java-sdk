@@ -7,20 +7,12 @@ public class CreateIndividuationProjectRequest extends TeaModel {
     @NameInMap("projectInfo")
     public String projectInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>avatar-1</p>
-     */
     @NameInMap("projectName")
     public String projectName;
 
     @NameInMap("purpose")
     public String purpose;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ail003</p>
-     */
     @NameInMap("sceneId")
     public String sceneId;
 

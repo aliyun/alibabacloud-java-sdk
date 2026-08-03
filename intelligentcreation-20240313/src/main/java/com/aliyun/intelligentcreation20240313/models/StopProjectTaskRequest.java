@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class StopProjectTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1111111</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

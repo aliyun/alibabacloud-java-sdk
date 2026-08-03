@@ -7,86 +7,42 @@ public class CreateRealisticPortraitRequest extends TeaModel {
     @NameInMap("ages")
     public java.util.List<Integer> ages;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("cloth")
     public Integer cloth;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("color")
     public Integer color;
 
-    /**
-     * <strong>example:</strong>
-     * <p>11</p>
-     */
     @NameInMap("custom")
     public String custom;
 
     @NameInMap("face")
     public java.util.List<Integer> face;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("figure")
     public Integer figure;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("gender")
     public Integer gender;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("hairColor")
     public Integer hairColor;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("hairstyle")
     public Integer hairstyle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>500</p>
-     */
     @NameInMap("height")
     public Integer height;
 
     @NameInMap("imageUrl")
     public String imageUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>4</p>
-     */
     @NameInMap("numbers")
     public Integer numbers;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1:1</p>
-     */
     @NameInMap("ratio")
     public String ratio;
 
-    /**
-     * <strong>example:</strong>
-     * <p>500</p>
-     */
     @NameInMap("width")
     public Integer width;
 

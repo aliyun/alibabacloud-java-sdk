@@ -7,17 +7,9 @@ public class AddTextFeedbackRequest extends TeaModel {
     @NameInMap("content")
     public String content;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("quality")
     public Integer quality;
 
-    /**
-     * <strong>example:</strong>
-     * <p>8478</p>
-     */
     @NameInMap("textId")
     public Long textId;
 

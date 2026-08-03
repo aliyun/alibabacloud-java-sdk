@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QueryIndividuationTextTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>829682927337963520</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

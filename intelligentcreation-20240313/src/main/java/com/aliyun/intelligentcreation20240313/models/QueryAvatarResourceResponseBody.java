@@ -7,10 +7,6 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
     @NameInMap("queryResourceInfoList")
     public java.util.List<QueryAvatarResourceResponseBodyQueryResourceInfoList> queryResourceInfoList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>D5798660-1531-5D12-9C20-16FEE9D22351</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -36,24 +32,12 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
     }
 
     public static class QueryAvatarResourceResponseBodyQueryResourceInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>21275</p>
-         */
         @NameInMap("resourceId")
         public String resourceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>STANDARD</p>
-         */
         @NameInMap("type")
         public String type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1719904342237</p>
-         */
         @NameInMap("validPeriodTime")
         public String validPeriodTime;
 

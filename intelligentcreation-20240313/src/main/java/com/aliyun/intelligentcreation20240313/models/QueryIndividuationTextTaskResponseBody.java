@@ -4,36 +4,18 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QueryIndividuationTextTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>yyyy-MM-dd HH:mm:ss</p>
-     */
     @NameInMap("createTime")
     public String createTime;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>56AC346B-AF40-5E4F-AFFE-FD8BA5E6FB3A</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("status")
     public Integer status;
 
     @NameInMap("textList")
     public java.util.List<QueryIndividuationTextTaskResponseBodyTextList> textList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>yyyy-MM-dd HH:mm:ss</p>
-     */
     @NameInMap("updateTime")
     public String updateTime;
 
@@ -83,24 +65,12 @@ public class QueryIndividuationTextTaskResponseBody extends TeaModel {
     }
 
     public static class QueryIndividuationTextTaskResponseBodyTextList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2761</p>
-         */
         @NameInMap("textId")
         public String textId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("userId")
         public String userId;
 

@@ -4,12 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListAICoachTaskPageResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>D7F2B74F-63F2-5DD6-95E4-F408EAD6617E</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -49,34 +43,18 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
     }
 
     public static class ListAICoachTaskPageResponseBodyTaskList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>yyyy-MM-dd HH:mm:ss</p>
-         */
         @NameInMap("finishTime")
         public String finishTime;
 
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>FINISHED</p>
-         */
         @NameInMap("status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>222</p>
-         */
         @NameInMap("studentId")
         public String studentId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11111111111</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 

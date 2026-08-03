@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QueryImageToVideoTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>868125994191405056</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

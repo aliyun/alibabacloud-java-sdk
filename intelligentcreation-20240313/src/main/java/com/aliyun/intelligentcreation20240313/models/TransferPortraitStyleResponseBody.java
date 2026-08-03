@@ -4,19 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class TransferPortraitStyleResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>725E87CD-F2DE-5FC4-8A09-2EBDFBF26DAA</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>313123123</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

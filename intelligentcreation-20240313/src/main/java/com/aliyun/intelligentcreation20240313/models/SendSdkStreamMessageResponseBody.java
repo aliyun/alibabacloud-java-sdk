@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SendSdkStreamMessageResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{&quot;id&quot;:&quot;123&quot;}</p>
-     */
     @NameInMap("commonStreamMessage")
     public String commonStreamMessage;
 

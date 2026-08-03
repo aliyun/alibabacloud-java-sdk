@@ -4,36 +4,18 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchDeletePracticeTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>040002</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10923AA3-F7A1-5EA0-ACCA-D704269EAA78</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("results")
     public java.util.List<BatchDeletePracticeTaskResponseBodyResults> results;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -83,17 +65,9 @@ public class BatchDeletePracticeTaskResponseBody extends TeaModel {
     }
 
     public static class BatchDeletePracticeTaskResponseBodyResults extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>job delete error by auth</p>
-         */
         @NameInMap("message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>901524394325590016</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 

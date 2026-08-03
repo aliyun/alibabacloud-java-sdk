@@ -4,48 +4,24 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAnchorRequest extends TeaModel {
-    /**
-     * <p>类型</p>
-     * 
-     * <strong>example:</strong>
-     * <p>VIDEO_ANCHOR</p>
-     */
     @NameInMap("anchorCategory")
     public String anchorCategory;
 
     @NameInMap("anchorMaterialName")
     public String anchorMaterialName;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://xxx">https://xxx</a></p>
-     */
     @NameInMap("coverUrl")
     public String coverUrl;
 
     @NameInMap("digitalHumanType")
     public String digitalHumanType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F</p>
-     */
     @NameInMap("gender")
     public String gender;
 
-    /**
-     * <strong>example:</strong>
-     * <p>offlineSynthesis</p>
-     */
     @NameInMap("useScene")
     public String useScene;
 
-    /**
-     * <p>视频文件osskey</p>
-     * 
-     * <strong>example:</strong>
-     * <p>path/key.mp4</p>
-     */
     @NameInMap("videoOssKey")
     public String videoOssKey;
 

@@ -4,45 +4,21 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListAgentsRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>840016700254633984</p>
-     */
     @NameInMap("agentId")
     public String agentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>text</p>
-     */
     @NameInMap("agentScene")
     public String agentScene;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SYSTEM</p>
-     */
     @NameInMap("owner")
     public String owner;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("status")
     public Integer status;
 

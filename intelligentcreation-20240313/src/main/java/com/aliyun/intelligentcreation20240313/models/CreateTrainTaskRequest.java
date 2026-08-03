@@ -4,55 +4,27 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateTrainTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>13168123111</p>
-     */
     @NameInMap("aliyunMainId")
     public String aliyunMainId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>BASIC_MODEL</p>
-     */
     @NameInMap("resSpecType")
     public String resSpecType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CopyAnchorAndVoice</p>
-     */
     @NameInMap("taskType")
     public String taskType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>realTimeInteractivity</p>
-     */
     @NameInMap("useScene")
     public String useScene;
 
-    /**
-     * <strong>example:</strong>
-     * <p>M</p>
-     */
     @NameInMap("voiceGender")
     public String voiceGender;
 
-    /**
-     * <strong>example:</strong>
-     * <p>zh</p>
-     */
     @NameInMap("voiceLanguage")
     public String voiceLanguage;
 
     @NameInMap("voiceName")
     public String voiceName;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://yic-pre/video/test-0513.mp3">https://yic-pre/video/test-0513.mp3</a></p>
-     */
     @NameInMap("voicePath")
     public String voicePath;
 

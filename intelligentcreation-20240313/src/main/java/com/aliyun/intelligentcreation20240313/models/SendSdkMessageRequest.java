@@ -4,34 +4,18 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SendSdkMessageRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
     @NameInMap("data")
     public String data;
 
     @NameInMap("header")
     public String header;
 
-    /**
-     * <strong>example:</strong>
-     * <p>avatar</p>
-     */
     @NameInMap("moduleName")
     public String moduleName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>getProject</p>
-     */
     @NameInMap("operationName")
     public String operationName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
     @NameInMap("userId")
     public String userId;
 

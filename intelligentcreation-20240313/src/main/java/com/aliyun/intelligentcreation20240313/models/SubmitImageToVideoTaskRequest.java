@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SubmitImageToVideoTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p><a href="http://xxx/image.png">http://xxx/image.png</a></p>
-     */
     @NameInMap("imageUrl")
     public String imageUrl;
 

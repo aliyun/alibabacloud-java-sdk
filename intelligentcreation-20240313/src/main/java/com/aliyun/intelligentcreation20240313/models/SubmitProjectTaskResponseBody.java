@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SubmitProjectTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>551FF252-6CFC-5DDA-9F84-9B07302385C2</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>313123123</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

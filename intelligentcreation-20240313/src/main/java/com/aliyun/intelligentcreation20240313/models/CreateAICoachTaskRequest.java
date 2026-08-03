@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAICoachTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>541E7123-2E8A-5BA2-AC38-665650C84129</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 

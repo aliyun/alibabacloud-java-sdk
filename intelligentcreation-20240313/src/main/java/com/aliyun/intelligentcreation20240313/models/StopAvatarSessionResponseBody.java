@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class StopAvatarSessionResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>725E87CD-F2DE-5FC4-8A09-2EBDFBF26DAA</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Stopped</p>
-     */
     @NameInMap("status")
     public String status;
 

@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetProjectTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>20230823218109326025-1200</p>
-     */
     @NameInMap("IdempotentId")
     public String idempotentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>313123123</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

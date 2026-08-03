@@ -4,51 +4,27 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p><a href="http://img.com">http://img.com</a></p>
-     */
     @NameInMap("agentIconUrl")
     public String agentIconUrl;
 
-    /**
-     * <strong>example:</strong>
-     * <p>AgentAlpha</p>
-     */
     @NameInMap("agentName")
     public String agentName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>aiCoachPractice</p>
-     */
     @NameInMap("agentScene")
     public String agentScene;
 
-    /**
-     * <strong>example:</strong>
-     * <p>18-22</p>
-     */
     @NameInMap("characterAgeStage")
     public String characterAgeStage;
 
     @NameInMap("characterGender")
     public String characterGender;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Tom</p>
-     */
     @NameInMap("characterName")
     public String characterName;
 
     @NameInMap("extraDescription")
     public String extraDescription;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Common</p>
-     */
     @NameInMap("industry")
     public String industry;
 

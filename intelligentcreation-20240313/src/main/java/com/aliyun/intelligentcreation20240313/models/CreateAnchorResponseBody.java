@@ -4,39 +4,18 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAnchorResponseBody extends TeaModel {
-    /**
-     * <p>123456789</p>
-     */
     @NameInMap("data")
     public String data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PARAM_ERROR</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Failed to proxy flink ui request, message: An error occurred: Invalid UUID string: jobsn</p>
-     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10923AA3-F7A1-5EA0-ACCA-D704269EAA78</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 

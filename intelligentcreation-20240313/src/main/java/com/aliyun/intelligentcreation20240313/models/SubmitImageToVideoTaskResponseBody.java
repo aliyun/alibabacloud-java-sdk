@@ -4,31 +4,15 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SubmitImageToVideoTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>job added successfully</p>
-     */
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>53AED51A-74CE-57CE-B1BF-2703F314EEC8</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>868125994191405056</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchGetVideoClipTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>86A90C40-D1AB-50DA-A4B1-0D545F80F2FE</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -36,20 +32,12 @@ public class BatchGetVideoClipTaskResponseBody extends TeaModel {
     }
 
     public static class BatchGetVideoClipTaskResponseBodyTaskListVideoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("beginTime")
         public Integer beginTime;
 
         @NameInMap("description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11110</p>
-         */
         @NameInMap("endTime")
         public Integer endTime;
 
@@ -59,20 +47,12 @@ public class BatchGetVideoClipTaskResponseBody extends TeaModel {
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://e-ai.oss-cn-guangzhou.aliyuncs.com/video/jlkasdl.mp4">https://e-ai.oss-cn-guangzhou.aliyuncs.com/video/jlkasdl.mp4</a></p>
-         */
         @NameInMap("videoDownloadUrl")
         public String videoDownloadUrl;
 
         @NameInMap("videoName")
         public String videoName;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://e-ai.oss-cn-guangzhou.aliyuncs.com/video/jlkasdl.mp4">https://e-ai.oss-cn-guangzhou.aliyuncs.com/video/jlkasdl.mp4</a></p>
-         */
         @NameInMap("videoUrl")
         public String videoUrl;
 
@@ -148,31 +128,15 @@ public class BatchGetVideoClipTaskResponseBody extends TeaModel {
     }
 
     public static class BatchGetVideoClipTaskResponseBodyTaskList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>FINISHED</p>
-         */
         @NameInMap("status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>864413342857035776</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>43335</p>
-         */
         @NameInMap("totalDuration")
         public Double totalDuration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("totalToken")
         public Long totalToken;
 

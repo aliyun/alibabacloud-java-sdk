@@ -4,37 +4,21 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListVoiceModelsRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("resSpecType")
     public String resSpecType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>offlineSynthesis</p>
-     */
     @NameInMap("useScene")
     public String useScene;
 
     @NameInMap("voiceLanguage")
     public String voiceLanguage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>PRIVATE_VOICE</p>
-     */
     @NameInMap("voiceType")
     public String voiceType;
 

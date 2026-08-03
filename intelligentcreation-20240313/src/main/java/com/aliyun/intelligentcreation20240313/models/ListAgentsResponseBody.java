@@ -7,24 +7,12 @@ public class ListAgentsResponseBody extends TeaModel {
     @NameInMap("list")
     public java.util.List<ListAgentsResponseBodyList> list;
 
-    /**
-     * <strong>example:</strong>
-     * <p>86A90C40-D1AB-50DA-A4B1-0D545F80F2FE</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("total")
     public Integer total;
 
@@ -69,20 +57,12 @@ public class ListAgentsResponseBody extends TeaModel {
         @NameInMap("agentIconUrl")
         public String agentIconUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>840016700254633984</p>
-         */
         @NameInMap("agentId")
         public String agentId;
 
         @NameInMap("agentName")
         public String agentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>text</p>
-         */
         @NameInMap("agentScene")
         public String agentScene;
 
@@ -95,60 +75,27 @@ public class ListAgentsResponseBody extends TeaModel {
         @NameInMap("charactersDescription")
         public String charactersDescription;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("enableInteraction")
         public Integer enableInteraction;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Car</p>
-         */
         @NameInMap("industry")
         public String industry;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("onlineSearch")
         public Boolean onlineSearch;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SYSTEM</p>
-         */
         @NameInMap("owner")
         public String owner;
 
-        /**
-         * <strong>example:</strong>
-         * <p>http
-         * ;//<a href="http://www.abc.com/111.mp4">www.abc.com/111.mp4</a></p>
-         */
         @NameInMap("referenceUrl")
         public String referenceUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>RED_BOOK</p>
-         */
         @NameInMap("textStyle")
         public String textStyle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Seller</p>
-         */
         @NameInMap("viewer")
         public String viewer;
 

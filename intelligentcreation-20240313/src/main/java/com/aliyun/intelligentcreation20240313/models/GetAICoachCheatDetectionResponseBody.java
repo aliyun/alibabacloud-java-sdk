@@ -4,55 +4,27 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetAICoachCheatDetectionResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("cheatId")
     public String cheatId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("errorCode")
     public String errorCode;
 
     @NameInMap("errorMessage")
     public String errorMessage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2025-02-24 12:00:00</p>
-     */
     @NameInMap("gmtCreate")
     public String gmtCreate;
 
     @NameInMap("imageCheat")
     public GetAICoachCheatDetectionResponseBodyImageCheat imageCheat;
 
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("status")
     public Integer status;
 
-    /**
-     * <p>true</p>
-     * 
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -137,17 +109,9 @@ public class GetAICoachCheatDetectionResponseBody extends TeaModel {
     }
 
     public static class GetAICoachCheatDetectionResponseBodyImageCheatList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2025-03-22 10:05:07</p>
-         */
         @NameInMap("time")
         public String time;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://demo.com">https://demo.com</a></p>
-         */
         @NameInMap("url")
         public String url;
 
@@ -175,20 +139,12 @@ public class GetAICoachCheatDetectionResponseBody extends TeaModel {
     }
 
     public static class GetAICoachCheatDetectionResponseBodyImageCheat extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("desc")
         public String desc;
 
         @NameInMap("list")
         public java.util.List<GetAICoachCheatDetectionResponseBodyImageCheatList> list;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("status")
         public Integer status;
 
@@ -224,17 +180,9 @@ public class GetAICoachCheatDetectionResponseBody extends TeaModel {
     }
 
     public static class GetAICoachCheatDetectionResponseBodyVoiceCheatComparisonList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2024-12-11 10:07:23</p>
-         */
         @NameInMap("time")
         public String time;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://demo.com">https://demo.com</a></p>
-         */
         @NameInMap("url")
         public String url;
 
@@ -262,10 +210,6 @@ public class GetAICoachCheatDetectionResponseBody extends TeaModel {
     }
 
     public static class GetAICoachCheatDetectionResponseBodyVoiceCheatOriginalList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://demo.com">https://demo.com</a></p>
-         */
         @NameInMap("url")
         public String url;
 
@@ -288,20 +232,12 @@ public class GetAICoachCheatDetectionResponseBody extends TeaModel {
         @NameInMap("comparisonList")
         public java.util.List<GetAICoachCheatDetectionResponseBodyVoiceCheatComparisonList> comparisonList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("desc")
         public String desc;
 
         @NameInMap("originalList")
         public java.util.List<GetAICoachCheatDetectionResponseBodyVoiceCheatOriginalList> originalList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("status")
         public Integer status;
 

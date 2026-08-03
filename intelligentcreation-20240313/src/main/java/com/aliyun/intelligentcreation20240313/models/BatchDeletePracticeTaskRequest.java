@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchDeletePracticeTaskRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1234567890</p>
-     */
     @NameInMap("idempotentId")
     public String idempotentId;
 

@@ -4,17 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateVideoClipTaskResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>86A90C40-D1AB-50DA-A4B1-0D545F80F2FE</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>837091359375048704</p>
-     */
     @NameInMap("taskId")
     public String taskId;
 

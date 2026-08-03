@@ -4,31 +4,15 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class OperateAvatarProjectRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>DELETE</p>
-     */
     @NameInMap("operateType")
     public String operateType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>812907463682949120</p>
-     */
     @NameInMap("projectId")
     public String projectId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("resChannelNumber")
     public Integer resChannelNumber;
 
-    /**
-     * <strong>example:</strong>
-     * <p>FREE</p>
-     */
     @NameInMap("resType")
     public String resType;
 

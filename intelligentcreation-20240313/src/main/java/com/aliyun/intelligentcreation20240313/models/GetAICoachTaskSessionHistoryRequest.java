@@ -10,17 +10,9 @@ public class GetAICoachTaskSessionHistoryRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
     @NameInMap("sessionId")
     public String sessionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1251317954812712</p>
-     */
     @NameInMap("uid")
     public String uid;
 

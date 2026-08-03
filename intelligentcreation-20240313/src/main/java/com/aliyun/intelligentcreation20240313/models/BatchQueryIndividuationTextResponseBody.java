@@ -4,12 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class BatchQueryIndividuationTextResponseBody extends TeaModel {
-    /**
-     * <p>Id of the request</p>
-     * 
-     * <strong>example:</strong>
-     * <p>14878724-A835-578D-9DD5-4779ADCE9221</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -41,66 +35,30 @@ public class BatchQueryIndividuationTextResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>yyyy-MM-dd HH:mm:ss</p>
-         */
         @NameInMap("createTime")
         public String createTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("errorMsg")
         public String errorMsg;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2849286</p>
-         */
         @NameInMap("itemId")
         public String itemId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>812884915104530432</p>
-         */
         @NameInMap("projectId")
         public String projectId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("status")
         public String status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>837074737851613184</p>
-         */
         @NameInMap("taskId")
         public String taskId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>110825</p>
-         */
         @NameInMap("textId")
         public String textId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>yyyy-MM-dd HH:mm:ss</p>
-         */
         @NameInMap("updateTime")
         public String updateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("userId")
         public String userId;
 

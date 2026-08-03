@@ -4,10 +4,6 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetTextTemplateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>Car</p>
-     */
     @NameInMap("industry")
     public String industry;
 

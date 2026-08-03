@@ -4,34 +4,18 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class QueryAvatarProjectResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1000222</p>
-     */
     @NameInMap("agentId")
     public String agentId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>error</p>
-     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
     @NameInMap("frames")
     public java.util.List<QueryAvatarProjectResponseBodyFrames> frames;
 
-    /**
-     * <strong>example:</strong>
-     * <p>doc_test_3</p>
-     */
     @NameInMap("projectName")
     public String projectName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2C331582-7390-5949-8D9A-AC8239185B37</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -44,10 +28,6 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     @NameInMap("scriptModelTag")
     public String scriptModelTag;
 
-    /**
-     * <strong>example:</strong>
-     * <p>DEPLOYING</p>
-     */
     @NameInMap("status")
     public String status;
 
