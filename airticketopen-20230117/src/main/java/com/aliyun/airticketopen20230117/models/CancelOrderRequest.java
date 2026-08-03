@@ -1,0 +1,61 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.airticketopen20230117.models;
+
+import com.aliyun.tea.*;
+
+public class CancelOrderRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
+    @NameInMap("AccountNo")
+    public Long accountNo;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SO202606290001</p>
+     */
+    @NameInMap("OrderNo")
+    public String orderNo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>TraceId</p>
+     */
+    @NameInMap("TracerId")
+    public String tracerId;
+
+    public static CancelOrderRequest build(java.util.Map<String, ?> map) throws Exception {
+        CancelOrderRequest self = new CancelOrderRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CancelOrderRequest setAccountNo(Long accountNo) {
+        this.accountNo = accountNo;
+        return this;
+    }
+    public Long getAccountNo() {
+        return this.accountNo;
+    }
+
+    public CancelOrderRequest setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
+        return this;
+    }
+    public String getOrderNo() {
+        return this.orderNo;
+    }
+
+    public CancelOrderRequest setTracerId(String tracerId) {
+        this.tracerId = tracerId;
+        return this;
+    }
+    public String getTracerId() {
+        return this.tracerId;
+    }
+
+}
