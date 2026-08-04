@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeviceStatusInfoRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
@@ -25,6 +26,7 @@ public class GetDeviceStatusInfoRequest extends TeaModel {
 
     public static class GetDeviceStatusInfoRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the project to which the product belongs. You can view it in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class GetDeviceStatusInfoRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Set this parameter to <strong>PROJECT_ID</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -43,6 +46,7 @@ public class GetDeviceStatusInfoRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device identifier. Specify the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -52,6 +56,11 @@ public class GetDeviceStatusInfoRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The Type of the Device ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: The default device ID identity.  </li>
+         * <li>UNION_ID: The organization-dimension device ID identity. You must request an organization in the Open Platform in advance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +70,8 @@ public class GetDeviceStatusInfoRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID of the device. This parameter is required if IdType is set to UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

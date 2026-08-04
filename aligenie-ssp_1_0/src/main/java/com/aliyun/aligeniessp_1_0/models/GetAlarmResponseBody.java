@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class GetAlarmResponseBody extends TeaModel {
     /**
+     * <p>Status code returned by the alarm service</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id为空</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>43<em><strong>28C-A810-5</strong></em>-8747-EC226A086881</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Alarm details</p>
+     */
     @NameInMap("Result")
     public GetAlarmResponseBodyResult result;
 
@@ -63,26 +76,44 @@ public class GetAlarmResponseBody extends TeaModel {
 
     public static class GetAlarmResponseBodyResultMusicInfo extends TeaModel {
         /**
+         * <p>Ringtone ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("MusicId")
         public Long musicId;
 
+        /**
+         * <p>Ringtone Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx铃声</p>
+         */
         @NameInMap("MusicName")
         public String musicName;
 
         /**
+         * <p>Ringtone Category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("MusicType")
         public Long musicType;
 
+        /**
+         * <p>Ringtone Category Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx音乐</p>
+         */
         @NameInMap("MusicTypeName")
         public String musicTypeName;
 
         /**
+         * <p>Ringtone URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
          */
@@ -138,6 +169,8 @@ public class GetAlarmResponseBody extends TeaModel {
 
     public static class GetAlarmResponseBodyResultScheduleInfoOnce extends TeaModel {
         /**
+         * <p>Trigger time: Day</p>
+         * 
          * <strong>example:</strong>
          * <p>29</p>
          */
@@ -145,6 +178,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public Integer day;
 
         /**
+         * <p>Trigger Time: Hour</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -152,6 +187,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger Time: Minute</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -159,6 +196,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public Integer minute;
 
         /**
+         * <p>Trigger Time: Month</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -166,6 +205,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public Integer month;
 
         /**
+         * <p>Trigger Time: Year</p>
+         * 
          * <strong>example:</strong>
          * <p>2022</p>
          */
@@ -221,6 +262,8 @@ public class GetAlarmResponseBody extends TeaModel {
 
     public static class GetAlarmResponseBodyResultScheduleInfoStatutoryWorkingDay extends TeaModel {
         /**
+         * <p>Trigger Time: Hour</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -228,6 +271,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger Time: Minute</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -258,10 +303,15 @@ public class GetAlarmResponseBody extends TeaModel {
     }
 
     public static class GetAlarmResponseBodyResultScheduleInfoWeekly extends TeaModel {
+        /**
+         * <p>Collection of days of the week to trigger: Numeric values between 1 and 7, where each number corresponds to a specific day of the week. If triggered every day, include all numbers.</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>Trigger time: Hour</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -269,6 +319,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger time: Minute</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -307,19 +359,30 @@ public class GetAlarmResponseBody extends TeaModel {
     }
 
     public static class GetAlarmResponseBodyResultScheduleInfo extends TeaModel {
+        /**
+         * <p>One-time: This property is active when the loop type is ONCE.</p>
+         */
         @NameInMap("Once")
         public GetAlarmResponseBodyResultScheduleInfoOnce once;
 
+        /**
+         * <p>Statutory working day: This property is active when the loop Type is STATUTORYWORKINGDAY.</p>
+         */
         @NameInMap("StatutoryWorkingDay")
         public GetAlarmResponseBodyResultScheduleInfoStatutoryWorkingDay statutoryWorkingDay;
 
         /**
+         * <p>Schedule Type / Loop Type: ONCE -&gt; One-time, WEEKLY -&gt; Weekly loop, STATUTORYWORKINGDAY -&gt; Statutory working day</p>
+         * 
          * <strong>example:</strong>
          * <p>ONCE</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Weekly loop: This property is active when the loop Type is WEEKLY.</p>
+         */
         @NameInMap("Weekly")
         public GetAlarmResponseBodyResultScheduleInfoWeekly weekly;
 
@@ -364,22 +427,38 @@ public class GetAlarmResponseBody extends TeaModel {
 
     public static class GetAlarmResponseBodyResult extends TeaModel {
         /**
+         * <p>Alarm ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567</p>
          */
         @NameInMap("AlarmId")
         public Long alarmId;
 
+        /**
+         * <p>Ringtone Information</p>
+         */
         @NameInMap("MusicInfo")
         public GetAlarmResponseBodyResultMusicInfo musicInfo;
 
+        /**
+         * <p>Schedule Information</p>
+         */
         @NameInMap("ScheduleInfo")
         public GetAlarmResponseBodyResultScheduleInfo scheduleInfo;
 
+        /**
+         * <p>Chinese description of the loop type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>单次</p>
+         */
         @NameInMap("ScheduleTypeDesc")
         public String scheduleTypeDesc;
 
         /**
+         * <p>status: 0 Normal, 1 deleted, 2 shutdown</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -387,6 +466,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Trigger date description (one-time)</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-29</p>
          */
@@ -394,6 +475,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public String triggerDateDesc;
 
         /**
+         * <p>Trigger time description</p>
+         * 
          * <strong>example:</strong>
          * <p>10:00</p>
          */
@@ -401,6 +484,8 @@ public class GetAlarmResponseBody extends TeaModel {
         public String triggerTimeDesc;
 
         /**
+         * <p>Ringtone volume</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */

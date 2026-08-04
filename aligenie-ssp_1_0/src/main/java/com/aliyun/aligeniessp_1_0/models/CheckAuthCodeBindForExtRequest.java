@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAuthCodeBindForExtRequest extends TeaModel {
     /**
+     * <p>The authCode obtained by specifying a user ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
     public String authCode;
 
     /**
+     * <p>The value corresponding to the encoding type. Enter the Project ID of the project containing the ProductKey of this product in the Tmall Genie AI platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
     public String encodeKey;
 
     /**
+     * <p>Encoding type. Enter PROJECT_ID here.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
     public String encodeType;
 
     /**
+     * <p>List of user identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -76,6 +80,7 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
 
     public static class CheckAuthCodeBindForExtRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. Enter the Project ID of the product\&quot;s project here. You can view it in the Tmall Genie AI platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,6 +90,7 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,6 +100,7 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier. Enter the value of userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,6 +110,7 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of User ID:<br>OPEN_ID: The default User ID identity.<br>UNION_ID: The User ID identity at the organization dimension, which requires prior request for an organization on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +120,8 @@ public class CheckAuthCodeBindForExtRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1***2</p>
          */

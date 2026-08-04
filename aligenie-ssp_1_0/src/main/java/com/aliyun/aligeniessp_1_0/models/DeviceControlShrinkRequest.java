@@ -4,10 +4,14 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class DeviceControlShrinkRequest extends TeaModel {
+    /**
+     * <p>Input parameters for volume control</p>
+     */
     @NameInMap("ControlRequest")
     public String controlRequestShrink;
 
     /**
+     * <p>List of device ID information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")

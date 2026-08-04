@@ -4,10 +4,15 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class AddSubResponseBody extends TeaModel {
+    /**
+     * <p>Status code. A value of 200 indicates success.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,12 +20,17 @@ public class AddSubResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B99D27ED-4E12-1414-9FDE-599C57C4B204</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Result")
     public AddSubResponseBodyResult result;
 
@@ -62,10 +72,15 @@ public class AddSubResponseBody extends TeaModel {
     }
 
     public static class AddSubResponseBodyResultScheduleInfo extends TeaModel {
+        /**
+         * <p>The epoch for trigger</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>The hour of the clock when the trigger occurs.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -73,6 +88,8 @@ public class AddSubResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>The minute of the Time when the trigger occurs.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -112,6 +129,8 @@ public class AddSubResponseBody extends TeaModel {
 
     public static class AddSubResponseBodyResult extends TeaModel {
         /**
+         * <p>Album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>51999575</p>
          */
@@ -119,6 +138,8 @@ public class AddSubResponseBody extends TeaModel {
         public String albumId;
 
         /**
+         * <p>Daily study quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -126,6 +147,8 @@ public class AddSubResponseBody extends TeaModel {
         public Integer dailyStudyCnt;
 
         /**
+         * <p>Device ID</p>
+         * 
          * <strong>example:</strong>
          * <p>5874DBCCA3038FAA1A70A8060F07F26D</p>
          */
@@ -133,6 +156,8 @@ public class AddSubResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Subscription record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -140,16 +165,23 @@ public class AddSubResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Playback mode</p>
+         * 
          * <strong>example:</strong>
          * <p>sequence</p>
          */
         @NameInMap("PlayMode")
         public String playMode;
 
+        /**
+         * <p>Schedule information</p>
+         */
         @NameInMap("ScheduleInfo")
         public AddSubResponseBodyResultScheduleInfo scheduleInfo;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1152893538998276761</p>
          */

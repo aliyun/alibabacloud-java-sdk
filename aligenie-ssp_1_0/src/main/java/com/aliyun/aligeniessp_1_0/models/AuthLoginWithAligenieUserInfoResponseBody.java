@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AuthLoginWithAligenieUserInfoResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AuthLoginWithAligenieUserInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,16 +23,23 @@ public class AuthLoginWithAligenieUserInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response Result</p>
+     */
     @NameInMap("Result")
     public AuthLoginWithAligenieUserInfoResponseBodyResult result;
 
     /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class AuthLoginWithAligenieUserInfoResponseBody extends TeaModel {
 
     public static class AuthLoginWithAligenieUserInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Expiration time of the login state access token (long integer)</p>
+         * 
          * <strong>example:</strong>
          * <p>1659506854230</p>
          */
@@ -89,6 +102,8 @@ public class AuthLoginWithAligenieUserInfoResponseBody extends TeaModel {
         public Long expiredTimeLong;
 
         /**
+         * <p>Login state access token</p>
+         * 
          * <strong>example:</strong>
          * <p>d15aa92de679d0d225aa845268be19ee</p>
          */

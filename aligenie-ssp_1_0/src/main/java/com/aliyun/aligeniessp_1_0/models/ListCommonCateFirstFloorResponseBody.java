@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCommonCateFirstFloorResponseBody extends TeaModel {
     /**
+     * <p>Code encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListCommonCateFirstFloorResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Message information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListCommonCateFirstFloorResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F12B6147-5925-19E5-A3AD-E1EE1360F34E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListCommonCateFirstFloorResponseBodyResult> result;
 
@@ -67,16 +76,26 @@ public class ListCommonCateFirstFloorResponseBody extends TeaModel {
 
     public static class ListCommonCateFirstFloorResponseBodyResult extends TeaModel {
         /**
+         * <p>Category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80012</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>Category name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>有声内容</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
         /**
+         * <p>Parent category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

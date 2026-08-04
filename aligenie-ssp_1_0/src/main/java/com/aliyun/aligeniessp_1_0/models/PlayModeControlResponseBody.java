@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PlayModeControlResponseBody extends TeaModel {
     /**
+     * <p>Return code of the invocation</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class PlayModeControlResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information, typically used to briefly describe a failed invocation to help the caller troubleshoot the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,16 +23,23 @@ public class PlayModeControlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10002398812</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Actual return result of the service</p>
+     */
     @NameInMap("Result")
     public PlayModeControlResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the invocation succeeded. true indicates success, and false indicates failure. When the value is false, check the Message field for details.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,9 @@ public class PlayModeControlResponseBody extends TeaModel {
 
     public static class PlayModeControlResponseBodyResult extends TeaModel {
         /**
+         * <p>Playback mode</p>
+         * <p>List loop: Repeat; Shuffle: Shuffle; Single-track loop: RepeatOne; NAT mode: Normal;</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */

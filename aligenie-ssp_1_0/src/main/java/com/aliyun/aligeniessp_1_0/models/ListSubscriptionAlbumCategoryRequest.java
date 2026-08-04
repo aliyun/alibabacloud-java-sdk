@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSubscriptionAlbumCategoryRequest extends TeaModel {
     /**
+     * <p>Category name</p>
+     * 
      * <strong>example:</strong>
      * <p>儿歌</p>
      */

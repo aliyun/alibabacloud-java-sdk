@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListSubShrinkRequest extends TeaModel {
     /**
+     * <p>Device Information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Pagination Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Page")
     public String pageShrink;
 
     /**
+     * <p>User information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

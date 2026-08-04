@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListPlayHistoryRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public ListPlayHistoryRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Request Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Request")
     public ListPlayHistoryRequestRequest request;
 
     /**
+     * <p>User identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class ListPlayHistoryRequest extends TeaModel {
 
     public static class ListPlayHistoryRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type  </p>
+         * <p>When the encoding type is SKILL_ID, this value is the application\&quot;s Skill ID.<br>When the encoding type is PACKAGE_NAME, this value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +67,8 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <p>PACKAGE_NAME: APK package name, used for Android application client-side identification.<br>SKILL_ID: Skill ID, used for cloud-based identification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +78,7 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to either deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +88,8 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID  </p>
+         * <p>OPEN_ID: Default device ID identity.<br>UNION_ID: Organization-dimension device ID identity. This value is available only after an organization has been registered on the Tmall Genie Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +99,7 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +157,8 @@ public class ListPlayHistoryRequest extends TeaModel {
 
     public static class ListPlayHistoryRequestRequest extends TeaModel {
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +166,8 @@ public class ListPlayHistoryRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -160,6 +175,8 @@ public class ListPlayHistoryRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Type of content: music, program (audiobook), story, children_song, or radio</p>
+         * 
          * <strong>example:</strong>
          * <p>music</p>
          */
@@ -199,6 +216,9 @@ public class ListPlayHistoryRequest extends TeaModel {
 
     public static class ListPlayHistoryRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <p>When the encoding type is SKILL_ID, the value is the Skill ID of the application.
+         * When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +228,9 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>The encoding type. There are multiple ways to obtain the User Identifier for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p>PACKAGE_NAME: The APK package name. This is the encoding type for the Android application customer link.
+         * SKILL_ID: The skill ID. This is the encoding type for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +240,7 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>The User Identifier, which can be set to userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +250,9 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of User ID.</p>
+         * <p>OPEN_ID: The default User ID identity.
+         * UNION_ID: The organization-dimension User ID identity. This value is available only after an organization has been requested on the Tmall Genie Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,6 +262,7 @@ public class ListPlayHistoryRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>The organization ID. This field is required when IdType is set to UNION_ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

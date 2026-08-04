@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeviceByUserIdShrinkRequest extends TeaModel {
     /**
+     * <p>List of User Identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

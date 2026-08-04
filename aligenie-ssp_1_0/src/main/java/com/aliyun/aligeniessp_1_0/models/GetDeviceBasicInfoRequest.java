@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeviceBasicInfoRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
@@ -25,6 +26,7 @@ public class GetDeviceBasicInfoRequest extends TeaModel {
 
     public static class GetDeviceBasicInfoRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the project to which this product belongs. You can view it in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class GetDeviceBasicInfoRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter <strong>PROJECT_ID</strong> here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -43,6 +46,7 @@ public class GetDeviceBasicInfoRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Enter the value of either deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -52,6 +56,11 @@ public class GetDeviceBasicInfoRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: The default device ID.  </li>
+         * <li>UNION_ID: The organization-dimension device ID. You must request an organization in the Open Platform in advance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +70,8 @@ public class GetDeviceBasicInfoRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

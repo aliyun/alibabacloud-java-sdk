@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ProgressControlResponseBody extends TeaModel {
     /**
+     * <p>Return code of the invocation</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ProgressControlResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information. In typical scenarios, this provides a brief description of a failed invocation to help the caller identify the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class ProgressControlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10002398812</p>
      */
@@ -26,6 +32,8 @@ public class ProgressControlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Actual return result of the service</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class ProgressControlResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the invocation succeeded. true indicates success, and false indicates failure. When the invocation fails, pay attention to the Message field.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

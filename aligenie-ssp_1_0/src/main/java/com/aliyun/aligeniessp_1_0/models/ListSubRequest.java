@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListSubRequest extends TeaModel {
     /**
+     * <p>Device Information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public ListSubRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Pagination Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Page")
     public ListSubRequestPage page;
 
     /**
+     * <p>User information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -140,6 +143,8 @@ public class ListSubRequest extends TeaModel {
 
     public static class ListSubRequestPage extends TeaModel {
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -147,6 +152,8 @@ public class ListSubRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of entries per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

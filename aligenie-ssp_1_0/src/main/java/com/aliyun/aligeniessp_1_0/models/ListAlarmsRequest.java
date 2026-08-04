@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListAlarmsRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public ListAlarmsRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public ListAlarmsRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,7 @@ public class ListAlarmsRequest extends TeaModel {
 
     public static class ListAlarmsRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +66,7 @@ public class ListAlarmsRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used in the Android application customer link; SKILL_ID: skill ID, used in the cloud link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +76,7 @@ public class ListAlarmsRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +86,7 @@ public class ListAlarmsRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Device ID type: OPEN_ID: default device ID; UNION_ID: organization-level device ID, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +96,8 @@ public class ListAlarmsRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,6 +153,8 @@ public class ListAlarmsRequest extends TeaModel {
 
     public static class ListAlarmsRequestPayload extends TeaModel {
         /**
+         * <p>Current page</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -151,6 +162,8 @@ public class ListAlarmsRequest extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>Number of entries per page: maximum value is 100</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -182,6 +195,7 @@ public class ListAlarmsRequest extends TeaModel {
 
     public static class ListAlarmsRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +205,7 @@ public class ListAlarmsRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME refers to the APK package name, which is the encoding type for the Android application customer link; SKILL_ID refers to the skill ID, which is the encoding type for the cloud link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +215,7 @@ public class ListAlarmsRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +225,11 @@ public class ListAlarmsRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: The default User ID identity.  </li>
+         * <li>UNION_ID: The User ID identity at the organization dimension. This is available only after an organization has been requested on the Maojing Skill Application Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +239,8 @@ public class ListAlarmsRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

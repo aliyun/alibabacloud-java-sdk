@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>When the code is 5140003, it indicates that the invocation failed because no account list eligible for authorization login was found for the given phone number. The frontend can prompt the user to confirm generating a Jingle account via the phone number or suggest registering a Taobao account using the phone number first. In subsequent flows, the frontend must return the sessionId from DataObj to the server.</p>
+     */
     @NameInMap("DataObj")
     public FindUserlistToAuthLoginWithPhoneNumberResponseBodyDataObj dataObj;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,15 +29,23 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response Result</p>
+     */
     @NameInMap("Result")
     public FindUserlistToAuthLoginWithPhoneNumberResponseBodyResult result;
 
+    /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -89,6 +104,8 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
 
     public static class FindUserlistToAuthLoginWithPhoneNumberResponseBodyDataObj extends TeaModel {
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>dbe2eb4458302b9246c6da17fbc95f4b</p>
          */
@@ -112,6 +129,8 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
 
     public static class FindUserlistToAuthLoginWithPhoneNumberResponseBodyResultUserListToAuthLogin extends TeaModel {
         /**
+         * <p>Profile picture</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxx">https://xxx</a></p>
          */
@@ -119,6 +138,8 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
         public String avatar;
 
         /**
+         * <p>Encrypted User Identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>KsVgypxAipf+xNECMZV2ONMcheqiIoEGFvgx+T8s1oV6/euTK9+ImYvLVPsSqFDh</p>
          */
@@ -126,6 +147,10 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
         public String encryptedUserIdentifier;
 
         /**
+         * <p>User Search Type  </p>
+         * <p>For Taobao users, the value is fixed as:<br>PHONE_NUMBER_BINDING_WITH_TAOBAO: The phoneNumber is queried as the phone number bound to a Taobao account.  </p>
+         * <p>For Tmall Genie users, the value can be:<br>PHONE_NUMBER_BINDING_WITH_ALIGENIE: The phoneNumber is queried as the phone number bound to a Tmall Genie device;<br>PHONE_NUMBER_BINDING_WITH_TAOBAO: The phoneNumber is queried as the phone number bound to a Taobao account.</p>
+         * 
          * <strong>example:</strong>
          * <p>PHONE_NUMBER_BINDING_WITH_ALIGENIE：phoneNumber</p>
          */
@@ -133,6 +158,8 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
         public String findingType;
 
         /**
+         * <p>Nickname</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
@@ -140,6 +167,8 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
         public String nickname;
 
         /**
+         * <p>User Type<br>TAOBAO: Taobao user<br>ALIGENIE: Tmall Genie user</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIGENIE</p>
          */
@@ -194,6 +223,9 @@ public class FindUserlistToAuthLoginWithPhoneNumberResponseBody extends TeaModel
     }
 
     public static class FindUserlistToAuthLoginWithPhoneNumberResponseBodyResult extends TeaModel {
+        /**
+         * <p>List of accounts eligible for authorization login</p>
+         */
         @NameInMap("UserListToAuthLogin")
         public java.util.List<FindUserlistToAuthLoginWithPhoneNumberResponseBodyResultUserListToAuthLogin> userListToAuthLogin;
 

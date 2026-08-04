@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class SetDeviceSettingShrinkRequest extends TeaModel {
     /**
+     * <p>List of user identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>The collection of keys specified for device settings:<br>Do Not Disturb mode: nightMode</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class SetDeviceSettingShrinkRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>Attribute Value</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;enable&quot;:true}</p>
      */

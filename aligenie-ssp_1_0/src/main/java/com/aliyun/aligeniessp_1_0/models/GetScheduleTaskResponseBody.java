@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class GetScheduleTaskResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>调用成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F7E21065-6C21-1158-A2F9-AEFE5CAB7C94</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Service response parameters</p>
+     */
     @NameInMap("Result")
     public GetScheduleTaskResponseBodyResult result;
 
@@ -63,6 +76,8 @@ public class GetScheduleTaskResponseBody extends TeaModel {
 
     public static class GetScheduleTaskResponseBodyResultActionTopicList extends TeaModel {
         /**
+         * <p>Vendor-defined command</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:{&quot;key&quot;:1}}</p>
          */
@@ -85,10 +100,15 @@ public class GetScheduleTaskResponseBody extends TeaModel {
     }
 
     public static class GetScheduleTaskResponseBodyResult extends TeaModel {
+        /**
+         * <p>Trigger behavior</p>
+         */
         @NameInMap("ActionTopicList")
         public java.util.List<GetScheduleTaskResponseBodyResultActionTopicList> actionTopicList;
 
         /**
+         * <p>Trigger Cron Expression</p>
+         * 
          * <strong>example:</strong>
          * <p>0 10 20 30 6 ? 2022</p>
          */
@@ -96,6 +116,8 @@ public class GetScheduleTaskResponseBody extends TeaModel {
         public String cron;
 
         /**
+         * <p>Validity Period - End Time</p>
+         * 
          * <strong>example:</strong>
          * <p>1659169473000</p>
          */
@@ -103,6 +125,8 @@ public class GetScheduleTaskResponseBody extends TeaModel {
         public String scheduleEndTime;
 
         /**
+         * <p>Job ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567</p>
          */
@@ -110,6 +134,8 @@ public class GetScheduleTaskResponseBody extends TeaModel {
         public Long scheduleId;
 
         /**
+         * <p>Validity Period - Start Time</p>
+         * 
          * <strong>example:</strong>
          * <p>1656577473000</p>
          */
@@ -117,6 +143,8 @@ public class GetScheduleTaskResponseBody extends TeaModel {
         public String scheduleStartTime;
 
         /**
+         * <p>Schedule Type</p>
+         * 
          * <strong>example:</strong>
          * <p>ONCE</p>
          */

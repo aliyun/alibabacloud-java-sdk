@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckAuthCodeBindForExtShrinkRequest extends TeaModel {
     /**
+     * <p>The authCode obtained by specifying a user ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckAuthCodeBindForExtShrinkRequest extends TeaModel {
     public String authCode;
 
     /**
+     * <p>The value corresponding to the encoding type. Enter the Project ID of the project containing the ProductKey of this product in the Tmall Genie AI platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CheckAuthCodeBindForExtShrinkRequest extends TeaModel {
     public String encodeKey;
 
     /**
+     * <p>Encoding type. Enter PROJECT_ID here.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CheckAuthCodeBindForExtShrinkRequest extends TeaModel {
     public String encodeType;
 
     /**
+     * <p>List of user identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

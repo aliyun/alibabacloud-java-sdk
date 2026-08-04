@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class SearchContentRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public SearchContentRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Request Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Request")
     public SearchContentRequestRequest request;
 
     /**
+     * <p>User identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class SearchContentRequest extends TeaModel {
 
     public static class SearchContentRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type.  </p>
+         * <p>When the encoding type is <code>SKILL_ID</code>, the value is the application\&quot;s Skill ID.<br>When the encoding type is <code>PACKAGE_NAME</code>, the value is the <code>packageName</code> of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +67,8 @@ public class SearchContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used for the Android application customer link.<br><code>SKILL_ID</code>: Skill ID, used for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +78,7 @@ public class SearchContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to either <code>deviceOpenId</code> or <code>deviceUnionId</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +88,8 @@ public class SearchContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID.  </p>
+         * <p><code>OPEN_ID</code>: Default device ID identity.<br><code>UNION_ID</code>: Organization-dimension device ID identity. This value is available only after an organization has been registered on the Tmall Genie Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +99,8 @@ public class SearchContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when <code>IdType</code> is <code>UNION_ID</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,6 +156,8 @@ public class SearchContentRequest extends TeaModel {
 
     public static class SearchContentRequestRequest extends TeaModel {
         /**
+         * <p>The search scope: music or audio.<br>Input parameter enumeration: music | program</p>
+         * 
          * <strong>example:</strong>
          * <p>music</p>
          */
@@ -151,6 +165,8 @@ public class SearchContentRequest extends TeaModel {
         public String cate;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -158,16 +174,26 @@ public class SearchContentRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>Query keyword</p>
+         * 
+         * <strong>example:</strong>
+         * <p>周杰伦</p>
+         */
         @NameInMap("Query")
         public String query;
 
         /**
+         * <p>Whether to query albums</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -175,6 +201,9 @@ public class SearchContentRequest extends TeaModel {
         public Boolean queryAlbum;
 
         /**
+         * <p>When <code>cate</code> is <code>music</code>, <code>subCate</code> can be omitted.<br>If <code>subCate</code> is provided, it can be one of the following:<br><code>song</code> (Song), <code>singer</code> (Artist), <code>album</code> (Album).  </p>
+         * <p>When <code>cate</code> is <code>program</code>, <code>subCate</code> can be omitted.<br>If <code>subCate</code> is provided, it can be one of the following:<br><code>album</code> (Album), <code>audio</code> (Program Audio), <code>radio</code> (Radio Station).</p>
+         * 
          * <strong>example:</strong>
          * <p>singer</p>
          */
@@ -238,6 +267,8 @@ public class SearchContentRequest extends TeaModel {
 
     public static class SearchContentRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <p>When the encoding type is SKILL_ID, the value is the Skill ID of the application.<br>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,6 +278,8 @@ public class SearchContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each method corresponds to a different encoding type.  </p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used for the Android application customer link.<br><code>SKILL_ID</code>: Skill ID, used for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,6 +289,7 @@ public class SearchContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier, set to either <code>userOpenId</code> or <code>userUnionId</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,6 +299,8 @@ public class SearchContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The Type of the User ID.</p>
+         * <p>OPEN_ID: The default User ID identity.<br>UNION_ID: The organization-dimension User ID identity. This value is available only after an organization has been requested on the Tmall Genie Skills Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +310,8 @@ public class SearchContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when <code>IdType</code> is <code>UNION_ID</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

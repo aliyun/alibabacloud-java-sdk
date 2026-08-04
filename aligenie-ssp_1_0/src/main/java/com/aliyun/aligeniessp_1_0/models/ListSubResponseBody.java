@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSubResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListSubResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListSubResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0D0C09C2-ADC1-198B-964D-24F4FAD967DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result</p>
+     */
     @NameInMap("Result")
     public ListSubResponseBodyResult result;
 
@@ -66,10 +75,15 @@ public class ListSubResponseBody extends TeaModel {
     }
 
     public static class ListSubResponseBodyResultDataListScheduleInfo extends TeaModel {
+        /**
+         * <p>Trigger epoch</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>Trigger hour</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -77,6 +91,8 @@ public class ListSubResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger minute</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -116,6 +132,8 @@ public class ListSubResponseBody extends TeaModel {
 
     public static class ListSubResponseBodyResultDataList extends TeaModel {
         /**
+         * <p>Album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>51999575</p>
          */
@@ -123,6 +141,8 @@ public class ListSubResponseBody extends TeaModel {
         public String albumId;
 
         /**
+         * <p>Album thumbnail</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg">https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg</a></p>
          */
@@ -130,6 +150,8 @@ public class ListSubResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
+         * <p>Daily study quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -137,6 +159,8 @@ public class ListSubResponseBody extends TeaModel {
         public Integer dailyStudyCnt;
 
         /**
+         * <p>Device ID</p>
+         * 
          * <strong>example:</strong>
          * <p>5874DBCCA3038FAA1A70A8060F07F26D</p>
          */
@@ -144,6 +168,8 @@ public class ListSubResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Subscription record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -151,16 +177,23 @@ public class ListSubResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Playback mode</p>
+         * 
          * <strong>example:</strong>
          * <p>sequence</p>
          */
         @NameInMap("PlayMode")
         public String playMode;
 
+        /**
+         * <p>Schedule information</p>
+         */
         @NameInMap("ScheduleInfo")
         public ListSubResponseBodyResultDataListScheduleInfo scheduleInfo;
 
         /**
+         * <p>Album title</p>
+         * 
          * <strong>example:</strong>
          * <p>小科学家探索</p>
          */
@@ -168,6 +201,8 @@ public class ListSubResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1152893538998276761</p>
          */
@@ -254,13 +289,21 @@ public class ListSubResponseBody extends TeaModel {
     }
 
     public static class ListSubResponseBodyResult extends TeaModel {
+        /**
+         * <p>Subscription list</p>
+         */
         @NameInMap("DataList")
         public java.util.List<ListSubResponseBodyResultDataList> dataList;
 
+        /**
+         * <p>Is there a next page</p>
+         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
         /**
+         * <p>Total number of data entries</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -268,6 +311,8 @@ public class ListSubResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

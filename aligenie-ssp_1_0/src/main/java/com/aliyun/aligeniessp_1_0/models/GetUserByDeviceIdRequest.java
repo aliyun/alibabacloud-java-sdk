@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserByDeviceIdRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
@@ -25,6 +26,7 @@ public class GetUserByDeviceIdRequest extends TeaModel {
 
     public static class GetUserByDeviceIdRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Set this parameter to the Project ID of the product’s ProductKey in the Tmall Genie AI platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class GetUserByDeviceIdRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Set this parameter to <strong>PROJECT_ID</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -43,6 +46,7 @@ public class GetUserByDeviceIdRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device identifier, configured as either deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -52,6 +56,11 @@ public class GetUserByDeviceIdRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the device ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: The default device ID.  </li>
+         * <li>UNION_ID: The organization-dimension device ID. You must request an organization on the Open Platform in advance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +70,8 @@ public class GetUserByDeviceIdRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is set to UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

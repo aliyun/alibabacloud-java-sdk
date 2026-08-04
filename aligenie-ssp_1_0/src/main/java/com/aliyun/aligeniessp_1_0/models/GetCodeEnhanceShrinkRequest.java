@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetCodeEnhanceShrinkRequest extends TeaModel {
     /**
+     * <p>Activation Channel, such as WeChat mini program or third-party app.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelInfo")
     public String channelInfoShrink;
 
     /**
+     * <p>List of User Identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

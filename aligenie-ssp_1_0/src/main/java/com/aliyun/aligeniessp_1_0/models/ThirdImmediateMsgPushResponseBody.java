@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ThirdImmediateMsgPushResponseBody extends TeaModel {
     /**
+     * <p>error code</p>
+     * 
      * <strong>example:</strong>
      * <p>500000000</p>
      */
@@ -12,15 +14,23 @@ public class ThirdImmediateMsgPushResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>服务器内部异常</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>push result</p>
+     */
     @NameInMap("Model")
     public ThirdImmediateMsgPushResponseBodyModel model;
 
+    /**
+     * <p>whether the invocation succeeded</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -63,12 +73,17 @@ public class ThirdImmediateMsgPushResponseBody extends TeaModel {
 
     public static class ThirdImmediateMsgPushResponseBodyModel extends TeaModel {
         /**
+         * <p>request ID</p>
+         * 
          * <strong>example:</strong>
          * <p>2DF6FEFE-3301-16DD-ABCC-968A9524920B</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>whether the push succeeded</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

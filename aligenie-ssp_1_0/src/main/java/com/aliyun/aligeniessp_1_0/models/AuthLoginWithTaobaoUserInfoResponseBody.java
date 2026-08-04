@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AuthLoginWithTaobaoUserInfoResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AuthLoginWithTaobaoUserInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,15 +23,23 @@ public class AuthLoginWithTaobaoUserInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response Result</p>
+     */
     @NameInMap("Result")
     public AuthLoginWithTaobaoUserInfoResponseBodyResult result;
 
+    /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -78,6 +90,8 @@ public class AuthLoginWithTaobaoUserInfoResponseBody extends TeaModel {
 
     public static class AuthLoginWithTaobaoUserInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Expiration time of the login state access token (long integer)</p>
+         * 
          * <strong>example:</strong>
          * <p>1659506854230</p>
          */
@@ -85,6 +99,8 @@ public class AuthLoginWithTaobaoUserInfoResponseBody extends TeaModel {
         public Long expiredTimeLong;
 
         /**
+         * <p>Login state access token</p>
+         * 
          * <strong>example:</strong>
          * <p>d15aa92de679d0d225aa845268be19ee</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>When Code is 5140001, it indicates that logon failed because the third-party user is not attached to a Tmall Genie user. The frontend must initiate the phone number authorization logon flow based on this error code. In subsequent steps, the frontend must return the SessionId in DataObj to the server.</p>
+     */
     @NameInMap("DataObj")
     public AuthLoginWithThirdUserInfoResponseBodyDataObj dataObj;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,16 +29,23 @@ public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response Result</p>
+     */
     @NameInMap("Result")
     public AuthLoginWithThirdUserInfoResponseBodyResult result;
 
     /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +107,8 @@ public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
 
     public static class AuthLoginWithThirdUserInfoResponseBodyDataObj extends TeaModel {
         /**
+         * <p>Session ID</p>
+         * 
          * <strong>example:</strong>
          * <p>dbe2eb4458302b9246c6da17fbc95f4b</p>
          */
@@ -116,6 +132,8 @@ public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
 
     public static class AuthLoginWithThirdUserInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Expiration time of the logon state access token</p>
+         * 
          * <strong>example:</strong>
          * <p>1659428051452</p>
          */
@@ -123,6 +141,8 @@ public class AuthLoginWithThirdUserInfoResponseBody extends TeaModel {
         public Long expiredTimeLong;
 
         /**
+         * <p>Logon state access token</p>
+         * 
          * <strong>example:</strong>
          * <p>bd9ccdb121ee950ddead51e943e081fe</p>
          */

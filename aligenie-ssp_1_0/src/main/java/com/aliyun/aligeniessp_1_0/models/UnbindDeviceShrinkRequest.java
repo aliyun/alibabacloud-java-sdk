@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UnbindDeviceShrinkRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>List of user identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

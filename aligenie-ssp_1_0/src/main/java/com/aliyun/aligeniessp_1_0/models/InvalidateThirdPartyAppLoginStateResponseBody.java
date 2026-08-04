@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InvalidateThirdPartyAppLoginStateResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class InvalidateThirdPartyAppLoginStateResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -28,6 +32,8 @@ public class InvalidateThirdPartyAppLoginStateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

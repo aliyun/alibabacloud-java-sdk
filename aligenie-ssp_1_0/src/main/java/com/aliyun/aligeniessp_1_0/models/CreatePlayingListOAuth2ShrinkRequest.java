@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreatePlayingListOAuth2ShrinkRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenCreatePlayingListRequest")

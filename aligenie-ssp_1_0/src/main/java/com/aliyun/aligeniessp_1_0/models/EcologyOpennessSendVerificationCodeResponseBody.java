@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EcologyOpennessSendVerificationCodeResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class EcologyOpennessSendVerificationCodeResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,15 +23,23 @@ public class EcologyOpennessSendVerificationCodeResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response Result</p>
+     */
     @NameInMap("Result")
     public EcologyOpennessSendVerificationCodeResponseBodyResult result;
 
+    /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -78,6 +90,8 @@ public class EcologyOpennessSendVerificationCodeResponseBody extends TeaModel {
 
     public static class EcologyOpennessSendVerificationCodeResponseBodyResult extends TeaModel {
         /**
+         * <p>Validity Period (unit: seconds)</p>
+         * 
          * <strong>example:</strong>
          * <p>900</p>
          */
@@ -85,6 +99,8 @@ public class EcologyOpennessSendVerificationCodeResponseBody extends TeaModel {
         public Integer expireIn;
 
         /**
+         * <p>Recency before the next resend is allowed (unit: seconds)</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */

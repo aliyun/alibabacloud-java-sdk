@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class ListMusicResponseBody extends TeaModel {
     /**
+     * <p>Status code returned by the alarm service</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>音乐类型名称为空</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>43<em><strong>28C-A810-5</strong></em>-8747-EC226A086881</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>collection of ringtone query results</p>
+     */
     @NameInMap("Result")
     public ListMusicResponseBodyResult result;
 
@@ -63,6 +76,8 @@ public class ListMusicResponseBody extends TeaModel {
 
     public static class ListMusicResponseBodyResultModel extends TeaModel {
         /**
+         * <p>Ringtone ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,6 +85,8 @@ public class ListMusicResponseBody extends TeaModel {
         public Long musicId;
 
         /**
+         * <p>Ringtone name</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -77,6 +94,8 @@ public class ListMusicResponseBody extends TeaModel {
         public String musicName;
 
         /**
+         * <p>Ringtone category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -84,6 +103,8 @@ public class ListMusicResponseBody extends TeaModel {
         public Long musicType;
 
         /**
+         * <p>Ringtone category name</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */
@@ -91,6 +112,8 @@ public class ListMusicResponseBody extends TeaModel {
         public String musicTypeName;
 
         /**
+         * <p>Ringtone URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
          */
@@ -146,16 +169,23 @@ public class ListMusicResponseBody extends TeaModel {
 
     public static class ListMusicResponseBodyResult extends TeaModel {
         /**
+         * <p>Current page</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>List of ringtones</p>
+         */
         @NameInMap("Model")
         public java.util.List<ListMusicResponseBodyResultModel> model;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -163,6 +193,8 @@ public class ListMusicResponseBody extends TeaModel {
         public Integer pageCount;
 
         /**
+         * <p>Number of entries per page: maximum value is 100; values exceeding 100 are treated as 100</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -170,6 +202,8 @@ public class ListMusicResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of entries</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

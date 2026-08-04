@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendMessageShrinkRequest extends TeaModel {
     /**
+     * <p>Message URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xx">http://xx</a></p>
      */

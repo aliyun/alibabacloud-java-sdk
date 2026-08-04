@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeviceTagShrinkRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")

@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class AddAndRemoveFavoriteContentRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public AddAndRemoveFavoriteContentRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenAddAndRemoveFavoriteContentRequest")
     public AddAndRemoveFavoriteContentRequestOpenAddAndRemoveFavoriteContentRequest openAddAndRemoveFavoriteContentRequest;
 
     /**
+     * <p>User identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
 
     public static class AddAndRemoveFavoriteContentRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type</p>
+         * <p>When the encoding type is <code>SKILL_ID</code>, the value is the Skill ID of the application. When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +67,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used for the Android application customer link. <code>SKILL_ID</code>: Skill ID, used for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +78,7 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +88,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID</p>
+         * <p><code>OPEN_ID</code>: Default device ID identifier. <code>UNION_ID</code>: Device ID identifier at the organization dimension. This value is available only after an organization has been registered on the Tmall Genie Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +99,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -143,10 +155,14 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
     }
 
     public static class AddAndRemoveFavoriteContentRequestOpenAddAndRemoveFavoriteContentRequestOpenSourceRawIdPair extends TeaModel {
+        /**
+         * <p>Extension information</p>
+         */
         @NameInMap("ExtendInfo")
         public java.util.Map<String, ?> extendInfo;
 
         /**
+         * <p>Third-party ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +172,7 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +214,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
 
     public static class AddAndRemoveFavoriteContentRequestOpenAddAndRemoveFavoriteContentRequest extends TeaModel {
         /**
+         * <p>Operation Type</p>
+         * <p>ADD for collect; REMOVE for remove from favorites</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,12 +225,15 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String favoriteCmd;
 
         /**
+         * <p>Object to collect or remove from favorites</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("OpenSourceRawIdPair")
         public AddAndRemoveFavoriteContentRequestOpenAddAndRemoveFavoriteContentRequestOpenSourceRawIdPair openSourceRawIdPair;
 
         /**
+         * <p>Content type</p>
+         * <p>Content: CONTENT; Album: ALBUM; Playlist: COLLECT.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +275,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
 
     public static class AddAndRemoveFavoriteContentRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <p>When the encoding type is <code>SKILL_ID</code>, the value is the Skill ID of the application. When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +286,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used for the Android application customer link. <code>SKILL_ID</code>: Skill ID, used for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +297,7 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier, set to userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,6 +307,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of User ID.</p>
+         * <p><code>OPEN_ID</code>: The default User ID identity. <code>UNION_ID</code>: The organization-dimension User ID identity. This value is available only after an organization has been requested on the Tmall Genie Skills Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,6 +318,8 @@ public class AddAndRemoveFavoriteContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

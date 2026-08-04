@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchContentResponseBody extends TeaModel {
     /**
+     * <p>code encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SearchContentResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>message information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class SearchContentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>return information</p>
+     */
     @NameInMap("Result")
     public java.util.List<SearchContentResponseBodyResult> result;
 
@@ -69,6 +76,8 @@ public class SearchContentResponseBody extends TeaModel {
 
     public static class SearchContentResponseBodyResultAuthorsCover extends TeaModel {
         /**
+         * <p>Indicates whether OSS rules can be used for cropping</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -76,6 +85,8 @@ public class SearchContentResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>Default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -83,6 +94,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -90,6 +103,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -97,6 +112,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -151,16 +168,30 @@ public class SearchContentResponseBody extends TeaModel {
     }
 
     public static class SearchContentResponseBodyResultAuthors extends TeaModel {
+        /**
+         * <p>Author type</p>
+         */
         @NameInMap("AuthorTypes")
         public java.util.List<String> authorTypes;
 
+        /**
+         * <p>Profile picture</p>
+         */
         @NameInMap("Cover")
         public SearchContentResponseBodyResultAuthorsCover cover;
 
+        /**
+         * <p>Author description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Gender</p>
+         * 
          * <strong>example:</strong>
          * <p>MALE</p>
          */
@@ -168,6 +199,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String gender;
 
         /**
+         * <p>Author primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13597709</p>
          */
@@ -175,6 +208,8 @@ public class SearchContentResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Is online</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -182,6 +217,8 @@ public class SearchContentResponseBody extends TeaModel {
         public Boolean online;
 
         /**
+         * <p>Third-party author ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -189,12 +226,20 @@ public class SearchContentResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Author title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -279,6 +324,8 @@ public class SearchContentResponseBody extends TeaModel {
 
     public static class SearchContentResponseBodyResultCover extends TeaModel {
         /**
+         * <p>Indicates whether OSS rules can be used to crop the image</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -286,6 +333,8 @@ public class SearchContentResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>Default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -293,6 +342,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -300,6 +351,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image (Deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -307,6 +360,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String mediam;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -314,6 +369,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -377,26 +434,38 @@ public class SearchContentResponseBody extends TeaModel {
 
     public static class SearchContentResponseBodyResult extends TeaModel {
         /**
+         * <p>The corresponding album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13123</p>
          */
         @NameInMap("AlbumId")
         public String albumId;
 
+        /**
+         * <p>Alias</p>
+         */
         @NameInMap("Alias")
         public java.util.List<String> alias;
 
         /**
+         * <p>Is audition available</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Audition")
         public Boolean audition;
 
+        /**
+         * <p>Authors of the content</p>
+         */
         @NameInMap("Authors")
         public java.util.List<SearchContentResponseBodyResultAuthors> authors;
 
         /**
+         * <p>Transform controlType based on the associated public category</p>
+         * 
          * <strong>example:</strong>
          * <p>audio</p>
          */
@@ -404,6 +473,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Is charged</p>
+         * 
          * <strong>example:</strong>
          * <p>fasle</p>
          */
@@ -411,19 +482,32 @@ public class SearchContentResponseBody extends TeaModel {
         public Boolean charge;
 
         /**
+         * <p>The corresponding category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80012017</p>
          */
         @NameInMap("CommCateId")
         public Long commCateId;
 
+        /**
+         * <p>Album thumbnail image</p>
+         */
         @NameInMap("Cover")
         public SearchContentResponseBodyResultCover cover;
 
+        /**
+         * <p>Content description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Duration information</p>
+         * 
          * <strong>example:</strong>
          * <p>180</p>
          */
@@ -431,6 +515,8 @@ public class SearchContentResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>Popularity score</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -438,6 +524,8 @@ public class SearchContentResponseBody extends TeaModel {
         public Double hotScore;
 
         /**
+         * <p>Content ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13597709</p>
          */
@@ -445,6 +533,8 @@ public class SearchContentResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Type of content, such as music, audio, radio, jokes, etc.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALBUM</p>
          */
@@ -452,6 +542,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String itemType;
 
         /**
+         * <p>Lyric information</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://a1231.lrc">http://a1231.lrc</a></p>
          */
@@ -459,6 +551,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String lyric;
 
         /**
+         * <p>Content sorting value</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -466,19 +560,32 @@ public class SearchContentResponseBody extends TeaModel {
         public String orderIndex;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Music styles</p>
+         */
         @NameInMap("Styles")
         public java.util.List<String> styles;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>超能狂少在都市</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Transform favoriteType based on the associated public category</p>
+         * 
          * <strong>example:</strong>
          * <p>program</p>
          */
@@ -486,6 +593,8 @@ public class SearchContentResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Indicates whether the item is playable</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */

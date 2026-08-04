@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloudPlayerResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CloudPlayerResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -28,6 +32,8 @@ public class CloudPlayerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return Result: true indicates validation succeeded; false indicates validation failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

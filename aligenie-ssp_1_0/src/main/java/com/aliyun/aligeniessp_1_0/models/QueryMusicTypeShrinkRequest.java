@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class QueryMusicTypeShrinkRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>Input parameters for the service request</p>
+     */
     @NameInMap("Payload")
     public String payloadShrink;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

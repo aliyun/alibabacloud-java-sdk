@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPlayHistoryResponseBody extends TeaModel {
     /**
+     * <p>Code encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,17 @@ public class ListPlayHistoryResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Message information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListPlayHistoryResponseBodyResult> result;
 
@@ -69,6 +76,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
 
     public static class ListPlayHistoryResponseBodyResultAuthorsCover extends TeaModel {
         /**
+         * <p>Indicates whether OSS rules can be used for cropping</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -76,6 +85,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>Default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -83,6 +94,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -90,6 +103,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -97,6 +112,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -151,16 +168,30 @@ public class ListPlayHistoryResponseBody extends TeaModel {
     }
 
     public static class ListPlayHistoryResponseBodyResultAuthors extends TeaModel {
+        /**
+         * <p>Author types</p>
+         */
         @NameInMap("AuthorTypes")
         public java.util.List<String> authorTypes;
 
+        /**
+         * <p>Profile picture</p>
+         */
         @NameInMap("Cover")
         public ListPlayHistoryResponseBodyResultAuthorsCover cover;
 
+        /**
+         * <p>Author description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Gender</p>
+         * 
          * <strong>example:</strong>
          * <p>MALE</p>
          */
@@ -168,6 +199,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String gender;
 
         /**
+         * <p>Author primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13597709</p>
          */
@@ -175,6 +208,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Is online</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -182,6 +217,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public Boolean online;
 
         /**
+         * <p>Third-party author ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -189,12 +226,20 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Author title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -279,6 +324,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
 
     public static class ListPlayHistoryResponseBodyResultCover extends TeaModel {
         /**
+         * <p>Indicates whether OSS rules can be used for cropping</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -286,6 +333,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>Default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -293,6 +342,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -300,6 +351,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image (Deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -307,6 +360,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String mediam;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -314,6 +369,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -376,20 +433,30 @@ public class ListPlayHistoryResponseBody extends TeaModel {
     }
 
     public static class ListPlayHistoryResponseBodyResult extends TeaModel {
+        /**
+         * <p>Alias</p>
+         */
         @NameInMap("Alias")
         public java.util.List<String> alias;
 
         /**
+         * <p>Is audition available</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Audition")
         public Boolean audition;
 
+        /**
+         * <p>Authors of the content</p>
+         */
         @NameInMap("Authors")
         public java.util.List<ListPlayHistoryResponseBodyResultAuthors> authors;
 
         /**
+         * <p>Transform controlType based on the category</p>
+         * 
          * <strong>example:</strong>
          * <p>audio</p>
          */
@@ -397,6 +464,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Is charged</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -404,19 +473,32 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public Boolean charge;
 
         /**
+         * <p>Category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80012017</p>
          */
         @NameInMap("CommCateId")
         public Long commCateId;
 
+        /**
+         * <p>Album cover image</p>
+         */
         @NameInMap("Cover")
         public ListPlayHistoryResponseBodyResultCover cover;
 
+        /**
+         * <p>Content description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Hot Score</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -424,6 +506,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public Double hotScore;
 
         /**
+         * <p>Content ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13597709</p>
          */
@@ -431,6 +515,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Type of content, such as music, audio, radio, jokes, etc.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALBUM</p>
          */
@@ -438,16 +524,26 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String itemType;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>超能狂少在都市</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Convert to favoriteType based on the associated public category</p>
+         * 
          * <strong>example:</strong>
          * <p>program</p>
          */
@@ -455,6 +551,8 @@ public class ListPlayHistoryResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Indicates whether the content is playable</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */

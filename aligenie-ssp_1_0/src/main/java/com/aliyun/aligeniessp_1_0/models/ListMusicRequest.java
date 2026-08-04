@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListMusicRequest extends TeaModel {
     /**
+     * <p>Device ID information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public ListMusicRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public ListMusicRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,7 @@ public class ListMusicRequest extends TeaModel {
 
     public static class ListMusicRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type: when the encoding type is SKILL_ID, the value is the application\&quot;s SkillID; when the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +66,7 @@ public class ListMusicRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME refers to the APK package name, used in the Android application customer link; SKILL_ID refers to the skill ID, used in the cloud link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +76,7 @@ public class ListMusicRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +86,7 @@ public class ListMusicRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the device ID: OPEN_ID indicates the default device ID; UNION_ID indicates the organization-dimension device ID, which is available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +96,8 @@ public class ListMusicRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,6 +153,8 @@ public class ListMusicRequest extends TeaModel {
 
     public static class ListMusicRequestPayload extends TeaModel {
         /**
+         * <p>Current page</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -151,16 +162,25 @@ public class ListMusicRequest extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>Ringtone ID, an extension field; currently not required</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("MusicId")
         public Long musicId;
 
+        /**
+         * <p>Ringtone name, an extension field; currently not required to be passed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx铃声</p>
+         */
         @NameInMap("MusicName")
         public String musicName;
 
         /**
+         * <p>Ringtone category ID, returned by the queryMusicType API</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,12 +190,18 @@ public class ListMusicRequest extends TeaModel {
         public Long musicType;
 
         /**
+         * <p>Ringtone category name, returned by the queryMusicType API</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx音乐</p>
          */
         @NameInMap("MusicTypeName")
         public String musicTypeName;
 
         /**
+         * <p>Number of entries per page: maximum value is 100</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -239,6 +265,7 @@ public class ListMusicRequest extends TeaModel {
 
     public static class ListMusicRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,6 +275,7 @@ public class ListMusicRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for Android application customer links; SKILL_ID: skill ID, used for cloud-based links</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,6 +285,7 @@ public class ListMusicRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,6 +295,7 @@ public class ListMusicRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of user ID: OPEN_ID: default user ID identifier; UNION_ID: organization-dimension user ID identifier, available only after an organization has been requested on the Maojing Skill Application Open Platform</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,6 +305,8 @@ public class ListMusicRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID, required if IdType is UNION_ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

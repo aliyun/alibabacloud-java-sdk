@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAligenieUserInfoResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetAligenieUserInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,6 +23,8 @@ public class GetAligenieUserInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
      */
@@ -28,6 +34,9 @@ public class GetAligenieUserInfoResponseBody extends TeaModel {
     @NameInMap("Result")
     public GetAligenieUserInfoResponseBodyResult result;
 
+    /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -78,6 +87,8 @@ public class GetAligenieUserInfoResponseBody extends TeaModel {
 
     public static class GetAligenieUserInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Aligenie user nickname</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
@@ -85,12 +96,17 @@ public class GetAligenieUserInfoResponseBody extends TeaModel {
         public String aligenieNickname;
 
         /**
+         * <p>URL of the Aligenie user profile picture</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://img.alicdn.com/xxx.jpg">http://img.alicdn.com/xxx.jpg</a></p>
          */
         @NameInMap("Avatar")
         public String avatar;
 
+        /**
+         * <p>Indicates whether the account can be logged off</p>
+         */
         @NameInMap("Deletable")
         public Boolean deletable;
 

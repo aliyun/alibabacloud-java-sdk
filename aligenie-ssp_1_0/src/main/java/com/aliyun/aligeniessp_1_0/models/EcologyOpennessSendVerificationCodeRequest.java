@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EcologyOpennessSendVerificationCodeRequest extends TeaModel {
     /**
+     * <p>Phone number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class EcologyOpennessSendVerificationCodeRequest extends TeaModel {
     public String phoneNumber;
 
     /**
+     * <p>Region encoding</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class EcologyOpennessSendVerificationCodeRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

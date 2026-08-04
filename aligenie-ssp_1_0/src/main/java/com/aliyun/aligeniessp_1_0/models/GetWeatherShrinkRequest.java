@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetWeatherShrinkRequest extends TeaModel {
     /**
+     * <p>Device ID information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Input parameters for the service request</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -18,6 +21,7 @@ public class GetWeatherShrinkRequest extends TeaModel {
     public String payloadShrink;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

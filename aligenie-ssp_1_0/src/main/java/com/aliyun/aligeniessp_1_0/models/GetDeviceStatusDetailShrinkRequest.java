@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetDeviceStatusDetailShrinkRequest extends TeaModel {
     /**
+     * <p>List of device identification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>A collection of specified keys for device settings:<br>Player: player<br>Device volume: speaker<br>Battery level: power</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Keys")

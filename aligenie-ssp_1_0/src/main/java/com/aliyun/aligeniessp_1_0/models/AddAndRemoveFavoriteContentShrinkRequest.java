@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class AddAndRemoveFavoriteContentShrinkRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenAddAndRemoveFavoriteContentRequest")
     public String openAddAndRemoveFavoriteContentRequestShrink;
 
     /**
+     * <p>User identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

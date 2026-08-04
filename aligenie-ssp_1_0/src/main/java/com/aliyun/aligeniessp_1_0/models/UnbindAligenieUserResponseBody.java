@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UnbindAligenieUserResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UnbindAligenieUserResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,12 +23,17 @@ public class UnbindAligenieUserResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73C67BD9-175A-1324-8202-9FAABBB3E6FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

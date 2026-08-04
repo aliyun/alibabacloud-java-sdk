@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserMessageRequest extends TeaModel {
     /**
+     * <p>After a specific point in time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-07-27 14:06:55.984</p>
      */
@@ -12,12 +14,15 @@ public class ListUserMessageRequest extends TeaModel {
     public String beforeTime;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
     public ListUserMessageRequestUserInfo userInfo;
 
     /**
+     * <p>Number of records to query</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -55,6 +60,7 @@ public class ListUserMessageRequest extends TeaModel {
 
     public static class ListUserMessageRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILLID, this value is the application\&quot;s Skill ID. When the encoding type is PACKAGENAME, this value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -64,6 +70,7 @@ public class ListUserMessageRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: - PACKAGENAME: APK package name, used for Android application client links - SKILLID: Skill ID, used for cloud-based links</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -73,6 +80,7 @@ public class ListUserMessageRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +90,7 @@ public class ListUserMessageRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of user ID: - OPENID: Default user ID identifier - UNIONID: Organization-level user ID identifier, available only after an organization has been registered on the Maojing skill application Open Platform</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +100,8 @@ public class ListUserMessageRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

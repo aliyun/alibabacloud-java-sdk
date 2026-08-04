@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAlbumResponseBody extends TeaModel {
     /**
+     * <p>Code encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,12 +14,17 @@ public class GetAlbumResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F12B6147-5925-19E5-A3AD-E1EE1360F34E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Result")
     public GetAlbumResponseBodyResult result;
 
@@ -51,10 +58,15 @@ public class GetAlbumResponseBody extends TeaModel {
     }
 
     public static class GetAlbumResponseBodyResultAuthors extends TeaModel {
+        /**
+         * <p>Author types</p>
+         */
         @NameInMap("AuthorTypes")
         public java.util.List<String> authorTypes;
 
         /**
+         * <p>Gender</p>
+         * 
          * <strong>example:</strong>
          * <p>MALE</p>
          */
@@ -62,6 +74,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String gender;
 
         /**
+         * <p>Author primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13123</p>
          */
@@ -69,6 +83,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Is online</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -76,12 +92,20 @@ public class GetAlbumResponseBody extends TeaModel {
         public Boolean online;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qignting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Author title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>超能狂少在都市</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -142,6 +166,8 @@ public class GetAlbumResponseBody extends TeaModel {
 
     public static class GetAlbumResponseBodyResultCover extends TeaModel {
         /**
+         * <p>Indicates whether OSS rules can be used for cropping.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -149,6 +175,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>Default Image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -156,6 +184,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large Image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -163,6 +193,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium Image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -170,6 +202,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small Image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -224,20 +258,30 @@ public class GetAlbumResponseBody extends TeaModel {
     }
 
     public static class GetAlbumResponseBodyResult extends TeaModel {
+        /**
+         * <p>Alias</p>
+         */
         @NameInMap("Alias")
         public java.util.List<String> alias;
 
         /**
+         * <p>Is auditionable</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Audition")
         public Boolean audition;
 
+        /**
+         * <p>Author information</p>
+         */
         @NameInMap("Authors")
         public java.util.List<GetAlbumResponseBodyResultAuthors> authors;
 
         /**
+         * <p>Transform controlType based on the public category it belongs to</p>
+         * 
          * <strong>example:</strong>
          * <p>audio</p>
          */
@@ -245,6 +289,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Is charged</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -252,19 +298,32 @@ public class GetAlbumResponseBody extends TeaModel {
         public Boolean charge;
 
         /**
+         * <p>Category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80012017</p>
          */
         @NameInMap("CommCateId")
         public Long commCateId;
 
+        /**
+         * <p>Album cover image</p>
+         */
         @NameInMap("Cover")
         public GetAlbumResponseBodyResultCover cover;
 
+        /**
+         * <p>Content description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Is finished</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */
@@ -272,6 +331,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String finished;
 
         /**
+         * <p>Popularity Score</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -279,6 +340,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public Double hotScore;
 
         /**
+         * <p>Album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1231231</p>
          */
@@ -286,6 +349,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Type of content, such as music, audio, radio, jokes, etc.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALBUM</p>
          */
@@ -293,6 +358,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String itemType;
 
         /**
+         * <p>Third-party ID</p>
+         * 
          * <strong>example:</strong>
          * <p>23242</p>
          */
@@ -300,16 +367,26 @@ public class GetAlbumResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qignting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>超能狂少在都市</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Total number of episodes</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -317,6 +394,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public Integer totalEpisode;
 
         /**
+         * <p>Transform to favoriteType based on the associated public category</p>
+         * 
          * <strong>example:</strong>
          * <p>program</p>
          */
@@ -324,6 +403,8 @@ public class GetAlbumResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Indicates whether the album is playable.</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */

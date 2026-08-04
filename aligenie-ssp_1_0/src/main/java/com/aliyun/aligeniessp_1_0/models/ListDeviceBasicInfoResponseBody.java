@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDeviceBasicInfoResponseBody extends TeaModel {
     /**
+     * <p>The error code returned. A value of 200 indicates that the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListDeviceBasicInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The return result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListDeviceBasicInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0EC7*726E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Detailed information returned.</p>
+     */
     @NameInMap("Result")
     public java.util.Map<String, ResultValue> result;
 

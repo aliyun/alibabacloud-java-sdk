@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetWeatherRequest extends TeaModel {
     /**
+     * <p>Device ID information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public GetWeatherRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -18,6 +21,7 @@ public class GetWeatherRequest extends TeaModel {
     public GetWeatherRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -54,6 +58,8 @@ public class GetWeatherRequest extends TeaModel {
 
     public static class GetWeatherRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -61,6 +67,8 @@ public class GetWeatherRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID of Maojing, and each way corresponds to a different encoding type: PACKAGE_NAME refers to the APK package name, which is the encoding type for the Android application customer link; SKILL_ID refers to the skill ID, which is the encoding type for the cloud link.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT_ID</p>
          */
@@ -68,6 +76,8 @@ public class GetWeatherRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
+         * 
          * <strong>example:</strong>
          * <p>DAFE****ce3ej=</p>
          */
@@ -75,6 +85,8 @@ public class GetWeatherRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the device ID: OPEN_ID is the default device ID identity; UNION_ID is the organization-dimension device ID identity, which is available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -82,6 +94,8 @@ public class GetWeatherRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. This field is required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -145,6 +159,8 @@ public class GetWeatherRequest extends TeaModel {
 
     public static class GetWeatherRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -152,6 +168,8 @@ public class GetWeatherRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for Android application customer links; SKILL_ID: skill ID, used for cloud-based links.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT_ID</p>
          */
@@ -159,6 +177,8 @@ public class GetWeatherRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
+         * 
          * <strong>example:</strong>
          * <p>HOFF****my7Iw=</p>
          */
@@ -166,6 +186,8 @@ public class GetWeatherRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of user ID: OPEN_ID: default user ID identifier; UNION_ID: organization-dimension user ID identifier, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -173,6 +195,8 @@ public class GetWeatherRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

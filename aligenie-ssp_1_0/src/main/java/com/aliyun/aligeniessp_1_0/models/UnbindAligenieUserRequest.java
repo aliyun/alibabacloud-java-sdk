@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindAligenieUserRequest extends TeaModel {
     /**
+     * <p>Logon credential</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

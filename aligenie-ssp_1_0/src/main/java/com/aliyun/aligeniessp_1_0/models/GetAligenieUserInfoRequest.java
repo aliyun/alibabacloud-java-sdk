@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAligenieUserInfoRequest extends TeaModel {
     /**
+     * <p>Logon state access credential</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

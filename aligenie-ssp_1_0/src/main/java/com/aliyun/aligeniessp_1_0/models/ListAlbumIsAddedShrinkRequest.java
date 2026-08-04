@@ -4,12 +4,21 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListAlbumIsAddedShrinkRequest extends TeaModel {
+    /**
+     * <p>Album ID list</p>
+     */
     @NameInMap("AlbumIdList")
     public String albumIdListShrink;
 
+    /**
+     * <p>Device Information</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>User information</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetDeviceStatusDetailRequest extends TeaModel {
     /**
+     * <p>List of device identification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public GetDeviceStatusDetailRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>A collection of specified keys for device settings:<br>Player: player<br>Device volume: speaker<br>Battery level: power</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Keys")
@@ -39,6 +41,7 @@ public class GetDeviceStatusDetailRequest extends TeaModel {
 
     public static class GetDeviceStatusDetailRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the product’s project here. You can view it in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +51,7 @@ public class GetDeviceStatusDetailRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +61,7 @@ public class GetDeviceStatusDetailRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Enter the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +71,7 @@ public class GetDeviceStatusDetailRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID:<br>OPEN_ID: The default device ID.<br>UNION_ID: An organization-level device ID. You must request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +81,8 @@ public class GetDeviceStatusDetailRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

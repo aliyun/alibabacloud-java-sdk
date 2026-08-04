@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ProgressControlRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public ProgressControlRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenProgressControlRequest")
     public ProgressControlRequestOpenProgressControlRequest openProgressControlRequest;
 
     /**
+     * <p>User identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class ProgressControlRequest extends TeaModel {
 
     public static class ProgressControlRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <p>When the encoding type is <code>SKILL_ID</code>, the value is the Skill ID of the application. When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +67,8 @@ public class ProgressControlRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used for the Android application customer flow. <code>SKILL_ID</code>: Skill ID, used for the cloud-based flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +78,7 @@ public class ProgressControlRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Set to either deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +88,8 @@ public class ProgressControlRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of Device ID.</p>
+         * <p><code>OPEN_ID</code>: The default device identity. <code>UNION_ID</code>: The organization-dimension device identity, which is available only after an organization has been requested on the Tmall Genie Skills Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +99,8 @@ public class ProgressControlRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -143,10 +155,14 @@ public class ProgressControlRequest extends TeaModel {
     }
 
     public static class ProgressControlRequestOpenProgressControlRequest extends TeaModel {
+        /**
+         * <p>Extension information</p>
+         */
         @NameInMap("ExtendInfo")
         public java.util.Map<String, ?> extendInfo;
 
         /**
+         * <p>Song progress, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +196,8 @@ public class ProgressControlRequest extends TeaModel {
 
     public static class ProgressControlRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type.</p>
+         * <p>When the encoding type is <code>SKILL_ID</code>, the value is the Skill ID of the application. When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +207,8 @@ public class ProgressControlRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the Tmall Genie user identity, and each way corresponds to a different encoding type.</p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used for the Android application client path. <code>SKILL_ID</code>: Skill ID, used for the cloud-based path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +218,7 @@ public class ProgressControlRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier, set to userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +228,8 @@ public class ProgressControlRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of User ID.</p>
+         * <p><code>OPEN_ID</code>: The default User ID identity. <code>UNION_ID</code>: The organization-dimension User ID identity, which is available only after an organization has been requested on the Tmall Genie Skills Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +239,8 @@ public class ProgressControlRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is <code>UNION_ID</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

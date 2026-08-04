@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContentRequest extends TeaModel {
     /**
+     * <p>Content ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetContentRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>Default value: song</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

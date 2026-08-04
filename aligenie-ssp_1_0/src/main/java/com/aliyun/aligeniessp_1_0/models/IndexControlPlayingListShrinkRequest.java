@@ -11,12 +11,14 @@ public class IndexControlPlayingListShrinkRequest extends TeaModel {
     public String deviceInfoShrink;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenIndexControlRequest")
     public String openIndexControlRequestShrink;
 
     /**
+     * <p>User Identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

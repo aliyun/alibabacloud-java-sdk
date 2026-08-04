@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DeleteScheduleTaskResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>调用成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F7E2****B7C94</p>
      */
@@ -22,6 +32,8 @@ public class DeleteScheduleTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Response result</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateScheduleTaskResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>调用成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F7E2****B7C94</p>
      */
@@ -22,6 +32,8 @@ public class CreateScheduleTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>ID of the successfully created job</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */

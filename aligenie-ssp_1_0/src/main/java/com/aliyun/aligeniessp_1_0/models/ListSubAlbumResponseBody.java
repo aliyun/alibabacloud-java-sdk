@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSubAlbumResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListSubAlbumResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListSubAlbumResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>CB13B8D7-37FB-1B3E-8EB9-65BB413267E1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result</p>
+     */
     @NameInMap("Result")
     public ListSubAlbumResponseBodyResult result;
 
@@ -66,10 +75,15 @@ public class ListSubAlbumResponseBody extends TeaModel {
     }
 
     public static class ListSubAlbumResponseBodyResultDataListScheduleInfo extends TeaModel {
+        /**
+         * <p>trigger epoch</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>trigger hour</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -77,12 +91,17 @@ public class ListSubAlbumResponseBody extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>trigger minute</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <p>scheduled task ID</p>
+         */
         @NameInMap("ScheduleId")
         public Long scheduleId;
 
@@ -127,6 +146,8 @@ public class ListSubAlbumResponseBody extends TeaModel {
 
     public static class ListSubAlbumResponseBodyResultDataList extends TeaModel {
         /**
+         * <p>Album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>4476001</p>
          */
@@ -134,6 +155,8 @@ public class ListSubAlbumResponseBody extends TeaModel {
         public String albumId;
 
         /**
+         * <p>Album category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80011</p>
          */
@@ -141,6 +164,8 @@ public class ListSubAlbumResponseBody extends TeaModel {
         public Integer categoryId;
 
         /**
+         * <p>Album thumbnail</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ailabs.alibabausercontent.com/images/17825/jknoamc2.jpg">https://ailabs.alibabausercontent.com/images/17825/jknoamc2.jpg</a></p>
          */
@@ -148,19 +173,29 @@ public class ListSubAlbumResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
+         * <p>Record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Is subscribed</p>
+         */
         @NameInMap("IsAdded")
         public Boolean isAdded;
 
+        /**
+         * <p>Schedule information</p>
+         */
         @NameInMap("ScheduleInfo")
         public ListSubAlbumResponseBodyResultDataListScheduleInfo scheduleInfo;
 
         /**
+         * <p>Sorting</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -168,6 +203,8 @@ public class ListSubAlbumResponseBody extends TeaModel {
         public Long sequence;
 
         /**
+         * <p>Album title</p>
+         * 
          * <strong>example:</strong>
          * <p>睡前故事</p>
          */
@@ -175,6 +212,8 @@ public class ListSubAlbumResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Total number of episodes</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -261,13 +300,21 @@ public class ListSubAlbumResponseBody extends TeaModel {
     }
 
     public static class ListSubAlbumResponseBodyResult extends TeaModel {
+        /**
+         * <p>Album List</p>
+         */
         @NameInMap("DataList")
         public java.util.List<ListSubAlbumResponseBodyResultDataList> dataList;
 
+        /**
+         * <p>Indicates whether there is a next page.</p>
+         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
         /**
+         * <p>total number of entries</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -275,6 +322,8 @@ public class ListSubAlbumResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

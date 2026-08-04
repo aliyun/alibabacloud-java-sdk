@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class QueryMusicTypeRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public QueryMusicTypeRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>Input parameters for the service request</p>
+     */
     @NameInMap("Payload")
     public QueryMusicTypeRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -50,6 +55,7 @@ public class QueryMusicTypeRequest extends TeaModel {
 
     public static class QueryMusicTypeRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -59,6 +65,7 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device identity for Maojing, and each way corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for the Android application customer link; SKILL_ID: skill ID, used for the cloud link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,6 +75,7 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -77,6 +85,7 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the device ID: OPEN_ID: default device ID; UNION_ID: organization-level device ID, available only after requesting an organization in the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,6 +95,8 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -149,6 +160,7 @@ public class QueryMusicTypeRequest extends TeaModel {
 
     public static class QueryMusicTypeRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +170,7 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the Maojing user identifier, and each way corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for Android application customer journeys; SKILL_ID: skill ID, used for cloud-based journeys.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +180,7 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +190,7 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID: OPEN_ID: default User ID identity; UNION_ID: organization-dimension User ID identity, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +200,8 @@ public class QueryMusicTypeRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

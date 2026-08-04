@@ -4,6 +4,9 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetUnreadMessageCountShrinkRequest extends TeaModel {
+    /**
+     * <p>User Identifier information</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

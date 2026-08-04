@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloudPlayerShrinkRequest extends TeaModel {
     /**
+     * <p>Index of the currently playing song. Starts from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class CloudPlayerShrinkRequest extends TeaModel {
     public Integer curPlayIndex;
 
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Playback pattern</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,8 @@ public class CloudPlayerShrinkRequest extends TeaModel {
     public String playMode;
 
     /**
+     * <p>Song ID (used to recompute the index when the index is invalid)</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -36,12 +41,14 @@ public class CloudPlayerShrinkRequest extends TeaModel {
     public String songId;
 
     /**
+     * <p>List of song IDs (1–200 songs)</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SongIdList")
     public String songIdListShrink;
 
     /**
+     * <p>Source of cloud-recommended songs</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +58,7 @@ public class CloudPlayerShrinkRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>Open user information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

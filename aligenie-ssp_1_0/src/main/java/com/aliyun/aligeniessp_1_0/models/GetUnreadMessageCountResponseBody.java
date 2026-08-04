@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetUnreadMessageCountResponseBody extends TeaModel {
     /**
+     * <p>Status code returned by the service</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户信息不存在</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Number of unread messages</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

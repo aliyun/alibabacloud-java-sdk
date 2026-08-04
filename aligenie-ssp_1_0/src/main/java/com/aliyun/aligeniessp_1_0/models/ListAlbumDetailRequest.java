@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlbumDetailRequest extends TeaModel {
     /**
+     * <p>album ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListAlbumDetailRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>page number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ListAlbumDetailRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>number of records per page</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

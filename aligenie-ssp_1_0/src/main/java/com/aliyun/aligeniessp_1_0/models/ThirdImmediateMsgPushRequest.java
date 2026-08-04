@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ThirdImmediateMsgPushRequest extends TeaModel {
     /**
+     * <p>Business type (FLIGHT: flight, TRAIN: train)</p>
+     * 
      * <strong>example:</strong>
      * <p>FLIGHT</p>
      */
@@ -12,13 +14,17 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>Change details (JSON-formatted change data)</p>
+     * 
      * <strong>example:</strong>
-     * <p>changeDetail</p>
+     * <p>{}</p>
      */
     @NameInMap("ChangeDetail")
     public String changeDetail;
 
     /**
+     * <p>Order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>orderId</p>
      */
@@ -26,6 +32,8 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
     public String orderId;
 
     /**
+     * <p>Passenger IDs to change</p>
+     * 
      * <strong>example:</strong>
      * <p>psgIds</p>
      */
@@ -33,6 +41,8 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
     public String psgIds;
 
     /**
+     * <p>Request source</p>
+     * 
      * <strong>example:</strong>
      * <p>source</p>
      */
@@ -40,20 +50,26 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>change type (TRAIN_ISSUED, FLIGHT_CHANGED)</p>
+     * 
      * <strong>example:</strong>
-     * <p>trafficChangeType</p>
+     * <p>TRAIN_ISSUED</p>
      */
     @NameInMap("TrafficChangeType")
     public String trafficChangeType;
 
     /**
+     * <p>change type description (ticket issued, rebooked)</p>
+     * 
      * <strong>example:</strong>
-     * <p>trafficChangeTypeDesc</p>
+     * <p>已出票</p>
      */
     @NameInMap("TrafficChangeTypeDesc")
     public String trafficChangeTypeDesc;
 
     /**
+     * <p>Journey IDs to change</p>
+     * 
      * <strong>example:</strong>
      * <p>trafficJourneyIds</p>
      */
@@ -61,6 +77,8 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
     public String trafficJourneyIds;
 
     /**
+     * <p>sub-order ID of the changed train request</p>
+     * 
      * <strong>example:</strong>
      * <p>trafficSubOrderIds</p>
      */
@@ -68,6 +86,8 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
     public String trafficSubOrderIds;
 
     /**
+     * <p>user ID</p>
+     * 
      * <strong>example:</strong>
      * <p>userId</p>
      */

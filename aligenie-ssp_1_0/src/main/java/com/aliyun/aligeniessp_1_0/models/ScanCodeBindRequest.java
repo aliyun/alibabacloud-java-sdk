@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ScanCodeBindRequest extends TeaModel {
     /**
+     * <p>Input parameters for QR code scanning binding</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BindReq")
     public ScanCodeBindRequestBindReq bindReq;
 
     /**
+     * <p>User identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -39,6 +41,7 @@ public class ScanCodeBindRequest extends TeaModel {
 
     public static class ScanCodeBindRequestBindReq extends TeaModel {
         /**
+         * <p>Product client ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -58,6 +61,8 @@ public class ScanCodeBindRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>Extension parameter</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
@@ -97,6 +102,7 @@ public class ScanCodeBindRequest extends TeaModel {
 
     public static class ScanCodeBindRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. Enter the Project ID of the project to which the product belongs. You can view this in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +112,7 @@ public class ScanCodeBindRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +122,7 @@ public class ScanCodeBindRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier. Enter the value of userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +132,7 @@ public class ScanCodeBindRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Device ID type:<br>OPEN_ID: Default Device ID identifier.<br>UNION_ID: Organization-dimension Device ID identifier. You must request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +142,8 @@ public class ScanCodeBindRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111</p>
          */

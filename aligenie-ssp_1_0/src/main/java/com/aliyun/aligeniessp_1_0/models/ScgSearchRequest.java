@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ScgSearchRequest extends TeaModel {
     /**
+     * <p>Query filter</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ScgFilter")
     public ScgSearchRequestScgFilter scgFilter;
 
     /**
+     * <p>Selection pool ID. Optional values: MC201132 (Ethnic Chinese Style), MC201136 (Pop Music), MC201139 (Sweet Love), MC201133 (Folk), MC201137 (Relaxing Reading), MC201138 (Happiness), PA202029 (Stories), PA202030 (Children\&quot;s Songs), PA202028 (Chinese Classics and History), PA202032 (Encyclopedia), PA202031 (English Children\&quot;s Songs)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,8 @@ public class ScgSearchRequest extends TeaModel {
 
     public static class ScgSearchRequestScgFilterOffSetParam extends TeaModel {
         /**
+         * <p>Number of returned items</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -49,6 +53,8 @@ public class ScgSearchRequest extends TeaModel {
         public Integer limit;
 
         /**
+         * <p>Number of skipped items</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -80,6 +86,8 @@ public class ScgSearchRequest extends TeaModel {
 
     public static class ScgSearchRequestScgFilterPageParam extends TeaModel {
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -87,6 +95,8 @@ public class ScgSearchRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -118,6 +128,8 @@ public class ScgSearchRequest extends TeaModel {
 
     public static class ScgSearchRequestScgFilterSortParam extends TeaModel {
         /**
+         * <p>Sorting field</p>
+         * 
          * <strong>example:</strong>
          * <p>internal_id</p>
          */
@@ -125,6 +137,8 @@ public class ScgSearchRequest extends TeaModel {
         public String sortKey;
 
         /**
+         * <p>Sorting order</p>
+         * 
          * <strong>example:</strong>
          * <p>ASC</p>
          */
@@ -132,6 +146,8 @@ public class ScgSearchRequest extends TeaModel {
         public String sortOrder;
 
         /**
+         * <p>Sorting field (default: empty string)</p>
+         * 
          * <strong>example:</strong>
          * <p>“”</p>
          */
@@ -170,19 +186,27 @@ public class ScgSearchRequest extends TeaModel {
     }
 
     public static class ScgSearchRequestScgFilter extends TeaModel {
+        /**
+         * <p>Paging type</p>
+         */
         @NameInMap("OffSetParam")
         public ScgSearchRequestScgFilterOffSetParam offSetParam;
 
+        /**
+         * <p>Paging type</p>
+         */
         @NameInMap("PageParam")
         public ScgSearchRequestScgFilterPageParam pageParam;
 
         /**
+         * <p>Sorting parameters</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SortParam")
         public ScgSearchRequestScgFilterSortParam sortParam;
 
         /**
+         * <p>Whether to use the pageParam object for paging. Choose either offSetParam or pageParam. The default paging mode is pageParam.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

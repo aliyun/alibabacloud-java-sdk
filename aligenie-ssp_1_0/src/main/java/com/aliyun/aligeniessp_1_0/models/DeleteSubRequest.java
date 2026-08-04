@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSubRequest extends TeaModel {
     /**
+     * <p>Subscription album record ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateAlarmResponseBody extends TeaModel {
     /**
+     * <p>Request result status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx为空</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>43<em><strong>28C-A810-5</strong></em>-8747-EC226A086881</p>
      */
@@ -22,6 +32,8 @@ public class CreateAlarmResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Alarm ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567</p>
      */

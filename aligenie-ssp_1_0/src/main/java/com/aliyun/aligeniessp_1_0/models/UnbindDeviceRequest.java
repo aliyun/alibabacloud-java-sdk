@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UnbindDeviceRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public UnbindDeviceRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>List of user identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -39,6 +41,7 @@ public class UnbindDeviceRequest extends TeaModel {
 
     public static class UnbindDeviceRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type, which is the Project ID of the project where the product resides. You can view it in the Tmall Genie AI platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +51,7 @@ public class UnbindDeviceRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Set this parameter to <strong>PROJECT_ID</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +61,7 @@ public class UnbindDeviceRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device identifier. Enter the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +71,11 @@ public class UnbindDeviceRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of Device ID.  </p>
+         * <ul>
+         * <li>OPEN_ID: The default device ID identity.  </li>
+         * <li>UNION_ID: The organization-dimension device ID identity. You must request an organization in advance on the Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +85,8 @@ public class UnbindDeviceRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. This parameter is required if IdType is set to UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -130,6 +142,7 @@ public class UnbindDeviceRequest extends TeaModel {
 
     public static class UnbindDeviceRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type, which is the Project ID of the project where this product resides. You can view it in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +152,7 @@ public class UnbindDeviceRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter <strong>PROJECT_ID</strong> here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +162,7 @@ public class UnbindDeviceRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier. Enter the value of userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +172,11 @@ public class UnbindDeviceRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of User ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: The default user ID identity.  </li>
+         * <li>UNION_ID: The organization-dimension user ID identity. You must request an organization in advance on the Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +186,8 @@ public class UnbindDeviceRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

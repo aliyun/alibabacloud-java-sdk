@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FindUserlistToAuthLoginWithPhoneNumberRequest extends TeaModel {
     /**
+     * <p>Text message verification code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class FindUserlistToAuthLoginWithPhoneNumberRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>Phone number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class FindUserlistToAuthLoginWithPhoneNumberRequest extends TeaModel {
     public String phoneNumber;
 
     /**
+     * <p>Region encoding</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class FindUserlistToAuthLoginWithPhoneNumberRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

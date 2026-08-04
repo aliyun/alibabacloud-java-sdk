@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetScheduleTaskShrinkRequest extends TeaModel {
     /**
+     * <p>Device ID information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public String payloadShrink;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

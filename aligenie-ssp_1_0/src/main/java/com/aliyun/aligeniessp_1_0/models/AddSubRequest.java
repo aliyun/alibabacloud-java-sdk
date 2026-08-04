@@ -4,12 +4,21 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class AddSubRequest extends TeaModel {
+    /**
+     * <p>Subscribe to album request</p>
+     */
     @NameInMap("AddSubscriptionInfoRequest")
     public AddSubRequestAddSubscriptionInfoRequest addSubscriptionInfoRequest;
 
+    /**
+     * <p>Device Information</p>
+     */
     @NameInMap("DeviceInfo")
     public AddSubRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>User Information</p>
+     */
     @NameInMap("UserInfo")
     public AddSubRequestUserInfo userInfo;
 
@@ -43,10 +52,15 @@ public class AddSubRequest extends TeaModel {
     }
 
     public static class AddSubRequestAddSubscriptionInfoRequestScheduleInfo extends TeaModel {
+        /**
+         * <p>The specific days of the week for weekly reminders. Valid values are 1 to 7.</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>The hour of the clock when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -54,6 +68,8 @@ public class AddSubRequest extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>The minute of the hour when the reminder is triggered.</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -93,6 +109,8 @@ public class AddSubRequest extends TeaModel {
 
     public static class AddSubRequestAddSubscriptionInfoRequest extends TeaModel {
         /**
+         * <p>Album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>51999575</p>
          */
@@ -100,6 +118,8 @@ public class AddSubRequest extends TeaModel {
         public String albumId;
 
         /**
+         * <p>Daily study quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -107,12 +127,17 @@ public class AddSubRequest extends TeaModel {
         public Integer dailyStudyCnt;
 
         /**
+         * <p>Playback pattern (currently only supports sequence)</p>
+         * 
          * <strong>example:</strong>
          * <p>sequence</p>
          */
         @NameInMap("PlayMode")
         public String playMode;
 
+        /**
+         * <p>Schedule information</p>
+         */
         @NameInMap("ScheduleInfo")
         public AddSubRequestAddSubscriptionInfoRequestScheduleInfo scheduleInfo;
 

@@ -1,3 +1,6 @@
+2026-08-04 Version: 2.5.3
+- Generated java ssp_1.0 for AliGenie.
+
 2025-09-02 Version: 2.5.2
 - Generated java ssp_1.0 for AliGenie.
 

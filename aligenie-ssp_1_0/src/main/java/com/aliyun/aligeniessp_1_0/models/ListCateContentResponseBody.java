@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCateContentResponseBody extends TeaModel {
     /**
+     * <p>code encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListCateContentResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>message information</p>
+     * 
      * <strong>example:</strong>
      * <p>sucess</p>
      */
@@ -27,6 +31,9 @@ public class ListCateContentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Result")
     public ListCateContentResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class ListCateContentResponseBody extends TeaModel {
 
     public static class ListCateContentResponseBodyResultOpenDataItemListAuthorsCover extends TeaModel {
         /**
+         * <p>Indicates whether the image can be cropped using OSS rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -76,6 +85,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -83,6 +94,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -90,6 +103,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image (Deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -97,6 +112,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String mediam;
 
         /**
+         * <p>medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -104,6 +121,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -166,16 +185,30 @@ public class ListCateContentResponseBody extends TeaModel {
     }
 
     public static class ListCateContentResponseBodyResultOpenDataItemListAuthors extends TeaModel {
+        /**
+         * <p>Author type</p>
+         */
         @NameInMap("AuthorTypes")
         public java.util.List<String> authorTypes;
 
+        /**
+         * <p>profile picture</p>
+         */
         @NameInMap("Cover")
         public ListCateContentResponseBodyResultOpenDataItemListAuthorsCover cover;
 
+        /**
+         * <p>Author description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Gender</p>
+         * 
          * <strong>example:</strong>
          * <p>MALE</p>
          */
@@ -183,6 +216,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String gender;
 
         /**
+         * <p>Primary key ID of the author information</p>
+         * 
          * <strong>example:</strong>
          * <p>13597709</p>
          */
@@ -190,6 +225,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Whether it is online</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -197,6 +234,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public Boolean online;
 
         /**
+         * <p>third-party author ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -204,12 +243,20 @@ public class ListCateContentResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Author title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -294,6 +341,8 @@ public class ListCateContentResponseBody extends TeaModel {
 
     public static class ListCateContentResponseBodyResultOpenDataItemListCover extends TeaModel {
         /**
+         * <p>Default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -301,6 +350,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718275.jpg">http://pic.qtfm.cn/2017/0207/2017020718275.jpg</a></p>
          */
@@ -308,6 +359,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image (Deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718275.jpg">http://pic.qtfm.cn/2017/0207/2017020718275.jpg</a></p>
          */
@@ -315,6 +368,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String mediam;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/20170207175.jpg">http://pic.qtfm.cn/2017/0207/20170207175.jpg</a></p>
          */
@@ -322,6 +377,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020675.jpg">http://pic.qtfm.cn/2017/0207/2017020675.jpg</a></p>
          */
@@ -329,6 +386,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String small;
 
         /**
+         * <p>Indicates whether cropping can be performed using OSS rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -391,20 +450,30 @@ public class ListCateContentResponseBody extends TeaModel {
     }
 
     public static class ListCateContentResponseBodyResultOpenDataItemList extends TeaModel {
+        /**
+         * <p>Alias</p>
+         */
         @NameInMap("Alias")
         public java.util.List<String> alias;
 
         /**
+         * <p>Is audition available</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Audition")
         public Boolean audition;
 
+        /**
+         * <p>author information</p>
+         */
         @NameInMap("Authors")
         public java.util.List<ListCateContentResponseBodyResultOpenDataItemListAuthors> authors;
 
         /**
+         * <p>Transform controlType based on the assigned public category</p>
+         * 
          * <strong>example:</strong>
          * <p>audio</p>
          */
@@ -412,6 +481,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Whether it is charged</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -419,19 +490,32 @@ public class ListCateContentResponseBody extends TeaModel {
         public Boolean charge;
 
         /**
+         * <p>Category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80012017</p>
          */
         @NameInMap("CommCateId")
         public String commCateId;
 
+        /**
+         * <p>Album thumbnail image</p>
+         */
         @NameInMap("Cover")
         public ListCateContentResponseBodyResultOpenDataItemListCover cover;
 
+        /**
+         * <p>Content description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>作者：月不醉 简介：啥，假冒你男友？退役兵王回归都市后做了一名小保安，机缘巧合下却被冷艳女总拉去客串男友，从此之后，他与冷艳老总开始纠缠不清···拳打恶一代，脚踩高富帅，哥哥我专治各种不服。面对各类的阴谋阳谋，面对各种黑恶势力，且看哥如何称霸都市，踏上巅峰！</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Popularity score</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -439,6 +523,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public Double hotScore;
 
         /**
+         * <p>Type of content, such as music, audio, radio, jokes, etc.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALBUM</p>
          */
@@ -446,6 +532,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String itemType;
 
         /**
+         * <p>Third-party ID of the album</p>
+         * 
          * <strong>example:</strong>
          * <p>206775</p>
          */
@@ -453,16 +541,26 @@ public class ListCateContentResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>超能狂少在都市</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Transform favoriteType based on the associated public category.</p>
+         * 
          * <strong>example:</strong>
          * <p>program</p>
          */
@@ -470,6 +568,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Indicates whether the content is playable.</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */
@@ -477,6 +577,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public String valid;
 
         /**
+         * <p>Primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>26152778</p>
          */
@@ -620,16 +722,23 @@ public class ListCateContentResponseBody extends TeaModel {
 
     public static class ListCateContentResponseBodyResult extends TeaModel {
         /**
+         * <p>Current page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>Data information</p>
+         */
         @NameInMap("OpenDataItemList")
         public java.util.List<ListCateContentResponseBodyResultOpenDataItemList> openDataItemList;
 
         /**
+         * <p>Number of records per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -637,6 +746,8 @@ public class ListCateContentResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of records</p>
+         * 
          * <strong>example:</strong>
          * <p>12002</p>
          */

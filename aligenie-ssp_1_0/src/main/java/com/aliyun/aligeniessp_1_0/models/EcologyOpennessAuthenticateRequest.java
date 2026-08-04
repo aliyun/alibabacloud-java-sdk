@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EcologyOpennessAuthenticateRequest extends TeaModel {
     /**
+     * <p>entity key</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class EcologyOpennessAuthenticateRequest extends TeaModel {
     public String encodeKey;
 
     /**
+     * <p>entity Type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class EcologyOpennessAuthenticateRequest extends TeaModel {
     public String encodeType;
 
     /**
+     * <p>logon state access token</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

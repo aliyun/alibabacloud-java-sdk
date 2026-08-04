@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScanCodeBindResponseBody extends TeaModel {
     /**
+     * <p>The returned error code. A value of 200 indicates that the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ScanCodeBindResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Result message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ScanCodeBindResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>686DF82F-45C4-7DF7-8B67-27B91CFD63A9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Detailed information returned.</p>
+     */
     @NameInMap("Result")
     public ScanCodeBindResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class ScanCodeBindResponseBody extends TeaModel {
 
     public static class ScanCodeBindResponseBodyResult extends TeaModel {
         /**
+         * <p>Product group</p>
+         * 
          * <strong>example:</strong>
          * <p>X1</p>
          */
@@ -74,6 +85,8 @@ public class ScanCodeBindResponseBody extends TeaModel {
         public String bizGroup;
 
         /**
+         * <p>Product categorization</p>
+         * 
          * <strong>example:</strong>
          * <p>AILABS</p>
          */
@@ -93,7 +106,7 @@ public class ScanCodeBindResponseBody extends TeaModel {
          * <p>DAFE****ce3ej=</p>
          * 
          * <strong>example:</strong>
-         * <p>用户opneId</p>
+         * <p>用户OpenId</p>
          */
         @NameInMap("UserOpenId")
         public String userOpenId;

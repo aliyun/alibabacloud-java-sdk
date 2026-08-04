@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDeviceByUserIdResponseBody extends TeaModel {
     /**
+     * <p>The returned error code, where 200 indicates that the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListDeviceByUserIdResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The return result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListDeviceByUserIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0EC7*726E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Detailed information returned.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDeviceByUserIdResponseBodyResult> result;
 
@@ -67,6 +76,8 @@ public class ListDeviceByUserIdResponseBody extends TeaModel {
 
     public static class ListDeviceByUserIdResponseBodyResultDeviceUnionIds extends TeaModel {
         /**
+         * <p>The UnionId of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>1553*B0C3</p>
          */
@@ -74,6 +85,8 @@ public class ListDeviceByUserIdResponseBody extends TeaModel {
         public String deviceUnionId;
 
         /**
+         * <p>The organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -105,12 +118,17 @@ public class ListDeviceByUserIdResponseBody extends TeaModel {
 
     public static class ListDeviceByUserIdResponseBodyResult extends TeaModel {
         /**
+         * <p>The openId corresponding to the Device Information.</p>
+         * 
          * <strong>example:</strong>
          * <p>A963*0158</p>
          */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 
+        /**
+         * <p>Organization ID and UnionId information corresponding to the device.</p>
+         */
         @NameInMap("DeviceUnionIds")
         public java.util.List<ListDeviceByUserIdResponseBodyResultDeviceUnionIds> deviceUnionIds;
 

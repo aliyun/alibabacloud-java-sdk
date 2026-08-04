@@ -4,10 +4,14 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class DeviceControlRequest extends TeaModel {
+    /**
+     * <p>Input parameters for volume control</p>
+     */
     @NameInMap("ControlRequest")
     public DeviceControlRequestControlRequest controlRequest;
 
     /**
+     * <p>List of device ID information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
@@ -36,6 +40,8 @@ public class DeviceControlRequest extends TeaModel {
 
     public static class DeviceControlRequestControlRequest extends TeaModel {
         /**
+         * <p>Indicates whether mute is enabled. If this field is set to true, you must also specify the volume value as 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -43,6 +49,8 @@ public class DeviceControlRequest extends TeaModel {
         public Boolean muted;
 
         /**
+         * <p>Target volume value</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -74,6 +82,7 @@ public class DeviceControlRequest extends TeaModel {
 
     public static class DeviceControlRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. Enter the Project ID of the project where the product resides. You can View this in the Tmall Genie AI platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,6 +92,7 @@ public class DeviceControlRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding Type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,6 +102,7 @@ public class DeviceControlRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Enter the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +112,7 @@ public class DeviceControlRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of Device ID:<br>OPEN_ID: The default Device ID identity.<br>UNION_ID: The organization-dimension Device ID identity. You must request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +122,8 @@ public class DeviceControlRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID of the device. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1*****2</p>
          */

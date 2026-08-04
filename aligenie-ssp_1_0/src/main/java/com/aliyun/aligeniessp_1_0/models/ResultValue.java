@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ResultValue extends TeaModel {
     /**
+     * <p>The openId corresponding to the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>A963*0158</p>
      */
     @NameInMap("DeviceOpenId")
     public String deviceOpenId;
 
+    /**
+     * <p>The organization ID and UnionId information corresponding to the device.</p>
+     */
     @NameInMap("DeviceUnionIds")
     public java.util.List<ResultValueDeviceUnionIds> deviceUnionIds;
 
     /**
+     * <p>The name of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>我的设备</p>
      */
@@ -22,6 +29,8 @@ public class ResultValue extends TeaModel {
     public String name;
 
     /**
+     * <p>The firmware version of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>2.0.3</p>
      */
@@ -29,6 +38,8 @@ public class ResultValue extends TeaModel {
     public String firmwareVersion;
 
     /**
+     * <p>The MAC address of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>b4:xx:xx:xx:65:2b</p>
      */
@@ -36,6 +47,8 @@ public class ResultValue extends TeaModel {
     public String mac;
 
     /**
+     * <p>The SN information of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>1200xx048</p>
      */
@@ -97,6 +110,8 @@ public class ResultValue extends TeaModel {
 
     public static class ResultValueDeviceUnionIds extends TeaModel {
         /**
+         * <p>The organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -104,6 +119,8 @@ public class ResultValue extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The UnionId of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>1553*B0C3</p>
          */

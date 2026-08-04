@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeviceBasicInfoResponseBody extends TeaModel {
     /**
+     * <p>Error code returned. A value of 200 indicates that the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Return result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0EC7*726E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Detailed information returned.</p>
+     */
     @NameInMap("Result")
     public GetDeviceBasicInfoResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
 
     public static class GetDeviceBasicInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Firmware version of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.0.3</p>
          */
@@ -74,6 +85,8 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
         public String firmwareVersion;
 
         /**
+         * <p>MAC address of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>b4:xx:xx:xx:65:2b</p>
          */
@@ -81,6 +94,8 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
         public String mac;
 
         /**
+         * <p>Name of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>我的设备</p>
          */
@@ -88,6 +103,8 @@ public class GetDeviceBasicInfoResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>SN information of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>1200xxx048</p>
          */

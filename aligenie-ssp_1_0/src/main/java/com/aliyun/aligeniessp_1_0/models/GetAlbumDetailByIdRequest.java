@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAlbumDetailByIdRequest extends TeaModel {
     /**
+     * <p>Album ID</p>
+     * 
      * <strong>example:</strong>
      * <p>51999575</p>
      */

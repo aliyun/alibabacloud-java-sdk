@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class QueryMusicTypeResponseBody extends TeaModel {
     /**
+     * <p>Status code returned by the alarm service</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>设备账号未关联</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>43<em><strong>28C-A810-5</strong></em>-8747-EC226A086881</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of ringtone types</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryMusicTypeResponseBodyResult> result;
 
@@ -63,6 +76,8 @@ public class QueryMusicTypeResponseBody extends TeaModel {
 
     public static class QueryMusicTypeResponseBodyResult extends TeaModel {
         /**
+         * <p>Ringtone type ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -70,6 +85,8 @@ public class QueryMusicTypeResponseBody extends TeaModel {
         public Long musicType;
 
         /**
+         * <p>Name of the ringtone category</p>
+         * 
          * <strong>example:</strong>
          * <p>xx</p>
          */

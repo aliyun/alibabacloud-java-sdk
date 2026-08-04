@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloudPlayerRequest extends TeaModel {
     /**
+     * <p>Index of the currently playing song. Starts from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class CloudPlayerRequest extends TeaModel {
     public Integer curPlayIndex;
 
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public CloudPlayerRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Playback pattern</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,8 @@ public class CloudPlayerRequest extends TeaModel {
     public String playMode;
 
     /**
+     * <p>Song ID (used to recompute the index when the index is invalid)</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -36,12 +41,14 @@ public class CloudPlayerRequest extends TeaModel {
     public String songId;
 
     /**
+     * <p>List of song IDs (1–200 songs)</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SongIdList")
     public java.util.List<String> songIdList;
 
     /**
+     * <p>Source of cloud-recommended songs</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +58,7 @@ public class CloudPlayerRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>Open user information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -119,6 +127,7 @@ public class CloudPlayerRequest extends TeaModel {
 
     public static class CloudPlayerRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Encoding key</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +137,7 @@ public class CloudPlayerRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +147,7 @@ public class CloudPlayerRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Open ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +157,7 @@ public class CloudPlayerRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>ID Type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +166,12 @@ public class CloudPlayerRequest extends TeaModel {
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <p>Organization ID (can be empty)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>为空</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -206,6 +224,7 @@ public class CloudPlayerRequest extends TeaModel {
 
     public static class CloudPlayerRequestUserInfo extends TeaModel {
         /**
+         * <p>Encoding key</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,6 +234,7 @@ public class CloudPlayerRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +244,7 @@ public class CloudPlayerRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Open ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +254,7 @@ public class CloudPlayerRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>ID Type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +263,12 @@ public class CloudPlayerRequest extends TeaModel {
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <p>Organization ID (can be empty)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>为空</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

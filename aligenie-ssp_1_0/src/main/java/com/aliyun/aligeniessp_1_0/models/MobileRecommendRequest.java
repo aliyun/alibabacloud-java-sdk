@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MobileRecommendRequest extends TeaModel {
     /**
+     * <p>Bot ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class MobileRecommendRequest extends TeaModel {
     public String botId;
 
     /**
+     * <p>Quantity of recommended Result</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -19,15 +23,24 @@ public class MobileRecommendRequest extends TeaModel {
     public String count;
 
     /**
+     * <p>Device identification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public MobileRecommendRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>Required when the request type is STYLE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>轻音乐</p>
+     */
     @NameInMap("Style")
     public String style;
 
     /**
+     * <p>Request Type: Obtain daily recommendations, hot songs, or genre-based playlists.</p>
+     * 
      * <strong>example:</strong>
      * <p>DAILY_REC</p>
      */
@@ -35,6 +48,7 @@ public class MobileRecommendRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>User information – userId</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -95,6 +109,7 @@ public class MobileRecommendRequest extends TeaModel {
 
     public static class MobileRecommendRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. Enter the Project ID of the project to which the product belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,6 +119,7 @@ public class MobileRecommendRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +129,7 @@ public class MobileRecommendRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Enter the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,6 +139,9 @@ public class MobileRecommendRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the device ID.</p>
+         * <p>OPEN_ID: Default device ID.
+         * UNION_ID: Organization-level device ID. This value is available only after an organization has been requested on the Tmall Genie Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +150,12 @@ public class MobileRecommendRequest extends TeaModel {
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <p>Organization ID. This parameter is required when <strong>IdType</strong> is set to <strong>UNION_ID</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暂无</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -182,6 +208,7 @@ public class MobileRecommendRequest extends TeaModel {
 
     public static class MobileRecommendRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding Type. Enter the Project ID of the project to which this product belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +218,7 @@ public class MobileRecommendRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +228,7 @@ public class MobileRecommendRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>ID value</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +238,7 @@ public class MobileRecommendRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>ID Type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +247,12 @@ public class MobileRecommendRequest extends TeaModel {
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <p>Organization ID. This parameter is Required when IdType is set to UNION_ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暂无</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

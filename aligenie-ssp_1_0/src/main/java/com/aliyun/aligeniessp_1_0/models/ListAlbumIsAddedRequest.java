@@ -4,12 +4,21 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListAlbumIsAddedRequest extends TeaModel {
+    /**
+     * <p>Album ID list</p>
+     */
     @NameInMap("AlbumIdList")
     public java.util.List<String> albumIdList;
 
+    /**
+     * <p>Device Information</p>
+     */
     @NameInMap("DeviceInfo")
     public ListAlbumIsAddedRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>User information</p>
+     */
     @NameInMap("UserInfo")
     public ListAlbumIsAddedRequestUserInfo userInfo;
 

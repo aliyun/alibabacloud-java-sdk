@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DeleteAlarmsResponseBody extends TeaModel {
     /**
+     * <p>Status code returned by the alarm service</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>闹钟id为空</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>43<em><strong>28C-A810-5</strong></em>-8747-EC226A086881</p>
      */
@@ -22,6 +32,8 @@ public class DeleteAlarmsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the alarm deletion was executed successfully</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

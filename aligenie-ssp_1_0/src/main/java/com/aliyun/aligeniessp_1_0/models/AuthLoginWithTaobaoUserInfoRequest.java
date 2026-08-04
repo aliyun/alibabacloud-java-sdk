@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthLoginWithTaobaoUserInfoRequest extends TeaModel {
     /**
+     * <p>Encrypted Taobao User Identifier</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AuthLoginWithTaobaoUserInfoRequest extends TeaModel {
     public String encryptedTaobaoUserIdentifier;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class PlayModeControlShrinkRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenPlayModeControlRequest")
     public String openPlayModeControlRequestShrink;
 
     /**
+     * <p>User Identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

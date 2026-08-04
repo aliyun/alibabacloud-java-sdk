@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeviceIdByIdentitiesShrinkRequest extends TeaModel {
     /**
+     * <p>The value corresponding to the encoding type. Enter the Project ID of the project to which this product belongs. You can view it in the Tmall Genie AI platform console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDeviceIdByIdentitiesShrinkRequest extends TeaModel {
     public String encodeKey;
 
     /**
+     * <p>Encoding type. Enter <strong>PROJECT_ID</strong> here.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,14 @@ public class ListDeviceIdByIdentitiesShrinkRequest extends TeaModel {
     @NameInMap("EncodeType")
     public String encodeType;
 
+    /**
+     * <p>List of device authentication identifiers.</p>
+     */
     @NameInMap("IdentityIds")
     public String identityIdsShrink;
 
     /**
+     * <p>Device authentication type. Enter <strong>MAC</strong> or <strong>SN</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +41,7 @@ public class ListDeviceIdByIdentitiesShrinkRequest extends TeaModel {
     public String identityType;
 
     /**
+     * <p>The unique product identifier ProductKey, which is a globally unique identity issued by the platform when creating a product in the Tmall Genie AI platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

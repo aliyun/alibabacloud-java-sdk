@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
     /**
+     * <p>The returned error code. The value 200 indicates that the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Return Result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0EC7*726E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Detailed information</p>
+     */
     @NameInMap("Result")
     public CheckAuthCodeBindForExtResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
 
     public static class CheckAuthCodeBindForExtResponseBodyResultDeviceOpenInfo extends TeaModel {
         /**
+         * <p>External device ID</p>
+         * 
          * <strong>example:</strong>
          * <p>A963*0158</p>
          */
@@ -107,6 +118,8 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
 
     public static class CheckAuthCodeBindForExtResponseBodyResultUserOpenInfo extends TeaModel {
         /**
+         * <p>External user ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0963*0158</p>
          */
@@ -146,9 +159,15 @@ public class CheckAuthCodeBindForExtResponseBody extends TeaModel {
     }
 
     public static class CheckAuthCodeBindForExtResponseBodyResult extends TeaModel {
+        /**
+         * <p>Device open information</p>
+         */
         @NameInMap("DeviceOpenInfo")
         public CheckAuthCodeBindForExtResponseBodyResultDeviceOpenInfo deviceOpenInfo;
 
+        /**
+         * <p>User open information</p>
+         */
         @NameInMap("UserOpenInfo")
         public CheckAuthCodeBindForExtResponseBodyResultUserOpenInfo userOpenInfo;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeviceSettingResponseBody extends TeaModel {
     /**
+     * <p>Returned error code. The value 200 indicates that the call Succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetDeviceSettingResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Return Result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class GetDeviceSettingResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0EC7*726E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns specific device Settings information.</p>
+     */
     @NameInMap("Result")
     public java.util.Map<String, ?> result;
 

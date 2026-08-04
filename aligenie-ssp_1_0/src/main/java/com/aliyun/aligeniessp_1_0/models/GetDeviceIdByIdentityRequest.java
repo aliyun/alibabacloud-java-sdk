@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeviceIdByIdentityRequest extends TeaModel {
     /**
+     * <p>The value corresponding to the encoding type. Enter the Project ID of the project to which this product belongs. You can view it in the Tmall Genie AI platform console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDeviceIdByIdentityRequest extends TeaModel {
     public String encodeKey;
 
     /**
+     * <p>Encoding type. Enter <strong>PROJECT_ID</strong> here.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetDeviceIdByIdentityRequest extends TeaModel {
     public String encodeType;
 
     /**
+     * <p>Authentication identifier. Enter the MAC address or the SN value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetDeviceIdByIdentityRequest extends TeaModel {
     public String identityId;
 
     /**
+     * <p>Device authentication type. Enter <strong>MAC</strong>, <strong>SN</strong>, or <strong>CTEI</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,8 @@ public class GetDeviceIdByIdentityRequest extends TeaModel {
     public String identityType;
 
     /**
+     * <p>The unique product identifier ProductKey, which is a globally unique identity issued by the platform when the product is created in the Tmall Genie AI platform. This parameter is optional when IdentityType is <strong>CTEI</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Mm*****XnZ8</p>
      */

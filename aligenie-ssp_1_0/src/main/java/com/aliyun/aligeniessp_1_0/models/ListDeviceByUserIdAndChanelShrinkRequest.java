@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDeviceByUserIdAndChanelShrinkRequest extends TeaModel {
     /**
+     * <p>Activation channel, such as WeChat mini program or third-party app.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelInfo")
     public String channelInfoShrink;
 
     /**
+     * <p>List of User Identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

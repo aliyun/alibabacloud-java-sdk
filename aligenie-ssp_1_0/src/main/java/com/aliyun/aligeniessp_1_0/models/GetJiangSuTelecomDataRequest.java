@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJiangSuTelecomDataRequest extends TeaModel {
     /**
+     * <p>Date in the format yyyy-MM-dd. This refers to the data timestamp when the data becomes available, not the date when the data was generated. Data is always produced on a T+1 basis.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-09</p>
      */

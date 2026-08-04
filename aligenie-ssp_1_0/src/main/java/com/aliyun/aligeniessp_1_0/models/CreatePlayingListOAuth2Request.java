@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreatePlayingListOAuth2Request extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public CreatePlayingListOAuth2RequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenCreatePlayingListRequest")
@@ -39,6 +41,7 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
 
     public static class CreatePlayingListOAuth2RequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the project to which the product belongs. You can view it in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +51,7 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -57,6 +61,7 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Enter the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +71,7 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of device ID:<br>OPEN_ID: The default device ID.<br>UNION_ID: The organization-level device ID. You must request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +81,8 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -130,6 +138,8 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
 
     public static class CreatePlayingListOAuth2RequestOpenCreatePlayingListRequestContentList extends TeaModel {
         /**
+         * <p>Third-party ID.  </p>
+         * <p>If the item is content, this is the content ID; if it is an album, this is the album ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +149,7 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,12 +183,15 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
 
     public static class CreatePlayingListOAuth2RequestOpenCreatePlayingListRequest extends TeaModel {
         /**
+         * <p>Playback objects</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ContentList")
         public java.util.List<CreatePlayingListOAuth2RequestOpenCreatePlayingListRequestContentList> contentList;
 
         /**
+         * <p>Content type for playback</p>
+         * <p>Content: content; Album: album; Playlist: collect</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,10 +200,16 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>Extension information</p>
+         */
         @NameInMap("ExtendInfo")
         public java.util.Map<String, ?> extendInfo;
 
         /**
+         * <p>Index of the item to play</p>
+         * <p>Can be empty. Default is 0, which means playback starts from the beginning.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -197,6 +217,8 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public Integer index;
 
         /**
+         * <p>Indicates whether album playback should continue from the last played episode. For example, if the last playback stopped at episode 5, whether to resume from episode 5. Default is true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -204,6 +226,9 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public Boolean needAlbumContinued;
 
         /**
+         * <p>Playback source, the unique identifier for configuring playback control capabilities.  </p>
+         * <p>Optional. Default value is &quot;default&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -211,6 +236,9 @@ public class CreatePlayingListOAuth2Request extends TeaModel {
         public String playFrom;
 
         /**
+         * <p>Playback pattern</p>
+         * <p>Repeat all: Repeat; Shuffle: Shuffle; Repeat one: RepeatOne; Play in order: Normal.</p>
+         * 
          * <strong>example:</strong>
          * <p>Repeat</p>
          */

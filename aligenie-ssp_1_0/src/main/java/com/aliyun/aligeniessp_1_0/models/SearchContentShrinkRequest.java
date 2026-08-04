@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class SearchContentShrinkRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Request Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Request")
     public String requestShrink;
 
     /**
+     * <p>User identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

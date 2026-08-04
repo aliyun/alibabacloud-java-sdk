@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateScheduleTaskRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public CreateScheduleTaskRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public CreateScheduleTaskRequestPayload payload;
 
     /**
+     * <p>User Identifier Information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
 
     public static class CreateScheduleTaskRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the SkillID of the application. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client application.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -60,6 +65,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device identity for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for Android application customer linkage; SKILL_ID: skill ID, used for cloud linkage.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT_ID</p>
          */
@@ -67,6 +74,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
+         * 
          * <strong>example:</strong>
          * <p>DAFE****ce3ej=</p>
          */
@@ -74,6 +83,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID: OPEN_ID: default device ID; UNION_ID: organization-level device ID, available only after applying for an organization in the Maojing Skill Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -81,6 +92,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -136,6 +149,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
 
     public static class CreateScheduleTaskRequestPayloadActionDTOs extends TeaModel {
         /**
+         * <p>Vendor-defined command</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:{&quot;key&quot;:1}}</p>
          */
@@ -159,6 +174,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
 
     public static class CreateScheduleTaskRequestPayloadScheduleDTOOnce extends TeaModel {
         /**
+         * <p>Trigger day</p>
+         * 
          * <strong>example:</strong>
          * <p>26</p>
          */
@@ -166,6 +183,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public Integer day;
 
         /**
+         * <p>Trigger Hour</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -173,6 +192,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger Minute</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -180,6 +201,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public Integer minute;
 
         /**
+         * <p>Trigger Month</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -187,6 +210,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public Integer month;
 
         /**
+         * <p>Trigger Year</p>
+         * 
          * <strong>example:</strong>
          * <p>2022</p>
          */
@@ -241,9 +266,15 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestPayloadScheduleDTOStatutoryWorkingDay extends TeaModel {
+        /**
+         * <p>Trigger hour; Multiple Choice</p>
+         */
         @NameInMap("Hours")
         public java.util.List<Integer> hours;
 
+        /**
+         * <p>Trigger minute; Multiple Choice</p>
+         */
         @NameInMap("Minutes")
         public java.util.List<Integer> minutes;
 
@@ -271,12 +302,21 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestPayloadScheduleDTOWeekly extends TeaModel {
+        /**
+         * <p>Trigger days of the week, where 1–7 represent Monday through Sunday, respectively</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <p>Trigger hour</p>
+         */
         @NameInMap("Hours")
         public java.util.List<Integer> hours;
 
+        /**
+         * <p>Trigger minute</p>
+         */
         @NameInMap("Minutes")
         public java.util.List<Integer> minutes;
 
@@ -312,10 +352,14 @@ public class CreateScheduleTaskRequest extends TeaModel {
     }
 
     public static class CreateScheduleTaskRequestPayloadScheduleDTO extends TeaModel {
+        /**
+         * <p>One-time Scan Configuration</p>
+         */
         @NameInMap("Once")
         public CreateScheduleTaskRequestPayloadScheduleDTOOnce once;
 
         /**
+         * <p>Schedule end time</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,6 +369,7 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public Long scheduleEndTime;
 
         /**
+         * <p>Schedule Start Time</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,6 +379,7 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public Long scheduleStartTime;
 
         /**
+         * <p>Schedule Type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,9 +388,15 @@ public class CreateScheduleTaskRequest extends TeaModel {
         @NameInMap("ScheduleType")
         public String scheduleType;
 
+        /**
+         * <p>Statutory working day schedule configuration</p>
+         */
         @NameInMap("StatutoryWorkingDay")
         public CreateScheduleTaskRequestPayloadScheduleDTOStatutoryWorkingDay statutoryWorkingDay;
 
+        /**
+         * <p>Loop schedule configuration</p>
+         */
         @NameInMap("Weekly")
         public CreateScheduleTaskRequestPayloadScheduleDTOWeekly weekly;
 
@@ -405,12 +457,15 @@ public class CreateScheduleTaskRequest extends TeaModel {
 
     public static class CreateScheduleTaskRequestPayload extends TeaModel {
         /**
+         * <p>Scheduling action parameters</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ActionDTOs")
         public java.util.List<CreateScheduleTaskRequestPayloadActionDTOs> actionDTOs;
 
         /**
+         * <p>Idempotent ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -418,6 +473,7 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String idempotentId;
 
         /**
+         * <p>Scheduling information</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ScheduleDTO")
@@ -456,6 +512,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
 
     public static class CreateScheduleTaskRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -463,6 +521,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding Type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used for Android application customer links; SKILL_ID: Skill ID, used for cloud-based links.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT_ID</p>
          */
@@ -470,6 +530,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
+         * 
          * <strong>example:</strong>
          * <p>HOFF****my7Iw=</p>
          */
@@ -477,6 +539,12 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID:  </p>
+         * <ul>
+         * <li>OPEN_ID: The default User ID identity.  </li>
+         * <li>UNION_ID: The User ID identity at the organization dimension. This is available only after an organization has been requested on the Maojing Skill Application Open Platform.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -484,6 +552,8 @@ public class CreateScheduleTaskRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID; Required if IdType is UNION_ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

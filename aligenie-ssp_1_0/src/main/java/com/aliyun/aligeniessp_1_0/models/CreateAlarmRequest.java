@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateAlarmRequest extends TeaModel {
     /**
+     * <p>Device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public CreateAlarmRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public CreateAlarmRequestPayload payload;
 
     /**
+     * <p>User Identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,7 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the Skill ID of the application; when the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +66,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device identity for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used in the Android application customer link; SKILL_ID: skill ID, used in the cloud link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +76,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +86,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID: OPEN_ID: default device ID; UNION_ID: organization-dimension device ID, available only after applying for an organization on the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +96,8 @@ public class CreateAlarmRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,6 +153,7 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestPayloadMusicInfo extends TeaModel {
         /**
+         * <p>Ringtone ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,12 +163,17 @@ public class CreateAlarmRequest extends TeaModel {
         public Long musicId;
 
         /**
+         * <p>Ringtone name</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx铃声</p>
          */
         @NameInMap("MusicName")
         public String musicName;
 
         /**
+         * <p>Ringtone category ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,12 +183,18 @@ public class CreateAlarmRequest extends TeaModel {
         public Long musicType;
 
         /**
+         * <p>Ringtone category name</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx音乐</p>
          */
         @NameInMap("MusicTypeName")
         public String musicTypeName;
 
         /**
+         * <p>Ringtone URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xx">http://xx</a></p>
          */
@@ -229,6 +250,8 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestPayloadScheduleInfoOnce extends TeaModel {
         /**
+         * <p>Trigger Time: Day</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -236,6 +259,8 @@ public class CreateAlarmRequest extends TeaModel {
         public Integer day;
 
         /**
+         * <p>Trigger Time: Hour</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -243,6 +268,8 @@ public class CreateAlarmRequest extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger time: Minute</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -250,6 +277,8 @@ public class CreateAlarmRequest extends TeaModel {
         public Integer minute;
 
         /**
+         * <p>Trigger time: Month</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -257,6 +286,8 @@ public class CreateAlarmRequest extends TeaModel {
         public Integer month;
 
         /**
+         * <p>Trigger time: Year</p>
+         * 
          * <strong>example:</strong>
          * <p>2022</p>
          */
@@ -312,6 +343,8 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestPayloadScheduleInfoStatutoryWorkingDay extends TeaModel {
         /**
+         * <p>Trigger time: hour</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -319,6 +352,8 @@ public class CreateAlarmRequest extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger time: minute</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -349,10 +384,15 @@ public class CreateAlarmRequest extends TeaModel {
     }
 
     public static class CreateAlarmRequestPayloadScheduleInfoWeekly extends TeaModel {
+        /**
+         * <p>Collection of Days of the Week to Trigger</p>
+         */
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
         /**
+         * <p>Trigger time: hour</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -360,6 +400,8 @@ public class CreateAlarmRequest extends TeaModel {
         public Integer hour;
 
         /**
+         * <p>Trigger Time: Minute</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -398,13 +440,20 @@ public class CreateAlarmRequest extends TeaModel {
     }
 
     public static class CreateAlarmRequestPayloadScheduleInfo extends TeaModel {
+        /**
+         * <p>One-time: This property is active when the loop type is ONCE.</p>
+         */
         @NameInMap("Once")
         public CreateAlarmRequestPayloadScheduleInfoOnce once;
 
+        /**
+         * <p>Statutory working day: This property is active when the loop Type is STATUTORY_WORKING_DAY.</p>
+         */
         @NameInMap("StatutoryWorkingDay")
         public CreateAlarmRequestPayloadScheduleInfoStatutoryWorkingDay statutoryWorkingDay;
 
         /**
+         * <p>Schedule Type / Loop Type:<br>ONCE -&gt; One-time, WEEKLY -&gt; Weekly loop, STATUTORY_WORKING_DAY -&gt; Statutory working day</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -413,6 +462,9 @@ public class CreateAlarmRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Weekly Loop: This property is active when the loop Type is WEEKLY.</p>
+         */
         @NameInMap("Weekly")
         public CreateAlarmRequestPayloadScheduleInfoWeekly weekly;
 
@@ -457,18 +509,22 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestPayload extends TeaModel {
         /**
+         * <p>Ringtone information</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("MusicInfo")
         public CreateAlarmRequestPayloadMusicInfo musicInfo;
 
         /**
+         * <p>Schedule information</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ScheduleInfo")
         public CreateAlarmRequestPayloadScheduleInfo scheduleInfo;
 
         /**
+         * <p>Ringtone volume</p>
+         * 
          * <strong>example:</strong>
          * <p>40</p>
          */
@@ -508,6 +564,7 @@ public class CreateAlarmRequest extends TeaModel {
 
     public static class CreateAlarmRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -517,6 +574,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding Type. There are multiple ways to obtain the User Identifier for Maojing, and each way corresponds to a different encoding Type: PACKAGE_NAME: APK package name, used for the Android application Customer link; SKILL_ID: Skill ID, used for the cloud link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -526,6 +584,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -535,6 +594,7 @@ public class CreateAlarmRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID: OPEN_ID: default User ID identifier; UNION_ID: organization-dimension User ID identifier, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -544,6 +604,8 @@ public class CreateAlarmRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

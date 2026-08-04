@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class QueryUserDeviceListByTmeUserIdRequest extends TeaModel {
     /**
+     * <p>&quot;KG&quot;: KuGou<br>&quot;KW&quot;: Kuwo<br>&quot;QM&quot;: QQ Music</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KG</p>
      */
     @NameInMap("Sp")
     public String sp;
 
     /**
+     * <p>TME User ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FDEEDE337BAA780793D72F7F20BEF2F5</p>
      */
     @NameInMap("TmeUserId")
     public String tmeUserId;

@@ -4,6 +4,9 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListSubAlbumRequest extends TeaModel {
+    /**
+     * <p>Device Information</p>
+     */
     @NameInMap("DeviceInfo")
     public ListSubAlbumRequestDeviceInfo deviceInfo;
 
@@ -13,6 +16,9 @@ public class ListSubAlbumRequest extends TeaModel {
     @NameInMap("QuerySubscriptionAlbumRequest")
     public ListSubAlbumRequestQuerySubscriptionAlbumRequest querySubscriptionAlbumRequest;
 
+    /**
+     * <p>User information</p>
+     */
     @NameInMap("UserInfo")
     public ListSubAlbumRequestUserInfo userInfo;
 
@@ -110,6 +116,8 @@ public class ListSubAlbumRequest extends TeaModel {
 
     public static class ListSubAlbumRequestQuerySubscriptionAlbumRequestPage extends TeaModel {
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +125,8 @@ public class ListSubAlbumRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of entries per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -148,6 +158,8 @@ public class ListSubAlbumRequest extends TeaModel {
 
     public static class ListSubAlbumRequestQuerySubscriptionAlbumRequest extends TeaModel {
         /**
+         * <p>Album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>4476001</p>
          */
@@ -155,6 +167,7 @@ public class ListSubAlbumRequest extends TeaModel {
         public String albumId;
 
         /**
+         * <p>Category ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,12 +177,15 @@ public class ListSubAlbumRequest extends TeaModel {
         public Integer categoryId;
 
         /**
+         * <p>Pagination Parameters</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Page")
         public ListSubAlbumRequestQuerySubscriptionAlbumRequestPage page;
 
         /**
+         * <p>Album title</p>
+         * 
          * <strong>example:</strong>
          * <p>睡前故事</p>
          */

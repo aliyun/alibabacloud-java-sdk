@@ -4,10 +4,14 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceSettingRequest extends TeaModel {
+    /**
+     * <p>List of device identity information.</p>
+     */
     @NameInMap("DeviceInfo")
     public GetDeviceSettingRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Set of specified keys for device Settings,<br>Do Not Disturb mode: nightMode</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Keys")
@@ -36,6 +40,7 @@ public class GetDeviceSettingRequest extends TeaModel {
 
     public static class GetDeviceSettingRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the project that contains the ProductKey of this product in the Tmall Genie AI Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -45,6 +50,7 @@ public class GetDeviceSettingRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Set this parameter to PROJECT_ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,6 +60,7 @@ public class GetDeviceSettingRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Configure this parameter as deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -63,6 +70,7 @@ public class GetDeviceSettingRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of Device ID.<br>OPEN_ID: The default device identity.<br>UNION_ID: The device identity at the organization dimension. You must request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -72,6 +80,8 @@ public class GetDeviceSettingRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>122</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecommendContentResponseBody extends TeaModel {
     /**
+     * <p>Code encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Message information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListRecommendContentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p>F12B6147-5925-19E5-A3AD-E1EE1360F34E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return Result</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListRecommendContentResponseBodyResult> result;
 
@@ -67,6 +76,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
 
     public static class ListRecommendContentResponseBodyResultAuthorsCover extends TeaModel {
         /**
+         * <p>Indicates whether OSS rules can be used to crop the image</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -74,6 +85,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>Default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -81,6 +94,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -88,6 +103,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -95,6 +112,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://a.jpg">https://a.jpg</a></p>
          */
@@ -149,16 +168,30 @@ public class ListRecommendContentResponseBody extends TeaModel {
     }
 
     public static class ListRecommendContentResponseBodyResultAuthors extends TeaModel {
+        /**
+         * <p>Author types</p>
+         */
         @NameInMap("AuthorTypes")
         public java.util.List<String> authorTypes;
 
+        /**
+         * <p>Profile picture</p>
+         */
         @NameInMap("Cover")
         public ListRecommendContentResponseBodyResultAuthorsCover cover;
 
+        /**
+         * <p>Author description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Gender</p>
+         * 
          * <strong>example:</strong>
          * <p>MALE</p>
          */
@@ -166,6 +199,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String gender;
 
         /**
+         * <p>Author primary key ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13597709</p>
          */
@@ -173,6 +208,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Whether the author is online</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -180,6 +217,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public Boolean online;
 
         /**
+         * <p>Third-party author ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12311</p>
          */
@@ -187,12 +226,20 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Author title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>播音呆瓜小贼</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -277,6 +324,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
 
     public static class ListRecommendContentResponseBodyResultCover extends TeaModel {
         /**
+         * <p>Whether OSS rules can be used for cropping</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -284,6 +333,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>Default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -291,6 +342,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -298,6 +351,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image (Deprecated)</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -305,6 +360,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String mediam;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -312,6 +369,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>Small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://pic.qtfm.cn/2017/0207/2017020718285.jpg">http://pic.qtfm.cn/2017/0207/2017020718285.jpg</a></p>
          */
@@ -374,20 +433,30 @@ public class ListRecommendContentResponseBody extends TeaModel {
     }
 
     public static class ListRecommendContentResponseBodyResult extends TeaModel {
+        /**
+         * <p>Alias</p>
+         */
         @NameInMap("Alias")
         public java.util.List<String> alias;
 
         /**
+         * <p>Is audition available</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Audition")
         public Boolean audition;
 
+        /**
+         * <p>Content author</p>
+         */
         @NameInMap("Authors")
         public java.util.List<ListRecommendContentResponseBodyResultAuthors> authors;
 
         /**
+         * <p>Transform controlType based on the assigned public category</p>
+         * 
          * <strong>example:</strong>
          * <p>audio</p>
          */
@@ -395,6 +464,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Whether the content is charged</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -402,19 +473,32 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public Boolean charge;
 
         /**
+         * <p>Corresponding category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80012017</p>
          */
         @NameInMap("CommCateId")
         public Long commCateId;
 
+        /**
+         * <p>Album cover image</p>
+         */
         @NameInMap("Cover")
         public ListRecommendContentResponseBodyResultCover cover;
 
+        /**
+         * <p>Content description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Hot Score</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -422,6 +506,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public Double hotScore;
 
         /**
+         * <p>Content ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13597709</p>
          */
@@ -429,6 +515,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Type of content, such as music, audio, radio, jokes, etc.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALBUM</p>
          */
@@ -436,6 +524,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String itemType;
 
         /**
+         * <p>Third-party ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -443,16 +533,26 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>qingting</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>超能狂少在都市</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>Transformed favoriteType based on the associated public category</p>
+         * 
          * <strong>example:</strong>
          * <p>program</p>
          */
@@ -460,6 +560,8 @@ public class ListRecommendContentResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Whether playable</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */

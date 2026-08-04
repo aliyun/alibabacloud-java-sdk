@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReadMessageRequest extends TeaModel {
     /**
+     * <p>Message ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -12,6 +14,7 @@ public class ReadMessageRequest extends TeaModel {
     public Long messageId;
 
     /**
+     * <p>User information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -40,6 +43,7 @@ public class ReadMessageRequest extends TeaModel {
 
     public static class ReadMessageRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILLID, this value is the Skill ID of the application. When the encoding type is PACKAGENAME, this value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -49,6 +53,7 @@ public class ReadMessageRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the User Identifier in Maojing, and each method corresponds to a different encoding type: PACKAGENAME for the APK package name used in Android client application links, and SKILLID for the skill ID used in cloud-based links.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -58,6 +63,7 @@ public class ReadMessageRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +73,7 @@ public class ReadMessageRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID: OPENID is the default User ID identity. UNIONID is the organization-dimension User ID identity, which is available only after an organization has been registered on the Maojing Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +83,8 @@ public class ReadMessageRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

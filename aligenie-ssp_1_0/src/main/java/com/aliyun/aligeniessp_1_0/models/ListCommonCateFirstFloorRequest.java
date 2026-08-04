@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCommonCateFirstFloorRequest extends TeaModel {
     /**
+     * <p>Default value: song (extension field currently only supports song)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

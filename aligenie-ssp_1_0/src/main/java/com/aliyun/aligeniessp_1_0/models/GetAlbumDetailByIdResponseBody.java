@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAlbumDetailByIdResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>A0B7CACD-485B-14E2-854F-39EACB09E45B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Album content</p>
+     */
     @NameInMap("Result")
     public GetAlbumDetailByIdResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
 
     public static class GetAlbumDetailByIdResponseBodyResultAlbumContentList extends TeaModel {
         /**
+         * <p>Album content duration</p>
+         * 
          * <strong>example:</strong>
          * <p>3分24秒</p>
          */
@@ -74,6 +85,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
         public String duration;
 
         /**
+         * <p>Album content ID</p>
+         * 
          * <strong>example:</strong>
          * <p>468009044</p>
          */
@@ -81,6 +94,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Album content sorting</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -88,6 +103,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
         public String orderIndex;
 
         /**
+         * <p>Album content title</p>
+         * 
          * <strong>example:</strong>
          * <p>001为什么肚子饿时会咕咕叫</p>
          */
@@ -134,10 +151,15 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
     }
 
     public static class GetAlbumDetailByIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>Album content list</p>
+         */
         @NameInMap("AlbumContentList")
         public java.util.List<GetAlbumDetailByIdResponseBodyResultAlbumContentList> albumContentList;
 
         /**
+         * <p>Album thumbnail</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg">https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg</a></p>
          */
@@ -145,6 +167,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
         public String albumCoverUrl;
 
         /**
+         * <p>Album Description</p>
+         * 
          * <strong>example:</strong>
          * <p>每次一个百科知识或者故事\n丰富孩子的视野，拓展眼界和知识面，培养和孩子的探究能力和好奇心\n\n</p>
          */
@@ -152,6 +176,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
         public String albumDescription;
 
         /**
+         * <p>Album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>51999575</p>
          */
@@ -159,6 +185,8 @@ public class GetAlbumDetailByIdResponseBody extends TeaModel {
         public String albumId;
 
         /**
+         * <p>Album Title</p>
+         * 
          * <strong>example:</strong>
          * <p>小科学家探索</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeviceStatusDetailResponseBody extends TeaModel {
     /**
+     * <p>Returned error code. 200 indicates that the invocation succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Return Result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0EC7*726E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned detailed information.</p>
+     */
     @NameInMap("Result")
     public GetDeviceStatusDetailResponseBodyResult result;
 
@@ -66,10 +75,15 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
     }
 
     public static class GetDeviceStatusDetailResponseBodyResultPlayer extends TeaModel {
+        /**
+         * <p>Song Album</p>
+         */
         @NameInMap("AudioAlbum")
         public String audioAlbum;
 
         /**
+         * <p>Artist</p>
+         * 
          * <strong>example:</strong>
          * <p>刘德华</p>
          */
@@ -77,6 +91,8 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String audioAnchor;
 
         /**
+         * <p>Extension Information</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -84,6 +100,8 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String audioExt;
 
         /**
+         * <p>Audio ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -91,16 +109,23 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String audioId;
 
         /**
+         * <p>Song length, in seconds</p>
+         * 
          * <strong>example:</strong>
          * <p>253</p>
          */
         @NameInMap("AudioLength")
         public String audioLength;
 
+        /**
+         * <p>Song Name</p>
+         */
         @NameInMap("AudioName")
         public String audioName;
 
         /**
+         * <p>Song Source (xiami)</p>
+         * 
          * <strong>example:</strong>
          * <p>xiami</p>
          */
@@ -108,6 +133,8 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String audioSource;
 
         /**
+         * <p>Song URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxx">https://xxx</a></p>
          */
@@ -115,6 +142,8 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String audioUrl;
 
         /**
+         * <p>Song Type (mp3)</p>
+         * 
          * <strong>example:</strong>
          * <p>mp3</p>
          */
@@ -122,6 +151,8 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String format;
 
         /**
+         * <p>Playback progress</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -129,6 +160,8 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String progress;
 
         /**
+         * <p>Playback Source (cloud)</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud</p>
          */
@@ -136,12 +169,17 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>Playback status, pause</p>
+         * 
          * <strong>example:</strong>
          * <p>pause</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Reporting Time</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -258,12 +296,17 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
 
     public static class GetDeviceStatusDetailResponseBodyResultPower extends TeaModel {
         /**
+         * <p>Battery value</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("Quantity")
         public Integer quantity;
 
+        /**
+         * <p>Power status</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -291,10 +334,15 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
     }
 
     public static class GetDeviceStatusDetailResponseBodyResultSpeaker extends TeaModel {
+        /**
+         * <p>Is muted</p>
+         */
         @NameInMap("Muted")
         public Boolean muted;
 
         /**
+         * <p>Current volume value</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -325,12 +373,21 @@ public class GetDeviceStatusDetailResponseBody extends TeaModel {
     }
 
     public static class GetDeviceStatusDetailResponseBodyResult extends TeaModel {
+        /**
+         * <p>Player information</p>
+         */
         @NameInMap("Player")
         public GetDeviceStatusDetailResponseBodyResultPlayer player;
 
+        /**
+         * <p>Battery information</p>
+         */
         @NameInMap("Power")
         public GetDeviceStatusDetailResponseBodyResultPower power;
 
+        /**
+         * <p>Volume information</p>
+         */
         @NameInMap("Speaker")
         public GetDeviceStatusDetailResponseBodyResultSpeaker speaker;
 

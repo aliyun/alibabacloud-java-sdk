@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListCateContentRequest extends TeaModel {
     /**
+     * <p>Device identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public ListCateContentRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Request Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Request")
     public ListCateContentRequestRequest request;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class ListCateContentRequest extends TeaModel {
 
     public static class ListCateContentRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type</p>
+         * <p>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.<br>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +67,9 @@ public class ListCateContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device identifier for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p>PACKAGE_NAME: APK package name, used for the Android application customer link.
+         * SKILL_ID: Skill ID, used for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +79,7 @@ public class ListCateContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device identifier, set to deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +89,8 @@ public class ListCateContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID</p>
+         * <p>OPEN_ID: Default device ID identifier.<br>UNION_ID: Organization-level device ID identifier. This value is available only after an organization has been registered on the Tmall Genie Skill Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +100,8 @@ public class ListCateContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -144,6 +157,7 @@ public class ListCateContentRequest extends TeaModel {
 
     public static class ListCateContentRequestRequest extends TeaModel {
         /**
+         * <p>Category ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +167,7 @@ public class ListCateContentRequest extends TeaModel {
         public Long cateId;
 
         /**
+         * <p>Indicates whether to query albums</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +177,7 @@ public class ListCateContentRequest extends TeaModel {
         public Boolean isAlbum;
 
         /**
+         * <p>Page number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +187,7 @@ public class ListCateContentRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of records per page</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +197,8 @@ public class ListCateContentRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Sorting field</p>
+         * 
          * <strong>example:</strong>
          * <p>hot_score</p>
          */
@@ -187,6 +206,7 @@ public class ListCateContentRequest extends TeaModel {
         public String sortBy;
 
         /**
+         * <p>Sorting order</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,6 +272,8 @@ public class ListCateContentRequest extends TeaModel {
 
     public static class ListCateContentRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type.</p>
+         * <p>When the encoding type is SKILL_ID, the value is the Skill ID of the application.<br>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,6 +283,8 @@ public class ListCateContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p>PACKAGE_NAME: APK package name, used for the Android application customer link.<br>SKILL_ID: Skill ID, used for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,6 +294,7 @@ public class ListCateContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier, set to userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,6 +304,8 @@ public class ListCateContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID.</p>
+         * <p>OPEN_ID: The default User ID identifier.<br>UNION_ID: The organization-dimension User ID identifier. This value is available only after an organization has been registered on the Tmall Genie Skills Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +315,8 @@ public class ListCateContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

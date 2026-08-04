@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,16 +23,23 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>73*<em><strong>9-175A-1324-8202-9FAAB</strong></em>**A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response Result</p>
+     */
     @NameInMap("Result")
     public EcologyOpennessAuthenticateResponseBodyResult result;
 
     /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
 
     public static class EcologyOpennessAuthenticateResponseBodyResult extends TeaModel {
         /**
+         * <p>entity key</p>
+         * 
          * <strong>example:</strong>
          * <p>12****7</p>
          */
@@ -89,6 +102,8 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>entity Type</p>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT_ID</p>
          */
@@ -96,6 +111,8 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>scenario code</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -103,6 +120,8 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
         public String sceneCode;
 
         /**
+         * <p>Third-party user identifier</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -110,6 +129,8 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
         public String thirdUserIdentifier;
 
         /**
+         * <p>Third-party user type</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -117,6 +138,8 @@ public class EcologyOpennessAuthenticateResponseBody extends TeaModel {
         public String thirdUserType;
 
         /**
+         * <p>Tmall Genie user openId</p>
+         * 
          * <strong>example:</strong>
          * <p>o****RnNAW/smBNX9By7Zlc3J7iQUXPiUj/6OizU+ifLSzn1vpQL9ZgSp22u7hsxj0UZ2i6urbv9HQ==</p>
          */

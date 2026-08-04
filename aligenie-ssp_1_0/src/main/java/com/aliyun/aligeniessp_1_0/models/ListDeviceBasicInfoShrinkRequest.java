@@ -4,6 +4,9 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceBasicInfoShrinkRequest extends TeaModel {
+    /**
+     * <p>List of device identity information.</p>
+     */
     @NameInMap("DeviceInfos")
     public String deviceInfosShrink;
 

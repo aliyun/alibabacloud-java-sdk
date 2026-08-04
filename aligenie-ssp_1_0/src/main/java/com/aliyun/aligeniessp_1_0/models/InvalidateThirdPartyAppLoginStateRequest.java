@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class InvalidateThirdPartyAppLoginStateRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public InvalidateThirdPartyAppLoginStateRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Third-party application identity</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class InvalidateThirdPartyAppLoginStateRequest extends TeaModel {
 
     public static class InvalidateThirdPartyAppLoginStateRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the Skill ID of the application. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class InvalidateThirdPartyAppLoginStateRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the Tmall Genie device ID, and each method corresponds to a different encoding type: PACKAGE_NAME refers to the APK package name, used in the Android application customer flow; SKILL_ID refers to the skill ID, used in the cloud-based flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -60,6 +64,7 @@ public class InvalidateThirdPartyAppLoginStateRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,6 +74,7 @@ public class InvalidateThirdPartyAppLoginStateRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of Device ID. OPEN_ID: the default device identity. UNION_ID: the device identity at the organization dimension, which is available only after an organization has been requested on the Maojing Skills Application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +84,8 @@ public class InvalidateThirdPartyAppLoginStateRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

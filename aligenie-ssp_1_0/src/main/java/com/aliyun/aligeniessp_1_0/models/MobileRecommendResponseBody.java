@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MobileRecommendResponseBody extends TeaModel {
     /**
+     * <p>Return code of the invocation</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class MobileRecommendResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>If an error occurs, the error message will be output.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +31,9 @@ public class MobileRecommendResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Request result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<MobileRecommendResponseBodyResult> result;
 
@@ -68,10 +75,15 @@ public class MobileRecommendResponseBody extends TeaModel {
     }
 
     public static class MobileRecommendResponseBodyResult extends TeaModel {
+        /**
+         * <p>Author information</p>
+         */
         @NameInMap("Authors")
         public java.util.List<String> authors;
 
         /**
+         * <p>Album thumbnail image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://img4.kuwo.cn/star/albumcover/120/78/77/1688821132.jpg">http://img4.kuwo.cn/star/albumcover/120/78/77/1688821132.jpg</a></p>
          */
@@ -79,6 +91,8 @@ public class MobileRecommendResponseBody extends TeaModel {
         public String cover;
 
         /**
+         * <p>Third-party ID of the content</p>
+         * 
          * <strong>example:</strong>
          * <p>550144364</p>
          */
@@ -86,12 +100,20 @@ public class MobileRecommendResponseBody extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source of the content</p>
+         * 
          * <strong>example:</strong>
          * <p>KG</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>Content title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>稻香</p>
+         */
         @NameInMap("Title")
         public String title;
 

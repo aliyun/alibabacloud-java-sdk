@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreatePlayingListRequest extends TeaModel {
     /**
+     * <p>Device ID information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public CreatePlayingListRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Business parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OpenCreatePlayingListRequest")
     public CreatePlayingListRequestOpenCreatePlayingListRequest openCreatePlayingListRequest;
 
     /**
+     * <p>User identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class CreatePlayingListRequest extends TeaModel {
 
     public static class CreatePlayingListRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type.</p>
+         * <p>When the encoding type is <code>SKILL_ID</code>, the value is the application\&quot;s Skill ID.<br>When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +67,8 @@ public class CreatePlayingListRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used as the encoding type for the Android application customer link.<br><code>SKILL_ID</code>: Skill ID, used as the encoding type for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +78,7 @@ public class CreatePlayingListRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to either deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +88,8 @@ public class CreatePlayingListRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID.</p>
+         * <p><code>OPEN_ID</code>: Default device ID identity.<br><code>UNION_ID</code>: Organization-dimension device ID identity. This value is available only after an organization has been requested on the Tmall Genie skill application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,6 +99,8 @@ public class CreatePlayingListRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -144,6 +156,8 @@ public class CreatePlayingListRequest extends TeaModel {
 
     public static class CreatePlayingListRequestOpenCreatePlayingListRequestContentList extends TeaModel {
         /**
+         * <p>Third-party ID.</p>
+         * <p>If the content type is &quot;content&quot;, this is the content ID. If it is &quot;album&quot;, this is the album ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +167,7 @@ public class CreatePlayingListRequest extends TeaModel {
         public String rawId;
 
         /**
+         * <p>Source</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,12 +201,16 @@ public class CreatePlayingListRequest extends TeaModel {
 
     public static class CreatePlayingListRequestOpenCreatePlayingListRequest extends TeaModel {
         /**
+         * <p>Playback content list.</p>
+         * <p>If the content type is &quot;content&quot;, multiple entries are supported. If it is &quot;album&quot;, only the first entry takes effect.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ContentList")
         public java.util.List<CreatePlayingListRequestOpenCreatePlayingListRequestContentList> contentList;
 
         /**
+         * <p>Content type for playback.</p>
+         * <p>Values: &quot;content&quot; for content, &quot;album&quot; for album, and &quot;collect&quot; for playlist.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,10 +219,16 @@ public class CreatePlayingListRequest extends TeaModel {
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>extension information</p>
+         */
         @NameInMap("ExtendInfo")
         public java.util.Map<String, ?> extendInfo;
 
         /**
+         * <p>Playback index.</p>
+         * <p>Can be empty. Default is 0, indicating playback starts from the beginning.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -211,6 +236,8 @@ public class CreatePlayingListRequest extends TeaModel {
         public Integer index;
 
         /**
+         * <p>Whether to resume album playback. For example, if the user previously listened up to episode 5 of an album, whether to continue from episode 5. Default is true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -218,6 +245,9 @@ public class CreatePlayingListRequest extends TeaModel {
         public Boolean needAlbumContinued;
 
         /**
+         * <p>Playback source, the UUID for configuring playback control capabilities.</p>
+         * <p>Can be empty. Default is &quot;default&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -225,6 +255,9 @@ public class CreatePlayingListRequest extends TeaModel {
         public String playFrom;
 
         /**
+         * <p>Playback pattern.</p>
+         * <p>Repeat: list loop; Shuffle: random; RepeatOne: single track loop; Normal: sequential playback.</p>
+         * 
          * <strong>example:</strong>
          * <p>Repeat</p>
          */
@@ -296,6 +329,8 @@ public class CreatePlayingListRequest extends TeaModel {
 
     public static class CreatePlayingListRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type.</p>
+         * <p>When the encoding type is <code>SKILL_ID</code>, the value is the application\&quot;s Skill ID.<br>When the encoding type is <code>PACKAGE_NAME</code>, the value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,6 +340,8 @@ public class CreatePlayingListRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p><code>PACKAGE_NAME</code>: APK package name, used as the encoding type for the Android application customer link.<br><code>SKILL_ID</code>: Skill ID, used as the encoding type for the cloud-based link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,6 +351,7 @@ public class CreatePlayingListRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User identifier, set to either userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,6 +361,8 @@ public class CreatePlayingListRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID.</p>
+         * <p><code>OPEN_ID</code>: Default User ID identity.<br><code>UNION_ID</code>: Organization-dimension User ID identity. This value is available only after an organization has been requested on the Tmall Genie skill application Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,6 +372,8 @@ public class CreatePlayingListRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

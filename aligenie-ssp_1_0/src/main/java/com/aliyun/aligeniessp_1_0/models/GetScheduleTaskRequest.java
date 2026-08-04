@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetScheduleTaskRequest extends TeaModel {
     /**
+     * <p>Device ID information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public GetScheduleTaskRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public GetScheduleTaskRequestPayload payload;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,8 @@ public class GetScheduleTaskRequest extends TeaModel {
 
     public static class GetScheduleTaskRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. If the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. If the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -60,6 +65,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used in the Android application customer link; SKILL_ID: skill ID, used in the cloud link.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT_ID</p>
          */
@@ -67,6 +74,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID (deviceOpenId or deviceUnionId)</p>
+         * 
          * <strong>example:</strong>
          * <p>DAFE****ce3ej=</p>
          */
@@ -74,6 +83,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Device ID type: OPEN_ID: default device ID; UNION_ID: organization-level device ID, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -81,6 +92,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -136,6 +149,7 @@ public class GetScheduleTaskRequest extends TeaModel {
 
     public static class GetScheduleTaskRequestPayload extends TeaModel {
         /**
+         * <p>ID of the job to query</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +175,8 @@ public class GetScheduleTaskRequest extends TeaModel {
 
     public static class GetScheduleTaskRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. When the encoding type is SKILLID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGENAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -168,6 +184,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME indicates the APK package name, used in the Android application customer flow; SKILL_ID indicates the skill ID, used in the cloud-based flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>PROJECT_ID</p>
          */
@@ -175,6 +193,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
+         * 
          * <strong>example:</strong>
          * <p>HOFF****my7Iw=</p>
          */
@@ -182,6 +202,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID: OPENID—the default User ID identity; UNIONID—the organization-dimension User ID identity, available only after an organization has been requested on the Maojing Skill Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -189,6 +211,8 @@ public class GetScheduleTaskRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

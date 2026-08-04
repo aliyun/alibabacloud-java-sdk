@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
     /**
+     * <p>Activation channel, such as WeChat mini program or third-party app.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelInfo")
     public ListDeviceByUserIdAndChanelRequestChannelInfo channelInfo;
 
     /**
+     * <p>List of User Identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -39,6 +41,7 @@ public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
 
     public static class ListDeviceByUserIdAndChanelRequestChannelInfo extends TeaModel {
         /**
+         * <p>Activation provisioning channel, such as WeChat or ThirdApp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +51,8 @@ public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
         public String channel;
 
         /**
+         * <p>Extension information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -79,6 +84,7 @@ public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
 
     public static class ListDeviceByUserIdAndChanelRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type; enter the Project ID of the project to which the product belongs. You can view this in the Tmall Genie AI platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +94,7 @@ public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding Type; enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +104,7 @@ public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier; enter the value of userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +114,7 @@ public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The Type of the User ID:<br>OPEN_ID: The default User ID identity.<br>UNION_ID: The User ID identity at the organization dimension, which requires you to request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +124,8 @@ public class ListDeviceByUserIdAndChanelRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID; required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1***2</p>
          */

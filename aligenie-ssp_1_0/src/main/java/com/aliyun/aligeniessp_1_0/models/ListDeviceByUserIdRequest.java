@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeviceByUserIdRequest extends TeaModel {
     /**
+     * <p>List of User Identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -25,6 +26,7 @@ public class ListDeviceByUserIdRequest extends TeaModel {
 
     public static class ListDeviceByUserIdRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the project where the product resides. You can view this in the Tmall Genie AI platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class ListDeviceByUserIdRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter <strong>PROJECT_ID</strong> here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -43,6 +46,7 @@ public class ListDeviceByUserIdRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier. Enter the value of userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -52,6 +56,11 @@ public class ListDeviceByUserIdRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of the User ID:</p>
+         * <ul>
+         * <li>OPEN_ID: The default User ID identifier.</li>
+         * <li>UNION_ID: A User ID identifier in the organization dimension. You must request an organization in the Open Platform beforehand.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +70,8 @@ public class ListDeviceByUserIdRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

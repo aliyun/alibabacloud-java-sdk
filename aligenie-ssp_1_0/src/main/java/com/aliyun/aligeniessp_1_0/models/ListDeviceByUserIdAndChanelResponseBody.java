@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDeviceByUserIdAndChanelResponseBody extends TeaModel {
     /**
+     * <p>The returned error code. The value 200 indicates that the call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListDeviceByUserIdAndChanelResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Return Result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListDeviceByUserIdAndChanelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>RE***D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of information</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDeviceByUserIdAndChanelResponseBodyResult> result;
 
@@ -67,6 +76,8 @@ public class ListDeviceByUserIdAndChanelResponseBody extends TeaModel {
 
     public static class ListDeviceByUserIdAndChanelResponseBodyResultDeviceUnionIds extends TeaModel {
         /**
+         * <p>The UnionId of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>1553*B0C3</p>
          */
@@ -74,6 +85,8 @@ public class ListDeviceByUserIdAndChanelResponseBody extends TeaModel {
         public String deviceUnionId;
 
         /**
+         * <p>Organization ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1***2</p>
          */
@@ -105,12 +118,17 @@ public class ListDeviceByUserIdAndChanelResponseBody extends TeaModel {
 
     public static class ListDeviceByUserIdAndChanelResponseBodyResult extends TeaModel {
         /**
+         * <p>The openId corresponding to the Device Information.</p>
+         * 
          * <strong>example:</strong>
          * <p>A963*0158</p>
          */
         @NameInMap("DeviceOpenId")
         public String deviceOpenId;
 
+        /**
+         * <p>List of information</p>
+         */
         @NameInMap("DeviceUnionIds")
         public java.util.List<ListDeviceByUserIdAndChanelResponseBodyResultDeviceUnionIds> deviceUnionIds;
 

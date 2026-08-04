@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReadMessageShrinkRequest extends TeaModel {
     /**
+     * <p>Message ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -12,6 +14,7 @@ public class ReadMessageShrinkRequest extends TeaModel {
     public Long messageId;
 
     /**
+     * <p>User information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

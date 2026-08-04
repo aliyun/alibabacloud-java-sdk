@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class InvalidateThirdPartyAppLoginStateShrinkRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Third-party application identity</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

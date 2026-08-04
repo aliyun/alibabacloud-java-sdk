@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthLoginWithAligenieUserInfoRequest extends TeaModel {
     /**
+     * <p>Encrypted Aligenie User Identifier</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AuthLoginWithAligenieUserInfoRequest extends TeaModel {
     public String encryptedAligenieUserIdentifier;
 
     /**
+     * <p>Session ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

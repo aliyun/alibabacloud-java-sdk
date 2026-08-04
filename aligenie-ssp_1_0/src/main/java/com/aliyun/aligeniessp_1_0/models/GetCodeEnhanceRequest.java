@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetCodeEnhanceRequest extends TeaModel {
     /**
+     * <p>Activation Channel, such as WeChat mini program or third-party app.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ChannelInfo")
     public GetCodeEnhanceRequestChannelInfo channelInfo;
 
     /**
+     * <p>List of User Identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -39,6 +41,7 @@ public class GetCodeEnhanceRequest extends TeaModel {
 
     public static class GetCodeEnhanceRequestChannelInfo extends TeaModel {
         /**
+         * <p>Activation Channel, such as WeChat or ThirdApp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +51,8 @@ public class GetCodeEnhanceRequest extends TeaModel {
         public String channel;
 
         /**
+         * <p>Extension information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -79,6 +84,7 @@ public class GetCodeEnhanceRequest extends TeaModel {
 
     public static class GetCodeEnhanceRequestUserInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the project to which the product belongs. You can view it in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,6 +94,7 @@ public class GetCodeEnhanceRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding Type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,6 +104,7 @@ public class GetCodeEnhanceRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier. Enter the value of userOpenId or userUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,6 +114,7 @@ public class GetCodeEnhanceRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID:<br>OPENID: The default User ID identifier.<br>UNIONID: The organization-dimension User ID identifier. You must request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +124,8 @@ public class GetCodeEnhanceRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class SetDeviceSettingRequest extends TeaModel {
     /**
+     * <p>List of user identifier information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public SetDeviceSettingRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>The collection of keys specified for device settings:<br>Do Not Disturb mode: nightMode</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class SetDeviceSettingRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>Attribute Value</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;enable&quot;:true}</p>
      */
@@ -57,6 +61,7 @@ public class SetDeviceSettingRequest extends TeaModel {
 
     public static class SetDeviceSettingRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. Enter the Project ID of the project where the product resides. You can view it in the Tmall Genie AI platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -66,6 +71,7 @@ public class SetDeviceSettingRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter PROJECT_ID here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -75,6 +81,7 @@ public class SetDeviceSettingRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID. Enter the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +91,7 @@ public class SetDeviceSettingRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of Device ID:<br>OPEN_ID: The default device identity.<br>UNION_ID: The organization-dimension device identity. You must request an organization in advance on the Open Platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,6 +100,9 @@ public class SetDeviceSettingRequest extends TeaModel {
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MobileRecommendShrinkRequest extends TeaModel {
     /**
+     * <p>Bot ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class MobileRecommendShrinkRequest extends TeaModel {
     public String botId;
 
     /**
+     * <p>Quantity of recommended Result</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -19,15 +23,24 @@ public class MobileRecommendShrinkRequest extends TeaModel {
     public String count;
 
     /**
+     * <p>Device identification information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
+    /**
+     * <p>Required when the request type is STYLE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>轻音乐</p>
+     */
     @NameInMap("Style")
     public String style;
 
     /**
+     * <p>Request Type: Obtain daily recommendations, hot songs, or genre-based playlists.</p>
+     * 
      * <strong>example:</strong>
      * <p>DAILY_REC</p>
      */
@@ -35,6 +48,7 @@ public class MobileRecommendShrinkRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>User information – userId</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

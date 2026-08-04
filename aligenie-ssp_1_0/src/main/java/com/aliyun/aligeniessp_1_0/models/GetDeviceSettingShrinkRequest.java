@@ -4,10 +4,14 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceSettingShrinkRequest extends TeaModel {
+    /**
+     * <p>List of device identity information.</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Set of specified keys for device Settings,<br>Do Not Disturb mode: nightMode</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Keys")

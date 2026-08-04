@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aligenie", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>收藏/取消收藏</p>
+     * <p>Collect or remove from favorites.</p>
      * 
      * @param tmpReq AddAndRemoveFavoriteContentRequest
      * @param headers AddAndRemoveFavoriteContentHeaders
@@ -99,7 +99,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>收藏/取消收藏</p>
+     * <p>Collect or remove from favorites.</p>
      * 
      * @param request AddAndRemoveFavoriteContentRequest
      * @return AddAndRemoveFavoriteContentResponse
@@ -112,7 +112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增订阅</p>
+     * <p>Subscribe to an album.</p>
      * 
      * @param tmpReq AddSubRequest
      * @param headers AddSubHeaders
@@ -181,7 +181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增订阅</p>
+     * <p>Subscribe to an album.</p>
      * 
      * @param request AddSubRequest
      * @return AddSubResponse
@@ -194,7 +194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过指定精灵账号进行授权登录</p>
+     * <p>Authorize logon by specifying an Aligenie account.</p>
      * 
      * @param request AuthLoginWithAligenieUserInfoRequest
      * @param headers AuthLoginWithAligenieUserInfoHeaders
@@ -245,7 +245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过指定精灵账号进行授权登录</p>
+     * <p>Authorize logon by specifying an Aligenie account.</p>
      * 
      * @param request AuthLoginWithAligenieUserInfoRequest
      * @return AuthLoginWithAligenieUserInfoResponse
@@ -258,7 +258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过手机号生成精灵账号进行授权登录</p>
+     * <p>Generate a Genie account by phone number for authorization logon.</p>
      * 
      * @param request AuthLoginWithAligenieUserInfoGeneratedByPhoneNumberRequest
      * @param headers AuthLoginWithAligenieUserInfoGeneratedByPhoneNumberHeaders
@@ -305,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过手机号生成精灵账号进行授权登录</p>
+     * <p>Generate a Genie account by phone number for authorization logon.</p>
      * 
      * @param request AuthLoginWithAligenieUserInfoGeneratedByPhoneNumberRequest
      * @return AuthLoginWithAligenieUserInfoGeneratedByPhoneNumberResponse
@@ -318,7 +318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过指定淘宝账号进行授权登录</p>
+     * <p>Authorize logon by specifying a Taobao account</p>
      * 
      * @param request AuthLoginWithTaobaoUserInfoRequest
      * @param headers AuthLoginWithTaobaoUserInfoHeaders
@@ -369,7 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过指定淘宝账号进行授权登录</p>
+     * <p>Authorize logon by specifying a Taobao account</p>
      * 
      * @param request AuthLoginWithTaobaoUserInfoRequest
      * @return AuthLoginWithTaobaoUserInfoResponse
@@ -382,7 +382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过三方用户信息进行授权登录</p>
+     * <p>Authorize logon by using third-party user information.</p>
      * 
      * @param tmpReq AuthLoginWithThirdUserInfoRequest
      * @param headers AuthLoginWithThirdUserInfoHeaders
@@ -447,7 +447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过三方用户信息进行授权登录</p>
+     * <p>Authorize logon by using third-party user information.</p>
      * 
      * @param request AuthLoginWithThirdUserInfoRequest
      * @return AuthLoginWithThirdUserInfoResponse
@@ -546,7 +546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轮询激活绑定结果</p>
+     * <p>Poll the result of the activation attachment.</p>
      * 
      * @param tmpReq CheckAuthCodeBindForExtRequest
      * @param headers CheckAuthCodeBindForExtHeaders
@@ -611,7 +611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轮询激活绑定结果</p>
+     * <p>Poll the result of the activation attachment.</p>
      * 
      * @param request CheckAuthCodeBindForExtRequest
      * @return CheckAuthCodeBindForExtResponse
@@ -623,8 +623,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After synchronously validating the input parameters, the system asynchronously creates the playlist.</p>
+     * 
      * <b>summary</b> : 
-     * <p>云播放器：对外</p>
+     * <p>Cloud Push Song: Create a playlist by providing the device openUuid and the Tmall Genie openUserId.</p>
      * 
      * @param tmpReq CloudPlayerRequest
      * @param headers CloudPlayerHeaders
@@ -708,8 +711,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After synchronously validating the input parameters, the system asynchronously creates the playlist.</p>
+     * 
      * <b>summary</b> : 
-     * <p>云播放器：对外</p>
+     * <p>Cloud Push Song: Create a playlist by providing the device openUuid and the Tmall Genie openUserId.</p>
      * 
      * @param request CloudPlayerRequest
      * @return CloudPlayerResponse
@@ -722,7 +728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建闹钟</p>
+     * <p>Create an alarm that supports three types: one-time, weekly, and legal working days.</p>
      * 
      * @param tmpReq CreateAlarmRequest
      * @param headers CreateAlarmHeaders
@@ -791,7 +797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建闹钟</p>
+     * <p>Create an alarm that supports three types: one-time, weekly, and legal working days.</p>
      * 
      * @param request CreateAlarmRequest
      * @return CreateAlarmResponse
@@ -804,7 +810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放列表创建</p>
+     * <p>Create a playlist and play the specified content.</p>
      * 
      * @param tmpReq CreatePlayingListRequest
      * @param headers CreatePlayingListHeaders
@@ -875,7 +881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放列表创建</p>
+     * <p>Create a playlist and play the specified content.</p>
      * 
      * @param request CreatePlayingListRequest
      * @return CreatePlayingListResponse
@@ -888,7 +894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放列表创建走OAuth2授权</p>
+     * <p>Playlist creation uses OAuth2 authorization.</p>
      * 
      * @param tmpReq CreatePlayingListOAuth2Request
      * @param headers map
@@ -938,7 +944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放列表创建走OAuth2授权</p>
+     * <p>Playlist creation uses OAuth2 authorization.</p>
      * 
      * @param request CreatePlayingListOAuth2Request
      * @return CreatePlayingListOAuth2Response
@@ -950,8 +956,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Configure a triggering task for Custom instruction data in the ecosystem based on scheduling rules such as one-time, daily, or business days.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建定时任务</p>
+     * <p>Create a scheduled task.</p>
      * 
      * @param tmpReq CreateScheduleTaskRequest
      * @param headers CreateScheduleTaskHeaders
@@ -1019,8 +1028,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Configure a triggering task for Custom instruction data in the ecosystem based on scheduling rules such as one-time, daily, or business days.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建定时任务</p>
+     * <p>Create a scheduled task.</p>
      * 
      * @param request CreateScheduleTaskRequest
      * @return CreateScheduleTaskResponse
@@ -1033,7 +1045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>闹钟批量删除</p>
+     * <p>Delete alarms. You can delete multiple alarms at the same time.</p>
      * 
      * @param tmpReq DeleteAlarmsRequest
      * @param headers DeleteAlarmsHeaders
@@ -1102,7 +1114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>闹钟批量删除</p>
+     * <p>Delete alarms. You can delete multiple alarms at the same time.</p>
      * 
      * @param request DeleteAlarmsRequest
      * @return DeleteAlarmsResponse
@@ -1114,8 +1126,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified scheduled task by its ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除定时任务</p>
+     * <p>Delete a scheduled task.</p>
      * 
      * @param tmpReq DeleteScheduleTaskRequest
      * @param headers DeleteScheduleTaskHeaders
@@ -1183,8 +1198,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified scheduled task by its ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除定时任务</p>
+     * <p>Delete a scheduled task.</p>
      * 
      * @param request DeleteScheduleTaskRequest
      * @return DeleteScheduleTaskResponse
@@ -1197,7 +1215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除订阅</p>
+     * <p>Delete a subscribed album.</p>
      * 
      * @param request DeleteSubRequest
      * @param headers DeleteSubHeaders
@@ -1244,7 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除订阅</p>
+     * <p>Delete a subscribed album.</p>
      * 
      * @param request DeleteSubRequest
      * @return DeleteSubResponse
@@ -1256,8 +1274,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify a device to modify property values such as volume.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设备控制</p>
+     * <p>Control property values such as device volume.</p>
      * 
      * @param tmpReq DeviceControlRequest
      * @param headers DeviceControlHeaders
@@ -1319,8 +1340,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify a device to modify property values such as volume.</p>
+     * 
      * <b>summary</b> : 
-     * <p>设备控制</p>
+     * <p>Control property values such as device volume.</p>
      * 
      * @param request DeviceControlRequest
      * @return DeviceControlResponse
@@ -1332,8 +1356,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: When the login state expires, the integrator must reinitiate the authorization login flow to obtain a new login state (entry service API: AuthLoginWithThirdUserInfo).</p>
+     * <ul>
+     * <li>Invoke the service API with the login-state access credential (LoginStateAccessToken) parameter by using the Java SDK (for SDKs in other languages, consult Tmall Genie developers during integration).<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the login state has expired.</li>
+     * <li>Invoke the service API by sending an HTTP request with the login-state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the login state has expired.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>生态开放鉴权</p>
+     * <p>Use the login-state access token for authentication to obtain the third-party user identifier and the Tmall Genie user\&quot;s openId.</p>
      * 
      * @param request EcologyOpennessAuthenticateRequest
      * @param headers EcologyOpennessAuthenticateHeaders
@@ -1387,8 +1418,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: When the login state expires, the integrator must reinitiate the authorization login flow to obtain a new login state (entry service API: AuthLoginWithThirdUserInfo).</p>
+     * <ul>
+     * <li>Invoke the service API with the login-state access credential (LoginStateAccessToken) parameter by using the Java SDK (for SDKs in other languages, consult Tmall Genie developers during integration).<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the login state has expired.</li>
+     * <li>Invoke the service API by sending an HTTP request with the login-state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the login state has expired.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>生态开放鉴权</p>
+     * <p>Use the login-state access token for authentication to obtain the third-party user identifier and the Tmall Genie user\&quot;s openId.</p>
      * 
      * @param request EcologyOpennessAuthenticateRequest
      * @return EcologyOpennessAuthenticateResponse
@@ -1401,7 +1439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生态开放发送短信验证码</p>
+     * <p>Ecosystem Open API for sending SMS verification codes</p>
      * 
      * @param request EcologyOpennessSendVerificationCodeRequest
      * @param headers EcologyOpennessSendVerificationCodeHeaders
@@ -1456,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生态开放发送短信验证码</p>
+     * <p>Ecosystem Open API for sending SMS verification codes</p>
      * 
      * @param request EcologyOpennessSendVerificationCodeRequest
      * @return EcologyOpennessSendVerificationCodeResponse
@@ -1469,7 +1507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过手机号寻找可授权登录的账号列表</p>
+     * <p>Find a list of accounts that can be authorized to log on by phone number</p>
      * 
      * @param request FindUserlistToAuthLoginWithPhoneNumberRequest
      * @param headers FindUserlistToAuthLoginWithPhoneNumberHeaders
@@ -1528,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过手机号寻找可授权登录的账号列表</p>
+     * <p>Find a list of accounts that can be authorized to log on by phone number</p>
      * 
      * @param request FindUserlistToAuthLoginWithPhoneNumberRequest
      * @return FindUserlistToAuthLoginWithPhoneNumberResponse
@@ -1541,7 +1579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个闹钟</p>
+     * <p>Retrieve the detailed information of a specific alarm clock.</p>
      * 
      * @param tmpReq GetAlarmRequest
      * @param headers GetAlarmHeaders
@@ -1610,7 +1648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个闹钟</p>
+     * <p>Retrieve the detailed information of a specific alarm clock.</p>
      * 
      * @param request GetAlarmRequest
      * @return GetAlarmResponse
@@ -1623,7 +1661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据id获取专辑信息</p>
+     * <p>Retrieve album information by a specific ID.</p>
      * 
      * @param request GetAlbumRequest
      * @param headers GetAlbumHeaders
@@ -1674,7 +1712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据id获取专辑信息</p>
+     * <p>Retrieve album information by a specific ID.</p>
      * 
      * @param request GetAlbumRequest
      * @return GetAlbumResponse
@@ -1687,7 +1725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取专辑数据</p>
+     * <p>Retrieve album information.</p>
      * 
      * @param request GetAlbumDetailByIdRequest
      * @param headers GetAlbumDetailByIdHeaders
@@ -1734,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取专辑数据</p>
+     * <p>Retrieve album information.</p>
      * 
      * @param request GetAlbumDetailByIdRequest
      * @return GetAlbumDetailByIdResponse
@@ -1746,8 +1784,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: When the logon state expires, the integrator must initiate the authorization logon flow again to obtain a new logon state (entry service API: AuthLoginWithThirdUserInfo).</p>
+     * <ul>
+     * <li>Invoke the service API with the logon state access credential (LoginStateAccessToken) parameter by using the Java software development kit (SDK). For SDKs in other languages, consult the Tmall Genie developer team during integration.<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the logon state has expired.</li>
+     * <li>Invoke the service API by sending an HTTP request with the logon state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon state has expired.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取三方绑定的精灵账号信息</p>
+     * <p>Obtain the Aligenie account information bound to a third party by using the logon state credential</p>
      * 
      * @param request GetAligenieUserInfoRequest
      * @param headers GetAligenieUserInfoHeaders
@@ -1793,8 +1838,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: When the logon state expires, the integrator must initiate the authorization logon flow again to obtain a new logon state (entry service API: AuthLoginWithThirdUserInfo).</p>
+     * <ul>
+     * <li>Invoke the service API with the logon state access credential (LoginStateAccessToken) parameter by using the Java software development kit (SDK). For SDKs in other languages, consult the Tmall Genie developer team during integration.<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the logon state has expired.</li>
+     * <li>Invoke the service API by sending an HTTP request with the logon state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon state has expired.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取三方绑定的精灵账号信息</p>
+     * <p>Obtain the Aligenie account information bound to a third party by using the logon state credential</p>
      * 
      * @param request GetAligenieUserInfoRequest
      * @return GetAligenieUserInfoResponse
@@ -1806,8 +1858,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the corresponding authCode by specifying the user ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取authCode</p>
+     * <p>Obtain the authCode.</p>
      * 
      * @param tmpReq GetCodeEnhanceRequest
      * @param headers GetCodeEnhanceHeaders
@@ -1867,8 +1922,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtain the corresponding authCode by specifying the user ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取authCode</p>
+     * <p>Obtain the authCode.</p>
      * 
      * @param request GetCodeEnhanceRequest
      * @return GetCodeEnhanceResponse
@@ -1881,7 +1939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按照特定的id获取内容信息</p>
+     * <p>Retrieve content information by a specific ID</p>
      * 
      * @param request GetContentRequest
      * @param headers GetContentHeaders
@@ -1932,7 +1990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按照特定的id获取内容信息</p>
+     * <p>Retrieve content information by a specific ID</p>
      * 
      * @param request GetContentRequest
      * @return GetContentResponse
@@ -1945,7 +2003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前播放项</p>
+     * <p>Obtain the current playback item.</p>
      * 
      * @param tmpReq GetCurrentPlayingItemRequest
      * @param headers GetCurrentPlayingItemHeaders
@@ -2006,7 +2064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前播放项</p>
+     * <p>Obtain the current playback item.</p>
      * 
      * @param request GetCurrentPlayingItemRequest
      * @return GetCurrentPlayingItemResponse
@@ -2019,7 +2077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前播放列表</p>
+     * <p>Obtain the current playlist.</p>
      * 
      * @param tmpReq GetCurrentPlayingListRequest
      * @param headers GetCurrentPlayingListHeaders
@@ -2090,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前播放列表</p>
+     * <p>Obtain the current playlist.</p>
      * 
      * @param request GetCurrentPlayingListRequest
      * @return GetCurrentPlayingListResponse
@@ -2103,7 +2161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备认证信息</p>
+     * <p>Obtain basic device information by Device ID.</p>
      * 
      * @param tmpReq GetDeviceBasicInfoRequest
      * @param headers GetDeviceBasicInfoHeaders
@@ -2156,7 +2214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备认证信息</p>
+     * <p>Obtain basic device information by Device ID.</p>
      * 
      * @param request GetDeviceBasicInfoRequest
      * @return GetDeviceBasicInfoResponse
@@ -2169,7 +2227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备信息</p>
+     * <p>Obtain the Device ID based on the device MAC or SN.</p>
      * 
      * @param request GetDeviceIdByIdentityRequest
      * @param headers GetDeviceIdByIdentityHeaders
@@ -2232,7 +2290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备信息</p>
+     * <p>Obtain the Device ID based on the device MAC or SN.</p>
      * 
      * @param request GetDeviceIdByIdentityRequest
      * @return GetDeviceIdByIdentityResponse
@@ -2245,7 +2303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备的用户设置</p>
+     * <p>Obtain the user settings of a device.</p>
      * 
      * @param tmpReq GetDeviceSettingRequest
      * @param headers GetDeviceSettingHeaders
@@ -2306,7 +2364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备的用户设置</p>
+     * <p>Obtain the user settings of a device.</p>
      * 
      * @param request GetDeviceSettingRequest
      * @return GetDeviceSettingResponse
@@ -2319,7 +2377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备状态详情</p>
+     * <p>Obtain device status details.</p>
      * 
      * @param tmpReq GetDeviceStatusDetailRequest
      * @param headers GetDeviceStatusDetailHeaders
@@ -2380,7 +2438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备状态详情</p>
+     * <p>Obtain device status details.</p>
      * 
      * @param request GetDeviceStatusDetailRequest
      * @return GetDeviceStatusDetailResponse
@@ -2393,7 +2451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备状态信息</p>
+     * <p>Obtain the online status of a device based on its openID.</p>
      * 
      * @param tmpReq GetDeviceStatusInfoRequest
      * @param headers GetDeviceStatusInfoHeaders
@@ -2446,7 +2504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备状态信息</p>
+     * <p>Obtain the online status of a device based on its openID.</p>
      * 
      * @param request GetDeviceStatusInfoRequest
      * @return GetDeviceStatusInfoResponse
@@ -2459,7 +2517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备标签</p>
+     * <p>Obtain the tag information of a device.</p>
      * 
      * @param tmpReq GetDeviceTagRequest
      * @param headers GetDeviceTagHeaders
@@ -2512,7 +2570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取设备标签</p>
+     * <p>Obtain the tag information of a device.</p>
      * 
      * @param request GetDeviceTagRequest
      * @return GetDeviceTagResponse
@@ -2525,7 +2583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>江苏电信号百</p>
+     * <p>Derived requirements from Jiangsu Telecom\&quot;s self-developed desktop launcher project. HaoBai expects to collect statistics on the activation rate, active user rate, and top user usage patterns after the project is published, and to generate daily and weekly reports. Daily reports are synchronized automatically via API, while weekly reports are synchronized offline.</p>
      * 
      * @param request GetJiangSuTelecomDataRequest
      * @param headers GetJiangSuTelecomDataHeaders
@@ -2572,7 +2630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>江苏电信号百</p>
+     * <p>Derived requirements from Jiangsu Telecom\&quot;s self-developed desktop launcher project. HaoBai expects to collect statistics on the activation rate, active user rate, and top user usage patterns after the project is published, and to generate daily and weekly reports. Daily reports are synchronized automatically via API, while weekly reports are synchronized offline.</p>
      * 
      * @param request GetJiangSuTelecomDataRequest
      * @return GetJiangSuTelecomDataResponse
@@ -2584,8 +2642,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the details of a specified scheduled task by its ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询定时任务</p>
+     * <p>Obtain scheduled task information.</p>
      * 
      * @param tmpReq GetScheduleTaskRequest
      * @param headers GetScheduleTaskHeaders
@@ -2653,8 +2714,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the details of a specified scheduled task by its ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询定时任务</p>
+     * <p>Obtain scheduled task information.</p>
      * 
      * @param request GetScheduleTaskRequest
      * @return GetScheduleTaskResponse
@@ -2667,7 +2731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询未读留言数量</p>
+     * <p>Query the number of unread messages for a user.</p>
      * 
      * @param tmpReq GetUnreadMessageCountRequest
      * @param headers GetUnreadMessageCountHeaders
@@ -2720,7 +2784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询未读留言数量</p>
+     * <p>Query the number of unread messages for a user.</p>
      * 
      * @param request GetUnreadMessageCountRequest
      * @return GetUnreadMessageCountResponse
@@ -2733,7 +2797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备绑定的用户</p>
+     * <p>Obtain the User ID attached to a device by the device\&quot;s openID.</p>
      * 
      * @param tmpReq GetUserByDeviceIdRequest
      * @param headers GetUserByDeviceIdHeaders
@@ -2786,7 +2850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备绑定的用户</p>
+     * <p>Obtain the User ID attached to a device by the device\&quot;s openID.</p>
      * 
      * @param request GetUserByDeviceIdRequest
      * @return GetUserByDeviceIdResponse
@@ -2798,8 +2862,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the weather data for the location of the device based on the Device Information obtained from system parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询天气</p>
+     * <p>Query the weather.</p>
      * 
      * @param tmpReq GetWeatherRequest
      * @param headers GetWeatherHeaders
@@ -2867,8 +2934,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the weather data for the location of the device based on the Device Information obtained from system parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询天气</p>
+     * <p>Query the weather.</p>
      * 
      * @param request GetWeatherRequest
      * @return GetWeatherResponse
@@ -2881,7 +2951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放列表点击播放</p>
+     * <p>Click a playlist to start playback.</p>
      * 
      * @param tmpReq IndexControlPlayingListRequest
      * @param headers IndexControlPlayingListHeaders
@@ -2952,7 +3022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放列表点击播放</p>
+     * <p>Click a playlist to start playback.</p>
      * 
      * @param request IndexControlPlayingListRequest
      * @return IndexControlPlayingListResponse
@@ -2964,8 +3034,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Modify message notification template  </p>
+     * <ul>
+     * <li>You need to query the templateId first, then modify other parameters based on the templateId.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>失效三方应用登录态</p>
+     * <p>When a user operation (not initiated from the device side) causes the login session of a third-party application on the device to become invalid (for example, the user logs on to the same account from a new device, invalidating the session on the old device, or the user changes their password, which invalidates the session on the old device), the third party must invoke this API to notify Tmall Genie.</p>
      * 
      * @param tmpReq InvalidateThirdPartyAppLoginStateRequest
      * @param headers InvalidateThirdPartyAppLoginStateHeaders
@@ -3021,8 +3099,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Modify message notification template  </p>
+     * <ul>
+     * <li>You need to query the templateId first, then modify other parameters based on the templateId.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>失效三方应用登录态</p>
+     * <p>When a user operation (not initiated from the device side) causes the login session of a third-party application on the device to become invalid (for example, the user logs on to the same account from a new device, invalidating the session on the old device, or the user changes their password, which invalidates the session on the old device), the third party must invoke this API to notify Tmall Genie.</p>
      * 
      * @param request InvalidateThirdPartyAppLoginStateRequest
      * @return InvalidateThirdPartyAppLoginStateResponse
@@ -3035,7 +3121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询闹钟列表</p>
+     * <p>Perform a paged query to retrieve the alarm clock list of a specific User on a device.</p>
      * 
      * @param tmpReq ListAlarmsRequest
      * @param headers ListAlarmsHeaders
@@ -3104,7 +3190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询闹钟列表</p>
+     * <p>Perform a paged query to retrieve the alarm clock list of a specific User on a device.</p>
      * 
      * @param request ListAlarmsRequest
      * @return ListAlarmsResponse
@@ -3117,7 +3203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音乐音频专辑里面的内容列表</p>
+     * <p>Obtain the content list within a music audio album.</p>
      * 
      * @param request ListAlbumDetailRequest
      * @param headers ListAlbumDetailHeaders
@@ -3172,7 +3258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音乐音频专辑里面的内容列表</p>
+     * <p>Obtain the content list within a music audio album.</p>
      * 
      * @param request ListAlbumDetailRequest
      * @return ListAlbumDetailResponse
@@ -3185,7 +3271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>专辑是否被订阅</p>
+     * <p>Whether the album is subscribed.</p>
      * 
      * @param tmpReq ListAlbumIsAddedRequest
      * @param headers ListAlbumIsAddedHeaders
@@ -3254,7 +3340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>专辑是否被订阅</p>
+     * <p>Whether the album is subscribed.</p>
      * 
      * @param request ListAlbumIsAddedRequest
      * @return ListAlbumIsAddedResponse
@@ -3267,7 +3353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据特定的类目,按照指定的排序顺序获取该类目下的内容.</p>
+     * <p>Obtain the content under a specific category according to the specified sorting order.</p>
      * 
      * @param tmpReq ListCateContentRequest
      * @param headers ListCateContentHeaders
@@ -3338,7 +3424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据特定的类目,按照指定的排序顺序获取该类目下的内容.</p>
+     * <p>Obtain the content under a specific category according to the specified sorting order.</p>
      * 
      * @param request ListCateContentRequest
      * @return ListCateContentResponse
@@ -3351,7 +3437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音乐音频类目列表</p>
+     * <p>Obtain category information.</p>
      * 
      * @param request ListCateInfoRequest
      * @param headers ListCateInfoHeaders
@@ -3398,7 +3484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音乐音频类目列表</p>
+     * <p>Obtain category information.</p>
      * 
      * @param request ListCateInfoRequest
      * @return ListCateInfoResponse
@@ -3411,7 +3497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音乐/音频的一级类目列表</p>
+     * <p>Obtain the top-level category list for music or audio.</p>
      * 
      * @param request ListCommonCateFirstFloorRequest
      * @param headers ListCommonCateFirstFloorHeaders
@@ -3458,7 +3544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取音乐/音频的一级类目列表</p>
+     * <p>Obtain the top-level category list for music or audio.</p>
      * 
      * @param request ListCommonCateFirstFloorRequest
      * @return ListCommonCateFirstFloorResponse
@@ -3471,7 +3557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定一级类目下面的二级类目列表</p>
+     * <p>Retrieve the list of level-2 categories under a specified level-1 category.</p>
      * 
      * @param request ListCommonCateSecondFloorRequest
      * @param headers ListCommonCateSecondFloorHeaders
@@ -3518,7 +3604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定一级类目下面的二级类目列表</p>
+     * <p>Retrieve the list of level-2 categories under a specified level-1 category.</p>
      * 
      * @param request ListCommonCateSecondFloorRequest
      * @return ListCommonCateSecondFloorResponse
@@ -3531,7 +3617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取设备基本信息</p>
+     * <p>Batch retrieve basic device information based on a list of device openIDs.</p>
      * 
      * @param tmpReq ListDeviceBasicInfoRequest
      * @param headers ListDeviceBasicInfoHeaders
@@ -3584,7 +3670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取设备基本信息</p>
+     * <p>Batch retrieve basic device information based on a list of device openIDs.</p>
      * 
      * @param request ListDeviceBasicInfoRequest
      * @return ListDeviceBasicInfoResponse
@@ -3597,7 +3683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户名下的设备</p>
+     * <p>Obtain the list of attached Device IDs based on the user\&quot;s openID.</p>
      * 
      * @param tmpReq ListDeviceByUserIdRequest
      * @param headers ListDeviceByUserIdHeaders
@@ -3650,7 +3736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户名下的设备</p>
+     * <p>Obtain the list of attached Device IDs based on the user\&quot;s openID.</p>
      * 
      * @param request ListDeviceByUserIdRequest
      * @return ListDeviceByUserIdResponse
@@ -3663,7 +3749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定渠道的设备列表</p>
+     * <p>Obtain the device list for a specified channel.</p>
      * 
      * @param tmpReq ListDeviceByUserIdAndChanelRequest
      * @param headers ListDeviceByUserIdAndChanelHeaders
@@ -3724,7 +3810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定渠道的设备列表</p>
+     * <p>Obtain the device list for a specified channel.</p>
      * 
      * @param request ListDeviceByUserIdAndChanelRequest
      * @return ListDeviceByUserIdAndChanelResponse
@@ -3737,7 +3823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取设备openId</p>
+     * <p>Batch retrieve Device IDs by device MAC/SN.</p>
      * 
      * @param tmpReq ListDeviceIdByIdentitiesRequest
      * @param headers ListDeviceIdByIdentitiesHeaders
@@ -3806,7 +3892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取设备openId</p>
+     * <p>Batch retrieve Device IDs by device MAC/SN.</p>
      * 
      * @param request ListDeviceIdByIdentitiesRequest
      * @return ListDeviceIdByIdentitiesResponse
@@ -3819,7 +3905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于音乐类型查询铃声列表（分页）</p>
+     * <p>Query the list of ringtones under a specified music category.</p>
      * 
      * @param tmpReq ListMusicRequest
      * @param headers ListMusicHeaders
@@ -3888,7 +3974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于音乐类型查询铃声列表（分页）</p>
+     * <p>Query the list of ringtones under a specified music category.</p>
      * 
      * @param request ListMusicRequest
      * @return ListMusicResponse
@@ -3901,7 +3987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户的播放历史</p>
+     * <p>Obtain the history playback API.</p>
      * 
      * @param tmpReq ListPlayHistoryRequest
      * @param headers ListPlayHistoryHeaders
@@ -3972,7 +4058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户的播放历史</p>
+     * <p>Obtain the history playback API.</p>
      * 
      * @param request ListPlayHistoryRequest
      * @return ListPlayHistoryResponse
@@ -3985,7 +4071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取每日推荐的音乐或者音频</p>
+     * <p>Obtain daily recommended music or audio.</p>
      * 
      * @param tmpReq ListRecommendContentRequest
      * @param headers ListRecommendContentHeaders
@@ -4056,7 +4142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取每日推荐的音乐或者音频</p>
+     * <p>Obtain daily recommended music or audio.</p>
      * 
      * @param request ListRecommendContentRequest
      * @return ListRecommendContentResponse
@@ -4069,7 +4155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订阅列表</p>
+     * <p>The user has subscribed to the list.</p>
      * 
      * @param tmpReq ListSubRequest
      * @param headers ListSubHeaders
@@ -4138,7 +4224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订阅列表</p>
+     * <p>The user has subscribed to the list.</p>
      * 
      * @param request ListSubRequest
      * @return ListSubResponse
@@ -4151,7 +4237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订阅专辑元数据列表</p>
+     * <p>Album List.</p>
      * 
      * @param tmpReq ListSubAlbumRequest
      * @param headers ListSubAlbumHeaders
@@ -4220,7 +4306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订阅专辑元数据列表</p>
+     * <p>Album List.</p>
      * 
      * @param request ListSubAlbumRequest
      * @return ListSubAlbumResponse
@@ -4233,7 +4319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容订阅元数据分类</p>
+     * <p>Album categorization.</p>
      * 
      * @param request ListSubscriptionAlbumCategoryRequest
      * @param headers ListSubscriptionAlbumCategoryHeaders
@@ -4280,7 +4366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>内容订阅元数据分类</p>
+     * <p>Album categorization.</p>
      * 
      * @param request ListSubscriptionAlbumCategoryRequest
      * @return ListSubscriptionAlbumCategoryResponse
@@ -4293,7 +4379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取留言列表</p>
+     * <p>Query the list of user message records based on the query conditions, including the start time and the number of entries to return.</p>
      * 
      * @param tmpReq ListUserMessageRequest
      * @param headers ListUserMessageHeaders
@@ -4354,7 +4440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取留言列表</p>
+     * <p>Query the list of user message records based on the query conditions, including the start time and the number of entries to return.</p>
      * 
      * @param request ListUserMessageRequest
      * @return ListUserMessageResponse
@@ -4366,8 +4452,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Different scenarios (such as daily recommendations and popular songs) can be distinguished by the Type parameter.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移动轻纳管</p>
+     * <p>Shift the project to obtain recommended songs, including daily recommendations, popular songs, and genre-based playlists.</p>
      * 
      * @param tmpReq MobileRecommendRequest
      * @param headers MobileRecommendHeaders
@@ -4443,8 +4532,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Different scenarios (such as daily recommendations and popular songs) can be distinguished by the Type parameter.</p>
+     * 
      * <b>summary</b> : 
-     * <p>移动轻纳管</p>
+     * <p>Shift the project to obtain recommended songs, including daily recommendations, popular songs, and genre-based playlists.</p>
      * 
      * @param request MobileRecommendRequest
      * @return MobileRecommendResponse
@@ -4457,7 +4549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放暂停控制</p>
+     * <p>Playback and pause control.</p>
      * 
      * @param tmpReq PlayAndPauseControlRequest
      * @param headers PlayAndPauseControlHeaders
@@ -4528,7 +4620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放暂停控制</p>
+     * <p>Playback and pause control.</p>
      * 
      * @param request PlayAndPauseControlRequest
      * @return PlayAndPauseControlResponse
@@ -4541,7 +4633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放模式切换</p>
+     * <p>Switch playback mode.</p>
      * 
      * @param tmpReq PlayModeControlRequest
      * @param headers PlayModeControlHeaders
@@ -4612,7 +4704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>播放模式切换</p>
+     * <p>Switch playback mode.</p>
      * 
      * @param request PlayModeControlRequest
      * @return PlayModeControlResponse
@@ -4625,7 +4717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上下首控制</p>
+     * <p>Control the next or previous track in the created playlist.</p>
      * 
      * @param tmpReq PreviousAndNextControlRequest
      * @param headers PreviousAndNextControlHeaders
@@ -4696,7 +4788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上下首控制</p>
+     * <p>Control the next or previous track in the created playlist.</p>
      * 
      * @param request PreviousAndNextControlRequest
      * @return PreviousAndNextControlResponse
@@ -4709,7 +4801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进度控制</p>
+     * <p>Progress control.</p>
      * 
      * @param tmpReq ProgressControlRequest
      * @param headers ProgressControlHeaders
@@ -4780,7 +4872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进度控制</p>
+     * <p>Progress control.</p>
      * 
      * @param request ProgressControlRequest
      * @return ProgressControlResponse
@@ -4793,7 +4885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取闹钟音乐类型列表</p>
+     * <p>Obtain the collection of alarm music types supported by the device.</p>
      * 
      * @param tmpReq QueryMusicTypeRequest
      * @param headers QueryMusicTypeHeaders
@@ -4862,7 +4954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取闹钟音乐类型列表</p>
+     * <p>Obtain the collection of alarm music types supported by the device.</p>
      * 
      * @param request QueryMusicTypeRequest
      * @return QueryMusicTypeResponse
@@ -4875,7 +4967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过tme用户id获取授权的天猫精灵用户+设备列表</p>
+     * <p>Obtain the list of authorized Tmall Genie users and their devices by using the TME user ID, for use by KuGou Cloud Push Song service</p>
      * 
      * @param request QueryUserDeviceListByTmeUserIdRequest
      * @param headers QueryUserDeviceListByTmeUserIdHeaders
@@ -4926,7 +5018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过tme用户id获取授权的天猫精灵用户+设备列表</p>
+     * <p>Obtain the list of authorized Tmall Genie users and their devices by using the TME user ID, for use by KuGou Cloud Push Song service</p>
      * 
      * @param request QueryUserDeviceListByTmeUserIdRequest
      * @return QueryUserDeviceListByTmeUserIdResponse
@@ -4939,7 +5031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>读取留言</p>
+     * <p>Set a message to read status.</p>
      * 
      * @param tmpReq ReadMessageRequest
      * @param headers ReadMessageHeaders
@@ -4996,7 +5088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>读取留言</p>
+     * <p>Set a message to read status.</p>
      * 
      * @param request ReadMessageRequest
      * @return ReadMessageResponse
@@ -5008,8 +5100,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Perform activation and attachment by scanning the QR code related to activation and attachment displayed on the device.</p>
+     * 
      * <b>summary</b> : 
-     * <p>扫描二维码激活绑定设备</p>
+     * <p>A screen-equipped device completes activation and attachment between the user and the device by scanning a QR code.</p>
      * 
      * @param tmpReq ScanCodeBindRequest
      * @param headers ScanCodeBindHeaders
@@ -5069,8 +5164,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Perform activation and attachment by scanning the QR code related to activation and attachment displayed on the device.</p>
+     * 
      * <b>summary</b> : 
-     * <p>扫描二维码激活绑定设备</p>
+     * <p>A screen-equipped device completes activation and attachment between the user and the device by scanning a QR code.</p>
      * 
      * @param request ScanCodeBindRequest
      * @return ScanCodeBindResponse
@@ -5083,7 +5181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>选品池投放能力</p>
+     * <p>Query the content of a selection pool by its ID.</p>
      * 
      * @param tmpReq ScgSearchRequest
      * @param headers ScgSearchHeaders
@@ -5140,7 +5238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>选品池投放能力</p>
+     * <p>Query the content of a selection pool by its ID.</p>
      * 
      * @param request ScgSearchRequest
      * @return ScgSearchResponse
@@ -5153,7 +5251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按照特定的搜索条件搜索</p>
+     * <p>Search according to specific search criteria.</p>
      * 
      * @param tmpReq SearchContentRequest
      * @param headers SearchContentHeaders
@@ -5224,7 +5322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>按照特定的搜索条件搜索</p>
+     * <p>Search according to specific search criteria.</p>
      * 
      * @param request SearchContentRequest
      * @return SearchContentResponse
@@ -5237,7 +5335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送留言</p>
+     * <p>Send a message.</p>
      * 
      * @param tmpReq SendMessageRequest
      * @param headers SendMessageHeaders
@@ -5294,7 +5392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发送留言</p>
+     * <p>Send a message.</p>
      * 
      * @param request SendMessageRequest
      * @return SendMessageResponse
@@ -5307,7 +5405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改设备设置</p>
+     * <p>Modify the user settings of a device.</p>
      * 
      * @param tmpReq SetDeviceSettingRequest
      * @param headers SetDeviceSettingHeaders
@@ -5370,7 +5468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改设备设置</p>
+     * <p>Modify the user settings of a device.</p>
      * 
      * @param request SetDeviceSettingRequest
      * @return SetDeviceSettingResponse
@@ -5383,7 +5481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>三方即时信息数据变更事件推送</p>
+     * <p>Third-party real-time information data change event push</p>
      * 
      * @param request ThirdImmediateMsgPushRequest
      * @param headers ThirdImmediateMsgPushHeaders
@@ -5466,7 +5564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>三方即时信息数据变更事件推送</p>
+     * <p>Third-party real-time information data change event push</p>
      * 
      * @param request ThirdImmediateMsgPushRequest
      * @return ThirdImmediateMsgPushResponse
@@ -5478,8 +5576,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: When the logon credential expires, the integrator must initiate the authorization logon flow again to obtain a new logon credential (entry service API: AuthLoginWithThirdUserInfo).</p>
+     * <ul>
+     * <li>Invoke the service API with the logon credential (LoginStateAccessToken) parameter via the Java software development kit (SDK). For SDKs in other languages, consult Tmall Genie developers during integration.<br>If the API call throws a TeaException and TeaException.code is &quot;InvalidAuthentication&quot;, the logon credential has expired.</li>
+     * <li>Invoke the service API by sending an HTTP request with the logon credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon credential has expired.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>解除三方和精灵账号的关系</p>
+     * <p>Detach the relationship between a third-party account and a Tmall Genie account by using a logon credential.</p>
      * 
      * @param request UnbindAligenieUserRequest
      * @param headers UnbindAligenieUserHeaders
@@ -5525,8 +5630,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: When the logon credential expires, the integrator must initiate the authorization logon flow again to obtain a new logon credential (entry service API: AuthLoginWithThirdUserInfo).</p>
+     * <ul>
+     * <li>Invoke the service API with the logon credential (LoginStateAccessToken) parameter via the Java software development kit (SDK). For SDKs in other languages, consult Tmall Genie developers during integration.<br>If the API call throws a TeaException and TeaException.code is &quot;InvalidAuthentication&quot;, the logon credential has expired.</li>
+     * <li>Invoke the service API by sending an HTTP request with the logon credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon credential has expired.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>解除三方和精灵账号的关系</p>
+     * <p>Detach the relationship between a third-party account and a Tmall Genie account by using a logon credential.</p>
      * 
      * @param request UnbindAligenieUserRequest
      * @return UnbindAligenieUserResponse
@@ -5539,7 +5651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑设备</p>
+     * <p>Detach the binding relationship based on the user\&quot;s open information and the device\&quot;s open information.</p>
      * 
      * @param tmpReq UnbindDeviceRequest
      * @param headers UnbindDeviceHeaders
@@ -5600,7 +5712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑设备</p>
+     * <p>Detach the binding relationship based on the user\&quot;s open information and the device\&quot;s open information.</p>
      * 
      * @param request UnbindDeviceRequest
      * @return UnbindDeviceResponse
@@ -5613,7 +5725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新闹钟</p>
+     * <p>Update an alarm, including its trigger time, loop type, and music.</p>
      * 
      * @param tmpReq UpdateAlarmRequest
      * @param headers UpdateAlarmHeaders
@@ -5682,7 +5794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新闹钟</p>
+     * <p>Update an alarm, including its trigger time, loop type, and music.</p>
      * 
      * @param request UpdateAlarmRequest
      * @return UpdateAlarmResponse

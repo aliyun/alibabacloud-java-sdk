@@ -4,18 +4,45 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class QueryUserDeviceListByTmeUserIdResponseBody extends TeaModel {
+    /**
+     * <p>Response code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Response message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>860194F7-9593-50EA-8E53-BCEC0D325A00</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Response Result</p>
+     */
     @NameInMap("Result")
     public QueryUserDeviceListByTmeUserIdResponseBodyResult result;
 
+    /**
+     * <p>Flag indicating whether the invocation succeeded</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,22 +92,42 @@ public class QueryUserDeviceListByTmeUserIdResponseBody extends TeaModel {
     }
 
     public static class QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoListAuthorizedDeviceList extends TeaModel {
+        /**
+         * <p>device name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
+         * <p>Indicates whether the device is online</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <p>Device ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fjwZiYQdtkaI95fHaLNjYcaOA/mxUPzxxw2J5iBiTBnjUCWKwER4TSHCqkBnNOYvGJ4bRZA9KzBB2naS4r/Am0lSe8ECDAAOcJ9QKLFF6DM=</p>
+         */
         @NameInMap("OpenDeviceId")
         public String openDeviceId;
 
+        /**
+         * <p>Device ID exposed to TME</p>
+         */
         @NameInMap("TmeDeviceId")
         public String tmeDeviceId;
 
+        /**
+         * <p>TME product ID</p>
+         */
         @NameInMap("TmeProductId")
         public String tmeProductId;
 
@@ -132,12 +179,27 @@ public class QueryUserDeviceListByTmeUserIdResponseBody extends TeaModel {
     }
 
     public static class QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoList extends TeaModel {
+        /**
+         * <p>User Authorization device List</p>
+         */
         @NameInMap("AuthorizedDeviceList")
         public java.util.List<QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoListAuthorizedDeviceList> authorizedDeviceList;
 
+        /**
+         * <p>User ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R457Av3qg/OXTwVnFt12z6MwNe0HAS699V6n63OaLdu+VmwvhcNfMzBd+la553wWJhj3kBMjgHq2Y2dyCFoDBg==</p>
+         */
         @NameInMap("OpenUserId")
         public String openUserId;
 
+        /**
+         * <p>User nickname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a***e</p>
+         */
         @NameInMap("UserNickname")
         public String userNickname;
 
@@ -173,15 +235,36 @@ public class QueryUserDeviceListByTmeUserIdResponseBody extends TeaModel {
     }
 
     public static class QueryUserDeviceListByTmeUserIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>Tmall Genie User List</p>
+         */
         @NameInMap("AligenieUserInfoList")
         public java.util.List<QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoList> aligenieUserInfoList;
 
+        /**
+         * <p>entity key (pass-through by third party)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****7</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>entity Type (pass-through by third party)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>&quot;KG&quot;: KuGou<br>&quot;KW&quot;: Kuwo<br>&quot;QM&quot;: QQ Music</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KG</p>
+         */
         @NameInMap("Sp")
         public String sp;
 

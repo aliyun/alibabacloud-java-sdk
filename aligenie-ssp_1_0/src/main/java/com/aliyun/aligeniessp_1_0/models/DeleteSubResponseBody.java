@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSubResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteSubResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteSubResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0AA6C15C-FD61-1E32-9881-480CC6F35A70</p>
      */
@@ -26,6 +32,8 @@ public class DeleteSubResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Return Result</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

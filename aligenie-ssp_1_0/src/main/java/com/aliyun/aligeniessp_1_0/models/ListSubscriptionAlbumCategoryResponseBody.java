@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSubscriptionAlbumCategoryResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListSubscriptionAlbumCategoryResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class ListSubscriptionAlbumCategoryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>60E7A523-9766-1D07-87A2-6E587420C59B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of categories</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListSubscriptionAlbumCategoryResponseBodyResult> result;
 
@@ -67,6 +76,8 @@ public class ListSubscriptionAlbumCategoryResponseBody extends TeaModel {
 
     public static class ListSubscriptionAlbumCategoryResponseBodyResult extends TeaModel {
         /**
+         * <p>Category ID</p>
+         * 
          * <strong>example:</strong>
          * <p>80011</p>
          */
@@ -74,6 +85,8 @@ public class ListSubscriptionAlbumCategoryResponseBody extends TeaModel {
         public String categoryId;
 
         /**
+         * <p>Category name</p>
+         * 
          * <strong>example:</strong>
          * <p>儿童</p>
          */

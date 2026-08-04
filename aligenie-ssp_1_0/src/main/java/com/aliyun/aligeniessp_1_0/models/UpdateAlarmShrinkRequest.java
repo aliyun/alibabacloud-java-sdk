@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateAlarmShrinkRequest extends TeaModel {
     /**
+     * <p>device identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
     /**
+     * <p>Input parameters for the service request</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Payload")
     public String payloadShrink;
 
     /**
+     * <p>User Identifier Information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

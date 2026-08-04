@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendMessageRequest extends TeaModel {
     /**
+     * <p>Message URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xx">http://xx</a></p>
      */
@@ -40,6 +42,7 @@ public class SendMessageRequest extends TeaModel {
 
     public static class SendMessageRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. When the encoding type is SKILLID, this value is the application\&quot;s Skill ID. When the encoding type is PACKAGENAME, this value is the packageName of the corresponding client app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -49,6 +52,7 @@ public class SendMessageRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the User Identifier for Maojing, and each method corresponds to a different encoding type: - PACKAGENAME: APK package name, used for Android application customer links - SKILLID: Skill ID, used for cloud-based links</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -58,6 +62,7 @@ public class SendMessageRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier (userOpenId or userUnionId)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,6 +72,7 @@ public class SendMessageRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID: - OPENID: default User ID identity - UNIONID: organization-dimension User ID identity, available only after an organization has been requested on the Maojing Skill Application Open Platform</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -76,6 +82,8 @@ public class SendMessageRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID; required when IdType is UNION_ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

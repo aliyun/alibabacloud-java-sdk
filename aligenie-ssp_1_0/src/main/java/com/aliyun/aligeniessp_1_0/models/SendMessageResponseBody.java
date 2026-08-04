@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class SendMessageResponseBody extends TeaModel {
     /**
+     * <p>Status code returned by the service; &quot;SUCCESS&quot; indicates success, otherwise it indicates failure</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Error message; if present, the send operation failed</p>
+     * 
+     * <strong>example:</strong>
+     * <p>外部userId映射关系不存在</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Message sending result</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeviceTagRequest extends TeaModel {
     /**
+     * <p>List of device identity information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
@@ -25,6 +26,7 @@ public class GetDeviceTagRequest extends TeaModel {
 
     public static class GetDeviceTagRequestDeviceInfo extends TeaModel {
         /**
+         * <p>The value corresponding to the encoding type. Enter the Project ID of the project in the Tmall Genie AI platform where the product\&quot;s ProductKey resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class GetDeviceTagRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter <strong>PROJECT_ID</strong> here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -43,6 +46,7 @@ public class GetDeviceTagRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device identifier. Enter the value of deviceOpenId or deviceUnionId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -52,6 +56,11 @@ public class GetDeviceTagRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The type of Device ID:</p>
+         * <ul>
+         * <li>OPEN_ID: The default device identity.</li>
+         * <li>UNION_ID: The device identity at the organization dimension, which requires a prior request for an organization on the Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +70,8 @@ public class GetDeviceTagRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

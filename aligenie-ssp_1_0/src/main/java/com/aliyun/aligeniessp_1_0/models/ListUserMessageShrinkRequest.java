@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserMessageShrinkRequest extends TeaModel {
     /**
+     * <p>After a specific point in time</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-07-27 14:06:55.984</p>
      */
@@ -12,12 +14,15 @@ public class ListUserMessageShrinkRequest extends TeaModel {
     public String beforeTime;
 
     /**
+     * <p>User identifier information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 
     /**
+     * <p>Number of records to query</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

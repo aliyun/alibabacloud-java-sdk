@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ReadMessageResponseBody extends TeaModel {
     /**
+     * <p>Status code returned by the service. Only &quot;SUCCESS&quot; indicates success; all other values indicate failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>外部userId映射关系不存在</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Succeeded in marking as read</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.aligeniessp_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceBasicInfoRequest extends TeaModel {
+    /**
+     * <p>List of device identity information.</p>
+     */
     @NameInMap("DeviceInfos")
     public ListDeviceBasicInfoRequestDeviceInfos deviceInfos;
 
@@ -22,6 +25,7 @@ public class ListDeviceBasicInfoRequest extends TeaModel {
 
     public static class ListDeviceBasicInfoRequestDeviceInfos extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type. Enter the Project ID of the project where the product resides. You can view this in the Tmall Genie AI Platform console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -31,6 +35,7 @@ public class ListDeviceBasicInfoRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. Enter <strong>PROJECT_ID</strong> here.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -40,6 +45,11 @@ public class ListDeviceBasicInfoRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Type of device ID:</p>
+         * <ul>
+         * <li>OPEN_ID: Default device ID identity.</li>
+         * <li>UNION_ID: Organization-dimension device ID identity. You must request an organization in advance on the Open Platform.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,10 +58,15 @@ public class ListDeviceBasicInfoRequest extends TeaModel {
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <p>List of device identity information.</p>
+         */
         @NameInMap("Ids")
         public java.util.List<String> ids;
 
         /**
+         * <p>Organization ID of the device. Required if IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ScanCodeBindShrinkRequest extends TeaModel {
     /**
+     * <p>Input parameters for QR code scanning binding</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BindReq")
     public String bindReqShrink;
 
     /**
+     * <p>User identity information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")

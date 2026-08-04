@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePlayingListResponseBody extends TeaModel {
     /**
+     * <p>Return code of the invocation</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Additional information, typically used to briefly describe a failed invocation to help the caller troubleshoot the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,16 +23,23 @@ public class CreatePlayingListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10002398812</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Actual return result of the service</p>
+     */
     @NameInMap("Result")
     public CreatePlayingListResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the invocation succeeded. true indicates success, and false indicates failure. When the value is false, check the Message field for details.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +93,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
 
     public static class CreatePlayingListResponseBodyResultCover extends TeaModel {
         /**
+         * <p>Indicates whether OSS rules can be used for cropping.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -89,6 +102,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public Boolean canResize;
 
         /**
+         * <p>default image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
          */
@@ -96,6 +111,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String img;
 
         /**
+         * <p>Large image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
          */
@@ -103,6 +120,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String large;
 
         /**
+         * <p>Medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
          */
@@ -110,6 +129,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String mediam;
 
         /**
+         * <p>medium image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
          */
@@ -117,6 +138,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String medium;
 
         /**
+         * <p>small image</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&columns=640&rows=640">http://imgopen.xmcdn.com/group58/M06/08/9B/wKgLglzTyTjiOy0oAAcOTv16ohg815.jpg!op_type=3&amp;columns=640&amp;rows=640</a></p>
          */
@@ -179,10 +202,18 @@ public class CreatePlayingListResponseBody extends TeaModel {
     }
 
     public static class CreatePlayingListResponseBodyResult extends TeaModel {
+        /**
+         * <p>Third-party album name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>晚安妈妈睡前故事</p>
+         */
         @NameInMap("AlbumName")
         public String albumName;
 
         /**
+         * <p>Third-party album ID</p>
+         * 
          * <strong>example:</strong>
          * <p>260744</p>
          */
@@ -190,6 +221,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String albumRawId;
 
         /**
+         * <p>Length</p>
+         * 
          * <strong>example:</strong>
          * <p>190</p>
          */
@@ -197,16 +230,23 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public Integer audioLength;
 
         /**
+         * <p>The copyright field is upgraded to indicate whether the content is playable: 0 means playable, 1 or 2 means not playable.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Copyright")
         public Integer copyright;
 
+        /**
+         * <p>thumbnail image object</p>
+         */
         @NameInMap("Cover")
         public CreatePlayingListResponseBodyResultCover cover;
 
         /**
+         * <p>Default playback order of the package: 0 for sequential, 1 for reverse.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -214,6 +254,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public Integer defaultPlayOrder;
 
         /**
+         * <p>Playback URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://openaudio.cos.tx.xmcdn.com/storages/587f-audiofreehighqps/15/CE/GKwRIJIGnb11ABc6SwF59DNb.mp3">https://openaudio.cos.tx.xmcdn.com/storages/587f-audiofreehighqps/15/CE/GKwRIJIGnb11ABc6SwF59DNb.mp3</a></p>
          */
@@ -221,6 +263,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String itemUrl;
 
         /**
+         * <p>is collected</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -228,6 +272,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public Boolean liked;
 
         /**
+         * <p>Lyrics URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://aicontent.alibabausercontent.com/lyric/thirdsource/6f4c8408073db134b0d097c122b5a1a1.lrc">https://aicontent.alibabausercontent.com/lyric/thirdsource/6f4c8408073db134b0d097c122b5a1a1.lrc</a></p>
          */
@@ -235,6 +281,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String lyricUrl;
 
         /**
+         * <p>Playback pattern (Repeat, Shuffle, RepeatOne, Normal)</p>
+         * 
          * <strong>example:</strong>
          * <p>Repeat</p>
          */
@@ -242,6 +290,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String playMode;
 
         /**
+         * <p>Position of the item in the playlist</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -249,6 +299,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public Integer pos;
 
         /**
+         * <p>Playback progress of the song</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -256,26 +308,44 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public Integer progress;
 
         /**
+         * <p>third-party ID</p>
+         * 
          * <strong>example:</strong>
          * <p>550144364</p>
          */
         @NameInMap("RawId")
         public String rawId;
 
+        /**
+         * <p>Author</p>
+         * 
+         * <strong>example:</strong>
+         * <p>晚安妈妈</p>
+         */
         @NameInMap("Singer")
         public String singer;
 
         /**
+         * <p>Source</p>
+         * 
          * <strong>example:</strong>
          * <p>ximalayav2</p>
          */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>足球鞋赛车 晚安妈妈</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>type (such as music, program, joke, news, children_song, radio, etc.)</p>
+         * 
          * <strong>example:</strong>
          * <p>story</p>
          */
@@ -283,6 +353,8 @@ public class CreatePlayingListResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Playback availability: VALID(10), UNKNOWN(20), NOT_VALID(30)</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */

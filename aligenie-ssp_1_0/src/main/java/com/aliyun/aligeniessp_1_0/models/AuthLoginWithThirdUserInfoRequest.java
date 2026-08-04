@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AuthLoginWithThirdUserInfoRequest extends TeaModel {
     /**
+     * <p>Extension information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      * 
@@ -15,6 +17,7 @@ public class AuthLoginWithThirdUserInfoRequest extends TeaModel {
     public java.util.Map<String, ?> extInfo;
 
     /**
+     * <p>Scene code, which must be requested from Tmall Genie in advance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +27,7 @@ public class AuthLoginWithThirdUserInfoRequest extends TeaModel {
     public String sceneCode;
 
     /**
+     * <p>Third-party User Identifier</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +37,7 @@ public class AuthLoginWithThirdUserInfoRequest extends TeaModel {
     public String thirdUserIdentifier;
 
     /**
+     * <p>Third-party User Type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

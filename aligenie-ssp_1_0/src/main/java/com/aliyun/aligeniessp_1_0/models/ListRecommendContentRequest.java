@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListRecommendContentRequest extends TeaModel {
     /**
+     * <p>Device identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceInfo")
     public ListRecommendContentRequestDeviceInfo deviceInfo;
 
     /**
+     * <p>Request Parameters</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Request")
     public ListRecommendContentRequestRequest request;
 
     /**
+     * <p>User identification information</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserInfo")
@@ -53,6 +56,10 @@ public class ListRecommendContentRequest extends TeaModel {
 
     public static class ListRecommendContentRequestDeviceInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type</p>
+         * <p>When the encoding type is SKILL_ID, the value is the application\&quot;s Skill ID.
+         * When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -60,6 +67,10 @@ public class ListRecommendContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p>PACKAGE_NAME: APK package name, used for the Android application client path.
+         * SKILL_ID: Skill ID, used for the cloud-based path.</p>
+         * 
          * <strong>example:</strong>
          * <p>PACKAGE_NAME</p>
          */
@@ -67,6 +78,8 @@ public class ListRecommendContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>Device ID, set to deviceOpenId or deviceUnionId.</p>
+         * 
          * <strong>example:</strong>
          * <p>DAFE****ce3ej=</p>
          */
@@ -74,6 +87,10 @@ public class ListRecommendContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of device ID</p>
+         * <p>OPEN_ID: Default device ID identity.
+         * UNION_ID: Organization-dimension device ID identity. This value is available only after an organization has been registered on the Tmall Genie Skill Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -81,6 +98,8 @@ public class ListRecommendContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */
@@ -136,6 +155,8 @@ public class ListRecommendContentRequest extends TeaModel {
 
     public static class ListRecommendContentRequestRequest extends TeaModel {
         /**
+         * <p>Quantity of recommendations</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -143,6 +164,8 @@ public class ListRecommendContentRequest extends TeaModel {
         public Integer count;
 
         /**
+         * <p>Default value: song (currently, the extension field supports only song)</p>
+         * 
          * <strong>example:</strong>
          * <p>song</p>
          */
@@ -174,6 +197,9 @@ public class ListRecommendContentRequest extends TeaModel {
 
     public static class ListRecommendContentRequestUserInfo extends TeaModel {
         /**
+         * <p>Value corresponding to the encoding type.</p>
+         * <p>When the encoding type is SKILL_ID, the value is the Skill ID of the application.<br>When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</p>
+         * 
          * <strong>example:</strong>
          * <p>12**45</p>
          */
@@ -181,6 +207,10 @@ public class ListRecommendContentRequest extends TeaModel {
         public String encodeKey;
 
         /**
+         * <p>Encoding type. There are multiple ways to obtain the user identifier for Tmall Genie, and each method corresponds to a different encoding type.</p>
+         * <p>PACKAGE_NAME: APK package name, used for the Android application client path.
+         * SKILL_ID: Skill ID, used for the cloud-based path.</p>
+         * 
          * <strong>example:</strong>
          * <p>PACKAGE_NAME</p>
          */
@@ -188,6 +218,8 @@ public class ListRecommendContentRequest extends TeaModel {
         public String encodeType;
 
         /**
+         * <p>User Identifier, set to userOpenId or userUnionId.</p>
+         * 
          * <strong>example:</strong>
          * <p>HOFF****my7Iw=</p>
          */
@@ -195,6 +227,9 @@ public class ListRecommendContentRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>Type of User ID.</p>
+         * <p>OPEN_ID: The default User ID identifier.<br>UNION_ID: The organization-dimension User ID identifier. This value is available only after an organization has been requested on the Tmall Genie Skills Application Open Platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPEN_ID</p>
          */
@@ -202,6 +237,8 @@ public class ListRecommendContentRequest extends TeaModel {
         public String idType;
 
         /**
+         * <p>Organization ID. Required when IdType is UNION_ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1**2</p>
          */

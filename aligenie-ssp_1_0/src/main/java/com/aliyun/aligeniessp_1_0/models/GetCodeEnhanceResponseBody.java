@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCodeEnhanceResponseBody extends TeaModel {
     /**
+     * <p>Returned error code. A value of 200 indicates that the invocation Succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetCodeEnhanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Return Result of invoking this API.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class GetCodeEnhanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0EC7*726E</p>
      */
@@ -26,6 +32,8 @@ public class GetCodeEnhanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Detailed returned information.</p>
+     * 
      * <strong>example:</strong>
      * <p>Aexfgc</p>
      */

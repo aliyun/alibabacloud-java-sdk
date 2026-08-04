@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCateInfoRequest extends TeaModel {
     /**
+     * <p>Default value is song (the extension field currently only supports song)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
