@@ -13,6 +13,9 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     @NameInMap("CaInstanceStatus")
     public String caInstanceStatus;
 
+    @NameInMap("CaType")
+    public String caType;
+
     /**
      * <p>The cron expression.</p>
      * 
@@ -60,6 +63,14 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     }
     public String getCaInstanceStatus() {
         return this.caInstanceStatus;
+    }
+
+    public GetCaInstanceCrlAddressResponseBody setCaType(String caType) {
+        this.caType = caType;
+        return this;
+    }
+    public String getCaType() {
+        return this.caType;
     }
 
     public GetCaInstanceCrlAddressResponseBody setCrlUrl(String crlUrl) {

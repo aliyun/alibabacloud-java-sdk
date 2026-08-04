@@ -60,7 +60,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1-oxs", "cas.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "cas.aliyuncs.com"),
             new TeaPair("us-east-1", "cas.aliyuncs.com"),
-            new TeaPair("us-west-1", "cas.aliyuncs.com")
+            new TeaPair("us-west-1", "cas.aliyuncs.com"),
+            new TeaPair("me-east-1", "cas.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "cas.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cas.eu-central-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "cas.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1205,13 +1212,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of a root or subordinate CA certificate by its unique identifier. The details include the serial number, subject information, and certificate content.
-     * Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>.</p>
+     * <p>This operation queries the details of a root CA certificate or sub-CA certificate by using the unique identifier of the certificate. The details include the serial number, subject information, and certificate content of the CA certificate.
+     * Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate.</p>
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled, which can affect your business. Plan your calls accordingly.</p>
+     * <p>The China site (aliyun.com) allows up to 10 queries per second (QPS) for a single user. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a certificate authority (CA) certificate.</p>
+     * <p>Queries the details of a CA certificate.</p>
      * 
      * @param request DescribeCACertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1243,13 +1250,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of a root or subordinate CA certificate by its unique identifier. The details include the serial number, subject information, and certificate content.
-     * Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>.</p>
+     * <p>This operation queries the details of a root CA certificate or sub-CA certificate by using the unique identifier of the certificate. The details include the serial number, subject information, and certificate content of the CA certificate.
+     * Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate.</p>
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled, which can affect your business. Plan your calls accordingly.</p>
+     * <p>The China site (aliyun.com) allows up to 10 queries per second (QPS) for a single user. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a certificate authority (CA) certificate.</p>
+     * <p>Queries the details of a CA certificate.</p>
      * 
      * @param request DescribeCACertificateRequest
      * @return DescribeCACertificateResponse
