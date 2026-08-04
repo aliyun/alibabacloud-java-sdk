@@ -1594,6 +1594,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes MCP Servers from a specified workspace.</p>
+     * 
+     * @param tmpReq DeleteDataAgentMcpRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataAgentMcpResponse
+     */
+    public DeleteDataAgentMcpResponse deleteDataAgentMcpWithOptions(DeleteDataAgentMcpRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteDataAgentMcpShrinkRequest request = new DeleteDataAgentMcpShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.mcpServerIds)) {
+            request.mcpServerIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.mcpServerIds, "McpServerIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerIdsShrink)) {
+            query.put("McpServerIds", request.mcpServerIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataAgentMcp"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataAgentMcpResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes MCP Servers from a specified workspace.</p>
+     * 
+     * @param request DeleteDataAgentMcpRequest
+     * @return DeleteDataAgentMcpResponse
+     */
+    public DeleteDataAgentMcpResponse deleteDataAgentMcp(DeleteDataAgentMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataAgentMcpWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes the memory of a DataAgent.</p>
      * 
      * @param request DeleteDataAgentMemoryRequest
@@ -2734,6 +2788,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of an MCP Server by its ID, including the workspace, network, connection method, and running status.</p>
+     * 
+     * @param request GetDataAgentMcpRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataAgentMcpResponse
+     */
+    public GetDataAgentMcpResponse getDataAgentMcpWithOptions(GetDataAgentMcpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerId)) {
+            query.put("McpServerId", request.mcpServerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataAgentMcp"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataAgentMcpResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an MCP Server by its ID, including the workspace, network, connection method, and running status.</p>
+     * 
+     * @param request GetDataAgentMcpRequest
+     * @return GetDataAgentMcpResponse
+     */
+    public GetDataAgentMcpResponse getDataAgentMcp(GetDataAgentMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataAgentMcpWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves information about a RAM user that belongs to an Alibaba Cloud account.</p>
      * 
      * @param request GetDataAgentSubAccountInfoRequest
@@ -3128,6 +3230,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</p>
+     * 
+     * @param request GetListMcpServerToolsResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetListMcpServerToolsResultResponse
+     */
+    public GetListMcpServerToolsResultResponse getListMcpServerToolsResultWithOptions(GetListMcpServerToolsResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerUuid)) {
+            query.put("McpServerUuid", request.mcpServerUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetListMcpServerToolsResult"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetListMcpServerToolsResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</p>
+     * 
+     * @param request GetListMcpServerToolsResultRequest
+     * @return GetListMcpServerToolsResultResponse
+     */
+    public GetListMcpServerToolsResultResponse getListMcpServerToolsResult(GetListMcpServerToolsResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getListMcpServerToolsResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Submits a task to schedule and run a Notebook file.</p>
      * 
      * @param request GetNotebookAndSubmitTaskRequest
@@ -3468,6 +3622,140 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkspaceQuotaResponse getWorkspaceQuota(GetWorkspaceQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkspaceQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Installs all currently available system MCP services for a specified Data Agent workspace.</p>
+     * 
+     * @param request InitWorkspaceSystemMcpServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitWorkspaceSystemMcpServerResponse
+     */
+    public InitWorkspaceSystemMcpServerResponse initWorkspaceSystemMcpServerWithOptions(InitWorkspaceSystemMcpServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitWorkspaceSystemMcpServer"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitWorkspaceSystemMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Installs all currently available system MCP services for a specified Data Agent workspace.</p>
+     * 
+     * @param request InitWorkspaceSystemMcpServerRequest
+     * @return InitWorkspaceSystemMcpServerResponse
+     */
+    public InitWorkspaceSystemMcpServerResponse initWorkspaceSystemMcpServer(InitWorkspaceSystemMcpServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.initWorkspaceSystemMcpServerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Imports an MCP into DataAgent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports an MCP into DataAgent.</p>
+     * 
+     * @param request InstallDataAgentMcpRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallDataAgentMcpResponse
+     */
+    public InstallDataAgentMcpResponse installDataAgentMcpWithOptions(InstallDataAgentMcpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpoint)) {
+            query.put("Endpoint", request.endpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromJson)) {
+            query.put("FromJson", request.fromJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.headers)) {
+            query.put("Headers", request.headers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needUidInHeader)) {
+            query.put("NeedUidInHeader", request.needUidInHeader);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netType)) {
+            query.put("NetType", request.netType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transportType)) {
+            query.put("TransportType", request.transportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswId)) {
+            query.put("VswId", request.vswId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallDataAgentMcp"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallDataAgentMcpResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Imports an MCP into DataAgent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports an MCP into DataAgent.</p>
+     * 
+     * @param request InstallDataAgentMcpRequest
+     * @return InstallDataAgentMcpResponse
+     */
+    public InstallDataAgentMcpResponse installDataAgentMcp(InstallDataAgentMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.installDataAgentMcpWithOptions(request, runtime);
     }
 
     /**
@@ -3876,6 +4164,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries MCP Servers in a specified workspace by paging. You can filter results by name, ready status, and service type.</p>
+     * 
+     * @param request ListDataAgentMcpRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataAgentMcpResponse
+     */
+    public ListDataAgentMcpResponse listDataAgentMcpWithOptions(ListDataAgentMcpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.readyOnly)) {
+            query.put("ReadyOnly", request.readyOnly);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataAgentMcp"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataAgentMcpResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries MCP Servers in a specified workspace by paging. You can filter results by name, ready status, and service type.</p>
+     * 
+     * @param request ListDataAgentMcpRequest
+     * @return ListDataAgentMcpResponse
+     */
+    public ListDataAgentMcpResponse listDataAgentMcp(ListDataAgentMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataAgentMcpWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the DataAgent memory list (up to 50 memories per RAM user).</p>
      * 
      * @param request ListDataAgentMemoryRequest
@@ -3952,7 +4312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of historical session descriptions for a Data Agent.</p>
+     * <p>Retrieves the list of historical session descriptions for Data Agent.</p>
      * 
      * @param request ListDataAgentSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3967,6 +4327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.createStartTime)) {
             query.put("CreateStartTime", request.createStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creatorId)) {
+            query.put("CreatorId", request.creatorId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.customAgentId)) {
@@ -4024,7 +4388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of historical session descriptions for a Data Agent.</p>
+     * <p>Retrieves the list of historical session descriptions for Data Agent.</p>
      * 
      * @param request ListDataAgentSessionRequest
      * @return ListDataAgentSessionResponse
@@ -4045,6 +4409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDataAgentWorkspaceResponse listDataAgentWorkspaceWithOptions(ListDataAgentWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creator)) {
+            query.put("Creator", request.creator);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
             query.put("DMSUnit", request.DMSUnit);
         }
@@ -5473,6 +5841,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies the configuration of an MCP server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of an MCP server.</p>
+     * 
+     * @param request ModifyDataAgentMcpRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDataAgentMcpResponse
+     */
+    public ModifyDataAgentMcpResponse modifyDataAgentMcpWithOptions(ModifyDataAgentMcpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpoint)) {
+            query.put("Endpoint", request.endpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.headers)) {
+            query.put("Headers", request.headers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerId)) {
+            query.put("McpServerId", request.mcpServerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needUidInHeader)) {
+            query.put("NeedUidInHeader", request.needUidInHeader);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transportType)) {
+            query.put("TransportType", request.transportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDataAgentMcp"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDataAgentMcpResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies the configuration of an MCP server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of an MCP server.</p>
+     * 
+     * @param request ModifyDataAgentMcpRequest
+     * @return ModifyDataAgentMcpResponse
+     */
+    public ModifyDataAgentMcpResponse modifyDataAgentMcp(ModifyDataAgentMcpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDataAgentMcpWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Operate custom agents in personal spaces and workspaces.</p>
      * 
@@ -6108,6 +6558,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartDataAgentAccuracyTestTaskResponse startDataAgentAccuracyTestTask(StartDataAgentAccuracyTestTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDataAgentAccuracyTestTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Asynchronously starts MCP Server connectivity and tool list detection. The first call prompts you to wait one minute for resource provisioning. Subsequent calls return a temporary Session ID for polling the result.</p>
+     * 
+     * @param request StartListMcpServerToolsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartListMcpServerToolsResponse
+     */
+    public StartListMcpServerToolsResponse startListMcpServerToolsWithOptions(StartListMcpServerToolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerUuid)) {
+            query.put("McpServerUuid", request.mcpServerUuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartListMcpServerTools"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartListMcpServerToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Asynchronously starts MCP Server connectivity and tool list detection. The first call prompts you to wait one minute for resource provisioning. Subsequent calls return a temporary Session ID for polling the result.</p>
+     * 
+     * @param request StartListMcpServerToolsRequest
+     * @return StartListMcpServerToolsResponse
+     */
+    public StartListMcpServerToolsResponse startListMcpServerTools(StartListMcpServerToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startListMcpServerToolsWithOptions(request, runtime);
     }
 
     /**

@@ -127,7 +127,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class ListDataAgentWorkspaceResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The creation time of the workspace, in UNIX timestamp format (milliseconds).</p>
+         * <p>The creation time of the workspace, in milliseconds (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516000</p>
@@ -143,6 +143,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
          */
         @NameInMap("Creator")
         public String creator;
+
+        @NameInMap("CreatorName")
+        public String creatorName;
 
         /**
          * <p>The description of the workspace.</p>
@@ -163,7 +166,7 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The most recent modification time of the workspace, in UNIX timestamp format (milliseconds).</p>
+         * <p>The most recent modification time of the workspace, in milliseconds (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516000</p>
@@ -180,6 +183,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("RoleName")
         public String roleName;
 
+        @NameInMap("RunningSessionCount")
+        public Integer runningSessionCount;
+
         /**
          * <p>The number of members in the workspace.</p>
          * 
@@ -188,6 +194,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
          */
         @NameInMap("TotalMember")
         public Long totalMember;
+
+        @NameInMap("TotalSessionCount")
+        public Integer totalSessionCount;
 
         /**
          * <p>The workspace type.</p>
@@ -246,6 +255,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             return this.creator;
         }
 
+        public ListDataAgentWorkspaceResponseBodyDataContent setCreatorName(String creatorName) {
+            this.creatorName = creatorName;
+            return this;
+        }
+        public String getCreatorName() {
+            return this.creatorName;
+        }
+
         public ListDataAgentWorkspaceResponseBodyDataContent setDescription(String description) {
             this.description = description;
             return this;
@@ -278,12 +295,28 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             return this.roleName;
         }
 
+        public ListDataAgentWorkspaceResponseBodyDataContent setRunningSessionCount(Integer runningSessionCount) {
+            this.runningSessionCount = runningSessionCount;
+            return this;
+        }
+        public Integer getRunningSessionCount() {
+            return this.runningSessionCount;
+        }
+
         public ListDataAgentWorkspaceResponseBodyDataContent setTotalMember(Long totalMember) {
             this.totalMember = totalMember;
             return this;
         }
         public Long getTotalMember() {
             return this.totalMember;
+        }
+
+        public ListDataAgentWorkspaceResponseBodyDataContent setTotalSessionCount(Integer totalSessionCount) {
+            this.totalSessionCount = totalSessionCount;
+            return this;
+        }
+        public Integer getTotalSessionCount() {
+            return this.totalSessionCount;
         }
 
         public ListDataAgentWorkspaceResponseBodyDataContent setType(String type) {

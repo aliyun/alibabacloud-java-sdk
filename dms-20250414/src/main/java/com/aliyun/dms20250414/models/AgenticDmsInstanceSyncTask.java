@@ -28,6 +28,12 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    @NameInMap("OperatorMode")
+    public String operatorMode;
+
+    @NameInMap("RequestedOperatorMode")
+    public String requestedOperatorMode;
+
     @NameInMap("SkippedCount")
     public Integer skippedCount;
 
@@ -113,6 +119,22 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
     }
     public String getGmtModified() {
         return this.gmtModified;
+    }
+
+    public AgenticDmsInstanceSyncTask setOperatorMode(String operatorMode) {
+        this.operatorMode = operatorMode;
+        return this;
+    }
+    public String getOperatorMode() {
+        return this.operatorMode;
+    }
+
+    public AgenticDmsInstanceSyncTask setRequestedOperatorMode(String requestedOperatorMode) {
+        this.requestedOperatorMode = requestedOperatorMode;
+        return this;
+    }
+    public String getRequestedOperatorMode() {
+        return this.requestedOperatorMode;
     }
 
     public AgenticDmsInstanceSyncTask setSkippedCount(Integer skippedCount) {

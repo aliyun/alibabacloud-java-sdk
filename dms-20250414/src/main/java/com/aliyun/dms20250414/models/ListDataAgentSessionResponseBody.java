@@ -11,7 +11,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public java.util.List<ListDataAgentSessionResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code returned when the request is abnormal.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -56,10 +56,10 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request fails.</li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
          * <p>The usage stage of the custom agent. Valid values:</p>
          * <ul>
          * <li><strong>debug</strong>: Debug stage.</li>
-         * <li><strong>prod</strong>: Production stage.</li>
+         * <li><strong>prod</strong>: Production environment stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
         /**
          * <p>The name of the user OSS bucket.</p>
          * <ul>
-         * <li>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</li>
+         * <li>Analysis process files and report outputs can be uploaded to the user-specified OSS bucket.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,7 +372,7 @@ public class ListDataAgentSessionResponseBody extends TeaModel {
          * <p>The title.</p>
          * 
          * <strong>example:</strong>
-         * <p>分析一下这份文件，给出报告。</p>
+         * <p>Analyze this file and generate a report</p>
          */
         @NameInMap("Title")
         public String title;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentSessionRequest extends TeaModel {
     /**
-     * <p>The end time of the session creation period.</p>
+     * <p>The end time for session creation.</p>
      * 
      * <strong>example:</strong>
      * <p>1770912000000</p>
@@ -14,13 +14,16 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Long createEndTime;
 
     /**
-     * <p>The start time of the session creation period.</p>
+     * <p>The start time for session creation.</p>
      * 
      * <strong>example:</strong>
      * <p>1770825600000</p>
      */
     @NameInMap("CreateStartTime")
     public Long createStartTime;
+
+    @NameInMap("CreatorId")
+    public String creatorId;
 
     /**
      * <p>The custom agent ID.</p>
@@ -32,7 +35,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public String customAgentId;
 
     /**
-     * <p>The current DMS unit.</p>
+     * <p>The current Data Management unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -49,6 +52,13 @@ public class ListDataAgentSessionRequest extends TeaModel {
     @NameInMap("IsSaved")
     public Boolean isSaved;
 
+    /**
+     * <p>The mode. Valid values:</p>
+     * <ul>
+     * <li>Analysis</li>
+     * <li>Coding</li>
+     * </ul>
+     */
     @NameInMap("Mode")
     public String mode;
 
@@ -71,7 +81,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The session type. This parameter is required if a workspace is specified.</p>
+     * <p>The session type. This parameter is required when a workspace is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>myFavorite</p>
@@ -83,7 +93,7 @@ public class ListDataAgentSessionRequest extends TeaModel {
      * <p>The Data Agent title. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>帮我分析一下这份数据</p>
+     * <p>Analyze this data for me</p>
      */
     @NameInMap("Title")
     public String title;
@@ -116,6 +126,14 @@ public class ListDataAgentSessionRequest extends TeaModel {
     }
     public Long getCreateStartTime() {
         return this.createStartTime;
+    }
+
+    public ListDataAgentSessionRequest setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
+        return this;
+    }
+    public String getCreatorId() {
+        return this.creatorId;
     }
 
     public ListDataAgentSessionRequest setCustomAgentId(String customAgentId) {

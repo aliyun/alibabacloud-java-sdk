@@ -4,6 +4,9 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class ListDataAgentWorkspaceRequest extends TeaModel {
+    @NameInMap("Creator")
+    public String creator;
+
     /**
      * <p>The current DMS unit.</p>
      * 
@@ -41,7 +44,7 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The field name used for sorting.</p>
+     * <p>The name of the field by which to sort.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>
@@ -91,6 +94,14 @@ public class ListDataAgentWorkspaceRequest extends TeaModel {
     public static ListDataAgentWorkspaceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataAgentWorkspaceRequest self = new ListDataAgentWorkspaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDataAgentWorkspaceRequest setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
     }
 
     public ListDataAgentWorkspaceRequest setDMSUnit(String DMSUnit) {
