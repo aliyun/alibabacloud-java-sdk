@@ -3068,13 +3068,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>RAM users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndexFiles permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
-     * <li>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
-     * <li>This operation is idempotent.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndexFiles permission), before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Invoke this operation through the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>Before invoking this operation, make sure your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>This operation has idempotence.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the files in a specified knowledge base along with their details.</p>
+     * <p>Retrieves files and their details from a specified knowledge base.</p>
      * 
      * @param request ListIndexFileDetailsRequest
      * @param headers map
@@ -3129,13 +3129,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>RAM users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndexFiles permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
-     * <li>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
-     * <li>This operation is idempotent.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndexFiles permission), before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Invoke this operation through the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>.</li>
+     * <li>Before invoking this operation, make sure your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>This operation has idempotence.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the files in a specified knowledge base along with their details.</p>
+     * <p>Retrieves files and their details from a specified knowledge base.</p>
      * 
      * @param request ListIndexFileDetailsRequest
      * @return ListIndexFileDetailsResponse
@@ -3149,8 +3149,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndex permission) before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
-     * <li>This operation is idempotent.
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndex permission). Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</li>
+     * <li>This operation has idempotence.
      * <strong>Rate limit:</strong>
      * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
      * </ul>
@@ -3199,8 +3199,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndex permission) before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</li>
-     * <li>This operation is idempotent.
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <code>AliyunBailianDataFullAccess</code>, which includes the sfm:ListIndex permission). Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</li>
+     * <li>This operation has idempotence.
      * <strong>Rate limit:</strong>
      * This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</li>
      * </ul>
@@ -3630,19 +3630,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.
+     * <li>This operation does not support data query or image Q&amp;A knowledge bases. For information about how to update data query or image Q&amp;A knowledge bases, see the knowledge base update instructions in <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.
      * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.</li>
-     * <li>A RAM user (sub-account) can call this API only after being granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">api permission</a> for Alibaba Cloud Model Studio (specifically, the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:SubmitIndexAddDocumentsJob</code> permission) and joining a <a href="https://help.aliyun.com/document_detail/2851098.html">workspace</a>. An Alibaba Cloud account can call this API directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API.</li>
-     * <li>Before calling this API, ensure your knowledge base exists and has a valid knowledge base ID (<code>IndexId</code>).</li>
-     * <li>Before calling this API, you must first upload files to Alibaba Cloud Model Studio using the <strong>AddFile</strong> API.</li>
-     * <li>After calling this API, the job runs in the background and may take several hours to complete, especially during peak times. Do not submit duplicate requests until the job is complete. To check the job status, call the <strong>GetIndexJobStatus</strong> API. The <code>Documents</code> file list returned by the GetIndexJobStatus API contains all files for the job, which is uniquely identified by the <code>job_id</code> you provided. You can check this list to verify whether each file was imported (parsed) successfully. Note that frequent calls to the GetIndexJobStatus API are subject to rate limiting. Do not exceed 20 calls per minute.</li>
-     * <li>A successful API call indicates the job has been submitted for processing, which takes time. This API is not idempotent, so do not send duplicate requests; doing so will create multiple jobs.
-     * <strong>Rate limiting:</strong> This API is limited to 10 calls per second. If you exceed this limit, wait before retrying.</li>
+     * <li>This operation does not support data query or image Q&amp;A knowledge bases. For information about how to update data query or image Q&amp;A knowledge bases, see the knowledge base update instructions in <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:SubmitIndexAddDocumentsJob permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>Before invoking this operation, invoke the <strong>AddFile</strong> operation to upload the files you want to append to Model Studio.</li>
+     * <li>After invoking this operation, the node requires time to execute and may take several hours during peak periods. Do not submit duplicate requests before the node is complete. To query the node execution status, invoke the <strong>GetIndexJobStatus</strong> operation. The <code>Documents</code> file list returned by this operation contains all files in this append job (uniquely identified by the <code>job_id</code> you provide), and you can check whether each file was imported (parsed) successfully. Note that invoking GetIndexJobStatus too frequently will trigger rate limiting. Do not exceed a frequency of 20 times per minute.</li>
+     * <li>After this operation is invoked successfully, it takes some time to execute. Do not submit duplicate requests before the response is returned. This operation does not have idempotence.
+     * <strong>Rate limit:</strong>
+     * Frequent calls to this operation will be throttled. Do not exceed 10 calls per second. If throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds parsed files to the specified knowledge base.</p>
+     * <p>Appends parsed files to a specified knowledge base.</p>
      * 
      * @param tmpReq SubmitIndexAddDocumentsJobRequest
      * @param headers map
@@ -3728,19 +3729,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.
+     * <li>This operation does not support data query or image Q&amp;A knowledge bases. For information about how to update data query or image Q&amp;A knowledge bases, see the knowledge base update instructions in <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.
      * &lt;props=&quot;intl&quot;&gt;</li>
-     * <li>This API does not support knowledge bases for data queries or image Q\&amp;A. To update these knowledge bases, see the <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a> documentation.</li>
-     * <li>A RAM user (sub-account) can call this API only after being granted the required <a href="https://help.aliyun.com/document_detail/2848578.html">api permission</a> for Alibaba Cloud Model Studio (specifically, the <code>AliyunBailianDataFullAccess</code> policy, which includes the <code>sfm:SubmitIndexAddDocumentsJob</code> permission) and joining a <a href="https://help.aliyun.com/document_detail/2851098.html">workspace</a>. An Alibaba Cloud account can call this API directly without authorization. We recommend using the latest version of the &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this API.</li>
-     * <li>Before calling this API, ensure your knowledge base exists and has a valid knowledge base ID (<code>IndexId</code>).</li>
-     * <li>Before calling this API, you must first upload files to Alibaba Cloud Model Studio using the <strong>AddFile</strong> API.</li>
-     * <li>After calling this API, the job runs in the background and may take several hours to complete, especially during peak times. Do not submit duplicate requests until the job is complete. To check the job status, call the <strong>GetIndexJobStatus</strong> API. The <code>Documents</code> file list returned by the GetIndexJobStatus API contains all files for the job, which is uniquely identified by the <code>job_id</code> you provided. You can check this list to verify whether each file was imported (parsed) successfully. Note that frequent calls to the GetIndexJobStatus API are subject to rate limiting. Do not exceed 20 calls per minute.</li>
-     * <li>A successful API call indicates the job has been submitted for processing, which takes time. This API is not idempotent, so do not send duplicate requests; doing so will create multiple jobs.
-     * <strong>Rate limiting:</strong> This API is limited to 10 calls per second. If you exceed this limit, wait before retrying.</li>
+     * <li>This operation does not support data query or image Q&amp;A knowledge bases. For information about how to update data query or image Q&amp;A knowledge bases, see the knowledge base update instructions in <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</li>
+     * <li>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <code>AliyunBailianDataFullAccess</code>, which includes the sfm:SubmitIndexAddDocumentsJob permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</li>
+     * <li>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <code>IndexId</code> is valid).</li>
+     * <li>Before invoking this operation, invoke the <strong>AddFile</strong> operation to upload the files you want to append to Model Studio.</li>
+     * <li>After invoking this operation, the node requires time to execute and may take several hours during peak periods. Do not submit duplicate requests before the node is complete. To query the node execution status, invoke the <strong>GetIndexJobStatus</strong> operation. The <code>Documents</code> file list returned by this operation contains all files in this append job (uniquely identified by the <code>job_id</code> you provide), and you can check whether each file was imported (parsed) successfully. Note that invoking GetIndexJobStatus too frequently will trigger rate limiting. Do not exceed a frequency of 20 times per minute.</li>
+     * <li>After this operation is invoked successfully, it takes some time to execute. Do not submit duplicate requests before the response is returned. This operation does not have idempotence.
+     * <strong>Rate limit:</strong>
+     * Frequent calls to this operation will be throttled. Do not exceed 10 calls per second. If throttled, retry later.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds parsed files to the specified knowledge base.</p>
+     * <p>Appends parsed files to a specified knowledge base.</p>
      * 
      * @param request SubmitIndexAddDocumentsJobRequest
      * @return SubmitIndexAddDocumentsJobResponse

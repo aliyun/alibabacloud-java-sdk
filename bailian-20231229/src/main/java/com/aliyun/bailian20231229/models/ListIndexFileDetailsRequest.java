@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIndexFileDetailsRequest extends TeaModel {
     /**
-     * <p>Filters the returned file details list by file name. Default value: empty, which means the results are not filtered by file name.</p>
+     * <p>Filters the returned file details list by file name. Default value: empty, which means no filtering by file name.</p>
      * 
      * <strong>example:</strong>
      * <p>TranslationPlatformO&amp;MDocument.</p>
@@ -23,7 +23,7 @@ public class ListIndexFileDetailsRequest extends TeaModel {
      * <li>PARSE_FAILED: Parsing failed.</li>
      * <li>DOC_PARSING: Parsing in progress.</li>
      * </ul>
-     * <p>Default value: empty, which means the results are not filtered by file import status.</p>
+     * <p>Default value: empty, which means no filtering by file import status.</p>
      * 
      * <strong>example:</strong>
      * <p>FINISH</p>
@@ -64,7 +64,7 @@ public class ListIndexFileDetailsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of files to display per page in a paginated query. Maximum value: 10.</p>
+     * <p>The number of files to display per page in a paging query. Maximum value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

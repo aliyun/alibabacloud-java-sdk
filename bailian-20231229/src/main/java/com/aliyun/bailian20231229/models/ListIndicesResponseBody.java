@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIndicesResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.InvalidParameter</p>
@@ -112,9 +112,61 @@ public class ListIndicesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListIndicesResponseBodyDataIndicesStructuredIndexConfig extends TeaModel {
+        @NameInMap("IsRecall")
+        public Boolean isRecall;
+
+        @NameInMap("IsSearch")
+        public Boolean isSearch;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListIndicesResponseBodyDataIndicesStructuredIndexConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListIndicesResponseBodyDataIndicesStructuredIndexConfig self = new ListIndicesResponseBodyDataIndicesStructuredIndexConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIndicesResponseBodyDataIndicesStructuredIndexConfig setIsRecall(Boolean isRecall) {
+            this.isRecall = isRecall;
+            return this;
+        }
+        public Boolean getIsRecall() {
+            return this.isRecall;
+        }
+
+        public ListIndicesResponseBodyDataIndicesStructuredIndexConfig setIsSearch(Boolean isSearch) {
+            this.isSearch = isSearch;
+            return this;
+        }
+        public Boolean getIsSearch() {
+            return this.isSearch;
+        }
+
+        public ListIndicesResponseBodyDataIndicesStructuredIndexConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListIndicesResponseBodyDataIndicesStructuredIndexConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListIndicesResponseBodyDataIndices extends TeaModel {
         /**
-         * <p>The estimated chunk length. Valid values: 1 to 2048.</p>
+         * <p>The estimated chunk size. Valid values: 1 to 2048.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -136,10 +188,10 @@ public class ListIndicesResponseBody extends TeaModel {
         public String confgModel;
 
         /**
-         * <p>The description of the knowledge base.</p>
+         * <p>The knowledge base description.</p>
          * 
          * <strong>example:</strong>
-         * <p>清单中产品主要面向海外客户。</p>
+         * <p>Products in this list are mainly for overseas customers</p>
          */
         @NameInMap("Description")
         public String description;
@@ -151,18 +203,17 @@ public class ListIndicesResponseBody extends TeaModel {
         public java.util.List<String> documentIds;
 
         /**
-         * <p>The name of the embedding model. Valid values:</p>
+         * <p>The embedding model name. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li>text-embedding-v4: the text-embedding-v4 model.</li>
-         * <li>text-embedding-v3: the text-embedding-v3 model.</li>
-         * <li>text-embedding-v2: the text-embedding-v2 model.</li>
+         * <li>text-embedding-v4: text-embedding-v4 model.</li>
+         * <li>text-embedding-v3: text-embedding-v3 model.</li>
+         * <li>text-embedding-v2: text-embedding-v2 model.</li>
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <ul>
-         * <li>text-embedding-v2: the text-embedding-v2 model.</li>
+         * <li>text-embedding-v2: text-embedding-v2 model.</li>
          * </ul>
-         * <p>.</p>
          * 
          * <strong>example:</strong>
          * <p>text-embedding-v2</p>
@@ -193,16 +244,16 @@ public class ListIndicesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the knowledge base.</p>
+         * <p>The knowledge base name.</p>
          * 
          * <strong>example:</strong>
-         * <p>XXXX产品清单</p>
+         * <p>XXXX Product List</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The chunk overlap length. Valid values: 0 to 1024.</p>
+         * <p>The chunk overlap size. Valid values: 0 to 1024.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -220,7 +271,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String rerankMinScore;
 
         /**
-         * <p>The name of the rerank model. Valid values:</p>
+         * <p>The rerank model name. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>qwen3-rerank-hybrid: qwen3-rerank (hybrid) reranking.</li>
@@ -233,7 +284,6 @@ public class ListIndicesResponseBody extends TeaModel {
          * <li>gte-rerank-hybrid: official reranking.</li>
          * <li>gte-rerank: gte-rerank reranking.</li>
          * </ul>
-         * <p>.</p>
          * 
          * <strong>example:</strong>
          * <p>gte-rerank-hybrid</p>
@@ -255,7 +305,7 @@ public class ListIndicesResponseBody extends TeaModel {
          * <li>；: Chinese semicolon</li>
          * <li>;: English semicolon</li>
          * <li>？: Chinese question mark</li>
-         * <li>?: English question mark.</li>
+         * <li>?: English question mark</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,7 +347,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String sinkType;
 
         /**
-         * <p>The data type of Alibaba Cloud Model Studio &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a>.</p>
+         * <p>The data type in Alibaba Cloud Model Studio &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</p>
          * <p>For document search&lt;props=&quot;china&quot;&gt;/audio and video search knowledge bases, valid values:</p>
          * <ul>
          * <li>DATA_CENTER_CATEGORY: category type.</li>
@@ -315,7 +365,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The type of the knowledge base. Valid values:</p>
+         * <p>The knowledge base type. Valid values:</p>
          * <ul>
          * <li>UNSTRUCTURED: document search.</li>
          * </ul>
@@ -325,6 +375,9 @@ public class ListIndicesResponseBody extends TeaModel {
          */
         @NameInMap("StructureType")
         public String structureType;
+
+        @NameInMap("StructuredIndexConfig")
+        public java.util.List<ListIndicesResponseBodyDataIndicesStructuredIndexConfig> structuredIndexConfig;
 
         public static ListIndicesResponseBodyDataIndices build(java.util.Map<String, ?> map) throws Exception {
             ListIndicesResponseBodyDataIndices self = new ListIndicesResponseBodyDataIndices();
@@ -467,6 +520,14 @@ public class ListIndicesResponseBody extends TeaModel {
             return this.structureType;
         }
 
+        public ListIndicesResponseBodyDataIndices setStructuredIndexConfig(java.util.List<ListIndicesResponseBodyDataIndicesStructuredIndexConfig> structuredIndexConfig) {
+            this.structuredIndexConfig = structuredIndexConfig;
+            return this;
+        }
+        public java.util.List<ListIndicesResponseBodyDataIndicesStructuredIndexConfig> getStructuredIndexConfig() {
+            return this.structuredIndexConfig;
+        }
+
     }
 
     public static class ListIndicesResponseBodyData extends TeaModel {
@@ -477,7 +538,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public java.util.List<ListIndicesResponseBodyDataIndices> indices;
 
         /**
-         * <p>The page number returned.</p>
+         * <p>The specified page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -486,7 +547,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page returned.</p>
+         * <p>The specified number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

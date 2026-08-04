@@ -159,7 +159,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String enableHeaders;
 
         /**
-         * <p>The time when the file was imported to the knowledge base, in Unix timestamp format.</p>
+         * <p>The time when the file was imported to the knowledge base, in UNIX timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1744856423000</p>
@@ -185,6 +185,15 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The metadata extracted from the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;doc_summary&quot;: [&quot;Example 1.&quot;],
+         *   &quot;health_rule&quot;: [&quot;Example 2&quot;]
+         * }</p>
+         */
         @NameInMap("MetaExtractInfo")
         public String metaExtractInfo;
 
@@ -377,7 +386,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
 
     public static class ListIndexFileDetailsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of files in the knowledge base, sorted by file import time in descending order (consistent with the console).</p>
+         * <p>The list of files in the knowledge base, sorted in descending order by file import time (consistent with the console).</p>
          */
         @NameInMap("Documents")
         public java.util.List<ListIndexFileDetailsResponseBodyDataDocuments> documents;
@@ -392,7 +401,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String indexId;
 
         /**
-         * <p>The specified page number.</p>
+         * <p>The returned page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -401,7 +410,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The specified number of entries per page.</p>
+         * <p>The returned number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

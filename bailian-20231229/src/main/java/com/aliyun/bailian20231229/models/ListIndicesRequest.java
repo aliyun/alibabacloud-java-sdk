@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIndicesRequest extends TeaModel {
     /**
-     * <p>The name of the knowledge base. You can use this parameter to search for a knowledge base by name. The name must be 1 to 20 characters in length and can contain characters classified as letters in Unicode (including English letters, Chinese characters, and digits). The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+     * <p>The name of the knowledge base. You can use this parameter to search for a knowledge base by name. The name must be 1 to 20 characters in length and can contain characters in the Unicode letter category (including English letters, Chinese characters, and digits). The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
      * <p>Default value: empty, which queries all knowledge bases in the specified workspace.</p>
      * 
      * <strong>example:</strong>
