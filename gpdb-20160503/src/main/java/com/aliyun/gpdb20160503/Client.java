@@ -965,6 +965,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Checks the available update versions for a SaaS service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks the available update versions for a SaaS service.</p>
+     * 
+     * @param request CheckSaasServiceVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckSaasServiceVersionResponse
+     */
+    public CheckSaasServiceVersionResponse checkSaasServiceVersionWithOptions(CheckSaasServiceVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("ServiceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckSaasServiceVersion"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckSaasServiceVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Checks the available update versions for a SaaS service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks the available update versions for a SaaS service.</p>
+     * 
+     * @param request CheckSaasServiceVersionRequest
+     * @return CheckSaasServiceVersionResponse
+     */
+    public CheckSaasServiceVersionResponse checkSaasServiceVersion(CheckSaasServiceVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkSaasServiceVersionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Checks whether a service-linked role is created.</p>
      * 
@@ -11198,6 +11252,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Queries API access endpoints.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries API endpoints.</p>
+     * 
+     * @param request GetApiEndpointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApiEndpointsResponse
+     */
+    public GetApiEndpointsResponse getApiEndpointsWithOptions(GetApiEndpointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApiEndpoints"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetApiEndpointsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries API access endpoints.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries API endpoints.</p>
+     * 
+     * @param request GetApiEndpointsRequest
+     * @return GetApiEndpointsResponse
+     */
+    public GetApiEndpointsResponse getApiEndpoints(GetApiEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getApiEndpointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Retrieves the details of an API key.</p>
      * 
      * <b>summary</b> : 
@@ -12012,6 +12124,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkspaceResponse getWorkspace(GetWorkspaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of an API key.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Authorizes an API key to access SaaS services.</p>
+     * 
+     * @param tmpReq GrantApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GrantApiKeyResponse
+     */
+    public GrantApiKeyResponse grantApiKeyWithOptions(GrantApiKeyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GrantApiKeyShrinkRequest request = new GrantApiKeyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceIds)) {
+            request.serviceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceIds, "ServiceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyId)) {
+            query.put("KeyId", request.keyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceIdsShrink)) {
+            query.put("ServiceIds", request.serviceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GrantApiKey"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GrantApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of an API key.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Authorizes an API key to access SaaS services.</p>
+     * 
+     * @param request GrantApiKeyRequest
+     * @return GrantApiKeyResponse
+     */
+    public GrantApiKeyResponse grantApiKey(GrantApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.grantApiKeyWithOptions(request, runtime);
     }
 
     /**
@@ -15706,6 +15886,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Modifies the deletion protection setting for a SaaS service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the deletion protection setting for a SaaS service.</p>
+     * 
+     * @param request ModifySaasServiceDeletionProtectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySaasServiceDeletionProtectionResponse
+     */
+    public ModifySaasServiceDeletionProtectionResponse modifySaasServiceDeletionProtectionWithOptions(ModifySaasServiceDeletionProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("ServiceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySaasServiceDeletionProtection"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySaasServiceDeletionProtectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies the deletion protection setting for a SaaS service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the deletion protection setting for a SaaS service.</p>
+     * 
+     * @param request ModifySaasServiceDeletionProtectionRequest
+     * @return ModifySaasServiceDeletionProtectionResponse
+     */
+    public ModifySaasServiceDeletionProtectionResponse modifySaasServiceDeletionProtection(ModifySaasServiceDeletionProtectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySaasServiceDeletionProtectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.</p>
      * <h2>Limits</h2>
      * <p>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -17944,6 +18182,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Revokes the access permissions of an API key to SaaS services.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions of an API key to SaaS services.</p>
+     * 
+     * @param tmpReq RevokeApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeApiKeyResponse
+     */
+    public RevokeApiKeyResponse revokeApiKeyWithOptions(RevokeApiKeyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RevokeApiKeyShrinkRequest request = new RevokeApiKeyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceIds)) {
+            request.serviceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceIds, "ServiceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyId)) {
+            query.put("KeyId", request.keyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceIdsShrink)) {
+            query.put("ServiceIds", request.serviceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeApiKey"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes the access permissions of an API key to SaaS services.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions of an API key to SaaS services.</p>
+     * 
+     * @param request RevokeApiKeyRequest
+     * @return RevokeApiKeyResponse
+     */
+    public RevokeApiKeyResponse revokeApiKey(RevokeApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Sets a specified branch as the default branch for a Supabase project.</p>
      * 
      * <b>summary</b> : 
@@ -18912,6 +19218,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDBInstancePlanResponse updateDBInstancePlan(UpdateDBInstancePlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDBInstancePlanWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the SaaS service version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the SaaS service version.</p>
+     * 
+     * @param request UpdateSaasServiceVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSaasServiceVersionResponse
+     */
+    public UpdateSaasServiceVersionResponse updateSaasServiceVersionWithOptions(UpdateSaasServiceVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("ServiceId", request.serviceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSaasServiceVersion"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSaasServiceVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates the SaaS service version.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the SaaS service version.</p>
+     * 
+     * @param request UpdateSaasServiceVersionRequest
+     * @return UpdateSaasServiceVersionResponse
+     */
+    public UpdateSaasServiceVersionResponse updateSaasServiceVersion(UpdateSaasServiceVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSaasServiceVersionWithOptions(request, runtime);
     }
 
     /**

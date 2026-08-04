@@ -92,21 +92,61 @@ public class ListSaasServiceResponseBody extends TeaModel {
     }
 
     public static class ListSaasServiceResponseBodyItemsComponents extends TeaModel {
+        /**
+         * <p>The component ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0644c5aa-5306-478b-ac39-bb4660cdc9f7</p>
+         */
         @NameInMap("ComponentId")
         public String componentId;
 
+        /**
+         * <p>The type of the subcomponent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gamestudio</p>
+         */
         @NameInMap("ComponentType")
         public String componentType;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-09T04:54:08Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The compute resource of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Cu")
         public String cu;
 
+        /**
+         * <p>The release protection status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
+        /**
+         * <p>The service status. Valid values:</p>
+         * <ul>
+         * <li>active: Running.</li>
+         * <li>creating: Being created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -166,6 +206,9 @@ public class ListSaasServiceResponseBody extends TeaModel {
     }
 
     public static class ListSaasServiceResponseBodyItems extends TeaModel {
+        /**
+         * <p>The list of service subcomponents.</p>
+         */
         @NameInMap("Components")
         public java.util.List<ListSaasServiceResponseBodyItemsComponents> components;
 
@@ -187,6 +230,16 @@ public class ListSaasServiceResponseBody extends TeaModel {
         @NameInMap("Cu")
         public Integer cu;
 
+        /**
+         * <p>Indicates whether the release protection feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
