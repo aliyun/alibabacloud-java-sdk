@@ -8,16 +8,16 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public java.util.List<AddressGroup> addressGroups;
 
     /**
-     * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
+     * <p>The addresses of the internal-facing access application. You can specify up to 1,000 addresses.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
     /**
-     * <p>Specifies whether to allow access from a browser. Default value: <strong>Disabled</strong>. Valid values:</p>
+     * <p>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications without a client. Default value: <strong>Disabled</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><strong>Enabled</strong>: enabled.</li>
+     * <li><strong>Disabled</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,19 +30,22 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String configMode;
 
     /**
-     * <p>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * <p>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一条内网访问应用</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The browser access mode parameter. The parameter specifies the configurations of Layer 7 applications.</p>
+     * <p>The browser access mode parameter: the application configuration.</p>
      */
     @NameInMap("L7Config")
     public PAL7Config l7Config;
 
     /**
-     * <p>The browser access mode parameter. The parameter specifies the prefix of the domain name that the proxy gateway uses. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
+     * <p>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>app-sample</p>
@@ -51,7 +54,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String l7ProxyDomainAutomaticPrefix;
 
     /**
-     * <p>The browser access mode parameter. The parameter specifies the custom domain name of the proxy gateway. Enter a valid domain name.</p>
+     * <p>The browser access mode parameter: the custom proxy domain name. The value must be a valid domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>app1.example.com</p>
@@ -60,7 +63,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String l7ProxyDomainCustom;
 
     /**
-     * <p>The name of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the internal-facing access application. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,17 +73,17 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
+     * <p>The port ranges of the internal-facing access application. You can specify up to 65,535 port ranges. Port ranges cannot be duplicate or overlapping.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<CreatePrivateAccessApplicationRequestPortRanges> portRanges;
 
     /**
-     * <p>The protocol that is used by the office application. Valid values:</p>
+     * <p>The protocol of the internal-facing access application. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong></li>
+     * <li><strong>All</strong>: all protocols.</li>
      * <li><strong>TCP</strong></li>
-     * <li><strong>UDP</strong></li>
+     * <li><strong>UDP</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -91,10 +94,10 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The status of the office application. Valid values:</p>
+     * <p>The status of the internal-facing access application. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><strong>Enabled</strong>: enabled.</li>
+     * <li><strong>Disabled</strong>: disabled.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -105,10 +108,13 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The IDs of the tags for the office applications. You can add up to six custom tags to an office application.</p>
+     * <p>The IDs of internal-facing access tags. You can associate up to 6 custom internal-facing access tags with each internal-facing access application.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
+
+    @NameInMap("UnauthorizedAccessConfig")
+    public PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig;
 
     public static CreatePrivateAccessApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePrivateAccessApplicationRequest self = new CreatePrivateAccessApplicationRequest();
@@ -219,9 +225,17 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
         return this.tagIds;
     }
 
+    public CreatePrivateAccessApplicationRequest setUnauthorizedAccessConfig(PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig) {
+        this.unauthorizedAccessConfig = unauthorizedAccessConfig;
+        return this;
+    }
+    public PAApplicationUnauthorizedAccessConfig getUnauthorizedAccessConfig() {
+        return this.unauthorizedAccessConfig;
+    }
+
     public static class CreatePrivateAccessApplicationRequestPortRanges extends TeaModel {
         /**
-         * <p>The start port. The start port must be less than or equal to the end port.</p>
+         * <p>The start port. The value must be less than or equal to the end port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +245,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
         public Integer begin;
 
         /**
-         * <p>The end port. The end port must be greater than or equal to the start port.</p>
+         * <p>The end port. The value must be greater than or equal to the start port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

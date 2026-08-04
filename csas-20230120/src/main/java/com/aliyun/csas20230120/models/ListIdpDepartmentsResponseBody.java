@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListIdpDepartmentsResponseBody extends TeaModel {
+    /**
+     * <p>The department information.</p>
+     */
     @NameInMap("Data")
     public ListIdpDepartmentsResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */
@@ -37,6 +42,8 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
 
     public static class ListIdpDepartmentsResponseBodyDataDataList extends TeaModel {
         /**
+         * <p>The department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30520</p>
          */
@@ -44,12 +51,20 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The ID of the custom IdP configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1440</p>
          */
         @NameInMap("IdpConfigId")
         public String idpConfigId;
 
+        /**
+         * <p>The department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例部门</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -85,10 +100,15 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
     }
 
     public static class ListIdpDepartmentsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of department information.</p>
+         */
         @NameInMap("DataList")
         public java.util.List<ListIdpDepartmentsResponseBodyDataDataList> dataList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

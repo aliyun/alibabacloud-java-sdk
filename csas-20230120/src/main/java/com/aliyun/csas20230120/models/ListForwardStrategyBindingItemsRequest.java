@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListForwardStrategyBindingItemsRequest extends TeaModel {
     /**
+     * <p>The forwarding rule ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ForwardIds")
     public java.util.List<String> forwardIds;
 
     /**
+     * <p>The binding item type. Valid values:</p>
+     * <ul>
+     * <li><strong>Application</strong>: internal-facing application</li>
+     * <li><strong>UserGroup</strong>: user group.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Application</p>
      */

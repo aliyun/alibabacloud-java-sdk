@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PAL7ConfigReplaceRule extends TeaModel {
     /**
+     * <p>The original content to be replaced.</p>
+     * 
      * <strong>example:</strong>
      * <p>before</p>
      */
@@ -12,6 +14,8 @@ public class PAL7ConfigReplaceRule extends TeaModel {
     public String from;
 
     /**
+     * <p>The target content for replacement.</p>
+     * 
      * <strong>example:</strong>
      * <p>after</p>
      */

@@ -75,6 +75,9 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the internal access tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条内网访问标签</p>
          */
         @NameInMap("Description")
         public String description;

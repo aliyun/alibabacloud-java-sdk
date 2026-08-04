@@ -7,6 +7,12 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     @NameInMap("ApprovalType")
     public Integer approvalType;
 
+    /**
+     * <p>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -19,10 +25,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     @NameInMap("MatchSchemaConfigs")
     public UpdateApprovalProcessRequestMatchSchemaConfigs matchSchemaConfigs;
 
+    /**
+     * <p>The matched approval templates.</p>
+     */
     @NameInMap("MatchSchemas")
     public UpdateApprovalProcessRequestMatchSchemas matchSchemas;
 
     /**
+     * <p>The ID of the approval flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +41,18 @@ public class UpdateApprovalProcessRequest extends TeaModel {
     @NameInMap("ProcessId")
     public String processId;
 
+    /**
+     * <p>The name of the approval flow. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
+     */
     @NameInMap("ProcessName")
     public String processName;
 
+    /**
+     * <p>The list of approval nodes. You can define up to 5 approval nodes.</p>
+     */
     @NameInMap("ProcessNodes")
     public java.util.List<java.util.List<String>> processNodes;
 
@@ -688,6 +707,88 @@ public class UpdateApprovalProcessRequest extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap self = new UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
+    public static class UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap> fieldMap;
+
+        @NameInMap("SchemaId")
+        public String schemaId;
+
+        public static UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig self = new UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig setFieldMap(java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap> getFieldMap() {
+            return this.fieldMap;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig setSchemaId(String schemaId) {
+            this.schemaId = schemaId;
+            return this;
+        }
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+    }
+
     public static class UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfigFieldMap extends TeaModel {
         @NameInMap("DisplayField")
         public String displayField;
@@ -874,6 +975,9 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         @NameInMap("PeripheralBlockSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsPeripheralBlockSchemaConfig peripheralBlockSchemaConfig;
 
+        @NameInMap("PrivateAccessBlockSchemaConfig")
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig privateAccessBlockSchemaConfig;
+
         @NameInMap("SoftwareBlockSchemaConfig")
         public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfig softwareBlockSchemaConfig;
 
@@ -941,6 +1045,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
             return this.peripheralBlockSchemaConfig;
         }
 
+        public UpdateApprovalProcessRequestMatchSchemaConfigs setPrivateAccessBlockSchemaConfig(UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig privateAccessBlockSchemaConfig) {
+            this.privateAccessBlockSchemaConfig = privateAccessBlockSchemaConfig;
+            return this;
+        }
+        public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig getPrivateAccessBlockSchemaConfig() {
+            return this.privateAccessBlockSchemaConfig;
+        }
+
         public UpdateApprovalProcessRequestMatchSchemaConfigs setSoftwareBlockSchemaConfig(UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfig softwareBlockSchemaConfig) {
             this.softwareBlockSchemaConfig = softwareBlockSchemaConfig;
             return this;
@@ -961,6 +1073,8 @@ public class UpdateApprovalProcessRequest extends TeaModel {
 
     public static class UpdateApprovalProcessRequestMatchSchemas extends TeaModel {
         /**
+         * <p>The ID of the device uninstall approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -968,6 +1082,8 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         public String appUninstallSchemaId;
 
         /**
+         * <p>The ID of the device registration approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -975,6 +1091,8 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         public String deviceRegistrationSchemaId;
 
         /**
+         * <p>The ID of the file outgoing approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -982,6 +1100,8 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         public String dlpSendSchemaId;
 
         /**
+         * <p>The ID of the domain name blacklist approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -989,6 +1109,8 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         public String domainBlacklistSchemaId;
 
         /**
+         * <p>The ID of the domain name whitelist approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -999,13 +1121,20 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         public String endpointHardeningSchemaId;
 
         /**
+         * <p>The ID of the peripheral control approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
         @NameInMap("PeripheralBlockSchemaId")
         public String peripheralBlockSchemaId;
 
+        @NameInMap("PrivateAccessBlockSchemaId")
+        public String privateAccessBlockSchemaId;
+
         /**
+         * <p>The ID of the software blocking approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -1074,6 +1203,14 @@ public class UpdateApprovalProcessRequest extends TeaModel {
         }
         public String getPeripheralBlockSchemaId() {
             return this.peripheralBlockSchemaId;
+        }
+
+        public UpdateApprovalProcessRequestMatchSchemas setPrivateAccessBlockSchemaId(String privateAccessBlockSchemaId) {
+            this.privateAccessBlockSchemaId = privateAccessBlockSchemaId;
+            return this;
+        }
+        public String getPrivateAccessBlockSchemaId() {
+            return this.privateAccessBlockSchemaId;
         }
 
         public UpdateApprovalProcessRequestMatchSchemas setSoftwareBlockSchemaId(String softwareBlockSchemaId) {

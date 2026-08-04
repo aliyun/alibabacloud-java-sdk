@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteIdpDepartmentResponseBody extends TeaModel {
     /**
+     * <p>ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
      */

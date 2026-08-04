@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetIdpConfigRequest extends TeaModel {
     /**
+     * <p>ID of the identity provider configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1465</p>
+     * <p>idp-cfg68956d86e********</p>
      */
     @NameInMap("Id")
     public String id;

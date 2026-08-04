@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListForwardStrategiesResponseBody extends TeaModel {
+    /**
+     * <p>The list of forwarding rules.</p>
+     */
     @NameInMap("ForwardStrategies")
     public java.util.List<ListForwardStrategiesResponseBodyForwardStrategies> forwardStrategies;
 
@@ -17,6 +20,8 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of policies.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -54,6 +59,8 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
 
     public static class ListForwardStrategiesResponseBodyForwardStrategies extends TeaModel {
         /**
+         * <p>The description of the forwarding rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>asdasdasd</p>
          */
@@ -61,6 +68,8 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the destination instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector-4178bc59bec56df1</p>
          */
@@ -68,6 +77,11 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         public String destinationId;
 
         /**
+         * <p>The type of the access destination. Valid values:</p>
+         * <ul>
+         * <li><strong>Connector</strong>: connector.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Connector</p>
          */
@@ -75,16 +89,26 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         public String destinationType;
 
         /**
+         * <p>The ID of the forwarding rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>fs-8b299ac5a93a0a3a</p>
          */
         @NameInMap("ForwardId")
         public String forwardId;
 
+        /**
+         * <p>The name of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白名单加速</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The policy priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -92,6 +116,12 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         public String priority;
 
         /**
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */

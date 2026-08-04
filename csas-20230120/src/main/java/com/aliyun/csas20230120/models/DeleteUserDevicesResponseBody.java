@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteUserDevicesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
+    /**
+     * <p>A list of device registration policies.</p>
+     */
     @NameInMap("Policies")
     public java.util.List<ListUserGroupsForRegistrationPolicyResponseBodyPolicies> policies;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D89009C7-54C6-51B6-BAE7-3F373920C6BF</p>
      */
@@ -37,6 +42,8 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
 
     public static class ListUserGroupsForRegistrationPolicyResponseBodyPoliciesUserGroupsAttributes extends TeaModel {
         /**
+         * <p>The identity provider ID for the user group. This field appears only when UserGroupType is <strong>department</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -44,6 +51,14 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         public Integer idpId;
 
         /**
+         * <p>The relation for the user group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Equal</strong>: Equal to.</p>
+         * </li>
+         * <li><p><strong>Unequal</strong>: Not equal to.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Equal</p>
          */
@@ -51,12 +66,40 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         public String relation;
 
         /**
+         * <p>The type of the user group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>username</strong>: A username.</p>
+         * </li>
+         * <li><p><strong>department</strong>: A department.</p>
+         * </li>
+         * <li><p><strong>email</strong>: An email address.</p>
+         * </li>
+         * <li><p><strong>telephone</strong>: A phone number.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>The value of the user group attribute.</p>
+         * <ul>
+         * <li><p>If UserGroupType is <strong>username</strong>, this is the username. It must be 1–128 characters long and can contain uppercase and lowercase letters, Chinese characters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>If UserGroupType is <strong>department</strong>, this is the department name. Example: OU=Department 1,OU=SASE DingTalk.</p>
+         * </li>
+         * <li><p>If UserGroupType is <strong>email</strong>, this is the email address. Example: username\@example.com.</p>
+         * </li>
+         * <li><p>If UserGroupType is <strong>telephone</strong>, this is the phone number. Example: 13900001234.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OU=部门1,OU=SASE钉钉</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -100,20 +143,33 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsForRegistrationPolicyResponseBodyPoliciesUserGroups extends TeaModel {
+        /**
+         * <p>A collection of user group attributes.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<ListUserGroupsForRegistrationPolicyResponseBodyPoliciesUserGroupsAttributes> attributes;
 
         /**
+         * <p>The time when the user group was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-27 18:10:25</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>A description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条被设备注册策略引用的用户组。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_group_name</p>
          */
@@ -121,6 +177,8 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>usergroup-6f1ef2fc56b6****</p>
          */
@@ -176,12 +234,17 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
 
     public static class ListUserGroupsForRegistrationPolicyResponseBodyPolicies extends TeaModel {
         /**
+         * <p>The ID of the device registration policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>reg-policy-f25c9e5872e5****</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <p>A collection of user groups associated with the device registration policy.</p>
+         */
         @NameInMap("UserGroups")
         public java.util.List<ListUserGroupsForRegistrationPolicyResponseBodyPoliciesUserGroups> userGroups;
 

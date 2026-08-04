@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetRegistrationPolicyRequest extends TeaModel {
     /**
+     * <p>The ID of the device registration policy. Valid values are obtained from the following sources:</p>
+     * <ul>
+     * <li><a href="~~ListRegistrationPolicies~~">ListRegistrationPolicies</a>: Queries device registration policies in batches.</li>
+     * <li><a href="~~GetRegistrationPolicy~~">GetRegistrationPolicy</a>: Queries the details of a device registration policy.</li>
+     * <li><a href="~~CreateRegistrationPolicy~~">CreateRegistrationPolicy</a>: Creates a device registration policy.</li>
+     * <li><a href="~~UpdateRegistrationPolicy~~">UpdateRegistrationPolicy</a>: Updates a device registration policy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

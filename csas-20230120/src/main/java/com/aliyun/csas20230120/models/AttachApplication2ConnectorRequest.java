@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class AttachApplication2ConnectorRequest extends TeaModel {
     /**
+     * <p>The set of private access application IDs. The number of private access applications that can be attached to a single Connector cannot exceed the total number of private access applications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>ConnectorID。</p>
+     * <p>The Connector ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

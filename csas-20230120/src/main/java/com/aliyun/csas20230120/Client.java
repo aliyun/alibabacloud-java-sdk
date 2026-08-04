@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("public", "csas.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "csas.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("csas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>挂载connector的应用</p>
+     * <p>Attaches the private access applications of a Connector under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq AttachApplication2ConnectorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -70,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>挂载connector的应用</p>
+     * <p>Attaches the private access applications of a Connector under the current Alibaba Cloud account.</p>
      * 
      * @param request AttachApplication2ConnectorRequest
      * @return AttachApplication2ConnectorResponse
@@ -82,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Mount a business policy to a specified approval flow</p>
+     * <p>Attaches a business policy to a specified approval process.</p>
      * 
      * @param request AttachPolicy2ApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -122,7 +126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Mount a business policy to a specified approval flow</p>
+     * <p>Attaches a business policy to a specified approval process.</p>
      * 
      * @param request AttachPolicy2ApprovalProcessRequest
      * @return AttachPolicy2ApprovalProcessResponse
@@ -134,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Creates an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreateApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -189,7 +193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Creates an approval process under the current Alibaba Cloud account.</p>
      * 
      * @param request CreateApprovalProcessRequest
      * @return CreateApprovalProcessResponse
@@ -201,7 +205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义身份源用户</p>
+     * <p>Create a custom identity source user for your Alibaba Cloud account.</p>
      * 
      * @param request CreateClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -257,7 +261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义身份源用户</p>
+     * <p>Create a custom identity source user for your Alibaba Cloud account.</p>
      * 
      * @param request CreateClientUserRequest
      * @return CreateClientUserResponse
@@ -268,8 +272,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create a maximum of 100 dynamic routes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建动态路由</p>
+     * <p>Create dynamic routes for the current Alibaba Cloud account.</p>
      * 
      * @param request CreateDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -341,8 +348,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create a maximum of 100 dynamic routes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建动态路由</p>
+     * <p>Create dynamic routes for the current Alibaba Cloud account.</p>
      * 
      * @param request CreateDynamicRouteRequest
      * @return CreateDynamicRouteResponse
@@ -354,7 +364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an enterprise acceleration policy.</p>
+     * <p>Creates an enterprise accelerate policy.</p>
      * 
      * @param request CreateEnterpriseAcceleratePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -418,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an enterprise acceleration policy.</p>
+     * <p>Creates an enterprise accelerate policy.</p>
      * 
      * @param request CreateEnterpriseAcceleratePolicyRequest
      * @return CreateEnterpriseAcceleratePolicyResponse
@@ -430,7 +440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an enterprise acceleration address.</p>
+     * <p>Creates enterprise acceleration addresses.</p>
      * 
      * @param request CreateEnterpriseAccelerateTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -471,7 +481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an enterprise acceleration address.</p>
+     * <p>Creates enterprise acceleration addresses.</p>
      * 
      * @param request CreateEnterpriseAccelerateTargetRequest
      * @return CreateEnterpriseAccelerateTargetResponse
@@ -483,7 +493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义身份源部门</p>
+     * <p>Creates a department for a custom identity source in the current Alibaba Cloud account.</p>
      * 
      * @param request CreateIdpDepartmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -519,7 +529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建自定义身份源部门</p>
+     * <p>Creates a department for a custom identity source in the current Alibaba Cloud account.</p>
      * 
      * @param request CreateIdpDepartmentRequest
      * @return CreateIdpDepartmentResponse
@@ -531,7 +541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an internal network access diagnostic task</p>
+     * <p>Creates a diagnostic task for internal network access.</p>
      * 
      * @param tmpReq CreatePADiagnosisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -605,7 +615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an internal network access diagnostic task</p>
+     * <p>Creates a diagnostic task for internal network access.</p>
      * 
      * @param request CreatePADiagnosisTaskRequest
      * @return CreatePADiagnosisTaskResponse
@@ -617,10 +627,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, you can create a maximum of 500 office applications.</p>
+     * <p>You can create up to 500 internal-facing access applications by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an office application within the current Alibaba Cloud account.</p>
+     * <p>Creates an internal-facing access application under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -632,6 +642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.l7Config)) {
             request.l7ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.l7Config, "L7Config", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.unauthorizedAccessConfig)) {
+            request.unauthorizedAccessConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.unauthorizedAccessConfig, "UnauthorizedAccessConfig", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -688,6 +702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("TagIds", request.tagIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.unauthorizedAccessConfigShrink)) {
+            body.put("UnauthorizedAccessConfig", request.unauthorizedAccessConfigShrink);
+        }
+
         body = TeaConverter.merge(Object.class,
             body,
             com.aliyun.openapiutil.Client.query(bodyFlat)
@@ -711,10 +729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, you can create a maximum of 500 office applications.</p>
+     * <p>You can create up to 500 internal-facing access applications by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an office application within the current Alibaba Cloud account.</p>
+     * <p>Creates an internal-facing access application under the current Alibaba Cloud account.</p>
      * 
      * @param request CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
@@ -856,8 +874,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create up to 500 private access tags.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网访问标签</p>
+     * <p>Creates a private access tag for the current Alibaba Cloud account.</p>
      * 
      * @param request CreatePrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -892,8 +913,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create up to 500 private access tags.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网访问标签</p>
+     * <p>Creates a private access tag for the current Alibaba Cloud account.</p>
      * 
      * @param request CreatePrivateAccessTagRequest
      * @return CreatePrivateAccessTagResponse
@@ -905,7 +929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建设备注册策略</p>
+     * <p>Create a device registration policy for your Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreateRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -992,7 +1016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建设备注册策略</p>
+     * <p>Create a device registration policy for your Alibaba Cloud account.</p>
      * 
      * @param request CreateRegistrationPolicyRequest
      * @return CreateRegistrationPolicyResponse
@@ -1003,8 +1027,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create up to 500 user groups.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建用户组</p>
+     * <p>Creates a user group for your Alibaba Cloud account.</p>
      * 
      * @param request CreateUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1048,8 +1075,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can create up to 500 user groups.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建用户组</p>
+     * <p>Creates a user group for your Alibaba Cloud account.</p>
      * 
      * @param request CreateUserGroupRequest
      * @return CreateUserGroupResponse
@@ -1061,7 +1091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数字水印暗水印透明底图</p>
+     * <p>Generates a transparent base image for web, screen, or app watermarks.</p>
      * 
      * @param tmpReq CreateWmBaseImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1137,7 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数字水印暗水印透明底图</p>
+     * <p>Generates a transparent base image for web, screen, or app watermarks.</p>
      * 
      * @param request CreateWmBaseImageRequest
      * @return CreateWmBaseImageResponse
@@ -1148,8 +1178,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create up to 500 groups.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建嵌入水印任务</p>
+     * <p>Create a digital watermarking embedding Job.</p>
      * 
      * @param tmpReq CreateWmEmbedTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1262,8 +1295,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create up to 500 groups.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建嵌入水印任务</p>
+     * <p>Create a digital watermarking embedding Job.</p>
      * 
      * @param request CreateWmEmbedTaskRequest
      * @return CreateWmEmbedTaskResponse
@@ -1275,7 +1311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a digital watermark extraction task.</p>
+     * <p>Create a digital watermarking fetch job.</p>
      * 
      * @param tmpReq CreateWmExtractTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1355,7 +1391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a digital watermark extraction task.</p>
+     * <p>Create a digital watermarking fetch job.</p>
      * 
      * @param request CreateWmExtractTaskRequest
      * @return CreateWmExtractTaskResponse
@@ -1367,7 +1403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一条字符串水印信息到数字水印信息的映射记录</p>
+     * <p>Creates a mapping from string-format watermark information to digital-format watermark information.</p>
      * 
      * @param request CreateWmInfoMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1407,7 +1443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一条字符串水印信息到数字水印信息的映射记录</p>
+     * <p>Creates a mapping from string-format watermark information to digital-format watermark information.</p>
      * 
      * @param request CreateWmInfoMappingRequest
      * @return CreateWmInfoMappingResponse
@@ -1419,7 +1455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch delete approval flows under the current Alibaba Cloud account.</p>
+     * <p>Deletes approval processes in batches from your Alibaba Cloud account.</p>
      * 
      * @param request DeleteApprovalProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1456,7 +1492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch delete approval flows under the current Alibaba Cloud account.</p>
+     * <p>Deletes approval processes in batches from your Alibaba Cloud account.</p>
      * 
      * @param request DeleteApprovalProcessesRequest
      * @return DeleteApprovalProcessesResponse
@@ -1468,7 +1504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义身份源指定用户</p>
+     * <p>Delete a specified user from your Alibaba Cloud account\&quot;s custom identity source.</p>
      * 
      * @param request DeleteClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1500,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除自定义身份源指定用户</p>
+     * <p>Delete a specified user from your Alibaba Cloud account\&quot;s custom identity source.</p>
      * 
      * @param request DeleteClientUserRequest
      * @return DeleteClientUserResponse
@@ -1512,7 +1548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除动态路由</p>
+     * <p>Delete a dynamic route from your current Alibaba Cloud account.</p>
      * 
      * @param request DeleteDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1544,7 +1580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除动态路由</p>
+     * <p>Delete a dynamic route from your current Alibaba Cloud account.</p>
      * 
      * @param request DeleteDynamicRouteRequest
      * @return DeleteDynamicRouteResponse
@@ -1556,7 +1592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an enterprise acceleration policy.</p>
+     * <p>Deletes an enterprise acceleration policy.</p>
      * 
      * @param request DeleteEnterpriseAcceleratePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1588,7 +1624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an enterprise acceleration policy.</p>
+     * <p>Deletes an enterprise acceleration policy.</p>
      * 
      * @param request DeleteEnterpriseAcceleratePolicyRequest
      * @return DeleteEnterpriseAcceleratePolicyResponse
@@ -1600,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an enterprise acceleration address.</p>
+     * <p>Deletes an enterprise acceleration address.</p>
      * 
      * @param request DeleteEnterpriseAccelerateTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1641,7 +1677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete an enterprise acceleration address.</p>
+     * <p>Deletes an enterprise acceleration address.</p>
      * 
      * @param request DeleteEnterpriseAccelerateTargetRequest
      * @return DeleteEnterpriseAccelerateTargetResponse
@@ -1653,7 +1689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定自定义身份源部门</p>
+     * <p>Delete a department from a custom identity provider in your Alibaba Cloud account.</p>
      * 
      * @param request DeleteIdpDepartmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1689,7 +1725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定自定义身份源部门</p>
+     * <p>Delete a department from a custom identity provider in your Alibaba Cloud account.</p>
      * 
      * @param request DeleteIdpDepartmentRequest
      * @return DeleteIdpDepartmentResponse
@@ -1701,7 +1737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the employee OTP configuration.</p>
+     * <p>Deletes a user\&quot;s One-Time Password (OTP) configuration.</p>
      * 
      * @param request DeleteOtpConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1733,7 +1769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the employee OTP configuration.</p>
+     * <p>Deletes a user\&quot;s One-Time Password (OTP) configuration.</p>
      * 
      * @param request DeleteOtpConfigRequest
      * @return DeleteOtpConfigResponse
@@ -1744,8 +1780,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot delete an application if it is referenced by an office zone or a policy. For more information, see:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal network access applications.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolicies</a>: Lists internal network access policies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除内网访问应用</p>
+     * <p>Deletes an internal network access application from your Alibaba Cloud account.</p>
      * 
      * @param request DeletePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1776,8 +1819,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot delete an application if it is referenced by an office zone or a policy. For more information, see:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal network access applications.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolicies</a>: Lists internal network access policies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除内网访问应用</p>
+     * <p>Deletes an internal network access application from your Alibaba Cloud account.</p>
      * 
      * @param request DeletePrivateAccessApplicationRequest
      * @return DeletePrivateAccessApplicationResponse
@@ -1789,7 +1839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除内网访问策略</p>
+     * <p>Deletes a private network access policy for the current Alibaba Cloud account.</p>
      * 
      * @param request DeletePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1821,7 +1871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除内网访问策略</p>
+     * <p>Deletes a private network access policy for the current Alibaba Cloud account.</p>
      * 
      * @param request DeletePrivateAccessPolicyRequest
      * @return DeletePrivateAccessPolicyResponse
@@ -1832,8 +1882,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletion is not allowed when the tag is referenced by applications, office networks, or policies. References:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal access applications.</li>
+     * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: Lists internal access tags.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal access policies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除内网访问标签</p>
+     * <p>Deletes an internal access tag from the current Alibaba Cloud account.</p>
      * 
      * @param request DeletePrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1864,8 +1922,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletion is not allowed when the tag is referenced by applications, office networks, or policies. References:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal access applications.</li>
+     * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: Lists internal access tags.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal access policies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除内网访问标签</p>
+     * <p>Deletes an internal access tag from the current Alibaba Cloud account.</p>
      * 
      * @param request DeletePrivateAccessTagRequest
      * @return DeletePrivateAccessTagResponse
@@ -1877,7 +1943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除设备注册策略</p>
+     * <p>Batch delete device registration policies under your Alibaba Cloud account.</p>
      * 
      * @param request DeleteRegistrationPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1914,7 +1980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除设备注册策略</p>
+     * <p>Batch delete device registration policies under your Alibaba Cloud account.</p>
      * 
      * @param request DeleteRegistrationPoliciesRequest
      * @return DeleteRegistrationPoliciesResponse
@@ -1925,8 +1991,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete up to 100 devices at a time. Each device must be in a non-online status. If some device IDs in the specified collection do not meet the status requirement, only the devices that meet the requirement are deleted, and the operation still returns a success response.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes multiple user terminals at a time.</p>
+     * <p>Deletes user endpoint devices in batches.</p>
      * 
      * @param request DeleteUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1962,8 +2031,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete up to 100 devices at a time. Each device must be in a non-online status. If some device IDs in the specified collection do not meet the status requirement, only the devices that meet the requirement are deleted, and the operation still returns a success response.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes multiple user terminals at a time.</p>
+     * <p>Deletes user endpoint devices in batches.</p>
      * 
      * @param request DeleteUserDevicesRequest
      * @return DeleteUserDevicesResponse
@@ -1974,8 +2046,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see:</p>
+     * <ul>
+     * <li><a href="~~ListPolicesForUserGroup~~">ListPolicesForUserGroup</a>: Query policies attached to a user group.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除用户组</p>
+     * <p>Delete a user group in your Alibaba Cloud account.</p>
      * 
      * @param request DeleteUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2006,8 +2084,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see:</p>
+     * <ul>
+     * <li><a href="~~ListPolicesForUserGroup~~">ListPolicesForUserGroup</a>: Query policies attached to a user group.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除用户组</p>
+     * <p>Delete a user group in your Alibaba Cloud account.</p>
      * 
      * @param request DeleteUserGroupRequest
      * @return DeleteUserGroupResponse
@@ -2019,7 +2103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>卸载connector的应用</p>
+     * <p>Detaches private network access applications from a Connector in your Alibaba Cloud account.</p>
      * 
      * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
      * 
@@ -2065,7 +2149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>卸载connector的应用</p>
+     * <p>Detaches private network access applications from a Connector in your Alibaba Cloud account.</p>
      * 
      * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
      * 
@@ -2081,7 +2165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detach business policies from approval flows</p>
+     * <p>Detach a business policy from an approval process.</p>
      * 
      * @param request DetachPolicy2ApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2121,7 +2205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detach business policies from approval flows</p>
+     * <p>Detach a business policy from an approval process.</p>
      * 
      * @param request DetachPolicy2ApprovalProcessRequest
      * @return DetachPolicy2ApprovalProcessResponse
@@ -2133,7 +2217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disable enterprise acceleration policy.</p>
+     * <p>Disables an enterprise acceleration policy.</p>
      * 
      * @param request DisableEnterpriseAcceleratePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2165,7 +2249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disable enterprise acceleration policy.</p>
+     * <p>Disables an enterprise acceleration policy.</p>
      * 
      * @param request DisableEnterpriseAcceleratePolicyRequest
      * @return DisableEnterpriseAcceleratePolicyResponse
@@ -2177,7 +2261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable enterprise acceleration policy.</p>
+     * <p>Enables an enterprise acceleration policy.</p>
      * 
      * @param request EnableEnterpriseAcceleratePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2209,7 +2293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enable enterprise acceleration policy.</p>
+     * <p>Enables an enterprise acceleration policy.</p>
      * 
      * @param request EnableEnterpriseAcceleratePolicyRequest
      * @return EnableEnterpriseAcceleratePolicyResponse
@@ -2221,7 +2305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports the information about user terminals in an Excel file.</p>
+     * <p>Export a list of user terminal devices to an Excel file.</p>
      * 
      * @param request ExportUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2314,7 +2398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports the information about user terminals in an Excel file.</p>
+     * <p>Export a list of user terminal devices to an Excel file.</p>
      * 
      * @param request ExportUserDevicesRequest
      * @return ExportUserDevicesResponse
@@ -2326,7 +2410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询已启用的身份源配置</p>
+     * <p>Queries the identity provider configuration enabled for your Alibaba Cloud account.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetActiveIdpConfigResponse
@@ -2349,7 +2433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询已启用的身份源配置</p>
+     * <p>Queries the identity provider configuration enabled for your Alibaba Cloud account.</p>
      * @return GetActiveIdpConfigResponse
      */
     public GetActiveIdpConfigResponse getActiveIdpConfig() throws Exception {
@@ -2359,7 +2443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an approval instance within your Alibaba Cloud account.</p>
+     * <p>Retrieves the details of an approval instance for your Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2387,7 +2471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an approval instance within your Alibaba Cloud account.</p>
+     * <p>Retrieves the details of an approval instance for your Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalRequest
      * @return GetApprovalResponse
@@ -2439,7 +2523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an approval template within your Alibaba Cloud account.</p>
+     * <p>Retrieves the details of an approval template for your Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2467,7 +2551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an approval template within your Alibaba Cloud account.</p>
+     * <p>Retrieves the details of an approval template for your Alibaba Cloud account.</p>
      * 
      * @param request GetApprovalSchemaRequest
      * @return GetApprovalSchemaResponse
@@ -2479,7 +2563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the Startup and anti-uninstall policy under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of the auto-start and anti-uninstall policy for your Alibaba Cloud account.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBootAndAntiUninstallPolicyResponse
@@ -2502,7 +2586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the Startup and anti-uninstall policy under the current Alibaba Cloud account.</p>
+     * <p>Queries the details of the auto-start and anti-uninstall policy for your Alibaba Cloud account.</p>
      * @return GetBootAndAntiUninstallPolicyResponse
      */
     public GetBootAndAntiUninstallPolicyResponse getBootAndAntiUninstallPolicy() throws Exception {
@@ -2512,7 +2596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a specified user from a custom identity source</p>
+     * <p>Retrieves the details of a user from a custom identity source in your Alibaba Cloud account.</p>
      * 
      * @param request GetClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2540,7 +2624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a specified user from a custom identity source</p>
+     * <p>Retrieves the details of a user from a custom identity source in your Alibaba Cloud account.</p>
      * 
      * @param request GetClientUserRequest
      * @return GetClientUserResponse
@@ -2552,7 +2636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询动态路由详情</p>
+     * <p>Retrieves details about a dynamic route in your Alibaba Cloud account.</p>
      * 
      * @param request GetDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2580,7 +2664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询动态路由详情</p>
+     * <p>Retrieves details about a dynamic route in your Alibaba Cloud account.</p>
      * 
      * @param request GetDynamicRouteRequest
      * @return GetDynamicRouteResponse
@@ -2592,7 +2676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询身份源配置详情</p>
+     * <p>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</p>
      * 
      * @param request GetIdpConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2620,7 +2704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询身份源配置详情</p>
+     * <p>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</p>
      * 
      * @param request GetIdpConfigRequest
      * @return GetIdpConfigResponse
@@ -2632,7 +2716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of an internal network access diagnostic task</p>
+     * <p>Retrieves the details of a private access diagnostic task.</p>
      * 
      * @param request GetPADiagnosisTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2660,7 +2744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of an internal network access diagnostic task</p>
+     * <p>Retrieves the details of a private access diagnostic task.</p>
      * 
      * @param request GetPADiagnosisTaskRequest
      * @return GetPADiagnosisTaskResponse
@@ -2672,7 +2756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the office applications that belong to the current Alibaba Cloud account.</p>
+     * <p>Queries the details of an internal-facing access application under the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2700,7 +2784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of the office applications that belong to the current Alibaba Cloud account.</p>
+     * <p>Queries the details of an internal-facing access application under the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @return GetPrivateAccessApplicationResponse
@@ -2752,7 +2836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备注册策略详情</p>
+     * <p>Queries the details of a device registration policy within the current Alibaba Cloud account.</p>
      * 
      * @param request GetRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2780,7 +2864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备注册策略详情</p>
+     * <p>Queries the details of a device registration policy within the current Alibaba Cloud account.</p>
      * 
      * @param request GetRegistrationPolicyRequest
      * @return GetRegistrationPolicyResponse
@@ -2792,7 +2876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户设备详情</p>
+     * <p>Queries the details of a user endpoint device under the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2820,7 +2904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户设备详情</p>
+     * <p>Queries the details of a user endpoint device under the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserDeviceRequest
      * @return GetUserDeviceResponse
@@ -2832,7 +2916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户组详情</p>
+     * <p>Queries the details of a user group in the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2860,7 +2944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户组详情</p>
+     * <p>Queries the details of a user group in the current Alibaba Cloud account.</p>
      * 
      * @param request GetUserGroupRequest
      * @return GetUserGroupResponse
@@ -2872,7 +2956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询嵌入水印任务</p>
+     * <p>Use the job ID obtained from creating a watermark embedding job to query the embedding job result.</p>
      * 
      * @param request GetWmEmbedTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2900,7 +2984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询嵌入水印任务</p>
+     * <p>Use the job ID obtained from creating a watermark embedding job to query the embedding job result.</p>
      * 
      * @param request GetWmEmbedTaskRequest
      * @return GetWmEmbedTaskResponse
@@ -2912,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询文件水印提取任务详情</p>
+     * <p>Queries the result of a watermark extraction task using the task ID that is returned when you create the task.</p>
      * 
      * @param request GetWmExtractTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2940,7 +3024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询文件水印提取任务详情</p>
+     * <p>Queries the result of a watermark extraction task using the task ID that is returned when you create the task.</p>
      * 
      * @param request GetWmExtractTaskRequest
      * @return GetWmExtractTaskResponse
@@ -2952,7 +3036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch import accelerated address List.</p>
+     * <p>Batch import acceleration addresses.</p>
      * 
      * @param request ImportEnterpriseAccelerateTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2988,7 +3072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch import accelerated address List.</p>
+     * <p>Batch import acceleration addresses.</p>
      * 
      * @param request ImportEnterpriseAccelerateTargetsRequest
      * @return ImportEnterpriseAccelerateTargetsResponse
@@ -3000,7 +3084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch queries the applications of internal network access policies under the current Alibaba Cloud account.</p>
+     * <p>Queries the applications associated with one or more private access policies.</p>
      * 
      * @param request ListApplicationsForPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3028,7 +3112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch queries the applications of internal network access policies under the current Alibaba Cloud account.</p>
+     * <p>Queries the applications associated with one or more private access policies.</p>
      * 
      * @param request ListApplicationsForPrivateAccessPolicyRequest
      * @return ListApplicationsForPrivateAccessPolicyResponse
@@ -3040,7 +3124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问标签的应用</p>
+     * <p>Batch-query applications associated with private network access tags within your Alibaba Cloud account.</p>
      * 
      * @param request ListApplicationsForPrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3068,7 +3152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问标签的应用</p>
+     * <p>Batch-query applications associated with private network access tags within your Alibaba Cloud account.</p>
      * 
      * @param request ListApplicationsForPrivateAccessTagRequest
      * @return ListApplicationsForPrivateAccessTagResponse
@@ -3080,7 +3164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the approval flow list under the current Alibaba Cloud account.</p>
+     * <p>Queries the list of approval processes under the current Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3108,7 +3192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the approval flow list under the current Alibaba Cloud account.</p>
+     * <p>Queries the list of approval processes under the current Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalProcessesRequest
      * @return ListApprovalProcessesResponse
@@ -3120,7 +3204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query flows associated with an approval rendering template</p>
+     * <p>Queries the approval flows associated with approval rendering templates.</p>
      * 
      * @param request ListApprovalProcessesForApprovalSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3148,7 +3232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query flows associated with an approval rendering template</p>
+     * <p>Queries the approval flows associated with approval rendering templates.</p>
      * 
      * @param request ListApprovalProcessesForApprovalSchemasRequest
      * @return ListApprovalProcessesForApprovalSchemasResponse
@@ -3160,7 +3244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of approval templates under the current Alibaba Cloud account.</p>
+     * <p>Lists the approval templates for your Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3188,7 +3272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of approval templates under the current Alibaba Cloud account.</p>
+     * <p>Lists the approval templates for your Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalSchemasRequest
      * @return ListApprovalSchemasResponse
@@ -3200,7 +3284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query rendering templates associated with an approval flow</p>
+     * <p>Queries the rendering templates associated with approval processes.</p>
      * 
      * @param request ListApprovalSchemasForApprovalProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3228,7 +3312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query rendering templates associated with an approval flow</p>
+     * <p>Queries the rendering templates associated with approval processes.</p>
      * 
      * @param request ListApprovalSchemasForApprovalProcessesRequest
      * @return ListApprovalSchemasForApprovalProcessesResponse
@@ -3240,7 +3324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the approval instance list under the current Alibaba Cloud account.</p>
+     * <p>Lists approval instances for your Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3268,7 +3352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the approval instance list under the current Alibaba Cloud account.</p>
+     * <p>Lists approval instances for your Alibaba Cloud account.</p>
      * 
      * @param request ListApprovalsRequest
      * @return ListApprovalsResponse
@@ -3280,7 +3364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义身份源用户</p>
+     * <p>Query user information from custom identity sources in your Alibaba Cloud account.</p>
      * 
      * @param request ListClientUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3308,7 +3392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义身份源用户</p>
+     * <p>Query user information from custom identity sources in your Alibaba Cloud account.</p>
      * 
      * @param request ListClientUsersRequest
      * @return ListClientUsersResponse
@@ -3320,7 +3404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch query connectors</p>
+     * <p>Query connectors in batches.</p>
      * 
      * @param request ListConnectorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3348,7 +3432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch query connectors</p>
+     * <p>Query connectors in batches.</p>
      * 
      * @param request ListConnectorsRequest
      * @return ListConnectorsResponse
@@ -3360,7 +3444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch query Dynamic policy handling flows.</p>
+     * <p>Batch Query Dynamic Policy Disposal Processes</p>
      * 
      * @param request ListDynamicDisposalProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3388,7 +3472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch query Dynamic policy handling flows.</p>
+     * <p>Batch Query Dynamic Policy Disposal Processes</p>
      * 
      * @param request ListDynamicDisposalProcessesRequest
      * @return ListDynamicDisposalProcessesResponse
@@ -3400,7 +3484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由的地域</p>
+     * <p>Queries the regions that are supported by the access points of SASE POP clusters for your Alibaba Cloud account.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDynamicRouteRegionsResponse
@@ -3423,7 +3507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由的地域</p>
+     * <p>Queries the regions that are supported by the access points of SASE POP clusters for your Alibaba Cloud account.</p>
      * @return ListDynamicRouteRegionsResponse
      */
     public ListDynamicRouteRegionsResponse listDynamicRouteRegions() throws Exception {
@@ -3433,7 +3517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由</p>
+     * <p>Retrieves information about all dynamic routes for the current Alibaba Cloud account.</p>
      * 
      * @param request ListDynamicRoutesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3461,7 +3545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由</p>
+     * <p>Retrieves information about all dynamic routes for the current Alibaba Cloud account.</p>
      * 
      * @param request ListDynamicRoutesRequest
      * @return ListDynamicRoutesResponse
@@ -3473,7 +3557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries enterprise acceleration Audit logs.</p>
+     * <p>Queries audit logs for enterprise acceleration.</p>
      * 
      * @param request ListEnterpriseAccelerateLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3501,7 +3585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries enterprise acceleration Audit logs.</p>
+     * <p>Queries audit logs for enterprise acceleration.</p>
      * 
      * @param request ListEnterpriseAccelerateLogsRequest
      * @return ListEnterpriseAccelerateLogsResponse
@@ -3513,7 +3597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query acceleration policy list</p>
+     * <p>Query acceleration policies</p>
      * 
      * @param request ListEnterpriseAcceleratePoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3541,7 +3625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query acceleration policy list</p>
+     * <p>Query acceleration policies</p>
      * 
      * @param request ListEnterpriseAcceleratePoliciesRequest
      * @return ListEnterpriseAcceleratePoliciesResponse
@@ -3553,7 +3637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the enterprise acceleration address list.</p>
+     * <p>Query the list of enterprise acceleration targets.</p>
      * 
      * @param request ListEnterpriseAccelerateTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3581,7 +3665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the enterprise acceleration address list.</p>
+     * <p>Query the list of enterprise acceleration targets.</p>
      * 
      * @param request ListEnterpriseAccelerateTargetsRequest
      * @return ListEnterpriseAccelerateTargetsResponse
@@ -3593,7 +3677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询超额注册申请列表</p>
+     * <p>Lists excess end-user device registration applications in the current Alibaba Cloud account.</p>
      * 
      * @param request ListExcessiveDeviceRegistrationApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3621,7 +3705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询超额注册申请列表</p>
+     * <p>Lists excess end-user device registration applications in the current Alibaba Cloud account.</p>
      * 
      * @param request ListExcessiveDeviceRegistrationApplicationsRequest
      * @return ListExcessiveDeviceRegistrationApplicationsResponse
@@ -3633,7 +3717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch query forwarding rules</p>
+     * <p>Queries forwarding rules in batches.</p>
      * 
      * @param request ListForwardStrategiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3661,7 +3745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch query forwarding rules</p>
+     * <p>Queries forwarding rules in batches.</p>
      * 
      * @param request ListForwardStrategiesRequest
      * @return ListForwardStrategiesResponse
@@ -3673,7 +3757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Query Forwarding Rules Attached to Projects</p>
+     * <p>Queries the bindings of forwarding rules in batches.</p>
      * 
      * @param request ListForwardStrategyBindingItemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3701,7 +3785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch Query Forwarding Rules Attached to Projects</p>
+     * <p>Queries the bindings of forwarding rules in batches.</p>
      * 
      * @param request ListForwardStrategyBindingItemsRequest
      * @return ListForwardStrategyBindingItemsResponse
@@ -3713,7 +3797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IDP配置</p>
+     * <p>Lists identity provider configurations for the current Alibaba Cloud account.</p>
      * 
      * @param request ListIdpConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3741,7 +3825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IDP配置</p>
+     * <p>Lists identity provider configurations for the current Alibaba Cloud account.</p>
      * 
      * @param request ListIdpConfigsRequest
      * @return ListIdpConfigsResponse
@@ -3753,7 +3837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义身份源部门</p>
+     * <p>Retrieves department information for a custom identity provider (IdP) associated with your Alibaba Cloud account.</p>
      * 
      * @param request ListIdpDepartmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3781,7 +3865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义身份源部门</p>
+     * <p>Retrieves department information for a custom identity provider (IdP) associated with your Alibaba Cloud account.</p>
      * 
      * @param request ListIdpDepartmentsRequest
      * @return ListIdpDepartmentsResponse
@@ -3793,7 +3877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Network User List.</p>
+     * <p>Lists onboarded users.</p>
      * 
      * @param request ListNacUserCertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3853,7 +3937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Network User List.</p>
+     * <p>Lists onboarded users.</p>
      * 
      * @param request ListNacUserCertRequest
      * @return ListNacUserCertResponse
@@ -3865,7 +3949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问应用的策略</p>
+     * <p>Queries policies for private access applications in your Alibaba Cloud account in batches.</p>
      * 
      * @param request ListPolicesForPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3893,7 +3977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问应用的策略</p>
+     * <p>Queries policies for private access applications in your Alibaba Cloud account in batches.</p>
      * 
      * @param request ListPolicesForPrivateAccessApplicationRequest
      * @return ListPolicesForPrivateAccessApplicationResponse
@@ -3905,7 +3989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问标签的策略</p>
+     * <p>Batch query policies for private network access tags in your Alibaba Cloud account.</p>
      * 
      * @param request ListPolicesForPrivateAccessTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3933,7 +4017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问标签的策略</p>
+     * <p>Batch query policies for private network access tags in your Alibaba Cloud account.</p>
      * 
      * @param request ListPolicesForPrivateAccessTagRequest
      * @return ListPolicesForPrivateAccessTagResponse
@@ -3945,7 +4029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户组的策略</p>
+     * <p>Queries policies for multiple user groups within your Alibaba Cloud account.</p>
      * 
      * @param request ListPolicesForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3973,7 +4057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户组的策略</p>
+     * <p>Queries policies for multiple user groups within your Alibaba Cloud account.</p>
      * 
      * @param request ListPolicesForUserGroupRequest
      * @return ListPolicesForUserGroupResponse
@@ -3985,7 +4069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>pop节点流量统计</p>
+     * <p>Retrieves bandwidth usage statistics for Secure Access Service Edge (SASE) points of presence (POPs).</p>
      * 
      * @param request ListPopTrafficStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4013,7 +4097,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>pop节点流量统计</p>
+     * <p>Retrieves bandwidth usage statistics for Secure Access Service Edge (SASE) points of presence (POPs).</p>
      * 
      * @param request ListPopTrafficStatisticsRequest
      * @return ListPopTrafficStatisticsResponse
@@ -4025,7 +4109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问应用</p>
+     * <p>Queries information about all internal-facing access applications under the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4093,7 +4177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问应用</p>
+     * <p>Queries information about all internal-facing access applications under the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsRequest
      * @return ListPrivateAccessApplicationsResponse
@@ -4105,7 +4189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由的内网访问应用</p>
+     * <p>List private access applications for dynamic routes in your Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsForDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4133,7 +4217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由的内网访问应用</p>
+     * <p>List private access applications for dynamic routes in your Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessApplicationsForDynamicRouteRequest
      * @return ListPrivateAccessApplicationsForDynamicRouteResponse
@@ -4145,7 +4229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the private access policies within the current Alibaba Cloud account.</p>
+     * <p>Queries the information about all private access policies under the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessPolicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4173,7 +4257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the private access policies within the current Alibaba Cloud account.</p>
+     * <p>Queries the information about all private access policies under the current Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessPolicesRequest
      * @return ListPrivateAccessPolicesResponse
@@ -4225,7 +4309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由的内网访问标签</p>
+     * <p>Lists the tags for dynamic routes in your Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessTagsForDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4253,7 +4337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态路由的内网访问标签</p>
+     * <p>Lists the tags for dynamic routes in your Alibaba Cloud account.</p>
      * 
      * @param request ListPrivateAccessTagsForDynamicRouteRequest
      * @return ListPrivateAccessTagsForDynamicRouteResponse
@@ -4265,7 +4349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户设备注册策略列表</p>
+     * <p>Query the list of device registration policies for your Alibaba Cloud account.</p>
      * 
      * @param request ListRegistrationPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4293,7 +4377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户设备注册策略列表</p>
+     * <p>Query the list of device registration policies for your Alibaba Cloud account.</p>
      * 
      * @param request ListRegistrationPoliciesRequest
      * @return ListRegistrationPoliciesResponse
@@ -4305,7 +4389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户组相关的设备注册策略</p>
+     * <p>Queries the device registration policies that are associated with user groups in your Alibaba Cloud account.</p>
      * 
      * @param request ListRegistrationPoliciesForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4333,7 +4417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户组相关的设备注册策略</p>
+     * <p>Queries the device registration policies that are associated with user groups in your Alibaba Cloud account.</p>
      * 
      * @param request ListRegistrationPoliciesForUserGroupRequest
      * @return ListRegistrationPoliciesForUserGroupResponse
@@ -4345,7 +4429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询终端安装软件列表</p>
+     * <p>Lists the software installed on a user device.</p>
      * 
      * @param request ListSoftwareForUserDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4373,7 +4457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询终端安装软件列表</p>
+     * <p>Lists the software installed on a user device.</p>
      * 
      * @param request ListSoftwareForUserDeviceRequest
      * @return ListSoftwareForUserDeviceResponse
@@ -4385,7 +4469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问应用的标签</p>
+     * <p>Batch query tags for private network access applications under the current Alibaba Cloud account.</p>
      * 
      * @param request ListTagsForPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4413,7 +4497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问应用的标签</p>
+     * <p>Batch query tags for private network access applications under the current Alibaba Cloud account.</p>
      * 
      * @param request ListTagsForPrivateAccessApplicationRequest
      * @return ListTagsForPrivateAccessApplicationResponse
@@ -4425,7 +4509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问策略的标签</p>
+     * <p>Queries the tags of internal network access policies in your Alibaba Cloud account.</p>
      * 
      * @param request ListTagsForPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4453,7 +4537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问策略的标签</p>
+     * <p>Queries the tags of internal network access policies in your Alibaba Cloud account.</p>
      * 
      * @param request ListTagsForPrivateAccessPolicyRequest
      * @return ListTagsForPrivateAccessPolicyResponse
@@ -4465,7 +4549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch queries the uninstall request list under the current Alibaba Cloud account.</p>
+     * <p>Retrieves a list of uninstallation requests for your Alibaba Cloud account.</p>
      * 
      * @param request ListUninstallApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4493,7 +4577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch queries the uninstall request list under the current Alibaba Cloud account.</p>
+     * <p>Retrieves a list of uninstallation requests for your Alibaba Cloud account.</p>
      * 
      * @param request ListUninstallApplicationsRequest
      * @return ListUninstallApplicationsResponse
@@ -4505,7 +4589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the application permissions of a logon user under the current Alibaba Cloud account.</p>
+     * <p>Queries the application permissions of the logged-in user in the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4533,7 +4617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the application permissions of a logon user under the current Alibaba Cloud account.</p>
+     * <p>Queries the application permissions of the logged-in user in the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserApplicationsRequest
      * @return ListUserApplicationsResponse
@@ -4545,7 +4629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户设备列表</p>
+     * <p>Queries the list of user endpoint devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4553,7 +4637,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public ListUserDevicesResponse listUserDevicesWithOptions(ListUserDevicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appStatuses)) {
+            query.put("AppStatuses", request.appStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersions)) {
+            query.put("AppVersions", request.appVersions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoLoginStatuses)) {
+            query.put("AutoLoginStatuses", request.autoLoginStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.department)) {
+            query.put("Department", request.department);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceBelong)) {
+            query.put("DeviceBelong", request.deviceBelong);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceGroupId)) {
+            query.put("DeviceGroupId", request.deviceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceStatuses)) {
+            query.put("DeviceStatuses", request.deviceStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceTags)) {
+            query.put("DeviceTags", request.deviceTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceTypes)) {
+            query.put("DeviceTypes", request.deviceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dlpStatuses)) {
+            query.put("DlpStatuses", request.dlpStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostname)) {
+            query.put("Hostname", request.hostname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iaStatuses)) {
+            query.put("IaStatuses", request.iaStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.innerIp)) {
+            query.put("InnerIp", request.innerIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mac)) {
+            query.put("Mac", request.mac);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nacStatuses)) {
+            query.put("NacStatuses", request.nacStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paStatuses)) {
+            query.put("PaStatuses", request.paStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saseUserId)) {
+            query.put("SaseUserId", request.saseUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharingStatus)) {
+            query.put("SharingStatus", request.sharingStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snBios)) {
+            query.put("SnBios", request.snBios);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snSystem)) {
+            query.put("SnSystem", request.snSystem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            query.put("Username", request.username);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workshop)) {
+            query.put("Workshop", request.workshop);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4562,7 +4746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2023-01-20"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -4573,7 +4757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户设备列表</p>
+     * <p>Queries the list of user endpoint devices under the current Alibaba Cloud account.</p>
      * 
      * @param request ListUserDevicesRequest
      * @return ListUserDevicesResponse
@@ -4585,7 +4769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户组</p>
+     * <p>Retrieves information about all user groups in your Alibaba Cloud account.</p>
      * 
      * @param request ListUserGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4613,7 +4797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询用户组</p>
+     * <p>Retrieves information about all user groups in your Alibaba Cloud account.</p>
      * 
      * @param request ListUserGroupsRequest
      * @return ListUserGroupsResponse
@@ -4625,7 +4809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问策略的用户组</p>
+     * <p>Retrieve user groups for private network access policies in batches under your Alibaba Cloud account.</p>
      * 
      * @param request ListUserGroupsForPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4653,7 +4837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询内网访问策略的用户组</p>
+     * <p>Retrieve user groups for private network access policies in batches under your Alibaba Cloud account.</p>
      * 
      * @param request ListUserGroupsForPrivateAccessPolicyRequest
      * @return ListUserGroupsForPrivateAccessPolicyResponse
@@ -4665,7 +4849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备注册策略相关用户组</p>
+     * <p>Lists the user groups associated with device registration policies in your Alibaba Cloud account.</p>
      * 
      * @param request ListUserGroupsForRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4693,7 +4877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询设备注册策略相关用户组</p>
+     * <p>Lists the user groups associated with device registration policies in your Alibaba Cloud account.</p>
      * 
      * @param request ListUserGroupsForRegistrationPolicyRequest
      * @return ListUserGroupsForRegistrationPolicyResponse
@@ -4705,7 +4889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the zero trust policies of a User in a List.</p>
+     * <p>Queries the list of user zero trust policies.</p>
      * 
      * @param request ListUserPrivateAccessPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4733,7 +4917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the zero trust policies of a User in a List.</p>
+     * <p>Queries the list of user zero trust policies.</p>
      * 
      * @param request ListUserPrivateAccessPoliciesRequest
      * @return ListUserPrivateAccessPoliciesResponse
@@ -4745,7 +4929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询登陆用户</p>
+     * <p>Queries the users for the current Alibaba Cloud account.</p>
      * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4773,7 +4957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询登陆用户</p>
+     * <p>Queries the users for the current Alibaba Cloud account.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -4785,7 +4969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据数字水印信息查询字符串水印信息</p>
+     * <p>Look up an existing watermark information mapping to retrieve the corresponding string-formatted watermark information from numeric-formatted watermark data.</p>
      * 
      * @param request LookupWmInfoMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4813,7 +4997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>根据数字水印信息查询字符串水印信息</p>
+     * <p>Look up an existing watermark information mapping to retrieve the corresponding string-formatted watermark information from numeric-formatted watermark data.</p>
      * 
      * @param request LookupWmInfoMappingRequest
      * @return LookupWmInfoMappingResponse
@@ -4825,7 +5009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify enterprise acceleration policy.</p>
+     * <p>Modifies an enterprise acceleration policy.</p>
      * 
      * @param request ModifyEnterpriseAcceleratePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4897,7 +5081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify enterprise acceleration policy.</p>
+     * <p>Modifies an enterprise acceleration policy.</p>
      * 
      * @param request ModifyEnterpriseAcceleratePolicyRequest
      * @return ModifyEnterpriseAcceleratePolicyResponse
@@ -4909,7 +5093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revoke a user device session.</p>
+     * <p>Revokes a user device session.</p>
      * 
      * @param request RevokeUserDeviceSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4945,7 +5129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revoke a user device session.</p>
+     * <p>Revokes a user device session.</p>
      * 
      * @param request RevokeUserDeviceSessionRequest
      * @return RevokeUserDeviceSessionResponse
@@ -4957,7 +5141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revoke a User logon session.</p>
+     * <p>Revokes a user logon session.</p>
      * 
      * @deprecated OpenAPI RevokeUserSession is deprecated
      * 
@@ -4997,7 +5181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revoke a User logon session.</p>
+     * <p>Revokes a user logon session.</p>
      * 
      * @deprecated OpenAPI RevokeUserSession is deprecated
      * 
@@ -5013,7 +5197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Updates an approval flow under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq UpdateApprovalProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5094,7 +5278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update an approval flow under the current Alibaba Cloud account.</p>
+     * <p>Updates an approval flow under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalProcessRequest
      * @return UpdateApprovalProcessResponse
@@ -5106,7 +5290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the approval instance status under the current Alibaba Cloud account.</p>
+     * <p>Updates the status of an approval instance under your Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5142,7 +5326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the approval instance status under the current Alibaba Cloud account.</p>
+     * <p>Updates the status of an approval instance under your Alibaba Cloud account.</p>
      * 
      * @param request UpdateApprovalStatusRequest
      * @return UpdateApprovalStatusResponse
@@ -5154,7 +5338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the Startup and anti-uninstall policy under the current Alibaba Cloud account.</p>
+     * <p>Update the auto-start and anti-uninstall policy for your Alibaba Cloud account.</p>
      * 
      * @param tmpReq UpdateBootAndAntiUninstallPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5217,7 +5401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the Startup and anti-uninstall policy under the current Alibaba Cloud account.</p>
+     * <p>Update the auto-start and anti-uninstall policy for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateBootAndAntiUninstallPolicyRequest
      * @return UpdateBootAndAntiUninstallPolicyResponse
@@ -5229,7 +5413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自定义身份源指定用户</p>
+     * <p>Update user information for a custom identity provider in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateClientUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5277,7 +5461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自定义身份源指定用户</p>
+     * <p>Update user information for a custom identity provider in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateClientUserRequest
      * @return UpdateClientUserResponse
@@ -5289,7 +5473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自定义身份源指定用户密码</p>
+     * <p>Sets the password for a specified user that belongs to a custom identity source.</p>
      * 
      * @param request UpdateClientUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5329,7 +5513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自定义身份源指定用户密码</p>
+     * <p>Sets the password for a specified user that belongs to a custom identity source.</p>
      * 
      * @param request UpdateClientUserPasswordRequest
      * @return UpdateClientUserPasswordResponse
@@ -5341,7 +5525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自定义身份源指定用户启用状态</p>
+     * <p>Sets the status of a specified user from a custom identity source for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateClientUserStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5377,7 +5561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改自定义身份源指定用户启用状态</p>
+     * <p>Sets the status of a specified user from a custom identity source for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateClientUserStatusRequest
      * @return UpdateClientUserStatusResponse
@@ -5389,7 +5573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改动态路由</p>
+     * <p>Modifies a dynamic route in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateDynamicRouteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5470,7 +5654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改动态路由</p>
+     * <p>Modifies a dynamic route in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateDynamicRouteRequest
      * @return UpdateDynamicRouteResponse
@@ -5482,7 +5666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新超额注册申请状态</p>
+     * <p>Update the status of device registration applications that exceed your Alibaba Cloud account\&quot;s quota.</p>
      * 
      * @param request UpdateExcessiveDeviceRegistrationApplicationsStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5523,7 +5707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新超额注册申请状态</p>
+     * <p>Update the status of device registration applications that exceed your Alibaba Cloud account\&quot;s quota.</p>
      * 
      * @param request UpdateExcessiveDeviceRegistrationApplicationsStatusRequest
      * @return UpdateExcessiveDeviceRegistrationApplicationsStatusResponse
@@ -5535,7 +5719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定自定义身份源部门</p>
+     * <p>Deletes a department from a custom identity provider for the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateIdpDepartmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5575,7 +5759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改指定自定义身份源部门</p>
+     * <p>Deletes a department from a custom identity provider for the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateIdpDepartmentRequest
      * @return UpdateIdpDepartmentResponse
@@ -5587,7 +5771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch modifies the Status of network access certificates for Users under the current Alibaba Cloud account.</p>
+     * <p>Updates the network access certificate status for users in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateNacUserCertStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5628,7 +5812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch modifies the Status of network access certificates for Users under the current Alibaba Cloud account.</p>
+     * <p>Updates the network access certificate status for users in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateNacUserCertStatusRequest
      * @return UpdateNacUserCertStatusResponse
@@ -5640,7 +5824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the office applications of the current Alibaba Cloud account.</p>
+     * <p>Modifies an internal-facing access application under the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq UpdatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5652,6 +5836,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.l7Config)) {
             request.l7ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.l7Config, "L7Config", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.unauthorizedAccessConfig)) {
+            request.unauthorizedAccessConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.unauthorizedAccessConfig, "UnauthorizedAccessConfig", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -5716,6 +5904,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("TagIds", request.tagIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.unauthorizedAccessConfigShrink)) {
+            body.put("UnauthorizedAccessConfig", request.unauthorizedAccessConfigShrink);
+        }
+
         body = TeaConverter.merge(Object.class,
             body,
             com.aliyun.openapiutil.Client.query(bodyFlat)
@@ -5739,7 +5931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the office applications of the current Alibaba Cloud account.</p>
+     * <p>Modifies an internal-facing access application under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdatePrivateAccessApplicationRequest
      * @return UpdatePrivateAccessApplicationResponse
@@ -5751,7 +5943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Private Access Policy</p>
+     * <p>Update an internal network access policy for your Alibaba Cloud account.</p>
      * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5872,7 +6064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Private Access Policy</p>
+     * <p>Update an internal network access policy for your Alibaba Cloud account.</p>
      * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @return UpdatePrivateAccessPolicyResponse
@@ -5884,7 +6076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改设备注册策略</p>
+     * <p>Modifies a device registration policy for your Alibaba Cloud account.</p>
      * 
      * @param tmpReq UpdateRegistrationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5975,7 +6167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改设备注册策略</p>
+     * <p>Modifies a device registration policy for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateRegistrationPolicyRequest
      * @return UpdateRegistrationPolicyResponse
@@ -5987,7 +6179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch updates the uninstall request status under the current Alibaba Cloud account.</p>
+     * <p>Batch updates the status of uninstall requests for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateUninstallApplicationsStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6028,7 +6220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Batch updates the uninstall request status under the current Alibaba Cloud account.</p>
+     * <p>Batch updates the status of uninstall requests for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateUninstallApplicationsStatusRequest
      * @return UpdateUninstallApplicationsStatusResponse
@@ -6040,7 +6232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新用户设备共享状态</p>
+     * <p>Updates the sharing status of devices for multiple enterprise users.</p>
      * 
      * @param request UpdateUserDevicesSharingStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6081,7 +6273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新用户设备共享状态</p>
+     * <p>Updates the sharing status of devices for multiple enterprise users.</p>
      * 
      * @param request UpdateUserDevicesSharingStatusRequest
      * @return UpdateUserDevicesSharingStatusResponse
@@ -6093,7 +6285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新用户设备状态</p>
+     * <p>Update the status of endpoint devices for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateUserDevicesStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6134,7 +6326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量更新用户设备状态</p>
+     * <p>Update the status of endpoint devices for your Alibaba Cloud account.</p>
      * 
      * @param request UpdateUserDevicesStatusRequest
      * @return UpdateUserDevicesStatusResponse
@@ -6146,7 +6338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改用户组</p>
+     * <p>Modifies a user group under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6195,7 +6387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改用户组</p>
+     * <p>Modifies a user group under the current Alibaba Cloud account.</p>
      * 
      * @param request UpdateUserGroupRequest
      * @return UpdateUserGroupResponse
@@ -6207,7 +6399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量修改登陆用户状态</p>
+     * <p>Updates the status of users in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateUsersStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6243,7 +6435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量修改登陆用户状态</p>
+     * <p>Updates the status of users in your Alibaba Cloud account.</p>
      * 
      * @param request UpdateUsersStatusRequest
      * @return UpdateUsersStatusResponse

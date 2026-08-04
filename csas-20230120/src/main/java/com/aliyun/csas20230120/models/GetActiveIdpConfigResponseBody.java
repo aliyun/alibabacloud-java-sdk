@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetActiveIdpConfigResponseBody extends TeaModel {
+    /**
+     * <p>The identity provider configuration.</p>
+     */
     @NameInMap("Data")
     public GetActiveIdpConfigResponseBodyData data;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
      */
@@ -36,20 +41,36 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
     }
 
     public static class GetActiveIdpConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>A description of the identity provider configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例身份源</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the identity provider configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>idp-cfg001</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the identity provider configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试身份源</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The type of the identity provider configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>DingTalk</p>
          */

@@ -4,9 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserDevicesRequest extends TeaModel {
+    /**
+     * <p>The collection of client statuses.</p>
+     */
     @NameInMap("AppStatuses")
     public java.util.List<String> appStatuses;
 
+    /**
+     * <p>The collection of client versions.</p>
+     */
     @NameInMap("AppVersions")
     public java.util.List<String> appVersions;
 
@@ -14,6 +20,7 @@ public class ListUserDevicesRequest extends TeaModel {
     public java.util.List<String> autoLoginStatuses;
 
     /**
+     * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,58 +29,108 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>The department to which the user belongs. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试部</p>
+     */
     @NameInMap("Department")
     public String department;
 
     /**
+     * <p>The ownership of the endpoint device. Valid values:</p>
+     * <ul>
+     * <li><strong>Personal</strong>: personal device.</li>
+     * <li><strong>Company</strong>: company device.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Company</p>
      */
     @NameInMap("DeviceBelong")
     public String deviceBelong;
 
+    /**
+     * <p>The device group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>device-group-5191cf830a5e****</p>
+     */
     @NameInMap("DeviceGroupId")
     public String deviceGroupId;
 
+    /**
+     * <p>The collection of endpoint device statuses.</p>
+     */
     @NameInMap("DeviceStatuses")
     public java.util.List<String> deviceStatuses;
 
+    /**
+     * <p>The collection of endpoint device IDs.</p>
+     */
     @NameInMap("DeviceTags")
     public java.util.List<String> deviceTags;
 
+    /**
+     * <p>The collection of endpoint device operating system types.</p>
+     */
     @NameInMap("DeviceTypes")
     public java.util.List<String> deviceTypes;
 
+    /**
+     * <p>The collection of office data protection statuses.</p>
+     */
     @NameInMap("DlpStatuses")
     public java.util.List<String> dlpStatuses;
 
     /**
+     * <p>The name of the endpoint device. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), endpoint devices whose names contain 4-byte UTF-8 characters are also queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>win10-64bit</p>
      */
     @NameInMap("Hostname")
     public String hostname;
 
+    /**
+     * <p>The collection of Internet access statuses.</p>
+     */
     @NameInMap("IaStatuses")
     public java.util.List<String> iaStatuses;
 
+    /**
+     * <p>The internal IP address of the endpoint device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("InnerIp")
     public String innerIp;
 
     /**
+     * <p>The MAC address of the endpoint device.</p>
+     * 
      * <strong>example:</strong>
      * <p>00:16:XX:XX:7c:46</p>
      */
     @NameInMap("Mac")
     public String mac;
 
+    /**
+     * <p>The collection of network access control statuses.</p>
+     */
     @NameInMap("NacStatuses")
     public java.util.List<String> nacStatuses;
 
+    /**
+     * <p>The collection of private access statuses.</p>
+     */
     @NameInMap("PaStatuses")
     public java.util.List<String> paStatuses;
 
     /**
+     * <p>The number of entries per page in a paging query. Settings: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,6 +140,12 @@ public class ListUserDevicesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The user ID. You can obtain this value from the following operations:</p>
+     * <ul>
+     * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
+     * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user endpoint devices.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
      */
@@ -90,21 +153,66 @@ public class ListUserDevicesRequest extends TeaModel {
     public String saseUserId;
 
     /**
+     * <p>Specifies whether sharing is enabled for the device. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Sharing is enabled.</li>
+     * <li><strong>false</strong>: Sharing is disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("SharingStatus")
     public Boolean sharingStatus;
 
+    /**
+     * <p>The BIOS system serial number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5CG003****</p>
+     */
+    @NameInMap("SnBios")
+    public String snBios;
+
+    /**
+     * <p>The system serial number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KVN9C9****</p>
+     */
     @NameInMap("SnSystem")
     public String snSystem;
 
+    /**
+     * <p>The sort parameter. Valid values:</p>
+     * <ul>
+     * <li><strong>Username</strong>: sorted by Username in ascending order.</li>
+     * <li><strong>AppVersion</strong>: sorted by AppVersion in descending order.</li>
+     * <li><strong>UpdateTime</strong>: sorted by UpdateTime in descending order.</li>
+     * <li><strong>CreateTime</strong>: sorted by CreateTime in descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>UpdateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The username. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>王先生</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The name of the office area.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试办公区</p>
+     */
     @NameInMap("Workshop")
     public String workshop;
 
@@ -271,6 +379,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public Boolean getSharingStatus() {
         return this.sharingStatus;
+    }
+
+    public ListUserDevicesRequest setSnBios(String snBios) {
+        this.snBios = snBios;
+        return this;
+    }
+    public String getSnBios() {
+        return this.snBios;
     }
 
     public ListUserDevicesRequest setSnSystem(String snSystem) {

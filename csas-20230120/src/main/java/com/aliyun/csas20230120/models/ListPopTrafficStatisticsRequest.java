@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPopTrafficStatisticsRequest extends TeaModel {
     /**
+     * <p>The end time for the data. This is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1681293719</p>
      */
@@ -12,6 +14,8 @@ public class ListPopTrafficStatisticsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class ListPopTrafficStatisticsRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The start time for the data. This is a UNIX timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1681035708</p>
      */

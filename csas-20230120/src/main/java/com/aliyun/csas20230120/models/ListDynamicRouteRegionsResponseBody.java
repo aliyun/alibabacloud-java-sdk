@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListDynamicRouteRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of regions for POP cluster access points authorized for the SASE Global Office service.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<String> regions;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
      */
@@ -15,6 +20,8 @@ public class ListDynamicRouteRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of regions for POP cluster access points authorized for the SASE Global Office service.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

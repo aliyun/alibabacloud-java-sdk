@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetPrivateAccessApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the office application. You can obtain the value by calling the following operations:</p>
+     * <p>The ID of the internal-facing access application. You can obtain the value from:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: queries office applications.</li>
-     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an office application.</li>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications.</li>
+     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates an internal-facing access application.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

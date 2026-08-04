@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateClientUserRequest extends TeaModel {
     /**
+     * <p>Department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10797</p>
      */
     @NameInMap("DepartmentId")
     public String departmentId;
 
+    /**
+     * <p>User description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例用户</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Email address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,7 @@ public class CreateClientUserRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>ID of the custom identity source configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,8 @@ public class CreateClientUserRequest extends TeaModel {
     public String idpConfigId;
 
     /**
+     * <p>Mobile phone number without country code.</p>
+     * 
      * <strong>example:</strong>
      * <p>13641966835</p>
      */
@@ -40,6 +52,8 @@ public class CreateClientUserRequest extends TeaModel {
     public String mobileNumber;
 
     /**
+     * <p>Password. If empty, a random password is generated automatically.</p>
+     * 
      * <strong>example:</strong>
      * <p>kehudiyi</p>
      */
@@ -47,7 +61,11 @@ public class CreateClientUserRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Username.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
      */
     @NameInMap("Username")
     public String username;

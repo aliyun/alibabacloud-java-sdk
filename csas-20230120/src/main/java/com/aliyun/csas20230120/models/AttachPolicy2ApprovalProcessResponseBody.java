@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachPolicy2ApprovalProcessResponseBody extends TeaModel {
     /**
+     * <p>ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C51D9340-4604-5331-AE62-407F3B408F86</p>
      */

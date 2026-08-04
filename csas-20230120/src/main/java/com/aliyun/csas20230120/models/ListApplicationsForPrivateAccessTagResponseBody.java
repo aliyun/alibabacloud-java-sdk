@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of private network access tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListApplicationsForPrivateAccessTagResponseBodyTags> tags;
 
@@ -37,6 +42,8 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
 
     public static class ListApplicationsForPrivateAccessTagResponseBodyTagsApplicationsPortRanges extends TeaModel {
         /**
+         * <p>The start port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -44,6 +51,8 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         public Integer begin;
 
         /**
+         * <p>The end port.</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -74,10 +83,15 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsForPrivateAccessTagResponseBodyTagsApplications extends TeaModel {
+        /**
+         * <p>The collection of addresses for the private network access application.</p>
+         */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
         /**
+         * <p>The ID of the private network access application.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-7a9243dd02f4****</p>
          */
@@ -85,7 +99,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>内网访问应用创建时间。</p>
+         * <p>The time when the private network access application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-27 18:10:25</p>
@@ -93,20 +107,41 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the private network access application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条内网访问应用</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the private network access application.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_application_name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The collection of port ranges for the private network access application. Port ranges must not overlap or duplicate each other.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<ListApplicationsForPrivateAccessTagResponseBodyTagsApplicationsPortRanges> portRanges;
 
         /**
+         * <p>The protocol used by the private network access application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>All</strong>: All protocols.</p>
+         * </li>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>All</p>
          */
@@ -114,6 +149,14 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The status of the private network access application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -192,10 +235,15 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsForPrivateAccessTagResponseBodyTags extends TeaModel {
+        /**
+         * <p>The collection of private network access applications.</p>
+         */
         @NameInMap("Applications")
         public java.util.List<ListApplicationsForPrivateAccessTagResponseBodyTagsApplications> applications;
 
         /**
+         * <p>The ID of the private network access tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag-7ffc82853476****</p>
          */

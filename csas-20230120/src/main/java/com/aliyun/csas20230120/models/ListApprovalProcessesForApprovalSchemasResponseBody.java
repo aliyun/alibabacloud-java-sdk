@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaModel {
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of approval templates.</p>
+     */
     @NameInMap("Schemas")
     public java.util.List<ListApprovalProcessesForApprovalSchemasResponseBodySchemas> schemas;
 
@@ -37,22 +42,38 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
 
     public static class ListApprovalProcessesForApprovalSchemasResponseBodySchemasProcesses extends TeaModel {
         /**
+         * <p>The time when the approval flow was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-25 10:44:09</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the approval flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个审批流程</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the approval flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-process-dc61e92ba5c5****</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>The name of the approval flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("ProcessName")
         public String processName;
 
@@ -96,10 +117,15 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
     }
 
     public static class ListApprovalProcessesForApprovalSchemasResponseBodySchemas extends TeaModel {
+        /**
+         * <p>A collection of approval flows.</p>
+         */
         @NameInMap("Processes")
         public java.util.List<ListApprovalProcessesForApprovalSchemasResponseBodySchemasProcesses> processes;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */

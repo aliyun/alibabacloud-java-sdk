@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody extends TeaModel {
+    /**
+     * <p>List of device registration applications that exceed your quota.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBodyApplications> applications;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */
@@ -37,6 +42,8 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
 
     public static class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBodyApplications extends TeaModel {
         /**
+         * <p>ID of the device registration application.</p>
+         * 
          * <strong>example:</strong>
          * <p>reg-application-0f4a127b7e78****</p>
          */
@@ -44,19 +51,35 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         public String applicationId;
 
         /**
+         * <p>Time when the device registration application was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-17 18:46:55</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Department to which the user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
+         */
         @NameInMap("Department")
         public String department;
 
+        /**
+         * <p>This field indicates the reason for the excessive device registration request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条超额注册申请</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>ID of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
@@ -64,6 +87,22 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         public String deviceTag;
 
         /**
+         * <p>Operating system of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Windows</strong>: Windows operating system.</p>
+         * </li>
+         * <li><p><strong>macOS</strong>: macOS operating system.</p>
+         * </li>
+         * <li><p><strong>Linux</strong>: Linux operating system.</p>
+         * </li>
+         * <li><p><strong>Android</strong>: Android operating system.</p>
+         * </li>
+         * <li><p><strong>iOS</strong>: iOS operating system.</p>
+         * </li>
+         * <li><p><strong>Windows_Wuying</strong>: Alibaba Cloud Cloud Desktop operating system.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -71,6 +110,8 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         public String deviceType;
 
         /**
+         * <p>Name of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
          */
@@ -78,6 +119,14 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         public String hostname;
 
         /**
+         * <p>Indicates whether the device registration application has been used. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Used.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not used.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -85,6 +134,8 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         public Boolean isUsed;
 
         /**
+         * <p>MAC address of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
          */
@@ -92,6 +143,8 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         public String mac;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
@@ -99,12 +152,28 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusResponseBody ext
         public String saseUserId;
 
         /**
+         * <p>Status of the device registration application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Pending</strong>: Pending review.</p>
+         * </li>
+         * <li><p><strong>Approved</strong>: Approved.</p>
+         * </li>
+         * <li><p><strong>Rejected</strong>: Rejected.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Approved</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
+         */
         @NameInMap("Username")
         public String username;
 

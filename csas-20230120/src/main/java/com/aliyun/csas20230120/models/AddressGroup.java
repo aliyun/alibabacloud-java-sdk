@@ -4,9 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class AddressGroup extends TeaModel {
+    /**
+     * <p>Address list.</p>
+     */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
+    /**
+     * <p>Port list.</p>
+     */
     @NameInMap("Ports")
     public java.util.List<AddressGroupPorts> ports;
 
@@ -33,6 +39,8 @@ public class AddressGroup extends TeaModel {
 
     public static class AddressGroupPorts extends TeaModel {
         /**
+         * <p>Start port. Must be less than or equal to the end port.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -40,6 +48,8 @@ public class AddressGroup extends TeaModel {
         public Integer begin;
 
         /**
+         * <p>End port. Must be greater than or equal to the start port.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */

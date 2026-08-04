@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetUserDeviceResponseBody extends TeaModel {
+    /**
+     * <p>The terminal device.</p>
+     */
     @NameInMap("Device")
     public GetUserDeviceResponseBodyDevice device;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</p>
      */
@@ -37,12 +42,20 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     public static class GetUserDeviceResponseBodyDeviceHistoryUsers extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         @NameInMap("SaseUserId")
         public String saseUserId;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ms. Zhang</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -70,9 +83,21 @@ public class GetUserDeviceResponseBody extends TeaModel {
     }
 
     public static class GetUserDeviceResponseBodyDeviceNetInterfaceInfo extends TeaModel {
+        /**
+         * <p>The MAC address of the NIC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:XX:XX:7c:46</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>The name of the NIC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -100,15 +125,39 @@ public class GetUserDeviceResponseBody extends TeaModel {
     }
 
     public static class GetUserDeviceResponseBodyDeviceProcesses extends TeaModel {
+        /**
+         * <p>The CPU usage percentage of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.05</p>
+         */
         @NameInMap("Cpu")
         public Double cpu;
 
+        /**
+         * <p>The process running description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C:\Program Files\Google\Chrome\Application\chrome.exe</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The memory usage of the process, in MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <p>The process name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chrome.exe</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -153,6 +202,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
     public static class GetUserDeviceResponseBodyDevice extends TeaModel {
         /**
+         * <p>The client status. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -160,32 +211,62 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String appStatus;
 
         /**
+         * <p>The client version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.2.0</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>The auto-logon status of the device. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("AutoLoginStatus")
         public String autoLoginStatus;
 
+        /**
+         * <p>The battery health percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("BatteryHealthPercentage")
         public Integer batteryHealthPercentage;
 
+        /**
+         * <p>The battery remaining charge percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("BatteryRemainingPercentage")
         public Integer batteryRemainingPercentage;
 
         /**
+         * <p>The CPU model of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>Apple M1</p>
          */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <p>The city to which the public IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou City</p>
+         */
         @NameInMap("City")
         public String city;
 
         /**
+         * <p>The city name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing City</p>
          */
@@ -193,16 +274,26 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String cityEn;
 
         /**
+         * <p>The city name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京市</p>
          */
         @NameInMap("CityZh")
         public String cityZh;
 
+        /**
+         * <p>The continent to which the public IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia</p>
+         */
         @NameInMap("Continent")
         public String continent;
 
         /**
+         * <p>The continent name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia</p>
          */
@@ -210,16 +301,26 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String continentEn;
 
         /**
+         * <p>The continent name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>亚洲</p>
          */
         @NameInMap("ContinentZh")
         public String continentZh;
 
+        /**
+         * <p>The country to which the public IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
+         */
         @NameInMap("Country")
         public String country;
 
         /**
+         * <p>The country name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>China</p>
          */
@@ -227,6 +328,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String countryEn;
 
         /**
+         * <p>The country name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>中国</p>
          */
@@ -234,16 +337,26 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String countryZh;
 
         /**
+         * <p>The registration time of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-16 17:18:46</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The department to which the user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QA Department</p>
+         */
         @NameInMap("Department")
         public String department;
 
         /**
+         * <p>The ownership of the terminal device. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Company</p>
          */
@@ -251,6 +364,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceBelong;
 
         /**
+         * <p>The model of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>MacBookPro17,1</p>
          */
@@ -258,6 +373,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceModel;
 
         /**
+         * <p>The status of the terminal device. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -265,6 +382,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceStatus;
 
         /**
+         * <p>The ID of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
@@ -272,6 +391,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceTag;
 
         /**
+         * <p>The operating system type of the terminal device. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -279,6 +400,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceType;
 
         /**
+         * <p>The operating system version of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.5.1</p>
          */
@@ -286,32 +409,59 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String deviceVersion;
 
         /**
+         * <p>The disk model of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>APPLE SSD AP0512Q Media</p>
          */
         @NameInMap("Disk")
         public String disk;
 
+        /**
+         * <p>The available disk space, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("DiskAvailable")
         public Integer diskAvailable;
 
+        /**
+         * <p>The used disk space, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103</p>
+         */
         @NameInMap("DiskUsed")
         public Integer diskUsed;
 
         /**
+         * <p>The office data protection status. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Unauthorized</p>
          */
         @NameInMap("DlpStatus")
         public String dlpStatus;
 
+        /**
+         * <p>The anti-intrusion status. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
+         */
         @NameInMap("EdrStatus")
         public String edrStatus;
 
+        /**
+         * <p>The historical users of the terminal device.</p>
+         */
         @NameInMap("HistoryUsers")
         public java.util.List<GetUserDeviceResponseBodyDeviceHistoryUsers> historyUsers;
 
         /**
+         * <p>The name of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
          */
@@ -319,6 +469,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The Internet access status. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Disabled</p>
          */
@@ -326,26 +478,41 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String iaStatus;
 
         /**
+         * <p>The internal IP address of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
          */
         @NameInMap("InnerIP")
         public String innerIP;
 
+        /**
+         * <p>Indicates whether the terminal has joined an AD domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("JoinAdDomain")
         public Boolean joinAdDomain;
 
         /**
+         * <p>The MAC address of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>48:9e:XX:XX:02:80</p>
          */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>The IDs of matched device groups.</p>
+         */
         @NameInMap("MatchDeviceGroupIds")
         public java.util.List<String> matchDeviceGroupIds;
 
         /**
+         * <p>The memory capacity of the terminal device. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -353,29 +520,47 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The network access control status. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Unprovisioned</p>
          */
         @NameInMap("NacStatus")
         public String nacStatus;
 
+        /**
+         * <p>The list of network interface controllers (NICs) of the terminal device.</p>
+         */
         @NameInMap("NetInterfaceInfo")
         public java.util.List<GetUserDeviceResponseBodyDeviceNetInterfaceInfo> netInterfaceInfo;
 
         /**
+         * <p>The private access status. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("PaStatus")
         public String paStatus;
 
+        /**
+         * <p>The list of processes running on the terminal.</p>
+         */
         @NameInMap("Processes")
         public java.util.List<GetUserDeviceResponseBodyDeviceProcesses> processes;
 
+        /**
+         * <p>The province to which the public IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
+         */
         @NameInMap("Province")
         public String province;
 
         /**
+         * <p>The province name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing</p>
          */
@@ -383,6 +568,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String provinceEn;
 
         /**
+         * <p>The province name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京市</p>
          */
@@ -390,6 +577,8 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String provinceZh;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
@@ -397,47 +586,101 @@ public class GetUserDeviceResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
+         * <p>Indicates whether sharing is enabled for the device. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("SharingStatus")
         public Boolean sharingStatus;
 
+        /**
+         * <p>The motherboard serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PJGGU00WBD****</p>
+         */
         @NameInMap("SnBaseBoard")
         public String snBaseBoard;
 
+        /**
+         * <p>The serial number (SN) of the BIOS system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CG003****</p>
+         */
         @NameInMap("SnBios")
         public String snBios;
 
+        /**
+         * <p>The hard disk serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD-WXR1A99A****</p>
+         */
         @NameInMap("SnDiskDrive")
         public String snDiskDrive;
 
+        /**
+         * <p>The serial number (SN) of the processor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFEBFBFF0008****</p>
+         */
         @NameInMap("SnProcessor")
         public String snProcessor;
 
+        /**
+         * <p>The system serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KVN9C9****</p>
+         */
         @NameInMap("SnSystem")
         public String snSystem;
 
         /**
+         * <p>The logon IP address of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>106.14.XX.XX</p>
          */
         @NameInMap("SrcIP")
         public String srcIP;
 
+        /**
+         * <p>The timestamp when the terminal process information was collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1775096714</p>
+         */
         @NameInMap("TerminalInfoCollectTime")
         public Long terminalInfoCollectTime;
 
         /**
+         * <p>The last online time of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-24 19:04:42</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mr. Wang</p>
+         */
         @NameInMap("Username")
         public String username;
 
+        /**
+         * <p>The name of the office area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Office Area</p>
+         */
         @NameInMap("Workshop")
         public String workshop;
 

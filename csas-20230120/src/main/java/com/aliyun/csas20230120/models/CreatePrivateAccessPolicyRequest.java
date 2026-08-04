@@ -34,7 +34,7 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
      * <p>Description of the private access policy. The length is 1 to 128 characters, supporting Chinese and uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), hyphens (-), and spaces.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>这是一条内网访问策略</p>
      */
     @NameInMap("Description")
     public String description;

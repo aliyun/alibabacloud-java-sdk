@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicesForPrivateAccessApplicationRequest extends TeaModel {
     /**
+     * <p>The IDs of the private access applications. You can specify up to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationIds")

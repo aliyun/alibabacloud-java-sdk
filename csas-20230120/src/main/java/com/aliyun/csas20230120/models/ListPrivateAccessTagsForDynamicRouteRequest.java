@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrivateAccessTagsForDynamicRouteRequest extends TeaModel {
     /**
+     * <p>A collection of dynamic route IDs. You can enter a maximum of 100 dynamic route IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DynamicRouteIds")

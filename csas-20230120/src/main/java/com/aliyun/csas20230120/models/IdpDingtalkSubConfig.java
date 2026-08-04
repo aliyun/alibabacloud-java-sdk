@@ -4,30 +4,57 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class IdpDingtalkSubConfig extends TeaModel {
+    /**
+     * <p>Your application\&quot;s unique identifier. You can get this identifier from the DingTalk Open Platform.</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>Your application\&quot;s secret key. You can get this key from the DingTalk Open Platform.</p>
+     */
     @NameInMap("AppSecret")
     public String appSecret;
 
+    /**
+     * <p>Your enterprise\&quot;s unique ID in DingTalk.</p>
+     */
     @NameInMap("CorpId")
     public String corpId;
 
+    /**
+     * <p>The AES key used to decrypt the content of event callbacks. This ensures the confidentiality of the event data.</p>
+     */
     @NameInMap("EventAesKey")
     public String eventAesKey;
 
+    /**
+     * <p>A custom label for event subscriptions. This field is reserved for future use.</p>
+     */
     @NameInMap("EventLabel")
     public String eventLabel;
 
+    /**
+     * <p>The token used to verify the authenticity of event callback requests from DingTalk.</p>
+     */
     @NameInMap("EventVerifyToken")
     public String eventVerifyToken;
 
+    /**
+     * <p>Specifies whether this identity provider is the exclusive login method. If set to <code>true</code>, other login methods are disabled.</p>
+     */
     @NameInMap("Exclusive")
     public Boolean exclusive;
 
+    /**
+     * <p>Specifies whether to enable the OAuth authentication flow.</p>
+     */
     @NameInMap("Oauth")
     public Boolean oauth;
 
+    /**
+     * <p>The URL where the user is redirected after successful authorization. You must register this URL on the DingTalk Open Platform.</p>
+     */
     @NameInMap("RedirectUri")
     public String redirectUri;
 

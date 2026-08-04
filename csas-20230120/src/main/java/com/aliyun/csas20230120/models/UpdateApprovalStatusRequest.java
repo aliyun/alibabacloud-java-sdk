@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateApprovalStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the approval instance. Obtain the value from:</p>
+     * <ul>
+     * <li><p><a href="~~ListApprovals~~">ListApprovals</a>: Query a list of approval instances in batches.</p>
+     * </li>
+     * <li><p><a href="~~GetApproval~~">GetApproval</a>: Query the details of an approval instance.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,13 @@ public class UpdateApprovalStatusRequest extends TeaModel {
     public String approvalId;
 
     /**
+     * <p>The status of the approval instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Approved</strong>: Approved.</p>
+     * </li>
+     * <li><p><strong>Rejected</strong>: Rejected.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

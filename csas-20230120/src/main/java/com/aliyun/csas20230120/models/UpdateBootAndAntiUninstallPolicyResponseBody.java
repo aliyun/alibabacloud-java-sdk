@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
     /**
+     * <p>ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>CB67D866-1E54-5106-89DF-6D70C73E5989</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Auto-start and anti-uninstall policy.</p>
+     */
     @NameInMap("Strategy")
     public UpdateBootAndAntiUninstallPolicyResponseBodyStrategy strategy;
 
@@ -37,6 +42,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
 
     public static class UpdateBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextEn extends TeaModel {
         /**
+         * <p>Dialog content.</p>
+         * 
          * <strong>example:</strong>
          * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
          */
@@ -44,6 +51,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>Main button text.</p>
+         * 
          * <strong>example:</strong>
          * <p>Report</p>
          */
@@ -51,6 +60,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String mainButtonText;
 
         /**
+         * <p>Secondary button text.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ignore</p>
          */
@@ -58,6 +69,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String minorButtonText;
 
         /**
+         * <p>Dialog title.</p>
+         * 
          * <strong>example:</strong>
          * <p>Anti-Uninstall Warning</p>
          */
@@ -104,15 +117,39 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
     }
 
     public static class UpdateBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextZh extends TeaModel {
+        /**
+         * <p>Dialog content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>卸载后该设备无法再用于公司办公，同时该设备将失去进入公司内网权限！</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Main button text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>去报备</p>
+         */
         @NameInMap("MainButtonText")
         public String mainButtonText;
 
+        /**
+         * <p>Secondary button text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我知道了</p>
+         */
         @NameInMap("MinorButtonText")
         public String minorButtonText;
 
+        /**
+         * <p>Dialog title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>防卸载警告</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -156,9 +193,15 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
     }
 
     public static class UpdateBootAndAntiUninstallPolicyResponseBodyStrategyBlockContent extends TeaModel {
+        /**
+         * <p>English text.</p>
+         */
         @NameInMap("BlockTextEn")
         public UpdateBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextEn blockTextEn;
 
+        /**
+         * <p>Chinese text.</p>
+         */
         @NameInMap("BlockTextZh")
         public UpdateBootAndAntiUninstallPolicyResponseBodyStrategyBlockContentBlockTextZh blockTextZh;
 
@@ -187,16 +230,23 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
 
     public static class UpdateBootAndAntiUninstallPolicyResponseBodyStrategy extends TeaModel {
         /**
+         * <p>End users can submit approval requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("AllowReport")
         public Boolean allowReport;
 
+        /**
+         * <p>Content shown in the client-side block dialog.</p>
+         */
         @NameInMap("BlockContent")
         public UpdateBootAndAntiUninstallPolicyResponseBodyStrategyBlockContent blockContent;
 
         /**
+         * <p>Time when the policy was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-16 10:50:05</p>
          */
@@ -204,6 +254,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Indicates whether the anti-uninstall feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -211,6 +263,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public Boolean isAntiUninstall;
 
         /**
+         * <p>Indicates whether the auto-start feature is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -218,6 +272,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public Boolean isBoot;
 
         /**
+         * <p>Policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>auto-boot-anti-uninstall-6f6cbf5f6605****</p>
          */
@@ -225,6 +281,8 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>ID of the approval process associated with this policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-process-65c255598826****</p>
          */
@@ -232,15 +290,23 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         public String reportProcessId;
 
         /**
+         * <p>Time when the policy was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-14 10:17:14</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>List of user group IDs to which this policy applies.</p>
+         */
         @NameInMap("UserGroupIds")
         public java.util.List<String> userGroupIds;
 
+        /**
+         * <p>List of whitelisted users.</p>
+         */
         @NameInMap("WhitelistUsers")
         public java.util.List<String> whitelistUsers;
 

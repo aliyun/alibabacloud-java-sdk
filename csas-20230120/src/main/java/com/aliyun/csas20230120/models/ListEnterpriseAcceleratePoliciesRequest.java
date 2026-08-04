@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnterpriseAcceleratePoliciesRequest extends TeaModel {
     /**
+     * <p>The number of the page to return for a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class ListEnterpriseAcceleratePoliciesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The name of the enterprise acceleration policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试策略</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

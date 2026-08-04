@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPolicesForUserGroupRequest extends TeaModel {
     /**
+     * <p>The IDs of the user groups. You can enter up to 100 user group IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroupIds")

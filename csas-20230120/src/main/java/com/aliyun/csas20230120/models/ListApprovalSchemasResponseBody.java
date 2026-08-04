@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListApprovalSchemasResponseBody extends TeaModel {
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of approval templates.</p>
+     */
     @NameInMap("Schemas")
     public java.util.List<ListApprovalSchemasResponseBodySchemas> schemas;
 
     /**
+     * <p>The total number of approval templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,16 +59,26 @@ public class ListApprovalSchemasResponseBody extends TeaModel {
 
     public static class ListApprovalSchemasResponseBodySchemas extends TeaModel {
         /**
+         * <p>The creation time of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15 14:44:07</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个模板</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates if it is an officially maintained template.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -69,6 +86,22 @@ public class ListApprovalSchemasResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The policy type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DomainBlacklist</strong>: Domain blacklist.</p>
+         * </li>
+         * <li><p><strong>DomainWhitelist</strong>: Domain whitelist.</p>
+         * </li>
+         * <li><p><strong>SoftwareBlock</strong>: Software disable.</p>
+         * </li>
+         * <li><p><strong>AppUninstall</strong>: Terminal uninstall.</p>
+         * </li>
+         * <li><p><strong>DlpSend</strong>: File outbound.</p>
+         * </li>
+         * <li><p><strong>PeripheralBlock</strong>: Peripheral control.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -76,6 +109,8 @@ public class ListApprovalSchemasResponseBody extends TeaModel {
         public String policyType;
 
         /**
+         * <p>The content of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</p>
          */
@@ -83,16 +118,26 @@ public class ListApprovalSchemasResponseBody extends TeaModel {
         public String schemaContent;
 
         /**
+         * <p>The approval template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
         @NameInMap("SchemaId")
         public String schemaId;
 
+        /**
+         * <p>The approval template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
+         * <p>The approval template version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715680940</p>
          */

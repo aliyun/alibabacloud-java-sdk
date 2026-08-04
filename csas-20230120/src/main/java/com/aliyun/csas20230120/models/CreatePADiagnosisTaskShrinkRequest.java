@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the terminal device.</p>
+     * 
      * <strong>example:</strong>
      * <p>2987b3e0-8108-2f99-4d18-3b4f1c1c36d7</p>
      */
@@ -12,6 +14,11 @@ public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     public String devTag;
 
     /**
+     * <p>The diagnosis type. Valid values:</p>
+     * <ul>
+     * <li><strong>FullLink</strong>: full-link diagnosis.</li>
+     * <li><strong>Application</strong>: application diagnosis.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     public String diagnoseType;
 
     /**
+     * <p>The address to diagnose.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,8 @@ public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     public String host;
 
     /**
+     * <p>The POP point ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pop-3e244b62357dcafc</p>
      */
@@ -37,6 +47,11 @@ public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     public String popId;
 
     /**
+     * <p>The POP point selection mode. Valid values:</p>
+     * <ul>
+     * <li><strong>AutoSelect</strong>: automatic selection.</li>
+     * <li><strong>ManualSelect</strong>: manual selection.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +61,7 @@ public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     public String popMode;
 
     /**
+     * <p>The port.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +71,11 @@ public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The protocol used by the internal network access application. Valid values:</p>
+     * <ul>
+     * <li><strong>TCP</strong></li>
+     * <li><strong>UDP</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,13 +84,24 @@ public class CreatePADiagnosisTaskShrinkRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The extra configurations for UDP diagnosis. If this parameter is not specified, any response received is considered a success.</p>
+     */
     @NameInMap("UdpExtraConfigs")
     public String udpExtraConfigsShrink;
 
+    /**
+     * <p>The user group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户组ID。</p>
+     */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>Zhaosi</p>
      */

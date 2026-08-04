@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateUserDevicesStatusRequest extends TeaModel {
     /**
+     * <p>The action to perform on the endpoint device status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Locked</strong>: Lock the device.</p>
+     * </li>
+     * <li><p><strong>Lost</strong>: Report the device as lost.</p>
+     * </li>
+     * <li><p><strong>Unbound</strong>: Detach the device. You can detach only offline or long-term offline devices.</p>
+     * </li>
+     * <li><p><strong>Unlocked</strong>: Unlock the device. You can unlock only locked devices.</p>
+     * </li>
+     * <li><p><strong>Found</strong>: Mark the device as found. You can mark only lost devices as found.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +27,7 @@ public class UpdateUserDevicesStatusRequest extends TeaModel {
     public String deviceAction;
 
     /**
+     * <p>A list of endpoint device IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeviceTags")

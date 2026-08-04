@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetWmExtractTaskResponseBody extends TeaModel {
+    /**
+     * <p>The task result.</p>
+     */
     @NameInMap("Data")
     public GetWmExtractTaskResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */
@@ -37,6 +42,8 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
 
     public static class GetWmExtractTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01 11:22:33</p>
          */
@@ -44,6 +51,8 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The name of the file that was provided when the extraction task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-****.pdf</p>
          */
@@ -51,6 +60,16 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         public String filename;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Running</strong>: The task is running.</p>
+         * </li>
+         * <li><p><strong>Success</strong>: The task is successful.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: The task failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -58,6 +77,8 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>wmt-9648c22d2eb2cb57bb855dcae7898464********</p>
          */
@@ -65,6 +86,8 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The extracted watermark information as a Base64-encoded string.</p>
+         * 
          * <strong>example:</strong>
          * <p>aGVsbG8gc2Fz****</p>
          */
@@ -72,6 +95,8 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         public String wmInfoBytesB64;
 
         /**
+         * <p>The size of the watermark information, which was provided when the extraction task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -79,6 +104,8 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         public Long wmInfoSize;
 
         /**
+         * <p>The extracted watermark information in decimal format.</p>
+         * 
          * <strong>example:</strong>
          * <p>123**</p>
          */
@@ -86,6 +113,8 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         public Long wmInfoUint;
 
         /**
+         * <p>The watermark type that was provided when the extraction task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>PureDocument</p>
          */

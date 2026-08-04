@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsForRegistrationPolicyRequest extends TeaModel {
     /**
+     * <p>A collection of device registration policy IDs. You can specify up to 100 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyIds")

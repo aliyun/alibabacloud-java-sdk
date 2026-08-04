@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteOtpConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>54A4055A-343D-583E-9EAC-D12231148A68</p>
      */

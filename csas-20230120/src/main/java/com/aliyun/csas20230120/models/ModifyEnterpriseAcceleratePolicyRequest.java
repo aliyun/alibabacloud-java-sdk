@@ -5,26 +5,53 @@ import com.aliyun.tea.*;
 
 public class ModifyEnterpriseAcceleratePolicyRequest extends TeaModel {
     /**
+     * <p>The acceleration mode:</p>
+     * <ul>
+     * <li><strong>whiltelist</strong>: whitelist acceleration</li>
+     * <li><strong>global</strong>: global acceleration</li>
+     * <li><strong>build-in-list</strong>: built-in system application acceleration</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>whiltelist</p>
+     * <p>whitelist</p>
      */
     @NameInMap("AccelerationType")
     public String accelerationType;
 
+    /**
+     * <p>The description of the enterprise acceleration policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一条内网访问策略</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the enterprise acceleration policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>eap-ce153a7165c8feea</p>
      */
     @NameInMap("EapId")
     public String eapId;
 
+    /**
+     * <p>The name of the enterprise acceleration policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>白名单策略001</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Specifies whether to enable TLS mode:</p>
+     * <ul>
+     * <li><strong>0</strong>: disable</li>
+     * <li><strong>1</strong>: enable</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -32,13 +59,21 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends TeaModel {
     public Integer onTls;
 
     /**
+     * <p>The priority.</p>
+     * 
      * <strong>example:</strong>
-     * <p>999</p>
+     * <p>49</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
+     * <p>Specifies whether to display on the client:</p>
+     * <ul>
+     * <li><strong>0</strong>: do not display</li>
+     * <li><strong>1</strong>: display</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -46,6 +81,7 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends TeaModel {
     public Integer showInClient;
 
     /**
+     * <p>The address (IP or domain name) of the acceleration instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +91,7 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends TeaModel {
     public String upstreamHost;
 
     /**
+     * <p>The port of the acceleration instance (between 1000 and 60000).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +101,7 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends TeaModel {
     public Integer upstreamPort;
 
     /**
+     * <p>The acceleration instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +111,11 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends TeaModel {
     public String upstreamType;
 
     /**
+     * <p>The acceleration user group.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试用户组</p>
      */
     @NameInMap("UserAttributeGroup")
     public String userAttributeGroup;

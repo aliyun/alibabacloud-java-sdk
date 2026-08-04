@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApprovalRequest extends TeaModel {
     /**
+     * <p>The ID of the approval instance. You can obtain the ID from the following sources:</p>
+     * <ul>
+     * <li><p><a href="~~ListApprovals~~">ListApprovals</a>: Queries a list of approval instances.</p>
+     * </li>
+     * <li><p><a href="~~GetApproval~~">GetApproval</a>: Queries the details of an approval instance.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

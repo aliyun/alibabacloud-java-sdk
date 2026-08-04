@@ -5,19 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListEnterpriseAccelerateLogsRequest extends TeaModel {
     /**
+     * <p>The current page number displayed during paged queries. Value range: 1 to 10000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Department.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试部</p>
+     */
     @NameInMap("Department")
     public String department;
 
+    /**
+     * <p>Endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jfrog.cea.vwah.vwgroup.com</p>
+     */
     @NameInMap("DstAddr")
     public String dstAddr;
 
     /**
+     * <p>End time, UNIX timestamp, in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,16 +42,31 @@ public class ListEnterpriseAccelerateLogsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The number of items per page for paged queries. Value range: 1 to 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Query mode. Only the DstAddr field supports the following modes:</p>
+     * <ul>
+     * <li><p><strong>Exact</strong>: Term query</p>
+     * </li>
+     * <li><p><strong>Fuzzy</strong>: Fuzzy query</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Exact</p>
+     */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
+     * <p>Start time, UNIX timestamp, in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +75,12 @@ public class ListEnterpriseAccelerateLogsRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>Username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("Username")
     public String username;
 

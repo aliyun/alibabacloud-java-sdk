@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmEmbedTaskResponseBody extends TeaModel {
+    /**
+     * <p>Job information.</p>
+     */
     @NameInMap("Data")
     public CreateWmEmbedTaskResponseBodyData data;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
      */
@@ -37,6 +42,8 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
 
     public static class CreateWmEmbedTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The Job ID, used for subsequent queries of task execution results.</p>
+         * 
          * <strong>example:</strong>
          * <p>job:5GfrJYsoaffmCE7Z5bZtjUefzxfd****</p>
          */

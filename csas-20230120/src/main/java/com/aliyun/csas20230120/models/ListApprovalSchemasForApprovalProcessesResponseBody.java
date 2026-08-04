@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaModel {
+    /**
+     * <p>A list of approval processes.</p>
+     */
     @NameInMap("Processes")
     public java.util.List<ListApprovalSchemasForApprovalProcessesResponseBodyProcesses> processes;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
      */
@@ -37,16 +42,26 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
 
     public static class ListApprovalSchemasForApprovalProcessesResponseBodyProcessesSchemas extends TeaModel {
         /**
+         * <p>The time when the approval template was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-15 14:44:07</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个模板</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the template is maintained by Alibaba Cloud.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -54,6 +69,22 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
         public Boolean isDefault;
 
         /**
+         * <p>The policy type that the template applies to. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DomainBlacklist</strong>: Domain blacklist.</p>
+         * </li>
+         * <li><p><strong>DomainWhitelist</strong>: Domain whitelist.</p>
+         * </li>
+         * <li><p><strong>SoftwareBlock</strong>: Software disable.</p>
+         * </li>
+         * <li><p><strong>AppUninstall</strong>: Application uninstall.</p>
+         * </li>
+         * <li><p><strong>DlpSend</strong>: File transfer.</p>
+         * </li>
+         * <li><p><strong>PeripheralBlock</strong>: Peripheral control.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -61,6 +92,8 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
         public String policyType;
 
         /**
+         * <p>The content of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</p>
          */
@@ -68,16 +101,26 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
         public String schemaContent;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
         @NameInMap("SchemaId")
         public String schemaId;
 
+        /**
+         * <p>The name of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
+         * <p>The version of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715680940</p>
          */
@@ -157,12 +200,17 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
 
     public static class ListApprovalSchemasForApprovalProcessesResponseBodyProcesses extends TeaModel {
         /**
+         * <p>The ID of the approval process.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-process-35ee09077ee9****</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>A list of approval templates.</p>
+         */
         @NameInMap("Schemas")
         public java.util.List<ListApprovalSchemasForApprovalProcessesResponseBodyProcessesSchemas> schemas;
 

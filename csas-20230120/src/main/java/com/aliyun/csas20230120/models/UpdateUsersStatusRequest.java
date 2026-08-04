@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateUsersStatusRequest extends TeaModel {
     /**
+     * <p>Collection of user IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SaseUserIds")
     public java.util.List<String> saseUserIds;
 
     /**
+     * <p>User status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong>: Enable the user.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: Disable the user.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

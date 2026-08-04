@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreatePADiagnosisTaskResponseBody extends TeaModel {
+    /**
+     * <p>The diagnostic task.</p>
+     */
     @NameInMap("DiagnosisTask")
     public CreatePADiagnosisTaskResponseBodyDiagnosisTask diagnosisTask;
 
@@ -39,6 +42,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
 
     public static class CreatePADiagnosisTaskResponseBodyDiagnosisTaskUdpExtraConfigs extends TeaModel {
         /**
+         * <p>The expected response from the backend server.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -46,6 +51,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String expectedResponse;
 
         /**
+         * <p>The UDP request content.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -77,6 +84,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
 
     public static class CreatePADiagnosisTaskResponseBodyDiagnosisTaskUserGroup extends TeaModel {
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ug-xxxxxxxx</p>
          */
@@ -84,6 +93,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String userGroupId;
 
         /**
+         * <p>The user group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>IT</p>
          */
@@ -115,6 +126,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
 
     public static class CreatePADiagnosisTaskResponseBodyDiagnosisTask extends TeaModel {
         /**
+         * <p>The ID of the terminal device.</p>
+         * 
          * <strong>example:</strong>
          * <p>E9EE1CE7-4AA0-521D-B8E1-E13E47F05E94</p>
          */
@@ -122,6 +135,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String devTag;
 
         /**
+         * <p>The diagnostic task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>diag-3e0d36d6c15a0502</p>
          */
@@ -129,6 +144,12 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String diagnoseId;
 
         /**
+         * <p>The diagnosis type. Valid values:</p>
+         * <ul>
+         * <li>FullLink: full-link diagnosis.</li>
+         * <li>Application: application diagnosis.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FullLink</p>
          */
@@ -136,6 +157,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String diagnoseType;
 
         /**
+         * <p>The address to diagnose.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.6.1</p>
          */
@@ -143,6 +166,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The POP point ID. This parameter is required when manual selection is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>pop-8ded63ce9d3d317e</p>
          */
@@ -150,6 +175,12 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String popId;
 
         /**
+         * <p>The POP point selection mode. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoSelect</strong>: automatic selection.</li>
+         * <li><strong>ManualSelect</strong>: manual selection.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AutoSelect</p>
          */
@@ -157,6 +188,8 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String popMode;
 
         /**
+         * <p>The port.</p>
+         * 
          * <strong>example:</strong>
          * <p>443</p>
          */
@@ -164,6 +197,12 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String port;
 
         /**
+         * <p>The protocol used by the internal network access application. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -171,19 +210,34 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The task running status. Valid values:</p>
+         * <ul>
+         * <li><strong>Running</strong>: The task is running.</li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Disabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The extra information for UDP diagnosis.</p>
+         */
         @NameInMap("UdpExtraConfigs")
         public CreatePADiagnosisTaskResponseBodyDiagnosisTaskUdpExtraConfigs udpExtraConfigs;
 
+        /**
+         * <p>The user group.</p>
+         */
         @NameInMap("UserGroup")
         public CreatePADiagnosisTaskResponseBodyDiagnosisTaskUserGroup userGroup;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */

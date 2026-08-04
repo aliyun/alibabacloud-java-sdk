@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIdpDepartmentRequest extends TeaModel {
     /**
+     * <p>The department ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class UpdateIdpDepartmentRequest extends TeaModel {
     public String departmentId;
 
     /**
+     * <p>The department name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例部门</p>
      */
     @NameInMap("DepartmentName")
     public String departmentName;
 
     /**
+     * <p>The ID of the custom identity source configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

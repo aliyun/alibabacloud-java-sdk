@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AttachApplication2ConnectorResponseBody extends TeaModel {
     /**
+     * <p>The ID of the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of user groups.</p>
+     */
     @NameInMap("UserGroups")
     public java.util.List<ListRegistrationPoliciesForUserGroupResponseBodyUserGroups> userGroups;
 
@@ -37,6 +42,8 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
 
     public static class ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetailLimitCount extends TeaModel {
         /**
+         * <p>The total number of allowed device registrations. This field is valid only when LimitType is set to <strong>LimitAll</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -44,6 +51,8 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         public String all;
 
         /**
+         * <p>The number of allowed mobile logons. This field is valid only when LimitType is set to <strong>LimitDiff</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +60,8 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         public String mobile;
 
         /**
+         * <p>The number of allowed PC logons. This field is valid only when LimitType is set to <strong>LimitDiff</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -90,16 +101,37 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
 
     public static class ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetail extends TeaModel {
         /**
+         * <p>Device ownership. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Company</strong>: Company-owned device.</p>
+         * </li>
+         * <li><p><strong>Personal</strong>: Personal device.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Company</p>
          */
         @NameInMap("DeviceBelong")
         public String deviceBelong;
 
+        /**
+         * <p>The number of allowed device registrations.</p>
+         */
         @NameInMap("LimitCount")
         public ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetailLimitCount limitCount;
 
         /**
+         * <p>The device registration limit type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Unlimited</strong>: No limit.</p>
+         * </li>
+         * <li><p><strong>LimitAll</strong>: Limit by total count.</p>
+         * </li>
+         * <li><p><strong>LimitDiff</strong>: Limit by device category.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LimitAll</p>
          */
@@ -139,19 +171,38 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
 
     public static class ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPolicies extends TeaModel {
         /**
+         * <p>The time when the device registration policy was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-16 17:18:46</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the device registration policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条设备注册策略。</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The list of device registration policy limit details.</p>
+         */
         @NameInMap("LimitDetail")
         public java.util.List<ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPoliciesLimitDetail> limitDetail;
 
         /**
+         * <p>The target type for policy matching. Valid values:</p>
+         * <ul>
+         * <li><p><strong>UserGroupAll</strong>: Associate with all users.</p>
+         * </li>
+         * <li><p><strong>UserGroupNormal</strong>: Associate with specific user groups.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UserGroupNormal</p>
          */
@@ -159,6 +210,8 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         public String matchMode;
 
         /**
+         * <p>The name of the device registration policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>registration_policy_name</p>
          */
@@ -166,6 +219,8 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the device registration policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>reg-policy-dcbfd33cb004****</p>
          */
@@ -173,6 +228,8 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>The policy priority. The number 0 indicates the highest priority. The number 99 indicates the lowest priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -180,12 +237,23 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         public Long priority;
 
         /**
+         * <p>The status of the device registration policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of users on the device registration policy whitelist.</p>
+         */
         @NameInMap("Whitelist")
         public java.util.List<String> whitelist;
 
@@ -269,10 +337,15 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListRegistrationPoliciesForUserGroupResponseBodyUserGroups extends TeaModel {
+        /**
+         * <p>The collection of device registration policies.</p>
+         */
         @NameInMap("Policies")
         public java.util.List<ListRegistrationPoliciesForUserGroupResponseBodyUserGroupsPolicies> policies;
 
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>usergroup-6f1ef2fc56b6****</p>
          */

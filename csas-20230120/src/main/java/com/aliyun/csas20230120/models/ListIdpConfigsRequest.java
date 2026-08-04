@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIdpConfigsRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListIdpConfigsRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>Specified IdP configuration types. Separate multiple types with a comma (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>CSAS,DingTalk,LDAP</p>
      */
@@ -19,6 +23,8 @@ public class ListIdpConfigsRequest extends TeaModel {
     public String include;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

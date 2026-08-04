@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserDevicesResponseBody extends TeaModel {
+    /**
+     * <p>The list of endpoint devices.</p>
+     */
     @NameInMap("Devices")
     public java.util.List<ListUserDevicesResponseBodyDevices> devices;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
      */
@@ -15,6 +20,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of endpoint devices.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,9 +58,21 @@ public class ListUserDevicesResponseBody extends TeaModel {
     }
 
     public static class ListUserDevicesResponseBodyDevicesNetInterfaceInfo extends TeaModel {
+        /**
+         * <p>The MAC address of the network interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:XX:XX:7c:46</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>The name of the network interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -82,6 +101,12 @@ public class ListUserDevicesResponseBody extends TeaModel {
 
     public static class ListUserDevicesResponseBodyDevices extends TeaModel {
         /**
+         * <p>The client status. Valid values:</p>
+         * <ul>
+         * <li><strong>Online</strong>: online.</li>
+         * <li><strong>Offline</strong>: offline.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -89,16 +114,26 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String appStatus;
 
         /**
+         * <p>The client version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.2.0</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>The auto-logon status of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("AutoLoginStatus")
         public String autoLoginStatus;
 
         /**
+         * <p>The CPU model of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>Apple M1</p>
          */
@@ -109,6 +144,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String city;
 
         /**
+         * <p>The city name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing City</p>
          */
@@ -116,6 +153,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String cityEn;
 
         /**
+         * <p>The city name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京市</p>
          */
@@ -126,6 +165,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String continent;
 
         /**
+         * <p>The continent name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia</p>
          */
@@ -133,6 +174,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String continentEn;
 
         /**
+         * <p>The continent name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>亚洲</p>
          */
@@ -143,6 +186,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String country;
 
         /**
+         * <p>The country name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>China</p>
          */
@@ -150,6 +195,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String countryEn;
 
         /**
+         * <p>The country name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>中国</p>
          */
@@ -157,16 +204,30 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String countryZh;
 
         /**
+         * <p>The registration time of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-17 18:46:55</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The department to which the user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
+         */
         @NameInMap("Department")
         public String department;
 
         /**
+         * <p>The ownership of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>Personal</strong>: personal device.</li>
+         * <li><strong>Company</strong>: company device.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Company</p>
          */
@@ -174,6 +235,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String deviceBelong;
 
         /**
+         * <p>The model of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>MacBookPro17,1</p>
          */
@@ -181,6 +244,16 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String deviceModel;
 
         /**
+         * <p>The status of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>Online</strong>: online.</li>
+         * <li><strong>Offline</strong>: offline.</li>
+         * <li><strong>LongTermOffline</strong>: long-term offline.</li>
+         * <li><strong>Locked</strong>: locked.</li>
+         * <li><strong>Lost</strong>: reported as lost.</li>
+         * <li><strong>Unbound</strong>: unbound.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -188,6 +261,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String deviceStatus;
 
         /**
+         * <p>The endpoint device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
@@ -195,6 +270,16 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String deviceTag;
 
         /**
+         * <p>The operating system type of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>Windows</strong>: Windows.</li>
+         * <li><strong>macOS</strong>: macOS.</li>
+         * <li><strong>Linux</strong>: Linux.</li>
+         * <li><strong>Android</strong>: Android.</li>
+         * <li><strong>iOS</strong>: iOS.</li>
+         * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -202,6 +287,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String deviceType;
 
         /**
+         * <p>The operating system version of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.5.1</p>
          */
@@ -209,6 +296,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String deviceVersion;
 
         /**
+         * <p>The disk model of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>APPLE SSD AP0512Q Media</p>
          */
@@ -216,19 +305,42 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String disk;
 
         /**
+         * <p>The office data protection status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Unprovisioned</strong>: not configured.</li>
+         * <li><strong>Unauthorized</strong>: unauthorized.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("DlpStatus")
         public String dlpStatus;
 
+        /**
+         * <p>The anti-intrusion status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("EdrStatus")
         public String edrStatus;
 
+        /**
+         * <p>The list of full department paths.</p>
+         */
         @NameInMap("FullDepartment")
         public java.util.List<String> fullDepartment;
 
         /**
+         * <p>The name of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
          */
@@ -236,6 +348,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The Internet access status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Unprovisioned</strong>: not configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -243,26 +362,41 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String iaStatus;
 
         /**
+         * <p>The internal IP address of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
          */
         @NameInMap("InnerIP")
         public String innerIP;
 
+        /**
+         * <p>Indicates whether the device is joined to an Active Directory (AD) domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("JoinAdDomain")
         public Boolean joinAdDomain;
 
         /**
+         * <p>The MAC address of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
          */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>The collection of matched device group IDs.</p>
+         */
         @NameInMap("MatchDeviceGroupIds")
         public java.util.List<String> matchDeviceGroupIds;
 
         /**
+         * <p>The memory capacity of the endpoint device. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -270,16 +404,33 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The network access control status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Unprovisioned</strong>: not configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("NacStatus")
         public String nacStatus;
 
+        /**
+         * <p>The list of network interfaces of the endpoint device.</p>
+         */
         @NameInMap("NetInterfaceInfo")
         public java.util.List<ListUserDevicesResponseBodyDevicesNetInterfaceInfo> netInterfaceInfo;
 
         /**
+         * <p>The private access status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * <li><strong>Unprovisioned</strong>: not configured.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -290,6 +441,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String province;
 
         /**
+         * <p>The province name in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing</p>
          */
@@ -297,6 +450,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String provinceEn;
 
         /**
+         * <p>The province name in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京市</p>
          */
@@ -304,6 +459,8 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String provinceZh;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
@@ -311,28 +468,66 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
+         * <p>Specifies whether sharing is enabled for the device. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Sharing is enabled.</li>
+         * <li><strong>false</strong>: Sharing is disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("SharingStatus")
         public Boolean sharingStatus;
 
+        /**
+         * <p>The motherboard serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PJGGU00WBD****</p>
+         */
         @NameInMap("SnBaseBoard")
         public String snBaseBoard;
 
+        /**
+         * <p>The BIOS system serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CG003****</p>
+         */
         @NameInMap("SnBios")
         public String snBios;
 
+        /**
+         * <p>The hard disk serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD-WXR1A99A****</p>
+         */
         @NameInMap("SnDiskDrive")
         public String snDiskDrive;
 
+        /**
+         * <p>The processor serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFEBFBFF0008****</p>
+         */
         @NameInMap("SnProcessor")
         public String snProcessor;
 
+        /**
+         * <p>The system serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KVN9C9****</p>
+         */
         @NameInMap("SnSystem")
         public String snSystem;
 
         /**
+         * <p>The logon IP address of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>11.49.XX.XX</p>
          */
@@ -340,15 +535,29 @@ public class ListUserDevicesResponseBody extends TeaModel {
         public String srcIP;
 
         /**
+         * <p>The last online time of the endpoint device.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-24 19:04:42</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
+         */
         @NameInMap("Username")
         public String username;
 
+        /**
+         * <p>The name of the office area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试办公区</p>
+         */
         @NameInMap("Workshop")
         public String workshop;
 

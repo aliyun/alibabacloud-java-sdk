@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class LookupWmInfoMappingResponseBody extends TeaModel {
+    /**
+     * <p>Query result of the mapping.</p>
+     */
     @NameInMap("Data")
     public LookupWmInfoMappingResponseBodyData data;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
      */
@@ -37,6 +42,11 @@ public class LookupWmInfoMappingResponseBody extends TeaModel {
 
     public static class LookupWmInfoMappingResponseBodyData extends TeaModel {
         /**
+         * <p>String-formatted watermark information obtained from the mapping lookup. Value source:</p>
+         * <ul>
+         * <li><a href="~~CreateWmInfoMapping~~">CreateWmInfoMapping</a>: The <strong>WmInfoBytesB64</strong> parameter from the CreateWmInfoMapping API.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>aGVsbG8gc2F*****</p>
          */

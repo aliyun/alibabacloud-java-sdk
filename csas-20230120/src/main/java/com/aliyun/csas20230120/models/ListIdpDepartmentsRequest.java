@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIdpDepartmentsRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,15 +14,18 @@ public class ListIdpDepartmentsRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The ID of the custom IdP configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1440</p>
+     * <p>idp-cfg68956d86e********</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

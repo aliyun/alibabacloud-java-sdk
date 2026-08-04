@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsForPrivateAccessTagRequest extends TeaModel {
     /**
+     * <p>A collection of private network access tag IDs. You can specify up to 100 tag IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TagIds")

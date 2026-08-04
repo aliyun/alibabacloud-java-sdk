@@ -4,10 +4,21 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateUninstallApplicationsStatusRequest extends TeaModel {
+    /**
+     * <p>List of uninstall request IDs.</p>
+     */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
+     * <p>Status of the uninstall request. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Approved</strong>: Approved.</p>
+     * </li>
+     * <li><p><strong>Rejected</strong>: Rejected.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Approved</p>
      */

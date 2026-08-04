@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateClientUserPasswordRequest extends TeaModel {
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1128</p>
      */
@@ -12,12 +14,20 @@ public class UpdateClientUserPasswordRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The password. If this parameter is left empty, a random password is automatically generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>kehudiyidj</p>
      */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("Username")
     public String username;
 

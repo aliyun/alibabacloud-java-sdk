@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeletePrivateAccessPolicyRequest extends TeaModel {
     /**
+     * <p>The ID of the private network access policy. Obtain this ID from:</p>
+     * <ul>
+     * <li><p><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Batch query private network access policies.</p>
+     * </li>
+     * <li><p><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create a private network access policy.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

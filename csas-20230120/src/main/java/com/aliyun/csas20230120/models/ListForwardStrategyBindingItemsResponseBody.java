@@ -4,10 +4,19 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
+    /**
+     * <p>The list of forwarding rule bindings.</p>
+     */
     @NameInMap("ForwardStrategyBindingItemsList")
     public java.util.List<ListForwardStrategyBindingItemsResponseBodyForwardStrategyBindingItemsList> forwardStrategyBindingItemsList;
 
     /**
+     * <p>The binding item type. Valid values:</p>
+     * <ul>
+     * <li><strong>Application</strong>: internal-facing application</li>
+     * <li><strong>UserGroup</strong>: user group.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Application</p>
      */
@@ -54,6 +63,8 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
 
     public static class ListForwardStrategyBindingItemsResponseBodyForwardStrategyBindingItemsListItems extends TeaModel {
         /**
+         * <p>The ID of the internal-facing application.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-104b6b97b7f0c5d9</p>
          */
@@ -61,6 +72,8 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
+         * <p>The name of the internal-facing application.</p>
+         * 
          * <strong>example:</strong>
          * <p>437008</p>
          */
@@ -68,6 +81,8 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
+         * <p>The internal-facing tag ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag-4c8b988bb0ffdfb3</p>
          */
@@ -75,6 +90,8 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>nieshirui.nsr</p>
          */
@@ -82,6 +99,8 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
         public String tagName;
 
         /**
+         * <p>The user group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ug-xxxxxx</p>
          */
@@ -89,6 +108,8 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
         public String userGroupId;
 
         /**
+         * <p>The user group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaaaa</p>
          */
@@ -152,16 +173,30 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
 
     public static class ListForwardStrategyBindingItemsResponseBodyForwardStrategyBindingItemsList extends TeaModel {
         /**
+         * <p>The forwarding rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>fs-41a7891ff6568421</p>
          */
         @NameInMap("ForwardId")
         public String forwardId;
 
+        /**
+         * <p>The binding items.</p>
+         */
         @NameInMap("Items")
         public java.util.List<ListForwardStrategyBindingItemsResponseBodyForwardStrategyBindingItemsListItems> items;
 
         /**
+         * <p>The policy matching target type. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: all users.</li>
+         * <li><strong>UserGroupNormal</strong>: specific user groups.</li>
+         * <li><strong>ApplicationAll</strong>: all internal-facing applications.</li>
+         * <li><strong>Application</strong>: specific internal-facing applications.</li>
+         * <li><strong>Tag</strong>: internal-facing application tags.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UserGroupAll</p>
          */

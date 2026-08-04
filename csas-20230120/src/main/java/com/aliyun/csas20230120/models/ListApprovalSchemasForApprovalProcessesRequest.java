@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApprovalSchemasForApprovalProcessesRequest extends TeaModel {
     /**
+     * <p>A collection of approval process IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProcessIds")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsRequest extends TeaModel {
     /**
+     * <p>The value of a user group property. The value must be 1 to 128 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>username</p>
      */
@@ -12,6 +14,7 @@ public class ListUserGroupsRequest extends TeaModel {
     public String attributeValue;
 
     /**
+     * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,7 @@ public class ListUserGroupsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>用户组名称。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</p>
+     * <p>The name of the user group. The name must be 1 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It supports both uppercase and lowercase letters and Chinese characters.</p>
      * 
      * <strong>example:</strong>
      * <p>user_group_name</p>
@@ -30,6 +33,14 @@ public class ListUserGroupsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of an internal network access policy. You can get this value from:</p>
+     * <ul>
+     * <li><p><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: List internal network access policies.</p>
+     * </li>
+     * <li><p><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create an internal network access policy.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>pa-policy-54a7838a48bf****</p>
      */
@@ -37,6 +48,7 @@ public class ListUserGroupsRequest extends TeaModel {
     public String PAPolicyId;
 
     /**
+     * <p>The number of entries per page in a paged query. Valid values: 1 to 1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +57,9 @@ public class ListUserGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>A collection of user group IDs. You can specify up to 100 IDs.</p>
+     */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableEnterpriseAcceleratePolicyRequest extends TeaModel {
     /**
+     * <p>The ID of the enterprise acceleration policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

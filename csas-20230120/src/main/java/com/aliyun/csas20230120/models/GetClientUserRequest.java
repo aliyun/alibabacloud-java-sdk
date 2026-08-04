@@ -5,16 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetClientUserRequest extends TeaModel {
     /**
+     * <p>ID of the custom identity source configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>598</p>
+     * <p>idp-cfg68956d86e********</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;
 
     /**
+     * <p>Username.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
      */
     @NameInMap("Username")
     public String username;

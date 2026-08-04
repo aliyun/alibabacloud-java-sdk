@@ -4,30 +4,57 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class IdpIdaas2SubConfig extends TeaModel {
+    /**
+     * <p>The unique identifier of the application within the IDaaS instance.</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The client ID of the application registered with the identity provider.</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The client secret used to authenticate the application with the identity provider.</p>
+     */
     @NameInMap("ClientSecret")
     public String clientSecret;
 
+    /**
+     * <p>The AES encryption key for securing event data.</p>
+     */
     @NameInMap("EventAesKey")
     public String eventAesKey;
 
+    /**
+     * <p>A label that identifies the event subscription.</p>
+     */
     @NameInMap("EventLabel")
     public String eventLabel;
 
+    /**
+     * <p>The unique identifier of the IDaaS instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The URL of the endpoint providing the public key for token signature verification.</p>
+     */
     @NameInMap("PublicKeyEndpoint")
     public String publicKeyEndpoint;
 
+    /**
+     * <p>The deployment region of the IDaaS instance.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The SAML metadata in XML format. It specifies the identity provider\&quot;s configuration, including endpoints and certificates.</p>
+     */
     @NameInMap("SamlMetadata")
     public String samlMetadata;
 

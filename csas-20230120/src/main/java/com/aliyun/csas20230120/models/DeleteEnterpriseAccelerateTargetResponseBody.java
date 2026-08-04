@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEnterpriseAccelerateTargetResponseBody extends TeaModel {
     /**
+     * <p>ID of the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>655CE28F-2C0C-5801-A31E-C16BF54BD225</p>
      */

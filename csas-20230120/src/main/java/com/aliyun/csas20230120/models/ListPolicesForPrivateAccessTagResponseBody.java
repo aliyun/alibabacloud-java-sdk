@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of private network access tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListPolicesForPrivateAccessTagResponseBodyTags> tags;
 
@@ -37,7 +42,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
 
     public static class ListPolicesForPrivateAccessTagResponseBodyTagsPolicesCustomUserAttributes extends TeaModel {
         /**
-         * <p>用户组的身份源ID。当自定义用户组类型为<strong>department</strong>时，存在该值。</p>
+         * <p>The identity provider ID of the user group. This value exists if the custom user group type is <strong>department</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -46,10 +51,12 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public Integer idpId;
 
         /**
-         * <p>用户组的关系。取值：</p>
+         * <p>The relationship of the user group. Values:</p>
          * <ul>
-         * <li><strong>Equal</strong>：等于。</li>
-         * <li><strong>Unequal</strong>：不等于。</li>
+         * <li><p><strong>Equal</strong>: Equal.</p>
+         * </li>
+         * <li><p><strong>Unequal</strong>: Unequal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -59,12 +66,16 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String relation;
 
         /**
-         * <p>用户组的类型。取值：</p>
+         * <p>The type of user group. Values:</p>
          * <ul>
-         * <li><strong>username</strong>：用户名。</li>
-         * <li><strong>department</strong>：部门。</li>
-         * <li><strong>email</strong>：邮箱。</li>
-         * <li><strong>telephone</strong>：手机。</li>
+         * <li><p><strong>username</strong>: Username.</p>
+         * </li>
+         * <li><p><strong>department</strong>: Department.</p>
+         * </li>
+         * <li><p><strong>email</strong>: Mailbox.</p>
+         * </li>
+         * <li><p><strong>telephone</strong>: Mobile phone.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,12 +85,16 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String userGroupType;
 
         /**
-         * <p>用户组属性的值。</p>
+         * <p>The value of the user group attribute.</p>
          * <ul>
-         * <li>当用户组类型为<strong>username</strong>时，表示用户名的值。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</li>
-         * <li>当用户组类型为<strong>department</strong>时，表示部门的值。如：OU=部门1,OU=SASE钉钉。</li>
-         * <li>当用户组类型为<strong>email</strong>时，表示邮箱的值。如：<a href="mailto:username@example.com">username@example.com</a>。</li>
-         * <li>当用户组类型为<strong>telephone</strong>时，表示手机的值。如：13900001234。</li>
+         * <li><p>If the user group type is <strong>username</strong>, this indicates the username\&quot;s value. The length is 1 to 128 characters. It supports Chinese characters, uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>If the user group type is <strong>department</strong>, this indicates the department\&quot;s value. For example: OU=Department 1,OU=SASE DingTalk.</p>
+         * </li>
+         * <li><p>If the user group type is <strong>email</strong>, this indicates the mailbox\&quot;s value. For example: username\@example.com.</p>
+         * </li>
+         * <li><p>If the user group type is <strong>telephone</strong>, this indicates the mobile phone\&quot;s value. For example: 13900001234.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,6 +144,14 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
 
     public static class ListPolicesForPrivateAccessTagResponseBodyTagsPolices extends TeaModel {
         /**
+         * <p>The application type of the private network access policy. Values:</p>
+         * <ul>
+         * <li><p><strong>Application</strong>: Application.</p>
+         * </li>
+         * <li><p><strong>Tag</strong>: Tag.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Application</p>
          */
@@ -136,7 +159,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String applicationType;
 
         /**
-         * <p>内网访问策略创建时间。</p>
+         * <p>Creation time of the private network access policy.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-21 14:10:16</p>
@@ -145,15 +168,23 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>自定义用户组属性集合。多个自定义用户组属性之间是或的关系，按照合集生效。</p>
+         * <p>A collection of custom user group attributes. Multiple custom user group attributes have an OR relationship and take effect as a union.</p>
          */
         @NameInMap("CustomUserAttributes")
         public java.util.List<ListPolicesForPrivateAccessTagResponseBodyTagsPolicesCustomUserAttributes> customUserAttributes;
 
+        /**
+         * <p>Description of the private network access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条内网访问策略</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Private network access policy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_policy_name</p>
          */
@@ -161,6 +192,14 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The action that the private access policy performs. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Block</strong>: Blocks access.</p>
+         * </li>
+         * <li><p><strong>Allow</strong>: Allows access.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Allow</p>
          */
@@ -168,6 +207,8 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String policyAction;
 
         /**
+         * <p>Private network access policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-policy-867ef4007c8a****</p>
          */
@@ -175,6 +216,8 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>The private network access policy priority. The number 1 indicates the highest priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,6 +225,14 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The status of the private network access policy. Values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -189,6 +240,14 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The user group type of the private network access policy. Values:</p>
+         * <ul>
+         * <li><p><strong>Normal</strong>: Normal user group.</p>
+         * </li>
+         * <li><p><strong>Custom</strong>: Custom user group.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -283,10 +342,15 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
     }
 
     public static class ListPolicesForPrivateAccessTagResponseBodyTags extends TeaModel {
+        /**
+         * <p>Collection of private network access policies.</p>
+         */
         @NameInMap("Polices")
         public java.util.List<ListPolicesForPrivateAccessTagResponseBodyTagsPolices> polices;
 
         /**
+         * <p>Private network access tag ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag-b927baf3e592****</p>
          */

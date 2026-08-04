@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnterpriseAccelerateTargetsResponseBody extends TeaModel {
     /**
+     * <p>Enterprise Acceleration Policy ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>eap-7fed37a757a0de24</p>
      */
@@ -12,16 +14,23 @@ public class ListEnterpriseAccelerateTargetsResponseBody extends TeaModel {
     public String eapId;
 
     /**
+     * <p>ID of the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>529F755E-2E75-52EC-9C2E-6293FB8BF986</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of enterprise acceleration targets.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<String> targets;
 
     /**
+     * <p>The total number of addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>103</p>
      */

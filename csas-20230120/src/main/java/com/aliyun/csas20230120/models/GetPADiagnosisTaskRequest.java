@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPADiagnosisTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the diagnostic task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

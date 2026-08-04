@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetApprovalSchemaResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The approval template.</p>
+     */
     @NameInMap("Schema")
     public GetApprovalSchemaResponseBodySchema schema;
 
@@ -37,16 +42,26 @@ public class GetApprovalSchemaResponseBody extends TeaModel {
 
     public static class GetApprovalSchemaResponseBodySchema extends TeaModel {
         /**
+         * <p>The time when the approval template was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-02-14 11:57:51</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个模板</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the template is an official template.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -54,6 +69,22 @@ public class GetApprovalSchemaResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The policy type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DomainBlacklist</strong>: Domain name blacklist.</p>
+         * </li>
+         * <li><p><strong>DomainWhitelist</strong>: Domain name whitelist.</p>
+         * </li>
+         * <li><p><strong>SoftwareBlock</strong>: Software blocking.</p>
+         * </li>
+         * <li><p><strong>AppUninstall</strong>: Application uninstallation.</p>
+         * </li>
+         * <li><p><strong>DlpSend</strong>: Outbound file transfer.</p>
+         * </li>
+         * <li><p><strong>PeripheralBlock</strong>: Peripheral control.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -61,6 +92,8 @@ public class GetApprovalSchemaResponseBody extends TeaModel {
         public String policyType;
 
         /**
+         * <p>The content of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</p>
          */
@@ -68,16 +101,26 @@ public class GetApprovalSchemaResponseBody extends TeaModel {
         public String schemaContent;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
         @NameInMap("SchemaId")
         public String schemaId;
 
+        /**
+         * <p>The name of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
+         * <p>The version of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715680940</p>
          */

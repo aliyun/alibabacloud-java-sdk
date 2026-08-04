@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
+    /**
+     * <p>The list of policies.</p>
+     */
     @NameInMap("Policies")
     public java.util.List<ListEnterpriseAcceleratePoliciesResponseBodyPolicies> policies;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>DB0471D0-C05C-556D-9F40-0325D890036F</p>
      */
@@ -15,6 +20,8 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of policies.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -52,16 +59,34 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
 
     public static class ListEnterpriseAcceleratePoliciesResponseBodyPolicies extends TeaModel {
         /**
+         * <p>The acceleration pattern.</p>
+         * <ul>
+         * <li><p><strong>whitelist</strong>: accelerates access to applications in the whitelist.</p>
+         * </li>
+         * <li><p><strong>global</strong>: accelerates access to all applications.</p>
+         * </li>
+         * <li><p><strong>build-in-list:</strong> accelerates access to built-in applications.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>whitelist</p>
          */
         @NameInMap("AccelerationType")
         public String accelerationType;
 
+        /**
+         * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条测试策略。</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>eap-eec34d4b12fcca61</p>
          */
@@ -69,6 +94,14 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public String eapId;
 
         /**
+         * <p>Indicates whether the policy is enabled.</p>
+         * <ul>
+         * <li><p><strong>1</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>0</strong>: disabled</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -76,6 +109,8 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public Integer enabled;
 
         /**
+         * <p>The policy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -83,6 +118,14 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether to enable Transport Layer Security (TLS).</p>
+         * <ul>
+         * <li><p><strong>0</strong>: disable</p>
+         * </li>
+         * <li><p><strong>1</strong>: enable</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -90,6 +133,8 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public Integer onTls;
 
         /**
+         * <p>The policy priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -97,6 +142,14 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>Indicates whether the policy is visible on the client.</p>
+         * <ul>
+         * <li><p><strong>0</strong>: not visible</p>
+         * </li>
+         * <li><p><strong>1</strong>: visible</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -104,6 +157,8 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public Integer showInClient;
 
         /**
+         * <p>The address of the acceleration instance. The address can be an IP address or a domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>12.34.56.XX</p>
          */
@@ -111,6 +166,8 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public String upstreamHost;
 
         /**
+         * <p>The port of the acceleration instance. The port must be between 1000 and 60000.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -118,12 +175,20 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         public Integer upstreamPort;
 
         /**
+         * <p>The acceleration instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector</p>
          */
         @NameInMap("UpstreamType")
         public String upstreamType;
 
+        /**
+         * <p>The user group for acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试用户组</p>
+         */
         @NameInMap("UserAttributeGroup")
         public String userAttributeGroup;
 

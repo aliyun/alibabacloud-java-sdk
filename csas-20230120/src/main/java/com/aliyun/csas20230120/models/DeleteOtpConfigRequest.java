@@ -4,6 +4,12 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DeleteOtpConfigRequest extends TeaModel {
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("Username")
     public String username;
 

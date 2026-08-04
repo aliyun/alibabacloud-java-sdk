@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRegistrationPoliciesRequest extends TeaModel {
     /**
+     * <p>A collection of device registration policy IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyIds")

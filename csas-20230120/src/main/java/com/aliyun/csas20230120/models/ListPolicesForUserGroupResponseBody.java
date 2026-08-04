@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListPolicesForUserGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5F04DFBD-3F48-5F70-AE72-474026670128</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of user groups.</p>
+     */
     @NameInMap("UserGroups")
     public java.util.List<ListPolicesForUserGroupResponseBodyUserGroups> userGroups;
 
@@ -37,6 +42,8 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
 
     public static class ListPolicesForUserGroupResponseBodyUserGroupsPolices extends TeaModel {
         /**
+         * <p>The name of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_policy_name</p>
          */
@@ -44,6 +51,8 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-policy-ce2bf7236fab****</p>
          */
@@ -51,6 +60,20 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>The policy type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>PrivateAccess</strong>: private network access.</p>
+         * </li>
+         * <li><p><strong>URLFilter</strong>: URL filtering.</p>
+         * </li>
+         * <li><p><strong>AppAccessControl</strong>: application control.</p>
+         * </li>
+         * <li><p><strong>DLP</strong>: Data Leakage Prevention.</p>
+         * </li>
+         * <li><p><strong>NAC</strong>: Network Access Control.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PrivateAccess</p>
          */
@@ -89,10 +112,15 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListPolicesForUserGroupResponseBodyUserGroups extends TeaModel {
+        /**
+         * <p>The policies.</p>
+         */
         @NameInMap("Polices")
         public java.util.List<ListPolicesForUserGroupResponseBodyUserGroupsPolices> polices;
 
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>usergroup-6f1ef2fc56b6****</p>
          */

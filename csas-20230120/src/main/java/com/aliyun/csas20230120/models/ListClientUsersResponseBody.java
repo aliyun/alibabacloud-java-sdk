@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListClientUsersResponseBody extends TeaModel {
+    /**
+     * <p>User information.</p>
+     */
     @NameInMap("Data")
     public ListClientUsersResponseBodyData data;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
      */
@@ -37,12 +42,20 @@ public class ListClientUsersResponseBody extends TeaModel {
 
     public static class ListClientUsersResponseBodyDataDataListDepartment extends TeaModel {
         /**
+         * <p>Department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>105</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例部门</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -70,20 +83,33 @@ public class ListClientUsersResponseBody extends TeaModel {
     }
 
     public static class ListClientUsersResponseBodyDataDataList extends TeaModel {
+        /**
+         * <p>Department to which the user belongs.</p>
+         */
         @NameInMap("Department")
         public ListClientUsersResponseBodyDataDataListDepartment department;
 
         /**
+         * <p>Department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10800</p>
          */
         @NameInMap("DepartmentId")
         public String departmentId;
 
+        /**
+         * <p>User description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例用户</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
          */
@@ -91,6 +117,8 @@ public class ListClientUsersResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1970</p>
          */
@@ -98,6 +126,8 @@ public class ListClientUsersResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Custom identity source configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1026</p>
          */
@@ -105,6 +135,8 @@ public class ListClientUsersResponseBody extends TeaModel {
         public String idpConfigId;
 
         /**
+         * <p>Mobile phone number without country code.</p>
+         * 
          * <strong>example:</strong>
          * <p>15800820468</p>
          */
@@ -112,6 +144,14 @@ public class ListClientUsersResponseBody extends TeaModel {
         public String mobileNumber;
 
         /**
+         * <p>User enable status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Disabled</p>
          */
@@ -119,12 +159,20 @@ public class ListClientUsersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Unique user identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_dead7216****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -216,10 +264,15 @@ public class ListClientUsersResponseBody extends TeaModel {
     }
 
     public static class ListClientUsersResponseBodyData extends TeaModel {
+        /**
+         * <p>List of user information.</p>
+         */
         @NameInMap("DataList")
         public java.util.List<ListClientUsersResponseBodyDataDataList> dataList;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
+    /**
+     * <p>Device list.</p>
+     */
     @NameInMap("Devices")
     public java.util.List<UpdateUserDevicesSharingStatusResponseBodyDevices> devices;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
      */
@@ -36,9 +41,21 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo extends TeaModel {
+        /**
+         * <p>NIC MAC address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:XX:XX:7c:46</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>NIC name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth0</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -67,6 +84,14 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
 
     public static class UpdateUserDevicesSharingStatusResponseBodyDevices extends TeaModel {
         /**
+         * <p>The client status. Values:</p>
+         * <ul>
+         * <li><p><strong>Online</strong>: Online.</p>
+         * </li>
+         * <li><p><strong>Offline</strong>: Offline.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -74,6 +99,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String appStatus;
 
         /**
+         * <p>Client version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.2.0</p>
          */
@@ -81,6 +108,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>Device CPU model.</p>
+         * 
          * <strong>example:</strong>
          * <p>Apple M1</p>
          */
@@ -88,16 +117,32 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String CPU;
 
         /**
+         * <p>Device registration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-16 17:18:46</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>User\&quot;s department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
+         */
         @NameInMap("Department")
         public String department;
 
         /**
+         * <p>Device ownership. Values:</p>
+         * <ul>
+         * <li><p><strong>Personal</strong>: Personal device.</p>
+         * </li>
+         * <li><p><strong>Company</strong>: Company device.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Company</p>
          */
@@ -105,6 +150,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String deviceBelong;
 
         /**
+         * <p>Device model.</p>
+         * 
          * <strong>example:</strong>
          * <p>MacBookPro17,1</p>
          */
@@ -112,6 +159,22 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String deviceModel;
 
         /**
+         * <p>The status of the device. Values:</p>
+         * <ul>
+         * <li><p><strong>Online</strong>: Online.</p>
+         * </li>
+         * <li><p><strong>Offline</strong>: Offline.</p>
+         * </li>
+         * <li><p><strong>LongTermOffline</strong>: Long-term offline.</p>
+         * </li>
+         * <li><p><strong>Locked</strong>: Locked.</p>
+         * </li>
+         * <li><p><strong>Lost</strong>: Lost.</p>
+         * </li>
+         * <li><p><strong>Unbound</strong>: Unbound.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
@@ -119,6 +182,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String deviceStatus;
 
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
@@ -126,6 +191,22 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String deviceTag;
 
         /**
+         * <p>The operating system type of the device. Values:</p>
+         * <ul>
+         * <li><p><strong>Windows</strong>: Windows system.</p>
+         * </li>
+         * <li><p><strong>macOS</strong>: macOS system.</p>
+         * </li>
+         * <li><p><strong>Linux</strong>: Linux system.</p>
+         * </li>
+         * <li><p><strong>Android</strong>: Android system.</p>
+         * </li>
+         * <li><p><strong>iOS</strong>: iOS system.</p>
+         * </li>
+         * <li><p><strong>Windows_Wuying</strong>: Wuying Cloud Desktop system.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -133,6 +214,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String deviceType;
 
         /**
+         * <p>Device operating system version.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.5.1</p>
          */
@@ -140,6 +223,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String deviceVersion;
 
         /**
+         * <p>Device disk model.</p>
+         * 
          * <strong>example:</strong>
          * <p>APPLE SSD AP0512Q Media</p>
          */
@@ -147,6 +232,18 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String disk;
 
         /**
+         * <p>Data protection status. Values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>Unprovisioned</strong>: Unprovisioned.</p>
+         * </li>
+         * <li><p><strong>Unauthorized</strong>: Unauthorized.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -154,6 +251,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String dlpStatus;
 
         /**
+         * <p>Device name.</p>
+         * 
          * <strong>example:</strong>
          * <p>win10-64bit</p>
          */
@@ -161,6 +260,16 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Internet access status. Values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>Unprovisioned</strong>: Unprovisioned.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -168,6 +277,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String iaStatus;
 
         /**
+         * <p>Device private network IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
          */
@@ -175,6 +286,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String innerIP;
 
         /**
+         * <p>Device MAC address.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:16:XX:XX:7c:46</p>
          */
@@ -182,6 +295,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String mac;
 
         /**
+         * <p>Device memory capacity. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -189,16 +304,39 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>Network access control status. Values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>Unprovisioned</strong>: Unprovisioned.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("NacStatus")
         public String nacStatus;
 
+        /**
+         * <p>NIC list.</p>
+         */
         @NameInMap("NetInterfaceInfo")
         public java.util.List<UpdateUserDevicesSharingStatusResponseBodyDevicesNetInterfaceInfo> netInterfaceInfo;
 
         /**
+         * <p>Private network access status. Values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>Unprovisioned</strong>: Unprovisioned.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -206,6 +344,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String paStatus;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
@@ -213,6 +353,14 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
+         * <p>Indicates whether device sharing is enabled. Values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enable sharing.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable sharing.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -220,6 +368,8 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public Boolean sharingStatus;
 
         /**
+         * <p>Device logon IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>11.49.XX.XX</p>
          */
@@ -227,12 +377,20 @@ public class UpdateUserDevicesSharingStatusResponseBody extends TeaModel {
         public String srcIP;
 
         /**
+         * <p>Device last online time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-24 19:04:42</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
+         */
         @NameInMap("Username")
         public String username;
 

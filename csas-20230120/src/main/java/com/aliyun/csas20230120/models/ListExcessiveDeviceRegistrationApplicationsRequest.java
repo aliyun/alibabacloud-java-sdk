@@ -4,10 +4,14 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the excessive device registration applications.</p>
+     */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
+     * <p>The page number. Valid values: 1 to 10,000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +20,24 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>The user\&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试部</p>
+     */
     @NameInMap("Department")
     public String department;
 
     /**
+     * <p>The device ID. You can get the device ID from the <code>DeviceTag</code> parameter returned by the following operations:</p>
+     * <ul>
+     * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</p>
+     * </li>
+     * <li><p><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
      */
@@ -27,6 +45,8 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     public String deviceTag;
 
     /**
+     * <p>The hostname of the device. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you specify only an underscore (</em>), the query is extended to include devices whose hostnames contain 4-byte UTF-8 characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>win10-64bit</p>
      */
@@ -34,6 +54,8 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     public String hostname;
 
     /**
+     * <p>The MAC address of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>00:16:XX:XX:7c:46</p>
      */
@@ -41,6 +63,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     public String mac;
 
     /**
+     * <p>The number of entries on each page. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,15 +73,32 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends TeaModel
     public Long pageSize;
 
     /**
+     * <p>The user ID. You can get the user ID from the <code>SaseUserId</code> parameter returned by the following operations:</p>
+     * <ul>
+     * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</p>
+     * </li>
+     * <li><p><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
      */
     @NameInMap("SaseUserId")
     public String saseUserId;
 
+    /**
+     * <p>The statuses of excessive device registration applications.</p>
+     */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
+    /**
+     * <p>The username. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>王先生</p>
+     */
     @NameInMap("Username")
     public String username;
 

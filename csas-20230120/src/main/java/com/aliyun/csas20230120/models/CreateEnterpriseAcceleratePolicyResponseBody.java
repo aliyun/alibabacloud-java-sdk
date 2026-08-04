@@ -8,6 +8,8 @@ public class CreateEnterpriseAcceleratePolicyResponseBody extends TeaModel {
     public String eapId;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2CABFEBB-0CE7-575E-833A-266F75D46713</p>
      */

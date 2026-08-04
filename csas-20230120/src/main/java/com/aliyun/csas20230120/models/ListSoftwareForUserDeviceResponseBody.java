@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of software applications.</p>
+     */
     @NameInMap("Software")
     public java.util.List<ListSoftwareForUserDeviceResponseBodySoftware> software;
 
     /**
+     * <p>The total number of software applications.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,8 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
 
     public static class ListSoftwareForUserDeviceResponseBodySoftware extends TeaModel {
         /**
+         * <p>The publisher of the software.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba (China) Network Technology Co.,Ltd.</p>
          */
@@ -59,15 +68,26 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         public String inc;
 
         /**
+         * <p>The time when the software was installed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-18 02:43:02</p>
          */
         @NameInMap("InstallTime")
         public String installTime;
 
+        /**
+         * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>钉钉</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The versions of the software.</p>
+         */
         @NameInMap("Versions")
         public java.util.List<String> versions;
 

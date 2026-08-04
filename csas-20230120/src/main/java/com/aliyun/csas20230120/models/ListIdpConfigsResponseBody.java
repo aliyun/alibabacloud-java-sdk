@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListIdpConfigsResponseBody extends TeaModel {
+    /**
+     * <p>IdP configurations.</p>
+     */
     @NameInMap("Data")
     public ListIdpConfigsResponseBodyData data;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>FD724DBC-CD76-5235-BF76-59C51B73296D</p>
      */
@@ -36,10 +41,18 @@ public class ListIdpConfigsResponseBody extends TeaModel {
     }
 
     public static class ListIdpConfigsResponseBodyDataDataList extends TeaModel {
+        /**
+         * <p>IdP configuration description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>IdP configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>277</p>
          */
@@ -47,6 +60,8 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Multi-factor authentication (MFA) type.</p>
+         * 
          * <strong>example:</strong>
          * <p>totp</p>
          */
@@ -54,6 +69,8 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         public String mfa;
 
         /**
+         * <p>Mobile login type.</p>
+         * 
          * <strong>example:</strong>
          * <p>password</p>
          */
@@ -61,6 +78,8 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         public String mobileLoginType;
 
         /**
+         * <p>Mobile MFA configuration type.</p>
+         * 
          * <strong>example:</strong>
          * <p>password</p>
          */
@@ -68,16 +87,26 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         public String mobileMfaConfigType;
 
         /**
+         * <p>List of multiple IdP configuration IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1482,1355</p>
          */
         @NameInMap("MultiIdpInfo")
         public String multiIdpInfo;
 
+        /**
+         * <p>IdP configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例身份源</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>PC login type.</p>
+         * 
          * <strong>example:</strong>
          * <p>password</p>
          */
@@ -85,6 +114,14 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         public String pcLoginType;
 
         /**
+         * <p>IdP configuration enable status. Values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Disabled</p>
          */
@@ -92,6 +129,8 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>IdP configuration type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DingTalk</p>
          */
@@ -99,6 +138,8 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>Update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-09T02:22:41.430Z</p>
          */
@@ -201,10 +242,15 @@ public class ListIdpConfigsResponseBody extends TeaModel {
     }
 
     public static class ListIdpConfigsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of IdP configurations.</p>
+         */
         @NameInMap("DataList")
         public java.util.List<ListIdpConfigsResponseBodyDataDataList> dataList;
 
         /**
+         * <p>Total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

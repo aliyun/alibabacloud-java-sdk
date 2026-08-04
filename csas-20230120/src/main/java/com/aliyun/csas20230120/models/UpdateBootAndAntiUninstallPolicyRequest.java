@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
     /**
+     * <p>Let end users submit approval requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("AllowReport")
     public Boolean allowReport;
 
+    /**
+     * <p>Content shown in the client-side block dialog.</p>
+     */
     @NameInMap("BlockContent")
     public UpdateBootAndAntiUninstallPolicyRequestBlockContent blockContent;
 
     /**
+     * <p>Enable anti-uninstall.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,15 +29,23 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
     public Boolean isAntiUninstall;
 
     /**
+     * <p>Enable auto-start.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsBoot")
     public Boolean isBoot;
 
+    /**
+     * <p>List of user group IDs to which this policy applies.</p>
+     */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
+    /**
+     * <p>List of whitelisted users.</p>
+     */
     @NameInMap("WhitelistUsers")
     public java.util.List<String> whitelistUsers;
 
@@ -89,6 +104,8 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
 
     public static class UpdateBootAndAntiUninstallPolicyRequestBlockContentBlockTextEn extends TeaModel {
         /**
+         * <p>Dialog content.</p>
+         * 
          * <strong>example:</strong>
          * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
          */
@@ -96,6 +113,8 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>Main button text.</p>
+         * 
          * <strong>example:</strong>
          * <p>Report</p>
          */
@@ -103,6 +122,8 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
         public String mainButtonText;
 
         /**
+         * <p>Secondary button text.</p>
+         * 
          * <strong>example:</strong>
          * <p>Ignore</p>
          */
@@ -110,6 +131,8 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
         public String minorButtonText;
 
         /**
+         * <p>Dialog title.</p>
+         * 
          * <strong>example:</strong>
          * <p>Anti-Uninstall Warning</p>
          */
@@ -156,15 +179,39 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
     }
 
     public static class UpdateBootAndAntiUninstallPolicyRequestBlockContentBlockTextZh extends TeaModel {
+        /**
+         * <p>Dialog content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>卸载后该设备无法再用于公司办公，同时该设备将失去进入公司内网权限！</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Main button text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>去报备</p>
+         */
         @NameInMap("MainButtonText")
         public String mainButtonText;
 
+        /**
+         * <p>Secondary button text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我知道了</p>
+         */
         @NameInMap("MinorButtonText")
         public String minorButtonText;
 
+        /**
+         * <p>Dialog title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>防卸载警告</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -208,9 +255,15 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends TeaModel {
     }
 
     public static class UpdateBootAndAntiUninstallPolicyRequestBlockContent extends TeaModel {
+        /**
+         * <p>English text.</p>
+         */
         @NameInMap("BlockTextEn")
         public UpdateBootAndAntiUninstallPolicyRequestBlockContentBlockTextEn blockTextEn;
 
+        /**
+         * <p>Chinese text.</p>
+         */
         @NameInMap("BlockTextZh")
         public UpdateBootAndAntiUninstallPolicyRequestBlockContentBlockTextZh blockTextZh;
 

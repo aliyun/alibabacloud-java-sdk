@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListDynamicRoutesResponseBody extends TeaModel {
+    /**
+     * <p>The list of dynamic routes.</p>
+     */
     @NameInMap("DynamicRoutes")
     public java.util.List<ListDynamicRoutesResponseBodyDynamicRoutes> dynamicRoutes;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
      */
@@ -15,6 +20,8 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of dynamic routes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,10 +58,23 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
     }
 
     public static class ListDynamicRoutesResponseBodyDynamicRoutes extends TeaModel {
+        /**
+         * <p>The IDs of the private access applications for the dynamic route. This field has a value when the application type is <strong>Application</strong>.</p>
+         */
         @NameInMap("ApplicationIds")
         public java.util.List<String> applicationIds;
 
         /**
+         * <p>The application type of the dynamic route. Valid values:</p>
+         * <ul>
+         * <li><p><strong>All</strong>: All applications.</p>
+         * </li>
+         * <li><p><strong>Application</strong>: A specific application.</p>
+         * </li>
+         * <li><p><strong>Tag</strong>: A specific tag.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Application</p>
          */
@@ -62,16 +82,26 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         public String applicationType;
 
         /**
+         * <p>The time when the dynamic route was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-21 11:50:03</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the dynamic route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条动态路由</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the dynamic route.</p>
+         * 
          * <strong>example:</strong>
          * <p>dr-a0ca843f53cf****</p>
          */
@@ -79,6 +109,8 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         public String dynamicRouteId;
 
         /**
+         * <p>The type of the dynamic route. Valid value: <strong>connector</strong>, which indicates a private leased line.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector</p>
          */
@@ -86,6 +118,8 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         public String dynamicRouteType;
 
         /**
+         * <p>The name of the dynamic route.</p>
+         * 
          * <strong>example:</strong>
          * <p>dynamic_route_name</p>
          */
@@ -93,6 +127,8 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the next hop instance for the dynamic route.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector-8ccb13b6f52c****</p>
          */
@@ -100,22 +136,38 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         public String nextHop;
 
         /**
+         * <p>The priority of the dynamic route. A value of 1 indicates the highest priority. The priority is consistent with the order in the list query results.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The list of regions where the SASE POP cluster endpoint is supported.</p>
+         */
         @NameInMap("RegionIds")
         public java.util.List<String> regionIds;
 
         /**
+         * <p>The status of the dynamic route. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: The dynamic route is enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: The dynamic route is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The IDs of the private access tags for the dynamic route. This field has a value when the application type is <strong>Tag</strong>.</p>
+         */
         @NameInMap("TagIds")
         public java.util.List<String> tagIds;
 

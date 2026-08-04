@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
      */
@@ -12,12 +14,17 @@ public class ListUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of users.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalNum")
     public String totalNum;
 
+    /**
+     * <p>An array of user objects.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListUsersResponseBodyUsers> users;
 
@@ -51,23 +58,42 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The user\&quot;s department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
+         */
         @NameInMap("Department")
         public String department;
 
         /**
+         * <p>The user\&quot;s email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>a***@example.net</p>
          */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>A list of full department paths.</p>
+         */
         @NameInMap("FullDepartment")
         public java.util.List<String> fullDepartment;
 
+        /**
+         * <p>The name of the Identity Provider (IdP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>飞书</p>
+         */
         @NameInMap("IdpName")
         public String idpName;
 
         /**
+         * <p>The user\&quot;s phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1381111****</p>
          */
@@ -75,6 +101,8 @@ public class ListUsersResponseBody extends TeaModel {
         public String phone;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
@@ -82,12 +110,20 @@ public class ListUsersResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
+         * <p>The user status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
+         */
         @NameInMap("Username")
         public String username;
 

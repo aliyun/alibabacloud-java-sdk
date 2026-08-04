@@ -4,11 +4,14 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>The list of applications that the user is authorized to access.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<ListUserApplicationsResponseBodyApplications> applications;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -17,6 +20,8 @@ public class ListUserApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of applications that the user is authorized to access.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -54,6 +59,8 @@ public class ListUserApplicationsResponseBody extends TeaModel {
 
     public static class ListUserApplicationsResponseBodyApplicationsPortRanges extends TeaModel {
         /**
+         * <p>The start port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -61,6 +68,8 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         public String begin;
 
         /**
+         * <p>The end port.</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -92,39 +101,86 @@ public class ListUserApplicationsResponseBody extends TeaModel {
 
     public static class ListUserApplicationsResponseBodyApplications extends TeaModel {
         /**
+         * <p>The action for private application access:</p>
+         * <ul>
+         * <li><p><strong>Block</strong>: blocks access.</p>
+         * </li>
+         * <li><p><strong>Allow</strong>: allows access.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Block</p>
          */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The application address group. This parameter is returned when ConfigMode is set to Precise. This parameter is empty when ConfigMode is an empty string.</p>
+         */
         @NameInMap("AddressGroups")
         public java.util.List<AddressGroup> addressGroups;
 
+        /**
+         * <p>The list of private access application addresses.</p>
+         */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-b927baf3e592****</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>The configuration mode. Valid values:</p>
+         * <ul>
+         * <li><p>Empty string: default mode.</p>
+         * </li>
+         * <li><p>Precise: precise mode.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Precise</p>
+         */
         @NameInMap("ConfigMode")
         public String configMode;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_application_name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The port ranges of the private access application. Multiple port ranges cannot be repeated or overlap.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<ListUserApplicationsResponseBodyApplicationsPortRanges> portRanges;
 
         /**
+         * <p>The protocol of the private access application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>All</strong>: all protocols.</p>
+         * </li>
+         * <li><p><strong>TCP</strong>: TCP.</p>
+         * </li>
+         * <li><p><strong>UDP</strong>: UDP.</p>
+         * </li>
+         * <li><p><strong>HTTP</strong>: HTTP.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: HTTPS.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */

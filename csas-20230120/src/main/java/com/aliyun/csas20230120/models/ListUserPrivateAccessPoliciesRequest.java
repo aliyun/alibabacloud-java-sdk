@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserPrivateAccessPoliciesRequest extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListUserPrivateAccessPoliciesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Intranet access policy name. Length should be between 1 to 128 characters, supporting Chinese and case-sensitive English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the private access policy. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>private_access_policy_name</p>
@@ -24,7 +24,7 @@ public class ListUserPrivateAccessPoliciesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Number of items per page for pagination. Range: 1~100.</p>
+     * <p>The number of entries per page set for the paginated query. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListUserPrivateAccessPoliciesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>User ID.</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

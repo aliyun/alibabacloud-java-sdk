@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpdateClientUserRequest extends TeaModel {
     /**
+     * <p>Department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10701</p>
      */
     @NameInMap("DepartmentId")
     public String departmentId;
 
+    /**
+     * <p>User description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例用户</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Email address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
      */
@@ -22,6 +32,7 @@ public class UpdateClientUserRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>User ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +42,8 @@ public class UpdateClientUserRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Mobile phone number without country code.</p>
+     * 
      * <strong>example:</strong>
      * <p>13641966835</p>
      */

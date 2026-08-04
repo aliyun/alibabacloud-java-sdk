@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteUserGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the user group. You can get this value from:</p>
+     * <ul>
+     * <li><p><a href="~~ListUserGroups~~">ListUserGroups</a>: Query user groups.</p>
+     * </li>
+     * <li><p><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Create a user group.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

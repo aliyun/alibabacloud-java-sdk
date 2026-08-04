@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportEnterpriseAccelerateTargetsResponseBody extends TeaModel {
     /**
+     * <p>ID of the import task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1648723859058501</p>
      */
@@ -12,6 +14,8 @@ public class ImportEnterpriseAccelerateTargetsResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>305508BD-8A31-5E15-86CE-52D57967C45E</p>
      */

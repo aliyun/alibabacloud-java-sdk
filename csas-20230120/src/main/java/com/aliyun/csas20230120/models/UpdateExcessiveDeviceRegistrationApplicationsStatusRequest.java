@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends TeaModel {
     /**
+     * <p>List of IDs for device registration applications that exceed your quota.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
+     * <p>Status of the device registration application. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Approved</strong>: Approve the application. You can approve only applications with a Pending status.</p>
+     * </li>
+     * <li><p><strong>Rejected</strong>: Reject the application. You can reject only applications with a Pending status.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

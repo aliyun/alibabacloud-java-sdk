@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIdpDepartmentRequest extends TeaModel {
     /**
+     * <p>ID of the department.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,10 +15,11 @@ public class DeleteIdpDepartmentRequest extends TeaModel {
     public String departmentId;
 
     /**
+     * <p>ID of the custom identity provider configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>507</p>
+     * <p>idp-cfg68956d86e********</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;

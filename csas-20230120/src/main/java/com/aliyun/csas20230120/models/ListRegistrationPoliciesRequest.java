@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListRegistrationPoliciesRequest extends TeaModel {
     /**
+     * <p>The type of company device registration limit. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Unlimited</strong>: No limit.</p>
+     * </li>
+     * <li><p><strong>LimitAll</strong>: Limit by total number.</p>
+     * </li>
+     * <li><p><strong>LimitDiff</strong>: Limit by device categorization.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>LimitAll</p>
      */
@@ -12,6 +22,7 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     public String companyLimitType;
 
     /**
+     * <p>The current page number for paged queries. Values range from 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,14 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The policy matching target type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>UserGroupAll</strong>: Associate all users.</p>
+     * </li>
+     * <li><p><strong>UserGroupNormal</strong>: Associate some user groups.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UserGroupAll</p>
      */
@@ -28,6 +47,8 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     public String matchMode;
 
     /**
+     * <p>The name of the device registration policy. It can be 1 to 128 characters long. It supports Chinese characters, uppercase and lowercase English letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
+     * 
      * <strong>example:</strong>
      * <p>registration_policy_name</p>
      */
@@ -35,6 +56,7 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The number of items per page for paged queries. Values range from 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,16 +66,37 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The type of personal device registration limit. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Unlimited</strong>: No limit.</p>
+     * </li>
+     * <li><p><strong>LimitAll</strong>: Limit by total number.</p>
+     * </li>
+     * <li><p><strong>LimitDiff</strong>: Limit by device categorization.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>LimitDiff</p>
      */
     @NameInMap("PersonalLimitType")
     public String personalLimitType;
 
+    /**
+     * <p>A collection of device registration policy IDs. You can enter up to 100 device registration policy IDs.</p>
+     */
     @NameInMap("PolicyIds")
     public java.util.List<String> policyIds;
 
     /**
+     * <p>The status of the device registration policy. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -61,6 +104,14 @@ public class ListRegistrationPoliciesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The user group ID. Get this value from:</p>
+     * <ul>
+     * <li><p><a href="~~ListUserGroups~~">ListUserGroups</a>: Batch query user groups.</p>
+     * </li>
+     * <li><p><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Create user groups.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>usergroup-6f1ef2fc56b6****</p>
      */

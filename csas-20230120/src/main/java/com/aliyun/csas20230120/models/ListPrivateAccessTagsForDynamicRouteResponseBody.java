@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
+    /**
+     * <p>The dynamic route list.</p>
+     */
     @NameInMap("DynamicRoutes")
     public java.util.List<ListPrivateAccessTagsForDynamicRouteResponseBodyDynamicRoutes> dynamicRoutes;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
      */
@@ -37,16 +42,26 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
 
     public static class ListPrivateAccessTagsForDynamicRouteResponseBodyDynamicRoutesTags extends TeaModel {
         /**
+         * <p>The private network access tag creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-23 14:02:56</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The private network access tag description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条被动态路由引用的内网访问标签</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The private network access tag name.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag_name</p>
          */
@@ -54,6 +69,8 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The private network access tag ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag-d3f64e8bdd4a****</p>
          */
@@ -61,6 +78,14 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>The private network access tag type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Default</strong>: Default.</p>
+         * </li>
+         * <li><p><strong>Custom</strong>: Custom.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */
@@ -116,12 +141,17 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
 
     public static class ListPrivateAccessTagsForDynamicRouteResponseBodyDynamicRoutes extends TeaModel {
         /**
+         * <p>The dynamic route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dr-ca9fddfac7c6****</p>
          */
         @NameInMap("DynamicRouteId")
         public String dynamicRouteId;
 
+        /**
+         * <p>A collection of private network access tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListPrivateAccessTagsForDynamicRouteResponseBodyDynamicRoutesTags> tags;
 

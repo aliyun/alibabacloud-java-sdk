@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The list of private access applications.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<ListPolicesForPrivateAccessApplicationResponseBodyApplications> applications;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4AB972E2-D702-5464-B132-B1911498B8BF</p>
      */
@@ -37,6 +42,8 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
 
     public static class ListPolicesForPrivateAccessApplicationResponseBodyApplicationsPoliciesCustomUserAttributes extends TeaModel {
         /**
+         * <p>The ID of the identity provider (IdP) for the user group. This parameter is returned when the custom user group type is <strong>department</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -44,6 +51,14 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public Integer idpId;
 
         /**
+         * <p>The relationship of the user group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Equal</strong>: Equal to.</p>
+         * </li>
+         * <li><p><strong>Unequal</strong>: Not equal to.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Equal</p>
          */
@@ -51,12 +66,40 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public String relation;
 
         /**
+         * <p>The type of the user group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>username</strong>: Username.</p>
+         * </li>
+         * <li><p><strong>department</strong>: Department.</p>
+         * </li>
+         * <li><p><strong>email</strong>: Email.</p>
+         * </li>
+         * <li><p><strong>telephone</strong>: Mobile number.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>The value of the user group attribute.</p>
+         * <ul>
+         * <li><p>If the user group type is <strong>username</strong>, this parameter specifies the value of the username. The value can be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>If the user group type is <strong>department</strong>, this parameter specifies the value of the department. Example: OU=Department 1,OU=SASE DingTalk.</p>
+         * </li>
+         * <li><p>If the user group type is <strong>email</strong>, this parameter specifies the value of the email address. Example: username\@example.com.</p>
+         * </li>
+         * <li><p>If the user group type is <strong>telephone</strong>, this parameter specifies the value of the mobile number. Example: 13900001234.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OU=部门1,OU=SASE钉钉</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -101,6 +144,14 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
 
     public static class ListPolicesForPrivateAccessApplicationResponseBodyApplicationsPolicies extends TeaModel {
         /**
+         * <p>The application type of the private access policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Application</strong>: Application.</p>
+         * </li>
+         * <li><p><strong>Tag</strong>: Tag.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Application</p>
          */
@@ -108,19 +159,32 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public String applicationType;
 
         /**
+         * <p>The time when the private access policy was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-27 18:10:25</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The collection of custom user group attributes. If you specify multiple attributes, the relationship between them is OR.</p>
+         */
         @NameInMap("CustomUserAttributes")
         public java.util.List<ListPolicesForPrivateAccessApplicationResponseBodyApplicationsPoliciesCustomUserAttributes> customUserAttributes;
 
+        /**
+         * <p>The description of the private access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条内网访问策略</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the private access policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_policy_name</p>
          */
@@ -128,6 +192,14 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public String name;
 
         /**
+         * <p>The action of the private access policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Block</strong>: Blocks access.</p>
+         * </li>
+         * <li><p><strong>Allow</strong>: Allows access.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Allow</p>
          */
@@ -135,6 +207,8 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public String policyAction;
 
         /**
+         * <p>The ID of the private access policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-policy-867ef4007c8a****</p>
          */
@@ -142,6 +216,8 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public String policyId;
 
         /**
+         * <p>The priority of the private access policy. The value 1 indicates the highest priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -149,6 +225,14 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public Integer priority;
 
         /**
+         * <p>The status of the private access policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: The policy is enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: The policy is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -156,6 +240,14 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         public String status;
 
         /**
+         * <p>The user group type of the private access policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Normal</strong>: Regular user group.</p>
+         * </li>
+         * <li><p><strong>Custom</strong>: Custom user group.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -251,12 +343,17 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
 
     public static class ListPolicesForPrivateAccessApplicationResponseBodyApplications extends TeaModel {
         /**
+         * <p>The ID of the private access application.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-b927baf3e592****</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>The collection of private access policies.</p>
+         */
         @NameInMap("Policies")
         public java.util.List<ListPolicesForPrivateAccessApplicationResponseBodyApplicationsPolicies> policies;
 

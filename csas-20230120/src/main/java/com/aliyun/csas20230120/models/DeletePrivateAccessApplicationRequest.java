@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeletePrivateAccessApplicationRequest extends TeaModel {
     /**
+     * <p>The ID of the internal network access application. You can get this value from:</p>
+     * <ul>
+     * <li><p><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: List internal network access applications.</p>
+     * </li>
+     * <li><p><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Create an internal network access application.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

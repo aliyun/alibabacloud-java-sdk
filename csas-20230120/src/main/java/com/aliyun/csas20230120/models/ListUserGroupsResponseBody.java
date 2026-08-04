@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4AB972E2-D702-5464-B132-B1911498B8BF</p>
      */
@@ -12,12 +14,17 @@ public class ListUserGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of user groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
+    /**
+     * <p>A list of user groups.</p>
+     */
     @NameInMap("UserGroups")
     public java.util.List<ListUserGroupsResponseBodyUserGroups> userGroups;
 
@@ -52,6 +59,8 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
     public static class ListUserGroupsResponseBodyUserGroupsAttributes extends TeaModel {
         /**
+         * <p>The identity provider ID for the user group. This parameter appears only when the user group type is <strong>department</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -59,6 +68,14 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public Integer idpId;
 
         /**
+         * <p>The relation for the user group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Equal</strong>: Equal to.</p>
+         * </li>
+         * <li><p><strong>Unequal</strong>: Not equal to.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Equal</p>
          */
@@ -66,12 +83,40 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public String relation;
 
         /**
+         * <p>The type of the user group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>username</strong>: Username.</p>
+         * </li>
+         * <li><p><strong>department</strong>: Department.</p>
+         * </li>
+         * <li><p><strong>email</strong>: Email address.</p>
+         * </li>
+         * <li><p><strong>telephone</strong>: Phone number.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>The value of the user group property.</p>
+         * <ul>
+         * <li><p>If the user group type is <strong>username</strong>, this is the username. The value must be 1 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It supports both uppercase and lowercase letters and Chinese characters.</p>
+         * </li>
+         * <li><p>If the user group type is <strong>department</strong>, this is the department name. Example: OU=Department 1,OU=SASE DingTalk.</p>
+         * </li>
+         * <li><p>If the user group type is <strong>email</strong>, this is the email address. Example: username\@example.com.</p>
+         * </li>
+         * <li><p>If the user group type is <strong>telephone</strong>, this is the phone number. Example: 13900001234.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OU=部门1,OU=SASE钉钉</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -115,20 +160,33 @@ public class ListUserGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsResponseBodyUserGroups extends TeaModel {
+        /**
+         * <p>A collection of user group properties. Multiple properties are combined with OR logic.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<ListUserGroupsResponseBodyUserGroupsAttributes> attributes;
 
         /**
+         * <p>The time when the user group was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-10 11:39:22</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>A description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条用户组</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_group_name</p>
          */
@@ -136,6 +194,8 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>usergroup-6f1ef2fc56b6****</p>
          */

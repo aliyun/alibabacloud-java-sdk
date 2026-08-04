@@ -8,16 +8,16 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public java.util.List<AddressGroup> addressGroups;
 
     /**
-     * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
+     * <p>The addresses of the internal-facing access application. You can specify up to 1000 addresses.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
     /**
-     * <p>The ID of the office application. You can obtain the value by calling the following operations:</p>
+     * <p>The ID of the internal-facing access application. You can obtain the value from the following operations:</p>
      * <ul>
-     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: queries office applications.</li>
-     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an office application.</li>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: lists internal-facing access applications.</li>
+     * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an internal-facing access application.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +31,10 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String configMode;
 
     /**
-     * <p>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * <p>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一条内网访问应用</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -40,13 +43,13 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The browser access mode parameter. The parameter specifies the configurations of Layer 7 applications.</p>
+     * <p>The browser access mode parameter: the Layer 7 application configuration.</p>
      */
     @NameInMap("L7Config")
     public PAL7Config l7Config;
 
     /**
-     * <p>The browser access mode parameter. The parameter specifies the prefix of the domain name that the proxy gateway uses. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
+     * <p>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>app1-xxx</p>
@@ -55,7 +58,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String l7ProxyDomainAutomaticPrefix;
 
     /**
-     * <p>The browser access mode parameter. The parameter specifies the custom domain name of the proxy gateway.</p>
+     * <p>The browser access mode parameter: the custom proxy domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>app1.example.com</p>
@@ -64,7 +67,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String l7ProxyDomainCustom;
 
     /**
-     * <p>浏览器访问模式参数：私有代理域名。</p>
+     * <p>The browser access mode parameter: the private proxy domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>app1.example.com</p>
@@ -74,10 +77,10 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String l7ProxyDomainPrivate;
 
     /**
-     * <p>The modification type of the office application. Valid values:</p>
+     * <p>The modification type of the internal-facing access application. Valid values:</p>
      * <ul>
-     * <li><strong>Cover</strong>: uses the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to overwrite the original addresses, port ranges, and tag IDs. This is the default value.</li>
-     * <li><strong>Append</strong>: adds the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters respectively to the original addresses, port ranges, and tag IDs.</li>
+     * <li><strong>Cover</strong> (default): overwrites the original addresses, port ranges, and tag IDs with the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters.</li>
+     * <li><strong>Append</strong>: adds the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to the original addresses, port ranges, and tag IDs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,15 +93,15 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
+     * <p>The port ranges of the internal-facing access application. You can specify up to 65535 port ranges. Multiple port ranges cannot be duplicate or overlap.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<UpdatePrivateAccessApplicationRequestPortRanges> portRanges;
 
     /**
-     * <p>The protocol that is used by the office application. Valid values:</p>
+     * <p>The protocol of the internal-facing access application. Valid values:</p>
      * <ul>
-     * <li><strong>All</strong></li>
+     * <li><strong>All</strong>: all protocols.</li>
      * <li><strong>TCP</strong></li>
      * <li><strong>UDP</strong></li>
      * </ul>
@@ -110,10 +113,10 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The status of the office application. Valid values:</p>
+     * <p>The status of the internal-facing access application. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong></li>
-     * <li><strong>Disabled</strong></li>
+     * <li><strong>Enabled</strong>: enabled.</li>
+     * <li><strong>Disabled</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,13 +126,16 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The IDs of the tags for the office applications. You can add up to six custom tags to an office application.</p>
+     * <p>The IDs of internal-facing access tags. You can associate up to 6 custom internal-facing access tags with each internal-facing access application.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
+
+    @NameInMap("UnauthorizedAccessConfig")
+    public PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig;
 
     public static UpdatePrivateAccessApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePrivateAccessApplicationRequest self = new UpdatePrivateAccessApplicationRequest();
@@ -257,9 +263,17 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.tagIds;
     }
 
+    public UpdatePrivateAccessApplicationRequest setUnauthorizedAccessConfig(PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig) {
+        this.unauthorizedAccessConfig = unauthorizedAccessConfig;
+        return this;
+    }
+    public PAApplicationUnauthorizedAccessConfig getUnauthorizedAccessConfig() {
+        return this.unauthorizedAccessConfig;
+    }
+
     public static class UpdatePrivateAccessApplicationRequestPortRanges extends TeaModel {
         /**
-         * <p>The start port. The start port must be less than or equal to the end port.</p>
+         * <p>The start port. The value must be less than or equal to the end port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -268,7 +282,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         public Integer begin;
 
         /**
-         * <p>The end port. The end port must be greater than or equal to the start port.</p>
+         * <p>The end port. The value must be greater than or equal to the start port.</p>
          * 
          * <strong>example:</strong>
          * <p>81</p>

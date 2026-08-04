@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeUserDeviceSessionRequest extends TeaModel {
     /**
+     * <p>The device tag.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class RevokeUserDeviceSessionRequest extends TeaModel {
     public String devTag;
 
     /**
+     * <p>The SASE user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

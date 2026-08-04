@@ -4,10 +4,21 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateNacUserCertStatusRequest extends TeaModel {
+    /**
+     * <p>A collection of end user IDs and device IDs.</p>
+     */
     @NameInMap("IdList")
     public java.util.List<UpdateNacUserCertStatusRequestIdList> idList;
 
     /**
+     * <p>The certificate status for the end user device. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong></p>
+     * </li>
+     * <li><p><strong>Disabled</strong></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -37,6 +48,8 @@ public class UpdateNacUserCertStatusRequest extends TeaModel {
 
     public static class UpdateNacUserCertStatusRequestIdList extends TeaModel {
         /**
+         * <p>The device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
@@ -44,6 +57,8 @@ public class UpdateNacUserCertStatusRequest extends TeaModel {
         public String devTag;
 
         /**
+         * <p>The end user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */

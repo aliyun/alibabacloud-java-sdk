@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends TeaModel {
+    /**
+     * <p>List of dynamic routes.</p>
+     */
     @NameInMap("DynamicRoutes")
     public java.util.List<ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutes> dynamicRoutes;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
      */
@@ -37,6 +42,8 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
 
     public static class ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutesApplicationsPortRanges extends TeaModel {
         /**
+         * <p>Start port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -44,6 +51,8 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         public Integer begin;
 
         /**
+         * <p>End port.</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -74,10 +83,15 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
     }
 
     public static class ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutesApplications extends TeaModel {
+        /**
+         * <p>Collection of private access application addresses.</p>
+         */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
         /**
+         * <p>Private access application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-7a9243dd02f4****</p>
          */
@@ -85,26 +99,49 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         public String applicationId;
 
         /**
+         * <p>Time when the private access application was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-13 13:33:24</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Private access application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条被动态路由引用的内网访问应用</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Private access application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>application_name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Collection of private access application port ranges.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutesApplicationsPortRanges> portRanges;
 
         /**
+         * <p>Protocol used by the private access application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>All</strong>: All protocols.</p>
+         * </li>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>All</p>
          */
@@ -112,6 +149,14 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         public String protocol;
 
         /**
+         * <p>Status of the private access application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -190,10 +235,15 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
     }
 
     public static class ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutes extends TeaModel {
+        /**
+         * <p>Collection of private access applications.</p>
+         */
         @NameInMap("Applications")
         public java.util.List<ListPrivateAccessApplicationsForDynamicRouteResponseBodyDynamicRoutesApplications> applications;
 
         /**
+         * <p>Dynamic route ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dr-ca9fddfac7c6****</p>
          */

@@ -7,6 +7,12 @@ public class UpdateApprovalProcessShrinkRequest extends TeaModel {
     @NameInMap("ApprovalType")
     public Integer approvalType;
 
+    /**
+     * <p>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -19,10 +25,14 @@ public class UpdateApprovalProcessShrinkRequest extends TeaModel {
     @NameInMap("MatchSchemaConfigs")
     public String matchSchemaConfigsShrink;
 
+    /**
+     * <p>The matched approval templates.</p>
+     */
     @NameInMap("MatchSchemas")
     public String matchSchemasShrink;
 
     /**
+     * <p>The ID of the approval flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +41,18 @@ public class UpdateApprovalProcessShrinkRequest extends TeaModel {
     @NameInMap("ProcessId")
     public String processId;
 
+    /**
+     * <p>The name of the approval flow. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
+     */
     @NameInMap("ProcessName")
     public String processName;
 
+    /**
+     * <p>The list of approval nodes. You can define up to 5 approval nodes.</p>
+     */
     @NameInMap("ProcessNodes")
     public java.util.List<java.util.List<String>> processNodes;
 

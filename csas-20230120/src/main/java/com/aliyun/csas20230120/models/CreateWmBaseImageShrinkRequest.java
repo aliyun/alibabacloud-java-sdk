@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWmBaseImageShrinkRequest extends TeaModel {
     /**
+     * <p>Height of the watermark image, in pixels. Valid values: 100 to 5000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     @NameInMap("Height")
     public Integer height;
 
+    /**
+     * <p>Image watermark control parameters.</p>
+     */
     @NameInMap("ImageControl")
     public String imageControlShrink;
 
     /**
+     * <p>Opacity of the watermark image. Valid values: 1 to 255. Higher values mean lower transparency.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,7 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     public Integer opacity;
 
     /**
+     * <p>Scaling factor of the watermark image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +41,7 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     public Integer scale;
 
     /**
+     * <p>Width of the watermark image, in pixels. Valid values: 100 to 5000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +51,8 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     public Integer width;
 
     /**
+     * <p>Base64-encoded watermark information. Length: 1 to 300 characters. Do not set this parameter if you set WmInfoUint.</p>
+     * 
      * <strong>example:</strong>
      * <p>aGVsbG8gc2F*****</p>
      */
@@ -51,6 +60,8 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     public String wmInfoBytesB64;
 
     /**
+     * <p>Bit width of the watermark information. Default value: 32. This value must be the same during embedding and extraction. For example, if you use a 40-bit SDK to embed the watermark, set this value to 40 when extracting it.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -58,6 +69,17 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     public Long wmInfoSize;
 
     /**
+     * <p>Decimal-form watermark information. Do not set this parameter if you set WmInfoBytesB64.</p>
+     * <p>The valid range depends on the WmInfoSize value:</p>
+     * <ul>
+     * <li><p>If WmInfoSize is <strong>32</strong>, the valid range is 1 to 4294967295.</p>
+     * </li>
+     * <li><p>If WmInfoSize is <strong>40</strong>, the valid range is 1 to 1099511627775.</p>
+     * </li>
+     * <li><p>If WmInfoSize is <strong>64</strong>, the valid range is 1 to 18446744073709551615.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>12*****</p>
      */
@@ -65,6 +87,21 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     public String wmInfoUint;
 
     /**
+     * <p>Watermark type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>PureWebappInvisible</strong>: Web watermark.</p>
+     * </li>
+     * <li><p><strong>PureAppInvisible</strong>: App watermark.</p>
+     * </li>
+     * <li><p><strong>PureScreenInvisible</strong>: Screen watermark.</p>
+     * </li>
+     * <li><p><strong>AigcWebappInvisible</strong>: AIGC web watermark.</p>
+     * </li>
+     * <li><p><strong>AigcAppInvisible</strong>: AIGC app watermark.</p>
+     * </li>
+     * <li><p><strong>AigcScreenInvisible</strong>: AIGC screen watermark.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +110,12 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     @NameInMap("WmType")
     public String wmType;
 
+    /**
+     * <p>Comments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>备注</p>
+     */
     @NameInMap("comment")
     public String comment;
 

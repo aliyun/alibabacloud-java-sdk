@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachPolicy2ApprovalProcessRequest extends TeaModel {
     /**
+     * <p>Business policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,21 @@ public class DetachPolicy2ApprovalProcessRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <p>Policy type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>DomainBlacklist</strong>: Domain blacklist.</p>
+     * </li>
+     * <li><p><strong>DomainWhitelist</strong>: Domain whitelist.</p>
+     * </li>
+     * <li><p><strong>SoftwareBlock</strong>: Software disable.</p>
+     * </li>
+     * <li><p><strong>AppUninstall</strong>: Terminal uninstall.</p>
+     * </li>
+     * <li><p><strong>DlpSend</strong>: File outbound transfer.</p>
+     * </li>
+     * <li><p><strong>PeripheralBlock</strong>: Peripheral control.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +39,7 @@ public class DetachPolicy2ApprovalProcessRequest extends TeaModel {
     public String policyType;
 
     /**
+     * <p>Approval process ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

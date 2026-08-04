@@ -306,7 +306,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
          * <p>Username.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>测试</p>
          */
         @NameInMap("Username")
         public String username;
@@ -315,7 +315,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
          * <p>Identified office area name.</p>
          * 
          * <strong>example:</strong>
-         * <p>office</p>
+         * <p>办公地点</p>
          */
         @NameInMap("Workshop")
         public String workshop;
@@ -437,7 +437,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
          * <p>User\&quot;s department.</p>
          * 
          * <strong>example:</strong>
-         * <p>IT</p>
+         * <p>场景险部</p>
          */
         @NameInMap("Department")
         public String department;

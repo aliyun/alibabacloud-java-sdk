@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIdpDepartmentResponseBody extends TeaModel {
     /**
+     * <p>The ID of the created department.</p>
+     * 
      * <strong>example:</strong>
      * <p>726</p>
      */
@@ -12,6 +14,8 @@ public class CreateIdpDepartmentResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
      */

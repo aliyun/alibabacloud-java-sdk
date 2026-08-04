@@ -4,6 +4,9 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserDevicesRequest extends TeaModel {
+    /**
+     * <p>The collection of endpoint device IDs. A maximum of 100 entries are supported.</p>
+     */
     @NameInMap("DeviceTags")
     public java.util.List<String> deviceTags;
 

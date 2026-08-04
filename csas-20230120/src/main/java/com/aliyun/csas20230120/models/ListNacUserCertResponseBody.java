@@ -5,16 +5,33 @@ import com.aliyun.tea.*;
 
 public class ListNacUserCertResponseBody extends TeaModel {
     /**
+     * <p>API status or POP error code. Valid values:</p>
+     * <ul>
+     * <li><p><strong>2xx</strong>: Success.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: Redirection.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: Request error.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: Server error.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>List of onboarding user certificate statuses.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<ListNacUserCertResponseBodyDataList> dataList;
 
     /**
+     * <p>Additional information.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +39,8 @@ public class ListNacUserCertResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
      */
@@ -29,6 +48,8 @@ public class ListNacUserCertResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of entries that match the conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,16 +103,26 @@ public class ListNacUserCertResponseBody extends TeaModel {
 
     public static class ListNacUserCertResponseBodyDataList extends TeaModel {
         /**
+         * <p>Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Aliuid")
         public String aliuid;
 
+        /**
+         * <p>Department that the user belongs to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>外包</p>
+         */
         @NameInMap("Department")
         public String department;
 
         /**
+         * <p>Endpoint device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
@@ -99,6 +130,20 @@ public class ListNacUserCertResponseBody extends TeaModel {
         public String devTag;
 
         /**
+         * <p>Operating system type of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><p><strong>windows</strong>: Windows.</p>
+         * </li>
+         * <li><p><strong>macos</strong>: macOS.</p>
+         * </li>
+         * <li><p><strong>linux</strong>: Linux.</p>
+         * </li>
+         * <li><p><strong>android</strong>: Android.</p>
+         * </li>
+         * <li><p><strong>ios</strong>: iOS.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>windows</p>
          */
@@ -106,6 +151,8 @@ public class ListNacUserCertResponseBody extends TeaModel {
         public String deviceType;
 
         /**
+         * <p>Expired At.</p>
+         * 
          * <strong>example:</strong>
          * <p>2029-06-30 09:31:54</p>
          */
@@ -113,6 +160,8 @@ public class ListNacUserCertResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>Endpoint device name. The value must be 1 to 128 characters in length. It can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system returns all endpoint devices whose names contain 4-byte UTF-8 characters.</p>
+         * 
          * <strong>example:</strong>
          * <p>MS-XU****</p>
          */
@@ -120,6 +169,8 @@ public class ListNacUserCertResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Endpoint device MAC address.</p>
+         * 
          * <strong>example:</strong>
          * <p>08:f8:<strong>:</strong>:**:5e</p>
          */
@@ -127,6 +178,14 @@ public class ListNacUserCertResponseBody extends TeaModel {
         public String mac;
 
         /**
+         * <p>Onboarding user certificate status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Disabled</p>
          */
@@ -134,6 +193,8 @@ public class ListNacUserCertResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
@@ -141,6 +202,8 @@ public class ListNacUserCertResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhang**</p>
          */

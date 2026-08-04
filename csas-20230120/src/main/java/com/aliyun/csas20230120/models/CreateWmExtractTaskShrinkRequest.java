@@ -43,9 +43,22 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     @NameInMap("Filename")
     public String filename;
 
+    /**
+     * <p>Image extraction parameters</p>
+     */
     @NameInMap("ImageExtractParamsOpenApi")
     public String imageExtractParamsOpenApiShrink;
 
+    /**
+     * <p>Audio watermark parameter: specifies whether the watermark was embedded by the client SDK. Default value: false. Valid values:  </p>
+     * <ul>
+     * <li><strong>true</strong>: Yes  </li>
+     * <li><strong>false</strong>: No</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsClientEmbed")
     public Boolean isClientEmbed;
 

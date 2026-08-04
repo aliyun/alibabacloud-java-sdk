@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetWmEmbedTaskResponseBody extends TeaModel {
+    /**
+     * <p>The result of the watermark embedding job.</p>
+     */
     @NameInMap("Data")
     public GetWmEmbedTaskResponseBodyData data;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
      */
@@ -37,6 +42,8 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
 
     public static class GetWmEmbedTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The temporary URL of the file embedded with watermark information.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/embed-****.pdf">https://example.com/embed-****.pdf</a></p>
          */
@@ -44,6 +51,8 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>Expiration time of FileUrl, formatted as a Unix timestamp with second-level precision.</p>
+         * 
          * <strong>example:</strong>
          * <p>171859****</p>
          */
@@ -51,6 +60,8 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         public String fileUrlExp;
 
         /**
+         * <p>The filename of the file embedded with watermark information.</p>
+         * 
          * <strong>example:</strong>
          * <p>embed-****.pdf</p>
          */
@@ -58,6 +69,8 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         public String filename;
 
         /**
+         * <p>The MD5 hash of the file with embedded watermark information, used for troubleshooting.</p>
+         * 
          * <strong>example:</strong>
          * <p>d41d8cd98f00b204e9800998ecf8****</p>
          */
@@ -65,6 +78,8 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         public String outFileHashMd5;
 
         /**
+         * <p>The size in bytes of the file embedded with watermark information. This is used for troubleshooting.</p>
+         * 
          * <strong>example:</strong>
          * <p>123**</p>
          */
@@ -72,6 +87,8 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         public Long outFileSize;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>job:5GfrJYsoaffmCE7Z5bZtjUxxxxxxxxxx</p>
          */
@@ -79,6 +96,13 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task Status. Valid values:  </p>
+         * <ul>
+         * <li><strong>Running</strong>: The job is running.  </li>
+         * <li><strong>Success</strong>: The job succeeded.  </li>
+         * <li><strong>Failed</strong>: The job failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

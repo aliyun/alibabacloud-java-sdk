@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateNacUserCertStatusResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or POP error code. Valid values:</p>
+     * <ul>
+     * <li><p><strong>2xx</strong>: Success.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: Redirection.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: Client error.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: Server error.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +24,8 @@ public class UpdateNacUserCertStatusResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Additional information about the result.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +33,8 @@ public class UpdateNacUserCertStatusResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */

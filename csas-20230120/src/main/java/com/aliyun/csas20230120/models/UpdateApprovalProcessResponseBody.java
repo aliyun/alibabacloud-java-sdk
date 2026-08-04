@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateApprovalProcessResponseBody extends TeaModel {
+    /**
+     * <p>The approval flow.</p>
+     */
     @NameInMap("Process")
     public UpdateApprovalProcessResponseBodyProcess process;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
      */
@@ -83,10 +88,15 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of terminal uninstall policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -180,10 +190,15 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of device registration policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -277,10 +292,15 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of file outgoing policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -374,10 +394,15 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of domain name blacklist policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -471,10 +496,15 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of domain name whitelist policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -661,10 +691,15 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of peripheral control policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -710,14 +745,115 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
+    public static class UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap> fieldMap;
+
+        @NameInMap("PolicyIds")
+        public java.util.List<String> policyIds;
+
+        @NameInMap("SchemaId")
+        public String schemaId;
+
+        public static UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies self = new UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies setPolicyIds(java.util.List<String> policyIds) {
+            this.policyIds = policyIds;
+            return this;
+        }
+        public java.util.List<String> getPolicyIds() {
+            return this.policyIds;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies setSchemaId(String schemaId) {
+            this.schemaId = schemaId;
+            return this;
+        }
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessProcessNodes extends TeaModel {
         /**
+         * <p>The approver ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         @NameInMap("SaseUserId")
         public String saseUserId;
 
+        /**
+         * <p>The approver username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wang</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -792,10 +928,15 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("FieldMap")
         public java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap> fieldMap;
 
+        /**
+         * <p>The list of software blocking policy IDs.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
         /**
+         * <p>The ID of the approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -935,6 +1076,9 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     }
 
     public static class UpdateApprovalProcessResponseBodyProcess extends TeaModel {
+        /**
+         * <p>The list of policies associated with terminal uninstall.</p>
+         */
         @NameInMap("AppUninstallPolicies")
         public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies appUninstallPolicies;
 
@@ -942,24 +1086,44 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public Integer approvalType;
 
         /**
+         * <p>The time when the approval flow was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-11 15:31:39</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the approval flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The list of policies associated with device registration.</p>
+         */
         @NameInMap("DeviceRegistrationPolicies")
         public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies deviceRegistrationPolicies;
 
+        /**
+         * <p>The list of policies associated with file outgoing.</p>
+         */
         @NameInMap("DlpSendPolicies")
         public UpdateApprovalProcessResponseBodyProcessDlpSendPolicies dlpSendPolicies;
 
+        /**
+         * <p>The list of policies associated with the domain name blacklist.</p>
+         */
         @NameInMap("DomainBlacklistPolicies")
         public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies domainBlacklistPolicies;
 
+        /**
+         * <p>The list of policies associated with the domain name whitelist.</p>
+         */
         @NameInMap("DomainWhitelistPolicies")
         public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies domainWhitelistPolicies;
 
@@ -972,22 +1136,42 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         @NameInMap("ExternalConfig")
         public String externalConfig;
 
+        /**
+         * <p>The list of policies associated with peripheral control.</p>
+         */
         @NameInMap("PeripheraBlockPolicies")
         public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies peripheraBlockPolicies;
 
+        @NameInMap("PrivateAccessBlockPolicies")
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies privateAccessBlockPolicies;
+
         /**
+         * <p>The ID of the approval flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-process-2677fcf063f5****</p>
          */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>The name of the approval flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
+         */
         @NameInMap("ProcessName")
         public String processName;
 
+        /**
+         * <p>The list of approval nodes.</p>
+         */
         @NameInMap("ProcessNodes")
         public java.util.List<java.util.List<UpdateApprovalProcessResponseBodyProcessProcessNodes>> processNodes;
 
+        /**
+         * <p>The list of policies associated with software blocking.</p>
+         */
         @NameInMap("SoftwareBlockPolicies")
         public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies softwareBlockPolicies;
 
@@ -1093,6 +1277,14 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
         public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies getPeripheraBlockPolicies() {
             return this.peripheraBlockPolicies;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcess setPrivateAccessBlockPolicies(UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies privateAccessBlockPolicies) {
+            this.privateAccessBlockPolicies = privateAccessBlockPolicies;
+            return this;
+        }
+        public UpdateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies getPrivateAccessBlockPolicies() {
+            return this.privateAccessBlockPolicies;
         }
 
         public UpdateApprovalProcessResponseBodyProcess setProcessId(String processId) {

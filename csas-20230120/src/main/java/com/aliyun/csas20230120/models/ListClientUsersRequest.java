@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListClientUsersRequest extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListClientUsersRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>Department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10785</p>
      */
@@ -19,6 +23,8 @@ public class ListClientUsersRequest extends TeaModel {
     public String departmentId;
 
     /**
+     * <p>Email address.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
      */
@@ -26,6 +32,7 @@ public class ListClientUsersRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>Custom identity source configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class ListClientUsersRequest extends TeaModel {
     public String idpConfigId;
 
     /**
+     * <p>Mobile phone number without country code.</p>
+     * 
      * <strong>example:</strong>
      * <p>18980976559</p>
      */
@@ -42,6 +51,8 @@ public class ListClientUsersRequest extends TeaModel {
     public String mobileNumber;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,12 +60,26 @@ public class ListClientUsersRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>User enable status. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Enabled</strong>: enabled.</p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("Username")
     public String username;
 

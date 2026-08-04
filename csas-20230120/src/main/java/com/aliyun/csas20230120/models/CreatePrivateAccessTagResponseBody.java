@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateAccessTagResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */
@@ -12,6 +14,8 @@ public class CreatePrivateAccessTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The private access tag ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>tag-d3f64e8bdd4a****</p>
      */

@@ -4,13 +4,23 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateApprovalProcessRequest extends TeaModel {
+    /**
+     * <p>The description of the approval process. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一个审批流程</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The matched approval templates.</p>
+     */
     @NameInMap("MatchSchemas")
     public CreateApprovalProcessRequestMatchSchemas matchSchemas;
 
     /**
+     * <p>The process name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +30,7 @@ public class CreateApprovalProcessRequest extends TeaModel {
     public String processName;
 
     /**
+     * <p>The list of approval nodes. You can define up to 5 approval nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProcessNodes")
@@ -64,6 +75,8 @@ public class CreateApprovalProcessRequest extends TeaModel {
 
     public static class CreateApprovalProcessRequestMatchSchemas extends TeaModel {
         /**
+         * <p>The ID of the device uninstall approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -71,6 +84,8 @@ public class CreateApprovalProcessRequest extends TeaModel {
         public String appUninstallSchemaId;
 
         /**
+         * <p>The ID of the device registration approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -78,6 +93,8 @@ public class CreateApprovalProcessRequest extends TeaModel {
         public String deviceRegistrationSchemaId;
 
         /**
+         * <p>The ID of the file outbound transfer approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -85,6 +102,8 @@ public class CreateApprovalProcessRequest extends TeaModel {
         public String dlpSendSchemaId;
 
         /**
+         * <p>The ID of the domain name blacklist approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -92,6 +111,8 @@ public class CreateApprovalProcessRequest extends TeaModel {
         public String domainBlacklistSchemaId;
 
         /**
+         * <p>The ID of the domain name whitelist approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -102,13 +123,20 @@ public class CreateApprovalProcessRequest extends TeaModel {
         public String endpointHardeningSchemaId;
 
         /**
+         * <p>The ID of the peripheral control approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
         @NameInMap("PeripheralBlockSchemaId")
         public String peripheralBlockSchemaId;
 
+        @NameInMap("PrivateAccessBlockSchemaId")
+        public String privateAccessBlockSchemaId;
+
         /**
+         * <p>The ID of the software blocking approval template.</p>
+         * 
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
          */
@@ -177,6 +205,14 @@ public class CreateApprovalProcessRequest extends TeaModel {
         }
         public String getPeripheralBlockSchemaId() {
             return this.peripheralBlockSchemaId;
+        }
+
+        public CreateApprovalProcessRequestMatchSchemas setPrivateAccessBlockSchemaId(String privateAccessBlockSchemaId) {
+            this.privateAccessBlockSchemaId = privateAccessBlockSchemaId;
+            return this;
+        }
+        public String getPrivateAccessBlockSchemaId() {
+            return this.privateAccessBlockSchemaId;
         }
 
         public CreateApprovalProcessRequestMatchSchemas setSoftwareBlockSchemaId(String softwareBlockSchemaId) {

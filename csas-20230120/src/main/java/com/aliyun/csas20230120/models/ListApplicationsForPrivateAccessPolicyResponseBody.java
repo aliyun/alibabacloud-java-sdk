@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel {
+    /**
+     * <p>A list of private access policies.</p>
+     */
     @NameInMap("Polices")
     public java.util.List<ListApplicationsForPrivateAccessPolicyResponseBodyPolices> polices;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
      */
@@ -37,6 +42,8 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
 
     public static class ListApplicationsForPrivateAccessPolicyResponseBodyPolicesApplicationsPortRanges extends TeaModel {
         /**
+         * <p>The start port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -44,6 +51,8 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         public Integer begin;
 
         /**
+         * <p>The end port.</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -74,10 +83,15 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
     }
 
     public static class ListApplicationsForPrivateAccessPolicyResponseBodyPolicesApplications extends TeaModel {
+        /**
+         * <p>A collection of private access application addresses.</p>
+         */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
         /**
+         * <p>The ID of the private access application.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-7a9243dd02f4****</p>
          */
@@ -85,26 +99,49 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         public String applicationId;
 
         /**
+         * <p>The time when the private access application was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-09-27 18:10:25</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the private access application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条被内网访问策略引用的内网访问应用</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the private access application.</p>
+         * 
          * <strong>example:</strong>
          * <p>application_name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>A collection of port ranges for the private access application.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<ListApplicationsForPrivateAccessPolicyResponseBodyPolicesApplicationsPortRanges> portRanges;
 
         /**
+         * <p>The protocol of the private access application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>All</strong>: All protocols.</p>
+         * </li>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -112,6 +149,14 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         public String protocol;
 
         /**
+         * <p>The status of the private access application. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: The application is enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: The application is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
@@ -190,10 +235,15 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
     }
 
     public static class ListApplicationsForPrivateAccessPolicyResponseBodyPolices extends TeaModel {
+        /**
+         * <p>A collection of private access applications.</p>
+         */
         @NameInMap("Applications")
         public java.util.List<ListApplicationsForPrivateAccessPolicyResponseBodyPolicesApplications> applications;
 
         /**
+         * <p>The policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-policy-1b0d0e8b4bcf****</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
+    /**
+     * <p>List of logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<ListEnterpriseAccelerateLogsResponseBodyLogs> logs;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>43F07A6A-294D-56FB-85EB-6AD00C5B60FF</p>
      */
@@ -15,6 +20,8 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of logs.</p>
+     * 
      * <strong>example:</strong>
      * <p>120</p>
      */
@@ -51,10 +58,18 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
     }
 
     public static class ListEnterpriseAccelerateLogsResponseBodyLogs extends TeaModel {
+        /**
+         * <p>Department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
+         */
         @NameInMap("Department")
         public String department;
 
         /**
+         * <p>Device type.</p>
+         * 
          * <strong>example:</strong>
          * <p>windows</p>
          */
@@ -62,6 +77,8 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
         public String deviceType;
 
         /**
+         * <p>Destination endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.bing.com:443">www.bing.com:443</a></p>
          */
@@ -69,6 +86,8 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
         public String dstAddr;
 
         /**
+         * <p>Inbound traffic, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>12299</p>
          */
@@ -76,16 +95,26 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
         public String inBytes;
 
         /**
+         * <p>Outbound traffic, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>2603</p>
          */
         @NameInMap("OutBytes")
         public String outBytes;
 
+        /**
+         * <p>Enterprise acceleration policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白名单加速</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
+         * <p>Enterprise acceleration instance address.</p>
+         * 
          * <strong>example:</strong>
          * <p>8.222.179.xxx:10015</p>
          */
@@ -93,12 +122,20 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
         public String proxyAddr;
 
         /**
+         * <p>Time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1748422797</p>
          */
         @NameInMap("UnixTime")
         public String unixTime;
 
+        /**
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("Username")
         public String username;
 

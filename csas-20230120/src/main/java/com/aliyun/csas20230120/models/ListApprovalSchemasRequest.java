@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApprovalSchemasRequest extends TeaModel {
     /**
+     * <p>The current page number for paged queries. Valid values: 1 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListApprovalSchemasRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The number of entries per page for paged queries. Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,16 +25,37 @@ public class ListApprovalSchemasRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The policy type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>DomainBlacklist</strong>: Domain blacklist.</p>
+     * </li>
+     * <li><p><strong>DomainWhitelist</strong>: Domain whitelist.</p>
+     * </li>
+     * <li><p><strong>SoftwareBlock</strong>: Software disable.</p>
+     * </li>
+     * <li><p><strong>AppUninstall</strong>: Terminal uninstall.</p>
+     * </li>
+     * <li><p><strong>DlpSend</strong>: File outbound.</p>
+     * </li>
+     * <li><p><strong>PeripheralBlock</strong>: Peripheral control.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DlpSend</p>
      */
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>Collection of approval template IDs.</p>
+     */
     @NameInMap("SchemaIds")
     public java.util.List<String> schemaIds;
 
     /**
+     * <p>The template name. It can be 1 to 128 characters long. It supports Chinese characters, uppercase and lowercase English letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateUserGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
      */
@@ -12,6 +14,8 @@ public class CreateUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the user group.</p>
+     * 
      * <strong>example:</strong>
      * <p>usergroup-6f1ef2fc56b6****</p>
      */

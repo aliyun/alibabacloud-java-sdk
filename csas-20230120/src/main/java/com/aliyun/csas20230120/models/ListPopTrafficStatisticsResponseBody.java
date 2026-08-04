@@ -13,6 +13,9 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of bandwidth data for the POPs.</p>
+     */
     @NameInMap("TrafficData")
     public java.util.List<ListPopTrafficStatisticsResponseBodyTrafficData> trafficData;
 
@@ -39,6 +42,8 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
 
     public static class ListPopTrafficStatisticsResponseBodyTrafficDataDatapoints extends TeaModel {
         /**
+         * <p>The average bandwidth value per minute. The unit is Byte/s.</p>
+         * 
          * <strong>example:</strong>
          * <p>15325</p>
          */
@@ -46,6 +51,8 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         public Double average;
 
         /**
+         * <p>The time that corresponds to the data point.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-06 15:29:00</p>
          */
@@ -76,10 +83,15 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     }
 
     public static class ListPopTrafficStatisticsResponseBodyTrafficData extends TeaModel {
+        /**
+         * <p>A list of bandwidth data points for the POPs.</p>
+         */
         @NameInMap("Datapoints")
         public java.util.List<ListPopTrafficStatisticsResponseBodyTrafficDataDatapoints> datapoints;
 
         /**
+         * <p>The name of the metric. Metrics are categorized as inbound or outbound.</p>
+         * 
          * <strong>example:</strong>
          * <p>InternetTx</p>
          */

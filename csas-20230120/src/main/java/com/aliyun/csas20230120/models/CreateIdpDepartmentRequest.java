@@ -5,16 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateIdpDepartmentRequest extends TeaModel {
     /**
+     * <p>The department name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例部门</p>
      */
     @NameInMap("DepartmentName")
     public String departmentName;
 
     /**
+     * <p>The ID of the custom identity source configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1222</p>
+     * <p>idp-cfg68956d86e********</p>
      */
     @NameInMap("IdpConfigId")
     public String idpConfigId;

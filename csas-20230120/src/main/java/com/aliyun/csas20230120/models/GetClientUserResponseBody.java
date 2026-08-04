@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetClientUserResponseBody extends TeaModel {
+    /**
+     * <p>User details.</p>
+     */
     @NameInMap("Data")
     public GetClientUserResponseBodyData data;
 
     /**
+     * <p>ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
      */
@@ -37,12 +42,20 @@ public class GetClientUserResponseBody extends TeaModel {
 
     public static class GetClientUserResponseBodyDataDepartment extends TeaModel {
         /**
+         * <p>Department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>107</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Department name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例部门</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -70,20 +83,33 @@ public class GetClientUserResponseBody extends TeaModel {
     }
 
     public static class GetClientUserResponseBodyData extends TeaModel {
+        /**
+         * <p>Department to which the user belongs.</p>
+         */
         @NameInMap("Department")
         public GetClientUserResponseBodyDataDepartment department;
 
         /**
+         * <p>Department ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10713</p>
          */
         @NameInMap("DepartmentId")
         public String departmentId;
 
+        /**
+         * <p>User description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例用户</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
          */
@@ -91,6 +117,8 @@ public class GetClientUserResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>User ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>83</p>
          */
@@ -98,20 +126,32 @@ public class GetClientUserResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>ID of the custom identity source configuration.</p>
+         * 
          * <strong>example:</strong>
-         * <p>598</p>
+         * <p>idp-cfg68956d86e********</p>
          */
         @NameInMap("IdpConfigId")
         public String idpConfigId;
 
         /**
+         * <p>Mobile phone number without country code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>13641966835</p>
+         * <p>1364196****</p>
          */
         @NameInMap("MobileNumber")
         public String mobileNumber;
 
         /**
+         * <p>User status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Disabled</p>
          */
@@ -119,12 +159,20 @@ public class GetClientUserResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Unique identifier of the user.</p>
+         * 
          * <strong>example:</strong>
          * <p>su_abcd7215****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("Username")
         public String username;
 

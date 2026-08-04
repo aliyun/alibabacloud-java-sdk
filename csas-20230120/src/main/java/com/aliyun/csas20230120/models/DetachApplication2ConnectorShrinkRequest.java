@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class DetachApplication2ConnectorShrinkRequest extends TeaModel {
     /**
+     * <p>Collection of private network access application IDs. Enter a maximum of 100 private network access application IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplicationIds")
     public String applicationIdsShrink;
 
     /**
-     * <p>ConnectorID。</p>
+     * <p>Connector ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

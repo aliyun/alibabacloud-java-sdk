@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsForPrivateAccessPolicyRequest extends TeaModel {
     /**
+     * <p>A collection of private network access policy IDs. Enter a maximum of 100 private network access policy IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyIds")

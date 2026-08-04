@@ -4,11 +4,14 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetPADiagnosisTaskResponseBody extends TeaModel {
+    /**
+     * <p>The diagnostic task.</p>
+     */
     @NameInMap("DiagnosisTask")
     public GetPADiagnosisTaskResponseBodyDiagnosisTask diagnosisTask;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2CABFEBB-0CE7-575E-833A-266F75D46713</p>
@@ -39,6 +42,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDnsHopsGeoData extends TeaModel {
         /**
+         * <p>The country.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -46,6 +51,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String country;
 
         /**
+         * <p>The province.</p>
+         * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
          */
@@ -53,6 +60,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String prov;
 
         /**
+         * <p>The city.</p>
+         * 
          * <strong>example:</strong>
          * <p>hangzhou</p>
          */
@@ -60,6 +69,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String city;
 
         /**
+         * <p>The ISP.</p>
+         * 
          * <strong>example:</strong>
          * <p>telecom</p>
          */
@@ -107,6 +118,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDnsHops extends TeaModel {
         /**
+         * <p>The private access application address. The address can be 1 to 128 characters long and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -114,7 +127,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>TTL。</p>
+         * <p>The TTL.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -123,12 +136,17 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String TTL;
 
         /**
+         * <p>The latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("Latency")
         public String latency;
 
+        /**
+         * <p>The geographic location.</p>
+         */
         @NameInMap("GeoData")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDnsHopsGeoData geoData;
 
@@ -173,6 +191,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDns extends TeaModel {
         /**
+         * <p>The DNS server.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.100.2.136,100.100.2.138</p>
          */
@@ -180,6 +200,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String dnsServer;
 
         /**
+         * <p>The DNS type.</p>
+         * 
          * <strong>example:</strong>
          * <p>private-zone</p>
          */
@@ -187,6 +209,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String dnsType;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -194,16 +218,23 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The source node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("FromNode")
         public Long fromNode;
 
+        /**
+         * <p>The intermediate hops.</p>
+         */
         @NameInMap("Hops")
         public java.util.List<java.util.List<GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDnsHops>> hops;
 
         /**
+         * <p>The latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -211,6 +242,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String latency;
 
         /**
+         * <p>The DNS result.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.0.1</p>
          */
@@ -218,6 +251,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -225,6 +260,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public Boolean success;
 
         /**
+         * <p>The destination node.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -312,6 +349,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoLinksHopsGeoData extends TeaModel {
         /**
+         * <p>The city.</p>
+         * 
          * <strong>example:</strong>
          * <p>Haikou City</p>
          */
@@ -319,6 +358,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String city;
 
         /**
+         * <p>The country.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -326,6 +367,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String country;
 
         /**
+         * <p>The ISP.</p>
+         * 
          * <strong>example:</strong>
          * <p>ChinaMobile_L2</p>
          */
@@ -333,6 +376,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String isp;
 
         /**
+         * <p>The province.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZHejiang</p>
          */
@@ -380,16 +425,23 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoLinksHops extends TeaModel {
         /**
+         * <p>The address.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The geographic location.</p>
+         */
         @NameInMap("GeoData")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoLinksHopsGeoData geoData;
 
         /**
+         * <p>The latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -397,7 +449,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String latency;
 
         /**
-         * <p>TTL。</p>
+         * <p>The Time to Live (TTL).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -446,6 +498,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoLinks extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -453,16 +507,23 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The source node.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("FromNode")
         public Long fromNode;
 
+        /**
+         * <p>The intermediate hops.</p>
+         */
         @NameInMap("Hops")
         public java.util.List<GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoLinksHops> hops;
 
         /**
+         * <p>The latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -470,6 +531,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String latency;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -477,6 +540,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public Boolean success;
 
         /**
+         * <p>The destination node.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -540,6 +605,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoNodesGeoData extends TeaModel {
         /**
+         * <p>The city.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
          */
@@ -547,6 +614,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String city;
 
         /**
+         * <p>The country.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -554,6 +623,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String country;
 
         /**
+         * <p>The Internet Service Provider (ISP).</p>
+         * 
          * <strong>example:</strong>
          * <p>ChinaTelecom_L2</p>
          */
@@ -561,6 +632,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String isp;
 
         /**
+         * <p>The province.</p>
+         * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
          */
@@ -608,6 +681,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoNodes extends TeaModel {
         /**
+         * <p>The private access application address. The address can be 1 to 128 characters long and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.27.228.132</p>
          */
@@ -615,6 +690,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>The ID of the cloud network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxxxxx</p>
          */
@@ -622,26 +699,41 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String cloudNetId;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <p>The geographic location information.</p>
+         */
         @NameInMap("GeoData")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoNodesGeoData geoData;
 
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1237</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全局加速</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The English name of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Japan Private POP</p>
          */
@@ -649,6 +741,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String nameEn;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>stunnel</p>
          */
@@ -656,6 +750,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String nodeType;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pop-xxxxxx</p>
          */
@@ -663,6 +759,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -757,19 +855,30 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
     }
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfo extends TeaModel {
+        /**
+         * <p>The Domain Name System (DNS) information.</p>
+         */
         @NameInMap("Dns")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDns dns;
 
         /**
+         * <p>The time to first byte.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
         @NameInMap("FBT")
         public String FBT;
 
+        /**
+         * <p>The connections between nodes.</p>
+         */
         @NameInMap("Links")
         public java.util.List<GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoLinks> links;
 
+        /**
+         * <p>The forwarding nodes.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoNodes> nodes;
 
@@ -814,6 +923,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoDeviceAttributeInfo extends TeaModel {
         /**
+         * <p>The ID of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>E9EE1CE7-4AA0-521D-B8E1-E13E47F05E94</p>
          */
@@ -821,16 +932,37 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String devTag;
 
         /**
+         * <p>The operating system of the device. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Windows</strong>: Windows</p>
+         * </li>
+         * <li><p><strong>macOS</strong>: macOS</p>
+         * </li>
+         * <li><p><strong>Linux</strong>: Linux</p>
+         * </li>
+         * <li><p><strong>Android</strong>: Android</p>
+         * </li>
+         * <li><p><strong>iOS</strong>: iOS</p>
+         * </li>
+         * <li><p><strong>Windows_Wuying</strong>: Cloud Desktop</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>macos</p>
          */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("File")
         public java.util.List<String> file;
 
         /**
+         * <p>The firewall.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;Platform\&quot;:\&quot;windows\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;macos\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;linux\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;}]</p>
          */
@@ -838,6 +970,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String firewall;
 
         /**
+         * <p>The name of the device. The name can be 1 to 128 characters long and can include letters, numbers, and the following special characters: . , ; - _ / @ and spaces. To query for all devices with names containing 4-byte UTF-8 characters, enter only an underscore (_).</p>
+         * 
          * <strong>example:</strong>
          * <p>DESKTOP-CVTB5KT.CXISHD01.CATHAY_INS.CHN</p>
          */
@@ -845,6 +979,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>The private IP address of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.5.208.122</p>
          */
@@ -852,6 +988,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String innerIp;
 
         /**
+         * <p>The public IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.98.146.136</p>
          */
@@ -859,6 +997,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String internetIp;
 
         /**
+         * <p>The MAC address of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p><code>curl Rj0F9uvI.popscan.xaliyun.com</code></p>
          */
@@ -866,17 +1006,22 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String mac;
 
         /**
+         * <p>The matched security baseline.</p>
+         * 
          * <strong>example:</strong>
          * <p>Test</p>
          */
         @NameInMap("MatchedSecurityBaseline")
         public String matchedSecurityBaseline;
 
+        /**
+         * <p>The list of security baseline processes.</p>
+         */
         @NameInMap("Process")
         public java.util.List<String> process;
 
         /**
-         * <p>SSID。</p>
+         * <p>The SSID.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -981,6 +1126,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoRouteStrategyInfo extends TeaModel {
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>connector</p>
          */
@@ -988,6 +1135,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String routeType;
 
         /**
+         * <p>The policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>av-rtd-091c2d6e3f24aae4</p>
          */
@@ -995,6 +1144,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String strategyId;
 
         /**
+         * <p>The policy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1034,16 +1185,23 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoUserGroupInfo extends TeaModel {
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:1234@xxxx.com">1234@xxxx.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The list of department names.</p>
+         */
         @NameInMap("Group")
         public java.util.List<String> group;
 
         /**
+         * <p>The matched user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>IT</p>
          */
@@ -1051,6 +1209,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String matchedUserGroups;
 
         /**
+         * <p>The mobile phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -1058,6 +1218,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String telephone;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
@@ -1113,6 +1275,16 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoZeroTrustPolicyInfo extends TeaModel {
         /**
+         * <p>The policy action:</p>
+         * <ul>
+         * <li><p><strong>Allow</strong>: allow</p>
+         * </li>
+         * <li><p><strong>Block</strong>: block</p>
+         * </li>
+         * <li><p><strong>Observe</strong>: monitor mode</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -1120,6 +1292,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyApp2</p>
          */
@@ -1127,12 +1301,20 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The block information.</p>
+         * 
          * <strong>example:</strong>
          * <p>access denied</p>
          */
         @NameInMap("BlockInfo")
         public String blockInfo;
 
+        /**
+         * <p>The name of the zero-trust policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>保密测试</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
@@ -1176,22 +1358,36 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
     }
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfo extends TeaModel {
+        /**
+         * <p>The device information.</p>
+         */
         @NameInMap("DeviceAttributeInfo")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoDeviceAttributeInfo deviceAttributeInfo;
 
         /**
+         * <p>The processing duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("ProcessTime")
         public Long processTime;
 
+        /**
+         * <p>The name of the routing policy.</p>
+         */
         @NameInMap("RouteStrategyInfo")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoRouteStrategyInfo routeStrategyInfo;
 
+        /**
+         * <p>The user group information.</p>
+         */
         @NameInMap("UserGroupInfo")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoUserGroupInfo userGroupInfo;
 
+        /**
+         * <p>The zero-trust policy information.</p>
+         */
         @NameInMap("ZeroTrustPolicyInfo")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoZeroTrustPolicyInfo zeroTrustPolicyInfo;
 
@@ -1244,6 +1440,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskResult extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>device offline</p>
          */
@@ -1251,19 +1449,29 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The ID of the request stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>flow-d918b12f9b974f6489fc</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The network connectivity information.</p>
+         */
         @NameInMap("NetworkLinkInfo")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfo networkLinkInfo;
 
+        /**
+         * <p>The policy information.</p>
+         */
         @NameInMap("PolicyInfo")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfo policyInfo;
 
         /**
+         * <p>Indicates whether the operation was successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -1319,6 +1527,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskUdpExtraConfigs extends TeaModel {
         /**
+         * <p>The expected response from the backend server.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -1326,6 +1536,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String expectedResponse;
 
         /**
+         * <p>The content of the UDP request.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -1357,6 +1569,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTaskUserGroup extends TeaModel {
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>ug-xxxxx</p>
          */
@@ -1364,6 +1578,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String userGroupId;
 
         /**
+         * <p>The name of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>IT</p>
          */
@@ -1395,6 +1611,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
 
     public static class GetPADiagnosisTaskResponseBodyDiagnosisTask extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-17 09:49:03</p>
          */
@@ -1402,6 +1620,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>76C08B0F-CEFD-8F01-C1D3-0D5B493B5EAF</p>
          */
@@ -1409,6 +1629,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String devTag;
 
         /**
+         * <p>The ID of the diagnostic task.</p>
+         * 
          * <strong>example:</strong>
          * <p>diag-3e0d36d6c15a0502</p>
          */
@@ -1416,6 +1638,14 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String diagnoseId;
 
         /**
+         * <p>The diagnostic type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>FullLink</strong>: full-link diagnostics</p>
+         * </li>
+         * <li><p><strong>Application</strong>: application diagnostics</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>FullLink</p>
          */
@@ -1423,6 +1653,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String diagnoseType;
 
         /**
+         * <p>The domain name to be diagnosed.</p>
+         * 
          * <strong>example:</strong>
          * <p>mtools-admin.redotpay.com</p>
          */
@@ -1430,6 +1662,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The ID of the POP.</p>
+         * 
          * <strong>example:</strong>
          * <p>pop-2504cd067e094750</p>
          */
@@ -1437,6 +1671,14 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String popId;
 
         /**
+         * <p>The point of presence (POP) selection mode:</p>
+         * <ul>
+         * <li><p><strong>AutoSelect</strong>: automatic selection</p>
+         * </li>
+         * <li><p><strong>ManualSelect</strong>: manual selection</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AutoSelect</p>
          */
@@ -1444,6 +1686,8 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String popMode;
 
         /**
+         * <p>The port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -1451,29 +1695,58 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         public String port;
 
         /**
+         * <p>The private access application protocol. Valid values:</p>
+         * <ul>
+         * <li><p><strong>TCP</strong></p>
+         * </li>
+         * <li><p><strong>UDP</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>All</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The diagnostic result.</p>
+         */
         @NameInMap("Result")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskResult result;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Running</strong>: The task is running.</p>
+         * </li>
+         * <li><p><strong>Finished</strong>: The task is complete.</p>
+         * </li>
+         * <li><p><strong>Failed</strong>: The task failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Additional UDP configurations.</p>
+         */
         @NameInMap("UdpExtraConfigs")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskUdpExtraConfigs udpExtraConfigs;
 
+        /**
+         * <p>The user group.</p>
+         */
         @NameInMap("UserGroup")
         public GetPADiagnosisTaskResponseBodyDiagnosisTaskUserGroup userGroup;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
          */
