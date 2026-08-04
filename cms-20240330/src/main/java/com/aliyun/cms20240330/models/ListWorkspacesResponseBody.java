@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Default value: 50. Maximum value: 50.</p>
+     * <p>The number of entries per page.
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +18,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -23,7 +27,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -91,6 +95,42 @@ public class ListWorkspacesResponseBody extends TeaModel {
         return this.workspaces;
     }
 
+    public static class ListWorkspacesResponseBodyWorkspacesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static ListWorkspacesResponseBodyWorkspacesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkspacesResponseBodyWorkspacesTags self = new ListWorkspacesResponseBodyWorkspacesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
         /**
          * <p>The time when the workspace was created.</p>
@@ -131,7 +171,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String lastModifyTime;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -140,7 +180,16 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******ey</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The Simple Log Service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>sls-project-test-001</p>
@@ -149,7 +198,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String slsProject;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The tags.</p>
+         */
+        @NameInMap("tags")
+        public java.util.List<ListWorkspacesResponseBodyWorkspacesTags> tags;
+
+        /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,12 +258,28 @@ public class ListWorkspacesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListWorkspacesResponseBodyWorkspaces setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListWorkspacesResponseBodyWorkspaces setSlsProject(String slsProject) {
             this.slsProject = slsProject;
             return this;
         }
         public String getSlsProject() {
             return this.slsProject;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setTags(java.util.List<ListWorkspacesResponseBodyWorkspacesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListWorkspacesResponseBodyWorkspacesTags> getTags() {
+            return this.tags;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setWorkspaceName(String workspaceName) {

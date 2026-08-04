@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results to return. The maximum value is 200.</p>
+     * <p>The maximum number of results to return. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -32,7 +32,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The label list.</p>
      */
     @NameInMap("tagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -94,7 +94,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The label key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -103,7 +103,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

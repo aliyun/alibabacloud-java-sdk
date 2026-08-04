@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesShrinkRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Default value: 50. Maximum value: 50.</p>
+     * <p>The number of entries per page.
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +18,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -35,7 +39,22 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The name of the workspace. This parameter supports fuzzy search.</p>
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ae******ey</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The tags.</p>
+     */
+    @NameInMap("tags")
+    public String tagsShrink;
+
+    /**
+     * <p>The workspace name. Fuzzy match is used.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -44,7 +63,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String workspaceName;
 
     /**
-     * <p>The names of the workspaces. This parameter supports exact search.</p>
+     * <p>The workspace name. Exact match is used.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -82,6 +101,22 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public ListWorkspacesShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListWorkspacesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
     public ListWorkspacesShrinkRequest setWorkspaceName(String workspaceName) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
     /**
-     * <p>The time when the workspace was created.</p>
+     * <p>The creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The description of the workspace.</p>
+     * <p>The workspace description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -33,7 +33,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The time when the workspace was last modified.</p>
+     * <p>The last modification time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,16 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the Simple Log Service project.</p>
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ae******ey</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The Simple Log Service project name.</p>
      * 
      * <strong>example:</strong>
      * <p>sls-project-test-001</p>
@@ -70,7 +79,13 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String slsProject;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The tags.</p>
+     */
+    @NameInMap("tags")
+    public java.util.List<GetWorkspaceResponseBodyTags> tags;
+
+    /**
+     * <p>The workspace name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,6 +147,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetWorkspaceResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetWorkspaceResponseBody setSlsProject(String slsProject) {
         this.slsProject = slsProject;
         return this;
@@ -140,12 +163,62 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.slsProject;
     }
 
+    public GetWorkspaceResponseBody setTags(java.util.List<GetWorkspaceResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetWorkspaceResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetWorkspaceResponseBody setWorkspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
         return this;
     }
     public String getWorkspaceName() {
         return this.workspaceName;
+    }
+
+    public static class GetWorkspaceResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetWorkspaceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkspaceResponseBodyTags self = new GetWorkspaceResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetWorkspaceResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetWorkspaceResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

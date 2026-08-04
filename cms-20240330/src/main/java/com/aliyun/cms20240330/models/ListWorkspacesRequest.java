@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Default value: 50. Maximum value: 50.</p>
+     * <p>The number of entries per page.
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +18,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -35,7 +39,22 @@ public class ListWorkspacesRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The name of the workspace. This parameter supports fuzzy search.</p>
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ae******ey</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The tags.</p>
+     */
+    @NameInMap("tags")
+    public java.util.List<ListWorkspacesRequestTags> tags;
+
+    /**
+     * <p>The workspace name. Fuzzy match is used.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -44,7 +63,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String workspaceName;
 
     /**
-     * <p>The names of the workspaces. This parameter supports exact search.</p>
+     * <p>The workspace name. Exact match is used.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -84,6 +103,22 @@ public class ListWorkspacesRequest extends TeaModel {
         return this.region;
     }
 
+    public ListWorkspacesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListWorkspacesRequest setTags(java.util.List<ListWorkspacesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListWorkspacesRequestTags> getTags() {
+        return this.tags;
+    }
+
     public ListWorkspacesRequest setWorkspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
         return this;
@@ -98,6 +133,42 @@ public class ListWorkspacesRequest extends TeaModel {
     }
     public java.util.List<String> getWorkspaceNameList() {
         return this.workspaceNameList;
+    }
+
+    public static class ListWorkspacesRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static ListWorkspacesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkspacesRequestTags self = new ListWorkspacesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListWorkspacesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

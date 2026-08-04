@@ -210,7 +210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a resource.</p>
+     * <p>Modifies the resource group to which a resource belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -252,7 +252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group of a resource.</p>
+     * <p>Modifies the resource group to which a resource belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -4122,7 +4122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query integration center policy information.</p>
+     * <p>Queries the policy information of the DDoS Access Center.</p>
      * 
      * @param request GetIntegrationPolicyRequest
      * @param headers map
@@ -4150,7 +4150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query integration center policy information.</p>
+     * <p>Queries the policy information of the DDoS Access Center.</p>
      * 
      * @param request GetIntegrationPolicyRequest
      * @return GetIntegrationPolicyResponse
@@ -4818,11 +4818,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据 taskId 查询单个服务任务详情。
-     * 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</p>
+     * <p>Queries the details of a single service task based on the taskId.
+     * The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</p>
      * 
      * <b>summary</b> : 
-     * <p>查询ServiceTask</p>
+     * <p>Queries the details of a single ServiceTask under a specified application.</p>
      * 
      * @param request GetServiceTaskRequest
      * @param headers map
@@ -4856,11 +4856,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>根据 taskId 查询单个服务任务详情。
-     * 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</p>
+     * <p>Queries the details of a single service task based on the taskId.
+     * The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</p>
      * 
      * <b>summary</b> : 
-     * <p>查询ServiceTask</p>
+     * <p>Queries the details of a single ServiceTask under a specified application.</p>
      * 
      * @param request GetServiceTaskRequest
      * @return GetServiceTaskResponse
@@ -6992,16 +6992,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>按任务类型列举应用下的服务任务。</p>
+     * <p>Lists service tasks under an application by task type.</p>
      * <ul>
-     * <li>type=heapdump：返回堆转储任务列表</li>
-     * <li>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</li>
-     * <li>type=live_debug_*：返回对应 LiveDebug 任务列表
-     * 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</li>
+     * <li>type=heapdump: Returns the list of heap dump tasks.</li>
+     * <li>type=pprof: Returns the list of pprof dumps (requires searchCondition).</li>
+     * <li>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
+     * Supports nextToken/maxResults pagination and searchCondition filtering.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>列举ServiceTask</p>
+     * <p>Lists service tasks.</p>
      * 
      * @param request ListServiceTaskRequest
      * @param headers map
@@ -7047,16 +7047,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>按任务类型列举应用下的服务任务。</p>
+     * <p>Lists service tasks under an application by task type.</p>
      * <ul>
-     * <li>type=heapdump：返回堆转储任务列表</li>
-     * <li>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</li>
-     * <li>type=live_debug_*：返回对应 LiveDebug 任务列表
-     * 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</li>
+     * <li>type=heapdump: Returns the list of heap dump tasks.</li>
+     * <li>type=pprof: Returns the list of pprof dumps (requires searchCondition).</li>
+     * <li>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
+     * Supports nextToken/maxResults pagination and searchCondition filtering.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>列举ServiceTask</p>
+     * <p>Lists service tasks.</p>
      * 
      * @param request ListServiceTaskRequest
      * @return ListServiceTaskResponse
@@ -7142,7 +7142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags attached to resources.</p>
+     * <p>Queries labels associated with resources.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
      * @param headers map
@@ -7202,7 +7202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags attached to resources.</p>
+     * <p>Queries labels associated with resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -7226,6 +7226,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.workspaceNameList)) {
             request.workspaceNameListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workspaceNameList, "workspaceNameList", "simple");
         }
@@ -7241,6 +7245,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("tags", request.tagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
@@ -7402,8 +7414,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("displayName", request.displayName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.slsProject)) {
             body.put("slsProject", request.slsProject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7682,7 +7702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to one or more resources.</p>
+     * <p>Attaches labels to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -7724,7 +7744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to one or more resources.</p>
+     * <p>Attaches labels to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -7737,7 +7757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a tag</p>
+     * <p>Unbinds labels from a resource.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -7793,7 +7813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a tag</p>
+     * <p>Unbinds labels from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
