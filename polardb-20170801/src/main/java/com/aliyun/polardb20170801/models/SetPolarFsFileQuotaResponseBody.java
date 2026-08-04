@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetPolarFsFileQuotaResponseBody extends TeaModel {
     /**
-     * <p>The ID of the PolarFS instance.</p>
+     * <p>The Polarlakebase instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
@@ -14,7 +14,7 @@ public class SetPolarFsFileQuotaResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>925B84D9-CA72-432C-95CF-738C22******</p>

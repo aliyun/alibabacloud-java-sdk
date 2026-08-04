@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsQuotaListRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The instance ID of the PolarDB instance on which the application depends.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-************</p>
@@ -14,6 +14,8 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +23,9 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: 30, 50, and 100.</p>
+     * <p>Default value: 30.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -28,7 +33,7 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The PolarFS instance ID.</p>
+     * <p>The PolarFs instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +43,11 @@ public class DescribePolarFsQuotaListRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>The quota mode.</p>
+     * <p>The query mode. Valid values:</p>
+     * <ul>
+     * <li><strong>quotaPolicy</strong>: quota rule</li>
+     * <li><strong>quota</strong>: quota</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>quotaPolicy</p>

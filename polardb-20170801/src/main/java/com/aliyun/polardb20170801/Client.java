@@ -19377,7 +19377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quota list.</p>
+     * <p>Queries the quota list.</p>
      * 
      * @param request DescribePolarFsQuotaListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19429,7 +19429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the quota list.</p>
+     * <p>Queries the quota list.</p>
      * 
      * @param request DescribePolarFsQuotaListRequest
      * @return DescribePolarFsQuotaListResponse
@@ -30242,16 +30242,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation sets file quota rules for specific directories in a PolarFS instance. Use the <code>FilePathQuotas</code> parameter to define the target directories and their properties. The path for <code>FilePathId</code> must be an absolute path from the root directory, not from a mount target. The <code>Strategy</code> parameter controls how the rule applies to existing files. By default, the operation applies a rule only if one does not already exist.</p>
+     * <h2>Request description</h2>
+     * <p>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <code>Strategy</code> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</p>
      * <h3>Notes</h3>
      * <ul>
-     * <li>The <code>FilePathQuotas</code> list can contain up to 21 items.</li>
-     * <li>To apply the rule to subdirectories at multiple levels under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
+     * <li>To apply rules to multiple levels of subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets file quota rules for specific directories in a PolarFS instance.</p>
+     * <p>Sets file quota rules for a specified directory in a Polarlakebase instance.</p>
      * 
      * @param request SetPolarFsFileQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30291,16 +30291,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation sets file quota rules for specific directories in a PolarFS instance. Use the <code>FilePathQuotas</code> parameter to define the target directories and their properties. The path for <code>FilePathId</code> must be an absolute path from the root directory, not from a mount target. The <code>Strategy</code> parameter controls how the rule applies to existing files. By default, the operation applies a rule only if one does not already exist.</p>
+     * <h2>Request description</h2>
+     * <p>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <code>Strategy</code> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</p>
      * <h3>Notes</h3>
      * <ul>
-     * <li>The <code>FilePathQuotas</code> list can contain up to 21 items.</li>
-     * <li>To apply the rule to subdirectories at multiple levels under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
+     * <li>To apply rules to multiple levels of subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sets file quota rules for specific directories in a PolarFS instance.</p>
+     * <p>Sets file quota rules for a specified directory in a Polarlakebase instance.</p>
      * 
      * @param request SetPolarFsFileQuotaRequest
      * @return SetPolarFsFileQuotaResponse

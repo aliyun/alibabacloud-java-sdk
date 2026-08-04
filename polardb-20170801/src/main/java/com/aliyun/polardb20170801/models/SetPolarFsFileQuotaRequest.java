@@ -14,14 +14,14 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>An array of objects defining the file quota rules for specific directories.</p>
+     * <p>The details of the quota rules to apply to directories.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FilePathQuotas")
     public java.util.List<SetPolarFsFileQuotaRequestFilePathQuotas> filePathQuotas;
 
     /**
-     * <p>The ID of the PolarFS instance.</p>
+     * <p>The Polarlakebase instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
 
     public static class SetPolarFsFileQuotaRequestFilePathQuotas extends TeaModel {
         /**
-         * <p>The capacity quota in GB.</p>
+         * <p>The quota capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -70,7 +70,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Long capacity;
 
         /**
-         * <p>The absolute path of the directory.</p>
+         * <p>The directory path.</p>
          * 
          * <strong>example:</strong>
          * <p>/a/project</p>
@@ -79,7 +79,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public String filePathId;
 
         /**
-         * <p>The inode quota.</p>
+         * <p>The quota inodes.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -88,7 +88,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Long inodes;
 
         /**
-         * <p>The maximum depth of subdirectories to traverse under the path specified by <code>FilePathId</code>. A value of 1 traverses only the first level of subdirectories. A value of 0 traverses to the deepest level.</p>
+         * <p>The number of subdirectory levels to traverse under <code>FilePathId</code>. A value of 1 indicates that only the first-level subdirectories are traversed. A value of 0 indicates that all levels are traversed to the deepest level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -97,7 +97,7 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public Integer maxDepth;
 
         /**
-         * <p>A list of file quota rule IDs, separated by a comma (<code>,</code>).</p>
+         * <p>The IDs of the rules to apply, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>1,2</p>
@@ -106,12 +106,10 @@ public class SetPolarFsFileQuotaRequest extends TeaModel {
         public String quotaIds;
 
         /**
-         * <p>Specifies how to apply the rule to existing files. Valid values:</p>
+         * <p>The mode in which rules take effect on existing files. Valid values:</p>
          * <ul>
-         * <li><p><strong>missing</strong>: Applies the rule only if one does not already exist. (Default)</p>
-         * </li>
-         * <li><p><strong>all</strong>: Applies the rule to all files.</p>
-         * </li>
+         * <li><strong>missing</strong>: Rules take effect only when they are missing. This is the default value.</li>
+         * <li><strong>all</strong>: Rules take effect on all files.</li>
          * </ul>
          * 
          * <strong>example:</strong>

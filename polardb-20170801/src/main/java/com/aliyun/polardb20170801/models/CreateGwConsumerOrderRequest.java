@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGwConsumerOrderRequest extends TeaModel {
     /**
-     * <p>The idempotence token.</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a42***********</p>
@@ -14,7 +14,7 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The expiration time of the API key in ISO 8601 format. The value must be later than the current time.</p>
+     * <p>The expiration time of the API key in ISO-8601 format. The value must be later than the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2027-07-23T03:09:08Z</p>
@@ -33,7 +33,7 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The number of API keys to generate, which is the number of resource plans to order. Valid values: 1 to 30.</p>
+     * <p>The number of API keys to generate (the number of capacity plans to order). Valid values: 1 to 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,17 +43,11 @@ public class CreateGwConsumerOrderRequest extends TeaModel {
     public Integer keyCount;
 
     /**
-     * <p>The specification tier of the resource plan. Valid values:</p>
-     * <ul>
-     * <li>basic</li>
-     * <li>advanced</li>
-     * <li>pro</li>
-     * </ul>
-     * <p>Each value represents the number of credits for a single key.</p>
+     * <p>The number of credits per API key. The value is a positive integer string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>basic</p>
+     * <p>3000</p>
      */
     @NameInMap("PackageSpec")
     public String packageSpec;
