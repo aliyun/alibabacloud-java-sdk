@@ -25,6 +25,9 @@ public class UpdateAccountProfileInfoShrinkRequest extends TeaModel {
     @NameInMap("ContactMethod")
     public String contactMethod;
 
+    @NameInMap("DistrictJsonString")
+    public String districtJsonStringShrink;
+
     @NameInMap("Fax")
     public String fax;
 
@@ -33,6 +36,9 @@ public class UpdateAccountProfileInfoShrinkRequest extends TeaModel {
 
     @NameInMap("Head")
     public String head;
+
+    @NameInMap("HeadColor")
+    public String headColor;
 
     @NameInMap("LastName")
     public String lastName;
@@ -48,6 +54,12 @@ public class UpdateAccountProfileInfoShrinkRequest extends TeaModel {
 
     @NameInMap("ProvinceJsonString")
     public String provinceJsonStringShrink;
+
+    @NameInMap("SelfServicingBusinessRegNum")
+    public String selfServicingBusinessRegNum;
+
+    @NameInMap("SelfServicingIdentificationNum")
+    public String selfServicingIdentificationNum;
 
     @NameInMap("TrueName")
     public String trueName;
@@ -113,6 +125,14 @@ public class UpdateAccountProfileInfoShrinkRequest extends TeaModel {
         return this.contactMethod;
     }
 
+    public UpdateAccountProfileInfoShrinkRequest setDistrictJsonStringShrink(String districtJsonStringShrink) {
+        this.districtJsonStringShrink = districtJsonStringShrink;
+        return this;
+    }
+    public String getDistrictJsonStringShrink() {
+        return this.districtJsonStringShrink;
+    }
+
     public UpdateAccountProfileInfoShrinkRequest setFax(String fax) {
         this.fax = fax;
         return this;
@@ -135,6 +155,14 @@ public class UpdateAccountProfileInfoShrinkRequest extends TeaModel {
     }
     public String getHead() {
         return this.head;
+    }
+
+    public UpdateAccountProfileInfoShrinkRequest setHeadColor(String headColor) {
+        this.headColor = headColor;
+        return this;
+    }
+    public String getHeadColor() {
+        return this.headColor;
     }
 
     public UpdateAccountProfileInfoShrinkRequest setLastName(String lastName) {
@@ -175,6 +203,22 @@ public class UpdateAccountProfileInfoShrinkRequest extends TeaModel {
     }
     public String getProvinceJsonStringShrink() {
         return this.provinceJsonStringShrink;
+    }
+
+    public UpdateAccountProfileInfoShrinkRequest setSelfServicingBusinessRegNum(String selfServicingBusinessRegNum) {
+        this.selfServicingBusinessRegNum = selfServicingBusinessRegNum;
+        return this;
+    }
+    public String getSelfServicingBusinessRegNum() {
+        return this.selfServicingBusinessRegNum;
+    }
+
+    public UpdateAccountProfileInfoShrinkRequest setSelfServicingIdentificationNum(String selfServicingIdentificationNum) {
+        this.selfServicingIdentificationNum = selfServicingIdentificationNum;
+        return this;
+    }
+    public String getSelfServicingIdentificationNum() {
+        return this.selfServicingIdentificationNum;
     }
 
     public UpdateAccountProfileInfoShrinkRequest setTrueName(String trueName) {

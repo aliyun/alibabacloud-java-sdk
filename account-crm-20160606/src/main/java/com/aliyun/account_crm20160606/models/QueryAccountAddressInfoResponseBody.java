@@ -94,6 +94,36 @@ public class QueryAccountAddressInfoResponseBody extends TeaModel {
 
     }
 
+    public static class QueryAccountAddressInfoResponseBodyProfileInfoDistrict extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static QueryAccountAddressInfoResponseBodyProfileInfoDistrict build(java.util.Map<String, ?> map) throws Exception {
+            QueryAccountAddressInfoResponseBodyProfileInfoDistrict self = new QueryAccountAddressInfoResponseBodyProfileInfoDistrict();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAccountAddressInfoResponseBodyProfileInfoDistrict setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryAccountAddressInfoResponseBodyProfileInfoDistrict setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class QueryAccountAddressInfoResponseBodyProfileInfoProvince extends TeaModel {
         @NameInMap("Id")
         public String id;
@@ -149,6 +179,9 @@ public class QueryAccountAddressInfoResponseBody extends TeaModel {
         @NameInMap("City")
         public QueryAccountAddressInfoResponseBodyProfileInfoCity city;
 
+        @NameInMap("District")
+        public QueryAccountAddressInfoResponseBodyProfileInfoDistrict district;
+
         @NameInMap("Email")
         public String email;
 
@@ -163,6 +196,12 @@ public class QueryAccountAddressInfoResponseBody extends TeaModel {
 
         @NameInMap("Province")
         public QueryAccountAddressInfoResponseBodyProfileInfoProvince province;
+
+        @NameInMap("SelfServicingBusinessRegNum")
+        public String selfServicingBusinessRegNum;
+
+        @NameInMap("SelfServicingIdentificationNum")
+        public String selfServicingIdentificationNum;
 
         @NameInMap("TrueName")
         public String trueName;
@@ -239,6 +278,14 @@ public class QueryAccountAddressInfoResponseBody extends TeaModel {
             return this.city;
         }
 
+        public QueryAccountAddressInfoResponseBodyProfileInfo setDistrict(QueryAccountAddressInfoResponseBodyProfileInfoDistrict district) {
+            this.district = district;
+            return this;
+        }
+        public QueryAccountAddressInfoResponseBodyProfileInfoDistrict getDistrict() {
+            return this.district;
+        }
+
         public QueryAccountAddressInfoResponseBodyProfileInfo setEmail(String email) {
             this.email = email;
             return this;
@@ -277,6 +324,22 @@ public class QueryAccountAddressInfoResponseBody extends TeaModel {
         }
         public QueryAccountAddressInfoResponseBodyProfileInfoProvince getProvince() {
             return this.province;
+        }
+
+        public QueryAccountAddressInfoResponseBodyProfileInfo setSelfServicingBusinessRegNum(String selfServicingBusinessRegNum) {
+            this.selfServicingBusinessRegNum = selfServicingBusinessRegNum;
+            return this;
+        }
+        public String getSelfServicingBusinessRegNum() {
+            return this.selfServicingBusinessRegNum;
+        }
+
+        public QueryAccountAddressInfoResponseBodyProfileInfo setSelfServicingIdentificationNum(String selfServicingIdentificationNum) {
+            this.selfServicingIdentificationNum = selfServicingIdentificationNum;
+            return this;
+        }
+        public String getSelfServicingIdentificationNum() {
+            return this.selfServicingIdentificationNum;
         }
 
         public QueryAccountAddressInfoResponseBodyProfileInfo setTrueName(String trueName) {

@@ -7,15 +7,27 @@ public class AddCustomerLabelRequest extends TeaModel {
     @NameInMap("Endtime")
     public String endtime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LabelSeries")
     public String labelSeries;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LabelTypes")
     public java.util.List<String> labelTypes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Organization")
     public String organization;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PK")
     public Long PK;
 
@@ -25,6 +37,9 @@ public class AddCustomerLabelRequest extends TeaModel {
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

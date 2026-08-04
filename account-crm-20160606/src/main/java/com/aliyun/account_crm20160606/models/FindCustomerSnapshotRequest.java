@@ -4,12 +4,21 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class FindCustomerSnapshotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InfoType")
     public String infoType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pk")
     public Long pk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 

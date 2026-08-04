@@ -4,12 +4,21 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgServiceStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AgAccountType")
     public String agAccountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mpk")
     public String mpk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Status")
     public String status;
 

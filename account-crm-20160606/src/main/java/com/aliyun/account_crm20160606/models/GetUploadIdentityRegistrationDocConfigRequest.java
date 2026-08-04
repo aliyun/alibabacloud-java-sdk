@@ -4,9 +4,15 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class GetUploadIdentityRegistrationDocConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustomerId")
     public String customerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 

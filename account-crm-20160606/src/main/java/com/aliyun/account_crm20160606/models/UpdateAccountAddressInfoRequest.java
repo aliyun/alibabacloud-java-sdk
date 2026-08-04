@@ -13,6 +13,9 @@ public class UpdateAccountAddressInfoRequest extends TeaModel {
     @NameInMap("CityJsonString")
     public java.util.Map<String, ?> cityJsonString;
 
+    @NameInMap("DistrictJsonString")
+    public java.util.Map<String, ?> districtJsonString;
+
     @NameInMap("PK")
     public String PK;
 
@@ -49,6 +52,14 @@ public class UpdateAccountAddressInfoRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getCityJsonString() {
         return this.cityJsonString;
+    }
+
+    public UpdateAccountAddressInfoRequest setDistrictJsonString(java.util.Map<String, ?> districtJsonString) {
+        this.districtJsonString = districtJsonString;
+        return this;
+    }
+    public java.util.Map<String, ?> getDistrictJsonString() {
+        return this.districtJsonString;
     }
 
     public UpdateAccountAddressInfoRequest setPK(String PK) {

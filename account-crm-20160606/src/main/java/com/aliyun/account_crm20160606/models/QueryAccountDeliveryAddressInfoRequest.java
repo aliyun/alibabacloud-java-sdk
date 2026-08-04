@@ -4,12 +4,21 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class QueryAccountDeliveryAddressInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pk")
     public String pk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

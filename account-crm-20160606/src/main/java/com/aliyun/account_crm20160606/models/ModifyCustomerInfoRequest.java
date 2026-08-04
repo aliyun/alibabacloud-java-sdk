@@ -13,6 +13,9 @@ public class ModifyCustomerInfoRequest extends TeaModel {
     @NameInMap("CustomerSubCategory")
     public String customerSubCategory;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

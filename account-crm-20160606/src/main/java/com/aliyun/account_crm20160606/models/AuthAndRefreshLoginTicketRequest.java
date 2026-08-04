@@ -4,9 +4,15 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class AuthAndRefreshLoginTicketRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HavanaId")
     public String havanaId;
 

@@ -13,12 +13,18 @@ public class ModifyContacterRequest extends TeaModel {
     @NameInMap("ContacterEmail")
     public String contacterEmail;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContacterId")
     public Long contacterId;
 
     @NameInMap("ContacterMobile")
     public String contacterMobile;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContacterName")
     public String contacterName;
 
@@ -40,6 +46,9 @@ public class ModifyContacterRequest extends TeaModel {
     @NameInMap("MobileConfirmed")
     public Boolean mobileConfirmed;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

@@ -4,12 +4,21 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class AsyncModifyAgLoginEmailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mpk")
     public String mpk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NewLoginEmail")
     public String newLoginEmail;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pk")
     public String pk;
 

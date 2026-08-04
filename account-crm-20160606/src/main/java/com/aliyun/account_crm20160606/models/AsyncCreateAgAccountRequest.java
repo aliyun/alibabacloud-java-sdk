@@ -4,12 +4,21 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class AsyncCreateAgAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LoginEmail")
     public String loginEmail;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MaserAccountInfo")
     public String maserAccountInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mpk")
     public String mpk;
 

@@ -4,36 +4,60 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class DoLogicalDeleteResourceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Bid")
     public String bid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GmtWakeup")
     public String gmtWakeup;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Hid")
     public Long hid;
 
     @NameInMap("Interrupt")
     public Boolean interrupt;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Invoker")
     public String invoker;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pk")
     public String pk;
 
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskExtraData")
     public String taskExtraData;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskIdentifier")
     public String taskIdentifier;
 

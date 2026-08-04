@@ -61,6 +61,36 @@ public class QueryAccountProfileInfoResponseBody extends TeaModel {
 
     }
 
+    public static class QueryAccountProfileInfoResponseBodyProfileInfoDistrict extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static QueryAccountProfileInfoResponseBodyProfileInfoDistrict build(java.util.Map<String, ?> map) throws Exception {
+            QueryAccountProfileInfoResponseBodyProfileInfoDistrict self = new QueryAccountProfileInfoResponseBodyProfileInfoDistrict();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAccountProfileInfoResponseBodyProfileInfoDistrict setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryAccountProfileInfoResponseBodyProfileInfoDistrict setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class QueryAccountProfileInfoResponseBodyProfileInfoProvince extends TeaModel {
         @NameInMap("Id")
         public String id;
@@ -176,6 +206,9 @@ public class QueryAccountProfileInfoResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("District")
+        public QueryAccountProfileInfoResponseBodyProfileInfoDistrict district;
+
         @NameInMap("Eid")
         public String eid;
 
@@ -196,6 +229,9 @@ public class QueryAccountProfileInfoResponseBody extends TeaModel {
 
         @NameInMap("Head")
         public String head;
+
+        @NameInMap("HeadUrl")
+        public String headUrl;
 
         @NameInMap("IDNumber")
         public String IDNumber;
@@ -244,6 +280,15 @@ public class QueryAccountProfileInfoResponseBody extends TeaModel {
 
         @NameInMap("SecurityQuestionExists")
         public Boolean securityQuestionExists;
+
+        @NameInMap("SelfServicingBusinessRegNum")
+        public String selfServicingBusinessRegNum;
+
+        @NameInMap("SelfServicingIdentificationNum")
+        public String selfServicingIdentificationNum;
+
+        @NameInMap("ShowNickName")
+        public String showNickName;
 
         @NameInMap("Src")
         public String src;
@@ -495,6 +540,14 @@ public class QueryAccountProfileInfoResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public QueryAccountProfileInfoResponseBodyProfileInfo setDistrict(QueryAccountProfileInfoResponseBodyProfileInfoDistrict district) {
+            this.district = district;
+            return this;
+        }
+        public QueryAccountProfileInfoResponseBodyProfileInfoDistrict getDistrict() {
+            return this.district;
+        }
+
         public QueryAccountProfileInfoResponseBodyProfileInfo setEid(String eid) {
             this.eid = eid;
             return this;
@@ -549,6 +602,14 @@ public class QueryAccountProfileInfoResponseBody extends TeaModel {
         }
         public String getHead() {
             return this.head;
+        }
+
+        public QueryAccountProfileInfoResponseBodyProfileInfo setHeadUrl(String headUrl) {
+            this.headUrl = headUrl;
+            return this;
+        }
+        public String getHeadUrl() {
+            return this.headUrl;
         }
 
         public QueryAccountProfileInfoResponseBodyProfileInfo setIDNumber(String IDNumber) {
@@ -677,6 +738,30 @@ public class QueryAccountProfileInfoResponseBody extends TeaModel {
         }
         public Boolean getSecurityQuestionExists() {
             return this.securityQuestionExists;
+        }
+
+        public QueryAccountProfileInfoResponseBodyProfileInfo setSelfServicingBusinessRegNum(String selfServicingBusinessRegNum) {
+            this.selfServicingBusinessRegNum = selfServicingBusinessRegNum;
+            return this;
+        }
+        public String getSelfServicingBusinessRegNum() {
+            return this.selfServicingBusinessRegNum;
+        }
+
+        public QueryAccountProfileInfoResponseBodyProfileInfo setSelfServicingIdentificationNum(String selfServicingIdentificationNum) {
+            this.selfServicingIdentificationNum = selfServicingIdentificationNum;
+            return this;
+        }
+        public String getSelfServicingIdentificationNum() {
+            return this.selfServicingIdentificationNum;
+        }
+
+        public QueryAccountProfileInfoResponseBodyProfileInfo setShowNickName(String showNickName) {
+            this.showNickName = showNickName;
+            return this;
+        }
+        public String getShowNickName() {
+            return this.showNickName;
         }
 
         public QueryAccountProfileInfoResponseBodyProfileInfo setSrc(String src) {

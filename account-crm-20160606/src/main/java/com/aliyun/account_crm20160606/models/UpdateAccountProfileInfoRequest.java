@@ -25,6 +25,9 @@ public class UpdateAccountProfileInfoRequest extends TeaModel {
     @NameInMap("ContactMethod")
     public String contactMethod;
 
+    @NameInMap("DistrictJsonString")
+    public java.util.Map<String, ?> districtJsonString;
+
     @NameInMap("Fax")
     public String fax;
 
@@ -33,6 +36,9 @@ public class UpdateAccountProfileInfoRequest extends TeaModel {
 
     @NameInMap("Head")
     public String head;
+
+    @NameInMap("HeadColor")
+    public String headColor;
 
     @NameInMap("LastName")
     public String lastName;
@@ -48,6 +54,12 @@ public class UpdateAccountProfileInfoRequest extends TeaModel {
 
     @NameInMap("ProvinceJsonString")
     public java.util.Map<String, ?> provinceJsonString;
+
+    @NameInMap("SelfServicingBusinessRegNum")
+    public String selfServicingBusinessRegNum;
+
+    @NameInMap("SelfServicingIdentificationNum")
+    public String selfServicingIdentificationNum;
 
     @NameInMap("TrueName")
     public String trueName;
@@ -113,6 +125,14 @@ public class UpdateAccountProfileInfoRequest extends TeaModel {
         return this.contactMethod;
     }
 
+    public UpdateAccountProfileInfoRequest setDistrictJsonString(java.util.Map<String, ?> districtJsonString) {
+        this.districtJsonString = districtJsonString;
+        return this;
+    }
+    public java.util.Map<String, ?> getDistrictJsonString() {
+        return this.districtJsonString;
+    }
+
     public UpdateAccountProfileInfoRequest setFax(String fax) {
         this.fax = fax;
         return this;
@@ -135,6 +155,14 @@ public class UpdateAccountProfileInfoRequest extends TeaModel {
     }
     public String getHead() {
         return this.head;
+    }
+
+    public UpdateAccountProfileInfoRequest setHeadColor(String headColor) {
+        this.headColor = headColor;
+        return this;
+    }
+    public String getHeadColor() {
+        return this.headColor;
     }
 
     public UpdateAccountProfileInfoRequest setLastName(String lastName) {
@@ -175,6 +203,22 @@ public class UpdateAccountProfileInfoRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getProvinceJsonString() {
         return this.provinceJsonString;
+    }
+
+    public UpdateAccountProfileInfoRequest setSelfServicingBusinessRegNum(String selfServicingBusinessRegNum) {
+        this.selfServicingBusinessRegNum = selfServicingBusinessRegNum;
+        return this;
+    }
+    public String getSelfServicingBusinessRegNum() {
+        return this.selfServicingBusinessRegNum;
+    }
+
+    public UpdateAccountProfileInfoRequest setSelfServicingIdentificationNum(String selfServicingIdentificationNum) {
+        this.selfServicingIdentificationNum = selfServicingIdentificationNum;
+        return this;
+    }
+    public String getSelfServicingIdentificationNum() {
+        return this.selfServicingIdentificationNum;
     }
 
     public UpdateAccountProfileInfoRequest setTrueName(String trueName) {

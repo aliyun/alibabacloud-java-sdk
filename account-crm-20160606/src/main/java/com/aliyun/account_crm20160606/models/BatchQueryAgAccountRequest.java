@@ -4,9 +4,15 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class BatchQueryAgAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mpk")
     public String mpk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PkList")
     public String pkList;
 

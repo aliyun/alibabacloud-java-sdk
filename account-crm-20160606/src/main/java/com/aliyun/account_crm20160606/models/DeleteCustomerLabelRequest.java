@@ -4,21 +4,36 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomerLabelRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LabelSeries")
     public String labelSeries;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LabelTypes")
     public java.util.List<String> labelTypes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Organization")
     public String organization;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PK")
     public Long PK;
 
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

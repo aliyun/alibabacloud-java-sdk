@@ -71,6 +71,9 @@ public class BatchQueryAgAccountResponseBody extends TeaModel {
         @NameInMap("Pk")
         public String pk;
 
+        @NameInMap("ShowNickName")
+        public String showNickName;
+
         public static BatchQueryAgAccountResponseBodyAgAccounts build(java.util.Map<String, ?> map) throws Exception {
             BatchQueryAgAccountResponseBodyAgAccounts self = new BatchQueryAgAccountResponseBodyAgAccounts();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class BatchQueryAgAccountResponseBody extends TeaModel {
         }
         public String getPk() {
             return this.pk;
+        }
+
+        public BatchQueryAgAccountResponseBodyAgAccounts setShowNickName(String showNickName) {
+            this.showNickName = showNickName;
+            return this;
+        }
+        public String getShowNickName() {
+            return this.showNickName;
         }
 
     }

@@ -4,12 +4,18 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class OperateFinanceTaxRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FinanceTax")
     public String financeTax;
 
     @NameInMap("FinanceTaxCertificateImgName")
     public String financeTaxCertificateImgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HId")
     public Long HId;
 

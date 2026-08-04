@@ -4,15 +4,24 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class MapPkFromHidRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("Bid")
     public String bid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Hid")
     public String hid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MappingScenes")
     public String mappingScenes;
 

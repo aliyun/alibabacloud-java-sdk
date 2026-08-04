@@ -4,6 +4,9 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class LoadRealNameInfoByPkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PK")
     public String PK;
 

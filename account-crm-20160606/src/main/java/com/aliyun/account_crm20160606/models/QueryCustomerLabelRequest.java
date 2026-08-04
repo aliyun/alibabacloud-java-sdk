@@ -7,6 +7,9 @@ public class QueryCustomerLabelRequest extends TeaModel {
     @NameInMap("LabelSeries")
     public String labelSeries;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PK")
     public Long PK;
 

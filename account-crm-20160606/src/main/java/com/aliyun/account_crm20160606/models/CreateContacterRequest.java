@@ -16,6 +16,9 @@ public class CreateContacterRequest extends TeaModel {
     @NameInMap("ContacterMobile")
     public String contacterMobile;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContacterName")
     public String contacterName;
 
@@ -37,6 +40,9 @@ public class CreateContacterRequest extends TeaModel {
     @NameInMap("MobileConfirmed")
     public Boolean mobileConfirmed;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

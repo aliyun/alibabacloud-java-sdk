@@ -7,6 +7,9 @@ public class GetAgRelationRequest extends TeaModel {
     @NameInMap("AgAccountType")
     public String agAccountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pk")
     public String pk;
 

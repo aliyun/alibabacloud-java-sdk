@@ -4,6 +4,9 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class GetAliyunPKByAliyunIDRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliyunId")
     public String aliyunId;
 

@@ -4,6 +4,9 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class FindFinanceTaxDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KpId")
     public Long kpId;
 

@@ -13,6 +13,9 @@ public class UpdateAccountAddressInfoShrinkRequest extends TeaModel {
     @NameInMap("CityJsonString")
     public String cityJsonStringShrink;
 
+    @NameInMap("DistrictJsonString")
+    public String districtJsonStringShrink;
+
     @NameInMap("PK")
     public String PK;
 
@@ -49,6 +52,14 @@ public class UpdateAccountAddressInfoShrinkRequest extends TeaModel {
     }
     public String getCityJsonStringShrink() {
         return this.cityJsonStringShrink;
+    }
+
+    public UpdateAccountAddressInfoShrinkRequest setDistrictJsonStringShrink(String districtJsonStringShrink) {
+        this.districtJsonStringShrink = districtJsonStringShrink;
+        return this;
+    }
+    public String getDistrictJsonStringShrink() {
+        return this.districtJsonStringShrink;
     }
 
     public UpdateAccountAddressInfoShrinkRequest setPK(String PK) {

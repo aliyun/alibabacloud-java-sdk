@@ -7,9 +7,15 @@ public class GetAgAccountAkRequest extends TeaModel {
     @NameInMap("AgAccountType")
     public String agAccountType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Mpk")
     public String mpk;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Pk")
     public String pk;
 

@@ -68,6 +68,9 @@ public class GetCustomerInformationResponseBody extends TeaModel {
         @NameInMap("Biz")
         public String biz;
 
+        @NameInMap("CustomerCategory")
+        public String customerCategory;
+
         @NameInMap("Website")
         public String website;
 
@@ -82,6 +85,14 @@ public class GetCustomerInformationResponseBody extends TeaModel {
         }
         public String getBiz() {
             return this.biz;
+        }
+
+        public GetCustomerInformationResponseBodyData setCustomerCategory(String customerCategory) {
+            this.customerCategory = customerCategory;
+            return this;
+        }
+        public String getCustomerCategory() {
+            return this.customerCategory;
         }
 
         public GetCustomerInformationResponseBodyData setWebsite(String website) {

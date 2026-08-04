@@ -4,15 +4,27 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class QueryBindsByOuterIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MinorOuterId")
     public String minorOuterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OuterId")
     public String outerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

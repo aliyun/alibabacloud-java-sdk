@@ -7,6 +7,9 @@ public class GetCustomerCategoryRequest extends TeaModel {
     @NameInMap("LocaleString")
     public String localeString;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

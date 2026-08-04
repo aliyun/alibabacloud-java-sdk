@@ -4,9 +4,15 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class DeleteContacterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContacterId")
     public Long contacterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 

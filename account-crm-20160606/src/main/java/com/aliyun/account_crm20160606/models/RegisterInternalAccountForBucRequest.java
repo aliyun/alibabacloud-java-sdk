@@ -4,9 +4,15 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class RegisterInternalAccountForBucRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Bid")
     public String bid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Email")
     public String email;
 

@@ -4,12 +4,21 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class MapFromHavanaBindIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HavanaBindId")
     public String havanaBindId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HavanaBindStations")
     public java.util.Map<String, ?> havanaBindStations;
 

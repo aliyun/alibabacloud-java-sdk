@@ -4,18 +4,32 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class FindAllContacterRequest extends TeaModel {
+    @NameInMap("AppName")
+    public String appName;
+
     @NameInMap("LocaleString")
     public String localeString;
 
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserId")
     public Long userId;
 
     public static FindAllContacterRequest build(java.util.Map<String, ?> map) throws Exception {
         FindAllContacterRequest self = new FindAllContacterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FindAllContacterRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public FindAllContacterRequest setLocaleString(String localeString) {

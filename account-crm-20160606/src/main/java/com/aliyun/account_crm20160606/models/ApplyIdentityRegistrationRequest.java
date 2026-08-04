@@ -4,15 +4,24 @@ package com.aliyun.account_crm20160606.models;
 import com.aliyun.tea.*;
 
 public class ApplyIdentityRegistrationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountType")
     public Integer accountType;
 
     @NameInMap("CustomerId")
     public String customerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DocBackPic")
     public String docBackPic;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DocFrontPic")
     public String docFrontPic;
 
@@ -22,9 +31,15 @@ public class ApplyIdentityRegistrationRequest extends TeaModel {
     @NameInMap("DocType")
     public String docType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FullName")
     public String fullName;
 
@@ -36,6 +51,9 @@ public class ApplyIdentityRegistrationRequest extends TeaModel {
 
     @NameInMap("RegisteredNum")
     public String registeredNum;
+
+    @NameInMap("Source")
+    public String source;
 
     @NameInMap("Tel")
     public String tel;
@@ -131,6 +149,14 @@ public class ApplyIdentityRegistrationRequest extends TeaModel {
     }
     public String getRegisteredNum() {
         return this.registeredNum;
+    }
+
+    public ApplyIdentityRegistrationRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ApplyIdentityRegistrationRequest setTel(String tel) {
