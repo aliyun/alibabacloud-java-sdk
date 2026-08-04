@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclResourceNameRequest extends TeaModel {
     /**
-     * <p>Matching pattern. Valid values:</p>
-     * <ul>
-     * <li><p>LITERAL: exact match</p>
-     * </li>
-     * <li><p>PREFIXED: prefix match</p>
-     * </li>
-     * </ul>
+     * <p>The matching mode. Valid values:</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,17 +15,7 @@ public class DescribeAclResourceNameRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>Resource type.</p>
-     * <ul>
-     * <li><p><strong>Topic</strong>: message topic.</p>
-     * </li>
-     * <li><p><strong>Group</strong>: consumer group.</p>
-     * </li>
-     * <li><p><strong>Cluster</strong>: instance.</p>
-     * </li>
-     * <li><p><strong>TransactionalId</strong>: transaction ID.</p>
-     * </li>
-     * </ul>
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +25,7 @@ public class DescribeAclResourceNameRequest extends TeaModel {
     public String aclResourceType;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +35,7 @@ public class DescribeAclResourceNameRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

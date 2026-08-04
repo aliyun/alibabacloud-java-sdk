@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class GetTopicListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The page size. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,7 +33,7 @@ public class GetTopicListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the instance to which the topic belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -42,7 +42,7 @@ public class GetTopicListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the topic whose information you want to query.</p>
+     * <p>The name of the topic whose information you want to retrieve.</p>
      * 
      * <strong>example:</strong>
      * <p>topic_name</p>

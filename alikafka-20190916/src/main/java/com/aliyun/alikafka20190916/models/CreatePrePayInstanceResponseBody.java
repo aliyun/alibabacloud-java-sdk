@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrePayInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates a successful request.</p>
+     * <p>The HTTP status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CreatePrePayInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreatePrePayInstanceResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -29,7 +29,7 @@ public class CreatePrePayInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E57A8862-DF68-4055-8E55-B80CB4****</p>
@@ -38,7 +38,7 @@ public class CreatePrePayInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +102,7 @@ public class CreatePrePayInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The unique ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>236972661xxxx</p>

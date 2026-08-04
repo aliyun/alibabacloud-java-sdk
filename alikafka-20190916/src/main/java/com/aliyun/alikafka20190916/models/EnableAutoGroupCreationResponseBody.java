@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableAutoGroupCreationResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The response code.</p>
      * <p>A value of <strong>200</strong> indicates success.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class EnableAutoGroupCreationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

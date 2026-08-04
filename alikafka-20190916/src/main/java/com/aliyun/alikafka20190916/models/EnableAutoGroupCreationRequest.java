@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnableAutoGroupCreationRequest extends TeaModel {
     /**
-     * <p>Enable or disable the free use of Groups. Valid values:</p>
+     * <p>Specifies whether to enable the free use of groups. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enable.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disable.</p>
-     * </li>
+     * <li><strong>true</strong>: Enable.</li>
+     * <li><strong>false</strong>: Disable.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +20,7 @@ public class EnableAutoGroupCreationRequest extends TeaModel {
 
     /**
      * <p>The instance ID.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> to obtain it.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

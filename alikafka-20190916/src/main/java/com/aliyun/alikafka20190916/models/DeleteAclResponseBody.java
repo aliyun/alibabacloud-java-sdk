@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAclResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates success.</p>
+     * <p>The HTTP status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteAclResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -23,7 +23,7 @@ public class DeleteAclResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B0740227-AA9A-4E14-8E9F-36ED665****</p>

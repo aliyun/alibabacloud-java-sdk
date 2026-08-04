@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupResponseBody extends TeaModel {
     /**
-     * <p>Status code. A return value of 200 indicates success.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -23,7 +23,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E57A8862-DF68-4055-8E55-B80CB4****</p>

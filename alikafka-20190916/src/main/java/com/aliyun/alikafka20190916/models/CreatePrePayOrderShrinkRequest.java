@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreatePrePayOrderShrinkRequest extends TeaModel {
     /**
-     * <p>The configuration of Confluent components.</p>
+     * <p>The Confluent component configurations.</p>
      * <blockquote>
-     * <p>This parameter is required when you create a Confluent series instance.</p>
+     * <p>This parameter is required when you create a Confluent instance.</p>
      * </blockquote>
      */
     @NameInMap("ConfluentConfig")
@@ -16,13 +16,13 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The deployment type. Valid values:</p>
      * <ul>
-     * <li><p><strong>4</strong>: Internet/VPC instance</p>
+     * <li><p><strong>4</strong>: Internet- and VPC-connected instance</p>
      * </li>
-     * <li><p><strong>5</strong>: VPC instance</p>
+     * <li><p><strong>5</strong>: VPC-connected instance</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you are creating a Confluent series instance, you cannot select the deployment type. You can only set the value to 5. After the purchase, you can adjust whether each component is open to the Internet.</p>
+     * <p>If you create a Confluent instance, the deployment type is not supported. You can only set this parameter to 5. After the purchase, you can configure whether to enable public access for each component.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,9 +33,9 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The disk capacity. Unit: GB.</p>
-     * <p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,13 +47,13 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The disk type. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: ultra disk</p>
+     * <li><p><strong>0</strong>: ultra cloud disk</p>
      * </li>
      * <li><p><strong>1</strong>: SSD</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,12 +63,10 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String diskType;
 
     /**
-     * <p>The subscription duration. Unit: month. Default value: 1. Valid values:</p>
+     * <p>The subscription duration. Unit: months. Default value: 1. Valid values:</p>
      * <ul>
-     * <li><p><strong>Confluent instances: 1 or 12</strong></p>
-     * </li>
-     * <li><p><strong>Kafka instances: 1</strong></p>
-     * </li>
+     * <li><strong>Confluent instances: 1 or 12</strong></li>
+     * <li><strong>Kafka instances: 1</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,15 +76,15 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The Internet traffic.</p>
+     * <p>The public network traffic.</p>
      * <ul>
-     * <li><p>If <strong>DeployType</strong> is set to <strong>4</strong>, you must specify this parameter.</p>
+     * <li><p>This parameter is required if <strong>DeployType</strong> is set to <strong>4</strong>.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go</a>.</p>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/72142.html">Pay-as-you-go billing method</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,15 +94,15 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public Integer eipMax;
 
     /**
-     * <p>The traffic peak (not recommended).</p>
+     * <p>The peak traffic (not recommended).</p>
      * <ul>
-     * <li><p>You must specify either <strong>IoMax</strong> or <strong>IoMaxSpec</strong>. If you specify both parameters, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
+     * <li><p>You must specify at least one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If you specify both, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,14 +114,14 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The traffic specification (recommended).</p>
      * <ul>
-     * <li><p>You must specify either <strong>IoMax</strong> or <strong>IoMaxSpec</strong>. If you specify both parameters, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
+     * <li><p>You must specify at least one of <strong>IoMax</strong> and <strong>IoMaxSpec</strong>. If you specify both, <strong>IoMaxSpec</strong> takes precedence. We recommend that you specify only <strong>IoMaxSpec</strong>.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <blockquote>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>alikafka.hw.2xlarge</p>
@@ -132,11 +130,11 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing type. Valid values:</p>
      * <ul>
      * <li><p><strong>0</strong>: subscription</p>
      * </li>
-     * <li><p><strong>4</strong>: Confluent series subscription</p>
+     * <li><p><strong>4</strong>: Confluent subscription</p>
      * </li>
      * </ul>
      * 
@@ -151,13 +149,13 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
      * <ul>
      * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions is equivalent to the topic specification based on the old topic sales model. If they are not equivalent, the system returns a failure. If they are equivalent, the system makes the purchase based on the number of partitions.</p>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -178,7 +176,7 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
-     * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Group console.</p>
+     * <p>If you do not specify this parameter, the instance is placed in the default resource group. You can view the resource group ID in the Resource Group console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
@@ -188,13 +186,13 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The specification type.</p>
-     * <p>Valid values for Kafka instances:</p>
+     * <p>Valid values for ApsaraMQ for Kafka instances:</p>
      * <ul>
-     * <li><p><strong>normal</strong>: Standard Edition (high write)</p>
+     * <li><p><strong>normal</strong>: Normal Edition (shared high-write)</p>
      * </li>
-     * <li><p><strong>professional</strong>: Professional Edition (high write)</p>
+     * <li><p><strong>professional</strong>: Professional Edition (shared high-write)</p>
      * </li>
-     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (high read)</p>
+     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (shared high-read)</p>
      * </li>
      * </ul>
      * <p>Valid values for Confluent instances:</p>
@@ -213,7 +211,7 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
     public String specType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreatePrePayOrderShrinkRequestTag> tag;
@@ -223,16 +221,16 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
      * <ul>
      * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions is equivalent to the topic specification based on the old topic sales model. If they are not equivalent, the system returns a failure. If they are equivalent, the system makes the purchase based on the number of partitions.</p>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
      * <li><p>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <blockquote>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you are creating a Confluent series instance, you do not need to pass this parameter.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -371,9 +369,9 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
          * <ul>
          * <li><p>N ranges from 1 to 20.</p>
          * </li>
-         * <li><p>If this parameter is empty, all tag keys are matched.</p>
+         * <li><p>If this parameter is left empty, all tag keys are matched.</p>
          * </li>
-         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -389,9 +387,9 @@ public class CreatePrePayOrderShrinkRequest extends TeaModel {
          * <ul>
          * <li><p>N ranges from 1 to 20.</p>
          * </li>
-         * <li><p>This parameter can be empty.</p>
+         * <li><p>This parameter can be left empty.</p>
          * </li>
-         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * </li>
          * </ul>
          * 

@@ -23,15 +23,15 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The Internet traffic.</p>
+     * <p>The public network traffic.</p>
      * <ul>
-     * <li>The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</li>
+     * <li>The public network traffic that you specify must be greater than or equal to the current public network traffic of the instance.</li>
      * <li>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If EipModel is set to true, the value of EipMax must be greater than 0.</li>
-     * <li>If EipModel is set to false, the value of EipMax must be 0.</li>
+     * <li>If <strong>EipModel</strong> is set to <strong>true</strong>, the value of <strong>EipMax</strong> must be greater than 0.</li>
+     * <li>If <strong>EipModel</strong> is set to <strong>false</strong>, the value of <strong>EipMax</strong> must be <strong>0</strong>.</li>
      * <li>If the instance is a serverless instance, you do not need to specify this parameter.</li>
      * </ul>
      * </blockquote>
@@ -75,7 +75,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
      * <ul>
      * <li><p>The peak traffic that you specify must be greater than or equal to the current peak traffic of the instance.</p>
      * </li>
-     * <li><p>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+     * <li><p>You must specify either the traffic specification or the peak traffic. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
      * </li>
      * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
@@ -95,7 +95,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
      * <ul>
      * <li><p>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
      * </li>
-     * <li><p>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+     * <li><p>You must specify either the traffic specification or the peak traffic. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
      * </li>
      * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
@@ -115,7 +115,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
      * <ul>
      * <li><p>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</p>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
      * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
@@ -141,7 +141,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The settings of the serverless instance. This parameter is required when you change the specifications of a serverless instance.</p>
+     * <p>The settings of the serverless instance. This parameter is required when you upgrade a serverless instance.</p>
      */
     @NameInMap("ServerlessConfig")
     public UpgradePostPayOrderRequestServerlessConfig serverlessConfig;
@@ -152,7 +152,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
      * <ul>
      * <li>normal: Standard Edition (shared throughput)</li>
      * <li>professional: Professional Edition (shared throughput)</li>
-     * <li>professionalForHighRead: Professional Edition (shared read throughput)</li>
+     * <li>professionalForHighRead: Professional Edition (shared throughput for high read)</li>
      * </ul>
      * <p>If the PaidType of the instance is 3 (reserved specification pay-as-you-go + serverless elastic scaling pay-as-you-go), valid values:</p>
      * <ul>
@@ -171,7 +171,7 @@ public class UpgradePostPayOrderRequest extends TeaModel {
      * <ul>
      * <li><p>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</p>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
      * <li><p>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</p>
      * </li>
@@ -283,9 +283,9 @@ public class UpgradePostPayOrderRequest extends TeaModel {
 
     public static class UpgradePostPayOrderRequestServerlessConfig extends TeaModel {
         /**
-         * <p>The reserved publish traffic specification. Only integers are supported. The minimum value is 60. This parameter is required for serverless instances.</p>
+         * <p>The reserved publish capacity. Only integers are supported. The minimum value is 60. This parameter is required for serverless instances.</p>
          * <blockquote>
-         * <p>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</p>
+         * <p>The actual upper limit is subject to the available inventory in the current region. Refer to the purchase page for the available range.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -295,9 +295,9 @@ public class UpgradePostPayOrderRequest extends TeaModel {
         public Long reservedPublishCapacity;
 
         /**
-         * <p>The reserved subscribe traffic specification. Only integers are supported. The minimum value is 20. This parameter is required for serverless instances.</p>
+         * <p>The reserved subscribe capacity. Only integers are supported. The minimum value is 20. This parameter is required for serverless instances.</p>
          * <blockquote>
-         * <p>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</p>
+         * <p>The actual upper limit is subject to the available inventory in the current region. Refer to the purchase page for the available range.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSaslUserRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class CreateSaslUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The encryption method. Valid values:</p>
+     * <p>The encryption mechanism. Valid values:</p>
      * <ul>
-     * <li><p>SCRAM-SHA-512 (default)</p>
+     * <li><p>SCRAM-SHA-512 (selected by default)</p>
      * </li>
      * <li><p>SCRAM-SHA-256</p>
      * </li>
@@ -43,7 +43,7 @@ public class CreateSaslUserRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class CreateSaslUserRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The SASL mechanism. Valid values:</p>
+     * <p>The type. Valid values:</p>
      * <ul>
-     * <li><p>plain: a simple username and password authentication mechanism. Message Queue for Apache Kafka optimizes the PLAIN mechanism to support the dynamic creation of SASL users without the need to restart the instance.</p>
+     * <li><p>plain: a simple username and password verification mechanism. ApsaraMQ for Kafka has optimized the PLAIN mechanism to support dynamically adding SASL users without restarting the instance.</p>
      * </li>
-     * <li><p>scram: a username and password authentication mechanism that provides higher security than the PLAIN mechanism. Message Queue for Apache Kafka uses Salted Challenge Response Authentication Mechanism (SCRAM)-SHA-256.</p>
+     * <li><p>scram: a username and password verification mechanism that provides higher security than PLAIN. ApsaraMQ for Kafka uses SCRAM-SHA-256.</p>
      * </li>
-     * <li><p>LDAP: This value is applicable only when you create users for Confluent instances.</p>
+     * <li><p>LDAP: applicable only to adding users for Confluent instances.</p>
      * </li>
      * </ul>
      * <p>Default value: plain.</p>

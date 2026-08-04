@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupRequest extends TeaModel {
     /**
-     * <p>Group name.</p>
+     * <p>The name of the consumer group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteConsumerGroupRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteConsumerGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID of the instance.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
     /**
-     * <p>Group name.</p>
+     * <p>The consumer group name.</p>
      * <ul>
-     * <li>Reserved instance: Supports uppercase and lowercase letters, numbers, underscores (_), hyphens (-), and periods (.), limited to 3-64 characters.</li>
-     * <li>Serverless instance: Can only contain letters, numbers, and special characters &quot;@._\*$#^!&amp;-&quot;, limited to 1-249 characters.</li>
+     * <li>Reserved instances:
+     * Can contain letters, digits, underscores (_), hyphens (-), and periods (.). The value must be 3 to 64 characters in length.</li>
+     * <li>Serverless instances:
+     * Can contain only letters, digits, and special characters &quot;@._*$#^!&amp;-&quot;. The value must be 1 to 249 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +31,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID of the instance.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +41,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Remarks.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -48,7 +50,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>Tag list.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateConsumerGroupRequestTag> tag;
@@ -102,9 +104,12 @@ public class CreateConsumerGroupRequest extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
          * <ul>
-         * <li>N ranges from 1 to 20.</li>
-         * <li>Cannot be empty.</li>
-         * <li>Supports up to 128 characters, cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li><p>N ranges from 1 to 20.</p>
+         * </li>
+         * <li><p>The tag key cannot be empty.</p>
+         * </li>
+         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -117,9 +122,12 @@ public class CreateConsumerGroupRequest extends TeaModel {
         /**
          * <p>The tag value of the resource.</p>
          * <ul>
-         * <li>N ranges from 1 to 20.</li>
-         * <li>Can be empty.</li>
-         * <li>Supports up to 128 characters, cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * <li><p>N ranges from 1 to 20.</p>
+         * </li>
+         * <li><p>The tag value can be empty.</p>
+         * </li>
+         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

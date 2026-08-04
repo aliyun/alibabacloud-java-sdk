@@ -7,9 +7,9 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     /**
      * <p>The deployment type. Valid values:</p>
      * <ul>
-     * <li><p><strong>4</strong>: instance that is accessible over the internet and a VPC</p>
+     * <li><p><strong>4</strong>: Internet- and VPC-connected instance</p>
      * </li>
-     * <li><p><strong>5</strong>: instance that is accessible only over a VPC</p>
+     * <li><p><strong>5</strong>: VPC-connected instance</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -22,9 +22,9 @@ public class CreatePostPayInstanceRequest extends TeaModel {
 
     /**
      * <p>The disk capacity.</p>
-     * <p>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p>This parameter is not required when you create a Serverless instance.</p>
+     * <p>This parameter is not required if you create a serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,11 +39,11 @@ public class CreatePostPayInstanceRequest extends TeaModel {
      * <li><p><strong>0</strong>: ultra disk</p>
      * </li>
      * <li><p><strong>1</strong>: SSD</p>
+     * <blockquote>
+     * <p>This parameter is not required if you create a serverless instance.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is not required when you create a Serverless instance.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -54,13 +54,13 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     /**
      * <p>The Internet traffic.</p>
      * <ul>
-     * <li><p>This parameter is required if you set <strong>DeployType</strong> to <strong>4</strong>.</p>
+     * <li><p>This parameter is required if <strong>DeployType</strong> is set to <strong>4</strong>.</p>
      * </li>
-     * <li><p>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is not required when you create a Serverless instance.</p>
+     * <p>This parameter is not required if you create a serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,10 +72,10 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     /**
      * <p>The traffic specification.</p>
      * <ul>
-     * <li>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is not required when you create a Serverless instance.</p>
+     * <p>This parameter is not required if you create a serverless instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,12 +85,10 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing type. Valid values:</p>
      * <ul>
-     * <li><p>1 (default): pay-as-you-go for reserved instances.</p>
-     * </li>
-     * <li><p>3: pay-as-you-go for reserved capacity and elastic scaling of Serverless instances.</p>
-     * </li>
+     * <li>1 (default): pay-as-you-go for reserved instances.</li>
+     * <li>3: pay-as-you-go for serverless reserved specifications + pay-as-you-go for serverless elastic scaling.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,13 +98,13 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public Integer paidType;
 
     /**
-     * <p>The number of partitions.</p>
+     * <p>The number of partitions to purchase.</p>
      * <ul>
-     * <li>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter is not required if the instance is a Serverless instance.</p>
+     * <li>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<blockquote>
+     * <p>This parameter is not required if the instance is a serverless instance.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -125,8 +123,8 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Group console.</p>
+     * <p>The resource group ID.</p>
+     * <p>If this parameter is not specified, the instance is placed in the default resource group. You can view the resource group ID in the Resource Management console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
@@ -135,32 +133,26 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The settings of the Serverless instance. This parameter is required when you create a Serverless instance.</p>
+     * <p>The settings for the serverless instance. This parameter is required when you create a serverless instance.</p>
      */
     @NameInMap("ServerlessConfig")
     public CreatePostPayInstanceRequestServerlessConfig serverlessConfig;
 
     /**
-     * <p>The edition of the instance.</p>
-     * <p>If you set the PaidType parameter to 1 (pay-as-you-go for reserved instances), valid values are:</p>
+     * <p>The specification type.</p>
+     * <p>Valid values when PaidType is set to 1 (pay-as-you-go for reserved instances):</p>
      * <ul>
-     * <li><p>normal: Standard Edition (High-write)</p>
-     * </li>
-     * <li><p>professional: Professional Edition (High-write)</p>
-     * </li>
-     * <li><p>professionalForHighRead: Professional Edition (High-read)</p>
-     * </li>
+     * <li>normal: Standard Edition (shared throughput)</li>
+     * <li>professional: Professional Edition (shared throughput)</li>
+     * <li>professionalForHighRead: Professional Edition (shared throughput for high read)</li>
      * </ul>
-     * <p>If you set the PaidType parameter to 3 (pay-as-you-go for reserved capacity and elastic scaling of Serverless instances), valid values are:</p>
+     * <p>Valid values when PaidType is set to 3 (pay-as-you-go for serverless reserved specifications + pay-as-you-go for serverless elastic scaling):</p>
      * <ul>
-     * <li><p>basic: Serverless Basic Edition</p>
-     * </li>
-     * <li><p>normal: Serverless Standard Edition</p>
-     * </li>
-     * <li><p>professional: Serverless Professional Edition</p>
-     * </li>
+     * <li>basic: Serverless Basic Edition</li>
+     * <li>normal: Serverless Standard Edition</li>
+     * <li>professional: Serverless Professional Edition</li>
      * </ul>
-     * <p>For more information about these instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>For more information about the specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>professional</p>
@@ -169,7 +161,7 @@ public class CreatePostPayInstanceRequest extends TeaModel {
     public String specType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreatePostPayInstanceRequestTag> tag;
@@ -277,9 +269,9 @@ public class CreatePostPayInstanceRequest extends TeaModel {
 
     public static class CreatePostPayInstanceRequestServerlessConfig extends TeaModel {
         /**
-         * <p>The reserved publish traffic. The value must be an integer. Minimum value: 60. This parameter is required for Serverless instances.</p>
+         * <p>The reserved publish traffic specification value. Only integers are supported. The minimum value is 60. This parameter is required for serverless instances.</p>
          * <blockquote>
-         * <p>The actual upper limit is subject to the inventory in the current region. For more information, see the value range on the buy page.</p>
+         * <p>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -289,9 +281,9 @@ public class CreatePostPayInstanceRequest extends TeaModel {
         public Long reservedPublishCapacity;
 
         /**
-         * <p>The reserved subscribe traffic. The value must be an integer. Minimum value: 20. This parameter is required for Serverless instances.</p>
+         * <p>The reserved subscribe traffic specification value. Only integers are supported. The minimum value is 20. This parameter is required for serverless instances.</p>
          * <blockquote>
-         * <p>The actual upper limit is subject to the inventory in the current region. For more information, see the value range on the buy page.</p>
+         * <p>The actual upper limit is subject to the inventory in the current region. Refer to the purchase page for the available range.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -327,12 +319,9 @@ public class CreatePostPayInstanceRequest extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
          * <ul>
-         * <li><p>The value of N can be from 1 to 20.</p>
-         * </li>
-         * <li><p>If this parameter is left empty, all tag keys are matched.</p>
-         * </li>
-         * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</p>
-         * </li>
+         * <li>N ranges from 1 to 20.</li>
+         * <li>If this parameter is left empty, all tag keys are matched.</li>
+         * <li>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -345,12 +334,9 @@ public class CreatePostPayInstanceRequest extends TeaModel {
         /**
          * <p>The tag value of the resource.</p>
          * <ul>
-         * <li><p>The value of N can be from 1 to 20.</p>
-         * </li>
-         * <li><p>If the tag key is empty, this parameter must also be empty. If this parameter is empty, all tag values are matched.</p>
-         * </li>
-         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</p>
-         * </li>
+         * <li>N ranges from 1 to 20.</li>
+         * <li>If the tag key is left empty, this parameter must also be left empty. If this parameter is left empty, all tag values are matched.</li>
+         * <li>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicListResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates that the call was successful.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The number of the page returned.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -32,7 +32,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C0D3DC5B-5C37-47AD-9F22-1F559880****</p>

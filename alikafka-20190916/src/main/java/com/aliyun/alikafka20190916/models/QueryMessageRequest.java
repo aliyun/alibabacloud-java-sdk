@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMessageRequest extends TeaModel {
     /**
-     * <p>The start timestamp of the query range. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1672410180000</p>
@@ -44,9 +44,9 @@ public class QueryMessageRequest extends TeaModel {
     /**
      * <p>The query type. Valid values:</p>
      * <ul>
-     * <li><p>byOffset: Query by offset. When selecting offset query, you need to fill in the partition ID and partition offset parameters.</p>
+     * <li><p>byOffset: queries messages by offset. If you select this type, you must specify the Partition and Offset parameters.</p>
      * </li>
-     * <li><p>byTimestamp: Query by time. When selecting time query, you need to fill in the BeginTime parameter.</p>
+     * <li><p>byTimestamp: queries messages by time. If you select this type, you must specify the BeginTime parameter.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTopicResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates that the request is successful.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C0F207C-77A6-43E5-991C-9D98510A****</p>
@@ -32,7 +32,7 @@ public class CreateTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

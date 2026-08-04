@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ConvertPostPayOrderRequest extends TeaModel {
     /**
-     * <p>The subscription duration in months. The default value is 1. Valid values:</p>
+     * <p>The subscription duration. Unit: months. Default value: 1. Valid values:</p>
      * <ul>
-     * <li><p>1 to <strong>12</strong></p>
+     * <li><p><strong>1 to 12</strong></p>
      * </li>
      * <li><p><strong>24</strong></p>
      * </li>
@@ -32,11 +32,11 @@ public class ConvertPostPayOrderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing type. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: subscription</p>
+     * <li><p><strong>0</strong>: subscription.</p>
      * </li>
-     * <li><p><strong>4</strong>: Confluent series subscription</p>
+     * <li><p><strong>4</strong>: Confluent series subscription.</p>
      * </li>
      * </ul>
      * 

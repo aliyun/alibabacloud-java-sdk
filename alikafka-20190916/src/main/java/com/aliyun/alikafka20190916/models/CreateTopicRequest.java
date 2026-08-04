@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
     /**
-     * <p>The cleanup policy for the topic. This parameter is available only if the storage engine of the topic is local storage. Valid values:</p>
+     * <p>The cleanup policy configured when the storage engine of the topic is set to local storage. Valid values:</p>
      * <ul>
-     * <li><p>false: The delete cleanup policy.</p>
-     * </li>
-     * <li><p>true: The compact cleanup policy.</p>
-     * </li>
+     * <li>false: delete cleanup policy.</li>
+     * <li>true: compact cleanup policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,30 +18,24 @@ public class CreateTopicRequest extends TeaModel {
     public Boolean compactTopic;
 
     /**
-     * <p>The advanced configurations of the topic.</p>
+     * <p>The supplementary configuration.</p>
      * <ul>
-     * <li><p>Configure this parameter in the JSON format.</p>
+     * <li><p>Must be in JSON format.</p>
      * </li>
-     * <li><p>This parameter is available only if <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+     * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
      * </li>
-     * <li><p>The following configurations are supported for reserved instances:</p>
+     * <li><p>Supported configurations for reserved instances:</p>
      * <ul>
-     * <li><p><strong>retention.ms</strong>: The message retention period. The value must be an integer from 3,600,000 to 31,536,000,000. Unit: milliseconds.</p>
-     * </li>
-     * <li><p><strong>max.message.bytes</strong>: The maximum size of a message that can be sent. The value must be an integer from 1,048,576 to 10,485,760. Unit: bytes.</p>
-     * </li>
-     * <li><p>message.timestamp.type: The timestamp type of a message. Valid values: CreateTime or LogAppendTime. CreateTime indicates that the message timestamp is the time when the producer creates the message. If you do not specify a timestamp, the client time is used. LogAppendTime indicates that the message timestamp is the time when the server stores the message. The default value is CreateTime. We recommend that you set this parameter to <strong>LogAppendTime</strong>.</p>
-     * </li>
+     * <li><strong>retention.ms</strong> (message retention period): ranges from 3600000 to 31536000000 milliseconds.</li>
+     * <li><strong>max.message.bytes</strong> (maximum message size): ranges from 1048576 to 10485760 bytes. </li>
+     * <li><strong>message.timestamp.type</strong>: specifies the type of message timestamp. CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, it is the message creation time on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: CreateTime. We recommend LogAppendTime.</li>
      * </ul>
      * </li>
-     * <li><p>The following configurations are supported for Serverless instances:</p>
+     * <li><p>Supported configurations for Serverless instances:</p>
      * <ul>
-     * <li><p><strong>retention.hours</strong>: The message retention period. The value is of the string type. The value must be an integer from 24 to 8,760.</p>
-     * </li>
-     * <li><p><strong>max.message.bytes</strong>: The maximum size of a message that can be sent. The value is of the string type. The value must be an integer from 1,048,576 to 10,485,760.</p>
-     * </li>
-     * <li><p>message.timestamp.type: The timestamp type of a message. Valid values: CreateTime or LogAppendTime. CreateTime indicates that the message timestamp is the time when the producer creates the message. If you do not specify a timestamp, the client time is used. LogAppendTime indicates that the message timestamp is the time when the server stores the message. The default value is CreateTime. We recommend that you set this parameter to <strong>LogAppendTime</strong>.</p>
-     * </li>
+     * <li><strong>retention.hours</strong> (message retention period): value type is String. Valid values: 24 to 8760.</li>
+     * <li><strong>max.message.bytes</strong> (maximum message size): value type is String. Valid values: 1048576 to 10485760.</li>
+     * <li><strong>message.timestamp.type</strong> (type of message timestamp): CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, it is the message creation time on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: CreateTime. We recommend LogAppendTime.</li>
      * </ul>
      * </li>
      * </ul>
@@ -58,7 +50,7 @@ public class CreateTopicRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,10 +62,8 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The storage engine of the topic. Valid values:</p>
      * <ul>
-     * <li><p>false: cloud storage.</p>
-     * </li>
-     * <li><p>true: local storage.</p>
-     * </li>
+     * <li>false: cloud storage.</li>
+     * <li>true: local storage.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,13 +73,13 @@ public class CreateTopicRequest extends TeaModel {
     public Boolean localTopic;
 
     /**
-     * <p>The minimum number of in-sync replicas (ISRs).</p>
+     * <p>The minimum number of in-sync replicas (ISR).</p>
      * <ul>
-     * <li><p>This parameter is available only if <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+     * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
      * </li>
-     * <li><p>The value of this parameter must be smaller than the number of replicas for the topic.</p>
+     * <li><p>The value must be less than the number of topic replicas.</p>
      * </li>
-     * <li><p>The value must be an integer from 1 to 3.</p>
+     * <li><p>The number of in-sync replicas ranges from 1 to 3.</p>
      * </li>
      * </ul>
      * 
@@ -103,18 +93,18 @@ public class CreateTopicRequest extends TeaModel {
     public Long minInsyncReplicas;
 
     /**
-     * <p>The number of partitions in the topic.</p>
+     * <p>The number of partitions for the topic.</p>
      * <ul>
-     * <li><p>The value must be an integer from 1 to 360.</p>
+     * <li><p>The number of partitions ranges from 1 to 360.</p>
      * </li>
-     * <li><p>The console suggests a number of partitions based on the instance type. Follow the suggestion to reduce the risk of data skew.</p>
+     * <li><p>The console provides different configuration suggestions based on the instance edition. Configure the number of partitions based on the console suggestions to reduce the risk of data skew.</p>
      * </li>
      * </ul>
      * <p>Default value:</p>
      * <ul>
-     * <li><p>Reserved instance: 12</p>
+     * <li><p>Reserved instances: 12</p>
      * </li>
-     * <li><p>Serverless instance: 3</p>
+     * <li><p>Serverless instances: 3</p>
      * </li>
      * </ul>
      * 
@@ -125,7 +115,7 @@ public class CreateTopicRequest extends TeaModel {
     public String partitionNum;
 
     /**
-     * <p>The ID of the region where the instance that contains the topic is located.</p>
+     * <p>The region ID of the instance to which the topic belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,11 +125,11 @@ public class CreateTopicRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remarks on the topic.</p>
+     * <p>The description of the topic.</p>
      * <ul>
-     * <li><p>The remarks can contain only letters, digits, underscores (_), and hyphens (-).</p>
+     * <li><p>Can contain only letters, digits, underscores (_), and hyphens (-).</p>
      * </li>
-     * <li><p>The remarks must be 3 to 64 characters in length.</p>
+     * <li><p>Must be 3 to 64 characters in length.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -153,13 +143,13 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The number of replicas for the topic.</p>
      * <ul>
-     * <li><p>This parameter is available only if <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
+     * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
      * </li>
-     * <li><p>The value must be an integer from 1 to 3.</p>
+     * <li><p>The number of replicas ranges from 1 to 3.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you set the number of replicas to <strong>1</strong>, you may lose data. Set this parameter with caution.</p>
+     * <p>If the number of replicas is set to <strong>1</strong>, data loss may occur. Set this parameter with caution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -172,7 +162,7 @@ public class CreateTopicRequest extends TeaModel {
     public Long replicationFactor;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTopicRequestTag> tag;
@@ -180,10 +170,10 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The name of the topic.</p>
      * <ul>
-     * <li><p>Reserved instance: The name can contain uppercase letters, lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</p>
-     * </li>
-     * <li><p>Serverless instance: The name can contain uppercase letters, lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</p>
-     * </li>
+     * <li>Reserved instances:
+     * Supports uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</li>
+     * <li>Serverless instances:
+     * Supports uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -290,11 +280,11 @@ public class CreateTopicRequest extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
          * <ul>
-         * <li><p>N specifies the number of the tag. The value of N must be an integer from 1 to 20.</p>
+         * <li><p>N ranges from 1 to 20.</p>
          * </li>
          * <li><p>If this parameter is left empty, all tag keys are matched.</p>
          * </li>
-         * <li><p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <li><p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -308,11 +298,11 @@ public class CreateTopicRequest extends TeaModel {
         /**
          * <p>The tag value of the resource.</p>
          * <ul>
-         * <li><p>N specifies the number of the tag. The value of N must be an integer from 1 to 20.</p>
+         * <li><p>N ranges from 1 to 20.</p>
          * </li>
-         * <li><p>The tag value can be empty.</p>
+         * <li><p>This parameter can be left empty.</p>
          * </li>
-         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</p>
+         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</p>
          * </li>
          * </ul>
          * 

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
     /**
-     * <p>Operation type. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Write</strong>: write</p>
+     * <li><p><strong>Write</strong>: write.</p>
      * </li>
-     * <li><p><strong>Read</strong>: read</p>
+     * <li><p><strong>Read</strong>: read.</p>
      * </li>
-     * <li><p><strong>Describe</strong>: read TransactionalId</p>
+     * <li><p><strong>Describe</strong>: read TransactionalId.</p>
      * </li>
-     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster</p>
+     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster.</p>
      * </li>
-     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster, only available for Serverless instances.</p>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster. This value is available only for serverless instances.</p>
      * </li>
-     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configuration, only available for Serverless instances.</p>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configurations. This value is available only for serverless instances.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -29,24 +29,24 @@ public class CreateAclRequest extends TeaModel {
     public String aclOperationType;
 
     /**
-     * <p>Batch authorization operation types. Multiple operations are separated by commas (,).</p>
+     * <p>The operation types for batch authorization. Separate multiple operations with commas (,).</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>Write</strong>: read</p>
+     * <li><p><strong>Write</strong>: write.</p>
      * </li>
-     * <li><p><strong>Read</strong>: write</p>
+     * <li><p><strong>Read</strong>: read.</p>
      * </li>
-     * <li><p><strong>Describe</strong>: read TransactionalId</p>
+     * <li><p><strong>Describe</strong>: read TransactionalId.</p>
      * </li>
-     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster</p>
+     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster.</p>
      * </li>
-     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster, only available for Serverless instances.</p>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster. This value is available only for serverless instances.</p>
      * </li>
-     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configuration, only available for Serverless instances.</p>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configurations. This value is available only for serverless instances.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is only supported for Serverless instances.</p>
+     * <p>This parameter is available only for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,15 +56,15 @@ public class CreateAclRequest extends TeaModel {
     public String aclOperationTypes;
 
     /**
-     * <p>Authorization method. Valid values:</p>
+     * <p>The authorization method. Valid values:</p>
      * <ul>
-     * <li><p><strong>DENY</strong>: deny.</p>
+     * <li><p><strong>DENY</strong>: Denied.</p>
      * </li>
-     * <li><p><strong>ALLOW</strong>: allow.</p>
+     * <li><p><strong>ALLOW</strong>: Allowed.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is only supported for Serverless instances.</p>
+     * <p>This parameter is available only for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,16 +74,16 @@ public class CreateAclRequest extends TeaModel {
     public String aclPermissionType;
 
     /**
-     * <p>Resource name.</p>
+     * <p>The resource name.</p>
      * <ul>
-     * <li><p>The name of the resource, which can be a topic name, Group ID, cluster name, or transaction ID.</p>
+     * <li><p>The name of the resource, which can be a topic name, group ID, cluster name, or transaction ID.</p>
      * </li>
      * <li><p>You can use an asterisk (\*) to represent all resources of this type.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Only after authorization is granted to all resources can you query the authorized resources using an asterisk (\*).</li>
+     * <li>The asterisk (\*) returns results only after permissions are granted to all resources.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -95,11 +95,11 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourceName;
 
     /**
-     * <p>Matching pattern. Valid values:</p>
+     * <p>The matching mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>LITERAL</strong>: exact match</p>
+     * <li><p><strong>LITERAL</strong>: exact match.</p>
      * </li>
-     * <li><p><strong>PREFIXED</strong>: prefix match</p>
+     * <li><p><strong>PREFIXED</strong>: prefix match.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -111,7 +111,7 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>Resource type. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
      * <li><p><strong>Topic</strong>: message topic.</p>
      * </li>
@@ -131,13 +131,11 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourceType;
 
     /**
-     * <p>Source IP.</p>
+     * <p>The source IP address.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Only specific IP addresses or \* (all IPs) are supported. IP address ranges are not supported.</p>
-     * </li>
-     * <li><p>This parameter is only supported for Serverless instances.</p>
-     * </li>
+     * <li>Only specific IP addresses or an asterisk (\*) to allow all IP addresses are supported. IP CIDR blocks are not supported.</li>
+     * <li>This parameter is available only for serverless instances.</li>
      * </ul>
      * </blockquote>
      * 
@@ -150,7 +148,7 @@ public class CreateAclRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -160,7 +158,7 @@ public class CreateAclRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -170,13 +168,13 @@ public class CreateAclRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Username.</p>
+     * <p>The username.</p>
      * <ul>
      * <li>You can use an asterisk (\*) to represent all usernames.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Only after authorization is granted to all users can you query the authorized users using an asterisk (\*).</li>
+     * <li>The asterisk (\*) returns results only after permissions are granted to all users.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

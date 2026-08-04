@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteAclRequest extends TeaModel {
     /**
-     * <p>Operation type. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Write</strong>: Write</p>
+     * <li><p><strong>Write</strong>: write.</p>
      * </li>
-     * <li><p><strong>Read</strong>: Read</p>
+     * <li><p><strong>Read</strong>: read.</p>
      * </li>
-     * <li><p><strong>Describe</strong>: Read TransactionalId</p>
+     * <li><p><strong>Describe</strong>: read TransactionalId.</p>
      * </li>
-     * <li><p><strong>IdempotentWrite</strong>: Idempotent write to Cluster</p>
+     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster.</p>
      * </li>
-     * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotent write to Cluster, only available for Serverless instances.</p>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster. This value is available only for serverless instances.</p>
      * </li>
-     * <li><p><strong>DESCRIBE_CONFIGS</strong>: Query configuration, only available for Serverless instances.</p>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configurations. This value is available only for serverless instances.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -29,24 +29,24 @@ public class DeleteAclRequest extends TeaModel {
     public String aclOperationType;
 
     /**
-     * <p>Batch authorization operation types. Multiple operations are separated by commas (,).</p>
+     * <p>The batch authorization operation types. Separate multiple operations with commas (,).</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>Write</strong>: Read</p>
+     * <li><p><strong>Write</strong>: write.</p>
      * </li>
-     * <li><p><strong>Read</strong>: Write</p>
+     * <li><p><strong>Read</strong>: read.</p>
      * </li>
-     * <li><p><strong>Describe</strong>: Read TransactionalId</p>
+     * <li><p><strong>Describe</strong>: read TransactionalId.</p>
      * </li>
-     * <li><p><strong>IdempotentWrite</strong>: Idempotent write to Cluster</p>
+     * <li><p><strong>IdempotentWrite</strong>: idempotent write to Cluster.</p>
      * </li>
-     * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotent write to Cluster, only available for Serverless instances.</p>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: idempotent write to Cluster. This value is available only for serverless instances.</p>
      * </li>
-     * <li><p><strong>DESCRIBE_CONFIGS</strong>: Query configuration, only available for Serverless instances.</p>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: query configurations. This value is available only for serverless instances.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is only supported for Serverless instances.</p>
+     * <p>This parameter is available only for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,15 +56,13 @@ public class DeleteAclRequest extends TeaModel {
     public String aclOperationTypes;
 
     /**
-     * <p>Authorization method. Valid values:</p>
+     * <p>The authorization method. Valid values:</p>
      * <ul>
-     * <li><p>DENY: Deny</p>
-     * </li>
-     * <li><p>ALLOW: Allow</p>
-     * </li>
+     * <li>DENY: deny.</li>
+     * <li>ALLOW: allow.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is only supported for Serverless instances.</p>
+     * <p>This parameter is available only for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,11 +72,11 @@ public class DeleteAclRequest extends TeaModel {
     public String aclPermissionType;
 
     /**
-     * <p>Resource name.</p>
+     * <p>The resource name.</p>
      * <ul>
-     * <li><p>Topic name or Group name.</p>
+     * <li><p>The name of a topic or consumer group.</p>
      * </li>
-     * <li><p>Asterisk (\*) represents all Topic or Group names.</p>
+     * <li><p>An asterisk (\*) indicates the names of all topics or consumer groups.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -90,11 +88,11 @@ public class DeleteAclRequest extends TeaModel {
     public String aclResourceName;
 
     /**
-     * <p>Matching pattern. Valid values:</p>
+     * <p>The matching mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>LITERAL</strong>: Exact matching pattern</p>
+     * <li><p><strong>LITERAL</strong>: full-name match.</p>
      * </li>
-     * <li><p><strong>PREFIXED</strong>: Prefix matching pattern</p>
+     * <li><p><strong>PREFIXED</strong>: prefix match.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -106,15 +104,15 @@ public class DeleteAclRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Topic</strong>: Message topic.</p>
+     * <li><p><strong>Topic</strong>: topic.</p>
      * </li>
-     * <li><p><strong>Group</strong>: Consumer group.</p>
+     * <li><p><strong>Group</strong>: consumer group.</p>
      * </li>
-     * <li><p><strong>Cluster</strong>: Instance.</p>
+     * <li><p><strong>Cluster</strong>: instance.</p>
      * </li>
-     * <li><p><strong>TransactionalId</strong>: Transaction ID.</p>
+     * <li><p><strong>TransactionalId</strong>: transaction ID.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -126,13 +124,11 @@ public class DeleteAclRequest extends TeaModel {
     public String aclResourceType;
 
     /**
-     * <p>Source IP.</p>
+     * <p>The source IP address.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Only supports specific IP addresses or setting \* (all IPs), does not support IP segments.</p>
-     * </li>
-     * <li><p>This parameter is only supported for Serverless instances.</p>
-     * </li>
+     * <li>Only specific IP addresses or an asterisk (\*) to allow all IP addresses are supported. CIDR blocks are not supported.</li>
+     * <li>This parameter is available only for serverless instances.</li>
      * </ul>
      * </blockquote>
      * 
@@ -145,7 +141,7 @@ public class DeleteAclRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -155,7 +151,7 @@ public class DeleteAclRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -165,7 +161,7 @@ public class DeleteAclRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Username.</p>
+     * <p>The username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
