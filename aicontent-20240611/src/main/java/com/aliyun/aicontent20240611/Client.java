@@ -2295,6 +2295,265 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Batch creates API keys for members under a department in organization management.</p>
+     * 
+     * @param request ModelRouterBatchCreateMemberApiKeysRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBatchCreateMemberApiKeysResponse
+     */
+    public ModelRouterBatchCreateMemberApiKeysResponse modelRouterBatchCreateMemberApiKeysWithOptions(String id, ModelRouterBatchCreateMemberApiKeysRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expireAt)) {
+            body.put("expireAt", request.expireAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            body.put("userIds", request.userIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBatchCreateMemberApiKeys"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/member-apikeys"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBatchCreateMemberApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Batch creates API keys for members under a department in organization management.</p>
+     * 
+     * @param request ModelRouterBatchCreateMemberApiKeysRequest
+     * @return ModelRouterBatchCreateMemberApiKeysResponse
+     */
+    public ModelRouterBatchCreateMemberApiKeysResponse modelRouterBatchCreateMemberApiKeys(String id, ModelRouterBatchCreateMemberApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBatchCreateMemberApiKeysWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Manages models by performing batch model creation.</p>
+     * 
+     * @param request ModelRouterBatchCreateModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBatchCreateModelResponse
+     */
+    public ModelRouterBatchCreateModelResponse modelRouterBatchCreateModelWithOptions(ModelRouterBatchCreateModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            body.put("apiKey", request.apiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baseUrl)) {
+            body.put("baseUrl", request.baseUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.models)) {
+            body.put("models", request.models);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.symbol)) {
+            body.put("symbol", request.symbol);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBatchCreateModel"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/models/batch"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBatchCreateModelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Manages models by performing batch model creation.</p>
+     * 
+     * @param request ModelRouterBatchCreateModelRequest
+     * @return ModelRouterBatchCreateModelResponse
+     */
+    public ModelRouterBatchCreateModelResponse modelRouterBatchCreateModel(ModelRouterBatchCreateModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBatchCreateModelWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables API keys in batches for members under a department in organization management.</p>
+     * 
+     * @param request ModelRouterBatchDisableMemberApiKeysRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBatchDisableMemberApiKeysResponse
+     */
+    public ModelRouterBatchDisableMemberApiKeysResponse modelRouterBatchDisableMemberApiKeysWithOptions(String id, ModelRouterBatchDisableMemberApiKeysRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            body.put("userIds", request.userIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBatchDisableMemberApiKeys"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/member-apikeys/disable"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBatchDisableMemberApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables API keys in batches for members under a department in organization management.</p>
+     * 
+     * @param request ModelRouterBatchDisableMemberApiKeysRequest
+     * @return ModelRouterBatchDisableMemberApiKeysResponse
+     */
+    public ModelRouterBatchDisableMemberApiKeysResponse modelRouterBatchDisableMemberApiKeys(String id, ModelRouterBatchDisableMemberApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBatchDisableMemberApiKeysWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Batch resets member authorizations to inherit under a department in organization management.</p>
+     * 
+     * @param request ModelRouterBatchResetMemberAuthorizationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBatchResetMemberAuthorizationResponse
+     */
+    public ModelRouterBatchResetMemberAuthorizationResponse modelRouterBatchResetMemberAuthorizationWithOptions(String id, ModelRouterBatchResetMemberAuthorizationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
+            body.put("userIds", request.userIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBatchResetMemberAuthorization"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/member-authorizations/reset"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBatchResetMemberAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Batch resets member authorizations to inherit under a department in organization management.</p>
+     * 
+     * @param request ModelRouterBatchResetMemberAuthorizationRequest
+     * @return ModelRouterBatchResetMemberAuthorizationResponse
+     */
+    public ModelRouterBatchResetMemberAuthorizationResponse modelRouterBatchResetMemberAuthorization(String id, ModelRouterBatchResetMemberAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBatchResetMemberAuthorizationWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sets authorization for multiple members under a department in batch.</p>
+     * 
+     * @param request ModelRouterBatchSetMemberAuthorizationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterBatchSetMemberAuthorizationResponse
+     */
+    public ModelRouterBatchSetMemberAuthorizationResponse modelRouterBatchSetMemberAuthorizationWithOptions(String id, ModelRouterBatchSetMemberAuthorizationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedModelGroupConfig)) {
+            body.put("allowedModelGroupConfig", request.allowedModelGroupConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdList)) {
+            body.put("userIdList", request.userIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterBatchSetMemberAuthorization"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/member-authorizations"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterBatchSetMemberAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sets authorization for multiple members under a department in batch.</p>
+     * 
+     * @param request ModelRouterBatchSetMemberAuthorizationRequest
+     * @return ModelRouterBatchSetMemberAuthorizationResponse
+     */
+    public ModelRouterBatchSetMemberAuthorizationResponse modelRouterBatchSetMemberAuthorization(String id, ModelRouterBatchSetMemberAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterBatchSetMemberAuthorizationWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the usage monitoring tab configuration.</p>
      * 
      * @param request ModelRouterBillingCostTabsRequest
@@ -2439,6 +2698,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterConfigureClientBalanceWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/配置成员子钱包余额</p>
+     * 
+     * @param request ModelRouterConfigureMemberBalanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterConfigureMemberBalanceResponse
+     */
+    public ModelRouterConfigureMemberBalanceResponse modelRouterConfigureMemberBalanceWithOptions(String clientId, String id, ModelRouterConfigureMemberBalanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableBalance)) {
+            body.put("enableBalance", request.enableBalance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initialBalance)) {
+            body.put("initialBalance", request.initialBalance);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterConfigureMemberBalance"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterConfigureMemberBalanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/配置成员子钱包余额</p>
+     * 
+     * @param request ModelRouterConfigureMemberBalanceRequest
+     * @return ModelRouterConfigureMemberBalanceResponse
+     */
+    public ModelRouterConfigureMemberBalanceResponse modelRouterConfigureMemberBalance(String clientId, String id, ModelRouterConfigureMemberBalanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterConfigureMemberBalanceWithOptions(clientId, id, request, headers, runtime);
     }
 
     /**
@@ -2787,6 +3101,179 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates an API key for a member in the organization.</p>
+     * 
+     * @param request ModelRouterCreateMemberApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateMemberApiKeyResponse
+     */
+    public ModelRouterCreateMemberApiKeyResponse modelRouterCreateMemberApiKeyWithOptions(String clientId, String id, ModelRouterCreateMemberApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expireAt)) {
+            body.put("expireAt", request.expireAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateMemberApiKey"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/apikeys"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateMemberApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an API key for a member in the organization.</p>
+     * 
+     * @param request ModelRouterCreateMemberApiKeyRequest
+     * @return ModelRouterCreateMemberApiKeyResponse
+     */
+    public ModelRouterCreateMemberApiKeyResponse modelRouterCreateMemberApiKey(String clientId, String id, ModelRouterCreateMemberApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateMemberApiKeyWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a balance transaction on a member sub-wallet in organization management.</p>
+     * 
+     * @param request ModelRouterCreateMemberBalanceTransactionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateMemberBalanceTransactionResponse
+     */
+    public ModelRouterCreateMemberBalanceTransactionResponse modelRouterCreateMemberBalanceTransactionWithOptions(String clientId, String id, ModelRouterCreateMemberBalanceTransactionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            body.put("amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotencyKey)) {
+            body.put("idempotencyKey", request.idempotencyKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateMemberBalanceTransaction"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/transactions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateMemberBalanceTransactionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Performs a balance transaction on a member sub-wallet in organization management.</p>
+     * 
+     * @param request ModelRouterCreateMemberBalanceTransactionRequest
+     * @return ModelRouterCreateMemberBalanceTransactionResponse
+     */
+    public ModelRouterCreateMemberBalanceTransactionResponse modelRouterCreateMemberBalanceTransaction(String clientId, String id, ModelRouterCreateMemberBalanceTransactionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateMemberBalanceTransactionWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a balance subscription for a member in an organization.</p>
+     * 
+     * @param request ModelRouterCreateMemberSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateMemberSubscriptionResponse
+     */
+    public ModelRouterCreateMemberSubscriptionResponse modelRouterCreateMemberSubscriptionWithOptions(String clientId, String id, ModelRouterCreateMemberSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            body.put("amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            body.put("effectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotencyKey)) {
+            body.put("idempotencyKey", request.idempotencyKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateMemberSubscription"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/subscription"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateMemberSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a balance subscription for a member in an organization.</p>
+     * 
+     * @param request ModelRouterCreateMemberSubscriptionRequest
+     * @return ModelRouterCreateMemberSubscriptionResponse
+     */
+    public ModelRouterCreateMemberSubscriptionResponse modelRouterCreateMemberSubscription(String clientId, String id, ModelRouterCreateMemberSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateMemberSubscriptionWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Performs model creation.</p>
      * 
      * @param request ModelRouterCreateModelRequest
@@ -2993,6 +3480,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a user.</p>
+     * 
+     * @param request ModelRouterCreateUserRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateUserResponse
+     */
+    public ModelRouterCreateUserResponse modelRouterCreateUserWithOptions(ModelRouterCreateUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.departmentRoles)) {
+            body.put("departmentRoles", request.departmentRoles);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginName)) {
+            body.put("loginName", request.loginName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateUser"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/users"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateUserResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a user.</p>
+     * 
+     * @param request ModelRouterCreateUserRequest
+     * @return ModelRouterCreateUserResponse
+     */
+    public ModelRouterCreateUserResponse modelRouterCreateUser(ModelRouterCreateUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateUserWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes an API key.</p>
      * 
@@ -3189,6 +3741,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a user.</p>
+     * 
+     * @param request ModelRouterDeleteUserRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterDeleteUserResponse
+     */
+    public ModelRouterDeleteUserResponse modelRouterDeleteUserWithOptions(String id, ModelRouterDeleteUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterDeleteUser"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/users/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterDeleteUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a user.</p>
+     * 
+     * @param request ModelRouterDeleteUserRequest
+     * @return ModelRouterDeleteUserResponse
+     */
+    public ModelRouterDeleteUserResponse modelRouterDeleteUser(String id, ModelRouterDeleteUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterDeleteUserWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Exports the balance change records of a member in the organization.</p>
+     * 
+     * @param request ModelRouterExportMemberBalanceOrdersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterExportMemberBalanceOrdersResponse
+     */
+    public ModelRouterExportMemberBalanceOrdersResponse modelRouterExportMemberBalanceOrdersWithOptions(String clientId, String id, ModelRouterExportMemberBalanceOrdersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            query.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("direction", request.direction);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterExportMemberBalanceOrders"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/orders/export"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterExportMemberBalanceOrdersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Exports the balance change records of a member in the organization.</p>
+     * 
+     * @param request ModelRouterExportMemberBalanceOrdersRequest
+     * @return ModelRouterExportMemberBalanceOrdersResponse
+     */
+    public ModelRouterExportMemberBalanceOrdersResponse modelRouterExportMemberBalanceOrders(String clientId, String id, ModelRouterExportMemberBalanceOrdersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterExportMemberBalanceOrdersWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Client Management/Get department balance</p>
      * 
      * @param request ModelRouterGetClientBalanceRequest
@@ -3292,6 +3936,249 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取部门余额概览</p>
+     * 
+     * @param request ModelRouterGetDeptBalanceSummaryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetDeptBalanceSummaryResponse
+     */
+    public ModelRouterGetDeptBalanceSummaryResponse modelRouterGetDeptBalanceSummaryWithOptions(String id, ModelRouterGetDeptBalanceSummaryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetDeptBalanceSummary"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance-summary"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetDeptBalanceSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取部门余额概览</p>
+     * 
+     * @param request ModelRouterGetDeptBalanceSummaryRequest
+     * @return ModelRouterGetDeptBalanceSummaryResponse
+     */
+    public ModelRouterGetDeptBalanceSummaryResponse modelRouterGetDeptBalanceSummary(String id, ModelRouterGetDeptBalanceSummaryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetDeptBalanceSummaryWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of API keys for a member in the organization.</p>
+     * 
+     * @param request ModelRouterGetMemberApiKeysRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetMemberApiKeysResponse
+     */
+    public ModelRouterGetMemberApiKeysResponse modelRouterGetMemberApiKeysWithOptions(String clientId, String id, ModelRouterGetMemberApiKeysRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetMemberApiKeys"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/apikeys"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetMemberApiKeysResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of API keys for a member in the organization.</p>
+     * 
+     * @param request ModelRouterGetMemberApiKeysRequest
+     * @return ModelRouterGetMemberApiKeysResponse
+     */
+    public ModelRouterGetMemberApiKeysResponse modelRouterGetMemberApiKeys(String clientId, String id, ModelRouterGetMemberApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetMemberApiKeysWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员子钱包余额</p>
+     * 
+     * @param request ModelRouterGetMemberBalanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetMemberBalanceResponse
+     */
+    public ModelRouterGetMemberBalanceResponse modelRouterGetMemberBalanceWithOptions(String clientId, String id, ModelRouterGetMemberBalanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetMemberBalance"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetMemberBalanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员子钱包余额</p>
+     * 
+     * @param request ModelRouterGetMemberBalanceRequest
+     * @return ModelRouterGetMemberBalanceResponse
+     */
+    public ModelRouterGetMemberBalanceResponse modelRouterGetMemberBalance(String clientId, String id, ModelRouterGetMemberBalanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetMemberBalanceWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员余额变更日志</p>
+     * 
+     * @param request ModelRouterGetMemberBalanceLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetMemberBalanceLogsResponse
+     */
+    public ModelRouterGetMemberBalanceLogsResponse modelRouterGetMemberBalanceLogsWithOptions(String clientId, String id, ModelRouterGetMemberBalanceLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.changeType)) {
+            query.put("changeType", request.changeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skipTotal)) {
+            query.put("skipTotal", request.skipTotal);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetMemberBalanceLogs"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetMemberBalanceLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员余额变更日志</p>
+     * 
+     * @param request ModelRouterGetMemberBalanceLogsRequest
+     * @return ModelRouterGetMemberBalanceLogsResponse
+     */
+    public ModelRouterGetMemberBalanceLogsResponse modelRouterGetMemberBalanceLogs(String clientId, String id, ModelRouterGetMemberBalanceLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetMemberBalanceLogsWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the role assignments of a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-department role assignments of a user.</p>
+     * 
+     * @param request ModelRouterGetUserRolesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterGetUserRolesResponse
+     */
+    public ModelRouterGetUserRolesResponse modelRouterGetUserRolesWithOptions(String id, ModelRouterGetUserRolesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterGetUserRoles"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/users/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/roles"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterGetUserRolesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the role assignments of a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the cross-department role assignments of a user.</p>
+     * 
+     * @param request ModelRouterGetUserRolesRequest
+     * @return ModelRouterGetUserRolesResponse
+     */
+    public ModelRouterGetUserRolesResponse modelRouterGetUserRoles(String id, ModelRouterGetUserRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterGetUserRolesWithOptions(id, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This API operation is deprecated. Do not use it.</p>
      * 
@@ -3366,6 +4253,181 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterListBalanceOrdersWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取部门成员列表</p>
+     * 
+     * @param request ModelRouterListDeptMembersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterListDeptMembersResponse
+     */
+    public ModelRouterListDeptMembersResponse modelRouterListDeptMembersWithOptions(String id, ModelRouterListDeptMembersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfig)) {
+            query.put("authConfig", request.authConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeAuthorization)) {
+            query.put("includeAuthorization", request.includeAuthorization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeBalance)) {
+            query.put("includeBalance", request.includeBalance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterListDeptMembers"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/members"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterListDeptMembersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取部门成员列表</p>
+     * 
+     * @param request ModelRouterListDeptMembersRequest
+     * @return ModelRouterListDeptMembersResponse
+     */
+    public ModelRouterListDeptMembersResponse modelRouterListDeptMembers(String id, ModelRouterListDeptMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterListDeptMembersWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员余额变更记录</p>
+     * 
+     * @param request ModelRouterListMemberBalanceOrdersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterListMemberBalanceOrdersResponse
+     */
+    public ModelRouterListMemberBalanceOrdersResponse modelRouterListMemberBalanceOrdersWithOptions(String clientId, String id, ModelRouterListMemberBalanceOrdersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            query.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("orderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterListMemberBalanceOrders"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/orders"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterListMemberBalanceOrdersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员余额变更记录</p>
+     * 
+     * @param request ModelRouterListMemberBalanceOrdersRequest
+     * @return ModelRouterListMemberBalanceOrdersResponse
+     */
+    public ModelRouterListMemberBalanceOrdersResponse modelRouterListMemberBalanceOrders(String clientId, String id, ModelRouterListMemberBalanceOrdersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterListMemberBalanceOrdersWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员订阅列表</p>
+     * 
+     * @param request ModelRouterListMemberSubscriptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterListMemberSubscriptionsResponse
+     */
+    public ModelRouterListMemberSubscriptionsResponse modelRouterListMemberSubscriptionsWithOptions(String clientId, String id, ModelRouterListMemberSubscriptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterListMemberSubscriptions"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/subscription"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterListMemberSubscriptionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/获取成员订阅列表</p>
+     * 
+     * @param request ModelRouterListMemberSubscriptionsRequest
+     * @return ModelRouterListMemberSubscriptionsResponse
+     */
+    public ModelRouterListMemberSubscriptionsResponse modelRouterListMemberSubscriptions(String clientId, String id, ModelRouterListMemberSubscriptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterListMemberSubscriptionsWithOptions(clientId, id, request, headers, runtime);
     }
 
     /**
@@ -3490,12 +4552,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("groupBy", request.groupBy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeMemberKeys)) {
+            query.put("includeMemberKeys", request.includeMemberKeys);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
             query.put("keyword", request.keyword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.needTotalCount)) {
@@ -3559,7 +4629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Billing &gt; Query billing cost breakdown</p>
+     * <p>Queries billing details in batches.</p>
      * 
      * @param request ModelRouterQueryBillingCostBreakdownRequest
      * @param headers map
@@ -3587,6 +4657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
@@ -3633,7 +4707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Billing &gt; Query billing cost breakdown</p>
+     * <p>Queries billing details in batches.</p>
      * 
      * @param request ModelRouterQueryBillingCostBreakdownRequest
      * @return ModelRouterQueryBillingCostBreakdownResponse
@@ -3820,6 +4894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            query.put("parentId", request.parentId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
@@ -4030,7 +5108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Model details</p>
+     * <p>Retrieves the usage details of a model for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelDetailRequest
      * @param headers map
@@ -4054,6 +5132,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
@@ -4100,7 +5182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Model details</p>
+     * <p>Retrieves the usage details of a model for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelDetailRequest
      * @return ModelRouterQueryCostModelDetailResponse
@@ -4113,7 +5195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Retrieves a list of invoked models</p>
+     * <p>Retrieves the list of models called for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelListRequest
      * @param headers map
@@ -4141,6 +5223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
@@ -4179,7 +5265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Retrieves a list of invoked models</p>
+     * <p>Retrieves the list of models called for billing management.</p>
      * 
      * @param request ModelRouterQueryCostModelListRequest
      * @return ModelRouterQueryCostModelListResponse
@@ -4192,7 +5278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Get cost overview metrics</p>
+     * <p>Retrieves cost overview metrics for billing management.</p>
      * 
      * @param request ModelRouterQueryCostOverviewMetricsRequest
      * @param headers map
@@ -4220,6 +5306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
@@ -4254,7 +5344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Get cost overview metrics</p>
+     * <p>Retrieves cost overview metrics for billing management.</p>
      * 
      * @param request ModelRouterQueryCostOverviewMetricsRequest
      * @return ModelRouterQueryCostOverviewMetricsResponse
@@ -4267,7 +5357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Cost trends</p>
+     * <p>Retrieves usage cost trends.</p>
      * 
      * @param request ModelRouterQueryCostTrendMetricsRequest
      * @param headers map
@@ -4295,6 +5385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelTypes)) {
@@ -4329,7 +5423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>billing management / Cost trends</p>
+     * <p>Retrieves usage cost trends.</p>
      * 
      * @param request ModelRouterQueryCostTrendMetricsRequest
      * @return ModelRouterQueryCostTrendMetricsResponse
@@ -4633,10 +5727,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the groups and models bound to a specified API key.</p>
+     * <p>Queries the users attached to a model group by paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the model groups and models bound to a specified API key.</p>
+     * <p>Queries the users attached to a model group by paging.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupUsersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryModelGroupUsersResponse
+     */
+    public ModelRouterQueryModelGroupUsersResponse modelRouterQueryModelGroupUsersWithOptions(String groupId, ModelRouterQueryModelGroupUsersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryModelGroupUsers"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/model-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + "/users"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryModelGroupUsersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the users attached to a model group by paging.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the users attached to a model group by paging.</p>
+     * 
+     * @param request ModelRouterQueryModelGroupUsersRequest
+     * @return ModelRouterQueryModelGroupUsersResponse
+     */
+    public ModelRouterQueryModelGroupUsersResponse modelRouterQueryModelGroupUsers(String groupId, ModelRouterQueryModelGroupUsersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryModelGroupUsersWithOptions(groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the bound groups and models by API key.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the bound groups and models by API key.</p>
      * 
      * @param request ModelRouterQueryModelGroupsByApiKeyRequest
      * @param headers map
@@ -4664,10 +5823,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the groups and models bound to a specified API key.</p>
+     * <p>Queries the bound groups and models by API key.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the model groups and models bound to a specified API key.</p>
+     * <p>Queries the bound groups and models by API key.</p>
      * 
      * @param request ModelRouterQueryModelGroupsByApiKeyRequest
      * @return ModelRouterQueryModelGroupsByApiKeyResponse
@@ -4921,7 +6080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves chart data for model observation.</p>
+     * <p>Retrieves observation chart data for model monitoring.</p>
      * 
      * @param request ModelRouterQueryObservationChartsRequest
      * @param headers map
@@ -4941,6 +6100,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("endTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
@@ -4975,7 +6138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves chart data for model observation.</p>
+     * <p>Retrieves observation chart data for model monitoring.</p>
      * 
      * @param request ModelRouterQueryObservationChartsRequest
      * @return ModelRouterQueryObservationChartsResponse
@@ -5016,6 +6179,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
@@ -5117,6 +6284,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("maxResults", request.maxResults);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
             query.put("modelId", request.modelId);
         }
@@ -5216,6 +6387,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("maxResults", request.maxResults);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUserIds)) {
+            query.put("memberUserIds", request.memberUserIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
         }
@@ -5261,6 +6436,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterQueryUsageBreakdownWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of users.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of users.</p>
+     * 
+     * @param request ModelRouterQueryUserListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterQueryUserListResponse
+     */
+    public ModelRouterQueryUserListResponse modelRouterQueryUserListWithOptions(ModelRouterQueryUserListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("pageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterQueryUserList"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/users"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterQueryUserListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of users.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of users.</p>
+     * 
+     * @param request ModelRouterQueryUserListRequest
+     * @return ModelRouterQueryUserListResponse
+     */
+    public ModelRouterQueryUserListResponse modelRouterQueryUserList(ModelRouterQueryUserListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterQueryUserListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Resets the authorization of a member to inherit from the organization.</p>
+     * 
+     * @param request ModelRouterResetMemberAuthorizationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterResetMemberAuthorizationResponse
+     */
+    public ModelRouterResetMemberAuthorizationResponse modelRouterResetMemberAuthorizationWithOptions(String clientId, String id, ModelRouterResetMemberAuthorizationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterResetMemberAuthorization"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/authorization"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterResetMemberAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Resets the authorization of a member to inherit from the organization.</p>
+     * 
+     * @param request ModelRouterResetMemberAuthorizationRequest
+     * @return ModelRouterResetMemberAuthorizationResponse
+     */
+    public ModelRouterResetMemberAuthorizationResponse modelRouterResetMemberAuthorization(String clientId, String id, ModelRouterResetMemberAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterResetMemberAuthorizationWithOptions(clientId, id, request, headers, runtime);
     }
 
     /**
@@ -5324,6 +6601,204 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>组织管理/部门树搜索定位</p>
+     * 
+     * @param request ModelRouterSearchClientTreeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterSearchClientTreeResponse
+     */
+    public ModelRouterSearchClientTreeResponse modelRouterSearchClientTreeWithOptions(ModelRouterSearchClientTreeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterSearchClientTree"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/tree/search"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterSearchClientTreeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/部门树搜索定位</p>
+     * 
+     * @param request ModelRouterSearchClientTreeRequest
+     * @return ModelRouterSearchClientTreeResponse
+     */
+    public ModelRouterSearchClientTreeResponse modelRouterSearchClientTree(ModelRouterSearchClientTreeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterSearchClientTreeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sets the member authorization model for an organization.</p>
+     * 
+     * @param request ModelRouterSetMemberAuthorizationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterSetMemberAuthorizationResponse
+     */
+    public ModelRouterSetMemberAuthorizationResponse modelRouterSetMemberAuthorizationWithOptions(String clientId, String id, ModelRouterSetMemberAuthorizationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedModelGroupConfig)) {
+            body.put("allowedModelGroupConfig", request.allowedModelGroupConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedModels)) {
+            body.put("allowedModels", request.allowedModels);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterSetMemberAuthorization"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/authorization"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterSetMemberAuthorizationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sets the member authorization model for an organization.</p>
+     * 
+     * @param request ModelRouterSetMemberAuthorizationRequest
+     * @return ModelRouterSetMemberAuthorizationResponse
+     */
+    public ModelRouterSetMemberAuthorizationResponse modelRouterSetMemberAuthorization(String clientId, String id, ModelRouterSetMemberAuthorizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterSetMemberAuthorizationWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Sets user roles or changes the department to which a user belongs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets user roles or changes the department to which a user belongs.</p>
+     * 
+     * @param request ModelRouterSetUserRolesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterSetUserRolesResponse
+     */
+    public ModelRouterSetUserRolesResponse modelRouterSetUserRolesWithOptions(String id, ModelRouterSetUserRolesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.departmentRoles)) {
+            body.put("departmentRoles", request.departmentRoles);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterSetUserRoles"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/users/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/roles"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterSetUserRolesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Sets user roles or changes the department to which a user belongs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Sets user roles or changes the department to which a user belongs.</p>
+     * 
+     * @param request ModelRouterSetUserRolesRequest
+     * @return ModelRouterSetUserRolesResponse
+     */
+    public ModelRouterSetUserRolesResponse modelRouterSetUserRoles(String id, ModelRouterSetUserRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterSetUserRolesWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/停止成员订阅</p>
+     * 
+     * @param request ModelRouterStopMemberSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterStopMemberSubscriptionResponse
+     */
+    public ModelRouterStopMemberSubscriptionResponse modelRouterStopMemberSubscriptionWithOptions(String clientId, String id, ModelRouterStopMemberSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterStopMemberSubscription"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/subscription/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterStopMemberSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/停止成员订阅</p>
+     * 
+     * @param request ModelRouterStopMemberSubscriptionRequest
+     * @return ModelRouterStopMemberSubscriptionResponse
+     */
+    public ModelRouterStopMemberSubscriptionResponse modelRouterStopMemberSubscription(String clientId, String id, ModelRouterStopMemberSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterStopMemberSubscriptionWithOptions(clientId, id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Stops a periodic recharge subscription for customer management.</p>
      * 
      * @param request ModelRouterStopSubscriptionRequest
@@ -5367,6 +6842,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterStopSubscriptionWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/部门向成员转账</p>
+     * 
+     * @param request ModelRouterTransferToMemberRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterTransferToMemberResponse
+     */
+    public ModelRouterTransferToMemberResponse modelRouterTransferToMemberWithOptions(String clientId, String id, ModelRouterTransferToMemberRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            body.put("amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotencyKey)) {
+            body.put("idempotencyKey", request.idempotencyKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.monthlyQuota)) {
+            body.put("monthlyQuota", request.monthlyQuota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("remark", request.remark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterTransferToMember"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(clientId) + "/members/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/transfer"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterTransferToMemberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>组织管理/部门向成员转账</p>
+     * 
+     * @param request ModelRouterTransferToMemberRequest
+     * @return ModelRouterTransferToMemberResponse
+     */
+    public ModelRouterTransferToMemberResponse modelRouterTransferToMember(String clientId, String id, ModelRouterTransferToMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterTransferToMemberWithOptions(clientId, id, request, headers, runtime);
     }
 
     /**
@@ -5712,6 +7250,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modelRouterUpdateModelGroupWithOptions(groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates user information.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates user information.</p>
+     * 
+     * @param request ModelRouterUpdateUserRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterUpdateUserResponse
+     */
+    public ModelRouterUpdateUserResponse modelRouterUpdateUserWithOptions(String id, ModelRouterUpdateUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterUpdateUser"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/users/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterUpdateUserResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates user information.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates user information.</p>
+     * 
+     * @param request ModelRouterUpdateUserRequest
+     * @return ModelRouterUpdateUserResponse
+     */
+    public ModelRouterUpdateUserResponse modelRouterUpdateUser(String id, ModelRouterUpdateUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterUpdateUserWithOptions(id, request, headers, runtime);
     }
 
     /**

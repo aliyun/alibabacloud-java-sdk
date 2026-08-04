@@ -86,6 +86,13 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("parentId")
+    public Long parentId;
+
+    /**
      * <p>Filters the results by status.</p>
      * 
      * <strong>example:</strong>
@@ -169,6 +176,14 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ModelRouterQueryClientListRequest setParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public Long getParentId() {
+        return this.parentId;
     }
 
     public ModelRouterQueryClientListRequest setStatus(Integer status) {

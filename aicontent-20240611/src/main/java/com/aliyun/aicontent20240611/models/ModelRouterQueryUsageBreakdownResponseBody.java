@@ -14,7 +14,7 @@ public class ModelRouterQueryUsageBreakdownResponseBody extends TeaModel {
     public UsageBreakdownRespDTO data;
 
     /**
-     * <p>The fault code.</p>
+     * <p>The error message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterQueryUsageBreakdownResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Unknown error.</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;

@@ -50,6 +50,13 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001,30002</p>
+     */
+    @NameInMap("memberUserIds")
+    public String memberUserIds;
+
+    /**
      * <p>The model ID used to filter the results.</p>
      * 
      * <strong>example:</strong>
@@ -173,6 +180,14 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryObservationLogsRequest setMemberUserIds(String memberUserIds) {
+        this.memberUserIds = memberUserIds;
+        return this;
+    }
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     public ModelRouterQueryObservationLogsRequest setModelId(Long modelId) {

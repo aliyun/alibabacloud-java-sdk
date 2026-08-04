@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     /**
-     * <p>The API key ID to use as a filter.</p>
+     * <p>The API key ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>The client ID to use as a filter.</p>
+     * <p>The client ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The end time of the custom time range, in ISO 8601 UTC format. If specified, <code>startTime</code> must also be provided.</p>
+     * <p>The custom end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-02T00:00:00Z</p>
@@ -32,7 +32,16 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The model ID to use as a filter.</p>
+     * <p>Optional. Filters by member IDs. Separate multiple IDs with commas. If this parameter is not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001,30002</p>
+     */
+    @NameInMap("memberUserIds")
+    public String memberUserIds;
+
+    /**
+     * <p>The model ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +50,7 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public Long modelId;
 
     /**
-     * <p>The start time of the custom time range, in ISO 8601 UTC format. If specified, <code>endTime</code> must also be provided.</p>
+     * <p>The custom start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
@@ -50,7 +59,7 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The time range for the query. Valid values are <code>1h</code>, <code>6h</code>, <code>24h</code>, <code>7d</code>, and <code>30d</code>. This parameter is mutually exclusive with <code>startTime</code> and <code>endTime</code>.</p>
+     * <p>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</p>
      * 
      * <strong>example:</strong>
      * <p>24h</p>
@@ -85,6 +94,14 @@ public class ModelRouterQueryObservationChartsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ModelRouterQueryObservationChartsRequest setMemberUserIds(String memberUserIds) {
+        this.memberUserIds = memberUserIds;
+        return this;
+    }
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     public ModelRouterQueryObservationChartsRequest setModelId(Long modelId) {

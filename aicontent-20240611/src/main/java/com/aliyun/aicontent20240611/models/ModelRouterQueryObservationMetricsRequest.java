@@ -50,6 +50,15 @@ public class ModelRouterQueryObservationMetricsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Optional. Filters by member IDs. Separate multiple IDs with commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001,30002</p>
+     */
+    @NameInMap("memberUserIds")
+    public String memberUserIds;
+
+    /**
      * <p>The model ID used to filter the results.</p>
      * 
      * <strong>example:</strong>
@@ -122,7 +131,7 @@ public class ModelRouterQueryObservationMetricsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</p>
+     * <p>The time range for the query. Valid values: 1h, 6h, 24h, 7d, 30d.</p>
      * 
      * <strong>example:</strong>
      * <p>24h</p>
@@ -173,6 +182,14 @@ public class ModelRouterQueryObservationMetricsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryObservationMetricsRequest setMemberUserIds(String memberUserIds) {
+        this.memberUserIds = memberUserIds;
+        return this;
+    }
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     public ModelRouterQueryObservationMetricsRequest setModelId(Long modelId) {

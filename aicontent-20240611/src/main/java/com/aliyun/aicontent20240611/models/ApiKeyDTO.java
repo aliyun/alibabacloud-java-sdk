@@ -58,6 +58,20 @@ public class ApiKeyDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>30001</p>
+     */
+    @NameInMap("memberUserId")
+    public Long memberUserId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
+    @NameInMap("memberUserName")
+    public String memberUserName;
+
+    /**
+     * <strong>example:</strong>
      * <p>MyApiKey</p>
      */
     @NameInMap("name")
@@ -130,6 +144,22 @@ public class ApiKeyDTO extends TeaModel {
     }
     public String getKeyPreview() {
         return this.keyPreview;
+    }
+
+    public ApiKeyDTO setMemberUserId(Long memberUserId) {
+        this.memberUserId = memberUserId;
+        return this;
+    }
+    public Long getMemberUserId() {
+        return this.memberUserId;
+    }
+
+    public ApiKeyDTO setMemberUserName(String memberUserName) {
+        this.memberUserName = memberUserName;
+        return this;
+    }
+    public String getMemberUserName() {
+        return this.memberUserName;
     }
 
     public ApiKeyDTO setName(String name) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryCostModelListRequest extends TeaModel {
     /**
+     * <p>Optional. Filters results by API key ID. This parameter works in conjunction with the department and requires clientId to be specified first.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,7 +14,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>The department ID to filter the results.</p>
+     * <p>Filters results by department ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -21,7 +23,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The query\&quot;s end time, specified as a UNIX timestamp in seconds.</p>
+     * <p>The end time, as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The time granularity for data aggregation. Valid values: <code>hourly</code> and <code>daily</code>. Default value: <code>hourly</code>.</p>
+     * <p>Automatic aggregation. You do not need to pass this parameter. Granularity: hourly/daily. Default value: hourly.</p>
      * 
      * <strong>example:</strong>
      * <p>hourly</p>
@@ -40,7 +42,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -49,7 +51,16 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The model types to query. Separate multiple types with a comma.</p>
+     * <p>Optional. Filters results by member IDs, separated by commas. If not specified, the department and all its members are included. If an empty value is passed, only the department is included without members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001,30002</p>
+     */
+    @NameInMap("memberUserIds")
+    public String memberUserIds;
+
+    /**
+     * <p>The model types, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>LLM,VL</p>
@@ -58,7 +69,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String modelTypes;
 
     /**
-     * <p>A token from a previous response used to retrieve the next page of results.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -67,7 +78,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A keyword for a fuzzy search on the model name or model code.</p>
+     * <p>Performs a fuzzy match on the model name or code.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen</p>
@@ -76,7 +87,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String search;
 
     /**
-     * <p>The query\&quot;s start time, specified as a UNIX timestamp in seconds.</p>
+     * <p>The start time, as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,6 +139,14 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryCostModelListRequest setMemberUserIds(String memberUserIds) {
+        this.memberUserIds = memberUserIds;
+        return this;
+    }
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     public ModelRouterQueryCostModelListRequest setModelTypes(String modelTypes) {

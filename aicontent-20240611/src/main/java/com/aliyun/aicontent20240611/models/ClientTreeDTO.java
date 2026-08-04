@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ClientTreeDTO extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("address")
     public String address;
@@ -97,10 +97,17 @@ public class ClientTreeDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>我的客户</p>
+     * <p>My customer</p>
      */
     @NameInMap("name")
     public String name;
+
+    /**
+     * <strong>example:</strong>
+     * <p>department</p>
+     */
+    @NameInMap("nodeType")
+    public String nodeType;
 
     /**
      * <strong>example:</strong>
@@ -111,10 +118,17 @@ public class ClientTreeDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>Remarks</p>
      */
     @NameInMap("remark")
     public String remark;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30001</p>
+     */
+    @NameInMap("userId")
+    public Long userId;
 
     public static ClientTreeDTO build(java.util.Map<String, ?> map) throws Exception {
         ClientTreeDTO self = new ClientTreeDTO();
@@ -233,6 +247,14 @@ public class ClientTreeDTO extends TeaModel {
         return this.name;
     }
 
+    public ClientTreeDTO setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
     public ClientTreeDTO setParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -247,6 +269,14 @@ public class ClientTreeDTO extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public ClientTreeDTO setUserId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
+    public Long getUserId() {
+        return this.userId;
     }
 
 }

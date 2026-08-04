@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryObservationChartsResponseBody extends TeaModel {
     /**
-     * <p>The data returned for the request.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryObservationChartsResponseBody extends TeaModel {
     public ObservationChartsDTO data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,16 +23,16 @@ public class ModelRouterQueryObservationChartsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
-     * <p>The HTTP status code of the response.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class ModelRouterQueryObservationChartsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>

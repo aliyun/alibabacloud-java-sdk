@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryCostTrendMetricsResponseBody extends TeaModel {
     /**
-     * <p>The data object containing the cost trend metrics.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryCostTrendMetricsResponseBody extends TeaModel {
     public CostQueryTrendDTO data;
 
     /**
-     * <p>The error code returned when the request fails.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,10 +23,10 @@ public class ModelRouterQueryCostTrendMetricsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -41,7 +41,7 @@ public class ModelRouterQueryCostTrendMetricsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The maximum number of results returned per page.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryCostTrendMetricsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A token to retrieve the next page of results. If no token is returned, all results have been retrieved.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -59,7 +59,7 @@ public class ModelRouterQueryCostTrendMetricsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique request ID. If you encounter a problem, provide this ID to technical support for troubleshooting.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
@@ -68,7 +68,7 @@ public class ModelRouterQueryCostTrendMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success, and <code>false</code> indicates failure.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

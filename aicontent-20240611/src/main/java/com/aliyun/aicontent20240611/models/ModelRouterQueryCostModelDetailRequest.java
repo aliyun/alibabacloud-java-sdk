@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     /**
+     * <p>Optional. Filters by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,7 +14,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>The department ID by which to filter results.</p>
+     * <p>The department ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -21,7 +23,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The end of the time range to query, specified as a Unix timestamp in seconds.</p>
+     * <p>The end time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,13 +33,22 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The maximum number of results to return per page. This parameter is recommended for pagination.</p>
+     * <p>maxResults</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
+
+    /**
+     * <p>Optional. Filters by member IDs. Separate multiple IDs with commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001,30002</p>
+     */
+    @NameInMap("memberUserIds")
+    public String memberUserIds;
 
     /**
      * <p>The model ID.</p>
@@ -50,7 +61,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long modelId;
 
     /**
-     * <p>The token to retrieve the next page of results. Obtain this token from the <code>nextToken</code> field in a previous response.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -59,7 +70,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. This parameter is part of an older pagination method. For better performance and consistency, use <code>maxResults</code> and <code>nextToken</code> instead.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +79,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The page number. This parameter is part of an older pagination method. For better performance and consistency, use <code>maxResults</code> and <code>nextToken</code> instead.</p>
+     * <p>The page number. This parameter takes priority over the page parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -77,7 +88,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>The page size. Default: 20.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -86,7 +97,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start of the time range to query, specified as a Unix timestamp in seconds.</p>
+     * <p>The start time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,6 +141,14 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryCostModelDetailRequest setMemberUserIds(String memberUserIds) {
+        this.memberUserIds = memberUserIds;
+        return this;
+    }
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     public ModelRouterQueryCostModelDetailRequest setModelId(Long modelId) {

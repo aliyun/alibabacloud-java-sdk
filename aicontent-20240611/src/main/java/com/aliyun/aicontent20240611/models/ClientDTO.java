@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class ClientDTO extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>杭州市</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("address")
     public String address;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;model_ids&quot;:[1,2],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</p>
+     */
+    @NameInMap("allowedModelGroupConfig")
+    public String allowedModelGroupConfig;
 
     /**
      * <strong>example:</strong>
@@ -41,6 +48,13 @@ public class ClientDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1.0</p>
+     */
+    @NameInMap("discount")
+    public Double discount;
+
+    /**
+     * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
     @NameInMap("gmtCreate")
@@ -62,6 +76,13 @@ public class ClientDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("level")
+    public Integer level;
+
+    /**
+     * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("main")
@@ -69,17 +90,38 @@ public class ClientDTO extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>我的客户</p>
+     * <p>My customer</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <strong>example:</strong>
-     * <p>备注</p>
+     * <p>department</p>
+     */
+    @NameInMap("nodeType")
+    public String nodeType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("parentId")
+    public Long parentId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Remarks</p>
      */
     @NameInMap("remark")
     public String remark;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30001</p>
+     */
+    @NameInMap("userId")
+    public Long userId;
 
     public static ClientDTO build(java.util.Map<String, ?> map) throws Exception {
         ClientDTO self = new ClientDTO();
@@ -92,6 +134,14 @@ public class ClientDTO extends TeaModel {
     }
     public String getAddress() {
         return this.address;
+    }
+
+    public ClientDTO setAllowedModelGroupConfig(String allowedModelGroupConfig) {
+        this.allowedModelGroupConfig = allowedModelGroupConfig;
+        return this;
+    }
+    public String getAllowedModelGroupConfig() {
+        return this.allowedModelGroupConfig;
     }
 
     public ClientDTO setAllowedModels(String allowedModels) {
@@ -126,6 +176,14 @@ public class ClientDTO extends TeaModel {
         return this.deleteTag;
     }
 
+    public ClientDTO setDiscount(Double discount) {
+        this.discount = discount;
+        return this;
+    }
+    public Double getDiscount() {
+        return this.discount;
+    }
+
     public ClientDTO setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -150,6 +208,14 @@ public class ClientDTO extends TeaModel {
         return this.id;
     }
 
+    public ClientDTO setLevel(Integer level) {
+        this.level = level;
+        return this;
+    }
+    public Integer getLevel() {
+        return this.level;
+    }
+
     public ClientDTO setMain(Integer main) {
         this.main = main;
         return this;
@@ -166,12 +232,36 @@ public class ClientDTO extends TeaModel {
         return this.name;
     }
 
+    public ClientDTO setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    public ClientDTO setParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public Long getParentId() {
+        return this.parentId;
+    }
+
     public ClientDTO setRemark(String remark) {
         this.remark = remark;
         return this;
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public ClientDTO setUserId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
+    public Long getUserId() {
+        return this.userId;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     /**
-     * <p>An array of API key objects.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public ModelRouterQueryApiKeyListResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -41,7 +41,7 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>maxResults</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

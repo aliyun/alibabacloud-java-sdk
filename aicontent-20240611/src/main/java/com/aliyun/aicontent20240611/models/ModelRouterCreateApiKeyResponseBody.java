@@ -14,7 +14,7 @@ public class ModelRouterCreateApiKeyResponseBody extends TeaModel {
     public ApiKeyDTO data;
 
     /**
-     * <p>The fault code.</p>
+     * <p>The fault message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>

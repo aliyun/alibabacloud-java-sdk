@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     /**
+     * <p>Optional. Filters results by API key ID. This parameter is linked with the department. Specify clientId first.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,7 +14,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
-     * <p>The ID of the client to query. If not specified, data for all clients is returned.</p>
+     * <p>Optional. Filters results by department ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -21,7 +23,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The end time for the query, specified as a Unix timestamp in seconds.</p>
+     * <p>The query end time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,11 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The granularity for data aggregation. Valid values: <code>hourly</code> and <code>daily</code>.</p>
+     * <p>The aggregation granularity. Valid values:</p>
+     * <ul>
+     * <li>hourly</li>
+     * <li>daily</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +47,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The maximum number of results to return. This parameter is used for pagination along with <code>nextToken</code> and is mutually exclusive with <code>page</code> and <code>pageSize</code>.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +56,16 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of the model to query. If not specified, data for all models is returned.</p>
+     * <p>Optional. Filters results by member ID. Separate multiple values with commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001,30002</p>
+     */
+    @NameInMap("memberUserIds")
+    public String memberUserIds;
+
+    /**
+     * <p>Optional. Filters results by model ID.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -59,7 +74,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long modelId;
 
     /**
-     * <p>The types of the models to query, separated by commas. For example: <code>Chat,Embedding</code>. If not specified, data for all model types is returned.</p>
+     * <p>Optional. Filters results by model type. Separate multiple values with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>Chat</p>
@@ -68,7 +83,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public String modelTypes;
 
     /**
-     * <p>The pagination token that is used to retrieve the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -77,7 +92,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Default: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,7 +101,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>The number of entries per page. Default: 20. Maximum: 500.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -95,7 +110,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time for the query, specified as a Unix timestamp in seconds.</p>
+     * <p>The query start time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -147,6 +162,14 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryBillingCostBreakdownRequest setMemberUserIds(String memberUserIds) {
+        this.memberUserIds = memberUserIds;
+        return this;
+    }
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     public ModelRouterQueryBillingCostBreakdownRequest setModelId(Long modelId) {

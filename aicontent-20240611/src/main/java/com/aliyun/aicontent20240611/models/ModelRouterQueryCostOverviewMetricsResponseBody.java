@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     /**
-     * <p>The data object that contains the returned metrics.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public java.util.List<MetricValueDTO> data;
 
     /**
-     * <p>The error code that is returned if the request fails.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -23,10 +23,10 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message that is returned if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -41,7 +41,7 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The maximum number of entries returned on each page.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>

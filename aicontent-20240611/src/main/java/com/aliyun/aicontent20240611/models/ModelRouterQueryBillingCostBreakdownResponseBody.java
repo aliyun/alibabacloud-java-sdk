@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     /**
-     * <p>The data object containing the billing breakdown. For details, see the response example.</p>
+     * <p>The data object.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public BillingCostBreakdownRespDTO data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -41,7 +41,7 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The maximum number of results returned.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. If this parameter is not empty, pass its value in a subsequent request to retrieve the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>

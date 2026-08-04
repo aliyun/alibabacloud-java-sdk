@@ -110,7 +110,14 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
 
     public static class ModelRouterQueryModelGroupsByApiKeyResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the department to which the key belongs.</p>
+         * <strong>example:</strong>
+         * <p>department</p>
+         */
+        @NameInMap("bindType")
+        public String bindType;
+
+        /**
+         * <p>The department ID to which the key belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -139,6 +146,14 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         public static ModelRouterQueryModelGroupsByApiKeyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModelRouterQueryModelGroupsByApiKeyResponseBodyData self = new ModelRouterQueryModelGroupsByApiKeyResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ModelRouterQueryModelGroupsByApiKeyResponseBodyData setBindType(String bindType) {
+            this.bindType = bindType;
+            return this;
+        }
+        public String getBindType() {
+            return this.bindType;
         }
 
         public ModelRouterQueryModelGroupsByApiKeyResponseBodyData setClientId(Long clientId) {

@@ -23,7 +23,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Long clientId;
 
     /**
-     * <p>The query end time, in UNIX timestamp (seconds).</p>
+     * <p>The query end time, in UNIX timestamp format (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +50,15 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
      */
     @NameInMap("maxResults")
     public Integer maxResults;
+
+    /**
+     * <p>Optional. Filters results by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001,30002</p>
+     */
+    @NameInMap("memberUserIds")
+    public String memberUserIds;
 
     /**
      * <p>The pagination token.</p>
@@ -79,7 +88,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query start time, in UNIX timestamp (seconds).</p>
+     * <p>The query start time, in UNIX timestamp format (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,6 +140,14 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ModelRouterQueryUsageBreakdownRequest setMemberUserIds(String memberUserIds) {
+        this.memberUserIds = memberUserIds;
+        return this;
+    }
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     public ModelRouterQueryUsageBreakdownRequest setNextToken(String nextToken) {

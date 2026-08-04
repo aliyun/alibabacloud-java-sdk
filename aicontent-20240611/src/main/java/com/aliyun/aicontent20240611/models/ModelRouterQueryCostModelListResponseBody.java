@@ -14,7 +14,7 @@ public class ModelRouterQueryCostModelListResponseBody extends TeaModel {
     public CostQueryModelsDTO data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The fault code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
@@ -26,7 +26,7 @@ public class ModelRouterQueryCostModelListResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>未知错误</p>
+     * <p>Unknown error</p>
      */
     @NameInMap("errMessage")
     public String errMessage;
@@ -41,7 +41,7 @@ public class ModelRouterQueryCostModelListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The number of results returned on the current page.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ModelRouterQueryCostModelListResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for retrieving the next page of results. If this parameter is not returned, all results have been returned.</p>
+     * <p>nextToken</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>

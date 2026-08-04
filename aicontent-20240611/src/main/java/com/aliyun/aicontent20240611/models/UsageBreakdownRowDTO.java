@@ -37,6 +37,20 @@ public class UsageBreakdownRowDTO extends TeaModel {
     public String clientName;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001</p>
+     */
+    @NameInMap("memberUserId")
+    public Long memberUserId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
+    @NameInMap("memberUserName")
+    public String memberUserName;
+
+    /**
      * <p>Array of usage metrics, containing only entries with non-zero values</p>
      * 
      * <strong>example:</strong>
@@ -125,6 +139,22 @@ public class UsageBreakdownRowDTO extends TeaModel {
     }
     public String getClientName() {
         return this.clientName;
+    }
+
+    public UsageBreakdownRowDTO setMemberUserId(Long memberUserId) {
+        this.memberUserId = memberUserId;
+        return this;
+    }
+    public Long getMemberUserId() {
+        return this.memberUserId;
+    }
+
+    public UsageBreakdownRowDTO setMemberUserName(String memberUserName) {
+        this.memberUserName = memberUserName;
+        return this;
+    }
+    public String getMemberUserName() {
+        return this.memberUserName;
     }
 
     public UsageBreakdownRowDTO setMetrics(java.util.List<MetricKVPairDTO> metrics) {

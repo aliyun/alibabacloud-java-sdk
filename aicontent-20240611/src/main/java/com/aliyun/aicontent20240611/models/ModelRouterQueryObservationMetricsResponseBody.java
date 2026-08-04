@@ -14,7 +14,7 @@ public class ModelRouterQueryObservationMetricsResponseBody extends TeaModel {
     public ModelMetricsDTO data;
 
     /**
-     * <p>The fault code.</p>
+     * <p>The error message code.</p>
      * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>

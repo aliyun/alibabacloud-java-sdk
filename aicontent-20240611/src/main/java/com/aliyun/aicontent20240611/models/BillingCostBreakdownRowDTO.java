@@ -53,6 +53,20 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public String dimValues;
 
     /**
+     * <strong>example:</strong>
+     * <p>30001</p>
+     */
+    @NameInMap("memberUserId")
+    public Long memberUserId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
+    @NameInMap("memberUserName")
+    public String memberUserName;
+
+    /**
      * <p>Model identifier</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +94,13 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public String modelName;
 
     /**
+     * <strong>example:</strong>
+     * <p>qwen</p>
+     */
+    @NameInMap("modelSymbol")
+    public String modelSymbol;
+
+    /**
      * <p>Statistics category</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +108,13 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
      */
     @NameInMap("modelType")
     public String modelType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("modelVersion")
+    public Integer modelVersion;
 
     /**
      * <p>Payable amount, rounded to 8 decimal places</p>
@@ -173,6 +201,22 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         return this.dimValues;
     }
 
+    public BillingCostBreakdownRowDTO setMemberUserId(Long memberUserId) {
+        this.memberUserId = memberUserId;
+        return this;
+    }
+    public Long getMemberUserId() {
+        return this.memberUserId;
+    }
+
+    public BillingCostBreakdownRowDTO setMemberUserName(String memberUserName) {
+        this.memberUserName = memberUserName;
+        return this;
+    }
+    public String getMemberUserName() {
+        return this.memberUserName;
+    }
+
     public BillingCostBreakdownRowDTO setModelCode(String modelCode) {
         this.modelCode = modelCode;
         return this;
@@ -197,12 +241,28 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         return this.modelName;
     }
 
+    public BillingCostBreakdownRowDTO setModelSymbol(String modelSymbol) {
+        this.modelSymbol = modelSymbol;
+        return this;
+    }
+    public String getModelSymbol() {
+        return this.modelSymbol;
+    }
+
     public BillingCostBreakdownRowDTO setModelType(String modelType) {
         this.modelType = modelType;
         return this;
     }
     public String getModelType() {
         return this.modelType;
+    }
+
+    public BillingCostBreakdownRowDTO setModelVersion(Integer modelVersion) {
+        this.modelVersion = modelVersion;
+        return this;
+    }
+    public Integer getModelVersion() {
+        return this.modelVersion;
     }
 
     public BillingCostBreakdownRowDTO setPayableAmount(Float payableAmount) {
