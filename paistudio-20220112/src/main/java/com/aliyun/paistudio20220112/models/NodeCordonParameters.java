@@ -4,12 +4,30 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeCordonParameters extends TeaModel {
+    /**
+     * <p>User-configurable reason for disabling scheduling</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a comment</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>Quota ID, used when disabling edge zone scheduling in a workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quota1dkoutl3tj1</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>Workspace ID, used when disabling edge zone scheduling in a workspace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

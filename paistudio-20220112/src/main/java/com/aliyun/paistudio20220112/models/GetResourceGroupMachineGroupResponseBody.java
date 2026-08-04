@@ -11,6 +11,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String allocatableMemory;
 
     /**
+     * <p>The total number of CPU cores per machine in the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -18,6 +20,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String cpu;
 
     /**
+     * <p>The default GPU driver version per machine in the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>535</p>
      */
@@ -25,6 +29,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String defaultDriver;
 
     /**
+     * <p>The number of ECS instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +38,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public Long ecsCount;
 
     /**
+     * <p>The ECS spec.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
      */
@@ -39,6 +47,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String ecsSpec;
 
     /**
+     * <p>The creation time of the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -46,6 +56,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gmtCreatedTime;
 
     /**
+     * <p>The expiration time of the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -53,6 +65,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gmtExpiredTime;
 
     /**
+     * <p>The last modification time of the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -60,6 +74,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The start time of the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -67,6 +83,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gmtStartedTime;
 
     /**
+     * <p>The number of GPUs per machine in the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -74,6 +92,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gpu;
 
     /**
+     * <p>The GPU type per machine in the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>A100</p>
      */
@@ -81,6 +101,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gpuType;
 
     /**
+     * <p>The ID of the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>mgmioirqjgw6c5lg</p>
      */
@@ -88,6 +110,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String machineGroupID;
 
     /**
+     * <p>The amount of memory per machine in the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>64</p>
      */
@@ -95,6 +119,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String memory;
 
     /**
+     * <p>The name of the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>testMachineGroup</p>
      */
@@ -102,6 +128,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The payment duration. When PaymentDurationUnit is set to Month, valid values are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -109,6 +137,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String paymentDuration;
 
     /**
+     * <p>The unit of the billing cycle for the machine group.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -116,6 +146,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String paymentDurationUnit;
 
     /**
+     * <p>The payment type.</p>
+     * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
      */
@@ -123,6 +155,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
      */
@@ -130,6 +164,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the resource group. This ID is globally unique and can be used to retrieve information about the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
      */
@@ -137,12 +173,24 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String resourceGroupID;
 
     /**
+     * <p>The status of the machine group.
+     * Valid values:
+     * Creating: The machine group is being created.
+     * Ready: The machine group is running.
+     * Expiring: The machine group is about to expire.
+     * Expired: The machine group has expired.
+     * Stopping: The machine group is being stopped.
+     * Stopped: The machine group has been stopped.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ready</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The GPU driver versions supported by the machines in the machine group.</p>
+     */
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
 
@@ -152,6 +200,9 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("SystemReservedMemory")
     public String systemReservedMemory;
 
+    /**
+     * <p>The list of tags attached to the machine group.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetResourceGroupMachineGroupResponseBodyTags> tags;
 
@@ -362,6 +413,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupMachineGroupResponseBodyTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -369,6 +422,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

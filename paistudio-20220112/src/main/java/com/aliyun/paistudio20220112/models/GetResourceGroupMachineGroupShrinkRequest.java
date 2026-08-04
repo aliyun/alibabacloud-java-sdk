@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupShrinkRequest extends TeaModel {
+    /**
+     * <p>A list of up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

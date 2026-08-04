@@ -4,10 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmResponseBody extends TeaModel {
+    /**
+     * <p>Algorithm description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Large language model training.</p>
+     */
     @NameInMap("AlgorithmDescription")
     public String algorithmDescription;
 
     /**
+     * <p>Algorithm ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>algo-xsldfvu1334</p>
      */
@@ -15,6 +23,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String algorithmId;
 
     /**
+     * <p>Algorithm name.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_training</p>
      */
@@ -22,6 +32,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String algorithmName;
 
     /**
+     * <p>Algorithm provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
@@ -29,6 +41,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String algorithmProvider;
 
     /**
+     * <p>Display name of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_training</p>
      */
@@ -36,6 +50,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String displayName;
 
     /**
+     * <p>Time when the algorithm was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
@@ -43,6 +59,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>Time when the algorithm was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
@@ -50,6 +68,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -57,6 +77,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Tenant ID of the algorithm owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -64,6 +86,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String tenantId;
 
     /**
+     * <p>User ID of the algorithm owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -71,6 +95,8 @@ public class GetAlgorithmResponseBody extends TeaModel {
     public String userId;
 
     /**
+     * <p>Workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

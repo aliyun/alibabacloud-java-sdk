@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupRequest extends TeaModel {
+    /**
+     * <p>A list of up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<GetResourceGroupMachineGroupRequestTag> tag;
 
@@ -22,6 +25,8 @@ public class GetResourceGroupMachineGroupRequest extends TeaModel {
 
     public static class GetResourceGroupMachineGroupRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -29,6 +34,8 @@ public class GetResourceGroupMachineGroupRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

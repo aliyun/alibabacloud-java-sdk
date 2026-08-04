@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GPUInfo extends TeaModel {
     /**
+     * <p>Quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GPUInfo extends TeaModel {
     public Long count;
 
     /**
+     * <p>Type</p>
+     * 
      * <strong>example:</strong>
      * <p>T4</p>
      */

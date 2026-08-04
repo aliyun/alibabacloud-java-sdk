@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class NodeMetric extends TeaModel {
     /**
+     * <p>The type of GPU.</p>
+     * 
      * <strong>example:</strong>
      * <p>GU108</p>
      */
@@ -12,6 +14,8 @@ public class NodeMetric extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>Performance Metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>23000</p>
      */
@@ -19,8 +23,10 @@ public class NodeMetric extends TeaModel {
     public java.util.List<Metric> metrics;
 
     /**
+     * <p>Edge zone ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>-i121212node</p>
+     * <p>-i12****node</p>
      */
     @NameInMap("NodeID")
     public String nodeID;

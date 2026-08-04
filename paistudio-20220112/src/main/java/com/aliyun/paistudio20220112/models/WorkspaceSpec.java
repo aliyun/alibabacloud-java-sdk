@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WorkspaceSpec extends TeaModel {
     /**
+     * <p>Invalidity reason code when using guaranteed resources is invalid</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,6 +14,8 @@ public class WorkspaceSpec extends TeaModel {
     public String code;
 
     /**
+     * <p>Type of invalidity reason when using guaranteed resources is invalid</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class WorkspaceSpec extends TeaModel {
     public String codeType;
 
     /**
+     * <p>Indicates whether the use of guaranteed resources is valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +32,8 @@ public class WorkspaceSpec extends TeaModel {
     public Boolean isGuaranteedValid;
 
     /**
+     * <p>Indicates whether the use of oversold resources is valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,16 +41,23 @@ public class WorkspaceSpec extends TeaModel {
     public Boolean isOverSoldValid;
 
     /**
+     * <p>Invalidity reason content when using guaranteed resources is invalid</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>Specification resource information</p>
+     */
     @NameInMap("Spec")
     public ResourceAmount spec;
 
     /**
+     * <p>Template Name</p>
+     * 
      * <strong>example:</strong>
      * <p>spec_test</p>
      */

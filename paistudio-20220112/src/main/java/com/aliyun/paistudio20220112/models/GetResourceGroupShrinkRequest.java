@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupShrinkRequest extends TeaModel {
     /**
+     * <p>Optional. Defaults to <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsAIWorkspaceDataEnabled")
     public Boolean isAIWorkspaceDataEnabled;
 
+    /**
+     * <p>A list of up to 20 tags to add to the instance.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

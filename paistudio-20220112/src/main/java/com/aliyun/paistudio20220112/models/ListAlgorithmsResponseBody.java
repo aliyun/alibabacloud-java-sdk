@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListAlgorithmsResponseBody extends TeaModel {
+    /**
+     * <p>Algorithm list.</p>
+     */
     @NameInMap("Algorithms")
     public java.util.List<ListAlgorithmsResponseBodyAlgorithms> algorithms;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -15,6 +20,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total algorithms.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -51,10 +58,18 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     }
 
     public static class ListAlgorithmsResponseBodyAlgorithms extends TeaModel {
+        /**
+         * <p>Algorithm description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large language model training.</p>
+         */
         @NameInMap("AlgorithmDescription")
         public String algorithmDescription;
 
         /**
+         * <p>Algorithm ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>algo-sidjc8134hv</p>
          */
@@ -62,6 +77,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         public String algorithmId;
 
         /**
+         * <p>Algorithm name.</p>
+         * 
          * <strong>example:</strong>
          * <p>llm_train</p>
          */
@@ -69,6 +86,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         public String algorithmName;
 
         /**
+         * <p>Algorithm provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>pai</p>
          */
@@ -76,6 +95,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         public String algorithmProvider;
 
         /**
+         * <p>Algorithm display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>LLM Train</p>
          */
@@ -83,6 +104,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>Algorithm creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-21T03:35:24Z</p>
          */
@@ -90,6 +113,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>Algorithm update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-25T02:15:40Z</p>
          */
@@ -97,6 +122,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>Algorithm owner ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789</p>
          */
@@ -104,6 +131,8 @@ public class ListAlgorithmsResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

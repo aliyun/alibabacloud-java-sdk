@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Location extends TeaModel {
     /**
+     * <p>The code location type. Valid values: OSS and NAS.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -12,6 +14,8 @@ public class Location extends TeaModel {
     public String locationType;
 
     /**
+     * <p>The code path.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://${bucket_name}.oss-${region}.aliyuncs.com/oss/location/path/</p>
      */

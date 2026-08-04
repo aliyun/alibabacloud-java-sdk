@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateAlgorithmVersionRequest extends TeaModel {
+    /**
+     * <p>Algorithm configuration.</p>
+     */
     @NameInMap("AlgorithmSpec")
     public AlgorithmSpec algorithmSpec;
 

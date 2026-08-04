@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupTotalRequest extends TeaModel {
     /**
+     * <p>The ID of the Resource Group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
      */

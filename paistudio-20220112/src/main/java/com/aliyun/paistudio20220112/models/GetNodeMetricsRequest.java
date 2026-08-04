@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNodeMetricsRequest extends TeaModel {
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T10:17:06</p>
      */
@@ -12,6 +14,15 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The GPU type. Valid values:</p>
+     * <ul>
+     * <li>V100</li>
+     * <li>A100</li>
+     * <li>A10</li>
+     * <li>T4</li>
+     * <li>P100</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>V100</p>
      */
@@ -19,6 +30,8 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-08T02:23:30.292Z</p>
      */
@@ -26,6 +39,17 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The time step. Default value: 5m. The supported time units are:</p>
+     * <ul>
+     * <li><p>h: hours.</p>
+     * </li>
+     * <li><p>m: minutes.</p>
+     * </li>
+     * <li><p>s: seconds.</p>
+     * </li>
+     * </ul>
+     * <p>If the value does not contain a unit, the default unit is s (seconds).</p>
+     * 
      * <strong>example:</strong>
      * <p>1h</p>
      */
@@ -33,6 +57,11 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String timeStep;
 
     /**
+     * <p>Specifies whether to display non-essential information. Non-essential information currently includes Labels.
+     * Valid values:</p>
+     * <p>false: does not display non-essential information (default value)
+     * true: displays non-essential information</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

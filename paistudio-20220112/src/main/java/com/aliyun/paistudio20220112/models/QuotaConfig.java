@@ -4,12 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaConfig extends TeaModel {
+    /**
+     * <p>The ACS-related configurations.</p>
+     */
     @NameInMap("ACS")
     public ACS ACS;
 
     /**
+     * <p>The ID of the cluster where the quota resides.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ceeb3724255364664</p>
+     * <p>ceeb3724255364***</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -18,6 +23,8 @@ public class QuotaConfig extends TeaModel {
     public String controlPlaneClusterId;
 
     /**
+     * <p>The default GPU driver version for the resource quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>470.199.02</p>
      */
@@ -27,21 +34,39 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("EnableGPUShare")
     public Boolean enableGPUShare;
 
+    /**
+     * <p>Specifies whether workloads in sub-quotas can be preempted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnablePreemptSubquotaWorkloads")
     public Boolean enablePreemptSubquotaWorkloads;
 
+    /**
+     * <p>Specifies whether guaranteed resources within this quota can be preempted.</p>
+     */
     @NameInMap("EnableSelfQuotaPreemption")
     public Boolean enableSelfQuotaPreemption;
 
+    /**
+     * <p>Specifies whether resources in sub-quotas can be preempted.</p>
+     */
     @NameInMap("EnableSubQuotaPreemption")
     public Boolean enableSubQuotaPreemption;
 
     @NameInMap("EniCacheConfig")
     public EniCacheConfig eniCacheConfig;
 
+    @NameInMap("IsEncryptedResource")
+    public Boolean isEncryptedResource;
+
     @NameInMap("OversoldUsageConfig")
     public OversoldUsageConfig oversoldUsageConfig;
 
+    /**
+     * <p>The resource specification templates.</p>
+     */
     @NameInMap("ResourceSpecs")
     public java.util.List<WorkspaceSpecs> resourceSpecs;
 
@@ -51,13 +76,21 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("SelfQuotaPreemptionConfig")
     public SelfQuotaPreemptionConfig selfQuotaPreemptionConfig;
 
+    /**
+     * <p>The configuration for the sub-quota preemption task.</p>
+     */
     @NameInMap("SubQuotaPreemptionConfig")
     public SubQuotaPreemptionConfig subQuotaPreemptionConfig;
 
+    /**
+     * <p>The GPU driver versions supported by the resource quota.</p>
+     */
     @NameInMap("SupportGPUDrivers")
     public java.util.List<String> supportGPUDrivers;
 
     /**
+     * <p>Specifies whether RDMA is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -67,8 +100,14 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("UseCase")
     public String useCase;
 
+    /**
+     * <p>The user VPC information.</p>
+     */
     @NameInMap("UserVpc")
     public UserVpc userVpc;
+
+    @NameInMap("WorkloadTypes")
+    public java.util.List<String> workloadTypes;
 
     public static QuotaConfig build(java.util.Map<String, ?> map) throws Exception {
         QuotaConfig self = new QuotaConfig();
@@ -147,6 +186,14 @@ public class QuotaConfig extends TeaModel {
         return this.eniCacheConfig;
     }
 
+    public QuotaConfig setIsEncryptedResource(Boolean isEncryptedResource) {
+        this.isEncryptedResource = isEncryptedResource;
+        return this;
+    }
+    public Boolean getIsEncryptedResource() {
+        return this.isEncryptedResource;
+    }
+
     public QuotaConfig setOversoldUsageConfig(OversoldUsageConfig oversoldUsageConfig) {
         this.oversoldUsageConfig = oversoldUsageConfig;
         return this;
@@ -217,6 +264,14 @@ public class QuotaConfig extends TeaModel {
     }
     public UserVpc getUserVpc() {
         return this.userVpc;
+    }
+
+    public QuotaConfig setWorkloadTypes(java.util.List<String> workloadTypes) {
+        this.workloadTypes = workloadTypes;
+        return this;
+    }
+    public java.util.List<String> getWorkloadTypes() {
+        return this.workloadTypes;
     }
 
 }

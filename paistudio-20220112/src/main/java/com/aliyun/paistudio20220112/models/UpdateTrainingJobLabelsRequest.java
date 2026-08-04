@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrainingJobLabelsRequest extends TeaModel {
+    /**
+     * <p>The list of labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<UpdateTrainingJobLabelsRequestLabels> labels;
 
@@ -22,6 +25,8 @@ public class UpdateTrainingJobLabelsRequest extends TeaModel {
 
     public static class UpdateTrainingJobLabelsRequestLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>RootModelID</p>
          */
@@ -29,6 +34,8 @@ public class UpdateTrainingJobLabelsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>model-ad8cv770kl</p>
          */

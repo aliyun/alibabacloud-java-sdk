@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class Metric extends TeaModel {
     /**
+     * <p>The UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rg17tmvwiokhzaxg</p>
+     * <p>rg17tmvwiokh****</p>
      */
     @NameInMap("Time")
     public Long time;
 
     /**
+     * <p>The metric value.</p>
+     * 
      * <strong>example:</strong>
      * <p>23000</p>
      */

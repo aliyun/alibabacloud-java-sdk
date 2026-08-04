@@ -4,11 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UserVpc extends TeaModel {
+    /**
+     * <p>The default public gateway information.</p>
+     */
     @NameInMap("DefaultForwardInfo")
     public ForwardInfo defaultForwardInfo;
 
     /**
-     * <p>DefaultRoute</p>
+     * <p>The default routing. Valid values:</p>
+     * <ul>
+     * <li>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.</li>
+     * <li>eth1: uses the user\&quot;s elastic network interfaces (ENIs) to access external networks through the private gateway.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>eth0</p>
@@ -17,13 +24,13 @@ public class UserVpc extends TeaModel {
     public String defaultRoute;
 
     /**
-     * <p>ExtendedCIDRs</p>
+     * <p>The secondary CIDR blocks.</p>
      */
     @NameInMap("ExtendedCIDRs")
     public java.util.List<String> extendedCIDRs;
 
     /**
-     * <p>RoleArn</p>
+     * <p>The OSS access authorization information.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::25xxxx:role/AliyunPAIDLCDefaultRole</p>
@@ -32,7 +39,7 @@ public class UserVpc extends TeaModel {
     public String roleArn;
 
     /**
-     * <p>SecurityGroupID</p>
+     * <p>The security group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-abcdef****</p>
@@ -41,7 +48,7 @@ public class UserVpc extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>VSW ID</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vs-abcdef****</p>
@@ -50,7 +57,7 @@ public class UserVpc extends TeaModel {
     public String switchId;
 
     /**
-     * <p>VPC ID</p>
+     * <p>VPC ID。</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-abcdef****</p>

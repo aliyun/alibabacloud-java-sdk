@@ -4,39 +4,69 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaDetails extends TeaModel {
+    /**
+     * <p>Total MinQuota amount actually assigned</p>
+     */
     @NameInMap("ActualMinQuota")
     public ResourceAmount actualMinQuota;
 
+    /**
+     * <p>Quota amount assignable by the User</p>
+     */
     @NameInMap("AllocatableQuota")
     public ResourceAmount allocatableQuota;
 
+    /**
+     * <p>Total Quota usage information</p>
+     */
     @NameInMap("AllocatedQuota")
     public ResourceAmount allocatedQuota;
 
+    /**
+     * <p>Quota usage information of ancestors</p>
+     */
     @NameInMap("AncestorsAllocatedQuota")
     public ResourceAmount ancestorsAllocatedQuota;
 
+    /**
+     * <p>Quota usage information of descendants</p>
+     */
     @NameInMap("DescendantsAllocatedQuota")
     public ResourceAmount descendantsAllocatedQuota;
 
+    /**
+     * <p>Total MinQuota amount requested by the User</p>
+     */
     @NameInMap("DesiredMinQuota")
     public ResourceAmount desiredMinQuota;
 
     @NameInMap("NodeStatistics")
     public QuotaNodeStatistics nodeStatistics;
 
+    /**
+     * <p>Quota request amount</p>
+     */
     @NameInMap("RequestedQuota")
     public ResourceAmount requestedQuota;
 
+    /**
+     * <p>Quota usage information at the current level</p>
+     */
     @NameInMap("SelfAllocatedQuota")
     public ResourceAmount selfAllocatedQuota;
 
     @NameInMap("SelfSubmittedQuota")
     public ResourceAmount selfSubmittedQuota;
 
+    /**
+     * <p>System-reserved Quota amount</p>
+     */
     @NameInMap("SystemReservedQuota")
     public ResourceAmount systemReservedQuota;
 
+    /**
+     * <p>Quota usage amount</p>
+     */
     @NameInMap("UsedQuota")
     public ResourceAmount usedQuota;
 

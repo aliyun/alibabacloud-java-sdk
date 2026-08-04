@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResourceAmount extends TeaModel {
     /**
+     * <p>Total CPU</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ResourceAmount extends TeaModel {
     public String CPU;
 
     /**
+     * <p>Total GPU cards</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -19,6 +23,8 @@ public class ResourceAmount extends TeaModel {
     public String GPU;
 
     /**
+     * <p>GPU card type</p>
+     * 
      * <strong>example:</strong>
      * <p>GPU</p>
      */
@@ -26,6 +32,8 @@ public class ResourceAmount extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>Total memory</p>
+     * 
      * <strong>example:</strong>
      * <p>100Gi</p>
      */

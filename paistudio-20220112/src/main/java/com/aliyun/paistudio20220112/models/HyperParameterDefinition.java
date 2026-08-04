@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class HyperParameterDefinition extends TeaModel {
     /**
+     * <p>The default value of the hyperparameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
+    /**
+     * <p>The description of the hyperparameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>参数定义了训练的batch_size。</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The display name of the parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>Batch Size</p>
      */
@@ -22,6 +32,7 @@ public class HyperParameterDefinition extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The name of the parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,10 +41,15 @@ public class HyperParameterDefinition extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The value range of the parameter.</p>
+     */
     @NameInMap("Range")
     public HyperParameterRange range;
 
     /**
+     * <p>Specifies whether the parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -41,6 +57,7 @@ public class HyperParameterDefinition extends TeaModel {
     public Boolean required;
 
     /**
+     * <p>The type of the hyperparameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

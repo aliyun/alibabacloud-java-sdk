@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<Node> nodes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -15,6 +20,8 @@ public class ListNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of nodes that meet the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */

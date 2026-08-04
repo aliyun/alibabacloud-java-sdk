@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTrainingJobsRequest extends TeaModel {
     /**
+     * <p>The algorithm name.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_train</p>
      */
@@ -12,6 +14,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String algorithmName;
 
     /**
+     * <p>The algorithm provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
@@ -19,6 +23,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String algorithmProvider;
 
     /**
+     * <p>The end time of the job creation time range for the query. Default value: current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-12-27T02:10:00Z</p>
      */
@@ -26,6 +32,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Specifies whether the algorithm is a temporary algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      * 
@@ -36,6 +44,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public Boolean isTempAlgo;
 
     /**
+     * <p>The labels of the training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;project&quot;: &quot;sd-s3&quot;}</p>
      */
@@ -43,6 +53,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public java.util.Map<String, ?> labels;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -50,6 +62,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,6 +71,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +80,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The field by which to sort the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtModifiedTime</p>
      */
@@ -71,6 +89,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The start time of the job creation time range for the query. Default value: 7 days ago.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-22T01:00:00Z</p>
      */
@@ -78,6 +98,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -85,6 +107,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The training job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>trains930928remn</p>
      */
@@ -92,6 +116,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String trainingJobId;
 
     /**
+     * <p>The name of the training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>large_language_model_training</p>
      */
@@ -99,6 +125,8 @@ public class ListTrainingJobsRequest extends TeaModel {
     public String trainingJobName;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlgorithmsRequest extends TeaModel {
     /**
+     * <p>Algorithm ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>algo-xsldfvu1334</p>
      */
@@ -12,6 +14,8 @@ public class ListAlgorithmsRequest extends TeaModel {
     public String algorithmId;
 
     /**
+     * <p>Algorithm name.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_training</p>
      */
@@ -19,6 +23,8 @@ public class ListAlgorithmsRequest extends TeaModel {
     public String algorithmName;
 
     /**
+     * <p>Algorithm provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
@@ -26,6 +32,8 @@ public class ListAlgorithmsRequest extends TeaModel {
     public String algorithmProvider;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListAlgorithmsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class ListAlgorithmsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

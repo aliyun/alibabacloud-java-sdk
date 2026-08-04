@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class WorkspaceIdName extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ws123456</p>
+     * <p>ws123***</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The workspace name.</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

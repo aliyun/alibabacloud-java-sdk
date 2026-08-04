@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTrainingJobLatestMetricsRequest extends TeaModel {
     /**
+     * <p>The name of the metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>loss</p>
      */

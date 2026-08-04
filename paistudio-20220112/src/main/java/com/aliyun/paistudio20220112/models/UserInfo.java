@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UserInfo extends TeaModel {
     /**
+     * <p>User ID</p>
+     * 
      * <strong>example:</strong>
      * <p>161222222222</p>
      */
@@ -12,6 +14,8 @@ public class UserInfo extends TeaModel {
     public String userId;
 
     /**
+     * <p>username</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

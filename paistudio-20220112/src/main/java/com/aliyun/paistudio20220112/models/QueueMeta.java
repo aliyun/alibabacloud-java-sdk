@@ -4,36 +4,69 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QueueMeta extends TeaModel {
+    /**
+     * <p>The time the entry was removed from the queue.</p>
+     */
     @NameInMap("GmtDequeuedTime")
     public String gmtDequeuedTime;
 
+    /**
+     * <p>The time the entry was added to the queue.</p>
+     */
     @NameInMap("GmtEnqueuedTime")
     public String gmtEnqueuedTime;
 
+    /**
+     * <p>The last time the position of the entry was modified.</p>
+     */
     @NameInMap("GmtPositionModifiedTime")
     public String gmtPositionModifiedTime;
 
+    /**
+     * <p>The name of the queue entry.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The position of the entry in the queue.</p>
+     */
     @NameInMap("Position")
     public String position;
 
+    /**
+     * <p>The queuing strategy for the entry.</p>
+     */
     @NameInMap("QueueStrategy")
     public String queueStrategy;
 
+    /**
+     * <p>The ID of the associated quota.</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The resources that the queue entry requires.</p>
+     */
     @NameInMap("Resource")
     public ResourceAmount resource;
 
+    /**
+     * <p>The resources scheduled for the entry.</p>
+     */
     @NameInMap("ScheduledResource")
     public String scheduledResource;
 
+    /**
+     * <p>The current status of the entry.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the entry can use oversold resources.</p>
+     */
     @NameInMap("UseOversoldResource")
     public Boolean useOversoldResource;
 

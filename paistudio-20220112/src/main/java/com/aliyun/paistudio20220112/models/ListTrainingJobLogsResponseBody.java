@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobLogsResponseBody extends TeaModel {
+    /**
+     * <p>The list of logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBF05F13-B24C-5129-9048-4FA684DCD579</p>
      */
@@ -15,6 +20,8 @@ public class ListTrainingJobLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of logs that match the filter condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the cluster to which the resource group belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cb2c7bde30b774e46a329c</p>
      */
@@ -12,6 +14,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String clusterID;
 
     /**
+     * <p>The provider of computing resources for the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -19,6 +23,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String computingResourceProvider;
 
     /**
+     * <p>The ID of the user who created the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>1612285282502324</p>
      */
@@ -26,6 +32,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String creatorID;
 
     /**
+     * <p>The description of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>testDescription</p>
      */
@@ -33,6 +41,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The time when the resource group was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -40,6 +50,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String gmtCreatedTime;
 
     /**
+     * <p>The time when the resource group was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -47,6 +59,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The name of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>TestResourceGroup</p>
      */
@@ -54,6 +68,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
      */
@@ -61,6 +77,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The type of computing resource for the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ecs</p>
      */
@@ -68,6 +86,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The status of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ready</p>
      */
@@ -75,15 +95,23 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the resource group supports RDMA.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("SupportRDMA")
     public Boolean supportRDMA;
 
+    /**
+     * <p>A list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetResourceGroupResponseBodyTags> tags;
 
+    /**
+     * <p>The details of the VPC connected to the resource group.</p>
+     */
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
@@ -91,6 +119,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String version;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35201</p>
      */
@@ -224,6 +254,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupResponseBodyTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -231,6 +263,8 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */

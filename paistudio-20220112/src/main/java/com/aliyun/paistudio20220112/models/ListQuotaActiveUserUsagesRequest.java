@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><code>desc</code>: descending order.</p>
+     * </li>
+     * <li><p><code>asc</code>: ascending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -12,6 +20,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>999</p>
      */
@@ -19,6 +29,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +38,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>If true, retrieves resource usage from the current quota only.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +47,26 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public Boolean selfOnly;
 
     /**
+     * <p>The field to sort the results by. Valid values:</p>
+     * <ul>
+     * <li><p>QuotaId</p>
+     * </li>
+     * <li><p>SubmittedCPU</p>
+     * </li>
+     * <li><p>SubmittedMemory</p>
+     * </li>
+     * <li><p>SubmittedGPU</p>
+     * </li>
+     * <li><p>UsedCPU</p>
+     * </li>
+     * <li><p>UsedMemory</p>
+     * </li>
+     * <li><p>UsedGPU</p>
+     * </li>
+     * <li><p>WorkloadCount</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -40,6 +74,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Filters the results by user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>200xxxxxx</p>
      */
@@ -47,6 +83,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>Filters the results by username.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -57,6 +95,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public Integer workloadCount;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

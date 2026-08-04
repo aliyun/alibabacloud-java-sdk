@@ -4,57 +4,111 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetMachineGroupResponseBody extends TeaModel {
+    /**
+     * <p>The number of instances in the machine group.</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The default driver.</p>
+     */
     @NameInMap("DefaultDriver")
     public String defaultDriver;
 
+    /**
+     * <p>The subscription duration. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <p>The ECS instance type of the machine group.</p>
+     */
     @NameInMap("EcsType")
     public String ecsType;
 
+    /**
+     * <p>The time when the machine group was created.</p>
+     */
     @NameInMap("GmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>The expiration time. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+     */
     @NameInMap("GmtExpired")
     public String gmtExpired;
 
+    /**
+     * <p>The time when the machine group was last modified.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The time when the machine group started.</p>
+     */
     @NameInMap("GmtStarted")
     public String gmtStarted;
 
+    /**
+     * <p>The ID of the machine group.</p>
+     */
     @NameInMap("MachineGroupID")
     public String machineGroupID;
 
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("OrderID")
     public String orderID;
 
+    /**
+     * <p>The instance ID of the order.</p>
+     */
     @NameInMap("OrderInstanceId")
     public String orderInstanceId;
 
+    /**
+     * <p>The PAI resource ID.</p>
+     */
     @NameInMap("PAIResourceID")
     public String PAIResourceID;
 
+    /**
+     * <p>The payment type. Valid values: <code>PostPay</code> (pay-as-you-go) and <code>PrePay</code> (subscription).</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The billing cycle. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionID")
     public String regionID;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the machine group.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The drivers that the machine group supports.</p>
+     */
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
 

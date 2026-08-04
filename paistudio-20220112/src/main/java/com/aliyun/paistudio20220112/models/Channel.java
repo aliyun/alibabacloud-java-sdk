@@ -4,10 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Channel extends TeaModel {
+    /**
+     * <p>Channel description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>模型输出。</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Channel name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,8 @@ public class Channel extends TeaModel {
     public String name;
 
     /**
+     * <p>Storage configuration of the channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -24,12 +33,17 @@ public class Channel extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
+     * <p>Indicates whether the channel must be configured.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Required")
     public Boolean required;
 
+    /**
+     * <p>List of storage classes supported by the channel.</p>
+     */
     @NameInMap("SupportedChannelTypes")
     public java.util.List<String> supportedChannelTypes;
 

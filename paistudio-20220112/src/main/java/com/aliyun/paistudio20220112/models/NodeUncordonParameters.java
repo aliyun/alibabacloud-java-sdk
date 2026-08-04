@@ -4,9 +4,21 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeUncordonParameters extends TeaModel {
+    /**
+     * <p>Quota ID. You can use this ID when you start a workspace or disable scheduling nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quota1ci8g793pgm</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The ID of the workspace that contains the node to uncordon.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

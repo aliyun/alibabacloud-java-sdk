@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
     /**
+     * <p>Time-to-live (TTL) of the share link in seconds. Default is 604800. Minimum is 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -12,6 +14,7 @@ public class GetTokenRequest extends TeaModel {
     public Long expireTime;
 
     /**
+     * <p>ID of the training task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9CFA2665-1FFE-5929-8468-C14C25890486</p>
      */
@@ -12,6 +14,8 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The list of resource groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>RG1</p>
      */
@@ -19,6 +23,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     public java.util.List<ResourceGroup> resourceGroups;
 
     /**
+     * <p>The total number of matching resource groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

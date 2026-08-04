@@ -4,13 +4,21 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class BindingPolicy extends TeaModel {
+    /**
+     * <p>A list of node IDs to exclude from scheduling.</p>
+     */
     @NameInMap("ExcludeNodes")
     public java.util.List<String> excludeNodes;
 
+    /**
+     * <p>A list of node IDs to include in the scheduling.</p>
+     */
     @NameInMap("IncludeNodes")
     public java.util.List<String> includeNodes;
 
     /**
+     * <p>The number of nodes to be selected by the scheduler.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

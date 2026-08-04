@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
+    /**
+     * <p>List of models produced by training.</p>
+     */
     @NameInMap("OutputModels")
     public java.util.List<ListTrainingJobOutputModelsResponseBodyOutputModels> outputModels;
 
@@ -21,12 +24,20 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobOutputModelsResponseBodyOutputModelsLabels extends TeaModel {
+        /**
+         * <p>Tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RootModelName</p>
+         */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>Tag value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>StableDiffusion</p>
+         * <p>qwen2-0.5</p>
          */
         @NameInMap("Value")
         public String value;
@@ -55,10 +66,18 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobOutputModelsResponseBodyOutputModels extends TeaModel {
+        /**
+         * <p>Model compression configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("CompressionSpec")
         public java.util.Map<String, ?> compressionSpec;
 
         /**
+         * <p>Model evaluation configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -66,26 +85,43 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         public java.util.Map<String, ?> evaluationSpec;
 
         /**
+         * <p>Model inference configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("InferenceSpec")
         public java.util.Map<String, ?> inferenceSpec;
 
+        /**
+         * <p>List of tags.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<ListTrainingJobOutputModelsResponseBodyOutputModelsLabels> labels;
 
         /**
+         * <p>Training job metrics.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
-         *       &quot;lr&quot;: 0.000001,
-         *       &quot;train_loss&quot;: 2.6345
+         *         &quot;Results&quot;: [
+         *           {
+         *             &quot;Dataset&quot;: {
+         *               &quot;Train&quot;: &quot;oss://somebucket.oss-cn-hangzhou.aliyuncs.com/datasets/Chinese-medical-dialogue-data/chinese_medical_train_sampled.json&quot;
+         *             },
+         *             &quot;Metrics&quot;: {
+         *               &quot;loss&quot;: 2.1276
+         *             }
+         *           }
+         *         ]
          * }</p>
          */
         @NameInMap("Metrics")
         public java.util.Map<String, ?> metrics;
 
         /**
+         * <p>Name of the training output data.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
@@ -93,6 +129,16 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         public String outputChannelName;
 
         /**
+         * <p>Source ID (optional):</p>
+         * <ul>
+         * <li><p>If the source is Custom, there are no format requirements.</p>
+         * </li>
+         * <li><p>If the source is PAIFlow, use the format: region=cn-shanghai,workspaceId=1345,kind=PipelineRun,id=run-sakdbaskjdf.</p>
+         * </li>
+         * <li><p>If the source is TrainingService, use the format: region=cn-shanghai,workspaceId=1345,kind=TrainingJob,id=job-sakdbaskjdf.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>region=cn-shanghai,workspaceId=1345,kind=PipelineRun,id=run-sakdbaskjdf</p>
          */
@@ -100,6 +146,8 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         public String sourceId;
 
         /**
+         * <p>Source (the type of job that produced the model). Default: Custom.</p>
+         * 
          * <strong>example:</strong>
          * <p>PAIFlow</p>
          */
@@ -107,6 +155,8 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         public String sourceType;
 
         /**
+         * <p>Model training configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -114,6 +164,8 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         public java.util.Map<String, ?> trainingSpec;
 
         /**
+         * <p>Link to the training output data.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/output/channel/</p>
          */

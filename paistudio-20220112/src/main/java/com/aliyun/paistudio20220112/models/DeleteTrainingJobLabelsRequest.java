@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTrainingJobLabelsRequest extends TeaModel {
     /**
+     * <p>The keys of the labels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

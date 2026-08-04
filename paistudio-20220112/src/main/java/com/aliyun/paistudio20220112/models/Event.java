@@ -4,36 +4,102 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Event extends TeaModel {
+    /**
+     * <p>The event content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The event ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eventxxx</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <p>The event type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateQuota</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The reserved field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Empty</p>
+     */
     @NameInMap("Function")
     public String function;
 
+    /**
+     * <p>Indicates whether the content is truncated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>Object ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotaxxx</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <p>The object type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Quota</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 
+    /**
+     * <p>The Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("TriggerTenantId")
     public String triggerTenantId;
 
+    /**
+     * <p>The trigger time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-01-01T00:00:00Z</p>
+     */
     @NameInMap("TriggerTime")
     public String triggerTime;
 
+    /**
+     * <p>The RAM user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567</p>
+     */
     @NameInMap("TriggerUserId")
     public String triggerUserId;
 
+    /**
+     * <p>The trigger source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
+     */
     @NameInMap("TriggeredBy")
     public String triggeredBy;
 

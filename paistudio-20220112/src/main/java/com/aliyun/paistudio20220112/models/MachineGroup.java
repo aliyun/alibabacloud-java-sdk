@@ -14,6 +14,8 @@ public class MachineGroup extends TeaModel {
     public Long cpu;
 
     /**
+     * <p>Machine group creator ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1612285282502324</p>
      */
@@ -21,6 +23,8 @@ public class MachineGroup extends TeaModel {
     public String creatorID;
 
     /**
+     * <p>Default driver supported by the machine group</p>
+     * 
      * <strong>example:</strong>
      * <p>470.199.02</p>
      */
@@ -34,6 +38,8 @@ public class MachineGroup extends TeaModel {
     public String diskPL;
 
     /**
+     * <p>Resource count</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -41,6 +47,8 @@ public class MachineGroup extends TeaModel {
     public Long ecsCount;
 
     /**
+     * <p>ECS specification</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
      */
@@ -48,6 +56,8 @@ public class MachineGroup extends TeaModel {
     public String ecsSpec;
 
     /**
+     * <p>Creation Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -55,6 +65,8 @@ public class MachineGroup extends TeaModel {
     public String gmtCreatedTime;
 
     /**
+     * <p>Expiration Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-22T00:00:00Z</p>
      */
@@ -62,6 +74,8 @@ public class MachineGroup extends TeaModel {
     public String gmtExpiredTime;
 
     /**
+     * <p>Update Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -69,6 +83,8 @@ public class MachineGroup extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>Start At</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
      */
@@ -85,6 +101,8 @@ public class MachineGroup extends TeaModel {
     public String gpuType;
 
     /**
+     * <p>Machine Group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>mg1</p>
      */
@@ -95,6 +113,8 @@ public class MachineGroup extends TeaModel {
     public Long memory;
 
     /**
+     * <p>Order ID</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
@@ -102,6 +122,8 @@ public class MachineGroup extends TeaModel {
     public String orderInstanceId;
 
     /**
+     * <p>Duration</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -109,7 +131,7 @@ public class MachineGroup extends TeaModel {
     public String paymentDuration;
 
     /**
-     * <p>region ID</p>
+     * <p>Region ID</p>
      * 
      * <strong>example:</strong>
      * <p>Monthly</p>
@@ -118,6 +140,8 @@ public class MachineGroup extends TeaModel {
     public String paymentDurationUnit;
 
     /**
+     * <p>Payment type</p>
+     * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
      */
@@ -125,6 +149,8 @@ public class MachineGroup extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>Machine group error code</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
@@ -132,6 +158,8 @@ public class MachineGroup extends TeaModel {
     public String reasonCode;
 
     /**
+     * <p>Machine group fault message</p>
+     * 
      * <strong>example:</strong>
      * <p>“”</p>
      */
@@ -139,6 +167,8 @@ public class MachineGroup extends TeaModel {
     public String reasonMessage;
 
     /**
+     * <p>Resource group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
      */
@@ -149,12 +179,17 @@ public class MachineGroup extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Machine group status</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>List of NVIDIA GPU driver versions supported by the machine group</p>
+     */
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
 

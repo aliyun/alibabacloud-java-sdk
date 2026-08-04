@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaWorkloadsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>42F23B58-3684-5443-848A-8DA81FF99712</p>
@@ -14,12 +14,17 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of workloads that match the filter criteria.</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>A list of workloads.</p>
+     */
     @NameInMap("Workloads")
     public java.util.List<QueueInfo> workloads;
 

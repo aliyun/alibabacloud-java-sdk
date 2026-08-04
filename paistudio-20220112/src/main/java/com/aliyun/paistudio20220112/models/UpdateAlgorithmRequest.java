@@ -4,10 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlgorithmRequest extends TeaModel {
+    /**
+     * <p>The algorithm description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Large language model training.</p>
+     */
     @NameInMap("AlgorithmDescription")
     public String algorithmDescription;
 
     /**
+     * <p>The display name of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>LLM Train</p>
      */

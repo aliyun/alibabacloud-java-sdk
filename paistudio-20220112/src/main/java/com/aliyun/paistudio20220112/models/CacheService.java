@@ -4,42 +4,87 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CacheService extends TeaModel {
+    /**
+     * <p>Information about each cache node in the service.</p>
+     */
     @NameInMap("CacheInfos")
     public java.util.List<CacheInfo> cacheInfos;
 
+    /**
+     * <p>The unique identifier of the CacheService.</p>
+     */
     @NameInMap("CacheServiceId")
     public String cacheServiceId;
 
+    /**
+     * <p>The ID of the PAI cluster where the CacheService is deployed.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The user or entity that created the resource.</p>
+     */
     @NameInMap("CreatedBy")
     public String createdBy;
 
+    /**
+     * <p>The time (in UTC, ISO 8601 format) when the CacheService was created.</p>
+     */
     @NameInMap("GmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>Indicates whether the CacheService is sharded across multiple nodes.</p>
+     */
+    @NameInMap("IsSharded")
+    public Boolean isSharded;
+
+    /**
+     * <p>The network type of the CacheService. For example, <code>VPC</code>.</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The ID of the resource quota associated with the CacheService.</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The current status of the CacheService. For example: <code>Creating</code>, <code>Available</code>, or <code>Deleting</code>.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the CacheService supports RDMA.</p>
+     */
     @NameInMap("SupportRDMA")
     public String supportRDMA;
 
+    /**
+     * <p>A list of quota IDs for clients that can connect to this CacheService.</p>
+     */
     @NameInMap("SupportedClientQuotaIds")
     public java.util.List<String> supportedClientQuotaIds;
 
+    /**
+     * <p>The ID of the tenant that owns the CacheService.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The ID of the user associated with the CacheService.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The configuration of the user\&quot;s VPC where the CacheService is deployed.</p>
+     */
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
@@ -86,6 +131,14 @@ public class CacheService extends TeaModel {
     }
     public String getGmtCreated() {
         return this.gmtCreated;
+    }
+
+    public CacheService setIsSharded(Boolean isSharded) {
+        this.isSharded = isSharded;
+        return this;
+    }
+    public Boolean getIsSharded() {
+        return this.isSharded;
     }
 
     public CacheService setNetworkType(String networkType) {

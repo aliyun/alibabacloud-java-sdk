@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupRequest extends TeaModel {
     /**
+     * <p>Optional. Defaults to <code>true</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsAIWorkspaceDataEnabled")
     public Boolean isAIWorkspaceDataEnabled;
 
+    /**
+     * <p>A list of up to 20 tags to add to the instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<GetResourceGroupRequestTag> tag;
 
@@ -37,6 +42,8 @@ public class GetResourceGroupRequest extends TeaModel {
 
     public static class GetResourceGroupRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -44,6 +51,8 @@ public class GetResourceGroupRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

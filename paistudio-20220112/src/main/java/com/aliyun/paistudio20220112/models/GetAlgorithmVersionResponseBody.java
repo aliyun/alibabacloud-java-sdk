@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAlgorithmVersionResponseBody extends TeaModel {
     /**
+     * <p>The ID of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>algo-xsldfvu1334</p>
      */
@@ -12,6 +14,8 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
     public String algorithmId;
 
     /**
+     * <p>The name of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_training</p>
      */
@@ -19,16 +23,23 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
     public String algorithmName;
 
     /**
+     * <p>The provider of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    /**
+     * <p>Details about the algorithm.</p>
+     */
     @NameInMap("AlgorithmSpec")
     public AlgorithmSpec algorithmSpec;
 
     /**
+     * <p>The version of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>v0.0.1</p>
      */
@@ -36,6 +47,8 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
     public String algorithmVersion;
 
     /**
+     * <p>The time when the algorithm was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
@@ -43,6 +56,8 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the algorithm was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
@@ -50,6 +65,8 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The ID of the tenant who owns the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -57,6 +74,8 @@ public class GetAlgorithmVersionResponseBody extends TeaModel {
     public String tenantId;
 
     /**
+     * <p>The ID of the user who owns the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */

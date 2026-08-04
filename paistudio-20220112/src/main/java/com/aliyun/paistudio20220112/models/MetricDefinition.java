@@ -4,10 +4,17 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class MetricDefinition extends TeaModel {
+    /**
+     * <p>The description of the metric.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>训练损失函数。</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The name of the metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,7 @@ public class MetricDefinition extends TeaModel {
     public String name;
 
     /**
+     * <p>The regular expression to collect metrics from logs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

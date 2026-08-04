@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class WorkspaceSpecs extends TeaModel {
     /**
+     * <p>Applicable product (DLC, DSW, EAS, ...)</p>
+     * 
      * <strong>example:</strong>
      * <p>DLC</p>
      */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <p>List of resource specifications</p>
+     */
     @NameInMap("Specs")
     public java.util.List<WorkspaceSpec> specs;
 
     /**
+     * <p>Workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>122421</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAlgorithmVersionResponseBody extends TeaModel {
     /**
+     * <p>ID of the training algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>algo-xsldfvu1334</p>
      */
@@ -12,6 +14,8 @@ public class CreateAlgorithmVersionResponseBody extends TeaModel {
     public String algorithmId;
 
     /**
+     * <p>Algorithm version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v0.0.1</p>
      */

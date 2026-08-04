@@ -4,25 +4,39 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class AlgorithmSpec extends TeaModel {
+    /**
+     * <p>The custom code configuration.</p>
+     */
     @NameInMap("CodeDir")
     public Location codeDir;
 
     /**
+     * <p>The list of commands to run the training task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Command")
     public java.util.List<String> command;
 
+    /**
+     * <p>The compute resource definition.</p>
+     */
     @NameInMap("ComputeResource")
     public AlgorithmSpecComputeResource computeResource;
 
+    /**
+     * <p>The custom configuration.</p>
+     */
     @NameInMap("Customization")
     public AlgorithmSpecCustomization customization;
 
+    /**
+     * <p>The list of hyperparameter definitions.</p>
+     */
     @NameInMap("HyperParameters")
     public java.util.List<HyperParameterDefinition> hyperParameters;
 
     /**
+     * <p>The training runtime image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +45,14 @@ public class AlgorithmSpec extends TeaModel {
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The list of input channels for the algorithm.</p>
+     */
     @NameInMap("InputChannels")
     public java.util.List<Channel> inputChannels;
 
     /**
+     * <p>The job type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,22 +61,39 @@ public class AlgorithmSpec extends TeaModel {
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>The list of metric definitions for the training task.</p>
+     */
     @NameInMap("MetricDefinitions")
     public java.util.List<MetricDefinition> metricDefinitions;
 
+    /**
+     * <p>The list of output channels for the algorithm.</p>
+     */
     @NameInMap("OutputChannels")
     public java.util.List<Channel> outputChannels;
 
+    /**
+     * <p>You can use this feature to monitor the training progress.</p>
+     */
     @NameInMap("ProgressDefinitions")
     public AlgorithmSpecProgressDefinitions progressDefinitions;
 
+    /**
+     * <p>The resource requirements.</p>
+     */
     @NameInMap("ResourceRequirements")
     public java.util.List<ConditionExpression> resourceRequirements;
 
+    /**
+     * <p>The list of supported elastic computing instance types for training.</p>
+     */
     @NameInMap("SupportedInstanceTypes")
     public java.util.List<String> supportedInstanceTypes;
 
     /**
+     * <p>Indicates whether distributed training is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -184,16 +219,17 @@ public class AlgorithmSpec extends TeaModel {
 
     public static class AlgorithmSpecComputeResourcePolicy extends TeaModel {
         /**
-         * <p>Policy Value</p>
+         * <p>Policy content, serialized from a JSON array.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>[{\&quot;MinTotalCount\&quot;:1,\&quot;MaxTotalCount\&quot;:4,\&quot;RolePolicies\&quot;:{\&quot;chief\&quot;:{\&quot;Count\&quot;:1},\&quot;ps\&quot;:{\&quot;Count\&quot;:1},\&quot;worker\&quot;:{\&quot;Percentage\&quot;:100}}},{\&quot;MinTotalCount\&quot;:5,\&quot;MaxTotalCount\&quot;:10,\&quot;RolePolicies\&quot;:{\&quot;chief\&quot;:{\&quot;Count\&quot;:1},\&quot;ps\&quot;:{\&quot;Percentage\&quot;:20},\&quot;worker\&quot;:{\&quot;Percentage\&quot;:80}}},{\&quot;MinTotalCount\&quot;:11,\&quot;RolePolicies\&quot;:{\&quot;chief\&quot;:{\&quot;Count\&quot;:1},\&quot;ps\&quot;:{\&quot;Percentage\&quot;:40},\&quot;worker\&quot;:{\&quot;Percentage\&quot;:60}}}]</p>
          */
         @NameInMap("Value")
         public String value;
 
         /**
+         * <p>Policy version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +263,7 @@ public class AlgorithmSpec extends TeaModel {
 
     public static class AlgorithmSpecComputeResource extends TeaModel {
         /**
+         * <p>Computing resource configuration policy for the algorithm.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Policy")
@@ -249,6 +286,8 @@ public class AlgorithmSpec extends TeaModel {
 
     public static class AlgorithmSpecCustomization extends TeaModel {
         /**
+         * <p>Indicates whether custom-mounted code is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -272,6 +311,8 @@ public class AlgorithmSpec extends TeaModel {
 
     public static class AlgorithmSpecProgressDefinitionsOverallProgress extends TeaModel {
         /**
+         * <p>The description of the monitoring definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>training progress</p>
          */
@@ -279,6 +320,8 @@ public class AlgorithmSpec extends TeaModel {
         public String description;
 
         /**
+         * <p>The regular expression for monitoring.</p>
+         * 
          * <strong>example:</strong>
          * <p>^[0-9]+([.][0-9]+){0,1}$</p>
          */
@@ -310,6 +353,8 @@ public class AlgorithmSpec extends TeaModel {
 
     public static class AlgorithmSpecProgressDefinitionsRemainingTime extends TeaModel {
         /**
+         * <p>The description of the monitoring definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>training remaining time</p>
          */
@@ -317,6 +362,8 @@ public class AlgorithmSpec extends TeaModel {
         public String description;
 
         /**
+         * <p>The regular expression for monitoring.</p>
+         * 
          * <strong>example:</strong>
          * <p>^[0-9]+([.][0-9]+){0,1}$</p>
          */
@@ -347,9 +394,15 @@ public class AlgorithmSpec extends TeaModel {
     }
 
     public static class AlgorithmSpecProgressDefinitions extends TeaModel {
+        /**
+         * <p>Monitors training progress.</p>
+         */
         @NameInMap("OverallProgress")
         public AlgorithmSpecProgressDefinitionsOverallProgress overallProgress;
 
+        /**
+         * <p>The definition for monitoring the remaining training time.</p>
+         */
         @NameInMap("RemainingTime")
         public AlgorithmSpecProgressDefinitionsRemainingTime remainingTime;
 

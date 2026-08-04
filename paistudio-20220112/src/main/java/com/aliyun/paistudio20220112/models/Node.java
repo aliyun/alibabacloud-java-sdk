@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class Node extends TeaModel {
     /**
+     * <p>The accelerator type of the resource node instance, such as CPU or GPU.</p>
+     * 
      * <strong>example:</strong>
      * <p>CPU</p>
      */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <p>The number of allocatable CPU cores.</p>
+     */
     @NameInMap("AllocatableCPU")
     public String allocatableCPU;
 
+    /**
+     * <p>The amount of allocatable memory in GiB.</p>
+     */
     @NameInMap("AllocatableMemory")
     public String allocatableMemory;
 
@@ -23,10 +31,15 @@ public class Node extends TeaModel {
     @NameInMap("AvailabilityZone")
     public String availabilityZone;
 
+    /**
+     * <p>The list of quotas that are bound to the node.</p>
+     */
     @NameInMap("BoundQuotas")
     public java.util.List<QuotaIdName> boundQuotas;
 
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -34,6 +47,8 @@ public class Node extends TeaModel {
     public String CPU;
 
     /**
+     * <p>The ID of the user who created the resource node.</p>
+     * 
      * <strong>example:</strong>
      * <p>281044699048527748</p>
      */
@@ -50,16 +65,23 @@ public class Node extends TeaModel {
     public String diskPL;
 
     /**
+     * <p>The number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <p>The GPU memory size in GiB.</p>
+     */
     @NameInMap("GPUMemory")
     public String GPUMemory;
 
     /**
+     * <p>The GPU model.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -67,6 +89,8 @@ public class Node extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>The time when the resource node was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
@@ -78,6 +102,8 @@ public class Node extends TeaModel {
     public String gmtCreatedTime;
 
     /**
+     * <p>The time when the resource node expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-22T00:00:00Z</p>
      */
@@ -85,6 +111,8 @@ public class Node extends TeaModel {
     public String gmtExpiredTime;
 
     /**
+     * <p>The time when the resource node was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
@@ -95,6 +123,8 @@ public class Node extends TeaModel {
     public String hyperZone;
 
     /**
+     * <p>Indicates whether the node is bound to a quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -102,6 +132,8 @@ public class Node extends TeaModel {
     public Boolean isBound;
 
     /**
+     * <p>The maximum number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -109,6 +141,8 @@ public class Node extends TeaModel {
     public String limitCPU;
 
     /**
+     * <p>The maximum number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -116,6 +150,8 @@ public class Node extends TeaModel {
     public String limitGPU;
 
     /**
+     * <p>The maximum memory size in GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -123,6 +159,8 @@ public class Node extends TeaModel {
     public String limitMemory;
 
     /**
+     * <p>The ID of the machine group to which the resource node belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>mg1234456</p>
      */
@@ -130,6 +168,8 @@ public class Node extends TeaModel {
     public String machineGroupId;
 
     /**
+     * <p>The memory size in GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -137,6 +177,8 @@ public class Node extends TeaModel {
     public String memory;
 
     /**
+     * <p>The name of the resource node.</p>
+     * 
      * <strong>example:</strong>
      * <p>lingjxxxx</p>
      */
@@ -144,6 +186,8 @@ public class Node extends TeaModel {
     public String nodeName;
 
     /**
+     * <p>The status of the resource node.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ready</p>
      */
@@ -151,6 +195,8 @@ public class Node extends TeaModel {
     public String nodeStatus;
 
     /**
+     * <p>The instance type of the resource node.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c8i.xlarge</p>
      */
@@ -158,6 +204,8 @@ public class Node extends TeaModel {
     public String nodeType;
 
     /**
+     * <p>The order status of the resource node.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ready</p>
      */
@@ -165,6 +213,8 @@ public class Node extends TeaModel {
     public String orderStatus;
 
     /**
+     * <p>The number of pods on the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -172,6 +222,8 @@ public class Node extends TeaModel {
     public Long podNum;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -179,6 +231,8 @@ public class Node extends TeaModel {
     public String reasonCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -186,6 +240,8 @@ public class Node extends TeaModel {
     public String reasonMessage;
 
     /**
+     * <p>The number of requested CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -193,6 +249,8 @@ public class Node extends TeaModel {
     public String requestCPU;
 
     /**
+     * <p>The number of requested GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -200,6 +258,8 @@ public class Node extends TeaModel {
     public String requestGPU;
 
     /**
+     * <p>The requested memory size in GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -207,6 +267,8 @@ public class Node extends TeaModel {
     public String requestMemory;
 
     /**
+     * <p>The ID of the resource group to which the resource node belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
      */
@@ -214,6 +276,8 @@ public class Node extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The name of the resource group to which the resource node belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -226,16 +290,27 @@ public class Node extends TeaModel {
     @NameInMap("SubNodes")
     public java.util.List<String> subNodes;
 
+    /**
+     * <p>The number of CPU cores that are reserved for the system.</p>
+     */
     @NameInMap("SystemReservedCPU")
     public String systemReservedCPU;
 
+    /**
+     * <p>The amount of memory that is reserved for the system in GiB.</p>
+     */
     @NameInMap("SystemReservedMemory")
     public String systemReservedMemory;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("Users")
     public java.util.List<UserInfo> users;
 
     /**
+     * <p>The number of workloads on the node.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

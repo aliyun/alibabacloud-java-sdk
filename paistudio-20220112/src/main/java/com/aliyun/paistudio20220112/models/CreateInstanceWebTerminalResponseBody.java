@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceWebTerminalResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceWebTerminalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the web terminal used to access the instance container.</p>
+     * 
      * <strong>example:</strong>
      * <p>wss://pai-dlc-proxy-cn-shanghai.aliyun.com/terminal/t1157703270994901/dlcmjzjt1dxbmx4h/dlcmjzjt1dxbmx4h-worker-0?Token=******</p>
      */

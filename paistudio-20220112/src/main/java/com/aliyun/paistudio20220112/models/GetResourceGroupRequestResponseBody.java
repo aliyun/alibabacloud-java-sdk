@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupRequestResponseBody extends TeaModel {
     /**
+     * <p>The total number of allocated CPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
     public Integer requestCPU;
 
     /**
+     * <p>The total number of allocated GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
     @NameInMap("requestGPU")
     public Integer requestGPU;
 
+    /**
+     * <p>The allocated GPU resources counted separately by card type.</p>
+     */
     @NameInMap("requestGPUInfos")
     public java.util.List<GPUInfo> requestGPUInfos;
 
     /**
+     * <p>The total amount of allocated memory.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class JobSettings extends TeaModel {
+    /**
+     * <p>Additional advanced parameter settings.</p>
+     */
     @NameInMap("AdvancedSettings")
     public java.util.Map<String, ?> advancedSettings;
 
     /**
+     * <p>User ID associated with the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>166924</p>
      */
@@ -15,6 +20,8 @@ public class JobSettings extends TeaModel {
     public String businessUserId;
 
     /**
+     * <p>Caller.</p>
+     * 
      * <strong>example:</strong>
      * <p>SilkFlow</p>
      */
@@ -22,6 +29,8 @@ public class JobSettings extends TeaModel {
     public String caller;
 
     /**
+     * <p>NVIDIA driver configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>535.54.03</p>
      */
@@ -29,6 +38,8 @@ public class JobSettings extends TeaModel {
     public String driver;
 
     /**
+     * <p>Enable job fault tolerance monitoring.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +47,8 @@ public class JobSettings extends TeaModel {
     public Boolean enableErrorMonitoringInAIMaster;
 
     /**
+     * <p>Enable OSS append writes.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class JobSettings extends TeaModel {
     public Boolean enableOssAppend;
 
     /**
+     * <p>Enable the job to use RDMA.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class JobSettings extends TeaModel {
     public Boolean enableRDMA;
 
     /**
+     * <p>Enable computing power health check for the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class JobSettings extends TeaModel {
     public Boolean enableSanityCheck;
 
     /**
+     * <p>Enable the job to use tide resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -64,6 +83,8 @@ public class JobSettings extends TeaModel {
     public Boolean enableTideResource;
 
     /**
+     * <p>Specify configuration parameters for fault tolerance monitoring, such as whether to enable log hang-based detection.</p>
+     * 
      * <strong>example:</strong>
      * <p>--enable-log-hang-detection true</p>
      */
@@ -71,6 +92,8 @@ public class JobSettings extends TeaModel {
     public String errorMonitoringArgs;
 
     /**
+     * <p>Duration in minutes to retain the job after completion.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -78,6 +101,8 @@ public class JobSettings extends TeaModel {
     public Integer jobReservedMinutes;
 
     /**
+     * <p>Policy for retaining the job after completion.</p>
+     * 
      * <strong>example:</strong>
      * <p>Always</p>
      */
@@ -85,6 +110,8 @@ public class JobSettings extends TeaModel {
     public String jobReservedPolicy;
 
     /**
+     * <p>Job\&quot;s oversold resource usage method (not accepted, accepted, or only accepted).</p>
+     * 
      * <strong>example:</strong>
      * <p>AcceptQuotaOverSold</p>
      */
@@ -92,6 +119,8 @@ public class JobSettings extends TeaModel {
     public String oversoldType;
 
     /**
+     * <p>Workflow ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pid-123456</p>
      */
@@ -99,12 +128,17 @@ public class JobSettings extends TeaModel {
     public String pipelineId;
 
     /**
+     * <p>Configuration parameters for computing power health check.</p>
+     * 
      * <strong>example:</strong>
      * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFai</p>
      */
     @NameInMap("SanityCheckArgs")
     public String sanityCheckArgs;
 
+    /**
+     * <p>Custom tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 

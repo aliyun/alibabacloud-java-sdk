@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class HyperParameterRange extends TeaModel {
+    /**
+     * <p>Hyperparameter enumeration list.</p>
+     */
     @NameInMap("Enum")
     public java.util.List<String> _enum;
 
     /**
+     * <p>Whether the maximum value is exclusive.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +20,8 @@ public class HyperParameterRange extends TeaModel {
     public Boolean exclusiveMaximum;
 
     /**
+     * <p>Whether the minimum value is exclusive.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,6 +29,8 @@ public class HyperParameterRange extends TeaModel {
     public Boolean exclusiveMinimum;
 
     /**
+     * <p>Maximum length.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -29,6 +38,8 @@ public class HyperParameterRange extends TeaModel {
     public Long maxLength;
 
     /**
+     * <p>Maximum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class HyperParameterRange extends TeaModel {
     public String maximum;
 
     /**
+     * <p>Minimum length.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +56,8 @@ public class HyperParameterRange extends TeaModel {
     public Long minLength;
 
     /**
+     * <p>Minimum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -50,6 +65,8 @@ public class HyperParameterRange extends TeaModel {
     public String minimum;
 
     /**
+     * <p>Regular expression.</p>
+     * 
      * <strong>example:</strong>
      * <p>^\+?[1-9][0-9]*$</p>
      */

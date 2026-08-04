@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
     /**
+     * <p>The provider of the compute resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ecs</p>
      */
@@ -15,6 +17,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public Boolean hasResource;
 
     /**
+     * <p>The name of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
      */
@@ -22,6 +26,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><code>desc</code>: descending.</p>
+     * </li>
+     * <li><p><code>asc</code>: ascending.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -29,6 +41,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -36,6 +50,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -46,6 +62,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String resourceGroupIDs;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><p><code>ECS</code>: ECS.</p>
+     * </li>
+     * <li><p><code>Lingjun</code>: Lingjun intelligent computing resources.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Lingjun</p>
      */
@@ -53,6 +77,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Specifies whether to return all results.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -60,6 +86,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public Boolean showAll;
 
     /**
+     * <p>The field to sort by. Valid values include: <code>DisplayName</code>, <code>GmtCreated</code>, <code>GmtModified</code>, <code>RegionID</code>, <code>Duration</code>, <code>PricingCycle</code>, and <code>PayType</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>DisplayName</p>
      */
@@ -67,6 +95,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The status of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>Creating</p>
      */
@@ -74,6 +104,8 @@ public class ListResourceGroupsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The version to filter by.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */

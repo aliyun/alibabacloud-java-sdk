@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The metric information.</p>
+     */
     @NameInMap("Metrics")
     public java.util.List<GetTrainingJobLatestMetricsResponseBodyMetrics> metrics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
      */
@@ -37,6 +42,8 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
 
     public static class GetTrainingJobLatestMetricsResponseBodyMetrics extends TeaModel {
         /**
+         * <p>The name of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>loss</p>
          */
@@ -44,6 +51,7 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The timestamp when the metric was collected.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -53,6 +61,8 @@ public class GetTrainingJobLatestMetricsResponseBody extends TeaModel {
         public String timestamp;
 
         /**
+         * <p>The value of the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.97</p>
          */

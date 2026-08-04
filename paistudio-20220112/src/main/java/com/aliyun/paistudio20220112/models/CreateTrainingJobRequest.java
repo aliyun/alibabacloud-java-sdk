@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTrainingJobRequest extends TeaModel {
     /**
+     * <p>The algorithm name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ev_classification</p>
      */
@@ -12,16 +14,23 @@ public class CreateTrainingJobRequest extends TeaModel {
     public String algorithmName;
 
     /**
+     * <p>The algorithm provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    /**
+     * <p>The algorithm configuration for the training job.</p>
+     */
     @NameInMap("AlgorithmSpec")
     public AlgorithmSpec algorithmSpec;
 
     /**
+     * <p>The algorithm version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1.0.0</p>
      */
@@ -31,50 +40,96 @@ public class CreateTrainingJobRequest extends TeaModel {
     @NameInMap("AssignNodeSpec")
     public AssignNodeSpec assignNodeSpec;
 
+    /**
+     * <p>The code directory for the training job.</p>
+     */
     @NameInMap("CodeDir")
     public Location codeDir;
 
+    /**
+     * <p>The compute resource configuration.</p>
+     */
     @NameInMap("ComputeResource")
     public CreateTrainingJobRequestComputeResource computeResource;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
+    /**
+     * <p>The environment variables for the training job.</p>
+     */
     @NameInMap("Environments")
     public java.util.Map<String, String> environments;
 
+    /**
+     * <p>The experiment configuration associated with the training job.</p>
+     */
     @NameInMap("ExperimentConfig")
     public CreateTrainingJobRequestExperimentConfig experimentConfig;
 
+    /**
+     * <p>The training hyperparameter settings.</p>
+     */
     @NameInMap("HyperParameters")
     public java.util.List<CreateTrainingJobRequestHyperParameters> hyperParameters;
 
+    /**
+     * <p>The training input data configuration.</p>
+     */
     @NameInMap("InputChannels")
     public java.util.List<CreateTrainingJobRequestInputChannels> inputChannels;
 
+    /**
+     * <p>The training job labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<CreateTrainingJobRequestLabels> labels;
 
+    /**
+     * <p>The training output data configuration.</p>
+     */
     @NameInMap("OutputChannels")
     public java.util.List<CreateTrainingJobRequestOutputChannels> outputChannels;
 
+    /**
+     * <p>The priority of the training job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The Python package configuration for the training job.</p>
+     */
     @NameInMap("PythonRequirements")
     public java.util.List<String> pythonRequirements;
 
     /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>The training job scheduling configuration.</p>
+     */
     @NameInMap("Scheduler")
     public CreateTrainingJobRequestScheduler scheduler;
 
+    /**
+     * <p>The additional parameter settings for the training node.</p>
+     */
     @NameInMap("Settings")
     public JobSettings settings;
 
     /**
+     * <p>The description of the training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen large language model training</p>
      */
@@ -82,6 +137,7 @@ public class CreateTrainingJobRequest extends TeaModel {
     public String trainingJobDescription;
 
     /**
+     * <p>The name of the training job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,10 +146,14 @@ public class CreateTrainingJobRequest extends TeaModel {
     @NameInMap("TrainingJobName")
     public String trainingJobName;
 
+    /**
+     * <p>The VPC configuration.</p>
+     */
     @NameInMap("UserVpc")
     public CreateTrainingJobRequestUserVpc userVpc;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,6 +221,14 @@ public class CreateTrainingJobRequest extends TeaModel {
     }
     public CreateTrainingJobRequestComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    public CreateTrainingJobRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public CreateTrainingJobRequest setEnvironments(java.util.Map<String, String> environments) {
@@ -285,6 +353,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestComputeResourceInstanceSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -292,6 +362,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String CPU;
 
         /**
+         * <p>The number of GPUs for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -299,6 +371,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String GPU;
 
         /**
+         * <p>The GPU type for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>V100</p>
          */
@@ -306,6 +380,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String GPUType;
 
         /**
+         * <p>The memory size of the instance. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -313,6 +389,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The shared memory size of the instance. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -368,6 +446,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestComputeResourceSpotSpec extends TeaModel {
         /**
+         * <p>The maximum hourly price discount for the instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -375,6 +455,12 @@ public class CreateTrainingJobRequest extends TeaModel {
         public Float spotDiscountLimit;
 
         /**
+         * <p>The bidding strategy for the spot instance. Valid values:</p>
+         * <ul>
+         * <li>SpotWithPriceLimit: a spot instance with a maximum price limit.</li>
+         * <li>SpotAsPriceGo: the system automatically bids at the current market price.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SpotWithPriceLimit</p>
          */
@@ -406,6 +492,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestComputeResource extends TeaModel {
         /**
+         * <p>The number of ECS instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -413,6 +501,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public Long ecsCount;
 
         /**
+         * <p>The ECS instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn5-c8g1.2xlarge</p>
          */
@@ -420,26 +510,38 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String ecsSpec;
 
         /**
+         * <p>The number of instances used from the resource quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
+        /**
+         * <p>The instance specification for the resource quota.</p>
+         */
         @NameInMap("InstanceSpec")
         public CreateTrainingJobRequestComputeResourceInstanceSpec instanceSpec;
 
         /**
+         * <p>The resource quota ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>quotam670lixikcs</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The spot instance configuration.</p>
+         */
         @NameInMap("SpotSpec")
         public CreateTrainingJobRequestComputeResourceSpotSpec spotSpec;
 
         /**
+         * <p>Specifies whether to use spot instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -511,6 +613,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestExperimentConfig extends TeaModel {
         /**
+         * <p>The experiment ID associated with the training job.</p>
+         * 
          * <strong>example:</strong>
          * <p>exp-ds9aefia90v</p>
          */
@@ -534,6 +638,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestHyperParameters extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>learning_rate</p>
          */
@@ -541,6 +647,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0001</p>
          */
@@ -572,6 +680,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestInputChannels extends TeaModel {
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-475megosidivjfgfq6</p>
          */
@@ -579,6 +689,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String datasetId;
 
         /**
+         * <p>The input data URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/modelscope/models/qwen2-0.5b/main/</p>
          */
@@ -586,14 +698,25 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String inputUri;
 
         /**
+         * <p>The input data name.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The input data parameter settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;appendable&quot;: true}</p>
+         */
         @NameInMap("Options")
         public String options;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
 
         @NameInMap("VersionName")
         public String versionName;
@@ -635,6 +758,14 @@ public class CreateTrainingJobRequest extends TeaModel {
             return this.options;
         }
 
+        public CreateTrainingJobRequestInputChannels setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
         public CreateTrainingJobRequestInputChannels setVersionName(String versionName) {
             this.versionName = versionName;
             return this;
@@ -647,6 +778,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestLabels extends TeaModel {
         /**
+         * <p>The key of the label.</p>
+         * 
          * <strong>example:</strong>
          * <p>CreatedBy</p>
          */
@@ -654,6 +787,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the label.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuickStart</p>
          */
@@ -685,6 +820,8 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestOutputChannels extends TeaModel {
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-475megosidivjfgfq6</p>
          */
@@ -692,6 +829,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String datasetId;
 
         /**
+         * <p>The output data name.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
@@ -699,11 +838,16 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The output data URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://pai-quickstart-cn-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/modelscope/models/qwen2-0.5b/main/</p>
          */
         @NameInMap("OutputUri")
         public String outputUri;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
 
         @NameInMap("VersionName")
         public String versionName;
@@ -737,6 +881,14 @@ public class CreateTrainingJobRequest extends TeaModel {
             return this.outputUri;
         }
 
+        public CreateTrainingJobRequestOutputChannels setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
         public CreateTrainingJobRequestOutputChannels setVersionName(String versionName) {
             this.versionName = versionName;
             return this;
@@ -748,10 +900,18 @@ public class CreateTrainingJobRequest extends TeaModel {
     }
 
     public static class CreateTrainingJobRequestScheduler extends TeaModel {
+        /**
+         * <p>The maximum training runtime in minutes. A value of 0 indicates no limit on the maximum runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxRunningTimeInMinutes")
         public Long maxRunningTimeInMinutes;
 
         /**
+         * <p>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -783,16 +943,23 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     public static class CreateTrainingJobRequestUserVpc extends TeaModel {
         /**
+         * <p>The default route interface. eth0 indicates that the default route uses the PAI VPC. eth1 indicates that the default route uses the user VPC. Default value: eth0.</p>
+         * 
          * <strong>example:</strong>
          * <p>eth0</p>
          */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
+        /**
+         * <p>The extended CIDR block configuration.</p>
+         */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-qdfasd13sdasf</p>
          */
@@ -800,6 +967,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vs-icrc813vdsfol</p>
          */

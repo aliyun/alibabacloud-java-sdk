@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSpotPriceHistoryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8BDA4440-DD3C-5F4B-BBDD-94A9CE1E75C7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of historical spot instance price details</p>
+     */
     @NameInMap("SpotPriceHistory")
     public java.util.List<SpotPriceItem> spotPriceHistory;
 
     /**
+     * <p>The total number of historical spot instance prices</p>
+     * 
      * <strong>example:</strong>
      * <p>194</p>
      */

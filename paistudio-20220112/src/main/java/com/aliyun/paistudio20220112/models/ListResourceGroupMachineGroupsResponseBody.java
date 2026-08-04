@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
+    /**
+     * <p>A list of machine groups.</p>
+     */
     @NameInMap("MachineGroups")
     public java.util.List<MachineGroup> machineGroups;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
      */
@@ -15,6 +20,8 @@ public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of machine groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

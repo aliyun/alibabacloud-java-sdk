@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListNodeTypesRequest extends TeaModel {
     /**
+     * <p>The accelerator type used to filter the results. Valid values: <code>CPU</code> and <code>GPU</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>GPU</p>
      */
@@ -12,6 +14,8 @@ public class ListNodeTypesRequest extends TeaModel {
     public String acceleratorType;
 
     /**
+     * <p>The GPU type used to filter the results. Fuzzy matching is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>A10</p>
      */
@@ -19,6 +23,8 @@ public class ListNodeTypesRequest extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>A comma-separated list of node types. If omitted, all node types are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c6.large,ecs.gn7i-c32g1.8xlarge</p>
      */
@@ -26,6 +32,8 @@ public class ListNodeTypesRequest extends TeaModel {
     public String nodeTypes;
 
     /**
+     * <p>The quota ID. You must specify either this parameter or <code>ResourceGroupIds</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>quota123</p>
      */
@@ -33,6 +41,8 @@ public class ListNodeTypesRequest extends TeaModel {
     public String quotaId;
 
     /**
+     * <p>A comma-separated list of resource group IDs. You must specify either this parameter or <code>QuotaId</code>. The <code>UserId</code> for the specified <code>ResourceGroupId</code> must match the <code>UserId</code> of the requesting user. All specified <code>resource group</code> instances must be of the same type and associated with the same Virtual Private Cloud (VPC).</p>
+     * 
      * <strong>example:</strong>
      * <p>rg123,rg456</p>
      */

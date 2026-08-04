@@ -4,20 +4,36 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CreateAlgorithmRequest extends TeaModel {
+    /**
+     * <p>The description of the algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tongyi Qwen large language model training algorithm.</p>
+     */
     @NameInMap("AlgorithmDescription")
     public String algorithmDescription;
 
     /**
+     * <p>The name of the algorithm.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_training</p>
      */
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
+    /**
+     * <p>The display name of the algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Large language model training</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The ID of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

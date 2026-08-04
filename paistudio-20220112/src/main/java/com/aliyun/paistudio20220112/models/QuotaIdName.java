@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QuotaIdName extends TeaModel {
     /**
+     * <p>Resource quota ID</p>
+     * 
      * <strong>example:</strong>
      * <p>quota12345</p>
      */
@@ -12,6 +14,8 @@ public class QuotaIdName extends TeaModel {
     public String quotaId;
 
     /**
+     * <p>Resource quota name</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-quota</p>
      */

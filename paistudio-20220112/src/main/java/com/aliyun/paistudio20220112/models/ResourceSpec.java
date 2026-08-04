@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceSpec extends TeaModel {
+    /**
+     * <p>The resource node specifications.</p>
+     */
     @NameInMap("NodeSpecs")
     public java.util.List<NodeSpec> nodeSpecs;
 

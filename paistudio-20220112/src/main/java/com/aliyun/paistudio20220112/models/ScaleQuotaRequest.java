@@ -4,9 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ScaleQuotaRequest extends TeaModel {
+    /**
+     * <p>Scaling Min Quota.</p>
+     * <blockquote>
+     * <p>Notice: NodeSpecs specifies the post-scaling specifications and quantity. If the Count in NodeSpecs is less than the current Quota\&quot;s Count, it indicates scale-in. Otherwise, it indicates scale-out.</p>
+     * </blockquote>
+     */
     @NameInMap("Min")
     public ResourceSpec min;
 
+    /**
+     * <p>Resource group IDs.</p>
+     */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 

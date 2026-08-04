@@ -4,9 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class DeleteResourceGroupMachineGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the deleted machine group.</p>
+     */
     @NameInMap("MachineGroupID")
     public String machineGroupID;
 
+    /**
+     * <p>The request ID. Provide this ID to our technical support for troubleshooting.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

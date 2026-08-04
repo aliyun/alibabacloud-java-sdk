@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrainingJobInstanceEventsRequest extends TeaModel {
     /**
+     * <p>End time in UTC, in ISO 8601 format. If empty, defaults to the current time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListTrainingJobInstanceEventsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListTrainingJobInstanceEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -28,6 +33,7 @@ public class ListTrainingJobInstanceEventsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Start time in UTC, in ISO 8601 format. If empty, defaults to the training job start time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>

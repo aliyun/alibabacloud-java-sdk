@@ -4,12 +4,21 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeOperationParameters extends TeaModel {
+    /**
+     * <p>Node cordon parameter settings</p>
+     */
     @NameInMap("CordonParameters")
     public NodeCordonParameters cordonParameters;
 
+    /**
+     * <p>Node drain task instance parameter settings</p>
+     */
     @NameInMap("DrainParameters")
     public NodeDrainParameters drainParameters;
 
+    /**
+     * <p>Node uncordon parameter settings</p>
+     */
     @NameInMap("UncordonParameters")
     public NodeUncordonParameters uncordonParameters;
 

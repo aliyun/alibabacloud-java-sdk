@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceGroupRequest extends TeaModel {
     /**
+     * <p>The description of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_new_havpn_tf</p>
      */
@@ -12,6 +14,8 @@ public class UpdateResourceGroupRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>prophet</p>
      */
@@ -19,12 +23,17 @@ public class UpdateResourceGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Whether to detach the resource group from the currently connected VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Unbind")
     public Boolean unbind;
 
+    /**
+     * <p>Information about the VPC connected to the resource group.</p>
+     */
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 

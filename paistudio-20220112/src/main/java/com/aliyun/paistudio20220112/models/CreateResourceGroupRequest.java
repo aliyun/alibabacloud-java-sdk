@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
     /**
+     * <p>Compute resource type for the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ecs</p>
      */
@@ -12,6 +14,8 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String computingResourceProvider;
 
     /**
+     * <p>Resource group description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_api_report</p>
      */
@@ -19,6 +23,8 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Resource group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>testResourceGroup</p>
      */
@@ -26,19 +32,35 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Resource type. Valid values:</p>
+     * <ul>
+     * <li><p>Ecs: general computing resources</p>
+     * </li>
+     * <li><p>Lingjun: Lingjun resources</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Ecs</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>List of tags to add. Maximum 20 items.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateResourceGroupRequestTag> tag;
 
+    /**
+     * <p>VPC connectivity information for the resource group.</p>
+     */
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
     /**
+     * <p>Resource group version. This parameter takes effect only when the resource type is ECS.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -108,6 +130,8 @@ public class CreateResourceGroupRequest extends TeaModel {
 
     public static class CreateResourceGroupRequestTag extends TeaModel {
         /**
+         * <p>The tag key of the instance. N ranges from 1 to 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -115,6 +139,8 @@ public class CreateResourceGroupRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>Tag value for the resource group. N ranges from 1 to 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

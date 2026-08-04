@@ -4,16 +4,27 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListQuotasResponseBody extends TeaModel {
+    /**
+     * <p>The list of quotas.</p>
+     */
     @NameInMap("Quotas")
     public java.util.List<Quota> quotas;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries that match the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

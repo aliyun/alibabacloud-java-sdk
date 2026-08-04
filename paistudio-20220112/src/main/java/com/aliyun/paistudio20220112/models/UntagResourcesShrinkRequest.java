@@ -5,6 +5,22 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesShrinkRequest extends TeaModel {
     /**
+     * <p>Whether to detach all tags from the resource. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Detach all tags from the resource.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not detach all tags from the resource.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Default value: false.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>If you specify both TagKey and this parameter, this parameter is ignored.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +28,7 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>Region</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,12 +38,14 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Resource IDs. Maximum: 50 items.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceIdShrink;
 
     /**
+     * <p>Resource type</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +54,9 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>List of tag keys. Maximum: 20 items.</p>
+     */
     @NameInMap("TagKey")
     public String tagKeyShrink;
 

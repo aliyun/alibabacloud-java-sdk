@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAlgorithmVersionsRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAlgorithmVersionsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size for paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

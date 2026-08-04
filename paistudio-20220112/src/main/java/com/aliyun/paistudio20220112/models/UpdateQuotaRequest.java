@@ -5,25 +5,47 @@ import com.aliyun.tea.*;
 
 public class UpdateQuotaRequest extends TeaModel {
     /**
+     * <p>The description of the resource quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test quota</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The list of user-defined labels. This is a full update.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    @NameInMap("PropagateDefaultGPUDriver")
+    public Boolean propagateDefaultGPUDriver;
+
+    /**
+     * <p>The queuing strategy for jobs in the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PaiStrategyIntelligent</p>
+     */
     @NameInMap("QueueStrategy")
     public String queueStrategy;
 
     /**
+     * <p>The resource quota configuration.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("QuotaConfig")
     public QuotaConfig quotaConfig;
 
+    /**
+     * <p>The resource quota name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("QuotaName")
     public String quotaName;
 
@@ -46,6 +68,14 @@ public class UpdateQuotaRequest extends TeaModel {
     }
     public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    public UpdateQuotaRequest setPropagateDefaultGPUDriver(Boolean propagateDefaultGPUDriver) {
+        this.propagateDefaultGPUDriver = propagateDefaultGPUDriver;
+        return this;
+    }
+    public Boolean getPropagateDefaultGPUDriver() {
+        return this.propagateDefaultGPUDriver;
     }
 
     public UpdateQuotaRequest setQueueStrategy(String queueStrategy) {

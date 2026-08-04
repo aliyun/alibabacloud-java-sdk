@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ACS extends TeaModel {
     /**
-     * <p>ACS Identifier</p>
+     * <p>ACS resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rq-3kbt2gtimmyw7fgfgothocvh</p>
@@ -13,6 +13,14 @@ public class ACS extends TeaModel {
     @NameInMap("ACSQuotaId")
     public String ACSQuotaId;
 
+    /**
+     * <p>Product codes that can use the ACS Quota.</p>
+     * <p>Constraints:<br>You can select multiple sub-products, but some sub-products are mutually exclusive. The following combinations can be selected simultaneously:  </p>
+     * <ul>
+     * <li>PAI-DLC, PAI-DSW  </li>
+     * <li>PAI-EAS</li>
+     * </ul>
+     */
     @NameInMap("AssociatedProducts")
     public java.util.List<String> associatedProducts;
 

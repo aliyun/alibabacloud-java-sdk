@@ -4,15 +4,27 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class AllocatedHyperNodeDetail extends TeaModel {
+    /**
+     * <p>The number of allocated nodes in the hyper node.</p>
+     */
     @NameInMap("AllocatedNodeNum")
     public Long allocatedNodeNum;
 
+    /**
+     * <p>The number of idle nodes in the hyper node.</p>
+     */
     @NameInMap("EmptyNodeNum")
     public Long emptyNodeNum;
 
+    /**
+     * <p>The name of the hyper node.</p>
+     */
     @NameInMap("HyperNodeName")
     public String hyperNodeName;
 
+    /**
+     * <p>The total number of nodes in the hyper node.</p>
+     */
     @NameInMap("TotalNodeNum")
     public Long totalNodeNum;
 

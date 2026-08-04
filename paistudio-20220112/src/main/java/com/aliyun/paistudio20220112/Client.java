@@ -28,7 +28,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-qingdao", "pai.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "pai.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "pai.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "pai.cn-zhangjiakou.aliyuncs.com")
+            new TeaPair("cn-zhangjiakou", "pai.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "pai.us-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "pai.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "pai.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "pai.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "pai.ap-northeast-2.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("paistudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -49,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查WebTerminal</p>
+     * <p>Checks the connection to the instance container.</p>
      * 
      * @param request CheckInstanceWebTerminalRequest
      * @param headers map
@@ -83,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查WebTerminal</p>
+     * <p>Checks the connection to the instance container.</p>
      * 
      * @param request CheckInstanceWebTerminalRequest
      * @return CheckInstanceWebTerminalResponse
@@ -96,7 +101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建新的算法</p>
+     * <p>Creates an algorithm.</p>
      * 
      * @param request CreateAlgorithmRequest
      * @param headers map
@@ -142,7 +147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建新的算法</p>
+     * <p>Creates an algorithm.</p>
      * 
      * @param request CreateAlgorithmRequest
      * @return CreateAlgorithmResponse
@@ -155,7 +160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的算法版本</p>
+     * <p>Creates a version of an algorithm.</p>
      * 
      * @param tmpReq CreateAlgorithmVersionRequest
      * @param headers map
@@ -195,7 +200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的算法版本</p>
+     * <p>Creates a version of an algorithm.</p>
      * 
      * @param request CreateAlgorithmVersionRequest
      * @return CreateAlgorithmVersionResponse
@@ -208,7 +213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建WebTerminal</p>
+     * <p>You can create a link to access the container of the instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -234,7 +239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建WebTerminal</p>
+     * <p>You can create a link to access the container of the instance.</p>
      * @return CreateInstanceWebTerminalResponse
      */
     public CreateInstanceWebTerminalResponse createInstanceWebTerminal(String TrainingJobId, String InstanceId) throws Exception {
@@ -245,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Quota</p>
+     * <p>Call the <code>CreateQuota</code> operation to create a quota.</p>
      * 
      * @param request CreateQuotaRequest
      * @param headers map
@@ -319,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Quota</p>
+     * <p>Call the <code>CreateQuota</code> operation to create a quota.</p>
      * 
      * @param request CreateQuotaRequest
      * @return CreateQuotaResponse
@@ -332,7 +337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源组</p>
+     * <p>Use the CreateResourceGroup operation to create a resource group.</p>
      * 
      * @param request CreateResourceGroupRequest
      * @param headers map
@@ -390,7 +395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资源组</p>
+     * <p>Use the CreateResourceGroup operation to create a resource group.</p>
      * 
      * @param request CreateResourceGroupRequest
      * @return CreateResourceGroupResponse
@@ -403,7 +408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建TrainingJob</p>
+     * <p>Creates a training job.</p>
      * 
      * @param request CreateTrainingJobRequest
      * @param headers map
@@ -439,6 +444,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.computeResource)) {
             body.put("ComputeResource", request.computeResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfig)) {
+            body.put("CredentialConfig", request.credentialConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.environments)) {
@@ -521,7 +530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建TrainingJob</p>
+     * <p>Creates a training job.</p>
      * 
      * @param request CreateTrainingJobRequest
      * @return CreateTrainingJobResponse
@@ -534,7 +543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除算法</p>
+     * <p>Deletes an algorithm.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -560,7 +569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除算法</p>
+     * <p>Deletes an algorithm.</p>
      * @return DeleteAlgorithmResponse
      */
     public DeleteAlgorithmResponse deleteAlgorithm(String AlgorithmId) throws Exception {
@@ -571,7 +580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除算法版本</p>
+     * <p>Deletes an algorithm version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -597,7 +606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除算法版本</p>
+     * <p>Deletes an algorithm version.</p>
      * @return DeleteAlgorithmVersionResponse
      */
     public DeleteAlgorithmVersionResponse deleteAlgorithmVersion(String AlgorithmId, String AlgorithmVersion) throws Exception {
@@ -608,7 +617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete machine group</p>
+     * <p>Deletes a machine group.</p>
      * 
      * @deprecated OpenAPI DeleteMachineGroup is deprecated
      * 
@@ -638,7 +647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete machine group</p>
+     * <p>Deletes a machine group.</p>
      * 
      * @deprecated OpenAPI DeleteMachineGroup is deprecated
      * @return DeleteMachineGroupResponse
@@ -653,7 +662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Quota</p>
+     * <p>You can delete a resource quota by using DeleteQuota.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -679,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Quota</p>
+     * <p>You can delete a resource quota by using DeleteQuota.</p>
      * @return DeleteQuotaResponse
      */
     public DeleteQuotaResponse deleteQuota(String QuotaId) throws Exception {
@@ -690,7 +699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源组</p>
+     * <p>Deletes a resource group.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -716,7 +725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源组</p>
+     * <p>Deletes a resource group.</p>
      * @return DeleteResourceGroupResponse
      */
     public DeleteResourceGroupResponse deleteResourceGroup(String ResourceGroupID) throws Exception {
@@ -727,7 +736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete machine group</p>
+     * <p>Deletes the specified machine group from a resource group.</p>
      * 
      * @deprecated OpenAPI DeleteResourceGroupMachineGroup is deprecated
      * 
@@ -757,7 +766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete machine group</p>
+     * <p>Deletes the specified machine group from a resource group.</p>
      * 
      * @deprecated OpenAPI DeleteResourceGroupMachineGroup is deprecated
      * @return DeleteResourceGroupMachineGroupResponse
@@ -772,7 +781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个TrainingJob</p>
+     * <p>Deletes a training task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -798,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个TrainingJob</p>
+     * <p>Deletes a training task.</p>
      * @return DeleteTrainingJobResponse
      */
     public DeleteTrainingJobResponse deleteTrainingJob(String TrainingJobId) throws Exception {
@@ -809,7 +818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除TrainingJob的Labels</p>
+     * <p>Deletes the labels of a training task.</p>
      * 
      * @param request DeleteTrainingJobLabelsRequest
      * @param headers map
@@ -843,7 +852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除TrainingJob的Labels</p>
+     * <p>Deletes the labels of a training task.</p>
      * 
      * @param request DeleteTrainingJobLabelsRequest
      * @return DeleteTrainingJobLabelsResponse
@@ -856,7 +865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一个算法信息</p>
+     * <p>Retrieves algorithm details.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -882,7 +891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一个算法信息</p>
+     * <p>Retrieves algorithm details.</p>
      * @return GetAlgorithmResponse
      */
     public GetAlgorithmResponse getAlgorithm(String AlgorithmId) throws Exception {
@@ -893,7 +902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的算法版本</p>
+     * <p>Retrieve details about an algorithm version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -919,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的算法版本</p>
+     * <p>Retrieve details about an algorithm version.</p>
      * @return GetAlgorithmVersionResponse
      */
     public GetAlgorithmVersionResponse getAlgorithmVersion(String AlgorithmId, String AlgorithmVersion) throws Exception {
@@ -930,7 +939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get machine group</p>
+     * <p>Retrieves the details of a specific machine group.</p>
      * 
      * @deprecated OpenAPI GetMachineGroup is deprecated
      * 
@@ -960,7 +969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get machine group</p>
+     * <p>Retrieves the details of a specific machine group.</p>
      * 
      * @deprecated OpenAPI GetMachineGroup is deprecated
      * @return GetMachineGroupResponse
@@ -975,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group node metrics</p>
+     * <p>You can call the GetNodeMetrics operation to obtain the metric information of resource group nodes.</p>
      * 
      * @deprecated OpenAPI GetNodeMetrics is deprecated
      * 
@@ -1029,7 +1038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group node metrics</p>
+     * <p>You can call the GetNodeMetrics operation to obtain the metric information of resource group nodes.</p>
      * 
      * @deprecated OpenAPI GetNodeMetrics is deprecated
      * 
@@ -1046,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Quota</p>
+     * <p>Call GetQuota to retrieve the details of a resource quota. This helps you monitor current resource usage for effective resource management and planning.</p>
      * 
      * @param request GetQuotaRequest
      * @param headers map
@@ -1084,7 +1093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Quota</p>
+     * <p>Call GetQuota to retrieve the details of a resource quota. This helps you monitor current resource usage for effective resource management and planning.</p>
      * 
      * @param request GetQuotaRequest
      * @return GetQuotaResponse
@@ -1097,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group by group id</p>
+     * <p><code>GetResourceGroup</code> retrieves details for a resource group.</p>
      * 
      * @param tmpReq GetResourceGroupRequest
      * @param headers map
@@ -1141,7 +1150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group by group id</p>
+     * <p><code>GetResourceGroup</code> retrieves details for a resource group.</p>
      * 
      * @param request GetResourceGroupRequest
      * @return GetResourceGroupResponse
@@ -1154,7 +1163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get machine group</p>
+     * <p>Call GetResourceGroupMachineGroup to retrieve the details of a machine group.</p>
      * 
      * @param tmpReq GetResourceGroupMachineGroupRequest
      * @param headers map
@@ -1194,7 +1203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get machine group</p>
+     * <p>Call GetResourceGroupMachineGroup to retrieve the details of a machine group.</p>
      * 
      * @param request GetResourceGroupMachineGroupRequest
      * @return GetResourceGroupMachineGroupResponse
@@ -1207,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group requested resource by resource group id</p>
+     * <p>You can call the GetResourceGroupRequest operation to obtain the number of resources that have been allocated to a resource group.</p>
      * 
      * @deprecated OpenAPI GetResourceGroupRequest is deprecated
      * 
@@ -1249,7 +1258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group requested resource by resource group id</p>
+     * <p>You can call the GetResourceGroupRequest operation to obtain the number of resources that have been allocated to a resource group.</p>
      * 
      * @deprecated OpenAPI GetResourceGroupRequest is deprecated
      * 
@@ -1266,7 +1275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group total resource by group id</p>
+     * <p>You can call GetResourceGroupTotal to get the total resources of a Resource Group.</p>
      * 
      * @param request GetResourceGroupTotalRequest
      * @param headers map
@@ -1300,7 +1309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get resource group total resource by group id</p>
+     * <p>You can call GetResourceGroupTotal to get the total resources of a Resource Group.</p>
      * 
      * @param request GetResourceGroupTotalRequest
      * @return GetResourceGroupTotalResponse
@@ -1313,7 +1322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取抢占式实例历史价格</p>
+     * <p>Retrieves the historical prices of spot instances.</p>
      * 
      * @param request GetSpotPriceHistoryRequest
      * @param headers map
@@ -1371,7 +1380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取抢占式实例历史价格</p>
+     * <p>Retrieves the historical prices of spot instances.</p>
      * 
      * @param request GetSpotPriceHistoryRequest
      * @return GetSpotPriceHistoryResponse
@@ -1384,7 +1393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用GetToken获取临时鉴权信息</p>
+     * <p>Obtains a share token for a training task.</p>
      * 
      * @param request GetTokenRequest
      * @param headers map
@@ -1422,7 +1431,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调用GetToken获取临时鉴权信息</p>
+     * <p>Obtains a share token for a training task.</p>
      * 
      * @param request GetTokenRequest
      * @return GetTokenResponse
@@ -1435,7 +1444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TrainingJob的详情</p>
+     * <p>Retrieves the details of a training job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1461,7 +1470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TrainingJob的详情</p>
+     * <p>Retrieves the details of a training job.</p>
      * @return GetTrainingJobResponse
      */
     public GetTrainingJobResponse getTrainingJob(String TrainingJobId) throws Exception {
@@ -1472,7 +1481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job的算法错误信息</p>
+     * <p>Retrieves the runtime fault error message of a training node.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1498,7 +1507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job的算法错误信息</p>
+     * <p>Retrieves the runtime fault error message of a training node.</p>
      * @return GetTrainingJobErrorInfoResponse
      */
     public GetTrainingJobErrorInfoResponse getTrainingJobErrorInfo(String TrainingJobId) throws Exception {
@@ -1509,7 +1518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TrainingJob最近的Metrics</p>
+     * <p>Retrieves the latest metrics for a training task.</p>
      * 
      * @param request GetTrainingJobLatestMetricsRequest
      * @param headers map
@@ -1543,7 +1552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TrainingJob最近的Metrics</p>
+     * <p>Retrieves the latest metrics for a training task.</p>
      * 
      * @param request GetTrainingJobLatestMetricsRequest
      * @return GetTrainingJobLatestMetricsResponse
@@ -1556,7 +1565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get user view  metrics</p>
+     * <p>Retrieves metric data at the user dimension.</p>
      * 
      * @deprecated OpenAPI GetUserViewMetrics is deprecated
      * 
@@ -1618,7 +1627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>get user view  metrics</p>
+     * <p>Retrieves metric data at the user dimension.</p>
      * 
      * @deprecated OpenAPI GetUserViewMetrics is deprecated
      * 
@@ -1635,7 +1644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取算法的所有版本信息</p>
+     * <p>Retrieve a list of algorithm version details.</p>
      * 
      * @param request ListAlgorithmVersionsRequest
      * @param headers map
@@ -1673,7 +1682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取算法的所有版本信息</p>
+     * <p>Retrieve a list of algorithm version details.</p>
      * 
      * @param request ListAlgorithmVersionsRequest
      * @return ListAlgorithmVersionsResponse
@@ -1686,7 +1695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取算法列表</p>
+     * <p>Lists algorithm details.</p>
      * 
      * @param request ListAlgorithmsRequest
      * @param headers map
@@ -1740,7 +1749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取算法列表</p>
+     * <p>Lists algorithm details.</p>
      * 
      * @param request ListAlgorithmsRequest
      * @return ListAlgorithmsResponse
@@ -1752,8 +1761,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</li>
+     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</li>
+     * <li>Optional parameters include <code>OversoldTypes</code> and <code>GPUIndexes</code>, which are used to further filter or specify conditions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取节点规格列表</p>
+     * <p>Retrieves detailed information about all pods on a specified node.</p>
+     * 
+     * @param request ListNodePodsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNodePodsResponse
+     */
+    public ListNodePodsResponse listNodePodsWithOptions(String NodeId, ListNodePodsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.GPUIndexes)) {
+            query.put("GPUIndexes", request.GPUIndexes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldTypes)) {
+            query.put("OversoldTypes", request.oversoldTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNodePods"),
+            new TeaPair("version", "2022-01-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/nodes/" + com.aliyun.openapiutil.Client.getEncodeParam(NodeId) + "/Pods"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNodePodsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</li>
+     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</li>
+     * <li>Optional parameters include <code>OversoldTypes</code> and <code>GPUIndexes</code>, which are used to further filter or specify conditions.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves detailed information about all pods on a specified node.</p>
+     * 
+     * @param request ListNodePodsRequest
+     * @return ListNodePodsResponse
+     */
+    public ListNodePodsResponse listNodePods(String NodeId, ListNodePodsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listNodePodsWithOptions(NodeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Lists the node types that match the specified filter criteria.</li>
+     * <li>You must specify either the <code>ResourceGroupIds</code> or <code>QuotaId</code> parameter. The specified resource group IDs or quota ID must belong to the requesting user.</li>
+     * <li>You can filter the results by using parameters such as accelerator type and GPU type.</li>
+     * <li>The response includes details and statistics for each node type, indicating the availability of your resources.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the available node types.</p>
      * 
      * @param request ListNodeTypesRequest
      * @param headers map
@@ -1802,8 +1891,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Lists the node types that match the specified filter criteria.</li>
+     * <li>You must specify either the <code>ResourceGroupIds</code> or <code>QuotaId</code> parameter. The specified resource group IDs or quota ID must belong to the requesting user.</li>
+     * <li>You can filter the results by using parameters such as accelerator type and GPU type.</li>
+     * <li>The response includes details and statistics for each node type, indicating the availability of your resources.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取节点规格列表</p>
+     * <p>Lists the available node types.</p>
      * 
      * @param request ListNodeTypesRequest
      * @return ListNodeTypesResponse
@@ -1815,8 +1913,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ListNodes retrieves resource nodes that match specified filter conditions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取资源节点列表</p>
+     * <p>Returns a list of resource nodes.</p>
      * 
      * @param tmpReq ListNodesRequest
      * @param headers map
@@ -1979,8 +2080,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ListNodes retrieves resource nodes that match specified filter conditions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取资源节点列表</p>
+     * <p>Returns a list of resource nodes.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -1992,8 +2096,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the resource usage of users in a specified quota.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取当前资源配额用户列表和其所使用的资源</p>
+     * <p>Lists users within a quota and their resource usage.</p>
      * 
      * @param request ListQuotaActiveUserUsagesRequest
      * @param headers map
@@ -2058,8 +2165,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the resource usage of users in a specified quota.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取当前资源配额用户列表和其所使用的资源</p>
+     * <p>Lists users within a quota and their resource usage.</p>
      * 
      * @param request ListQuotaActiveUserUsagesRequest
      * @return ListQuotaActiveUserUsagesResponse
@@ -2072,7 +2182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>您可以通过此API获取Quota上的任务信息列表</p>
+     * <p>Retrieves a list of workloads associated with a specific quota.</p>
      * 
      * @param request ListQuotaWorkloadsRequest
      * @param headers map
@@ -2198,7 +2308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>您可以通过此API获取Quota上的任务信息列表</p>
+     * <p>Retrieves a list of workloads associated with a specific quota.</p>
      * 
      * @param request ListQuotaWorkloadsRequest
      * @return ListQuotaWorkloadsResponse
@@ -2211,7 +2321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Quota列表</p>
+     * <p>Lists quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @param headers map
@@ -2313,7 +2423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Quota列表</p>
+     * <p>Lists quotas.</p>
      * 
      * @param request ListQuotasRequest
      * @return ListQuotasResponse
@@ -2326,7 +2436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list machine groups</p>
+     * <p>Retrieves a list of machine groups in a specified resource group.</p>
      * 
      * @param request ListResourceGroupMachineGroupsRequest
      * @param headers map
@@ -2412,7 +2522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>list machine groups</p>
+     * <p>Retrieves a list of machine groups in a specified resource group.</p>
      * 
      * @param request ListResourceGroupMachineGroupsRequest
      * @return ListResourceGroupMachineGroupsResponse
@@ -2424,8 +2534,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>list resource group</p>
+     * <p>Call this operation to list resource groups for ECS or Lingjun intelligent computing resources.</p>
      * 
      * @param request ListResourceGroupsRequest
      * @param headers map
@@ -2502,8 +2615,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, AI computing resource groups (including ECS and Lingjun intelligent computing resources) are available only in specific regions. For a list of supported regions, see <a href="https://help.aliyun.com/document_detail/143986.html">AI computing resource management</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>list resource group</p>
+     * <p>Call this operation to list resource groups for ECS or Lingjun intelligent computing resources.</p>
      * 
      * @param request ListResourceGroupsRequest
      * @return ListResourceGroupsResponse
@@ -2515,8 +2631,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify at least one of the following parameters to query for resources.</p>
+     * <ul>
+     * <li>ResourceId.N</li>
+     * <li>Tag.N (Tag.N.Key and Tag.N.Value)
+     * If you specify both parameters, the operation returns only resources that match both criteria.</li>
+     * <li>Tag.N and ResourceId.N</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Tag query API.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
      * @param headers map
@@ -2575,8 +2700,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Specify at least one of the following parameters to query for resources.</p>
+     * <ul>
+     * <li>ResourceId.N</li>
+     * <li>Tag.N (Tag.N.Key and Tag.N.Value)
+     * If you specify both parameters, the operation returns only resources that match both criteria.</li>
+     * <li>Tag.N and ResourceId.N</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查标签接口</p>
+     * <p>Tag query API.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2589,7 +2723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定TrainingJob的事件。</p>
+     * <p>Retrieve events for a specific training task to gain detailed insight into the training process.</p>
      * 
      * @param request ListTrainingJobEventsRequest
      * @param headers map
@@ -2635,7 +2769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定TrainingJob的事件。</p>
+     * <p>Retrieve events for a specific training task to gain detailed insight into the training process.</p>
      * 
      * @param request ListTrainingJobEventsRequest
      * @return ListTrainingJobEventsResponse
@@ -2648,7 +2782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定Instance（TrainingJob的运行单元）的日志。</p>
+     * <p>Retrieve events for a training job instance.</p>
      * 
      * @param request ListTrainingJobInstanceEventsRequest
      * @param headers map
@@ -2694,7 +2828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定Instance（TrainingJob的运行单元）的日志。</p>
+     * <p>Retrieve events for a training job instance.</p>
      * 
      * @param request ListTrainingJobInstanceEventsRequest
      * @return ListTrainingJobInstanceEventsResponse
@@ -2707,7 +2841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job实例的Metrics</p>
+     * <p>Retrieve monitoring metrics for training job instances.</p>
      * 
      * @param request ListTrainingJobInstanceMetricsRequest
      * @param headers map
@@ -2757,7 +2891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job实例的Metrics</p>
+     * <p>Retrieve monitoring metrics for training job instances.</p>
      * 
      * @param request ListTrainingJobInstanceMetricsRequest
      * @return ListTrainingJobInstanceMetricsResponse
@@ -2770,7 +2904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job的日志</p>
+     * <p>Retrieves the logs for a training task.</p>
      * 
      * @param request ListTrainingJobLogsRequest
      * @param headers map
@@ -2824,7 +2958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job的日志</p>
+     * <p>Retrieves the logs for a training task.</p>
      * 
      * @param request ListTrainingJobLogsRequest
      * @return ListTrainingJobLogsResponse
@@ -2837,7 +2971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job的Metrics</p>
+     * <p>Retrieve monitoring data for a training task.</p>
      * 
      * @param request ListTrainingJobMetricsRequest
      * @param headers map
@@ -2891,7 +3025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job的Metrics</p>
+     * <p>Retrieve monitoring data for a training task.</p>
      * 
      * @param request ListTrainingJobMetricsRequest
      * @return ListTrainingJobMetricsResponse
@@ -2904,7 +3038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job 产出的所有模型信息</p>
+     * <p>Retrieves information about the output models of a training job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2930,7 +3064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Training Job 产出的所有模型信息</p>
+     * <p>Retrieves information about the output models of a training job.</p>
      * @return ListTrainingJobOutputModelsResponse
      */
     public ListTrainingJobOutputModelsResponse listTrainingJobOutputModels(String TrainingJobId) throws Exception {
@@ -2941,7 +3075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TrainingJob的列表</p>
+     * <p>Retrieves a list of training jobs.</p>
      * 
      * @param tmpReq ListTrainingJobsRequest
      * @param headers map
@@ -3033,7 +3167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取TrainingJob的列表</p>
+     * <p>Retrieves a list of training jobs.</p>
      * 
      * @param request ListTrainingJobsRequest
      * @return ListTrainingJobsResponse
@@ -3045,8 +3179,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use OperateNode to manage a specified resource node. Supported operations include disabling or enabling scheduling.</p>
+     * 
      * <b>summary</b> : 
-     * <p>您可以通过OperateNode对节点进行操作</p>
+     * <p>Use OperateNode to manage nodes.</p>
      * 
      * @param request OperateNodeRequest
      * @param headers map
@@ -3087,8 +3224,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Use OperateNode to manage a specified resource node. Supported operations include disabling or enabling scheduling.</p>
+     * 
      * <b>summary</b> : 
-     * <p>您可以通过OperateNode对节点进行操作</p>
+     * <p>Use OperateNode to manage nodes.</p>
      * 
      * @param request OperateNodeRequest
      * @return OperateNodeResponse
@@ -3101,7 +3241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩缩容Quota</p>
+     * <p>Use ScaleQuota to scale resource quotas.</p>
      * 
      * @param request ScaleQuotaRequest
      * @param headers map
@@ -3139,7 +3279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>扩缩容Quota</p>
+     * <p>Use ScaleQuota to scale resource quotas.</p>
      * 
      * @param request ScaleQuotaRequest
      * @return ScaleQuotaResponse
@@ -3152,7 +3292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止一个TrainingJob</p>
+     * <p>Stops a training task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3178,7 +3318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止一个TrainingJob</p>
+     * <p>Stops a training task.</p>
      * @return StopTrainingJobResponse
      */
     public StopTrainingJobResponse stopTrainingJob(String TrainingJobId) throws Exception {
@@ -3188,8 +3328,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Alibaba Cloud checks the number of existing tags on the resource before attaching a new tag. If the limit is exceeded, an error message is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Attaches tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -3234,8 +3377,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Alibaba Cloud checks the number of existing tags on the resource before attaching a new tag. If the limit is exceeded, an error message is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>打标签接口</p>
+     * <p>Attaches tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -3248,7 +3394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Detach tags from a list of specified resources. If a tag is no longer attached to any resource after detachment, Alibaba Cloud deletes it automatically.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -3308,7 +3454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删标签接口</p>
+     * <p>Detach tags from a list of specified resources. If a tag is no longer attached to any resource after detachment, Alibaba Cloud deletes it automatically.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -3321,7 +3467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新算法</p>
+     * <p>Updates an algorithm.</p>
      * 
      * @param request UpdateAlgorithmRequest
      * @param headers map
@@ -3359,7 +3505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新算法</p>
+     * <p>Updates an algorithm.</p>
      * 
      * @param request UpdateAlgorithmRequest
      * @return UpdateAlgorithmResponse
@@ -3372,7 +3518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新算法</p>
+     * <p>Updates an algorithm version.</p>
      * 
      * @param tmpReq UpdateAlgorithmVersionRequest
      * @param headers map
@@ -3412,7 +3558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新算法</p>
+     * <p>Updates an algorithm version.</p>
      * 
      * @param request UpdateAlgorithmVersionRequest
      * @return UpdateAlgorithmVersionResponse
@@ -3425,7 +3571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Quota</p>
+     * <p>Updates the information of a resource quota.</p>
      * 
      * @param request UpdateQuotaRequest
      * @param headers map
@@ -3441,6 +3587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
             body.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.propagateDefaultGPUDriver)) {
+            body.put("PropagateDefaultGPUDriver", request.propagateDefaultGPUDriver);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueStrategy)) {
@@ -3475,7 +3625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Quota</p>
+     * <p>Updates the information of a resource quota.</p>
      * 
      * @param request UpdateQuotaRequest
      * @return UpdateQuotaResponse
@@ -3488,7 +3638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Resource Group</p>
+     * <p>Use UpdateResourceGroup to update resource group information.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @param headers map
@@ -3534,7 +3684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新Resource Group</p>
+     * <p>Use UpdateResourceGroup to update resource group information.</p>
      * 
      * @param request UpdateResourceGroupRequest
      * @return UpdateResourceGroupResponse
@@ -3547,7 +3697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新一个TrainingJob的Labels</p>
+     * <p>Updates the labels of a training task.</p>
      * 
      * @param request UpdateTrainingJobLabelsRequest
      * @param headers map
@@ -3581,7 +3731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新一个TrainingJob的Labels</p>
+     * <p>Updates the labels of a training task.</p>
      * 
      * @param request UpdateTrainingJobLabelsRequest
      * @return UpdateTrainingJobLabelsResponse

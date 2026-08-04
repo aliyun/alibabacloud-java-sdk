@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConditionExpression extends TeaModel {
     /**
+     * <p>The type of required resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ConditionExpression extends TeaModel {
     public String key;
 
     /**
+     * <p>The criterion for evaluation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ConditionExpression extends TeaModel {
     public String operator;
 
     /**
+     * <p>List of resource values.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Values")

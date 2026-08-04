@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
     /**
+     * <p>Filters the results by cluster type.</p>
+     * 
      * <strong>example:</strong>
      * <p>RayCluster</p>
      */
@@ -18,16 +20,26 @@ public class ListQuotasRequest extends TeaModel {
     public String hasResource;
 
     /**
+     * <p>Filters the results by labels. Specify labels as key=value pairs, separated by commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>official=true,gpu=false</p>
      */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>The layout mode. Valid values: Tree and List.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tree</p>
+     */
     @NameInMap("LayoutMode")
     public String layoutMode;
 
     /**
+     * <p>The sort order. Valid values are desc and asc.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -35,6 +47,8 @@ public class ListQuotasRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number of the results to return. The minimum value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +56,8 @@ public class ListQuotasRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. The minimum value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -49,6 +65,16 @@ public class ListQuotasRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters the results by parent quota ID:</p>
+     * <ul>
+     * <li><p>If this parameter is not specified, all quotas within the tenant are returned, including both root and child quotas.</p>
+     * </li>
+     * <li><p>If this parameter is set to an empty string, all root quotas are returned.</p>
+     * </li>
+     * <li><p>If a specific parent quota ID is provided, all child quotas of that parent are returned.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>quotajradxh43rgb</p>
      */
@@ -56,6 +82,8 @@ public class ListQuotasRequest extends TeaModel {
     public String parentQuotaId;
 
     /**
+     * <p>A comma-separated list of up to 100 quota IDs to filter the results. Only exact matching is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>quota1ci8g793pgm,quotajradxh43rgb</p>
      */
@@ -63,6 +91,8 @@ public class ListQuotasRequest extends TeaModel {
     public String quotaIds;
 
     /**
+     * <p>Filters the results by quota name. Fuzzy matching is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>quotajradxh43rgb</p>
      */
@@ -70,6 +100,8 @@ public class ListQuotasRequest extends TeaModel {
     public String quotaName;
 
     /**
+     * <p>The resource type. Valid values are Lingjun, ECS, and ACS. The default value is ECS.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -77,6 +109,24 @@ public class ListQuotasRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The field to sort the results by. Valid values:</p>
+     * <ul>
+     * <li><p>QuotaName</p>
+     * </li>
+     * <li><p>Status</p>
+     * </li>
+     * <li><p>CPU</p>
+     * </li>
+     * <li><p>Memory</p>
+     * </li>
+     * <li><p>GPU</p>
+     * </li>
+     * <li><p>GmtCreatedTime</p>
+     * </li>
+     * <li><p>GmtModifiedTime</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>status</p>
      */
@@ -84,16 +134,32 @@ public class ListQuotasRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>A comma-separated list of quota statuses to filter the results. Only exact matching is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>Creating</p>
      */
     @NameInMap("Statuses")
     public String statuses;
 
+    /**
+     * <p>Specifies whether to return detailed information. Valid values:</p>
+     * <ul>
+     * <li><p>true: Returns detailed information.</p>
+     * </li>
+     * <li><p>false: Does not return detailed information.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Verbose")
     public Boolean verbose;
 
     /**
+     * <p>Filters the results by version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -101,12 +167,20 @@ public class ListQuotasRequest extends TeaModel {
     public String versions;
 
     /**
+     * <p>A comma-separated list of up to 10 workspace IDs to filter the results. Only exact matching is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>21345,38727</p>
      */
     @NameInMap("WorkspaceIds")
     public String workspaceIds;
 
+    /**
+     * <p>The name of the associated workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myshellprod</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

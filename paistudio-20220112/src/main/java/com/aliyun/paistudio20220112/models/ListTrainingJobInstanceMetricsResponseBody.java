@@ -4,10 +4,15 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
+    /**
+     * <p>List of all monitoring metrics that match the filter condition.</p>
+     */
     @NameInMap("InstanceMetrics")
     public java.util.List<ListTrainingJobInstanceMetricsResponseBodyInstanceMetrics> instanceMetrics;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
      */
@@ -36,9 +41,21 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobInstanceMetricsResponseBodyInstanceMetricsMetrics extends TeaModel {
+        /**
+         * <p>UTC time in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-08T16:00:00Z</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>Metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public Double value;
 
@@ -66,12 +83,27 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobInstanceMetricsResponseBodyInstanceMetrics extends TeaModel {
+        /**
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trainkxen7qjyg6y-master-0</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>List of instance monitoring metrics.</p>
+         */
         @NameInMap("Metrics")
         public java.util.List<ListTrainingJobInstanceMetricsResponseBodyInstanceMetricsMetrics> metrics;
 
+        /**
+         * <p>Node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trains930928remn-master-0</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 

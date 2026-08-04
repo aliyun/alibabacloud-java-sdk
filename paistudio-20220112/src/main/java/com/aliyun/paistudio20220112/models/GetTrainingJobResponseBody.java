@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTrainingJobResponseBody extends TeaModel {
     /**
+     * <p>The training algorithm ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>algo-xsldfvu1334</p>
      */
@@ -12,6 +14,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String algorithmId;
 
     /**
+     * <p>The algorithm name.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm_training</p>
      */
@@ -19,16 +23,23 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String algorithmName;
 
     /**
+     * <p>The algorithm provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>pai</p>
      */
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    /**
+     * <p>The temporary algorithm definition.</p>
+     */
     @NameInMap("AlgorithmSpec")
     public AlgorithmSpec algorithmSpec;
 
     /**
+     * <p>The algorithm version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v0.0.1</p>
      */
@@ -38,23 +49,39 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("AssignNodeSpec")
     public AssignNodeSpec assignNodeSpec;
 
+    /**
+     * <p>The compute resource configuration.</p>
+     */
     @NameInMap("ComputeResource")
     public GetTrainingJobResponseBodyComputeResource computeResource;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     /**
+     * <p>The running duration of the training job. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>7200</p>
      */
     @NameInMap("Duration")
     public Long duration;
 
+    /**
+     * <p>The environment variables of the training job.</p>
+     */
     @NameInMap("Environments")
     public java.util.Map<String, String> environments;
 
+    /**
+     * <p>The experiment configuration associated with the training job.</p>
+     */
     @NameInMap("ExperimentConfig")
     public GetTrainingJobResponseBodyExperimentConfig experimentConfig;
 
     /**
+     * <p>The time when the training job was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
@@ -62,50 +89,89 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the training job status was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-10T11:49:47Z</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The training hyperparameter settings.</p>
+     */
     @NameInMap("HyperParameters")
     public java.util.List<GetTrainingJobResponseBodyHyperParameters> hyperParameters;
 
+    /**
+     * <p>The training input data configurations.</p>
+     */
     @NameInMap("InputChannels")
     public java.util.List<GetTrainingJobResponseBodyInputChannels> inputChannels;
 
+    /**
+     * <p>The list of training job instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<GetTrainingJobResponseBodyInstances> instances;
 
     /**
+     * <p>Indicates whether a temporary algorithm is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsTempAlgo")
     public Boolean isTempAlgo;
 
+    /**
+     * <p>The list of training job labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<GetTrainingJobResponseBodyLabels> labels;
 
+    /**
+     * <p>The list of training job metrics.</p>
+     */
     @NameInMap("LatestMetrics")
     public java.util.List<GetTrainingJobResponseBodyLatestMetrics> latestMetrics;
 
+    /**
+     * <p>The latest progress of the training job.</p>
+     */
     @NameInMap("LatestProgress")
     public GetTrainingJobResponseBodyLatestProgress latestProgress;
 
+    /**
+     * <p>The training output data configurations.</p>
+     */
     @NameInMap("OutputChannels")
     public java.util.List<GetTrainingJobResponseBodyOutputChannels> outputChannels;
 
+    /**
+     * <p>The model produced by the training job.</p>
+     */
     @NameInMap("OutputModel")
     public GetTrainingJobResponseBodyOutputModel outputModel;
 
+    /**
+     * <p>The job priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The Python package configuration for the training job.</p>
+     */
     @NameInMap("PythonRequirements")
     public java.util.List<String> pythonRequirements;
 
     /**
+     * <p>The status code of the training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>TrainingJobSucceed</p>
      */
@@ -113,6 +179,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String reasonCode;
 
     /**
+     * <p>The error message of the training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -120,6 +188,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String reasonMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -127,32 +197,53 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ARN of the RAM role used for proxy authorization.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::{accountID}:role/{roleName}</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>The scheduling configuration of the training job.</p>
+     */
     @NameInMap("Scheduler")
     public GetTrainingJobResponseBodyScheduler scheduler;
 
+    /**
+     * <p>The additional parameter settings for the training node.</p>
+     */
     @NameInMap("Settings")
     public JobSettings settings;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The list of training job status transitions.</p>
+     */
     @NameInMap("StatusTransitions")
     public java.util.List<GetTrainingJobResponseBodyStatusTransitions> statusTransitions;
 
+    /**
+     * <p>The description of the training job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qwen2 large language model training.</p>
+     */
     @NameInMap("TrainingJobDescription")
     public String trainingJobDescription;
 
     /**
+     * <p>The training job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>traini6hhxiq69eo</p>
      */
@@ -160,6 +251,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String trainingJobId;
 
     /**
+     * <p>The name of the training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen_llm</p>
      */
@@ -167,6 +260,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String trainingJobName;
 
     /**
+     * <p>The URL of the training job details page.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://pai.console.aliyun.com/?regionId=cn-hangzhou&workspaceId=1234#/training/jobs/train1ouyadsl8n4">https://pai.console.aliyun.com/?regionId=cn-hangzhou&amp;workspaceId=1234#/training/jobs/train1ouyadsl8n4</a></p>
      */
@@ -174,16 +269,23 @@ public class GetTrainingJobResponseBody extends TeaModel {
     public String trainingJobUrl;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The user VPC configuration.</p>
+     */
     @NameInMap("UserVpc")
     public GetTrainingJobResponseBodyUserVpc userVpc;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>86995</p>
      */
@@ -249,6 +351,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public GetTrainingJobResponseBodyComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    public GetTrainingJobResponseBody setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public GetTrainingJobResponseBody setDuration(Long duration) {
@@ -501,6 +611,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyComputeResourceInstanceSpec extends TeaModel {
         /**
+         * <p>The number of CPU cores of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -508,6 +620,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String CPU;
 
         /**
+         * <p>The number of GPUs of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -515,6 +629,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String GPU;
 
         /**
+         * <p>The GPU type of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>V100</p>
          */
@@ -522,6 +638,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String GPUType;
 
         /**
+         * <p>The memory size of the instance, in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -529,6 +647,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The shared memory size of the instance, in GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -584,6 +704,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyComputeResourceSpotSpec extends TeaModel {
         /**
+         * <p>The maximum hourly price discount for the instance. This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9</p>
          */
@@ -591,6 +713,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public Float spotDiscountLimit;
 
         /**
+         * <p>SpotStrategy: The bidding policy of the instance. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>SpotWithPriceLimit</p>
          */
@@ -622,6 +746,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyComputeResource extends TeaModel {
         /**
+         * <p>The number of ECS instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -629,6 +755,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public Long ecsCount;
 
         /**
+         * <p>The ECS instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn5-c8g1.2xlarge</p>
          */
@@ -636,29 +764,47 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String ecsSpec;
 
         /**
+         * <p>The number of instances used by the resource quota.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
+        /**
+         * <p>The instance specification of the resource quota.</p>
+         */
         @NameInMap("InstanceSpec")
         public GetTrainingJobResponseBodyComputeResourceInstanceSpec instanceSpec;
 
         /**
+         * <p>The resource quota ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>quotam670lixikcl</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource quota name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The spot instance configuration.</p>
+         */
         @NameInMap("SpotSpec")
         public GetTrainingJobResponseBodyComputeResourceSpotSpec spotSpec;
 
         /**
+         * <p>Indicates whether spot instances are used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -738,6 +884,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyExperimentConfig extends TeaModel {
         /**
+         * <p>The experiment ID associated with the training job.</p>
+         * 
          * <strong>example:</strong>
          * <p>exp-ds9aefia90v</p>
          */
@@ -745,6 +893,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String experimentId;
 
         /**
+         * <p>The experiment name associated with the training job.</p>
+         * 
          * <strong>example:</strong>
          * <p>large_language_model_train</p>
          */
@@ -776,6 +926,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyHyperParameters extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>learning_rate</p>
          */
@@ -783,6 +935,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0001</p>
          */
@@ -814,6 +968,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyInputChannels extends TeaModel {
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-475megosidivjfgfq6</p>
          */
@@ -821,6 +977,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String datasetId;
 
         /**
+         * <p>The URI of the input data.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/input/model/</p>
          */
@@ -828,15 +986,32 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String inputUri;
 
         /**
+         * <p>The name of the input data.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The file system parameters of the input data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossAppendable=true</p>
+         */
         @NameInMap("Options")
         public String options;
 
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        /**
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
@@ -877,6 +1052,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
             return this.options;
         }
 
+        public GetTrainingJobResponseBodyInputChannels setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
         public GetTrainingJobResponseBodyInputChannels setVersionName(String versionName) {
             this.versionName = versionName;
             return this;
@@ -889,6 +1072,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyInstances extends TeaModel {
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>train1oug3yehan4-master-0</p>
          */
@@ -896,6 +1081,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The instance role.</p>
+         * 
          * <strong>example:</strong>
          * <p>master</p>
          */
@@ -903,6 +1090,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String role;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
          */
@@ -942,6 +1131,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyLabels extends TeaModel {
         /**
+         * <p>The label name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CreatedBy</p>
          */
@@ -949,6 +1140,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The label value.</p>
+         * 
          * <strong>example:</strong>
          * <p>QuickStart</p>
          */
@@ -980,6 +1173,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyLatestMetrics extends TeaModel {
         /**
+         * <p>The metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>loss</p>
          */
@@ -987,6 +1182,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The time when the metric was collected.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-10T11:49:47Z</p>
          */
@@ -994,6 +1191,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String timestamp;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.11</p>
          */
@@ -1033,6 +1232,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyLatestProgressOverallProgress extends TeaModel {
         /**
+         * <p>The progress timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T13:20:18Z</p>
          */
@@ -1040,6 +1241,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String timestamp;
 
         /**
+         * <p>The progress value.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.75</p>
          */
@@ -1071,6 +1274,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyLatestProgressRemainingTime extends TeaModel {
         /**
+         * <p>The progress timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-04T13:20:18Z</p>
          */
@@ -1078,6 +1283,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String timestamp;
 
         /**
+         * <p>The remaining time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
@@ -1108,9 +1315,15 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyLatestProgress extends TeaModel {
+        /**
+         * <p>The overall progress of the training job execution.</p>
+         */
         @NameInMap("OverallProgress")
         public GetTrainingJobResponseBodyLatestProgressOverallProgress overallProgress;
 
+        /**
+         * <p>The estimated remaining time for the training job execution, in seconds.</p>
+         */
         @NameInMap("RemainingTime")
         public GetTrainingJobResponseBodyLatestProgressRemainingTime remainingTime;
 
@@ -1139,6 +1352,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyOutputChannels extends TeaModel {
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-8o0hh35po15ejcdq2p</p>
          */
@@ -1146,6 +1361,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String datasetId;
 
         /**
+         * <p>The name of the output data.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
@@ -1153,12 +1370,23 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The URI of the output data.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/output/model/</p>
          */
         @NameInMap("OutputUri")
         public String outputUri;
 
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        /**
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
@@ -1191,6 +1419,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
             return this.outputUri;
         }
 
+        public GetTrainingJobResponseBodyOutputChannels setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
         public GetTrainingJobResponseBodyOutputChannels setVersionName(String versionName) {
             this.versionName = versionName;
             return this;
@@ -1203,6 +1439,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyOutputModel extends TeaModel {
         /**
+         * <p>The OutputChannel name corresponding to the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
@@ -1210,6 +1448,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String outputChannelName;
 
         /**
+         * <p>The model URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/model/output/</p>
          */
@@ -1240,10 +1480,18 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyScheduler extends TeaModel {
+        /**
+         * <p>The maximum runtime in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxRunningTimeInMinutes")
         public String maxRunningTimeInMinutes;
 
         /**
+         * <p>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1275,6 +1523,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     public static class GetTrainingJobResponseBodyStatusTransitions extends TeaModel {
         /**
+         * <p>The end time of the status.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-10T11:49:47Z</p>
          */
@@ -1282,6 +1532,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The status code.</p>
+         * 
          * <strong>example:</strong>
          * <p>TrainingJobSucceed</p>
          */
@@ -1289,6 +1541,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
+         * <p>The status update message.</p>
+         * 
          * <strong>example:</strong>
          * <p>KubeDL job runs successfully</p>
          */
@@ -1296,6 +1550,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
+         * <p>The start time of the status.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-10T11:49:47Z</p>
          */
@@ -1303,6 +1559,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The training job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Creating</p>
          */
@@ -1357,10 +1615,15 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     public static class GetTrainingJobResponseBodyUserVpc extends TeaModel {
+        /**
+         * <p>The extended CIDR block configuration.</p>
+         */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-abcdef****</p>
          */
@@ -1368,6 +1631,8 @@ public class GetTrainingJobResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vs-abcdef****</p>
          */

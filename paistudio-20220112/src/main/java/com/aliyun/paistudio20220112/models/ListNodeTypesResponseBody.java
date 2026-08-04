@@ -4,16 +4,24 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListNodeTypesResponseBody extends TeaModel {
+    /**
+     * <p>A collection of node types.</p>
+     */
     @NameInMap("NodeTypes")
     public java.util.List<NodeType> nodeTypes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Statistics for the node types that match the filter criteria.</p>
+     */
     @NameInMap("Statistics")
     public java.util.List<NodeTypeStatistic> statistics;
 

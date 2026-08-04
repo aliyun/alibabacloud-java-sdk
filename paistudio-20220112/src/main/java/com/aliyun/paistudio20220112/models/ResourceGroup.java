@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ResourceGroup extends TeaModel {
     /**
-     * <p>CreatorID</p>
+     * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>1612285282502324</p>
+     * <p>161228528250****</p>
      */
     @NameInMap("CreatorID")
     public String creatorID;
 
     /**
-     * <p>pai resource created time</p>
+     * <p>The time the PAI resource group was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -23,7 +23,7 @@ public class ResourceGroup extends TeaModel {
     public String gmtCreatedTime;
 
     /**
-     * <p>GmtModified</p>
+     * <p>The time the PAI resource group was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -32,7 +32,7 @@ public class ResourceGroup extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>pai resource group name</p>
+     * <p>The name of the PAI resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>RG1</p>
@@ -41,7 +41,7 @@ public class ResourceGroup extends TeaModel {
     public String name;
 
     /**
-     * <p>NodeCount</p>
+     * <p>The number of nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -50,10 +50,10 @@ public class ResourceGroup extends TeaModel {
     public Integer nodeCount;
 
     /**
-     * <p>pai resource group id</p>
+     * <p>The ID of the PAI resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg17tmvwiokhzaxg</p>
+     * <p>rg17tmvwiokh****</p>
      */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
@@ -65,7 +65,7 @@ public class ResourceGroup extends TeaModel {
     public String status;
 
     /**
-     * <p>UserVpc</p>
+     * <p>The VPC configuration.</p>
      */
     @NameInMap("UserVpc")
     public UserVpc userVpc;
@@ -74,7 +74,7 @@ public class ResourceGroup extends TeaModel {
     public String version;
 
     /**
-     * <p>pworkspace id</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23000</p>

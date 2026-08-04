@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrainingJobInstanceMetricsRequest extends TeaModel {
     /**
+     * <p>End time in UTC, in ISO 8601 format. If empty, use the current time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListTrainingJobInstanceMetricsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>trains930928remn-master-0</p>
      */
@@ -21,6 +24,25 @@ public class ListTrainingJobInstanceMetricsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Metric type:</p>
+     * <ul>
+     * <li><p>GpuCoreUsage: POD GPU usage</p>
+     * </li>
+     * <li><p>GpuMemoryUsage: POD GPU memory usage</p>
+     * </li>
+     * <li><p>CpuCoreUsage: POD CPU usage</p>
+     * </li>
+     * <li><p>MemoryUsage: POD memory usage</p>
+     * </li>
+     * <li><p>NetworkInputRate: POD network input rate (TCP/IP) (MB/s)</p>
+     * </li>
+     * <li><p>NetworkOutputRate: POD network output rate (TCP/IP) (MB/s)</p>
+     * </li>
+     * <li><p>DiskReadRate: POD disk read rate (MB/s)</p>
+     * </li>
+     * <li><p>DiskWriteRate: POD disk write rate (MB/s)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +52,7 @@ public class ListTrainingJobInstanceMetricsRequest extends TeaModel {
     public String metricType;
 
     /**
+     * <p>Start time in UTC, in ISO 8601 format. If empty, use the job start time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +62,8 @@ public class ListTrainingJobInstanceMetricsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Time interval. Valid values: 1h, 30m, 5m, 10s.</p>
+     * 
      * <strong>example:</strong>
      * <p>10s</p>
      */

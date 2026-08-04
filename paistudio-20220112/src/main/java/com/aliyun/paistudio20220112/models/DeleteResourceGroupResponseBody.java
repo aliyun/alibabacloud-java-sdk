@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</p>
      */
@@ -12,6 +14,8 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The globally unique ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rgvl9d6utwcscukh</p>
      */

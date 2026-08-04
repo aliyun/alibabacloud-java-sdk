@@ -4,20 +4,30 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeSpec extends TeaModel {
+    /**
+     * <p>Rule for attaching resource nodes.</p>
+     */
     @NameInMap("BindingPolicy")
     public BindingPolicy bindingPolicy;
 
     /**
+     * <p>Number of resource nodes with this specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>Type of supernode to use. You cannot specify both a node specification and a supernode type.</p>
+     */
     @NameInMap("HyperType")
     public String hyperType;
 
     /**
+     * <p>Type of the resource node specification.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.g6.4xlarge</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlgorithmVersionShrinkRequest extends TeaModel {
+    /**
+     * <p>The details of the algorithm.</p>
+     */
     @NameInMap("AlgorithmSpec")
     public String algorithmSpecShrink;
 

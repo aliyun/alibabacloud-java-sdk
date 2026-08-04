@@ -4,52 +4,129 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UserViewMetric extends TeaModel {
+    /**
+     * <p>Number of CPU nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CPUNodeNumber")
     public Integer CPUNodeNumber;
 
+    /**
+     * <p>CPU usage rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59</p>
+     */
     @NameInMap("CPUUsageRate")
     public String CPUUsageRate;
 
+    /**
+     * <p>CPU jobs.</p>
+     */
     @NameInMap("CpuJobNames")
     public java.util.List<String> cpuJobNames;
 
+    /**
+     * <p>List of CPU nodes.</p>
+     */
     @NameInMap("CpuNodeNames")
     public java.util.List<String> cpuNodeNames;
 
+    /**
+     * <p>Disk read rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("DiskReadRate")
     public String diskReadRate;
 
+    /**
+     * <p>Disk write rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("DiskWriteRate")
     public String diskWriteRate;
 
+    /**
+     * <p>Number of GPU nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GPUNodeNumber")
     public Integer GPUNodeNumber;
 
+    /**
+     * <p>GPU usage rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("GPUUsageRate")
     public String GPUUsageRate;
 
+    /**
+     * <p>GPU jobs.</p>
+     */
     @NameInMap("GpuJobNames")
     public java.util.List<String> gpuJobNames;
 
+    /**
+     * <p>List of GPU nodes.</p>
+     */
     @NameInMap("GpuNodeNames")
     public java.util.List<String> gpuNodeNames;
 
+    /**
+     * <p>Job type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PyTorch</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>Memory usage rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MemoryUsageRate")
     public String memoryUsageRate;
 
+    /**
+     * <p>The network input rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NetworkInputRate")
     public String networkInputRate;
 
+    /**
+     * <p>Network output rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NetworkOutputRate")
     public String networkOutputRate;
 
+    /**
+     * <p>List of nodes.</p>
+     */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
     /**
+     * <p>Number of CPU cores allocated.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -57,6 +134,8 @@ public class UserViewMetric extends TeaModel {
     public Integer requestCPU;
 
     /**
+     * <p>Number of GPU cores allocated.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -64,6 +143,8 @@ public class UserViewMetric extends TeaModel {
     public Integer requestGPU;
 
     /**
+     * <p>Allocated memory, in KB.</p>
+     * 
      * <strong>example:</strong>
      * <p>102400000</p>
      */
@@ -71,25 +152,47 @@ public class UserViewMetric extends TeaModel {
     public Long requestMemory;
 
     /**
+     * <p>Resource group ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>rg17tmvwiokhzaxg</p>
+     * <p>rg17tmvwiokh****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>Total number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
     @NameInMap("TotalCPU")
     public Integer totalCPU;
 
+    /**
+     * <p>Total number of GPU cards.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalGPU")
     public Integer totalGPU;
 
+    /**
+     * <p>Total memory, in KB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("TotalMemory")
     public Long totalMemory;
 
+    /**
+     * <p>User ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16111111****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
