@@ -3,15 +3,15 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteOnlineTestResponseBody extends TeaModel {
+public class AddAppAgentResponseBody extends TeaModel {
     /**
      * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>ag.abcxxx</p>
      */
     @NameInMap("Data")
-    public Boolean data;
+    public String data;
 
     /**
      * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
@@ -22,20 +22,20 @@ public class DeleteOnlineTestResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteOnlineTestResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteOnlineTestResponseBody self = new DeleteOnlineTestResponseBody();
+    public static AddAppAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AddAppAgentResponseBody self = new AddAppAgentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteOnlineTestResponseBody setData(Boolean data) {
+    public AddAppAgentResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Boolean getData() {
+    public String getData() {
         return this.data;
     }
 
-    public DeleteOnlineTestResponseBody setRequestId(String requestId) {
+    public AddAppAgentResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

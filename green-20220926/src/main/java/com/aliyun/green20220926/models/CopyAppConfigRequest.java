@@ -3,12 +3,21 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class GetUploadInfoRequest extends TeaModel {
+public class CopyAppConfigRequest extends TeaModel {
     /**
-     * <p>The upload name.</p>
+     * <p>The ID of the source App to copy from.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test.</p>
+     * <p>txt_check_agent_01</p>
+     */
+    @NameInMap("AppId")
+    public String appId;
+
+    /**
+     * <p>The name of the new App to be created from the copy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CustomTextModeration</p>
      */
     @NameInMap("Name")
     public String name;
@@ -26,17 +35,25 @@ public class GetUploadInfoRequest extends TeaModel {
      * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
-     * <p>image</p>
+     * <p>agent_text</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    public static GetUploadInfoRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetUploadInfoRequest self = new GetUploadInfoRequest();
+    public static CopyAppConfigRequest build(java.util.Map<String, ?> map) throws Exception {
+        CopyAppConfigRequest self = new CopyAppConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetUploadInfoRequest setName(String name) {
+    public CopyAppConfigRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public CopyAppConfigRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -44,7 +61,7 @@ public class GetUploadInfoRequest extends TeaModel {
         return this.name;
     }
 
-    public GetUploadInfoRequest setRegionId(String regionId) {
+    public CopyAppConfigRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -52,7 +69,7 @@ public class GetUploadInfoRequest extends TeaModel {
         return this.regionId;
     }
 
-    public GetUploadInfoRequest setResourceType(String resourceType) {
+    public CopyAppConfigRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }

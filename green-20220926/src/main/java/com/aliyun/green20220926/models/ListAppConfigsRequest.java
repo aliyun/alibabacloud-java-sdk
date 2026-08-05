@@ -3,7 +3,16 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteOnlineTestRequest extends TeaModel {
+public class ListAppConfigsRequest extends TeaModel {
+    /**
+     * <p>The classification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>guard-scene</p>
+     */
+    @NameInMap("Classify")
+    public String classify;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -17,17 +26,25 @@ public class DeleteOnlineTestRequest extends TeaModel {
      * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
-     * <p>image</p>
+     * <p>agent_text</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    public static DeleteOnlineTestRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteOnlineTestRequest self = new DeleteOnlineTestRequest();
+    public static ListAppConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAppConfigsRequest self = new ListAppConfigsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteOnlineTestRequest setRegionId(String regionId) {
+    public ListAppConfigsRequest setClassify(String classify) {
+        this.classify = classify;
+        return this;
+    }
+    public String getClassify() {
+        return this.classify;
+    }
+
+    public ListAppConfigsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -35,7 +52,7 @@ public class DeleteOnlineTestRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeleteOnlineTestRequest setResourceType(String resourceType) {
+    public ListAppConfigsRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }

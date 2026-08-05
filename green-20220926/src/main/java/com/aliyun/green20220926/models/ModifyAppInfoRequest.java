@@ -3,12 +3,21 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class GetUploadInfoRequest extends TeaModel {
+public class ModifyAppInfoRequest extends TeaModel {
     /**
-     * <p>The upload name.</p>
+     * <p>App ID。</p>
      * 
      * <strong>example:</strong>
-     * <p>Test.</p>
+     * <p>txt_check_agent_01</p>
+     */
+    @NameInMap("AppId")
+    public String appId;
+
+    /**
+     * <p>The app name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom text moderation</p>
      */
     @NameInMap("Name")
     public String name;
@@ -26,17 +35,25 @@ public class GetUploadInfoRequest extends TeaModel {
      * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
-     * <p>image</p>
+     * <p>agent_text</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    public static GetUploadInfoRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetUploadInfoRequest self = new GetUploadInfoRequest();
+    public static ModifyAppInfoRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyAppInfoRequest self = new ModifyAppInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetUploadInfoRequest setName(String name) {
+    public ModifyAppInfoRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public ModifyAppInfoRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -44,7 +61,7 @@ public class GetUploadInfoRequest extends TeaModel {
         return this.name;
     }
 
-    public GetUploadInfoRequest setRegionId(String regionId) {
+    public ModifyAppInfoRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -52,7 +69,7 @@ public class GetUploadInfoRequest extends TeaModel {
         return this.regionId;
     }
 
-    public GetUploadInfoRequest setResourceType(String resourceType) {
+    public ModifyAppInfoRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }

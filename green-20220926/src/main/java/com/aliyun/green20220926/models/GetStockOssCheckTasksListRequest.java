@@ -35,7 +35,7 @@ public class GetStockOssCheckTasksListRequest extends TeaModel {
      * <p>The media asset type.</p>
      * 
      * <strong>example:</strong>
-     * <p>image</p>
+     * <p>1</p>
      */
     @NameInMap("MediaType")
     public Integer mediaType;

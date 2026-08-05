@@ -72,7 +72,7 @@ public class ListAnswerLibResponseBody extends TeaModel {
          * <p>The name of the library.</p>
          * 
          * <strong>example:</strong>
-         * <p>代答库名称</p>
+         * <p>ProxyAnswerLibraryName</p>
          */
         @NameInMap("LibName")
         public String libName;

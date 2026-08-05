@@ -29,7 +29,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -102,7 +102,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         public String copyFrom;
 
         /**
-         * <p>Indicates whether the service is a copy.</p>
+         * <p>Indicates whether the service is copied.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -123,7 +123,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>通用基线检测</p>
+         * <p>General baseline detection.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -238,7 +238,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The execution date of the scheduled task.</p>
+         * <p>The scheduled execution date of the task. An integer value, such as 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -247,7 +247,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         public Integer executeDate;
 
         /**
-         * <p>The expected execution time of the scheduled task. Format: HH:mm:ss.</p>
+         * <p>The scheduled execution time of the task. Format: HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>02:00:00</p>
@@ -256,7 +256,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         public String executeTime;
 
         /**
-         * <p>Specifies whether to freeze files.</p>
+         * <p>Specifies whether to freeze.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -354,7 +354,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         public String referer;
 
         /**
-         * <p>The maximum number of files to scan.</p>
+         * <p>The scan limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -363,7 +363,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         public Long scanLimit;
 
         /**
-         * <p>Specifies whether to scan images without file name extensions.</p>
+         * <p>Specifies whether to scan images without file extensions.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -402,7 +402,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The scheduling date.</p>
+         * <p>The scheduling cycle. An integer value, such as 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -617,7 +617,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
 
     public static class GetStockOssCheckTasksListResponseBodyItems extends TeaModel {
         /**
-         * <p>The OSS bucket.</p>
+         * <p>The storage space.</p>
          * 
          * <strong>example:</strong>
          * <p>tmp</p>
@@ -734,7 +734,7 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>图片定时任务20231205135716797</p>
+         * <p>ImageScheduledTask20231205135716797</p>
          */
         @NameInMap("TaskName")
         public String taskName;

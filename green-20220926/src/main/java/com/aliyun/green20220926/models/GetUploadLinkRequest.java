@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUploadLinkRequest extends TeaModel {
     /**
-     * <p>Upload Link address</p>
+     * <p>The upload URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>

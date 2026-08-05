@@ -14,7 +14,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public String bid;
 
     /**
-     * <p>Indicates whether the service is activated on Alibaba Cloud.</p>
+     * <p>Indicates whether the commodity is activated on Alibaba Cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -32,7 +32,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>Indicates whether the account has an overdue payment.</p>
+     * <p>Indicates whether there is an overdue payment.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -50,7 +50,7 @@ public class GetOssCheckStatusResponseBody extends TeaModel {
     public String ramStatus;
 
     /**
-     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

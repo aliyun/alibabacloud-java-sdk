@@ -1,3 +1,17 @@
+2026-08-05 Version: 1.13.0
+- Support API AddAppAgent.
+- Support API CopyAppConfig.
+- Support API CreateAppConfig.
+- Support API DeleteAppAgent.
+- Support API GetAppConfig.
+- Support API ListAppConfigHistory.
+- Support API ListAppConfigs.
+- Support API ModifyAppAgent.
+- Support API ModifyAppInfo.
+- Support API PublishAppConfig.
+- Support API RecoverAppConfigHistory.
+
+
 2026-07-24 Version: 1.12.0
 - Support API ConfirmAiAppScan.
 - Update API GetScanResult: add response parameters Body.Data.Items.$.BailianRequestId.

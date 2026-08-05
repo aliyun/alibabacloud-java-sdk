@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateKeywordLibRequest extends TeaModel {
     /**
-     * <p>The ID of the keyword library.</p>
+     * <p>The keyword library ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>custom_xxxx</p>
+     * <p>custom_6.2193748597</p>
      */
     @NameInMap("LibId")
     public String libId;
 
     /**
-     * <p>The name of the keyword library.</p>
+     * <p>The keyword library name.</p>
      * 
      * <strong>example:</strong>
      * <p>TestLibrary.</p>

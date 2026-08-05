@@ -14,16 +14,16 @@ public class LlmStreamChatRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>Conversation information</p>
+     * <p>The conversation messages.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;content\&quot;:\&quot;你好\&quot;,\&quot;role\&quot;:\&quot;user\&quot;}]</p>
+     * <p>[{&quot;content&quot;:&quot;Hello&quot;,&quot;role&quot;:&quot;user&quot;}]</p>
      */
     @NameInMap("Messages")
     public Object messages;
 
     /**
-     * <p>Temperature value for the large model</p>
+     * <p>The temperature value of the large language model.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>
@@ -32,7 +32,7 @@ public class LlmStreamChatRequest extends TeaModel {
     public Float temperature;
 
     /**
-     * <p>Top p parameter controlling the randomness of the large model\&quot;s output.</p>
+     * <p>The top_p parameter that controls the randomness of the large language model output.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>
@@ -41,7 +41,7 @@ public class LlmStreamChatRequest extends TeaModel {
     public Float topP;
 
     /**
-     * <p>Type of conversation</p>
+     * <p>The conversation type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>

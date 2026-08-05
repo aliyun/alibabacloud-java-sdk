@@ -14,7 +14,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String accessId;
 
     /**
-     * <p>The error code, consistent with the HTTP status code.</p>
+     * <p>The error code, which is consistent with the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Unit: seconds.</p>
+     * <p>The expiration time. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -59,7 +59,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The key used for file upload.</p>
+     * <p>The key used for uploading the file.</p>
      * 
      * <strong>example:</strong>
      * <p>image/upload/xxx</p>
@@ -77,16 +77,16 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Used for frontend image upload.</p>
+     * <p>Used by the frontend for image upload.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The OSS file upload policy.</p>
+     * <p>The policy for uploading files to OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -95,7 +95,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String policy;
 
     /**
-     * <p>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -103,11 +103,17 @@ public class GetUploadInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>STS token</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
-     * <p>The upload signature information.</p>
+     * <p>The signature information for the upload.</p>
      * 
      * <strong>example:</strong>
      * <p>iyu7VHblYj+mEF9p46cdGOlNPAw=</p>

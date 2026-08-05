@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopOnlineTestRequest extends TeaModel {
     /**
-     * <p>Resource type</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -14,7 +14,7 @@ public class StopOnlineTestRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Service encoding</p>
+     * <p>The service code.</p>
      * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
@@ -23,7 +23,7 @@ public class StopOnlineTestRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Detection TaskId</p>
+     * <p>The ID of the detection task.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxxx</p>

@@ -3,12 +3,12 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteOnlineTestResponseBody extends TeaModel {
+public class PublishAppConfigResponseBody extends TeaModel {
     /**
      * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
@@ -22,12 +22,12 @@ public class DeleteOnlineTestResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteOnlineTestResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteOnlineTestResponseBody self = new DeleteOnlineTestResponseBody();
+    public static PublishAppConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        PublishAppConfigResponseBody self = new PublishAppConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteOnlineTestResponseBody setData(Boolean data) {
+    public PublishAppConfigResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
@@ -35,7 +35,7 @@ public class DeleteOnlineTestResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteOnlineTestResponseBody setRequestId(String requestId) {
+    public PublishAppConfigResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
