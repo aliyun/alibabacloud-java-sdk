@@ -23,12 +23,7 @@ public class SubDomainInfo extends TeaModel {
     public String name;
 
     /**
-     * <p>The network type. Valid values:</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Intranet</li>
-     * <li>Internet</li>
-     * </ul>
+     * <p>The network type.</p>
      * 
      * <strong>example:</strong>
      * <p>Intranet</p>
@@ -37,12 +32,7 @@ public class SubDomainInfo extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The protocol.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>HTTPS</li>
-     * <li>HTTP</li>
-     * </ul>
+     * <p>The protocol type supported by the subdomain. Valid values: HTTP, HTTPS.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>

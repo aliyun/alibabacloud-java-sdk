@@ -14,7 +14,7 @@ public class ListGatewaysResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The gateway list query result.</p>
+     * <p>The query result of the gateway list.</p>
      */
     @NameInMap("data")
     public ListGatewaysResponseBodyData data;
@@ -190,7 +190,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public java.util.List<ListGatewaysResponseBodyDataItemsLoadBalancersPorts> ports;
 
         /**
-         * <p>The load balancing status. Valid values:</p>
+         * <p>The status of the load balancing instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -539,6 +539,13 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
+         */
+        @NameInMap("gatewayMode")
+        public String gatewayMode;
+
+        /**
          * <p>The gateway type.</p>
          * 
          * <strong>example:</strong>
@@ -626,7 +633,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public java.util.List<ListGatewaysResponseBodyDataItemsTags> tags;
 
         /**
-         * <p>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</p>
+         * <p>The target version of the gateway. If this value differs from the version, a version upgrade can be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>
@@ -721,6 +728,14 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
         public String getGatewayId() {
             return this.gatewayId;
+        }
+
+        public ListGatewaysResponseBodyDataItems setGatewayMode(String gatewayMode) {
+            this.gatewayMode = gatewayMode;
+            return this;
+        }
+        public String getGatewayMode() {
+            return this.gatewayMode;
         }
 
         public ListGatewaysResponseBodyDataItems setGatewayType(String gatewayType) {

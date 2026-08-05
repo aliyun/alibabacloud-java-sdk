@@ -20,13 +20,13 @@ public class UpdateConsumerRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试消费者</p>
+     * <p>Test consumer</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to enable the API consumer.</p>
+     * <p>Specifies whether to enable the consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

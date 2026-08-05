@@ -11,7 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type used for the tagging operation. Set this to Gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gateway</p>

@@ -42,7 +42,7 @@ public class TlsCipherSuitesConfig extends TeaModel {
 
     public static class TlsCipherSuitesConfigTlsCipherSuite extends TeaModel {
         /**
-         * <p>The suite name.</p>
+         * <p>The TLS cipher suite name, such as ECDHE-ECDSA-AES256-GCM-SHA384.</p>
          * 
          * <strong>example:</strong>
          * <p>ECDHE-ECDSA-AES256-GCM-SHA384</p>

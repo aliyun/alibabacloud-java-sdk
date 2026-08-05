@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
-     * <p>The billing method. Valid values:</p>
-     * <ul>
-     * <li>POSTPAY: subscription.</li>
-     * <li>PREPAY: pay-as-you-go.</li>
-     * </ul>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -36,12 +32,11 @@ public class CreateGatewayRequest extends TeaModel {
     @NameInMap("gatewayEdition")
     public String gatewayEdition;
 
+    @NameInMap("gatewayMode")
+    public String gatewayMode;
+
     /**
-     * <p>The gateway type. Valid values:</p>
-     * <ul>
-     * <li>AI: AI gateway.</li>
-     * <li>API: cloud-native API gateway.</li>
-     * </ul>
+     * <p>The gateway type.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -130,6 +125,14 @@ public class CreateGatewayRequest extends TeaModel {
         return this.gatewayEdition;
     }
 
+    public CreateGatewayRequest setGatewayMode(String gatewayMode) {
+        this.gatewayMode = gatewayMode;
+        return this;
+    }
+    public String getGatewayMode() {
+        return this.gatewayMode;
+    }
+
     public CreateGatewayRequest setGatewayType(String gatewayType) {
         this.gatewayType = gatewayType;
         return this;
@@ -204,7 +207,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfigSls extends TeaModel {
         /**
-         * <p>Specifies whether to enable SLS logging.</p>
+         * <p>Specifies whether to enable SLS log collection.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -229,7 +232,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfig extends TeaModel {
         /**
-         * <p>The Simple Log Service (SLS) log configuration.</p>
+         * <p>The Simple Log Service (SLS) configuration, which controls gateway log collection.</p>
          */
         @NameInMap("sls")
         public CreateGatewayRequestLogConfigSls sls;
@@ -251,12 +254,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestNetworkAccessConfig extends TeaModel {
         /**
-         * <p>The network access type. Valid values:</p>
-         * <ul>
-         * <li>InternetAndIntranet: public and internal network.</li>
-         * <li>Intranet: internal network.</li>
-         * <li>Internet: public network.</li>
-         * </ul>
+         * <p>The network access type.</p>
          * 
          * <strong>example:</strong>
          * <p>Internet</p>
@@ -365,11 +363,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestZoneConfig extends TeaModel {
         /**
-         * <p>The zone selection option. Valid values:</p>
-         * <ul>
-         * <li>Auto: automatic.</li>
-         * <li>Manual: manual.</li>
-         * </ul>
+         * <p>The zone selection option.</p>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>

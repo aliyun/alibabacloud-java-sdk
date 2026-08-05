@@ -88,13 +88,13 @@ public class GetConsumerResponseBody extends TeaModel {
          * <p>The consumer group description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于线上 API 调用方分组</p>
+         * <p>Used for grouping online API callers</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The time when the API consumer joined the consumer group. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the API consumer joined the consumer group, in Unix milliseconds timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1715769600000</p>
@@ -152,7 +152,7 @@ public class GetConsumerResponseBody extends TeaModel {
 
     public static class GetConsumerResponseBodyData extends TeaModel {
         /**
-         * <p>The AccessKey identity authentication configurations.</p>
+         * <p>The AK/SK identity authentication configuration.</p>
          */
         @NameInMap("akSkIdentityConfigs")
         public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
@@ -188,7 +188,7 @@ public class GetConsumerResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The deployment status of the API in the current environment.</p>
+         * <p>The publish status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -200,7 +200,7 @@ public class GetConsumerResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试专用消费者</p>
+         * <p>Test-dedicated consumer</p>
          */
         @NameInMap("description")
         public String description;

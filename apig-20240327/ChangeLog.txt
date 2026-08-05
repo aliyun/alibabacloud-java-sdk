@@ -1,3 +1,10 @@
+2026-08-05 Version: 11.1.2
+- Update API CreateGateway: add request parameters body.gatewayMode.
+- Update API GetGateway: add response parameters Body.data.gatewayMode.
+- Update API GetGateway: add response parameters Body.data.tenantId.
+- Update API ListGateways: add response parameters Body.data.items.$.gatewayMode.
+
+
 2026-07-30 Version: 11.1.1
 - Update API CreateAiModelProvider: add request parameters clientToken.
 - Update API CreateAiModelProvider: add response parameters Body.data.modelCards.$.sourceURL.

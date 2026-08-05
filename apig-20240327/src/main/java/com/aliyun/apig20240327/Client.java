@@ -1116,6 +1116,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("gatewayEdition", request.gatewayEdition);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayMode)) {
+            body.put("gatewayMode", request.gatewayMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
             body.put("gatewayType", request.gatewayType);
         }
@@ -3503,7 +3507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</p>
+     * <p>Retrieves basic information about a gateway, including the VPC, vSwitch, and gateway ingress.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3529,7 +3533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</p>
+     * <p>Retrieves basic information about a gateway, including the VPC, vSwitch, and gateway ingress.</p>
      * @return GetGatewayResponse
      */
     public GetGatewayResponse getGateway(String gatewayId) throws Exception {
@@ -6709,7 +6713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds labels to resources.</p>
+     * <p>Tags resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -6751,7 +6755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds labels to resources.</p>
+     * <p>Tags resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -7155,7 +7159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an API consumer.</p>
+     * <p>Updates a consumer.</p>
      * 
      * @param request UpdateConsumerRequest
      * @param headers map
@@ -7205,7 +7209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an API consumer.</p>
+     * <p>Updates a consumer.</p>
      * 
      * @param request UpdateConsumerRequest
      * @return UpdateConsumerResponse

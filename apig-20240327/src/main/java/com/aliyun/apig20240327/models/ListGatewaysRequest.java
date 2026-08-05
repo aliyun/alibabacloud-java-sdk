@@ -23,7 +23,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The keyword for full match search. The search is case-insensitive.</p>
+     * <p>The keyword for full match search. Case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -74,7 +74,7 @@ public class ListGatewaysRequest extends TeaModel {
     public java.util.List<ListGatewaysRequestTag> tag;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zeqrgx6jrlb063y06yjo</p>

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ApiKeyIdentityConfig extends TeaModel {
     /**
-     * <p>The source configuration of the API key.</p>
+     * <p>The API key source configuration.</p>
      */
     @NameInMap("apikeySource")
     public ApiKeyIdentityConfigApikeySource apikeySource;
 
     /**
-     * <p>The list of certificates.</p>
+     * <p>The complete set of API key credential sources. The set contains one to three items. Multiple sources are applicable only to the AI gateway Header mode. Query String and non-AI gateway scenarios allow only a single source. If submitted together with apikeySource, the latter must be consistent with the compatible projection.</p>
+     */
+    @NameInMap("apikeySources")
+    public java.util.List<ApiKeyIdentityConfigApikeySources> apikeySources;
+
+    /**
+     * <p>The list of credentials.</p>
      */
     @NameInMap("credentials")
     public java.util.List<ApiKeyIdentityConfigCredentials> credentials;
@@ -38,6 +44,14 @@ public class ApiKeyIdentityConfig extends TeaModel {
         return this.apikeySource;
     }
 
+    public ApiKeyIdentityConfig setApikeySources(java.util.List<ApiKeyIdentityConfigApikeySources> apikeySources) {
+        this.apikeySources = apikeySources;
+        return this;
+    }
+    public java.util.List<ApiKeyIdentityConfigApikeySources> getApikeySources() {
+        return this.apikeySources;
+    }
+
     public ApiKeyIdentityConfig setCredentials(java.util.List<ApiKeyIdentityConfigCredentials> credentials) {
         this.credentials = credentials;
         return this;
@@ -56,13 +70,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
     public static class ApiKeyIdentityConfigApikeySource extends TeaModel {
         /**
-         * <p>The source of the API key.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Header</li>
-         * <li>QueryString</li>
-         * <li>Default</li>
-         * </ul>
+         * <p>The API key source.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -71,7 +79,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
         public String source;
 
         /**
-         * <p>The value of the API key.</p>
+         * <p>The API key value.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -102,6 +110,42 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
     }
 
+    public static class ApiKeyIdentityConfigApikeySources extends TeaModel {
+        /**
+         * <p>The credential source type.</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <p>The field name of the HTTP header or query string.</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static ApiKeyIdentityConfigApikeySources build(java.util.Map<String, ?> map) throws Exception {
+            ApiKeyIdentityConfigApikeySources self = new ApiKeyIdentityConfigApikeySources();
+            return TeaModel.build(map, self);
+        }
+
+        public ApiKeyIdentityConfigApikeySources setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ApiKeyIdentityConfigApikeySources setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ApiKeyIdentityConfigCredentials extends TeaModel {
         /**
          * <p>The API key configuration.</p>
@@ -113,7 +157,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
         public String apikey;
 
         /**
-         * <p>The production mode.</p>
+         * <p>The generation mode.</p>
          * 
          * <strong>example:</strong>
          * <p>System</p>

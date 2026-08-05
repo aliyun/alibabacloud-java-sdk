@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>The CA certificate identifier. Optional for Dedicated+HTTPS. Not allowed for Serverless. Not validated for Dedicated+HTTP.</p>
+     * <p>The CA certificate identifier. This parameter is optional for Dedicated with HTTPS. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -14,7 +14,7 @@ public class CreateDomainRequest extends TeaModel {
     public String caCertIdentifier;
 
     /**
-     * <p>The certificate identifier. Required for Dedicated+HTTPS and must pass submission validation. Not allowed for Serverless. Not validated for Dedicated+HTTP.</p>
+     * <p>The certificate identifier. This parameter is required for Dedicated with HTTPS and must pass validation. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -23,7 +23,7 @@ public class CreateDomainRequest extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The client CA certificate. Conditionally required for Dedicated+HTTPS when MTLSEnabled is set to true. Not allowed for Serverless. Not validated for Dedicated+HTTP.</p>
+     * <p>The client CA certificate. This parameter is conditionally required for Dedicated with HTTPS (when MTLSEnabled is set to true). This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -36,7 +36,12 @@ public class CreateDomainRequest extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The domain name scope. Optional. If not specified, the default value is Dedicated.</p>
+     * <p>The domain name scope. Valid values:</p>
+     * <ul>
+     * <li>Dedicated: dedicated gateway domain name.</li>
+     * <li>Serverless: Serverless gateway domain name.</li>
+     * </ul>
+     * <p>Default value: Dedicated.</p>
      * 
      * <strong>example:</strong>
      * <p>Dedicated</p>
@@ -45,7 +50,7 @@ public class CreateDomainRequest extends TeaModel {
     public String domainScope;
 
     /**
-     * <p>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless and for Dedicated+HTTPS. It is not validated for Dedicated+HTTP.</p>
+     * <p>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless and for Dedicated with HTTPS. This parameter is not validated for Dedicated with HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -54,7 +59,7 @@ public class CreateDomainRequest extends TeaModel {
     public Boolean forceHttps;
 
     /**
-     * <p>The gateway type. Optional. If not specified, the default value is API.</p>
+     * <p>The gateway type. If not specified, the default value is API.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -63,7 +68,13 @@ public class CreateDomainRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The HTTP/2 setting. Optional for Dedicated+HTTPS. If not specified, the default value is GlobalConfig. Not allowed for Serverless.</p>
+     * <p>The HTTP/2 setting. Valid values:</p>
+     * <ul>
+     * <li>GlobalConfig: follows the global configuration.</li>
+     * <li>Open: enabled.</li>
+     * <li>Close: disabled.</li>
+     * </ul>
+     * <p>Default value: GlobalConfig. This setting is supported only for HTTPS domain names in the Dedicated scope.</p>
      * 
      * <strong>example:</strong>
      * <p>Open</p>
@@ -72,13 +83,13 @@ public class CreateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
-     * <p>Specifies whether to enable mTLS mutual authentication. Optional for Dedicated+HTTPS. When set to true, ClientCACert is required. Not allowed for Serverless.</p>
+     * <p>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated with HTTPS. When set to true, ClientCACert is required. This parameter is not allowed for Serverless.</p>
      */
     @NameInMap("mTLSEnabled")
     public Boolean mTLSEnabled;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name. The name must be 1 to 128 characters in length, such as abc.com.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +99,7 @@ public class CreateDomainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type supported by the domain name. This parameter is required for Dedicated and must not be specified for Serverless.</p>
+     * <p>The protocol type used by the domain name. Valid values: HTTP and HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -106,13 +117,13 @@ public class CreateDomainRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The cipher suite configuration. Optional for Dedicated+HTTPS and must pass cipher suite validation. Not allowed for Serverless. Set to empty for Dedicated+HTTP.</p>
+     * <p>The TLS cipher suite configuration, including the configuration type, cipher suite names, and supported TLS versions. This configuration is supported only for HTTPS domain names in the Dedicated scope.</p>
      */
     @NameInMap("tlsCipherSuitesConfig")
     public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
     /**
-     * <p>The maximum TLS protocol version. Optional for Dedicated+HTTPS. If not specified, the value is derived from TlsMin and must be greater than or equal to TlsMin. Not allowed for Serverless.</p>
+     * <p>The maximum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the value is derived from TlsMin. The value must be greater than or equal to TlsMin. This parameter is not allowed for Serverless.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.3</p>
@@ -121,7 +132,7 @@ public class CreateDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
-     * <p>The minimum TLS protocol version. Optional for Dedicated+HTTPS. If not specified, the default value is TLS 1.0. Valid values range from TLS 1.0 to TLS 1.3, compatible with TLSv1.x. Not allowed for Serverless.</p>
+     * <p>The minimum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the default value is TLS 1.0. Valid values: TLS 1.0 to TLS 1.3, compatible with TLSv1.x. This parameter is not allowed for Serverless.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.0</p>

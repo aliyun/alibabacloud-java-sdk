@@ -14,7 +14,11 @@ public class ListHttpApisRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The gateway type filter. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+     * <p>The gateway type associated with the HTTP API. Valid values:</p>
+     * <ul>
+     * <li>API: cloud-native API gateway.</li>
+     * <li>AI: AI gateway.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -32,7 +36,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The exact name to search for.</p>
+     * <p>Searches by exact name match.</p>
      * 
      * <strong>example:</strong>
      * <p>login</p>
@@ -50,7 +54,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The page size. Valid range: [1, 100]. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +63,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ahr5uil8raz0rq3b</p>
@@ -83,7 +87,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String types;
 
     /**
-     * <p>Specifies whether to return information about APIs published to the specified environment.</p>
+     * <p>Specifies whether to return API information that has been published to the specified environment.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,7 +96,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withAPIsPublishedToEnvironment;
 
     /**
-     * <p>The environment ID. If specified, the response includes consumer authentication policy information for each API in the specified environment.</p>
+     * <p>Specifies the environment ID. The response includes consumer authentication policy information for each API in the specified environment.</p>
      * 
      * <strong>example:</strong>
      * <p>env-xxx</p>
@@ -101,7 +105,7 @@ public class ListHttpApisRequest extends TeaModel {
     public String withAuthPolicyInEnvironmentId;
 
     /**
-     * <p>Specifies whether authentication policies are enabled.</p>
+     * <p>Specifies whether permission authentication policies are enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +114,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withAuthPolicyList;
 
     /**
-     * <p>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer for each API.</p>
+     * <p>Specifies the consumer ID. The response includes the authorization rule list for the specified consumer for each API.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-xxx</p>
@@ -146,7 +150,7 @@ public class ListHttpApisRequest extends TeaModel {
     public Boolean withIngressInfo;
 
     /**
-     * <p>The plug-in ID. If specified, the response includes the plug-in publishing information for the specified plug-in.</p>
+     * <p>The plug-in ID. Used to retrieve plug-in publishing information based on this plug-in ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pl-ct9qn3um1hktue8dqol0</p>
