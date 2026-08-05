@@ -15,6 +15,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("us-west-1", "kms.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "kms.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "kms.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "kms.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "kms.me-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "kms.eu-west-1.aliyuncs.com"),
@@ -30,6 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-qingdao", "kms.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "kms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"),
             new TeaPair("cn-heyuan", "kms.cn-heyuan.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"),
@@ -825,6 +827,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AsymmetricVerifyResponse asymmetricVerify(AsymmetricVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.asymmetricVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</li>
+     * <li>The caller must have the <code>kms:GetSecretValue</code> permission on all secrets in the batch.</li>
+     * <li>If a secret uses a customer master key to protect the secret value, the caller must also have the <code>kms:Decrypt</code> permission on the corresponding master key.
+     * This topic provides an example of how to retrieve the secret value of a secret named <code>secret001</code>. The response shows that the secret value <code>SecretData</code> is <code>testdata1</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves secret values in batches.</p>
+     * 
+     * @param tmpReq BatchGetSecretValueRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchGetSecretValueResponse
+     */
+    public BatchGetSecretValueResponse batchGetSecretValueWithOptions(BatchGetSecretValueRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchGetSecretValueShrinkRequest request = new BatchGetSecretValueShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.secretsList)) {
+            request.secretsListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.secretsList, "SecretsList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.secretsListShrink)) {
+            query.put("SecretsList", request.secretsListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchGetSecretValue"),
+            new TeaPair("version", "2016-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchGetSecretValueResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</li>
+     * <li>The caller must have the <code>kms:GetSecretValue</code> permission on all secrets in the batch.</li>
+     * <li>If a secret uses a customer master key to protect the secret value, the caller must also have the <code>kms:Decrypt</code> permission on the corresponding master key.
+     * This topic provides an example of how to retrieve the secret value of a secret named <code>secret001</code>. The response shows that the secret value <code>SecretData</code> is <code>testdata1</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves secret values in batches.</p>
+     * 
+     * @param request BatchGetSecretValueRequest
+     * @return BatchGetSecretValueResponse
+     */
+    public BatchGetSecretValueResponse batchGetSecretValue(BatchGetSecretValueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchGetSecretValueWithOptions(request, runtime);
     }
 
     /**
@@ -4625,12 +4695,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</li>
-     * <li>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</li>
+     * <li>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>Version information does not include secret values. By default, only secret versions that have version stages are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all version IDs and stage labels of a specified secret.</p>
+     * <p>Queries all version information of a secret.</p>
      * 
      * @param request ListSecretVersionIdsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4675,12 +4745,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For more information about the access policy required for a RAM user or RAM role to call this OpenAPI, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</li>
-     * <li>The version information does not include the secret value. By default, this operation returns only the secret versions that are marked with a version stage.</li>
+     * <li>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, refer to <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>Version information does not include secret values. By default, only secret versions that have version stages are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all version IDs and stage labels of a specified secret.</p>
+     * <p>Queries all version information of a secret.</p>
      * 
      * @param request ListSecretVersionIdsRequest
      * @return ListSecretVersionIdsResponse

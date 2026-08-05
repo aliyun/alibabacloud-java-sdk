@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListSecretVersionIdsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to include credential versions that have no version stages in the response.</p>
+     * <p>Specifies whether to include secret versions that do not have version stages in the response.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>false (default): No</p>
-     * </li>
-     * <li><p>true: Yes</p>
-     * </li>
+     * <li>false (default): does not include</li>
+     * <li>true: includes</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +19,7 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     public String includeDeprecated;
 
     /**
-     * <p>The number of the page to return for a paged query. Default value: 1.</p>
+     * <p>The page number of the current page in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +28,7 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page for a paged query. Default value: 20.</p>
+     * <p>The number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -39,9 +37,9 @@ public class ListSecretVersionIdsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name or Alibaba Cloud Resource Name (ARN) of the credential.</p>
+     * <p>The secret name or secret Amazon Resource Name (ARN).</p>
      * <blockquote>
-     * <p>When you access a credential that belongs to another Alibaba Cloud account, you must specify the ARN of the credential. The ARN of a credential is in the format of <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
+     * <p>When accessing a secret under another Alibaba Cloud account, you must specify the secret ARN. The format of the secret ARN is <code>acs:kms:${region}:${account}:secret/${secret-name}</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
