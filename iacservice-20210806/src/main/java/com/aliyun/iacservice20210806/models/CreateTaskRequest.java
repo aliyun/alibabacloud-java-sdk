@@ -144,6 +144,10 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("taskBackend")
     public CreateTaskRequestTaskBackend taskBackend;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.248.0</p>
+     */
     @NameInMap("terraformProviderVersion")
     public String terraformProviderVersion;
 
