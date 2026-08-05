@@ -27,7 +27,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
      * <ul>
      * <li>Prompt: String. Required. The prompt.</li>
      * <li>Medias: the media list. Required when the task type is <code>image_to_image</code>. A maximum of 9 items are supported.<blockquote>
-     * <p>The Media struct contains: Type, the media type, String, valid value: image. URL, the media download URL, String.</p>
+     * <p>The Media structure contains: Type, the media type, String, valid value: image; URL, the media download URL, String.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -39,7 +39,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String input;
 
     /**
-     * <p>The task feature parameters, in JSON string format. No configuration is required at this time.</p>
+     * <p>The task function parameters, in JSON string format. No configuration is required at this time.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -88,7 +88,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String resolution;
 
     /**
-     * <p>The scene. This is an enumeration type. Currently, only <code>general</code> is supported.</p>
+     * <p>The scene. This is an enumeration type. Currently only <code>general</code> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>general</p>
@@ -97,7 +97,7 @@ public class SubmitImageGenerationJobRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>The user business data, in JSON format.</p>
+     * <p>The user business data in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;env&quot;:&quot;prd&quot;}</p>

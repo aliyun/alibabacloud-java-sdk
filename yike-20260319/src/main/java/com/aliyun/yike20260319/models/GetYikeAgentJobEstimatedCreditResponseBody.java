@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetYikeAgentJobEstimatedCreditResponseBody extends TeaModel {
     /**
+     * <p>The estimated credits to be deducted.</p>
+     * 
      * <strong>example:</strong>
      * <p>20.1</p>
      */
@@ -12,6 +14,8 @@ public class GetYikeAgentJobEstimatedCreditResponseBody extends TeaModel {
     public Double estimatedCreditCost;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
      */

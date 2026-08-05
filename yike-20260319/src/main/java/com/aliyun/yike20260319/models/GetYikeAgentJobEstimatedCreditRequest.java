@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetYikeAgentJobEstimatedCreditRequest extends TeaModel {
     /**
+     * <p>The name of the task submission operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetYikeAgentJobEstimatedCreditRequest extends TeaModel {
     public String jobAction;
 
     /**
+     * <p>The task request content. This is a JSON string and uses the same JobParams parameter as the task submission operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -60,7 +60,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The error message. This parameter is returned when the task is in the Failed state.</p>
+         * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
@@ -72,7 +72,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
          * <p>The task input.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Prompt&quot;:&quot;图1在篮球场上，用图2来了个灌篮&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
+         * <p>{&quot;Prompt&quot;:&quot;Person in image 1 is on a basketball court, dunking with image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
          */
         @NameInMap("Input")
         public String input;
@@ -87,7 +87,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The task feature configuration. You do not need to set this parameter.</p>
+         * <p>The task feature configuration. No configuration is required at this time.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -169,7 +169,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The custom business information.</p>
+         * <p>The user business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

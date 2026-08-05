@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetYikeJobCreditResponseBody extends TeaModel {
     /**
+     * <p>The credit deduction status.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class GetYikeJobCreditResponseBody extends TeaModel {
     public String creditStatus;
 
     /**
+     * <p>The actual credits consumed.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class GetYikeJobCreditResponseBody extends TeaModel {
     public Double jobCreditCost;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag_12412424****</p>
      */
@@ -26,6 +32,8 @@ public class GetYikeJobCreditResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
