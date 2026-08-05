@@ -1765,7 +1765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</li>
-     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</li>
+     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the resource group ID to which the node belongs.</li>
      * <li>Optional parameters include <code>OversoldTypes</code> and <code>GPUIndexes</code>, which are used to further filter or specify conditions.</li>
      * </ul>
      * 
@@ -1815,7 +1815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h2>Operation description</h2>
      * <ul>
      * <li>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</li>
-     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</li>
+     * <li><code>NodeName</code> and <code>ResourceGroupId</code> are required parameters that represent the node name and the resource group ID to which the node belongs.</li>
      * <li>Optional parameters include <code>OversoldTypes</code> and <code>GPUIndexes</code>, which are used to further filter or specify conditions.</li>
      * </ul>
      * 
