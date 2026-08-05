@@ -42,7 +42,7 @@ public class GetKnowledgeRecallResponseBody extends TeaModel {
 
     public static class GetKnowledgeRecallResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of results.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

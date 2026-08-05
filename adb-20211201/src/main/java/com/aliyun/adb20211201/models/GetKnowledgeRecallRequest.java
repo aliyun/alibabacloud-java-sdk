@@ -33,6 +33,12 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     @NameInMap("Topk")
     public Integer topk;
 
+    /**
+     * <p>The username. Only files that this user has permission to access are recalled.</p>
+     */
+    @NameInMap("User")
+    public String user;
+
     public static GetKnowledgeRecallRequest build(java.util.Map<String, ?> map) throws Exception {
         GetKnowledgeRecallRequest self = new GetKnowledgeRecallRequest();
         return TeaModel.build(map, self);
@@ -60,6 +66,14 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     }
     public Integer getTopk() {
         return this.topk;
+    }
+
+    public GetKnowledgeRecallRequest setUser(String user) {
+        this.user = user;
+        return this;
+    }
+    public String getUser() {
+        return this.user;
     }
 
 }

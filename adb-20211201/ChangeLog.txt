@@ -1,3 +1,7 @@
+2026-08-05 Version: 5.0.3
+- Update API GetKnowledgeRecall: add request parameters User.
+
+
 2026-08-03 Version: 5.0.2
 - Update API DescribeAuditLogRecords: add request parameters EngineType.
 
