@@ -18,7 +18,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     public String customAgentId;
 
     /**
-     * <p>The current DMS unit.</p>
+     * <p>The current Data Management unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -27,10 +27,89 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The specified data scope, in <strong>JSON string format</strong>.</p>
+     * <p>The specified data scope in <strong>JSON string format</strong>.</p>
+     * <ul>
+     * <li>Common parameter description<ul>
+     * <li>tableFlag: true indicates a specified data scope</li>
+     * <li>scope: personal is a fixed value</li>
+     * <li>personal: pass parameters for file or database types</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <p><strong>File type</strong>. Pass parameters in the following format:</p>
+     * <ul>
+     * <li>DataSourceType: remote_data_center is a fixed value</li>
+     * <li>FileId: the file ID</li>
+     * <li>Database: the database name returned by the ListDataCenterTable operation, which is typically the file name</li>
+     * <li>Tables: the table name returned by the ListDataCenterTable operation</li>
+     * <li>TableIds: the TableId returned by the ListDataCenterTable operation</li>
+     * <li>RegionId: the current region</li>
+     * </ul>
+     * <pre><code>{
+     *   &quot;tableFlag&quot;: true,
+     *   &quot;scope&quot;: &quot;personal&quot;,
+     *   &quot;personal&quot;: {
+     *     &quot;DataSourceType&quot;: &quot;remote_data_center&quot;,
+     *     &quot;FileId&quot;: &quot;f-f0jksn001ibmkoo********6v2zn6&quot;,
+     *     &quot;Database&quot;: &quot;diamonds.csv&quot;,
+     *     &quot;Tables&quot;: [
+     *       &quot;diamonds&quot;
+     *     ],
+     *     &quot;TableIds&quot;: [
+     *       &quot;35hfn94pxl********50pi&quot;
+     *     ],
+     *     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+     *   }
+     * }
+     * </code></pre>
+     * <p><strong>Database type</strong>. Pass parameters in the following format:</p>
+     * <ul>
+     * <li>DataSourceType: database is a fixed value</li>
+     * <li>DmsInstanceId: the DMS instance ID returned by the data center operation</li>
+     * <li>DmsDatabaseId: the DMS database ID returned by the data center operation</li>
+     * <li>FileId: the instance name (deprecated)</li>
+     * <li>DbName: the database name returned by the data center operation</li>
+     * <li>Database: the database name returned by the data center operation</li>
+     * <li>Tables: the table name returned by the data center operation</li>
+     * <li>TableIds: the TableId returned by the data center operation</li>
+     * <li>Engine: the engine type (mysql or postgresql)</li>
+     * <li>RegionId: the current region</li>
+     * </ul>
+     * <pre><code>{
+     *   &quot;tableFlag&quot;: true,
+     *   &quot;scope&quot;: &quot;personal&quot;,
+     *   &quot;personal&quot;: {
+     *     &quot;DataSourceType&quot;: &quot;database&quot;,
+     *     &quot;DmsInstanceId&quot;: &quot;284***8&quot;,
+     *     &quot;DmsDatabaseId&quot;: &quot;769***45&quot;,
+     *     &quot;FileId&quot;: &quot;pgm-bp15095e*******6t&quot;,
+     *     &quot;DbName&quot;: &quot;pg_catalog&quot;,
+     *     &quot;Database&quot;: &quot;pg_catalog&quot;,
+     *     &quot;Tables&quot;: [
+     *       &quot;pg_aggregate&quot;
+     *     ],
+     *     &quot;TableIds&quot;: [
+     *       &quot;5263****31&quot;
+     *     ],
+     *     &quot;Engine&quot;: &quot;postgresql&quot;,
+     *     &quot;RegionId&quot;: &quot;ap-southeast-1&quot;
+     *   }
+     * }
+     * </code></pre>
      * 
      * <strong>example:</strong>
-     * <p>{</p>
+     * <p>{
+     *   &quot;tableFlag&quot; : true,
+     *   &quot;scope&quot; : &quot;personal&quot;,
+     *   &quot;personal&quot; : {
+     *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
+     *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
+     *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+     *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
+     *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
+     *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
+     *   }
+     * }</p>
      */
     @NameInMap("DataJson")
     public String dataJson;
@@ -39,7 +118,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * <p>The description of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgentTestDescription.</p>
+     * <p>AgentTestDescription</p>
      */
     @NameInMap("Description")
     public String description;
@@ -55,6 +134,11 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>Analysis framework:</p>
+     * <ol>
+     * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis. Analyze trends and year-over-year/month-over-month fluctuations.</li>
+     * <li>Segment by new vs. returning customers, channels, and regions to identify growth drivers and weaknesses.</li>
+     * <li>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages.</li>
+     * </ol>
      */
     @NameInMap("Instruction")
     public String instruction;
@@ -64,6 +148,12 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>Core metric definitions:</p>
+     * <ol>
+     * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</li>
+     * <li>Order volume is the number of valid orders placed per day;</li>
+     * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</li>
+     * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</li>
+     * </ol>
      */
     @NameInMap("Knowledge")
     public String knowledge;
@@ -74,15 +164,21 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     @NameInMap("KnowledgeConfigList")
     public String knowledgeConfigListShrink;
 
+    @NameInMap("KnowledgeSemanticConfigList")
+    public String knowledgeSemanticConfigListShrink;
+
     /**
      * <p>The name of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgentTestName.</p>
+     * <p>AgentTestName</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the referenced historical session.</p>
+     */
     @NameInMap("RelatedSessionId")
     public String relatedSessionId;
 
@@ -96,7 +192,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * <p>The text report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals.</p>
+     * <p>The text report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("TextReportConfig")
     public String textReportConfig;
@@ -105,7 +201,7 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
      * <p>The web report format.</p>
      * 
      * <strong>example:</strong>
-     * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals.</p>
+     * <p>The web report requires that all numbers use Chinese numerals instead of Arabic numerals</p>
      */
     @NameInMap("WebReportConfig")
     public String webReportConfig;
@@ -197,6 +293,14 @@ public class ModifyCustomAgentShrinkRequest extends TeaModel {
     }
     public String getKnowledgeConfigListShrink() {
         return this.knowledgeConfigListShrink;
+    }
+
+    public ModifyCustomAgentShrinkRequest setKnowledgeSemanticConfigListShrink(String knowledgeSemanticConfigListShrink) {
+        this.knowledgeSemanticConfigListShrink = knowledgeSemanticConfigListShrink;
+        return this;
+    }
+    public String getKnowledgeSemanticConfigListShrink() {
+        return this.knowledgeSemanticConfigListShrink;
     }
 
     public ModifyCustomAgentShrinkRequest setName(String name) {

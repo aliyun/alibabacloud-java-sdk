@@ -277,6 +277,58 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
     }
 
+    public static class ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList extends TeaModel {
+        @NameInMap("DbId")
+        public String dbId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("KnowledgeUuid")
+        public String knowledgeUuid;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList self = new ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList setDbId(String dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public String getDbId() {
+            return this.dbId;
+        }
+
+        public ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList setKnowledgeUuid(String knowledgeUuid) {
+            this.knowledgeUuid = knowledgeUuid;
+            return this;
+        }
+        public String getKnowledgeUuid() {
+            return this.knowledgeUuid;
+        }
+
+        public ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class ListCustomAgentResponseBodyDataContentScheduleTaskConfig extends TeaModel {
         /**
          * <p>The cron expression for the recurring task.</p>
@@ -486,6 +538,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
         @NameInMap("KnowledgeConfigList")
         public java.util.List<ListCustomAgentResponseBodyDataContentKnowledgeConfigList> knowledgeConfigList;
+
+        @NameInMap("KnowledgeSemanticConfigList")
+        public java.util.List<ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList> knowledgeSemanticConfigList;
 
         /**
          * <p>The user who last modified the agent.</p>
@@ -737,6 +792,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
         public java.util.List<ListCustomAgentResponseBodyDataContentKnowledgeConfigList> getKnowledgeConfigList() {
             return this.knowledgeConfigList;
+        }
+
+        public ListCustomAgentResponseBodyDataContent setKnowledgeSemanticConfigList(java.util.List<ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList> knowledgeSemanticConfigList) {
+            this.knowledgeSemanticConfigList = knowledgeSemanticConfigList;
+            return this;
+        }
+        public java.util.List<ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList> getKnowledgeSemanticConfigList() {
+            return this.knowledgeSemanticConfigList;
         }
 
         public ListCustomAgentResponseBodyDataContent setModifier(String modifier) {

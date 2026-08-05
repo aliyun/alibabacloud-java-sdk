@@ -1,3 +1,12 @@
+2026-08-05 Version: 1.20.1
+- Update API CreateCustomAgent: add request parameters KnowledgeSemanticConfigList.
+- Update API CreateCustomAgent: add response parameters Body.Data.KnowledgeSemanticConfigList.
+- Update API DescribeCustomAgent: add response parameters Body.Data.KnowledgeSemanticConfigList.
+- Update API ListCustomAgent: add response parameters Body.Data.Content.$.KnowledgeSemanticConfigList.
+- Update API ModifyCustomAgent: add request parameters KnowledgeSemanticConfigList.
+- Update API ModifyCustomAgent: add response parameters Body.Data.KnowledgeSemanticConfigList.
+
+
 2026-08-04 Version: 1.20.0
 - Support API DeleteDataAgentMcp.
 - Support API GetDataAgentMcp.

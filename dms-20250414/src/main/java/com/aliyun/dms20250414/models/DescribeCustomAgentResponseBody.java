@@ -20,7 +20,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -187,7 +187,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public Boolean skipSqlConfirm;
 
         /**
-         * <p>Specifies whether to skip the web report rendering confirmation.</p>
+         * <p>Specifies whether to skip the web report drawing confirmation.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -275,6 +275,58 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList extends TeaModel {
+        @NameInMap("DbId")
+        public String dbId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("KnowledgeUuid")
+        public String knowledgeUuid;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList self = new DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList setDbId(String dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public String getDbId() {
+            return this.dbId;
+        }
+
+        public DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList setKnowledgeUuid(String knowledgeUuid) {
+            this.knowledgeUuid = knowledgeUuid;
+            return this;
+        }
+        public String getKnowledgeUuid() {
+            return this.knowledgeUuid;
+        }
+
+        public DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeCustomAgentResponseBodyDataScheduleTaskConfig extends TeaModel {
         /**
          * <p>The cron expression for timed scheduling.</p>
@@ -289,7 +341,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The query of the periodic task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyze this data and provide a brief report.</p>
+         * <p>Analyze this data and provide a brief report</p>
          */
         @NameInMap("Query")
         public String query;
@@ -375,6 +427,8 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
+         * <p>The current DMS unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -391,7 +445,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          *   &quot;personal&quot; : {
          *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
          *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
-         *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Database&quot; : &quot;Test spreadsheet</strong></strong></strong>.xlsx&quot;,
          *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
          *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
          *     &quot;RegionId&quot; : &quot;ap-southeast-1&quot;
@@ -408,7 +462,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent test description.</p>
+         * <p>Agent test description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -454,7 +508,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <ol>
          * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations;</li>
          * <li>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses;</li>
-         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to locate drop-off points;</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points;</li>
          * </ol>
          */
         @NameInMap("Instruction")
@@ -487,6 +541,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         @NameInMap("KnowledgeConfigList")
         public java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
 
+        @NameInMap("KnowledgeSemanticConfigList")
+        public java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList> knowledgeSemanticConfigList;
+
         /**
          * <p>The modifier.</p>
          * 
@@ -509,7 +566,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Agent test name.</p>
+         * <p>Agent test name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -542,6 +599,8 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The referenced historical session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5xyz...</p>
          */
@@ -557,6 +616,9 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
+        /**
+         * <p>The periodic task configuration.</p>
+         */
         @NameInMap("ScheduleTaskConfig")
         public DescribeCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
 
@@ -573,7 +635,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires all numbers to be converted from Arabic numerals to Chinese numerals.</p>
+         * <p>The text report requires all numbers to be converted from Arabic numerals to Chinese numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -582,7 +644,7 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires all numbers to be converted from Arabic numerals to Chinese numerals.</p>
+         * <p>The web report requires all numbers to be converted from Arabic numerals to Chinese numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
@@ -738,6 +800,14 @@ public class DescribeCustomAgentResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeConfigList> getKnowledgeConfigList() {
             return this.knowledgeConfigList;
+        }
+
+        public DescribeCustomAgentResponseBodyData setKnowledgeSemanticConfigList(java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList> knowledgeSemanticConfigList) {
+            this.knowledgeSemanticConfigList = knowledgeSemanticConfigList;
+            return this;
+        }
+        public java.util.List<DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList> getKnowledgeSemanticConfigList() {
+            return this.knowledgeSemanticConfigList;
         }
 
         public DescribeCustomAgentResponseBodyData setModifier(String modifier) {

@@ -672,6 +672,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.knowledgeConfigListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeConfigList, "KnowledgeConfigList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.knowledgeSemanticConfigList)) {
+            request.knowledgeSemanticConfigListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleTaskConfig)) {
             request.scheduleTaskConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleTaskConfig, "ScheduleTaskConfig", "json");
         }
@@ -707,6 +711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.knowledgeConfigListShrink)) {
             query.put("KnowledgeConfigList", request.knowledgeConfigListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeSemanticConfigListShrink)) {
+            query.put("KnowledgeSemanticConfigList", request.knowledgeSemanticConfigListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -2214,7 +2222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
+     * <p>Retrieves the details of a custom agent by its ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2250,7 +2258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a custom agent by custom agent ID.</p>
+     * <p>Retrieves the details of a custom agent by its ID.</p>
      * 
      * @param request DescribeCustomAgentRequest
      * @return DescribeCustomAgentResponse
@@ -5742,6 +5750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.knowledgeConfigListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeConfigList, "KnowledgeConfigList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.knowledgeSemanticConfigList)) {
+            request.knowledgeSemanticConfigListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.knowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleTaskConfig)) {
             request.scheduleTaskConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleTaskConfig, "ScheduleTaskConfig", "json");
         }
@@ -5781,6 +5793,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.knowledgeConfigListShrink)) {
             query.put("KnowledgeConfigList", request.knowledgeConfigListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.knowledgeSemanticConfigListShrink)) {
+            query.put("KnowledgeSemanticConfigList", request.knowledgeSemanticConfigListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

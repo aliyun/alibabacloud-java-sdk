@@ -38,7 +38,11 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>True: The request is successful.</li>
+     * <li>False: The request fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -283,9 +287,61 @@ public class CreateCustomAgentResponseBody extends TeaModel {
 
     }
 
+    public static class CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList extends TeaModel {
+        @NameInMap("DbId")
+        public String dbId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("KnowledgeUuid")
+        public String knowledgeUuid;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList build(java.util.Map<String, ?> map) throws Exception {
+            CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList self = new CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList setDbId(String dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public String getDbId() {
+            return this.dbId;
+        }
+
+        public CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList setKnowledgeUuid(String knowledgeUuid) {
+            this.knowledgeUuid = knowledgeUuid;
+            return this;
+        }
+        public String getKnowledgeUuid() {
+            return this.knowledgeUuid;
+        }
+
+        public CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class CreateCustomAgentResponseBodyDataScheduleTaskConfig extends TeaModel {
         /**
-         * <p>The cron expression for the time-based scheduling.</p>
+         * <p>The cron expression for time-based scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 0 ? * 1-7</p>
@@ -297,7 +353,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The query for the scheduled task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analyze this data and provide a brief report.</p>
+         * <p>Analyze this data and provide a brief report</p>
          */
         @NameInMap("Query")
         public String query;
@@ -383,7 +439,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String customAgentId;
 
         /**
-         * <p>The current DMS unit.</p>
+         * <p>The current Data Management unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -395,7 +451,18 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The specified data scope in JSON string format.</p>
          * 
          * <strong>example:</strong>
-         * <p>{</p>
+         * <p>{
+         *   &quot;tableFlag&quot; : true,
+         *   &quot;scope&quot; : &quot;personal&quot;,
+         *   &quot;personal&quot; : {
+         *     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
+         *     &quot;FileId&quot; : &quot;f-5qlrwaw10<strong><strong><strong><strong>s3gpw1z&quot;,
+         *     &quot;Database&quot; : &quot;TestTable</strong></strong></strong>.xlsx&quot;,
+         *     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
+         *     &quot;TableIds&quot; : [ &quot;</strong>****&quot; ],
+         *     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
+         *   }
+         * }</p>
          */
         @NameInMap("DataJson")
         public String dataJson;
@@ -404,13 +471,13 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The description of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>AgentTestDescription.</p>
+         * <p>AgentTestDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The current DMS unit.</p>
+         * <p>The current Data Management unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -447,12 +514,17 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * 
          * <strong>example:</strong>
          * <p>Analysis framework:</p>
+         * <ol>
+         * <li>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, analyze trends and year-over-year/month-over-month fluctuations;</li>
+         * <li>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses;</li>
+         * <li>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages;</li>
+         * </ol>
          */
         @NameInMap("Instruction")
         public String instruction;
 
         /**
-         * <p>Indicates whether a periodic task is configured.</p>
+         * <p>Indicates whether a scheduled task is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -465,6 +537,12 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * 
          * <strong>example:</strong>
          * <p>Core metric definitions:</p>
+         * <ol>
+         * <li>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</li>
+         * <li>Order volume is the number of valid orders placed per day.</li>
+         * <li>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</li>
+         * <li>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency.</li>
+         * </ol>
          */
         @NameInMap("Knowledge")
         public String knowledge;
@@ -474,6 +552,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          */
         @NameInMap("KnowledgeConfigList")
         public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeConfigList> knowledgeConfigList;
+
+        @NameInMap("KnowledgeSemanticConfigList")
+        public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList> knowledgeSemanticConfigList;
 
         /**
          * <p>The modifier.</p>
@@ -497,13 +578,13 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The name of the custom agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>AgentTestName.</p>
+         * <p>AgentTestName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The next run time of the periodic task.</p>
+         * <p>The next run time of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>1767715200</p>
@@ -529,6 +610,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The ID of the referenced historical session.</p>
+         */
         @NameInMap("RelatedSessionId")
         public String relatedSessionId;
 
@@ -542,7 +626,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The periodic task configuration.</p>
+         * <p>The scheduled task configuration.</p>
          */
         @NameInMap("ScheduleTaskConfig")
         public CreateCustomAgentResponseBodyDataScheduleTaskConfig scheduleTaskConfig;
@@ -560,7 +644,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The text report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals.</p>
+         * <p>The text report requires all numbers to be written in words instead of Arabic numerals</p>
          */
         @NameInMap("TextReportConfig")
         public String textReportConfig;
@@ -569,7 +653,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
          * <p>The web report format.</p>
          * 
          * <strong>example:</strong>
-         * <p>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals.</p>
+         * <p>The web report requires all numbers to be written in words instead of Arabic numerals</p>
          */
         @NameInMap("WebReportConfig")
         public String webReportConfig;
@@ -717,6 +801,14 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
         public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeConfigList> getKnowledgeConfigList() {
             return this.knowledgeConfigList;
+        }
+
+        public CreateCustomAgentResponseBodyData setKnowledgeSemanticConfigList(java.util.List<CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList> knowledgeSemanticConfigList) {
+            this.knowledgeSemanticConfigList = knowledgeSemanticConfigList;
+            return this;
+        }
+        public java.util.List<CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList> getKnowledgeSemanticConfigList() {
+            return this.knowledgeSemanticConfigList;
         }
 
         public CreateCustomAgentResponseBodyData setModifier(String modifier) {
