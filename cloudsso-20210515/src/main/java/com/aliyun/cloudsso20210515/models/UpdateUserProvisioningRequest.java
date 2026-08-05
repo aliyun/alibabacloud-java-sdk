@@ -16,8 +16,10 @@ public class UpdateUserProvisioningRequest extends TeaModel {
     /**
      * <p>The new deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
      * <ul>
-     * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
-     * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+     * <li><p>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
+     * </li>
+     * <li><p>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class UpdateUserProvisioningRequest extends TeaModel {
     /**
      * <p>The new conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
      * <ul>
-     * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
-     * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+     * <li><p>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</p>
+     * </li>
+     * <li><p>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

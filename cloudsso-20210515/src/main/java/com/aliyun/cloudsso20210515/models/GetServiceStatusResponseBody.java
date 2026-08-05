@@ -51,13 +51,15 @@ public class GetServiceStatusResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>Indicates whether you have the permissions to enable CloudSSO. Valid values:</p>
+         * <p>Indicates whether the prerequisites for enabling CloudSSO are met. Valid values:</p>
          * <ul>
-         * <li>Success: You have the permissions to enable CloudSSO.</li>
-         * <li>Failed: You do not have the permissions to enable CloudSSO.</li>
+         * <li><p>Success: The prerequisites are met.</p>
+         * </li>
+         * <li><p>Failed: The prerequisites are not met.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The value of this parameter is returned only if the value of <code>Status</code> is <code>Disabled</code>.</p>
+         * <p>The value of this parameter is returned only if the value of <code>Status</code> is <code>Disabled</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -67,16 +69,18 @@ public class GetServiceStatusResponseBody extends TeaModel {
         public String prerequisiteCheckResult;
 
         /**
-         * <p>The region IDs.</p>
+         * <p>The IDs of regions where directories are deployed.</p>
          */
         @NameInMap("RegionsInUse")
         public java.util.List<String> regionsInUse;
 
         /**
-         * <p>Indicates whether CloudSSO is enabled. Valid values:</p>
+         * <p>The status of CloudSSO. Valid values:</p>
          * <ul>
-         * <li>Enabled</li>
-         * <li>Disabled</li>
+         * <li><p>Enabled</p>
+         * </li>
+         * <li><p>Disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

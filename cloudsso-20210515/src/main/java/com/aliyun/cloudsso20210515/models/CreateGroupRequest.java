@@ -25,7 +25,7 @@ public class CreateGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the group.</p>
-     * <p>The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).``</p>
+     * <p>The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).\<code>\\</code></p>
      * <p>The name can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>

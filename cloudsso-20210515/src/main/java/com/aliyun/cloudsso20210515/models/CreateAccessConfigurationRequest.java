@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class CreateAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The name of the access configuration.</p>
-     * <p>The name can contain letters, digits, and hyphens (-).</p>
-     * <p>The name can be up to 32 characters in length.</p>
+     * <p>Format: contains letters, digits, or hyphens (-).</p>
+     * <p>Length: up to 32 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS-Admin</p>
@@ -17,7 +17,7 @@ public class CreateAccessConfigurationRequest extends TeaModel {
 
     /**
      * <p>The description of the access configuration.</p>
-     * <p>The description can be up to 1,024 characters in length.</p>
+     * <p>Length: up to 1024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>This is an access configuration.</p>
@@ -26,7 +26,7 @@ public class CreateAccessConfigurationRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -35,9 +35,9 @@ public class CreateAccessConfigurationRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The initial web page</p>
-     * <p>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
-     * <p>The web page must be a page of the Alibaba Cloud Management Console. By default, this parameter is empty, which indicates that the initial web page is the homepage of the Alibaba Cloud Management Console.</p>
+     * <p>The initial access page.</p>
+     * <p>The page address that a CloudSSO user initially accesses when using the access configuration to access an account in a resource directory.</p>
+     * <p>The page must be an Alibaba Cloud Management Console page. Default value: empty, which indicates that the user is redirected to the homepage of the Alibaba Cloud Management Console.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -46,11 +46,11 @@ public class CreateAccessConfigurationRequest extends TeaModel {
     public String relayState;
 
     /**
-     * <p>The duration of a session</p>
-     * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+     * <p>The session duration.</p>
+     * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
      * <p>Unit: seconds.</p>
-     * <p>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</p>
-     * <p>Default value: 3600. The value indicates 1 hour.</p>
+     * <p>Valid values: 900 to 43200 (15 minutes to 12 hours).</p>
+     * <p>Default value: 3600 (1 hour).</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -58,6 +58,9 @@ public class CreateAccessConfigurationRequest extends TeaModel {
     @NameInMap("SessionDuration")
     public Integer sessionDuration;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateAccessConfigurationRequestTags> tags;
 
@@ -115,9 +118,21 @@ public class CreateAccessConfigurationRequest extends TeaModel {
     }
 
     public static class CreateAccessConfigurationRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

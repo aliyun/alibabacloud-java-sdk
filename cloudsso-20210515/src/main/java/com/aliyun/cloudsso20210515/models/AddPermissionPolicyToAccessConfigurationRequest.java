@@ -36,8 +36,10 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The name of the policy.</p>
      * <ul>
-     * <li>If you set <code>PermissionPolicyType</code> to <code>System</code>, you must set PermissionPolicyName to the name of a system policy. You can obtain the name of the system policy from RAM.</li>
-     * <li>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must set PermissionPolicyName to the name of an inline policy. A custom value is supported. The value can be up to 32 characters in length.</li>
+     * <li><p>If you set <code>PermissionPolicyType</code> to <code>System</code>, you must set PermissionPolicyName to the name of a system policy. You can obtain the name of the system policy from RAM.</p>
+     * </li>
+     * <li><p>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must set PermissionPolicyName to the name of an inline policy. A custom value is supported. The value can be up to 32 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,8 +51,10 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The type of the policy. Valid values:</p>
      * <ul>
-     * <li>System: system policy. Resource Access Management (RAM) system policies are reused.</li>
-     * <li>Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</li>
+     * <li><p>System: system policy. Resource Access Management (RAM) system policies are reused.</p>
+     * </li>
+     * <li><p>Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

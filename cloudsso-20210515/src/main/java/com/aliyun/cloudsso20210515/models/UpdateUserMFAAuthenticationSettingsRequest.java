@@ -25,8 +25,10 @@ public class UpdateUserMFAAuthenticationSettingsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable MFA for the user. Valid values:</p>
      * <ul>
-     * <li>Enabled: enables MFA for the user.</li>
-     * <li>Disabled: disables MFA for the user.</li>
+     * <li><p>Enabled: enables MFA for the user.</p>
+     * </li>
+     * <li><p>Disabled: disables MFA for the user.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

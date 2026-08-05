@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
     /**
-     * <p>The MFA setting of all users.</p>
+     * <p>The global MFA verification configuration.</p>
      */
     @NameInMap("MFAAuthenticationSettingInfo")
     public GetMFAAuthenticationSettingInfoResponseBodyMFAAuthenticationSettingInfo MFAAuthenticationSettingInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>95D3B107-DA80-5B34-A3D0-9E82F8F0DA0E</p>
@@ -41,13 +41,16 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
     }
 
     public static class GetMFAAuthenticationSettingInfoResponseBodyMFAAuthenticationSettingInfo extends TeaModel {
+        @NameInMap("AllowedVerificationTypes")
+        public java.util.List<String> allowedVerificationTypes;
+
         /**
-         * <p>The MFA policy of all users. Valid values:</p>
+         * <p>The global MFA verification policy. Valid values:</p>
          * <ul>
-         * <li>Enabled: MFA is enabled for all users.</li>
-         * <li>Byuser: User-specific settings are applied. For more information about how to configure MFA for a single user, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
-         * <li>Disabled: MFA is disabled for all users.</li>
-         * <li>OnlyRiskyLogin: MFA is required only for unusual logons.</li>
+         * <li>Enabled: MFA verification is enabled for all users.</li>
+         * <li>Byuser: MFA verification depends on the independent MFA configuration of each user. For more information about user-specific MFA configuration, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
+         * <li>Disabled: MFA verification is disabled for all users.</li>
+         * <li>OnlyRiskyLogin: MFA verification is required only for unusual logon attempts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,13 +60,13 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         public String mfaAuthenticationAdvanceSettings;
 
         /**
-         * <p>The MFA policy for unusual logons. Valid values:</p>
+         * <p>The MFA verification policy for unusual logon attempts. Valid values:</p>
          * <ul>
-         * <li>Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.</li>
-         * <li>EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</li>
+         * <li>Autonomous: Users can skip MFA binding during unusual logon, but users who have already bound MFA must complete verification.</li>
+         * <li>EnforceVerify: Users are required to bind or verify MFA during unusual logon.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is displayed only when Byuser or OnlyRiskyLogin is returned for the MfaAuthenticationAdvanceSettings parameter.</p>
+         * <p>This parameter is displayed only when MfaAuthenticationAdvanceSettings is set to Byuser or OnlyRiskyLogin.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -75,6 +78,14 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         public static GetMFAAuthenticationSettingInfoResponseBodyMFAAuthenticationSettingInfo build(java.util.Map<String, ?> map) throws Exception {
             GetMFAAuthenticationSettingInfoResponseBodyMFAAuthenticationSettingInfo self = new GetMFAAuthenticationSettingInfoResponseBodyMFAAuthenticationSettingInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetMFAAuthenticationSettingInfoResponseBodyMFAAuthenticationSettingInfo setAllowedVerificationTypes(java.util.List<String> allowedVerificationTypes) {
+            this.allowedVerificationTypes = allowedVerificationTypes;
+            return this;
+        }
+        public java.util.List<String> getAllowedVerificationTypes() {
+            return this.allowedVerificationTypes;
         }
 
         public GetMFAAuthenticationSettingInfoResponseBodyMFAAuthenticationSettingInfo setMfaAuthenticationAdvanceSettings(String mfaAuthenticationAdvanceSettings) {

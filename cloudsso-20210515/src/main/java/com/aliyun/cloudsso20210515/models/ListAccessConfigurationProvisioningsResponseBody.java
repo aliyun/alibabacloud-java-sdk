@@ -13,8 +13,10 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +37,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+     * <p>This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -170,9 +172,12 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         /**
          * <p>The status of the access configuration. Valid values:</p>
          * <ul>
-         * <li>Provisioned: The access configuration is provisioned.</li>
-         * <li>ReprovisionRequired: The access configuration needs to be re-provisioned.</li>
-         * <li>DeprovisionFailed: The access configuration failed to be provisioned.</li>
+         * <li><p>Provisioned: The access configuration is provisioned.</p>
+         * </li>
+         * <li><p>ReprovisionRequired: The access configuration needs to be re-provisioned.</p>
+         * </li>
+         * <li><p>DeprovisionFailed: The access configuration failed to be provisioned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

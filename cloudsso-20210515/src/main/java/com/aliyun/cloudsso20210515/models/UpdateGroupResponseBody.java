@@ -80,8 +80,10 @@ public class UpdateGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the group. Valid values:</p>
          * <ul>
-         * <li>Manual: The group is manually created.</li>
-         * <li>Synchronized: The group is synchronized from an external identity provider (IdP).</li>
+         * <li><p>Manual: The group is manually created.</p>
+         * </li>
+         * <li><p>Synchronized: The group is synchronized from an external identity provider (IdP).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMFAAuthenticationSettingInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>u-00q8wbq42wiltcrk****</p>

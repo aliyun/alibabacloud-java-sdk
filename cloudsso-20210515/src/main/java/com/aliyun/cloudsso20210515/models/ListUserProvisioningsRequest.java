@@ -37,8 +37,10 @@ public class ListUserProvisioningsRequest extends TeaModel {
     /**
      * <p>The identity ID of the RAM user provisioning. Valid values:</p>
      * <ul>
-     * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
-     * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
+     * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+     * </li>
+     * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,8 +52,10 @@ public class ListUserProvisioningsRequest extends TeaModel {
     /**
      * <p>The identity type of the RAM user provisioning. Valid values:</p>
      * <ul>
-     * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
-     * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+     * <li><p>User: The identity of the RAM user provisioning is a CloudSSO user.</p>
+     * </li>
+     * <li><p>Group: The identity of the RAM user provisioning is a CloudSSO user group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

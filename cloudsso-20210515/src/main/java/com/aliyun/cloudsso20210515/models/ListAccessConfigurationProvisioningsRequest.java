@@ -46,9 +46,12 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     /**
      * <p>The status of the access configuration. The value can be used to filter accounts. Valid values:</p>
      * <ul>
-     * <li>Provisioned: The access configuration is provisioned.</li>
-     * <li>ReprovisionRequired: The access configuration needs to be re-provisioned.</li>
-     * <li>DeprovisionFailed: The access configuration failed to be provisioned.</li>
+     * <li><p>Provisioned: The access configuration is provisioned.</p>
+     * </li>
+     * <li><p>ReprovisionRequired: The access configuration needs to be re-provisioned.</p>
+     * </li>
+     * <li><p>DeprovisionFailed: The access configuration failed to be provisioned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +63,7 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     /**
      * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +76,7 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
      * <p>The type of the task object. The type can be used to filter access permissions.</p>
      * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

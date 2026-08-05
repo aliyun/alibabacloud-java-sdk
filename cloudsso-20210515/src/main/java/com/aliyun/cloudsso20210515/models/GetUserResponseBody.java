@@ -42,7 +42,7 @@ public class GetUserResponseBody extends TeaModel {
 
     public static class GetUserResponseBodyUserExternalId extends TeaModel {
         /**
-         * <p>The identifier of the user that is synchronized from an external IdP.</p>
+         * <p>The user identifier from the external IdP.</p>
          * 
          * <strong>example:</strong>
          * <p>c73******a5fdd5</p>
@@ -51,7 +51,7 @@ public class GetUserResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+         * <p>The channel for external user synchronization. Only SCIM synchronization is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SCIM</p>
@@ -83,9 +83,21 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUserTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,7 +126,7 @@ public class GetUserResponseBody extends TeaModel {
 
     public static class GetUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created. The value is displayed in UTC.</p>
+         * <p>The time when the user was created. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>
@@ -150,7 +162,7 @@ public class GetUserResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The identifier information about the user synchronized from an external IdP.</p>
+         * <p>The information about the user identifier from an external IdP.</p>
          */
         @NameInMap("ExternalId")
         public GetUserResponseBodyUserExternalId externalId;
@@ -176,8 +188,10 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The type of the user. Valid values:</p>
          * <ul>
-         * <li>Manual: The user is manually created.</li>
-         * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+         * <li><p>Manual: The user was created manually.</p>
+         * </li>
+         * <li><p>Synchronized: The user was synchronized from an external IdP.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,8 +203,10 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The status of the user. Valid values:</p>
          * <ul>
-         * <li>Enabled: The logon of the user is enabled.</li>
-         * <li>Disabled: The logon of the user is disabled.</li>
+         * <li><p>Enabled</p>
+         * </li>
+         * <li><p>Disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,11 +215,14 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags attached to the user.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetUserResponseBodyUserTags> tags;
 
         /**
-         * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+         * <p>The time when the user was last modified. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T06:43:55Z</p>
@@ -221,7 +240,7 @@ public class GetUserResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>

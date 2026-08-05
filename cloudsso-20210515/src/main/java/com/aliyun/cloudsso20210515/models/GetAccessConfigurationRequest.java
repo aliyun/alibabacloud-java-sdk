@@ -14,7 +14,7 @@ public class GetAccessConfigurationRequest extends TeaModel {
     public String accessConfigurationId;
 
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The ID of the CloudSSO directory.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>

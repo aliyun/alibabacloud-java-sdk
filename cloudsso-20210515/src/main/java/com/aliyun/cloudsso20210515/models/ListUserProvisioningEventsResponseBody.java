@@ -7,8 +7,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +33,7 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
     /**
      * <p>The token that is used to initiate the next request.</p>
      * <blockquote>
-     * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+     * <p>This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -130,8 +132,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         /**
          * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
-         * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+         * <li><p>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
+         * </li>
+         * <li><p>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,8 +156,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         /**
          * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
          * <ul>
-         * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
-         * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+         * <li><p>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</p>
+         * </li>
+         * <li><p>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,8 +207,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         /**
          * <p>The identity ID of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>If you set the <code>PrincipalType</code> parameter to <code>Group</code>, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
-         * <li>If you set the <code>PrincipalType</code> parameter to <code>User</code>, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
+         * <li><p>If you set the <code>PrincipalType</code> parameter to <code>Group</code>, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+         * </li>
+         * <li><p>If you set the <code>PrincipalType</code> parameter to <code>User</code>, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,8 +222,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         /**
          * <p>The identity name of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</li>
-         * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</li>
+         * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</p>
+         * </li>
+         * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,8 +237,10 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         /**
          * <p>The identity type of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
-         * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+         * <li><p>User: The identity of the RAM user provisioning is a CloudSSO user.</p>
+         * </li>
+         * <li><p>Group: The identity of the RAM user provisioning is a CloudSSO user group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,11 +252,16 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
         /**
          * <p>The type of the source operation. Valid values:</p>
          * <ul>
-         * <li>StartProvisioning: enables the RAM user provisioning.</li>
-         * <li>DeleteProvisioning: deletes the RAM user provisioning.</li>
-         * <li>AddUserToGroup: adds a user to a user group.</li>
-         * <li>RemoveUserFromGroup: removes a user from a user group.</li>
-         * <li>UserProvisioningDeletionClearing: deletes the RAM user provisioning and clears resources in the background.</li>
+         * <li><p>StartProvisioning: enables the RAM user provisioning.</p>
+         * </li>
+         * <li><p>DeleteProvisioning: deletes the RAM user provisioning.</p>
+         * </li>
+         * <li><p>AddUserToGroup: adds a user to a user group.</p>
+         * </li>
+         * <li><p>RemoveUserFromGroup: removes a user from a user group.</p>
+         * </li>
+         * <li><p>UserProvisioningDeletionClearing: deletes the RAM user provisioning and clears resources in the background.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +272,7 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the object for which you create the RAM user provisioning.</p>
-         * <p>The value is fixed as the ID of the account in the resource directory.````</p>
+         * <p>The value is fixed as the ID of the account in the resource directory.\<code>\\</code>\<code>\\</code></p>
          * 
          * <strong>example:</strong>
          * <p>153218*******</p>
@@ -265,7 +282,7 @@ public class ListUserProvisioningEventsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the object for which you create the RAM user provisioning.</p>
-         * <p>If <code>RD-Account</code> is returned, the value of this parameter is the name of the account that is used to access the instance.``</p>
+         * <p>If <code>RD-Account</code> is returned, the value of this parameter is the name of the account that is used to access the instance.\<code>\\</code></p>
          * 
          * <strong>example:</strong>
          * <p>exampleRdMember</p>

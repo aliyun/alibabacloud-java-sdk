@@ -53,8 +53,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         /**
          * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
-         * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+         * <li><p>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
+         * </li>
+         * <li><p>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,8 +86,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         /**
          * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
          * <ul>
-         * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
-         * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+         * <li><p>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</p>
+         * </li>
+         * <li><p>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,8 +110,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         /**
          * <p>The identity ID of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
-         * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
+         * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+         * </li>
+         * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,8 +125,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         /**
          * <p>The identity name of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</li>
-         * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</li>
+         * <li><p>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</p>
+         * </li>
+         * <li><p>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,8 +140,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         /**
          * <p>The identity type of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>User: indicates that the identity of the RAM user provisioning is a CloudSSO user.</li>
-         * <li>Group: indicates that the identity of the RAM user provisioning is a CloudSSO user group.</li>
+         * <li><p>User: indicates that the identity of the RAM user provisioning is a CloudSSO user.</p>
+         * </li>
+         * <li><p>Group: indicates that the identity of the RAM user provisioning is a CloudSSO user group.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,8 +155,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         /**
          * <p>The status of the RAM user provisioning. Valid values:</p>
          * <ul>
-         * <li>Enabled</li>
-         * <li>Disabled</li>
+         * <li><p>Enabled</p>
+         * </li>
+         * <li><p>Disabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

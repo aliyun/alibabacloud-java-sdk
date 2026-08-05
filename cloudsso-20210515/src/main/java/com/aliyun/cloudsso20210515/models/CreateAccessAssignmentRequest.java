@@ -25,8 +25,10 @@ public class CreateAccessAssignmentRequest extends TeaModel {
     /**
      * <p>The ID of the CloudSSO identity.</p>
      * <ul>
-     * <li>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
-     * <li>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+     * <li><p>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
+     * </li>
+     * <li><p>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class CreateAccessAssignmentRequest extends TeaModel {
     /**
      * <p>The type of the CloudSSO identity. Valid values:</p>
      * <ul>
-     * <li>User</li>
-     * <li>Group</li>
+     * <li><p>User</p>
+     * </li>
+     * <li><p>Group</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

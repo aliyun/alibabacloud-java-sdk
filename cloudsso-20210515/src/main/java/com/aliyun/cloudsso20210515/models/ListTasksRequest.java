@@ -27,7 +27,7 @@ public class ListTasksRequest extends TeaModel {
      * <p>The condition is not case-sensitive. The condition must be in the StartTime ge YYYY-MM-DDTHH:mm:SSZ format. You must set YYYY-MM-DDTHH:mm:SSZ to a value that is no more than 7 days from the current time. ge indicates Greater Than or Equals.</p>
      * <p>For example, if you set the Filter parameter to StartTime ge 2021-03-15T01:12:23Z, the operation queries the tasks from 2021-03-15T01:12:23 GMT.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the operation queries the tasks within the previous 24 hours by default.</p>
+     * <p>If you do not specify this parameter, the operation queries the tasks within the previous 24 hours by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,11 +60,13 @@ public class ListTasksRequest extends TeaModel {
     /**
      * <p>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</p>
      * <ul>
-     * <li>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
-     * <li>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+     * <li><p>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
+     * </li>
+     * <li><p>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>PrincipalId</code> and <code>PrincipalType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>PrincipalId</code> and <code>PrincipalType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,11 +78,13 @@ public class ListTasksRequest extends TeaModel {
     /**
      * <p>The type of the CloudSSO identity. The type can be used to filter access permissions. Valid values:</p>
      * <ul>
-     * <li>User</li>
-     * <li>Group</li>
+     * <li><p>User</p>
+     * </li>
+     * <li><p>Group</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>PrincipalId</code> and <code>PrincipalType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>PrincipalId</code> and <code>PrincipalType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,9 +96,12 @@ public class ListTasksRequest extends TeaModel {
     /**
      * <p>The ID of the task. The ID can be used to filter tasks. Valid values:</p>
      * <ul>
-     * <li>InProgress: The task is running.</li>
-     * <li>Success: The task is successful.</li>
-     * <li>Failed: The task failed.</li>
+     * <li><p>InProgress: The task is running.</p>
+     * </li>
+     * <li><p>Success: The task is successful.</p>
+     * </li>
+     * <li><p>Failed: The task failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +113,7 @@ public class ListTasksRequest extends TeaModel {
     /**
      * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,7 +126,7 @@ public class ListTasksRequest extends TeaModel {
      * <p>The type of the task object. The type can be used to filter access permissions.</p>
      * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,10 +138,14 @@ public class ListTasksRequest extends TeaModel {
     /**
      * <p>The type of the task. The type can be used to filter tasks. Valid values:</p>
      * <ul>
-     * <li>ProvisionAccessConfiguration: An access configuration is provisioned.</li>
-     * <li>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</li>
-     * <li>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</li>
-     * <li>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</li>
+     * <li><p>ProvisionAccessConfiguration: An access configuration is provisioned.</p>
+     * </li>
+     * <li><p>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>
+     * </li>
+     * <li><p>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</p>
+     * </li>
+     * <li><p>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

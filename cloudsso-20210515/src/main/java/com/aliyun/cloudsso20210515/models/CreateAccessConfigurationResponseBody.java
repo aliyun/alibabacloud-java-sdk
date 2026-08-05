@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccessConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The information about the access configuration.</p>
+     * <p>The access configuration information.</p>
      */
     @NameInMap("AccessConfiguration")
     public CreateAccessConfigurationResponseBodyAccessConfiguration accessConfiguration;
@@ -41,9 +41,21 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
     }
 
     public static class CreateAccessConfigurationResponseBodyAccessConfigurationTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -108,8 +120,8 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The initial web page</p>
-         * <p>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+         * <p>The initial access page.</p>
+         * <p>The page address that a CloudSSO user initially accesses when using the access configuration to access an account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -118,8 +130,8 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
         public String relayState;
 
         /**
-         * <p>The duration of a session</p>
-         * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+         * <p>The session duration.</p>
+         * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -129,16 +141,19 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
         public Integer sessionDuration;
 
         /**
-         * <p>The status notifications.</p>
+         * <p>The status notification information.</p>
          */
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<CreateAccessConfigurationResponseBodyAccessConfigurationTags> tags;
 
         /**
-         * <p>The time when the information about the access configuration was modified.</p>
+         * <p>The time when the access configuration was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-02T08:44:23Z</p>

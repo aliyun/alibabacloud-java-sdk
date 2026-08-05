@@ -15,7 +15,7 @@ public class CreateUserRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The ID of the CloudSSO directory.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -66,8 +66,10 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The status of the user. Valid values:</p>
      * <ul>
-     * <li>Enabled (default)</li>
-     * <li>Disabled</li>
+     * <li><p>Enabled (default)</p>
+     * </li>
+     * <li><p>Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,12 +78,15 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateUserRequestTags> tags;
 
     /**
-     * <p>The username of the user. The username must be unique within the directory. and cannot be changed.</p>
-     * <p>The username can contain digits, letters, and the following special characters: <code>@_-.</code></p>
+     * <p>The username. The username must be unique within the directory and cannot be modified.</p>
+     * <p>The username can contain digits, letters, and the following special characters: <code>@_-.</code>.</p>
      * <p>The username can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -168,9 +173,21 @@ public class CreateUserRequest extends TeaModel {
     }
 
     public static class CreateUserRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

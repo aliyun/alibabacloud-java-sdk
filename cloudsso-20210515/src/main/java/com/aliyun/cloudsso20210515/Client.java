@@ -9,6 +9,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "cloudsso.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cloudsso.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cloudsso.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cloudsso.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cloudsso", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -336,7 +344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Overview of access configurations</a>.
+     * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
      * This topic provides an example on how to create an access configuration named <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
@@ -392,7 +400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Overview of access configurations</a>.
+     * <p>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
      * This topic provides an example on how to create an access configuration named <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
@@ -583,9 +591,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to create a user named <code>Alice</code>.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates a user.</p>
      * 
@@ -650,9 +655,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to create a user named <code>Alice</code>.</p>
-     * 
      * <b>summary</b> : 
      * <p>Creates a user.</p>
      * 
@@ -1026,10 +1028,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to unbind the MFA device whose ID is <code>mfa-00ujhet8pycljj7j****</code> from the user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * <p>This topic provides an example on how to delete the MFA device <code>mfa-00ujhet8pycljj7j****</code> that is attached to the user <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a multi-factor authentication (MFA) device from a user.</p>
+     * <p>Deletes the MFA device of a user.</p>
      * 
      * @param request DeleteMFADeviceForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1044,6 +1046,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.MFADeviceId)) {
             query.put("MFADeviceId", request.MFADeviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mfaType)) {
+            query.put("MfaType", request.mfaType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -1069,10 +1075,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to unbind the MFA device whose ID is <code>mfa-00ujhet8pycljj7j****</code> from the user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * <p>This topic provides an example on how to delete the MFA device <code>mfa-00ujhet8pycljj7j****</code> that is attached to the user <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a multi-factor authentication (MFA) device from a user.</p>
+     * <p>Deletes the MFA device of a user.</p>
      * 
      * @param request DeleteMFADeviceForUserRequest
      * @return DeleteMFADeviceForUserResponse
@@ -1424,12 +1430,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.</p>
+     * <p>You can disable CloudSSO only when no directories exist in CloudSSO. After you disable CloudSSO, you can re-enable it at any time.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables CloudSSO.</p>
      * 
-     * @param request DisableServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableServiceResponse
      */
@@ -1451,7 +1456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.</p>
+     * <p>You can disable CloudSSO only when no directories exist in CloudSSO. After you disable CloudSSO, you can re-enable it at any time.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables CloudSSO.</p>
@@ -1516,13 +1521,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
-     * If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</p>
+     * <p>Only users under the management account of a resource directory who have the permissions to enable CloudSSO can call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+     * By calling this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables CloudSSO.</p>
      * 
-     * @param request EnableServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableServiceResponse
      */
@@ -1544,8 +1548,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
-     * If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</p>
+     * <p>Only users under the management account of a resource directory who have the permissions to enable CloudSSO can call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+     * By calling this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables CloudSSO.</p>
@@ -1558,10 +1562,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the access configuration whose ID is <code>ac-00ccule7tadaijxc****</code>.</p>
+     * <p>This topic provides an example of how to query the details of an access configuration with the ID <code>ac-00ccule7tadaijxc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an access configuration.</p>
+     * <p>Queries the details of an access configuration.</p>
      * 
      * @param request GetAccessConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1597,10 +1601,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the access configuration whose ID is <code>ac-00ccule7tadaijxc****</code>.</p>
+     * <p>This topic provides an example of how to query the details of an access configuration with the ID <code>ac-00ccule7tadaijxc****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an access configuration.</p>
+     * <p>Queries the details of an access configuration.</p>
      * 
      * @param request GetAccessConfigurationRequest
      * @return GetAccessConfigurationResponse
@@ -1912,11 +1916,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
-     * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * <p>When username-password logon is enabled, you can retrieve the global MFA verification policy for user logon.
+     * This topic provides an example on how to query the global MFA verification policy for CloudSSO users in the directory <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the multi-factor authentication (MFA) setting of all users.</p>
+     * <p>Queries the global multi-factor authentication (MFA) configuration.</p>
      * 
      * @param request GetMFAAuthenticationSettingInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1948,11 +1952,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
-     * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * <p>When username-password logon is enabled, you can retrieve the global MFA verification policy for user logon.
+     * This topic provides an example on how to query the global MFA verification policy for CloudSSO users in the directory <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the multi-factor authentication (MFA) setting of all users.</p>
+     * <p>Queries the global multi-factor authentication (MFA) configuration.</p>
      * 
      * @param request GetMFAAuthenticationSettingInfoRequest
      * @return GetMFAAuthenticationSettingInfoResponse
@@ -2166,7 +2170,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the status of CloudSSO.</p>
      * 
-     * @param request GetServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetServiceStatusResponse
      */
@@ -2307,11 +2310,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the user whose ID is <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries information about a user.</p>
+     * <p>Queries the information about a user.</p>
      * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2346,11 +2346,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the user whose ID is <code>u-00q8wbq42wiltcrk****</code> in the <code>d-00fc2p61****</code> directory.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries information about a user.</p>
+     * <p>Queries the information about a user.</p>
      * 
      * @param request GetUserRequest
      * @return GetUserResponse
@@ -2858,10 +2855,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the access configurations within the directory <code>d-00fc2p61****</code>. The returned result shows that the directory contains the <code>VPC-Admin</code> and <code>ECS-Admin</code> access configurations.</p>
+     * <p>This topic provides an example of how to query the access configurations in the folder <code>d-00fc2p61****</code>. The response shows two access configurations: <code>VPC-Admin</code> and <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries access configurations.</p>
+     * <p>Queries a list of access configurations.</p>
      * 
      * @param request ListAccessConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2913,10 +2910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the access configurations within the directory <code>d-00fc2p61****</code>. The returned result shows that the directory contains the <code>VPC-Admin</code> and <code>ECS-Admin</code> access configurations.</p>
+     * <p>This topic provides an example of how to query the access configurations in the folder <code>d-00fc2p61****</code>. The response shows two access configurations: <code>VPC-Admin</code> and <code>ECS-Admin</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries access configurations.</p>
+     * <p>Queries a list of access configurations.</p>
      * 
      * @param request ListAccessConfigurationsRequest
      * @return ListAccessConfigurationsResponse
@@ -2933,7 +2930,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries directories.</p>
      * 
-     * @param request ListDirectoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDirectoriesResponse
      */
@@ -3208,10 +3204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the MFA devices that are bound to the user <code>u-00q8wbq42wiltcrk****</code>. The returned result shows that the MFA device named <code>Alice-MFA1</code> is bound to the user.</p>
+     * <p>This topic provides an example on how to query the MFA device list for the user <code>u-00q8wbq42wiltcrk****</code>. The response shows that the user has one MFA device named <code>Alice-MFA1</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the multi-factor authentication (MFA) devices that are bound to a user. Up to two MFA devices can be bound to a user.</p>
+     * <p>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</p>
      * 
      * @param request ListMFADevicesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3247,10 +3243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the MFA devices that are bound to the user <code>u-00q8wbq42wiltcrk****</code>. The returned result shows that the MFA device named <code>Alice-MFA1</code> is bound to the user.</p>
+     * <p>This topic provides an example on how to query the MFA device list for the user <code>u-00q8wbq42wiltcrk****</code>. The response shows that the user has one MFA device named <code>Alice-MFA1</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the multi-factor authentication (MFA) devices that are bound to a user. Up to two MFA devices can be bound to a user.</p>
+     * <p>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</p>
      * 
      * @param request ListMFADevicesForUserRequest
      * @return ListMFADevicesForUserResponse
@@ -3585,11 +3581,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to query users in the <code>d-00fc2p61****</code> directory. The returned result shows that the directory contains two users. The user <code>AliceLee</code> is synchronized from an external identity provider (IdP). The user <code>user1</code> is manually created within CloudSSO.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries users.</p>
+     * <p>Queries a list of users.</p>
      * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3644,11 +3637,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example on how to query users in the <code>d-00fc2p61****</code> directory. The returned result shows that the directory contains two users. The user <code>AliceLee</code> is synchronized from an external identity provider (IdP). The user <code>user1</code> is manually created within CloudSSO.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries users.</p>
+     * <p>Queries a list of users.</p>
      * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
@@ -3904,7 +3894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</p>
      * <blockquote>
-     * <p> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
+     * <p>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
      * This topic provides an example on how to reset the password of the user <code>u-00q8wbq42wiltcrk****</code>. The new password is automatically generated by the system.</p>
      * </blockquote>
      * 
@@ -3959,7 +3949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</p>
      * <blockquote>
-     * <p> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
+     * <p>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
      * This topic provides an example on how to reset the password of the user <code>u-00q8wbq42wiltcrk****</code>. The new password is automatically generated by the system.</p>
      * </blockquote>
      * 
@@ -4496,7 +4486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can modify <code>GroupName</code> and <code>Description</code> for a group.</p>
      * <blockquote>
-     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
      * This topic provides an example on how to modify the name of the group <code>g-00jqzghi2n3o5hkh****</code> to <code>NewTestGroup</code>.</p>
      * </blockquote>
      * 
@@ -4547,7 +4537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can modify <code>GroupName</code> and <code>Description</code> for a group.</p>
      * <blockquote>
-     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
      * This topic provides an example on how to modify the name of the group <code>g-00jqzghi2n3o5hkh****</code> to <code>NewTestGroup</code>.</p>
      * </blockquote>
      * 
@@ -4626,19 +4616,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-     * This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named <code>d-00fc2p61****</code>.</p>
+     * <p>When username-password logon is enabled, you can configure the global MFA verification policy for user logon.
+     * This topic provides an example on how to enable MFA verification for all CloudSSO users in the directory <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the multi-factor authentication (MFA) setting of all users.</p>
+     * <p>Modifies the global multi-factor authentication (MFA) settings.</p>
      * 
-     * @param request UpdateMFAAuthenticationSettingsRequest
+     * @param tmpReq UpdateMFAAuthenticationSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMFAAuthenticationSettingsResponse
      */
-    public UpdateMFAAuthenticationSettingsResponse updateMFAAuthenticationSettingsWithOptions(UpdateMFAAuthenticationSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateMFAAuthenticationSettingsResponse updateMFAAuthenticationSettingsWithOptions(UpdateMFAAuthenticationSettingsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMFAAuthenticationSettingsShrinkRequest request = new UpdateMFAAuthenticationSettingsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.allowedVerificationTypes)) {
+            request.allowedVerificationTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.allowedVerificationTypes, "AllowedVerificationTypes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowedVerificationTypesShrink)) {
+            query.put("AllowedVerificationTypes", request.allowedVerificationTypesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
             query.put("DirectoryId", request.directoryId);
         }
@@ -4670,11 +4670,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-     * This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named <code>d-00fc2p61****</code>.</p>
+     * <p>When username-password logon is enabled, you can configure the global MFA verification policy for user logon.
+     * This topic provides an example on how to enable MFA verification for all CloudSSO users in the directory <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the multi-factor authentication (MFA) setting of all users.</p>
+     * <p>Modifies the global multi-factor authentication (MFA) settings.</p>
      * 
      * @param request UpdateMFAAuthenticationSettingsRequest
      * @return UpdateMFAAuthenticationSettingsResponse
@@ -4746,7 +4746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can modify <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> for a user. You cannot modify <code>UserName</code> for a user.</p>
      * <blockquote>
-     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4808,7 +4808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can modify <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> for a user. You cannot modify <code>UserName</code> for a user.</p>
      * <blockquote>
-     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 

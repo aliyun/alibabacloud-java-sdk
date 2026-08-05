@@ -16,8 +16,10 @@ public class UpdateUserStatusRequest extends TeaModel {
     /**
      * <p>The new status of the user. Valid values:</p>
      * <ul>
-     * <li>Enabled: The logon of the user is enabled.</li>
-     * <li>Disabled: The logon of the user is disabled.</li>
+     * <li><p>Enabled: The logon of the user is enabled.</p>
+     * </li>
+     * <li><p>Disabled: The logon of the user is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

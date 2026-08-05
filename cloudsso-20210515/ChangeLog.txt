@@ -1,3 +1,10 @@
+2026-08-05 Version: 1.5.2
+- Update API DeleteMFADeviceForUser: add request parameters MfaType.
+- Update API GetMFAAuthenticationSettingInfo: add response parameters Body.MFAAuthenticationSettingInfo.AllowedVerificationTypes.
+- Update API ListMFADevicesForUser: add response parameters Body.MFADevices.$.LastUseTime.
+- Update API UpdateMFAAuthenticationSettings: add request parameters AllowedVerificationTypes.
+
+
 2025-06-11 Version: 1.5.1
 - Update API CreateAccessConfiguration: add request parameters Tags.
 - Update API CreateAccessConfiguration: add response parameters Body.AccessConfiguration.Tags.

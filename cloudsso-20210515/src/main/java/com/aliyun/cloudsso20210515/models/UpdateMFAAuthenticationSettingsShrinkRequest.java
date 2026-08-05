@@ -3,9 +3,9 @@ package com.aliyun.cloudsso20210515.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
+public class UpdateMFAAuthenticationSettingsShrinkRequest extends TeaModel {
     @NameInMap("AllowedVerificationTypes")
-    public java.util.List<String> allowedVerificationTypes;
+    public String allowedVerificationTypesShrink;
 
     /**
      * <p>The directory ID.</p>
@@ -44,20 +44,20 @@ public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
     @NameInMap("OperationForRiskLogin")
     public String operationForRiskLogin;
 
-    public static UpdateMFAAuthenticationSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateMFAAuthenticationSettingsRequest self = new UpdateMFAAuthenticationSettingsRequest();
+    public static UpdateMFAAuthenticationSettingsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateMFAAuthenticationSettingsShrinkRequest self = new UpdateMFAAuthenticationSettingsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMFAAuthenticationSettingsRequest setAllowedVerificationTypes(java.util.List<String> allowedVerificationTypes) {
-        this.allowedVerificationTypes = allowedVerificationTypes;
+    public UpdateMFAAuthenticationSettingsShrinkRequest setAllowedVerificationTypesShrink(String allowedVerificationTypesShrink) {
+        this.allowedVerificationTypesShrink = allowedVerificationTypesShrink;
         return this;
     }
-    public java.util.List<String> getAllowedVerificationTypes() {
-        return this.allowedVerificationTypes;
+    public String getAllowedVerificationTypesShrink() {
+        return this.allowedVerificationTypesShrink;
     }
 
-    public UpdateMFAAuthenticationSettingsRequest setDirectoryId(String directoryId) {
+    public UpdateMFAAuthenticationSettingsShrinkRequest setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
     }
@@ -65,7 +65,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public UpdateMFAAuthenticationSettingsRequest setMFAAuthenticationSettings(String MFAAuthenticationSettings) {
+    public UpdateMFAAuthenticationSettingsShrinkRequest setMFAAuthenticationSettings(String MFAAuthenticationSettings) {
         this.MFAAuthenticationSettings = MFAAuthenticationSettings;
         return this;
     }
@@ -73,7 +73,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
         return this.MFAAuthenticationSettings;
     }
 
-    public UpdateMFAAuthenticationSettingsRequest setOperationForRiskLogin(String operationForRiskLogin) {
+    public UpdateMFAAuthenticationSettingsShrinkRequest setOperationForRiskLogin(String operationForRiskLogin) {
         this.operationForRiskLogin = operationForRiskLogin;
         return this;
     }

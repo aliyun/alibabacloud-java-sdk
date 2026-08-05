@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
     /**
-     * <p>The ID of the resource directory.</p>
+     * <p>The CloudSSO directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -14,7 +14,7 @@ public class GetUserRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>u-00q8wbq42wiltcrk****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccessConfigurationsRequest extends TeaModel {
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The ID of the folder.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -15,8 +15,9 @@ public class ListAccessConfigurationsRequest extends TeaModel {
 
     /**
      * <p>The filter condition.</p>
-     * <p>The value is not case-sensitive. You must specify the value in the \<Attribute> \<Operator> \<Value> format. You can set \<Attribute> only to AccessConfigurationName and \<Operator> only to eq or sw. The value eq indicates Equals. The value sw indicates Starts With.</p>
-     * <p>For example, if you set Filter to AccessConfigurationName sw test, the operation queries all access configurations whose names start with test. If you set Filter to AccessConfigurationName eq TestAccessConfiguration, the operation queries the access configuration whose name is TestAccessConfiguration.</p>
+     * <p>The format is <code>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</code> . The filter is not case-sensitive. The <code>&lt;Attribute&gt;</code> only supports <code>AccessConfigurationName</code>. The <code>&lt;Operator&gt;</code> only supports <code>eq</code> (equal to) and <code>sw</code> (starts with).</p>
+     * <p>Examples:</p>
+     * <p>If you configure this parameter to <code>AccessConfigurationName sw test</code>, the system queries all access configurations whose names start with <code>test</code>. If you configure this parameter to <code>AccessConfigurationName eq TestAccessConfiguration</code>, the system queries the access configuration named <code>TestAccessConfiguration</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>AccessConfigurationName sw test</p>
@@ -25,7 +26,7 @@ public class ListAccessConfigurationsRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -36,8 +37,8 @@ public class ListAccessConfigurationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
-     * <p>When you call this operation for the first time, if the total number of entries to return is larger than the value of the <code>MaxResults</code> parameter, the entries are truncated. The system returns entries based on the value of the <code>MaxResults</code> parameter, and does not return the excess entries. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and the <code>NextToken</code> parameter is returned. In the next call, you can use the value of the <code>NextToken</code> parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * <p>If the number of results exceeds the value of <code>MaxResults</code>, the response is truncated. The <code>IsTruncated</code> parameter is set to <code>true</code>, and a <code>NextToken</code> is returned. You can use the <code>NextToken</code> in a subsequent request with the same parameters to retrieve the next page of results. Repeat this process until <code>IsTruncated</code> is <code>false</code> to query all results.</p>
      * 
      * <strong>example:</strong>
      * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -46,8 +47,8 @@ public class ListAccessConfigurationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The status notification. The status notification can be used to filter access configurations.</p>
-     * <p>Set the value to ReprovisionRequired, which indicates that the operation queries all access configurations that need to be re-provisioned.</p>
+     * <p>The status notification, which is used as a filter condition.</p>
+     * <p>A value of ReprovisionRequired returns only the access configurations that need to be reprovisioned.</p>
      * 
      * <strong>example:</strong>
      * <p>ReprovisionRequired</p>
@@ -55,6 +56,9 @@ public class ListAccessConfigurationsRequest extends TeaModel {
     @NameInMap("StatusNotifications")
     public String statusNotifications;
 
+    /**
+     * <p>The tags attached to the access configuration.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListAccessConfigurationsRequestTags> tags;
 
@@ -112,9 +116,21 @@ public class ListAccessConfigurationsRequest extends TeaModel {
     }
 
     public static class ListAccessConfigurationsRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

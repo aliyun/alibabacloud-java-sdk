@@ -62,7 +62,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         /**
          * <p>The SCIM credential.</p>
          * <blockquote>
-         * <p> The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</p>
+         * <p>The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

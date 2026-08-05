@@ -25,8 +25,10 @@ public class UpdateSCIMServerCredentialStatusRequest extends TeaModel {
     /**
      * <p>The new status of the SCIM credential. Valid values:</p>
      * <ul>
-     * <li>Enabled: The SCIM credential is enabled.</li>
-     * <li>Disabled: The SCIM credential is disabled.</li>
+     * <li><p>Enabled: The SCIM credential is enabled.</p>
+     * </li>
+     * <li><p>Disabled: The SCIM credential is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

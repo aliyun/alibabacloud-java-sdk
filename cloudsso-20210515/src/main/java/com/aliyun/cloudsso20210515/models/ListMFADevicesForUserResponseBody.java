@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMFADevicesForUserResponseBody extends TeaModel {
     /**
-     * <p>The MFA devices.</p>
+     * <p>The list of MFA devices.</p>
      */
     @NameInMap("MFADevices")
     public java.util.List<ListMFADevicesForUserResponseBodyMFADevices> MFADevices;
@@ -59,7 +59,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
 
     public static class ListMFADevicesForUserResponseBodyMFADevices extends TeaModel {
         /**
-         * <p>The ID of the MFA device.</p>
+         * <p>The MFA device ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mfa-00ujhet8pycljj7j****</p>
@@ -68,7 +68,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         public String deviceId;
 
         /**
-         * <p>The name of the MFA device.</p>
+         * <p>The MFA device name.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice-MFA1</p>
@@ -77,7 +77,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         public String deviceName;
 
         /**
-         * <p>The type of the MFA device. The value is fixed as TOTP, which indicates a virtual MFA device. Virtual MFA devices are based on the Time-based One-time Password (TOTP) algorithm.</p>
+         * <p>The MFA device type. Valid values: TOTP: a virtual MFA device based on the Time-based One-Time Password algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>TOTP</p>
@@ -86,7 +86,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The time when the MFA device was enabled.</p>
+         * <p>The effective period. The time is displayed in UTC in RFC 3339 format (YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-29T09:14:06Z</p>
@@ -94,8 +94,11 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        @NameInMap("LastUseTime")
+        public String lastUseTime;
+
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u-00q8wbq42wiltcrk****</p>
@@ -138,6 +141,14 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         }
         public String getEffectiveTime() {
             return this.effectiveTime;
+        }
+
+        public ListMFADevicesForUserResponseBodyMFADevices setLastUseTime(String lastUseTime) {
+            this.lastUseTime = lastUseTime;
+            return this;
+        }
+        public String getLastUseTime() {
+            return this.lastUseTime;
         }
 
         public ListMFADevicesForUserResponseBodyMFADevices setUserId(String userId) {

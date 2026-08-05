@@ -41,9 +41,21 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetAccessConfigurationResponseBodyAccessConfigurationTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -108,8 +120,8 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The initial web page</p>
-         * <p>displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+         * <p>The initial access page.</p>
+         * <p>This is the page that a CloudSSO user is redirected to after they uses the access configuration to access an account in your resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -118,8 +130,8 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
         public String relayState;
 
         /**
-         * <p>The duration of a session</p>
-         * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+         * <p>The session duration.</p>
+         * <p>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in the resource directory.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -134,11 +146,14 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
+        /**
+         * <p>The tags attached to the access configuration.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetAccessConfigurationResponseBodyAccessConfigurationTags> tags;
 
         /**
-         * <p>The time when the information about the access configuration was modified.</p>
+         * <p>The time when the access configuration was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-26T03:02:11Z</p>

@@ -14,7 +14,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the user.</p>
+     * <p>The details of the user.</p>
      */
     @NameInMap("User")
     public CreateUserResponseBodyUser user;
@@ -41,9 +41,21 @@ public class CreateUserResponseBody extends TeaModel {
     }
 
     public static class CreateUserResponseBodyUserTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -72,7 +84,7 @@ public class CreateUserResponseBody extends TeaModel {
 
     public static class CreateUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created. The value is displayed in UTC.</p>
+         * <p>The time when the user was created. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>
@@ -126,10 +138,12 @@ public class CreateUserResponseBody extends TeaModel {
         public String lastName;
 
         /**
-         * <p>The type of the user. Valid values:</p>
+         * <p>The provisioning type of the user. Valid values:</p>
          * <ul>
-         * <li>Manual: The user is manually created.</li>
-         * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+         * <li><p>Manual: The user was created manually.</p>
+         * </li>
+         * <li><p>Synchronized: The user was synchronized from an external IdP.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,8 +155,10 @@ public class CreateUserResponseBody extends TeaModel {
         /**
          * <p>The status of the user. Valid values:</p>
          * <ul>
-         * <li>Enabled</li>
-         * <li>Disabled</li>
+         * <li><p>Enabled: The user is enabled.</p>
+         * </li>
+         * <li><p>Disabled: The user is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,11 +167,14 @@ public class CreateUserResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<CreateUserResponseBodyUserTags> tags;
 
         /**
-         * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+         * <p>The time when the user was last modified. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-26T03:03:42Z</p>
@@ -164,7 +183,7 @@ public class CreateUserResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u-00q8wbq42wiltcrk****</p>
@@ -173,7 +192,7 @@ public class CreateUserResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The username of the user.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>

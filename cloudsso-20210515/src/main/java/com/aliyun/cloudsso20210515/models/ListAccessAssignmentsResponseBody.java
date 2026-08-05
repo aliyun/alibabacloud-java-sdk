@@ -13,8 +13,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +37,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p> This parameter is returned only when the value of IsTruncated is <code>true</code>.``</p>
+     * <p>This parameter is returned only when the value of IsTruncated is <code>true</code>.\<code>\\</code></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,8 +166,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         /**
          * <p>The type of the CloudSSO identity. Valid values:</p>
          * <ul>
-         * <li>User</li>
-         * <li>Group</li>
+         * <li><p>User</p>
+         * </li>
+         * <li><p>Group</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

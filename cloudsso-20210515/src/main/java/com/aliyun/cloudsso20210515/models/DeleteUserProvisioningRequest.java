@@ -7,11 +7,13 @@ public class DeleteUserProvisioningRequest extends TeaModel {
     /**
      * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
      * <ul>
-     * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
-     * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+     * <li><p>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
+     * </li>
+     * <li><p>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.</p>
+     * <p>If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

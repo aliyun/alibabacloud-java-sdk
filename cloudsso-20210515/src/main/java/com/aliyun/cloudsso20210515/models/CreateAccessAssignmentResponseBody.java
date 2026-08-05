@@ -80,8 +80,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         /**
          * <p>The type of the CloudSSO identity. Valid values:</p>
          * <ul>
-         * <li>User</li>
-         * <li>Group</li>
+         * <li><p>User</p>
+         * </li>
+         * <li><p>Group</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,9 +95,12 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>InProgress: The task is running.</li>
-         * <li>Success: The task is successful.</li>
-         * <li>Failed: The task failed.</li>
+         * <li><p>InProgress: The task is running.</p>
+         * </li>
+         * <li><p>Success: The task is successful.</p>
+         * </li>
+         * <li><p>Failed: The task failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

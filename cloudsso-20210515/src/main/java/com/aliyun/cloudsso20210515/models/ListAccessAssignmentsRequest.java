@@ -46,11 +46,13 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     /**
      * <p>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</p>
      * <ul>
-     * <li>If you set <code>PrincipalType</code> to User, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
-     * <li>If you set <code>PrincipalType</code> to Group, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+     * <li><p>If you set <code>PrincipalType</code> to User, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
+     * </li>
+     * <li><p>If you set <code>PrincipalType</code> to Group, set <code>PrincipalId</code> to the ID of the CloudSSO group.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both PrincipalId and <code>PrincipalType</code>.``</p>
+     * <p>You can use the type to filter access permissions only if you specify both PrincipalId and <code>PrincipalType</code>.\<code>\\</code></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,11 +64,13 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     /**
      * <p>The type of the CloudSSO identity. The type can be used to filter access permissions. Valid values:</p>
      * <ul>
-     * <li>User</li>
-     * <li>Group</li>
+     * <li><p>User</p>
+     * </li>
+     * <li><p>Group</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both PrincipalId and <code>PrincipalType</code>.``</p>
+     * <p>You can use the type to filter access permissions only if you specify both PrincipalId and <code>PrincipalType</code>.\<code>\\</code></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,7 +82,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     /**
      * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,7 +95,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
      * <p>The type of the task object. The type can be used to filter access permissions.</p>
      * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
      * <blockquote>
-     * <p> You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

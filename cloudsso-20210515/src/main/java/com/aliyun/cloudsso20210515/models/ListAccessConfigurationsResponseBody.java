@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListAccessConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>The access configurations.</p>
+     * <p>The list of access configurations.</p>
      */
     @NameInMap("AccessConfigurations")
     public java.util.List<ListAccessConfigurationsResponseBodyAccessConfigurations> accessConfigurations;
 
     /**
-     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <p>Indicates whether the response is truncated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The response was truncated.</p>
+     * </li>
+     * <li><p>false: The response was not truncated.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +37,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p> This parameter is returned only when the value of the <code>IsTruncated</code> parameter is <code>true</code>.</p>
+     * <p>This parameter is returned only when <code>IsTruncated</code> is set to <code>true</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -116,9 +118,21 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     }
 
     public static class ListAccessConfigurationsResponseBodyAccessConfigurationsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -183,8 +197,8 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The initial web page</p>
-         * <p>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+         * <p>The initial access page.</p>
+         * <p>This is the page that a CloudSSO user is redirected to after they uses the access configuration to access an account in your resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -193,8 +207,8 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         public String relayState;
 
         /**
-         * <p>The duration of a session</p>
-         * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+         * <p>The session duration.</p>
+         * <p>The maximum session duration for a CloudSSO user who uses the access configuration to access an account in your resource directory.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -209,11 +223,14 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
+        /**
+         * <p>The tags attached to the access configuration.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAccessConfigurationsResponseBodyAccessConfigurationsTags> tags;
 
         /**
-         * <p>The time when the information about the access configuration was modified.</p>
+         * <p>The time when the access configuration was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-02T08:44:23Z</p>

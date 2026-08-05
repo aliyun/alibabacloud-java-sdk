@@ -16,8 +16,10 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     /**
      * <p>Specifies whether to de-provision the access configuration when you remove the access permissions from the CloudSSO identity. The access configuration is used to assign the access permissions, and the identity is the only one that uses the access configuration and is associated with the account. Valid values:</p>
      * <ul>
-     * <li>DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.</li>
-     * <li>None: does not de-provision the access configuration. This is the default value.</li>
+     * <li><p>DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.</p>
+     * </li>
+     * <li><p>None: does not de-provision the access configuration. This is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     /**
      * <p>The ID of the CloudSSO identity.</p>
      * <ul>
-     * <li>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
-     * <li>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+     * <li><p>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
+     * </li>
+     * <li><p>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,8 +55,10 @@ public class DeleteAccessAssignmentRequest extends TeaModel {
     /**
      * <p>The type of the CloudSSO identity. Valid values:</p>
      * <ul>
-     * <li>User</li>
-     * <li>Group</li>
+     * <li><p>User</p>
+     * </li>
+     * <li><p>Group</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

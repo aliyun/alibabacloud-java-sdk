@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMFADeviceForUserRequest extends TeaModel {
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -14,8 +14,8 @@ public class DeleteMFADeviceForUserRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The ID of the MFA device.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/333531.html">ListMFADevicesForUser</a> operation to query the IDs of MFA devices.</p>
+     * <p>The MFA device ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/333531.html">ListMFADevicesForUser</a> to query the MFA device ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mfa-00ujhet8pycljj7j****</p>
@@ -23,8 +23,11 @@ public class DeleteMFADeviceForUserRequest extends TeaModel {
     @NameInMap("MFADeviceId")
     public String MFADeviceId;
 
+    @NameInMap("MfaType")
+    public String mfaType;
+
     /**
-     * <p>The ID of the user.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>u-00q8wbq42wiltcrk****</p>
@@ -51,6 +54,14 @@ public class DeleteMFADeviceForUserRequest extends TeaModel {
     }
     public String getMFADeviceId() {
         return this.MFADeviceId;
+    }
+
+    public DeleteMFADeviceForUserRequest setMfaType(String mfaType) {
+        this.mfaType = mfaType;
+        return this;
+    }
+    public String getMfaType() {
+        return this.mfaType;
     }
 
     public DeleteMFADeviceForUserRequest setUserId(String userId) {
