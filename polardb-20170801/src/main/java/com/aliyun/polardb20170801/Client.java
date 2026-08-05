@@ -5543,6 +5543,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a PolarFS S3 account.</p>
+     * 
+     * @param request CreateLakebaseS3AccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLakebaseS3AccountResponse
+     */
+    public CreateLakebaseS3AccountResponse createLakebaseS3AccountWithOptions(CreateLakebaseS3AccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccAk)) {
+            query.put("UserAccAk", request.userAccAk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccPolicy)) {
+            query.put("UserAccPolicy", request.userAccPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccSk)) {
+            query.put("UserAccSk", request.userAccSk);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLakebaseS3Account"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLakebaseS3AccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a PolarFS S3 account.</p>
+     * 
+     * @param request CreateLakebaseS3AccountRequest
+     * @return CreateLakebaseS3AccountResponse
+     */
+    public CreateLakebaseS3AccountResponse createLakebaseS3Account(CreateLakebaseS3AccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLakebaseS3AccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a model API.</p>
      * 
      * @param request CreateModelApiRequest
@@ -6229,6 +6289,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePolarClawCronJobResponse createPolarClawCronJob(CreatePolarClawCronJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolarClawCronJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables PolarFS support.</p>
+     * 
+     * @param request CreatePolarFsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolarFsResponse
+     */
+    public CreatePolarFsResponse createPolarFsWithOptions(CreatePolarFsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerateStorageSize)) {
+            query.put("AccelerateStorageSize", request.accelerateStorageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerateSwitch)) {
+            query.put("AccelerateSwitch", request.accelerateSwitch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerateType)) {
+            query.put("AccelerateType", request.accelerateType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizedUserIds)) {
+            query.put("AuthorizedUserIds", request.authorizedUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creationCategory)) {
+            query.put("CreationCategory", request.creationCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customBucketCount)) {
+            query.put("CustomBucketCount", request.customBucketCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customBucketPath)) {
+            query.put("CustomBucketPath", request.customBucketPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customBucketPathList)) {
+            query.put("CustomBucketPathList", request.customBucketPathList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customOssAk)) {
+            query.put("CustomOssAk", request.customOssAk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customOssSk)) {
+            query.put("CustomOssSk", request.customOssSk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBType)) {
+            query.put("DBType", request.DBType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSpace)) {
+            query.put("StorageSpace", request.storageSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePolarFs"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolarFsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables PolarFS support.</p>
+     * 
+     * @param request CreatePolarFsRequest
+     * @return CreatePolarFsResponse
+     */
+    public CreatePolarFsResponse createPolarFs(CreatePolarFsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPolarFsWithOptions(request, runtime);
     }
 
     /**
@@ -8727,6 +8923,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a PolarFS S3 account.</p>
+     * 
+     * @param request DeleteLakebaseS3AccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLakebaseS3AccountResponse
+     */
+    public DeleteLakebaseS3AccountResponse deleteLakebaseS3AccountWithOptions(DeleteLakebaseS3AccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccAk)) {
+            query.put("UserAccAk", request.userAccAk);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLakebaseS3Account"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLakebaseS3AccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a PolarFS S3 account.</p>
+     * 
+     * @param request DeleteLakebaseS3AccountRequest
+     * @return DeleteLakebaseS3AccountResponse
+     */
+    public DeleteLakebaseS3AccountResponse deleteLakebaseS3Account(DeleteLakebaseS3AccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLakebaseS3AccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes the specified data masking rules.</p>
      * 
      * @param request DeleteMaskingRulesRequest
@@ -9235,6 +9483,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePolarClawCronJobResponse deletePolarClawCronJob(DeletePolarClawCronJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolarClawCronJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go PolarFs instance.</p>
+     * 
+     * @param request DeletePolarFsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolarFsResponse
+     */
+    public DeletePolarFsResponse deletePolarFsWithOptions(DeletePolarFsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePolarFs"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolarFsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go PolarFs instance.</p>
+     * 
+     * @param request DeletePolarFsRequest
+     * @return DeletePolarFsResponse
+     */
+    public DeletePolarFsResponse deletePolarFs(DeletePolarFsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePolarFsWithOptions(request, runtime);
     }
 
     /**
@@ -17361,6 +17657,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the details of a PolarFS S3 account.</p>
+     * 
+     * @param request DescribeLakebaseS3AccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLakebaseS3AccountResponse
+     */
+    public DescribeLakebaseS3AccountResponse describeLakebaseS3AccountWithOptions(DescribeLakebaseS3AccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccAk)) {
+            query.put("UserAccAk", request.userAccAk);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLakebaseS3Account"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLakebaseS3AccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a PolarFS S3 account.</p>
+     * 
+     * @param request DescribeLakebaseS3AccountRequest
+     * @return DescribeLakebaseS3AccountResponse
+     */
+    public DescribeLakebaseS3AccountResponse describeLakebaseS3Account(DescribeLakebaseS3AccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLakebaseS3AccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a license order.</p>
      * 
      * @param request DescribeLicenseOrderDetailsRequest
@@ -19227,6 +19575,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolarFsAttributeResponse describePolarFsAttribute(DescribePolarFsAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolarFsAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of PolarFS path mappings.</p>
+     * 
+     * @param request DescribePolarFsMappingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarFsMappingResponse
+     */
+    public DescribePolarFsMappingResponse describePolarFsMappingWithOptions(DescribePolarFsMappingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarFsMapping"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarFsMappingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of PolarFS path mappings.</p>
+     * 
+     * @param request DescribePolarFsMappingRequest
+     * @return DescribePolarFsMappingResponse
+     */
+    public DescribePolarFsMappingResponse describePolarFsMapping(DescribePolarFsMappingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarFsMappingWithOptions(request, runtime);
     }
 
     /**
@@ -22530,6 +22934,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallPolarClawSkillResponse installPolarClawSkill(InstallPolarClawSkillRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installPolarClawSkillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists PolarFS S3 accounts.</p>
+     * 
+     * @param request ListLakebaseS3AccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLakebaseS3AccountsResponse
+     */
+    public ListLakebaseS3AccountsResponse listLakebaseS3AccountsWithOptions(ListLakebaseS3AccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLakebaseS3Accounts"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLakebaseS3AccountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists PolarFS S3 accounts.</p>
+     * 
+     * @param request ListLakebaseS3AccountsRequest
+     * @return ListLakebaseS3AccountsResponse
+     */
+    public ListLakebaseS3AccountsResponse listLakebaseS3Accounts(ListLakebaseS3AccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listLakebaseS3AccountsWithOptions(request, runtime);
     }
 
     /**
@@ -28174,6 +28634,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPendingMaintenanceActionResponse modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPendingMaintenanceActionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the bucket credentials for a PolarFS path mapping.</p>
+     * 
+     * @param request ModifyPolarFsMappingAuthRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPolarFsMappingAuthResponse
+     */
+    public ModifyPolarFsMappingAuthResponse modifyPolarFsMappingAuthWithOptions(ModifyPolarFsMappingAuthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucket)) {
+            query.put("Bucket", request.bucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketAccessKeyId)) {
+            query.put("BucketAccessKeyId", request.bucketAccessKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bucketAccessKeySecret)) {
+            query.put("BucketAccessKeySecret", request.bucketAccessKeySecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPolarFsMappingAuth"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPolarFsMappingAuthResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the bucket credentials for a PolarFS path mapping.</p>
+     * 
+     * @param request ModifyPolarFsMappingAuthRequest
+     * @return ModifyPolarFsMappingAuthResponse
+     */
+    public ModifyPolarFsMappingAuthResponse modifyPolarFsMappingAuth(ModifyPolarFsMappingAuthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyPolarFsMappingAuthWithOptions(request, runtime);
     }
 
     /**
