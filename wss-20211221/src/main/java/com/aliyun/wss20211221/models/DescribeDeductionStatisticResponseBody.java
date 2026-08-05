@@ -42,7 +42,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
 
     public static class DescribeDeductionStatisticResponseBodyDataAvailableCorePackages extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>The Alibaba Cloud UID.</p>
          * 
          * <strong>example:</strong>
          * <p>1568857911493620</p>
@@ -96,13 +96,13 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public String groupResourceType;
 
         /**
-         * <p>Indicates whether the resource is a No-Lx resource.</p>
+         * <p>Indicates whether LingXiao is excluded.</p>
          */
         @NameInMap("NoLx")
         public Boolean noLx;
 
         /**
-         * <p>The source of the No-Lx resource.</p>
+         * <p>The source when LingXiao is excluded.</p>
          * 
          * <strong>example:</strong>
          * <p>无凌霄来源示例值</p>
@@ -285,7 +285,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
 
     public static class DescribeDeductionStatisticResponseBodyDataDeductions extends TeaModel {
         /**
-         * <p>The consumption duration in seconds.</p>
+         * <p>The consumption duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>7000</p>
@@ -344,7 +344,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
 
     public static class DescribeDeductionStatisticResponseBodyDataUsages extends TeaModel {
         /**
-         * <p><strong>The consumption duration in seconds.</strong></p>
+         * <p><strong>The consumption duration, in seconds.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>6000</p>
@@ -403,7 +403,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
 
     public static class DescribeDeductionStatisticResponseBodyData extends TeaModel {
         /**
-         * <p><strong>The available core-hour packages.</strong></p>
+         * <p><strong>The list of available core-hour package resources.</strong></p>
          */
         @NameInMap("AvailableCorePackages")
         public java.util.List<DescribeDeductionStatisticResponseBodyDataAvailableCorePackages> availableCorePackages;
@@ -415,7 +415,7 @@ public class DescribeDeductionStatisticResponseBody extends TeaModel {
         public java.util.List<DescribeDeductionStatisticResponseBodyDataDeductions> deductions;
 
         /**
-         * <p><strong>The usage details.</strong></p>
+         * <p><strong>The usage list.</strong></p>
          */
         @NameInMap("Usages")
         public java.util.List<DescribeDeductionStatisticResponseBodyDataUsages> usages;

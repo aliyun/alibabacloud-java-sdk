@@ -14,7 +14,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of usage data.</p>
+     * <p>The array of business data.</p>
      */
     @NameInMap("UsageInfoList")
     public java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoList> usageInfoList;
@@ -42,7 +42,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
 
     public static class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoCreditTrendList extends TeaModel {
         /**
-         * <p>The time point in the format of <code>yyyy-MM-dd HH</code> (accurate to the hour).</p>
+         * <p>The time point in the format <code>yyyy-MM-dd HH</code> (accurate to the hour).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-02 10</p>
@@ -51,7 +51,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public String timePoint;
 
         /**
-         * <p>The number of credits consumed during the hour.</p>
+         * <p>The number of credits consumed during this hour.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -83,6 +83,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo extends TeaModel {
+        @NameInMap("ContactGroupNames")
+        public java.util.List<String> contactGroupNames;
+
         /**
          * <p>The hourly consumption samples of the current credit package.</p>
          */
@@ -90,7 +93,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoCreditTrendList> creditTrendList;
 
         /**
-         * <p>The instance ID of the current active credit package.</p>
+         * <p>The instance ID of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>cp-inst-001</p>
@@ -99,28 +102,28 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public String currentInstanceId;
 
         /**
-         * <p>The remaining credits of the current active credit package.</p>
+         * <p>The remaining credits of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
-         * <p>当前周期积分余量</p>
+         * <p>Current period remaining credits</p>
          */
         @NameInMap("CurrentRemainCredit")
         public Long currentRemainCredit;
 
         /**
-         * <p>The total credits of the current active credit package.</p>
+         * <p>The total credits of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
-         * <p>当前周期积分配额</p>
+         * <p>Current period credit quota</p>
          */
         @NameInMap("CurrentTotalCredit")
         public Long currentTotalCredit;
 
         /**
-         * <p>The used credits of the current active credit package.</p>
+         * <p>The used credits of the currently active credit package.</p>
          * 
          * <strong>example:</strong>
-         * <p>当前周期积分消耗</p>
+         * <p>Current period credits consumed</p>
          */
         @NameInMap("CurrentUsedCredit")
         public Long currentUsedCredit;
@@ -129,10 +132,13 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
          * <p>The credit usage in the last 1 day.</p>
          * 
          * <strong>example:</strong>
-         * <p>最近一天消耗积分</p>
+         * <p>Credits consumed in the last day</p>
          */
         @NameInMap("DayUsedCredit")
         public Long dayUsedCredit;
+
+        @NameInMap("LastTriggeredAt")
+        public String lastTriggeredAt;
 
         /**
          * <p>The shared credit quota in the current active period.</p>
@@ -156,23 +162,29 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
          * <p>The cumulative remaining credits.</p>
          * 
          * <strong>example:</strong>
-         * <p>积分余量</p>
+         * <p>Remaining credits</p>
          */
         @NameInMap("RemainCredit")
         public Long remainCredit;
 
+        /**
+         * <p>The credits used today.</p>
+         */
         @NameInMap("TodayUsed")
         public String todayUsed;
 
         /**
-         * <p>The cumulative total credits.</p>
+         * <p>The total cumulative credits.</p>
          * 
          * <strong>example:</strong>
-         * <p>积分配额</p>
+         * <p>Credit quota</p>
          */
         @NameInMap("TotalCredit")
         public Long totalCredit;
 
+        /**
+         * <p>The cumulative credits used.</p>
+         */
         @NameInMap("TotalUsed")
         public String totalUsed;
 
@@ -180,7 +192,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
          * <p>The cumulative credit usage.</p>
          * 
          * <strong>example:</strong>
-         * <p>共计消耗积分</p>
+         * <p>Total credits consumed</p>
          */
         @NameInMap("TotalUsedCredit")
         public Long totalUsedCredit;
@@ -198,7 +210,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
          * <p>The credit usage in the last 1 week.</p>
          * 
          * <strong>example:</strong>
-         * <p>最近一周消耗积分</p>
+         * <p>Credits consumed in the last week</p>
          */
         @NameInMap("WeekUsedCredit")
         public Long weekUsedCredit;
@@ -206,6 +218,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         public static DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo self = new DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setContactGroupNames(java.util.List<String> contactGroupNames) {
+            this.contactGroupNames = contactGroupNames;
+            return this;
+        }
+        public java.util.List<String> getContactGroupNames() {
+            return this.contactGroupNames;
         }
 
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setCreditTrendList(java.util.List<DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfoCreditTrendList> creditTrendList) {
@@ -254,6 +274,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
         public Long getDayUsedCredit() {
             return this.dayUsedCredit;
+        }
+
+        public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setLastTriggeredAt(String lastTriggeredAt) {
+            this.lastTriggeredAt = lastTriggeredAt;
+            return this;
+        }
+        public String getLastTriggeredAt() {
+            return this.lastTriggeredAt;
         }
 
         public DescribeCreditUsageInfoResponseBodyUsageInfoListUsageInfo setPeriodTotalCredit(Long periodTotalCredit) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
     /**
-     * <p>A list of agents.</p>
+     * <p>The Agent list.</p>
      */
     @NameInMap("Agents")
     public java.util.List<DescribeCreditPackageAgentsResponseBodyAgents> agents;
 
     /**
-     * <p>The number of results returned on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If this value is empty, all results have been returned.</p>
+     * <p>The pagination token. Set this parameter to an empty string for the first request. For subsequent requests, use the <code>nextToken</code> value from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
@@ -29,7 +29,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID. Provide this ID when contacting support.</p>
+     * <p>The request trace ID, which is used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx</p>
@@ -76,7 +76,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
 
     public static class DescribeCreditPackageAgentsResponseBodyAgents extends TeaModel {
         /**
-         * <p>The ID of the agent.</p>
+         * <p>Agent ID</p>
          * 
          * <strong>example:</strong>
          * <p>agent-abc</p>
@@ -85,7 +85,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p><strong>The creation time of the instance.</strong></p>
+         * <p><strong>The instance creation time.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-01 10:00:00</p>
@@ -94,7 +94,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p><strong>The ID of the active credit package instance.</strong></p>
+         * <p><strong>The ID of the currently active credit package instance.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>cp-inst-001</p>
@@ -103,7 +103,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public String creditPackageId;
 
         /**
-         * <p><strong>The expiration time of the instance.</strong></p>
+         * <p><strong>The time when the instance expires.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-01 10:00:00</p>
@@ -121,7 +121,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p><strong>The total credit.</strong></p>
+         * <p><strong>The total number of credits.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -130,7 +130,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public Long totalCredit;
 
         /**
-         * <p><strong>The amount of credit used.</strong></p>
+         * <p><strong>The amount of credits used.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -139,7 +139,7 @@ public class DescribeCreditPackageAgentsResponseBody extends TeaModel {
         public Long usedCredit;
 
         /**
-         * <p><strong>The alarm threshold, specified as a percentage. Valid values: 0 to 100.</strong></p>
+         * <p><strong>The alert threshold percentage (0–100).</strong></p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

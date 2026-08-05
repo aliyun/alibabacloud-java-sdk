@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePackageDeductionsResponseBody extends TeaModel {
     /**
-     * <p>The deduction details.</p>
+     * <p>The list of deduction details.</p>
      */
     @NameInMap("Deductions")
     public java.util.List<DescribePackageDeductionsResponseBodyDeductions> deductions;
@@ -20,7 +20,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in Settings for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -38,7 +38,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching entries.</p>
+     * <p>The total number of deduction detail records returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -47,7 +47,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The total core-hours deducted for all matching entries.</p>
+     * <p>The total deducted core-hours.</p>
      * 
      * <strong>example:</strong>
      * <p>10.1</p>
@@ -56,7 +56,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     public Float totalUsedCoreTime;
 
     /**
-     * <p>The total usage duration of all matching entries, in seconds.</p>
+     * <p>The total usage duration.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>
@@ -64,6 +64,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     @NameInMap("TotalUsedTime")
     public Long totalUsedTime;
 
+    /**
+     * <p>The total usage duration in decimal format.</p>
+     */
     @NameInMap("TotalUsedTimeDecimal")
     public String totalUsedTimeDecimal;
 
@@ -156,7 +159,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud computer name.</p>
+         * <p>The name of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -165,7 +168,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The desktop type.</p>
+         * <p>The specifications of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.4c8g</p>
@@ -174,7 +177,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The billing cycle end time.</p>
+         * <p>The end time of the period.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-31T03:00Z</p>
@@ -182,14 +185,20 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The group resource type.</p>
+         */
         @NameInMap("GroupResourceType")
         public String groupResourceType;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The core-hour package state.</p>
+         * <p>The status of the core-hour package.</p>
          * 
          * <strong>example:</strong>
          * <p>Deleted</p>
@@ -197,11 +206,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @NameInMap("InstanceState")
         public String instanceState;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The memory size, in MB.</p>
+         * <p>The memory size. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -210,7 +222,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The OS of the cloud computer.</p>
+         * <p>The operating system type of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -219,7 +231,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -236,11 +248,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The session ID.</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
         /**
-         * <p>The billing cycle start time.</p>
+         * <p>The start time of the period.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-31T02:00Z</p>
@@ -249,7 +264,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public String staTime;
 
         /**
-         * <p>The deducted core-hours.</p>
+         * <p>The number of cores deducted in this period.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -258,7 +273,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         public Float usedCoreTime;
 
         /**
-         * <p>The usage duration, in seconds.</p>
+         * <p>The usage duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -266,9 +281,15 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @NameInMap("UsedTime")
         public Long usedTime;
 
+        /**
+         * <p>The usage duration in decimal format.</p>
+         */
         @NameInMap("UsedTimeDecimal")
         public String usedTimeDecimal;
 
+        /**
+         * <p>The usage duration after proportional scaling.</p>
+         */
         @NameInMap("UsedTimeWithScale")
         public Long usedTimeWithScale;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditPackageAgentsRequest extends TeaModel {
     /**
-     * <p>An array of agent IDs to query. Example: <code>[&quot;agent-1&quot;,&quot;agent-2&quot;]</code>.</p>
+     * <p>A JSON string of the AgentId list. Example: <code>[&quot;agent-1&quot;,&quot;agent-2&quot;]</code>.</p>
      */
     @NameInMap("AgentIds")
     public java.util.List<String> agentIds;
 
     /**
-     * <p>The agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
+     * <p>The Agent type. Valid values: <code>CREDIT_PACKAGE</code>, <code>JVS_CLAW</code>, <code>OPEN_CLAW</code>, and <code>JVS_COPILOT</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>JVS_COPILOT</p>
@@ -29,7 +29,7 @@ public class DescribeCreditPackageAgentsRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The maximum number of results to return per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -38,7 +38,7 @@ public class DescribeCreditPackageAgentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. Obtain this value from the <code>NextToken</code> parameter of the previous response. For the first request, set this parameter to an empty string.</p>
+     * <p>The pagination token. Set this parameter to an empty string for the first request. For subsequent requests, use the <code>nextToken</code> value from the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>

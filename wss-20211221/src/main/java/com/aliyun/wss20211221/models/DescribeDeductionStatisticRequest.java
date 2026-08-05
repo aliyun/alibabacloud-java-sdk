@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeductionStatisticRequest extends TeaModel {
     /**
-     * <p>The end time, specified as a Unix timestamp.</p>
+     * <p>The end time (timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-06-06T02:14:00Z</p>
@@ -14,13 +14,13 @@ public class DescribeDeductionStatisticRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The list of instance IDs, specified as a JSON array.</p>
+     * <p>The list of instance IDs (JSON array).</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The list of periods, formatted as a JSON array of <code>PeriodParam</code> objects.</p>
+     * <p>The list of time periods in JSON array format. Each element is a <code>PeriodParam</code> object.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -29,13 +29,13 @@ public class DescribeDeductionStatisticRequest extends TeaModel {
     public java.util.List<DescribeDeductionStatisticRequestPeriods> periods;
 
     /**
-     * <p>The list of resource types, specified as a JSON array.</p>
+     * <p>The list of resource types in JSON array format.</p>
      */
     @NameInMap("ResourceTypes")
     public java.util.List<String> resourceTypes;
 
     /**
-     * <p>The start time, specified as a Unix timestamp.</p>
+     * <p>The start time (timestamp).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-03-20T16:00:00Z</p>
@@ -99,7 +99,7 @@ public class DescribeDeductionStatisticRequest extends TeaModel {
         public String baseTime;
 
         /**
-         * <p>The period unit. For valid values, see the <code>PeriodUnit</code> enumeration.</p>
+         * <p>The time period unit. For more information, see the <code>PeriodUnit</code> enumeration.</p>
          * 
          * <strong>example:</strong>
          * <p>Year</p>

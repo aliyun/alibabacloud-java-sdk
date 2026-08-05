@@ -20,7 +20,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The package code. You do not need to specify this parameter for non-package types.</p>
+     * <p>The package code. You do not need to specify this parameter if the product is not a package.</p>
      * 
      * <strong>example:</strong>
      * <p>pacakge</p>
@@ -29,7 +29,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
     public String packageCode;
 
     /**
-     * <p>The user ID of the resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+     * <p>The user ID of resource ownership in the reselling pattern. You do not need to specify this parameter if the product is not in the reselling pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>182864463481****</p>
@@ -86,38 +86,6 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
         /**
          * <p>The value of the module.</p>
-         * <p>The following example values and valid values are for the Enterprise Edition monthly duration package:</p>
-         * <ul>
-         * <li>RegionId: cn-shanghai</li>
-         * <li>InstanceType: eds.enterprise_office.4c8g</li>
-         * <li>DurationType (hours): Valid values: <ul>
-         * <li>120</li>
-         * <li>250</li>
-         * </ul>
-         * </li>
-         * <li>OsType: Valid values: <ul>
-         * <li>Windows</li>
-         * <li>Linux</li>
-         * </ul>
-         * </li>
-         * <li>RootDiskSize (GiB): 80</li>
-         * <li>RootDiskCategory: Valid values: <ul>
-         * <li>cloud_efficiency: ultra cloud disk</li>
-         * <li>cloud_auto: ESSD AutoPL cloud disk</li>
-         * <li>cloud_essd: enhanced standard SSD. Only specific instance types support this value.</li>
-         * </ul>
-         * </li>
-         * <li>RootPerformanceLevel: Valid values: <ul>
-         * <li>PL0</li>
-         * <li>PL1</li>
-         * <li>PL2</li>
-         * <li>PL3</li>
-         * </ul>
-         * </li>
-         * <li>DataDiskSize (GiB): same as RootDiskSize</li>
-         * <li>DataDiskCategory: same as RootDiskCategory</li>
-         * <li>DataPerformanceLevel: same as RootPerformanceLevel</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -150,7 +118,7 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
     public static class DescribeMultiPriceRequestOrderItems extends TeaModel {
         /**
-         * <p>The purchase quantity.</p>
+         * <p>The quantity to purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,6 +132,9 @@ public class DescribeMultiPriceRequest extends TeaModel {
         @NameInMap("Components")
         public java.util.List<DescribeMultiPriceRequestOrderItemsComponents> components;
 
+        /**
+         * <p>The extended properties.</p>
+         */
         @NameInMap("Data")
         public String data;
 
@@ -175,12 +146,6 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
         /**
          * <p>The subscription duration. Valid values:</p>
-         * <ul>
-         * <li><p>If PeriodUnit is set to Year: 1, 2, or 3.</p>
-         * </li>
-         * <li><p>If PeriodUnit is set to Month: 1, 2, 3, or 6.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,9 +179,6 @@ public class DescribeMultiPriceRequest extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <blockquote>
-         * <p>This parameter is case-sensitive. Make sure that the value is spelled correctly.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DurationPackage</p>
@@ -224,6 +186,9 @@ public class DescribeMultiPriceRequest extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The period of the savings plan.</p>
+         */
         @NameInMap("SavingPlanPeriod")
         public String savingPlanPeriod;
 

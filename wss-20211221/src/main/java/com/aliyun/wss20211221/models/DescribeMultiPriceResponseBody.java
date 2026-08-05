@@ -86,6 +86,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The savings plan discount price.</p>
+         */
         @NameInMap("SavingPlanDiscountPrice")
         public Float savingPlanDiscountPrice;
 
@@ -189,6 +192,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The savings plan recommended price.</p>
+         */
         @NameInMap("SavingPlanRecommendPrice")
         public Float savingPlanRecommendPrice;
 
@@ -302,12 +308,21 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeMultiPriceResponseBodyPriceInfoPricePromotions extends TeaModel {
+        /**
+         * <p>The activity ID.</p>
+         */
         @NameInMap("ActivityId")
         public String activityId;
 
+        /**
+         * <p>Indicates whether the activity is effective.</p>
+         */
         @NameInMap("Effective")
         public Boolean effective;
 
+        /**
+         * <p>The timestamp when the activity ends.</p>
+         */
         @NameInMap("EndTimestamp")
         public String endTimestamp;
 
@@ -320,9 +335,15 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The tiered pricing discount value.</p>
+         */
         @NameInMap("PriceBreakReduceValue")
         public String priceBreakReduceValue;
 
+        /**
+         * <p>The tiered pricing threshold.</p>
+         */
         @NameInMap("PriceBreakThreshold")
         public String priceBreakThreshold;
 
@@ -348,7 +369,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
          * <p>The promotion name.</p>
          * 
          * <strong>example:</strong>
-         * <p>PromotionName</p>
+         * <p>Promotion name</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -362,6 +383,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @NameInMap("Selected")
         public Boolean selected;
 
+        /**
+         * <p>The timestamp when the activity starts.</p>
+         */
         @NameInMap("StartTimestamp")
         public String startTimestamp;
 
@@ -463,8 +487,6 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
     public static class DescribeMultiPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
-         * <p>China site: CNY.</p>
-         * <p>International site: USD.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>

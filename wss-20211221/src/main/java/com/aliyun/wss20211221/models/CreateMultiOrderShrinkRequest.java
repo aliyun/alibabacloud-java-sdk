@@ -4,6 +4,9 @@ package com.aliyun.wss20211221.models;
 import com.aliyun.tea.*;
 
 public class CreateMultiOrderShrinkRequest extends TeaModel {
+    /**
+     * <p>The channel cookie information.</p>
+     */
     @NameInMap("ChannelCookie")
     public String channelCookie;
 
@@ -28,6 +31,9 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
     @NameInMap("Properties")
     public String propertiesShrink;
 
+    /**
+     * <p>The UID of the reseller owner.</p>
+     */
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
@@ -88,28 +94,28 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
 
         /**
          * <p>The value of the module.</p>
-         * <p>The following example values or valid values are available for each key of the Enterprise Edition monthly duration package:</p>
+         * <p>The following section describes the sample values and valid values for each key of the Enterprise Edition monthly duration package:</p>
          * <ul>
-         * <li>RegionId: cn-shanghai</li>
+         * <li>RegionId: ap-southeast-1</li>
          * <li>InstanceType: eds.enterprise_office.4c8g</li>
-         * <li>DurationType (hours): [Valid values] <ul>
+         * <li>DurationType (hours): Valid values: <ul>
          * <li>120</li>
          * <li>250</li>
          * </ul>
          * </li>
-         * <li>OsType: [Valid values] <ul>
+         * <li>OsType: Valid values: <ul>
          * <li>Windows</li>
          * <li>Linux</li>
          * </ul>
          * </li>
          * <li>RootDiskSize (GiB): 80</li>
-         * <li>RootDiskCategory: [Valid values] <ul>
+         * <li>RootDiskCategory: Valid values: <ul>
          * <li>cloud_efficiency (ultra cloud disk)</li>
          * <li>cloud_auto (ultra-fast cloud disk)</li>
          * <li>cloud_essd (enhanced standard SSD. Only specific instance types support this value.)</li>
          * </ul>
          * </li>
-         * <li>RootPerformanceLevel: [Valid values] <ul>
+         * <li>RootPerformanceLevel: Valid values: <ul>
          * <li>PL0</li>
          * <li>PL1</li>
          * <li>PL2</li>
@@ -178,6 +184,9 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <p>Specifies whether this is a change purchase.</p>
+         */
         @NameInMap("BuyChange")
         public Boolean buyChange;
 
@@ -187,18 +196,24 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         @NameInMap("Components")
         public java.util.List<CreateMultiOrderShrinkRequestOrderItemsComponents> components;
 
+        /**
+         * <p>The list of instance IDs.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <p>The callback URL after the payment is completed.</p>
+         */
         @NameInMap("PaidCallBackUrl")
         public String paidCallBackUrl;
 
         /**
          * <p>The subscription duration. Valid values:</p>
          * <ul>
-         * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>: 1, 2, 3, or 5.</p>
+         * <li><p>If PeriodUnit is set to Year: 1, 2, 3, and 5.</p>
          * </li>
-         * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>: 1, 2, 3, or 6.</p>
+         * <li><p>If PeriodUnit is set to Month: 1, 2, 3, and 6.</p>
          * </li>
          * </ul>
          * 
@@ -209,9 +224,9 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The unit of the billing cycle for the subscription instance.</p>
+         * <p>The unit of the subscription duration for a subscription instance.</p>
          * <blockquote>
-         * <p>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the spelling is correct.</p>
+         * <p>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the value is spelled correctly.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,7 +247,7 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         /**
          * <p>The list of resource IDs.</p>
          * <blockquote>
-         * <p>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not <code>create</code>.</p>
+         * <p>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to create.</p>
          * </blockquote>
          */
         @NameInMap("ResourceIds")
@@ -241,7 +256,7 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         /**
          * <p>The resource type.</p>
          * <blockquote>
-         * <p>This parameter is case-sensitive. Make sure that the spelling is correct.</p>
+         * <p>This parameter is case-sensitive. Make sure that the value is spelled correctly.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
