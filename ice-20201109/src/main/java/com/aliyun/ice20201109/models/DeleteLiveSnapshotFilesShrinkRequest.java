@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveSnapshotFilesShrinkRequest extends TeaModel {
     /**
-     * <p>A list of creation timestamps for the files to delete. You can specify up to 200 timestamps per request.</p>
+     * <p>The list of creation timestamps. A maximum of 200 entries can be deleted at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateTimestampList")
     public String createTimestampListShrink;
 
     /**
-     * <p>Specifies whether to delete the original OSS files. The default value is false.</p>
+     * <p>Specifies whether to delete the original files. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

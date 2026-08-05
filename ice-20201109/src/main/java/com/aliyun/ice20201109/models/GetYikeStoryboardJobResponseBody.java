@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetYikeStoryboardJobResponseBody extends TeaModel {
     /**
-     * <p>The storyboard job ID. You can obtain this ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/461964.html">SubmitStoryboardJob</a> operation.</p>
+     * <p>The job ID. You can obtain this value from the response parameters of <a href="https://help.aliyun.com/document_detail/461964.html">Submit a packaging job</a>.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
@@ -14,7 +14,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>A JSON object that contains the parameters for the job. The structure of this object varies based on the AI algorithm.</p>
+     * <p>The algorithm job parameters. This is a JSON object whose content varies depending on the algorithm.</p>
      */
     @NameInMap("JobParams")
     public GetYikeStoryboardJobResponseBodyJobParams jobParams;
@@ -28,11 +28,11 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
     /**
      * <p>The job status. Valid values:</p>
      * <ul>
-     * <li><p><strong>Succeeded</strong>: The job completed successfully.</p>
+     * <li><p><strong>Succeeded</strong>: The job is processed.</p>
      * </li>
-     * <li><p><strong>Failed</strong>: The job failed to complete.</p>
+     * <li><p><strong>Failed</strong>: The job failed.</p>
      * </li>
-     * <li><p><strong>Running</strong>: The job is in progress.</p>
+     * <li><p><strong>Running</strong>: The job is being processed.</p>
      * </li>
      * </ul>
      * 
@@ -116,7 +116,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String fileURL;
 
         /**
-         * <p>The model parameters.</p>
+         * <p>The random seed.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -127,7 +127,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String modelParams;
 
         /**
-         * <p>The narration voice.</p>
+         * <p>The narration voice ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sys_YoungGracefulWoman</p>
@@ -145,7 +145,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
-         * <p>The shot generation mode.</p>
+         * <p>The shot prompt generation mode.</p>
          * 
          * <strong>example:</strong>
          * <p>multi</p>
@@ -154,7 +154,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String shotPromptMode;
 
         /**
-         * <p>The shot splitting mode.</p>
+         * <p>The shot split mode.</p>
          * 
          * <strong>example:</strong>
          * <p>firstPersonNarration</p>
@@ -183,7 +183,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         /**
          * <p>The job title.</p>
          * <p>\- Maximum length: 128 bytes.</p>
-         * <p>\- UTF-8 encoding.</p>
+         * <p>\- UTF-8 encoded.</p>
          * 
          * <strong>example:</strong>
          * <p>test-title</p>
@@ -297,7 +297,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
 
     public static class GetYikeStoryboardJobResponseBodyJobResult extends TeaModel {
         /**
-         * <p>A list of IDs for storyboards that encountered an exception.</p>
+         * <p>The list of exception storyboard IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;st_2053348871\&quot;]</p>
@@ -306,7 +306,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String exceptionStoryboardIds;
 
         /**
-         * <p>A list of shots that failed to generate.</p>
+         * <p>The list of failed shots.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;errorCode\&quot;:\&quot;NoMediaData\&quot;,\&quot;storyboardId\&quot;:\&quot;st_2118280473\&quot;,\&quot;shotId\&quot;:\&quot;54\&quot;}]</p>
@@ -324,7 +324,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String outputUrl;
 
         /**
-         * <p>Detailed information about each storyboard in the job.</p>
+         * <p>The detailed storyboard information for the storyboard generation task.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;storyboardId\&quot;:\&quot;st_1541525214\&quot;,\&quot;title\&quot;:\&quot;test_1\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;},{\&quot;storyboardId\&quot;:\&quot;st_1633435355\&quot;,\&quot;title\&quot;:\&quot;test_2\&quot;,\&quot;status\&quot;:\&quot;Produced\&quot;,\&quot;subStatus\&quot;:\&quot;ProduceSucc\&quot;}]</p>
@@ -333,7 +333,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String storyboardInfoList;
 
         /**
-         * <p>A comma-separated list of successful storyboard IDs.</p>
+         * <p>The list of successful storyboard IDs, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>st_2118280473, st_2118280471</p>
@@ -342,7 +342,7 @@ public class GetYikeStoryboardJobResponseBody extends TeaModel {
         public String successStoryboardIds;
 
         /**
-         * <p>A list of IDs for successful storyboards.</p>
+         * <p>The list of successful storyboards.</p>
          * 
          * <strong>example:</strong>
          * <p>[\&quot;st_2118280473\&quot;]</p>

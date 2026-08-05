@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     /**
-     * <p>An array of deletion results.</p>
+     * <p>The list of deletion results.</p>
      */
     @NameInMap("DeleteFileResultList")
     public java.util.List<DeleteLiveSnapshotFilesResponseBodyDeleteFileResultList> deleteFileResultList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
@@ -42,7 +42,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
 
     public static class DeleteLiveSnapshotFilesResponseBodyDeleteFileResultList extends TeaModel {
         /**
-         * <p>The creation timestamp of the file.</p>
+         * <p>The creation timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1660638613798</p>
@@ -51,7 +51,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The deletion result. A value of <code>OK</code> indicates the operation succeeded. Other values indicate that it failed.</p>
+         * <p>The deletion result. OK indicates that the deletion was successful. Other values indicate that the deletion failed.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>

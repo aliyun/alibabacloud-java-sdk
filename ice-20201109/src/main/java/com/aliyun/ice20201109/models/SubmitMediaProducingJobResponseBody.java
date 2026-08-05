@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaProducingJobResponseBody extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The producing job ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The media ID.</p>
+     * <p>The ID of the produced media asset.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -23,7 +23,7 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The editing project ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>b4549d46c88681030f6e</strong></strong></p>
@@ -41,7 +41,7 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The VOD media ID. Returned if the output destination is VOD.</p>
+     * <p>The VOD media asset ID. This parameter is returned when the video output location is VOD.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d8s4h75ci975745c14b</strong></strong></p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchPublicMediaInfoResponseBody extends TeaModel {
     /**
-     * <p>Public copyright media asset information</p>
+     * <p>The public copyright media asset information.</p>
      */
     @NameInMap("PublicMediaInfos")
     public java.util.List<SearchPublicMediaInfoResponseBodyPublicMediaInfos> publicMediaInfos;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>3CFB-2767-54FD-B311-BD15A4C1</strong></strong></p>
@@ -20,7 +20,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total amount of Data under the current request conditions.</p>
+     * <p>The total number of entries that match the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoDynamicMetaData extends TeaModel {
         /**
-         * <p>Metadata JSON string</p>
+         * <p>The metadata JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;AuditionUrl\&quot;: \&quot;<a href="http://xxx%5C%5C">http://xxx\\</a>&quot;, \&quot;AuditionCount\&quot;: 3...}&quot;</p>
@@ -68,14 +68,11 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String data;
 
         /**
-         * <p>Type. Valid values:</p>
+         * <p>The type. Valid values:</p>
          * <ul>
-         * <li><p>&quot;ai&quot;: AI data processed and normalized from original AI results</p>
-         * </li>
-         * <li><p>&quot;user-defined&quot;: User-defined metadata</p>
-         * </li>
-         * <li><p>&quot;system&quot;: System-provided</p>
-         * </li>
+         * <li>&quot;ai&quot;: AI data that is generated after unified processing of AI raw results.</li>
+         * <li>&quot;user-defined&quot;: user-defined metadata.</li>
+         * <li>&quot;system&quot;: system built-in metadata.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +106,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo extends TeaModel {
         /**
-         * <p>Media Asset Business Type</p>
+         * <p>The business type of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -118,7 +115,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String businessType;
 
         /**
-         * <p>Categorization</p>
+         * <p>The category of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>category</p>
@@ -127,7 +124,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>Thumbnail URL</p>
+         * <p>The cover URL of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -136,7 +133,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>Media Asset Creation Time</p>
+         * <p>The time when the media asset was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T06:04:49Z</p>
@@ -145,7 +142,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Media Asset Deletion Time</p>
+         * <p>The time when the media asset was deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-29T06:04:49Z</p>
@@ -154,7 +151,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String deletedTime;
 
         /**
-         * <p>Content description</p>
+         * <p>The content description of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -172,7 +169,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>Label</p>
+         * <p>The tags of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1</p>
@@ -181,7 +178,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String mediaTags;
 
         /**
-         * <p>Media asset media type</p>
+         * <p>The media type of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>audio</p>
@@ -190,7 +187,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>Updated At</p>
+         * <p>The time when the media asset was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T06:04:50Z</p>
@@ -199,7 +196,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>Source</p>
+         * <p>The source of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -208,7 +205,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>sprite</p>
+         * <p>The sprite images of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
@@ -217,7 +214,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String spriteImages;
 
         /**
-         * <p>Resource status</p>
+         * <p>The status of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -226,7 +223,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>title</p>
+         * <p>The title of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -235,7 +232,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>User Data</p>
+         * <p>The user data of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>userDataTest</p>
@@ -372,7 +369,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfo extends TeaModel {
         /**
-         * <p>Dynamic metadata</p>
+         * <p>The dynamic metadata.</p>
          */
         @NameInMap("DynamicMetaData")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoDynamicMetaData dynamicMetaData;
@@ -384,7 +381,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo mediaBasicInfo;
 
         /**
-         * <p>Media asset ID</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
@@ -425,7 +422,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfos extends TeaModel {
         /**
-         * <p>Indicates whether you have purchased a resource plan that includes this media asset.</p>
+         * <p>Indicates whether a resource plan that includes this media asset has been purchased.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -434,7 +431,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public Boolean authorized;
 
         /**
-         * <p>Whether the media asset is collected.</p>
+         * <p>Indicates whether the media asset has been added to favorites.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -443,13 +440,13 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         public Boolean favorite;
 
         /**
-         * <p>Media asset information</p>
+         * <p>The media asset information.</p>
          */
         @NameInMap("MediaInfo")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfo mediaInfo;
 
         /**
-         * <p>Remaining validity period of the resource plan (Day)</p>
+         * <p>The remaining validity period of the resource plan, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

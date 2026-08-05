@@ -11,7 +11,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     public java.util.List<AddEditingProjectMaterialsResponseBodyLiveMaterials> liveMaterials;
 
     /**
-     * <p>The media assets that meet the specified conditions.</p>
+     * <p>The collection of eligible media assets.</p>
      */
     @NameInMap("MediaInfos")
     public java.util.List<AddEditingProjectMaterialsResponseBodyMediaInfos> mediaInfos;
@@ -26,7 +26,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The materials associated with the editing project. A live stream editing project will be associated with a regular editing project after the live streaming ends.</p>
+     * <p>The materials associated with the editing project. After a live stream ends, the live editing project is associated with a standard editing project.</p>
      * 
      * <strong>example:</strong>
      * <p><em><strong><strong>9b145c5cafc2e057304fcd</strong></strong></em></p>
@@ -117,7 +117,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String liveUrl;
 
         /**
-         * <p>The name of the live stream.</p>
+         * <p>The stream name of the live stream.</p>
          * 
          * <strong>example:</strong>
          * <p>teststream</p>
@@ -193,7 +193,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size. Unit: bytes.</p>
+         * <p>The file size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>30611502</p>
@@ -203,11 +203,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
         /**
          * <p>The file status.</p>
-         * <p>-Uploading</p>
-         * <p>-Normal</p>
-         * <p>-UploadFail</p>
-         * <p>-Disable</p>
-         * <p>-Deleted</p>
+         * <ul>
+         * <li>Uploading</li>
+         * <li>Normal</li>
+         * <li>UploadFail</li>
+         * <li>Disable</li>
+         * <li>Deleted</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -225,7 +227,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         * <p>The OSS URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -252,7 +254,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The region in which the file resides.</p>
+         * <p>The storage region of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -366,7 +368,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
 
     public static class AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoList extends TeaModel {
         /**
-         * <p>The basic information of the file, including the duration and size.</p>
+         * <p>The basic file information, including the duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
@@ -397,7 +399,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String businessType;
 
         /**
-         * <p>The category of the media asset.</p>
+         * <p>The category.</p>
          * 
          * <strong>example:</strong>
          * <p>audio</p>
@@ -406,7 +408,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The thumbnail URL of the media asset.</p>
+         * <p>The cover URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -433,7 +435,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String deletedTime;
 
         /**
-         * <p>The description of the media asset.</p>
+         * <p>The content description.</p>
          * 
          * <strong>example:</strong>
          * <p>sample_description</p>
@@ -442,7 +444,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The URL of the media asset in another service.</p>
+         * <p>The address of the media asset to be registered in the corresponding system.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/file.mp4">http://bucket.oss-cn-shanghai.aliyuncs.com/file.mp4</a></p>
@@ -451,7 +453,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String inputURL;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>5cb2e35433198daae94a72</strong></strong></em></p>
@@ -460,7 +462,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The tags of the media asset.</p>
+         * <p>The tags.</p>
          * 
          * <strong>example:</strong>
          * <p>sample_tag</p>
@@ -469,7 +471,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String mediaTags;
 
         /**
-         * <p>The type of the media asset.</p>
+         * <p>The media type of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>Video</p>
@@ -487,7 +489,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The snapshots of the media asset.</p>
+         * <p>The snapshots.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -496,7 +498,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String snapshots;
 
         /**
-         * <p>The source of the media asset.</p>
+         * <p>The source.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -505,7 +507,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The sprite of the media asset.</p>
+         * <p>The sprite images.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://outin-example.oss-cn-shanghai.aliyuncs.com/test.png?Expires=">http://outin-example.oss-cn-shanghai.aliyuncs.com/test.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -514,11 +516,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String spriteImages;
 
         /**
-         * <p>The status of the media asset. Valid values:</p>
-         * <p>\- Init</p>
-         * <p>\- Preparing</p>
-         * <p>\- PrepareFail</p>
-         * <p>\- Normal</p>
+         * <p>The media asset status.</p>
+         * <ul>
+         * <li>Init</li>
+         * <li>Preparing</li>
+         * <li>PrepareFail</li>
+         * <li>Normal</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -527,7 +531,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The title of the media asset.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>default_title_2020-12-23T03:32:59Z</p>
@@ -536,7 +540,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The transcoding status of the media asset.</p>
+         * <p>The transcoding status.</p>
          * 
          * <strong>example:</strong>
          * <p>Init</p>
@@ -712,13 +716,13 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         public java.util.List<AddEditingProjectMaterialsResponseBodyMediaInfosFileInfoList> fileInfoList;
 
         /**
-         * <p>The basic information of the media assets.</p>
+         * <p>The basic information about the media asset.</p>
          */
         @NameInMap("MediaBasicInfo")
         public AddEditingProjectMaterialsResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>5cb2e35433198daae94a72</strong></strong></em></p>

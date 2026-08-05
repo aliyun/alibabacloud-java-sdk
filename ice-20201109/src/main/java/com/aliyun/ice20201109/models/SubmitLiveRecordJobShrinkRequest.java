@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveRecordJobShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the recording job.</p>
+     * <p>The name of the recording task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,21 +24,21 @@ public class SubmitLiveRecordJobShrinkRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The storage address of the recording.</p>
+     * <p>The recording storage address.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordOutput")
     public String recordOutputShrink;
 
     /**
-     * <p>The URL of the live stream.</p>
+     * <p>The live stream address.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public String streamInputShrink;
 
     /**
-     * <p>The ID of the recording template.</p>
+     * <p>The recording template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentInstanceRequest extends TeaModel {
     /**
-     * <p>Agent ID.</p>
+     * <p>The agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAIAgentInstanceRequest extends TeaModel {
     public String AIAgentId;
 
     /**
-     * <p>End time of the query in ISO 8601 format. No default value.</p>
+     * <p>The end time of the query in ISO 8601 format. No default value.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-02T00:00:00Z</p>
@@ -24,7 +24,7 @@ public class ListAIAgentInstanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Page number. Default is 1. Valid values: 1 to 100.</p>
+     * <p>The page number. Default value: 1. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListAIAgentInstanceRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Number of results per page. Default is 10. Valid values: 0 to 100.</p>
+     * <p>The number of entries per page. Default value: 10. Valid values: 0 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class ListAIAgentInstanceRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Start time of the query in ISO 8601 format. No default value.</p>
+     * <p>The start time of the query in ISO 8601 format. No default value.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-01T00:00:00Z</p>

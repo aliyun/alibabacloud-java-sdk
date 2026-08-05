@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveEditingJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the live editing job.</p>
+     * <p>The ID of the live editing task.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The ID of the output media asset.</p>
+     * <p>The media asset ID of the output.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -23,7 +23,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The URL of the output file.</p>
+     * <p>The URL of the output.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4</a></p>
@@ -41,7 +41,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
@@ -50,7 +50,7 @@ public class SubmitLiveEditingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the VOD media asset. This parameter is returned only if the output destination is VOD.</p>
+     * <p>The VOD media asset ID. This parameter is returned when the video output destination is VOD.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d7578s4h75ci945c14b</strong></strong></p>

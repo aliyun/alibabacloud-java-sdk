@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineResponseBody extends TeaModel {
     /**
-     * <p>The information about the MPS queue.</p>
+     * <p>The pipeline information.</p>
      */
     @NameInMap("Pipeline")
     public CreatePipelineResponseBodyPipeline pipeline;
@@ -42,7 +42,7 @@ public class CreatePipelineResponseBody extends TeaModel {
 
     public static class CreatePipelineResponseBodyPipeline extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The time when the pipeline was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -51,7 +51,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The time when the pipeline was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -60,7 +60,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The name of the MPS queue.</p>
+         * <p>The pipeline name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-pipeline</p>
@@ -69,7 +69,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the MPS queue.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -78,7 +78,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority of the MPS queue.</p>
+         * <p>The pipeline priority.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -87,16 +87,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The type of the MPS queue.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Boost: MPS queue with transcoding speed boosted.</p>
-         * </li>
-         * <li><p>Standard: standard MPS queue.</p>
-         * </li>
-         * <li><p>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</p>
-         * </li>
-         * </ul>
+         * <p>The pipeline type.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -105,14 +96,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String speed;
 
         /**
-         * <p>The state of the MPS queue.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Active</p>
-         * </li>
-         * <li><p>Paused</p>
-         * </li>
-         * </ul>
+         * <p>The pipeline status.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

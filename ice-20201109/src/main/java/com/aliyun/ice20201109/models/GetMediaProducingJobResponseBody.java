@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaProducingJobResponseBody extends TeaModel {
     /**
-     * <p>The details of the media producing job.</p>
+     * <p>The media producing job information.</p>
      */
     @NameInMap("MediaProducingJob")
     public GetMediaProducingJobResponseBodyMediaProducingJob mediaProducingJob;
@@ -42,7 +42,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
 
     public static class GetMediaProducingJobResponseBodyMediaProducingJob extends TeaModel {
         /**
-         * <p>The clip parameters of the template used for the job.</p>
+         * <p>The template parameters of the media producing job.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VideoArray&quot;:[&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;,&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;,&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;]}</p>
@@ -51,7 +51,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String clipsParam;
 
         /**
-         * <p>The error code of the media producing job. &gt;Notice: This parameter is returned only if the job fails.</p>
+         * <p>The error code of the media producing job.</p>
+         * <blockquote>
+         * <p>Notice: Check this field when the job fails.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ExceededMaximumValue</p>
@@ -60,7 +63,8 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The time in UTC when the media producing job was completed, formatted as <code>YYYY-MM-DD\\&quot;T\\&quot;hh:mm:ss\\&quot;Z\\&quot;</code>.</p>
+         * <p>The time when the media producing job was completed, in UTC.</p>
+         * <p>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:52Z</p>
@@ -69,7 +73,8 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time in UTC when the media producing job was created, formatted as <code>YYYY-MM-DD\\&quot;T\\&quot;hh:mm:ss\\&quot;Z\\&quot;</code>.</p>
+         * <p>The time when the media producing job was created, in UTC.</p>
+         * <p>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:40Z</p>
@@ -78,7 +83,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The duration of the output media. &gt;Notice: This parameter is returned only if the job is successful and the output is an audio or video file.</p>
+         * <p>The duration of the output media asset.</p>
+         * <blockquote>
+         * <p>Notice: This field has a value only when the producing job succeeds and the output media asset type is audio or video.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>30.500000</p>
@@ -87,7 +95,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the media producing job.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -96,7 +104,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The ID of the output media asset.</p>
+         * <p>The resource ID of the output media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>0cc6ba49eab379332c5b</strong></strong></p>
@@ -105,7 +113,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The URL of the output media file.</p>
+         * <p>The resource file URL of the output media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4</a></p>
@@ -116,9 +124,8 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         /**
          * <p>The error message of the media producing job.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice: Check this field when the job fails.</p>
          * </blockquote>
-         * <p>This parameter is returned only if the job fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified &quot;Width_Height&quot; has exceeded maximum value.</p>
@@ -127,7 +134,8 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The time in UTC when the media producing job was last modified, formatted as <code>YYYY-MM-DD\\&quot;T\\&quot;hh:mm:ss\\&quot;Z\\&quot;</code>.</p>
+         * <p>The time when the media producing job was last modified, in UTC.</p>
+         * <p>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:49Z</p>
@@ -135,14 +143,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        /**
-         * <p>The progress of the job. Valid values: 0 to 100.</p>
-         */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
@@ -153,16 +158,11 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         /**
          * <p>The status of the media producing job. Valid values:</p>
          * <ul>
-         * <li><p><code>Init</code> (Initialized)</p>
-         * </li>
-         * <li><p><code>Queuing</code> (In queue)</p>
-         * </li>
-         * <li><p><code>Processing</code> (In progress)</p>
-         * </li>
-         * <li><p><code>Success</code> (Successful)</p>
-         * </li>
-         * <li><p><code>Failed</code> (Failed)</p>
-         * </li>
+         * <li>Init: init state.</li>
+         * <li>Queuing: queuing.</li>
+         * <li>Processing: processing.</li>
+         * <li>Success: succeeded.</li>
+         * <li>Failed: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,16 +172,16 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>If the job is a subtask of a batch smart one-click video creation task, this parameter contains the subtask\&quot;s materials, such as the title and speech script.</p>
+         * <p>If this media producing job is a subtask of a batch intelligent one-click video production job, this field returns the material information used by the subtask, such as the narration text and title.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Title&quot;: &quot;标题&quot;, &quot;SpeechText&quot;: &quot;批量智能一键成片口播文案&quot;}</p>
+         * <p>{&quot;Title&quot;: &quot;Title&quot;, &quot;SpeechText&quot;: &quot;Narration text for batch intelligent one-click video production&quot;}</p>
          */
         @NameInMap("SubJobMaterials")
         public String subJobMaterials;
 
         /**
-         * <p>The ID of the template used for the job.</p>
+         * <p>The template ID of the media producing job.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>6e76134d739cc3e85d3e</strong></strong></p>
@@ -199,7 +199,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String timeline;
 
         /**
-         * <p>The user data, in JSON format.</p>
+         * <p>The custom settings in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22,%22Key%22:%22Valuexxx%22%7D">http://xx.xx.xxx&quot;,&quot;Key&quot;:&quot;Valuexxx&quot;}</a></p>
@@ -208,7 +208,7 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         public String userData;
 
         /**
-         * <p>The ID of the media asset in VOD (Video on Demand). This ID is returned if the job\&quot;s output is stored in VOD.</p>
+         * <p>If the output of the media producing job is delivered to ApsaraVideo VOD, the output is registered as a VOD media asset. The vodMediaId is the media asset ID in VOD.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>332c5b0cc6ba49eab379</strong></strong></p>

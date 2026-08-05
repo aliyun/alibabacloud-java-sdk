@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAvatarTrainingJobRequest extends TeaModel {
     /**
-     * <p>The ID of the digital human training job.</p>
+     * <p>The ID of the digital human training task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

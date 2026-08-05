@@ -5,36 +5,22 @@ import com.aliyun.tea.*;
 
 public class SubmitIProductionJobShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the algorithm function. Valid values:</p>
+     * <p>The name of the algorithm function to use. Valid values:</p>
      * <ul>
-     * <li><p><strong>Cover</strong>: Generates a smart cover.</p>
-     * </li>
-     * <li><p><strong>VideoClip</strong>: Creates a video summary.</p>
-     * </li>
-     * <li><p><strong>VideoDelogo</strong>: Removes logos from a video.</p>
-     * </li>
-     * <li><p><strong>VideoDetext</strong>: Removes text from a video.</p>
-     * </li>
-     * <li><p><strong>CaptionExtraction</strong>: Extracts captions from a video.</p>
-     * </li>
-     * <li><p><strong>VideoGreenScreenMatting</strong>: Performs green screen keying for a video.</p>
-     * </li>
-     * <li><p><strong>FaceBeauty</strong>: Applies beauty filters to faces in a video.</p>
-     * </li>
-     * <li><p><strong>VideoH2V</strong>: Converts a horizontal video to a vertical video.</p>
-     * </li>
-     * <li><p><strong>MusicSegmentDetect</strong>: Detects chorus segments in music.</p>
-     * </li>
-     * <li><p><strong>AudioBeatDetection</strong>: Detects the beat of an audio track.</p>
-     * </li>
-     * <li><p><strong>AudioQualityAssessment</strong>: Assesses audio quality.</p>
-     * </li>
-     * <li><p><strong>SpeechDenoise</strong>: Reduces noise in speech audio.</p>
-     * </li>
-     * <li><p><strong>AudioMixing</strong>: Mixes audio tracks.</p>
-     * </li>
-     * <li><p><strong>MusicDemix</strong>: Separates vocals from accompaniment in music.</p>
-     * </li>
+     * <li><strong>Cover</strong>: intelligent cover</li>
+     * <li><strong>VideoClip</strong>: video synopsis</li>
+     * <li><strong>VideoDelogo</strong>: video logo removal</li>
+     * <li><strong>VideoDetext</strong>: video subtitle removal</li>
+     * <li><strong>CaptionExtraction</strong>: caption extraction</li>
+     * <li><strong>VideoGreenScreenMatting</strong>: image matting</li>
+     * <li><strong>FaceBeauty</strong>: video face beautification</li>
+     * <li><strong>VideoH2V</strong>: intelligent landscape-to-portrait</li>
+     * <li><strong>MusicSegmentDetect</strong>: chorus detection</li>
+     * <li><strong>AudioBeatDetection</strong>: beat detection</li>
+     * <li><strong>AudioQualityAssessment</strong>: audio quality assessment</li>
+     * <li><strong>SpeechDenoise</strong>: speech denoising</li>
+     * <li><strong>AudioMixing</strong>: audio mixing</li>
+     * <li><strong>MusicDemix</strong>: vocal and accompaniment separation</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,15 +31,15 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     public String functionName;
 
     /**
-     * <p>The input media asset. You can specify an OSS file or a media asset ID.</p>
-     * <p>The requirements for input files vary by algorithm function. For more information, see the supplementary instructions.</p>
+     * <p>The input media. Object Storage Service (OSS) paths and media asset IDs are supported.</p>
+     * <p>Different algorithm functions have different input file requirements. For more information, see the supplementary description below.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>The algorithm job parameters, specified as a JSON-formatted string. The content of the JSON object varies by algorithm function. For more information, see the supplementary instructions.</p>
+     * <p>The algorithm job parameters. This is a JSON object. The parameters vary depending on the algorithm. For more information, see the supplementary description.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
@@ -62,12 +48,11 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     public String jobParams;
 
     /**
-     * <p>The ID of the algorithm model. If you do not specify this parameter, the system uses the default model for the selected function. We recommend leaving this parameter empty unless you need to use a specific alternative model.</p>
-     * <p>The following function offers an alternative model:</p>
+     * <p>The algorithm model ID. If this parameter is left empty, the default model for the corresponding function is used. In most cases, leave this parameter empty to use the default model.</p>
+     * <p>The following algorithm functions have non-default models available:</p>
      * <ul>
-     * <li><p><code>VideoDetext</code></p>
-     * <ul>
-     * <li>Set <code>ModelId</code> to <code>algo-video-detext-new</code> to use an advanced subtitle removal algorithm. This model provides higher quality results but is slower and more expensive than the default model.</li>
+     * <li>VideoDetext<ul>
+     * <li>ModelId = algo-video-detext-new: a subtitle removal algorithm with better results but slower speed and higher cost than the default algorithm.</li>
      * </ul>
      * </li>
      * </ul>
@@ -76,7 +61,7 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     public String modelId;
 
     /**
-     * <p>The name of the job, which can be up to 100 characters long.</p>
+     * <p>The job name. The name can be up to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Test task</p>
@@ -85,21 +70,21 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output destination. You can specify an OSS file path or a media asset ID.</p>
-     * <p>The output files vary by algorithm function. For more information, see the supplementary instructions.</p>
+     * <p>The output media. OSS paths and media asset IDs are supported.</p>
+     * <p>Different algorithm functions produce different output files. For more information, see the supplementary description below.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
     public String outputShrink;
 
     /**
-     * <p>The configuration for job scheduling.</p>
+     * <p>The job scheduling configuration.</p>
      */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -108,7 +93,7 @@ public class SubmitIProductionJobShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>Custom user data. The system passes this data through and returns it as-is in the callback or response. The length cannot exceed 256 characters.</p>
+     * <p>The custom user data, which is returned as-is when you retrieve the result. The value can be up to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:1}</p>

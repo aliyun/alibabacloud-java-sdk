@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUploadMediaResponseBody extends TeaModel {
     /**
-     * <p>The OSS URL of the file, without authentication parameters.</p>
+     * <p>The OSS URL of the file (without authentication).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://outin-***.oss-cn-north-2-gov-1.aliyuncs.com/sv/40360f05-181f63c3110-0004-cd8e-27f-de3c9.mp4">http://outin-***.oss-cn-north-2-gov-1.aliyuncs.com/sv/40360f05-181f63c3110-0004-cd8e-27f-de3c9.mp4</a></p>
@@ -14,7 +14,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String fileURL;
 
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -23,9 +23,9 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The URL of the media asset.</p>
+     * <p>The media asset URL.</p>
      * <blockquote>
-     * <p>This will be a CDN URL if a CDN domain is configured, or an OSS URL otherwise. If you receive a 403 error when accessing this URL in a browser, it is likely because URL authentication is enabled for the VOD domain. To resolve this, either disable URL authentication or generate a signed URL for access.</p>
+     * <p>If a CDN domain name is configured, a CDN URL is returned. Otherwise, an OSS URL is returned. If the returned MediaURL is inaccessible (403) in a browser, URL signing is enabled for the VOD domain name. Disable URL signing or generate a signing signature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     public String mediaURL;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
@@ -46,7 +46,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     /**
      * <p>The upload address.</p>
      * <blockquote>
-     * <p>The returned upload address is Base64-encoded and must be decoded before use. You only need to manually decode this address if you are using a native OSS SDK or an OSS API to perform the upload.</p>
+     * <p>The upload address returned by the operation is a Base64-encoded value. When you call an SDK or API to upload media assets, decode the value by using Base64 before use. Only uploads through the native OSS SDK or OSS API require you to parse UploadAddress.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreateUploadMediaResponseBody extends TeaModel {
     /**
      * <p>The upload credential.</p>
      * <blockquote>
-     * <p>The returned upload credential is Base64-encoded and must be decoded before use. You only need to manually decode this credential if you are using a native OSS SDK or an OSS API to perform the upload.</p>
+     * <p>The upload credential returned by the operation is a Base64-encoded value. When you call an SDK or API to upload media assets, decode the value by using Base64 before use. Only uploads through the native OSS SDK or OSS API require you to parse UploadAuth.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

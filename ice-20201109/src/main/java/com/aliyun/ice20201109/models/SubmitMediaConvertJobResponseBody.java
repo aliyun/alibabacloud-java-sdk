@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaConvertJobResponseBody extends TeaModel {
     /**
-     * <p>The media transcoding job.</p>
+     * <p>The media transcoding task.</p>
      */
     @NameInMap("Job")
     public SubmitMediaConvertJobResponseBodyJob job;
@@ -42,13 +42,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
 
     public static class SubmitMediaConvertJobResponseBodyJobConfig extends TeaModel {
         /**
-         * <p>The job inputs.</p>
+         * <p>The media transcoding task input list.</p>
          */
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
         /**
-         * <p>The job name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>Name</p>
@@ -57,13 +57,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The output group configurations.</p>
+         * <p>The media transcoding task output group configuration list.</p>
          */
         @NameInMap("OutputGroups")
         public java.util.List<MediaConvertOutputGroup> outputGroups;
 
         /**
-         * <p>The output configurations.</p>
+         * <p>The media transcoding output configuration list.</p>
          */
         @NameInMap("Outputs")
         public java.util.List<MediaConvertOutput> outputs;
@@ -109,7 +109,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
 
     public static class SubmitMediaConvertJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The idempotency token for the request.</p>
+         * <p>The idempotency parameter for the media transcoding task creation request.</p>
          * 
          * <strong>example:</strong>
          * <p>FB7F25E9-AD9B-1603-8AF6-F1E42DF2E706</p>
@@ -118,7 +118,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String clientToken;
 
         /**
-         * <p>The error code returned if the job fails.</p>
+         * <p>The error code returned when the media transcoding task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter.ResourceContentBad</p>
@@ -127,13 +127,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The job configuration.</p>
+         * <p>The media transcoding task configuration.</p>
          */
         @NameInMap("Config")
         public SubmitMediaConvertJobResponseBodyJobConfig config;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The media transcoding task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -142,7 +142,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The error message returned if the job fails.</p>
+         * <p>The detailed error message returned when the media transcoding task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The resource operated InputFile is bad</p>
@@ -151,13 +151,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The output details.</p>
+         * <p>The media transcoding output result list.</p>
          */
         @NameInMap("OutputDetails")
         public java.util.List<MediaConvertOutputDetail> outputDetails;
 
         /**
-         * <p>The output group details.</p>
+         * <p>The media transcoding output group result list.</p>
          */
         @NameInMap("OutputGroupDetails")
         public java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails;
@@ -181,18 +181,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The job status. Valid values:</p>
+         * <p>The media transcoding task status. Valid values:</p>
          * <ul>
-         * <li><p>Inited: The job has been initialized.</p>
-         * </li>
-         * <li><p>Running: The job is running.</p>
-         * </li>
-         * <li><p>Success: The job has completed successfully.</p>
-         * </li>
-         * <li><p>Failed: The job has failed.</p>
-         * </li>
-         * <li><p>Canceled: The job has been canceled.</p>
-         * </li>
+         * <li>Inited: initialized.</li>
+         * <li>Running: running.</li>
+         * <li>Success: transcoding succeeded.</li>
+         * <li>Failed: transcoding failed.</li>
+         * <li>Cancelled: canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

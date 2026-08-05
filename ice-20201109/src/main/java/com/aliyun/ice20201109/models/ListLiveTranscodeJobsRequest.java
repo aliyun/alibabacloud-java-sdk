@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveTranscodeJobsRequest extends TeaModel {
     /**
-     * <p>The search keyword. You can use the job ID or name as the keyword to search for jobs. If you search for jobs by name, fuzzy match is supported.</p>
+     * <p>The search keyword. You can search by task ID or name. Name supports fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>24ecbb5c-4f98-4194-9400-f17102e27fc5</p>
@@ -32,12 +32,10 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+     * <p>The sort order. Sorts by CreateTime. Default value: desc.</p>
      * <ul>
-     * <li><p>asc</p>
-     * </li>
-     * <li><p>desc</p>
-     * </li>
+     * <li>asc: ascending order</li>
+     * <li>desc: descending order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,12 +45,10 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start mode of the transcoding job.</p>
+     * <p>The start mode.</p>
      * <ul>
-     * <li><p>0: The transcoding job immediately starts.</p>
-     * </li>
-     * <li><p>1: The transcoding job starts at the scheduled time.</p>
-     * </li>
+     * <li>0: start immediately</li>
+     * <li>1: scheduled start</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,8 +58,15 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer startMode;
 
     /**
-     * <p>The state of the job.</p>
-     * <p>0: The job is not started. 1: The job is in progress. 2: The job is stopped.</p>
+     * <p>The task status.</p>
+     * <ul>
+     * <li><p>0: not started</p>
+     * </li>
+     * <li><p>1: running</p>
+     * </li>
+     * <li><p>2: stopped</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -72,16 +75,12 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The type of the template used by the transcoding job.</p>
+     * <p>The template type corresponding to the transcoding task.</p>
      * <ul>
-     * <li><p>normal</p>
-     * </li>
-     * <li><p>narrow-band</p>
-     * </li>
-     * <li><p>audio-only</p>
-     * </li>
-     * <li><p>origin</p>
-     * </li>
+     * <li>normal: standard</li>
+     * <li>narrow-band: narrow bandwidth high definition</li>
+     * <li>audio-only: audio only</li>
+     * <li>origin: original quality</li>
      * </ul>
      * 
      * <strong>example:</strong>

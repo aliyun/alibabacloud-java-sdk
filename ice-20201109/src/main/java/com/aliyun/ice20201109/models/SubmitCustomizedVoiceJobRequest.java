@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class SubmitCustomizedVoiceJobRequest extends TeaModel {
     /**
-     * <p>The OSS URL where the demo audio will be saved.</p>
+     * <p>The audio output address of the sample.  </p>
      * <ul>
-     * <li><p>If specified, the service generates a demo audio file at the provided OSS URL after training completes.</p>
-     * </li>
-     * <li><blockquote>
-     * <p>Notice: </p>
+     * <li>If you specify this parameter, a sample audio file is generated at the specified OSS address after training succeeds.  </li>
+     * <li>If you do not specify this parameter, no sample audio is generated.<blockquote>
+     * <p>Notice: The address must be a valid public OSS address under your account.</p>
      * </blockquote>
-     * <p>The URL must be a valid public address for an OSS object in your account.</p>
      * </li>
      * </ul>
      * 
@@ -23,7 +21,7 @@ public class SubmitCustomizedVoiceJobRequest extends TeaModel {
     public String demoAudioMediaURL;
 
     /**
-     * <p>The unique identifier for the voice.</p>
+     * <p>The voice ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

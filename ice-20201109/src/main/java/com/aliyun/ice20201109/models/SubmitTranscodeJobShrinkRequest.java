@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     /**
-     * <p>The idempotence key. Ensures request idempotence.</p>
+     * <p>The idempotency key that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The input group for the job. A single input creates a transcoding job. Multiple inputs create a media merging job.</p>
+     * <p>The job input group. A single input creates a transcoding job. Multiple inputs create an audio and video stream merging job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String inputGroupShrink;
 
     /**
-     * <p>The job name.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>job-name</p>
@@ -33,7 +33,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output group for the job.</p>
+     * <p>The task output group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String outputGroupShrink;
 
     /**
-     * <p>The job scheduling information.</p>
+     * <p>The task scheduling information.</p>
      * 
      * <strong>example:</strong>
      * <p>job-name</p>
@@ -52,7 +52,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String scheduleConfigShrink;
 
     /**
-     * <p>Custom settings in JSON format. The length is limited to 512 bytes. Supports <a href="https://help.aliyun.com/document_detail/451631.html">custom webhook address configuration</a>.</p>
+     * <p>Custom settings in JSON format. The value can be up to 512 bytes in length. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>user-data</p>

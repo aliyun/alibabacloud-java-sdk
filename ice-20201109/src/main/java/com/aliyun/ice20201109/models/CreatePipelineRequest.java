@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRequest extends TeaModel {
     /**
-     * <p>The name of the MPS queue.</p>
+     * <p>The pipeline name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreatePipelineRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The priority. Default value: 6. Valid values: 1 to 10. A greater value specifies a higher priority.</p>
+     * <p>The priority, ranging from 1 to 10. Default value: 6. A larger value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -24,15 +24,15 @@ public class CreatePipelineRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The type of the MPS queue. Valid values:</p>
-     * <ol>
-     * <li><p>Standard: standard MPS queue.</p>
+     * <p>The pipeline type. Valid values:</p>
+     * <ul>
+     * <li><p>Standard: standard pipeline.</p>
      * </li>
-     * <li><p>Boost: MPS queue with transcoding speed boosted.</p>
+     * <li><p>Boost: double-speed transcoding pipeline.</p>
      * </li>
-     * <li><p>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</p>
+     * <li><p>NarrowBandHDV2: Narrowband HD 2.0 pipeline.</p>
      * </li>
-     * </ol>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

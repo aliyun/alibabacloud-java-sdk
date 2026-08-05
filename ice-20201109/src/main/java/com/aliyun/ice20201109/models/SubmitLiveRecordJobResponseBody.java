@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveRecordJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the recording job.</p>
+     * <p>The recording task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>

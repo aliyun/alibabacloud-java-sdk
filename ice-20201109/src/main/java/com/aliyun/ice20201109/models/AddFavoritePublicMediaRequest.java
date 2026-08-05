@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddFavoritePublicMediaRequest extends TeaModel {
     /**
-     * <p>The IDs of the Media Assets.</p>
+     * <p>The IMS media asset IDs.</p>
      * <ul>
-     * <li>Separate multiple IDs with commas.</li>
+     * <li>Separate multiple IDs with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>

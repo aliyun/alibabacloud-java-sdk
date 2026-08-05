@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveRecordJobRequest extends TeaModel {
     /**
-     * <p>The name of the recording job.</p>
+     * <p>The name of the recording task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,21 +24,21 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The storage address of the recording.</p>
+     * <p>The recording storage address.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordOutput")
     public SubmitLiveRecordJobRequestRecordOutput recordOutput;
 
     /**
-     * <p>The URL of the live stream.</p>
+     * <p>The live stream address.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public SubmitLiveRecordJobRequestStreamInput streamInput;
 
     /**
-     * <p>The ID of the recording template.</p>
+     * <p>The recording template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
 
     public static class SubmitLiveRecordJobRequestRecordOutput extends TeaModel {
         /**
-         * <p>The bucket name.</p>
+         * <p>The name of the storage space.</p>
          * 
          * <strong>example:</strong>
          * <p>imsbucket1</p>
@@ -103,7 +103,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The endpoint of the storage service.</p>
+         * <p>The storage service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou.aliyuncs.com</p>
@@ -154,7 +154,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
 
     public static class SubmitLiveRecordJobRequestStreamInput extends TeaModel {
         /**
-         * <p>The type of the live stream URL. The value can only be rtmp.</p>
+         * <p>The type of the live stream address. Currently, only rtmp is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL of the live stream.</p>
+         * <p>The live stream address.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/live/stream1</p>

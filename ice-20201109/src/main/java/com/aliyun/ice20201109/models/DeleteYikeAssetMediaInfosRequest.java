@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteYikeAssetMediaInfosRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a logical delete or a permanent delete. Valid values:</p>
+     * <p>Specifies whether to logically delete the media asset information and files. Valid values:</p>
      * <ul>
-     * <li><p>true (default): Performs a logical delete. This action moves the media asset to the recycle bin and retains its associated file.</p>
-     * </li>
-     * <li><p>false: Performs a permanent delete. This action deletes both the media asset information and the associated file.</p>
-     * </li>
+     * <li>true (default): logically deletes the media asset. The media asset is moved to the recycle bin, and the files are retained.</li>
+     * <li>false: deletes the media asset information and files.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class DeleteYikeAssetMediaInfosRequest extends TeaModel {
     public Boolean logicDelete;
 
     /**
-     * <p>A comma-separated list of media asset IDs.</p>
+     * <p>The media asset IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong>,<strong><strong>15d4a4b0448391508f2cb486</strong></strong></p>

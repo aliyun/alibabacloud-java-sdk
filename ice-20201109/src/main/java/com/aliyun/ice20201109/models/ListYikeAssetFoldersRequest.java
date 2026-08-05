@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListYikeAssetFoldersRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListYikeAssetFoldersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The project ID. If this parameter is omitted, folders in the default project are returned.</p>
+     * <p>The project ID. If this parameter is not specified, the default project is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ProductionId</p>

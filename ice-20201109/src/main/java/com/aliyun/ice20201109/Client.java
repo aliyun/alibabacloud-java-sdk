@@ -229,10 +229,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
+     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a category.</p>
+     * <p>Creates a media asset category.</p>
      * 
      * @param request AddCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -272,10 +272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
+     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a category.</p>
+     * <p>Creates a media asset category.</p>
      * 
      * @param request AddCategoryRequest
      * @return AddCategoryResponse
@@ -335,7 +335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more public Media Assets to your Favorites list by their media IDs.</p>
+     * <p>Adds all media assets to the favorite based on the specified list of media asset IDs.</p>
      * 
      * @param request AddFavoritePublicMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -367,7 +367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more public Media Assets to your Favorites list by their media IDs.</p>
+     * <p>Adds all media assets to the favorite based on the specified list of media asset IDs.</p>
      * 
      * @param request AddFavoritePublicMediaRequest
      * @return AddFavoritePublicMediaResponse
@@ -721,14 +721,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
-     * <li>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</li>
+     * <li>To use standard templates, see <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</li>
+     * <li>To use advanced templates, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
+     * <h3>Limits</h3>
+     * <p>After an advanced template is created, it takes some time to be parsed. During parsing, the template status is Processing and the template is not active. The template becomes active only when its status changes to Available. The parsing time depends on the template file size and typically ranges from 10 seconds to 5 minutes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a template.</p>
+     * <p>Creates a template. Intelligent Cloud Editor supports the video clip feature based on standard templates and advanced templates. You can invoke AddTemplate to create a template.</p>
      * 
      * @param request AddTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -790,14 +792,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>For more information about how to use a regular template, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a>.</li>
-     * <li>For more information about how to use an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
-     * <li>After an advanced template is created, it enters the Processing state. In this case, the template is unavailable. The template can be used only when it is in the Available state. The time required for template processing varies based on the size of the template file. Generally, it ranges from 10 seconds to 5 minutes.</li>
+     * <li>To use standard templates, see <a href="https://help.aliyun.com/document_detail/445399.html">Quick start for standard templates</a>.</li>
+     * <li>To use advanced templates, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</li>
      * </ul>
+     * <h3>Limits</h3>
+     * <p>After an advanced template is created, it takes some time to be parsed. During parsing, the template status is Processing and the template is not active. The template becomes active only when its status changes to Available. The parsing time depends on the template file size and typically ranges from 10 seconds to 5 minutes.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a template.</p>
+     * <p>Creates a template. Intelligent Cloud Editor supports the video clip feature based on standard templates and advanced templates. You can invoke AddTemplate to create a template.</p>
      * 
      * @param request AddTemplateRequest
      * @return AddTemplateResponse
@@ -857,7 +861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies search index information including index status and configurations.</p>
+     * <p>Modifies search index information, including the index status or index configuration.</p>
      * 
      * @param request AlterSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -901,7 +905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies search index information including index status and configurations.</p>
+     * <p>Modifies search index information, including the index status or index configuration.</p>
      * 
      * @param request AlterSearchIndexRequest
      * @return AlterSearchIndexResponse
@@ -1015,7 +1019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information for multiple media assets in a single request by providing their <code>mediaId</code> values.</p>
+     * <p>Retrieves information about multiple media assets by specifying multiple mediaId values.</p>
      * 
      * @param request BatchGetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1055,7 +1059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information for multiple media assets in a single request by providing their <code>mediaId</code> values.</p>
+     * <p>Retrieves information about multiple media assets by specifying multiple mediaId values.</p>
      * 
      * @param request BatchGetMediaInfosRequest
      * @return BatchGetMediaInfosResponse
@@ -1111,7 +1115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves multiple media assets.</p>
+     * <p>Retrieves information about multiple media assets in a batch.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1143,7 +1147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves multiple media assets.</p>
+     * <p>Retrieves information about multiple media assets in a batch.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @return BatchGetYikeAssetMediaInfosResponse
@@ -1227,7 +1231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes all specified media assets from favorites based on the input mediaId list.</p>
+     * <p>Cancels the favorite status of all media assets based on the specified list of media asset IDs.</p>
      * 
      * @param request CancelFavoritePublicMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1259,7 +1263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes all specified media assets from favorites based on the input mediaId list.</p>
+     * <p>Cancels the favorite status of all media assets based on the specified list of media asset IDs.</p>
      * 
      * @param request CancelFavoritePublicMediaRequest
      * @return CancelFavoritePublicMediaResponse
@@ -1271,7 +1275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke CancelIProductionJob to cancel an Intelligent Production job.</p>
+     * <p>Cancels an intelligent production job.</p>
      * 
      * @param request CancelIProductionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1307,7 +1311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke CancelIProductionJob to cancel an Intelligent Production job.</p>
+     * <p>Cancels an intelligent production job.</p>
      * 
      * @param request CancelIProductionJobRequest
      * @return CancelIProductionJobResponse
@@ -1473,7 +1477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits manual review results for media assets.</p>
+     * <p>Submits a manual review for a media asset by calling CreateAudit.</p>
      * 
      * @param request CreateAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1505,7 +1509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits manual review results for media assets.</p>
+     * <p>Submits a manual review for a media asset by calling CreateAudit.</p>
      * 
      * @param request CreateAuditRequest
      * @return CreateAuditResponse
@@ -1517,10 +1521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is only used to initialize trainingTaskrelatedInformation,And will not submit training,To officially submit training, you need toCall <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> API.</p>
+     * <p>This operation only initializes the training task information and does not submit the training. To formally submit the training, call the <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</p>
+     * <p>Creates a digital human training task and configures the basic information and training material information for the digital human.</p>
      * 
      * @param request CreateAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1576,10 +1580,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is only used to initialize trainingTaskrelatedInformation,And will not submit training,To officially submit training, you need toCall <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> API.</p>
+     * <p>This operation only initializes the training task information and does not submit the training. To formally submit the training, call the <a href="https://help.aliyun.com/document_detail/2526196.html">SubmitAvatarTrainingJob</a> operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an avatar training job. You can configure the basic information of the avatar and the materials required for the training.</p>
+     * <p>Creates a digital human training task and configures the basic information and training material information for the digital human.</p>
      * 
      * @param request CreateAvatarTrainingJobRequest
      * @return CreateAvatarTrainingJobResponse
@@ -1719,14 +1723,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</p>
      * <ul>
-     * <li>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</li>
-     * <li>Call this operation to achieve entertainment-grade results. You need to record 20 predefined scripts. The system then extracts key voiceprint features to perform voice cloning quickly and cost-effectively.</li>
+     * <li>To achieve entertainment-level effects, call this operation. When using it, you need to record 20 fixed script texts. The system extracts key voiceprint features, enabling quick and low-cost voice cloning customization.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a voice cloning job and initializes its basic information.</p>
+     * <p>Creates a voice cloning task to initialize the basic configuration information for the task.</p>
      * 
      * @param request CreateCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1774,14 +1777,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</p>
      * <ul>
-     * <li>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</li>
-     * <li>Call this operation to achieve entertainment-grade results. You need to record 20 predefined scripts. The system then extracts key voiceprint features to perform voice cloning quickly and cost-effectively.</li>
+     * <li>To achieve entertainment-level effects, call this operation. When using it, you need to record 20 fixed script texts. The system extracts key voiceprint features, enabling quick and low-cost voice cloning customization.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a voice cloning job and initializes its basic information.</p>
+     * <p>Creates a voice cloning task to initialize the basic configuration information for the task.</p>
      * 
      * @param request CreateCustomizedVoiceJobRequest
      * @return CreateCustomizedVoiceJobResponse
@@ -1868,12 +1870,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Billing is based on the duration of the edited video,For more informationPlease referSee<a href="https://help.aliyun.com/document_detail/2840899.html">VideoEditing</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">LiveEditing</a> .If processing fails,No charge.</li>
-     * <li>After creating the editing project,You canCall<a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - SubmitEditingCompositing jobAPI</a>Submit mediaEditingSynthesisTask.Call<a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit liveEditingTask</a>Submit liveEditingTask.</li>
+     * <li>Billing is based on the duration of the output video produced by editing and compositing. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">Live editing</a>. No fees are charged if the processing is failed.</li>
+     * <li>After you create an editing project, you can invoke <a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - Submit a media editing and compositing node</a> to commit a media editing and compositing node. Invoke <a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit a live editing node</a> to commit a live editing node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</p>
+     * <p>Creates a cloud editing project. You can set the title, description, timeline, and project cover.</p>
      * 
      * @param request CreateEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1944,12 +1946,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Billing is based on the duration of the edited video,For more informationPlease referSee<a href="https://help.aliyun.com/document_detail/2840899.html">VideoEditing</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">LiveEditing</a> .If processing fails,No charge.</li>
-     * <li>After creating the editing project,You canCall<a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - SubmitEditingCompositing jobAPI</a>Submit mediaEditingSynthesisTask.Call<a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit liveEditingTask</a>Submit liveEditingTask.</li>
+     * <li>Billing is based on the duration of the output video produced by editing and compositing. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>&lt;props=&quot;china&quot;&gt; and <a href="https://help.aliyun.com/document_detail/2840900.html">Live editing</a>. No fees are charged if the processing is failed.</li>
+     * <li>After you create an editing project, you can invoke <a href="https://help.aliyun.com/document_detail/441147.html">SubmitMediaProducingJob - Submit a media editing and compositing node</a> to commit a media editing and compositing node. Invoke <a href="https://help.aliyun.com/document_detail/441148.html">SubmitLiveEditingJob - Submit a live editing node</a> to commit a live editing node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an online editing project. You can specify configurations such as the title, description, timeline, and thumbnail for the project.</p>
+     * <p>Creates a cloud editing project. You can set the title, description, timeline, and project cover.</p>
      * 
      * @param request CreateEditingProjectRequest
      * @return CreateEditingProjectResponse
@@ -2343,10 +2345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Live recording requires a Live Record Template. You can use a template to configure settings such as the recording format (for example, M3U8, MP4, or FLV) and the duration of Recording Files.</p>
+     * <p>Real-time recording requires a recording template. A recording template specifies the output format of recording files (m3u8, mp4, or flv), the recording file duration, and other information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use this operation to create a Live Record Template. You can use the template to submit Live Recording Jobs.</p>
+     * <p>Creates a real-time recording template for submitting real-time recording tasks.</p>
      * 
      * @param tmpReq CreateLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2388,10 +2390,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Live recording requires a Live Record Template. You can use a template to configure settings such as the recording format (for example, M3U8, MP4, or FLV) and the duration of Recording Files.</p>
+     * <p>Real-time recording requires a recording template. A recording template specifies the output format of recording files (m3u8, mp4, or flv), the recording file duration, and other information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use this operation to create a Live Record Template. You can use the template to submit Live Recording Jobs.</p>
+     * <p>Creates a real-time recording template for submitting real-time recording tasks.</p>
      * 
      * @param request CreateLiveRecordTemplateRequest
      * @return CreateLiveRecordTemplateResponse
@@ -2403,7 +2405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</p>
+     * <p>Creates a live snapshot template that can be used to create snapshot tasks.</p>
      * 
      * @param request CreateLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2447,7 +2449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a live stream snapshot template to facilitate the creation of snapshot jobs.</p>
+     * <p>Creates a live snapshot template that can be used to create snapshot tasks.</p>
      * 
      * @param request CreateLiveSnapshotTemplateRequest
      * @return CreateLiveSnapshotTemplateResponse
@@ -2459,10 +2461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only Shanghai region supports real-time media transcoding.</p>
+     * <p>Real-time media transcoding is supported only in the Shanghai region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</p>
+     * <p>Creates a real-time transcoding template for submitting real-time transcoding tasks.</p>
      * 
      * @param tmpReq CreateLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2508,10 +2510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only Shanghai region supports real-time media transcoding.</p>
+     * <p>Real-time media transcoding is supported only in the Shanghai region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a live stream transcoding template, which can be referenced when submitting a transcoding job.</p>
+     * <p>Creates a real-time transcoding template for submitting real-time transcoding tasks.</p>
      * 
      * @param request CreateLiveTranscodeTemplateRequest
      * @return CreateLiveTranscodeTemplateResponse
@@ -2811,7 +2813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ApsaraVideo Media Processing (MPS) queue.</p>
+     * <p>Creates a media processing pipeline for automated and batch processing of media files.</p>
      * 
      * @param request CreatePipelineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2851,7 +2853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ApsaraVideo Media Processing (MPS) queue.</p>
+     * <p>Creates a media processing pipeline for automated and batch processing of media files.</p>
      * 
      * @param request CreatePipelineRequest
      * @return CreatePipelineResponse
@@ -3189,11 +3191,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">Intelligent Search billing</a> method and pricing.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">billing</a> methods and pricing of intelligent retrieval.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can create a search index under a search library. A search library can contain multiple search indexes of different types.</p>
+     * <p>Creates a search index in a search library. A search library can contain multiple search indexes of different types.</p>
      * 
      * @param request CreateSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3237,11 +3238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">Intelligent Search billing</a> method and pricing.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/2840897.html">billing</a> methods and pricing of intelligent retrieval.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can create a search index under a search library. A search library can contain multiple search indexes of different types.</p>
+     * <p>Creates a search index in a search library. A search library can contain multiple search indexes of different types.</p>
      * 
      * @param request CreateSearchIndexRequest
      * @return CreateSearchIndexResponse
@@ -3253,7 +3253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a search library to store media assets.</p>
+     * <p>Creates a search media library. You can use the library to store media assets.</p>
      * 
      * @param request CreateSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3289,7 +3289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a search library to store media assets.</p>
+     * <p>Creates a search media library. You can use the library to store media assets.</p>
      * 
      * @param request CreateSearchLibRequest
      * @return CreateSearchLibResponse
@@ -3465,21 +3465,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Overview</h3>
+     * <h3>Operation description</h3>
      * <ul>
-     * <li>Obtaining an upload address and upload credential is a prerequisite for all uploads in Intelligent Media Service.</li>
-     * <li>If an upload credential expires (the default validity is 3,000 seconds), call the <code>RefreshUploadMedia</code> operation to get a new one.</li>
-     * <li>After an upload is complete, you can confirm its success by either configuring a callback for event notifications or calling the <code>GetMediaInfo</code> operation to check the media asset\&quot;s status.</li>
-     * <li>Use the returned <code>MediaId</code> for media asset lifecycle management or media processing.</li>
+     * <li>Retrieving the upload URL and credential is a core foundation of Intelligent Media Services and a required procedure for every upload operation.</li>
+     * <li>If the video upload credential expires (the default validity epoch is 3000 seconds), invoke the refresh video upload credential operation to obtain a new upload credential.</li>
+     * <li>After the upload, you can configure callbacks to accept upload event notifications, or invoke the GetMediaInfo operation to check the returned media asset status to determine whether the upload is successful.</li>
+     * <li>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
      * </ul>
-     * <h3>Limitations</h3>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This operation supports uploads only to VOD storage, not to your own Object Storage Service (OSS) buckets. If you use your own OSS buckets, first upload the files by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS files in your media library.</li>
-     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * <li>This operation supports uploads only to VOD storage. Uploads to user-owned OSS storage are not supported. If you use your own OSS storage, upload files to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media library.</li>
+     * <li>This operation currently supports only the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation retrieves an upload address and upload credential for audio, video, image, and auxiliary media assets, and creates the corresponding media asset.</p>
+     * <p>Retrieves the upload URL and credential for audio, video, image, and auxiliary media assets, and creates media asset information.</p>
      * 
      * @param request CreateUploadMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3535,21 +3535,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Overview</h3>
+     * <h3>Operation description</h3>
      * <ul>
-     * <li>Obtaining an upload address and upload credential is a prerequisite for all uploads in Intelligent Media Service.</li>
-     * <li>If an upload credential expires (the default validity is 3,000 seconds), call the <code>RefreshUploadMedia</code> operation to get a new one.</li>
-     * <li>After an upload is complete, you can confirm its success by either configuring a callback for event notifications or calling the <code>GetMediaInfo</code> operation to check the media asset\&quot;s status.</li>
-     * <li>Use the returned <code>MediaId</code> for media asset lifecycle management or media processing.</li>
+     * <li>Retrieving the upload URL and credential is a core foundation of Intelligent Media Services and a required procedure for every upload operation.</li>
+     * <li>If the video upload credential expires (the default validity epoch is 3000 seconds), invoke the refresh video upload credential operation to obtain a new upload credential.</li>
+     * <li>After the upload, you can configure callbacks to accept upload event notifications, or invoke the GetMediaInfo operation to check the returned media asset status to determine whether the upload is successful.</li>
+     * <li>The MediaId parameter returned by this operation can be used for media asset lifecycle management or media processing.</li>
      * </ul>
-     * <h3>Limitations</h3>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>This operation supports uploads only to VOD storage, not to your own Object Storage Service (OSS) buckets. If you use your own OSS buckets, first upload the files by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then call the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS files in your media library.</li>
-     * <li>This operation is available only in the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
+     * <li>This operation supports uploads only to VOD storage. Uploads to user-owned OSS storage are not supported. If you use your own OSS storage, upload files to OSS by using the <a href="https://help.aliyun.com/document_detail/32006.html">OSS SDK</a>, and then invoke the <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a> operation to register the OSS file in the media library.</li>
+     * <li>This operation currently supports only the China (Shanghai), China (Beijing), and China (Shenzhen) regions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This operation retrieves an upload address and upload credential for audio, video, image, and auxiliary media assets, and creates the corresponding media asset.</p>
+     * <p>Retrieves the upload URL and credential for audio, video, image, and auxiliary media assets, and creates media asset information.</p>
      * 
      * @param request CreateUploadMediaRequest
      * @return CreateUploadMediaResponse
@@ -3815,7 +3815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an upload credential for a Yike media asset.</p>
+     * <p>Retrieves the upload credential for a media asset on Yike.</p>
      * 
      * @param request CreateYikeAssetUploadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3851,7 +3851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an upload credential for a Yike media asset.</p>
+     * <p>Retrieves the upload credential for a media asset on Yike.</p>
      * 
      * @param request CreateYikeAssetUploadRequest
      * @return CreateYikeAssetUploadResponse
@@ -4019,7 +4019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</p>
+     * <p>Performs decryption on the CiphertextBlob ciphertext in a KMS data key (DK).</p>
      * 
      * @param request DecryptKMSDataKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4051,7 +4051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Decrypts the ciphertext specified by CiphertextBlob in the Key Management Service (KMS) data key.</p>
+     * <p>Performs decryption on the CiphertextBlob ciphertext in a KMS data key (DK).</p>
      * 
      * @param request DecryptKMSDataKeyRequest
      * @return DecryptKMSDataKeyResponse
@@ -4159,7 +4159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a digital human training job that is in the Init or Fail state.</p>
+     * <p>Deletes a digital human training task that is in the init (draft) or training failed status.</p>
      * 
      * @param request DeleteAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4191,7 +4191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a digital human training job that is in the Init or Fail state.</p>
+     * <p>Deletes a digital human training task that is in the init (draft) or training failed status.</p>
      * 
      * @param request DeleteAvatarTrainingJobRequest
      * @return DeleteAvatarTrainingJobResponse
@@ -4203,7 +4203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</p>
+     * <p>This operation also deletes all subcategories, including level-2 and level-3 categories. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a media asset category.</p>
@@ -4238,7 +4238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation also deletes the subcategories, including the level-2 and level-3 categories, of the category.</p>
+     * <p>This operation also deletes all subcategories, including level-2 and level-3 categories. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a media asset category.</p>
@@ -4925,7 +4925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes live snapshot files. You can delete only the records, or both the records and the original Object Storage Service (OSS) files.</p>
+     * <p>Deletes live snapshot files. You can choose to delete only the records or delete both the records and the original OSS files.</p>
      * 
      * @param tmpReq DeleteLiveSnapshotFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4971,7 +4971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes live snapshot files. You can delete only the records, or both the records and the original Object Storage Service (OSS) files.</p>
+     * <p>Deletes live snapshot files. You can choose to delete only the records or delete both the records and the original OSS files.</p>
      * 
      * @param request DeleteLiveSnapshotFilesRequest
      * @return DeleteLiveSnapshotFilesResponse
@@ -6349,7 +6349,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more media assets.</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteYikeAssetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6385,7 +6385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more media assets.</p>
+     * <p>Deletes media asset information.</p>
      * 
      * @param request DeleteYikeAssetMediaInfosRequest
      * @return DeleteYikeAssetMediaInfosResponse
@@ -7251,11 +7251,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Prerequisites</h2>
-     * <p>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a custom KMS key before you can call this operation.</p>
+     * <h2>Before you begin</h2>
+     * <p>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a customer master key (CMK) in KMS before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</p>
+     * <p>Generates a random KMS data key (DK) for standard encryption transcoding of videos.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateKMSDataKeyResponse
@@ -7278,11 +7278,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Prerequisites</h2>
-     * <p>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a custom KMS key before you can call this operation.</p>
+     * <h2>Before you begin</h2>
+     * <p>You must <a href="https://smartservice.console.aliyun.com/service/create-ticket?spm=a2c63.p38356.0.0.583760760aj80E">submit a ticket</a> to create a customer master key (CMK) in KMS before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</p>
+     * <p>Generates a random KMS data key (DK) for standard encryption transcoding of videos.</p>
      * @return GenerateKMSDataKeyResponse
      */
     public GenerateKMSDataKeyResponse generateKMSDataKey() throws Exception {
@@ -9290,10 +9290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><code>MediaId</code> takes precedence. If <code>MediaId</code> is empty, <code>InputURL</code> must not be null.</p>
+     * <p>If MediaId is not empty, MediaId takes priority. If MediaId is empty, InputURL must be non-empty.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves media asset information using an Intelligent Media Services (IMS) <code>mediaId</code> or an <code>InputURL</code>.</p>
+     * <p>Retrieves media asset information based on an IMS mediaId or media asset InputURL.</p>
      * 
      * @param request GetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9341,10 +9341,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><code>MediaId</code> takes precedence. If <code>MediaId</code> is empty, <code>InputURL</code> must not be null.</p>
+     * <p>If MediaId is not empty, MediaId takes priority. If MediaId is empty, InputURL must be non-empty.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves media asset information using an Intelligent Media Services (IMS) <code>mediaId</code> or an <code>InputURL</code>.</p>
+     * <p>Retrieves media asset information based on an IMS mediaId or media asset InputURL.</p>
      * 
      * @param request GetMediaInfoRequest
      * @return GetMediaInfoResponse
@@ -9610,11 +9610,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Limitations</h3>
-     * <p>This API can only retrieve editing job data from the past year.</p>
+     * <h3>Limits</h3>
+     * <p>This operation only supports querying media producing node data from the last year.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves details for an editing and composition job, such as its task status, timeline, template, and data.</p>
+     * <p>Retrieves the details of a media producing job, including the job status, timeline, template, and data.</p>
      * 
      * @param request GetMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9646,11 +9646,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Limitations</h3>
-     * <p>This API can only retrieve editing job data from the past year.</p>
+     * <h3>Limits</h3>
+     * <p>This operation only supports querying media producing node data from the last year.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves details for an editing and composition job, such as its task status, timeline, template, and data.</p>
+     * <p>Retrieves the details of a media producing job, including the job status, timeline, template, and data.</p>
      * 
      * @param request GetMediaProducingJobRequest
      * @return GetMediaProducingJobResponse
@@ -9750,7 +9750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This API retrieves the playback URL for a media file (video or audio) using a given audio/video ID. Use this URL for audio/video playback after integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player.</p>
+     * <p>Obtains the playback URL of a media file (video or audio) by audio or video ID. After integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player, you can use the URL for audio and video playback.</p>
      * 
      * @param request GetPlayInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9790,7 +9790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This API retrieves the playback URL for a media file (video or audio) using a given audio/video ID. Use this URL for audio/video playback after integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player.</p>
+     * <p>Obtains the playback URL of a media file (video or audio) by audio or video ID. After integrating the Alibaba Cloud Player SDK (for URL-based playback) or a third-party player, you can use the URL for audio and video playback.</p>
      * 
      * @param request GetPlayInfoRequest
      * @return GetPlayInfoResponse
@@ -10464,7 +10464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the replaceable material parameter information of a template, including the parameter name, default material value, and material thumbnail. Currently, only advanced templates are supported.</p>
+     * <p>Retrieves the replaceable media parameter information of a template, including parameter names, default media values, and media thumbnails. Currently, only advanced templates are supported.</p>
      * 
      * @param request GetTemplateParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10492,7 +10492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain the replaceable material parameter information of a template, including the parameter name, default material value, and material thumbnail. Currently, only advanced templates are supported.</p>
+     * <p>Retrieves the replaceable media parameter information of a template, including parameter names, default media values, and media thumbnails. Currently, only advanced templates are supported.</p>
      * 
      * @param request GetTemplateParamsRequest
      * @return GetTemplateParamsResponse
@@ -10862,7 +10862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Yike AI App job.</p>
+     * <p>Retrieves the task result of an AI application.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10894,7 +10894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Yike AI App job.</p>
+     * <p>Retrieves the task result of an AI application.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @return GetYikeAIAppJobResponse
@@ -10906,7 +10906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets media asset information.</p>
+     * <p>Retrieves the content information of a media asset.</p>
      * 
      * @param request GetYikeAssetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10938,7 +10938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets media asset information.</p>
+     * <p>Retrieves the content information of a media asset.</p>
      * 
      * @param request GetYikeAssetMediaInfoRequest
      * @return GetYikeAssetMediaInfoResponse
@@ -10950,7 +10950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Yike storyboard job.</p>
+     * <p>Retrieves an AI application task for storyboard generation.</p>
      * 
      * @param request GetYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10982,7 +10982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a Yike storyboard job.</p>
+     * <p>Retrieves an AI application task for storyboard generation.</p>
      * 
      * @param request GetYikeStoryboardJobRequest
      * @return GetYikeStoryboardJobResponse
@@ -11226,14 +11226,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation lists AI agent instances. Filter results by agent ID (<code>AIAgentId</code>). Optionally, specify a time range (<code>StartTime</code> and <code>EndTime</code>), the number of results per page (<code>PageSize</code>), and the page number (<code>PageNumber</code>). The response includes each instance’s status, runtime configuration, template configuration, user-defined data, and a download link for the conversation call log.</p>
+     * <p>This operation allows you to query the list of AI agent instances based on the specified agent ID (<code>AIAgentId</code>), along with optional parameters such as time range (<code>StartTime</code> and <code>EndTime</code>), page size (<code>PageSize</code>), and page number (<code>PageNumber</code>). The response includes the status, runtime configuration, template configuration, user-defined data, and download URL for conversation call logs of each instance.</p>
      * <blockquote>
-     * <p>Notice: 
-     * Default pagination values: PageSize is 10. PageNumber is 1.</p>
+     * <p>Notice: Default values for pagination parameters: PageSize is 10, PageNumber is 1.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>List AI agent instances. You can retrieve all instances or filter them by specified conditions.</p>
+     * <p>Queries the list of AI agent instances. You can retrieve all instances or filter by specified conditions.</p>
      * 
      * @param request ListAIAgentInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11281,14 +11280,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation lists AI agent instances. Filter results by agent ID (<code>AIAgentId</code>). Optionally, specify a time range (<code>StartTime</code> and <code>EndTime</code>), the number of results per page (<code>PageSize</code>), and the page number (<code>PageNumber</code>). The response includes each instance’s status, runtime configuration, template configuration, user-defined data, and a download link for the conversation call log.</p>
+     * <p>This operation allows you to query the list of AI agent instances based on the specified agent ID (<code>AIAgentId</code>), along with optional parameters such as time range (<code>StartTime</code> and <code>EndTime</code>), page size (<code>PageSize</code>), and page number (<code>PageNumber</code>). The response includes the status, runtime configuration, template configuration, user-defined data, and download URL for conversation call logs of each instance.</p>
      * <blockquote>
-     * <p>Notice: 
-     * Default pagination values: PageSize is 10. PageNumber is 1.</p>
+     * <p>Notice: Default values for pagination parameters: PageSize is 10, PageNumber is 1.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>List AI agent instances. You can retrieve all instances or filter them by specified conditions.</p>
+     * <p>Queries the list of AI agent instances. You can retrieve all instances or filter by specified conditions.</p>
      * 
      * @param request ListAIAgentInstanceRequest
      * @return ListAIAgentInstanceResponse
@@ -12924,7 +12922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of live stream transcoding jobs.</p>
+     * <p>Queries the list of real-time media transcoding tasks by calling ListLiveTranscodeJobs.</p>
      * 
      * @param request ListLiveTranscodeJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12980,7 +12978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of live stream transcoding jobs.</p>
+     * <p>Queries the list of real-time media transcoding tasks by calling ListLiveTranscodeJobs.</p>
      * 
      * @param request ListLiveTranscodeJobsRequest
      * @return ListLiveTranscodeJobsResponse
@@ -13232,7 +13230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of media information analysis jobs.</p>
+     * <p>Queries the list of media information tasks.</p>
      * 
      * @param request ListMediaInfoJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13288,7 +13286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of media information analysis jobs.</p>
+     * <p>Queries the list of media information tasks.</p>
      * 
      * @param request ListMediaInfoJobsRequest
      * @return ListMediaInfoJobsResponse
@@ -15116,7 +15114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Yike folders.</p>
+     * <p>Retrieves the list of folders.</p>
      * 
      * @param request ListYikeAssetFoldersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15156,7 +15154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Yike folders.</p>
+     * <p>Retrieves the list of folders.</p>
      * 
      * @param request ListYikeAssetFoldersRequest
      * @return ListYikeAssetFoldersResponse
@@ -15168,7 +15166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Yike projects.</p>
+     * <p>Retrieves the list of Yike projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15216,7 +15214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Yike projects.</p>
+     * <p>Retrieves the list of Yike projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @return ListYikeProductionsResponse
@@ -16268,10 +16266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> operation at this time, you may fail to obtain the information about the media asset.</p>
+     * <p>Media asset registration is an asynchronous task that typically takes 2 to 3 seconds to complete. When the registration operation returns a mediaId, the media asset may not have been fully registered. In this case, calling <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> may not return the file information of the media asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</p>
+     * <p>Initiates a media asset registration task and assigns a new IMS mediaId to the media asset. Based on the InputURL, the operation asynchronously calls other media asset information services to retrieve file information about the media asset. You can also set basic information such as the title, tags, and description. The operation synchronously returns a mediaId. You can call the GetMediaInfo operation to retrieve detailed media asset information. Currently, only OSS files and VOD media assets are supported as InputURL values.</p>
      * 
      * @param request RegisterMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16359,10 +16357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Registering a media asset is an asynchronous job that takes 2 to 3 seconds. When the operation returns the ID of the media asset, the registration may have not be completed. If you call the <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> operation at this time, you may fail to obtain the information about the media asset.</p>
+     * <p>Media asset registration is an asynchronous task that typically takes 2 to 3 seconds to complete. When the registration operation returns a mediaId, the media asset may not have been fully registered. In this case, calling <a href="https://help.aliyun.com/document_detail/441155.html">GetMediaInfo</a> may not return the file information of the media asset.</p>
      * 
      * <b>summary</b> : 
-     * <p>Registers a media asset with Intelligent Media Services (IMS). IMS assigns an ID to the media asset. This operation asynchronously accesses the media asset service in which the media asset is stored to obtain the file information of the media asset based on the input URL. You can also specify basic information, such as the title, tags, and description, for the media asset. This operation returns the ID of the media asset. You can call the GetMediaInfo operation based on the ID to query the details of the media asset. You can set InputURL only to the URL of an Object Storage Service (OSS) file or an ApsaraVideo VOD media asset.</p>
+     * <p>Initiates a media asset registration task and assigns a new IMS mediaId to the media asset. Based on the InputURL, the operation asynchronously calls other media asset information services to retrieve file information about the media asset. You can also set basic information such as the title, tags, and description. The operation synchronously returns a mediaId. You can call the GetMediaInfo operation to retrieve detailed media asset information. Currently, only OSS files and VOD media assets are supported as InputURL values.</p>
      * 
      * @param request RegisterMediaInfoRequest
      * @return RegisterMediaInfoResponse
@@ -16430,7 +16428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers a media asset in the asset library.</p>
+     * <p>Registers a content library resource.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16474,7 +16472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers a media asset in the asset library.</p>
+     * <p>Registers a content library resource.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @return RegisterYikeAssetMediaInfoResponse
@@ -16654,7 +16652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rerun the search index jobs for the specified media assets in batch. You can rerun index jobs for up to 20 media assets per request.</p>
+     * <p>Reanalyzes search index tasks for specified media assets in batches. You can rerun index tasks for up to 20 media assets per request.</p>
      * 
      * @param request SearchIndexJobRerunRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16698,7 +16696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Rerun the search index jobs for the specified media assets in batch. You can rerun index jobs for up to 20 media assets per request.</p>
+     * <p>Reanalyzes search index tasks for specified media assets in batches. You can rerun index tasks for up to 20 media assets per request.</p>
      * 
      * @param request SearchIndexJobRerunRequest
      * @return SearchIndexJobRerunResponse
@@ -16710,10 +16708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have any questions about the multi-modal search feature, join our DingTalk group (ID: 30415005038) for assistance.</p>
+     * <p>To use the multimodal search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) and join the Intelligent Media Services multimodal search customer support group to contact us.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns media assets that match the specified conditions.</p>
+     * <p>Returns media asset information that matches the specified filter conditions.</p>
      * 
      * @param request SearchMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16773,10 +16771,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you have any questions about the multi-modal search feature, join our DingTalk group (ID: 30415005038) for assistance.</p>
+     * <p>To use the multimodal search feature of Alibaba Cloud Intelligent Media Services or to consult about related issues, search for DingTalk group (30415005038) and join the Intelligent Media Services multimodal search customer support group to contact us.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns media assets that match the specified conditions.</p>
+     * <p>Returns media asset information that matches the specified filter conditions.</p>
      * 
      * @param request SearchMediaRequest
      * @return SearchMediaResponse
@@ -17132,10 +17130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For questions about using or troubleshooting the Intelligent Media Search feature of Alibaba Cloud Intelligent Media Services, please search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</p>
+     * <p>For questions about the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group.</p>
      * 
      * <b>summary</b> : 
-     * <p>The API for searching media asset segments by face image (fine search) returns information about relevant character segments in the media asset where the face appears, based on coarse search results.</p>
+     * <p>Searches for media asset clips by face image (precise search). Returns relevant person clip information in the media asset based on the coarse search results.</p>
      * 
      * @param request SearchMediaClipByFaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17187,10 +17185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For questions about using or troubleshooting the Intelligent Media Search feature of Alibaba Cloud Intelligent Media Services, please search for the DingTalk group (30415005038) and join the Intelligent Media Services multimodal search Customer Support DingTalk group to contact us.</p>
+     * <p>For questions about the intelligent media asset search feature of Alibaba Cloud Intelligent Media Services, search for DingTalk group (30415005038) to join the Intelligent Media Services multimodal search customer support group.</p>
      * 
      * <b>summary</b> : 
-     * <p>The API for searching media asset segments by face image (fine search) returns information about relevant character segments in the media asset where the face appears, based on coarse search results.</p>
+     * <p>Searches for media asset clips by face image (precise search). Returns relevant person clip information in the media asset based on the coarse search results.</p>
      * 
      * @param request SearchMediaClipByFaceRequest
      * @return SearchMediaClipByFaceResponse
@@ -17202,7 +17200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search for media assets that meet the conditions based on the parameters provided by the User.</p>
+     * <p>Searches for media assets that match the specified conditions.</p>
      * 
      * @param request SearchPublicMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17262,7 +17260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Search for media assets that meet the conditions based on the parameters provided by the User.</p>
+     * <p>Searches for media assets that match the specified conditions.</p>
      * 
      * @param request SearchPublicMediaInfoRequest
      * @return SearchPublicMediaInfoResponse
@@ -17444,7 +17442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sends a command to process a live stream snapshot job.</p>
+     * <p>Sends an instruction for a real-time snapshot task.</p>
      * 
      * @param request SendLiveSnapshotJobCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17480,7 +17478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sends a command to process a live stream snapshot job.</p>
+     * <p>Sends an instruction for a real-time snapshot task.</p>
      * 
      * @param request SendLiveSnapshotJobCommandRequest
      * @return SendLiveSnapshotJobCommandResponse
@@ -17758,16 +17756,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>-Intelligent Media Services can use Object Storage Service (OSS) or ApsaraVideo VOD storage. Activate the corresponding service based on the storage type you need. The differences are as follows:</p>
      * <ul>
-     * <li>Intelligent Media Services supports storage in either Object Storage Service or ApsaraVideo VOD. Activate the corresponding service based on your required storage type. The differences between the two are as follows:</li>
-     * <li><strong>ApsaraVideo VOD storage</strong>: ApsaraVideo VOD provides an all-in-one audio and video solution, including video storage, media asset management, and CDN-based playback. When storing media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and publishing of video applications using VOD-provided APIs.</li>
-     * <li><strong>Object Storage</strong>: Object Storage Service (OSS) is Alibaba Cloud’s secure, low-cost, highly durable, and scalable cloud storage service. You can leverage the combined capabilities of Intelligent Media Services and OSS to develop audio and video applications for diverse scenarios.</li>
-     * <li>You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure Storage Address</a>.</li>
-     * <li>Storage fees are billed through OSS or ApsaraVideo VOD based on your configured storage address. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media Asset Storage Billing</a>.</li>
+     * <li>ApsaraVideo VOD storage: ApsaraVideo VOD provides a one-stop audio and video Solutions that includes video storage, media asset management, and CDN playback services. When you store media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and launch of video services based on the APIs provided by ApsaraVideo VOD.</li>
+     * <li>Object Storage Service: OSS is a massive, secure, low-cost, and highly durable cloud storage service provided by Alibaba Cloud. You can develop multi-scenario audio and video services based on the capabilities of Intelligent Media Services and OSS.
+     * -You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure storage address</a>.
+     * -Storage fees are billed in OSS or ApsaraVideo VOD based on the storage address you configure. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media asset storage billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Set the default storage path for temporary files. The default storage address is used by the ICE online editor and the integrated web SDK to store temporary files generated during video editing, such as audio files generated by Intelligent configurations. Setting a default storage address avoids inconveniencing users who would otherwise need to specify storage paths for various temporary resources during editing. If you integrate ICE editing capabilities through an API, you can flexibly specify the path in the API request, and this default path will not take effect.</p>
+     * <p>Sets the default storage path for temporary files. The default storage address is used for temporary file storage generated during editing when using the ICE online editor or integrated WebSDK, such as audio files generated by intelligent configurations. Setting the default storage address prevents confusion when users are prompted to specify storage paths for various temporary resources during editing. If you access ICE editing capabilities through APIs, you can flexibly set the path in the API request, and this default path does not take effect.</p>
      * 
      * @param request SetDefaultStorageLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17807,16 +17805,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>-Intelligent Media Services can use Object Storage Service (OSS) or ApsaraVideo VOD storage. Activate the corresponding service based on the storage type you need. The differences are as follows:</p>
      * <ul>
-     * <li>Intelligent Media Services supports storage in either Object Storage Service or ApsaraVideo VOD. Activate the corresponding service based on your required storage type. The differences between the two are as follows:</li>
-     * <li><strong>ApsaraVideo VOD storage</strong>: ApsaraVideo VOD provides an all-in-one audio and video solution, including video storage, media asset management, and CDN-based playback. When storing media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and publishing of video applications using VOD-provided APIs.</li>
-     * <li><strong>Object Storage</strong>: Object Storage Service (OSS) is Alibaba Cloud’s secure, low-cost, highly durable, and scalable cloud storage service. You can leverage the combined capabilities of Intelligent Media Services and OSS to develop audio and video applications for diverse scenarios.</li>
-     * <li>You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure Storage Address</a>.</li>
-     * <li>Storage fees are billed through OSS or ApsaraVideo VOD based on your configured storage address. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media Asset Storage Billing</a>.</li>
+     * <li>ApsaraVideo VOD storage: ApsaraVideo VOD provides a one-stop audio and video Solutions that includes video storage, media asset management, and CDN playback services. When you store media assets in ApsaraVideo VOD, Intelligent Media Services enhances VOD capabilities, enabling rapid development and launch of video services based on the APIs provided by ApsaraVideo VOD.</li>
+     * <li>Object Storage Service: OSS is a massive, secure, low-cost, and highly durable cloud storage service provided by Alibaba Cloud. You can develop multi-scenario audio and video services based on the capabilities of Intelligent Media Services and OSS.
+     * -You can also configure the storage address in the console. For details, see <a href="https://help.aliyun.com/document_detail/609918.html">Configure storage address</a>.
+     * -Storage fees are billed in OSS or ApsaraVideo VOD based on the storage address you configure. For details, see <a href="https://help.aliyun.com/document_detail/440701.html">Media asset storage billing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Set the default storage path for temporary files. The default storage address is used by the ICE online editor and the integrated web SDK to store temporary files generated during video editing, such as audio files generated by Intelligent configurations. Setting a default storage address avoids inconveniencing users who would otherwise need to specify storage paths for various temporary resources during editing. If you integrate ICE editing capabilities through an API, you can flexibly specify the path in the API request, and this default path will not take effect.</p>
+     * <p>Sets the default storage path for temporary files. The default storage address is used for temporary file storage generated during editing when using the ICE online editor or integrated WebSDK, such as audio files generated by intelligent configurations. Setting the default storage address prevents confusion when users are prompted to specify storage paths for various temporary resources during editing. If you access ICE editing capabilities through APIs, you can flexibly set the path in the API request, and this default path does not take effect.</p>
      * 
      * @param request SetDefaultStorageLocationRequest
      * @return SetDefaultStorageLocationResponse
@@ -18427,12 +18425,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Currently, only media assets from Intelligent Media Services or ApsaraVideo VOD are supported as workflow inputs.</li>
-     * <li>When submitting a flow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a system preset workflow template.</li>
+     * <li>Currently, only Intelligent Media Services (IMS) media assets and ApsaraVideo VOD media assets are supported as workflow inputs.</li>
+     * <li>When you initiate a workflow task, specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a preset template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>By invoking the StartWorkflow API, you can submit a media workflow template task to implement an automated media processing flow based on the workflow template.</p>
+     * <p>Submits a workflow template task to implement an automated media processing flow based on a workflow template.</p>
      * 
      * @param request StartWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18477,12 +18475,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Currently, only media assets from Intelligent Media Services or ApsaraVideo VOD are supported as workflow inputs.</li>
-     * <li>When submitting a flow task, you must specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a system preset workflow template.</li>
+     * <li>Currently, only Intelligent Media Services (IMS) media assets and ApsaraVideo VOD media assets are supported as workflow inputs.</li>
+     * <li>When you initiate a workflow task, specify a workflow template. You can create a workflow template in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> or use a preset template.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>By invoking the StartWorkflow API, you can submit a media workflow template task to implement an automated media processing flow based on the workflow template.</p>
+     * <p>Submits a workflow template task to implement an automated media processing flow based on a workflow template.</p>
      * 
      * @param request StartWorkflowRequest
      * @return StartWorkflowResponse
@@ -18495,13 +18493,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Feature description</strong>: Stops and terminates a running agent instance and release the associated resources.</li>
+     * <li><strong>Feature description</strong>: This operation stops and terminates a running agent instance and releases related resources.</li>
      * <li><strong>Parameter notes</strong>: You must provide the unique ID (InstanceId) of the instance to be stopped as a query parameter.</li>
-     * <li><strong>Common scenarios</strong>: When an agent is no longer needed for a call or job, you can invoke this API to end its execution.</li>
+     * <li><strong>Common scenarios</strong>: Invoke this operation to end the running of an agent when the agent is no longer needed for a call or node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Stop an agent instance.</p>
+     * <p>Stops an agent instance.</p>
      * 
      * @param request StopAIAgentInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18534,13 +18532,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Feature description</strong>: Stops and terminates a running agent instance and release the associated resources.</li>
+     * <li><strong>Feature description</strong>: This operation stops and terminates a running agent instance and releases related resources.</li>
      * <li><strong>Parameter notes</strong>: You must provide the unique ID (InstanceId) of the instance to be stopped as a query parameter.</li>
-     * <li><strong>Common scenarios</strong>: When an agent is no longer needed for a call or job, you can invoke this API to end its execution.</li>
+     * <li><strong>Common scenarios</strong>: Invoke this operation to end the running of an agent when the agent is no longer needed for a call or node.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Stop an agent instance.</p>
+     * <p>Stops an agent instance.</p>
      * 
      * @param request StopAIAgentInstanceRequest
      * @return StopAIAgentInstanceResponse
@@ -18742,7 +18740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deducts credits from a sub-account.</p>
+     * <p>Deducts user credits.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18778,7 +18776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deducts credits from a sub-account.</p>
+     * <p>Deducts user credits.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @return SubYikeUserCreditResponse
@@ -18874,10 +18872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, the API returns a job ID and processes the job in the background. The results are sent through a callback notification, or you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartTaskResult</a> operation.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Transcribes speech from a media file and returns the text with corresponding start and end timestamps.</p>
+     * <p>Extracts time start and end points along with corresponding text information based on video speech.</p>
      * 
      * @param request SubmitASRJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18933,10 +18931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, the API returns a job ID and processes the job in the background. The results are sent through a callback notification, or you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartTaskResult</a> operation.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. At this point, the task is not yet complete and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">Get intelligent task results</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Transcribes speech from a media file and returns the text with corresponding start and end timestamps.</p>
+     * <p>Extracts time start and end points along with corresponding text information based on video speech.</p>
      * 
      * @param request SubmitASRJobRequest
      * @return SubmitASRJobResponse
@@ -18948,10 +18946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, you receive a job ID, and the job is processed in the background. You can get the result through a callback notification or by querying the job status with the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartJobResult API</a>.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartHandleJob</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This API converts text into a high-quality audio file of speech.</p>
+     * <p>Converts provided text content into a high-quality speech audio file.</p>
      * 
      * @param request SubmitAudioProduceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19007,10 +19005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a job, you receive a job ID, and the job is processed in the background. You can get the result through a callback notification or by querying the job status with the <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartJobResult API</a>.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441172.html">GetSmartHandleJob</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This API converts text into a high-quality audio file of speech.</p>
+     * <p>Converts provided text content into a high-quality speech audio file.</p>
      * 
      * @param request SubmitAudioProduceJobRequest
      * @return SubmitAudioProduceJobResponse
@@ -19154,17 +19152,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>To use the one-click smart video creation feature, you must first subscribe to the IMS Subscription Service. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription Billing</a>.
+     * <li>To use intelligent one-click video production, you must first purchase the [IMS subscription service]. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>For more information about billing for one-click smart video creation, see <a href="https://help.aliyun.com/document_detail/2840901.html">One-click Video Creation</a>.</li>
-     * <li>The one-click smart video creation feature is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a job ID and queues the job for asynchronous processing. The system delivers the final result through a callback. You can also query the job status by calling the <a href="https://help.aliyun.com/document_detail/2693269.html">Get Batch Media Production Job Information</a> operation.</li>
-     * <li>The one-click smart video creation feature offers multiple solutions, including Script-based Automated Video Creation, AI-powered Image-Text Matching Video Creation (General), AI-powered Image-Text Matching Video Creation (Highlights), Sports Highlight Video Creation, and High-Energy Montage Video Creation. For more information about these features, see <a href="https://help.aliyun.com/document_detail/2689046.html">One-click Video Creation</a>.</li>
-     * <li>Script-based Automated Video Creation and AI-powered Image-Text Matching Video Creation share the same API for submitting jobs. To learn how to differentiate between them using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter Differences for One-click Video Creation</a>.</li>
-     * <li>After you submit a batch job for one-click smart video creation, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve a list of all matching jobs. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to get detailed information about a job, including its status, the generated media asset ID, and the media asset URL.</li>
+     * <li>For the billing rules of intelligent one-click video production, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video production</a>.</li>
+     * <li>Intelligent one-click video production is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</li>
+     * <li>Intelligent one-click video production provides multiple solutions, including [Scripted automatic video production], [Intelligent text-image matching video production - General scenario], [Intelligent text-image matching video production - Film highlights], [Sports event highlights production], and [High-energy remix production]. For more information about the features, see <a href="https://help.aliyun.com/document_detail/2689046.html">Intelligent one-click video production</a>.</li>
+     * <li>Scripted automatic video production and intelligent text-image matching video production share the same task submission API. For information about how to distinguish between them by using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter differences for intelligent one-click video production</a>.</li>
+     * <li>After you submit a batch intelligent one-click video production task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all eligible one-click video production tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain detailed task information, including the task status, produced media asset IDs, and URLs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently edits and combines multiple video, audio, and image media assets to create videos in batches with a single API call.</p>
+     * <p>Intelligently mixes and edits multiple video, audio, and image materials to batch-produce videos with one click.</p>
      * 
      * @param request SubmitBatchMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19220,17 +19218,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>To use the one-click smart video creation feature, you must first subscribe to the IMS Subscription Service. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription Billing</a>.
+     * <li>To use intelligent one-click video production, you must first purchase the [IMS subscription service]. For more information, see <a href="~~439260#3285adfad70dw~~">Subscription billing</a>.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li>For more information about billing for one-click smart video creation, see <a href="https://help.aliyun.com/document_detail/2840901.html">One-click Video Creation</a>.</li>
-     * <li>The one-click smart video creation feature is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a job ID and queues the job for asynchronous processing. The system delivers the final result through a callback. You can also query the job status by calling the <a href="https://help.aliyun.com/document_detail/2693269.html">Get Batch Media Production Job Information</a> operation.</li>
-     * <li>The one-click smart video creation feature offers multiple solutions, including Script-based Automated Video Creation, AI-powered Image-Text Matching Video Creation (General), AI-powered Image-Text Matching Video Creation (Highlights), Sports Highlight Video Creation, and High-Energy Montage Video Creation. For more information about these features, see <a href="https://help.aliyun.com/document_detail/2689046.html">One-click Video Creation</a>.</li>
-     * <li>Script-based Automated Video Creation and AI-powered Image-Text Matching Video Creation share the same API for submitting jobs. To learn how to differentiate between them using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter Differences for One-click Video Creation</a>.</li>
-     * <li>After you submit a batch job for one-click smart video creation, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to retrieve a list of all matching jobs. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to get detailed information about a job, including its status, the generated media asset ID, and the media asset URL.</li>
+     * <li>For the billing rules of intelligent one-click video production, see <a href="https://help.aliyun.com/document_detail/2840901.html">Intelligent one-click video production</a>.</li>
+     * <li>Intelligent one-click video production is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a>.</li>
+     * <li>Intelligent one-click video production provides multiple solutions, including [Scripted automatic video production], [Intelligent text-image matching video production - General scenario], [Intelligent text-image matching video production - Film highlights], [Sports event highlights production], and [High-energy remix production]. For more information about the features, see <a href="https://help.aliyun.com/document_detail/2689046.html">Intelligent one-click video production</a>.</li>
+     * <li>Scripted automatic video production and intelligent text-image matching video production share the same task submission API. For information about how to distinguish between them by using parameters, see <a href="https://help.aliyun.com/document_detail/2846101.html">Parameter differences for intelligent one-click video production</a>.</li>
+     * <li>After you submit a batch intelligent one-click video production task, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to obtain a list of all eligible one-click video production tasks. Call <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to obtain detailed task information, including the task status, produced media asset IDs, and URLs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Intelligently edits and combines multiple video, audio, and image media assets to create videos in batches with a single API call.</p>
+     * <p>Intelligently mixes and edits multiple video, audio, and image materials to batch-produce videos with one click.</p>
      * 
      * @param request SubmitBatchMediaProducingJobRequest
      * @return SubmitBatchMediaProducingJobResponse
@@ -19486,16 +19484,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</p>
      * <ul>
-     * <li>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">voice cloning pricing</a>.</li>
-     * <li>When you submit a voice cloning job, the <code>VoiceId</code> must match the one provided during audio detection. The service uses this parameter to locate the staged audio for training.</li>
-     * <li>While the job is training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob - Query a voice clone job</a> operation to query the job status.</li>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After a job is submitted, the API immediately returns a <code>JobId</code> and queues the job for background processing. The result is delivered via a callback. Alternatively, you can poll for the job status by using the <a href="https://help.aliyun.com/document_detail/2384473.html">Query a voice clone job</a> operation.</li>
+     * <li>When submitting a voice cloning task, the VoiceId must be the same as the one used during audio detection. The cloud relies on this parameter to locate the staged audio for training.  </li>
+     * <li>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is completed or to obtain the training status.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned (the task is not yet completed at this point and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a basic voice cloning job.</p>
+     * <p>Submits a voice cloning task of the Basic edition.</p>
      * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19531,16 +19528,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- Voice cloning billing is divided into two dimensions: customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">Voice cloning billing</a>.</p>
      * <ul>
-     * <li>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">voice cloning pricing</a>.</li>
-     * <li>When you submit a voice cloning job, the <code>VoiceId</code> must match the one provided during audio detection. The service uses this parameter to locate the staged audio for training.</li>
-     * <li>While the job is training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob - Query a voice clone job</a> operation to query the job status.</li>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After a job is submitted, the API immediately returns a <code>JobId</code> and queues the job for background processing. The result is delivered via a callback. Alternatively, you can poll for the job status by using the <a href="https://help.aliyun.com/document_detail/2384473.html">Query a voice clone job</a> operation.</li>
+     * <li>When submitting a voice cloning task, the VoiceId must be the same as the one used during audio detection. The cloud relies on this parameter to locate the staged audio for training.  </li>
+     * <li>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is completed or to obtain the training status.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned (the task is not yet completed at this point and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a basic voice cloning job.</p>
+     * <p>Submits a voice cloning task of the Basic edition.</p>
      * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @return SubmitCustomizedVoiceJobResponse
@@ -19936,10 +19932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a task, the API returns a task ID and queues the task for asynchronous processing. The final result is delivered via a callback. You can also query the task status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QuerySmartProductionTask</a>.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the job status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QueryIProductionJob</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use the <code>SubmitIProductionJob</code> operation to submit an intelligent production job.</p>
+     * <p>Submits an intelligent production job by calling SubmitIProductionJob.</p>
      * 
      * @param tmpReq SubmitIProductionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20017,10 +20013,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a task, the API returns a task ID and queues the task for asynchronous processing. The final result is delivered via a callback. You can also query the task status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QuerySmartProductionTask</a>.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, a job ID is returned. The job is not yet complete at this point and enters a background queue for asynchronous execution. The final result is delivered through a callback notification. You can also proactively query the job status by calling <a href="https://help.aliyun.com/document_detail/441215.html">QueryIProductionJob</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Use the <code>SubmitIProductionJob</code> operation to submit an intelligent production job.</p>
+     * <p>Submits an intelligent production job by calling SubmitIProductionJob.</p>
      * 
      * @param request SubmitIProductionJobRequest
      * @return SubmitIProductionJobResponse
@@ -20033,12 +20029,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a JobId before the job is complete. The job is then queued for asynchronous processing. You will receive a <a href="https://help.aliyun.com/document_detail/441150.html">callback notification</a> when the job completes. Alternatively, you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a> operation.</li>
-     * <li>You can edit live streams that are recorded to either OSS or VOD. When editing multiple live streams together, all streams must be recorded to the same service, either all to OSS or all to VOD.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a>.</li>
+     * <li>Live editing is supported for live streams recorded to OSS and VOD. When mixing multiple live streams, all streams must be recorded to OSS or all streams must be recorded to VOD.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Live editing creates an output file by combining one or more segments from live streams. After you submit a live editing job, it is processed asynchronously. You can then call the GetLiveEditingJob operation with the returned JobId to query the job status, or call the GetMediaInfo operation with the MediaId to get details of the generated media asset.</p>
+     * <p>Live editing combines one or more live stream segments into a finished product. After you submit a live editing task, the task enters a background queue and is executed asynchronously. After submission, you can call the GetLiveEditingJob operation to query the job status by jobId. You can also call the GetMediaInfo operation to query information about the generated media asset by MediaId.</p>
      * 
      * @param request SubmitLiveEditingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20095,12 +20091,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. When you submit a job, the system returns a JobId before the job is complete. The job is then queued for asynchronous processing. You will receive a <a href="https://help.aliyun.com/document_detail/441150.html">callback notification</a> when the job completes. Alternatively, you can query the job status by calling the <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a> operation.</li>
-     * <li>You can edit live streams that are recorded to either OSS or VOD. When editing multiple live streams together, all streams must be recorded to the same service, either all to OSS or all to VOD.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned (the task is not yet complete and enters a background queue for asynchronous execution). The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441150.html">GetLiveEditingJob</a>.</li>
+     * <li>Live editing is supported for live streams recorded to OSS and VOD. When mixing multiple live streams, all streams must be recorded to OSS or all streams must be recorded to VOD.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Live editing creates an output file by combining one or more segments from live streams. After you submit a live editing job, it is processed asynchronously. You can then call the GetLiveEditingJob operation with the returned JobId to query the job status, or call the GetMediaInfo operation with the MediaId to get details of the generated media asset.</p>
+     * <p>Live editing combines one or more live stream segments into a finished product. After you submit a live editing task, the task enters a background queue and is executed asynchronously. After submission, you can call the GetLiveEditingJob operation to query the job status by jobId. You can also call the GetMediaInfo operation to query information about the generated media asset by MediaId.</p>
      * 
      * @param request SubmitLiveEditingJobRequest
      * @return SubmitLiveEditingJobResponse
@@ -20112,12 +20108,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
-     * Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
-     * If the preset recording template does not meet your requirements, you can create a custom recording template.</p>
+     * <p>This operation supports recording of Alibaba Cloud live streams or third-party RTMP live streams. Start the stream before calling this operation to submit a recording task. If the live stream address cannot be pulled, the task attempts to pull the stream for 3 minutes. After the timeout, the recording service stops recording.
+     * Before submitting a recording task, prepare an Alibaba Cloud OSS or VOD storage space. Use the storage address configured in Intelligent Media Services to facilitate management and processing of recorded files.
+     * If the preset recording templates do not meet your requirements, create a custom recording template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a live stream recording job.</p>
+     * <p>Submits a real-time recording task to record a live stream by calling SubmitLiveRecordJob.</p>
      * 
      * @param tmpReq SubmitLiveRecordJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20175,12 +20171,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Record live streams of ApsaraVideo Live or third-party Real-Time Messaging Protocol (RTMP) live streams. We recommend that you ingest a stream before you call this operation to submit a recording job. If no stream is pulled from the streaming URL, the job attempts to pull a stream for 3 minutes. If the attempt times out, the recording service stops.
-     * Before you submit a recording job, you must prepare an Object Storage Service (OSS) or ApsaraVideo VOD bucket. We recommend that you use a storage address configured in Intelligent Media Services (IMS) to facilitate the management and processing of generated recording files.
-     * If the preset recording template does not meet your requirements, you can create a custom recording template.</p>
+     * <p>This operation supports recording of Alibaba Cloud live streams or third-party RTMP live streams. Start the stream before calling this operation to submit a recording task. If the live stream address cannot be pulled, the task attempts to pull the stream for 3 minutes. After the timeout, the recording service stops recording.
+     * Before submitting a recording task, prepare an Alibaba Cloud OSS or VOD storage space. Use the storage address configured in Intelligent Media Services to facilitate management and processing of recorded files.
+     * If the preset recording templates do not meet your requirements, create a custom recording template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a live stream recording job.</p>
+     * <p>Submits a real-time recording task to record a live stream by calling SubmitLiveRecordJob.</p>
      * 
      * @param request SubmitLiveRecordJobRequest
      * @return SubmitLiveRecordJobResponse
@@ -20192,7 +20188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</p>
+     * <p>Submits a real-time snapshot task. If submitted during an active stream, the task starts automatically and asynchronously. Otherwise, the task remains in an unstarted state.</p>
      * 
      * @param tmpReq SubmitLiveSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20250,7 +20246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a live stream snapshot job. If the job is submitted during stream ingest, it automatically starts in asynchronous mode. Otherwise, it does not start.</p>
+     * <p>Submits a real-time snapshot task. If submitted during an active stream, the task starts automatically and asynchronously. Otherwise, the task remains in an unstarted state.</p>
      * 
      * @param request SubmitLiveSnapshotJobRequest
      * @return SubmitLiveSnapshotJobResponse
@@ -20500,10 +20496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a task, the API returns a task ID and queues the task for asynchronous processing. You will receive the final result via a callback notification, or you can poll for the task status by calling the <a href="https://help.aliyun.com/document_detail/2867675.html">Query Media Transcoding Task</a> operation.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution in the background. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2867675.html">Query media transcoding task</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submit a media processing job</p>
+     * <p>Submits a media processing task.</p>
      * 
      * @param request SubmitMediaConvertJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20547,10 +20543,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous API</a>. After you submit a task, the API returns a task ID and queues the task for asynchronous processing. You will receive the final result via a callback notification, or you can poll for the task status by calling the <a href="https://help.aliyun.com/document_detail/2867675.html">Query Media Transcoding Task</a> operation.</p>
+     * <p>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution in the background. The final result is delivered through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/2867675.html">Query media transcoding task</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submit a media processing job</p>
+     * <p>Submits a media processing task.</p>
      * 
      * @param request SubmitMediaConvertJobRequest
      * @return SubmitMediaConvertJobResponse
@@ -20641,37 +20637,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Billing: Video editing is charged based on the duration of the output video. For more information, see <a href="https://help.aliyun.com/document_detail/2840899.html">video editing</a>. Failed jobs incur no charges.</strong></li>
-     * <li>Flexible editing capabilities: Use this operation to arrange and design assets. It supports complex video editing through flexible <a href="https://help.aliyun.com/document_detail/198823.html">timeline</a> configurations.</li>
-     * <li>Asset reference rules: Assets referenced in the timeline can be media assets from your asset library or OSS objects. External URLs and CDN URLs are not supported. If an asset is an OSS object, MediaUrl must be an OSS URL, for example: https\://your-bucket.oss-region-name.aliyuncs.com/your-object.ext.</li>
-     * <li>Asynchronous job execution: This operation creates an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you submit a job, the operation returns a task ID and queues the job for background processing. The job is not yet complete at this stage. The system delivers the final result via a callback notification. You can also query the job status by <a href="https://help.aliyun.com/document_detail/441149.html">querying the editing and compositing job</a>.</li>
-     * <li>Job status query:<ol>
-     * <li>Call <a href="https://help.aliyun.com/document_detail/441149.html">Query an editing and compositing job</a> and pass the JobId to query the job status and result.</li>
-     * <li>When you submit an editing and compositing job, you can include a callback URL in the <strong>UserData</strong> parameter of your request. When the job completes or fails, the system sends a notification to this callback URL. You can use the callback data to retrieve the job status.</li>
+     * <li><p><strong>Billing: Video clip editing is billed based on the duration of the produced video. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>. No fees are charged for failed jobs.</strong></p>
+     * </li>
+     * <li><p>Diverse editing capabilities: When you need to arrange and design materials based on your creative ideas, invoke this operation. This operation supports flexible <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a> to meet complex video clip editing requirements.</p>
+     * </li>
+     * <li><p>Material reference rules: Materials referenced in the cloud editing timeline can be media assets in the media library or OSS files. External URLs or CDN URLs are not supported. When the material is an OSS file, MediaUrl supports only OSS URL format, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.   </p>
+     * </li>
+     * <li><p>Asynchronous task execution: This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you commit a task, a task ID is returned (the task is not yet completed and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a>. </p>
+     * </li>
+     * <li><p>Task status query:</p>
+     * <ol>
+     * <li>Invoke <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a> and pass in the JobId to query the task status and result.</li>
+     * <li>When committing a media producing job, you can set <strong>UserData</strong> in the request parameters to include a callback URL. When the editing task is completed or fails, the system sends a notification to the callback URL. You can process the callback data to obtain the task status.</li>
      * </ol>
      * </li>
-     * <li>Media asset registration and analysis: After video compositing completes, the system automatically registers a new media asset, which is initially in an analyzing state. After the analysis is complete, you can use the MediaId to retrieve the duration and resolution of the output video.</li>
+     * <li><p>Media asset registration and analysis: After video compositing is completed, the media asset is automatically registered. At this point, the media asset is still in the analyzing state. After the analysis is completed, you can obtain the duration and resolution of the produced video based on the MediaId.</p>
+     * </li>
      * </ul>
-     * <h2>Limitations</h2>
+     * <h2>Limits</h2>
      * <ul>
-     * <li>The throttling limit for this operation is 30 QPS. Submitted jobs are queued and processed asynchronously.<blockquote>
-     * <p>If you exceed this limit, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">&quot;Throttling.User&quot; error when submitting editing jobs</a>.</p>
+     * <li>The throttling limit of this operation is 30 QPS (requests per second for submitting tasks). Submitted tasks enter a background queue and are processed asynchronously.<blockquote>
+     * <p>If this limit is exceeded, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">Throttling.User error when submitting an editing task</a>.</p>
      * </blockquote>
      * </li>
-     * <li>When you submit a large number of jobs (for example, 1,000 or 10,000), the system scales out automatically, but you may experience queueing delays.</li>
-     * <li>The maximum number of tracks is 100 for each type: video, image, and subtitle.</li>
-     * <li>While there is no limit on the number of assets, their total size must not exceed 1 TB.</li>
-     * <li>The region of the input or output OSS bucket must match the IMS region.</li>
-     * <li>When the output is a video, the following resolution limits apply:<ul>
-     * <li>Both the width and height must be at least 128 px.</li>
-     * <li>Neither the width nor the height can exceed 4096 px.</li>
-     * <li>The shorter side cannot exceed 2160 px.</li>
+     * <li>When you submit a large number of tasks (such as 1,000 or 10,000), the system dynamically scales up, but there may be some queuing time.</li>
+     * <li>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.    </li>
+     * <li>There is no limit on the number of materials, but the total file size of all materials cannot exceed 1 TB.  </li>
+     * <li>The region of the input or output OSS bucket must be the same as the region where IMS is used.   </li>
+     * <li>When the output is a video, the following resolution limits apply to the produced video:<ul>
+     * <li>Both width and height must be at least 128 px.</li>
+     * <li>Both width and height cannot exceed 4096 px.</li>
+     * <li>The short side cannot exceed 2160 px.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The <code>SubmitMediaProducingJob</code> API submits a media production job. This job provides automated processing for post-production tasks, such as editing and composing video and audio assets.</p>
+     * <p>Commits a media editing and compositing job. When you need to perform editing, compositing, or other forms of post-production on video or audio materials, you can invoke this API operation to automate the processing.</p>
      * 
      * @param request SubmitMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20750,37 +20752,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Billing: Video editing is charged based on the duration of the output video. For more information, see <a href="https://help.aliyun.com/document_detail/2840899.html">video editing</a>. Failed jobs incur no charges.</strong></li>
-     * <li>Flexible editing capabilities: Use this operation to arrange and design assets. It supports complex video editing through flexible <a href="https://help.aliyun.com/document_detail/198823.html">timeline</a> configurations.</li>
-     * <li>Asset reference rules: Assets referenced in the timeline can be media assets from your asset library or OSS objects. External URLs and CDN URLs are not supported. If an asset is an OSS object, MediaUrl must be an OSS URL, for example: https\://your-bucket.oss-region-name.aliyuncs.com/your-object.ext.</li>
-     * <li>Asynchronous job execution: This operation creates an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you submit a job, the operation returns a task ID and queues the job for background processing. The job is not yet complete at this stage. The system delivers the final result via a callback notification. You can also query the job status by <a href="https://help.aliyun.com/document_detail/441149.html">querying the editing and compositing job</a>.</li>
-     * <li>Job status query:<ol>
-     * <li>Call <a href="https://help.aliyun.com/document_detail/441149.html">Query an editing and compositing job</a> and pass the JobId to query the job status and result.</li>
-     * <li>When you submit an editing and compositing job, you can include a callback URL in the <strong>UserData</strong> parameter of your request. When the job completes or fails, the system sends a notification to this callback URL. You can use the callback data to retrieve the job status.</li>
+     * <li><p><strong>Billing: Video clip editing is billed based on the duration of the produced video. For details, see <a href="https://help.aliyun.com/document_detail/2840899.html">Video clip</a>. No fees are charged for failed jobs.</strong></p>
+     * </li>
+     * <li><p>Diverse editing capabilities: When you need to arrange and design materials based on your creative ideas, invoke this operation. This operation supports flexible <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a> to meet complex video clip editing requirements.</p>
+     * </li>
+     * <li><p>Material reference rules: Materials referenced in the cloud editing timeline can be media assets in the media library or OSS files. External URLs or CDN URLs are not supported. When the material is an OSS file, MediaUrl supports only OSS URL format, such as <a href="https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext">https://your-bucket.oss-region-name.aliyuncs.com/your-object.ext</a>.   </p>
+     * </li>
+     * <li><p>Asynchronous task execution: This operation is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After you commit a task, a task ID is returned (the task is not yet completed and enters a background queue for asynchronous execution). The final result is sent through a callback notification. You can also proactively query the task status by calling <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a>. </p>
+     * </li>
+     * <li><p>Task status query:</p>
+     * <ol>
+     * <li>Invoke <a href="https://help.aliyun.com/document_detail/441149.html">GetMediaProducingJob</a> and pass in the JobId to query the task status and result.</li>
+     * <li>When committing a media producing job, you can set <strong>UserData</strong> in the request parameters to include a callback URL. When the editing task is completed or fails, the system sends a notification to the callback URL. You can process the callback data to obtain the task status.</li>
      * </ol>
      * </li>
-     * <li>Media asset registration and analysis: After video compositing completes, the system automatically registers a new media asset, which is initially in an analyzing state. After the analysis is complete, you can use the MediaId to retrieve the duration and resolution of the output video.</li>
+     * <li><p>Media asset registration and analysis: After video compositing is completed, the media asset is automatically registered. At this point, the media asset is still in the analyzing state. After the analysis is completed, you can obtain the duration and resolution of the produced video based on the MediaId.</p>
+     * </li>
      * </ul>
-     * <h2>Limitations</h2>
+     * <h2>Limits</h2>
      * <ul>
-     * <li>The throttling limit for this operation is 30 QPS. Submitted jobs are queued and processed asynchronously.<blockquote>
-     * <p>If you exceed this limit, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">&quot;Throttling.User&quot; error when submitting editing jobs</a>.</p>
+     * <li>The throttling limit of this operation is 30 QPS (requests per second for submitting tasks). Submitted tasks enter a background queue and are processed asynchronously.<blockquote>
+     * <p>If this limit is exceeded, you may encounter a &quot;Throttling.User&quot; error. For more information, see <a href="https://help.aliyun.com/document_detail/453484.html">Throttling.User error when submitting an editing task</a>.</p>
      * </blockquote>
      * </li>
-     * <li>When you submit a large number of jobs (for example, 1,000 or 10,000), the system scales out automatically, but you may experience queueing delays.</li>
-     * <li>The maximum number of tracks is 100 for each type: video, image, and subtitle.</li>
-     * <li>While there is no limit on the number of assets, their total size must not exceed 1 TB.</li>
-     * <li>The region of the input or output OSS bucket must match the IMS region.</li>
-     * <li>When the output is a video, the following resolution limits apply:<ul>
-     * <li>Both the width and height must be at least 128 px.</li>
-     * <li>Neither the width nor the height can exceed 4096 px.</li>
-     * <li>The shorter side cannot exceed 2160 px.</li>
+     * <li>When you submit a large number of tasks (such as 1,000 or 10,000), the system dynamically scales up, but there may be some queuing time.</li>
+     * <li>The maximum number of tracks for video tracks, image tracks, and subtitle tracks is 100 each.    </li>
+     * <li>There is no limit on the number of materials, but the total file size of all materials cannot exceed 1 TB.  </li>
+     * <li>The region of the input or output OSS bucket must be the same as the region where IMS is used.   </li>
+     * <li>When the output is a video, the following resolution limits apply to the produced video:<ul>
+     * <li>Both width and height must be at least 128 px.</li>
+     * <li>Both width and height cannot exceed 4096 px.</li>
+     * <li>The short side cannot exceed 2160 px.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The <code>SubmitMediaProducingJob</code> API submits a media production job. This job provides automated processing for post-production tasks, such as editing and composing video and audio assets.</p>
+     * <p>Commits a media editing and compositing job. When you need to perform editing, compositing, or other forms of post-production on video or audio materials, you can invoke this API operation to automate the processing.</p>
      * 
      * @param request SubmitMediaProducingJobRequest
      * @return SubmitMediaProducingJobResponse
@@ -21548,7 +21556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</p>
+     * <p>Submits a voice cloning task of the basic edition. After you call this operation, a JobId is synchronously returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query whether the current task is completed and obtain the training status.</p>
      * 
      * @param request SubmitStandardCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21596,7 +21604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a standard human voice cloning job. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</p>
+     * <p>Submits a voice cloning task of the basic edition. After you call this operation, a JobId is synchronously returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query whether the current task is completed and obtain the training status.</p>
      * 
      * @param request SubmitStandardCustomizedVoiceJobRequest
      * @return SubmitStandardCustomizedVoiceJobResponse
@@ -21999,12 +22007,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation will be discontinued on December 31, 2025. Use <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob</a> instead.</li>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, the system returns a job ID. The job is not completed immediately but is queued for asynchronous execution in the background. You will receive the final result through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/441206.html">QueryTranscodeJob</a> to query the job status.</li>
+     * <li>&lt;props=&quot;intl&quot;&gt;This operation will be discontinued on December 31, 2025. Call <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob - Submit a media transcoding job</a> instead.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the SubmitTranscodeJob operation to submit a video or audio transcoding job to Intelligent Media Services. In the request, you must specify the source file to transcode, the output format, and related parameters.</p>
+     * <p>Submits a transcoding job for a video or audio file to Intelligent Media Services by specifying the source file, output format, and related parameters.</p>
      * 
      * @param tmpReq SubmitTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22071,12 +22078,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation will be discontinued on December 31, 2025. Use <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob</a> instead.</li>
-     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit a job, the system returns a job ID. The job is not completed immediately but is queued for asynchronous execution in the background. You will receive the final result through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/441206.html">QueryTranscodeJob</a> to query the job status.</li>
+     * <li>&lt;props=&quot;intl&quot;&gt;This operation will be discontinued on December 31, 2025. Call <a href="https://help.aliyun.com/document_detail/2867673.html">SubmitMediaConvertJob - Submit a media transcoding job</a> instead.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the SubmitTranscodeJob operation to submit a video or audio transcoding job to Intelligent Media Services. In the request, you must specify the source file to transcode, the output format, and related parameters.</p>
+     * <p>Submits a transcoding job for a video or audio file to Intelligent Media Services by specifying the source file, output format, and related parameters.</p>
      * 
      * @param request SubmitTranscodeJobRequest
      * @return SubmitTranscodeJobResponse
@@ -22282,7 +22288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a Yike AI application job.</p>
+     * <p>Submits an AI application task.</p>
      * 
      * @param request SubmitYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22326,7 +22332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a Yike AI application job.</p>
+     * <p>Submits an AI application task.</p>
      * 
      * @param request SubmitYikeAIAppJobRequest
      * @return SubmitYikeAIAppJobResponse
@@ -22338,7 +22344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a Yike AI application job.</p>
+     * <p>Submits a storyboard generation task for the Yike AI application.</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22424,7 +22430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a Yike AI application job.</p>
+     * <p>Submits a storyboard generation task for the Yike AI application.</p>
      * 
      * @param request SubmitYikeStoryboardJobRequest
      * @return SubmitYikeStoryboardJobResponse
@@ -22704,10 +22710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</p>
+     * <p>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a category.</p>
+     * <p>Updates a media asset category.</p>
      * 
      * @param request UpdateCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22743,10 +22749,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you create a media asset category, you can call this operation to find the category based on the category ID and change the name of the category.</p>
+     * <p>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a category.</p>
+     * <p>Updates a media asset category.</p>
      * 
      * @param request UpdateCategoryRequest
      * @return UpdateCategoryResponse
@@ -22822,7 +22828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom template.</p>
+     * <p>Modifies the information of a user-defined template for media processing.</p>
      * 
      * @param request UpdateCustomTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22862,7 +22868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom template.</p>
+     * <p>Modifies the information of a user-defined template for media processing.</p>
      * 
      * @param request UpdateCustomTemplateRequest
      * @return UpdateCustomTemplateResponse
@@ -24194,7 +24200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the marks of a media asset.</p>
+     * <p>Updates media asset mark information.</p>
      * 
      * @param request UpdateMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24230,7 +24236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the marks of a media asset.</p>
+     * <p>Updates media asset mark information.</p>
      * 
      * @param request UpdateMediaMarksRequest
      * @return UpdateMediaMarksResponse

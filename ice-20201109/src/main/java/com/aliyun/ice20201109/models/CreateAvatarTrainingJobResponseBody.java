@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAvatarTrainingJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateAvatarTrainingJobResponseBodyData data;
@@ -59,7 +59,7 @@ public class CreateAvatarTrainingJobResponseBody extends TeaModel {
 
     public static class CreateAvatarTrainingJobResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the digital human training job.</p>
+         * <p>The ID of the digital human training task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>

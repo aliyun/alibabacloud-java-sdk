@@ -14,11 +14,11 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String aspectRatio;
 
     /**
-     * <p>The storyboard generation execution mode.</p>
+     * <p>The execution mode for storyboard generation. Valid values:</p>
      * <ul>
-     * <li><p><code>FullPipeline</code>: Executes the full generation pipeline, including both storyboard creation and shot video generation.</p>
+     * <li><p>FullPipeline: full pipeline generation, which includes storyboard generation and shot video generation.</p>
      * </li>
-     * <li><p><code>StoryboardOnly</code>: Generates only the storyboard.</p>
+     * <li><p>StoryboardOnly: generates only the storyboard.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String execMode;
 
     /**
-     * <p>The OSS address of the file.</p>
+     * <p>The OSS URL of the file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
@@ -38,7 +38,7 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String fileURL;
 
     /**
-     * <p>Parameters for the model, in JSON format.</p>
+     * <p>The model feature parameters in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -85,7 +85,7 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String shotSplitMode;
 
     /**
-     * <p>Specifies whether to skip a failed shot. The default value is <code>true</code>.</p>
+     * <p>Specifies whether to skip failed shots. Default value: True.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -112,7 +112,7 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String styleId;
 
     /**
-     * <p>The job title. It must be a UTF-8 encoded string of up to 128 bytes. If you do not specify a title, the system generates a default one based on the date.</p>
+     * <p>The task title. If not specified, a default title is automatically generated based on the date. The title cannot exceed 128 bytes in length and must be UTF-8 encoded.</p>
      * 
      * <strong>example:</strong>
      * <p>test-title</p>
@@ -121,9 +121,9 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>Custom settings in JSON format. This parameter can contain the following field:</p>
+     * <p>The custom settings in JSON format. Fields:</p>
      * <ul>
-     * <li>The <code>NotifyAddress</code> field specifies the callback URL that is invoked when the job is complete. Both MNS and HTTP callbacks are supported.</li>
+     * <li>NotifyAddress: the callback URL for task completion. MNS callbacks and HTTP callbacks are supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>

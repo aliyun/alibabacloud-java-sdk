@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentInstanceResponseBody extends TeaModel {
     /**
-     * <p>List of agent instance objects.</p>
+     * <p>The list of agent instance structs.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListAIAgentInstanceResponseBodyInstances> instances;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
@@ -42,13 +42,13 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
 
     public static class ListAIAgentInstanceResponseBodyInstances extends TeaModel {
         /**
-         * <p>Template configuration used by the agent instance.</p>
+         * <p>The template configuration used by the agent instance.</p>
          */
         @NameInMap("AgentConfig")
         public AIAgentConfig agentConfig;
 
         /**
-         * <p>URL of the call log file. The file contains a JSON-formatted CallLog structure.</p>
+         * <p>The URL of the agent conversation call log file. The file contains the CallLog struct in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/call_logs/12345.json">https://example.com/call_logs/12345.json</a></p>
@@ -57,7 +57,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         public String callLogUrl;
 
         /**
-         * <p>Runtime configuration required by the agent.</p>
+         * <p>The runtime configuration required by the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</p>
@@ -66,13 +66,13 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         public AIAgentRuntimeConfig runtimeConfig;
 
         /**
-         * <p>Instance status:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p>Created: The call started but no connection was established between both ends.</p>
+         * <li><p>Created: The call is initiated but the connection between the two ends is not established.</p>
          * </li>
-         * <li><p>Executing: The call is in progress and a connection is established between both ends.</p>
+         * <li><p>Executing: The call is in progress and the connection between the two ends is established.</p>
          * </li>
-         * <li><p>Finished: The call ended.</p>
+         * <li><p>Finished: The call has ended.</p>
          * </li>
          * </ul>
          * 
@@ -83,7 +83,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Template configuration used by the agent instance.</p>
+         * <p>The template configuration used by the agent instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VoiceChat&quot;: {&quot;VoiceId&quot;: &quot;zhixiaoxia&quot;}}</p>
@@ -93,7 +93,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         public AIAgentTemplateConfig templateConfig;
 
         /**
-         * <p>User-defined information.</p>
+         * <p>The user-defined data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>

@@ -16,43 +16,30 @@ public class CreateCustomTemplateRequest extends TeaModel {
 
     /**
      * <p>The template subtype.</p>
-     * <p>Valid values for transcoding templates:</p>
+     * <p>Transcoding template subtypes:</p>
      * <ul>
-     * <li><p>1 (Normal): regular template.</p>
-     * </li>
-     * <li><p>2 (AudioTranscode): audio transcoding template.</p>
-     * </li>
-     * <li><p>3 (Remux): container format conversion template.</p>
-     * </li>
-     * <li><p>4 (NarrowBandV1): Narrowband HD 1.0 template.</p>
-     * </li>
-     * <li><p>5 (NarrowBandV2): Narrowband HD 2.0 template.</p>
-     * </li>
+     * <li>1: normal transcoding template (Normal)</li>
+     * <li>2: audio transcoding template (AudioTranscode)</li>
+     * <li>3: container format conversion (Remux)</li>
+     * <li>4: Narrowband HD 1.0 (NarrowBandV1)</li>
+     * <li>5: Narrowband HD 2.0 (NarrowBandV2)</li>
      * </ul>
-     * <p>Valid values for snapshot templates:</p>
+     * <p>Snapshot template subtypes:</p>
      * <ul>
-     * <li><p>1 (Normal): regular template.</p>
-     * </li>
-     * <li><p>2 (Sprite): sprite template.</p>
-     * </li>
-     * <li><p>3 (WebVtt): WebVTT template.</p>
-     * </li>
+     * <li>1: normal snapshot/static snapshot (Normal)</li>
+     * <li>2: sprite snapshot (Sprite)</li>
+     * <li>3: WebVTT snapshot (WebVtt)</li>
      * </ul>
-     * <p>Valid values for AI-assisted content moderation templates:</p>
+     * <p>AI review template subtypes:</p>
      * <ul>
-     * <li><p>1 (Video): video moderation template.</p>
-     * </li>
-     * <li><p>2 (Audio): audio moderation template.</p>
-     * </li>
-     * <li><p>3 (Image): image moderation template.</p>
-     * </li>
+     * <li>1: video review (Video) </li>
+     * <li>2: audio review (Audio)</li>
+     * <li>3: image review (Image)</li>
      * </ul>
-     * <p>Valid values for AI-assisted intelligent erasure templates.</p>
+     * <p>AI intelligent erasure template subtypes:</p>
      * <ul>
-     * <li><p>1 (VideoDelogo): logo erasure template.</p>
-     * </li>
-     * <li><p>2 (VideoDetext): subtitle erasure template.</p>
-     * </li>
+     * <li>1: logo erasure (VideoDelogo)</li>
+     * <li>2: subtitle erasure (VideoDetext)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +49,7 @@ public class CreateCustomTemplateRequest extends TeaModel {
     public Integer subtype;
 
     /**
-     * <p>The template configurations. For more information, see <a href="https://help.aliyun.com/document_detail/448291.html">Template parameters</a>.</p>
+     * <p>The template configuration. For detailed metric description, see <a href="https://help.aliyun.com/document_detail/448291.html">Template parameters</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,30 +59,19 @@ public class CreateCustomTemplateRequest extends TeaModel {
     public String templateConfig;
 
     /**
-     * <p>The template type. Valid values:</p>
+     * <p>The templatetype. Valid values:</p>
      * <ul>
-     * <li><p>1: transcoding template.</p>
-     * </li>
-     * <li><p>2: snapshot template.</p>
-     * </li>
-     * <li><p>3: animated image template.</p>
-     * </li>
-     * <li><p>4\. image watermark template.</p>
-     * </li>
-     * <li><p>5: text watermark template.</p>
-     * </li>
-     * <li><p>6: subtitle template.</p>
-     * </li>
-     * <li><p>7: AI-assisted content moderation template.</p>
-     * </li>
-     * <li><p>8: AI-assisted intelligent thumbnail template.</p>
-     * </li>
-     * <li><p>9: AI-assisted intelligent erasure template.</p>
-     * </li>
-     * <li><p>10: AI-assisted media fingerprint analysis template.</p>
-     * </li>
-     * <li><p>11: AI-assisted smart tagging template.</p>
-     * </li>
+     * <li>1: transcoding template</li>
+     * <li>2: snapshot template</li>
+     * <li>3: animated image template</li>
+     * <li>4: image watermark template</li>
+     * <li>5: text watermark template</li>
+     * <li>6: subtitle template</li>
+     * <li>7: AI intelligent review</li>
+     * <li>8: AI intelligent cover</li>
+     * <li>9: AI intelligent erasure</li>
+     * <li>10: AI intelligent DNA template</li>
+     * <li>11: AI intelligent label template</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CancelFavoritePublicMediaRequest extends TeaModel {
     /**
-     * <p>IMS media asset ID.</p>
+     * <p>The IMS media asset IDs.</p>
      * <ul>
-     * <li>Separate multiple IDs with commas.</li>
+     * <li>Separate multiple IDs with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>

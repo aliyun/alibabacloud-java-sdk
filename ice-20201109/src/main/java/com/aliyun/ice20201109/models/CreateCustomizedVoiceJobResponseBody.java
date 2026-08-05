@@ -20,12 +20,10 @@ public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class CreateCustomizedVoiceJobResponseBody extends TeaModel {
 
     public static class CreateCustomizedVoiceJobResponseBodyData extends TeaModel {
         /**
-         * <p>The voice cloning job ID.</p>
+         * <p>The voice cloning task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>29faef8144638ba42eb8e037</strong></strong></p>

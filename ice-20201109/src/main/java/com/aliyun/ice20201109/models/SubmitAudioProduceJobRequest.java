@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class SubmitAudioProduceJobRequest extends TeaModel {
     /**
-     * <p>The description of the job.</p>
+     * <p>The task description:</p>
      * <ul>
-     * <li><p>Cannot exceed 1,024 bytes.</p>
-     * </li>
-     * <li><p>Must be UTF-8 encoded.</p>
-     * </li>
+     * <li>Maximum length: 1024 bytes.</li>
+     * <li>UTF-8 encoding.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,38 +20,23 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     /**
      * <p>The audio production configuration:</p>
      * <ul>
-     * <li><p><code>voice</code>: The <a href="https://help.aliyun.com/document_detail/449563.html">voice type</a>.</p>
-     * </li>
-     * <li><p><code>customizedVoice</code>: The ID of the custom voice for voice cloning.</p>
-     * </li>
-     * <li><p><code>format</code>: The output file format. Supported formats: <code>PCM</code>, <code>WAV</code>, and <code>MP3</code>.</p>
-     * </li>
-     * <li><p><code>volume</code>: The volume. The value ranges from 0 to 100. Default: 50.</p>
-     * </li>
-     * <li><p><code>speech_rate</code>: The speech rate. The value ranges from -500 to 500. Default: 0.</p>
-     * <ul>
-     * <li><p>Values of -500, 0, and 500 correspond to 0.5x, 1.0x, and 2.0x speed, respectively.</p>
-     * </li>
-     * <li><p>Calculation method:</p>
-     * <ul>
-     * <li><p>For a 0.8x speed multiplier: (1 - 1/0.8) / 0.002 = -125.</p>
-     * </li>
-     * <li><p>For a 1.2x speed multiplier: (1 - 1/1.2) / 0.001 = 166.</p>
-     * </li>
-     * <li><p>For speed multipliers less than 1, use a factor of 0.002.</p>
-     * </li>
-     * <li><p>For speed multipliers greater than 1, use a factor of 0.001.</p>
-     * </li>
+     * <li>voice: the <a href="https://help.aliyun.com/document_detail/449563.html">voice type</a>.</li>
+     * <li>customizedVoice: the VoiceId for voice cloning.</li>
+     * <li>format: the output file format. Valid values: PCM, WAV, and MP3.</li>
+     * <li>volume: the volume. Valid values: 0 to 100. Default value: 50.</li>
+     * <li>speech_rate: the speech rate. Valid values: -500 to 500. Default value: 0.<ul>
+     * <li>[-500, 0, 500] corresponds to the speed multiplier range of [0.5, 1.0, 2.0].</li>
+     * <li>The calculation method is as follows:<ul>
+     * <li>0.8x speed: (1-1/0.8)/0.002 = -125</li>
+     * <li>1.2x speed: (1-1/1.2)/0.001 = 166</li>
+     * <li>For speeds less than 1x, use the 0.002 coefficient.</li>
+     * <li>For speeds greater than 1x, use the 0.001 coefficient.</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
-     * <li><p><code>pitch_rate</code>: The pitch rate. The value ranges from -500 to 500. Default: 0.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>If you provide both <code>voice</code> and <code>customizedVoice</code>, <code>customizedVoice</code> takes precedence.</p>
-     * </li>
+     * <li>pitch_rate: the pitch. Valid values: -500 to 500. Default value: 0.
+     * <notice>If both voice and customizedVoice are specified, customizedVoice takes precedence.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -64,7 +47,7 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>The text to synthesize. The maximum length is 10,000 characters. Supports <a href="https://help.aliyun.com/document_detail/2672807.html">SSML</a>.</p>
+     * <p>The text content. A maximum of 10,000 Chinese characters is supported. <a href="https://help.aliyun.com/document_detail/2672807.html">SSML markup language</a> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +71,7 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>Specifies whether to overwrite an existing OSS file.</p>
+     * <p>Specifies whether to overwrite existing OSS files.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -97,12 +80,10 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     public Boolean overwrite;
 
     /**
-     * <p>The title of the job. If you do not provide a title, the system automatically generates one based on the current date.</p>
+     * <p>The task title. If not provided, a default title is automatically generated based on the date.</p>
      * <ul>
-     * <li><p>Cannot exceed 128 bytes.</p>
-     * </li>
-     * <li><p>Must be UTF-8 encoded.</p>
-     * </li>
+     * <li>Maximum length: 128 bytes.</li>
+     * <li>UTF-8 encoding.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +93,7 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>Custom settings in JSON format. The maximum length is 512 bytes. This parameter supports <a href="https://help.aliyun.com/document_detail/451631.html">custom callback address configuration</a>.</p>
+     * <p>The custom settings in JSON format. Maximum length: 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDefaultStorageLocationResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>5A-CAAC-4850-A3AF-B74606</strong></strong></strong></p>
@@ -14,7 +14,11 @@ public class SetDefaultStorageLocationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded. Valid values: true: succeeded. false: failed.</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

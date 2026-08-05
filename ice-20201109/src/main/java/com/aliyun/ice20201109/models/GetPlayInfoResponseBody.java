@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPlayInfoResponseBody extends TeaModel {
     /**
-     * <p>The basic information about the media asset.</p>
+     * <p>The media asset information.</p>
      */
     @NameInMap("MediaBase")
     public GetPlayInfoResponseBodyMediaBase mediaBase;
 
     /**
-     * <p>A list of audio or video playback streams.</p>
+     * <p>The audio or video playback information (stream information).</p>
      */
     @NameInMap("PlayInfoList")
     public java.util.List<GetPlayInfoResponseBodyPlayInfoList> playInfoList;
@@ -56,14 +56,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     public static class GetPlayInfoResponseBodyMediaBase extends TeaModel {
         /**
-         * <p>The category ID. You can obtain the category ID in one of the following ways:</p>
+         * <p>The category ID. You can obtain the category ID by using the following methods:</p>
          * <ul>
-         * <li><p>Log on to the <a href="https://ims.console.aliyun.com">IMS console</a> and choose <strong>media asset management</strong> &gt; <strong>category management</strong> to view the category ID.</p>
-         * </li>
-         * <li><p>The create category operation returns the category ID in the <code>CateId</code> parameter.</p>
-         * </li>
-         * <li><p>The get category operation returns the category ID in the <code>CateId</code> parameter.</p>
-         * </li>
+         * <li>Log on to the <a href="https://ims.console.aliyun.com">IMS console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+         * <li>When you create a category by calling the create category operation, the category ID is the value of CateId in the response.</li>
+         * <li>When you query a category by calling the get category operation, the category ID is the value of CateId in the response.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +79,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the media asset was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-22T10:07:31+08:00</p>
@@ -91,7 +88,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description.</p>
+         * <p>The content description.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -111,13 +108,13 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The tags.</p>
          * <ul>
-         * <li><p>You can add up to 16 tags.</p>
+         * <li><p>A maximum of 16 tags are supported.</p>
          * </li>
          * <li><p>Separate multiple tags with commas (,).</p>
          * </li>
-         * <li><p>The maximum length of a tag is 32 bytes.</p>
+         * <li><p>Each tag can be up to 32 bytes in length.</p>
          * </li>
-         * <li><p>Tags must be UTF-8 encoded.</p>
+         * <li><p>UTF-8 encoding is used.</p>
          * </li>
          * </ul>
          * 
@@ -128,8 +125,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String mediaTags;
 
         /**
-         * <p>The type of the media file. Valid values:</p>
-         * <p><code>video</code>: A video file. <code>audio</code>: An audio-only file.</p>
+         * <p>The media file type. Valid values:</p>
+         * <p>video: video.
+         * audio: audio only.</p>
          * 
          * <strong>example:</strong>
          * <p>video</p>
@@ -138,15 +136,15 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The status of the media asset. Valid values:</p>
+         * <p>The resource status. Valid values:</p>
          * <ul>
-         * <li><p><code>Init</code>: The source file is not ready.</p>
+         * <li><p>Init: The source file is not ready.</p>
          * </li>
-         * <li><p><code>Preparing</code>: The source file is being prepared. This process may involve uploading or compositing.</p>
+         * <li><p>Preparing: The source file is being prepared, for example, being uploaded or composed.</p>
          * </li>
-         * <li><p><code>PrepareFail</code>: Preparation of the source file failed. For example, the system failed to retrieve the source file metadata.</p>
+         * <li><p>PrepareFail: The source file failed to be prepared, for example, failed to obtain source file information.</p>
          * </li>
-         * <li><p><code>Normal</code>: The source file is ready.</p>
+         * <li><p>Normal: The source file is ready.</p>
          * </li>
          * </ul>
          * 
@@ -255,7 +253,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public Integer bitDepth;
 
         /**
-         * <p>The bitrate of the media stream in Kbit/s.</p>
+         * <p>The bitrate of the media stream. Unit: Kbps.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -264,7 +262,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The creation time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time follows the format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-10T02:28:49Z</p>
@@ -275,26 +273,16 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The definition of the video stream. Valid values:</p>
          * <ul>
-         * <li><p><strong>FD</strong>: fluent</p>
-         * </li>
-         * <li><p><strong>LD</strong>: standard definition</p>
-         * </li>
-         * <li><p><strong>SD</strong>: high definition</p>
-         * </li>
-         * <li><p><strong>HD</strong>: ultra-high definition</p>
-         * </li>
-         * <li><p><strong>OD</strong>: original</p>
-         * </li>
-         * <li><p><strong>2K</strong></p>
-         * </li>
-         * <li><p><strong>4K</strong></p>
-         * </li>
-         * <li><p><strong>SQ</strong>: standard-quality audio</p>
-         * </li>
-         * <li><p><strong>HQ</strong>: high-quality audio</p>
-         * </li>
-         * <li><p><strong>AUTO</strong>: adaptive bitrate</p>
-         * </li>
+         * <li><strong>FD</strong>: low definition.</li>
+         * <li><strong>LD</strong>: standard definition.</li>
+         * <li><strong>SD</strong>: high definition.</li>
+         * <li><strong>HD</strong>: ultra-high definition.</li>
+         * <li><strong>OD</strong>: original quality.</li>
+         * <li><strong>2K</strong>: 2K.</li>
+         * <li><strong>4K</strong>: 4K.</li>
+         * <li><strong>SQ</strong>: standard sound quality.</li>
+         * <li><strong>HQ</strong>: high sound quality.</li>
+         * <li><strong>AUTO</strong>: adaptive bitrate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +292,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String definition;
 
         /**
-         * <p>The duration of the media stream in seconds.</p>
+         * <p>The duration of the media stream. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>9.0464</p>
@@ -315,10 +303,8 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the media stream is encrypted. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: No.</p>
-         * </li>
-         * <li><p><strong>1</strong>: Yes.</p>
-         * </li>
+         * <li><strong>0</strong>: not encrypted.</li>
+         * <li><strong>1</strong>: encrypted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,13 +316,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The encryption type of the media stream. Valid values:</p>
          * <ul>
-         * <li><p><strong>AliyunVoDEncryption</strong>: Alibaba Cloud VoD Encryption.</p>
-         * </li>
-         * <li><p><strong>HLSEncryption</strong>: HLS standard encryption.</p>
-         * </li>
+         * <li><strong>AliyunVoDEncryption</strong>: Alibaba Cloud video encryption.</li>
+         * <li><strong>HLSEncryption</strong>: HLS standard encryption.</li>
          * </ul>
          * <blockquote>
-         * <p>If a stream is encrypted with <strong>AliyunVoDEncryption</strong>, you can play it only with the Alibaba Cloud Player SDK.</p>
+         * <p>If the encryption type is <strong>AliyunVoDEncryption</strong>, only the Alibaba Cloud Player SDK can be used for playback.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -346,7 +330,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String encryptType;
 
         /**
-         * <p>The OSS file URL.</p>
+         * <p>The OSS URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg">http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg</a></p>
@@ -357,10 +341,8 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The format of the media stream.</p>
          * <ul>
-         * <li><p>For video streams, valid values are <strong>mp4</strong> and <strong>m3u8</strong>.</p>
-         * </li>
-         * <li><p>For audio-only streams, the value is <strong>mp3</strong>.</p>
-         * </li>
+         * <li>If the media file is a video, valid values are <strong>mp4</strong> and <strong>m3u8</strong>.</li>
+         * <li>If the media file is audio only, the value is <strong>mp3</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,7 +352,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The frame rate of the media stream in frames per second.</p>
+         * <p>The frame rate of the media stream. Unit: frames per second.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -379,20 +361,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>The High Dynamic Range (HDR) type of the media stream. Valid values:</p>
+         * <p>The HDR type of the media stream. Valid values:</p>
          * <ul>
-         * <li><p>HDR</p>
-         * </li>
-         * <li><p>HDR10</p>
-         * </li>
-         * <li><p>HLG</p>
-         * </li>
-         * <li><p>DolbyVision</p>
-         * </li>
-         * <li><p>HDRVivid</p>
-         * </li>
-         * <li><p>SDR+</p>
-         * </li>
+         * <li>HDR</li>
+         * <li>HDR10</li>
+         * <li>HLG</li>
+         * <li>DolbyVision</li>
+         * <li>HDRVivid</li>
+         * <li>SDR+</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,7 +378,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String HDRType;
 
         /**
-         * <p>The height of the media stream in pixels.</p>
+         * <p>The height of the media stream. Unit: px.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -420,7 +396,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The last modification time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The modification time. The time follows the format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-13T11:39:41.714+08:00</p>
@@ -431,14 +407,11 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The Narrowband HD type. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: regular.</p>
-         * </li>
-         * <li><p><strong>1.0</strong>: Narrowband HD 1.0.</p>
-         * </li>
-         * <li><p><strong>2.0</strong>: Narrowband HD 2.0.</p>
-         * </li>
+         * <li><strong>0</strong>: normal.</li>
+         * <li><strong>1.0</strong>: Narrowband HD 1.0.</li>
+         * <li><strong>2.0</strong>: Narrowband HD 2.0.</li>
          * </ul>
-         * <p>This parameter applies only if a definition is configured in the built-in transcoding template for Narrowband HD 1.0. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Configure transcoding templates - Definition</a>.</p>
+         * <p>This parameter takes effect only when the definition of a Narrowband HD 1.0 built-in transcoding template is configured. For more information, see <a href="https://help.aliyun.com/document_detail/52839.html">Transcoding template configuration - Definition</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -456,7 +429,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String playURL;
 
         /**
-         * <p>The size of the media stream in bytes.</p>
+         * <p>The size of the media stream. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>418112</p>
@@ -467,10 +440,8 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The media stream status. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong>: The stream is available.</p>
-         * </li>
-         * <li><p><strong>Invisible</strong>: The stream is not visible.</p>
-         * </li>
+         * <li><strong>Normal</strong>: normal.</li>
+         * <li><strong>Invisible</strong>: invisible.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -480,7 +451,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The stream tags, which are used to identify the transcoding type.</p>
+         * <p>The stream tag that identifies the transcoding processing type.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;ims.audioServiceType\&quot;: \&quot;AudioEnhancement\&quot;}&quot;</p>
@@ -489,7 +460,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String streamTags;
 
         /**
-         * <p>The type of the media stream. The value is <strong>video</strong> for video streams or <strong>audio</strong> for audio-only streams.</p>
+         * <p>The media stream type. If the media stream is a video, the value is <strong>video</strong>. If the media stream is audio only, the value is <strong>audio</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>video</p>
@@ -498,20 +469,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String streamType;
 
         /**
-         * <p>The type of the transcoding template. Valid values:</p>
+         * <p>The transcoding templatetype. Valid values:</p>
          * <ul>
-         * <li><p><code>Normal</code>: regular transcoding</p>
-         * </li>
-         * <li><p><code>AudioTranscode</code>: audio transcoding</p>
-         * </li>
-         * <li><p><code>Remux</code>: remuxing</p>
-         * </li>
-         * <li><p><code>NarrowBandV1</code>: Narrowband HD 1.0</p>
-         * </li>
-         * <li><p><code>NarrowBandV2</code>: Narrowband HD 2.0</p>
-         * </li>
-         * <li><p><code>UHD</code>: audio and video enhancement (ultra-high definition)</p>
-         * </li>
+         * <li>Normal: normal template.</li>
+         * <li>AudioTranscode: audio transcoding.</li>
+         * <li>Remux: encapsulation conversion.</li>
+         * <li>NarrowBandV1: Narrowband HD 1.0.</li>
+         * <li>NarrowBandV2: Narrowband HD 2.0.</li>
+         * <li>UHD: audio and video enhancement (ultra-high definition).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -521,7 +486,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String transTemplateType;
 
         /**
-         * <p>The ID of the watermark that is associated with the media stream.</p>
+         * <p>The watermark ID associated with the current media stream.</p>
          * 
          * <strong>example:</strong>
          * <p>5bed88672b1e2520ead228935ed51***</p>
@@ -530,7 +495,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String watermarkId;
 
         /**
-         * <p>The width of the media stream in pixels.</p>
+         * <p>The width of the media stream. Unit: px.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

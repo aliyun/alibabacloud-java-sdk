@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of transcoding jobs.</p>
+     * <p>The list of transcoding tasks.</p>
      */
     @NameInMap("JobList")
     public java.util.List<ListLiveTranscodeJobsResponseBodyJobList> jobList;
@@ -20,7 +20,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeJobsResponseBodyJobListOutputStreamStreamInfos extends TeaModel {
         /**
-         * <p>The URL of the output stream.</p>
+         * <p>The output stream URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://mydomain/app/mytranscode1</p>
@@ -68,7 +68,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String outputUrl;
 
         /**
-         * <p>The type of the output stream protocol. Only the RTMP protocol is supported.</p>
+         * <p>The output stream protocol type. Currently, only the RTMP protocol is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp</p>
@@ -101,7 +101,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeJobsResponseBodyJobListOutputStream extends TeaModel {
         /**
-         * <p>The list of stream URLs.</p>
+         * <p>The list of playback URLs.</p>
          */
         @NameInMap("StreamInfos")
         public java.util.List<ListLiveTranscodeJobsResponseBodyJobListOutputStreamStreamInfos> streamInfos;
@@ -123,7 +123,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeJobsResponseBodyJobListStreamInput extends TeaModel {
         /**
-         * <p>The URL of the input stream.</p>
+         * <p>The input stream URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://mydomain/app/stream1</p>
@@ -132,7 +132,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String inputUrl;
 
         /**
-         * <p>The type of the input stream.</p>
+         * <p>The input stream type.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp</p>
@@ -165,7 +165,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeJobsResponseBodyJobList extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-20T02:48:58Z</p>
@@ -174,7 +174,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
@@ -183,7 +183,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The name of the transcoding job.</p>
+         * <p>The name of the transcoding task.</p>
          * 
          * <strong>example:</strong>
          * <p>mytask</p>
@@ -192,13 +192,13 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The information about the output stream.</p>
+         * <p>The output stream information.</p>
          */
         @NameInMap("OutputStream")
         public ListLiveTranscodeJobsResponseBodyJobListOutputStream outputStream;
 
         /**
-         * <p>The start mode of the job.</p>
+         * <p>The start mode.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -207,7 +207,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public Integer startMode;
 
         /**
-         * <p>The state of the job.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,13 +216,13 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The information about the input stream.</p>
+         * <p>The input stream information.</p>
          */
         @NameInMap("StreamInput")
         public ListLiveTranscodeJobsResponseBodyJobListStreamInput streamInput;
 
         /**
-         * <p>The ID of the transcoding template used by the transcoding job.</p>
+         * <p>The template ID corresponding to the transcoding task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
@@ -240,7 +240,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The type of the transcoding template used by the transcoding job.</p>
+         * <p>The type of the transcoding template corresponding to the transcoding task.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>

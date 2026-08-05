@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateSearchLibRequest extends TeaModel {
     /**
-     * <p>The configuration of the search library, in JSON string format. The fields include the following:</p>
+     * <p>The configuration of the search library. The value is in JSON string format. Fields:</p>
      * <ul>
-     * <li>faceGroupIds: The IDs of custom face recognition libraries. You can create these libraries by calling the CreateRecognitionLib operation. You can specify up to three library IDs, separated by commas (,).</li>
+     * <li>faceGroupIds: the IDs of self-registered face libraries created by calling CreateRecognitionLib. A maximum of three self-registered face library IDs are supported, separated by commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateSearchLibRequest extends TeaModel {
     public String searchLibConfig;
 
     /**
-     * <p>The name of the search library. The name can contain letters and digits. For IP camera (IPC) monitoring scenarios, the name must start with the <code>IPCamera_</code> prefix. For other scenarios, you can use a custom name.</p>
+     * <p>The name of the search library. The name must be a combination of letters and digits. For network monitoring camera (IPC) scenarios, the prefix must be &quot;IPCamera_&quot;. For other scenarios, you can customize the name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

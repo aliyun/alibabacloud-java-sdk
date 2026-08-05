@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelFavoritePublicMediaResponseBody extends TeaModel {
     /**
-     * <p>List of IDs for which removing from favorites failed.</p>
+     * <p>The list of IDs that failed to be removed from favorites.</p>
      */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

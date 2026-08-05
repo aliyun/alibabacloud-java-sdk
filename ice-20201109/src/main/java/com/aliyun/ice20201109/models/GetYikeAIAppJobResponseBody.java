@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetYikeAIAppJobResponseBody extends TeaModel {
     /**
-     * <p>The Yike AI App ID.</p>
+     * <p>The AI application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app-****</p>
@@ -14,7 +14,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The input parameters for the Yike AI App, provided as a JSON string.</p>
+     * <p>The input parameters for running the AI application. The value is a string obtained after JSON serialize.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</p>
@@ -23,7 +23,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String appParams;
 
     /**
-     * <p>The UTC time when the job finished, in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+     * <p>The time when the task ended. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:18.809+08:00</p>
@@ -32,7 +32,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String executionFinishTime;
 
     /**
-     * <p>The UTC time when the job started, in <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+     * <p>The time when the task started. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:34.001+08:00</p>
@@ -50,7 +50,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String folderId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -77,24 +77,19 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The job results.</p>
+     * <p>The task execution result.</p>
      */
     @NameInMap("Result")
     public GetYikeAIAppJobResponseBodyResult result;
 
     /**
-     * <p>The status of the job. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><p><code>Created</code>: The job is created.</p>
-     * </li>
-     * <li><p><code>Queuing</code>: The job is queued for processing.</p>
-     * </li>
-     * <li><p><code>Executing</code>: The job is running.</p>
-     * </li>
-     * <li><p><code>Finished</code>: The job completed successfully.</p>
-     * </li>
-     * <li><p><code>Failed</code>: The job failed.</p>
-     * </li>
+     * <li>Created: The task is created.</li>
+     * <li>Queuing: The task is queuing.</li>
+     * <li>Executing: The task is being executed.</li>
+     * <li>Finished: The task is completed.</li>
+     * <li>Failed: The task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -199,7 +194,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The OSS URL of the output file.</p>
+         * <p>The downloadable OSS URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp3</a></p>
@@ -241,7 +236,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The OSS URL of the output file.</p>
+         * <p>The downloadable OSS URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.png</a></p>
@@ -283,7 +278,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The OSS URL of the output file.</p>
+         * <p>The downloadable OSS URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></p>
@@ -316,19 +311,19 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
 
     public static class GetYikeAIAppJobResponseBodyResult extends TeaModel {
         /**
-         * <p>The audio results.</p>
+         * <p>The audio task result.</p>
          */
         @NameInMap("AudioResult")
         public java.util.List<GetYikeAIAppJobResponseBodyResultAudioResult> audioResult;
 
         /**
-         * <p>The image results.</p>
+         * <p>The image task result.</p>
          */
         @NameInMap("ImageResult")
         public java.util.List<GetYikeAIAppJobResponseBodyResultImageResult> imageResult;
 
         /**
-         * <p>The video results.</p>
+         * <p>The video task result.</p>
          */
         @NameInMap("VideoResult")
         public java.util.List<GetYikeAIAppJobResponseBodyResultVideoResult> videoResult;

@@ -14,7 +14,7 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The media ID.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>2bcbfcfa30fccb36f72dca22</strong></strong></p>
@@ -32,16 +32,12 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The job status.</p>
+     * <p>The job status. Valid values:</p>
      * <ul>
-     * <li><p>Created</p>
-     * </li>
-     * <li><p>Executing</p>
-     * </li>
-     * <li><p>Finished</p>
-     * </li>
-     * <li><p>Failed</p>
-     * </li>
+     * <li>Created</li>
+     * <li>Executing</li>
+     * <li>Finished</li>
+     * <li>Failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

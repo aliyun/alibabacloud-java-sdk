@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SubYikeUserCreditResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the operation fails. A possible value is:</p>
+     * <p>The error code returned when the deduction fails. Valid values:</p>
      * <ul>
-     * <li><code>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA</code>: The sub-account\&quot;s credit balance is insufficient.</li>
+     * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: the credit balance of the RAM user is insufficient.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,12 +26,10 @@ public class SubYikeUserCreditResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded.</p>
+     * <p>Indicates whether the deduction is successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The operation succeeded.</p>
-     * </li>
-     * <li><p><code>false</code>: The operation failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

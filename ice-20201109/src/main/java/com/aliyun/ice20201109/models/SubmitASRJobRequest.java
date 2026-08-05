@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitASRJobRequest extends TeaModel {
     /**
-     * <p>The job description. The maximum length is 128 bytes.</p>
+     * <p>The task description. The value can be up to 128 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Test description</p>
@@ -14,7 +14,7 @@ public class SubmitASRJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The duration of the segment to transcribe.</p>
+     * <p>The duration.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00:10</p>
@@ -23,9 +23,9 @@ public class SubmitASRJobRequest extends TeaModel {
     public String duration;
 
     /**
-     * <p>The configuration for speech-to-text conversion:</p>
+     * <p>The audio-to-text recognition configuration:</p>
      * <ul>
-     * <li>HotwordLibraryIdList: A list of custom vocabulary IDs. Only one custom vocabulary ID is currently supported. Future releases will support multiple IDs.</li>
+     * <li>HotwordLibraryIdList: the list of hotword library IDs. Currently, only one hotword library ID can be specified. Support for multiple hotword library IDs is planned for the future.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class SubmitASRJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>The input configuration. Specify either an OSS URL or a media ID from the media library.</p>
+     * <p>The input configuration. OSS URLs and content library material IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or <strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -46,7 +46,7 @@ public class SubmitASRJobRequest extends TeaModel {
     public String inputFile;
 
     /**
-     * <p>The start time of the segment to be transcribed from the media file.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00:00</p>
@@ -55,7 +55,7 @@ public class SubmitASRJobRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The job title. The maximum length is 128 bytes.</p>
+     * <p>The task title. The value can be up to 128 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Test title</p>
@@ -64,7 +64,7 @@ public class SubmitASRJobRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>User-defined settings in JSON format. Use this to pass business-related data, such as the operating environment or other job details.</p>
+     * <p>The custom settings. You can pass in business information such as the business environment and task information. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{

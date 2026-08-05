@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUploadMediaRequest extends TeaModel {
     /**
-     * <p>The application ID. The default value is <code>app-1000000</code>.</p>
+     * <p>The application ID. Default value: app-1000000.</p>
      * 
      * <strong>example:</strong>
      * <p>app-1000000</p>
@@ -14,7 +14,7 @@ public class CreateUploadMediaRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the entity. You can call the <code>CreateEntity</code> operation to create an entity and define a custom schema for dynamic metadata.</p>
+     * <p>The entity ID. You can call the CreateEntity operation to create an entity and customize the dynamic metadata structure.</p>
      * 
      * <strong>example:</strong>
      * <p>9e177cac2fb44f8b8c67b199fcc7bffd</p>
@@ -23,16 +23,12 @@ public class CreateUploadMediaRequest extends TeaModel {
     public String entityId;
 
     /**
-     * <p>The file information, provided as a JSON string containing the following fields:</p>
+     * <p>The file information in JSON format. This parameter contains the following fields:</p>
      * <ul>
-     * <li><p><code>Type</code> (Required): The file type. Valid values: <code>video</code>, <code>image</code>, <code>audio</code>, <code>text</code>, and <code>other</code>.</p>
-     * </li>
-     * <li><p><code>Name</code> (Required): The filename without the extension.</p>
-     * </li>
-     * <li><p><code>Size</code> (Optional): The file size.</p>
-     * </li>
-     * <li><p><code>Ext</code> (Required): The file extension.</p>
-     * </li>
+     * <li>Type (required): the file type. Valid values: video, image, audio, text, and other.</li>
+     * <li>Name (required): the file name without the file name extension.</li>
+     * <li>Size (optional): the file size.</li>
+     * <li>Ext (required): the file name extension.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,36 +38,35 @@ public class CreateUploadMediaRequest extends TeaModel {
     public String fileInfo;
 
     /**
-     * <p>The media asset metadata, provided as a JSON string.</p>
-     * <p><code>Title</code> (Required):</p>
+     * <p>The metadata of the media asset to upload, in JSON format.</p>
+     * <p>Title (required):</p>
      * <ul>
-     * <li><p>The title can be up to 128 characters in length.</p>
-     * </li>
-     * <li><p>The title must be UTF-8 encoded.</p>
-     * </li>
+     * <li>The maximum length is 128 characters.</li>
+     * <li>UTF-8 encoded.</li>
      * </ul>
-     * <p><code>Description</code> (Optional):</p>
+     * <p>Description (optional):</p>
      * <ul>
-     * <li><p>The description can be up to 1,024 characters in length.</p>
-     * </li>
-     * <li><p>The description must be UTF-8 encoded.</p>
-     * </li>
+     * <li>The maximum length is 1024 characters.</li>
+     * <li>UTF-8 encoded.</li>
      * </ul>
-     * <p><code>CateId</code> (Optional): The category ID.</p>
-     * <p><code>Tags</code> (Optional): The tags of the media asset, separated by commas.</p>
-     * <p><code>BusinessType</code> (Required): The business type. Valid values depend on the <code>Type</code> specified in <code>FileInfo</code>.</p>
+     * <p>CateId (optional): the category ID.</p>
+     * <p>Tags (optional): the tags.</p>
+     * <p>BusinessType (required): the business type. Valid values:</p>
      * <ul>
-     * <li><p>If <code>Type</code> is <code>video</code>: <code>opening</code> or <code>ending</code>.</p>
-     * </li>
-     * <li><p>If <code>Type</code> is <code>image</code>: <code>default</code>, <code>cover</code>, or <code>watermark</code>.</p>
-     * </li>
-     * <li><p>If <code>Type</code> is <code>text</code>: <code>subtitles</code> or <code>font</code>.</p>
-     * </li>
-     * <li></li>
-     * <li><p>If <code>Type</code> is <code>other</code>: <code>general</code>.</p>
-     * </li>
+     * <li>When Type = video:
+     * opening: opening credits. ending: ending credits.</li>
+     * <li>When Type = image:
+     * default: default.
+     * cover: cover image.</li>
+     * <li>When Type = text:
+     * subtitles: subtitles.
+     * font: font.</li>
+     * <li>When Type = material:
+     * watermark: watermark.</li>
+     * <li>general: general-purpose.</li>
      * </ul>
-     * <p><code>CoverURL</code> (Optional): The URL of the cover image.<br><code>DynamicMetaData</code> (Optional): A string for custom dynamic metadata.<br></p>
+     * <p>CoverURL (optional): the cover URL.</p>
+     * <p>DynamicMetaData: the dynamic metadata. The value is a string.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;Title\&quot;: \&quot;UploadTest\&quot;, \&quot;Description\&quot;: \&quot;UploadImageTest\&quot;, \&quot;Tags\&quot;: \&quot;tag1,tag2\&quot;,\&quot;BusinessType\&quot;:\&quot;cover\&quot;}</p>
@@ -80,11 +75,11 @@ public class CreateUploadMediaRequest extends TeaModel {
     public String mediaMetaData;
 
     /**
-     * <p>The post-processing configuration for <code>video</code> or <code>audio</code> uploads.</p>
-     * <p>Set <code>ProcessType</code> to <code>Workflow</code>.</p>
+     * <p>Specifies the post-upload processing action when Type = video or audio.</p>
+     * <p>ProcessType: set to Workflow.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter specifies an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>, which is queued and runs in the background after you submit the request.</li>
+     * <li>This parameter triggers an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous task</a>. After submission, the task is not immediately completed and enters a background queue for asynchronous execution.</li>
      * </ul>
      * </blockquote>
      * 
@@ -95,12 +90,10 @@ public class CreateUploadMediaRequest extends TeaModel {
     public String postProcessConfig;
 
     /**
-     * <p>The destination storage configuration, provided as a JSON string.</p>
+     * <p>The destination storage address.</p>
      * <ul>
-     * <li><p><code>StorageType</code>: Only <code>oss</code> is supported.</p>
-     * </li>
-     * <li><p><code>StorageLocation</code>: Only VOD storage is supported. You cannot upload to your own OSS buckets.</p>
-     * </li>
+     * <li>StorageType: only oss is supported.</li>
+     * <li>StorageLocation: only VOD storage is supported. User-owned OSS storage is not supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +103,7 @@ public class CreateUploadMediaRequest extends TeaModel {
     public String uploadTargetConfig;
 
     /**
-     * <p>A JSON string for custom settings, such as configuring a message callback.</p>
+     * <p>The custom settings. The value is a JSON string that supports settings such as message callbacks.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D,%22Extend%22:%7B%22localId%22:%22*****%22,%22test%22:%22www%22%7D%7D">http://example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;*****&quot;,&quot;test&quot;:&quot;www&quot;}}</a></p>

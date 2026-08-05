@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AlterSearchIndexRequest extends TeaModel {
     /**
-     * <p>The configurations of the index.</p>
+     * <p>The index configuration.</p>
      * <blockquote>
-     * <p>You must specify either IndexStatus or IndexConfig.</p>
+     * <p>Notice:  You must specify either IndexStatus or IndexConfig.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,15 +17,13 @@ public class AlterSearchIndexRequest extends TeaModel {
     public String indexConfig;
 
     /**
-     * <p>The state of the index. Valid values:</p>
+     * <p>The index status. Default value: Active. Valid values:</p>
      * <ul>
-     * <li><p>active (default): the index is enabled.</p>
-     * </li>
-     * <li><p>Deactive: the index is not enabled.</p>
-     * </li>
+     * <li>Active: activated.</li>
+     * <li>Deactive: deactivated.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify either IndexStatus or IndexConfig.</p>
+     * <p>Notice:  You must specify either IndexStatus or IndexConfig.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,14 +33,11 @@ public class AlterSearchIndexRequest extends TeaModel {
     public String indexStatus;
 
     /**
-     * <p>The category of the index. Valid values:</p>
+     * <p>The index type. Valid values:</p>
      * <ul>
-     * <li><p>mm: large visual model.</p>
-     * </li>
-     * <li><p>face: face recognition.</p>
-     * </li>
-     * <li><p>aiLabel: smart tagging.</p>
-     * </li>
+     * <li>mm: large model.</li>
+     * <li>face: face.</li>
+     * <li>aiLabel: intelligent tag.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -53,12 +48,10 @@ public class AlterSearchIndexRequest extends TeaModel {
     public String indexType;
 
     /**
-     * <p>The name of the search library.</p>
+     * <p>The search library name.</p>
      * <ul>
-     * <li><p>If you leave this parameter empty, the search index is created in the default search library of Intelligent Media Service (IMS). Default value: ims-default-search-lib.</p>
-     * </li>
-     * <li><p>To query information about an existing search library, call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> API operation.</p>
-     * </li>
+     * <li>If no search library name is specified, the search index is created in the default IMS search library. Default value: ims-default-search-lib.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> operation to query existing search library information.</li>
      * </ul>
      * 
      * <strong>example:</strong>

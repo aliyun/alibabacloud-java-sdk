@@ -7,10 +7,8 @@ public class AddCategoryRequest extends TeaModel {
     /**
      * <p>The category name.</p>
      * <ul>
-     * <li><p>The value can be up to 64 bytes in length.</p>
-     * </li>
-     * <li><p>The value must be encoded in UTF-8.</p>
-     * </li>
+     * <li>The maximum length is 64 bytes.</li>
+     * <li>UTF-8 encoding.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +19,7 @@ public class AddCategoryRequest extends TeaModel {
     public String cateName;
 
     /**
-     * <p>The ID of the parent category.</p>
+     * <p>The parent category ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -30,12 +28,10 @@ public class AddCategoryRequest extends TeaModel {
     public Long parentId;
 
     /**
-     * <p>The type of the category. Valid values:</p>
+     * <p>The category type. Valid values:</p>
      * <ul>
-     * <li><p>default: audio, video, and image files. This is the default value.</p>
-     * </li>
-     * <li><p>material: short video materials.</p>
-     * </li>
+     * <li>default (default): audio, video, and image category.                                 </li>
+     * <li>material: short video material category.</li>
      * </ul>
      * 
      * <strong>example:</strong>

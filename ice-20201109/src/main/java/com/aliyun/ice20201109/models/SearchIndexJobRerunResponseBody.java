@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchIndexJobRerunResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,12 +29,10 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +80,7 @@ public class SearchIndexJobRerunResponseBody extends TeaModel {
 
     public static class SearchIndexJobRerunResponseBodyData extends TeaModel {
         /**
-         * <p>The media asset IDs that do not exist.</p>
+         * <p>The list of media asset IDs that do not exist.</p>
          */
         @NameInMap("MediaIdsNoExist")
         public java.util.List<String> mediaIdsNoExist;

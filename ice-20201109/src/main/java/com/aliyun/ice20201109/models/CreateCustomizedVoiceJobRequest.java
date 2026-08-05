@@ -7,10 +7,8 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>The gender. Valid values:</p>
      * <ul>
-     * <li><p>female</p>
-     * </li>
-     * <li><p>male</p>
-     * </li>
+     * <li>female: female.</li>
+     * <li>male: male.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,12 +21,9 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>The scenario. Valid values:</p>
      * <ul>
-     * <li><p>story</p>
-     * </li>
-     * <li><p>interaction</p>
-     * </li>
-     * <li><p>navigation</p>
-     * </li>
+     * <li>story: story.</li>
+     * <li>interaction: interaction.</li>
+     * <li>navigation: navigation.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,24 +36,21 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>The voice description.</p>
      * <ul>
-     * <li>Must be 256 characters or fewer.</li>
+     * <li>The description cannot exceed 256 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>这是一个个性化声音</p>
+     * <p>This is a personalized voice</p>
      */
     @NameInMap("VoiceDesc")
     public String voiceDesc;
 
     /**
-     * <p>The custom voice ID. This is typically an English name or Pinyin.</p>
+     * <p>The custom voice ID (English name or pinyin of the voice).</p>
      * <ul>
-     * <li><p>Must be unique among your other custom voices.</p>
-     * </li>
-     * <li><p>Must be 32 characters or fewer.</p>
-     * </li>
-     * <li><p>Can contain only letters and numbers.</p>
-     * </li>
+     * <li>The ID cannot be the same as any of your other custom voice IDs.</li>
+     * <li>The ID cannot exceed 32 characters.</li>
+     * <li>Only letters and numbers are supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -69,9 +61,9 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
     public String voiceId;
 
     /**
-     * <p>The voice name, typically in Chinese.</p>
+     * <p>The voice name (generally a Chinese name).</p>
      * <ul>
-     * <li>Must be 32 characters or fewer.</li>
+     * <li>The name cannot exceed 32 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>

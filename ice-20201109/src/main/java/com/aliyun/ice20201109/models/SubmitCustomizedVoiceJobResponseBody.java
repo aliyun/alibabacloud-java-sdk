@@ -11,7 +11,7 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
     public SubmitCustomizedVoiceJobResponseBodyData data;
 
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -20,12 +20,10 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The call was successful.                  </li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
 
     public static class SubmitCustomizedVoiceJobResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier for the voice cloning job.</p>
+         * <p>The voice cloning task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
@@ -74,7 +72,7 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The unique identifier for the voice.</p>
+         * <p>The voice ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xiaozhuan</p>

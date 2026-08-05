@@ -15,7 +15,7 @@ public class SubmitYikeAIAppJobRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The AI application runtime parameters, as a JSON string.</p>
+     * <p>The runtime parameters of the AI application. The value is a JSON-serialized string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;testKey&quot;:&quot;testValue&quot;}</p>
@@ -24,7 +24,7 @@ public class SubmitYikeAIAppJobRequest extends TeaModel {
     public String appParams;
 
     /**
-     * <p>The ID of the folder. If provided, the output is saved to this folder.</p>
+     * <p>The folder ID. This parameter is used to save results to the specified folder.</p>
      * 
      * <strong>example:</strong>
      * <p>fd-cReaEcVqQK</p>
@@ -33,7 +33,7 @@ public class SubmitYikeAIAppJobRequest extends TeaModel {
     public String folderId;
 
     /**
-     * <p>The ID of the project. If provided, the output is saved to this project.</p>
+     * <p>The project ID. This parameter is used to save results to the specified project.</p>
      * 
      * <strong>example:</strong>
      * <p>ProductionId</p>

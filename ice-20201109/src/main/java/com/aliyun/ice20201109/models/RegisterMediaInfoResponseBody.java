@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RegisterMediaInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the media asset in IMS.</p>
+     * <p>The IMS media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>

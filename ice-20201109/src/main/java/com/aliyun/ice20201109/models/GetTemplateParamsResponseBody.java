@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTemplateParamsResponseBody extends TeaModel {
     /**
-     * <p>The queried parameters.</p>
+     * <p>The parameter list.</p>
      */
     @NameInMap("ParamList")
     public java.util.List<GetTemplateParamsResponseBodyParamList> paramList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
@@ -68,13 +68,13 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The thumbnail URL of the original material.</p>
+         * <p>The thumbnail URL of the original media.</p>
          */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
         /**
-         * <p>The height of the original material in the output video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * <p>The height of the original media in the output video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -92,13 +92,13 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The URL of the original material.</p>
+         * <p>The URL of the original media.</p>
          */
         @NameInMap("MediaUrl")
         public String mediaUrl;
 
         /**
-         * <p>In-point of the original material segment relative to the timeline, in seconds. This value is returned only for standard templates created in the console.</p>
+         * <p>The in-point of the original media clip relative to the timeline. Unit: seconds. Currently, this value is returned only for common templates created in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>5.5</p>
@@ -107,7 +107,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         public Float timelineIn;
 
         /**
-         * <p>Out-point of the original material segment relative to the timeline, in seconds. This value is returned only for standard templates created in the console.</p>
+         * <p>The out-point of the original media clip relative to the timeline. Unit: seconds. Currently, this value is returned only for common templates created in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>8.5</p>
@@ -116,16 +116,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         public Float timelineOut;
 
         /**
-         * <p>The material type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Video</p>
-         * </li>
-         * <li><p>Text</p>
-         * </li>
-         * <li><p>Image</p>
-         * </li>
-         * </ul>
+         * <p>The media type.</p>
          * 
          * <strong>example:</strong>
          * <p>Image</p>
@@ -134,7 +125,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The width of the original material in the output video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * <p>The width of the original media in the output video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -143,7 +134,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         public Integer width;
 
         /**
-         * <p>The horizontal distance of the original material relative to the top-left corner of the video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * <p>The horizontal distance of the original media from the upper-left corner of the video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -152,7 +143,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         public Integer x;
 
         /**
-         * <p>The vertical distance of the original material relative to the top-left corner of the video, in absolute pixel values. This value is returned only for standard templates created in the console.</p>
+         * <p>The vertical distance of the original media from the upper-left corner of the video, in absolute pixel values. Currently, this value is returned only for common templates created in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

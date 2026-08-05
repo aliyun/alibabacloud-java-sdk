@@ -11,7 +11,7 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
     public java.util.List<ListYikeAssetFoldersResponseBodyFolderList> folderList;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The maximum number of results.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+     * <p>The token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>Token</p>
@@ -38,7 +38,7 @@ public class ListYikeAssetFoldersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of folders.</p>
+     * <p>The total number of folders.</p>
      * 
      * <strong>example:</strong>
      * <p>78</p>

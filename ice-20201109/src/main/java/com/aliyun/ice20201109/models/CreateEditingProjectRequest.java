@@ -5,10 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateEditingProjectRequest extends TeaModel {
     /**
-     * <p>The business configuration of the project. This parameter can be ignored for general editing projects.</p>
-     * <p>For a live stream editing project, observe the following rules: OutputMediaConfig.StorageLocation is required. OutputMediaConfig.Path is optional. If you do not specify this option, the live streaming clips are stored in the root directory by default.</p>
-     * <p>Valid values of OutputMediaTarget include vod-media and oss-object. If you do not specify OutputMediaTarget, the default value oss-object is used.</p>
-     * <p>If you set OutputMediaTarget to vod-media, the setting of OutputMediaConfig.Path does not take effect.</p>
+     * <p>The business configuration of the project. This parameter can be ignored for standard editing projects.</p>
+     * <ul>
+     * <li><p>For live editing projects, OutputMediaConfig.StorageLocation is required.</p>
+     * </li>
+     * <li><p>If OutputMediaConfig.Path is not specified, the produced live clips are stored in the root path by default. </p>
+     * </li>
+     * <li><p>OutputMediaTarget can be set to vod-media or oss-object. Default value: oss-object.</p>
+     * </li>
+     * <li><p>When OutputMediaTarget is set to vod-media, Path does not take effect.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;OutputMediaConfig&quot; : { &quot;StorageLocation&quot;: &quot;test-bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;Path&quot;: &quot;test-path&quot; }, &quot;OutputMediaTarget&quot;: &quot;oss-object&quot;, &quot;ReservationTime&quot;: &quot;2021-06-21T08:05:00Z&quot; }</p>
@@ -17,7 +24,7 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String businessConfig;
 
     /**
-     * <p>The material parameter corresponding to the template, in the JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a regular template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</p>
+     * <p>The material parameters corresponding to the template in JSON format. If TemplateId is specified, ClipsParam must also be specified. For more information about the format, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a standard template</a> and <a href="https://help.aliyun.com/document_detail/445389.html">Create and use an advanced template</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>See the template user guide.</p>
@@ -26,7 +33,7 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String clipsParam;
 
     /**
-     * <p>The thumbnail URL of the online editing project.</p>
+     * <p>The cover URL of the cloud editing project.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/example.png">https://example.com/example.png</a></p>
@@ -35,7 +42,7 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String coverURL;
 
     /**
-     * <p>The description of the online editing project.</p>
+     * <p>The description of the cloud editing project.</p>
      * 
      * <strong>example:</strong>
      * <p>Description</p>
@@ -44,7 +51,7 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The material associated with the project. Separate multiple material IDs with commas (,). Each type supports up to 10 material IDs.</p>
+     * <p>The materials associated with the project. Separate multiple materials with commas (,). A maximum of 10 material IDs are supported for each type.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;video&quot;:&quot;<em><strong><strong>2e057304fcd9b145c5cafc</strong></strong></em>&quot;, &quot;image&quot;:&quot;<strong><strong>8021a8d493da643c8acd98</strong></strong>*,<em><strong><strong>cb6307a4edea614d8b3f3c</strong></strong></em>&quot;, &quot;liveStream&quot;: &quot;[{\&quot;appName\&quot;:\&quot;testrecord\&quot;,\&quot;domainName\&quot;:\&quot;test.alivecdn.com\&quot;,\&quot;liveUrl\&quot;:\&quot;rtmp://test.alivecdn.com/testrecord/teststream\&quot;,\&quot;streamName\&quot;:\&quot;teststream\&quot;}]&quot;, &quot;editingProject&quot;: &quot;<em><strong><strong>9b145c5cafc2e057304fcd</strong></strong></em>&quot;}</p>
@@ -53,7 +60,13 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String materialMaps;
 
     /**
-     * <p>The type of the editing project. Valid values: EditingProject and LiveEditingProject. A value of EditingProject indicates a regular editing project, and a value of LiveEditingProject indicates a live stream editing project.</p>
+     * <p>The type of the editing project.</p>
+     * <ul>
+     * <li><p>EditingProject: standard editing project.</p>
+     * </li>
+     * <li><p>LiveEditingProject: live editing project.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>LiveEditingProject</p>
@@ -62,7 +75,10 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String projectType;
 
     /**
-     * <p>The template ID. This parameter is used to quickly build a timeline with ease. Note: Only one of Timeline and TemplateId can be specified. If TemplateId is specified, ClipsParam must also be specified.</p>
+     * <p>The template ID, which is used to quickly build a timeline with minimal effort.</p>
+     * <blockquote>
+     * <p>Notice: Either Timeline or TemplateId must be specified, but not both. If TemplateId is specified, ClipsParam must also be specified.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -71,12 +87,11 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The template type. This parameter is required if you create a template-based online editing project. Default value: Timeline. Valid values:</p>
+     * <p>The templatetype. Specify this parameter when you create a template-based cloud editing project. Default value: Timeline.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>Timeline: a regular template.</p>
-     * </li>
-     * <li><p>VETemplate: an advanced template.</p>
-     * </li>
+     * <li>Timeline: standard template.</li>
+     * <li>VETemplate: advanced template.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +101,7 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String templateType;
 
     /**
-     * <p>The timeline of the online editing project, in the JSON format.</p>
+     * <p>The timeline of the cloud editing project in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
@@ -95,7 +110,7 @@ public class CreateEditingProjectRequest extends TeaModel {
     public String timeline;
 
     /**
-     * <p>The title of the online editing project.</p>
+     * <p>The title of the cloud editing project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class UpdateCustomTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/448291.html">template parameters</a>.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/448291.html">template parameter</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;param&quot;: &quot;sample&quot;}</p>

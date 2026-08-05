@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelIProductionJobResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * <p>The details about the access denial. This field is returned only when RAM authentication fails.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CancelIProductionJobResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class CancelIProductionJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -59,7 +59,7 @@ public class CancelIProductionJobResponseBody extends TeaModel {
 
     public static class CancelIProductionJobResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The operation that failed the permission check.</p>
+         * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
          * <p>ice:CancelIProductionJob</p>
@@ -68,14 +68,11 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The identity. Values:</p>
+         * <p>The identity used for authentication in the request. Valid values:</p>
          * <ul>
-         * <li><p>RAM user: a UID</p>
-         * </li>
-         * <li><p>RAM role: RoleName:RoleSessionName</p>
-         * </li>
-         * <li><p>Federated user: ProviderType/ProviderName</p>
-         * </li>
+         * <li>RAM user: RAM user UID</li>
+         * <li>RAM role: RoleName:RoleSessionName</li>
+         * <li>Federated: ProviderType/ProviderName</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,7 +82,7 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The account to which the principal belongs.</p>
+         * <p>The account to which the authenticate principal belongs.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>82303720</strong></strong></p>
@@ -94,14 +91,11 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of identity that made the request. Valid values:</p>
+         * <p>The type of the identity used for authentication in the request. Valid values:</p>
          * <ul>
-         * <li><p>SubUser: RAM user</p>
-         * </li>
-         * <li><p>AssumedRoleUser: RAM role</p>
-         * </li>
-         * <li><p>Federated: SSO federated user</p>
-         * </li>
+         * <li>SubUser: RAM user</li>
+         * <li>AssumedRoleUser: RAM role</li>
+         * <li>Federated: SSO federated identity</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,12 +114,10 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of policy that resulted in the denial. Valid values:</p>
+         * <p>The type of denial by the access policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>ImplicitDeny</strong>: The resource holder has not configured a policy for the current user. By default, unauthorized operations are denied.</p>
-         * </li>
-         * <li><p><strong>ExplicitDeny</strong>: The RAM policy configured by the resource holder explicitly denies the current user access to the corresponding resources.</p>
-         * </li>
+         * <li><strong>ImplicitDeny</strong>: The resource owner has not configured a relevant permission policy for the current user. Access to unauthorized operations is denied by default.</li>
+         * <li><strong>ExplicitDeny</strong>: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,18 +127,13 @@ public class CancelIProductionJobResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The type of policy that triggered the permission failure.</p>
+         * <p>The type of the policy that caused the access denial. Valid values:</p>
          * <ul>
-         * <li><p><strong>ControlPolicy</strong>: control policy</p>
-         * </li>
-         * <li><p><strong>SessionPolicy</strong>: an additional policy attached to a temporary token.</p>
-         * </li>
-         * <li><p><strong>AssumeRolePolicy</strong>: the trust policy of a RAM role.</p>
-         * </li>
-         * <li><p><strong>AccountLevelIdentityBasedPolicy</strong>: an identity-based policy at the account level (custom or system).</p>
-         * </li>
-         * <li><p><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: an identity-based policy scoped to a resource group.</p>
-         * </li>
+         * <li><strong>ControlPolicy</strong>: control policy.</li>
+         * <li><strong>SessionPolicy</strong>: an additional permission policy attached to a temporary token.</li>
+         * <li><strong>AssumeRolePolicy</strong>: the trust policy of a RAM role.</li>
+         * <li><strong>AccountLevelIdentityBasedPolicy</strong>: an identity-access policy at the account authorization scope, including custom policies and system policies.</li>
+         * <li><strong>ResourceGroupLevelIdentityBasedPolicy</strong>: an identity-access policy at the resource group authorization scope, including custom policies and system policies.</li>
          * </ul>
          * 
          * <strong>example:</strong>

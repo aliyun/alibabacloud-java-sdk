@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class StartWorkflowRequest extends TeaModel {
     /**
-     * <p>Specifies whether to skip verification of the input path supported by the pipeline. This parameter takes effect only when the pipeline input is an OSS file. We recommend that you do not skip this verification to avoid faults caused by incorrect paths. If this parameter is not specified, verification is performed by default. Valid values:</p>
+     * <p>Specifies whether to skip the input path verification for the workflow. This parameter takes effect only when the workflow input is an OSS file. We recommend that you do not skip the verification to avoid errors caused by incorrect paths. If this parameter is not specified, the default value is false. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Skip verification</p>
+     * <li><p><strong>true</strong>: Skip the verification.</p>
      * </li>
-     * <li><p><strong>false</strong>: Do not skip verification</p>
+     * <li><p><strong>false</strong>: Do not skip the verification.</p>
      * </li>
      * </ul>
      * 
@@ -20,32 +20,46 @@ public class StartWorkflowRequest extends TeaModel {
     public Boolean skipInputVerification;
 
     /**
-     * <p>The workflow input. Only media assets are supported.</p>
+     * <p>The workflow input. Currently, media asset types and OSS files are supported.</p>
+     * <p>Type: the supported media object type. Valid values:</p>
+     * <ul>
+     * <li><p>OSS: an OSS file.</p>
+     * </li>
+     * <li><p>Media: a media asset ID.</p>
+     * </li>
+     * </ul>
+     * <p>Media: the media value. Valid values:</p>
+     * <ul>
+     * <li><p>If Type is set to OSS, the value is a URL that supports the OSS protocol and HTTP protocol.</p>
+     * </li>
+     * <li><p>If Type is set to Media, the value is a media asset ID.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{
-     *       &quot;Type&quot;: &quot;Media&quot;,
-     *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
+     *       &quot;Type&quot;: &quot;Media&quot;,
+     *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
      * } or
      * {
-     *       &quot;Type&quot;: &quot;OSS&quot;,
-     *       &quot;Media&quot;: &quot;oss://bucket/path/to/video.mp4&quot;
+     *       &quot;Type&quot;: &quot;OSS&quot;,
+     *       &quot;Media&quot;: &quot;oss://bucket.oss-ap-southeast-1.aliyuncs.com/A/B/C/test1.flv&quot;
      * }</p>
      */
     @NameInMap("TaskInput")
     public String taskInput;
 
     /**
-     * <p>The user-defined data in the JSON format, which cannot be up to 512 bytes in length. You can specify a custom callback URL. For more information, see <a href="https://help.aliyun.com/document_detail/451631.html">Configure a callback upon editing completion</a>.</p>
+     * <p>The custom settings in JSON format. The maximum length is 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or{&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
      */
     @NameInMap("UserData")
     public String userData;
 
     /**
-     * <p>The ID of the workflow template. To view the template ID, log on to the <a href="https://ims.console.aliyun.com/settings/workflow/list">IMS console</a> and choose Configurations &gt; Workflow Template.</p>
+     * <p>The workflow template ID. You can view the template ID in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> by navigating to Configuration Management &gt; Workflow Template.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>f0e54971ecbffd472190</strong></strong></strong></p>

@@ -6,20 +6,19 @@ import com.aliyun.tea.*;
 public class AddTemplateRequest extends TeaModel {
     /**
      * <ul>
-     * <li><p>The template configurations. The Config object of a regular template is encapsulated based on the Timeline object of an online editing project. The Config object of a custom template provides more flexible features. If you have special requirements, we recommend that you understand the structure of a Config object and configure a custom template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</p>
-     * </li>
-     * <li><p>For more information about Config object examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Basic template configurations</a>.</p>
-     * </li>
+     * <li>The standard template Config is an encapsulation based on the cloud editing Timeline. Custom template Config provides more flexibility. If you have special requirements, familiarize yourself with the Config structure and customize the template. For details, see <a href="https://help.aliyun.com/document_detail/456193.html">Standard template Config details</a>.</li>
+     * <li>For more template Config examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Common standard template Config examples</a>.</li>
+     * <li>For one-click video production template Config configurations, see <a href="https://help.aliyun.com/document_detail/2878274.html">One-click video production template configuration parameter description</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>参见Timeline模板Config文档</p>
+     * <p>See the Timeline template Config documentation</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The URL of the template thumbnail.</p>
+     * <p>The template cover URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -28,7 +27,7 @@ public class AddTemplateRequest extends TeaModel {
     public String coverUrl;
 
     /**
-     * <p>The name of the custom template.</p>
+     * <p>The custom template name.</p>
      * 
      * <strong>example:</strong>
      * <p>Template name</p>
@@ -37,7 +36,7 @@ public class AddTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the template preview video.</p>
+     * <p>The media asset ID of the template preview video.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
@@ -46,7 +45,7 @@ public class AddTemplateRequest extends TeaModel {
     public String previewMedia;
 
     /**
-     * <p>The IDs of the materials associated with the template for use by the regular template editor.</p>
+     * <p>The media assets associated with the template, used by the standard template editor.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;video&quot;:[&quot;1805a0c6ca544fb395a06ca683619655&quot;]}</p>
@@ -55,16 +54,12 @@ public class AddTemplateRequest extends TeaModel {
     public String relatedMediaids;
 
     /**
-     * <p>The source from which the template is created. Valid values:</p>
+     * <p>The template creation source. Valid values:</p>
      * <ul>
-     * <li><p>OpenAPI</p>
-     * </li>
-     * <li><p>AliyunConsole</p>
-     * </li>
-     * <li><p>WebSDK</p>
-     * </li>
+     * <li>OpenAPI: created by using OpenAPI.</li>
+     * <li>AliyunConsole: created by using the Alibaba Cloud Management Console.</li>
+     * <li>WebSDK: created by using WebSDK.</li>
      * </ul>
-     * <!---->
      * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
@@ -73,22 +68,15 @@ public class AddTemplateRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The template state. Valid values:</p>
+     * <p>The template status. Valid values:</p>
      * <ul>
-     * <li><p>Available: The template is available.</p>
-     * </li>
-     * <li><p>Created: The template is created but not ready for use.</p>
-     * </li>
-     * <li><p>Uploading: The video is being uploaded.</p>
-     * </li>
-     * <li><p>Processing: The advanced template is being processed.</p>
-     * </li>
-     * <li><p>UploadFailed: Failed to upload the video.</p>
-     * </li>
-     * <li><p>ProcessFailed: Failed to process the advanced template.</p>
-     * </li>
+     * <li>Available: normal.</li>
+     * <li>Created: created but not yet available.</li>
+     * <li>Uploading: uploading.</li>
+     * <li>Processing: advanced template is being analyzed.</li>
+     * <li>UploadFailed: upload failed.</li>
+     * <li>ProcessFailed: advanced template analysis failed.</li>
      * </ul>
-     * <!---->
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -97,14 +85,12 @@ public class AddTemplateRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The template type. Valid values:</p>
+     * <p>The templatetype. Valid values:  </p>
      * <ul>
-     * <li><p>Timeline: a regular template created based on the timeline of a video editing project, in which multiple materials are arranged in sequence across multiple layers. It can be used to convert text and images into videos, create photo albums, add opening and closing parts, and apply the default watermark.</p>
-     * </li>
-     * <li><p>VETemplate: an advanced template created using effects of Adobe After Effects (AE). It can be used to produce complex animations and advanced media effects.</p>
-     * </li>
+     * <li>Timeline (standard template): a template created based on the Timeline of a video clip node (multiple materials on multiple tracks are concatenated in sequence). This templatetype can be used to implement effects such as image-to-video conversion, photo albums, intros and outros, and default watermarks.</li>
+     * <li>VETemplate (advanced template): a template created based on Adobe After Effects (AE) effects. This templatetype can be used to implement advanced media effects with complex animations.</li>
+     * <li>BatchEditing (one-click video production template): supports configurations for sticker watermarks, background music, background images, narration subtitle styles, title subtitle styles, and output resolution parameters. These configurations are automatically applied when you commit a one-click video production node.</li>
      * </ul>
-     * <!---->
      * 
      * <strong>example:</strong>
      * <p>Timeline</p>

@@ -4,16 +4,13 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetPlayInfoRequest extends TeaModel {
-    /**
-     * <p>The validity period of the playback URL, in seconds. The value defaults to 3600, which is also the minimum.</p>
-     */
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
     /**
-     * <p>The InputURL used to register the media asset. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</p>
+     * <p>The InputURL specified when the media asset was registered. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</p>
      * <blockquote>
-     * <p>Specify at least one of MediaId and InputURL.</p>
+     * <p>At least one of MediaId and InputURL must be specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,7 +22,7 @@ public class GetPlayInfoRequest extends TeaModel {
     /**
      * <p>The media asset ID.</p>
      * <blockquote>
-     * <p>Specify at least one of MediaId and InputURL.</p>
+     * <p>At least one of MediaId and InputURL must be specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

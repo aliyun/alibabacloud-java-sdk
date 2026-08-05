@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteYikeAssetMediaInfosResponseBody extends TeaModel {
     /**
-     * <p>A list of the IDs or InputUrl values of media assets that could not be deleted.</p>
+     * <p>The list of IDs or InputUrls that failed to be deleted.</p>
      */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,22 +15,21 @@ public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The configuration of the template.</p>
+     * <p>The template configuration.</p>
+     * <blockquote>
+     * <p>The pass parameter requirements vary based on the templatetype (Type). When Type is set to normal, at least one of the width and height parameters must be specified, and the frame rate and bitrate parameters are required. For other template types, specify the parameters based on your requirements.</p>
+     * </blockquote>
      */
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
     /**
-     * <p>The type of the template. Valid values:</p>
+     * <p>The template type. Valid values:</p>
      * <ul>
-     * <li><p>normal</p>
-     * </li>
-     * <li><p>narrow-band</p>
-     * </li>
-     * <li><p>audio-only</p>
-     * </li>
-     * <li><p>origin</p>
-     * </li>
+     * <li>normal: standard.</li>
+     * <li>narrow-band: narrowband HD.</li>
+     * <li>audio-only: audio only.</li>
+     * <li>origin: original quality.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

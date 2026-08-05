@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListYikeProductionsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results returned on each page.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. If more results are available, you can use this token in the next request to retrieve the next page of results. If this field is empty, all results have been returned.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>Token</p>
@@ -23,7 +23,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of projects.</p>
+     * <p>The project list.</p>
      */
     @NameInMap("ProductionList")
     public java.util.List<ListYikeProductionsResponseBodyProductionList> productionList;
@@ -94,7 +94,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
-         * <p>The creation time of the project.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-07T02:21:36Z</p>
@@ -103,7 +103,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator name.</p>
+         * <p>The username of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_183320223010****</p>
@@ -130,7 +130,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String productionId;
 
         /**
-         * <p>The title of the project.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>Harvest</p>

@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteCategoryRequest extends TeaModel {
     /**
-     * <p>The category ID. You can use one of the following methods to obtain the ID:</p>
+     * <p>The category ID. You can obtain the category ID by using the following methods:</p>
      * <ul>
-     * <li><p>Log on to the <a href="https://ims.console.aliyun.com">Intelligent Media Services (IMS) console</a> and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</p>
-     * </li>
-     * <li><p>View the value of CateId returned by the AddCategory operation that you called to create a category.</p>
-     * </li>
-     * <li><p>View the value of CateId returned by the GetCategories operation that you called to query a category.</p>
-     * </li>
+     * <li>Log on to the <a href="https://ims.console.aliyun.com">IMS console</a>, and choose <strong>Media Asset Management</strong> &gt; <strong>Category Management</strong> to view the category ID.</li>
+     * <li>When you create a category by calling the create category operation, the category ID is the value of CateId in the response.</li>
+     * <li>When you query a category by calling the get category operation, the category ID is the value of CateId in the response.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
