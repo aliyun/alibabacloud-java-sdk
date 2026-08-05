@@ -4,6 +4,12 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceEndpointsRequest extends TeaModel {
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 

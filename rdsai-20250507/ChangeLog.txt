@@ -1,3 +1,7 @@
+2026-08-05 Version: 3.6.3
+- Update API ChatMessages: add request parameters Inputs.ModelId.
+
+
 2026-07-28 Version: 3.6.1
 - Update API DescribeInstanceEndpoints: add response parameters Body.InstanceEndpoints.$.Domain.
 - Update API DescribeInstanceSSL: add response parameters Body.SSLExpiredTime.

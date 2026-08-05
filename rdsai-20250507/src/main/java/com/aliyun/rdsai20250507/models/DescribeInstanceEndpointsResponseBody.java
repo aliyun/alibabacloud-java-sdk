@@ -4,17 +4,23 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The endpoints of the database instance.</p>
+     * <p>The list of endpoint information of the database instance.</p>
      */
     @NameInMap("DBInstanceEndpoints")
     public java.util.List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> DBInstanceEndpoints;
 
     /**
-     * <p>The endpoints of the AI application instance.</p>
+     * <p>The list of endpoint information of the AI application instance.</p>
      */
     @NameInMap("InstanceEndpoints")
     public java.util.List<DescribeInstanceEndpointsResponseBodyInstanceEndpoints> instanceEndpoints;
@@ -155,6 +161,12 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.apsaradb.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 

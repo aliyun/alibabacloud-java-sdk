@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSandboxTemplateRequest extends TeaModel {
     /**
+     * <p>The number of CPUs for sandboxes created by using this template. Valid values: 1 to 4.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String defaultCpu;
 
     /**
+     * <p>The memory size for sandboxes created by using this template. Unit: Gi. Valid values: 1Gi to 8Gi.</p>
+     * 
      * <strong>example:</strong>
      * <p>1Gi</p>
      */
@@ -19,6 +23,8 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String defaultMemory;
 
     /**
+     * <p>The description of the sandbox template. The description must be unique within the VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>code-interpreter</p>
      */
@@ -26,6 +32,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -42,6 +51,8 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The number of prewarmed sandboxes. Valid values: 1 to 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -49,6 +60,7 @@ public class CreateSandboxTemplateRequest extends TeaModel {
     public Long replicas;
 
     /**
+     * <p>The name of the sandbox template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,12 +8,17 @@ public class ModifyAppInstanceShrinkRequest extends TeaModel {
     public String branchName;
 
     /**
+     * <p>The idempotency parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of modules.</p>
+     */
     @NameInMap("Components")
     public String componentsShrink;
 
@@ -24,6 +29,8 @@ public class ModifyAppInstanceShrinkRequest extends TeaModel {
     public String instanceClass;
 
     /**
+     * <p>The instance ID of the AI application.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-8moov5lxba****</p>
      */
@@ -31,6 +38,8 @@ public class ModifyAppInstanceShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

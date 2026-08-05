@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetInstanceKeysRequest extends TeaModel {
     /**
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ResetInstanceKeysRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

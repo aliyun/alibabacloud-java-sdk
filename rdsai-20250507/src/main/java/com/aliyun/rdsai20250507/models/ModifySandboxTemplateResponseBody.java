@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifySandboxTemplateResponseBody extends TeaModel {
     /**
+     * <p>The instance ID of the AI application.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-supabase-8moov5lxba****</p>
      */
@@ -12,6 +14,8 @@ public class ModifySandboxTemplateResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskRequest extends TeaModel {
     /**
-     * <p>The end of the inspection time range. The time must be in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ. If StartTime and EndTime are not specified, the inspection covers the last 24 hours.</p>
+     * <p>The end time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-30T02:10:48Z</p>
@@ -14,33 +14,21 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The inspection items to run, separated by commas. If this parameter is omitted, all inspection items are run.</p>
-     * <h3>Inspection items</h3>
+     * <p>The list of inspection items. Separate multiple values with commas (,). If this parameter is left empty or not specified, all inspection items are executed.</p>
+     * <h3>Available inspection items:</h3>
      * <ul>
-     * <li><p><code>instance_info</code> (instance information)</p>
-     * </li>
-     * <li><p><code>resource_usage</code> (resource usage)</p>
-     * </li>
-     * <li><p><code>connection_session_management</code> (connection and session management)</p>
-     * </li>
-     * <li><p><code>performance_metrics</code> (performance metrics)</p>
-     * </li>
-     * <li><p><code>slow_query_analysis</code> (slow query analysis)</p>
-     * </li>
-     * <li><p><code>error_log_analysis</code> (error log analysis)</p>
-     * </li>
-     * <li><p><code>lock_wait_deadlock_analysis</code> (lock wait and deadlock analysis)</p>
-     * </li>
-     * <li><p><code>backup_recovery_analysis</code> (backup and recovery analysis)</p>
-     * </li>
-     * <li><p><code>high_availability_disaster_recovery_analysis</code> (high availability and disaster recovery inspection)</p>
-     * </li>
-     * <li><p><code>security_configuration_analysis</code> (security configuration inspection)</p>
-     * </li>
-     * <li><p><code>storage_engine_analysis</code> (storage engine inspection)</p>
-     * </li>
-     * <li><p><code>schema_object_analysis</code> (schema and object inspection)</p>
-     * </li>
+     * <li>instance_info (instance information)</li>
+     * <li>resource_usage (resource usage)</li>
+     * <li>connection_session_management (connection and session management)</li>
+     * <li>performance_metrics (performance metrics)</li>
+     * <li>slow_query_analysis (slow query analysis)</li>
+     * <li>error_log_analysis (error log analysis)</li>
+     * <li>lock_wait_deadlock_analysis (lock wait and deadlock analysis)</li>
+     * <li>backup_recovery_analysis (backup and recovery analysis)</li>
+     * <li>high_availability_disaster_recovery_analysis (high availability and disaster recovery inspection)</li>
+     * <li>security_configuration_analysis (security configuration inspection)</li>
+     * <li>storage_engine_analysis (storage engine inspection)</li>
+     * <li>schema_object_analysis (schema and object inspection)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +38,7 @@ public class CreateInspectionTaskRequest extends TeaModel {
     public String inspectionItems;
 
     /**
-     * <p>The IDs of the instances to inspect. Separate multiple instance IDs with a comma.</p>
+     * <p>The list of associated instance IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze6mk259v322****,rm-2zef3b65430j0****</p>
@@ -58,35 +46,29 @@ public class CreateInspectionTaskRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIds;
 
-    /**
-     * <p>The region ID.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The language of the inspection report. Valid values are zh-CN (Simplified Chinese) and en-US (English). The default value is en-US.</p>
-     */
     @NameInMap("ReportLanguage")
     public String reportLanguage;
 
     @NameInMap("ReportRegionId")
     public String reportRegionId;
 
-    /**
-     * <p>The format of the inspection report. Valid values are pdf and json. The default value is pdf.</p>
-     */
     @NameInMap("ReportType")
     public String reportType;
 
     /**
-     * <p>The beginning of the inspection time range. The time must be in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ. If StartTime and EndTime are not specified, the inspection covers the last 24 hours.</p>
+     * <p>The start time of the inspection range. Format: YYYY-MM-DDTHH:mm:ssZ (UTC). Default value: 24 hours before the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-28T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("TemplateId")
+    public String templateId;
 
     public static CreateInspectionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInspectionTaskRequest self = new CreateInspectionTaskRequest();
@@ -155,6 +137,14 @@ public class CreateInspectionTaskRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public CreateInspectionTaskRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
 }

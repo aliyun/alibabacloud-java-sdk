@@ -7,10 +7,15 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     @NameInMap("BranchName")
     public String branchName;
 
+    /**
+     * <p>The list of modules.</p>
+     */
     @NameInMap("Components")
     public java.util.List<ModifyAppInstanceResponseBodyComponents> components;
 
     /**
+     * <p>The instance ID of the AI application.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-8moov5lxba****</p>
      */
@@ -18,6 +23,8 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
      */
@@ -63,6 +70,8 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
 
     public static class ModifyAppInstanceResponseBodyComponents extends TeaModel {
         /**
+         * <p>The module status.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -70,6 +79,8 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The module type.</p>
+         * 
          * <strong>example:</strong>
          * <p>supabase</p>
          */

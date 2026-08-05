@@ -8,7 +8,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>定时任务更新成功</p>
+     * <p>Scheduled task updated successfully</p>
      */
     @NameInMap("Message")
     public String message;
@@ -23,7 +23,7 @@ public class ModifyScheduledTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

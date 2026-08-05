@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInspectionTaskResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The result.</p>
      */
     @NameInMap("Data")
     public CreateInspectionTaskResponseBodyData data;
@@ -14,7 +14,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>任务创建成功</p>
+     * <p>Task created successfully</p>
      */
     @NameInMap("Message")
     public String message;
@@ -29,7 +29,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -76,7 +76,7 @@ public class CreateInspectionTaskResponseBody extends TeaModel {
 
     public static class CreateInspectionTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the inspection task.</p>
+         * <p>The inspection task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9adf8567-b619-4d37-8ff2-01d38a76****</p>

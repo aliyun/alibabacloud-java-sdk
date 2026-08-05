@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSandboxTemplateRequest extends TeaModel {
     /**
+     * <p>The instance ID of the AI application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteSandboxTemplateRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -21,6 +24,7 @@ public class DeleteSandboxTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The sandbox template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

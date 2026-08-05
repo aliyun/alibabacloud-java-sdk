@@ -8,13 +8,13 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>获取巡检报告列表成功</p>
+     * <p>Successfully retrieved the inspection report list</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. The default value is 20 and the maximum value is 100.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>A list of inspection reports.</p>
+     * <p>The list of reports.</p>
      */
     @NameInMap("Reports")
     public java.util.List<GetStandAloneReportsResponseBodyReports> reports;
@@ -47,7 +47,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries across all pages.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -127,7 +127,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
 
     public static class GetStandAloneReportsResponseBodyReports extends TeaModel {
         /**
-         * <p>The time the inspection task was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-22T08:20:31Z</p>
@@ -136,7 +136,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The end time of the inspection. The time is in UTC and uses the <code>YYYY-MM-DDTHH:mm:ssZ</code> format.</p>
+         * <p>The inspection end time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:20:31Z</p>
@@ -147,9 +147,6 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         @NameInMap("InspectionItems")
         public String inspectionItems;
 
-        /**
-         * <p>The ID of the region.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -160,7 +157,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String reportType;
 
         /**
-         * <p>The start time of the inspection. The time is in UTC and uses the <code>YYYY-MM-DDTHH:mm:ssZ</code> format.</p>
+         * <p>The inspection start time (format: YYYY-MM-DDTHH:mm:ssZ).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-23T08:00:31Z</p>
@@ -169,7 +166,7 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the inspection task.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -178,13 +175,19 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the inspection task.</p>
+         * <p>The inspection report ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0f19210c-7bb8-4e38-a099-f94152df****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
+
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        @NameInMap("TemplateName")
+        public String templateName;
 
         public static GetStandAloneReportsResponseBodyReports build(java.util.Map<String, ?> map) throws Exception {
             GetStandAloneReportsResponseBodyReports self = new GetStandAloneReportsResponseBodyReports();
@@ -261,6 +264,22 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public GetStandAloneReportsResponseBodyReports setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public GetStandAloneReportsResponseBodyReports setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
         }
 
     }

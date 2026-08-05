@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
     /**
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that indicates the position from which the query starts. Set this parameter to empty to start from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</p>
      */
@@ -19,12 +23,17 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The sandbox templates.</p>
+     */
     @NameInMap("Templates")
     public java.util.List<DescribeCommonSandboxTemplatesResponseBodyTemplates> templates;
 
@@ -67,6 +76,8 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
 
     public static class DescribeCommonSandboxTemplatesResponseBodyTemplates extends TeaModel {
         /**
+         * <p>The default number of CPUs for sandboxes created by using this template.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +85,8 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         public String defaultCpu;
 
         /**
+         * <p>The default memory size for sandboxes created by using this template. The unit ends with Gi.</p>
+         * 
          * <strong>example:</strong>
          * <p>1Gi</p>
          */
@@ -81,6 +94,8 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         public String defaultMemory;
 
         /**
+         * <p>The default number of prewarmed sandboxes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -88,6 +103,8 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         public Long defaultReplicas;
 
         /**
+         * <p>The description of the sandbox template.</p>
+         * 
          * <strong>example:</strong>
          * <p>Execute user-provided Python code in the sandbox environment. Runs any Python script the user provides and returns the output.</p>
          */
@@ -95,6 +112,8 @@ public class DescribeCommonSandboxTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The name of the sandbox template.</p>
+         * 
          * <strong>example:</strong>
          * <p>desktop</p>
          */

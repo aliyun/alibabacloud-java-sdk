@@ -13,11 +13,14 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <p>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</p>
+     */
     @NameInMap("EventMode")
     public String eventMode;
 
     /**
-     * <p>The task inputs.</p>
+     * <p>The task input.</p>
      */
     @NameInMap("Inputs")
     public String inputsShrink;
@@ -36,7 +39,7 @@ public class ChatMessagesShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>The disk usage of instance rm-bp14as9914vd3****. Is capacity expansion required?</p>
+     * <p>Instance rm-bp14as9914vd3**** disk usage, whether expansion is needed</p>
      */
     @NameInMap("Query")
     public String query;

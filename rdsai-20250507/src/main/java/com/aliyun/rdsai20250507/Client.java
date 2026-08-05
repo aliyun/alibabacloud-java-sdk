@@ -434,7 +434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an inspection task for one or more instances.</p>
+     * <p>Creates a batch instance inspection task.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -475,6 +475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -494,7 +498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an inspection task for one or more instances.</p>
+     * <p>Creates a batch instance inspection task.</p>
      * 
      * @param request CreateInspectionTaskRequest
      * @return CreateInspectionTaskResponse
@@ -578,13 +582,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>创建沙箱模板</p>
+     * <p>Creates a sandbox template.</p>
      * 
      * @param request CreateSandboxTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -640,13 +644,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>创建沙箱模板</p>
+     * <p>Creates a sandbox template.</p>
      * 
      * @param request CreateSandboxTemplateRequest
      * @return CreateSandboxTemplateResponse
@@ -658,16 +662,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation may incur charges. Please read the related feature documentation carefully before you proceed.
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scheduled inspection task for one or more instances.</p>
+     * <p>Creates a scheduled inspection configuration for batch instances.</p>
      * 
      * @param request CreateScheduledTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -716,6 +720,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
             query.put("TimeRange", request.timeRange);
         }
@@ -739,16 +747,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation may incur charges. Please read the related feature documentation carefully before you proceed.
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation before you perform this operation.
      * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scheduled inspection task for one or more instances.</p>
+     * <p>Creates a scheduled inspection configuration for batch instances.</p>
      * 
      * @param request CreateScheduledTaskRequest
      * @return CreateScheduledTaskResponse
@@ -1002,13 +1010,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>删除沙箱模板</p>
+     * <p>Deletes a sandbox template.</p>
      * 
      * @param request DeleteSandboxTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1048,13 +1056,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>删除沙箱模板</p>
+     * <p>Deletes a sandbox template.</p>
      * 
      * @param request DeleteSandboxTemplateRequest
      * @return DeleteSandboxTemplateResponse
@@ -1290,13 +1298,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>查询已支持的沙箱模板列表</p>
+     * <p>Queries the list of supported sandbox templates.</p>
      * 
      * @param request DescribeCommonSandboxTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1336,13 +1344,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>查询已支持的沙箱模板列表</p>
+     * <p>Queries the list of supported sandbox templates.</p>
      * 
      * @param request DescribeCommonSandboxTemplatesRequest
      * @return DescribeCommonSandboxTemplatesResponse
@@ -2512,7 +2520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the content of a specified inspection report.</p>
+     * <p>Retrieves the details of an inspection report by report ID.</p>
      * 
      * @param request GetInspectionReportRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2552,7 +2560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the content of a specified inspection report.</p>
+     * <p>Retrieves the details of an inspection report by report ID.</p>
      * 
      * @param request GetInspectionReportRequest
      * @return GetInspectionReportResponse
@@ -2715,7 +2723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all inspection reports for a specified scheduled task. You can filter the results by time range and use pagination.</p>
+     * <p>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</p>
      * 
      * @param request GetScheduledReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2763,7 +2771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all inspection reports for a specified scheduled task. You can filter the results by time range and use pagination.</p>
+     * <p>Queries all inspection reports under a specified scheduled task, with support for time range filtering and pagination.</p>
      * 
      * @param request GetScheduledReportsRequest
      * @return GetScheduledReportsResponse
@@ -2823,7 +2831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves paginated standalone inspection reports on a specified user\&quot;s non-scheduled tasks.</p>
+     * <p>Queries the list of individual inspection reports for all non-scheduled tasks under a specified user, with pagination support.</p>
      * 
      * @param request GetStandAloneReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2871,7 +2879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves paginated standalone inspection reports on a specified user\&quot;s non-scheduled tasks.</p>
+     * <p>Queries the list of individual inspection reports for all non-scheduled tasks under a specified user, with pagination support.</p>
      * 
      * @param request GetStandAloneReportsRequest
      * @return GetStandAloneReportsResponse
@@ -3092,7 +3100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists basic information about all inspection configurations for the specified user ID.</p>
+     * <p>Queries the list of basic information about all inspection configurations under a specified user UID.</p>
      * 
      * @param request ListScheduledTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3132,7 +3140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists basic information about all inspection configurations for the specified user ID.</p>
+     * <p>Queries the list of basic information about all inspection configurations under a specified user UID.</p>
      * 
      * @param request ListScheduledTasksRequest
      * @return ListScheduledTasksResponse
@@ -3196,13 +3204,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>修改RDS AI应用实例</p>
+     * <p>Modifies the modules of an RDS AI application instance.</p>
      * 
      * @param tmpReq ModifyAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3264,13 +3272,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>修改RDS AI应用实例</p>
+     * <p>Modifies the modules of an RDS AI application instance.</p>
      * 
      * @param request ModifyAppInstanceRequest
      * @return ModifyAppInstanceResponse
@@ -3868,13 +3876,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>修改沙箱模板</p>
+     * <p>Modifies a sandbox template.</p>
      * 
      * @param request ModifySandboxTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3926,13 +3934,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS Supabase</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>修改沙箱模板</p>
+     * <p>Modifies a sandbox template.</p>
      * 
      * @param request ModifySandboxTemplateRequest
      * @return ModifySandboxTemplateResponse
@@ -3983,6 +3991,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
@@ -4192,13 +4204,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>重置RDS AI实例的Keys</p>
+     * <p>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</p>
      * 
      * @param request ResetInstanceKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4234,13 +4246,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>适用引擎</h3>
+     * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
-     * <h3>相关功能文档</h3>
+     * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
      * 
      * <b>summary</b> : 
-     * <p>重置RDS AI实例的Keys</p>
+     * <p>Resets the keys of an RDS AI instance, including AnonKey, ServiceKey, and JwtSecret. After the reset, the old keys and secret become invalid immediately. Ensure that your applications are adapted accordingly.</p>
      * 
      * @param request ResetInstanceKeysRequest
      * @return ResetInstanceKeysResponse

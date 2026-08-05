@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledTaskResponseBody extends TeaModel {
     /**
-     * <p>Provides details about the request outcome, such as a success message or an error description.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>创建定时巡检任务成功</p>
+     * <p>Scheduled inspection task created successfully</p>
      */
     @NameInMap("Message")
     public String message;
@@ -23,7 +23,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the scheduled inspection task.</p>
+     * <p>The ID of the scheduled inspection configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>847268a4-196f-416b-aa12-bfe0c115****</p>
@@ -32,7 +32,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>Indicates whether the request succeeded. A value of true indicates success.</p>
+     * <p>The request result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

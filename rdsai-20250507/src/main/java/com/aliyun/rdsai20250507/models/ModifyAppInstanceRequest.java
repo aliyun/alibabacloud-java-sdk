@@ -8,12 +8,17 @@ public class ModifyAppInstanceRequest extends TeaModel {
     public String branchName;
 
     /**
+     * <p>The idempotency parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of modules.</p>
+     */
     @NameInMap("Components")
     public java.util.List<ModifyAppInstanceRequestComponents> components;
 
@@ -24,6 +29,8 @@ public class ModifyAppInstanceRequest extends TeaModel {
     public String instanceClass;
 
     /**
+     * <p>The instance ID of the AI application.</p>
+     * 
      * <strong>example:</strong>
      * <p>ra-8moov5lxba****</p>
      */
@@ -31,6 +38,8 @@ public class ModifyAppInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -100,6 +109,8 @@ public class ModifyAppInstanceRequest extends TeaModel {
 
     public static class ModifyAppInstanceRequestComponents extends TeaModel {
         /**
+         * <p>The module status.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -107,6 +118,8 @@ public class ModifyAppInstanceRequest extends TeaModel {
         public String status;
 
         /**
+         * <p>The module type.</p>
+         * 
          * <strong>example:</strong>
          * <p>supabase</p>
          */

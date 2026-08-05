@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledReportsRequest extends TeaModel {
     /**
-     * <p>The end time of the query range. The time must be in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+     * <p>The end time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no end time filter is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-25T02:02:00Z</p>
@@ -14,7 +14,7 @@ public class GetScheduledReportsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class GetScheduledReportsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. The default value is 20, and the maximum value is 100.</p>
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class GetScheduledReportsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the inspection task.</p>
+     * <p>The inspection task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class GetScheduledReportsRequest extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>The start time of the query range. The time must be in the YYYY-MM-DDTHH:mm:ssZ format.</p>
+     * <p>The start time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no start time filter is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-25T01:02:00Z</p>
