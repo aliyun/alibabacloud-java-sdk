@@ -1,3 +1,8 @@
+2026-08-05 Version: 7.11.1
+- Update API DescribePolarFsAttribute: add response parameters Body.AuthorizedUserArnIds.
+- Update API DescribePolarFsAttribute: add response parameters Body.AuthorizedUserIds.
+
+
 2026-08-05 Version: 7.11.0
 - Support API CreateLakebaseS3Account.
 - Support API CreatePolarFs.

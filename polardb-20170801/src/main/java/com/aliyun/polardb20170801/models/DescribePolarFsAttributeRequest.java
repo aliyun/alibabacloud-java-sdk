@@ -17,7 +17,7 @@ public class DescribePolarFsAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The PolarLakebase instance ID.</p>
+     * <p>The Polarlakebase instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

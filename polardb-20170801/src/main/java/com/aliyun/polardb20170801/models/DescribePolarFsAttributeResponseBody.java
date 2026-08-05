@@ -14,7 +14,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String accelerateType;
 
     /**
-     * <p>The acceleration storage space. Unit: GB.</p>
+     * <p>The acceleration space. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -23,7 +23,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double acceleratedStorageSpace;
 
     /**
-     * <p>Specifies whether the acceleration cache is enabled. Valid values:</p>
+     * <p>Indicates whether the acceleration cache is enabled. Valid values:</p>
      * <ul>
      * <li><strong>ON</strong>: Enabled.</li>
      * <li><strong>OFF</strong>: Disabled.</li>
@@ -34,6 +34,24 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     @NameInMap("AcceleratingEnable")
     public String acceleratingEnable;
+
+    /**
+     * <p>The list of authorized RAM role ARNs, separated by commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arn:sts::123456:assumed-role/myrole/*</p>
+     */
+    @NameInMap("AuthorizedUserArnIds")
+    public String authorizedUserArnIds;
+
+    /**
+     * <p>The list of authorized UIDs, separated by commas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890,9876543210</p>
+     */
+    @NameInMap("AuthorizedUserIds")
+    public String authorizedUserIds;
 
     /**
      * <p>The bandwidth. Unit: MB/s.</p>
@@ -63,7 +81,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String bucketId;
 
     /**
-     * <p>The PolarLakebase edition. Valid values:</p>
+     * <p>The Polarlakebase edition. Valid values:</p>
      * <ul>
      * <li><p><strong>high_performance</strong>: High-performance Edition.</p>
      * </li>
@@ -128,13 +146,16 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The list of endpoints, including endpoint information for types such as NAS and S3Gateway.</p>
+     */
     @NameInMap("EndpointItems")
     public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItems> endpointItems;
 
     /**
      * <p>The expiration time of the cluster.</p>
      * <blockquote>
-     * <p>This parameter is returned only for clusters that use the <strong>Prepaid</strong> (subscription) billing method. An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+     * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -146,7 +167,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster has expired.</p>
      * <blockquote>
-     * <p>This parameter is returned only for clusters that use the <strong>Prepaid</strong> (subscription) billing method.</p>
+     * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -185,6 +206,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String metaConnString;
 
     /**
+     * <p>The metadata instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pc-xxxxxxxxxxxxxxxxx</p>
      */
@@ -195,7 +218,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String metaMxsConnString;
 
     /**
-     * <p>The encrypted metadata URL for Fuse mounting.</p>
+     * <p>The metadata URL for Fuse mounting (encrypted).</p>
      * 
      * <strong>example:</strong>
      * <p>e6cc1d2e2a6fa292038d999fda6501*****</p>
@@ -232,7 +255,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String payType;
 
     /**
-     * <p>The description of the PolarLakebase instance.</p>
+     * <p>The description of the Polarlakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-xxx</p>
@@ -241,7 +264,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsInstanceDescription;
 
     /**
-     * <p>The PolarLakebase instance ID.</p>
+     * <p>The Polarlakebase instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-2ze0i74ka607*****</p>
@@ -250,7 +273,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>The PolarLakebase instance status.</p>
+     * <p>The Polarlakebase instance status.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -299,7 +322,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String relativeDbClusterId;
 
     /**
-     * <p>The instance ID of the associated PolarLakebase instance.</p>
+     * <p>The instance ID of the associated Polarlakebase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-**********</p>
@@ -361,6 +384,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double storageUsed;
 
     /**
+     * <p>The default user account name for S3 Gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>lakebase_acc</p>
      */
@@ -368,6 +393,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String userDefaultAccName;
 
     /**
+     * <p>The default user account key for S3 Gateway (encrypted ciphertext).</p>
+     * 
      * <strong>example:</strong>
      * <p>EncryptedSecretKey==</p>
      */
@@ -428,6 +455,22 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
     public String getAcceleratingEnable() {
         return this.acceleratingEnable;
+    }
+
+    public DescribePolarFsAttributeResponseBody setAuthorizedUserArnIds(String authorizedUserArnIds) {
+        this.authorizedUserArnIds = authorizedUserArnIds;
+        return this;
+    }
+    public String getAuthorizedUserArnIds() {
+        return this.authorizedUserArnIds;
+    }
+
+    public DescribePolarFsAttributeResponseBody setAuthorizedUserIds(String authorizedUserIds) {
+        this.authorizedUserIds = authorizedUserIds;
+        return this;
+    }
+    public String getAuthorizedUserIds() {
+        return this.authorizedUserIds;
     }
 
     public DescribePolarFsAttributeResponseBody setBandwidth(Double bandwidth) {
@@ -875,10 +918,15 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribePolarFsAttributeResponseBodyEndpointItems extends TeaModel {
+        /**
+         * <p>The list of addresses.</p>
+         */
         @NameInMap("AddressItems")
         public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems> addressItems;
 
         /**
+         * <p>The endpoint ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ep-xxxxxxxxx</p>
          */
@@ -886,6 +934,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         public String DBEndpointId;
 
         /**
+         * <p>The endpoint type, such as Nas or S3Gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>S3Gateway</p>
          */

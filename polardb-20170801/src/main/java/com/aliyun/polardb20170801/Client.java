@@ -19527,7 +19527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a PolarLakebase instance.</p>
+     * <p>Retrieves the details of a Polarlakebase instance.</p>
      * 
      * @param request DescribePolarFsAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19567,7 +19567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a PolarLakebase instance.</p>
+     * <p>Retrieves the details of a Polarlakebase instance.</p>
      * 
      * @param request DescribePolarFsAttributeRequest
      * @return DescribePolarFsAttributeResponse
