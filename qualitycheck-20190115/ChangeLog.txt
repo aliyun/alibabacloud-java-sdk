@@ -1,3 +1,7 @@
+2026-08-05 Version: 9.0.1
+- Update API ListRulesV4: add request parameters TargetType.
+
+
 2026-07-28 Version: 9.0.0
 - Delete API DeletePrecisionTask.
 - Delete API GetPrecisionTask.

@@ -14,7 +14,7 @@ public class UploadDataSyncForLLMRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>The complete JSON string. For more information about the content, see the following details.</p>
+     * <p>The complete JSON string. For more information, see the following details.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

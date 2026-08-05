@@ -187,6 +187,9 @@ public class ListRulesV4Request extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("TargetType")
+    public String targetType;
+
     /**
      * <p>Type value of the rule category that the rule belongs to.</p>
      * 
@@ -403,6 +406,14 @@ public class ListRulesV4Request extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ListRulesV4Request setTargetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+    public String getTargetType() {
+        return this.targetType;
     }
 
     public ListRulesV4Request setType(Integer type) {
