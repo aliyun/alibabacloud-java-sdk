@@ -9313,7 +9313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a path mapping for transparent acceleration.</p>
+     * <p>Deletes a transparent acceleration path mapping.</p>
      * 
      * @param request DeletePolarFsPathMappingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9353,7 +9353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a path mapping for transparent acceleration.</p>
+     * <p>Deletes a transparent acceleration path mapping.</p>
      * 
      * @param request DeletePolarFsPathMappingRequest
      * @return DeletePolarFsPathMappingResponse
