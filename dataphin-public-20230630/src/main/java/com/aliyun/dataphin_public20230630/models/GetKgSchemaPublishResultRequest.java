@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKgSchemaPublishResultRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetKgSchemaPublishResultRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The version number. If this parameter is left empty, the most recent publish record is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,7 @@ public class GetKgSchemaPublishResultRequest extends TeaModel {
     public Integer versionId;
 
     /**
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

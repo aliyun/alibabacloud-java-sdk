@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetKgNeighborResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The query result.</p>
+     */
     @NameInMap("Data")
     public GetKgNeighborResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -29,12 +38,17 @@ public class GetKgNeighborResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
 
     public static class GetKgNeighborResponseBodyDataEdgeListPropertyList extends TeaModel {
         /**
+         * <p>The property code.</p>
+         * 
          * <strong>example:</strong>
          * <p>company_name</p>
          */
@@ -100,6 +116,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -107,6 +125,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The property value.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
          */
@@ -145,10 +165,15 @@ public class GetKgNeighborResponseBody extends TeaModel {
     }
 
     public static class GetKgNeighborResponseBodyDataEdgeList extends TeaModel {
+        /**
+         * <p>The relation record property list.</p>
+         */
         @NameInMap("PropertyList")
         public java.util.List<GetKgNeighborResponseBodyDataEdgeListPropertyList> propertyList;
 
         /**
+         * <p>The relation record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
          */
@@ -156,6 +181,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String relationId;
 
         /**
+         * <p>The relation type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>BELONG_TO</p>
          */
@@ -163,6 +190,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String relationType;
 
         /**
+         * <p>The source entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
          */
@@ -170,6 +199,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String sourceEntityId;
 
         /**
+         * <p>The target entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abd-xxx</p>
          */
@@ -225,6 +256,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
 
     public static class GetKgNeighborResponseBodyDataNodeListPropertyList extends TeaModel {
         /**
+         * <p>The property code.</p>
+         * 
          * <strong>example:</strong>
          * <p>company_name</p>
          */
@@ -232,6 +265,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -239,6 +274,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The property value.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
          */
@@ -278,6 +315,8 @@ public class GetKgNeighborResponseBody extends TeaModel {
 
     public static class GetKgNeighborResponseBodyDataNodeList extends TeaModel {
         /**
+         * <p>The entity record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
          */
@@ -285,12 +324,17 @@ public class GetKgNeighborResponseBody extends TeaModel {
         public String entityId;
 
         /**
+         * <p>The entity type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Company</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The entity record property list.</p>
+         */
         @NameInMap("PropertyList")
         public java.util.List<GetKgNeighborResponseBodyDataNodeListPropertyList> propertyList;
 
@@ -326,9 +370,15 @@ public class GetKgNeighborResponseBody extends TeaModel {
     }
 
     public static class GetKgNeighborResponseBodyData extends TeaModel {
+        /**
+         * <p>The edge list.</p>
+         */
         @NameInMap("EdgeList")
         public java.util.List<GetKgNeighborResponseBodyDataEdgeList> edgeList;
 
+        /**
+         * <p>The node list.</p>
+         */
         @NameInMap("NodeList")
         public java.util.List<GetKgNeighborResponseBodyDataNodeList> nodeList;
 

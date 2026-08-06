@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListKgRelationResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListKgRelationResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,22 +23,32 @@ public class ListKgRelationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paged query result.</p>
+     */
     @NameInMap("PageResult")
     public ListKgRelationResponseBodyPageResult pageResult;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ListKgRelationResponseBody extends TeaModel {
 
     public static class ListKgRelationResponseBodyPageResultRelationListPropertyList extends TeaModel {
         /**
+         * <p>The property code.</p>
+         * 
          * <strong>example:</strong>
          * <p>company_name</p>
          */
@@ -100,6 +116,8 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (boolean), DATE (date), LIST (list), and others.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -107,6 +125,8 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The property value.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
          */
@@ -145,10 +165,15 @@ public class ListKgRelationResponseBody extends TeaModel {
     }
 
     public static class ListKgRelationResponseBodyPageResultRelationList extends TeaModel {
+        /**
+         * <p>The relationship record property list.</p>
+         */
         @NameInMap("PropertyList")
         public java.util.List<ListKgRelationResponseBodyPageResultRelationListPropertyList> propertyList;
 
         /**
+         * <p>The relationship record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
          */
@@ -156,6 +181,8 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String relationId;
 
         /**
+         * <p>The relationship type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>BELONG_TO</p>
          */
@@ -163,6 +190,8 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String relationType;
 
         /**
+         * <p>The source entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
          */
@@ -170,6 +199,8 @@ public class ListKgRelationResponseBody extends TeaModel {
         public String sourceEntityId;
 
         /**
+         * <p>The target entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abd-xxx</p>
          */
@@ -224,10 +255,15 @@ public class ListKgRelationResponseBody extends TeaModel {
     }
 
     public static class ListKgRelationResponseBodyPageResult extends TeaModel {
+        /**
+         * <p>The paged relationship record list.</p>
+         */
         @NameInMap("RelationList")
         public java.util.List<ListKgRelationResponseBodyPageResultRelationList> relationList;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>68</p>
          */

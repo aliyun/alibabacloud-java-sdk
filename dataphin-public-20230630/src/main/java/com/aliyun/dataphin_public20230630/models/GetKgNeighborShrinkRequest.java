@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKgNeighborShrinkRequest extends TeaModel {
     /**
+     * <p>The entity record data ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetKgNeighborShrinkRequest extends TeaModel {
     public String entityDataId;
 
     /**
+     * <p>The entity type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,14 @@ public class GetKgNeighborShrinkRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>The entity record neighbor node query instruction.</p>
+     */
     @NameInMap("NeighborsQuery")
     public String neighborsQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +41,7 @@ public class GetKgNeighborShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5403,7 +5403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出知识图谱定义。</p>
+     * <p>Exports knowledge graph metadata definitions. Online version: v6.1.1.</p>
      * 
      * @param request ExportKgSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5447,7 +5447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出知识图谱定义。</p>
+     * <p>Exports knowledge graph metadata definitions. Online version: v6.1.1.</p>
      * 
      * @param request ExportKgSchemaRequest
      * @return ExportKgSchemaResponse
@@ -7783,7 +7783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识图谱实体记录。</p>
+     * <p>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</p>
      * 
      * @param request GetKgEntityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7827,7 +7827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识图谱实体记录。</p>
+     * <p>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</p>
      * 
      * @param request GetKgEntityRequest
      * @return GetKgEntityResponse
@@ -7839,7 +7839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图谱模型邻居节点。</p>
+     * <p>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</p>
      * 
      * @param tmpReq GetKgNeighborRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7895,7 +7895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图谱模型邻居节点。</p>
+     * <p>Retrieves neighbor nodes of a graph model entity. Online version: v6.2.0.</p>
      * 
      * @param request GetKgNeighborRequest
      * @return GetKgNeighborResponse
@@ -7907,7 +7907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识图谱关系记录。</p>
+     * <p>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</p>
      * 
      * @param request GetKgRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7951,7 +7951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取知识图谱关系记录。</p>
+     * <p>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</p>
      * 
      * @param request GetKgRelationRequest
      * @return GetKgRelationResponse
@@ -7963,7 +7963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图谱模型发布结果。</p>
+     * <p>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</p>
      * 
      * @param request GetKgSchemaPublishResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8003,7 +8003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取图谱模型发布结果。</p>
+     * <p>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</p>
      * 
      * @param request GetKgSchemaPublishResultRequest
      * @return GetKgSchemaPublishResultResponse
@@ -8843,7 +8843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a pipeline task by pipeline task ID.</p>
+     * <p>Queries a pipeline node by pipeline node ID.</p>
      * 
      * @param tmpReq GetPipelineByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8895,7 +8895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a pipeline task by pipeline task ID.</p>
+     * <p>Queries a pipeline node by pipeline node ID.</p>
      * 
      * @param request GetPipelineByIdRequest
      * @return GetPipelineByIdResponse
@@ -11341,7 +11341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入知识图谱定义。</p>
+     * <p>Imports a knowledge graph model definition. Online version: v6.1.1.</p>
      * 
      * @param tmpReq ImportKgSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11389,7 +11389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导入知识图谱定义。</p>
+     * <p>Imports a knowledge graph model definition. Online version: v6.1.1.</p>
      * 
      * @param request ImportKgSchemaRequest
      * @return ImportKgSchemaResponse
@@ -11675,8 +11675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</p>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
      * <p>Queries the specific field list of APIs that an application has requested.</p>
@@ -11723,8 +11722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</p>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
      * <p>Queries the specific field list of APIs that an application has requested.</p>
@@ -12849,7 +12847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询知识图谱关系记录。</p>
+     * <p>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</p>
      * 
      * @param tmpReq ListKgRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12901,7 +12899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询知识图谱关系记录。</p>
+     * <p>Queries knowledge graph relationship records by paging. Online version: v6.1.1.</p>
      * 
      * @param request ListKgRelationRequest
      * @return ListKgRelationResponse
@@ -16819,18 +16817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该 API 用于更新特定项目下已存在的数据集的详细信息。</li>
-     * <li>必须提供 <code>ProjectId</code> 和 <code>UpdateCommand</code> 参数，其中 <code>UpdateCommand</code> 包含了需要更新的数据集的具体字段。</li>
-     * <li><code>UpdateCommand</code> 中的 <code>Id</code> 字段是必需的，用来标识要更新的数据集。</li>
-     * <li>其他字段如 <code>Name</code>, <code>Type</code>, <code>DataCellId</code> 等为可选项，根据实际需求选择性填写。</li>
-     * <li>版本配置（<code>VersionConfig</code>）和实时元表配置（<code>RealtimeMetaTableConfig</code>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</li>
-     * <li>注意确保所有提供的 ID 值（如 <code>ProjectId</code>, <code>Id</code>, <code>DataSourceId</code> 等）在系统中有效且正确关联。</li>
-     * </ul>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Dataphin OpenAPI 模板。</p>
+     * <p>Updates the information of a dataset in a specified project. Available since v6.2.0.</p>
      * 
      * @param tmpReq UpdateDatasetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16878,18 +16868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该 API 用于更新特定项目下已存在的数据集的详细信息。</li>
-     * <li>必须提供 <code>ProjectId</code> 和 <code>UpdateCommand</code> 参数，其中 <code>UpdateCommand</code> 包含了需要更新的数据集的具体字段。</li>
-     * <li><code>UpdateCommand</code> 中的 <code>Id</code> 字段是必需的，用来标识要更新的数据集。</li>
-     * <li>其他字段如 <code>Name</code>, <code>Type</code>, <code>DataCellId</code> 等为可选项，根据实际需求选择性填写。</li>
-     * <li>版本配置（<code>VersionConfig</code>）和实时元表配置（<code>RealtimeMetaTableConfig</code>）提供了更详细的设置选项，包括存储路径、表结构等，这些也是可选的。</li>
-     * <li>注意确保所有提供的 ID 值（如 <code>ProjectId</code>, <code>Id</code>, <code>DataSourceId</code> 等）在系统中有效且正确关联。</li>
-     * </ul>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Dataphin OpenAPI 模板。</p>
+     * <p>Updates the information of a dataset in a specified project. Available since v6.2.0.</p>
      * 
      * @param request UpdateDatasetRequest
      * @return UpdateDatasetResponse

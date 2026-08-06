@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportKgSchemaResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ExportKgSchemaResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ExportKgSchemaResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -26,15 +32,23 @@ public class ExportKgSchemaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The knowledge graph definition details.</p>
+     */
     @NameInMap("SchemaInfo")
     public ExportKgSchemaResponseBodySchemaInfo schemaInfo;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ExportKgSchemaResponseBody extends TeaModel {
 
     public static class ExportKgSchemaResponseBodySchemaInfo extends TeaModel {
         /**
+         * <p>The knowledge graph definition content converted based on the specified format.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspaceId: f1d4559a4db044158305e2d89bccf81f
          * name: jytest</p>
@@ -101,6 +117,8 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The format of the returned knowledge graph definition content. Valid values: json and yaml.</p>
+         * 
          * <strong>example:</strong>
          * <p>yaml</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetKgEntityResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The entity record details.</p>
+     */
     @NameInMap("EntityInfo")
     public GetKgEntityResponseBodyEntityInfo entityInfo;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetKgEntityResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -29,12 +38,17 @@ public class GetKgEntityResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class GetKgEntityResponseBody extends TeaModel {
 
     public static class GetKgEntityResponseBodyEntityInfoPropertyList extends TeaModel {
         /**
+         * <p>The property code.</p>
+         * 
          * <strong>example:</strong>
          * <p>company_name</p>
          */
@@ -100,6 +116,16 @@ public class GetKgEntityResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The property data type. Valid values:</p>
+         * <ul>
+         * <li>STRING: string</li>
+         * <li>INTEGER: integer</li>
+         * <li>FLOAT: floating-point number</li>
+         * <li>BOOLEAN: Boolean</li>
+         * <li>DATE: date</li>
+         * <li>LIST: list</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -107,6 +133,8 @@ public class GetKgEntityResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>The property value.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
          */
@@ -146,6 +174,8 @@ public class GetKgEntityResponseBody extends TeaModel {
 
     public static class GetKgEntityResponseBodyEntityInfo extends TeaModel {
         /**
+         * <p>The entity record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
          */
@@ -153,12 +183,17 @@ public class GetKgEntityResponseBody extends TeaModel {
         public String entityId;
 
         /**
+         * <p>The entity type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Company</p>
          */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The list of entity record properties.</p>
+         */
         @NameInMap("PropertyList")
         public java.util.List<GetKgEntityResponseBodyEntityInfoPropertyList> propertyList;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateDatasetRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateDatasetRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The update request struct.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,6 +62,7 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigFileStorageConfig extends TeaModel {
         /**
+         * <p><strong>The data source ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,13 +72,17 @@ public class UpdateDatasetRequest extends TeaModel {
         public String dataSourceId;
 
         /**
+         * <p>The data source name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试数据源</p>
+         * <p>Test data source.</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
         /**
+         * <p>The development path (not required for basic projects).</p>
+         * 
          * <strong>example:</strong>
          * <p>HTML正文提取/test423/</p>
          */
@@ -82,6 +90,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String devPath;
 
         /**
+         * <p>The mount path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +100,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String mountPath;
 
         /**
+         * <p>The production path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +158,7 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfigTableSchemaColumnsVectorIndexConfig extends TeaModel {
         /**
+         * <p>The embedding dimension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +168,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public Long dimension;
 
         /**
+         * <p>The embedding model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +178,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String embeddingModel;
 
         /**
+         * <p>The index build parameters. Different parameters are required based on the indexType. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+         * 
          * <strong>example:</strong>
          * <p>{M:30, efConstruction:360}</p>
          */
@@ -173,6 +187,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public java.util.Map<String, ?> indexParams;
 
         /**
+         * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all types.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +197,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String indexType;
 
         /**
+         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,6 +255,8 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfigTableSchemaColumns extends TeaModel {
         /**
+         * <p>The field description.</p>
+         * 
          * <strong>example:</strong>
          * <p>primary key</p>
          */
@@ -246,6 +264,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p><strong>The array element subtype. Valid only when type is set to ARRAY.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>INT64</p>
          */
@@ -253,6 +273,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String elementType;
 
         /**
+         * <p>The maximum capacity of the array. Valid only when type is set to ARRAY. Default value: 4096.</p>
+         * 
          * <strong>example:</strong>
          * <p>250</p>
          */
@@ -260,6 +282,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public Integer maxCapacity;
 
         /**
+         * <p><strong>The field name.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,6 +292,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the field is a primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -276,6 +301,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public Boolean pk;
 
         /**
+         * <p><strong>The field type.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,12 +311,17 @@ public class UpdateDatasetRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>Indicates whether the field is a URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Url")
         public Boolean url;
 
+        /**
+         * <p>The vector index configuration.</p>
+         */
         @NameInMap("VectorIndexConfig")
         public UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfigTableSchemaColumnsVectorIndexConfig vectorIndexConfig;
 
@@ -366,6 +397,9 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfigTableSchema extends TeaModel {
+        /**
+         * <p>The field list.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfigTableSchemaColumns> columns;
 
@@ -386,6 +420,7 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfig extends TeaModel {
         /**
+         * <p><strong>The data source ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -395,13 +430,17 @@ public class UpdateDatasetRequest extends TeaModel {
         public String dataSourceId;
 
         /**
+         * <p><strong>The data source name.</strong></p>
+         * 
          * <strong>example:</strong>
-         * <p>测试数据源</p>
+         * <p>Test data source.</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
         /**
+         * <p><strong>The development database/schema.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>HTML正文提取/test423/</p>
          */
@@ -409,6 +448,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String devSchema;
 
         /**
+         * <p>Specifies whether to store metadata in a new table or an existing table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -418,6 +458,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String metadataStorageMode;
 
         /**
+         * <p><strong>The metastore type.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>MILVUS</p>
          */
@@ -425,6 +467,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String metadataStorageType;
 
         /**
+         * <p><strong>The production database/schema.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -434,6 +477,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String prodSchema;
 
         /**
+         * <p><strong>The table name.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -442,6 +486,9 @@ public class UpdateDatasetRequest extends TeaModel {
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The table schema.</p>
+         */
         @NameInMap("TableSchema")
         public UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfigTableSchema tableSchema;
 
@@ -518,6 +565,7 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumnsVectorIndexConfig extends TeaModel {
         /**
+         * <p>The embedding dimension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -527,6 +575,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public Long dimension;
 
         /**
+         * <p>The embedding model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -536,6 +585,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String embeddingModel;
 
         /**
+         * <p>The index build parameters. Different parameters are required based on the indexType. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+         * 
          * <strong>example:</strong>
          * <p>{M:30, efConstruction:360}</p>
          */
@@ -543,6 +594,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public java.util.Map<String, ?> indexParams;
 
         /**
+         * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all types.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -552,6 +604,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String indexType;
 
         /**
+         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -609,6 +662,8 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumns extends TeaModel {
         /**
+         * <p>The field description.</p>
+         * 
          * <strong>example:</strong>
          * <p>happen time</p>
          */
@@ -616,6 +671,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String comment;
 
         /**
+         * <p><strong>The array element subtype. Valid only when type is set to ARRAY.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>INT64</p>
          */
@@ -623,6 +680,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String elementType;
 
         /**
+         * <p><strong>The maximum capacity of the array. This parameter is valid only when type is set to ARRAY. Default value: 4096.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -630,6 +689,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public Integer maxCapacity;
 
         /**
+         * <p><strong>The field name.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -639,6 +699,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the field is a primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -646,6 +708,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public Boolean pk;
 
         /**
+         * <p><strong>The field type.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -655,12 +718,17 @@ public class UpdateDatasetRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>Indicates whether the field is a URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("Url")
         public Boolean url;
 
+        /**
+         * <p>The vector index configuration. Configure this parameter when the field type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR. This parameter is used to specify the dimensions, index type, and similarity metric.</p>
+         */
         @NameInMap("VectorIndexConfig")
         public UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumnsVectorIndexConfig vectorIndexConfig;
 
@@ -736,6 +804,9 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfigTableSchema extends TeaModel {
+        /**
+         * <p><strong>The field list.</strong></p>
+         */
         @NameInMap("Columns")
         public java.util.List<UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumns> columns;
 
@@ -756,6 +827,7 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfig extends TeaModel {
         /**
+         * <p>The meta table data source type (only KAFKA is supported in the current release).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -765,15 +837,17 @@ public class UpdateDatasetRequest extends TeaModel {
         public String datasourceType;
 
         /**
+         * <p>The meta table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试元表</p>
+         * <p>Test meta table.</p>
          */
         @NameInMap("MetaTableName")
         public String metaTableName;
 
         /**
+         * <p>The project ID to which the meta table belongs (cross-project access is supported).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -782,6 +856,9 @@ public class UpdateDatasetRequest extends TeaModel {
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The table schema.</p>
+         */
         @NameInMap("TableSchema")
         public UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfigTableSchema tableSchema;
 
@@ -825,18 +902,29 @@ public class UpdateDatasetRequest extends TeaModel {
     }
 
     public static class UpdateDatasetRequestUpdateCommandVersionConfig extends TeaModel {
+        /**
+         * <p>The file storage configuration.</p>
+         */
         @NameInMap("FileStorageConfig")
         public UpdateDatasetRequestUpdateCommandVersionConfigFileStorageConfig fileStorageConfig;
 
+        /**
+         * <p>The metastore configuration.</p>
+         */
         @NameInMap("MetadataStorageConfig")
         public UpdateDatasetRequestUpdateCommandVersionConfigMetadataStorageConfig metadataStorageConfig;
 
+        /**
+         * <p>The real-time meta table configuration. Takes effect when metadataStorageType is set to STREAM_TABLE.</p>
+         */
         @NameInMap("RealtimeMetaTableConfig")
         public UpdateDatasetRequestUpdateCommandVersionConfigRealtimeMetaTableConfig realtimeMetaTableConfig;
 
         /**
+         * <p><strong>Version description</strong></p>
+         * 
          * <strong>example:</strong>
-         * <p>测试数据集版本</p>
+         * <p>Test dataset version.</p>
          */
         @NameInMap("VersionDescription")
         public String versionDescription;
@@ -882,6 +970,8 @@ public class UpdateDatasetRequest extends TeaModel {
 
     public static class UpdateDatasetRequestUpdateCommand extends TeaModel {
         /**
+         * <p><strong>The content type.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>GENERAL</p>
          */
@@ -889,6 +979,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String contentType;
 
         /**
+         * <p>The subject area ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>78201</p>
          */
@@ -896,13 +988,16 @@ public class UpdateDatasetRequest extends TeaModel {
         public String dataCellId;
 
         /**
+         * <p><strong>The description.</strong></p>
+         * 
          * <strong>example:</strong>
-         * <p>测试数据集</p>
+         * <p>Test dataset.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The file ID (the file ID at creation time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -912,6 +1007,7 @@ public class UpdateDatasetRequest extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The dataset ID (business primary key).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -921,6 +1017,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public Long id;
 
         /**
+         * <p><strong>The metastore type.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>POSTGRESQL</p>
          */
@@ -928,6 +1026,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String metadataStorageType;
 
         /**
+         * <p>The dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>audio_dataset</p>
          */
@@ -935,6 +1035,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The list of owner IDs, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>300001391</p>
          */
@@ -942,6 +1044,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String owner;
 
         /**
+         * <p><strong>Scenarios:</strong> <code>OFFLINE</code> (offline, default) / <code>REALTIME</code> (real-time).</p>
+         * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
          */
@@ -949,6 +1053,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String scenario;
 
         /**
+         * <p><strong>The storage type.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -956,6 +1062,8 @@ public class UpdateDatasetRequest extends TeaModel {
         public String storageType;
 
         /**
+         * <p>The dataset type.</p>
+         * 
          * <strong>example:</strong>
          * <p>HYBRID</p>
          */
@@ -963,12 +1071,17 @@ public class UpdateDatasetRequest extends TeaModel {
         public String type;
 
         /**
+         * <p>The version.</p>
+         * 
          * <strong>example:</strong>
          * <p>V1</p>
          */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The dataset version configuration.</p>
+         */
         @NameInMap("VersionConfig")
         public UpdateDatasetRequestUpdateCommandVersionConfig versionConfig;
 

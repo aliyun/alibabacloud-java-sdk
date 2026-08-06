@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKgSchemaShrinkRequest extends TeaModel {
     /**
+     * <p>The instruction for importing the knowledge graph definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ImportKgSchemaShrinkRequest extends TeaModel {
     public String importCommandShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ImportKgSchemaShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

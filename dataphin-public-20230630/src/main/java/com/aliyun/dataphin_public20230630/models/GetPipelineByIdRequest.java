@@ -22,7 +22,7 @@ public class GetPipelineByIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID used to query the pipeline task.</p>
+     * <p>The query ID used to query the pipeline node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QueryId")
@@ -73,7 +73,7 @@ public class GetPipelineByIdRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The ID of the project to which the integration pipeline task belongs.</p>
+         * <p>The project ID to which the integration pipeline node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class GetPipelineByIdRequest extends TeaModel {
 
     public static class GetPipelineByIdRequestQueryId extends TeaModel {
         /**
-         * <p>Supports querying by the integration task file ID (fileId).</p>
+         * <p>The file ID of the integration node. You can use this parameter to query the pipeline node.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -116,7 +116,7 @@ public class GetPipelineByIdRequest extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>Supports querying by the integration task scheduling node ID (nodeId).</p>
+         * <p>The scheduling node ID of the integration node. You can use this parameter to query the pipeline node.</p>
          * 
          * <strong>example:</strong>
          * <p>n_123</p>
@@ -125,7 +125,7 @@ public class GetPipelineByIdRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>Supports querying by the integration pipeline primary key (pipelineId).</p>
+         * <p>The primary key ID of the integration pipeline. You can use this parameter to query the pipeline node.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

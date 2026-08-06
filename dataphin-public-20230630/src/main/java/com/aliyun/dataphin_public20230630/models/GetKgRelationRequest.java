@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKgRelationRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The relationship record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetKgRelationRequest extends TeaModel {
     public String relationId;
 
     /**
+     * <p>The relationship type code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetKgRelationRequest extends TeaModel {
     public String relationType;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

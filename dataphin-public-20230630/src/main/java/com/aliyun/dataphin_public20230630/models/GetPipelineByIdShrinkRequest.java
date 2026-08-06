@@ -22,7 +22,7 @@ public class GetPipelineByIdShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID used to query the pipeline task.</p>
+     * <p>The query ID used to query the pipeline node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("QueryId")

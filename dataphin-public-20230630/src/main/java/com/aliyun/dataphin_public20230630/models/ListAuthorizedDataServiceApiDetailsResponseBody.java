@@ -26,7 +26,7 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
      * <p>The error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Invalid input parameter.</p>
+     * <p>Invalid parameter.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -128,7 +128,7 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer isAuthorized;
 
         /**
-         * <p>The parameter data type.</p>
+         * <p>The parameter type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -221,7 +221,7 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public Integer isAuthorized;
 
         /**
-         * <p>The parameter data type.</p>
+         * <p>The parameter type.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -332,13 +332,13 @@ public class ListAuthorizedDataServiceApiDetailsResponseBody extends TeaModel {
         public String authType;
 
         /**
-         * <p>The list of authorized fields for the API in the development environment.</p>
+         * <p>The list of fields authorized for the API in the development environment.</p>
          */
         @NameInMap("AuthorizedDevReturnParameters")
         public java.util.List<ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedDevReturnParameters> authorizedDevReturnParameters;
 
         /**
-         * <p>The list of authorized fields for the API in the production environment.</p>
+         * <p>The list of fields authorized for the API in the production environment.</p>
          */
         @NameInMap("AuthorizedProdReturnParameters")
         public java.util.List<ListAuthorizedDataServiceApiDetailsResponseBodyResultDataAuthorizedProdReturnParameters> authorizedProdReturnParameters;

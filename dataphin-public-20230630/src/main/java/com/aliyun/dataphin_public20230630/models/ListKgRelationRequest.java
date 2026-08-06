@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListKgRelationRequest extends TeaModel {
+    /**
+     * <p>The paged search filter conditions.</p>
+     */
     @NameInMap("ListQuery")
     public ListKgRelationRequestListQuery listQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ListKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The relationship type code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,7 @@ public class ListKgRelationRequest extends TeaModel {
     public String relationType;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +79,8 @@ public class ListKgRelationRequest extends TeaModel {
 
     public static class ListKgRelationRequestListQuery extends TeaModel {
         /**
+         * <p>The page number. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -80,6 +88,8 @@ public class ListKgRelationRequest extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of records per page. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -87,6 +97,8 @@ public class ListKgRelationRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The source entity record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e1d4559a4db044158305e2d89bccf81f</p>
          */
@@ -94,6 +106,8 @@ public class ListKgRelationRequest extends TeaModel {
         public String sourceEntityId;
 
         /**
+         * <p>The target entity record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e1d4559a4db044158305e2d89bccf82f</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportKgSchemaRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ExportKgSchemaRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The format of the exported content. Valid values: json and yaml. Default value: yaml.</p>
+     * 
      * <strong>example:</strong>
      * <p>json</p>
      */
@@ -21,6 +24,8 @@ public class ExportKgSchemaRequest extends TeaModel {
     public String outputFormat;
 
     /**
+     * <p>The version number. If this parameter is empty or set to -1, the model metadata in draft state is returned. If this parameter is set to 0, the model metadata of the latest version is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +33,7 @@ public class ExportKgSchemaRequest extends TeaModel {
     public Integer versionId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

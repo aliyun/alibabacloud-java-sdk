@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKgSchemaRequest extends TeaModel {
     /**
+     * <p>The instruction for importing the knowledge graph definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ImportKgSchemaRequest extends TeaModel {
     public ImportKgSchemaRequestImportCommand importCommand;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ImportKgSchemaRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +65,8 @@ public class ImportKgSchemaRequest extends TeaModel {
 
     public static class ImportKgSchemaRequestImportCommand extends TeaModel {
         /**
+         * <p>The knowledge graph definition content converted based on the specified format.</p>
+         * 
          * <strong>example:</strong>
          * <p>name:xxx</p>
          */
@@ -69,6 +74,8 @@ public class ImportKgSchemaRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The format of the knowledge graph definition content. Valid values: json and yaml. Default value: yaml.</p>
+         * 
          * <strong>example:</strong>
          * <p>yaml</p>
          */
@@ -76,6 +83,8 @@ public class ImportKgSchemaRequest extends TeaModel {
         public String inputFormat;
 
         /**
+         * <p>The merge strategy for the knowledge graph definition content. Valid values: replace and merge. Default value: replace.</p>
+         * 
          * <strong>example:</strong>
          * <p>replace</p>
          */

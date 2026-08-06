@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ImportKgSchemaResponseBody extends TeaModel {
     /**
+     * <p>The backend response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,16 +14,23 @@ public class ImportKgSchemaResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The import result.</p>
+     */
     @NameInMap("ImportResult")
     public ImportKgSchemaResponseBodyImportResult importResult;
 
     /**
+     * <p>The backend exception details.</p>
+     * 
      * <strong>example:</strong>
      * <p>internal error</p>
      */
@@ -29,12 +38,17 @@ public class ImportKgSchemaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ImportKgSchemaResponseBody extends TeaModel {
 
     public static class ImportKgSchemaResponseBodyImportResult extends TeaModel {
         /**
+         * <p>The number of entity types that were changed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1032591</p>
          */
@@ -100,6 +116,8 @@ public class ImportKgSchemaResponseBody extends TeaModel {
         public Integer entityTypeCount;
 
         /**
+         * <p>The number of relation types that were changed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3380766</p>
          */

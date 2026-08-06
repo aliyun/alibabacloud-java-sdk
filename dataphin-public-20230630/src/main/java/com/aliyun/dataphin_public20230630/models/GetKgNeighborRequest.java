@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKgNeighborRequest extends TeaModel {
     /**
+     * <p>The entity record data ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetKgNeighborRequest extends TeaModel {
     public String entityDataId;
 
     /**
+     * <p>The entity type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,14 @@ public class GetKgNeighborRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>The entity record neighbor node query instruction.</p>
+     */
     @NameInMap("NeighborsQuery")
     public GetKgNeighborRequestNeighborsQuery neighborsQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +41,7 @@ public class GetKgNeighborRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,6 +97,8 @@ public class GetKgNeighborRequest extends TeaModel {
 
     public static class GetKgNeighborRequestNeighborsQuery extends TeaModel {
         /**
+         * <p>The maximum depth of neighbor nodes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -97,12 +106,23 @@ public class GetKgNeighborRequest extends TeaModel {
         public Integer depth;
 
         /**
+         * <p>The direction type. Valid values:</p>
+         * <ul>
+         * <li>in: the current entity is the target node.</li>
+         * <li>out: the current entity is the source node.</li>
+         * <li>both: the current entity is both the source node and the target node.</li>
+         * </ul>
+         * <p>Default value: both.</p>
+         * 
          * <strong>example:</strong>
          * <p>both</p>
          */
         @NameInMap("DirectionType")
         public String directionType;
 
+        /**
+         * <p>The list of relation types.</p>
+         */
         @NameInMap("RelationTypes")
         public java.util.List<String> relationTypes;
 

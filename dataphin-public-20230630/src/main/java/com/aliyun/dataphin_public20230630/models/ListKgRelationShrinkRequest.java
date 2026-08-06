@@ -4,10 +4,14 @@ package com.aliyun.dataphin_public20230630.models;
 import com.aliyun.tea.*;
 
 public class ListKgRelationShrinkRequest extends TeaModel {
+    /**
+     * <p>The paged search filter conditions.</p>
+     */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class ListKgRelationShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The relationship type code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,7 @@ public class ListKgRelationShrinkRequest extends TeaModel {
     public String relationType;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

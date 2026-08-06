@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKgEntityRequest extends TeaModel {
     /**
+     * <p>The entity record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetKgEntityRequest extends TeaModel {
     public String entityId;
 
     /**
+     * <p>The entity type code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetKgEntityRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GetKgEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
