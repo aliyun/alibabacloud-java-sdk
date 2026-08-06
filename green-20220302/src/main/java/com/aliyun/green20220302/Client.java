@@ -786,10 +786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is the AI Guardrails agent.</p>
+     * <p>The content moderation agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>This is the synchronous detection API for the multi-modal agent.</p>
+     * <p>Synchronously detects content by using the multimodal Agent API.</p>
      * 
      * @param request MultiModalAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -825,10 +825,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is the AI Guardrails agent.</p>
+     * <p>The content moderation agent.</p>
      * 
      * <b>summary</b> : 
-     * <p>This is the synchronous detection API for the multi-modal agent.</p>
+     * <p>Synchronously detects content by using the multimodal Agent API.</p>
      * 
      * @param request MultiModalAgentRequest
      * @return MultiModalAgentResponse

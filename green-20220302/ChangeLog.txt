@@ -1,3 +1,7 @@
+2026-08-06 Version: 3.6.5
+- Update API MultiModalAgent: add response parameters Body.Data.Usage.Credits.
+
+
 2026-08-03 Version: 3.6.4
 - Generated java 2022-03-02 for Green.
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MultiModalAgentRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the whiteboard application. To get the whiteboard application ID, see <a href="https://help.aliyun.com/document_detail/204234.html">CreateApp</a>.</p>
+     * <p>The unique identifier of the whiteboard application. To obtain the whiteboard application ID, see <a href="https://help.aliyun.com/document_detail/204234.html">CreateApp</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>txt_check_agent_01</p>
@@ -14,10 +14,10 @@ public class MultiModalAgentRequest extends TeaModel {
     public String appID;
 
     /**
-     * <p>The set of parameters for the auditing service. This includes the taskId of the detection task to query. You can specify only one taskId at a time.</p>
+     * <p>The parameter set required by the moderation service. taskId specifies the taskId of the detection task to query. Only one taskId can be specified per request.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;content&quot;:&quot;测试文本&quot;,&quot;dataId&quot;:&quot;img1234567&quot;}</p>
+     * <p>{&quot;content&quot;:&quot;Test text&quot;,&quot;dataId&quot;:&quot;img1234567&quot;}</p>
      */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
