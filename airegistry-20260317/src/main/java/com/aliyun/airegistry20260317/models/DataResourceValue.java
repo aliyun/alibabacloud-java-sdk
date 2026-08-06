@@ -4,15 +4,36 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class DataResourceValue extends TeaModel {
+    /**
+     * <p>The resource name (including the file name extension).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample.md</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The resource type: template, data, script, etc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>script</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The resource content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a sample file.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The resource metadata.</p>
+     */
     @NameInMap("Metadata")
     public java.util.Map<String, ?> metadata;
 

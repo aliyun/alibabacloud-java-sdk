@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("airegistry", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 AI Registry 命名空间</p>
+     * <p>Creates a namespace in AI Registry and returns the corresponding namespace ID.</p>
      * 
      * @param request CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +72,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 AI Registry 命名空间</p>
+     * <p>Creates a namespace in AI Registry and returns the corresponding namespace ID.</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -84,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Prompt</p>
+     * <p>Create a prompt and create the initial draft version content of that prompt</p>
      * 
      * @param request CreatePromptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -144,7 +144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Prompt</p>
+     * <p>Create a prompt and create the initial draft version content of that prompt</p>
      * 
      * @param request CreatePromptRequest
      * @return CreatePromptResponse
@@ -156,7 +156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Prompt 草稿版本。Prompt 必须已存在，且当前没有正在编辑的草稿。只对草稿版本生效。</p>
+     * <p>Creates a new version of a prompt. The new version defaults to draft status. An error is returned if a draft version already exists.</p>
      * 
      * @param request CreatePromptVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -212,7 +212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Prompt 草稿版本。Prompt 必须已存在，且当前没有正在编辑的草稿。只对草稿版本生效。</p>
+     * <p>Creates a new version of a prompt. The new version defaults to draft status. An error is returned if a draft version already exists.</p>
      * 
      * @param request CreatePromptVersionRequest
      * @return CreatePromptVersionResponse
@@ -224,7 +224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Skill 草稿版本</p>
+     * <p>Creates a Skill draft and returns the Skill version.</p>
      * 
      * @param request CreateSkillDraftRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -276,7 +276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建 Skill 草稿版本</p>
+     * <p>Creates a Skill draft and returns the Skill version.</p>
      * 
      * @param request CreateSkillDraftRequest
      * @return CreateSkillDraftResponse
@@ -288,7 +288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除命名空间</p>
+     * <p>Deletes a specified namespace from the AI Governance Center. The system checks whether the namespace contains any resources in use (such as Skills or Prompts) before deletion. If such resources exist, the deletion fails.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -320,7 +320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除命名空间</p>
+     * <p>Deletes a specified namespace from the AI Governance Center. The system checks whether the namespace contains any resources in use (such as Skills or Prompts) before deletion. If such resources exist, the deletion fails.</p>
      * 
      * @param request DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -332,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Prompt</p>
+     * <p>Deletes a specified prompt.</p>
      * 
      * @param request DeletePromptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -368,7 +368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Prompt</p>
+     * <p>Deletes a specified prompt.</p>
      * 
      * @param request DeletePromptRequest
      * @return DeletePromptResponse
@@ -380,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Skill</p>
+     * <p>Deletes a specified Skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -416,7 +416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除 Skill</p>
+     * <p>Deletes a specified Skill.</p>
      * 
      * @param request DeleteSkillRequest
      * @return DeleteSkillResponse
@@ -428,7 +428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过 OSS 下载 Skill 版本 - 返回 OSS 下载 URL</p>
+     * <p>Downloads a skill version through OSS and returns the OSS download URL.</p>
      * 
      * @param request DownloadSkillVersionViaOssRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -468,7 +468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过 OSS 下载 Skill 版本 - 返回 OSS 下载 URL</p>
+     * <p>Downloads a skill version through OSS and returns the OSS download URL.</p>
      * 
      * @param request DownloadSkillVersionViaOssRequest
      * @return DownloadSkillVersionViaOssResponse
@@ -480,7 +480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>强制发布版本</p>
+     * <p>Force-publishes a version.</p>
      * 
      * @param request ForcePublishSkillVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -524,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>强制发布版本</p>
+     * <p>Force-publishes a version.</p>
      * 
      * @param request ForcePublishSkillVersionRequest
      * @return ForcePublishSkillVersionResponse
@@ -536,7 +536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取命名空间详细信息</p>
+     * <p>Queries the details of an AI Governance Center namespace.</p>
      * 
      * @param request GetNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -568,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取命名空间详细信息</p>
+     * <p>Queries the details of an AI Governance Center namespace.</p>
      * 
      * @param request GetNamespaceRequest
      * @return GetNamespaceResponse
@@ -580,7 +580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Prompt 详情信息</p>
+     * <p>Retrieves the details of a prompt.</p>
      * 
      * @param request GetPromptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -616,7 +616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Prompt 详情信息</p>
+     * <p>Retrieves the details of a prompt.</p>
      * 
      * @param request GetPromptRequest
      * @return GetPromptResponse
@@ -628,7 +628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Prompt 某个版本的信息</p>
+     * <p>Query the detailed information of a specified version of a prompt.</p>
      * 
      * @param request GetPromptVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -668,7 +668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Prompt 某个版本的信息</p>
+     * <p>Query the detailed information of a specified version of a prompt.</p>
      * 
      * @param request GetPromptVersionRequest
      * @return GetPromptVersionResponse
@@ -680,7 +680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Skill 详情</p>
+     * <p>Retrieves the metadata and version information of a skill.</p>
      * 
      * @param request GetSkillDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -716,7 +716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Skill 详情</p>
+     * <p>Retrieves the metadata and version information of a skill.</p>
      * 
      * @param request GetSkillDetailRequest
      * @return GetSkillDetailResponse
@@ -728,7 +728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Skill 导入用 OSS 上传 URL。客户端使用返回的 uploadUrl 执行 PUT 上传后，</p>
+     * <p>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</p>
      * 
      * @param request GetSkillImportFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -764,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 Skill 导入用 OSS 上传 URL。客户端使用返回的 uploadUrl 执行 PUT 上传后，</p>
+     * <p>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</p>
      * 
      * @param request GetSkillImportFileUrlRequest
      * @return GetSkillImportFileUrlResponse
@@ -776,7 +776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定版本详情</p>
+     * <p>Retrieves the details of a specified version.</p>
      * 
      * @param request GetSkillVersionDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -816,7 +816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定版本详情</p>
+     * <p>Retrieves the details of a specified version.</p>
      * 
      * @param request GetSkillVersionDetailRequest
      * @return GetSkillVersionDetailResponse
@@ -828,7 +828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取命名空间列表</p>
+     * <p>Lists the namespaces in the AI Governance Center.</p>
      * 
      * @param request ListNamespacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -872,7 +872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取命名空间列表</p>
+     * <p>Lists the namespaces in the AI Governance Center.</p>
      * 
      * @param request ListNamespacesRequest
      * @return ListNamespacesResponse
@@ -884,7 +884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出Prompt版本列表</p>
+     * <p>Lists the versions of a prompt.</p>
      * 
      * @param request ListPromptVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -928,7 +928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出Prompt版本列表</p>
+     * <p>Lists the versions of a prompt.</p>
      * 
      * @param request ListPromptVersionsRequest
      * @return ListPromptVersionsResponse
@@ -940,7 +940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Prompt列表</p>
+     * <p>Lists the prompts in a namespace.</p>
      * 
      * @param request ListPromptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -992,7 +992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Prompt列表</p>
+     * <p>Lists the prompts in a namespace.</p>
      * 
      * @param request ListPromptsRequest
      * @return ListPromptsResponse
@@ -1004,7 +1004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出 Skills</p>
+     * <p>Lists skills.</p>
      * 
      * @param request ListSkillsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1064,7 +1064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出 Skills</p>
+     * <p>Lists skills.</p>
      * 
      * @param request ListSkillsRequest
      * @return ListSkillsResponse
@@ -1076,7 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线版本</p>
+     * <p>Offlines a Skill or a specific version of a Skill.</p>
      * 
      * @param request OfflineSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1120,7 +1120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线版本</p>
+     * <p>Offlines a Skill or a specific version of a Skill.</p>
      * 
      * @param request OfflineSkillRequest
      * @return OfflineSkillResponse
@@ -1132,7 +1132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线 Skill</p>
+     * <p>Brings online a Skill or a specific version of a Skill.</p>
      * 
      * @param request OnlineSkillRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1176,7 +1176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线 Skill</p>
+     * <p>Brings online a Skill or a specific version of a Skill.</p>
      * 
      * @param request OnlineSkillRequest
      * @return OnlineSkillResponse
@@ -1188,7 +1188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布版本</p>
+     * <p>Publishes a specific version of a Skill.</p>
      * 
      * @param request PublishSkillVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1232,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布版本</p>
+     * <p>Publishes a specific version of a Skill.</p>
      * 
      * @param request PublishSkillVersionRequest
      * @return PublishSkillVersionResponse
@@ -1244,7 +1244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交 Prompt 版本, 将 Prompt 的草稿版本转化为正式版本</p>
+     * <p>Publishes a draft version of a prompt as an official version. The specified version must be a draft version.</p>
      * 
      * @param request SubmitPromptVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1284,7 +1284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交 Prompt 版本, 将 Prompt 的草稿版本转化为正式版本</p>
+     * <p>Publishes a draft version of a prompt as an official version. The specified version must be a draft version.</p>
      * 
      * @param request SubmitPromptVersionRequest
      * @return SubmitPromptVersionResponse
@@ -1296,7 +1296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交 Skill Draft 审核</p>
+     * <p>Submits a specific version of a skill for review.</p>
      * 
      * @param request SubmitSkillVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1336,7 +1336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交 Skill Draft 审核</p>
+     * <p>Submits a specific version of a skill for review.</p>
      * 
      * @param request SubmitSkillVersionRequest
      * @return SubmitSkillVersionResponse
@@ -1348,7 +1348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新命名空间信息</p>
+     * <p>Updates namespace information.</p>
      * 
      * @param request UpdateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1396,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新命名空间信息</p>
+     * <p>Updates namespace information.</p>
      * 
      * @param request UpdateNamespaceRequest
      * @return UpdateNamespaceResponse
@@ -1408,7 +1408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Prompt 元数据，支持同时更新 description、bizTags、labels。</p>
+     * <p>Modifies the metadata of a prompt, such as the description and business tags.</p>
      * 
      * @param tmpReq UpdatePromptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1466,7 +1466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Prompt 元数据，支持同时更新 description、bizTags、labels。</p>
+     * <p>Modifies the metadata of a prompt, such as the description and business tags.</p>
      * 
      * @param request UpdatePromptRequest
      * @return UpdatePromptResponse
@@ -1478,7 +1478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Prompt 草稿版本内容。只对草稿版本生效，已发布的版本不可修改。</p>
+     * <p>Updates the content of a prompt version. Only the draft version of a prompt can be modified.</p>
      * 
      * @param request UpdatePromptVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1526,7 +1526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Prompt 草稿版本内容。只对草稿版本生效，已发布的版本不可修改。</p>
+     * <p>Updates the content of a prompt version. Only the draft version of a prompt can be modified.</p>
      * 
      * @param request UpdatePromptVersionRequest
      * @return UpdatePromptVersionResponse
@@ -1538,7 +1538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新业务标签</p>
+     * <p>Updates business labels.</p>
      * 
      * @param request UpdateSkillBizTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1578,7 +1578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新业务标签</p>
+     * <p>Updates business labels.</p>
      * 
      * @param request UpdateSkillBizTagsRequest
      * @return UpdateSkillBizTagsResponse
@@ -1590,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Draft</p>
+     * <p>Updates a draft.</p>
      * 
      * @param request UpdateSkillDraftRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1634,7 +1634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新 Draft</p>
+     * <p>Updates a draft.</p>
      * 
      * @param request UpdateSkillDraftRequest
      * @return UpdateSkillDraftResponse
@@ -1646,7 +1646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新版本标签</p>
+     * <p>Updates version labels.</p>
      * 
      * @param request UpdateSkillLabelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1686,7 +1686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新版本标签</p>
+     * <p>Updates version labels.</p>
      * 
      * @param request UpdateSkillLabelsRequest
      * @return UpdateSkillLabelsResponse
@@ -1698,7 +1698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新可见性</p>
+     * <p>Updates the visibility.</p>
      * 
      * @param request UpdateSkillScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1738,7 +1738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新可见性</p>
+     * <p>Updates the visibility.</p>
      * 
      * @param request UpdateSkillScopeRequest
      * @return UpdateSkillScopeResponse
@@ -1750,7 +1750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过 OSS 上传 Skill (ZIP) - 从 OSS 拉取文件内容后上传到 Nacos</p>
+     * <p>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</p>
      * 
      * @param request UploadSkillViaOssRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1775,6 +1775,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Overwrite", request.overwrite);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetVersion)) {
+            query.put("TargetVersion", request.targetVersion);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1794,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过 OSS 上传 Skill (ZIP) - 从 OSS 拉取文件内容后上传到 Nacos</p>
+     * <p>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</p>
      * 
      * @param request UploadSkillViaOssRequest
      * @return UploadSkillViaOssResponse

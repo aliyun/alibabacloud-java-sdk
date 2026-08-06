@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNamespaceRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

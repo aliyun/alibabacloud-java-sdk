@@ -4,9 +4,18 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class GetNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The namespace information.</p>
+     */
     @NameInMap("Data")
     public GetNamespaceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +41,112 @@ public class GetNamespaceResponseBody extends TeaModel {
     }
 
     public static class GetNamespaceResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the namespace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-17T09:57:38+08:00</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret for bbtadmin</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("IpWhitelist")
+        public String ipWhitelist;
+
+        /**
+         * <p>The namespace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>magic:magic-cn-1us4sed5d01</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2a9310a-9d91-4283-b4e2-844f6d45fe64</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The number of prompts in the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PromptCount")
         public Integer promptCount;
 
+        @NameInMap("PublicAccessEnabled")
+        public Boolean publicAccessEnabled;
+
+        @NameInMap("PublicDomain")
+        public String publicDomain;
+
+        /**
+         * <p>The scan policy.</p>
+         * <p>The policy contains two configuration items:</p>
+         * <ul>
+         * <li>minBlockRiskLevel: the risk level for blocking.<ul>
+         * <li>high: blocks high-risk items.</li>
+         * <li>medium: blocks medium- and high-risk items.</li>
+         * <li>low: blocks all risk levels including high, medium, and low.</li>
+         * </ul>
+         * </li>
+         * <li>maxSkipRatio: the maximum skip ratio. If the scan skip ratio exceeds this value, the scan is considered as failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;minBlockRiskLevel&quot;:&quot;medium&quot;,&quot;maxSkipRatio&quot;:0.2}</p>
+         */
         @NameInMap("ScanPolicy")
         public String scanPolicy;
 
+        /**
+         * <p>The number of skills in the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SkillCount")
         public Integer skillCount;
 
+        /**
+         * <p>The source of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>magic:magic-cn-1us4sed5d01</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The source ordinal number of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SourceIndex")
         public Integer sourceIndex;
 
+        /**
+         * <p>The tags of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -83,6 +171,14 @@ public class GetNamespaceResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetNamespaceResponseBodyData setIpWhitelist(String ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+        public String getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
         public GetNamespaceResponseBodyData setName(String name) {
             this.name = name;
             return this;
@@ -105,6 +201,22 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
         public Integer getPromptCount() {
             return this.promptCount;
+        }
+
+        public GetNamespaceResponseBodyData setPublicAccessEnabled(Boolean publicAccessEnabled) {
+            this.publicAccessEnabled = publicAccessEnabled;
+            return this;
+        }
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        public GetNamespaceResponseBodyData setPublicDomain(String publicDomain) {
+            this.publicDomain = publicDomain;
+            return this;
+        }
+        public String getPublicDomain() {
+            return this.publicDomain;
         }
 
         public GetNamespaceResponseBodyData setScanPolicy(String scanPolicy) {

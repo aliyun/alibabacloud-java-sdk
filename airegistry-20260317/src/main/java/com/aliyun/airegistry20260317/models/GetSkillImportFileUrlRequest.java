@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSkillImportFileUrlRequest extends TeaModel {
     /**
+     * <p>The Content-Type of the uploaded file. Default value: application/zip.</p>
+     * 
      * <strong>example:</strong>
      * <p>application/zip</p>
      */
@@ -12,6 +14,7 @@ public class GetSkillImportFileUrlRequest extends TeaModel {
     public String contentType;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

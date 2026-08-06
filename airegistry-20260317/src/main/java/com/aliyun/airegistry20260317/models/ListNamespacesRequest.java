@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListNamespacesRequest extends TeaModel {
     /**
+     * <p>Performs a fuzzy search by name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>客服</p>
+     * <p>test-namespace</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListNamespacesRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListNamespacesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters by tags. Separate multiple tags with commas. Results are matched by intersection.</p>
+     * 
      * <strong>example:</strong>
      * <p>production,customer-service</p>
      */

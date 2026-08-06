@@ -4,9 +4,21 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class ListSkillsResponseBody extends TeaModel {
+    /**
+     * <p>The list of rule information returned when the call succeeds. For more information, see <strong>RuleInfo</strong>.</p>
+     * <blockquote>
+     * <p>The returned rule information is sorted by rule creation time in descending order.</p>
+     * </blockquote>
+     */
     @NameInMap("Data")
     public ListSkillsResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>195BF118-9AEF-5F3F-9A58-D88A77EB07DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,48 +44,132 @@ public class ListSkillsResponseBody extends TeaModel {
     }
 
     public static class ListSkillsResponseBodyDataPageItems extends TeaModel {
+        /**
+         * <p>The business tags as a JSON array string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("BizTags")
         public String bizTags;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret for bbtadmin</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The total number of downloads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("DownloadCount")
         public Long downloadCount;
 
+        /**
+         * <p>The version being edited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.3</p>
+         */
         @NameInMap("EditingVersion")
         public String editingVersion;
 
+        /**
+         * <p>Indicates whether the skill is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The source tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aqs</p>
+         */
         @NameInMap("From")
         public String from;
 
+        /**
+         * <p>The label mapping.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OCR品牌</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the group or workspace to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:creatulize-test</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The number of online versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineCnt")
         public Integer onlineCnt;
 
+        /**
+         * <p>The account ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The version under review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.2</p>
+         */
         @NameInMap("ReviewingVersion")
         public String reviewingVersion;
 
+        /**
+         * <p>The visibility scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-yORclL</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-05T19:24:43.798</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>Indicates whether the skill can be edited.</p>
+         */
         @NameInMap("Writeable")
         public Boolean writeable;
 
@@ -205,15 +301,36 @@ public class ListSkillsResponseBody extends TeaModel {
     }
 
     public static class ListSkillsResponseBodyData extends TeaModel {
+        /**
+         * <p>The MCP server information.</p>
+         */
         @NameInMap("PageItems")
         public java.util.List<ListSkillsResponseBodyDataPageItems> pageItems;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>pagesAvailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PagesAvailable")
         public Integer pagesAvailable;
 
+        /**
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

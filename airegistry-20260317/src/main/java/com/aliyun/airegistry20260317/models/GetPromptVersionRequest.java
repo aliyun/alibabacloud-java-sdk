@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPromptVersionRequest extends TeaModel {
     /**
+     * <p>Workspace ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetPromptVersionRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>Unique identifier of the prompt</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetPromptVersionRequest extends TeaModel {
     public String promptKey;
 
     /**
+     * <p>Version number</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

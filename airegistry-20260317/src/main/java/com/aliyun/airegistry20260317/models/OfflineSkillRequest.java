@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OfflineSkillRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class OfflineSkillRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The operation scope. Valid values:</p>
+     * <ul>
+     * <li>skill: the entire Skill.</li>
+     * <li>version: a specific version.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>version</p>
      */
@@ -21,6 +28,7 @@ public class OfflineSkillRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>The Skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,8 @@ public class OfflineSkillRequest extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The version number. This parameter is required when scope is set to version.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0.2</p>
      */

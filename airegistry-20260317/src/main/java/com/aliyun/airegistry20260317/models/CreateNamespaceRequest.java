@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
     /**
+     * <p>The workspace description.</p>
+     * 
      * <strong>example:</strong>
      * <p>用于管理客服场景的Prompt</p>
      */
@@ -12,6 +14,8 @@ public class CreateNamespaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>我的Prompt空间</p>
      */
@@ -19,6 +23,18 @@ public class CreateNamespaceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The scan policy.</p>
+     * <p>This parameter contains two configuration items:</p>
+     * <ul>
+     * <li>minBlockRiskLevel: the risk level for blocking.<ul>
+     * <li>high: blocks high-risk items.</li>
+     * <li>medium: blocks medium-risk and high-risk items.</li>
+     * <li>low: blocks all risk levels including high, medium, and low.</li>
+     * </ul>
+     * </li>
+     * <li>maxSkipRatio: the max false positive rate. If the scan skip ratio exceeds this value, the scan is considered as failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;minBlockRiskLevel&quot;:&quot;medium&quot;,&quot;maxSkipRatio&quot;:0.2}</p>
      */
@@ -26,6 +42,8 @@ public class CreateNamespaceRequest extends TeaModel {
     public String scanPolicy;
 
     /**
+     * <p>The tags. Separate multiple tags with commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>customer-service,production</p>
      */

@@ -4,9 +4,21 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillDraftResponseBody extends TeaModel {
+    /**
+     * <p>The Skill version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3aa3fb14dddd4bdb941cf4536e4e918b</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

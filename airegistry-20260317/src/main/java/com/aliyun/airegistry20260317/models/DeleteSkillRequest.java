@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSkillRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteSkillRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The Skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

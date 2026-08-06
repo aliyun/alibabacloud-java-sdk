@@ -4,9 +4,18 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The namespace creation result.</p>
+     */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +41,12 @@ public class CreateNamespaceResponseBody extends TeaModel {
     }
 
     public static class CreateNamespaceResponseBodyData extends TeaModel {
+        /**
+         * <p>The namespace ID. The default namespace cannot be queried, modified, or deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2a9310a-9d91-4283-b4e2-844f6d45fe64</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePromptRequest extends TeaModel {
     /**
+     * <p>The list of business tags. The value is a string array.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;cs&quot;,&quot;qa&quot;,&quot;support&quot;]</p>
      */
@@ -12,16 +14,25 @@ public class UpdatePromptRequest extends TeaModel {
     public java.util.List<String> bizTags;
 
     /**
+     * <p>The description of the prompt.</p>
+     * 
      * <strong>example:</strong>
      * <p>客服问答 Prompt</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The mapping between prompt versions and labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;latest&quot;:&quot;0.0.1&quot;,&quot;stable&quot;:&quot;0.0.1&quot;}</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, ?> labels;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +42,7 @@ public class UpdatePromptRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The unique identifier of the prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,9 +4,18 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class ListNamespacesResponseBody extends TeaModel {
+    /**
+     * <p>The namespace query result.</p>
+     */
     @NameInMap("Data")
     public ListNamespacesResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +41,93 @@ public class ListNamespacesResponseBody extends TeaModel {
     }
 
     public static class ListNamespacesResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The time when the namespace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-11T09:32:03+08:00</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default project, auto-created by EMR.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("IpWhitelist")
+        public String ipWhitelist;
+
+        /**
+         * <p>The namespace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>magic:magic-cn-1us4sed5d01</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76d4b6e4-31bf-475a-8710-6217ec049c1f</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The number of prompts in the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PromptCount")
         public Integer promptCount;
 
+        @NameInMap("PublicAccessEnabled")
+        public Boolean publicAccessEnabled;
+
+        @NameInMap("PublicDomain")
+        public String publicDomain;
+
+        /**
+         * <p>The number of skills in the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SkillCount")
         public Integer skillCount;
 
+        /**
+         * <p>The source of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>magic:magic-cn-fpi4secsq01</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The source index of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SourceIndex")
         public Integer sourceIndex;
 
+        /**
+         * <p>The tags of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qa,test</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -80,6 +152,14 @@ public class ListNamespacesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListNamespacesResponseBodyDataItems setIpWhitelist(String ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+        public String getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
         public ListNamespacesResponseBodyDataItems setName(String name) {
             this.name = name;
             return this;
@@ -102,6 +182,22 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
         public Integer getPromptCount() {
             return this.promptCount;
+        }
+
+        public ListNamespacesResponseBodyDataItems setPublicAccessEnabled(Boolean publicAccessEnabled) {
+            this.publicAccessEnabled = publicAccessEnabled;
+            return this;
+        }
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        public ListNamespacesResponseBodyDataItems setPublicDomain(String publicDomain) {
+            this.publicDomain = publicDomain;
+            return this;
+        }
+        public String getPublicDomain() {
+            return this.publicDomain;
         }
 
         public ListNamespacesResponseBodyDataItems setSkillCount(Integer skillCount) {
@@ -139,15 +235,36 @@ public class ListNamespacesResponseBody extends TeaModel {
     }
 
     public static class ListNamespacesResponseBodyData extends TeaModel {
+        /**
+         * <p>The returned data entries.</p>
+         */
         @NameInMap("Items")
         public java.util.List<ListNamespacesResponseBodyDataItems> items;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The page size. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

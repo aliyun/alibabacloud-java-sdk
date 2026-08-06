@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdatePromptVersionRequest extends TeaModel {
     /**
+     * <p>The commit message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>优化回答语气</p>
+     * <p>Optimize response tone.</p>
      */
     @NameInMap("CommitMsg")
     public String commitMsg;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdatePromptVersionRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The unique identifier of the prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,15 +34,18 @@ public class UpdatePromptVersionRequest extends TeaModel {
     public String promptKey;
 
     /**
+     * <p>The updated template content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>你是一个客服助手，请回答：{question}</p>
+     * <p>You are a customer service assistant. Please answer: {question}</p>
      */
     @NameInMap("Template")
     public String template;
 
     /**
+     * <p>The updated variable definition in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;:&quot;question&quot;,&quot;defaultValue&quot;:&quot;Hello&quot;}]</p>
      */

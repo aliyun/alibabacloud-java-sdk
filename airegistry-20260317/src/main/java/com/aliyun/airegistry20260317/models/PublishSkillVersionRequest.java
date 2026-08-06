@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishSkillVersionRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PublishSkillVersionRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The Skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class PublishSkillVersionRequest extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,8 @@ public class PublishSkillVersionRequest extends TeaModel {
     public String skillVersion;
 
     /**
+     * <p>Specifies whether to update the latest label.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

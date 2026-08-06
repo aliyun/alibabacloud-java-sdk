@@ -4,9 +4,18 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class ListPromptsResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public ListPromptsResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +41,87 @@ public class ListPromptsResponseBody extends TeaModel {
     }
 
     public static class ListPromptsResponseBodyDataPageItems extends TeaModel {
+        /**
+         * <p>The list of business tags.</p>
+         */
         @NameInMap("BizTags")
         public java.util.List<String> bizTags;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test prompt</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The version number of the draft version of the prompt. This value is empty if no draft version exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("EditingVersion")
         public String editingVersion;
 
+        /**
+         * <p>The time when the prompt was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-04-22 11:51:03</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The mapping between prompt versions and labels.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
+        /**
+         * <p>The latest version number of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        /**
+         * <p>The number of online versions of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineCnt")
         public Integer onlineCnt;
 
+        /**
+         * <p>The unique identifier of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
+         */
         @NameInMap("PromptKey")
         public String promptKey;
 
+        /**
+         * <p>The version number of the prompt version that is under review. This value is empty if no version is under review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("ReviewingVersion")
         public String reviewingVersion;
 
+        /**
+         * <p>The schema version of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SchemaVersion")
         public Integer schemaVersion;
 
@@ -150,15 +213,36 @@ public class ListPromptsResponseBody extends TeaModel {
     }
 
     public static class ListPromptsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of prompts.</p>
+         */
         @NameInMap("PageItems")
         public java.util.List<ListPromptsResponseBodyDataPageItems> pageItems;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of available pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PagesAvailable")
         public Integer pagesAvailable;
 
+        /**
+         * <p>The total number of prompts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

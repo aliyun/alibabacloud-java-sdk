@@ -4,9 +4,18 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class GetPromptResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public GetPromptResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,57 @@ public class GetPromptResponseBody extends TeaModel {
     }
 
     public static class GetPromptResponseBodyDataVersionDetails extends TeaModel {
+        /**
+         * <p>The commit message of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test Version</p>
+         */
         @NameInMap("CommitMsg")
         public String commitMsg;
 
+        /**
+         * <p>The time when the version was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627545952000</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The unique identifier of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer-service-qa</p>
+         */
         @NameInMap("PromptKey")
         public String promptKey;
 
+        /**
+         * <p>The creator of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("SrcUser")
         public String srcUser;
 
+        /**
+         * <p>The version status. Valid values: draft and online.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -106,39 +151,99 @@ public class GetPromptResponseBody extends TeaModel {
     }
 
     public static class GetPromptResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of business tags.</p>
+         */
         @NameInMap("BizTags")
         public java.util.List<String> bizTags;
 
+        /**
+         * <p>The description of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prompt for test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The version number of the draft version. This value is empty if no draft version exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("EditingVersion")
         public String editingVersion;
 
+        /**
+         * <p>The time when the prompt was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-13T02:11:53Z</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The mapping between prompt labels and versions.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
+        /**
+         * <p>The version number of the latest version of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        /**
+         * <p>The number of online versions of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineCnt")
         public Integer onlineCnt;
 
+        /**
+         * <p>The unique identifier of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer-service-qa</p>
+         */
         @NameInMap("PromptKey")
         public String promptKey;
 
+        /**
+         * <p>The version number of the prompt version that is under review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("ReviewingVersion")
         public String reviewingVersion;
 
+        /**
+         * <p>The schema version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("SchemaVersion")
         public Integer schemaVersion;
 
+        /**
+         * <p>The list of version details.</p>
+         */
         @NameInMap("VersionDetails")
         public java.util.List<GetPromptResponseBodyDataVersionDetails> versionDetails;
 
+        /**
+         * <p>The list of version numbers.</p>
+         */
         @NameInMap("Versions")
         public java.util.List<String> versions;
 

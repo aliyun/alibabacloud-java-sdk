@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPromptsRequest extends TeaModel {
     /**
+     * <p>The business tags used to filter prompts. Separate multiple tags with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>cs,qa</p>
      */
@@ -12,6 +14,7 @@ public class ListPromptsRequest extends TeaModel {
     public String bizTags;
 
     /**
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListPromptsRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class ListPromptsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +42,8 @@ public class ListPromptsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The identifier of the prompt to search for. This parameter is optional.</p>
+     * 
      * <strong>example:</strong>
      * <p>customer</p>
      */
@@ -42,6 +51,12 @@ public class ListPromptsRequest extends TeaModel {
     public String promptKey;
 
     /**
+     * <p>The search mode. Valid values:</p>
+     * <ul>
+     * <li>accurate: exact match.</li>
+     * <li>blur: fuzzy match.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>blur</p>
      */

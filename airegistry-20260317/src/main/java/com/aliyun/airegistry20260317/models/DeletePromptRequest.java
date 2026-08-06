@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePromptRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeletePromptRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The unique identifier of the prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

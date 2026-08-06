@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSkillVersionDetailRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetSkillVersionDetailRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetSkillVersionDetailRequest extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The version number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,9 +4,21 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class SubmitPromptVersionResponseBody extends TeaModel {
+    /**
+     * <p>The version number of the published version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.1</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

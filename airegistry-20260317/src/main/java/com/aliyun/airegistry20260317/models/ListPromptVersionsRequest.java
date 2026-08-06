@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPromptVersionsRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListPromptVersionsRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListPromptVersionsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,7 @@ public class ListPromptVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique identifier of the prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

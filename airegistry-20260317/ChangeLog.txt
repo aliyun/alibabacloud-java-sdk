@@ -1,3 +1,13 @@
+2026-08-06 Version: 1.0.1
+- Update API GetNamespace: add response parameters Body.Data.IpWhitelist.
+- Update API GetNamespace: add response parameters Body.Data.PublicAccessEnabled.
+- Update API GetNamespace: add response parameters Body.Data.PublicDomain.
+- Update API ListNamespaces: add response parameters Body.Data.Items.$.IpWhitelist.
+- Update API ListNamespaces: add response parameters Body.Data.Items.$.PublicAccessEnabled.
+- Update API ListNamespaces: add response parameters Body.Data.Items.$.PublicDomain.
+- Update API UploadSkillViaOss: add request parameters TargetVersion.
+
+
 2026-06-11 Version: 1.0.0
 - Generated java 2026-03-17 for AIRegistry.
 

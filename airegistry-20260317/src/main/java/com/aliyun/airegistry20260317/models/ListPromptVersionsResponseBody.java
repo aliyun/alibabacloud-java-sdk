@@ -4,9 +4,18 @@ package com.aliyun.airegistry20260317.models;
 import com.aliyun.tea.*;
 
 public class ListPromptVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListPromptVersionsResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9E87E66-9EF0-5C10-A5E6-924020A0C9B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,57 @@ public class ListPromptVersionsResponseBody extends TeaModel {
     }
 
     public static class ListPromptVersionsResponseBodyDataPageItems extends TeaModel {
+        /**
+         * <p>The commit message of the prompt version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test version</p>
+         */
         @NameInMap("CommitMsg")
         public String commitMsg;
 
+        /**
+         * <p>The modification date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-04T16:09:29+08:00</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The unique identifier of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer-service-qa</p>
+         */
         @NameInMap("PromptKey")
         public String promptKey;
 
+        /**
+         * <p>The creator of the prompt version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("SrcUser")
         public String srcUser;
 
+        /**
+         * <p>The status of the prompt version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>draft</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -106,15 +151,36 @@ public class ListPromptVersionsResponseBody extends TeaModel {
     }
 
     public static class ListPromptVersionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of prompt versions.</p>
+         */
         @NameInMap("PageItems")
         public java.util.List<ListPromptVersionsResponseBodyDataPageItems> pageItems;
 
+        /**
+         * <p>The page number. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of available pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PagesAvailable")
         public Integer pagesAvailable;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

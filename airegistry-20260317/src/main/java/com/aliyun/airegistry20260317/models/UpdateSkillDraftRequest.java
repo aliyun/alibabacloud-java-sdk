@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateSkillDraftRequest extends TeaModel {
     /**
+     * <p>The commit message.</p>
+     * 
      * <strong>example:</strong>
      * <p>更新说明</p>
      */
@@ -12,6 +14,7 @@ public class UpdateSkillDraftRequest extends TeaModel {
     public String commitMsg;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class UpdateSkillDraftRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The skill card JSON string that contains complete skill information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class UpdateSkillDraftRequest extends TeaModel {
     public String skillCard;
 
     /**
+     * <p>The skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

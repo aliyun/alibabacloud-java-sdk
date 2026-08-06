@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSkillsRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListSkillsRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The field by which to sort the results. Set the value to download_count to sort by download count. Default value: gmt_modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>download_count</p>
      */
@@ -21,6 +24,8 @@ public class ListSkillsRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>Filters results by owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>user123</p>
      */
@@ -28,6 +33,8 @@ public class ListSkillsRequest extends TeaModel {
     public String owner;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +42,8 @@ public class ListSkillsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +51,12 @@ public class ListSkillsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters results by visibility. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: public</li>
+     * <li>PRIVATE: private.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
      */
@@ -49,6 +64,12 @@ public class ListSkillsRequest extends TeaModel {
     public String scope;
 
     /**
+     * <p>The search mode. Valid values:</p>
+     * <ul>
+     * <li>accurate: exact match</li>
+     * <li>blur: fuzzy match.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>blur</p>
      */
@@ -56,6 +77,8 @@ public class ListSkillsRequest extends TeaModel {
     public String search;
 
     /**
+     * <p>The filter keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>customer</p>
      */

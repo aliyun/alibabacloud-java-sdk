@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSkillDraftRequest extends TeaModel {
     /**
+     * <p>The version to fork from. If not specified, a new Skill is created based on the latest version.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0.1</p>
      */
@@ -12,13 +14,16 @@ public class CreateSkillDraftRequest extends TeaModel {
     public String basedOnVersion;
 
     /**
+     * <p>The commit message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>初始版本</p>
+     * <p>Initial version.</p>
      */
     @NameInMap("CommitMsg")
     public String commitMsg;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,13 +33,16 @@ public class CreateSkillDraftRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The Skill card JSON string that contains complete Skill information.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;name&quot;:&quot;customer-service-skill&quot;,&quot;description&quot;:&quot;...&quot;}</p>
+     * <p>{&quot;name&quot;:&quot;customer-service-skill&quot;,&quot;description&quot;:&quot;customer-skill-desc&quot;,&quot;skillMd&quot;:&quot;---\nname: customer-service-skill\ndescription: customer-skill-desc\n---\ncustomer-skill-content&quot;}</p>
      */
     @NameInMap("SkillCard")
     public String skillCard;
 
     /**
+     * <p>The Skill name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,8 @@ public class CreateSkillDraftRequest extends TeaModel {
     public String skillName;
 
     /**
+     * <p>The specified draft version number. If not specified, the version number is automatically incremented.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0.2</p>
      */

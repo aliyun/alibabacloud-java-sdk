@@ -8,6 +8,7 @@ public class UploadSkillViaOssRequest extends TeaModel {
     public String commitMsg;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,17 +18,27 @@ public class UploadSkillViaOssRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The OSS object name (path).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OssObjectName")
     public String ossObjectName;
 
     /**
+     * <p>Specifies whether to overwrite an existing skill. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Overwrite")
     public Boolean overwrite;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
+    @NameInMap("TargetVersion")
+    public String targetVersion;
 
     public static UploadSkillViaOssRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadSkillViaOssRequest self = new UploadSkillViaOssRequest();
@@ -64,6 +75,14 @@ public class UploadSkillViaOssRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public UploadSkillViaOssRequest setTargetVersion(String targetVersion) {
+        this.targetVersion = targetVersion;
+        return this;
+    }
+    public String getTargetVersion() {
+        return this.targetVersion;
     }
 
 }
