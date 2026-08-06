@@ -209,6 +209,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -438,6 +441,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyInstanceSpecRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
+        return this;
+    }
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
     }
 
     public ModifyInstanceSpecRequest setSecurityToken(String securityToken) {
