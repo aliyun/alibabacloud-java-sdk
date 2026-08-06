@@ -7,12 +7,12 @@ public class ListConfigsRequest extends TeaModel {
     /**
      * <p>The category of the configuration item. The following categories are supported:</p>
      * <ul>
-     * <li>CommonResourceConfig: common resource configuration</li>
-     * <li>DLCAutoRecycle: DLC automatic reclamation</li>
-     * <li>DLCPriorityConfig: DLC priority settings</li>
-     * <li>DSWPriorityConfig: DSW priority settings</li>
-     * <li>QuotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota</li>
-     * <li>CommonTagConfig: tag settings</li>
+     * <li>CommonResourceConfig: common resource configuration.</li>
+     * <li>DLCAutoRecycle: DLC automatic recycling.</li>
+     * <li>DLCPriorityConfig: DLC priority settings.</li>
+     * <li>DSWPriorityConfig: DSW priority settings.</li>
+     * <li>QuotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota.</li>
+     * <li>CommonTagConfig: tag settings.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,11 @@ public class ListConfigsRequest extends TeaModel {
     /**
      * <p>The keys of the configuration items. The following keys are supported:</p>
      * <ul>
-     * <li>tempStoragePath: temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
-     * <li>isAutoRecycle: automatic reclamation configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
-     * <li>priorityConfig: priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-     * <li>quotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-     * <li>predefinedTags: preset tags for the workspace. Resources that are created must include these tags.</li>
+     * <li>tempStoragePath: the temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
+     * <li>isAutoRecycle: the automatic recycling configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
+     * <li>priorityConfig: the priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+     * <li>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+     * <li>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListConfigsRequest extends TeaModel {
     public String configKeys;
 
     /**
-     * <p>The labels used as filter conditions. Separate multiple conditions with commas. These conditions have an AND relationship.</p>
+     * <p>The labels used as filter conditions. Separate multiple conditions with commas. These conditions are evaluated using a logical AND.</p>
      * 
      * <strong>example:</strong>
      * <p>key1=value1,key2=value2</p>

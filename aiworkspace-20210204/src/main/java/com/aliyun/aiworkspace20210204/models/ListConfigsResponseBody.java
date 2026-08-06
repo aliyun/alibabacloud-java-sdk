@@ -20,7 +20,7 @@ public class ListConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned configuration items.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -101,6 +101,8 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigs extends TeaModel {
         /**
+         * <p>The configuration ID, which is globally unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>wc-95******o36ylr</p>
          */
@@ -110,11 +112,11 @@ public class ListConfigsResponseBody extends TeaModel {
         /**
          * <p>The key of the configuration item. The following keys are supported:</p>
          * <ul>
-         * <li>tempStoragePath: temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
-         * <li>isAutoRecycle: automatic reclamation configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
-         * <li>priorityConfig: priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-         * <li>quotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
-         * <li>predefinedTags: preset tags for the workspace. Resources that are created must include these tags.</li>
+         * <li>tempStoragePath: the temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: the automatic recycling configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: the priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+         * <li>predefinedTags: the preset tags for the workspace. Resources that are created must include these tags.</li>
          * </ul>
          * 
          * <strong>example:</strong>

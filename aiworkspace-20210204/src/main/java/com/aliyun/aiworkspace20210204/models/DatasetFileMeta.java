@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatasetFileMeta extends TeaModel {
     /**
-     * <p>The MIME type of the file. Contains Type and SubType.</p>
+     * <p>The MIME type of the file. The value contains the type and subtype.</p>
      * 
      * <strong>example:</strong>
      * <p>image/jpeg</p>
@@ -23,7 +23,7 @@ public class DatasetFileMeta extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The ID of the dataset file metadata.</p>
+     * <p>The dataset file metadata ID.</p>
      * 
      * <strong>example:</strong>
      * <p>07914c9534586e4e7aa6e9dbca5009082df******fd8a0d857b33296c59bf6</p>
@@ -41,7 +41,7 @@ public class DatasetFileMeta extends TeaModel {
     public String downloadUrl;
 
     /**
-     * <p>The file creation time. UTC timestamp in ISO 8601 format.</p>
+     * <p>The file creation time. The value is a UTC timestamp in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DatasetFileMeta extends TeaModel {
     public String fileCreateTime;
 
     /**
-     * <p>The file fingerprint value. Used to determine the uniqueness of the file content. This value changes when the file content is modified. OSS files use ETag, and NAS files use MD5 values.</p>
+     * <p>The file fingerprint value. This parameter is used to determine the uniqueness of the file content. The value changes when the file content is modified. The ETag is used for OSS files, and the MD5 value is used for NAS files.</p>
      * 
      * <strong>example:</strong>
      * <p>D41D8CD98F*****E9800998ECF8</p>
@@ -69,7 +69,7 @@ public class DatasetFileMeta extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The file type. Same as MIME Type.</p>
+     * <p>The file type. The value is the same as the MIME type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>
@@ -78,7 +78,7 @@ public class DatasetFileMeta extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The last modification time of the file. UTC timestamp in ISO 8601 format.</p>
+     * <p>The last modification time of the file. The value is a UTC timestamp in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DatasetFileMeta extends TeaModel {
     public String fileUpdateTime;
 
     /**
-     * <p>The specific metadata of the file. For example, image width and height information, or bitrate and resolution information for video files. Search capability is not currently supported. JSON string format.</p>
+     * <p>The specific metadata of the file. For example, image width and height, or video bitrate and resolution. Search is not supported for this field. The value is in JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;ImageHeight&quot;: 400,     &quot;ImageWidth&quot;: 800 }</p>
@@ -115,7 +115,7 @@ public class DatasetFileMeta extends TeaModel {
     public String semanticIndexJobId;
 
     /**
-     * <p>The last update time of the semantic index. UTC timestamp in ISO 8601 format.</p>
+     * <p>The last update time of the semantic index. The value is a UTC timestamp in ISO 8601 format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class DatasetFileMeta extends TeaModel {
     /**
      * <p>The current status of the metadata. Valid values:</p>
      * <ul>
-     * <li>ACTIVE: currently available.</li>
+     * <li>ACTIVE: active.</li>
      * <li>DELETED: deleted.</li>
      * </ul>
      * 
@@ -138,15 +138,15 @@ public class DatasetFileMeta extends TeaModel {
     public String status;
 
     /**
-     * <p>The tag collection of the metadata in JSON string format. This includes:</p>
+     * <p>The collection of labels for the metadata, in JSON string format. The following label groups are included:</p>
      * <ul>
-     * <li>Algorithm tag group:<ul>
-     * <li>ai: The list of tag names aggregated from all algorithm tagging tasks for a single metadata entry.</li>
+     * <li>Algorithm label group:<ul>
+     * <li>ai: the list of label names aggregated from all algorithm labeling tasks for a single metadata entry.</li>
      * </ul>
      * </li>
-     * <li>User-defined tag group:<ul>
-     * <li>user: The list of tag names manually added by the user for a single metadata entry.</li>
-     * <li>user-delete-ai-tags: The list of tag names in the algorithm tag group that the user wants to delete for a single metadata entry.</li>
+     * <li>User-defined label group:<ul>
+     * <li>user: the list of label names manually added by the user for a single metadata entry.</li>
+     * <li>user-delete-ai-tags: the list of label names in the algorithm label group that the user wants to delete for a single metadata entry.</li>
      * </ul>
      * </li>
      * </ul>
@@ -184,7 +184,7 @@ public class DatasetFileMeta extends TeaModel {
     public String thumbnailUrl;
 
     /**
-     * <p>The unique URI of the file. Used to record the unique path of the file. Supports file paths in OSS and NAS.</p>
+     * <p>The unique URI of the file. This parameter is used to record the unique path of the file. File paths in OSS and NAS are supported.</p>
      * <details>
      * <summary>OSS</summary>
      * oss://${bucket}/${path}

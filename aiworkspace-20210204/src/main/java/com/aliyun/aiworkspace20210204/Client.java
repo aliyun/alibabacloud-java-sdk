@@ -1618,6 +1618,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a prompt.</p>
+     * 
+     * @param request CreatePromptRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePromptResponse
+     */
+    public CreatePromptResponse createPromptWithOptions(CreatePromptRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.frameworkContent)) {
+            body.put("FrameworkContent", request.frameworkContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.frameworkType)) {
+            body.put("FrameworkType", request.frameworkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptName)) {
+            body.put("PromptName", request.promptName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePrompt"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/prompts"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePromptResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a prompt.</p>
+     * 
+     * @param request CreatePromptRequest
+     * @return CreatePromptResponse
+     */
+    public CreatePromptResponse createPrompt(CreatePromptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPromptWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a run for an experiment. The run can be associated with a specific workload or be a standalone code execution.</p>
      * 
@@ -2608,6 +2681,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteModelVersionLabelsWithOptions(ModelId, VersionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When calling this operation, note the following:</p>
+     * <ul>
+     * <li>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</li>
+     * <li>Tag keys cannot start with aliyun, acs, http://, or https://.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a prompt.</p>
+     * 
+     * @param request DeletePromptRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePromptResponse
+     */
+    public DeletePromptResponse deletePromptWithOptions(String PromptId, DeletePromptRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePrompt"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/prompts/" + com.aliyun.openapiutil.Client.getEncodeParam(PromptId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePromptResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When calling this operation, note the following:</p>
+     * <ul>
+     * <li>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</li>
+     * <li>Tag keys cannot start with aliyun, acs, http://, or https://.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a prompt.</p>
+     * 
+     * @param request DeletePromptRequest
+     * @return DeletePromptResponse
+     */
+    public DeletePromptResponse deletePrompt(String PromptId, DeletePromptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deletePromptWithOptions(PromptId, request, headers, runtime);
     }
 
     /**
@@ -3733,6 +3867,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getPermissionWithOptions(WorkspaceId, PermissionCode, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a prompt.</p>
+     * 
+     * @param request GetPromptRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPromptResponse
+     */
+    public GetPromptResponse getPromptWithOptions(String PromptId, GetPromptRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPrompt"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/prompts/" + com.aliyun.openapiutil.Client.getEncodeParam(PromptId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPromptResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a prompt.</p>
+     * 
+     * @param request GetPromptRequest
+     * @return GetPromptResponse
+     */
+    public GetPromptResponse getPrompt(String PromptId, GetPromptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPromptWithOptions(PromptId, request, headers, runtime);
     }
 
     /**
@@ -5281,6 +5462,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listProductsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of prompts.</p>
+     * 
+     * @param request ListPromptsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPromptsResponse
+     */
+    public ListPromptsResponse listPromptsWithOptions(ListPromptsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.frameworkType)) {
+            query.put("FrameworkType", request.frameworkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrompts"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/prompts"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPromptsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of prompts.</p>
+     * 
+     * @param request ListPromptsRequest
+     * @return ListPromptsResponse
+     */
+    public ListPromptsResponse listPrompts(ListPromptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPromptsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -7120,6 +7368,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateModelVersionWithOptions(ModelId, VersionName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the prompt of a dataset.</p>
+     * 
+     * @param request UpdatePromptRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePromptResponse
+     */
+    public UpdatePromptResponse updatePromptWithOptions(String PromptId, UpdatePromptRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.frameworkContent)) {
+            body.put("FrameworkContent", request.frameworkContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.frameworkType)) {
+            body.put("FrameworkType", request.frameworkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrompt"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/prompts/" + com.aliyun.openapiutil.Client.getEncodeParam(PromptId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePromptResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the prompt of a dataset.</p>
+     * 
+     * @param request UpdatePromptRequest
+     * @return UpdatePromptResponse
+     */
+    public UpdatePromptResponse updatePrompt(String PromptId, UpdatePromptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updatePromptWithOptions(PromptId, request, headers, runtime);
     }
 
     /**
