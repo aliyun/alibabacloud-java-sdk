@@ -2020,6 +2020,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createPublicEndpoint)) {
+            query.put("CreatePublicEndpoint", request.createPublicEndpoint);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
             query.put("DBClusterDescription", request.DBClusterDescription);
         }
@@ -2066,6 +2070,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
             query.put("ModelName", request.modelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSpace)) {
+            query.put("ModelSpace", request.modelSpace);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -2178,6 +2186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSpaceName)) {
+            query.put("ModelSpaceName", request.modelSpaceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2304,12 +2316,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAIDBClusterTaskResponse createAIDBClusterTaskWithOptions(CreateAIDBClusterTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customOssBucketName)) {
+            query.put("CustomOssBucketName", request.customOssBucketName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
             query.put("DBInstanceClass", request.DBInstanceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataserviceMode)) {
+            query.put("DataserviceMode", request.dataserviceMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.datasetPath)) {
@@ -3818,6 +3838,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cacheCostPointsPerMillion)) {
             query.put("CacheCostPointsPerMillion", request.cacheCostPointsPerMillion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTargetType)) {
+            query.put("EffectiveTargetType", request.effectiveTargetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTargetValue)) {
+            query.put("EffectiveTargetValue", request.effectiveTargetValue);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gwClusterId)) {
@@ -6800,6 +6828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSpace)) {
+            query.put("ModelSpace", request.modelSpace);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -6842,6 +6874,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
             query.put("ApiKey", request.apiKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSpaceName)) {
+            query.put("ModelSpaceName", request.modelSpaceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -9928,6 +9964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAIDBClusterApiKeysResponse describeAIDBClusterApiKeysWithOptions(DescribeAIDBClusterApiKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modelSpaceName)) {
+            query.put("ModelSpaceName", request.modelSpaceName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -11939,12 +11979,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the performance of a PolarDB AI application.</p>
      * 
-     * @param request DescribeApplicationPerformanceRequest
+     * @param tmpReq DescribeApplicationPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeApplicationPerformanceResponse
      */
-    public DescribeApplicationPerformanceResponse describeApplicationPerformanceWithOptions(DescribeApplicationPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeApplicationPerformanceResponse describeApplicationPerformanceWithOptions(DescribeApplicationPerformanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeApplicationPerformanceShrinkRequest request = new DescribeApplicationPerformanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "filter", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
             query.put("ApplicationId", request.applicationId);
@@ -11992,6 +12038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("filter", request.filterShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -13432,6 +13482,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCostRulesResponse describeCostRulesWithOptions(DescribeCostRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTargetType)) {
+            query.put("EffectiveTargetType", request.effectiveTargetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTargetValue)) {
+            query.put("EffectiveTargetValue", request.effectiveTargetValue);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gwClusterId)) {
             query.put("GwClusterId", request.gwClusterId);
         }
@@ -30646,7 +30704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves memories based on a search query.</p>
+     * <p>Retrieves memories.</p>
      * 
      * @param request SearchMemoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30673,6 +30731,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.memoryUserId)) {
             query.put("MemoryUserId", request.memoryUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
@@ -30702,7 +30768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves memories based on a search query.</p>
+     * <p>Retrieves memories.</p>
      * 
      * @param request SearchMemoriesRequest
      * @return SearchMemoriesResponse

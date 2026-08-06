@@ -48,6 +48,13 @@ public class CreateAIDBClusterRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <strong>example:</strong>
+     * <p>ON</p>
+     */
+    @NameInMap("CreatePublicEndpoint")
+    public String createPublicEndpoint;
+
+    /**
      * <p>The description of the cluster. You can use the description to perform a fuzzy search.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +74,6 @@ public class CreateAIDBClusterRequest extends TeaModel {
 
     /**
      * <p>The node specification.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>polar.pg.g4.6xlarge.gu4</p>
@@ -153,6 +159,13 @@ public class CreateAIDBClusterRequest extends TeaModel {
      */
     @NameInMap("ModelName")
     public String modelName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>pms-xxx</p>
+     */
+    @NameInMap("ModelSpace")
+    public String modelSpace;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -345,6 +358,14 @@ public class CreateAIDBClusterRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateAIDBClusterRequest setCreatePublicEndpoint(String createPublicEndpoint) {
+        this.createPublicEndpoint = createPublicEndpoint;
+        return this;
+    }
+    public String getCreatePublicEndpoint() {
+        return this.createPublicEndpoint;
+    }
+
     public CreateAIDBClusterRequest setDBClusterDescription(String DBClusterDescription) {
         this.DBClusterDescription = DBClusterDescription;
         return this;
@@ -439,6 +460,14 @@ public class CreateAIDBClusterRequest extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public CreateAIDBClusterRequest setModelSpace(String modelSpace) {
+        this.modelSpace = modelSpace;
+        return this;
+    }
+    public String getModelSpace() {
+        return this.modelSpace;
     }
 
     public CreateAIDBClusterRequest setOwnerAccount(String ownerAccount) {

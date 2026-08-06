@@ -14,6 +14,13 @@ public class DeleteAIDBClusterRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pms-xxx</p>
+     */
+    @NameInMap("ModelSpace")
+    public String modelSpace;
+
     public static DeleteAIDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAIDBClusterRequest self = new DeleteAIDBClusterRequest();
         return TeaModel.build(map, self);
@@ -25,6 +32,14 @@ public class DeleteAIDBClusterRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DeleteAIDBClusterRequest setModelSpace(String modelSpace) {
+        this.modelSpace = modelSpace;
+        return this;
+    }
+    public String getModelSpace() {
+        return this.modelSpace;
     }
 
 }

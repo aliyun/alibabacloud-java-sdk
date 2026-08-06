@@ -7,7 +7,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li>vnode: ACK-managed</li>
+     * <li>vnode: managed by ACK</li>
      * <li>container: loginable container</li>
      * <li>maas: model service</li>
      * </ul>
@@ -72,6 +72,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
+    @NameInMap("DBInstanceStatusDesc")
+    public String DBInstanceStatusDesc;
+
     /**
      * <p>The node details.</p>
      */
@@ -108,7 +111,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The cluster expiration time.</p>
      * <blockquote>
-     * <p>This parameter returns a value only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+     * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -180,6 +183,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("MaxQPM")
     public String maxQPM;
 
+    @NameInMap("MaxTPM")
+    public String maxTPM;
+
     /**
      * <p>The model name.</p>
      * 
@@ -188,6 +194,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     @NameInMap("ModelName")
     public String modelName;
+
+    @NameInMap("ModelSpaceName")
+    public String modelSpaceName;
 
     /**
      * <p>The model type.</p>
@@ -252,12 +261,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String runType;
 
     /**
-     * <p>Valid values for Enterprise Edition storage type:</p>
+     * <p>The storage type for Enterprise Edition. Valid values:</p>
      * <ul>
      * <li><strong>PSL5</strong></li>
      * <li><strong>PSL4</strong></li>
      * </ul>
-     * <p>Valid values for Standard Edition storage type:</p>
+     * <p>The storage type for Standard Edition. Valid values:</p>
      * <ul>
      * <li><strong>ESSDPL0</strong></li>
      * <li><strong>ESSDPL1</strong></li>
@@ -279,7 +288,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String timeSlicesType;
 
     /**
-     * <p>The VPC ID specified for the zone switchover.</p>
+     * <p>The VPC ID that can be specified when switching zones.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
@@ -318,7 +327,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone IDs.</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i,cn-hangzhou-g</p>
@@ -377,6 +386,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getDBClusterStatus() {
         return this.DBClusterStatus;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setDBInstanceStatusDesc(String DBInstanceStatusDesc) {
+        this.DBInstanceStatusDesc = DBInstanceStatusDesc;
+        return this;
+    }
+    public String getDBInstanceStatusDesc() {
+        return this.DBInstanceStatusDesc;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setDBNodes(java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodes> DBNodes) {
@@ -475,12 +492,28 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         return this.maxQPM;
     }
 
+    public DescribeAIDBClusterAttributeResponseBody setMaxTPM(String maxTPM) {
+        this.maxTPM = maxTPM;
+        return this;
+    }
+    public String getMaxTPM() {
+        return this.maxTPM;
+    }
+
     public DescribeAIDBClusterAttributeResponseBody setModelName(String modelName) {
         this.modelName = modelName;
         return this;
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setModelSpaceName(String modelSpaceName) {
+        this.modelSpaceName = modelSpaceName;
+        return this;
+    }
+    public String getModelSpaceName() {
+        return this.modelSpaceName;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setModelType(String modelType) {
@@ -696,6 +729,58 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis extends TeaModel {
+        @NameInMap("ApiName")
+        public String apiName;
+
+        @NameInMap("GenerationMode")
+        public String generationMode;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis self = new DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis setApiName(String apiName) {
+            this.apiName = apiName;
+            return this;
+        }
+        public String getApiName() {
+            return this.apiName;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis setGenerationMode(String generationMode) {
+            this.generationMode = generationMode;
+            return this;
+        }
+        public String getGenerationMode() {
+            return this.generationMode;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
     public static class DescribeAIDBClusterAttributeResponseBodyDBNodes extends TeaModel {
         /**
          * <p>The list of data cloud disks.</p>
@@ -759,7 +844,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          * <li><strong>DBNodeDeleting</strong>: deleting a node </li>
          * <li><strong>ClassChanging</strong>: changing node specifications  </li>
          * <li><strong>MinorVersionUpgrading</strong>: upgrading the minor version</li>
-         * <li><strong>Maintaining</strong>: under maintenance  </li>
+         * <li><strong>Maintaining</strong>: being maintained  </li>
          * <li><strong>Switching</strong>: being switched</li>
          * </ul>
          * 
@@ -796,6 +881,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         public String memorySize;
 
+        @NameInMap("ModelName")
+        public String modelName;
+
         /**
          * <p>The public IP address.</p>
          * 
@@ -804,6 +892,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         @NameInMap("PublicIp")
         public String publicIp;
+
+        @NameInMap("SupportedApis")
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis> supportedApis;
 
         /**
          * <p>The Kubernetes virtual node ID.</p>
@@ -926,12 +1017,28 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             return this.memorySize;
         }
 
+        public DescribeAIDBClusterAttributeResponseBodyDBNodes setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
         public DescribeAIDBClusterAttributeResponseBodyDBNodes setPublicIp(String publicIp) {
             this.publicIp = publicIp;
             return this;
         }
         public String getPublicIp() {
             return this.publicIp;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyDBNodes setSupportedApis(java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis> supportedApis) {
+            this.supportedApis = supportedApis;
+            return this;
+        }
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyDBNodesSupportedApis> getSupportedApis() {
+            return this.supportedApis;
         }
 
         public DescribeAIDBClusterAttributeResponseBodyDBNodes setVNodeId(String VNodeId) {
@@ -970,7 +1077,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems extends TeaModel {
         /**
-         * <p>The database connection address.</p>
+         * <p>The database endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**********.rwlb.rds.aliyuncs.com</p>

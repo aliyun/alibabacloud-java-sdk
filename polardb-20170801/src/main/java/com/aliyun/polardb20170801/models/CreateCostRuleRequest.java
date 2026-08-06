@@ -5,13 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateCostRuleRequest extends TeaModel {
     /**
-     * <p>The number of cost points per million cache tokens. The default value is 0.</p>
+     * <p>The cost points per million cached tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("CacheCostPointsPerMillion")
     public String cacheCostPointsPerMillion;
+
+    /**
+     * <p>The effective target type. Valid values:</p>
+     * <ul>
+     * <li>global</li>
+     * <li>consumerGroup</li>
+     * <li>consumer</li>
+     * </ul>
+     * <p>Default value: global.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>global</p>
+     */
+    @NameInMap("EffectiveTargetType")
+    public String effectiveTargetType;
+
+    /**
+     * <p>The effective target value. This parameter is required when EffectiveTargetType is not set to global.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
+    @NameInMap("EffectiveTargetValue")
+    public String effectiveTargetValue;
 
     /**
      * <p>The gateway instance ID.</p>
@@ -24,7 +48,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The number of cost points per million input tokens. The default value is 0.</p>
+     * <p>The cost points per million input tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -33,7 +57,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String inputCostPointsPerMillion;
 
     /**
-     * <p>The name of the model, such as <code>gpt-4</code> or <code>qwen-turbo</code>.</p>
+     * <p>The model name, such as gpt-4 or qwen-turbo.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +77,7 @@ public class CreateCostRuleRequest extends TeaModel {
     public String modelServiceId;
 
     /**
-     * <p>The number of cost points per million output tokens. The default value is 0.</p>
+     * <p>The cost points per million output tokens. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -81,6 +105,22 @@ public class CreateCostRuleRequest extends TeaModel {
     }
     public String getCacheCostPointsPerMillion() {
         return this.cacheCostPointsPerMillion;
+    }
+
+    public CreateCostRuleRequest setEffectiveTargetType(String effectiveTargetType) {
+        this.effectiveTargetType = effectiveTargetType;
+        return this;
+    }
+    public String getEffectiveTargetType() {
+        return this.effectiveTargetType;
+    }
+
+    public CreateCostRuleRequest setEffectiveTargetValue(String effectiveTargetValue) {
+        this.effectiveTargetValue = effectiveTargetValue;
+        return this;
+    }
+    public String getEffectiveTargetValue() {
+        return this.effectiveTargetValue;
     }
 
     public CreateCostRuleRequest setGwClusterId(String gwClusterId) {

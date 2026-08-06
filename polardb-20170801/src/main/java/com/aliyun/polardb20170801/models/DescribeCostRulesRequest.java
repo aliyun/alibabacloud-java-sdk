@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeCostRulesRequest extends TeaModel {
     /**
+     * <p>Filters by effective target type. Valid values: global, consumerGroup, and consumer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>global</p>
+     */
+    @NameInMap("EffectiveTargetType")
+    public String effectiveTargetType;
+
+    /**
+     * <p>Filters by effective target value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
+    @NameInMap("EffectiveTargetValue")
+    public String effectiveTargetValue;
+
+    /**
      * <p>The gateway instance ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -15,7 +33,7 @@ public class DescribeCostRulesRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The model name, such as <code>gpt-4</code> or <code>qwen-turbo</code>.</p>
+     * <p>The model name, such as gpt-4 or qwen-turbo.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-max</p>
@@ -44,12 +62,9 @@ public class DescribeCostRulesRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
@@ -71,6 +86,22 @@ public class DescribeCostRulesRequest extends TeaModel {
     public static DescribeCostRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCostRulesRequest self = new DescribeCostRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCostRulesRequest setEffectiveTargetType(String effectiveTargetType) {
+        this.effectiveTargetType = effectiveTargetType;
+        return this;
+    }
+    public String getEffectiveTargetType() {
+        return this.effectiveTargetType;
+    }
+
+    public DescribeCostRulesRequest setEffectiveTargetValue(String effectiveTargetValue) {
+        this.effectiveTargetValue = effectiveTargetValue;
+        return this;
+    }
+    public String getEffectiveTargetValue() {
+        return this.effectiveTargetValue;
     }
 
     public DescribeCostRulesRequest setGwClusterId(String gwClusterId) {

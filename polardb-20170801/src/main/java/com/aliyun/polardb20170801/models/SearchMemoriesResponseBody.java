@@ -4,8 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class SearchMemoriesResponseBody extends TeaModel {
+    @NameInMap("Page")
+    public String page;
+
+    @NameInMap("PageSize")
+    public String pageSize;
+
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -14,14 +20,36 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of search results.</p>
+     * <p>The list of results.</p>
      */
     @NameInMap("Results")
     public java.util.List<SearchMemoriesResponseBodyResults> results;
 
+    @NameInMap("Total")
+    public String total;
+
+    @NameInMap("TotalPages")
+    public String totalPages;
+
     public static SearchMemoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchMemoriesResponseBody self = new SearchMemoriesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SearchMemoriesResponseBody setPage(String page) {
+        this.page = page;
+        return this;
+    }
+    public String getPage() {
+        return this.page;
+    }
+
+    public SearchMemoriesResponseBody setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public SearchMemoriesResponseBody setRequestId(String requestId) {
@@ -40,9 +68,25 @@ public class SearchMemoriesResponseBody extends TeaModel {
         return this.results;
     }
 
+    public SearchMemoriesResponseBody setTotal(String total) {
+        this.total = total;
+        return this;
+    }
+    public String getTotal() {
+        return this.total;
+    }
+
+    public SearchMemoriesResponseBody setTotalPages(String totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+    public String getTotalPages() {
+        return this.totalPages;
+    }
+
     public static class SearchMemoriesResponseBodyResults extends TeaModel {
         /**
-         * <p>The creation time of the memory.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-26T08:25:44Z</p>
@@ -51,7 +95,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The unique ID of the memory.</p>
+         * <p>The memory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>423</p>
@@ -60,7 +104,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The content of the memory.</p>
+         * <p>The memory content.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -69,7 +113,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String memory;
 
         /**
-         * <p>The agent ID that owns the memory.</p>
+         * <p>The agent to which the memory belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>agent1</p>
@@ -78,7 +122,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String memoryAgentId;
 
         /**
-         * <p>The user ID that owns the memory.</p>
+         * <p>The user to whom the memory belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>user1</p>
@@ -87,7 +131,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String memoryUserId;
 
         /**
-         * <p>Additional metadata associated with the memory.</p>
+         * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_现行有效\&quot;}</p>
@@ -96,7 +140,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The relevance score of the result.</p>
+         * <p>The score.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -105,7 +149,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String score;
 
         /**
-         * <p>The update time of the memory.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16T02:27:33Z</p>

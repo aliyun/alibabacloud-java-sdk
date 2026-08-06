@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCostRulesResponseBody extends TeaModel {
     /**
-     * <p>A list of cost rules.</p>
+     * <p>The list of cost rules.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeCostRulesResponseBodyItems> items;
@@ -29,7 +29,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -38,7 +38,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -110,7 +110,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
 
     public static class DescribeCostRulesResponseBodyItems extends TeaModel {
         /**
-         * <p>The cost in points per one million cached tokens.</p>
+         * <p>The cost points per million cache tokens. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -128,7 +128,25 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String costRuleId;
 
         /**
-         * <p>The time when the cost rule was created.</p>
+         * <p>The effective target type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
+         */
+        @NameInMap("EffectiveTargetType")
+        public String effectiveTargetType;
+
+        /**
+         * <p>The effective target value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
+        @NameInMap("EffectiveTargetValue")
+        public String effectiveTargetValue;
+
+        /**
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-04T16:09:29+08:00</p>
@@ -137,7 +155,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the cost rule was last updated.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -155,7 +173,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
-         * <p>The cost in points per one million input tokens.</p>
+         * <p>The cost points per million input tokens. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -182,7 +200,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public String modelServiceId;
 
         /**
-         * <p>The cost in points per one million output tokens.</p>
+         * <p>The cost points per million output tokens. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -209,6 +227,22 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
         public String getCostRuleId() {
             return this.costRuleId;
+        }
+
+        public DescribeCostRulesResponseBodyItems setEffectiveTargetType(String effectiveTargetType) {
+            this.effectiveTargetType = effectiveTargetType;
+            return this;
+        }
+        public String getEffectiveTargetType() {
+            return this.effectiveTargetType;
+        }
+
+        public DescribeCostRulesResponseBodyItems setEffectiveTargetValue(String effectiveTargetValue) {
+            this.effectiveTargetValue = effectiveTargetValue;
+            return this;
+        }
+        public String getEffectiveTargetValue() {
+            return this.effectiveTargetValue;
         }
 
         public DescribeCostRulesResponseBodyItems setGmtCreated(String gmtCreated) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAIDBClusterTaskRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>my-bucket</p>
+     */
+    @NameInMap("CustomOssBucketName")
+    public String customOssBucketName;
+
+    /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -22,6 +29,13 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cold_storage</p>
+     */
+    @NameInMap("DataserviceMode")
+    public String dataserviceMode;
 
     /**
      * <p>The training dataset ID. This parameter is required for fine-tuning.</p>
@@ -175,6 +189,14 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateAIDBClusterTaskRequest setCustomOssBucketName(String customOssBucketName) {
+        this.customOssBucketName = customOssBucketName;
+        return this;
+    }
+    public String getCustomOssBucketName() {
+        return this.customOssBucketName;
+    }
+
     public CreateAIDBClusterTaskRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
@@ -189,6 +211,14 @@ public class CreateAIDBClusterTaskRequest extends TeaModel {
     }
     public String getDBInstanceClass() {
         return this.DBInstanceClass;
+    }
+
+    public CreateAIDBClusterTaskRequest setDataserviceMode(String dataserviceMode) {
+        this.dataserviceMode = dataserviceMode;
+        return this;
+    }
+    public String getDataserviceMode() {
+        return this.dataserviceMode;
     }
 
     public CreateAIDBClusterTaskRequest setDatasetPath(String datasetPath) {

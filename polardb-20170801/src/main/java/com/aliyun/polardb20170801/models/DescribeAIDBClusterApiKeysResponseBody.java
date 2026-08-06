@@ -10,6 +10,12 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
     @NameInMap("ApiKeys")
     public java.util.List<DescribeAIDBClusterApiKeysResponseBodyApiKeys> apiKeys;
 
+    @NameInMap("PageNumber")
+    public String pageNumber;
+
+    @NameInMap("PageSize")
+    public String pageSize;
+
     /**
      * <p>Id of the request</p>
      * 
@@ -30,6 +36,22 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
     }
     public java.util.List<DescribeAIDBClusterApiKeysResponseBodyApiKeys> getApiKeys() {
         return this.apiKeys;
+    }
+
+    public DescribeAIDBClusterApiKeysResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAIDBClusterApiKeysResponseBody setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeAIDBClusterApiKeysResponseBody setRequestId(String requestId) {

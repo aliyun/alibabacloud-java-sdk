@@ -14,7 +14,7 @@ public class CreateCostRuleResponseBody extends TeaModel {
     public String costRuleId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>580EF224-9647-59E7-9950-D9EBFD6A2921</p>

@@ -14,7 +14,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String accelerateType;
 
     /**
-     * <p>The acceleration space. Unit: GB.</p>
+     * <p>The acceleration storage space, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -54,7 +54,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String authorizedUserIds;
 
     /**
-     * <p>The bandwidth. Unit: MB/s.</p>
+     * <p>The bandwidth, in MB/s.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -63,7 +63,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double bandwidth;
 
     /**
-     * <p>The bandwidth baseline. Unit: MB/s/TiB.</p>
+     * <p>The bandwidth baseline, in MB/s/TiB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -130,6 +130,12 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("CustomBucketPathList")
     public java.util.List<DescribePolarFsAttributeResponseBodyCustomBucketPathList> customBucketPathList;
 
+    /**
+     * <p>The endpoint ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pe-zo1z5qw5nb39s699n</p>
+     */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
@@ -147,7 +153,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The list of endpoints, including endpoint information for types such as NAS and S3Gateway.</p>
+     * <p>The list of endpoints, including endpoint information for NAS, S3Gateway, and other types.</p>
      */
     @NameInMap("EndpointItems")
     public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItems> endpointItems;
@@ -199,9 +205,21 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("LockMode")
     public String lockMode;
 
+    /**
+     * <p>The proxy endpoint ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pe-cz9inwqec7ifd98c3</p>
+     */
     @NameInMap("MaxscaleEndpointId")
     public String maxscaleEndpointId;
 
+    /**
+     * <p>The metadata service cluster endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-x67w12d2d5t13mt88.pg.polardb.rds.aliyuncs.com</p>
+     */
     @NameInMap("MetaConnString")
     public String metaConnString;
 
@@ -214,11 +232,17 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("MetaInstanceName")
     public String metaInstanceName;
 
+    /**
+     * <p>The metadata proxy service cluster endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-y3610mp168p3bb740.rwlb.rds.aliyuncs.com</p>
+     */
     @NameInMap("MetaMxsConnString")
     public String metaMxsConnString;
 
     /**
-     * <p>The metadata URL for Fuse mounting (encrypted).</p>
+     * <p>The metadata address for Fuse mount (encrypted).</p>
      * 
      * <strong>example:</strong>
      * <p>e6cc1d2e2a6fa292038d999fda6501*****</p>
@@ -284,8 +308,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>The instance version. Valid values:</p>
      * <ul>
-     * <li><strong>PolarFS 2.0</strong>: 2.0.</li>
-     * <li><strong>PolarFS 1.0</strong>: 1.0.</li>
+     * <li><strong>PolarFS 2.0</strong>: 2.0</li>
+     * <li><strong>PolarFS 1.0</strong>: 1.0</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -349,7 +373,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The storage space. Unit: GB.</p>
+     * <p>The storage space, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -365,7 +389,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      * </ul>
      * <p>The storage type for the Basic Edition. Valid values:</p>
      * <ul>
-     * <li><strong>city_redundancy</strong>: zone-redundant storage.</li>
+     * <li><strong>city_redundancy</strong>: cross-zone redundancy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -375,7 +399,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The used storage space. Unit: bytes.</p>
+     * <p>The storage usage, in bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>3012558848</p>
@@ -844,21 +868,62 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems extends TeaModel {
+        /**
+         * <p>The endpoint of the protocol connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aclsh-prd-pdb12-rw.rwlb.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.116.9.224</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The network type of the connection string. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong>: public endpoint.</li>
+         * <li><strong>Private</strong>: private endpoint.</li>
+         * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-**********</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-**************</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -934,7 +999,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         public String DBEndpointId;
 
         /**
-         * <p>The endpoint type, such as Nas or S3Gateway.</p>
+         * <p>The endpoint type. Valid values: Nas, S3Gateway, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>S3Gateway</p>

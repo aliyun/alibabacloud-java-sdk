@@ -15,7 +15,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The start time for filtering memories by creation time. Must be in UTC and ISO 8601 format.</p>
+     * <p>The start time for memory creation.</p>
      * 
      * <strong>example:</strong>
      * <p>yyyy-MM-ddTHH:mm:ssZ</p>
@@ -24,7 +24,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String createTimeBegin;
 
     /**
-     * <p>The end time for filtering memories by creation time. Must be in UTC and ISO 8601 format.</p>
+     * <p>The end time for memory creation.</p>
      * 
      * <strong>example:</strong>
      * <p>yyyy-MM-ddTHH:mm:ssZ</p>
@@ -33,7 +33,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
-     * <p>The agent ID associated with the memory.</p>
+     * <p>The memory agent ID.</p>
      * 
      * <strong>example:</strong>
      * <p>agent1</p>
@@ -42,7 +42,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String memoryAgentId;
 
     /**
-     * <p>The user ID associated with the memory.</p>
+     * <p>The memory user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,8 +52,19 @@ public class SearchMemoriesRequest extends TeaModel {
     public String memoryUserId;
 
     /**
+     * <p>The page number.</p>
+     */
+    @NameInMap("Page")
+    public Integer page;
+
+    /**
+     * <p>The number of records per page.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
      * <p>The search query.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>who are you</p>
@@ -62,7 +73,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The maximum number of results to return.</p>
+     * <p>Specifies the number of top results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -113,6 +124,22 @@ public class SearchMemoriesRequest extends TeaModel {
     }
     public String getMemoryUserId() {
         return this.memoryUserId;
+    }
+
+    public SearchMemoriesRequest setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public SearchMemoriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public SearchMemoriesRequest setQuery(String query) {

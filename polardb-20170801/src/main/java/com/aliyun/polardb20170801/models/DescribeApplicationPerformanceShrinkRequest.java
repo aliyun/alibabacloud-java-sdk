@@ -3,7 +3,7 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApplicationPerformanceRequest extends TeaModel {
+public class DescribeApplicationPerformanceShrinkRequest extends TeaModel {
     /**
      * <p>The application cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -129,14 +129,14 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     public String startTime;
 
     @NameInMap("filter")
-    public java.util.Map<String, ?> filter;
+    public String filterShrink;
 
-    public static DescribeApplicationPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApplicationPerformanceRequest self = new DescribeApplicationPerformanceRequest();
+    public static DescribeApplicationPerformanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeApplicationPerformanceShrinkRequest self = new DescribeApplicationPerformanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationPerformanceRequest setApplicationId(String applicationId) {
+    public DescribeApplicationPerformanceShrinkRequest setApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
@@ -144,7 +144,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.applicationId;
     }
 
-    public DescribeApplicationPerformanceRequest setConsumer(String consumer) {
+    public DescribeApplicationPerformanceShrinkRequest setConsumer(String consumer) {
         this.consumer = consumer;
         return this;
     }
@@ -152,7 +152,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.consumer;
     }
 
-    public DescribeApplicationPerformanceRequest setConsumerGroup(String consumerGroup) {
+    public DescribeApplicationPerformanceShrinkRequest setConsumerGroup(String consumerGroup) {
         this.consumerGroup = consumerGroup;
         return this;
     }
@@ -160,7 +160,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.consumerGroup;
     }
 
-    public DescribeApplicationPerformanceRequest setDownsample(String downsample) {
+    public DescribeApplicationPerformanceShrinkRequest setDownsample(String downsample) {
         this.downsample = downsample;
         return this;
     }
@@ -168,7 +168,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.downsample;
     }
 
-    public DescribeApplicationPerformanceRequest setEndStep(Long endStep) {
+    public DescribeApplicationPerformanceShrinkRequest setEndStep(Long endStep) {
         this.endStep = endStep;
         return this;
     }
@@ -176,7 +176,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.endStep;
     }
 
-    public DescribeApplicationPerformanceRequest setEndTime(String endTime) {
+    public DescribeApplicationPerformanceShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -184,7 +184,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeApplicationPerformanceRequest setInterval(String interval) {
+    public DescribeApplicationPerformanceShrinkRequest setInterval(String interval) {
         this.interval = interval;
         return this;
     }
@@ -192,7 +192,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.interval;
     }
 
-    public DescribeApplicationPerformanceRequest setKey(String key) {
+    public DescribeApplicationPerformanceShrinkRequest setKey(String key) {
         this.key = key;
         return this;
     }
@@ -200,7 +200,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.key;
     }
 
-    public DescribeApplicationPerformanceRequest setMaxPoints(Integer maxPoints) {
+    public DescribeApplicationPerformanceShrinkRequest setMaxPoints(Integer maxPoints) {
         this.maxPoints = maxPoints;
         return this;
     }
@@ -208,7 +208,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.maxPoints;
     }
 
-    public DescribeApplicationPerformanceRequest setModelService(String modelService) {
+    public DescribeApplicationPerformanceShrinkRequest setModelService(String modelService) {
         this.modelService = modelService;
         return this;
     }
@@ -216,7 +216,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.modelService;
     }
 
-    public DescribeApplicationPerformanceRequest setStartStep(Long startStep) {
+    public DescribeApplicationPerformanceShrinkRequest setStartStep(Long startStep) {
         this.startStep = startStep;
         return this;
     }
@@ -224,7 +224,7 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.startStep;
     }
 
-    public DescribeApplicationPerformanceRequest setStartTime(String startTime) {
+    public DescribeApplicationPerformanceShrinkRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -232,12 +232,12 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeApplicationPerformanceRequest setFilter(java.util.Map<String, ?> filter) {
-        this.filter = filter;
+    public DescribeApplicationPerformanceShrinkRequest setFilterShrink(String filterShrink) {
+        this.filterShrink = filterShrink;
         return this;
     }
-    public java.util.Map<String, ?> getFilter() {
-        return this.filter;
+    public String getFilterShrink() {
+        return this.filterShrink;
     }
 
 }

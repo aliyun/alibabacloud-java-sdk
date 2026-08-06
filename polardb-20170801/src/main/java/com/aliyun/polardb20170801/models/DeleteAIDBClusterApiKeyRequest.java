@@ -15,6 +15,13 @@ public class DeleteAIDBClusterApiKeyRequest extends TeaModel {
     public String apiKey;
 
     /**
+     * <strong>example:</strong>
+     * <p>pms-xxx</p>
+     */
+    @NameInMap("ModelSpaceName")
+    public String modelSpaceName;
+
+    /**
      * <p>The region ID.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
@@ -38,6 +45,14 @@ public class DeleteAIDBClusterApiKeyRequest extends TeaModel {
     }
     public String getApiKey() {
         return this.apiKey;
+    }
+
+    public DeleteAIDBClusterApiKeyRequest setModelSpaceName(String modelSpaceName) {
+        this.modelSpaceName = modelSpaceName;
+        return this;
+    }
+    public String getModelSpaceName() {
+        return this.modelSpaceName;
     }
 
     public DeleteAIDBClusterApiKeyRequest setRegionId(String regionId) {

@@ -14,6 +14,13 @@ public class CreateAIDBClusterApiKeyRequest extends TeaModel {
     public String description;
 
     /**
+     * <strong>example:</strong>
+     * <p>pms-xxx</p>
+     */
+    @NameInMap("ModelSpaceName")
+    public String modelSpaceName;
+
+    /**
      * <p>The region ID.</p>
      * <blockquote>
      * <ul>
@@ -40,6 +47,14 @@ public class CreateAIDBClusterApiKeyRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAIDBClusterApiKeyRequest setModelSpaceName(String modelSpaceName) {
+        this.modelSpaceName = modelSpaceName;
+        return this;
+    }
+    public String getModelSpaceName() {
+        return this.modelSpaceName;
     }
 
     public CreateAIDBClusterApiKeyRequest setRegionId(String regionId) {

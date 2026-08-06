@@ -31,6 +31,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CustomBucketInfo")
+    public DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo customBucketInfo;
+
     /**
      * <p>The task name.</p>
      * 
@@ -224,6 +227,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         return this.createTime;
     }
 
+    public DescribeAIDBClusterTaskAttributeResponseBody setCustomBucketInfo(DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo customBucketInfo) {
+        this.customBucketInfo = customBucketInfo;
+        return this;
+    }
+    public DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo getCustomBucketInfo() {
+        return this.customBucketInfo;
+    }
+
     public DescribeAIDBClusterTaskAttributeResponseBody setDBClusterDescription(String DBClusterDescription) {
         this.DBClusterDescription = DBClusterDescription;
         return this;
@@ -366,6 +377,29 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
+         */
+        @NameInMap("CustomOssBucketName")
+        public String customOssBucketName;
+
+        public static DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo self = new DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterTaskAttributeResponseBodyCustomBucketInfo setCustomOssBucketName(String customOssBucketName) {
+            this.customOssBucketName = customOssBucketName;
+            return this;
+        }
+        public String getCustomOssBucketName() {
+            return this.customOssBucketName;
+        }
+
     }
 
     public static class DescribeAIDBClusterTaskAttributeResponseBodyDataSets extends TeaModel {

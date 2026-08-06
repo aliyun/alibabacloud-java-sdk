@@ -174,6 +174,9 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         @NameInMap("LockMode")
         public String lockMode;
 
+        @NameInMap("ModelSpace")
+        public String modelSpace;
+
         @NameInMap("ModelType")
         public String modelType;
 
@@ -302,6 +305,14 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         }
         public String getLockMode() {
             return this.lockMode;
+        }
+
+        public DescribeAIDBClustersResponseBodyItemsDBCluster setModelSpace(String modelSpace) {
+            this.modelSpace = modelSpace;
+            return this;
+        }
+        public String getModelSpace() {
+            return this.modelSpace;
         }
 
         public DescribeAIDBClustersResponseBodyItemsDBCluster setModelType(String modelType) {

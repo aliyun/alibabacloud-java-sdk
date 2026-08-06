@@ -1,3 +1,36 @@
+2026-08-06 Version: 7.11.2
+- Update API CreateAIDBCluster: add request parameters CreatePublicEndpoint.
+- Update API CreateAIDBCluster: add request parameters ModelSpace.
+- Update API CreateAIDBClusterApiKey: add request parameters ModelSpaceName.
+- Update API CreateAIDBClusterTask: add request parameters CustomOssBucketName.
+- Update API CreateAIDBClusterTask: add request parameters DataserviceMode.
+- Update API CreateCostRule: add request parameters EffectiveTargetType.
+- Update API CreateCostRule: add request parameters EffectiveTargetValue.
+- Update API DeleteAIDBCluster: add request parameters ModelSpace.
+- Update API DeleteAIDBClusterApiKey: add request parameters ModelSpaceName.
+- Update API DescribeAIDBClusterApiKeys: add request parameters ModelSpaceName.
+- Update API DescribeAIDBClusterApiKeys: add response parameters Body.PageNumber.
+- Update API DescribeAIDBClusterApiKeys: add response parameters Body.PageSize.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.DBInstanceStatusDesc.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.MaxTPM.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.ModelSpaceName.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.DBNodes.$.ModelName.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.DBNodes.$.SupportedApis.
+- Update API DescribeAIDBClusterTaskAttribute: add response parameters Body.CustomBucketInfo.
+- Update API DescribeAIDBClusters: add response parameters Body.Items.$.ModelSpace.
+- Update API DescribeApplicationPerformance: add request parameters filter.
+- Update API DescribeCostRules: add request parameters EffectiveTargetType.
+- Update API DescribeCostRules: add request parameters EffectiveTargetValue.
+- Update API DescribeCostRules: add response parameters Body.Items.$.EffectiveTargetType.
+- Update API DescribeCostRules: add response parameters Body.Items.$.EffectiveTargetValue.
+- Update API SearchMemories: add request parameters Page.
+- Update API SearchMemories: add request parameters PageSize.
+- Update API SearchMemories: add response parameters Body.Page.
+- Update API SearchMemories: add response parameters Body.PageSize.
+- Update API SearchMemories: add response parameters Body.Total.
+- Update API SearchMemories: add response parameters Body.TotalPages.
+
+
 2026-08-05 Version: 7.11.1
 - Update API DescribePolarFsAttribute: add response parameters Body.AuthorizedUserArnIds.
 - Update API DescribePolarFsAttribute: add response parameters Body.AuthorizedUserIds.
