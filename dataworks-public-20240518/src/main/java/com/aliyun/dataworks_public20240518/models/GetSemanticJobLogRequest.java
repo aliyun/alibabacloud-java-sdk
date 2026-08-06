@@ -15,7 +15,7 @@ public class GetSemanticJobLogRequest extends TeaModel {
     public String executorJobId;
 
     /**
-     * <p>The ID of the DataWorks workspace to which the job belongs. Use the ProjectId from the CreateSemanticJob response or a ListSemanticJobs list item.</p>
+     * <p>The ID of the DataWorks workspace to which the task belongs. Use the ProjectId from the CreateSemanticJob response or a ListSemanticJobs list item.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

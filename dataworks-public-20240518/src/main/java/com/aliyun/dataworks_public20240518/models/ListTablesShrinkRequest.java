@@ -13,6 +13,12 @@ public class ListTablesShrinkRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties or <code>false</code> to not return them.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeExtendedProperties")
     public Boolean includeExtendedProperties;
 
@@ -59,23 +65,23 @@ public class ListTablesShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the parent-level metadata entity. You can obtain this value from the response of the ListDatabases or ListSchemas operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <ul>
-     * <li><p>The value can be the database to which the table belongs. The ParentMetaEntityId format is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
+     * <li><p>The value can be the database to which the table belongs. The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
      * </li>
-     * <li><p>The value can also be the database schema to which the table belongs. The ParentMetaEntityId format is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
+     * <li><p>The value can also be the database schema to which the table belongs. The format of <code>ParentMetaEntityId</code> is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can set ParentMetaEntityId to a database schema only when the database type supports schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</code>, and the three-level model must be enabled for the maxcompute type). Otherwise, you can set this parameter only to a database.</li>
+     * <li>You can set <code>ParentMetaEntityId</code> to a database schema only when the database type supports schemas (<code>maxcompute/holo/postgresql/sqlserver/hybriddb_for_postgresql/oracle</code>, where the three-layer model must be enabled for the maxcompute type). Otherwise, you can set it only to a database.</li>
      * <li>For the maxcompute and dlf types, use an empty string as a placeholder for the instance ID. For the maxcompute type, the database name is the MaxCompute project name.</li>
-     * <li>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level. Use an empty string as a placeholder.</li>
+     * <li>For the starrocks type, the data catalog identifier is the catalog name. For the dlf type, the data catalog identifier is the catalog ID. Other types do not support the catalog level, and you can use an empty string as a placeholder.</li>
      * </ul>
      * </blockquote>
-     * <p>The following examples show the ParentMetaEntityId formats for common types:</p>
+     * <p>The following examples show the format of ParentMetaEntityId for common types:</p>
      * <ul>
      * <li><p><code>maxcompute-project:::project_name</code></p>
      * </li>
-     * <li><p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-level model is enabled for the project)</p>
+     * <li><p><code>maxcompute-schema:::project_name:schema_name</code> (only when the three-layer model is enabled for the project)</p>
      * </li>
      * <li><p><code>dlf-database::catalog_id:database_name</code></p>
      * </li>

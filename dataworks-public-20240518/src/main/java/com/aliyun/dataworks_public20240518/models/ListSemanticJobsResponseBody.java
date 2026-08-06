@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSemanticJobsResponseBody extends TeaModel {
     /**
-     * <p>The paginated result of task definitions. Use the Name field of a list item to run, delete, query run records, or download results. Use the ProjectId field to query run details, view logs, or stop a run.</p>
+     * <p>The paginated result of job definitions. Use the Name field of a list item to run, delete, query run records, or download results. Use the ProjectId field to query run details, logs, or stop a run.</p>
      */
     @NameInMap("Data")
     public ListSemanticJobsResponseBodyData data;
@@ -20,7 +20,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,7 +56,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
 
     public static class ListSemanticJobsResponseBodyDataSemanticJobs extends TeaModel {
         /**
-         * <p>The user ID of the semantic task creator.</p>
+         * <p>The user identifier of the semantic job creator.</p>
          * 
          * <strong>example:</strong>
          * <p>user-demo</p>
@@ -83,7 +83,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The internal unique ID of the task definition.</p>
+         * <p>The internal unique ID of the job definition.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -92,7 +92,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The task name. Used for RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
+         * <p>The job name. Used for RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
          * 
          * <strong>example:</strong>
          * <p>semantic-job-demo</p>
@@ -101,7 +101,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The workspace ID to which the task belongs. Used for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
+         * <p>The workspace ID to which the job belongs. Used for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -110,19 +110,19 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The list of uploaded file IDs associated with the task.</p>
+         * <p>The list of uploaded file IDs associated with the job.</p>
          */
         @NameInMap("ReferenceFileIds")
         public java.util.List<String> referenceFileIds;
 
         /**
-         * <p>The list of external reference file URIs associated with the task.</p>
+         * <p>The list of external reference file URIs associated with the job.</p>
          */
         @NameInMap("ReferenceFileUris")
         public java.util.List<String> referenceFileUris;
 
         /**
-         * <p>The ID of the resource group used to run this task.</p>
+         * <p>The resource group identifier used when running this job.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-demo</p>
@@ -131,13 +131,13 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The input datasource config saved in the node. This configuration determines the analysis scope at runtime.</p>
+         * <p>The input datasource config saved with the node. This configuration determines the analysis scope at runtime.</p>
          */
         @NameInMap("Source")
         public java.util.Map<String, ?> source;
 
         /**
-         * <p>The Source.type data source type saved in the task.</p>
+         * <p>The Source.type data source type saved with the job.</p>
          * 
          * <strong>example:</strong>
          * <p>maxcompute</p>
@@ -146,7 +146,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The user ID of the semantic task creator.</p>
+         * <p>The user identifier of the semantic job creator.</p>
          * 
          * <strong>example:</strong>
          * <p>user-demo</p>
@@ -259,7 +259,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
 
     public static class ListSemanticJobsResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page, starting from 1.</p>
+         * <p>The page number returned, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -268,7 +268,7 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of task definitions per page in the current response.</p>
+         * <p>The number of job definitions per page returned.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -277,13 +277,13 @@ public class ListSemanticJobsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The list of task definitions.</p>
+         * <p>The list of job definitions.</p>
          */
         @NameInMap("SemanticJobs")
         public java.util.List<ListSemanticJobsResponseBodyDataSemanticJobs> semanticJobs;
 
         /**
-         * <p>The total number of task definitions that meet the conditions within the current tenant.</p>
+         * <p>The total number of job definitions that meet the conditions in the current tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

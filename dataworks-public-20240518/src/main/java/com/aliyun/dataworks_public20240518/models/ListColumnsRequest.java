@@ -13,6 +13,12 @@ public class ListColumnsRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties or <code>false</code> to not return them.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeExtendedProperties")
     public Boolean includeExtendedProperties;
 
@@ -26,10 +32,10 @@ public class ListColumnsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order. Default value: Asc. Valid values:</p>
+     * <p>The sort direction. Default value: Asc. Valid values:</p>
      * <ul>
-     * <li>Asc: ascending order</li>
-     * <li>Desc: descending order</li>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +54,7 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The page size. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,8 +65,8 @@ public class ListColumnsRequest extends TeaModel {
     /**
      * <p>The sort field. Default value: Position. Valid values:</p>
      * <ul>
-     * <li>Name: name</li>
-     * <li>Position: position</li>
+     * <li>Name: name.</li>
+     * <li>Position: position.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +76,7 @@ public class ListColumnsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the data table. You can obtain the ID from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The table ID. You can obtain the ID from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMetaEntityDefResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier of the created entity type.</p>
+     * <p>The entity type after creation.</p>
      * 
      * <strong>example:</strong>
      * <p>custom_entity-biz_api</p>

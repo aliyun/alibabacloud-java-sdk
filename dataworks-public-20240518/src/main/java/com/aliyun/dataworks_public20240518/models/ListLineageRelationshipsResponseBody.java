@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLineageRelationshipsResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination result.</p>
      */
     @NameInMap("PagingInfo")
     public ListLineageRelationshipsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The ID of the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
@@ -59,13 +59,13 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
 
     public static class ListLineageRelationshipsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>An array of data lineage relationships.</p>
+         * <p>The list of data tables.</p>
          */
         @NameInMap("LineageRelationships")
         public java.util.List<LineageRelationship> lineageRelationships;
 
         /**
-         * <p>The current page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +74,7 @@ public class ListLineageRelationshipsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

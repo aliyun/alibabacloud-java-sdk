@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomAttributesRequest extends TeaModel {
     /**
-     * <p>The comment on the custom attribute. The service performs a fuzzy search based on this parameter\&quot;s value.</p>
+     * <p>The description of the custom attribute. The value is fuzzy matched.</p>
      * 
      * <strong>example:</strong>
      * <p>owner</p>
@@ -14,7 +14,7 @@ public class ListCustomAttributesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The display name of the custom attribute. The service performs a partial match based on this parameter\&quot;s value.</p>
+     * <p>The display name of the custom attribute. The value is matched by plain text containment.</p>
      * 
      * <strong>example:</strong>
      * <p>Owner</p>
@@ -23,7 +23,7 @@ public class ListCustomAttributesRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The entity types to which the custom attribute applies. To specify multiple entity types, separate them with commas (,), for example, <code>*-table,*-column</code>. This parameter supports specific entity types, such as <code>hms-table</code> and <code>emr-table</code>, and wildcard types, such as <code>*-table</code> and <code>*-column</code>.</p>
+     * <p>The entity types to which the custom attribute applies. Separate multiple entity types with commas, such as <code>*-table,*-column</code>. Specific entity types (such as hms-table and emr-table) and wildcard types <code>*-table</code> and <code>*-column</code> are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>maxcompute-table</p>
@@ -59,7 +59,7 @@ public class ListCustomAttributesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field to sort by. Valid values: CreateTime and ModifyTime.</p>
+     * <p>The sort field. Valid values: CreateTime and ModifyTime.</p>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>

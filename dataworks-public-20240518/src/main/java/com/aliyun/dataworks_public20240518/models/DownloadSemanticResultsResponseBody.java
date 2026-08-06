@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DownloadSemanticResultsResponseBody extends TeaModel {
     /**
-     * <p>The collection of result files for the specified node run. Multiple items are returned if a single run generates multiple files.</p>
+     * <p>The collection of result files for the specified job run. Multiple items are returned if a single run generates multiple files.</p>
      */
     @NameInMap("Data")
     public DownloadSemanticResultsResponseBodyData data;
 
     /**
-     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
@@ -56,7 +56,7 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
 
     public static class DownloadSemanticResultsResponseBodyDataResults extends TeaModel {
         /**
-         * <p>The temporary pre-signed download URL of the result file. Download the file by using an HTTP GET request as soon as possible. Do not log, share, or treat the full URL as a long-term address.</p>
+         * <p>The temporary pre-signed download URL of the result file. Download the file promptly by using an HTTP GET request. Do not log, share, or treat the full URL as a long-term address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/temporary-download-url">https://example.com/temporary-download-url</a></p>
@@ -65,7 +65,7 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>The node name to which the artifact belongs. This value is the same as the JobName value in the request.</p>
+         * <p>The job name to which the artifact belongs. This value is the same as the JobName in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>semantic-job-demo</p>
@@ -74,7 +74,7 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The run ID to which the artifact belongs. You can compare this value with the Data.JobRunId value from the RunSemanticJob response or the JobRunId value from ListSemanticJobRuns.</p>
+         * <p>The run ID to which the artifact belongs. You can compare this value with Data.JobRunId in the RunSemanticJob response or JobRunId in the ListSemanticJobRuns response.</p>
          * 
          * <strong>example:</strong>
          * <p>01H00000000000000000000000</p>
@@ -115,7 +115,7 @@ public class DownloadSemanticResultsResponseBody extends TeaModel {
 
     public static class DownloadSemanticResultsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of result files. Each item contains the associated node name, the associated run ID, and a short-lived download URL.</p>
+         * <p>The list of result files. Each item contains the associated job name, run ID, and a short-lived download URL.</p>
          */
         @NameInMap("Results")
         public java.util.List<DownloadSemanticResultsResponseBodyDataResults> results;

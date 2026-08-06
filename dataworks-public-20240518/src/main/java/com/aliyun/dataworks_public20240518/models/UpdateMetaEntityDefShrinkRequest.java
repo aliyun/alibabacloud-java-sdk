@@ -14,7 +14,7 @@ public class UpdateMetaEntityDefShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The new display name. The maximum length is 32 characters.</p>
+     * <p>The new display name, up to 32 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>Business API</p>
@@ -42,7 +42,7 @@ public class UpdateMetaEntityDefShrinkRequest extends TeaModel {
     public String newAttributeDefsShrink;
 
     /**
-     * <p>The updates to existing attribute definitions. You can modify only the display name and description. You can also add enumerated values for attributes of the ENUM type.</p>
+     * <p>Updates to existing attribute definitions. Only modifying the display name, description, and appending enum values to ENUM types are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>

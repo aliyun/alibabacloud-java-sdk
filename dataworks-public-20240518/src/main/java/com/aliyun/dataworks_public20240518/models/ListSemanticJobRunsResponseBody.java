@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSemanticJobRunsResponseBody extends TeaModel {
     /**
-     * <p>The paginated run record results. Use the JobRunId to download the results of a specific run, and use the ExecutorJobId to query details, logs, or stop a run.</p>
+     * <p>The paginated run record results. Use the JobRunId to download the results of a specific run, and use the ExecutorJobId to query details, retrieve logs, or stop a run.</p>
      */
     @NameInMap("Data")
     public ListSemanticJobRunsResponseBodyData data;
 
     /**
-     * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
+     * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>676271D6-53B4-57BE-89FA-72F7AE1418DF</p>
@@ -56,7 +56,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
 
     public static class ListSemanticJobRunsResponseBodyDataJobRuns extends TeaModel {
         /**
-         * <p>The executor job ID. Pass this value to the ExecutorJobId parameter of GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</p>
+         * <p>The executor job ID. Pass this value as the ExecutorJobId parameter to GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</p>
          * 
          * <strong>example:</strong>
          * <p>exec-job-demo</p>
@@ -74,7 +74,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The name of the job to which this run belongs. This value can be used to re-run the job, query run records, or download results.</p>
+         * <p>The name of the job to which this run belongs. You can use this value to rerun the job, query run records, or download results.</p>
          * 
          * <strong>example:</strong>
          * <p>semantic-job-demo</p>
@@ -83,7 +83,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The semantic job run ID. Pass this value to the JobRunId parameter of DownloadSemanticResults to download the results of this run.</p>
+         * <p>The semantic job run ID. Pass this value as the JobRunId parameter to DownloadSemanticResults to download the results of this run.</p>
          * 
          * <strong>example:</strong>
          * <p>01H00000000000000000000000</p>
@@ -155,7 +155,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
         public java.util.List<ListSemanticJobRunsResponseBodyDataJobRuns> jobRuns;
 
         /**
-         * <p>The page number returned, starting from 1.</p>
+         * <p>The page number of the returned page, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +164,7 @@ public class ListSemanticJobRunsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of records per page returned.</p>
+         * <p>The number of records per page in the current response.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

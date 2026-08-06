@@ -42,6 +42,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
 
     public static class ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories extends TeaModel {
         /**
+         * <p>The ID of the asset domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -49,6 +51,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String assetDomainId;
 
         /**
+         * <p>The ID of the asset category.</p>
+         * 
          * <strong>example:</strong>
          * <p>cate-xxxxxx</p>
          */
@@ -56,8 +60,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the asset category.</p>
+         * 
          * <strong>example:</strong>
-         * <p>资产域名称</p>
+         * <p>AssetDomainName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -113,7 +119,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The data asset ID.</p>
+         * <p>The ID of the data asset.</p>
          * 
          * <strong>example:</strong>
          * <p>7259557313</p>
@@ -133,8 +139,8 @@ public class ListDataAssetsResponseBody extends TeaModel {
         /**
          * <p>The source of the mapping between the data asset and the tag. Valid values:</p>
          * <ul>
-         * <li>System: The mapping is created by the data asset governance system.</li>
-         * <li>UserDefined: The mapping is manually created by a user.</li>
+         * <li>System: The mapping originates from data asset governance system operations.</li>
+         * <li>UserDefined: The mapping originates from manual user-defined operations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,6 +214,9 @@ public class ListDataAssetsResponseBody extends TeaModel {
     }
 
     public static class ListDataAssetsResponseBodyPagingInfoDataAssets extends TeaModel {
+        /**
+         * <p>The asset category information.</p>
+         */
         @NameInMap("AssetCategories")
         public java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories> assetCategories;
 
@@ -231,7 +240,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String envType;
 
         /**
-         * <p>The data asset ID.</p>
+         * <p>The ID of the data asset.</p>
          * 
          * <strong>example:</strong>
          * <p>7259557313</p>
@@ -249,7 +258,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>54275</p>
@@ -260,7 +269,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         /**
          * <p>The Asset Type of the data asset. Valid values:</p>
          * <ul>
-         * <li><p>ACS::DataWorks::Table: table.</p>
+         * <li><p>ACS::DataWorks::Table: data table.</p>
          * </li>
          * <li><p>ACS::DataWorks::Task: scheduling node.</p>
          * </li>

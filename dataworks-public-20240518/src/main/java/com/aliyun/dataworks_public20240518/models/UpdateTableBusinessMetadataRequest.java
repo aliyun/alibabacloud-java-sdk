@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableBusinessMetadataRequest extends TeaModel {
     /**
-     * <p>The values of custom attributes. The key specifies the identifier of a custom attribute, and the value is an array that can contain at most one item. To delete the value for an attribute, pass an empty array. To update only custom attributes, omit the <code>Readme</code> parameter to prevent its existing value from being cleared. To leave the custom attributes unchanged, pass an empty object <code>{}</code>.</p>
+     * <p>The custom attribute values. The key is the custom attribute identifier, and the value contains at most one element. An empty list indicates that the attribute value is deleted. Passing this parameter without Readme prevents the usage description from being cleared. An empty object indicates that custom attributes are not updated.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</p>
@@ -14,7 +14,7 @@ public class UpdateTableBusinessMetadataRequest extends TeaModel {
     public java.util.Map<String, java.util.List<String>> customAttributes;
 
     /**
-     * <p>The table ID. For the required format, see the response of the <code>ListTables</code> operation.</p>
+     * <p>The ID of the table. For the format, refer to the response of the ListTables operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateTableBusinessMetadataRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The Readme of the table, which supports rich text format.</p>
+     * <p>The usage description. Rich text format is supported.</p>
      * 
      * <strong>example:</strong>
      * <h2>introduction</h2>

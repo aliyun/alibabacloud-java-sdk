@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5A1E9EBB-FEA6-5BBB-B7BE-BFC0FB3F8C71</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableRequest extends TeaModel {
     /**
-     * <p>The ID. You can obtain this value from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
+     * <p>The ID of the table. You can obtain this value from the response of the ListTables operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</p>
      * <p>The format is <code>${EntityType}:${InstanceID or encoded URL}:${DataCatalogIdentifier}:${DatabaseName}:${SchemaName}:${TableName}</code>. Use an empty string as a placeholder for levels that do not exist.</p>
      * <blockquote>
      * <p>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID.</p>
@@ -16,15 +16,16 @@ public class GetTableRequest extends TeaModel {
      * <blockquote>
      * <p>For MaxCompute, the database name is the MaxCompute project name. Projects with the three-layer model enabled require a schema name. For projects without the three-layer model enabled, use an empty string as a placeholder for the schema name.</p>
      * </blockquote>
-     * <p>The following examples show the ID formats for common types:</p>
+     * <p>The following are ID format examples for common types:</p>
      * <p><code>maxcompute-table:::project_name:[schema_name]:table_name</code></p>
      * <p><code>dlf-table::catalog_id:database_name::table_name</code></p>
      * <p><code>hms-table:instance_id::database_name::table_name</code></p>
      * <p><code>holo-table:instance_id::database_name:schema_name:table_name</code></p>
      * <p><code>mysql-table:(instance_id|encoded_jdbc_url)::database_name::table_name</code></p>
      * <blockquote>
-     * <p>Where<br><code>instance_id</code>: The instance ID. This is required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. This is required when the data source is registered using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For MaxCompute, this is required only when the three-layer model is enabled for the project. Use an empty string as a placeholder if the three-layer model is not enabled.<br><code>table_name</code>: The table name.</p>
+     * <p>Where<br><code>instance_id</code>: The instance ID. Required when the data source is registered in instance mode.<br><code>encoded_jdbc_url</code>: The URL-encoded JDBC connection string. Required when the data source is registered by using a connection string.<br><code>catalog_id</code>: The DLF catalog ID.<br><code>project_name</code>: The MaxCompute project name.<br><code>database_name</code>: The database name.<br><code>schema_name</code>: The schema name. For MaxCompute, this is required only when the three-layer model is enabled for the project. Otherwise, use an empty string as a placeholder.<br><code>table_name</code>: The table name.</p>
      * </blockquote>
+     * <p>Recommended procedure for obtaining this parameter: First, call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that include a data catalog level, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then, call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables to obtain the target table ID, and use the returned table ID as the Id for this operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +43,9 @@ public class GetTableRequest extends TeaModel {
     @NameInMap("IncludeBusinessMetadata")
     public Boolean includeBusinessMetadata;
 
+    /**
+     * <p>Specifies whether to return extended properties. Set this parameter to <code>true</code> to return extended properties, or <code>false</code> to not return them.</p>
+     */
     @NameInMap("IncludeExtendedProperties")
     public Boolean includeExtendedProperties;
 

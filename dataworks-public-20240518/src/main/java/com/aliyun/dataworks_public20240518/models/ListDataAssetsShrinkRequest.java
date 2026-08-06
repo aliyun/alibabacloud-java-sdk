@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataAssetsShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the asset domain.</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
@@ -12,6 +14,8 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     public Long assetDomainId;
 
     /**
+     * <p>The ID of the asset category.</p>
+     * 
      * <strong>example:</strong>
      * <p>cate-xxxxxxxx</p>
      */
@@ -27,7 +31,7 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The Asset Type of the data asset. Valid values:</p>
      * <ul>
-     * <li><p>ACS::DataWorks::Table: table.</p>
+     * <li><p>ACS::DataWorks::Table: data table.</p>
      * </li>
      * <li><p>ACS::DataWorks::Task: scheduling node.</p>
      * </li>
@@ -53,14 +57,16 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     public String envType;
 
     /**
+     * <p>The name of the asset. Fuzzy search by name is supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>资产域名称</p>
+     * <p>AssetDomainName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +84,7 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -89,7 +95,7 @@ public class ListDataAssetsShrinkRequest extends TeaModel {
     /**
      * <p>The list of tags associated with data assets. Tags are used as query filters:</p>
      * <ul>
-     * <li>Multiple values have an OR relationship. For example, <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code> queries data assets that contain any of the specified tags.</li>
+     * <li>Multiple values have an OR relationship. For example, <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code> queries data assets that contain any one of the specified tags.</li>
      * <li>If this parameter is not specified or is left empty, no tag-based filtering is applied.</li>
      * </ul>
      */

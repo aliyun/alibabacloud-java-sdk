@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMetaEntityDefsResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The paging information.</p>
      */
     @NameInMap("PagingInfo")
     public ListMetaEntityDefsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ADFASDFASDFA-ADFASDF-ASDFADSDF-AFFADS</p>
@@ -20,7 +20,7 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
 
     public static class ListMetaEntityDefsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>A list of custom entity definitions.</p>
+         * <p>The list of custom entity definitions.</p>
          */
         @NameInMap("MetaEntityDefs")
         public java.util.List<MetaEntityDef> metaEntityDefs;
@@ -74,7 +74,7 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -83,7 +83,7 @@ public class ListMetaEntityDefsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

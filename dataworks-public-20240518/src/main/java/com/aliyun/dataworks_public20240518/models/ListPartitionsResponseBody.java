@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsResponseBody extends TeaModel {
     /**
-     * <p>Pagination information.</p>
+     * <p>The pagination result.</p>
      */
     @NameInMap("PagingInfo")
     public ListPartitionsResponseBodyPagingInfo pagingInfo;
@@ -20,7 +20,7 @@ public class ListPartitionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,13 +77,13 @@ public class ListPartitionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The list of table partitions.</p>
+         * <p>The partition list of the table.</p>
          */
         @NameInMap("PartitionList")
         public java.util.List<Partition> partitionList;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

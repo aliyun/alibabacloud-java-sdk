@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMetaEntityDefRequest extends TeaModel {
     /**
-     * <p>A list of attribute definitions for the pure custom type. Do not specify this parameter if the <code>Extend</code> parameter is set to <code>TABLE</code>.</p>
+     * <p>The attribute definition list for custom entities. This parameter cannot be specified when extend is set to TABLE.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -14,7 +14,7 @@ public class CreateMetaEntityDefRequest extends TeaModel {
     public java.util.List<MetaEntityAttributeDef> attributeDefs;
 
     /**
-     * <p>A description of the entity definition.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -23,7 +23,7 @@ public class CreateMetaEntityDefRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name. The maximum length is 32 characters.</p>
+     * <p>The display name, up to 32 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,20 +35,18 @@ public class CreateMetaEntityDefRequest extends TeaModel {
     /**
      * <p>The extension mode. Valid values:</p>
      * <ul>
-     * <li><p><code>NONE</code>: The default value. Specifies a pure custom type with user-defined attributes.</p>
-     * </li>
-     * <li><p><code>TABLE</code>: Specifies an extended table type that references an existing table type in Data Map. Attribute definitions are not required for this type. You can create corresponding <code>Database</code> and <code>Table</code> objects for it.</p>
-     * </li>
+     * <li>NONE: default value. Indicates a custom entity with freely defined attributes.</li>
+     * <li>TABLE: indicates an extended table type. This type integrates in the same way as existing table types in DataWorks Data Map. You do not need to provide attribute definitions and can create corresponding Database/Table objects.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>NONE</p>
+     * <p>TABLE</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>The type definition name. For a pure custom type, the name must match <code>^[a-z0-9][a-z0-9_]*$</code>. For an extended table type, the name must match <code>^[a-z0-9][a-z0-9_]*-table$</code>.</p>
+     * <p>The name of the type definition. Custom types must match <code>^[a-z0-9][a-z0-9_]*$</code>. Extended table types must match <code>^[a-z0-9][a-z0-9_]*-table$</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

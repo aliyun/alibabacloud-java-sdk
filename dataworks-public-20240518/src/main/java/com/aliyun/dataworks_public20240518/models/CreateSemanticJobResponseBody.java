@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSemanticJobResponseBody extends TeaModel {
     /**
-     * <p>The saved semantic task definition. Use Data.Name to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
+     * <p>The saved semantic job definition. Use Data.Name to call RunSemanticJob, DeleteSemanticJob, ListSemanticJobRuns, and DownloadSemanticResults.</p>
      */
     @NameInMap("Data")
     public CreateSemanticJobResponseBodyData data;
@@ -56,7 +56,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
 
     public static class CreateSemanticJobResponseBodyData extends TeaModel {
         /**
-         * <p>The task creator identifier, equivalent to UserId, used to display creation ownership.</p>
+         * <p>The job creator identifier, equivalent to UserId, used to display creation ownership.</p>
          * 
          * <strong>example:</strong>
          * <p>user-demo</p>
@@ -65,7 +65,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The creation time of the task definition, as a UNIX timestamp in milliseconds.</p>
+         * <p>The creation time of the job definition, expressed as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1700000000000</p>
@@ -74,7 +74,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The last modification time of the task definition, as a UNIX timestamp in milliseconds.</p>
+         * <p>The last modification time of the job definition, expressed as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1700000000000</p>
@@ -83,7 +83,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The internal unique ID of the task definition, which identifies the task created by this call.</p>
+         * <p>The internal unique ID of the job definition, which identifies the job created by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -92,7 +92,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The saved task name. Use this value for subsequent run, delete, list runs, and download results operations.</p>
+         * <p>The saved job name. Use this value for subsequent operations such as running, deleting, querying run records, and downloading results.</p>
          * 
          * <strong>example:</strong>
          * <p>semantic-job-demo</p>
@@ -101,7 +101,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The DataWorks workspace ID to which the task belongs. Use this value as the ProjectId for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
+         * <p>The DataWorks workspace ID to which the job belongs. Use this value as the ProjectId for GetSemanticJobDetail, GetSemanticJobLog, and KillSemanticJob.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -122,7 +122,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public java.util.List<String> referenceFileUris;
 
         /**
-         * <p>The ID of the resource group that will be used when running this task.</p>
+         * <p>The ID of the resource group that is used when running this job.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-demo</p>
@@ -137,7 +137,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public java.util.Map<String, ?> source;
 
         /**
-         * <p>The saved Source.type data source type, used to quickly identify the task input type.</p>
+         * <p>The saved Source.type data source type, used to quickly identify the job input type.</p>
          * 
          * <strong>example:</strong>
          * <p>maxcompute</p>
@@ -146,7 +146,7 @@ public class CreateSemanticJobResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The identifier of the user who created the task.</p>
+         * <p>The identifier of the user who created the job.</p>
          * 
          * <strong>example:</strong>
          * <p>user-demo</p>

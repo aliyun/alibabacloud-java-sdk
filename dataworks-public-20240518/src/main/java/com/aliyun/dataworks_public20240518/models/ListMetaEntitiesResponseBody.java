@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMetaEntitiesResponseBody extends TeaModel {
     /**
-     * <p>Pagination information.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListMetaEntitiesResponseBodyPagingInfo pagingInfo;
@@ -20,7 +20,7 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
 
     public static class ListMetaEntitiesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The maximum number of entries per page.</p>
+         * <p>The maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -68,13 +68,13 @@ public class ListMetaEntitiesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>A list of metadata entities.</p>
+         * <p>The list of custom entities.</p>
          */
         @NameInMap("MetaEntities")
         public java.util.List<MetaEntity> metaEntities;
 
         /**
-         * <p>The token used to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdEdsXbwG2ZlbWCzN4wTTg6NmTbhyvglcoMCJsiEdngaTov15YaMyduvjIHYeTOIcEeXqCevM1qffZkwCkUTUYc=</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the custom attribute. The description must be less than 256 characters in length.</p>
+     * <p>The description of the custom attribute. The value must be less than 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test comment</p>
@@ -14,7 +14,7 @@ public class CreateCustomAttributeRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>Specifies whether to display the attribute on the product page. The default value is true.</p>
+     * <p>Specifies whether to display the attribute on the details page. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,26 +23,22 @@ public class CreateCustomAttributeRequest extends TeaModel {
     public Boolean displayEnabled;
 
     /**
-     * <p>The display name of the custom attribute. The name must be less than 128 characters in length.</p>
+     * <p>The display name of the custom attribute. The value must be less than 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>业务负责人</p>
+     * <p>BusinessOwner</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
-     * <p>The list of applicable entity types. You can specify precise entity types or use wildcards such as <code>*-table</code> and <code>*-column</code>. Examples:</p>
+     * <p>The list of applicable entity types. Exact entity types and wildcard patterns such as <code>*-table</code> and <code>*-column</code> are supported. Examples:</p>
      * <ul>
-     * <li><p>dataworks-project: a DataWorks workspace.</p>
-     * </li>
-     * <li><p>dataworks-dataset: a DataWorks dataset.</p>
-     * </li>
-     * <li><p>maxcompute-table: a MaxCompute table.</p>
-     * </li>
-     * <li><p>\*-column: all field types.</p>
-     * </li>
+     * <li>dataworks-project: workspace</li>
+     * <li>dataworks-dataset: DataWorks dataset</li>
+     * <li>maxcompute-table: MaxCompute table</li>
+     * <li>*-column: all column types</li>
      * </ul>
      * <p>This parameter is required.</p>
      */
@@ -50,7 +46,7 @@ public class CreateCustomAttributeRequest extends TeaModel {
     public java.util.List<String> entityTypes;
 
     /**
-     * <p>The ID of the custom attribute. The ID must match the regular expression <code>^custom-attribute:[A-Za-z][A-Za-z0-9_]{0,98}$</code>. The part after \<code>custom-attribute:\\</code> must be less than 100 characters in length.</p>
+     * <p>The custom attribute ID. The value must match <code>^custom-attribute:[A-Za-z][A-Za-z0-9_]{0,98}$</code>. The part after custom-attribute: must be less than 100 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +56,7 @@ public class CreateCustomAttributeRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Specifies whether the attribute can be used as a filter on the Data Map search page. The default value is false. Currently, you can set this parameter to true only for attributes of the ENUM type.</p>
+     * <p>Specifies whether the attribute can be used as a filter condition on the DataWorks Data Map search page. Default value: false. Currently, only the ENUM type supports setting this value to true.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -69,7 +65,7 @@ public class CreateCustomAttributeRequest extends TeaModel {
     public Boolean searchFilterEnabled;
 
     /**
-     * <p>The type of the custom attribute. Valid values are ENUM, TEXT, and HYPERLINK.</p>
+     * <p>The type of the custom attribute. Valid values: ENUM, TEXT, and HYPERLINK.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +75,7 @@ public class CreateCustomAttributeRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The enumeration values. This parameter is required when \<code>Type\\</code> is set to \<code>ENUM\\</code>. It is not supported for the TEXT and HYPERLINK types.</p>
+     * <p>The enumeration values. This parameter is required when type is set to ENUM. This parameter is not supported for TEXT or HYPERLINK types.</p>
      */
     @NameInMap("ValueEnums")
     public java.util.List<String> valueEnums;

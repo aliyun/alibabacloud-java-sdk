@@ -15,7 +15,7 @@ public class ListSemanticJobRunsRequest extends TeaModel {
     public String jobName;
 
     /**
-     * <p>The page number, starting from 1. If this parameter is omitted or set to a value less than or equal to 0, page 1 is returned.</p>
+     * <p>The page number, starting from 1. If this parameter is not specified or set to a value less than or equal to 0, page 1 is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListSemanticJobRunsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of run records per page. If this parameter is omitted or set to a value less than or equal to 0, the default value 50 is used. Maximum value: 200.</p>
+     * <p>The number of run records to return per page. If this parameter is not specified or set to a value less than or equal to 0, the default value 50 is used. Maximum value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

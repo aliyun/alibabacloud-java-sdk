@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCustomAttributesResponseBody extends TeaModel {
     /**
-     * <p>The paging information.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListCustomAttributesResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>54594ACA-7976-5273-958B-02E15E9B867C</p>
@@ -20,7 +20,7 @@ public class ListCustomAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class ListCustomAttributesResponseBody extends TeaModel {
 
     public static class ListCustomAttributesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>A list of custom attribute objects.</p>
+         * <p>The list of custom attribute objects.</p>
          */
         @NameInMap("CustomAttributes")
         public java.util.List<CustomAttribute> customAttributes;
@@ -74,7 +74,7 @@ public class ListCustomAttributesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

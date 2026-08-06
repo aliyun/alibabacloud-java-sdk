@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMetaEntityDefsRequest extends TeaModel {
     /**
-     * <p>A keyword to search for in the description. The system performs a fuzzy match.</p>
+     * <p>The description. Matched by fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -14,7 +14,7 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name of the type definition. This parameter supports partial matching.</p>
+     * <p>The display name of the type definition. Matched by plain text containment.</p>
      * 
      * <strong>example:</strong>
      * <p>CustomReport</p>
@@ -23,16 +23,24 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>Filters the results by extension mode. Valid values: <code>NONE</code> and <code>TABLE</code>.</p>
+     * <p>The extension mode filter. Valid values:</p>
+     * <ul>
+     * <li>NONE: custom entity only.</li>
+     * <li>TABLE: extension table entity.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>NONE</p>
+     * <p>TABLE</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
-     * <p>The sort order. Valid values: <code>Asc</code> and <code>Desc</code>.</p>
+     * <p>The sort direction. Valid values:</p>
+     * <ul>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Asc</p>
@@ -50,7 +58,7 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +67,12 @@ public class ListMetaEntityDefsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort field. Valid values: <code>Name</code>, <code>CreateTime</code>, and <code>ModifyTime</code>.</p>
+     * <p>The field by which to sort the results. Valid values:</p>
+     * <ul>
+     * <li>Name: sorted by name.</li>
+     * <li>CreateTime: sorted by creation time.</li>
+     * <li>ModifyTime: sorted by modification time.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CreateTime</p>

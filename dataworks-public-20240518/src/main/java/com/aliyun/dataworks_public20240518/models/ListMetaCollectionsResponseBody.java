@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionsResponseBody extends TeaModel {
     /**
-     * <p>Pagination information.</p>
+     * <p>The paged result object.</p>
      */
     @NameInMap("Data")
     public ListMetaCollectionsResponseBodyData data;
@@ -42,13 +42,13 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
 
     public static class ListMetaCollectionsResponseBodyDataMetaCollections extends TeaModel {
         /**
-         * <p>The list of administrator IDs. Supported only for album types. Administrators must be users within the same tenant. Multiple administrators can be specified.</p>
+         * <p>The list of administrator user IDs. This parameter is supported only for the album type. The administrators must be users within the same tenant. You can specify multiple administrators.</p>
          */
         @NameInMap("Administrators")
         public java.util.List<String> administrators;
 
         /**
-         * <p>The creation time in milliseconds (timestamp).</p>
+         * <p>The creation time as a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
@@ -57,7 +57,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The creator user ID.</p>
+         * <p>The user ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>456789</p>
@@ -66,7 +66,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String createUser;
 
         /**
-         * <p>The collection description.</p>
+         * <p>The description of the collection object.</p>
          * 
          * <strong>example:</strong>
          * <p>Test category</p>
@@ -75,7 +75,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The collection name.</p>
+         * <p>The name of the collection object.</p>
          * 
          * <strong>example:</strong>
          * <p>7a65sd7aasd</p>
@@ -84,7 +84,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The modification time in milliseconds (timestamp).</p>
+         * <p>The modification time as a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
@@ -93,7 +93,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The collection name.</p>
+         * <p>The name of the collection object.</p>
          * 
          * <strong>example:</strong>
          * <p>test_category</p>
@@ -102,7 +102,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the parent collection. Can be empty.</p>
+         * <p>The ID of the parent node collection object. This value can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>as78d756asd</p>
@@ -113,12 +113,9 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         /**
          * <p>The collection type. Valid values:</p>
          * <ul>
-         * <li><p>Category</p>
-         * </li>
-         * <li><p>Album</p>
-         * </li>
-         * <li><p>AlbumCategory: Album subcategory</p>
-         * </li>
+         * <li>Category: category.</li>
+         * <li>Album: data album.</li>
+         * <li>AlbumCategory: album subcategory.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +220,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

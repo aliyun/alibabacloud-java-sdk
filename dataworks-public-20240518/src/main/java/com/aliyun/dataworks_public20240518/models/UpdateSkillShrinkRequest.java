@@ -26,9 +26,7 @@ public class UpdateSkillShrinkRequest extends TeaModel {
      * <p>The expected version number for optimistic locking. If not specified, the update is based on the current highest version.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>1</p>
      */
     @NameInMap("ExpectedVersion")
     public Integer expectedVersion;

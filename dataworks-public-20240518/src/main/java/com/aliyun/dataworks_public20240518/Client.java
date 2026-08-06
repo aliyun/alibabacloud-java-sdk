@@ -1473,6 +1473,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>为指定数据源创建元数据采集器，并配置采集范围、资源组、调度方式和扩展配置。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>GetCrawlerTypeCapabilities</code> 查询当前地域支持的采集器类型及其配置能力。</li>
+     * <li>使用与 <code>Type</code> 匹配的数据源创建采集器。</li>
+     * <li>创建成功后，调用 <code>RunCrawler</code> 手动运行，或通过周期调度自动运行。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>创建成功仅表示采集器配置已生成，不会立即执行元数据采集。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建元数据采集器</p>
+     * 
+     * @param tmpReq CreateCrawlerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCrawlerResponse
+     */
+    public CreateCrawlerResponse createCrawlerWithOptions(CreateCrawlerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCrawlerShrinkRequest request = new CreateCrawlerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.options)) {
+            request.optionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.options, "Options", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scope)) {
+            request.scopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scope, "Scope", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            body.put("DataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAiComment)) {
+            body.put("EnableAiComment", request.enableAiComment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optionsShrink)) {
+            body.put("Options", request.optionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleConfigShrink)) {
+            body.put("ScheduleConfig", request.scheduleConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeShrink)) {
+            body.put("Scope", request.scopeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCrawler"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCrawlerResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>为指定数据源创建元数据采集器，并配置采集范围、资源组、调度方式和扩展配置。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>GetCrawlerTypeCapabilities</code> 查询当前地域支持的采集器类型及其配置能力。</li>
+     * <li>使用与 <code>Type</code> 匹配的数据源创建采集器。</li>
+     * <li>创建成功后，调用 <code>RunCrawler</code> 手动运行，或通过周期调度自动运行。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>创建成功仅表示采集器配置已生成，不会立即执行元数据采集。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建元数据采集器</p>
+     * 
+     * @param request CreateCrawlerRequest
+     * @return CreateCrawlerResponse
+     */
+    public CreateCrawlerResponse createCrawler(CreateCrawlerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCrawlerWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a custom attribute definition.</p>
      * 
@@ -3390,10 +3504,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Professional Edition or a higher edition.</p>
+     * <p>DataWorks Professional Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</p>
+     * <p>Creates a metadata entity definition, including custom types and extended table types.</p>
      * 
      * @param tmpReq CreateMetaEntityDefRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3447,10 +3561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Professional Edition or a higher edition.</p>
+     * <p>DataWorks Professional Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a metadata entity definition. The definition can be for a pure custom type or an extended table type.</p>
+     * <p>Creates a metadata entity definition, including custom types and extended table types.</p>
      * 
      * @param request CreateMetaEntityDefRequest
      * @return CreateMetaEntityDefResponse
@@ -4674,10 +4788,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a semantic task definition.</p>
+     * <h2>Scenarios</h2>
+     * <p>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</p>
+     * <h2>Recommended workflow</h2>
+     * <ol>
+     * <li>When <code>Source.type=singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
+     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the job.</li>
+     * <li>Use <code>Data.Name</code> from the response to call <code>RunSemanticJob</code>. After the job is complete, use <code>DownloadSemanticResults</code> to retrieve the output.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p><code>Name</code> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</p>
+     * <p>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</p>
      * 
      * @param tmpReq CreateSemanticJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4743,10 +4866,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a semantic task definition.</p>
+     * <h2>Scenarios</h2>
+     * <p>Creates and saves a reusable semantic job definition. This operation only saves the data source, resource group, and reference file configurations without immediately executing the job.</p>
+     * <h2>Recommended workflow</h2>
+     * <ol>
+     * <li>When <code>Source.type=singleTableFile</code>, call <code>UploadSemanticFile</code> first, use the returned <code>Data.UploadUrl</code> to complete the PUT upload, and then specify <code>Data.FileId</code> in <code>ReferenceFileIds</code>. Alternatively, you can provide a single accessible URI.</li>
+     * <li>Configure <code>Source</code>, <code>ProjectId</code>, and <code>ResourceGroupId</code>, and then call this operation to save the job.</li>
+     * <li>Use <code>Data.Name</code> from the response to call <code>RunSemanticJob</code>. After the job is complete, use <code>DownloadSemanticResults</code> to retrieve the output.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p><code>Name</code> must be unique within the current tenant. The reference file quantity rules differ between single-file sources and other sources. For details, refer to the descriptions of the <code>ReferenceFileIds</code> and <code>ReferenceFileUris</code> fields.</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</p>
+     * <p>Saves a reusable semantic job definition. If you use a single-file source, apply for and complete the attachment upload first. After creation, call RunSemanticJob with the returned Name.</p>
      * 
      * @param request CreateSemanticJobRequest
      * @return CreateSemanticJobResponse
@@ -5446,6 +5578,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteComputeResourceResponse deleteComputeResource(DeleteComputeResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteComputeResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>删除不再使用的元数据采集器。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlers</code> 查询采集器 ID。</li>
+     * <li>确认采集器不再需要后调用本接口。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>删除成功后，该采集器不能继续查询、更新或运行。已采集元数据由系统清理，清理结果可能存在延迟。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除元数据采集器</p>
+     * 
+     * @param request DeleteCrawlerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCrawlerResponse
+     */
+    public DeleteCrawlerResponse deleteCrawlerWithOptions(DeleteCrawlerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCrawler"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCrawlerResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>删除不再使用的元数据采集器。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlers</code> 查询采集器 ID。</li>
+     * <li>确认采集器不再需要后调用本接口。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>删除成功后，该采集器不能继续查询、更新或运行。已采集元数据由系统清理，清理结果可能存在延迟。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除元数据采集器</p>
+     * 
+     * @param request DeleteCrawlerRequest
+     * @return DeleteCrawlerResponse
+     */
+    public DeleteCrawlerResponse deleteCrawler(DeleteCrawlerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCrawlerWithOptions(request, runtime);
     }
 
     /**
@@ -6349,11 +6551,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a lineage in Data Map.</p>
+     * <p>Deletes a specified data lineage relationship from DataWorks Data Map.</p>
      * 
      * @param request DeleteLineageRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6386,11 +6588,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a lineage in Data Map.</p>
+     * <p>Deletes a specified data lineage relationship from DataWorks Data Map.</p>
      * 
      * @param request DeleteLineageRelationshipRequest
      * @return DeleteLineageRelationshipResponse
@@ -7174,10 +7376,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for deleting a semantic task.</p>
+     * <h2>Scenarios</h2>
+     * <p>Archives and deletes a saved semantic job definition so that it no longer appears in the list of available jobs.</p>
+     * <h2>Call flow</h2>
+     * <ol>
+     * <li>Obtain the job name from <code>CreateSemanticJob.Data.Name</code> or <code>ListSemanticJobs.Data.SemanticJobs[].Name</code>.</li>
+     * <li>To check whether any active runs exist, call <code>ListSemanticJobRuns</code> first. If necessary, stop the execution by calling <code>KillSemanticJob</code>.</li>
+     * <li>Call this operation to delete the job definition.</li>
+     * </ol>
+     * <h2>Result description</h2>
+     * <p>A successful response indicates that the deletion request is complete. After deletion, you can no longer use the name to call <code>RunSemanticJob</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</p>
+     * <p>Deletes a semantic job definition by the Name of a created job. If the job is currently running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</p>
      * 
      * @param request DeleteSemanticJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7209,10 +7420,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for deleting a semantic task.</p>
+     * <h2>Scenarios</h2>
+     * <p>Archives and deletes a saved semantic job definition so that it no longer appears in the list of available jobs.</p>
+     * <h2>Call flow</h2>
+     * <ol>
+     * <li>Obtain the job name from <code>CreateSemanticJob.Data.Name</code> or <code>ListSemanticJobs.Data.SemanticJobs[].Name</code>.</li>
+     * <li>To check whether any active runs exist, call <code>ListSemanticJobRuns</code> first. If necessary, stop the execution by calling <code>KillSemanticJob</code>.</li>
+     * <li>Call this operation to delete the job definition.</li>
+     * </ol>
+     * <h2>Result description</h2>
+     * <p>A successful response indicates that the deletion request is complete. After deletion, you can no longer use the name to call <code>RunSemanticJob</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</p>
+     * <p>Deletes a semantic job definition by the Name of a created job. If the job is currently running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</p>
      * 
      * @param request DeleteSemanticJobRequest
      * @return DeleteSemanticJobResponse
@@ -7782,10 +8002,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for retrieving the download URL of semantic task results.</p>
+     * <h2>Scenarios</h2>
+     * <p>Retrieves temporary download URLs for result files of a submitted semantic job run, such as semantic model YAML artifacts. This operation returns download URLs and does not directly return file content.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Use the job name <code>JobName</code> to locate the job.</li>
+     * <li>To retrieve artifacts of a specific run, specify the <code>JobRunId</code> from the <code>RunSemanticJob.Data.JobRunId</code> or <code>ListSemanticJobRuns</code> response. If you do not specify this parameter, the artifacts of the most recent run are returned.</li>
+     * <li>Download the corresponding files from <code>Data.Results[].DownloadUrl</code>.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>The download URL is a temporary credential. Use it only briefly on the client side. Do not write it to logs or store it for long-term use.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</p>
+     * <p>Returns the download URL of artifacts by job name and an optional run ID after a run completes. If JobRunId is not specified, the results of the most recent run of the job are returned.</p>
      * 
      * @param request DownloadSemanticResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7821,10 +8050,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for retrieving the download URL of semantic task results.</p>
+     * <h2>Scenarios</h2>
+     * <p>Retrieves temporary download URLs for result files of a submitted semantic job run, such as semantic model YAML artifacts. This operation returns download URLs and does not directly return file content.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Use the job name <code>JobName</code> to locate the job.</li>
+     * <li>To retrieve artifacts of a specific run, specify the <code>JobRunId</code> from the <code>RunSemanticJob.Data.JobRunId</code> or <code>ListSemanticJobRuns</code> response. If you do not specify this parameter, the artifacts of the most recent run are returned.</li>
+     * <li>Download the corresponding files from <code>Data.Results[].DownloadUrl</code>.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>The download URL is a temporary credential. Use it only briefly on the client side. Do not write it to logs or store it for long-term use.</p>
      * 
      * <b>summary</b> : 
-     * <p>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</p>
+     * <p>Returns the download URL of artifacts by job name and an optional run ID after a run completes. If JobRunId is not specified, the results of the most recent run of the job are returned.</p>
      * 
      * @param request DownloadSemanticResultsRequest
      * @return DownloadSemanticResultsResponse
@@ -8774,6 +9012,141 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetComputeResourceResponse getComputeResource(GetComputeResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getComputeResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>查询指定元数据采集器的配置、可用状态和最近一次运行信息。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlers</code> 查询采集器 ID。</li>
+     * <li>调用本接口获取采集器详情。</li>
+     * <li>如需查询完整运行历史，调用 <code>ListCrawlerRuns</code>。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>采集器尚未运行时，最近运行状态和任务实例 ID 可能为空。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取元数据采集器详情</p>
+     * 
+     * @param request GetCrawlerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCrawlerResponse
+     */
+    public GetCrawlerResponse getCrawlerWithOptions(GetCrawlerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCrawler"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCrawlerResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>查询指定元数据采集器的配置、可用状态和最近一次运行信息。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlers</code> 查询采集器 ID。</li>
+     * <li>调用本接口获取采集器详情。</li>
+     * <li>如需查询完整运行历史，调用 <code>ListCrawlerRuns</code>。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>采集器尚未运行时，最近运行状态和任务实例 ID 可能为空。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取元数据采集器详情</p>
+     * 
+     * @param request GetCrawlerRequest
+     * @return GetCrawlerResponse
+     */
+    public GetCrawlerResponse getCrawler(GetCrawlerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCrawlerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>查询当前地域支持创建的采集器类型，以及各类型支持的数据源、采集范围、资源组、调度、AI 元数据描述和扩展配置能力。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>在创建或更新采集器前调用本接口。</li>
+     * <li>根据返回的能力信息构造 <code>CreateCrawler</code> 或 <code>UpdateCrawler</code> 请求。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>不同地域和采集器类型的能力可能不同，请以本接口的实际返回结果为准。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询当前地域支持创建的元数据采集器类型及能力</p>
+     * 
+     * @param request GetCrawlerTypeCapabilitiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCrawlerTypeCapabilitiesResponse
+     */
+    public GetCrawlerTypeCapabilitiesResponse getCrawlerTypeCapabilitiesWithOptions(GetCrawlerTypeCapabilitiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCrawlerTypeCapabilities"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCrawlerTypeCapabilitiesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>查询当前地域支持创建的采集器类型，以及各类型支持的数据源、采集范围、资源组、调度、AI 元数据描述和扩展配置能力。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>在创建或更新采集器前调用本接口。</li>
+     * <li>根据返回的能力信息构造 <code>CreateCrawler</code> 或 <code>UpdateCrawler</code> 请求。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>不同地域和采集器类型的能力可能不同，请以本接口的实际返回结果为准。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询当前地域支持创建的元数据采集器类型及能力</p>
+     * 
+     * @param request GetCrawlerTypeCapabilitiesRequest
+     * @return GetCrawlerTypeCapabilitiesResponse
+     */
+    public GetCrawlerTypeCapabilitiesResponse getCrawlerTypeCapabilities(GetCrawlerTypeCapabilitiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCrawlerTypeCapabilitiesWithOptions(request, runtime);
     }
 
     /**
@@ -11082,7 +11455,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for querying semantic job run details.</p>
+     * <h2>Scenarios</h2>
+     * <p>Queries the detailed status and runtime information of a semantic job run on the executor side. This is used to poll execution progress or troubleshoot run failures.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Call <code>RunSemanticJob</code> or <code>ListSemanticJobRuns</code> to obtain the <code>ExecutorJobId</code>.</li>
+     * <li>Use the <code>ProjectId</code> returned by the job definition as the <code>ProjectId</code> for this operation.</li>
+     * <li>Determine the current status based on the executor details in <code>Data</code>. If the job is still running, continue polling this operation.</li>
+     * </ol>
+     * <h2>Related operations</h2>
+     * <p>To retrieve logs, call <code>GetSemanticJobLog</code>. To stop a run, call <code>KillSemanticJob</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</p>
@@ -11121,7 +11503,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for querying semantic job run details.</p>
+     * <h2>Scenarios</h2>
+     * <p>Queries the detailed status and runtime information of a semantic job run on the executor side. This is used to poll execution progress or troubleshoot run failures.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Call <code>RunSemanticJob</code> or <code>ListSemanticJobRuns</code> to obtain the <code>ExecutorJobId</code>.</li>
+     * <li>Use the <code>ProjectId</code> returned by the job definition as the <code>ProjectId</code> for this operation.</li>
+     * <li>Determine the current status based on the executor details in <code>Data</code>. If the job is still running, continue polling this operation.</li>
+     * </ol>
+     * <h2>Related operations</h2>
+     * <p>To retrieve logs, call <code>GetSemanticJobLog</code>. To stop a run, call <code>KillSemanticJob</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</p>
@@ -11136,7 +11527,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for querying semantic job run logs.</p>
+     * <h2>Scenarios</h2>
+     * <p>Reads the execution logs of a semantic job run to observe the execution process and identify failure causes.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Specify the run by using <code>RunSemanticJob.Data.ExecutorJobId</code> or <code>ListSemanticJobRuns[].ExecutorJobId</code>.</li>
+     * <li>Call this operation with the <code>ProjectId</code> of the corresponding task.</li>
+     * <li>Analyze the log segments in <code>Data</code> together with the run status returned by <code>GetSemanticJobDetail</code>.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>Logs are used for diagnostics and do not represent the final result files. Obtain result artifacts by calling <code>DownloadSemanticResults</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</p>
@@ -11175,7 +11575,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for querying semantic job run logs.</p>
+     * <h2>Scenarios</h2>
+     * <p>Reads the execution logs of a semantic job run to observe the execution process and identify failure causes.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Specify the run by using <code>RunSemanticJob.Data.ExecutorJobId</code> or <code>ListSemanticJobRuns[].ExecutorJobId</code>.</li>
+     * <li>Call this operation with the <code>ProjectId</code> of the corresponding task.</li>
+     * <li>Analyze the log segments in <code>Data</code> together with the run status returned by <code>GetSemanticJobDetail</code>.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>Logs are used for diagnostics and do not represent the final result files. Obtain result artifacts by calling <code>DownloadSemanticResults</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</p>
@@ -11255,7 +11664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</p>
+     * <p>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</p>
      * 
      * @param request GetTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11288,7 +11697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified data table in DataWorks Data Map. You can specify whether to return business metadata.</p>
+     * <p>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</p>
      * 
      * @param request GetTableRequest
      * @return GetTableResponse
@@ -11854,10 +12263,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for stopping a semantic job run.</p>
+     * <h2>Scenarios</h2>
+     * <p>Sends a stop request to the executor for a specified semantic job run. This is applicable to scenarios where a job runs for an extended period, requires manual termination, or needs resource reclamation.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Obtain the <code>ExecutorJobId</code> from <code>RunSemanticJob</code> or <code>ListSemanticJobRuns</code>, and use the <code>ProjectId</code> of the job.</li>
+     * <li>Optionally specify <code>RetryTimes</code> as needed.</li>
+     * <li>After the call, poll the final status by using <code>GetSemanticJobDetail</code>. If necessary, call <code>GetSemanticJobLog</code> for diagnostics.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>A successful response indicates only that the stop request has been processed. It does not mean the job has reached a desired state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</p>
+     * <p>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call indicates only that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</p>
      * 
      * @param request KillSemanticJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11897,10 +12315,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation description for stopping a semantic job run.</p>
+     * <h2>Scenarios</h2>
+     * <p>Sends a stop request to the executor for a specified semantic job run. This is applicable to scenarios where a job runs for an extended period, requires manual termination, or needs resource reclamation.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Obtain the <code>ExecutorJobId</code> from <code>RunSemanticJob</code> or <code>ListSemanticJobRuns</code>, and use the <code>ProjectId</code> of the job.</li>
+     * <li>Optionally specify <code>RetryTimes</code> as needed.</li>
+     * <li>After the call, poll the final status by using <code>GetSemanticJobDetail</code>. If necessary, call <code>GetSemanticJobLog</code> for diagnostics.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>A successful response indicates only that the stop request has been processed. It does not mean the job has reached a desired state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</p>
+     * <p>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call indicates only that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</p>
      * 
      * @param request KillSemanticJobRequest
      * @return KillSemanticJobResponse
@@ -12387,7 +12814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the column list of a specified data table in DataWorks Data Map.</p>
+     * <p>Queries the column list of a specified table in DataWorks Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12420,7 +12847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the column list of a specified data table in DataWorks Data Map.</p>
+     * <p>Queries the column list of a specified table in DataWorks Data Map.</p>
      * 
      * @param request ListColumnsRequest
      * @return ListColumnsResponse
@@ -12586,6 +13013,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>分页查询指定元数据采集器最近 30 天内的运行记录，并可按运行开始时间和状态筛选。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>使用 <code>ListCrawlers</code> 查询采集器 ID。</li>
+     * <li>调用本接口查询运行记录和任务实例 ID。</li>
+     * <li>对运行、停止等异步操作，以本接口返回的最终状态为准。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>未指定时间范围时，默认查询当前时间向前 30 天。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询元数据采集器运行记录</p>
+     * 
+     * @param request ListCrawlerRunsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCrawlerRunsResponse
+     */
+    public ListCrawlerRunsResponse listCrawlerRunsWithOptions(ListCrawlerRunsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeFrom)) {
+            body.put("StartTimeFrom", request.startTimeFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeTo)) {
+            body.put("StartTimeTo", request.startTimeTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCrawlerRuns"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCrawlerRunsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>分页查询指定元数据采集器最近 30 天内的运行记录，并可按运行开始时间和状态筛选。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>使用 <code>ListCrawlers</code> 查询采集器 ID。</li>
+     * <li>调用本接口查询运行记录和任务实例 ID。</li>
+     * <li>对运行、停止等异步操作，以本接口返回的最终状态为准。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>未指定时间范围时，默认查询当前时间向前 30 天。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询元数据采集器运行记录</p>
+     * 
+     * @param request ListCrawlerRunsRequest
+     * @return ListCrawlerRunsResponse
+     */
+    public ListCrawlerRunsResponse listCrawlerRuns(ListCrawlerRunsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCrawlerRunsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <ol>
      * <li>DataWorks Basic Edition or a higher edition is required.</li>
      * </ol>
@@ -12625,6 +13144,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCrawlerTypesResponse listCrawlerTypes() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCrawlerTypesWithOptions(runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>分页查询有权访问的元数据采集器，并可按工作空间、数据源、采集器类型、环境、负责人和名称筛选。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>按需组合筛选条件查询采集器列表。</li>
+     * <li>使用返回的采集器 ID 调用详情、更新、运行、停止、运行记录或删除接口。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>多个筛选条件同时提供时组合生效，名称支持模糊匹配。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询元数据采集器列表</p>
+     * 
+     * @param tmpReq ListCrawlersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCrawlersResponse
+     */
+    public ListCrawlersResponse listCrawlersWithOptions(ListCrawlersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListCrawlersShrinkRequest request = new ListCrawlersShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dataSourceIds)) {
+            request.dataSourceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dataSourceIds, "DataSourceIds", "simple");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceIdsShrink)) {
+            body.put("DataSourceIds", request.dataSourceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            body.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCrawlers"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCrawlersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>分页查询有权访问的元数据采集器，并可按工作空间、数据源、采集器类型、环境、负责人和名称筛选。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>按需组合筛选条件查询采集器列表。</li>
+     * <li>使用返回的采集器 ID 调用详情、更新、运行、停止、运行记录或删除接口。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>多个筛选条件同时提供时组合生效，名称支持模糊匹配。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询元数据采集器列表</p>
+     * 
+     * @param request ListCrawlersRequest
+     * @return ListCrawlersResponse
+     */
+    public ListCrawlersResponse listCrawlers(ListCrawlersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCrawlersWithOptions(request, runtime);
     }
 
     /**
@@ -12709,7 +13332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of custom attribute definitions.</p>
+     * <p>Queries the list of custom attribute definitions.</p>
      * 
      * @param request ListCustomAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12765,7 +13388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of custom attribute definitions.</p>
+     * <p>Queries the list of custom attribute definitions.</p>
      * 
      * @param request ListCustomAttributesRequest
      * @return ListCustomAttributesResponse
@@ -14822,11 +15445,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation is available in DataWorks Standard Edition and later versions.</li>
+     * <li>You must purchase DataWorks Standard Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</p>
+     * <p>Queries the list of data lineage relationships between two specified entities (tables, fields, OSS files, etc.) in DataWorks Data Map.</p>
      * 
      * @param request ListLineageRelationshipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14855,11 +15478,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>This operation is available in DataWorks Standard Edition and later versions.</li>
+     * <li>You must purchase DataWorks Standard Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries the data map for data lineage relationships between specified entities, such as tables, columns, and OSS objects.</p>
+     * <p>Queries the list of data lineage relationships between two specified entities (tables, fields, OSS files, etc.) in DataWorks Data Map.</p>
      * 
      * @param request ListLineageRelationshipsRequest
      * @return ListLineageRelationshipsResponse
@@ -15008,11 +15631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of collections in Data Map. Collections include categories and data albums.</p>
+     * <p>Queries the list of Data Map collections. Supports querying both Data Map categories and data albums.</p>
      * 
      * @param request ListMetaCollectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15041,11 +15664,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Professional Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Professional Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of collections in Data Map. Collections include categories and data albums.</p>
+     * <p>Queries the list of Data Map collections. Supports querying both Data Map categories and data albums.</p>
      * 
      * @param request ListMetaCollectionsRequest
      * @return ListMetaCollectionsResponse
@@ -15057,7 +15680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists metadata entities. Support is currently limited to custom types.</p>
+     * <p>Queries a list of metadata entities. Currently, only custom entity types are supported.</p>
      * 
      * @param tmpReq ListMetaEntitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15131,7 +15754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists metadata entities. Support is currently limited to custom types.</p>
+     * <p>Queries a list of metadata entities. Currently, only custom entity types are supported.</p>
      * 
      * @param request ListMetaEntitiesRequest
      * @return ListMetaEntitiesResponse
@@ -15143,7 +15766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</p>
+     * <p>Queries the list of custom entity definitions, including custom entity types and extension table types.</p>
      * 
      * @param request ListMetaEntityDefsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15199,7 +15822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of custom entity definitions, including custom entity types and extended table types.</p>
+     * <p>Queries the list of custom entity definitions, including custom entity types and extension table types.</p>
      * 
      * @param request ListMetaEntityDefsRequest
      * @return ListMetaEntityDefsResponse
@@ -15722,12 +16345,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
-     * <li>Only maxcompute and hms (EMR cluster) table types are supported.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>Only MaxCompute and HMS (EMR cluster) table types are supported.</li>
+     * <li>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</p>
+     * <p>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</p>
      * 
      * @param request ListPartitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15756,12 +16380,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
-     * <li>Only maxcompute and hms (EMR cluster) table types are supported.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
+     * <li>Only MaxCompute and HMS (EMR cluster) table types are supported.</li>
+     * <li>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of partitions in a table in Data Map. Only tables of the MaxCompute and E-MapReduce (EMR)-type Hive Metastore Service (HMS) metadata crawlers are supported.</p>
+     * <p>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</p>
      * 
      * @param request ListPartitionsRequest
      * @return ListPartitionsResponse
@@ -16743,10 +17368,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the run records of a semantic job.</p>
+     * <h2>Scenarios</h2>
+     * <p>View the historical run records of a semantic job with pagination to obtain the run ID, executor job ID, status, and time information for each submission.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Use the job name from <code>CreateSemanticJob.Data.Name</code> or <code>ListSemanticJobs</code> as the <code>JobName</code>.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to read records page by page.</li>
+     * <li>Use the <code>JobRunId</code> from a record to call <code>DownloadSemanticResults</code>, and use the <code>ExecutorJobId</code> to call the detail, log, or stop operations.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>Pagination starts from page 1 by default. Each page contains a maximum of 200 records.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</p>
+     * <p>Queries the run records of a created node by Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for querying details, retrieving logs, or stopping the run.</p>
      * 
      * @param request ListSemanticJobRunsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16786,10 +17420,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the run records of a semantic job.</p>
+     * <h2>Scenarios</h2>
+     * <p>View the historical run records of a semantic job with pagination to obtain the run ID, executor job ID, status, and time information for each submission.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Use the job name from <code>CreateSemanticJob.Data.Name</code> or <code>ListSemanticJobs</code> as the <code>JobName</code>.</li>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to read records page by page.</li>
+     * <li>Use the <code>JobRunId</code> from a record to call <code>DownloadSemanticResults</code>, and use the <code>ExecutorJobId</code> to call the detail, log, or stop operations.</li>
+     * </ol>
+     * <h2>Before you begin</h2>
+     * <p>Pagination starts from page 1 by default. Each page contains a maximum of 200 records.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</p>
+     * <p>Queries the run records of a created node by Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for querying details, retrieving logs, or stopping the run.</p>
      * 
      * @param request ListSemanticJobRunsRequest
      * @return ListSemanticJobRunsResponse
@@ -16801,10 +17444,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of semantic task definitions.</p>
+     * <h2>Scenarios</h2>
+     * <p>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</p>
+     * <h2>Invoke flow</h2>
+     * <ol>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to read <code>Data.SemanticJobs</code> with paging.</li>
+     * <li>Use the <code>Name</code> field of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
+     * <li>Use the <code>ProjectId</code> field of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
+     * </ol>
+     * <h2>Notes</h2>
+     * <p>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <code>ListSemanticJobRuns</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
+     * <p>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
      * 
      * @param request ListSemanticJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16840,10 +17492,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of semantic task definitions.</p>
+     * <h2>Scenarios</h2>
+     * <p>Queries the saved semantic node definitions of the current tenant with paging. Use this operation to display the node list, select a node to run, or obtain the workspace to which a node belongs.</p>
+     * <h2>Invoke flow</h2>
+     * <ol>
+     * <li>Use <code>PageNumber</code> and <code>PageSize</code> to read <code>Data.SemanticJobs</code> with paging.</li>
+     * <li>Use the <code>Name</code> field of a list item to invoke <code>RunSemanticJob</code>, <code>DeleteSemanticJob</code>, or <code>ListSemanticJobRuns</code>.</li>
+     * <li>Use the <code>ProjectId</code> field of a list item together with <code>ExecutorJobId</code> to invoke the details, log, and stop operations.</li>
+     * </ol>
+     * <h2>Notes</h2>
+     * <p>This operation returns node definitions, not real-time run statuses. To query run statuses, invoke <code>ListSemanticJobRuns</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
+     * <p>Queries the semantic node definitions of the current tenant with paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</p>
      * 
      * @param request ListSemanticJobsRequest
      * @return ListSemanticJobsResponse
@@ -16940,7 +17601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -16979,7 +17640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>DataWorks Basic Edition or a higher edition is required.</li>
+     * <li>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -18757,10 +19418,95 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</p>
+     * <h2>使用场景</h2>
+     * <p>提交指定元数据采集器的运行请求。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlers</code> 查询可运行的采集器 ID。</li>
+     * <li>调用本接口提交运行请求。</li>
+     * <li>调用 <code>ListCrawlerRuns</code> 查询最终运行状态。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>费用说明</h2>
+     * <p>运行采集任务会使用计算资源，可能产生费用，具体以实际使用的资源组和 DataWorks 计费规则为准。
+     * 当采集器已开启 AI 元数据描述能力（<code>EnableAiComment=true</code>）时，采集元数据并生成 AI 说明会消耗 Token。Token 赠送额度及超出额度后的计费规则，请参见 <a href="https://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing">Data Agent 费用</a>。</p>
+     * <h2>注意事项</h2>
+     * <p>接口成功仅表示运行请求已受理，不表示采集任务已经完成。</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
+     * <p>运行元数据采集器</p>
+     * 
+     * @param request RunCrawlerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunCrawlerResponse
+     */
+    public RunCrawlerResponse runCrawlerWithOptions(RunCrawlerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunCrawler"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunCrawlerResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>提交指定元数据采集器的运行请求。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlers</code> 查询可运行的采集器 ID。</li>
+     * <li>调用本接口提交运行请求。</li>
+     * <li>调用 <code>ListCrawlerRuns</code> 查询最终运行状态。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>费用说明</h2>
+     * <p>运行采集任务会使用计算资源，可能产生费用，具体以实际使用的资源组和 DataWorks 计费规则为准。
+     * 当采集器已开启 AI 元数据描述能力（<code>EnableAiComment=true</code>）时，采集元数据并生成 AI 说明会消耗 Token。Token 赠送额度及超出额度后的计费规则，请参见 <a href="https://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing">Data Agent 费用</a>。</p>
+     * <h2>注意事项</h2>
+     * <p>接口成功仅表示运行请求已受理，不表示采集任务已经完成。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>运行元数据采集器</p>
+     * 
+     * @param request RunCrawlerRequest
+     * @return RunCrawlerResponse
+     */
+    public RunCrawlerResponse runCrawler(RunCrawlerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runCrawlerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Loads a saved semantic job definition by <code>Name</code> and submits a new analysis run to the executor. This operation does not accept runtime <code>Source</code>, resource group, or reference file overrides. The execution always uses the configuration saved by <code>CreateSemanticJob</code>.</p>
+     * <h2>Pre-execution validation</h2>
+     * <p>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <code>ReferenceFileIds</code>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</p>
+     * <h2>Response and What to do next</h2>
+     * <p><code>Data.JobRunId</code> is the identity of the current semantics node run and is used by <code>DownloadSemanticResults</code> to download the exact output of this run. <code>Data.ExecutorJobId</code> is the identity of the executor node and is used by <code>GetSemanticJobDetail</code>, <code>GetSemanticJobLog</code>, and <code>KillSemanticJob</code>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</p>
+     * <h2>Billing</h2>
+     * <p><strong>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</strong></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
      * 
      * @param request RunSemanticJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18792,10 +19538,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</p>
+     * <h2>Description</h2>
+     * <p>Loads a saved semantic job definition by <code>Name</code> and submits a new analysis run to the executor. This operation does not accept runtime <code>Source</code>, resource group, or reference file overrides. The execution always uses the configuration saved by <code>CreateSemanticJob</code>.</p>
+     * <h2>Pre-execution validation</h2>
+     * <p>The service validates the existence and access permissions of the job, and re-validates whether the associated files still exist. For files associated through <code>ReferenceFileIds</code>, the service resolves them to temporary addresses readable by the current run before submission. Deleting a file after upload or specifying an invalid file ID causes the submission to fail.</p>
+     * <h2>Response and What to do next</h2>
+     * <p><code>Data.JobRunId</code> is the identity of the current semantics node run and is used by <code>DownloadSemanticResults</code> to download the exact output of this run. <code>Data.ExecutorJobId</code> is the identity of the executor node and is used by <code>GetSemanticJobDetail</code>, <code>GetSemanticJobLog</code>, and <code>KillSemanticJob</code>. A successful response indicates that the executor has accepted the submission, not that the model analysis or result files are complete.</p>
+     * <h2>Billing</h2>
+     * <p><strong>Before using this operation, make sure that you fully understand the billing method and pricing of the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">model calls</a> used by semantic construction.</strong></p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
+     * <p>Submits a saved semantic job for execution by name and returns the run identifier and executor job identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</p>
      * 
      * @param request RunSemanticJobRequest
      * @return RunSemanticJobResponse
@@ -18975,6 +19728,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartWorkflowInstancesResponse startWorkflowInstances(StartWorkflowInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startWorkflowInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>停止指定元数据采集器当前正在执行的运行任务。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlerRuns</code> 确认采集器存在正在执行的运行任务。</li>
+     * <li>调用本接口提交停止请求。</li>
+     * <li>再次调用 <code>ListCrawlerRuns</code> 确认最终运行状态。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>没有正在执行的运行任务时调用会失败。接口成功仅表示停止请求已受理。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>停止元数据采集器运行</p>
+     * 
+     * @param request StopCrawlerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopCrawlerResponse
+     */
+    public StopCrawlerResponse stopCrawlerWithOptions(StopCrawlerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopCrawler"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopCrawlerResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>停止指定元数据采集器当前正在执行的运行任务。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>ListCrawlerRuns</code> 确认采集器存在正在执行的运行任务。</li>
+     * <li>调用本接口提交停止请求。</li>
+     * <li>再次调用 <code>ListCrawlerRuns</code> 确认最终运行状态。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>没有正在执行的运行任务时调用会失败。接口成功仅表示停止请求已受理。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>停止元数据采集器运行</p>
+     * 
+     * @param request StopCrawlerRequest
+     * @return StopCrawlerResponse
+     */
+    public StopCrawlerResponse stopCrawler(StopCrawlerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopCrawlerWithOptions(request, runtime);
     }
 
     /**
@@ -19949,6 +20774,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateComputeResourceResponse updateComputeResource(UpdateComputeResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateComputeResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>部分更新指定元数据采集器的资源组、采集范围、调度、AI 元数据描述或扩展配置。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>GetCrawler</code> 查询当前配置。</li>
+     * <li>调用 <code>GetCrawlerTypeCapabilities</code> 确认该采集器类型支持的配置能力。</li>
+     * <li>仅传入需要更新的字段调用本接口。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>至少需要提供一个可更新字段；未提供的字段保持不变。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新元数据采集器</p>
+     * 
+     * @param tmpReq UpdateCrawlerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCrawlerResponse
+     */
+    public UpdateCrawlerResponse updateCrawlerWithOptions(UpdateCrawlerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCrawlerShrinkRequest request = new UpdateCrawlerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.options)) {
+            request.optionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.options, "Options", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scheduleConfig)) {
+            request.scheduleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scheduleConfig, "ScheduleConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.scope)) {
+            request.scopeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.scope, "Scope", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAiComment)) {
+            body.put("EnableAiComment", request.enableAiComment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.optionsShrink)) {
+            body.put("Options", request.optionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleConfigShrink)) {
+            body.put("ScheduleConfig", request.scheduleConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeShrink)) {
+            body.put("Scope", request.scopeShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCrawler"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCrawlerResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用场景</h2>
+     * <p>部分更新指定元数据采集器的资源组、采集范围、调度、AI 元数据描述或扩展配置。</p>
+     * <h2>推荐流程</h2>
+     * <ol>
+     * <li>调用 <code>GetCrawler</code> 查询当前配置。</li>
+     * <li>调用 <code>GetCrawlerTypeCapabilities</code> 确认该采集器类型支持的配置能力。</li>
+     * <li>仅传入需要更新的字段调用本接口。</li>
+     * </ol>
+     * <h2>版本要求</h2>
+     * <p>需要购买DataWorks基础版及以上版本才能使用。</p>
+     * <h2>注意事项</h2>
+     * <p>至少需要提供一个可更新字段；未提供的字段保持不变。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新元数据采集器</p>
+     * 
+     * @param request UpdateCrawlerRequest
+     * @return UpdateCrawlerResponse
+     */
+    public UpdateCrawlerResponse updateCrawler(UpdateCrawlerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCrawlerWithOptions(request, runtime);
     }
 
     /**
@@ -21561,10 +22492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Professional Edition or a later version.</p>
+     * <p>DataWorks Professional Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a meta entity definition. This operation supports both custom and extended table entity types.</p>
+     * <p>Updates a metadata entity definition, including custom entity types and extension table types.</p>
      * 
      * @param tmpReq UpdateMetaEntityDefRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21622,10 +22553,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation requires DataWorks Professional Edition or a later version.</p>
+     * <p>DataWorks Professional Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a meta entity definition. This operation supports both custom and extended table entity types.</p>
+     * <p>Updates a metadata entity definition, including custom entity types and extension table types.</p>
      * 
      * @param request UpdateMetaEntityDefRequest
      * @return UpdateMetaEntityDefResponse
@@ -22440,11 +23371,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a later version to use this operation.</li>
+     * <li>You must have DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</p>
+     * <p>Updates the business metadata of a table in Data Map. Currently, only the table usage description and custom attributes can be updated.</p>
      * 
      * @param tmpReq UpdateTableBusinessMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22491,11 +23422,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>You must purchase DataWorks Basic Edition or a later version to use this operation.</li>
+     * <li>You must have DataWorks Basic Edition or a higher edition to use this feature.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</p>
+     * <p>Updates the business metadata of a table in Data Map. Currently, only the table usage description and custom attributes can be updated.</p>
      * 
      * @param request UpdateTableBusinessMetadataRequest
      * @return UpdateTableBusinessMetadataResponse
@@ -22989,10 +23920,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Requests an upload URL for semantic job attachments.</p>
+     * <h2>Scenarios</h2>
+     * <p>Requests an upload slot for a reference file to prepare a file for the <code>singleTableFile</code> source of <code>CreateSemanticJob</code>.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Pass the file name, MIME type, and actual size to this operation to obtain <code>Data.UploadUrl</code> and <code>Data.FileId</code>.</li>
+     * <li>Perform an HTTP PUT upload with the same <code>Content-Type</code> before the <code>UploadUrl</code> expires.</li>
+     * <li>After the upload is complete, use <code>FileId</code> as the only element of <code>CreateSemanticJob.ReferenceFileIds</code>.</li>
+     * </ol>
+     * <h2>Security considerations</h2>
+     * <p><code>UploadUrl</code> is a short-lived pre-signed PUT URL. The holder can write to the corresponding object. Do not log, share, or persist this URL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</p>
+     * <p>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</p>
      * 
      * @param request UploadSemanticFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23032,10 +23972,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Requests an upload URL for semantic job attachments.</p>
+     * <h2>Scenarios</h2>
+     * <p>Requests an upload slot for a reference file to prepare a file for the <code>singleTableFile</code> source of <code>CreateSemanticJob</code>.</p>
+     * <h2>Procedure</h2>
+     * <ol>
+     * <li>Pass the file name, MIME type, and actual size to this operation to obtain <code>Data.UploadUrl</code> and <code>Data.FileId</code>.</li>
+     * <li>Perform an HTTP PUT upload with the same <code>Content-Type</code> before the <code>UploadUrl</code> expires.</li>
+     * <li>After the upload is complete, use <code>FileId</code> as the only element of <code>CreateSemanticJob.ReferenceFileIds</code>.</li>
+     * </ol>
+     * <h2>Security considerations</h2>
+     * <p><code>UploadUrl</code> is a short-lived pre-signed PUT URL. The holder can write to the corresponding object. Do not log, share, or persist this URL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</p>
+     * <p>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</p>
      * 
      * @param request UploadSemanticFileRequest
      * @return UploadSemanticFileResponse

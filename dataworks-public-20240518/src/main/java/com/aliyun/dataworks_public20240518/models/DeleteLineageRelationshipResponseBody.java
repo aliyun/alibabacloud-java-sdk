@@ -16,10 +16,8 @@ public class DeleteLineageRelationshipResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: success.</p>
-     * </li>
-     * <li><p>false: failure.</p>
-     * </li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

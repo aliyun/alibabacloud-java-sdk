@@ -23,7 +23,7 @@ public class GetTableResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The details of the data table.</p>
+     * <p>The details of the table.</p>
      */
     @NameInMap("Table")
     public Table table;

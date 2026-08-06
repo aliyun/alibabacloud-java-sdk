@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLineageRelationshipsRequest extends TeaModel {
     /**
-     * <p>The ID of the destination entity. You can get the ID for a table or column from the response of the <code>ListTables</code> or <code>ListColumns</code> operation, or specify the ID of a custom entity.</p>
+     * <p>The destination entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String dstEntityId;
 
     /**
-     * <p>The name of the destination entity. Supports fuzzy matching.</p>
+     * <p>The destination entity name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>dstName</p>
@@ -24,12 +24,10 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String dstEntityName;
 
     /**
-     * <p>The sort order. The default value is <code>Asc</code>. Valid values:</p>
+     * <p>The sort order. Default value: Asc. Valid values:</p>
      * <ul>
-     * <li><p><code>Asc</code>: ascending order</p>
-     * </li>
-     * <li><p><code>Desc</code>: descending order</p>
-     * </li>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +37,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +46,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. The default value is 10. The maximum value is 100.</p>
+     * <p>The page size. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,7 +55,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field to sort the results by. The default value is <code>Name</code>.</p>
+     * <p>The sort field. Default value: Name.</p>
      * 
      * <strong>example:</strong>
      * <p>Name</p>
@@ -66,7 +64,8 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The ID of the source entity. You can get the ID for a table or column from the response of the <code>ListTables</code> or <code>ListColumns</code> operation, or specify the ID of a custom entity.</p>
+     * <p>The source entity ID. You can use the table or field ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
+     * <p>To obtain the table or field entity ID, first call ListCrawlers to obtain the MetaEntityId of the metadata crawler. For types that contain data catalog levels, such as DLF and StarRocks, call ListCatalogs to obtain the catalog ID. Then call ListDatabases to obtain the database ID. If necessary, call ListSchemas to obtain the schema ID. Finally, call ListTables or ListColumns to obtain the table or field ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +75,7 @@ public class ListLineageRelationshipsRequest extends TeaModel {
     public String srcEntityId;
 
     /**
-     * <p>The name of the source entity. Supports fuzzy matching.</p>
+     * <p>The source entity name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>srcName</p>

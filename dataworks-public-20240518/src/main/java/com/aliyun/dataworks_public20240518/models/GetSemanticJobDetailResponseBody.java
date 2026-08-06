@@ -62,7 +62,7 @@ public class GetSemanticJobDetailResponseBody extends TeaModel {
         public java.util.Map<String, ?> advanceSettings;
 
         /**
-         * <p>The code parameter information returned by the executor. Used for troubleshooting the runtime configuration of this run.</p>
+         * <p>The code parameter information returned by the executor. Used to troubleshoot the runtime configuration of this run.</p>
          * 
          * <strong>example:</strong>
          * <p>--limit 100</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadSemanticFileRequest extends TeaModel {
     /**
-     * <p>The MIME type of the object to upload. Maximum length: 128 characters. This value is included in the signature of UploadUrl. Use the same Content-Type when you perform the PUT request.</p>
+     * <p>The MIME type of the object to upload. Maximum length: 128 characters. This value is included in the UploadUrl signature. Use the same Content-Type when performing the PUT request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UploadSemanticFileRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The original file name of the reference file to upload. Maximum length: 255 characters. When FileId is used for singleTableFile, only CSV or XLSX files are supported.</p>
+     * <p>The original file name of the reference file to upload. Maximum length: 255 characters. When singleTableFile uses a FileId, only CSV or XLSX files are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
