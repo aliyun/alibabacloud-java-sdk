@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudConnectNetworksRequest extends TeaModel {
     /**
-     * <p>The ID of the CCN.</p>
+     * <p>The instance ID of the Cloud Connect Network (CCN).</p>
      * 
      * <strong>example:</strong>
      * <p>ccn-l9340rlu5enst*****</p>
@@ -14,8 +14,8 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public String ccnId;
 
     /**
-     * <p>The name of the CCN.</p>
-     * <p>The name must be 2 to 100 characters long, start with a letter or a Chinese character, and can contain digits, underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The name of the Cloud Connect Network (CCN) instance.</p>
+     * <p>The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), periods (.), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>ccnname</p>
@@ -39,7 +39,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +48,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the CCN is located.</p>
+     * <p>The region ID of the Cloud Connect Network (CCN) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class DescribeCloudConnectNetworksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags to filter CCN instances.</p>
+     * <p>The labels used to filter Cloud Connect Network (CCN) instances.</p>
      * 
      * <strong>example:</strong>
      * <p>DescribeCloudConnectNetworks</p>

@@ -32,7 +32,7 @@ public class AttachCcnInstanceToCenRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Internet CIDR block used when the Cloud Connect Network (CCN) instance is attached to the CEN instance.</p>
+     * <p>The CIDR block used when the Cloud Connect Network (CCN) instance is attached to the CEN instance over the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.55.0/24</p>

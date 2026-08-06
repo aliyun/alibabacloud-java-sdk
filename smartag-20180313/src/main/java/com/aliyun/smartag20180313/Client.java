@@ -808,10 +808,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * @param request AttachCcnInstanceToCenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -855,10 +855,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds a Cloud Connect Network (CCN) instance to a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>Associates a Cloud Connect Network (CCN) instance with a Cloud Enterprise Network (CEN) instance.</p>
      * 
      * @param request AttachCcnInstanceToCenRequest
      * @return AttachCcnInstanceToCenResponse
@@ -4216,7 +4216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves Cloud Connect Network (CCN) instances in a specified region.</p>
+     * <p>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</p>
      * 
      * @param request DescribeCloudConnectNetworksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4284,7 +4284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves Cloud Connect Network (CCN) instances in a specified region.</p>
+     * <p>Queries information about Cloud Connect Network (CCN) instances created in a specified region.</p>
      * 
      * @param request DescribeCloudConnectNetworksRequest
      * @return DescribeCloudConnectNetworksResponse

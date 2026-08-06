@@ -17,7 +17,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -144,6 +144,9 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @NameInMap("AssociatedCenOwnerId")
         public String associatedCenOwnerId;
 
+        @NameInMap("AssociatedCenStatus")
+        public String associatedCenStatus;
+
         @NameInMap("AssociatedCloudBoxCount")
         public String associatedCloudBoxCount;
 
@@ -152,6 +155,12 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
 
         @NameInMap("CcnId")
         public String ccnId;
+
+        @NameInMap("CenStatusErrorCode")
+        public String cenStatusErrorCode;
+
+        @NameInMap("CenStatusErrorMessage")
+        public String cenStatusErrorMessage;
 
         @NameInMap("CidrBlock")
         public String cidrBlock;
@@ -170,6 +179,9 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
 
         @NameInMap("NewAgw")
         public Boolean newAgw;
+
+        @NameInMap("ProcessingCenId")
+        public String processingCenId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -204,6 +216,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             return this.associatedCenOwnerId;
         }
 
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setAssociatedCenStatus(String associatedCenStatus) {
+            this.associatedCenStatus = associatedCenStatus;
+            return this;
+        }
+        public String getAssociatedCenStatus() {
+            return this.associatedCenStatus;
+        }
+
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setAssociatedCloudBoxCount(String associatedCloudBoxCount) {
             this.associatedCloudBoxCount = associatedCloudBoxCount;
             return this;
@@ -226,6 +246,22 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
         public String getCcnId() {
             return this.ccnId;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setCenStatusErrorCode(String cenStatusErrorCode) {
+            this.cenStatusErrorCode = cenStatusErrorCode;
+            return this;
+        }
+        public String getCenStatusErrorCode() {
+            return this.cenStatusErrorCode;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setCenStatusErrorMessage(String cenStatusErrorMessage) {
+            this.cenStatusErrorMessage = cenStatusErrorMessage;
+            return this;
+        }
+        public String getCenStatusErrorMessage() {
+            return this.cenStatusErrorMessage;
         }
 
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setCidrBlock(String cidrBlock) {
@@ -274,6 +310,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
         public Boolean getNewAgw() {
             return this.newAgw;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setProcessingCenId(String processingCenId) {
+            this.processingCenId = processingCenId;
+            return this;
+        }
+        public String getProcessingCenId() {
+            return this.processingCenId;
         }
 
         public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setResourceGroupId(String resourceGroupId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachCcnInstanceFromCenRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Connect Network (CCN) that is bound to the CEN instance.</p>
+     * <p>The ID of the Cloud Connect Network (CCN) that is attached to the CEN instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ccn-isdjvvkexkrpk*****</p>
@@ -14,7 +14,7 @@ public class DetachCcnInstanceFromCenRequest extends TeaModel {
     public String ccnId;
 
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance from which you want to revoke the authorization.</p>
+     * <p>The ID of the CEN instance from which you want to revoke the authorization.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-9j8gkkj7z9vie9a8z9</p>
