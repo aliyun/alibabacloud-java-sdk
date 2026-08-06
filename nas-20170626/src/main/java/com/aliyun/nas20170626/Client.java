@@ -6410,6 +6410,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>关闭数据洞察</p>
+     * 
+     * @param request DisableDataInsightRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableDataInsightResponse
+     */
+    public DisableDataInsightResponse disableDataInsightWithOptions(DisableDataInsightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableDataInsight"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableDataInsightResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>关闭数据洞察</p>
+     * 
+     * @param request DisableDataInsightRequest
+     * @return DisableDataInsightResponse
+     */
+    public DisableDataInsightResponse disableDataInsight(DisableDataInsightRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableDataInsightWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>仅通用型NAS NFS协议文件系统支持该功能。</p>
      * 
      * <b>summary</b> : 
@@ -6510,6 +6564,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableSmbAclResponse disableSmbAcl(DisableSmbAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableSmbAclWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>开启数据洞察</p>
+     * 
+     * @param request EnableDataInsightRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableDataInsightResponse
+     */
+    public EnableDataInsightResponse enableDataInsightWithOptions(EnableDataInsightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableDataInsight"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableDataInsightResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>开启数据洞察</p>
+     * 
+     * @param request EnableDataInsightRequest
+     * @return EnableDataInsightResponse
+     */
+    public EnableDataInsightResponse enableDataInsight(EnableDataInsightRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableDataInsightWithOptions(request, runtime);
     }
 
     /**
@@ -7012,6 +7120,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAccessPointsResponse listAccessPoints(ListAccessPointsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAccessPointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取数据洞察目录结构</p>
+     * 
+     * @param request ListDataInsightDirectoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDataInsightDirectoriesResponse
+     */
+    public ListDataInsightDirectoriesResponse listDataInsightDirectoriesWithOptions(ListDataInsightDirectoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentDir)) {
+            query.put("ParentDir", request.parentDir);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataInsightDirectories"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataInsightDirectoriesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>当前邀测使用，如需使用请提交工单申请。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取数据洞察目录结构</p>
+     * 
+     * @param request ListDataInsightDirectoriesRequest
+     * @return ListDataInsightDirectoriesResponse
+     */
+    public ListDataInsightDirectoriesResponse listDataInsightDirectories(ListDataInsightDirectoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataInsightDirectoriesWithOptions(request, runtime);
     }
 
     /**

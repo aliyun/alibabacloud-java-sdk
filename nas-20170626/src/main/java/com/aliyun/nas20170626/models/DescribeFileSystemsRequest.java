@@ -6,6 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeFileSystemsRequest extends TeaModel {
     /**
      * <p>The file system ID.</p>
+     * <ul>
+     * <li>General-purpose NAS: 31a8e4****.</li>
+     * <li>Extreme NAS: must start with extreme-, such as extreme-0015****.</li>
+     * <li>CPFS (locally redundant): must start with cpfs-, such as cpfs-125487****.</li>
+     * <li>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>31a8e4****</p>
@@ -14,7 +20,18 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The file system type.</p>
+     * <p>The type of the file system.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>all (default): queries all types.</li>
+     * <li>standard: General-purpose NAS.</li>
+     * <li>extreme: Extreme NAS.</li>
+     * <li>cpfs: Cloud Parallel File Storage (locally redundant).</li>
+     * <li>cpfsse: Cloud Parallel File Storage SE (zone-redundant).</li>
+     * </ul>
+     * <blockquote>
+     * <p>To query multiple types, separate them with commas (,).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -42,6 +59,7 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmwavnfef****</p>
@@ -51,6 +69,14 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     /**
      * <p>The storage type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>General-purpose NAS: Capacity, Performance, and Premium.</li>
+     * <li>Extreme NAS: standard and advance.</li>
+     * <li>CPFS: advance_100 (100 MB/s/TiB baseline), advance_200 (200 MB/s/TiB baseline), and economic.</li>
+     * <li>CPFS SE: advance_100 (100 MB/s/TiB baseline).</li>
+     * <li>AgenticFS: Agentic (available only when FileSystemType is set to standard).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Capacity</p>
@@ -65,7 +91,7 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public java.util.List<DescribeFileSystemsRequestTag> tag;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1sevsgtqvk5gxbl****</p>
@@ -154,6 +180,13 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
         /**
          * <p>The tag value.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>Valid values of N: 1 to 20.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>
