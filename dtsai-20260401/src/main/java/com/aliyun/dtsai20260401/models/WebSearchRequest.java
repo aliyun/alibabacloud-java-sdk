@@ -33,6 +33,12 @@ public class WebSearchRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("UrlScopeDomains")
+    public String urlScopeDomains;
+
+    @NameInMap("UrlScopeMode")
+    public String urlScopeMode;
+
     public static WebSearchRequest build(java.util.Map<String, ?> map) throws Exception {
         WebSearchRequest self = new WebSearchRequest();
         return TeaModel.build(map, self);
@@ -60,6 +66,22 @@ public class WebSearchRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public WebSearchRequest setUrlScopeDomains(String urlScopeDomains) {
+        this.urlScopeDomains = urlScopeDomains;
+        return this;
+    }
+    public String getUrlScopeDomains() {
+        return this.urlScopeDomains;
+    }
+
+    public WebSearchRequest setUrlScopeMode(String urlScopeMode) {
+        this.urlScopeMode = urlScopeMode;
+        return this;
+    }
+    public String getUrlScopeMode() {
+        return this.urlScopeMode;
     }
 
 }

@@ -138,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Region: Only China (Beijing) is supported.</li>
-     * <li>Fees: The service is free of charge during the public preview period.</li>
+     * <li>Fees: Free during the public preview period. No fees are charged.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -208,7 +208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Region: Only China (Beijing) is supported.</li>
-     * <li>Fees: The service is free of charge during the public preview period.</li>
+     * <li>Fees: Free during the public preview period. No fees are charged.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -523,6 +523,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.urlScopeDomains)) {
+            query.put("UrlScopeDomains", request.urlScopeDomains);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.urlScopeMode)) {
+            query.put("UrlScopeMode", request.urlScopeMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

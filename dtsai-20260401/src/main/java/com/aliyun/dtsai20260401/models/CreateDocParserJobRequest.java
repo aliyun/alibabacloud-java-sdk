@@ -9,13 +9,13 @@ public class CreateDocParserJobRequest extends TeaModel {
      * <ul>
      * <li><p><strong>pdf</strong>: PDF file.</p>
      * </li>
-     * <li><p><strong>docx</strong>: Word file in DOCX format.</p>
+     * <li><p><strong>docx</strong>: Word file in docx format.</p>
      * </li>
-     * <li><p><strong>doc</strong>: Word file in DOC format.</p>
+     * <li><p><strong>doc</strong>: Word file in doc format.</p>
      * </li>
-     * <li><p><strong>pptx</strong>: PPT file in PPTX format.</p>
+     * <li><p><strong>pptx</strong>: PPT file in pptx format.</p>
      * </li>
-     * <li><p><strong>ppt</strong>: PPT file in PPT format.</p>
+     * <li><p><strong>ppt</strong>: PPT file in ppt format.</p>
      * </li>
      * <li><p><strong>txt</strong>: plain text file.</p>
      * </li>
@@ -49,7 +49,7 @@ public class CreateDocParserJobRequest extends TeaModel {
     /**
      * <p>The HTTP or HTTPS URL of the file to be parsed.</p>
      * <blockquote>
-     * <p>The SDKs for various programming languages additionally provide a <code>CreateDocParserJobAdvance</code> method that supports passing a local file stream directly (such as InputStream in Java), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <code>FileUrl</code> parameter (URL string) with the <code>FileUrlObject</code> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</p>
+     * <p>SDKs for various languages provide an additional <code>CreateDocParserJobAdvance</code> method that supports passing a local file stream directly (such as InputStream in Java), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <code>FileUrl</code> parameter (URL string) with the <code>FileUrlObject</code> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</p>
      * <ol>
      * <li>Obtains temporary OSS upload credentials.</li>
      * <li>Uploads the file stream directly to OSS.</li>

@@ -1,3 +1,8 @@
+2026-08-06 Version: 1.0.2
+- Update API WebSearch: add request parameters UrlScopeDomains.
+- Update API WebSearch: add request parameters UrlScopeMode.
+
+
 2026-07-29 Version: 1.0.1
 - Update API CreateDocParserJob: add request parameters ImageMode.
 - Update API CreateDocParserJob: add request parameters OssFileUrl.
