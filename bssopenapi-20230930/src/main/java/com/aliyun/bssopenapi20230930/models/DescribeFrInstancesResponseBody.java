@@ -91,6 +91,47 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeFrInstancesResponseBodyDataAutoPurchase extends TeaModel {
+        @NameInMap("AlreadyAutoPurchase")
+        public Boolean alreadyAutoPurchase;
+
+        @NameInMap("SettingAutoPurchase")
+        public Boolean settingAutoPurchase;
+
+        @NameInMap("SupportAutoPurchase")
+        public Boolean supportAutoPurchase;
+
+        public static DescribeFrInstancesResponseBodyDataAutoPurchase build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFrInstancesResponseBodyDataAutoPurchase self = new DescribeFrInstancesResponseBodyDataAutoPurchase();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFrInstancesResponseBodyDataAutoPurchase setAlreadyAutoPurchase(Boolean alreadyAutoPurchase) {
+            this.alreadyAutoPurchase = alreadyAutoPurchase;
+            return this;
+        }
+        public Boolean getAlreadyAutoPurchase() {
+            return this.alreadyAutoPurchase;
+        }
+
+        public DescribeFrInstancesResponseBodyDataAutoPurchase setSettingAutoPurchase(Boolean settingAutoPurchase) {
+            this.settingAutoPurchase = settingAutoPurchase;
+            return this;
+        }
+        public Boolean getSettingAutoPurchase() {
+            return this.settingAutoPurchase;
+        }
+
+        public DescribeFrInstancesResponseBodyDataAutoPurchase setSupportAutoPurchase(Boolean supportAutoPurchase) {
+            this.supportAutoPurchase = supportAutoPurchase;
+            return this;
+        }
+        public Boolean getSupportAutoPurchase() {
+            return this.supportAutoPurchase;
+        }
+
+    }
+
     public static class DescribeFrInstancesResponseBodyDataCapacityType extends TeaModel {
         /**
          * <p>The property code.</p>
@@ -105,7 +146,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>总量递减型</p>
+         * <p>Total decrement</p>
          */
         @NameInMap("Name")
         public String name;
@@ -147,7 +188,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALB资源包</p>
+         * <p>ALB Resource Plan</p>
          */
         @NameInMap("Name")
         public String name;
@@ -189,7 +230,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The commitment cycle name.</p>
          * 
          * <strong>example:</strong>
-         * <p>小时</p>
+         * <p>Hour</p>
          */
         @NameInMap("Name")
         public String name;
@@ -231,7 +272,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The deductible region.</p>
          * 
          * <strong>example:</strong>
-         * <p>北京</p>
+         * <p>Beijing</p>
          */
         @NameInMap("Name")
         public String name;
@@ -273,7 +314,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>负载均衡</p>
+         * <p>Server Load Balancer</p>
          */
         @NameInMap("Name")
         public String name;
@@ -315,7 +356,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>有效</p>
+         * <p>Valid</p>
          */
         @NameInMap("Name")
         public String name;
@@ -357,7 +398,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The property name.</p>
          * 
          * <strong>example:</strong>
-         * <p>中国内地区域</p>
+         * <p>Chinese mainland regions</p>
          */
         @NameInMap("Name")
         public String name;
@@ -404,11 +445,14 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("AutoPurchase")
+        public DescribeFrInstancesResponseBodyDataAutoPurchase autoPurchase;
+
         /**
          * <p>The capacity type name.</p>
          * 
          * <strong>example:</strong>
-         * <p>总量递减型</p>
+         * <p>Total decrement</p>
          */
         @NameInMap("CapacitiyTypeName")
         public String capacitiyTypeName;
@@ -447,13 +491,13 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The commodity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>性能测试</p>
+         * <p>Performance Testing</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
-         * <p>The current capacity baseline unit.</p>
+         * <p>The current capacity base unit.</p>
          * 
          * <strong>example:</strong>
          * <p>CU</p>
@@ -462,7 +506,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String currCapacityBaseUnit;
 
         /**
-         * <p>The current capacity baseline value.</p>
+         * <p>The current capacity base value.</p>
          * 
          * <strong>example:</strong>
          * <p>1000.000000</p>
@@ -507,7 +551,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The commitment cycle name.</p>
          * 
          * <strong>example:</strong>
-         * <p>小时</p>
+         * <p>Hour</p>
          */
         @NameInMap("CycleTypeName")
         public String cycleTypeName;
@@ -518,8 +562,11 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         @NameInMap("DeductRegions")
         public java.util.List<DescribeFrInstancesResponseBodyDataDeductRegions> deductRegions;
 
+        @NameInMap("EnableDeductRule")
+        public Boolean enableDeductRule;
+
         /**
-         * <p>Indicates whether the resource plan can be exchanged.</p>
+         * <p>Indicates whether exchange is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -528,7 +575,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public Boolean enableExchange;
 
         /**
-         * <p>Indicates whether the resource plan can be renewed.</p>
+         * <p>Indicates whether renewal is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -537,7 +584,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public Boolean enableRenew;
 
         /**
-         * <p>Indicates whether the resource plan can be upgraded.</p>
+         * <p>Indicates whether upgrade is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -555,7 +602,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The commodity code for exchange.</p>
+         * <p>The exchange commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -564,7 +611,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String exchangeCommodityCode;
 
         /**
-         * <p>The initial capacity baseline unit.</p>
+         * <p>The initial capacity base unit.</p>
          * 
          * <strong>example:</strong>
          * <p>CU</p>
@@ -573,7 +620,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String initCapacityBaseUnit;
 
         /**
-         * <p>The initial capacity baseline value.</p>
+         * <p>The initial capacity base value.</p>
          * 
          * <strong>example:</strong>
          * <p>1000.000000</p>
@@ -654,7 +701,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The product name.</p>
          * 
          * <strong>example:</strong>
-         * <p>性能测试</p>
+         * <p>Performance Testing</p>
          */
         @NameInMap("ProductName")
         public String productName;
@@ -727,7 +774,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          * <p>The resource status name.</p>
          * 
          * <strong>example:</strong>
-         * <p>有效</p>
+         * <p>Valid</p>
          */
         @NameInMap("StatusName")
         public String statusName;
@@ -757,7 +804,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The period capacity baseline unit.</p>
+         * <p>The periodic capacity base unit.</p>
          * 
          * <strong>example:</strong>
          * <p>CU</p>
@@ -766,7 +813,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public String periodCapacityBaseUnit;
 
         /**
-         * <p>The period capacity baseline value.</p>
+         * <p>The periodic capacity base value.</p>
          * 
          * <strong>example:</strong>
          * <p>1000.000000</p>
@@ -793,6 +840,14 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public DescribeFrInstancesResponseBodyData setAutoPurchase(DescribeFrInstancesResponseBodyDataAutoPurchase autoPurchase) {
+            this.autoPurchase = autoPurchase;
+            return this;
+        }
+        public DescribeFrInstancesResponseBodyDataAutoPurchase getAutoPurchase() {
+            return this.autoPurchase;
         }
 
         public DescribeFrInstancesResponseBodyData setCapacitiyTypeName(String capacitiyTypeName) {
@@ -905,6 +960,14 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeFrInstancesResponseBodyDataDeductRegions> getDeductRegions() {
             return this.deductRegions;
+        }
+
+        public DescribeFrInstancesResponseBodyData setEnableDeductRule(Boolean enableDeductRule) {
+            this.enableDeductRule = enableDeductRule;
+            return this;
+        }
+        public Boolean getEnableDeductRule() {
+            return this.enableDeductRule;
         }
 
         public DescribeFrInstancesResponseBodyData setEnableExchange(Boolean enableExchange) {

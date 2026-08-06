@@ -1330,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query budget list</p>
+     * <p>Queries a list of budgets.</p>
      * 
      * @param request DescribeBudgetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1384,7 +1384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query budget list</p>
+     * <p>Queries a list of budgets.</p>
      * 
      * @param request DescribeBudgetsRequest
      * @return DescribeBudgetsResponse
@@ -3445,10 +3445,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the SLA compensation details list of a user. Only data from the last two months is available.</p>
+     * <p>Provides the SLA compensation details list for a user. Only data from the last two months is available.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SLA compensation list of a user.</p>
+     * <p>Queries the SLA compensation list for a user.</p>
      * 
      * @param request QueryMonthlySlaListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3510,10 +3510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the SLA compensation details list of a user. Only data from the last two months is available.</p>
+     * <p>Provides the SLA compensation details list for a user. Only data from the last two months is available.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SLA compensation list of a user.</p>
+     * <p>Queries the SLA compensation list for a user.</p>
      * 
      * @param request QueryMonthlySlaListRequest
      * @return QueryMonthlySlaListResponse

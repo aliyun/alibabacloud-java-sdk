@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryMonthlySlaListRequest extends TeaModel {
     /**
-     * <p>The current page number. Default value: 1, which indicates the first page.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class QueryMonthlySlaListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</p>
+     * <p>The enterprise and account list. If this parameter is empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryMonthlySlaListRequestEcIdAccountIds> ecIdAccountIds;
@@ -29,7 +29,7 @@ public class QueryMonthlySlaListRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>Optional. Month list in yyyyMM format.</p>
+     * <p>Optional. List of months in yyyyMM format.</p>
      * 
      * <strong>example:</strong>
      * <p>[202602,202603]</p>
@@ -38,7 +38,7 @@ public class QueryMonthlySlaListRequest extends TeaModel {
     public java.util.List<Integer> months;
 
     /**
-     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
@@ -141,7 +141,7 @@ public class QueryMonthlySlaListRequest extends TeaModel {
 
     public static class QueryMonthlySlaListRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>The list of accounts to query. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
+         * <p>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;

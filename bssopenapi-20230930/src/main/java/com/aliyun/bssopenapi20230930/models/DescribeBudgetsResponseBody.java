@@ -135,7 +135,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
 
     public static class DescribeBudgetsResponseBodyDataEcIdAccountIdsFilter extends TeaModel {
         /**
-         * <p>The member account IDs.</p>
+         * <p>The IDs of the member accounts.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
@@ -192,7 +192,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         public String selectType;
 
         /**
-         * <p>The filter value list.</p>
+         * <p>The list of filter values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -230,7 +230,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
 
     public static class DescribeBudgetsResponseBodyDataWarnConfs extends TeaModel {
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>comment1</p>
@@ -239,7 +239,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>Indicates whether EventBridge is enabled.</p>
+         * <p>Specifies whether EventBridge is enabled.</p>
          */
         @NameInMap("EventBridge")
         public Boolean eventBridge;
@@ -266,7 +266,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The sort sequence number. This parameter is present only in responses. Alerts are numbered in ascending order by alert ID, starting from 1.</p>
+         * <p>The sequence number. This field is present only in responses and is numbered starting from 1 in ascending order of alert ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -400,7 +400,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         public String budgetType;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>budget-1</p>
@@ -409,7 +409,7 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The end period.</p>
+         * <p>The end period of the budget cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-12</p>
@@ -418,13 +418,13 @@ public class DescribeBudgetsResponseBody extends TeaModel {
         public String cycleEndPeriod;
 
         /**
-         * <p>The specified quota per cycle.</p>
+         * <p>The specified quota for each cycle.</p>
          */
         @NameInMap("CycleQuota")
         public java.util.List<DescribeBudgetsResponseBodyDataCycleQuota> cycleQuota;
 
         /**
-         * <p>The start period.</p>
+         * <p>The start period of the budget cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10</p>

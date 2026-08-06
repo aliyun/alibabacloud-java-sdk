@@ -20,7 +20,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
     public java.util.List<QueryMonthlySlaListResponseBodyData> data;
 
     /**
-     * <p>The response metadata.</p>
+     * <p>The response struct metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -119,7 +119,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Double availableRate;
 
         /**
-         * <p>The unique identifier of the damage record, which is used for targeted compensation application.</p>
+         * <p>The unique ID of the damage record, used for targeted claims.</p>
          * 
          * <strong>example:</strong>
          * <p>9b7***9413</p>
@@ -146,7 +146,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Integer month;
 
         /**
-         * <p>The monthly service charge.</p>
+         * <p>The monthly service fee.</p>
          * 
          * <strong>example:</strong>
          * <p>365.00</p>
@@ -158,13 +158,13 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
          * <p>The compensation description.</p>
          * 
          * <strong>example:</strong>
-         * <p>SLA赔付</p>
+         * <p>SLA compensation</p>
          */
         @NameInMap("PayDescription")
         public String payDescription;
 
         /**
-         * <p>The compensation ratio. Unit: %.</p>
+         * <p>The compensation ratio, in percentage (%).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -173,7 +173,12 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Double payRate;
 
         /**
-         * <p>The compensation status. Valid values: 0 (uncompensated) and 1 (compensated).</p>
+         * <p>The compensation status. Valid values:</p>
+         * <ul>
+         * <li>0: not compensated.</li>
+         * <li>1: compensated.</li>
+         * <li>2: no compensation required.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +196,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The compensation amount.</p>
+         * <p>The compensation amount that should be paid.</p>
          * 
          * <strong>example:</strong>
          * <p>36.5</p>

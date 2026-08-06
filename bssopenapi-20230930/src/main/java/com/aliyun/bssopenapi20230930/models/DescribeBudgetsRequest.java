@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBudgetsRequest extends TeaModel {
     /**
-     * <p>The budget name. Fuzzy search is supported.</p>
+     * <p>The budget name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>department1</p>
@@ -32,7 +32,7 @@ public class DescribeBudgetsRequest extends TeaModel {
     public String expireStatus;
 
     /**
-     * <p>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2688801000001</p>
@@ -41,7 +41,7 @@ public class DescribeBudgetsRequest extends TeaModel {
     public String nbid;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

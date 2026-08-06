@@ -32,7 +32,7 @@ public class DescribeFrInstancesRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The enterprise and account list. If this parameter is empty, the current account is queried.</p>
+     * <p>The enterprise and account list. If empty, the current account is queried.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<DescribeFrInstancesRequestEcIdAccountIds> ecIdAccountIds;
@@ -47,7 +47,7 @@ public class DescribeFrInstancesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The resource dimension to query.</p>
+     * <p>The resource dimension for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>cu</p>
@@ -65,7 +65,7 @@ public class DescribeFrInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The instance label value of the resource plan.</p>
+     * <p>The instance tag label value of the resource plan instance.</p>
      * 
      * <strong>example:</strong>
      * <p>FR-***</p>
@@ -74,7 +74,7 @@ public class DescribeFrInstancesRequest extends TeaModel {
     public String instanceTag;
 
     /**
-     * <p>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</p>
+     * <p>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>2684202000018</p>
@@ -119,7 +119,7 @@ public class DescribeFrInstancesRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The sorting rule.</p>
+     * <p>The collation for sorting.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -316,7 +316,7 @@ public class DescribeFrInstancesRequest extends TeaModel {
 
     public static class DescribeFrInstancesRequestEcIdAccountIds extends TeaModel {
         /**
-         * <p>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
+         * <p>The account list to access. If empty, all accounts under the current entity ID are selected.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;

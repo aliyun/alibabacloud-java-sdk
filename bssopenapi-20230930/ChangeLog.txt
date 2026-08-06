@@ -1,3 +1,8 @@
+2026-08-06 Version: 1.11.1
+- Update API DescribeFrInstances: add response parameters Body.Data.$.AutoPurchase.
+- Update API DescribeFrInstances: add response parameters Body.Data.$.EnableDeductRule.
+
+
 2026-07-09 Version: 1.11.0
 - Support API DescribeDeductLogs.
 - Support API DescribeFrInstances.
