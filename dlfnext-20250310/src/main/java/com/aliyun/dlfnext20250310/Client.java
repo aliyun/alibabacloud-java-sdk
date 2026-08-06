@@ -1212,8 +1212,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the DLF data access role and KMS key policy authorization statement required to configure BYOK SSE KMS. The customer master key is configured at the catalog level through oss.sse.kms.key-id. When creating a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled=true. Tables with KMS encryption enabled and tables without encryption can coexist under the same catalog.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</p>
+     * <p>Retrieves the DLF data access role ARN and KMS key policy authorization statement required to configure BYOK SSE KMS for a catalog. This operation returns the DLF data access role and KMS key policy authorization statement required to configure BYOK SSE KMS. The customer master key is configured at the catalog level through oss.sse.kms.key-id. When creating a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled=true. Tables with KMS encryption enabled and tables without encryption can coexist under the same catalog.</p>
      * 
      * @param request GetCatalogKmsGrantsRequest
      * @param headers map
@@ -1240,8 +1243,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the DLF data access role and KMS key policy authorization statement required to configure BYOK SSE KMS. The customer master key is configured at the catalog level through oss.sse.kms.key-id. When creating a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled=true. Tables with KMS encryption enabled and tables without encryption can coexist under the same catalog.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</p>
+     * <p>Retrieves the DLF data access role ARN and KMS key policy authorization statement required to configure BYOK SSE KMS for a catalog. This operation returns the DLF data access role and KMS key policy authorization statement required to configure BYOK SSE KMS. The customer master key is configured at the catalog level through oss.sse.kms.key-id. When creating a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled=true. Tables with KMS encryption enabled and tables without encryption can coexist under the same catalog.</p>
      * 
      * @param request GetCatalogKmsGrantsRequest
      * @return GetCatalogKmsGrantsResponse
@@ -1473,7 +1479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about an Iceberg namespace.</p>
+     * <p>Queries an Iceberg database.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1499,7 +1505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about an Iceberg namespace.</p>
+     * <p>Queries an Iceberg database.</p>
      * @return GetIcebergNamespaceResponse
      */
     public GetIcebergNamespaceResponse getIcebergNamespace(String catalogId, String namespace) throws Exception {
@@ -3806,7 +3812,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</p>
+     * <p>Updates the trusted VPC configuration.</p>
+     * 
+     * @param request UpdateVpcConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVpcConfigResponse
+     */
+    public UpdateVpcConfigResponse updateVpcConfigWithOptions(UpdateVpcConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.removals)) {
+            body.put("removals", request.removals);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updates)) {
+            body.put("updates", request.updates);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVpcConfig"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/auth/vpc"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVpcConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the trusted VPC configuration.</p>
+     * 
+     * @param request UpdateVpcConfigRequest
+     * @return UpdateVpcConfigResponse
+     */
+    public UpdateVpcConfigResponse updateVpcConfig(UpdateVpcConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateVpcConfigWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation only validates whether the specified customer master key (CMK) can be used for BYOK SSE-KMS of the Catalog. It does not automatically enable encryption for all tables in the Catalog. The CMK is configured at the Catalog level through oss.sse.kms.key-id. When creating a table, set the table property oss.sse.kms.enabled=true to enable SSE-KMS for the specified table.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates the BYOK SSE-KMS configuration of a Catalog: performs an SSE-KMS write probe on the storage bucket using the issued temporary credentials. This operation only validates whether the specified customer master key (CMK) can be used for BYOK SSE-KMS of the Catalog. It does not automatically enable encryption for all tables in the Catalog. The CMK is configured at the Catalog level through oss.sse.kms.key-id. When creating a table, set the table property oss.sse.kms.enabled=true to enable SSE-KMS for the specified table.</p>
      * 
      * @param request VerifyCatalogKmsRequest
      * @param headers map
@@ -3839,8 +3899,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation only validates whether the specified customer master key (CMK) can be used for BYOK SSE-KMS of the Catalog. It does not automatically enable encryption for all tables in the Catalog. The CMK is configured at the Catalog level through oss.sse.kms.key-id. When creating a table, set the table property oss.sse.kms.enabled=true to enable SSE-KMS for the specified table.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</p>
+     * <p>Validates the BYOK SSE-KMS configuration of a Catalog: performs an SSE-KMS write probe on the storage bucket using the issued temporary credentials. This operation only validates whether the specified customer master key (CMK) can be used for BYOK SSE-KMS of the Catalog. It does not automatically enable encryption for all tables in the Catalog. The CMK is configured at the Catalog level through oss.sse.kms.key-id. When creating a table, set the table property oss.sse.kms.enabled=true to enable SSE-KMS for the specified table.</p>
      * 
      * @param request VerifyCatalogKmsRequest
      * @return VerifyCatalogKmsResponse

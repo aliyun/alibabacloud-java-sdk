@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class VerifyCatalogKmsRequest extends TeaModel {
     /**
+     * <p>The ID of the KMS customer master key (CMK) to be validated. The server uses this key to perform an SSE-KMS write probe.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-1234567890abcdef</p>
      */
     @NameInMap("kmsKeyId")
     public String kmsKeyId;
