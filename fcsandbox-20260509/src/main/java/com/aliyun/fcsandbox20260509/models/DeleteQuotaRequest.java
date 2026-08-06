@@ -4,6 +4,12 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class DeleteQuotaRequest extends TeaModel {
+    /**
+     * <p>Team ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f79d6a95-abcd-47a8-9167-eccf0622a998</p>
+     */
     @NameInMap("tagValue")
     public String tagValue;
 

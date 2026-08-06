@@ -4,24 +4,63 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class ListApiKeysResponseBody extends TeaModel {
+    /**
+     * <p>The list of API keys.</p>
+     */
     @NameInMap("apiKeys")
     public java.util.List<ApiKey> apiKeys;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The page number, starting from 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of API keys displayed per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The total number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("total")
     public Integer total;
 

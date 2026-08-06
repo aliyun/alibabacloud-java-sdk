@@ -4,15 +4,36 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CreateTeamResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The Team information.</p>
+     */
     @NameInMap("team")
     public E2BTeam team;
 

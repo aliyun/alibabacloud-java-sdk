@@ -4,24 +4,70 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class ListApiKeysRequest extends TeaModel {
+    /**
+     * <p>The API key name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("apiKeyName")
     public String apiKeyName;
 
+    /**
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of teams displayed per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwxqyrgwabcd</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The status. Valid values:</p>
+     * <ul>
+     * <li>active</li>
+     * <li>inactive</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The unique identifier of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <p>The UID of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("userID")
     public String userID;
 

@@ -4,12 +4,30 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class Quota extends TeaModel {
+    /**
+     * <p>The vCPU quota limit. Unit: cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("cpuCores")
     public Integer cpuCores;
 
+    /**
+     * <p>The memory quota limit. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
     @NameInMap("memoryGB")
     public Integer memoryGB;
 
+    /**
+     * <p>Team ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f79d6a95-abcd-47a8-9167-eccf0622a998</p>
+     */
     @NameInMap("tagValue")
     public String tagValue;
 

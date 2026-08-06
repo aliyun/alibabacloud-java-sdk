@@ -4,42 +4,127 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class ApiKey extends TeaModel {
+    /**
+     * <p>The unique identifier of the API key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34f6a4c4-499f-4bbd-baa0-0e699f53abcd</p>
+     */
     @NameInMap("apiKeyID")
     public String apiKeyID;
 
+    /**
+     * <p>The masked display value of the API key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e2b_xxxx****xxxx</p>
+     */
     @NameInMap("apiKeyMask")
     public String apiKeyMask;
 
+    /**
+     * <p>The name of the API key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("apiKeyName")
     public String apiKeyName;
 
+    /**
+     * <p>The value of the API key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e2b_xxxxxx79cd777ef8exxxxxx4ad6f1b567cxxxxxx</p>
+     */
     @NameInMap("apiKeyValue")
     public String apiKeyValue;
 
+    /**
+     * <p>The time when the API key was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-09-13T08:27:20Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <p>The expiration time of the API key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-10-13T08:27:20Z</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <p>The time when the API key was last used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-09-14T08:27:20Z</p>
+     */
     @NameInMap("lastUsedTime")
     public String lastUsedTime;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwxqyrgwabcd</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The status of the API key. Valid values:</p>
+     * <ul>
+     * <li>active</li>
+     * <li>inactive</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The unique identifier of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <p>The name of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开发团队</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    @NameInMap("teamPlan")
+    public String teamPlan;
+
+    /**
+     * <p>The UID of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("userID")
     public String userID;
 
+    /**
+     * <p>The username of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("username")
     public String username;
 
@@ -134,6 +219,14 @@ public class ApiKey extends TeaModel {
     }
     public String getTeamName() {
         return this.teamName;
+    }
+
+    public ApiKey setTeamPlan(String teamPlan) {
+        this.teamPlan = teamPlan;
+        return this;
+    }
+    public String getTeamPlan() {
+        return this.teamPlan;
     }
 
     public ApiKey setUserID(String userID) {

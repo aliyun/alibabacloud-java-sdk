@@ -1,3 +1,7 @@
+2026-08-06 Version: 1.2.1
+- Update API ListTeams: add request parameters plan.
+
+
 2026-07-10 Version: 1.2.0
 - Support API UpdateApiKey.
 

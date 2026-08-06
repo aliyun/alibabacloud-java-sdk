@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateInput extends TeaModel {
+    @NameInMap("containerConfiguration")
+    public ContainerConfiguration containerConfiguration;
+
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
@@ -13,6 +16,14 @@ public class UpdateTemplateInput extends TeaModel {
     public static UpdateTemplateInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateInput self = new UpdateTemplateInput();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTemplateInput setContainerConfiguration(ContainerConfiguration containerConfiguration) {
+        this.containerConfiguration = containerConfiguration;
+        return this;
+    }
+    public ContainerConfiguration getContainerConfiguration() {
+        return this.containerConfiguration;
     }
 
     public UpdateTemplateInput setLogConfiguration(LogConfiguration logConfiguration) {

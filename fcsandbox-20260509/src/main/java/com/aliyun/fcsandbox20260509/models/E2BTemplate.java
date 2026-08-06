@@ -10,6 +10,9 @@ public class E2BTemplate extends TeaModel {
     @NameInMap("category")
     public String category;
 
+    @NameInMap("containerConfiguration")
+    public ContainerConfiguration containerConfiguration;
+
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
@@ -46,6 +49,9 @@ public class E2BTemplate extends TeaModel {
     @NameInMap("teamName")
     public String teamName;
 
+    @NameInMap("teamPlan")
+    public String teamPlan;
+
     @NameInMap("templateID")
     public String templateID;
 
@@ -74,6 +80,14 @@ public class E2BTemplate extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public E2BTemplate setContainerConfiguration(ContainerConfiguration containerConfiguration) {
+        this.containerConfiguration = containerConfiguration;
+        return this;
+    }
+    public ContainerConfiguration getContainerConfiguration() {
+        return this.containerConfiguration;
     }
 
     public E2BTemplate setCpuCount(Integer cpuCount) {
@@ -170,6 +184,14 @@ public class E2BTemplate extends TeaModel {
     }
     public String getTeamName() {
         return this.teamName;
+    }
+
+    public E2BTemplate setTeamPlan(String teamPlan) {
+        this.teamPlan = teamPlan;
+        return this;
+    }
+    public String getTeamPlan() {
+        return this.teamPlan;
     }
 
     public E2BTemplate setTemplateID(String templateID) {

@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CreateApiKeyRequest extends TeaModel {
+    /**
+     * <p>The template base structure.</p>
+     */
     @NameInMap("body")
     public CreateApiKeyInput body;
 

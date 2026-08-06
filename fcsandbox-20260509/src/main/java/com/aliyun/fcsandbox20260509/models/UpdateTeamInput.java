@@ -4,12 +4,33 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class UpdateTeamInput extends TeaModel {
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开发团队</p>
+     */
     @NameInMap("description")
     public String description;
 
+    @NameInMap("plan")
+    public String plan;
+
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwxqyrgwabcd</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The team name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
@@ -24,6 +45,14 @@ public class UpdateTeamInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateTeamInput setPlan(String plan) {
+        this.plan = plan;
+        return this;
+    }
+    public String getPlan() {
+        return this.plan;
     }
 
     public UpdateTeamInput setResourceGroupID(String resourceGroupID) {

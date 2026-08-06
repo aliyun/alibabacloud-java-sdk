@@ -4,27 +4,78 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BTeam extends TeaModel {
+    /**
+     * <p>Indicates whether the team name can be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("allowUpdateTeamName")
     public Boolean allowUpdateTeamName;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-05-23T11:26:25Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开放团队</p>
+     */
     @NameInMap("description")
     public String description;
 
+    @NameInMap("plan")
+    public String plan;
+
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwxqyrgwabcd</p>
+     */
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The unique identifier of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 
+    /**
+     * <p>The team name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("teamName")
     public String teamName;
 
+    /**
+     * <p>The UID of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("userID")
     public String userID;
 
@@ -55,6 +106,14 @@ public class E2BTeam extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public E2BTeam setPlan(String plan) {
+        this.plan = plan;
+        return this;
+    }
+    public String getPlan() {
+        return this.plan;
     }
 
     public E2BTeam setResourceGroupID(String resourceGroupID) {

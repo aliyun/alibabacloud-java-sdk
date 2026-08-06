@@ -4,15 +4,36 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class UpdateQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The Quota configuration information.</p>
+     */
     @NameInMap("quota")
     public Quota quota;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2BCFAE0A-9FA9-5F72-8E8B-724632BC19A9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

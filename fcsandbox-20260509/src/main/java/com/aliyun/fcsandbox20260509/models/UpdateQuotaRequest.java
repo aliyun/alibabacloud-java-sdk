@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class UpdateQuotaRequest extends TeaModel {
+    /**
+     * <p>The Quota configuration information.</p>
+     */
     @NameInMap("body")
     public Quota body;
 

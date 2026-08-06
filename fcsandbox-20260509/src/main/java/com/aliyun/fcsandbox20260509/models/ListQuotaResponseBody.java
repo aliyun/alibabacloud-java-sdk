@@ -4,21 +4,48 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token obtained from the previous response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qxGrXje86XMrYQ51aJMy</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of quota configurations.</p>
+     */
     @NameInMap("quotas")
     public java.util.List<Quota> quotas;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

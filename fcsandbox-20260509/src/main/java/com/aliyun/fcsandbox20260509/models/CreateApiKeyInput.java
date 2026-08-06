@@ -4,12 +4,30 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CreateApiKeyInput extends TeaModel {
+    /**
+     * <p>The API key name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("apiKeyName")
     public String apiKeyName;
 
+    /**
+     * <p>The expiration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-07-24T16:00:00.000Z</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <p>The unique identifier of the team.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
+     */
     @NameInMap("teamID")
     public String teamID;
 

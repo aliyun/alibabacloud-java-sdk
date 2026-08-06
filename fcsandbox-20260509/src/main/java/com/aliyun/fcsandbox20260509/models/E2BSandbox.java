@@ -52,6 +52,9 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("teamName")
     public String teamName;
 
+    @NameInMap("teamPlan")
+    public String teamPlan;
+
     @NameInMap("templateID")
     public String templateID;
 
@@ -192,6 +195,14 @@ public class E2BSandbox extends TeaModel {
     }
     public String getTeamName() {
         return this.teamName;
+    }
+
+    public E2BSandbox setTeamPlan(String teamPlan) {
+        this.teamPlan = teamPlan;
+        return this;
+    }
+    public String getTeamPlan() {
+        return this.teamPlan;
     }
 
     public E2BSandbox setTemplateID(String templateID) {

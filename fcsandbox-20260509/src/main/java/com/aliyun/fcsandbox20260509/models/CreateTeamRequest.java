@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class CreateTeamRequest extends TeaModel {
+    /**
+     * <p>The request struct.</p>
+     */
     @NameInMap("body")
     public CreateTeamInput body;
 

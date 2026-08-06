@@ -4,15 +4,39 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class ResetApiKeyResponseBody extends TeaModel {
+    /**
+     * <p>The API key information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asdfjoY87-9IUHH</p>
+     */
     @NameInMap("apiKey")
     public ApiKey apiKey;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
