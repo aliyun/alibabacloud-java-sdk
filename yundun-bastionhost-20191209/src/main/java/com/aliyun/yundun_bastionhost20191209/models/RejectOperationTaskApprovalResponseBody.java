@@ -42,6 +42,8 @@ public class RejectOperationTaskApprovalResponseBody extends TeaModel {
 
     public static class RejectOperationTaskApprovalResponseBodyResults extends TeaModel {
         /**
+         * <p>The error code. OK indicates success. Other values indicate errors.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */

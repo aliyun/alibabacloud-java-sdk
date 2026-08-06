@@ -1,3 +1,8 @@
+2026-08-06 Version: 1.6.2
+- Update API AllowOperationTaskApproval: add request parameters ProjectId.
+- Update API RejectOperationTaskApproval: add request parameters ProjectId.
+
+
 2026-07-31 Version: 1.6.1
 - Update API DescribeInstanceAttribute: add response parameters Body.InstanceAttribute.AiCreditStatus.
 - Update API DescribeInstanceAttribute: add response parameters Body.InstanceAttribute.AiOpsModule.
