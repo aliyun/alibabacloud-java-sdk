@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepositoryRequest extends TeaModel {
     /**
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +13,12 @@ public class ListRepositoryRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     /**
      * <p>The page number.</p>
@@ -24,7 +30,7 @@ public class ListRepositoryRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. If you specify a value larger than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+     * <p>The number of entries per page. The maximum value is 100. If the specified value exceeds 100, the system returns a parameter error or uses 100 as the actual maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +39,7 @@ public class ListRepositoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the repository.</p>
+     * <p>The repository name.</p>
      * 
      * <strong>example:</strong>
      * <p>repo-test</p>
@@ -42,7 +48,7 @@ public class ListRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
-     * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>The repository namespace name.</p>
      * 
      * <strong>example:</strong>
      * <p>repo-namespace-test</p>
@@ -51,11 +57,11 @@ public class ListRepositoryRequest extends TeaModel {
     public String repoNamespaceName;
 
     /**
-     * <p>Repository status. Valid values:</p>
+     * <p>The repository status. Valid values:</p>
      * <ul>
      * <li><p><code>NORMAL</code>: Normal.</p>
      * </li>
-     * <li><p><code>DELETING</code>: Deleting.</p>
+     * <li><p><code>DELETING</code>: Being deleted.</p>
      * </li>
      * <li><p><code>DELETED</code>: Deleted.</p>
      * </li>
@@ -80,6 +86,22 @@ public class ListRepositoryRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListRepositoryRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListRepositoryRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListRepositoryRequest setPageNo(Integer pageNo) {

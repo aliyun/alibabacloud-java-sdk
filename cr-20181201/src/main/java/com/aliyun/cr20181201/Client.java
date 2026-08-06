@@ -48,9 +48,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-southeast-6", "cr.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "cr.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "cr.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "cr.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "cr.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "cr.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "cr.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "cr.ap-northeast-1.aliyuncs.com")
         );
@@ -2251,7 +2249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例自定义域名</p>
+     * <p>Deletes a custom domain name from an instance.</p>
      * 
      * @param request DeleteInstanceCustomizedDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2291,7 +2289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例自定义域名</p>
+     * <p>Deletes a custom domain name from an instance.</p>
      * 
      * @param request DeleteInstanceCustomizedDomainRequest
      * @return DeleteInstanceCustomizedDomainResponse
@@ -3097,15 +3095,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</p>
+     * <p>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password equals the validity period of the STS token used in the request.</p>
      * <ul>
-     * <li>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</li>
-     * <li>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</li>
+     * <li>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as those granted when logging on to the instance with the username and password of the Alibaba Cloud account.</li>
+     * <li>The permissions granted by a temporary token obtained through a RAM user are the same as those granted when logging on to the instance with the username and password of the RAM user.</li>
      * <li>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a temporary account and temporary password for logging on to an instance.</p>
+     * <p>Retrieves a temporary username and password for logging on to an instance.</p>
      * 
      * @param request GetAuthorizationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3114,6 +3112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAuthorizationTokenResponse getAuthorizationTokenWithOptions(GetAuthorizationTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expiresInHours)) {
+            query.put("ExpiresInHours", request.expiresInHours);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -3137,15 +3139,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password is the same as that of the STS token used in the request.</p>
+     * <p>The temporary password is valid for 1 hour. If you use STS to make the request, the validity period of the temporary password equals the validity period of the STS token used in the request.</p>
      * <ul>
-     * <li>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as the permissions granted when you log on to the instance with the username and password of the Alibaba Cloud account.</li>
-     * <li>The permissions granted by a temporary token obtained through a RAM user are the same as the permissions granted when you log on to the instance with the username and password of the RAM user.</li>
+     * <li>The permissions granted by a temporary token obtained through an Alibaba Cloud account are the same as those granted when logging on to the instance with the username and password of the Alibaba Cloud account.</li>
+     * <li>The permissions granted by a temporary token obtained through a RAM user are the same as those granted when logging on to the instance with the username and password of the RAM user.</li>
      * <li>The permissions granted by a temporary token obtained through STS are the same as the permissions of the STS token.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a temporary account and temporary password for logging on to an instance.</p>
+     * <p>Retrieves a temporary username and password for logging on to an instance.</p>
      * 
      * @param request GetAuthorizationTokenRequest
      * @return GetAuthorizationTokenResponse
@@ -3381,6 +3383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the custom domain name of an instance.</p>
+     * 
      * @param request GetInstanceCustomizedDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceCustomizedDomainResponse
@@ -3418,6 +3423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the custom domain name of an instance.</p>
+     * 
      * @param request GetInstanceCustomizedDomainRequest
      * @return GetInstanceCustomizedDomainResponse
      */
@@ -5222,7 +5230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image tags in a repository.</p>
+     * <p>Queries the list of image versions (tags).</p>
      * 
      * @param request ListRepoTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5233,6 +5241,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
@@ -5266,7 +5282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries image tags in a repository.</p>
+     * <p>Queries the list of image versions (tags).</p>
      * 
      * @param request ListRepoTagRequest
      * @return ListRepoTagResponse
@@ -5410,7 +5426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the image repository list.</p>
+     * <p>Queries a list of image repositories.</p>
      * 
      * @param request ListRepositoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5421,6 +5437,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
@@ -5462,7 +5486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the image repository list.</p>
+     * <p>Queries a list of image repositories.</p>
      * 
      * @param request ListRepositoryRequest
      * @return ListRepositoryResponse
@@ -6294,7 +6318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例自定义域名</p>
+     * <p>Updates the custom domain name of an instance.</p>
      * 
      * @param request UpdateInstanceCustomizedDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6342,7 +6366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例自定义域名</p>
+     * <p>Updates the custom domain name of an instance.</p>
      * 
      * @param request UpdateInstanceCustomizedDomainRequest
      * @return UpdateInstanceCustomizedDomainResponse

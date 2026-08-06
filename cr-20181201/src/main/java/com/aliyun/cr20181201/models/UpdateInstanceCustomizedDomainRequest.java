@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceCustomizedDomainRequest extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateInstanceCustomizedDomainRequest extends TeaModel {
     public String certId;
 
     /**
+     * <p>The region where the certificate resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,6 +24,7 @@ public class UpdateInstanceCustomizedDomainRequest extends TeaModel {
     public String certRegionId;
 
     /**
+     * <p>The custom domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class UpdateInstanceCustomizedDomainRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class UpdateInstanceCustomizedDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The modified domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>24858802</p>
      */
@@ -12,6 +14,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String certId;
 
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
      */
@@ -26,6 +32,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The custom domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>docker-images.qu-in.club</p>
      */
@@ -33,6 +41,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String domain;
 
     /**
+     * <p>The domain type.</p>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
@@ -40,6 +50,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String domainType;
 
     /**
+     * <p>The custom endpoint type.</p>
+     * 
      * <strong>example:</strong>
      * <p>internet</p>
      */
@@ -47,6 +59,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String endpointType;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-4ec5xvj4j0l****</p>
      */
@@ -54,6 +68,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,6 +77,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1638259914000</p>
      */
@@ -68,6 +86,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
+     * <p>The custom module name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chart</p>
      */
@@ -75,6 +95,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String moduleName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -82,6 +104,8 @@ public class GetInstanceCustomizedDomainResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
      */

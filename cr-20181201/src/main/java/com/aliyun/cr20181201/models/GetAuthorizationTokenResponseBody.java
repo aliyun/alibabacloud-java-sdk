@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthorizationTokenResponseBody extends TeaModel {
     /**
-     * <p>The password used to log on to the Registry.</p>
+     * <p>The password used to log on to the registry.</p>
      * 
      * <strong>example:</strong>
      * <p>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</p>
@@ -32,7 +32,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class GetAuthorizationTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The username used to log on to the Registry.</p>
+     * <p>The username used to log on to the registry.</p>
      * 
      * <strong>example:</strong>
      * <p>temp_user_cr</p>

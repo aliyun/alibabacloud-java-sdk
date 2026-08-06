@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceCustomizedDomainResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class UpdateInstanceCustomizedDomainResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +23,8 @@ public class UpdateInstanceCustomizedDomainResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2EFAF75C-1FA7-5254-B044-E97291C170CC</p>
      */

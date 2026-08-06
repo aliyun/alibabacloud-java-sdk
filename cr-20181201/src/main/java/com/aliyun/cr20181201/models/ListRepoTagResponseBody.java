@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoTagResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The images.</p>
+     * <p>The image list.</p>
      */
     @NameInMap("Images")
     public java.util.List<ListRepoTagResponseBodyImages> images;
@@ -28,8 +28,14 @@ public class ListRepoTagResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +44,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +53,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
@@ -56,7 +62,7 @@ public class ListRepoTagResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,6 +99,22 @@ public class ListRepoTagResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
+    public ListRepoTagResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListRepoTagResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ListRepoTagResponseBody setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
@@ -127,7 +149,7 @@ public class ListRepoTagResponseBody extends TeaModel {
 
     public static class ListRepoTagResponseBodyImages extends TeaModel {
         /**
-         * <p>The digest of the image.</p>
+         * <p>The digest value.</p>
          * 
          * <strong>example:</strong>
          * <p>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</p>
@@ -145,7 +167,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public String imageCreate;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</p>
@@ -154,7 +176,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The size of the image.</p>
+         * <p>The image size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>27107966</p>
@@ -163,7 +185,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public Long imageSize;
 
         /**
-         * <p>The time when the image was last updated.</p>
+         * <p>The time when the image was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1572875608000</p>
@@ -172,7 +194,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public String imageUpdate;
 
         /**
-         * <p>The status of the image.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -181,7 +203,7 @@ public class ListRepoTagResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag of the image.</p>
+         * <p>The image tag.</p>
          * 
          * <strong>example:</strong>
          * <p>v0.1</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceCustomizedDomainResponseBody extends TeaModel {
     /**
+     * <p>The return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class DeleteInstanceCustomizedDomainResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +23,8 @@ public class DeleteInstanceCustomizedDomainResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEE92FA9-3181-5174-8A06-BE2252FA462E</p>
      */

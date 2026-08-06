@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepoTagRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,8 +14,14 @@ public class ListRepoTagRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +30,7 @@ public class ListRepoTagRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100.</p>
+     * <p>The number of entries per page. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -33,7 +39,7 @@ public class ListRepoTagRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the repository.</p>
+     * <p>The repository ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +59,22 @@ public class ListRepoTagRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListRepoTagRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListRepoTagRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListRepoTagRequest setPageNo(Integer pageNo) {

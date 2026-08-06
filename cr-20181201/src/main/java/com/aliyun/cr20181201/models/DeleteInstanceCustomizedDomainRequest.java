@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceCustomizedDomainRequest extends TeaModel {
     /**
+     * <p>The custom domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteInstanceCustomizedDomainRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DeleteInstanceCustomizedDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The custom module name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -22,6 +22,12 @@ public class ListRepositoryResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The page number.</p>
      * 
@@ -32,7 +38,7 @@ public class ListRepositoryResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -41,7 +47,7 @@ public class ListRepositoryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The information about the repositories.</p>
+     * <p>The list of repositories.</p>
      */
     @NameInMap("Repositories")
     public java.util.List<ListRepositoryResponseBodyRepositories> repositories;
@@ -56,7 +62,7 @@ public class ListRepositoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of the queried image repositories.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -83,6 +89,22 @@ public class ListRepositoryResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
+    }
+
+    public ListRepositoryResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListRepositoryResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListRepositoryResponseBody setPageNo(Integer pageNo) {
@@ -127,7 +149,7 @@ public class ListRepositoryResponseBody extends TeaModel {
 
     public static class ListRepositoryResponseBodyRepositories extends TeaModel {
         /**
-         * <p>The time when the repository was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1564153576000</p>
@@ -136,7 +158,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the Container Registry instance to which the repository belongs.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-kmsiwlxxdcv****</p>
@@ -145,7 +167,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the repository was last modified.</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1564153576000</p>
@@ -154,10 +176,12 @@ public class ListRepositoryResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
-         * <p>The type of the repository building. Valid values:</p>
+         * <p>The repository build type. Valid values:</p>
          * <ul>
-         * <li><code>AUTO</code>: The repository is automatically built.</li>
-         * <li><code>MANUAL</code>: The repository is manually built.</li>
+         * <li><p><code>AUTO</code>: Automatically triggered build.</p>
+         * </li>
+         * <li><p><code>MANUAL</code>: Manually triggered build.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +191,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoBuildType;
 
         /**
-         * <p>The ID of the repository.</p>
+         * <p>The repository ID.</p>
          * 
          * <strong>example:</strong>
          * <p>crr-03cuozrsqhkw****</p>
@@ -176,7 +200,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoId;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The repository name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -185,7 +209,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoName;
 
         /**
-         * <p>The name of the namespace to which the repository belongs.</p>
+         * <p>The repository namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -194,7 +218,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoNamespaceName;
 
         /**
-         * <p>The status of the repository.</p>
+         * <p>The repository status.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -203,10 +227,12 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoStatus;
 
         /**
-         * <p>The type of the repository. Valid values:</p>
+         * <p>The repository type. Valid values:</p>
          * <ul>
-         * <li><code>PUBLIC</code></li>
-         * <li><code>PRIVATE</code></li>
+         * <li><p><code>PUBLIC</code>: Public.</p>
+         * </li>
+         * <li><p><code>PRIVATE</code>: Private.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +242,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoType;
 
         /**
-         * <p>The ID of the resource group to which the repository belongs.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm4n5kzyfxxxx</p>
@@ -225,7 +251,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The summary of the repository.</p>
+         * <p>The summary information.</p>
          * 
          * <strong>example:</strong>
          * <p>test OK</p>
@@ -234,7 +260,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>Indicates whether the feature of image tag immutability is enabled for the repository.</p>
+         * <p>The image tag immutability.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

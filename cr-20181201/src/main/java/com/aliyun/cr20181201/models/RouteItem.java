@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class RouteItem extends TeaModel {
     /**
-     * <p>Instance Endpoint Type</p>
+     * <p>The endpoint type.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Internet</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>
@@ -15,15 +18,21 @@ public class RouteItem extends TeaModel {
     public String endpointType;
 
     /**
-     * <p>Instance Domain</p>
+     * <p>The instance domain name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-instance-registry-vpc.cn-hangzhou.cr.aliyuncs.com</p>
      */
     @NameInMap("InstanceDomain")
     public String instanceDomain;
 
     /**
-     * <p>OSS Domain</p>
+     * <p>The OSS domain name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://cri-cfafawer***-registry.oss-cn-hangzhou.aliyuncs.com">https://cri-cfafawer***-registry.oss-cn-hangzhou.aliyuncs.com</a></p>
      */
     @NameInMap("StorageDomain")
     public String storageDomain;
