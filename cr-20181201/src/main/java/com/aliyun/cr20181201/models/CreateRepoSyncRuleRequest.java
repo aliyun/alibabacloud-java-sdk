@@ -19,13 +19,22 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
 
     /**
      * <p>The namespace name of the source instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ns1</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>.*</p>
+     */
+    @NameInMap("NamespaceNameFilter")
+    public String namespaceNameFilter;
+
+    @NameInMap("Priority")
+    public Integer priority;
 
     /**
      * <p>The name of the image repository in the source instance.</p>
@@ -107,7 +116,6 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
 
     /**
      * <p>The namespace name of the destination instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ns1</p>
@@ -173,6 +181,22 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
     }
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    public CreateRepoSyncRuleRequest setNamespaceNameFilter(String namespaceNameFilter) {
+        this.namespaceNameFilter = namespaceNameFilter;
+        return this;
+    }
+    public String getNamespaceNameFilter() {
+        return this.namespaceNameFilter;
+    }
+
+    public CreateRepoSyncRuleRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public CreateRepoSyncRuleRequest setRepoName(String repoName) {

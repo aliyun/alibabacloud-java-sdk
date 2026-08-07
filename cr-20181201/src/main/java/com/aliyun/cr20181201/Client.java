@@ -1272,6 +1272,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NamespaceName", request.namespaceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceNameFilter)) {
+            query.put("NamespaceNameFilter", request.namespaceNameFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.repoName)) {
             query.put("RepoName", request.repoName);
         }
@@ -1364,6 +1372,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Override", request.override);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.repoId)) {
             query.put("RepoId", request.repoId);
         }
@@ -1438,6 +1450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.repoId)) {

@@ -49,6 +49,9 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     @NameInMap("LayerTasks")
     public java.util.List<GetRepoSyncTaskResponseBodyLayerTasks> layerTasks;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     /**
      * <p>The synchronization progress. Valid values:</p>
      * <ul>
@@ -150,7 +153,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
      * <p>The policy that is used to trigger the synchronization task.</p>
      * 
      * <strong>example:</strong>
-     * <p>PASSIVE</p>
+     * <p>null</p>
      */
     @NameInMap("TaskTrigger")
     public String taskTrigger;
@@ -206,6 +209,14 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     }
     public java.util.List<GetRepoSyncTaskResponseBodyLayerTasks> getLayerTasks() {
         return this.layerTasks;
+    }
+
+    public GetRepoSyncTaskResponseBody setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public GetRepoSyncTaskResponseBody setProgress(Long progress) {

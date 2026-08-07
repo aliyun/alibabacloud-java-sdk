@@ -199,6 +199,12 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        @NameInMap("NamespaceNameFilter")
+        public String namespaceNameFilter;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
         /**
          * <p>The regular expression that is used to filter repositories.</p>
          * <blockquote>
@@ -386,6 +392,22 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
         public Long getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public ListRepoSyncRuleResponseBodySyncRules setNamespaceNameFilter(String namespaceNameFilter) {
+            this.namespaceNameFilter = namespaceNameFilter;
+            return this;
+        }
+        public String getNamespaceNameFilter() {
+            return this.namespaceNameFilter;
+        }
+
+        public ListRepoSyncRuleResponseBodySyncRules setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public ListRepoSyncRuleResponseBodySyncRules setRepoNameFilter(String repoNameFilter) {

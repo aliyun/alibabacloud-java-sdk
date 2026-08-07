@@ -29,6 +29,9 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     @NameInMap("Override")
     public Boolean override;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     /**
      * <p>Image repository ID in the source instance</p>
      * <p>This parameter is required.</p>
@@ -127,6 +130,14 @@ public class CreateRepoSyncTaskRequest extends TeaModel {
     }
     public Boolean getOverride() {
         return this.override;
+    }
+
+    public CreateRepoSyncTaskRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public CreateRepoSyncTaskRequest setRepoId(String repoId) {

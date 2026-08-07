@@ -14,6 +14,9 @@ public class CreateRepoSyncTaskByRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     /**
      * <p>The ID of the image repository.</p>
      * <p>This parameter is required.</p>
@@ -55,6 +58,14 @@ public class CreateRepoSyncTaskByRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateRepoSyncTaskByRuleRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public CreateRepoSyncTaskByRuleRequest setRepoId(String repoId) {

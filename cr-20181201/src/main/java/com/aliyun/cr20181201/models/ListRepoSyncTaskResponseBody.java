@@ -380,6 +380,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
         /**
          * <p>The ID of the batch sync task. This ID is the same as the sync record ID (<code>SyncRecordId</code>).</p>
          * <blockquote>
@@ -524,6 +527,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
         public Long getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasks setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public ListRepoSyncTaskResponseBodySyncTasks setSyncBatchTaskId(String syncBatchTaskId) {

@@ -1,3 +1,14 @@
+2026-08-07 Version: 2.2.2
+- Update API CreateRepoSyncRule: add request parameters NamespaceNameFilter.
+- Update API CreateRepoSyncRule: add request parameters Priority.
+- Update API CreateRepoSyncTask: add request parameters Priority.
+- Update API CreateRepoSyncTaskByRule: add request parameters Priority.
+- Update API GetRepoSyncTask: add response parameters Body.Priority.
+- Update API ListRepoSyncRule: add response parameters Body.SyncRules.$.NamespaceNameFilter.
+- Update API ListRepoSyncRule: add response parameters Body.SyncRules.$.Priority.
+- Update API ListRepoSyncTask: add response parameters Body.SyncTasks.$.Priority.
+
+
 2026-08-06 Version: 2.2.1
 - Update API GetAuthorizationToken: add request parameters ExpiresInHours.
 - Update API ListRepoTag: add request parameters MaxResults.
