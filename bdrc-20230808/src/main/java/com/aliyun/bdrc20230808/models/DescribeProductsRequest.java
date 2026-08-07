@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProductsRequest extends TeaModel {
     /**
-     * <p>The product type of the resource. If you omit this parameter, the API returns resources of all product types. For example, specify <code>oss</code> to query resources from Object Storage Service.</p>
+     * <p>Filters by the product type of the resource. If this parameter is not specified, all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -23,7 +23,7 @@ public class DescribeProductsRequest extends TeaModel {
     public String resourceCategoryId;
 
     /**
-     * <p>A list of resource owner IDs for cross-account resource queries. If you omit this parameter, the API returns resources from the current account.</p>
+     * <p>The list of resource owner IDs. This parameter is used in cross-account scenarios. If this parameter is left empty, data of the current account is returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>[123***7890]</p>
@@ -32,7 +32,7 @@ public class DescribeProductsRequest extends TeaModel {
     public java.util.List<Long> resourceOwnerIds;
 
     /**
-     * <p>The ID of the resource\&quot;s region. If you omit this parameter, the API returns resources from all regions.</p>
+     * <p>Filters by the region where the resource resides. If this parameter is not specified, all regions are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

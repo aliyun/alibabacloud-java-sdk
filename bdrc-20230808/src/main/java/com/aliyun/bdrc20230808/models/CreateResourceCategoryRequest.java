@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceCategoryRequest extends TeaModel {
     /**
-     * <p>Resource category name.</p>
+     * <p>The resource category name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateResourceCategoryRequest extends TeaModel {
     public String resourceCategoryName;
 
     /**
-     * <p>Resource matcher.</p>
+     * <p>The resource matcher.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateResourceCategoryRequest extends TeaModel {
     public String resourceMatcher;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>

@@ -457,7 +457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data protection score status for cloud products.</p>
+     * <p>Queries the data protection score status of cloud services.</p>
      * 
      * @param tmpReq DescribeProductsRequest
      * @param headers map
@@ -509,7 +509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data protection score status for cloud products.</p>
+     * <p>Queries the data protection score status of cloud services.</p>
      * 
      * @param request DescribeProductsRequest
      * @return DescribeProductsResponse
@@ -518,6 +518,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeProductsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>BDRC本身是中心化的产品，接口用于部分与Region相关的功能使用。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries available regions.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRegions"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/regions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>BDRC本身是中心化的产品，接口用于部分与Region相关的功能使用。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries available regions.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeRegionsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -623,7 +670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all data protection rules.</p>
+     * <p>Queries a list of data protection rules.</p>
      * 
      * @param tmpReq DescribeRulesRequest
      * @param headers map
@@ -683,7 +730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all data protection rules.</p>
+     * <p>Queries a list of data protection rules.</p>
      * 
      * @param request DescribeRulesRequest
      * @return DescribeRulesResponse
@@ -853,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the data protection score for a cloud product.</p>
+     * <p>Disables the data protection score for a cloud service.</p>
      * 
      * @param request DisableCheckProductRequest
      * @param headers map
@@ -887,7 +934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables the data protection score for a cloud product.</p>
+     * <p>Disables the data protection score for a cloud service.</p>
      * 
      * @param request DisableCheckProductRequest
      * @return DisableCheckProductResponse
@@ -947,7 +994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables data protection scoring for a cloud product.</p>
+     * <p>Enables data protection scoring for an Alibaba Cloud service.</p>
      * 
      * @param request EnableCheckProductRequest
      * @param headers map
@@ -981,7 +1028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables data protection scoring for a cloud product.</p>
+     * <p>Enables data protection scoring for an Alibaba Cloud service.</p>
      * 
      * @param request EnableCheckProductRequest
      * @return EnableCheckProductResponse

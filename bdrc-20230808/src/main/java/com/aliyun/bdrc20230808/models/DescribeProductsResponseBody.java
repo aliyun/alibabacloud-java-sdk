@@ -11,7 +11,7 @@ public class DescribeProductsResponseBody extends TeaModel {
     public DescribeProductsResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>30FB202A-1D22-5394-AB02-4477CDFCF51F</p>
@@ -42,7 +42,7 @@ public class DescribeProductsResponseBody extends TeaModel {
 
     public static class DescribeProductsResponseBodyDataContentProtectionScoreDistributionRange extends TeaModel {
         /**
-         * <p>The lower bound of the score range, inclusive.</p>
+         * <p>The lower bound of the range (inclusive).</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Integer from;
 
         /**
-         * <p>The upper bound of the score range, inclusive.</p>
+         * <p>The upper bound of the range (inclusive).</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -84,7 +84,7 @@ public class DescribeProductsResponseBody extends TeaModel {
 
     public static class DescribeProductsResponseBodyDataContentProtectionScoreDistribution extends TeaModel {
         /**
-         * <p>The count of resources within this score range.</p>
+         * <p>The number of resources within the range.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -123,7 +123,7 @@ public class DescribeProductsResponseBody extends TeaModel {
 
     public static class DescribeProductsResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The count of failed check items.</p>
+         * <p>The number of failed check items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -132,7 +132,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Long checkFailedCount;
 
         /**
-         * <p>The count of resources that failed the check.</p>
+         * <p>The number of resources that failed the check.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Long checkFailedResourceCount;
 
         /**
-         * <p>The count of resources for which the check is disabled.</p>
+         * <p>The number of resources for which the check is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +150,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Long disableCheckResourceCount;
 
         /**
-         * <p>Indicates whether the data protection score is enabled for the cloud product.</p>
+         * <p>Indicates whether data protection score assessment is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -159,7 +159,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Boolean enableCheck;
 
         /**
-         * <p>The cloud product type, such as <code>ECS</code> and <code>OSS</code>.</p>
+         * <p>The cloud service type, such as ecs or oss.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -168,7 +168,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The data protection score, ranging from 0 to 100.</p>
+         * <p>The data protection score (0 to 100).</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -183,7 +183,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public java.util.List<DescribeProductsResponseBodyDataContentProtectionScoreDistribution> protectionScoreDistribution;
 
         /**
-         * <p>The UNIX timestamp of the last data protection score update.</p>
+         * <p>The time when the data protection score was last updated (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>1726036498</p>
@@ -192,7 +192,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Long protectionScoreUpdatedTime;
 
         /**
-         * <p>The count of risky check items.</p>
+         * <p>The number of check items with risks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -201,7 +201,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>The count of risky resources.</p>
+         * <p>The number of resources with risks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -210,7 +210,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Long riskyResourceCount;
 
         /**
-         * <p>The total count of resources for the cloud product.</p>
+         * <p>The total number of resources.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -219,7 +219,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Long totalResourceCount;
 
         /**
-         * <p>The count of resources pending a check.</p>
+         * <p>The number of resources pending check.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -332,13 +332,13 @@ public class DescribeProductsResponseBody extends TeaModel {
 
     public static class DescribeProductsResponseBodyData extends TeaModel {
         /**
-         * <p>A list of cloud products and their data protection status.</p>
+         * <p>The collection of records returned in this request.</p>
          */
         @NameInMap("Content")
         public java.util.List<DescribeProductsResponseBodyDataContent> content;
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of records returned in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -347,7 +347,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token for the next page of results. If this parameter is absent from the response, all results have been retrieved.</p>
+         * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>b4fd3cffcacafd65e3818a0b9b2ff9a2</p>
@@ -356,7 +356,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries that match the query. This parameter is not returned by default.</p>
+         * <p>The total number of records that match the request conditions. This is an optional parameter and may not be returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

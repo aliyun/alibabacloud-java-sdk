@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRulesShrinkRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50. Default value: 10.</p>
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 50. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class DescribeRulesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. You can obtain this token from the <code>NextToken</code> parameter in the previous response.</p>
+     * <p>Specifies whether a next query token exists. Valid values: If NextToken is empty, no more results exist. If NextToken is returned, the value indicates the token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>cae**********699</p>
@@ -35,7 +35,7 @@ public class DescribeRulesShrinkRequest extends TeaModel {
     public String resourceOwnerIdsShrink;
 
     /**
-     * <p>The ID of the region where the resource resides.</p>
+     * <p>The region ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

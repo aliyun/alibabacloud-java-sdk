@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListMessagesResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ListMessagesResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5748C531-80B1-5C31-8421-63A1830B9E48</p>
@@ -42,7 +42,7 @@ public class ListMessagesResponseBody extends TeaModel {
 
     public static class ListMessagesResponseBodyDataContent extends TeaModel {
         /**
-         * <p>Message ID.</p>
+         * <p>The message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>zgrjap8j-us04-owef-fpmo-kdpr80pbss0k</p>
@@ -51,7 +51,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageId;
 
         /**
-         * <p>Message level.</p>
+         * <p>The message level.</p>
          * 
          * <strong>example:</strong>
          * <p>WARNING</p>
@@ -60,7 +60,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageLevel;
 
         /**
-         * <p>Message name.</p>
+         * <p>The message name.</p>
          * 
          * <strong>example:</strong>
          * <p>MyMessage</p>
@@ -69,7 +69,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageName;
 
         /**
-         * <p>Message source ID.</p>
+         * <p>The message source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>p-123***7890</p>
@@ -78,7 +78,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageSourceId;
 
         /**
-         * <p>Message source region ID.</p>
+         * <p>The region ID of the message source.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -87,7 +87,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageSourceRegionId;
 
         /**
-         * <p>Message source type.</p>
+         * <p>The message source type.</p>
          * 
          * <strong>example:</strong>
          * <p>PROTECTION_POLICY</p>
@@ -96,7 +96,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String messageSourceType;
 
         /**
-         * <p>Message time.</p>
+         * <p>The message time.</p>
          * 
          * <strong>example:</strong>
          * <p>1740019609</p>
@@ -105,7 +105,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public Long messageTime;
 
         /**
-         * <p>Message type.</p>
+         * <p>The message type.</p>
          * 
          * <strong>example:</strong>
          * <p>SUB_PROTECTION_POLICY_MODIFIED</p>
@@ -186,7 +186,7 @@ public class ListMessagesResponseBody extends TeaModel {
 
     public static class ListMessagesResponseBodyData extends TeaModel {
         /**
-         * <p>Response parameters.</p>
+         * <p>The response content.</p>
          */
         @NameInMap("Content")
         public java.util.List<ListMessagesResponseBodyDataContent> content;
@@ -210,7 +210,7 @@ public class ListMessagesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>

@@ -14,7 +14,7 @@ public class ListMessagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Message level.</p>
+     * <p>The message level.</p>
      * 
      * <strong>example:</strong>
      * <p>WARNING</p>
@@ -23,7 +23,7 @@ public class ListMessagesRequest extends TeaModel {
     public String messageLevel;
 
     /**
-     * <p>Messages with time earlier than this value.</p>
+     * <p>Filters messages with a time earlier than the specified value.</p>
      * 
      * <strong>example:</strong>
      * <p>1740019610</p>
@@ -32,7 +32,7 @@ public class ListMessagesRequest extends TeaModel {
     public Long messageTimeEarlierThan;
 
     /**
-     * <p>Messages with time later than this value.</p>
+     * <p>Filters messages with a time later than the specified value.</p>
      * 
      * <strong>example:</strong>
      * <p>1740019609</p>
@@ -41,7 +41,7 @@ public class ListMessagesRequest extends TeaModel {
     public Long messageTimeLaterThan;
 
     /**
-     * <p>Message type.</p>
+     * <p>The message type.</p>
      * 
      * <strong>example:</strong>
      * <p>SUB_PROTECTION_POLICY_MODIFIED</p>
@@ -50,10 +50,7 @@ public class ListMessagesRequest extends TeaModel {
     public String messageType;
 
     /**
-     * <p>The pagination token. If more entries are to be returned on the next page, a pagination token is returned.</p>
-     * <blockquote>
-     * <p>If this parameter returns data, it indicates that there are more pages. You can use the returned NextToken as a request parameter to obtain the next page of data until it returns Null, indicating that all data has been obtained.</p>
-     * </blockquote>
+     * <p>The pagination token. If there is a next page, this field has a return value. This parameter indicates that there is a next page as long as data is returned. You can use the returned NextToken as a request parameter to obtain the next page of data until Null is returned, which indicates that all data has been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>cae***********99</p>

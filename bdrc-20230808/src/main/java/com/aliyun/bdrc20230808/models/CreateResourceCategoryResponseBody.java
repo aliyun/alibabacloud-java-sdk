@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceCategoryResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateResourceCategoryResponseBodyData data;
@@ -42,7 +42,7 @@ public class CreateResourceCategoryResponseBody extends TeaModel {
 
     public static class CreateResourceCategoryResponseBodyData extends TeaModel {
         /**
-         * <p>Resource category ID.</p>
+         * <p>The resource category ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-123****7890</p>

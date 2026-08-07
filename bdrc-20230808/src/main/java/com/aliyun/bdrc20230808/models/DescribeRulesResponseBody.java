@@ -11,7 +11,7 @@ public class DescribeRulesResponseBody extends TeaModel {
     public DescribeRulesResponseBodyData data;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>86DEBAC9-AB6A-59AB-9E5C-A540E579ECC9</p>
@@ -51,7 +51,14 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long checkFailedResourceCount;
 
         /**
-         * <p>The check status. Valid values: NOT_CHECKED (Not checked), PASSED (Passed), FAILED (Failed), CHECKING (Checking), and CHECK_FAILED (Check failed).</p>
+         * <p>The check status. Valid values:</p>
+         * <ul>
+         * <li>NOT_CHECKED: not checked.</li>
+         * <li>PASSED: check passed.</li>
+         * <li>FAILED: check failed.</li>
+         * <li>CHECKING: checking in progress.</li>
+         * <li>CHECK_FAILED: check execution failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PASSED</p>
@@ -60,7 +67,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
-         * <p>The UNIX timestamp that indicates when the check was performed.</p>
+         * <p>The check time.</p>
          * 
          * <strong>example:</strong>
          * <p>1704157635</p>
@@ -69,7 +76,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long checkTime;
 
         /**
-         * <p>The product type to which the rule applies.</p>
+         * <p>The applicable product type.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -78,7 +85,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The resource type to which the rule applies.</p>
+         * <p>The applicable resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
@@ -87,7 +94,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The number of at-risk resources.</p>
+         * <p>The number of resources with risks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -96,7 +103,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long riskyResourceCount;
 
         /**
-         * <p>The unique ID of the rule.</p>
+         * <p>The unique identifier of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>rule-bp11ggd8wr762</p>
@@ -114,7 +121,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String ruleTemplate;
 
         /**
-         * <p>The total number of resources that were checked.</p>
+         * <p>The total number of checked resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,13 +210,13 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     public static class DescribeRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of returned records.</p>
+         * <p>The collection of records returned in this request.</p>
          */
         @NameInMap("Content")
         public java.util.List<DescribeRulesResponseBodyDataContent> content;
 
         /**
-         * <p>The maximum number of entries returned on the current page.</p>
+         * <p>The maximum number of records returned in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -218,7 +225,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+         * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>0975951c75d7b41464c8d08ae17043ca</p>
@@ -227,7 +234,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of entries that meet the filter criteria. This parameter is optional and is not returned by default.</p>
+         * <p>The total number of records that match the request conditions. This parameter is optional and may not be returned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
