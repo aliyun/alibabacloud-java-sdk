@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeColumnsRequest extends TeaModel {
     /**
-     * <p>The page number for paged query.</p>
+     * <p>The page number for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,18 +14,13 @@ public class DescribeColumnsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Engine type. Valid values:</p>
+     * <p>The database engine type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong>.</p>
-     * </li>
-     * <li><p><strong>MariaDB</strong>.</p>
-     * </li>
-     * <li><p><strong>Oracle</strong>.</p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong>.</p>
-     * </li>
-     * <li><p><strong>SQLServer</strong>.</p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>MariaDB</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +32,7 @@ public class DescribeColumnsRequest extends TeaModel {
     /**
      * <p>The ID of the asset instance to which the column data in the data asset table belongs.</p>
      * <blockquote>
-     * <p>Query column data in data asset tables authorized to connect to Data Security Center using the ID of the asset instance to which the column data in the data asset table belongs. Obtain the asset instance ID by calling the <a href="~~DescribeRules~~">DescribeInstances</a> API.</p>
+     * <p>Queries column data in data asset tables authorized for connection by Data Security Center based on the asset instance ID. You can call the <a href="~~DescribeRules~~">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,12 +51,10 @@ public class DescribeColumnsRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The language type for requests and responses. The default value is <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,11 +64,11 @@ public class DescribeColumnsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Data tag.</p>
+     * <p>The data tag.</p>
      * <ul>
-     * <li><p>101: Personal sensitive information</p>
+     * <li><p>101: personal sensitive information</p>
      * </li>
-     * <li><p>102: Personal information</p>
+     * <li><p>102: personal information</p>
      * </li>
      * </ul>
      * 
@@ -86,8 +79,8 @@ public class DescribeColumnsRequest extends TeaModel {
     public String modelTagId;
 
     /**
-     * <p>The keyword for search. Supports fuzzy match.</p>
-     * <p>For example, entering <strong>test</strong> returns all data containing <strong>test</strong>.</p>
+     * <p>The keyword to search for. Fuzzy match is supported.</p>
+     * <p>For example, if you enter <strong>test</strong>, all data entries that contain <strong>test</strong> in the search fields are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -96,7 +89,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The maximum number of data entries displayed per page in the list.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -105,7 +98,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product name to which the column data in the data asset table belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and others.</p>
+     * <p>The name of the product to which the column data in the data asset table belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -114,32 +107,20 @@ public class DescribeColumnsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID corresponding to the product name to which the data object belongs. Valid values:</p>
+     * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS</p>
-     * </li>
-     * <li><p><strong>3</strong>: ADB-MYSQL</p>
-     * </li>
-     * <li><p><strong>4</strong>: TableStore</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS</p>
-     * </li>
-     * <li><p><strong>6</strong>: SELF_DB</p>
-     * </li>
-     * <li><p><strong>7</strong>: PolarDB-X</p>
-     * </li>
-     * <li><p><strong>8</strong>: PolarDB</p>
-     * </li>
-     * <li><p><strong>9</strong>: ADB-PG</p>
-     * </li>
-     * <li><p><strong>10</strong>: OceanBase</p>
-     * </li>
-     * <li><p><strong>11</strong>: MongoDB</p>
-     * </li>
-     * <li><p><strong>25</strong>: Redis</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute</li>
+     * <li><strong>2</strong>: OSS</li>
+     * <li><strong>3</strong>: ADB-MYSQL</li>
+     * <li><strong>4</strong>: TableStore</li>
+     * <li><strong>5</strong>: RDS</li>
+     * <li><strong>6</strong>: SELF_DB</li>
+     * <li><strong>7</strong>: PolarDB-X</li>
+     * <li><strong>8</strong>: PolarDB</li>
+     * <li><strong>9</strong>: ADB-PG</li>
+     * <li><strong>10</strong>: OceanBase</li>
+     * <li><strong>11</strong>: MongoDB</li>
+     * <li><strong>25</strong>: Redis</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,16 +132,11 @@ public class DescribeColumnsRequest extends TeaModel {
     /**
      * <p>The risk level ID of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: N/A.</p>
-     * </li>
-     * <li><p><strong>2</strong>: S1.</p>
-     * </li>
-     * <li><p><strong>3</strong>: S2.</p>
-     * </li>
-     * <li><p><strong>4</strong>: S3.</p>
-     * </li>
-     * <li><p><strong>5</strong>: S4.</p>
-     * </li>
+     * <li><strong>1</strong>: N/A.</li>
+     * <li><strong>2</strong>: S1.</li>
+     * <li><strong>3</strong>: S2.</li>
+     * <li><strong>4</strong>: S3.</li>
+     * <li><strong>5</strong>: S4.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,9 +146,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The unique ID of the sensitive data detection rule hit by the column data in the asset table.</p>
+     * <p>The unique ID of the sensitive data detection rule that the column data matches.</p>
      * <blockquote>
-     * <p>Query column data in data asset tables authorized to connect to Data Security Center using the ID of the sensitive data detection rule hit by the column data in the asset table. Obtain the sensitive data detection rule ID by calling the <a href="~~DescribeRules~~">DescribeRules</a> API.</p>
+     * <p>Queries column data in data asset tables authorized for connection by Data Security Center based on the ID of the sensitive data detection rule that the column data matches. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the rule ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -182,7 +158,7 @@ public class DescribeColumnsRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The name of the sensitive data detection rule hit by the column data in the data asset table.</p>
+     * <p>The name of the sensitive data detection rule that the column data in the data asset table matches.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -191,18 +167,13 @@ public class DescribeColumnsRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Sensitivity level name. Valid values:</p>
+     * <p>The sensitivity level name. Valid values:</p>
      * <ul>
-     * <li><p><strong>N/A</strong>: No sensitive data detected.</p>
-     * </li>
-     * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
-     * </li>
-     * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
-     * </li>
-     * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
-     * </li>
-     * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
-     * </li>
+     * <li><strong>N/A</strong>: No sensitive data is detected.</li>
+     * <li><strong>S1</strong>: Level-1 sensitive data.</li>
+     * <li><strong>S2</strong>: Level-2 sensitive data.</li>
+     * <li><strong>S3</strong>: Level-3 sensitive data.</li>
+     * <li><strong>S4</strong>: Level-4 sensitive data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -219,9 +190,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The unique ID of the asset table that contains the columns in data asset tables such as MaxCompute and RDS.</p>
+     * <p>The unique ID of the data asset table to which the columns belong in MaxCompute, ApsaraDB RDS, or other assets.</p>
      * <blockquote>
-     * <p>Query column data in data asset tables authorized to connect to Data Security Center using the asset table ID. Obtain the asset table ID by calling the <a href="~~DescribeTables~~">DescribeTables</a> API.</p>
+     * <p>Queries column data in data asset tables authorized for connection by Data Security Center based on the table ID. You can call the <a href="~~DescribeTables~~">DescribeTables</a> operation to obtain the table ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -240,9 +211,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>Industry template ID.</p>
+     * <p>The industry template ID.</p>
      * <blockquote>
-     * <p>Obtain the industry template ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the industry template ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -252,9 +223,9 @@ public class DescribeColumnsRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The ID of the hit template rule.</p>
+     * <p>The ID of the matched template rule.</p>
      * <blockquote>
-     * <p>Obtain the hit template rule ID by calling <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a> operation to obtain the matched template rule ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

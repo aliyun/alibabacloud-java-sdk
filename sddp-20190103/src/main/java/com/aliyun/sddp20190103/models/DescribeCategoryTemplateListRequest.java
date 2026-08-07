@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCategoryTemplateListRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number in a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,12 +23,11 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Simplified Chinese</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: U.S. English</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Simplified Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +37,7 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,14 +46,12 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The scenario in which the operation is called. Default value: <strong>null</strong>. Valid values:</p>
+     * <p>The scenario in which the API is called. Default value: <strong>null</strong>.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>null</strong>: an earlier version</p>
-     * </li>
-     * <li><p><strong>0</strong>: an earlier version</p>
-     * </li>
-     * <li><p><strong>1</strong>: the latest version</p>
-     * </li>
+     * <li><strong>null</strong>: legacy version.</li>
+     * <li><strong>0</strong>: legacy version.</li>
+     * <li><strong>1</strong>: new version.</li>
      * </ul>
      * 
      * <strong>example:</strong>

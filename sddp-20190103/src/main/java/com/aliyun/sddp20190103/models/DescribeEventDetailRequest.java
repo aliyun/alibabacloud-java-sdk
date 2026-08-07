@@ -7,7 +7,7 @@ public class DescribeEventDetailRequest extends TeaModel {
     /**
      * <p>The unique ID of the anomalous activity.</p>
      * <blockquote>
-     * <p>To query the details of a single anomalous activity, you must provide its unique ID. You can call the <strong>DescribeEvents</strong> operation to obtain the ID.</p>
+     * <p>To query the details of a single anomalous activity, provide the unique ID of the anomalous activity. You can call the <strong>DescribeEvents</strong> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,12 +18,10 @@ public class DescribeEventDetailRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

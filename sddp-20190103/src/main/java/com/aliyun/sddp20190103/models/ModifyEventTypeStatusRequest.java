@@ -14,7 +14,7 @@ public class ModifyEventTypeStatusRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the request and response. Valid values are <strong>zh</strong> for Chinese and <strong>en</strong> for English.</p>
+     * <p>The language of the request and response. Valid values:- <strong>zh</strong>: Chinese- <strong>en</strong>: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,9 +23,9 @@ public class ModifyEventTypeStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The unique IDs of the anomalous activity subtypes. Separate multiple IDs with commas.</p>
+     * <p>The unique IDs of the anomalous activity child classes, separated by commas (,).</p>
      * <blockquote>
-     * <p>To enable SDDP to detect anomalous activities for subtypes, provide the unique IDs of the anomalous activity subtypes. Call the <strong>DescribeEventTypes</strong> operation to obtain the IDs.</p>
+     * <p>To enable the detection of anomalous activities of specified child classes, provide the unique IDs of the child classes. You can call the <strong>DescribeEventTypes</strong> operation to obtain the IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

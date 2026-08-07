@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableUserConfigRequest extends TeaModel {
     /**
-     * <p>The code of the configuration item in the general anomaly alert configuration module. Call the <a href="~~DescribeConfigs~~">DescribeConfigs</a> operation to obtain the code.</p>
+     * <p>The code of the configuration item in the anomaly alert general configuration module. You can call <a href="~~DescribeConfigs~~">DescribeConfigs</a> to obtain the Code of the configuration item.</p>
      * 
      * <strong>example:</strong>
      * <p>access_failed_cnt</p>
@@ -25,10 +25,8 @@ public class DisableUserConfigRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese. This is the default value.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese. This is the default value.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

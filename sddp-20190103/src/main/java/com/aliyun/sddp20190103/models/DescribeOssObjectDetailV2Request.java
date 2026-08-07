@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOssObjectDetailV2Request extends TeaModel {
     /**
-     * <p>The name of the bucket.</p>
+     * <p>The bucket name.</p>
      * 
      * <strong>example:</strong>
      * <p>sddp-api-scan-demo</p>
@@ -14,7 +14,7 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String bucketName;
 
     /**
-     * <p>The unique ID of the OSS object.</p>
+     * <p>The unique ID of the OSS storage object.</p>
      * <blockquote>
      * <p>Call the <a href="https://help.aliyun.com/document_detail/410152.html">DescribeOssObjects</a> operation to obtain the ID.</p>
      * </blockquote>
@@ -26,12 +26,10 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>en_us</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>en_us</strong>: Simplified Chinese</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English (US)</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Simplified Chinese.</li>
+     * <li><strong>en_us</strong>: English (US).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +39,7 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The full name of the object stored in OSS.</p>
+     * <p>The full name of the file stored in OSS.</p>
      * 
      * <strong>example:</strong>
      * <p>dir1/test.png</p>
@@ -50,7 +48,7 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String objectKey;
 
     /**
-     * <p>The ID of the region where the service is enabled. This is also the region where the bucket is located.</p>
+     * <p>The service region ID, which is the region ID of the bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,9 +57,9 @@ public class DescribeOssObjectDetailV2Request extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The ID of the industry-specific template.</p>
+     * <p>The industry template ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the ID of the industry-specific template.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the industry template ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

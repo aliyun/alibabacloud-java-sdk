@@ -7,10 +7,8 @@ public class DescribeDataLimitsRequest extends TeaModel {
     /**
      * <p>The audit status. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Auditing enabled.</p>
-     * </li>
-     * <li><p><strong>0</strong>: Auditing disabled.</p>
-     * </li>
+     * <li><strong>1</strong>: audit enabled.</li>
+     * <li><strong>0</strong>: audit disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,18 +18,13 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer auditStatus;
 
     /**
-     * <p>The connectivity test status. Valid values:</p>
+     * <p>The data detection status. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Ready.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Running.</p>
-     * </li>
-     * <li><p><strong>2</strong>: Connectivity test in progress.</p>
-     * </li>
-     * <li><p><strong>3</strong>: Connectivity test passed.</p>
-     * </li>
-     * <li><p><strong>4</strong>: Connectivity test failed.</p>
-     * </li>
+     * <li><strong>0</strong>: ready.</li>
+     * <li><strong>1</strong>: running.</li>
+     * <li><strong>2</strong>: connectivity test in progress.</li>
+     * <li><strong>3</strong>: connectivity test passed.</li>
+     * <li><strong>4</strong>: connectivity test failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +34,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer checkStatus;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>Settings the page number of the current page when you perform a paged query. For more information about paging, refer to the paging parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,12 +43,10 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The data masking status. Valid values:</p>
+     * <p>The data masking permission status. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,12 +56,10 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer datamaskStatus;
 
     /**
-     * <p>The sensitive data detection status. Valid values:</p>
+     * <p>The detection permission status. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>1</strong>: enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +69,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer enable;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end of the creation time range. Format: timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1616068534877</p>
@@ -89,7 +78,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The type of the database engine. Examples: <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong>.</p>
+     * <p>The database type. Valid values: <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, <strong>MongoDB</strong>, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -107,12 +96,10 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +109,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the member account.</p>
+     * <p>The ID of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>**********8103</p>
@@ -131,7 +118,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Long memberAccount;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return on each page when you perform a paged query. For more information about paging, refer to the paging parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -142,12 +129,9 @@ public class DescribeDataLimitsRequest extends TeaModel {
     /**
      * <p>The ID of the parent asset to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li><p>The name or ID of a MaxCompute project.</p>
-     * </li>
-     * <li><p>The name or ID of an OSS bucket.</p>
-     * </li>
-     * <li><p>The name or ID of an RDS instance or database.</p>
-     * </li>
+     * <li>The project name or ID for MaxCompute.</li>
+     * <li>The bucket name or ID for OSS.</li>
+     * <li>The instance name or ID, or the database name or ID for RDS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,20 +141,14 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public String parentId;
 
     /**
-     * <p>The type of service to which the data asset belongs. Data assets can be instances, databases, or buckets. Valid values:</p>
+     * <p>Required. The type of the product to which the data asset belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS</p>
-     * </li>
-     * <li><p><strong>3</strong>: AnalyticDB for MySQL</p>
-     * </li>
-     * <li><p><strong>4</strong>: Tablestore</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS</p>
-     * </li>
-     * <li><p><strong>6</strong>: A self-managed database</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute</li>
+     * <li><strong>2</strong>: OSS</li>
+     * <li><strong>3</strong>: ADS</li>
+     * <li><strong>4</strong>: OTS</li>
+     * <li><strong>5</strong>: RDS</li>
+     * <li><strong>6</strong>: SELF_DB</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,7 +158,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public Integer resourceType;
 
     /**
-     * <p>The ID of the region where the data asset is located.</p>
+     * <p>The region where the asset resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -189,7 +167,7 @@ public class DescribeDataLimitsRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start of the creation time range. Format: timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1616068534877</p>

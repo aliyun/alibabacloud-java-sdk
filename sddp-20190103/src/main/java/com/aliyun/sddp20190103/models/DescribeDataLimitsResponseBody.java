@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataLimitsResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of data assets.</p>
+     * <p>The list of data assets.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataLimitsResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>769FB3C1-F4C9-42DF-9B72-7077A8989***</p>
@@ -38,7 +38,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -95,10 +95,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * <p>The audit status. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Auditing enabled.</p>
-         * </li>
-         * <li><p><strong>0</strong>: Auditing disabled.</p>
-         * </li>
+         * <li><strong>1</strong>: audit enabled.</li>
+         * <li><strong>0</strong>: audit disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,10 +108,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether automatic scanning is enabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: No.</p>
-         * </li>
-         * <li><p><strong>1</strong>: Yes.</p>
-         * </li>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,18 +119,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer autoScan;
 
         /**
-         * <p>The connectivity test status. Valid values:</p>
+         * <p>The data detection status. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: Ready.</p>
-         * </li>
-         * <li><p><strong>1</strong>: Running.</p>
-         * </li>
-         * <li><p><strong>2</strong>: Connectivity test in progress.</p>
-         * </li>
-         * <li><p><strong>3</strong>: Connectivity test passed.</p>
-         * </li>
-         * <li><p><strong>4</strong>: Connectivity test failed.</p>
-         * </li>
+         * <li><strong>0</strong>: ready.</li>
+         * <li><strong>1</strong>: running.</li>
+         * <li><strong>2</strong>: connectivity test in progress.</li>
+         * <li><strong>3</strong>: connectivity test passed.</li>
+         * <li><strong>4</strong>: connectivity test failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +135,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer checkStatus;
 
         /**
-         * <p>The name of the connectivity test status.</p>
+         * <p>The name of the data detection status.</p>
          * 
          * <strong>example:</strong>
          * <p>Connectivity detection status</p>
@@ -153,12 +144,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String checkStatusName;
 
         /**
-         * <p>The data masking status. Valid values:</p>
+         * <p>The data masking permission status. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Enabled.</p>
-         * </li>
-         * <li><p><strong>0</strong>: Disabled.</p>
-         * </li>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,12 +166,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
-         * <p>The sensitive data detection status. Valid values:</p>
+         * <p>The detection permission status. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Enabled.</p>
-         * </li>
-         * <li><p><strong>0</strong>: Disabled.</p>
-         * </li>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +179,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer enable;
 
         /**
-         * <p>The database engine type. Examples: <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong>.</p>
+         * <p>The database type. Valid values: <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, <strong>MongoDB</strong>, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -201,7 +188,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The error code that is returned if the connectivity test fails.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>connect_network_error</p>
@@ -210,7 +197,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message that is returned if the connectivity test fails.</p>
+         * <p>The failure reason.</p>
          * 
          * <strong>example:</strong>
          * <p>Incorrect password.</p>
@@ -219,12 +206,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The anomaly detection status. Valid values:</p>
+         * <p>The data leak prevention switch. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: Disabled.</p>
-         * </li>
-         * <li><p><strong>1</strong>: Enabled (default).</p>
-         * </li>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,7 +219,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer eventStatus;
 
         /**
-         * <p>The time when the data asset was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time. Format: timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>145600000</p>
@@ -261,7 +246,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The ID of the instance to which the data asset belongs.</p>
+         * <p>The instance ID of the asset to which the data asset table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>12332</p>
@@ -270,12 +255,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the last full scan was complete. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the last full scan was completed.</p>
          * <ul>
-         * <li><p>Format: UNIX timestamp</p>
-         * </li>
-         * <li><p>Unit: milliseconds</p>
-         * </li>
+         * <li>Format: timestamp</li>
+         * <li>Unit: milliseconds</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -285,7 +268,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Long lastFinishedTime;
 
         /**
-         * <p>The time when the last scan started. This value is a UNIX timestamp in milliseconds.</p>
+         * <p>The time when the last scan of the data asset started. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>145600000</p>
@@ -294,7 +277,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Long lastStartTime;
 
         /**
-         * <p>The name of the region in which the data asset is located.</p>
+         * <p>The name of the region where the data resides.</p>
          * 
          * <strong>example:</strong>
          * <p>China (Hangzhou)</p>
@@ -303,7 +286,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The retention period of raw logs, in days.</p>
+         * <p>The raw log storage duration. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -312,7 +295,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer logStoreDay;
 
         /**
-         * <p>The ID of the member account to which the data asset belongs.</p>
+         * <p>The member accounts ID.</p>
          * 
          * <strong>example:</strong>
          * <p>**********8103</p>
@@ -321,7 +304,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Long memberAccount;
 
         /**
-         * <p>The time when the next scan is scheduled to start. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The next execution time. Format: timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1676620236000</p>
@@ -330,12 +313,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Long nextStartTime;
 
         /**
-         * <p>The status of Optical Character Recognition (OCR). Valid values:</p>
+         * <p>The OCR status. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: Disabled.</p>
-         * </li>
-         * <li><p><strong>1</strong>: Enabled.</p>
-         * </li>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,7 +326,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer ocrStatus;
 
         /**
-         * <p>The ID of the parent asset, such as a bucket, DB, or <strong>project</strong>.</p>
+         * <p>The parent ID of the asset to query. Valid values: <strong>bucket</strong>, <strong>db</strong>, <strong>project</strong>, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>project</p>
@@ -363,18 +344,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The status of the scan task. Valid values:</p>
+         * <p>The scan status. Valid values:</p>
          * <ul>
-         * <li><p><strong>-1</strong>: Invalid.</p>
-         * </li>
-         * <li><p><strong>0</strong>: Pending.</p>
-         * </li>
-         * <li><p><strong>1</strong>: Scanning.</p>
-         * </li>
-         * <li><p><strong>2</strong>: Paused.</p>
-         * </li>
-         * <li><p><strong>3</strong>: Completed.</p>
-         * </li>
+         * <li><strong>-1</strong>: invalid.</li>
+         * <li><strong>0</strong>: waiting.</li>
+         * <li><strong>1</strong>: scanning.</li>
+         * <li><strong>2</strong>: paused.</li>
+         * <li><strong>3</strong>: completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -384,7 +360,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer processStatus;
 
         /**
-         * <p>The total number of data tables or files.</p>
+         * <p>The total number of tables or files.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -393,7 +369,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer processTotalCount;
 
         /**
-         * <p>The ID of the region in which the data asset is located.</p>
+         * <p>The region where the asset resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -402,20 +378,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The type of service to which the data asset belongs. Data assets can be instances, databases, or buckets. Valid values:</p>
+         * <p>The type of the product to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: MaxCompute</p>
-         * </li>
-         * <li><p><strong>2</strong>: OSS</p>
-         * </li>
-         * <li><p><strong>3</strong>: AnalyticDB for MySQL</p>
-         * </li>
-         * <li><p><strong>4</strong>: Tablestore</p>
-         * </li>
-         * <li><p><strong>5</strong>: RDS</p>
-         * </li>
-         * <li><p><strong>6</strong>: A self-managed database</p>
-         * </li>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: ADS</li>
+         * <li><strong>4</strong>: OTS</li>
+         * <li><strong>5</strong>: RDS</li>
+         * <li><strong>6</strong>: SELF_DB</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,7 +395,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Long resourceType;
 
         /**
-         * <p>The code of the service to which the data asset belongs. Examples: MaxCompute, OSS, ADS, OTS, and <strong>RDS</strong>.</p>
+         * <p>The product type code of the data source. Valid values: <strong>MaxCompute</strong>, <strong>OSS</strong>, <strong>ADS</strong>, <strong>OTS</strong>, <strong>RDS</strong>, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -434,7 +404,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String resourceTypeCode;
 
         /**
-         * <p>The number of sensitive data samples. Valid values: <strong>0</strong>, <strong>5</strong>, and <strong>10</strong>. Unit: entries.</p>
+         * <p>The sensitive data sampling size. Valid values: <strong>0</strong>, <strong>5</strong>, and <strong>10</strong>. Unit: entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -443,7 +413,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer samplingSize;
 
         /**
-         * <p>A list of security group IDs that are used by PrivateLink for agent-based auditing.</p>
+         * <p>The list of security group IDs used by PrivateLink in agent-based auditing.</p>
          */
         @NameInMap("SecurityGroupIdList")
         public java.util.List<String> securityGroupIdList;
@@ -451,10 +421,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether auditing is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: No.</p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -466,10 +434,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether data masking is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: No.</p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -479,12 +445,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Boolean supportDatamask;
 
         /**
-         * <p>Indicates whether anomaly detection is supported. Valid values:</p>
+         * <p>Indicates whether anomalous activity detection is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: No.</p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,10 +460,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether OCR is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: No.</p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,12 +471,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Boolean supportOcr;
 
         /**
-         * <p>Indicates whether sensitive data detection is supported. Valid values:</p>
+         * <p>Indicates whether scanning is supported. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: No.</p>
-         * </li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -524,7 +484,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Boolean supportScan;
 
         /**
-         * <p>The alias of the tenant.</p>
+         * <p>The tenant alias.</p>
          * 
          * <strong>example:</strong>
          * <p>insta_gram</p>
@@ -533,7 +493,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String tenantName;
 
         /**
-         * <p>The total number of fields. This parameter is returned only when the data asset is a table.</p>
+         * <p>The total number of fields in the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -542,7 +502,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The username of the data asset owner.</p>
+         * <p>The username of the data owner.</p>
          * 
          * <strong>example:</strong>
          * <p>tsts</p>
@@ -551,13 +511,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>A list of vSwitch IDs that are used by PrivateLink for agent-based auditing.</p>
+         * <p>The list of vSwitch IDs used by PrivateLink in agent-based auditing.</p>
          */
         @NameInMap("VSwitchIdList")
         public java.util.List<String> vSwitchIdList;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the data asset resides.</p>
+         * <p>The VPC ID to which the data asset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zevcqke6hh09c41****</p>

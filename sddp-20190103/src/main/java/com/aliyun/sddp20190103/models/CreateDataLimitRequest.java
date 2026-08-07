@@ -7,10 +7,8 @@ public class CreateDataLimitRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auditing. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Do not enable auditing.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enable auditing.</p>
-     * </li>
+     * <li><strong>0</strong>: Auditing is disabled.</li>
+     * <li><strong>1</strong>: Auditing is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,15 +18,13 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer auditStatus;
 
     /**
-     * <p>Specifies whether to automatically trigger a rescan when a rule changes. Valid values:</p>
+     * <p>Specifies whether to automatically trigger a rescan when rules are changed. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Do not trigger an automatic scan.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Trigger an automatic scan.</p>
-     * </li>
+     * <li><strong>0</strong>: Automatic rescan is not triggered.</li>
+     * <li><strong>1</strong>: Automatic rescan is triggered.</li>
      * </ul>
      * <blockquote>
-     * <p>If you enable this feature, a rule change triggers a full scan of all data in the data source.</p>
+     * <p>When a rule change triggers an automatic rescan, a full scan is performed on all data in the data source.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,12 +34,10 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer autoScan;
 
     /**
-     * <p>The permission level of the credential. Valid values:</p>
+     * <p>The credential permission. Valid values:</p>
      * <ul>
-     * <li><p><strong>ReadOnly</strong>: Read-only permissions.</p>
-     * </li>
-     * <li><p><strong>ReadWrite</strong>: Read and write permissions.</p>
-     * </li>
+     * <li><strong>ReadOnly</strong>: read-only permission.</li>
+     * <li><strong>ReadWrite</strong>: read and write permission.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,13 +49,11 @@ public class CreateDataLimitRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable sensitive data detection. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is 1 for the first authorization. For later authorizations, the value from the previous authorization is used. Set this parameter to 1 to detect sensitive data.</p>
+     * <p>If the asset is authorized for the first time, the default value is 1. If the asset has been previously authorized, the value from the last authorization is used, which may be 0 or 1. To perform sensitive data detection on the asset, set this parameter to 1.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,12 +63,10 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer enable;
 
     /**
-     * <p>The database engine type. Valid values:</p>
+     * <p>The type of the database. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,12 +76,10 @@ public class CreateDataLimitRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>Specifies whether to enable anomalous activity detection. Valid values:</p>
+     * <p>The anomalous activity detection status. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enabled. This is the default value.</p>
-     * </li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,12 +98,10 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>Specifies whether to immediately scan the authorized data asset. Valid values:</p>
+     * <p>Specifies whether to immediately scan the authorized asset. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong>: Do not scan immediately.</p>
-     * </li>
-     * <li><p><strong>true</strong>: Scan immediately.</p>
-     * </li>
+     * <li><strong>false</strong>: The asset is not immediately scanned.</li>
+     * <li><strong>true</strong>: The asset is immediately scanned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,12 +111,10 @@ public class CreateDataLimitRequest extends TeaModel {
     public Boolean instantlyScan;
 
     /**
-     * <p>The language of the content that is returned in the response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,16 +124,12 @@ public class CreateDataLimitRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The retention period of raw logs after you enable auditing. Unit: days. Valid values:</p>
+     * <p>The retention period of raw logs after auditing is enabled. Unit: days. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>90</strong></p>
-     * </li>
-     * <li><p><strong>180</strong></p>
-     * </li>
-     * <li><p><strong>365</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>90</strong></li>
+     * <li><strong>180</strong></li>
+     * <li><strong>365</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,12 +139,10 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer logStoreDay;
 
     /**
-     * <p>Specifies whether to enable Optical Character Recognition (OCR). Valid values:</p>
+     * <p>The OCR status. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Enabled.</p>
-     * </li>
-     * <li><p><strong>0</strong>: Disabled.</p>
-     * </li>
+     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -174,7 +152,7 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer ocrStatus;
 
     /**
-     * <p>The name of the data asset. The name consists of the instance ID and the database name, separated by a period (.).</p>
+     * <p>Required. The name of the asset, which consists of the instance ID and the database connection string separated by a period (.).</p>
      * 
      * <strong>example:</strong>
      * <p>rm-****34.******name</p>
@@ -183,7 +161,7 @@ public class CreateDataLimitRequest extends TeaModel {
     public String parentId;
 
     /**
-     * <p>The password to access the database.</p>
+     * <p>The password used to access the database asset.</p>
      * 
      * <strong>example:</strong>
      * <p>p****d</p>
@@ -201,18 +179,13 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The service to which the data asset belongs. Valid values:</p>
+     * <p>The type of the service to which the asset to be scanned belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS</p>
-     * </li>
-     * <li><p><strong>3</strong>: ADS</p>
-     * </li>
-     * <li><p><strong>4</strong>: OTS</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute.</li>
+     * <li><strong>2</strong>: OSS.</li>
+     * <li><strong>3</strong>: ADS.</li>
+     * <li><strong>4</strong>: OTS.</li>
+     * <li><strong>5</strong>: RDS.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -223,18 +196,15 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer resourceType;
 
     /**
-     * <p>The number of sensitive data samples to return after a scan. Valid values:</p>
+     * <p>The number of sample entries for sensitive data detection after data detection is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong></p>
-     * </li>
-     * <li><p><strong>5</strong></p>
-     * </li>
-     * <li><p><strong>10</strong></p>
+     * <li><strong>0</strong></li>
+     * <li><strong>5</strong></li>
+     * <li><strong>10</strong><blockquote>
+     * <p>Default value: 10.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>The default value is 10.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -243,22 +213,15 @@ public class CreateDataLimitRequest extends TeaModel {
     public Integer samplingSize;
 
     /**
-     * <p>The region where the data asset is located. Valid values:</p>
+     * <p>Required. The region in which the asset resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-beijing</strong>: China (Beijing)</p>
-     * </li>
-     * <li><p><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</p>
-     * </li>
-     * <li><p><strong>cn-huhehaote</strong>: China (Hohhot)</p>
-     * </li>
-     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou)</p>
-     * </li>
-     * <li><p><strong>cn-shanghai</strong>: China (Shanghai)</p>
-     * </li>
-     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen)</p>
-     * </li>
-     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
-     * </li>
+     * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
+     * <li><strong>cn-huhehaote</strong>: China (Hohhot).</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -277,7 +240,7 @@ public class CreateDataLimitRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The username for the database.</p>
+     * <p>The username of the database asset.</p>
      * 
      * <strong>example:</strong>
      * <p>y*****m</p>

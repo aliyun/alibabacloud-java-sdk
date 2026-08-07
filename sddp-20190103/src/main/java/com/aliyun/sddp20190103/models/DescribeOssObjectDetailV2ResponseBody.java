@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
     /**
-     * <p>The details of the OSS object.</p>
+     * <p>The details of the OSS storage object.</p>
      */
     @NameInMap("OssObjectDetail")
     public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail ossObjectDetail;
 
     /**
-     * <p>The ID of the request. Use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
@@ -42,14 +42,11 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
 
     public static class DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleListModelTags extends TeaModel {
         /**
-         * <p>The ID of the data tag for the detection model.</p>
+         * <p>The data tag ID of the detection model. Valid values:</p>
          * <ul>
-         * <li><p><strong>101</strong>: Personal sensitive information.</p>
-         * </li>
-         * <li><p><strong>102</strong>: Personal information.</p>
-         * </li>
-         * <li><p><strong>103</strong>: Important data.</p>
-         * </li>
+         * <li><strong>101</strong>: personal sensitive information.</li>
+         * <li><strong>102</strong>: personal information.</li>
+         * <li><strong>103</strong>: important data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -59,14 +56,11 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the data tag for the detection model.</p>
+         * <p>The data tag name of the detection model. Valid values:</p>
          * <ul>
-         * <li><p>Personal sensitive information.</p>
-         * </li>
-         * <li><p>Personal information.</p>
-         * </li>
-         * <li><p>Important data.</p>
-         * </li>
+         * <li>Personal sensitive information.</li>
+         * <li>Personal information.</li>
+         * <li>Important data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +103,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The number of times the sensitive data detection rule was matched.</p>
+         * <p>The number of times the sensitive data detection rule is hit.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -118,24 +112,19 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>A list of tags for the detection model.</p>
+         * <p>The list of data tags.</p>
          */
         @NameInMap("ModelTags")
         public java.util.List<DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleListModelTags> modelTags;
 
         /**
-         * <p>The ID of the risk level that is specified in the rule.</p>
+         * <p>The risk level ID of the OSS storage object. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: N/A</p>
-         * </li>
-         * <li><p><strong>2</strong>: S1</p>
-         * </li>
-         * <li><p><strong>3</strong>: S2</p>
-         * </li>
-         * <li><p><strong>4</strong>: S3</p>
-         * </li>
-         * <li><p><strong>5</strong>: S4</p>
-         * </li>
+         * <li><strong>1</strong>: No sensitive data is detected.</li>
+         * <li><strong>2</strong>: Level 1 sensitive data.</li>
+         * <li><strong>3</strong>: Level 2 sensitive data.</li>
+         * <li><strong>4</strong>: Level 3 sensitive data.</li>
+         * <li><strong>5</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +134,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the risk level that is specified in the rule.</p>
+         * <p>The risk level name of the OSS storage object.</p>
          * 
          * <strong>example:</strong>
          * <p>S2</p>
@@ -154,7 +143,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
-         * <p>The name of the matched sensitive data detection rule.</p>
+         * <p>The name of the sensitive data detection rule that is hit.</p>
          * 
          * <strong>example:</strong>
          * <p>ID card number</p>
@@ -219,7 +208,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
 
     public static class DescribeOssObjectDetailV2ResponseBodyOssObjectDetail extends TeaModel {
         /**
-         * <p>The name of the bucket that stores the OSS object.</p>
+         * <p>The name of the bucket to which the OSS storage object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>sddp-api-scan-demo</p>
@@ -246,7 +235,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String fileCategoryName;
 
         /**
-         * <p>The unique ID of the object.</p>
+         * <p>The unique ID of the column object.</p>
          * 
          * <strong>example:</strong>
          * <p>1757262735738932224</p>
@@ -255,14 +244,11 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The data tags, separated by commas. Example: 101,102. Valid values:</p>
+         * <p>The data tags, separated by commas, such as 101,102. Valid values:</p>
          * <ul>
-         * <li><p><strong>101</strong>: Personal sensitive information.</p>
-         * </li>
-         * <li><p><strong>102</strong>: Personal information.</p>
-         * </li>
-         * <li><p><strong>107</strong>: General information.</p>
-         * </li>
+         * <li><strong>101</strong>: personal sensitive information.</li>
+         * <li><strong>102</strong>: personal information.</li>
+         * <li><strong>107</strong>: general information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,7 +258,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String modelTagIds;
 
         /**
-         * <p>The name of the OSS object.</p>
+         * <p>The name of the OSS storage object.</p>
          * 
          * <strong>example:</strong>
          * <p>dir1/test.png</p>
@@ -281,7 +267,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The access control list (ACL) of the object.</p>
+         * <p>The ACL of the file object.</p>
          * 
          * <strong>example:</strong>
          * <p>private</p>
@@ -290,7 +276,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String objectAcl;
 
         /**
-         * <p>The ID of the region where the OSS object is stored.</p>
+         * <p>The region ID of the OSS storage object.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -299,21 +285,16 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the risk level of the data asset. Valid values:</p>
+         * <p>The risk level ID of the column data in the data asset table. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: N/A.</p>
-         * </li>
-         * <li><p><strong>2</strong>: S1.</p>
-         * </li>
-         * <li><p><strong>3</strong>: S2.</p>
-         * </li>
-         * <li><p><strong>4</strong>: S3.</p>
-         * </li>
-         * <li><p><strong>5</strong>: S4.</p>
-         * </li>
+         * <li><strong>1</strong>: N/A.</li>
+         * <li><strong>2</strong>: S1.</li>
+         * <li><strong>3</strong>: S2.</li>
+         * <li><strong>4</strong>: S3.</li>
+         * <li><strong>5</strong>: S4.</li>
          * </ul>
          * <blockquote>
-         * <p>A return value of 1 or less indicates N/A.</p>
+         * <p>A return value less than or equal to 1 indicates N/A.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -323,7 +304,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public Integer riskLevelId;
 
         /**
-         * <p>The name of the risk level of the OSS object.</p>
+         * <p>The risk level name of the OSS storage object.</p>
          * 
          * <strong>example:</strong>
          * <p>S2</p>
@@ -332,13 +313,13 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
-         * <p>The list of sensitive data detection rules that the OSS object matches.</p>
+         * <p>The list of sensitive data detection rules that the OSS storage object hits.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleList> ruleList;
 
         /**
-         * <p>The size of the file in bytes.</p>
+         * <p>The file size. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

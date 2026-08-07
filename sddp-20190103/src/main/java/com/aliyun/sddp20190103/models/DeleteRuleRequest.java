@@ -24,7 +24,11 @@ public class DeleteRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the data asset. Valid values: -<strong>zh</strong>: Chinese -<strong>en</strong>: English</p>
+     * <p>The language of the data asset. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeColumnsV2ResponseBody extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of detection results for the columns in the data table.</p>
+     * <p>The list of column detection results in the data asset table.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeColumnsV2ResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries returned on each page. Default value: <strong>10</strong>.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,14 +93,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
 
     public static class DescribeColumnsV2ResponseBodyItemsModelTags extends TeaModel {
         /**
-         * <p>The ID of the data tag. Valid values:</p>
+         * <p>The data tag ID. Valid values:</p>
          * <ul>
-         * <li><p><strong>101</strong>: Personal sensitive information</p>
-         * </li>
-         * <li><p><strong>102</strong>: Personal information</p>
-         * </li>
-         * <li><p><strong>107</strong>: General information</p>
-         * </li>
+         * <li><strong>101</strong>: personal sensitive information</li>
+         * <li><strong>102</strong>: personal information</li>
+         * <li><strong>107</strong>: general information</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,14 +107,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the data tag. Valid values:</p>
+         * <p>The data tag name. Valid values:</p>
          * <ul>
-         * <li><p>Personal sensitive information</p>
-         * </li>
-         * <li><p>Personal information</p>
-         * </li>
-         * <li><p>General information</p>
-         * </li>
+         * <li>个人敏感信息</li>
+         * <li>个人信息</li>
+         * <li>通用信息</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,7 +145,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
 
     public static class DescribeColumnsV2ResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the data in the column of the data asset table was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time of the column data in the data asset table, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1536751124000</p>
@@ -160,7 +154,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>The data type of the data in the column of the data asset table.</p>
+         * <p>The data type of the column data in the data asset table.</p>
          * 
          * <strong>example:</strong>
          * <p>varchar</p>
@@ -169,18 +163,13 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The type of the database engine. Valid values:</p>
+         * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><p><strong>MySQL</strong></p>
-         * </li>
-         * <li><p><strong>MariaDB</strong></p>
-         * </li>
-         * <li><p><strong>Oracle</strong></p>
-         * </li>
-         * <li><p><strong>PostgreSQL</strong></p>
-         * </li>
-         * <li><p><strong>SQLServer</strong></p>
-         * </li>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>MariaDB</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +188,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the data asset instance to which the data in the column belongs.</p>
+         * <p>The instance ID of the asset to which the column data in the data asset table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>1232122</p>
@@ -208,7 +197,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long instanceId;
 
         /**
-         * <p>The name of the data asset instance to which the data in the column belongs.</p>
+         * <p>The name of the asset instance to which the column data in the data asset table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-1234</p>
@@ -219,11 +208,11 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         /**
          * <p>The column encryption status. Valid values:</p>
          * <ul>
-         * <li><p><strong>-1</strong>: not encrypted</p>
+         * <li><p><strong>-1</strong>: not encrypted.</p>
          * </li>
-         * <li><p><strong>1</strong>: encryption successful</p>
+         * <li><p><strong>1</strong>: encryption succeeded.</p>
          * </li>
-         * <li><p><strong>2</strong>: encryption failed</p>
+         * <li><p><strong>2</strong>: encryption failed.</p>
          * </li>
          * </ul>
          * 
@@ -234,7 +223,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Integer maskingStatus;
 
         /**
-         * <p>A list of data tags.</p>
+         * <p>The list of data tags.</p>
          */
         @NameInMap("ModelTags")
         public java.util.List<DescribeColumnsV2ResponseBodyItemsModelTags> modelTags;
@@ -249,18 +238,13 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the risk level for the data asset. Valid values:</p>
+         * <p>The risk level name of the asset. Valid values:</p>
          * <ul>
-         * <li><p><strong>N/A</strong>: No sensitive data is detected.</p>
-         * </li>
-         * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
-         * </li>
+         * <li><strong>N/A</strong>: no sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,21 +254,16 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String odpsRiskLevelName;
 
         /**
-         * <p>The code of the risk level for the data asset. Valid values:</p>
+         * <p>The risk level code of the asset. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: N/A</p>
-         * </li>
-         * <li><p><strong>2</strong>: S1</p>
-         * </li>
-         * <li><p><strong>3</strong>: S2</p>
-         * </li>
-         * <li><p><strong>4</strong>: S3</p>
-         * </li>
-         * <li><p><strong>5</strong>: S4</p>
-         * </li>
+         * <li><strong>1</strong>: N/A.</li>
+         * <li><strong>2</strong>: S1.</li>
+         * <li><strong>3</strong>: S2.</li>
+         * <li><strong>4</strong>: S3.</li>
+         * <li><strong>5</strong>: S4.</li>
          * </ul>
          * <blockquote>
-         * <p>A return value that is less than or equal to 1 indicates N/A.</p>
+         * <p>A return value less than or equal to 1 indicates N/A.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -294,7 +273,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Integer odpsRiskLevelValue;
 
         /**
-         * <p>The name of the product to which the data in the column of the data asset table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The name of the product to which the column data in the data asset table belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -303,20 +282,14 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the product to which the data asset belongs. Valid values:</p>
+         * <p>The ID that corresponds to the product name of the data asset. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: MaxCompute</p>
-         * </li>
-         * <li><p><strong>2</strong>: OSS</p>
-         * </li>
-         * <li><p><strong>3</strong>: ADS</p>
-         * </li>
-         * <li><p><strong>4</strong>: OTS</p>
-         * </li>
-         * <li><p><strong>5</strong>: RDS</p>
-         * </li>
-         * <li><p><strong>6</strong>: SELF_DB</p>
-         * </li>
+         * <li><strong>1</strong>: MaxCompute.</li>
+         * <li><strong>2</strong>: OSS.</li>
+         * <li><strong>3</strong>: ADS.</li>
+         * <li><strong>4</strong>: OTS.</li>
+         * <li><strong>5</strong>: ApsaraDB RDS.</li>
+         * <li><strong>6</strong>: SELF_DB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,7 +299,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long productId;
 
         /**
-         * <p>The region where the data asset resides.</p>
+         * <p>The region where the asset resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -346,10 +319,8 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         /**
          * <p>The revision status. Valid values:</p>
          * <ul>
-         * <li><p>1: revised</p>
-         * </li>
-         * <li><p>0: not revised</p>
-         * </li>
+         * <li>1: revised.</li>
+         * <li>0: not revised.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -359,21 +330,16 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long revisionStatus;
 
         /**
-         * <p>The ID of the risk level for the data in the column of the data asset table. Valid values:</p>
+         * <p>The risk level ID of the column data in the data asset table. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: N/A</p>
-         * </li>
-         * <li><p><strong>2</strong>: S1</p>
-         * </li>
-         * <li><p><strong>3</strong>: S2</p>
-         * </li>
-         * <li><p><strong>4</strong>: S3</p>
-         * </li>
-         * <li><p><strong>5</strong>: S4</p>
-         * </li>
+         * <li><strong>1</strong>: N/A.</li>
+         * <li><strong>2</strong>: S1.</li>
+         * <li><strong>3</strong>: S2.</li>
+         * <li><strong>4</strong>: S3.</li>
+         * <li><strong>5</strong>: S4.</li>
          * </ul>
          * <blockquote>
-         * <p>A return value that is less than or equal to 1 indicates N/A.</p>
+         * <p>A return value less than or equal to 1 indicates N/A.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -383,18 +349,13 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the risk level for the data in the column of the data asset table. Valid values:</p>
+         * <p>The risk level name of the column data in the data asset table. Valid values:</p>
          * <ul>
-         * <li><p><strong>N/A</strong>: No sensitive data is detected.</p>
-         * </li>
-         * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
-         * </li>
+         * <li><strong>N/A</strong>: no sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,7 +365,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
-         * <p>The ID of the sensitive data detection rule that is hit by the data in the column.</p>
+         * <p>The ID of the sensitive data detection rule that the column data in the data asset table matches.</p>
          * 
          * <strong>example:</strong>
          * <p>1004</p>
@@ -413,7 +374,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>The name of the sensitive data detection rule that is hit by the data in the column.</p>
+         * <p>The name of the sensitive data detection rule that the column data in the data asset table matches.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -422,18 +383,13 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The name of the sensitivity level. Valid values:</p>
+         * <p>The sensitivity level name. Valid values:</p>
          * <ul>
-         * <li><p><strong>N/A</strong>: No sensitive data is detected.</p>
-         * </li>
-         * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
-         * </li>
-         * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
-         * </li>
+         * <li><strong>N/A</strong>: no sensitive data detected.</li>
+         * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level 4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -443,12 +399,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public String sensLevelName;
 
         /**
-         * <p>Indicates whether the data in the column of the data asset table is sensitive. Valid values:</p>
+         * <p>Indicates whether the column data in the data asset table contains sensitive data. Valid values:</p>
          * <ul>
-         * <li><p>true: The data in the column is sensitive.</p>
-         * </li>
-         * <li><p>false: The data in the column is not sensitive.</p>
-         * </li>
+         * <li>true: The column data contains sensitive data.</li>
+         * <li>false: The column data does not contain sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +412,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Boolean sensitive;
 
         /**
-         * <p>The ID of the data asset table to which the data in the column belongs.</p>
+         * <p>The ID of the data asset table to which the column data belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -467,7 +421,7 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
         public Long tableId;
 
         /**
-         * <p>The name of the table that contains the revised target column.</p>
+         * <p>The name of the table to which the revised target column belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>it_table</p>

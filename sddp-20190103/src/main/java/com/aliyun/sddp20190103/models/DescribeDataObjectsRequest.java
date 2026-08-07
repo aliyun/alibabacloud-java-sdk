@@ -49,6 +49,9 @@ public class DescribeDataObjectsRequest extends TeaModel {
     @NameInMap("DomainId")
     public Long domainId;
 
+    @NameInMap("EngineType")
+    public String engineType;
+
     /**
      * <p>This parameter is deprecated.</p>
      * 
@@ -396,6 +399,14 @@ public class DescribeDataObjectsRequest extends TeaModel {
     }
     public Long getDomainId() {
         return this.domainId;
+    }
+
+    public DescribeDataObjectsRequest setEngineType(String engineType) {
+        this.engineType = engineType;
+        return this;
+    }
+    public String getEngineType() {
+        return this.engineType;
     }
 
     public DescribeDataObjectsRequest setFeatureType(Integer featureType) {

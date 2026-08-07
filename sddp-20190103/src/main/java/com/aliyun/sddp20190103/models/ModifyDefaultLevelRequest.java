@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDefaultLevelRequest extends TeaModel {
     /**
-     * <p>The ID of the default threat level for unidentified data. Valid values:</p>
+     * <p>The default risk level ID for unrecognized data. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: N/A.</p>
-     * </li>
-     * <li><p><strong>2</strong>: S1.</p>
-     * </li>
-     * <li><p><strong>3</strong>: S2.</p>
-     * </li>
-     * <li><p><strong>4</strong>: S3.</p>
-     * </li>
-     * <li><p><strong>5</strong>: S4.</p>
-     * </li>
+     * <li><strong>1</strong>: N/A.</li>
+     * <li><strong>2</strong>: S1.</li>
+     * <li><strong>3</strong>: S2.</li>
+     * <li><strong>4</strong>: S3.</li>
+     * <li><strong>5</strong>: S4.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +23,8 @@ public class ModifyDefaultLevelRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,18 +34,13 @@ public class ModifyDefaultLevelRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The IDs of the threat levels for data classified as sensitive. If you specify multiple IDs, separate them with commas. Valid values:</p>
+     * <p>The risk level IDs for data classified as &quot;sensitive&quot;. Separate multiple IDs with commas (,). Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: N/A.</p>
-     * </li>
-     * <li><p><strong>2</strong>: S1.</p>
-     * </li>
-     * <li><p><strong>3</strong>: S2.</p>
-     * </li>
-     * <li><p><strong>4</strong>: S3.</p>
-     * </li>
-     * <li><p><strong>5</strong>: S4.</p>
-     * </li>
+     * <li><strong>1</strong>: N/A.</li>
+     * <li><strong>2</strong>: S1.</li>
+     * <li><strong>3</strong>: S2.</li>
+     * <li><strong>4</strong>: S3.</li>
+     * <li><strong>5</strong>: S4.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The details of the data asset instances.</p>
+     * <p>The details of the data asset instances returned.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeInstancesResponseBodyItems> items;
 
     /**
-     * <p>The number of data asset instances returned on each page.</p>
+     * <p>The number of data asset instances on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>71064826-726F-4ADA-B879-05D8055476FB</p>
@@ -38,7 +38,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of data asset instances.</p>
+     * <p>The total number of data asset instances returned.</p>
      * 
      * <strong>example:</strong>
      * <p>231</p>
@@ -93,14 +93,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyItemsModelTags extends TeaModel {
         /**
-         * <p>The ID of the data label. Valid values:</p>
+         * <p>The data tag ID. Valid values:</p>
          * <ul>
-         * <li><p><strong>101</strong>: Personal sensitive information</p>
-         * </li>
-         * <li><p><strong>102</strong>: Personal information</p>
-         * </li>
-         * <li><p><strong>107</strong>: General information</p>
-         * </li>
+         * <li><strong>101</strong>: personal sensitive information</li>
+         * <li><strong>102</strong>: personal information</li>
+         * <li><strong>107</strong>: general information</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,14 +107,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the data label. Valid values:</p>
+         * <p>The data tag name. Valid values:</p>
          * <ul>
-         * <li><p>Personal sensitive information</p>
-         * </li>
-         * <li><p>Personal information</p>
-         * </li>
-         * <li><p>General information</p>
-         * </li>
+         * <li>个人敏感信息</li>
+         * <li>个人信息</li>
+         * <li>通用信息</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,7 +163,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String departName;
 
         /**
-         * <p>The unique ID of the data asset instance that is recorded in Data Security Center.</p>
+         * <p>The unique ID of the data asset instance recorded in Data Security Center.</p>
          * 
          * <strong>example:</strong>
          * <p>11111</p>
@@ -189,10 +183,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The security status of the data asset instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: secure</p>
-         * </li>
-         * <li><p><strong>false</strong>: insecure</p>
-         * </li>
+         * <li><strong>true</strong>: Secure.</li>
+         * <li><strong>false</strong>: Not secure.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +194,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean labelsec;
 
         /**
-         * <p>The time when the last scan of the data asset instance was completed. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the most recent scan of the data asset instance was completed. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1637622793000</p>
@@ -211,7 +203,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long lastFinishTime;
 
         /**
-         * <p>If multi-account management is enabled and the asset belongs to a member account, this parameter indicates the UID of the member account.</p>
+         * <p>If the management account has enabled multi-account management and the asset belongs to another member account, this field displays the UID of the member account.</p>
          * 
          * <strong>example:</strong>
          * <p>12567890126</p>
@@ -220,7 +212,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String memberAliUid;
 
         /**
-         * <p>The list of data labels.</p>
+         * <p>The list of data tags.</p>
          */
         @NameInMap("ModelTags")
         public java.util.List<DescribeInstancesResponseBodyItemsModelTags> modelTags;
@@ -253,7 +245,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the product to which the data asset instance belongs, such as MaxCompute, OSS, or RDS. For more information about the supported products, see <a href="https://help.aliyun.com/document_detail/212906.html">Data assets that can be scanned for sensitive data</a>.</p>
+         * <p>The name of the product to which the data asset instance belongs, such as MaxCompute, OSS, or RDS. For supported product names, see <a href="https://help.aliyun.com/document_detail/212906.html">Data types from which sensitive data can be detected</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -273,10 +265,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The protection status of the data asset instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The instance is protected.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The instance is not protected.</p>
-         * </li>
+         * <li><strong>true</strong>: Protected.</li>
+         * <li><strong>false</strong>: Not protected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,30 +276,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean protection;
 
         /**
-         * <p>The ID of the threat level for the data asset instance. The higher the threat level ID, the more sensitive the data.</p>
+         * <p>The risk level ID of the data asset instance. A higher risk level ID indicates more sensitive data is detected.</p>
          * <ul>
-         * <li><p><strong>1</strong>: No sensitive data is detected. No threat.</p>
-         * </li>
-         * <li><p><strong>2</strong>: Threat level 1.</p>
-         * </li>
-         * <li><p><strong>3</strong>: Threat level 2.</p>
-         * </li>
-         * <li><p><strong>4</strong>: Threat level 3.</p>
-         * </li>
-         * <li><p><strong>5</strong>: Threat level 4.</p>
-         * </li>
-         * <li><p><strong>6</strong>: Threat level 5.</p>
-         * </li>
-         * <li><p><strong>7</strong>: Threat level 6.</p>
-         * </li>
-         * <li><p><strong>8</strong>: Threat level 7.</p>
-         * </li>
-         * <li><p><strong>9</strong>: Threat level 8.</p>
-         * </li>
-         * <li><p><strong>10</strong>: Threat level 9.</p>
-         * </li>
-         * <li><p><strong>11</strong>: Threat level 10.</p>
-         * </li>
+         * <li><strong>1</strong>: No sensitive data is detected. No risk.</li>
+         * <li><strong>2</strong>: Sensitive data risk at level 1.</li>
+         * <li><strong>3</strong>: Sensitive data risk at level 2.</li>
+         * <li><strong>4</strong>: Sensitive data risk at level 3.</li>
+         * <li><strong>5</strong>: Sensitive data risk at level 4.</li>
+         * <li><strong>6</strong>: Sensitive data risk at level 5.</li>
+         * <li><strong>7</strong>: Sensitive data risk at level 6.</li>
+         * <li><strong>8</strong>: Sensitive data risk at level 7.</li>
+         * <li><strong>9</strong>: Sensitive data risk at level 8.</li>
+         * <li><strong>10</strong>: Sensitive data risk at level 9.</li>
+         * <li><strong>11</strong>: Sensitive data risk at level 10.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,7 +298,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the threat level for the data asset instance.</p>
+         * <p>The risk level name of the data asset instance.</p>
          * 
          * <strong>example:</strong>
          * <p>S1</p>
@@ -339,10 +318,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the data asset instance contains sensitive data. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes</p>
-         * </li>
-         * <li><p><strong>false</strong>: no</p>
-         * </li>
+         * <li><strong>true</strong>: Contains sensitive data.</li>
+         * <li><strong>false</strong>: Does not contain sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,7 +329,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean sensitive;
 
         /**
-         * <p>The total amount of sensitive data in the data asset instance. For example, if the data asset is an RDS instance, this parameter indicates the total number of sensitive tables in the instance.</p>
+         * <p>The total number of sensitive data items in the data asset instance. For example, if the data asset is ApsaraDB RDS, this value indicates the total number of sensitive tables in the databases of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -370,7 +347,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String tenantName;
 
         /**
-         * <p>The total amount of data in the data asset instance. For example, if the data asset is an RDS instance, this parameter indicates the total number of tables in the instance.</p>
+         * <p>The total number of data items in the data asset instance. For example, if the data asset is ApsaraDB RDS, this value indicates the total number of tables in the databases of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>231</p>

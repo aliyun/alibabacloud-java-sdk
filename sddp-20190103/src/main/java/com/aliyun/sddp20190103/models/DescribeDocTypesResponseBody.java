@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDocTypesResponseBody extends TeaModel {
     /**
-     * <p>A list of OSS file types.</p>
+     * <p>The list of OSS file types in the result.</p>
      */
     @NameInMap("DocTypeList")
     public java.util.List<DescribeDocTypesResponseBodyDocTypeList> docTypeList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>769FB3C1-F4C9-4******</p>
@@ -42,7 +42,7 @@ public class DescribeDocTypesResponseBody extends TeaModel {
 
     public static class DescribeDocTypesResponseBodyDocTypeList extends TeaModel {
         /**
-         * <p>The code of the file type.</p>
+         * <p>The file type code.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -60,7 +60,7 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the file type.</p>
+         * <p>The file type name.</p>
          * 
          * <strong>example:</strong>
          * <p>C/C++ Source Code</p>

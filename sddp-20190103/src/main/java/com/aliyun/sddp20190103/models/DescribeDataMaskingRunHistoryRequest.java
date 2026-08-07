@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The type of service to which the masked data is destined. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
+     * <p>The type of the destination product where the masked data is stored. Valid values: <strong>1</strong>: MaxCompute, <strong>2</strong>: OSS, <strong>3</strong>: ADS, <strong>4</strong>: OTS, <strong>5</strong>: RDS, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Integer dstType;
 
     /**
-     * <p>The end time to query for task executions. This is a UNIX timestamp in milliseconds.</p>
+     * <p>The end time of the task execution to query. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1583856000000</p>
@@ -34,10 +34,8 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +47,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     /**
      * <p>The ID of the main task.</p>
      * <blockquote>
-     * <p>If a task has subtasks, this parameter specifies the ID of the main task. Otherwise, this parameter is empty.</p>
+     * <p>If the task contains subtasks, this parameter is set to the current task ID. Otherwise, this parameter is empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +57,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Long mainProcessId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -77,7 +75,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public String srcTableName;
 
     /**
-     * <p>The type of service to which the source data belongs. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
+     * <p>The type of the source product to which the data to be masked belongs. Valid values: <strong>1</strong>: MaxCompute, <strong>2</strong>: OSS, <strong>3</strong>: ADS, <strong>4</strong>: OTS, <strong>5</strong>: RDS, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -86,7 +84,7 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Integer srcType;
 
     /**
-     * <p>The start time to query for task executions. This is a UNIX timestamp in milliseconds.</p>
+     * <p>The start time of the task execution to query. The value is a timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582992000000</p>
@@ -95,20 +93,14 @@ public class DescribeDataMaskingRunHistoryRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The execution status of the task. Valid values:</p>
+     * <p>The task execution status. Valid values:</p>
      * <ul>
-     * <li><p><strong>-1</strong>: pending.</p>
-     * </li>
-     * <li><p><strong>0</strong>: running.</p>
-     * </li>
-     * <li><p><strong>1</strong>: successful.</p>
-     * </li>
-     * <li><p><strong>2</strong>: failed.</p>
-     * </li>
-     * <li><p><strong>3</strong>: stopped by user.</p>
-     * </li>
-     * <li><p><strong>4</strong>: partially failed.</p>
-     * </li>
+     * <li><strong>-1</strong>: Waiting for execution.</li>
+     * <li><strong>0</strong>: Running.</li>
+     * <li><strong>1</strong>: Executed successfully.</li>
+     * <li><strong>2</strong>: Execution failed.</li>
+     * <li><strong>3</strong>: Terminated by user.</li>
+     * <li><strong>4</strong>: Partially failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

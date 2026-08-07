@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the current page in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of data masking task details.</p>
+     * <p>The list of data masking task information.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>769FB3C1-F4C9-4******</p>
@@ -38,7 +38,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
 
     public static class DescribeDataMaskingRunHistoryResponseBodyItems extends TeaModel {
         /**
-         * <p>The number of data conflicts. This is the number of rows to be inserted into the destination table that conflict with existing data.</p>
+         * <p>The number of data conflict rows, which indicates the number of rows where the masked data to be inserted into the destination table conflicts with the existing data in the destination table.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -102,7 +102,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long conflictCount;
 
         /**
-         * <p>The type of service to which the masked data is destined. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
+         * <p>The type of the destination product where the masked data is stored. Valid values: <strong>1</strong>: MaxCompute, <strong>2</strong>: OSS, <strong>3</strong>: ADS, <strong>4</strong>: OTS, <strong>5</strong>: RDS, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -111,7 +111,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer dstType;
 
         /**
-         * <p>The type of the destination service. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The type of the destination product. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -120,7 +120,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String dstTypeCode;
 
         /**
-         * <p>The time when the execution ended. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1582251233000</p>
@@ -129,7 +129,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The error code returned when the task fails. This parameter has a value only if the task fails.</p>
+         * <p>The error code for the task execution failure. This parameter has a value only when the task execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>masking_task_not_found</p>
@@ -138,7 +138,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String failCode;
 
         /**
-         * <p>The reason the task failed.</p>
+         * <p>The reason for the task execution failure.</p>
          * 
          * <strong>example:</strong>
          * <p>error</p>
@@ -147,12 +147,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String failMsg;
 
         /**
-         * <p>Indicates whether a download file is available.</p>
+         * <p>Indicates whether a download file exists. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Yes.</p>
-         * </li>
-         * <li><p><strong>0</strong>: No.</p>
-         * </li>
+         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +160,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer hasDownloadFile;
 
         /**
-         * <p>The number of created subtasks.</p>
+         * <p>The number of subtasks that have been created.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -180,7 +178,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The number of masked rows.</p>
+         * <p>The number of rows masked.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -198,7 +196,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>The number of times the task has been executed.</p>
+         * <p>The sequence number of the task execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +214,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String srcTableName;
 
         /**
-         * <p>The type of service to which the source data belongs. Valid values: <strong>1</strong> for MaxCompute, <strong>2</strong> for OSS, <strong>3</strong> for ADS, <strong>4</strong> for OTS, and <strong>5</strong> for RDS.</p>
+         * <p>The type of the source product to which the data to be masked belongs. Valid values: <strong>1</strong>: MaxCompute, <strong>2</strong>: OSS, <strong>3</strong>: ADS, <strong>4</strong>: OTS, <strong>5</strong>: RDS, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -225,7 +223,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer srcType;
 
         /**
-         * <p>The type of the source service. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * <p>The type of the source product. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -234,7 +232,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String srcTypeCode;
 
         /**
-         * <p>The time when the execution started. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The execution time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1582251233000</p>
@@ -243,20 +241,14 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The execution status of the task. Valid values:</p>
+         * <p>The task execution status. Valid values:</p>
          * <ul>
-         * <li><p>-<strong>1</strong>: pending.</p>
-         * </li>
-         * <li><p><strong>0</strong>: running.</p>
-         * </li>
-         * <li><p><strong>1</strong>: successful.</p>
-         * </li>
-         * <li><p><strong>2</strong>: failed.</p>
-         * </li>
-         * <li><p><strong>3</strong>: stopped by user.</p>
-         * </li>
-         * <li><p><strong>4</strong>: partially failed.</p>
-         * </li>
+         * <li><strong>-1</strong>: Waiting for execution.</li>
+         * <li><strong>0</strong>: Running.</li>
+         * <li><strong>1</strong>: Executed successfully.</li>
+         * <li><strong>2</strong>: Execution failed.</li>
+         * <li><strong>3</strong>: Terminated by user.</li>
+         * <li><strong>4</strong>: Partially failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,7 +258,7 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mt4HBgtw1B******</p>
@@ -275,12 +267,10 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The execution method. Valid values:</p>
+         * <p>The execution mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: manual.</p>
-         * </li>
-         * <li><p><strong>2</strong>: scheduled.</p>
-         * </li>
+         * <li><strong>1</strong>: Manual.</li>
+         * <li><strong>2</strong>: Scheduled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the current page in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A list of data masking tasks.</p>
+     * <p>The list of static data masking tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataMaskingTasksResponseBodyItems> items;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>769FB3C1-F4C9-4******</p>
@@ -38,7 +38,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries in the results.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
 
     public static class DescribeDataMaskingTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The member account that the data masking destination belongs to.</p>
+         * <p>The member accounts to which the destination data belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>192479427903xxxx</p>
@@ -108,20 +108,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String dstPath;
 
         /**
-         * <p>The product that the destination data source belongs to. Valid values:</p>
+         * <p>The service to which the destination data source belongs. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: MaxCompute.</p>
-         * </li>
-         * <li><p><strong>2</strong>: OSS.</p>
-         * </li>
-         * <li><p><strong>3</strong>: ADS.</p>
-         * </li>
-         * <li><p><strong>4</strong>: OTS.</p>
-         * </li>
-         * <li><p><strong>5</strong>: RDS.</p>
-         * </li>
-         * <li><p><strong>6</strong>: SELF_DB.</p>
-         * </li>
+         * <li><strong>1</strong>: MaxCompute.</li>
+         * <li><strong>2</strong>: OSS.</li>
+         * <li><strong>3</strong>: ADS.</li>
+         * <li><strong>4</strong>: OTS.</li>
+         * <li><strong>5</strong>: RDS.</li>
+         * <li><strong>6</strong>: SELF_DB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,20 +125,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer dstType;
 
         /**
-         * <p>The type of the destination product. Valid values:</p>
+         * <p>The destination service type. Valid values:</p>
          * <ul>
-         * <li><p><strong>MaxCompute</strong>.</p>
-         * </li>
-         * <li><p><strong>OSS</strong>.</p>
-         * </li>
-         * <li><p><strong>ADS</strong>.</p>
-         * </li>
-         * <li><p><strong>OTS</strong>.</p>
-         * </li>
-         * <li><p><strong>RDS</strong>.</p>
-         * </li>
-         * <li><p><strong>SELF_DB</strong>.</p>
-         * </li>
+         * <li><strong>MaxCompute</strong>.</li>
+         * <li><strong>OSS</strong>.</li>
+         * <li><strong>ADS</strong>.</li>
+         * <li><strong>OTS</strong>.</li>
+         * <li><strong>RDS</strong>.</li>
+         * <li><strong>SELF_DB</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +142,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String dstTypeCode;
 
         /**
-         * <p>The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time. Format: timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1582992000000</p>
@@ -163,7 +151,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>Indicates whether the task is running.</p>
+         * <p>Indicates whether the task is being executed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -172,7 +160,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Boolean hasUnfinishProcess;
 
         /**
-         * <p>The numerical ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -181,7 +169,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Indicates whether the source table is masked.</p>
+         * <p>Indicates whether the task masks data in the original table.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -190,7 +178,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Boolean originalTable;
 
         /**
-         * <p>The creator of the task.</p>
+         * <p>The task creator.</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -208,7 +196,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer runCount;
 
         /**
-         * <p>The member account that the data masking source belongs to.</p>
+         * <p>The member accounts to which the source data belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>192479427903xxxx</p>
@@ -223,20 +211,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String srcPath;
 
         /**
-         * <p>The type of the source product. Valid values:</p>
+         * <p>The source service type. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: MaxCompute.</p>
-         * </li>
-         * <li><p><strong>2</strong>: OSS.</p>
-         * </li>
-         * <li><p><strong>3</strong>: ADS.</p>
-         * </li>
-         * <li><p><strong>4</strong>: OTS.</p>
-         * </li>
-         * <li><p><strong>5</strong>: RDS.</p>
-         * </li>
-         * <li><p><strong>6</strong>: SELF_DB.</p>
-         * </li>
+         * <li><strong>1</strong>: MaxCompute.</li>
+         * <li><strong>2</strong>: OSS.</li>
+         * <li><strong>3</strong>: ADS.</li>
+         * <li><strong>4</strong>: OTS.</li>
+         * <li><strong>5</strong>: RDS.</li>
+         * <li><strong>6</strong>: SELF_DB.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,20 +228,14 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer srcType;
 
         /**
-         * <p>The type of the source product. Valid values:</p>
+         * <p>The source service type. Valid values:</p>
          * <ul>
-         * <li><p><strong>MaxCompute</strong>.</p>
-         * </li>
-         * <li><p><strong>OSS</strong>.</p>
-         * </li>
-         * <li><p><strong>ADS</strong>.</p>
-         * </li>
-         * <li><p><strong>OTS</strong>.</p>
-         * </li>
-         * <li><p><strong>RDS</strong>.</p>
-         * </li>
-         * <li><p><strong>SELF_DB</strong>.</p>
-         * </li>
+         * <li><strong>MaxCompute</strong>.</li>
+         * <li><strong>OSS</strong>.</li>
+         * <li><strong>ADS</strong>.</li>
+         * <li><strong>OTS</strong>.</li>
+         * <li><strong>RDS</strong>.</li>
+         * <li><strong>SELF_DB</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,12 +245,10 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String srcTypeCode;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: Disabled.</p>
-         * </li>
-         * <li><p><strong>1</strong>: Enabled.</p>
-         * </li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +258,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The string ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mt4HBgtw1B******</p>
@@ -293,7 +267,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>Task name</p>
@@ -302,14 +276,11 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The execution method of the task. Valid values:</p>
+         * <p>The execution mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Manual.</p>
-         * </li>
-         * <li><p><strong>2</strong>: Scheduled.</p>
-         * </li>
-         * <li><p><strong>3</strong>: Manual and scheduled.</p>
-         * </li>
+         * <li><strong>1</strong>: Manual.</li>
+         * <li><strong>2</strong>: Scheduled.</li>
+         * <li><strong>3</strong>: Manual and scheduled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

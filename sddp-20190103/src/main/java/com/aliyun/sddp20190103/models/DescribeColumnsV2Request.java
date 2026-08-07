@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeColumnsV2Request extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,18 +14,13 @@ public class DescribeColumnsV2Request extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The type of the database engine. Valid values:</p>
+     * <p>The engine type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>MariaDB</strong></p>
-     * </li>
-     * <li><p><strong>Oracle</strong></p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>MariaDB</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,9 +30,9 @@ public class DescribeColumnsV2Request extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The ID of the data asset instance to which the data in the column belongs.</p>
+     * <p>The ID of the asset instance to which the column data in the data asset table belongs.</p>
      * <blockquote>
-     * <p>Query data in columns of a data asset table based on the ID of the data asset instance. The data asset table must be authorized in Data Security Center. To obtain the ID of the data asset instance, call the <a href="https://help.aliyun.com/document_detail/141708.html">DescribeInstances</a> operation.</p>
+     * <p>Queries column data in data asset tables that are connected to and authorized by Data Security Center based on the asset instance ID. You can call the <a href="https://help.aliyun.com/document_detail/141708.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +42,7 @@ public class DescribeColumnsV2Request extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The name of the data asset instance to which the data in the column belongs.</p>
+     * <p>The name of the asset instance to which the column data in the data asset table belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp17t1htja573l5i8****</p>
@@ -56,13 +51,11 @@ public class DescribeColumnsV2Request extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>.
-     * Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Simplified Chinese</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese (Simplified).</li>
+     * <li><strong>en_us</strong>: English (US).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,8 +65,8 @@ public class DescribeColumnsV2Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The keyword for the search. Fuzzy match is supported.</p>
-     * <p>For example, if you enter <strong>test</strong>, all data that contains <strong>test</strong> is returned.</p>
+     * <p>The keyword to search for. Fuzzy match is supported.</p>
+     * <p>For example, if you enter <strong>test</strong>, all data entries that contain <strong>test</strong> in the search fields are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -82,7 +75,7 @@ public class DescribeColumnsV2Request extends TeaModel {
     public String name;
 
     /**
-     * <p>The maximum number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The maximum number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -91,7 +84,7 @@ public class DescribeColumnsV2Request extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the product to which the data in the column of the data asset table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * <p>The name of the product to which the column data in the data asset table belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, RDS</strong>, and others.</p>
      * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
@@ -100,18 +93,13 @@ public class DescribeColumnsV2Request extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the risk level for the sensitive data detection rule. Valid values:</p>
+     * <p>The risk level ID of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: N/A</p>
-     * </li>
-     * <li><p><strong>2</strong>: S1</p>
-     * </li>
-     * <li><p><strong>3</strong>: S2</p>
-     * </li>
-     * <li><p><strong>4</strong>: S3</p>
-     * </li>
-     * <li><p><strong>5</strong>: S4</p>
-     * </li>
+     * <li><strong>1</strong>: N/A.</li>
+     * <li><strong>2</strong>: S1.</li>
+     * <li><strong>3</strong>: S2.</li>
+     * <li><strong>4</strong>: S3.</li>
+     * <li><strong>5</strong>: S4.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,9 +109,9 @@ public class DescribeColumnsV2Request extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The unique ID of the sensitive data detection rule that is hit by the data in the column.</p>
+     * <p>The unique ID of the sensitive data detection rule that the column data matches.</p>
      * <blockquote>
-     * <p>Query data in columns of a data asset table based on the ID of the sensitive data detection rule that is hit. The data asset table must be authorized in Data Security Center. To obtain the ID of the sensitive data detection rule, call the <a href="https://help.aliyun.com/document_detail/141389.html">DescribeRules</a> operation.</p>
+     * <p>Queries column data in data asset tables that are connected to and authorized by Data Security Center based on the ID of the sensitive data detection rule that the column data matches. You can call the <a href="https://help.aliyun.com/document_detail/141389.html">DescribeRules</a> operation to obtain the rule ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -133,7 +121,7 @@ public class DescribeColumnsV2Request extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The name of the sensitive data detection rule that is hit by the data in the column.</p>
+     * <p>The name of the sensitive data detection rule that the column data in the data asset table matches.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -142,18 +130,13 @@ public class DescribeColumnsV2Request extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The name of the sensitivity level. Valid values:</p>
+     * <p>The sensitivity level name. Valid values:</p>
      * <ul>
-     * <li><p><strong>N/A</strong>: No sensitive data is detected.</p>
-     * </li>
-     * <li><p><strong>S1</strong>: Level 1 sensitive data.</p>
-     * </li>
-     * <li><p><strong>S2</strong>: Level 2 sensitive data.</p>
-     * </li>
-     * <li><p><strong>S3</strong>: Level 3 sensitive data.</p>
-     * </li>
-     * <li><p><strong>S4</strong>: Level 4 sensitive data.</p>
-     * </li>
+     * <li><strong>N/A</strong>: no sensitive data detected.</li>
+     * <li><strong>S1</strong>: Level 1 sensitive data.</li>
+     * <li><strong>S2</strong>: Level 2 sensitive data.</li>
+     * <li><strong>S3</strong>: Level 3 sensitive data.</li>
+     * <li><strong>S4</strong>: Level 4 sensitive data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,9 +146,9 @@ public class DescribeColumnsV2Request extends TeaModel {
     public String sensLevelName;
 
     /**
-     * <p>The unique ID of the data asset table that contains the column. The table can be in a data asset such as MaxCompute or RDS.</p>
+     * <p>The unique ID of the data asset table to which the columns belong in MaxCompute, ApsaraDB RDS, or other data assets.</p>
      * <blockquote>
-     * <p>Query data in columns of a data asset table by the table ID. The data asset table must be authorized in Data Security Center. To obtain the ID of the data asset table, call the <a href="https://help.aliyun.com/document_detail/141709.html">DescribeTables</a> operation.</p>
+     * <p>Queries column data in data asset tables that are connected to and authorized by Data Security Center based on the table ID. You can call the <a href="https://help.aliyun.com/document_detail/141709.html">DescribeTables</a> operation to obtain the table ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

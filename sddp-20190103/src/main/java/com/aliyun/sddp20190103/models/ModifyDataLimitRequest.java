@@ -7,10 +7,8 @@ public class ModifyDataLimitRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auditing. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Disable auditing.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Enable auditing.</p>
-     * </li>
+     * <li><strong>0</strong>: Disable auditing.</li>
+     * <li><strong>1</strong>: Enable auditing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,15 +18,13 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer auditStatus;
 
     /**
-     * <p>Specifies whether to automatically trigger a rescan when a rule is changed. Valid values:</p>
+     * <p>Specifies whether to automatically trigger a rescan when rules change. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Do not automatically trigger a rescan.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Automatically trigger a rescan.</p>
-     * </li>
+     * <li><strong>0</strong>: Do not trigger an automatic scan.</li>
+     * <li><strong>1</strong>: Trigger an automatic scan.</li>
      * </ul>
      * <blockquote>
-     * <p>If a rescan is automatically triggered, a full scan is performed on the data asset.</p>
+     * <p>When a rule change triggers an automatic scan, a full scan is performed on all data in the data source.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,12 +34,10 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer autoScan;
 
     /**
-     * <p>The type of the database. Valid values:</p>
+     * <p>The database type. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong></p>
-     * </li>
-     * <li><p><strong>SQLServer</strong></p>
-     * </li>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,9 +56,9 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The unique ID of the data asset.</p>
+     * <p>The unique ID of the data asset that belongs to the product associated with the DSC connection authorization configuration item.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the ID of the data asset.</p>
+     * <p>To modify a DSC connection authorization configuration item, you must provide the unique ID of the data asset that belongs to the associated product. You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -75,12 +69,10 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response messages. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese (default)</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong>: Chinese (default)</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,14 +84,10 @@ public class ModifyDataLimitRequest extends TeaModel {
     /**
      * <p>The retention period of raw logs after auditing is enabled. Unit: days. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>90</strong></p>
-     * </li>
-     * <li><p><strong>180</strong></p>
-     * </li>
-     * <li><p><strong>365</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>90</strong></li>
+     * <li><strong>180</strong></li>
+     * <li><strong>365</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,12 +97,10 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer logStoreDay;
 
     /**
-     * <p>Specifies whether to modify the username and password that are used to connect to the database. Valid values:</p>
+     * <p>Specifies whether to modify the username and password for connecting to the database. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Modify the username and password.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Do not modify the username and password.</p>
-     * </li>
+     * <li><strong>true</strong>: Modify.</li>
+     * <li><strong>false</strong>: Do not modify.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +110,7 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Boolean modifyPassword;
 
     /**
-     * <p>The password for the ApsaraDB RDS database.</p>
+     * <p>The password used for the DSC connection authorization to the RDS database.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -142,18 +128,13 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The service to which the data asset belongs. Valid values:</p>
+     * <p>The name of the product to which the data of the DSC connection authorization configuration item belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS</p>
-     * </li>
-     * <li><p><strong>3</strong>: ADS</p>
-     * </li>
-     * <li><p><strong>4</strong>: OTS</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute</li>
+     * <li><strong>2</strong>: OSS</li>
+     * <li><strong>3</strong>: ADS</li>
+     * <li><strong>4</strong>: OTS</li>
+     * <li><strong>5</strong>: RDS</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -164,14 +145,11 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer resourceType;
 
     /**
-     * <p>The number of sensitive data samples to return. This parameter takes effect only after data detection is enabled. Valid values:</p>
+     * <p>The number of sample entries for sensitive data detection after data detection is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong></p>
-     * </li>
-     * <li><p><strong>5</strong></p>
-     * </li>
-     * <li><p><strong>10</strong></p>
-     * </li>
+     * <li><strong>0</strong></li>
+     * <li><strong>5</strong></li>
+     * <li><strong>10</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -181,28 +159,21 @@ public class ModifyDataLimitRequest extends TeaModel {
     public Integer samplingSize;
 
     /**
-     * <p>The security groups for agent-based auditing that uses PrivateLink.</p>
+     * <p>The security groups used by PrivateLink in agent-based auditing.</p>
      */
     @NameInMap("SecurityGroupIdList")
     public java.util.List<String> securityGroupIdList;
 
     /**
-     * <p>The ID of the region in which the data asset is located. Valid values:</p>
+     * <p>The region where the asset resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-beijing</strong>: China (Beijing)</p>
-     * </li>
-     * <li><p><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</p>
-     * </li>
-     * <li><p><strong>cn-huhehaote</strong>: China (Hohhot)</p>
-     * </li>
-     * <li><p><strong>cn-hangzhou</strong>: China (Hangzhou)</p>
-     * </li>
-     * <li><p><strong>cn-shanghai</strong>: China (Shanghai)</p>
-     * </li>
-     * <li><p><strong>cn-shenzhen</strong>: China (Shenzhen)</p>
-     * </li>
-     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
-     * </li>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+     * <li><strong>cn-huhehaote</strong>: China (Hohhot)</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -212,7 +183,7 @@ public class ModifyDataLimitRequest extends TeaModel {
     public String serviceRegionId;
 
     /**
-     * <p>The username for the ApsaraDB RDS database.</p>
+     * <p>The username used for the DSC connection authorization to the RDS database.</p>
      * 
      * <strong>example:</strong>
      * <p>User01</p>
@@ -221,13 +192,13 @@ public class ModifyDataLimitRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>The vSwitches for agent-based auditing that uses PrivateLink.</p>
+     * <p>The vSwitches used by PrivateLink in agent-based auditing.</p>
      */
     @NameInMap("VSwitchIdList")
     public java.util.List<String> vSwitchIdList;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the data asset belongs.</p>
+     * <p>The VPC ID to which the data asset belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zevcqke6hh09c41****</p>

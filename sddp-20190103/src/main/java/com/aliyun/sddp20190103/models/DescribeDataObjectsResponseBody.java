@@ -338,6 +338,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String dbName;
 
         /**
+         * <strong>example:</strong>
+         * <p>TABLE</p>
+         */
+        @NameInMap("EngineType")
+        public String engineType;
+
+        /**
          * <p>The code for the file category.</p>
          * 
          * <strong>example:</strong>
@@ -714,6 +721,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public String getDbName() {
             return this.dbName;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+        public String getEngineType() {
+            return this.engineType;
         }
 
         public DescribeDataObjectsResponseBodyItems setFileCategoryCode(Integer fileCategoryCode) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
@@ -14,7 +14,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the current account.</p>
+     * <p>The details of the current logon account.</p>
      */
     @NameInMap("UserStatus")
     public DescribeUserStatusResponseBodyUserStatus userStatus;
@@ -42,7 +42,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
 
     public static class DescribeUserStatusResponseBodyUserStatus extends TeaModel {
         /**
-         * <p>The authorized AccessKey ID of the user.</p>
+         * <p>The AccessKey ID authorized by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>yourAccessKeyID</p>
@@ -51,12 +51,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>Indicates whether the currently logged-in account has been granted the service role permissions for DSC asset synchronization. Valid values:</p>
+         * <p>Indicates whether the current logon account has authorized the service-linked role for DSC asset synchronization. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: authorized.</p>
-         * </li>
-         * <li><p><strong>false</strong>: unauthorized.</p>
-         * </li>
+         * <li><strong>true</strong>: authorized.</li>
+         * <li><strong>false</strong>: not authorized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,12 +64,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Boolean assetRoleAuthed;
 
         /**
-         * <p>Indicates whether SQL Insights can be disabled. Valid values:</p>
+         * <p>Indicates whether SQL Explorer can be disabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: no.</p>
-         * </li>
+         * <li><strong>true</strong>: can be disabled.</li>
+         * <li><strong>false</strong>: cannot be disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -81,12 +77,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Boolean auditClosable;
 
         /**
-         * <p>Indicates whether SQL Insights can be released.</p>
+         * <p>Indicates whether SQL Explorer can be released. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: no.</p>
-         * </li>
+         * <li><strong>true</strong>: can be released.</li>
+         * <li><strong>false</strong>: cannot be released.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,12 +90,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Boolean auditReleasable;
 
         /**
-         * <p>Indicates whether the current account is granted Resource Access Management (RAM) permissions on DSC. Valid values:</p>
+         * <p>Indicates whether the current logon account has authorized DSC to access RAM. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The account is granted the permissions.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The account is not granted the permissions.</p>
-         * </li>
+         * <li><strong>true</strong>: authorized.</li>
+         * <li><strong>false</strong>: not authorized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,12 +103,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Boolean authed;
 
         /**
-         * <p>The billing method of the DSC service for the current account. Valid values:</p>
+         * <p>The billing method of the DSC service purchased by the current logon account. Valid values:</p>
          * <ul>
-         * <li><p><strong>PREPAY</strong>: subscription.</p>
-         * </li>
-         * <li><p><strong>POSTPAY</strong>: pay-as-you-go.</p>
-         * </li>
+         * <li><strong>PREPAY</strong>: subscription.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -126,12 +116,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The permissions that the current account has. Valid values:</p>
+         * <p>The permissions of the current account. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: The account has the management or read-only permissions on Data Security Center.</p>
-         * </li>
-         * <li><p><strong>1</strong>: The account has the management permissions on data domains.</p>
-         * </li>
+         * <li><strong>0</strong>: has management or read-only permissions for Data Security Center.</li>
+         * <li><strong>1</strong>: has data domain management permissions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +129,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Integer dataManagerRole;
 
         /**
-         * <p>The ID of the Data Security Center instance purchased by the Alibaba Cloud account.</p>
+         * <p>The instance ID of the Data Security Center product purchased by the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>sddp-cn-****</p>
@@ -150,7 +138,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The number of instances in the current account.</p>
+         * <p>The number of instances in the current logon account.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -168,12 +156,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Long instanceTotalCount;
 
         /**
-         * <p>Indicates whether the Asset Lab feature is enabled. Valid values:</p>
+         * <p>Indicates whether the asset lab feature is enabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: enabled.</p>
-         * </li>
-         * <li><p><strong>0</strong>: disabled.</p>
-         * </li>
+         * <li><strong>1</strong>: enabled.</li>
+         * <li><strong>0</strong>: not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,7 +169,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Integer labStatus;
 
         /**
-         * <p>The total OSS storage. Unit: bytes.</p>
+         * <p>The total OSS storage capacity. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2048</p>
@@ -192,7 +178,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Long ossTotalSize;
 
         /**
-         * <p>The total number of days that assets have been protected.</p>
+         * <p>The total number of days that user assets have been protected.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -203,10 +189,8 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the DSC service is purchased. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: no.</p>
-         * </li>
+         * <li><strong>true</strong>: purchased.</li>
+         * <li><strong>false</strong>: not purchased.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +200,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Boolean purchased;
 
         /**
-         * <p>The number of days from service expiration to service release. Unit: days.</p>
+         * <p>The number of days from expiration to release. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -234,7 +218,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Long releaseTime;
 
         /**
-         * <p>The number of remaining days in the protection period for the assets of the current account.</p>
+         * <p>The remaining days of the protection period for assets in the current logon account.</p>
          * 
          * <strong>example:</strong>
          * <p>131</p>
@@ -243,12 +227,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Integer remainDays;
 
         /**
-         * <p>Indicates whether the current account uses the trial version of the DSC service. Valid values:</p>
+         * <p>Indicates whether the current logon account is using a trial version of DSC. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: yes.</p>
-         * </li>
-         * <li><p><strong>false</strong>: no.</p>
-         * </li>
+         * <li><strong>true</strong>: trial.</li>
+         * <li><strong>false</strong>: non-trial.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,12 +240,10 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Boolean trail;
 
         /**
-         * <p>Indicates whether the agent-based audit feature has been used. Valid values:</p>
+         * <p>Indicates whether the Agent audit feature has been used. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: yes.</p>
-         * </li>
-         * <li><p><strong>0</strong>: no.</p>
-         * </li>
+         * <li><strong>1</strong>: has been used.</li>
+         * <li><strong>0</strong>: has not been used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,7 +253,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Boolean useAgentAudit;
 
         /**
-         * <p>The number of used instances.</p>
+         * <p>The number of instances that are used.</p>
          * 
          * <strong>example:</strong>
          * <p>125</p>
@@ -282,7 +262,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         public Integer useInstanceNum;
 
         /**
-         * <p>The used Object Storage Service (OSS) storage. Unit: bytes.</p>
+         * <p>The used OSS storage capacity. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>Settings for paging query. The page number of the current page. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -25,7 +25,7 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     /**
      * <p>The unique ID of the data object to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> operation to obtain the ID.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,12 +36,10 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     public String id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +49,7 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>Settings for paging query. The maximum number of data asset instances to display on each page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,30 +60,18 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     /**
      * <p>The ID of the product to which the data object belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS</p>
-     * </li>
-     * <li><p><strong>3</strong>: ADB-MYSQL</p>
-     * </li>
-     * <li><p><strong>4</strong>: Tablestore</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS</p>
-     * </li>
-     * <li><p><strong>6</strong>: SELF_DB</p>
-     * </li>
-     * <li><p><strong>7</strong>: PolarDB-X</p>
-     * </li>
-     * <li><p><strong>8</strong>: PolarDB</p>
-     * </li>
-     * <li><p><strong>9</strong>: ADB-PG</p>
-     * </li>
-     * <li><p><strong>10</strong>: OceanBase</p>
-     * </li>
-     * <li><p><strong>11</strong>: MongoDB</p>
-     * </li>
-     * <li><p><strong>25</strong>: Redis</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute</li>
+     * <li><strong>2</strong>: OSS</li>
+     * <li><strong>3</strong>: ADB-MYSQL</li>
+     * <li><strong>4</strong>: TableStore</li>
+     * <li><strong>5</strong>: RDS</li>
+     * <li><strong>6</strong>: SELF_DB</li>
+     * <li><strong>7</strong>: PolarDB-X</li>
+     * <li><strong>8</strong>: PolarDB</li>
+     * <li><strong>9</strong>: ADB-PG</li>
+     * <li><strong>10</strong>: OceanBase</li>
+     * <li><strong>11</strong>: MongoDB</li>
+     * <li><strong>25</strong>: Redis</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,9 +81,9 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The ID of the industry-specific template.</p>
+     * <p>The industry template ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> operation to obtain the ID of the industry-specific template.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> to obtain the industry template ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

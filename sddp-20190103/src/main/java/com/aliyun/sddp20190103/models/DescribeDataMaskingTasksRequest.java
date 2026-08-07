@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataMaskingTasksRequest extends TeaModel {
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,20 +14,14 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The product that the destination data source belongs to. Valid values:</p>
+     * <p>The service to which the destination data source belongs. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute.</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS.</p>
-     * </li>
-     * <li><p><strong>3</strong>: ADS.</p>
-     * </li>
-     * <li><p><strong>4</strong>: OTS.</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS.</p>
-     * </li>
-     * <li><p><strong>6</strong>: SELF_DB.</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute.</li>
+     * <li><strong>2</strong>: OSS.</li>
+     * <li><strong>3</strong>: ADS.</li>
+     * <li><strong>4</strong>: OTS.</li>
+     * <li><strong>5</strong>: RDS.</li>
+     * <li><strong>6</strong>: SELF_DB.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +31,7 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public Integer dstType;
 
     /**
-     * <p>The end time for creating the data masking task. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end time of the task creation period. Format: timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1583856000000</p>
@@ -48,10 +42,8 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +53,7 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -70,7 +62,7 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>A keyword to search for tasks. You can search by task name or task ID.</p>
+     * <p>The keyword used to search for tasks. You can search by task name or task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -79,7 +71,7 @@ public class DescribeDataMaskingTasksRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The start time for creating the task. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start time of the task creation period. Format: timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582992000000</p>

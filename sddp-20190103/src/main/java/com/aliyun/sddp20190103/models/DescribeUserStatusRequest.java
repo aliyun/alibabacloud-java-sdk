@@ -16,10 +16,8 @@ public class DescribeUserStatusRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: The default value. Simplified Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: American English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese (Simplified). This is the default value.</li>
+     * <li><strong>en_us</strong>: English (US).</li>
      * </ul>
      * 
      * <strong>example:</strong>

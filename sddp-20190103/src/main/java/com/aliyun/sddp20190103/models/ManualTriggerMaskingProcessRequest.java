@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class ManualTriggerMaskingProcessRequest extends TeaModel {
     /**
-     * <p>The ID of the data masking task. The value is an integer.</p>
-     * <blockquote>
-     * <p>You can call the DescribeDataMaskingTasks operation to obtain the ID of the data masking task.</p>
-     * </blockquote>
+     * <p>The ID of the data masking task, represented as a number.</p>
+     * <p><note>The data masking task ID is represented by a string of characters. You can call the DescribeDataMaskingTasks operation to obtain the ID.</note></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +18,8 @@ public class ManualTriggerMaskingProcessRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Default value: zh_cn. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Chinese</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Chinese.</li>
+     * <li><strong>en_us</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

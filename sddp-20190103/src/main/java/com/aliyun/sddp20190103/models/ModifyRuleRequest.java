@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyRuleRequest extends TeaModel {
     /**
-     * <p>The type of the content in the sensitive data detection rule. Valid values:</p>
+     * <p>The type of the sensitive data detection rule content. Valid values:</p>
      * <ul>
-     * <li><p><strong>2</strong>: regular expression.</p>
-     * </li>
-     * <li><p><strong>3</strong>: algorithm.</p>
-     * </li>
-     * <li><p><strong>5</strong>: keyword.</p>
-     * </li>
+     * <li><strong>2</strong>: regular expression.</li>
+     * <li><strong>3</strong>: algorithm.</li>
+     * <li><strong>5</strong>: keyword.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer category;
 
     /**
-     * <p>The content of the sensitive data detection rule. The rule can be a regular expression, an algorithm, or a keyword, and matches fields or text that contain sensitive data.</p>
+     * <p>The content of the sensitive data detection rule. The content can be a regular expression, algorithm, or keyword that is used to match sensitive data fields or text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +30,7 @@ public class ModifyRuleRequest extends TeaModel {
 
     /**
      * <p>The unique ID of the sensitive data detection rule.</p>
-     * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the ID.</p>
+     * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,12 +40,10 @@ public class ModifyRuleRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The language of the request and response. The default value is <strong>zh_cn</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh_cn</strong>: Simplified Chinese.</p>
-     * </li>
-     * <li><p><strong>en_us</strong>: English.</p>
-     * </li>
+     * <li><strong>zh_cn</strong>: Simplified Chinese.</li>
+     * <li><strong>en_us</strong>: English (US).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,10 +55,8 @@ public class ModifyRuleRequest extends TeaModel {
     /**
      * <p>The match type. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: rule-based match.</p>
-     * </li>
-     * <li><p><strong>2</strong>: dictionary-based match.</p>
-     * </li>
+     * <li><strong>1</strong>: rule match.</li>
+     * <li><strong>2</strong>: dictionary match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +66,7 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer matchType;
 
     /**
-     * <p>A collection of model IDs for sensitive data auditing.</p>
+     * <p>The collection of model IDs associated with the sensitive data audit.</p>
      * 
      * <strong>example:</strong>
      * <p>1452</p>
@@ -93,20 +86,14 @@ public class ModifyRuleRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the product resource that contains the sensitive data detection rule. Valid values:</p>
+     * <p>The resource type of the product that contains the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>MaxCompute</strong>.</p>
-     * </li>
-     * <li><p><strong>OSS</strong>.</p>
-     * </li>
-     * <li><p><strong>ADS</strong>.</p>
-     * </li>
-     * <li><p><strong>OTS</strong>.</p>
-     * </li>
-     * <li><p><strong>RDS</strong>.</p>
-     * </li>
-     * <li><p><strong>SELF_DB</strong>.</p>
-     * </li>
+     * <li><strong>MaxCompute</strong></li>
+     * <li><strong>OSS</strong></li>
+     * <li><strong>ADS</strong></li>
+     * <li><strong>OTS</strong></li>
+     * <li><strong>RDS</strong></li>
+     * <li><strong>SELF_DB</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,20 +103,14 @@ public class ModifyRuleRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the product that contains the sensitive data detection rule. Valid values:</p>
+     * <p>The product ID of the product that contains the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: MaxCompute.</p>
-     * </li>
-     * <li><p><strong>2</strong>: OSS.</p>
-     * </li>
-     * <li><p><strong>3</strong>: ADS.</p>
-     * </li>
-     * <li><p><strong>4</strong>: OTS.</p>
-     * </li>
-     * <li><p><strong>5</strong>: RDS.</p>
-     * </li>
-     * <li><p><strong>6</strong>: SELF_DB.</p>
-     * </li>
+     * <li><strong>1</strong>: MaxCompute.</li>
+     * <li><strong>2</strong>: OSS.</li>
+     * <li><strong>3</strong>: ADS.</li>
+     * <li><strong>4</strong>: OTS.</li>
+     * <li><strong>5</strong>: RDS.</li>
+     * <li><strong>6</strong>: SELF_DB.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,18 +120,13 @@ public class ModifyRuleRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The ID of the risk level for the sensitive data detection rule. Valid values:</p>
+     * <p>The risk level ID of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: N/A. No sensitive data is detected.</p>
-     * </li>
-     * <li><p><strong>2</strong>: S1. Level 1 sensitive data.</p>
-     * </li>
-     * <li><p><strong>3</strong>: S2. Level 2 sensitive data.</p>
-     * </li>
-     * <li><p><strong>4</strong>: S3. Level 3 sensitive data.</p>
-     * </li>
-     * <li><p><strong>5</strong>: S4. Level 4 sensitive data.</p>
-     * </li>
+     * <li><strong>1</strong>: N/A. No sensitive data is detected.</li>
+     * <li><strong>2</strong>: S1. Level-1 sensitive data.</li>
+     * <li><strong>3</strong>: S2. Level-2 sensitive data.</li>
+     * <li><strong>4</strong>: S3. Level-3 sensitive data.</li>
+     * <li><strong>5</strong>: S4. Level-4 sensitive data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,12 +138,9 @@ public class ModifyRuleRequest extends TeaModel {
     /**
      * <p>The type of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: data detection rule.</p>
-     * </li>
-     * <li><p><strong>2</strong>: audit policy.</p>
-     * </li>
-     * <li><p><strong>3</strong>: abnormal event rule.</p>
-     * </li>
+     * <li><strong>1</strong>: data detection rule.</li>
+     * <li><strong>2</strong>: audit policy.</li>
+     * <li><strong>3</strong>: anomalous activity rule.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -177,14 +150,11 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer ruleType;
 
     /**
-     * <p>The type of data asset that the rule supports. Valid values:</p>
+     * <p>The data asset type supported by the rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: all assets.</p>
-     * </li>
-     * <li><p><strong>1</strong>: structured assets.</p>
-     * </li>
-     * <li><p><strong>2</strong>: unstructured assets.</p>
-     * </li>
+     * <li><strong>0</strong>: all assets.</li>
+     * <li><strong>1</strong>: structured assets.</li>
+     * <li><strong>2</strong>: unstructured assets.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -194,7 +164,7 @@ public class ModifyRuleRequest extends TeaModel {
     public Integer supportForm;
 
     /**
-     * <p>A collection of template IDs for sensitive data auditing.</p>
+     * <p>The collection of template IDs associated with the sensitive data audit.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -205,12 +175,9 @@ public class ModifyRuleRequest extends TeaModel {
     /**
      * <p>The risk level of the sensitive data detection rule. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: low.</p>
-     * </li>
-     * <li><p><strong>2</strong>: medium.</p>
-     * </li>
-     * <li><p><strong>3</strong>: high.</p>
-     * </li>
+     * <li><strong>1</strong>: low.</li>
+     * <li><strong>2</strong>: medium.</li>
+     * <li><strong>3</strong>: high.</li>
      * </ul>
      * 
      * <strong>example:</strong>
