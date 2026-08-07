@@ -417,6 +417,25 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeImagesResponseBodyImagesImageSecureBootOptions extends TeaModel {
+        @NameInMap("SecureBootSupport")
+        public String secureBootSupport;
+
+        public static DescribeImagesResponseBodyImagesImageSecureBootOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagesResponseBodyImagesImageSecureBootOptions self = new DescribeImagesResponseBodyImagesImageSecureBootOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageSecureBootOptions setSecureBootSupport(String secureBootSupport) {
+            this.secureBootSupport = secureBootSupport;
+            return this;
+        }
+        public String getSecureBootSupport() {
+            return this.secureBootSupport;
+        }
+
+    }
+
     public static class DescribeImagesResponseBodyImagesImageTagsTag extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
@@ -550,6 +569,9 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("SecureBootOptions")
+        public DescribeImagesResponseBodyImagesImageSecureBootOptions secureBootOptions;
 
         @NameInMap("Size")
         public Integer size;
@@ -796,6 +818,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setSecureBootOptions(DescribeImagesResponseBodyImagesImageSecureBootOptions secureBootOptions) {
+            this.secureBootOptions = secureBootOptions;
+            return this;
+        }
+        public DescribeImagesResponseBodyImagesImageSecureBootOptions getSecureBootOptions() {
+            return this.secureBootOptions;
         }
 
         public DescribeImagesResponseBodyImagesImage setSize(Integer size) {

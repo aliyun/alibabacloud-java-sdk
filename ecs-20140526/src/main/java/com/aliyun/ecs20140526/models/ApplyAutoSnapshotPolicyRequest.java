@@ -14,7 +14,7 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the automatic snapshot policy.</p>
+     * <p>The ID of the target automatic snapshot policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

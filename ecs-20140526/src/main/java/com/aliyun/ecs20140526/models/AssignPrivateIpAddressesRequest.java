@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -16,7 +16,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
      * <p>One or more IPv4 prefixes to assign to the network interface controller (NIC). Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>To set IPv4 prefixes for the NIC, you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
+     * <p>If you need to set IPv4 prefixes for the NIC, you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
      * </blockquote>
      */
     @NameInMap("Ipv4Prefix")
@@ -25,7 +25,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
      * <p>The number of randomly generated IPv4 prefixes to assign to the network interface controller (NIC). Valid values: 1 to 10.</p>
      * <blockquote>
-     * <p>To set IPv4 prefixes for the NIC, you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
+     * <p>If you need to set IPv4 prefixes for the NIC, you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,9 +54,9 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
      * <p>One or more secondary private IP addresses selected from the idle IP addresses within the vSwitch to which the network interface controller (NIC) belongs. Valid values of N:</p>
      * <ul>
      * <li>When the NIC is in the active (<code>Available</code>) state: 1 to 32.</li>
-     * <li>When the NIC is in the <code>InUse</code> state: subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
+     * <li>When the NIC is in the <code>InUse</code> state: subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</li>
      * </ul>
-     * <p>When you allocate secondary private IP addresses, you cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code>.</p>
+     * <p>When you allocate secondary private IP addresses, you cannot specify both PrivateIpAddress.N and SecondaryPrivateIpAddressCount.</p>
      * 
      * <strong>example:</strong>
      * <p><code>10.1.**.**</code></p>
@@ -65,7 +65,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the network interface controller (NIC). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
 
     /**
      * <p>The number of private IP addresses to be automatically assigned from the idle IP addresses within the vSwitch.</p>
-     * <p>When you assign secondary private IP addresses, you cannot specify both <code>PrivateIpAddress.N</code> and <code>SecondaryPrivateIpAddressCount</code>.</p>
+     * <p>When you assign secondary private IP addresses, you cannot specify both PrivateIpAddress.N and SecondaryPrivateIpAddressCount.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

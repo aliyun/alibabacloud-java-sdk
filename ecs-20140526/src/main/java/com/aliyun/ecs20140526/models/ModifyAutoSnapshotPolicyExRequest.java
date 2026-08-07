@@ -7,8 +7,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: Snapshot replicas are permanently retained.</li>
-     * <li>1 to 65535: the number of days for which snapshot replicas are retained.</li>
+     * <li>-1: permanently retained.</li>
+     * <li>1 to 65535: retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -19,16 +19,16 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Integer copiedSnapshotsRetentionDays;
 
     /**
-     * <p>The encryption parameter for cross-region snapshot replication.</p>
+     * <p>The encryption parameter object for cross-region snapshot replication.</p>
      */
     @NameInMap("CopyEncryptionConfiguration")
     public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
     /**
-     * <p>Specifies whether to allow automatic cross-region replication. Valid values:</p>
+     * <p>Specifies whether to allow automatic cross-region replication.</p>
      * <ul>
-     * <li>true: Allowed.</li>
-     * <li>false: Not allowed.</li>
+     * <li>true: allowed.</li>
+     * <li>false: not allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,13 +47,20 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination region for cross-region snapshot replication. You can set one destination region.</p>
+     * <p>The destination region to which snapshots are replicated. Currently, you can set only one destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;]</p>
      */
     @NameInMap("TargetCopyRegions")
     public String targetCopyRegions;
+
+    /**
+     * <p>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
+     * This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</p>
+     */
+    @NameInMap("TargetTags")
+    public java.util.List<ModifyAutoSnapshotPolicyExRequestTargetTags> targetTags;
 
     /**
      * <p>The ID of the automatic snapshot policy. You can call <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> to query available automatic snapshot policies.</p>
@@ -66,7 +73,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. If this parameter is empty, the name is not modified.</p>
+     * <p>The name of the automatic snapshot policy. If this parameter is left empty, the name is not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>SPTestName</p>
@@ -101,8 +108,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     /**
      * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li>-1: Automatic snapshots are permanently retained.</li>
-     * <li>1 to 65536: the number of days for which automatic snapshots are retained.</li>
+     * <li>-1: permanently retained.</li>
+     * <li>1 to 65536: retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -185,6 +192,14 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     }
     public String getTargetCopyRegions() {
         return this.targetCopyRegions;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setTargetTags(java.util.List<ModifyAutoSnapshotPolicyExRequestTargetTags> targetTags) {
+        this.targetTags = targetTags;
+        return this;
+    }
+    public java.util.List<ModifyAutoSnapshotPolicyExRequestTargetTags> getTargetTags() {
+        return this.targetTags;
     }
 
     public ModifyAutoSnapshotPolicyExRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
@@ -304,8 +319,8 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</p>
          * <ul>
-         * <li>true: Enabled. </li>
-         * <li>false: Disabled.</li>
+         * <li>true: enabled. </li>
+         * <li>false: disabled.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -351,6 +366,46 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         }
         public String getKMSKeyId() {
             return this.KMSKeyId;
+        }
+
+    }
+
+    public static class ModifyAutoSnapshotPolicyExRequestTargetTags extends TeaModel {
+        /**
+         * <p>The tag key.
+         * Valid values of N: 1 to 10.
+         * The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.
+         * Valid values of N: 1 to 10. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+         * Note: If you pass in an empty value or an empty string, it indicates any value.</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ModifyAutoSnapshotPolicyExRequestTargetTags build(java.util.Map<String, ?> map) throws Exception {
+            ModifyAutoSnapshotPolicyExRequestTargetTags self = new ModifyAutoSnapshotPolicyExRequestTargetTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyAutoSnapshotPolicyExRequestTargetTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ModifyAutoSnapshotPolicyExRequestTargetTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

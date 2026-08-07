@@ -94,11 +94,11 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     /**
      * <p>The status of the snapshot-consistent group. Valid values of N: 1 to 3. Valid values:</p>
      * <ul>
-     * <li><p>progressing: being created.</p>
+     * <li><p>progressing: The snapshot-consistent group is being created.</p>
      * </li>
-     * <li><p>accomplished: created.</p>
+     * <li><p>accomplished: The snapshot-consistent group is created.</p>
      * </li>
-     * <li><p>failed: failed to be created.</p>
+     * <li><p>failed: The snapshot-consistent group failed to be created.</p>
      * </li>
      * </ul>
      * 
