@@ -7667,6 +7667,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param tmpReq GenerateAuthCodeRequest
+     * @param tmpHeader GenerateAuthCodeHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateAuthCodeResponse
+     */
+    public GenerateAuthCodeResponse generateAuthCodeWithOptions(GenerateAuthCodeRequest tmpReq, GenerateAuthCodeHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GenerateAuthCodeShrinkRequest request = new GenerateAuthCodeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GenerateAuthCodeShrinkHeaders headers = new GenerateAuthCodeShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bucAppName)) {
+            body.put("BucAppName", request.bucAppName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ssoTicket)) {
+            body.put("SsoTicket", request.ssoTicket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validRedirectUri)) {
+            body.put("ValidRedirectUri", request.validRedirectUri);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateAuthCode"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/auth/generateAuthCode"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateAuthCodeResponse());
+    }
+
+    /**
+     * @param request GenerateAuthCodeRequest
+     * @return GenerateAuthCodeResponse
+     */
+    public GenerateAuthCodeResponse generateAuthCode(GenerateAuthCodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GenerateAuthCodeHeaders headers = new GenerateAuthCodeHeaders();
+        return this.generateAuthCodeWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>获取流程设计的节点信息</p>
      * 
@@ -13232,6 +13306,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetUserHeaders headers = new GetUserHeaders();
         return this.getUserWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户对钉钉文档的权限情况</p>
+     * 
+     * @param tmpReq GetUserDocumentPermissionRequest
+     * @param tmpHeader GetUserDocumentPermissionHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserDocumentPermissionResponse
+     */
+    public GetUserDocumentPermissionResponse getUserDocumentPermissionWithOptions(GetUserDocumentPermissionRequest tmpReq, GetUserDocumentPermissionHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetUserDocumentPermissionShrinkRequest request = new GetUserDocumentPermissionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        GetUserDocumentPermissionShrinkHeaders headers = new GetUserDocumentPermissionShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dentryId)) {
+            body.put("DentryId", request.dentryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dentryUuid)) {
+            body.put("DentryUuid", request.dentryUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spaceId)) {
+            body.put("SpaceId", request.spaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserDocumentPermission"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/documents/getUserDocumentPermission"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserDocumentPermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户对钉钉文档的权限情况</p>
+     * 
+     * @param request GetUserDocumentPermissionRequest
+     * @return GetUserDocumentPermissionResponse
+     */
+    public GetUserDocumentPermissionResponse getUserDocumentPermission(GetUserDocumentPermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetUserDocumentPermissionHeaders headers = new GetUserDocumentPermissionHeaders();
+        return this.getUserDocumentPermissionWithOptions(request, headers, runtime);
     }
 
     /**
