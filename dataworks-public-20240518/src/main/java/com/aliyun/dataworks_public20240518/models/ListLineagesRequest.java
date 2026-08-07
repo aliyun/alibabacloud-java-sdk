@@ -64,6 +64,9 @@ public class ListLineagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RecentDays")
+    public Integer recentDays;
+
     /**
      * <p>The field to sort the results by. The default is <code>Name</code>, which sorts by entity name.</p>
      * 
@@ -142,6 +145,14 @@ public class ListLineagesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListLineagesRequest setRecentDays(Integer recentDays) {
+        this.recentDays = recentDays;
+        return this;
+    }
+    public Integer getRecentDays() {
+        return this.recentDays;
     }
 
     public ListLineagesRequest setSortBy(String sortBy) {
