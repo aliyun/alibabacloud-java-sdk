@@ -1,3 +1,8 @@
+2026-08-07 Version: 7.12.0
+- Support API AddPolarOSSAuthorizedAccount.
+- Support API DeletePolarOSSAuthorizedAccount.
+
+
 2026-08-06 Version: 7.11.2
 - Update API CreateAIDBCluster: add request parameters CreatePublicEndpoint.
 - Update API CreateAIDBCluster: add request parameters ModelSpace.
