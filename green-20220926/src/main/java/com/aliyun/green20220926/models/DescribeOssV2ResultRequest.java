@@ -4,24 +4,66 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssV2ResultRequest extends TeaModel {
+    /**
+     * <p>The OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>buckect_test</p>
+     */
     @NameInMap("Bucket")
     public String bucket;
 
+    /**
+     * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-14 16:08:38</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The page size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The risk level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>high</p>
+     */
     @NameInMap("RiskLevel")
     public String riskLevel;
 
+    /**
+     * <p>The start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-09-14 16:08:38</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Image stock task 20240914100517757</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

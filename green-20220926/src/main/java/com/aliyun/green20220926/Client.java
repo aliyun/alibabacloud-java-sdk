@@ -1796,8 +1796,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取oss结果v2</p>
+     * <p>Retrieves OSS moderation results v2.</p>
      * 
      * @param request DescribeOssV2ResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1852,8 +1855,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取oss结果v2</p>
+     * <p>Retrieves OSS moderation results v2.</p>
      * 
      * @param request DescribeOssV2ResultRequest
      * @return DescribeOssV2ResultResponse
@@ -2817,6 +2823,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetFeatureConfigResponse getFeatureConfig(GetFeatureConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getFeatureConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves log statistics for AI security guardrails.</p>
+     * 
+     * @param request GetGuardLogStatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGuardLogStatsResponse
+     */
+    public GetGuardLogStatsResponse getGuardLogStatsWithOptions(GetGuardLogStatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGuardLogStats"),
+            new TeaPair("version", "2022-09-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGuardLogStatsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves log statistics for AI security guardrails.</p>
+     * 
+     * @param request GetGuardLogStatsRequest
+     * @return GetGuardLogStatsResponse
+     */
+    public GetGuardLogStatsResponse getGuardLogStats(GetGuardLogStatsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGuardLogStatsWithOptions(request, runtime);
     }
 
     /**
@@ -3959,6 +4002,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTuneProposalByIdResponse getTuneProposalById(GetTuneProposalByIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTuneProposalByIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the text content of an uploaded file.</p>
+     * 
+     * @param request GetUploadContentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUploadContentResponse
+     */
+    public GetUploadContentResponse getUploadContentWithOptions(GetUploadContentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadUrl)) {
+            query.put("UploadUrl", request.uploadUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUploadContent"),
+            new TeaPair("version", "2022-09-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUploadContentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the text content of an uploaded file.</p>
+     * 
+     * @param request GetUploadContentRequest
+     * @return GetUploadContentResponse
+     */
+    public GetUploadContentResponse getUploadContent(GetUploadContentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUploadContentWithOptions(request, runtime);
     }
 
     /**
