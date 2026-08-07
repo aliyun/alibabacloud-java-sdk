@@ -263,6 +263,9 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("QueueName")
         public String queueName;
 
+        @NameInMap("Reason")
+        public String reason;
+
         /**
          * <p>The bidding policy of the node. Valid values:</p>
          * <ul>
@@ -436,6 +439,14 @@ public class ListNodesResponseBody extends TeaModel {
         }
         public String getQueueName() {
             return this.queueName;
+        }
+
+        public ListNodesResponseBodyNodes setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public ListNodesResponseBodyNodes setSpotStrategy(String spotStrategy) {
