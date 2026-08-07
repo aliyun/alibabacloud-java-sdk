@@ -6360,6 +6360,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("consumerGroupId", request.consumerGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerGroupNameLike)) {
+            query.put("consumerGroupNameLike", request.consumerGroupNameLike);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
             query.put("consumerId", request.consumerId);
         }

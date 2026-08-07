@@ -22,6 +22,9 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     @NameInMap("consumerGroupId")
     public String consumerGroupId;
 
+    @NameInMap("consumerGroupNameLike")
+    public String consumerGroupNameLike;
+
     /**
      * <p>The consumer ID.</p>
      * 
@@ -140,6 +143,14 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     }
     public String getConsumerGroupId() {
         return this.consumerGroupId;
+    }
+
+    public QueryConsumerAuthorizationRulesRequest setConsumerGroupNameLike(String consumerGroupNameLike) {
+        this.consumerGroupNameLike = consumerGroupNameLike;
+        return this;
+    }
+    public String getConsumerGroupNameLike() {
+        return this.consumerGroupNameLike;
     }
 
     public QueryConsumerAuthorizationRulesRequest setConsumerId(String consumerId) {
