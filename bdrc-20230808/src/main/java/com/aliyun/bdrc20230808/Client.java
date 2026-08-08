@@ -1088,6 +1088,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>开启跨账号管理</p>
+     * 
+     * @param request EnableCrossAccountManagementRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableCrossAccountManagementResponse
+     */
+    public EnableCrossAccountManagementResponse enableCrossAccountManagementWithOptions(EnableCrossAccountManagementRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableCrossAccountManagement"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/cross-accounts/enable-management"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableCrossAccountManagementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启跨账号管理</p>
+     * 
+     * @param request EnableCrossAccountManagementRequest
+     * @return EnableCrossAccountManagementResponse
+     */
+    public EnableCrossAccountManagementResponse enableCrossAccountManagement(EnableCrossAccountManagementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableCrossAccountManagementWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the status of the Backup and Disaster Recovery Center.</p>
      * 
      * @param headers map
@@ -1250,6 +1291,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getResourceCategoryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建跨账号纳管关系</p>
+     * 
+     * @param request ListCrossAccountsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCrossAccountsResponse
+     */
+    public ListCrossAccountsResponse listCrossAccountsWithOptions(ListCrossAccountsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crossAccountOwnerId)) {
+            query.put("CrossAccountOwnerId", request.crossAccountOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managementMode)) {
+            query.put("ManagementMode", request.managementMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
+            query.put("TargetId", request.targetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCrossAccounts"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/cross-accounts"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCrossAccountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建跨账号纳管关系</p>
+     * 
+     * @param request ListCrossAccountsRequest
+     * @return ListCrossAccountsResponse
+     */
+    public ListCrossAccountsResponse listCrossAccounts(ListCrossAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listCrossAccountsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1535,6 +1643,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.openBdrcServiceWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预检查资源数量</p>
+     * 
+     * @param tmpReq PrecheckResourceCountRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PrecheckResourceCountResponse
+     */
+    public PrecheckResourceCountResponse precheckResourceCountWithOptions(PrecheckResourceCountRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PrecheckResourceCountShrinkRequest request = new PrecheckResourceCountShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagResourceMatchers)) {
+            request.tagResourceMatchersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagResourceMatchers, "TagResourceMatchers", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagResourceMatchersShrink)) {
+            body.put("TagResourceMatchers", request.tagResourceMatchersShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PrecheckResourceCount"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/resources/precheck-count"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PrecheckResourceCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预检查资源数量</p>
+     * 
+     * @param request PrecheckResourceCountRequest
+     * @return PrecheckResourceCountResponse
+     */
+    public PrecheckResourceCountResponse precheckResourceCount(PrecheckResourceCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.precheckResourceCountWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新跨账号纳管关系</p>
+     * 
+     * @param tmpReq UpdateCrossAccountsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCrossAccountsResponse
+     */
+    public UpdateCrossAccountsResponse updateCrossAccountsWithOptions(UpdateCrossAccountsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCrossAccountsShrinkRequest request = new UpdateCrossAccountsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createTargets)) {
+            request.createTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createTargets, "CreateTargets", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deleteTargets)) {
+            request.deleteTargetsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deleteTargets, "DeleteTargets", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTargetsShrink)) {
+            body.put("CreateTargets", request.createTargetsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteTargetsShrink)) {
+            body.put("DeleteTargets", request.deleteTargetsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCrossAccounts"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/cross-accounts"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCrossAccountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新跨账号纳管关系</p>
+     * 
+     * @param request UpdateCrossAccountsRequest
+     * @return UpdateCrossAccountsResponse
+     */
+    public UpdateCrossAccountsResponse updateCrossAccounts(UpdateCrossAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateCrossAccountsWithOptions(request, headers, runtime);
     }
 
     /**
