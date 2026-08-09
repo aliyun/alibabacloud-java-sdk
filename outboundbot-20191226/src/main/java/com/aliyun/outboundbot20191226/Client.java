@@ -4194,7 +4194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of contacts blocked for outbound calls.</p>
+     * <p>Retrieves the outbound call blocklist.</p>
      * 
      * @param request GetContactBlockListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4219,6 +4219,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.searchPattern)) {
+            query.put("SearchPattern", request.searchPattern);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4238,7 +4242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of contacts blocked for outbound calls.</p>
+     * <p>Retrieves the outbound call blocklist.</p>
      * 
      * @param request GetContactBlockListRequest
      * @return GetContactBlockListResponse
@@ -4273,6 +4277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchPattern)) {
+            query.put("SearchPattern", request.searchPattern);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6312,7 +6320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the script list.</p>
+     * <p>Queries the list of scripts.</p>
      * 
      * @param request ListScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6360,7 +6368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the script list.</p>
+     * <p>Queries the list of scripts.</p>
      * 
      * @param request ListScriptsRequest
      * @return ListScriptsResponse

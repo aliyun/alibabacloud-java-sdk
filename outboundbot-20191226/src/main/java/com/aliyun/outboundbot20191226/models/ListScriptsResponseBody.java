@@ -41,7 +41,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The paginated list of scripts.</p>
+     * <p>The script list.</p>
      */
     @NameInMap("Scripts")
     public ListScriptsResponseBodyScripts scripts;
@@ -110,7 +110,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyScriptsListNluProfile extends TeaModel {
         /**
-         * <p>The function name.</p>
+         * <p>The function service name.</p>
          * 
          * <strong>example:</strong>
          * <p>sanfang_test</p>
@@ -119,7 +119,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String fcFunction;
 
         /**
-         * <p>The URL of the function trigger.</p>
+         * <p>The function service trigger URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run">http://sanfang_test-xxxxxx.cn-shanghai-vpc.fcapp.run</a></p>
@@ -128,7 +128,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String fcHttpTriggerUrl;
 
         /**
-         * <p>The function region.</p>
+         * <p>The function service region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -169,7 +169,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyScriptsList extends TeaModel {
         /**
-         * <p>The agent access key.</p>
+         * <p>The access key of the robot business workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>14791f5f226b4878b3d9b676a0291234</p>
@@ -178,13 +178,16 @@ public class ListScriptsResponseBody extends TeaModel {
         public String agentKey;
 
         /**
-         * <p>Indicates whether the agent is an LLM agent.</p>
+         * <p>Indicates whether the robot business workspace is a large model workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("AgentLlm")
         public Boolean agentLlm;
+
+        @NameInMap("ChatBotId")
+        public String chatBotId;
 
         /**
          * <p>The creation time.</p>
@@ -205,7 +208,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public String debugStatus;
 
         /**
-         * <p>Indicates whether emotion detection is enabled. This parameter is always false for LLM-based scripts.</p>
+         * <p>Indicates whether the emotion recognition feature is enabled. This parameter is set to false for all large model scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -217,13 +220,13 @@ public class ListScriptsResponseBody extends TeaModel {
          * <p>The industry.</p>
          * 
          * <strong>example:</strong>
-         * <p>金融</p>
+         * <p>Finance</p>
          */
         @NameInMap("Industry")
         public String industry;
 
         /**
-         * <p>Indicates whether the debug version of the script is a draft.</p>
+         * <p>Indicates whether the debug version is in draft state.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -241,7 +244,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean isDrafted;
 
         /**
-         * <p>Indicates whether the script is for a preset scene.</p>
+         * <p>Indicates whether the scenario is a preset scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -250,7 +253,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean isPreset;
 
         /**
-         * <p>Indicates whether long wait is enabled. This parameter is always false for LLM-based scripts.</p>
+         * <p>Indicates whether the long pause detection feature is enabled. This parameter is set to false for all large model scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -259,7 +262,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean longWaitEnable;
 
         /**
-         * <p>Indicates whether mini playback is enabled.</p>
+         * <p>Indicates whether the filler phrase feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -268,7 +271,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean miniPlaybackEnable;
 
         /**
-         * <p>Indicates whether graceful barge-in is enabled. This parameter is always false for LLM-based scripts.</p>
+         * <p>Indicates whether the graceful barge-in feature is enabled. This parameter is set to false for all large model scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -277,43 +280,43 @@ public class ListScriptsResponseBody extends TeaModel {
         public Boolean newBargeInEnable;
 
         /**
-         * <p>The NLU access type, which is set to Managed for LLM scenarios and is empty for small model scenarios.</p>
+         * <p>The robot access type. If the scenario uses a small model, this field is empty. If the scenario uses a large model, this field is set to Managed.</p>
          * 
          * <strong>example:</strong>
-         * <p>空或者Managed</p>
+         * <p>Empty or Managed</p>
          */
         @NameInMap("NluAccessType")
         public String nluAccessType;
 
         /**
-         * <p>The NLU engine, which is set to Prompts for LLM scenarios and is empty for small model scenarios.</p>
+         * <p>The robot engine. If the scenario uses a small model, this field is empty. If the scenario uses a large model, this field is set to Prompts.</p>
          * 
          * <strong>example:</strong>
-         * <p>空或者Prompts</p>
+         * <p>Empty or Prompts</p>
          */
         @NameInMap("NluEngine")
         public String nluEngine;
 
         /**
-         * <p>The Function Compute configuration for function calling mode.</p>
+         * <p>The function computing service mode configuration.</p>
          */
         @NameInMap("NluProfile")
         public ListScriptsResponseBodyScriptsListNluProfile nluProfile;
 
         /**
-         * <p>The rejection reason.</p>
+         * <p>The reason for review rejection.</p>
          * 
          * <strong>example:</strong>
-         * <p>话术用语不合规</p>
+         * <p>Non-compliant script language</p>
          */
         @NameInMap("RejectReason")
         public String rejectReason;
 
         /**
-         * <p>The scene.</p>
+         * <p>The scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>电销</p>
+         * <p>Telemarketing</p>
          */
         @NameInMap("Scene")
         public String scene;
@@ -322,7 +325,7 @@ public class ListScriptsResponseBody extends TeaModel {
          * <p>The script description.</p>
          * 
          * <strong>example:</strong>
-         * <p>电话销售话术</p>
+         * <p>Telemarketing script</p>
          */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
@@ -340,7 +343,7 @@ public class ListScriptsResponseBody extends TeaModel {
          * <p>The script name.</p>
          * 
          * <strong>example:</strong>
-         * <p>电话销售话术</p>
+         * <p>Telemarketing script</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
@@ -364,7 +367,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The agent ID.</p>
+         * <p>The robot business workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1160195</p>
@@ -391,6 +394,14 @@ public class ListScriptsResponseBody extends TeaModel {
         }
         public Boolean getAgentLlm() {
             return this.agentLlm;
+        }
+
+        public ListScriptsResponseBodyScriptsList setChatBotId(String chatBotId) {
+            this.chatBotId = chatBotId;
+            return this;
+        }
+        public String getChatBotId() {
+            return this.chatBotId;
         }
 
         public ListScriptsResponseBodyScriptsList setCreateTime(Long createTime) {
@@ -565,7 +576,7 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyScripts extends TeaModel {
         /**
-         * <p>The list of scripts.</p>
+         * <p>The script array.</p>
          */
         @NameInMap("List")
         public java.util.List<ListScriptsResponseBodyScriptsList> list;
@@ -580,7 +591,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -589,7 +600,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of scripts.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContactWhiteListResponseBody extends TeaModel {
     /**
-     * <p>API status code</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Contact list</p>
+     * <p>The contact list.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     public GetContactWhiteListResponseBodyContactWhitelistList contactWhitelistList;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>API message</p>
+     * <p>The API response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -41,7 +41,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -50,7 +50,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
 
     public static class GetContactWhiteListResponseBodyContactWhitelistListList extends TeaModel {
         /**
-         * <p>Whitelist ID</p>
+         * <p>The whitelist ID.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -122,7 +122,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public String contactWhiteListId;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1640174411848</p>
@@ -131,16 +131,16 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public Long creationTime;
 
         /**
-         * <p>Creator</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试123</p>
+         * <p>Test123</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
@@ -149,16 +149,16 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Name</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John Smith</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Operator</p>
+         * <p>The operator.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -167,7 +167,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>Mobile phone number</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>13959999999</p>
@@ -176,7 +176,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Remarks</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -257,7 +257,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
 
     public static class GetContactWhiteListResponseBodyContactWhitelistList extends TeaModel {
         /**
-         * <p>Contact list</p>
+         * <p>The contact list.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -266,7 +266,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public java.util.List<GetContactWhiteListResponseBodyContactWhitelistListList> list;
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -275,7 +275,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Number of entries per page</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -284,7 +284,7 @@ public class GetContactWhiteListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of entries</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

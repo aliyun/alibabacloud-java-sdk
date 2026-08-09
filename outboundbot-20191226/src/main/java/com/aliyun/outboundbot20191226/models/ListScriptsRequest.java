@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScriptsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,15 @@ public class ListScriptsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The NLU engine.</p>
+     * <p>The NLU robot engine.</p>
      * <ul>
-     * <li><p>Leave this parameter empty to query scripts that use small models.</p>
+     * <li><p>If this parameter is left empty, small model scenarios are queried.</p>
      * </li>
-     * <li><p>Set this parameter to <code>Prompts</code> to query scripts that use the text completion mode of a large model.</p>
+     * <li><p>If this parameter is set to Prompts, the text input mode under large model scenarios is queried.</p>
      * </li>
-     * <li><p>Set this parameter to <code>SSE_FUNCTION</code> to query scripts that use the function calling mode of a large model.</p>
+     * <li><p>If this parameter is set to SSE_FUNCTION, the function computing mode under large model scenarios is queried.</p>
      * </li>
-     * <li><p>Set this parameter to <code>BeeBot</code> to query scripts that use the workflow configuration mode of a large model.</p>
+     * <li><p>If this parameter is set to BeeBot, the workflow configuration mode under large model scenarios is queried.</p>
      * </li>
      * </ul>
      * 
@@ -54,10 +54,10 @@ public class ListScriptsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the script.</p>
+     * <p>The script name.</p>
      * 
      * <strong>example:</strong>
-     * <p>课程满意度回访</p>
+     * <p>Course satisfaction follow-up</p>
      */
     @NameInMap("ScriptName")
     public String scriptName;

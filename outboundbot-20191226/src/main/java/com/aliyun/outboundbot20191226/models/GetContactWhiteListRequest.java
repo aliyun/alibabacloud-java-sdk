@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContactWhiteListRequest extends TeaModel {
     /**
-     * <p>Whether to return the total count</p>
+     * <p>Specifies whether to return the total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetContactWhiteListRequest extends TeaModel {
     public Boolean countTotalRow;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class GetContactWhiteListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page number</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,13 +33,16 @@ public class GetContactWhiteListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of entries per page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SearchPattern")
+    public String searchPattern;
 
     public static GetContactWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetContactWhiteListRequest self = new GetContactWhiteListRequest();
@@ -76,6 +79,14 @@ public class GetContactWhiteListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetContactWhiteListRequest setSearchPattern(String searchPattern) {
+        this.searchPattern = searchPattern;
+        return this;
+    }
+    public String getSearchPattern() {
+        return this.searchPattern;
     }
 
 }

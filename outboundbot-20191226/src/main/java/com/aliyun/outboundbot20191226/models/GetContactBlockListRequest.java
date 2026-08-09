@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContactBlockListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the total number of entries.</p>
+     * <p>Specifies whether to display the total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,13 +33,16 @@ public class GetContactBlockListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries (required)</p>
+     * <p>The number of entries per page. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SearchPattern")
+    public String searchPattern;
 
     public static GetContactBlockListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetContactBlockListRequest self = new GetContactBlockListRequest();
@@ -76,6 +79,14 @@ public class GetContactBlockListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetContactBlockListRequest setSearchPattern(String searchPattern) {
+        this.searchPattern = searchPattern;
+        return this;
+    }
+    public String getSearchPattern() {
+        return this.searchPattern;
     }
 
 }
