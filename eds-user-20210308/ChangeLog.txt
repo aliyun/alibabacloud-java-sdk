@@ -1,3 +1,7 @@
+2026-08-10 Version: 2.2.2
+- Update API DescribeResourceGroups: add response parameters Body.ResourceGroup.$.Timers.$.Type.
+
+
 2026-06-26 Version: 2.2.1
 - Update API CreateResourceGroup: add request parameters AgentType.
 - Update API DescribeResourceGroups: add request parameters AgentType.

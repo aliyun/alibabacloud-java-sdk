@@ -8,7 +8,7 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public String agentType;
 
     /**
-     * <p>The cloud platform resource group ID.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      */
     @NameInMap("AliyunResourceGroupIds")
     public java.util.List<String> aliyunResourceGroupIds;
@@ -65,6 +65,9 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>The resource classification within the resource group.</p>
+     */
     @NameInMap("ResourceClassification")
     public String resourceClassification;
 
@@ -75,10 +78,10 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public java.util.List<String> resourceGroupIds;
 
     /**
-     * <p>The name of the resource group.</p>
+     * <p>The resource group name.</p>
      * 
      * <strong>example:</strong>
-     * <p>部门A资源组</p>
+     * <p>DepartmentAResourceGroup</p>
      */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;

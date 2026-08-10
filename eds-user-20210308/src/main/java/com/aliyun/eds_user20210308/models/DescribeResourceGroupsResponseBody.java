@@ -14,7 +14,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of resource groups.</p>
+     * <p>The list of resource group information.</p>
      */
     @NameInMap("ResourceGroup")
     public java.util.List<DescribeResourceGroupsResponseBodyResourceGroup> resourceGroup;
@@ -121,7 +121,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试策略123</p>
+         * <p>TestPolicy123</p>
          */
         @NameInMap("Name")
         public String name;
@@ -174,13 +174,16 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
          * <p>The scheduled task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试任务123</p>
+         * <p>TestTask123</p>
          */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("TimerStatus")
         public String timerStatus;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeResourceGroupsResponseBodyResourceGroupTimers build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceGroupsResponseBodyResourceGroupTimers self = new DescribeResourceGroupsResponseBodyResourceGroupTimers();
@@ -217,6 +220,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
         public String getTimerStatus() {
             return this.timerStatus;
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroupTimers setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -259,8 +270,8 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
          * <blockquote>
          * <p>The policies associated with the resource group.</p>
          * <ul>
-         * <li>Associated policies take effect on cloud desktops in the resource group. If multiple policies are associated, they take effect based on policy priority.</li>
-         * <li>If a cloud desktop in the resource group already has other policies specified, the policies associated with the resource group take precedence.</li>
+         * <li>Associated policies take effect on cloud computers in the resource group. If multiple policies are associated, they take effect based on policy priority.</li>
+         * <li>If a cloud computer in the resource group already has other policies specified, the policies associated with the resource group take effect first.</li>
          * </ul>
          * </blockquote>
          */
@@ -286,10 +297,10 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The resource group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试资源组</p>
+         * <p>TestResourceGroup</p>
          */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
@@ -298,7 +309,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
          * <blockquote>
          * <p>The associated scheduled tasks.</p>
          * <ul>
-         * <li>Associated scheduled tasks take effect on cloud desktops in the resource group. If a cloud desktop in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take precedence.</li>
+         * <li>Associated scheduled tasks take effect on cloud computers in the resource group. If a cloud computer in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take effect first.</li>
          * </ul>
          * </blockquote>
          */
