@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataObjectsResponseBody extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page in a paged query. Settings the current page number for paging. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -13,14 +13,29 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("HasNext")
+    public Boolean hasNext;
+
+    @NameInMap("HasPrevious")
+    public Boolean hasPrevious;
+
     /**
-     * <p>A list of data objects.</p>
+     * <p>The list of data objects.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataObjectsResponseBodyItems> items;
 
+    @NameInMap("NextCursor")
+    public String nextCursor;
+
     /**
-     * <p>The number of data asset instances to return on each page. Default value: <strong>10</strong>.</p>
+     * <p>The maximum number of data asset instances to return per page in a paged query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -28,8 +43,11 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PreviousCursor")
+    public String previousCursor;
+
     /**
-     * <p>The unique ID of the request. Alibaba Cloud generates this ID to help you troubleshoot issues.</p>
+     * <p>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E6F6460E-4330-549A-BD89-C183FB17571E</p>
@@ -37,8 +55,11 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SyncStatus")
+    public String syncStatus;
+
     /**
-     * <p>The total number of entries that match the query.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>21</p>
@@ -59,12 +80,52 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeDataObjectsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public DescribeDataObjectsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public DescribeDataObjectsResponseBody setHasNext(Boolean hasNext) {
+        this.hasNext = hasNext;
+        return this;
+    }
+    public Boolean getHasNext() {
+        return this.hasNext;
+    }
+
+    public DescribeDataObjectsResponseBody setHasPrevious(Boolean hasPrevious) {
+        this.hasPrevious = hasPrevious;
+        return this;
+    }
+    public Boolean getHasPrevious() {
+        return this.hasPrevious;
+    }
+
     public DescribeDataObjectsResponseBody setItems(java.util.List<DescribeDataObjectsResponseBodyItems> items) {
         this.items = items;
         return this;
     }
     public java.util.List<DescribeDataObjectsResponseBodyItems> getItems() {
         return this.items;
+    }
+
+    public DescribeDataObjectsResponseBody setNextCursor(String nextCursor) {
+        this.nextCursor = nextCursor;
+        return this;
+    }
+    public String getNextCursor() {
+        return this.nextCursor;
     }
 
     public DescribeDataObjectsResponseBody setPageSize(Integer pageSize) {
@@ -75,12 +136,28 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeDataObjectsResponseBody setPreviousCursor(String previousCursor) {
+        this.previousCursor = previousCursor;
+        return this;
+    }
+    public String getPreviousCursor() {
+        return this.previousCursor;
+    }
+
     public DescribeDataObjectsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDataObjectsResponseBody setSyncStatus(String syncStatus) {
+        this.syncStatus = syncStatus;
+        return this;
+    }
+    public String getSyncStatus() {
+        return this.syncStatus;
     }
 
     public DescribeDataObjectsResponseBody setTotalCount(Integer totalCount) {
@@ -93,14 +170,11 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     public static class DescribeDataObjectsResponseBodyItemsModelTags extends TeaModel {
         /**
-         * <p>The ID of the data tag. Valid values:</p>
+         * <p>The data label ID. Valid values:</p>
          * <ul>
-         * <li><p><strong>101</strong>: Personal sensitive information</p>
-         * </li>
-         * <li><p><strong>102</strong>: Personal information</p>
-         * </li>
-         * <li><p><strong>107</strong>: General information</p>
-         * </li>
+         * <li><strong>101</strong>: Personal sensitive information.</li>
+         * <li><strong>102</strong>: Personal information.</li>
+         * <li><strong>107</strong>: General information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,15 +184,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the data tag. Valid values:</p>
-         * <ul>
-         * <li><p><strong>Personal sensitive information</strong></p>
-         * </li>
-         * <li><p><strong>Personal information</strong></p>
-         * </li>
-         * <li><p><strong>General information</strong></p>
-         * </li>
-         * </ul>
+         * <p>The data tag name. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Personal sensitive information</p>
@@ -151,19 +217,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     public static class DescribeDataObjectsResponseBodyItemsRuleList extends TeaModel {
         /**
-         * <p>The ID of the risk level. Valid values:</p>
-         * <ul>
-         * <li><p><strong>1</strong>: N/A - No sensitive data is detected</p>
-         * </li>
-         * <li><p><strong>2</strong>: S1 - Level-1 sensitive data</p>
-         * </li>
-         * <li><p><strong>3</strong>: S2 - Level-2 sensitive data</p>
-         * </li>
-         * <li><p><strong>4</strong>: S3 - Level-3 sensitive data</p>
-         * </li>
-         * <li><p><strong>5</strong>: S4 - Level-4 sensitive data</p>
-         * </li>
-         * </ul>
+         * <p>The risk level ID of the sensitive data detection rule. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -172,18 +226,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long riskLevelId;
 
         /**
-         * <p>The name of the risk level. Valid values:</p>
+         * <p>The risk level name of the data asset table. Valid values:</p>
          * <ul>
-         * <li><p><strong>N/A</strong>: No sensitive data is detected</p>
-         * </li>
-         * <li><p><strong>S1</strong>: Level-1 sensitive data</p>
-         * </li>
-         * <li><p><strong>S2</strong>: Level-2 sensitive data</p>
-         * </li>
-         * <li><p><strong>S3</strong>: Level-3 sensitive data</p>
-         * </li>
-         * <li><p><strong>S4</strong>: Level-4 sensitive data</p>
-         * </li>
+         * <li><strong>N/A</strong>: No sensitive data is detected.</li>
+         * <li><strong>S1</strong>: Level-1 sensitive data.</li>
+         * <li><strong>S2</strong>: Level-2 sensitive data.</li>
+         * <li><strong>S3</strong>: Level-3 sensitive data.</li>
+         * <li><strong>S4</strong>: Level-4 sensitive data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,7 +242,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
-         * <p>The hierarchical category of the rule, from the top-level to the leaf-level category in the template.</p>
+         * <p>The rule information described from the top to the bottom of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>Personal sensitive information-ID card</p>
@@ -202,7 +251,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String ruleCategoryNameList;
 
         /**
-         * <p>The number of matched detection models.</p>
+         * <p>The number of detection models that are hit.</p>
          * 
          * <strong>example:</strong>
          * <p>590</p>
@@ -302,7 +351,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     public static class DescribeDataObjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>An array of industry categories to which the sensitive data belongs.</p>
+         * <p>The list of industry categories to which the sensitive data belongs.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
@@ -311,7 +360,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The comment on the column.</p>
+         * <p>The column comment.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -320,7 +369,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The data type of the database column.</p>
+         * <p>The database column type.</p>
          * 
          * <strong>example:</strong>
          * <p>varchar</p>
@@ -329,7 +378,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>DataBaseName</p>
@@ -338,6 +387,8 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String dbName;
 
         /**
+         * <p>The engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TABLE</p>
          */
@@ -345,7 +396,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The code for the file category.</p>
+         * <p>The file type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -363,7 +414,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The description of the data asset instance.</p>
+         * <p>The instance description of the data object.</p>
          * 
          * <strong>example:</strong>
          * <p>instance description</p>
@@ -372,7 +423,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
-         * <p>The ID of the data asset instance.</p>
+         * <p>The data asset instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-12*****</p>
@@ -408,7 +459,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long lastScanTime;
 
         /**
-         * <p>The name of the Logstore in SLS.</p>
+         * <p>The SLS Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>logStore</p>
@@ -426,7 +477,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer maskStatus;
 
         /**
-         * <p>The ID of the member account.</p>
+         * <p>The member accounts ID.</p>
          * 
          * <strong>example:</strong>
          * <p>**********8103</p>
@@ -435,7 +486,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long memberAccount;
 
         /**
-         * <p>A list of data tags.</p>
+         * <p>The list of data tags.</p>
          */
         @NameInMap("ModelTags")
         public java.util.List<DescribeDataObjectsResponseBodyItemsModelTags> modelTags;
@@ -450,7 +501,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the file category.</p>
+         * <p>The file category name.</p>
          * 
          * <strong>example:</strong>
          * <p>text file</p>
@@ -459,7 +510,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String objectFileCategory;
 
         /**
-         * <p>The type of the data object.</p>
+         * <p>The data object type.</p>
          * 
          * <strong>example:</strong>
          * <p>text type</p>
@@ -477,33 +528,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The name of the product to which the data object belongs. Valid values:</p>
-         * <ul>
-         * <li><p><strong>MaxCompute</strong></p>
-         * </li>
-         * <li><p><strong>OSS</strong></p>
-         * </li>
-         * <li><p><strong>ADB-MYSQL</strong></p>
-         * </li>
-         * <li><p><strong>Table Store</strong></p>
-         * </li>
-         * <li><p><strong>RDS</strong></p>
-         * </li>
-         * <li><p><strong>SELF_DB</strong></p>
-         * </li>
-         * <li><p><strong>PolarDB-X</strong></p>
-         * </li>
-         * <li><p><strong>PolarDB</strong></p>
-         * </li>
-         * <li><p><strong>ADB-PG</strong></p>
-         * </li>
-         * <li><p><strong>OceanBase</strong></p>
-         * </li>
-         * <li><p><strong>MongoDB</strong></p>
-         * </li>
-         * <li><p><strong>Redis</strong></p>
-         * </li>
-         * </ul>
+         * <p>The product name to which the data object belongs. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -512,32 +537,20 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the product to which the data object belongs. Valid values:</p>
+         * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: MaxCompute</p>
-         * </li>
-         * <li><p><strong>2</strong>: OSS</p>
-         * </li>
-         * <li><p><strong>3</strong>: ADB-MYSQL</p>
-         * </li>
-         * <li><p><strong>4</strong>: Table Store</p>
-         * </li>
-         * <li><p><strong>5</strong>: RDS</p>
-         * </li>
-         * <li><p><strong>6</strong>: SELF_DB</p>
-         * </li>
-         * <li><p><strong>7</strong>: PolarDB-X</p>
-         * </li>
-         * <li><p><strong>8</strong>: PolarDB</p>
-         * </li>
-         * <li><p><strong>9</strong>: ADB-PG</p>
-         * </li>
-         * <li><p><strong>10</strong>: OceanBase</p>
-         * </li>
-         * <li><p><strong>11</strong>: MongoDB</p>
-         * </li>
-         * <li><p><strong>25</strong>: Redis</p>
-         * </li>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: ADB-MYSQL</li>
+         * <li><strong>4</strong>: TableStore</li>
+         * <li><strong>5</strong>: RDS</li>
+         * <li><strong>6</strong>: SELF_DB</li>
+         * <li><strong>7</strong>: PolarDB-X</li>
+         * <li><strong>8</strong>: PolarDB</li>
+         * <li><strong>9</strong>: ADB-PG</li>
+         * <li><strong>10</strong>: OceanBase</li>
+         * <li><strong>11</strong>: MongoDB</li>
+         * <li><strong>25</strong>: Redis</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -547,7 +560,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long productId;
 
         /**
-         * <p>The name of the Simple Log Service (SLS) project.</p>
+         * <p>The Simple Log Service (SLS) project.</p>
          * 
          * <strong>example:</strong>
          * <p>project</p>
@@ -556,7 +569,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The ID of the region where the data object is located.</p>
+         * <p>The region ID to which the data object belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -565,7 +578,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -574,7 +587,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String regionName;
 
         /**
-         * <p>The risk level.</p>
+         * <p>The sensitivity level.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -583,7 +596,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer riskLevelId;
 
         /**
-         * <p>The number of matched rules.</p>
+         * <p>The number of rules that are hit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -592,13 +605,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>A list of matched detection models.</p>
+         * <p>The list of detection models that are hit.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeDataObjectsResponseBodyItemsRuleList> ruleList;
 
         /**
-         * <p>The number of sensitive data fields.</p>
+         * <p>The number of sensitive data entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -607,7 +620,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Integer sensitiveCount;
 
         /**
-         * <p>The size of the file in bytes.</p>
+         * <p>The file size.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -616,7 +629,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>A comma-separated string that specifies the count of matched rules for each risk level. The string follows the format <code>S1,S2...S10</code>, where the value at each position represents the count for the corresponding risk level.</p>
+         * <p>An array that consists of the number of rules hit for each sensitivity level, in the format &quot;S1,S2,S3,S4,S5,S6,S7,S8,S9,S10&quot;, where S1 represents the number of rules hit at sensitivity level S1.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3,0,0,0,0,5,0,0</p>
@@ -625,7 +638,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String sx;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>tableName</p>
@@ -634,7 +647,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -643,7 +656,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-task</p>
@@ -652,7 +665,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The task number.</p>
+         * <p>The user task number.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -661,7 +674,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long taskNumber;
 
         /**
-         * <p>The ID of the industry template.</p>
+         * <p>The industry template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -670,7 +683,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         public Long templateId;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

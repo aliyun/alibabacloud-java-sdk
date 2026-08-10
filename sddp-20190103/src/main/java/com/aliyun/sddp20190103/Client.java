@@ -11,11 +11,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hongkong", "sddp-api.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "sddp.ap-southeast-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "sddp.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "sddp.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "sddp.cn-hangzhou.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "sddp.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "sddp.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-hangzhou", "sddp.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "sddp.cn-shanghai.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sddp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1848,12 +1848,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</p>
+     * <p>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</p>
      * <h2>QPS limit</h2>
-     * <p>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query data detection results for tables and files.</p>
+     * <p>Queries the data detection results of data tables and files.</p>
      * 
      * @param request DescribeDataObjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1872,6 +1872,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            query.put("Cursor", request.cursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cursorDirection)) {
+            query.put("CursorDirection", request.cursorDirection);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
@@ -2005,12 +2013,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</p>
+     * <p>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</p>
      * <h2>QPS limit</h2>
-     * <p>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query data detection results for tables and files.</p>
+     * <p>Queries the data detection results of data tables and files.</p>
      * 
      * @param request DescribeDataObjectsRequest
      * @return DescribeDataObjectsResponse

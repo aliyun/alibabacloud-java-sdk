@@ -1,3 +1,15 @@
+2026-08-10 Version: 3.0.3
+- Update API DescribeDataObjects: add request parameters Cursor.
+- Update API DescribeDataObjects: add request parameters CursorDirection.
+- Update API DescribeDataObjects: add response parameters Body.ErrorCode.
+- Update API DescribeDataObjects: add response parameters Body.ErrorMessage.
+- Update API DescribeDataObjects: add response parameters Body.HasNext.
+- Update API DescribeDataObjects: add response parameters Body.HasPrevious.
+- Update API DescribeDataObjects: add response parameters Body.NextCursor.
+- Update API DescribeDataObjects: add response parameters Body.PreviousCursor.
+- Update API DescribeDataObjects: add response parameters Body.SyncStatus.
+
+
 2026-08-07 Version: 3.0.2
 - Update API DescribeDataObjects: add request parameters EngineType.
 - Update API DescribeDataObjects: add response parameters Body.Items.$.EngineType.
