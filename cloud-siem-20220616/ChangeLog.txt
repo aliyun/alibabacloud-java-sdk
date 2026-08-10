@@ -1,3 +1,9 @@
+2026-08-10 Version: 6.2.3
+- Update API GetEntitiyStat: add request parameters EntityUuids.
+- Update API GetEntitiyStat: add response parameters Body.Data.$.AlertNum.
+- Update API GetEntitiyStat: add response parameters Body.Data.$.IncidentNum.
+
+
 2026-07-13 Version: 6.2.0
 - Support API GetDataStorage.
 - Update API DescribeDisposeAndPlaybook: add response parameters Body.Data.ResponseData.$.PlaybookList.$.DisposeStatus.

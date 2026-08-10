@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     /**
-     * <p>The response status code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -42,10 +42,6 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -159,11 +155,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
     public static class DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList extends TeaModel {
         /**
-         * <p>Indicates whether the playbook is available. Valid values:</p>
-         * <ul>
-         * <li>1: Available.</li>
-         * <li>0: Unavailable.</li>
-         * </ul>
+         * <p>Indicates whether the playbook is available.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,11 +206,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String opCode;
 
         /**
-         * <p>Indicates whether the playbook is selected by default for one-click event disposition. Valid values:</p>
-         * <ul>
-         * <li>2: Selected. </li>
-         * <li>1: Displayed but not selected.</li>
-         * </ul>
+         * <p>Specifies whether the playbook is selected by default for one-click incident disposition. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -227,7 +215,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String opLevel;
 
         /**
-         * <p>The parameter list and corresponding parameter properties of the playbook.</p>
+         * <p>The parameter list of the playbook and the corresponding parameter properties.</p>
          */
         @NameInMap("ParamConfig")
         public java.util.List<?> paramConfig;
@@ -242,9 +230,10 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String taskConfig;
 
         /**
-         * <p>The code that indicates why the playbook is unavailable. Valid values:</p>
+         * <p>The code that indicates why the playbook is unavailable.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>PARAM_INVALID: The input parameters are invalid. </li>
+         * <li>PARAM_INVALID: The input parameters are invalid.</li>
          * <li>NO_INGESTION: The corresponding product is not connected.</li>
          * </ul>
          * 
@@ -264,11 +253,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>Indicates whether this is a WAF playbook. Valid values:</p>
-         * <ul>
-         * <li>true: Yes.</li>
-         * <li>false: No.</li>
-         * </ul>
+         * <p>Indicates whether the playbook is a WAF playbook. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -463,13 +448,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
          * <p>The list of playbooks that can dispose of the entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;云安全中心-云服务器安全&quot;,&quot;code&quot;:&quot;1&quot;}]</p>
+         * <p>[{&quot;name&quot;:&quot;Security Center - Cloud Server Security&quot;,&quot;code&quot;:&quot;1&quot;}]</p>
          */
         @NameInMap("PlaybookList")
         public java.util.List<DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList> playbookList;
 
         /**
-         * <p>The disposition scope. The list of user IDs that can perform the disposition.</p>
+         * <p>The disposition scope, which is the list of user IDs that can perform the disposition.</p>
          * 
          * <strong>example:</strong>
          * <p>176618589410****</p>

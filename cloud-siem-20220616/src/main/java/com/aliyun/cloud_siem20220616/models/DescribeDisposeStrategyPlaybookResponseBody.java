@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     /**
-     * <p>The status code of the request.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     public java.util.List<DescribeDisposeStrategyPlaybookResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -43,10 +43,8 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +100,7 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
 
     public static class DescribeDisposeStrategyPlaybookResponseBodyData extends TeaModel {
         /**
-         * <p>The unique name of the playbook.</p>
+         * <p>The unique identifier name of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>WafBlockIP</p>

@@ -49,6 +49,9 @@ public class GetEntitiyStatRequest extends TeaModel {
     @NameInMap("EntityUuid")
     public String entityUuid;
 
+    @NameInMap("EntityUuids")
+    public String entityUuids;
+
     /**
      * <p>The incident ID.</p>
      * <p>This parameter is required.</p>
@@ -84,8 +87,8 @@ public class GetEntitiyStatRequest extends TeaModel {
     /**
      * <p>The region where the threat detection and response data management center resides. Select the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: the asset belongs to the Chinese mainland or Hong Kong (China).</li>
-     * <li>ap-southeast-1: the asset belongs to a region outside the Chinese mainland.</li>
+     * <li>cn-hangzhou: The assets belong to the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: The assets belong to regions outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,6 +173,14 @@ public class GetEntitiyStatRequest extends TeaModel {
     }
     public String getEntityUuid() {
         return this.entityUuid;
+    }
+
+    public GetEntitiyStatRequest setEntityUuids(String entityUuids) {
+        this.entityUuids = entityUuids;
+        return this;
+    }
+    public String getEntityUuids() {
+        return this.entityUuids;
     }
 
     public GetEntitiyStatRequest setIncidentUuid(String incidentUuid) {

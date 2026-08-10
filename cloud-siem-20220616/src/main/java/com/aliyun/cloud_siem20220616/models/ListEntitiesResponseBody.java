@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEntitiesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code of the request.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListEntitiesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The request return value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class ListEntitiesResponseBody extends TeaModel {
     public ListEntitiesResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The request return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -42,10 +42,6 @@ public class ListEntitiesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li>true: successful.</li>
-     * <li>false: failed.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -100,7 +96,7 @@ public class ListEntitiesResponseBody extends TeaModel {
 
     public static class ListEntitiesResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The page number of the current page.</p>
+         * <p>The current page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -109,7 +105,7 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +114,7 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -224,7 +220,7 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String agentConfidence;
 
         /**
-         * <p>The disposal method recommended by the agent.</p>
+         * <p>The recommended disposal method from the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>delete_file</p>
@@ -287,10 +283,10 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>The code of the cloud service provider from which the entity originates. Valid values:</p>
+         * <p>The cloud code of the entity source. Valid values:</p>
          * <ul>
-         * <li>aliyun: Alibaba Cloud</li>
-         * <li>qcloud: Tencent Cloud</li>
+         * <li>aliyun: Alibaba Cloud.</li>
+         * <li>qcloud: Tencent Cloud.</li>
          * <li>hcloud: Huawei Cloud.</li>
          * </ul>
          * 
@@ -310,7 +306,7 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>The display information of the entity in JSON format.</p>
+         * <p>The entity display information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;file_path&quot;: &quot;c:/www/leixi.jsp&quot;,&quot;file_hash&quot;: &quot;aa0ca926ad948cd820e0a3d9a18c****&quot;,&quot;host_uuid&quot;: &quot;efed2cf7-0b77-45d9-a97b-d2cf246b****&quot;,&quot;malware_type&quot;: &quot;${aliyun.siem.sas.alert_tag.webshell}&quot;,&quot;host_name&quot;: &quot;launch-advisor-2023****&quot;}</p>
@@ -329,17 +325,6 @@ public class ListEntitiesResponseBody extends TeaModel {
 
         /**
          * <p>The entity type. Valid values:</p>
-         * <ul>
-         * <li>ip: IP address</li>
-         * <li>domain: domain name</li>
-         * <li>url: URL</li>
-         * <li>process: process</li>
-         * <li>file: file</li>
-         * <li>host: host</li>
-         * <li>cloud_account: cloud account</li>
-         * <li>container: container</li>
-         * <li>bucket: Object Storage Service (OSS) bucket.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -403,10 +388,6 @@ public class ListEntitiesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the entity is an asset. Valid values:</p>
-         * <ul>
-         * <li>0: No.</li>
-         * <li>1: Yes.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -415,11 +396,7 @@ public class ListEntitiesResponseBody extends TeaModel {
         public String isAsset;
 
         /**
-         * <p>Indicates whether the entity is malicious. Valid values:</p>
-         * <ul>
-         * <li>0: No.</li>
-         * <li>1: Yes.</li>
-         * </ul>
+         * <p>Specifies whether the entity is malicious. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -446,8 +423,8 @@ public class ListEntitiesResponseBody extends TeaModel {
         public Long subUserId;
 
         /**
-         * <p>The entity tags. The value is a JSON array string:</p>
-         * <p><code>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</code>.</p>
+         * <p>The entity tags. The value is a JSON array string in the following format:</p>
+         * <p><code>&quot;[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]&quot;</code></p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;tagKey1&quot;:&quot;tagValue1&quot;},{&quot;tagKey2&quot;:&quot;tagValue2&quot;}]</p>

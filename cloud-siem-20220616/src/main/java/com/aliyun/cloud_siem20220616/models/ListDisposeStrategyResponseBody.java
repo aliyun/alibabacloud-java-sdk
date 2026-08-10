@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisposeStrategyResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The request return value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -23,7 +23,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public ListDisposeStrategyResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The request return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
@@ -41,13 +41,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
-     * </ul>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -100,9 +94,168 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListDisposeStrategyResponseBodyDataGroupsGroupMeta extends TeaModel {
+        @NameInMap("GroupInfo")
+        public Object groupInfo;
+
+        public static ListDisposeStrategyResponseBodyDataGroupsGroupMeta build(java.util.Map<String, ?> map) throws Exception {
+            ListDisposeStrategyResponseBodyDataGroupsGroupMeta self = new ListDisposeStrategyResponseBodyDataGroupsGroupMeta();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroupsGroupMeta setGroupInfo(Object groupInfo) {
+            this.groupInfo = groupInfo;
+            return this;
+        }
+        public Object getGroupInfo() {
+            return this.groupInfo;
+        }
+
+    }
+
+    public static class ListDisposeStrategyResponseBodyDataGroups extends TeaModel {
+        @NameInMap("FailedCount")
+        public Long failedCount;
+
+        @NameInMap("FirstOccurrenceTime")
+        public Long firstOccurrenceTime;
+
+        @NameInMap("GroupBy")
+        public String groupBy;
+
+        @NameInMap("GroupKey")
+        public String groupKey;
+
+        @NameInMap("GroupMeta")
+        public ListDisposeStrategyResponseBodyDataGroupsGroupMeta groupMeta;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("GroupTitle")
+        public String groupTitle;
+
+        @NameInMap("LastOccurrenceTime")
+        public Long lastOccurrenceTime;
+
+        @NameInMap("LatestModifiedTime")
+        public Long latestModifiedTime;
+
+        @NameInMap("RunningCount")
+        public Long runningCount;
+
+        @NameInMap("SuccessCount")
+        public Long successCount;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
+        public static ListDisposeStrategyResponseBodyDataGroups build(java.util.Map<String, ?> map) throws Exception {
+            ListDisposeStrategyResponseBodyDataGroups self = new ListDisposeStrategyResponseBodyDataGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setFailedCount(Long failedCount) {
+            this.failedCount = failedCount;
+            return this;
+        }
+        public Long getFailedCount() {
+            return this.failedCount;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setFirstOccurrenceTime(Long firstOccurrenceTime) {
+            this.firstOccurrenceTime = firstOccurrenceTime;
+            return this;
+        }
+        public Long getFirstOccurrenceTime() {
+            return this.firstOccurrenceTime;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setGroupBy(String groupBy) {
+            this.groupBy = groupBy;
+            return this;
+        }
+        public String getGroupBy() {
+            return this.groupBy;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setGroupKey(String groupKey) {
+            this.groupKey = groupKey;
+            return this;
+        }
+        public String getGroupKey() {
+            return this.groupKey;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setGroupMeta(ListDisposeStrategyResponseBodyDataGroupsGroupMeta groupMeta) {
+            this.groupMeta = groupMeta;
+            return this;
+        }
+        public ListDisposeStrategyResponseBodyDataGroupsGroupMeta getGroupMeta() {
+            return this.groupMeta;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setGroupTitle(String groupTitle) {
+            this.groupTitle = groupTitle;
+            return this;
+        }
+        public String getGroupTitle() {
+            return this.groupTitle;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setLastOccurrenceTime(Long lastOccurrenceTime) {
+            this.lastOccurrenceTime = lastOccurrenceTime;
+            return this;
+        }
+        public Long getLastOccurrenceTime() {
+            return this.lastOccurrenceTime;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setLatestModifiedTime(Long latestModifiedTime) {
+            this.latestModifiedTime = latestModifiedTime;
+            return this;
+        }
+        public Long getLatestModifiedTime() {
+            return this.latestModifiedTime;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setRunningCount(Long runningCount) {
+            this.runningCount = runningCount;
+            return this;
+        }
+        public Long getRunningCount() {
+            return this.runningCount;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setSuccessCount(Long successCount) {
+            this.successCount = successCount;
+            return this;
+        }
+        public Long getSuccessCount() {
+            return this.successCount;
+        }
+
+        public ListDisposeStrategyResponseBodyDataGroups setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
     public static class ListDisposeStrategyResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +264,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>Number of entries returned per page.</p>
+         * <p>The number of records returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -120,7 +273,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -160,8 +313,11 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     }
 
     public static class ListDisposeStrategyResponseBodyDataResponseData extends TeaModel {
+        @NameInMap("AlertName")
+        public String alertName;
+
         /**
-         * <p>Alert UUID.</p>
+         * <p>The alert UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>sas_71e24437d2797ce8fc59692905a4****</p>
@@ -170,7 +326,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String alertUuid;
 
         /**
-         * <p>SIEM root account ID associated with the strategy.</p>
+         * <p>The SIEM primary account ID associated with the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>127608589417****</p>
@@ -179,13 +335,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long aliuid;
 
         /**
-         * <p>Strategy status. Valid values:</p>
-         * <ul>
-         * <li><p>0: disabled</p>
-         * </li>
-         * <li><p>1: enabled</p>
-         * </li>
-         * </ul>
+         * <p>The policy status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -194,7 +344,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer effectiveStatus;
 
         /**
-         * <p>Entity details in JSON array format.</p>
+         * <p>The entity details in JSON array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;ip&quot;:&quot;1.1.1.1&quot;}]</p>
@@ -203,7 +353,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public java.util.List<?> entity;
 
         /**
-         * <p>Entity ID.</p>
+         * <p>The entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -212,15 +362,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long entityId;
 
         /**
-         * <p>Entity type. Valid values:</p>
-         * <ul>
-         * <li><p>ip</p>
-         * </li>
-         * <li><p>process</p>
-         * </li>
-         * <li><p>file</p>
-         * </li>
-         * </ul>
+         * <p>The entity type. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>ip</p>
@@ -229,7 +371,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String entityType;
 
         /**
-         * <p>Summary of task failure.</p>
+         * <p>The failure summary of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>DisposalEntity failed which description is Aegis Quarantine File , return_info failed which description is Check Aegis Process Result , [ERROR DETAIL] *******.php:file not found</p>
@@ -238,7 +380,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>Task completion time.</p>
+         * <p>The end time of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-10 21:34:07</p>
@@ -247,7 +389,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -256,7 +398,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Last modified time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-06 16:37:29</p>
@@ -265,7 +407,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Strategy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -274,7 +416,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Event name.</p>
+         * <p>The incident name.</p>
          * 
          * <strong>example:</strong>
          * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
@@ -283,7 +425,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String incidentName;
 
         /**
-         * <p>Global unique UUID of the event.</p>
+         * <p>The globally unique UUID of the incident.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -292,7 +434,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String incidentUuid;
 
         /**
-         * <p>Unique name of the playbook.</p>
+         * <p>The unique identifier name of the playbook.</p>
          * 
          * <strong>example:</strong>
          * <p>WafBlockIP</p>
@@ -301,18 +443,13 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String playbookName;
 
         /**
-         * <p>Playbook type. Valid values:</p>
+         * <p>The playbook type. Valid values:</p>
          * <ul>
-         * <li><p>system: manual disposal</p>
-         * </li>
-         * <li><p>custom: event-triggered playbook</p>
-         * </li>
-         * <li><p>custom_alert: alert-triggered playbook</p>
-         * </li>
-         * <li><p>soar-manual: manually run playbook</p>
-         * </li>
-         * <li><p>soar-mdr: MDR-run playbook</p>
-         * </li>
+         * <li>system: manual handling</li>
+         * <li>custom: event-triggered playbook</li>
+         * <li>custom_alert: alert-triggered playbook</li>
+         * <li>soar-manual: manually run playbook</li>
+         * <li>soar-mdr: MDR-run playbook</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +459,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String playbookType;
 
         /**
-         * <p>UUID of the playbook.</p>
+         * <p>The playbook UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>system_aliyun_clb_process_book</p>
@@ -331,7 +468,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String playbookUuid;
 
         /**
-         * <p>Disposal scope.</p>
+         * <p>The disposition scope.</p>
          * 
          * <strong>example:</strong>
          * <p>[{ aliUid: 1766185894104675 }]</p>
@@ -340,7 +477,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public java.util.List<?> scope;
 
         /**
-         * <p>ID of the security orchestration and automated response disposal strategy.</p>
+         * <p>The SOAR disposal policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>577bbf90-a770-44a7-8154-586aa2d3****</p>
@@ -349,17 +486,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String sophonTaskId;
 
         /**
-         * <p>Playbook invocation status. Valid values:</p>
-         * <ul>
-         * <li><p>200: succeeded</p>
-         * </li>
-         * <li><p>10: deleted</p>
-         * </li>
-         * <li><p>5: failed</p>
-         * </li>
-         * <li><p>0: initial state</p>
-         * </li>
-         * </ul>
+         * <p>The playbook invocation status. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -368,7 +495,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The Alibaba Cloud account ID associated with the configuration policy.</p>
+         * <p>The Alibaba Cloud account ID that configured the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>176555323***</p>
@@ -377,7 +504,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public Long subAliuid;
 
         /**
-         * <p>Parameters used to trigger the playbook, in JSON format.</p>
+         * <p>The playbook trigger parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -417,7 +544,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public String taskParam;
 
         /**
-         * <p>Playbook URL.</p>
+         * <p>The playbook URL.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;playbookUuid&quot;:&quot;system_aliyun_aegis_stop_container_book&quot;,&quot;requestUuid&quot;:&quot;e8924356-448b-4301-aee9-*******&quot;}</p>
@@ -428,6 +555,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public static ListDisposeStrategyResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListDisposeStrategyResponseBodyDataResponseData self = new ListDisposeStrategyResponseBodyDataResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDisposeStrategyResponseBodyDataResponseData setAlertName(String alertName) {
+            this.alertName = alertName;
+            return this;
+        }
+        public String getAlertName() {
+            return this.alertName;
         }
 
         public ListDisposeStrategyResponseBodyDataResponseData setAlertUuid(String alertUuid) {
@@ -609,14 +744,17 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     }
 
     public static class ListDisposeStrategyResponseBodyData extends TeaModel {
+        @NameInMap("Groups")
+        public java.util.List<ListDisposeStrategyResponseBodyDataGroups> groups;
+
         /**
-         * <p>Paging information.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("PageInfo")
         public ListDisposeStrategyResponseBodyDataPageInfo pageInfo;
 
         /**
-         * <p>Detailed data.</p>
+         * <p>The detailed data.</p>
          */
         @NameInMap("ResponseData")
         public java.util.List<ListDisposeStrategyResponseBodyDataResponseData> responseData;
@@ -624,6 +762,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         public static ListDisposeStrategyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDisposeStrategyResponseBodyData self = new ListDisposeStrategyResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDisposeStrategyResponseBodyData setGroups(java.util.List<ListDisposeStrategyResponseBodyDataGroups> groups) {
+            this.groups = groups;
+            return this;
+        }
+        public java.util.List<ListDisposeStrategyResponseBodyDataGroups> getGroups() {
+            return this.groups;
         }
 
         public ListDisposeStrategyResponseBodyData setPageInfo(ListDisposeStrategyResponseBodyDataPageInfo pageInfo) {

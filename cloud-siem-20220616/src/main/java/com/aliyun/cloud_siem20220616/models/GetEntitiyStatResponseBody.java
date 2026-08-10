@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEntitiyStatResponseBody extends TeaModel {
     /**
-     * <p>The status code of the request.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,8 @@ public class GetEntitiyStatResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: successful.</li>
-     * <li>false: failed.</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,6 +99,9 @@ public class GetEntitiyStatResponseBody extends TeaModel {
     }
 
     public static class GetEntitiyStatResponseBodyData extends TeaModel {
+        @NameInMap("AlertNum")
+        public Long alertNum;
+
         /**
          * <p>The number of entities.</p>
          * 
@@ -126,9 +129,20 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         @NameInMap("EntityUuid")
         public String entityUuid;
 
+        @NameInMap("IncidentNum")
+        public Long incidentNum;
+
         public static GetEntitiyStatResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEntitiyStatResponseBodyData self = new GetEntitiyStatResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetEntitiyStatResponseBodyData setAlertNum(Long alertNum) {
+            this.alertNum = alertNum;
+            return this;
+        }
+        public Long getAlertNum() {
+            return this.alertNum;
         }
 
         public GetEntitiyStatResponseBodyData setEntityNum(Integer entityNum) {
@@ -153,6 +167,14 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         }
         public String getEntityUuid() {
             return this.entityUuid;
+        }
+
+        public GetEntitiyStatResponseBodyData setIncidentNum(Long incidentNum) {
+            this.incidentNum = incidentNum;
+            return this;
+        }
+        public Long getIncidentNum() {
+            return this.incidentNum;
         }
 
     }

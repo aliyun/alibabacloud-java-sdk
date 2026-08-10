@@ -2220,7 +2220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of playbooks used in a disposal policy.</p>
+     * <p>Retrieves the list of playbooks used by a disposal policy.</p>
      * 
      * @param request DescribeDisposeStrategyPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2268,7 +2268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of playbooks used in a disposal policy.</p>
+     * <p>Retrieves the list of playbooks used by a disposal policy.</p>
      * 
      * @param request DescribeDisposeStrategyPlaybookRequest
      * @return DescribeDisposeStrategyPlaybookResponse
@@ -3334,7 +3334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries entity counts.</p>
@@ -3364,6 +3364,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.entityUuid)) {
             body.put("EntityUuid", request.entityUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityUuids)) {
+            body.put("EntityUuids", request.entityUuids);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.incidentUuid)) {
@@ -3413,7 +3417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class with configuration examples is provided. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * <p>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to assist with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries entity counts.</p>
@@ -4300,15 +4304,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a list of system-recommended disposal strategies.</p>
+     * <p>Retrieves the list of system-recommended disposal policies.</p>
      * 
-     * @param request ListDisposeStrategyRequest
+     * @param tmpReq ListDisposeStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDisposeStrategyResponse
      */
-    public ListDisposeStrategyResponse listDisposeStrategyWithOptions(ListDisposeStrategyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListDisposeStrategyResponse listDisposeStrategyWithOptions(ListDisposeStrategyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListDisposeStrategyShrinkRequest request = new ListDisposeStrategyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entityUuidList)) {
+            request.entityUuidListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entityUuidList, "EntityUuidList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertUuid)) {
+            body.put("AlertUuid", request.alertUuid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             body.put("CurrentPage", request.currentPage);
         }
@@ -4327,6 +4350,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.entityType)) {
             body.put("EntityType", request.entityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityUuidListShrink)) {
+            body.put("EntityUuidList", request.entityUuidListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            body.put("GroupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupKey)) {
+            body.put("GroupKey", request.groupKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.incidentUuid)) {
@@ -4357,8 +4392,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PlaybookUuid", request.playbookUuid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryMode)) {
+            body.put("QueryMode", request.queryMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleId)) {
+            body.put("ResponseRuleId", request.responseRuleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
@@ -4381,7 +4424,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyId)) {
+            body.put("StrategyId", request.strategyId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4400,7 +4448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a list of system-recommended disposal strategies.</p>
+     * <p>Retrieves the list of system-recommended disposal policies.</p>
      * 
      * @param request ListDisposeStrategyRequest
      * @return ListDisposeStrategyResponse

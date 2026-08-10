@@ -3,7 +3,7 @@ package com.aliyun.cloud_siem20220616.models;
 
 import com.aliyun.tea.*;
 
-public class ListDisposeStrategyRequest extends TeaModel {
+public class ListDisposeStrategyShrinkRequest extends TeaModel {
     @NameInMap("AlertUuid")
     public String alertUuid;
 
@@ -55,7 +55,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
     public String entityType;
 
     @NameInMap("EntityUuidList")
-    public java.util.List<String> entityUuidList;
+    public String entityUuidListShrink;
 
     @NameInMap("GroupBy")
     public String groupBy;
@@ -213,12 +213,12 @@ public class ListDisposeStrategyRequest extends TeaModel {
     @NameInMap("StrategyId")
     public String strategyId;
 
-    public static ListDisposeStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDisposeStrategyRequest self = new ListDisposeStrategyRequest();
+    public static ListDisposeStrategyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDisposeStrategyShrinkRequest self = new ListDisposeStrategyShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDisposeStrategyRequest setAlertUuid(String alertUuid) {
+    public ListDisposeStrategyShrinkRequest setAlertUuid(String alertUuid) {
         this.alertUuid = alertUuid;
         return this;
     }
@@ -226,7 +226,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.alertUuid;
     }
 
-    public ListDisposeStrategyRequest setCurrentPage(Integer currentPage) {
+    public ListDisposeStrategyShrinkRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
@@ -234,7 +234,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ListDisposeStrategyRequest setEffectiveStatus(Integer effectiveStatus) {
+    public ListDisposeStrategyShrinkRequest setEffectiveStatus(Integer effectiveStatus) {
         this.effectiveStatus = effectiveStatus;
         return this;
     }
@@ -242,7 +242,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.effectiveStatus;
     }
 
-    public ListDisposeStrategyRequest setEndTime(Long endTime) {
+    public ListDisposeStrategyShrinkRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -250,7 +250,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.endTime;
     }
 
-    public ListDisposeStrategyRequest setEntityIdentity(String entityIdentity) {
+    public ListDisposeStrategyShrinkRequest setEntityIdentity(String entityIdentity) {
         this.entityIdentity = entityIdentity;
         return this;
     }
@@ -258,7 +258,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.entityIdentity;
     }
 
-    public ListDisposeStrategyRequest setEntityType(String entityType) {
+    public ListDisposeStrategyShrinkRequest setEntityType(String entityType) {
         this.entityType = entityType;
         return this;
     }
@@ -266,15 +266,15 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.entityType;
     }
 
-    public ListDisposeStrategyRequest setEntityUuidList(java.util.List<String> entityUuidList) {
-        this.entityUuidList = entityUuidList;
+    public ListDisposeStrategyShrinkRequest setEntityUuidListShrink(String entityUuidListShrink) {
+        this.entityUuidListShrink = entityUuidListShrink;
         return this;
     }
-    public java.util.List<String> getEntityUuidList() {
-        return this.entityUuidList;
+    public String getEntityUuidListShrink() {
+        return this.entityUuidListShrink;
     }
 
-    public ListDisposeStrategyRequest setGroupBy(String groupBy) {
+    public ListDisposeStrategyShrinkRequest setGroupBy(String groupBy) {
         this.groupBy = groupBy;
         return this;
     }
@@ -282,7 +282,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.groupBy;
     }
 
-    public ListDisposeStrategyRequest setGroupKey(String groupKey) {
+    public ListDisposeStrategyShrinkRequest setGroupKey(String groupKey) {
         this.groupKey = groupKey;
         return this;
     }
@@ -290,7 +290,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.groupKey;
     }
 
-    public ListDisposeStrategyRequest setIncidentUuid(String incidentUuid) {
+    public ListDisposeStrategyShrinkRequest setIncidentUuid(String incidentUuid) {
         this.incidentUuid = incidentUuid;
         return this;
     }
@@ -298,7 +298,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.incidentUuid;
     }
 
-    public ListDisposeStrategyRequest setMaxResults(Integer maxResults) {
+    public ListDisposeStrategyShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -306,7 +306,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDisposeStrategyRequest setNextToken(String nextToken) {
+    public ListDisposeStrategyShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -314,7 +314,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListDisposeStrategyRequest setOrder(String order) {
+    public ListDisposeStrategyShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -322,7 +322,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.order;
     }
 
-    public ListDisposeStrategyRequest setOrderField(String orderField) {
+    public ListDisposeStrategyShrinkRequest setOrderField(String orderField) {
         this.orderField = orderField;
         return this;
     }
@@ -330,7 +330,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.orderField;
     }
 
-    public ListDisposeStrategyRequest setPageSize(Integer pageSize) {
+    public ListDisposeStrategyShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -338,7 +338,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDisposeStrategyRequest setPlaybookName(String playbookName) {
+    public ListDisposeStrategyShrinkRequest setPlaybookName(String playbookName) {
         this.playbookName = playbookName;
         return this;
     }
@@ -346,7 +346,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.playbookName;
     }
 
-    public ListDisposeStrategyRequest setPlaybookTypes(String playbookTypes) {
+    public ListDisposeStrategyShrinkRequest setPlaybookTypes(String playbookTypes) {
         this.playbookTypes = playbookTypes;
         return this;
     }
@@ -354,7 +354,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.playbookTypes;
     }
 
-    public ListDisposeStrategyRequest setPlaybookUuid(String playbookUuid) {
+    public ListDisposeStrategyShrinkRequest setPlaybookUuid(String playbookUuid) {
         this.playbookUuid = playbookUuid;
         return this;
     }
@@ -362,7 +362,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.playbookUuid;
     }
 
-    public ListDisposeStrategyRequest setQueryMode(String queryMode) {
+    public ListDisposeStrategyShrinkRequest setQueryMode(String queryMode) {
         this.queryMode = queryMode;
         return this;
     }
@@ -370,7 +370,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.queryMode;
     }
 
-    public ListDisposeStrategyRequest setRegionId(String regionId) {
+    public ListDisposeStrategyShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -378,7 +378,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListDisposeStrategyRequest setResponseRuleId(String responseRuleId) {
+    public ListDisposeStrategyShrinkRequest setResponseRuleId(String responseRuleId) {
         this.responseRuleId = responseRuleId;
         return this;
     }
@@ -386,7 +386,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.responseRuleId;
     }
 
-    public ListDisposeStrategyRequest setRoleFor(Long roleFor) {
+    public ListDisposeStrategyShrinkRequest setRoleFor(Long roleFor) {
         this.roleFor = roleFor;
         return this;
     }
@@ -394,7 +394,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.roleFor;
     }
 
-    public ListDisposeStrategyRequest setRoleType(Integer roleType) {
+    public ListDisposeStrategyShrinkRequest setRoleType(Integer roleType) {
         this.roleType = roleType;
         return this;
     }
@@ -402,7 +402,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.roleType;
     }
 
-    public ListDisposeStrategyRequest setSophonTaskId(String sophonTaskId) {
+    public ListDisposeStrategyShrinkRequest setSophonTaskId(String sophonTaskId) {
         this.sophonTaskId = sophonTaskId;
         return this;
     }
@@ -410,7 +410,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.sophonTaskId;
     }
 
-    public ListDisposeStrategyRequest setStartTime(Long startTime) {
+    public ListDisposeStrategyShrinkRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -418,7 +418,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.startTime;
     }
 
-    public ListDisposeStrategyRequest setStatus(Integer status) {
+    public ListDisposeStrategyShrinkRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
@@ -426,7 +426,7 @@ public class ListDisposeStrategyRequest extends TeaModel {
         return this.status;
     }
 
-    public ListDisposeStrategyRequest setStrategyId(String strategyId) {
+    public ListDisposeStrategyShrinkRequest setStrategyId(String strategyId) {
         this.strategyId = strategyId;
         return this;
     }
