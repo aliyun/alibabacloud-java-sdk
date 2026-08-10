@@ -64,7 +64,7 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
          * <p>The display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -88,13 +88,16 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
         public String mobilePhone;
 
         /**
-         * <p>The original ID of the user.</p>
+         * <p>The source user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2323131</p>
          */
         @NameInMap("SourceId")
         public String sourceId;
+
+        @NameInMap("SourceType")
+        public String sourceType;
 
         public static AddTenantMembersBySourceUserRequestAddCommandSourceUserList build(java.util.Map<String, ?> map) throws Exception {
             AddTenantMembersBySourceUserRequestAddCommandSourceUserList self = new AddTenantMembersBySourceUserRequestAddCommandSourceUserList();
@@ -147,6 +150,14 @@ public class AddTenantMembersBySourceUserRequest extends TeaModel {
         }
         public String getSourceId() {
             return this.sourceId;
+        }
+
+        public AddTenantMembersBySourceUserRequestAddCommandSourceUserList setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
     }

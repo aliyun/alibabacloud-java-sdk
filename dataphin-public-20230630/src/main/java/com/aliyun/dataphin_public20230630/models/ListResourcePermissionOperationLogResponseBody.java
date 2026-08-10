@@ -23,7 +23,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paging query result.</p>
+     * <p>The paged query result.</p>
      */
     @NameInMap("PageResult")
     public ListResourcePermissionOperationLogResponseBodyPageResult pageResult;
@@ -110,12 +110,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
 
     public static class ListResourcePermissionOperationLogResponseBodyPageResultDataAccount extends TeaModel {
         /**
-         * <p>The account ID.</p>
-         * <ul>
-         * <li>Individual account: the userId on the Dataphin side.</li>
-         * <li>Production account: the UserId obtained by calling the GetProjectProduceUser operation.</li>
-         * <li>User group: the user group ID obtained by calling the ListUserGroup operation.</li>
-         * </ul>
+         * <p>The account ID. For a personal account, this is the Dataphin-side userId. For a production account, this is the UserId obtained through the GetProjectProduceUser operation. For a user group, this is the user group ID obtained through the ListUserGroup operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1212131</p>
@@ -133,10 +128,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The authorization account type. Valid values:</p>
+         * <p>The authorized account type. Valid values:</p>
          * <ul>
-         * <li>PERSONAL: individual account</li>
-         * <li>PRODUCE: production account</li>
+         * <li>PERSONAL: personal account.</li>
+         * <li>PRODUCE: production account.</li>
          * <li>USER_GROUP: user group.</li>
          * </ul>
          * 
@@ -191,10 +186,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
          * <p>The validity period type. Valid values:</p>
          * <ul>
          * <li>CUSTOM: custom</li>
-         * <li>LONG_TERM: permanently valid</li>
+         * <li>LONG_TERM: long-term validity</li>
          * <li>DAYS_30: valid for 30 days</li>
          * <li>DAYS_90: valid for 90 days</li>
-         * <li>DAYS_180: valid for 180 days.</li>
+         * <li>DAYS_180: valid for 180 days</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,10 +232,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The environment identifier. Valid values: </p>
+         * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV</li>
-         * <li>PROD.</li>
+         * <li>DEV: development.</li>
+         * <li>PROD: production.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,10 +312,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The environment identifier. Valid values: </p>
+         * <p>The environment identifier. Valid values:</p>
          * <ul>
-         * <li>DEV</li>
-         * <li>PROD.</li>
+         * <li>DEV: development.</li>
+         * <li>PROD: production.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -388,7 +383,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
 
     public static class ListResourcePermissionOperationLogResponseBodyPageResultDataResourceInfo extends TeaModel {
         /**
-         * <p>The business unit information.</p>
+         * <p>The business unit.</p>
          */
         @NameInMap("BizUnitInfo")
         public ListResourcePermissionOperationLogResponseBodyPageResultDataResourceInfoBizUnitInfo bizUnitInfo;
@@ -405,8 +400,8 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         /**
          * <p>The resource environment. Valid values:</p>
          * <ul>
-         * <li>DEV</li>
-         * <li>PROD.</li>
+         * <li>DEV: development.</li>
+         * <li>PROD: production.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,7 +429,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The project information.</p>
+         * <p>The project.</p>
          */
         @NameInMap("ProjectInfo")
         public ListResourcePermissionOperationLogResponseBodyPageResultDataResourceInfoProjectInfo projectInfo;
@@ -442,13 +437,13 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li>PHYSICAL_TABLE: physical table</li>
-         * <li>PHYSICAL_VIEW: physical view</li>
-         * <li>LOGICAL_TABLE: fact logical table</li>
-         * <li>LOGICAL_VIEW: fact logical view</li>
-         * <li>REALTIME_LOGICAL_TABLE: real-time meta table</li>
-         * <li>REALTIME_MIRROR_TABLE: real-time meta table</li>
-         * <li>DATASOURCE: datasource.</li>
+         * <li>PHYSICAL_TABLE: physical table.</li>
+         * <li>PHYSICAL_VIEW: physical view.</li>
+         * <li>LOGICAL_TABLE: fact logical table.</li>
+         * <li>LOGICAL_VIEW: fact logical view.</li>
+         * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+         * <li>REALTIME_MIRROR_TABLE: real-time meta table.</li>
+         * <li>DATASOURCE: data source.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -522,7 +517,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
 
     public static class ListResourcePermissionOperationLogResponseBodyPageResultDataTargetAccount extends TeaModel {
         /**
-         * <p>The account ID.</p>
+         * <p>The account ID. For a personal account, this is the Dataphin-side userId. For a production account, this is the UserId obtained through the GetProjectProduceUser operation. For a user group, this is the user group ID obtained through the ListUserGroup operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1212131</p>
@@ -540,7 +535,12 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The authorized account type.</p>
+         * <p>The authorized account type. Valid values:</p>
+         * <ul>
+         * <li>PERSONAL: personal account.</li>
+         * <li>PRODUCE: production account.</li>
+         * <li>USER_GROUP: user group.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PERSONAL</p>
@@ -591,7 +591,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
          * <ul>
          * <li>selectTable: specified table</li>
          * <li>projectAllTable: all tables in the project</li>
-         * <li>bizUnitAllLogicTable: all logical tables in the business unit.</li>
+         * <li>bizUnitAllLogicTable: all logical tables in the business unit</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -621,8 +621,8 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         /**
          * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li>APPLY: Apply for permissions.</li>
-         * <li>GRANT: Grant permissions.</li>
+         * <li>APPLY: apply.</li>
+         * <li>GRANT: grant.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -641,7 +641,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
          * <p>The reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -739,7 +739,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
 
     public static class ListResourcePermissionOperationLogResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The paginated records.</p>
+         * <p>The paged records.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListResourcePermissionOperationLogResponseBodyPageResultData> data;

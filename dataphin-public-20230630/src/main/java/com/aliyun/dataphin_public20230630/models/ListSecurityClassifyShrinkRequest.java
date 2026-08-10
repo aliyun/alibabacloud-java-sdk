@@ -3,10 +3,9 @@ package com.aliyun.dataphin_public20230630.models;
 
 import com.aliyun.tea.*;
 
-public class ListResourcePermissionsShrinkRequest extends TeaModel {
+public class ListSecurityClassifyShrinkRequest extends TeaModel {
     /**
-     * <p>The paged query request.</p>
-     * <p>This parameter is required.</p>
+     * <p>The query conditions.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
@@ -21,12 +20,12 @@ public class ListResourcePermissionsShrinkRequest extends TeaModel {
     @NameInMap("OpTenantId")
     public Long opTenantId;
 
-    public static ListResourcePermissionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListResourcePermissionsShrinkRequest self = new ListResourcePermissionsShrinkRequest();
+    public static ListSecurityClassifyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListSecurityClassifyShrinkRequest self = new ListSecurityClassifyShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListResourcePermissionsShrinkRequest setListQueryShrink(String listQueryShrink) {
+    public ListSecurityClassifyShrinkRequest setListQueryShrink(String listQueryShrink) {
         this.listQueryShrink = listQueryShrink;
         return this;
     }
@@ -34,7 +33,7 @@ public class ListResourcePermissionsShrinkRequest extends TeaModel {
         return this.listQueryShrink;
     }
 
-    public ListResourcePermissionsShrinkRequest setOpTenantId(Long opTenantId) {
+    public ListSecurityClassifyShrinkRequest setOpTenantId(Long opTenantId) {
         this.opTenantId = opTenantId;
         return this;
     }

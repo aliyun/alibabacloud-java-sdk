@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourcePermissionOperationLogShrinkRequest extends TeaModel {
     /**
-     * <p>The paged request parameters.</p>
+     * <p>The pagination request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")

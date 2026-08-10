@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourcePermissionOperationLogRequest extends TeaModel {
     /**
-     * <p>The paged request parameters.</p>
+     * <p>The pagination request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
@@ -54,7 +54,7 @@ public class ListResourcePermissionOperationLogRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -67,16 +67,16 @@ public class ListResourcePermissionOperationLogRequest extends TeaModel {
          * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("SearchText")
         public String searchText;
 
         /**
-         * <p>The tab name. Valid values:</p>
+         * <p>The tab type. Valid values:</p>
          * <ul>
-         * <li>TABLE: table</li>
-         * <li>DATASOURCE: datasource.</li>
+         * <li>TABLE: table.</li>
+         * <li>DATASOURCE: data source.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

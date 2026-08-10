@@ -3,9 +3,9 @@ package com.aliyun.dataphin_public20230630.models;
 
 import com.aliyun.tea.*;
 
-public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
+public class ExecuteDDLResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,16 +14,7 @@ public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of the add operation.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("Data")
-    public Boolean data;
-
-    /**
-     * <p>The HTTP status code returned by the backend.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,19 +23,19 @@ public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
-     * <p>successful</p>
+     * <p>internal error</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
+     * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,17 +44,17 @@ public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static AddTenantMembersBySourceUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AddTenantMembersBySourceUserResponseBody self = new AddTenantMembersBySourceUserResponseBody();
+    public static ExecuteDDLResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ExecuteDDLResponseBody self = new ExecuteDDLResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddTenantMembersBySourceUserResponseBody setCode(String code) {
+    public ExecuteDDLResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -71,15 +62,7 @@ public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AddTenantMembersBySourceUserResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public AddTenantMembersBySourceUserResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public ExecuteDDLResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -87,7 +70,7 @@ public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public AddTenantMembersBySourceUserResponseBody setMessage(String message) {
+    public ExecuteDDLResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -95,7 +78,7 @@ public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
         return this.message;
     }
 
-    public AddTenantMembersBySourceUserResponseBody setRequestId(String requestId) {
+    public ExecuteDDLResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -103,7 +86,7 @@ public class AddTenantMembersBySourceUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddTenantMembersBySourceUserResponseBody setSuccess(Boolean success) {
+    public ExecuteDDLResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListResourcePermissionsRequest extends TeaModel {
     /**
-     * <p>Paginated request.</p>
+     * <p>The paged query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListResourcePermissionsRequestListQuery listQuery;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ListResourcePermissionsRequest extends TeaModel {
 
     public static class ListResourcePermissionsRequestListQuery extends TeaModel {
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ListResourcePermissionsRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>Number of records per page.</p>
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -64,16 +64,20 @@ public class ListResourcePermissionsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Search keyword.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("SearchText")
         public String searchText;
 
         /**
-         * <p>Tab name. Table: TABLE. Data source: DATASOURCE.</p>
+         * <p>The tab type. Valid values:</p>
+         * <ul>
+         * <li>TABLE: table.</li>
+         * <li>DATASOURCE: datasource.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
