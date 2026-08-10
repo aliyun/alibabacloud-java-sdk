@@ -29,20 +29,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shenzhen-finance-1", "gpdb.aliyuncs.com"),
             new TeaPair("cn-qingdao", "gpdb.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "gpdb.aliyuncs.com"),
-            new TeaPair("me-east-1", "gpdb.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "gpdb.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"),
             new TeaPair("eu-west-1", "gpdb.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "gpdb.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "gpdb.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com")
+            new TeaPair("me-east-1", "gpdb.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "gpdb.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "gpdb.cn-beijing-finance-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("gpdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -12616,7 +12616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for all branches under a specified Supabase project. You can filter branches by parent branch, keyword, and sorting criteria. Paging is supported.</p>
+     * <p>This operation performs a paging query of all branches under a specified Supabase project. You can filter results by parent branch, keyword, and sorting conditions.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the branch list of a Supabase project.</p>
@@ -12683,7 +12683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a paged query for all branches under a specified Supabase project. You can filter branches by parent branch, keyword, and sorting criteria. Paging is supported.</p>
+     * <p>This operation performs a paging query of all branches under a specified Supabase project. You can filter results by parent branch, keyword, and sorting conditions.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the branch list of a Supabase project.</p>

@@ -8,7 +8,7 @@ public class ListBranchesResponseBody extends TeaModel {
     public ListBranchesResponseBodyBranches branches;
 
     /**
-     * <p>The maximum number of records to return in this request.</p>
+     * <p>The maximum number of records to return in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +17,7 @@ public class ListBranchesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The cursor for the paged query. You do not need to specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response for paging.</p>
+     * <p>The cursor for paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -61,7 +61,7 @@ public class ListBranchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of branches that match the query criteria.</p>
+     * <p>The total number of branches that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -222,6 +222,9 @@ public class ListBranchesResponseBody extends TeaModel {
         @NameInMap("ServiceType")
         public String serviceType;
 
+        @NameInMap("SpbProjectId")
+        public String spbProjectId;
+
         @NameInMap("Status")
         public String status;
 
@@ -343,6 +346,14 @@ public class ListBranchesResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public ListBranchesResponseBodyBranchesBranch setSpbProjectId(String spbProjectId) {
+            this.spbProjectId = spbProjectId;
+            return this;
+        }
+        public String getSpbProjectId() {
+            return this.spbProjectId;
         }
 
         public ListBranchesResponseBodyBranchesBranch setStatus(String status) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBranchesRequest extends TeaModel {
     /**
-     * <p>The maximum number of records to return in this request.</p>
+     * <p>The maximum number of records to return in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListBranchesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The cursor for the paged query. You do not need to specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response for paging.</p>
+     * <p>The cursor for paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -49,7 +49,7 @@ public class ListBranchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent branch ID. This parameter specifies the parent branch for a new branch or a query filter.</p>
+     * <p>The parent branch ID. This parameter specifies the parent branch for a new branch or as a query filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>br-main</p>
@@ -76,7 +76,7 @@ public class ListBranchesRequest extends TeaModel {
     public String search;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort field.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>BranchName: sorts by branch name.</li>
@@ -92,7 +92,7 @@ public class ListBranchesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The sort order.</p>
+     * <p>The sort direction.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>Asc: ascending order.</li>

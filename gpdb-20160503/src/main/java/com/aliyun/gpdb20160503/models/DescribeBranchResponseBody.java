@@ -84,7 +84,7 @@ public class DescribeBranchResponseBody extends TeaModel {
 
     public static class DescribeBranchResponseBodyBranch extends TeaModel {
         /**
-         * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
+         * <p>The branch ID that uniquely identifies a Supabase branch.</p>
          * 
          * <strong>example:</strong>
          * <p>br-xxxx</p>
@@ -161,7 +161,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The parent branch ID, which specifies the parent branch for a new branch or a query condition.</p>
+         * <p>The parent branch ID, which specifies the parent branch of a new branch or a query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>br-main</p>
@@ -179,7 +179,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String parentBranchName;
 
         /**
-         * <p>The LSN of the parent branch at the time this branch was created.</p>
+         * <p>The Log Sequence Number (LSN) of the parent branch at the time this branch was created.</p>
          * 
          * <strong>example:</strong>
          * <p>0/3522648</p>
@@ -189,7 +189,7 @@ public class DescribeBranchResponseBody extends TeaModel {
 
         /**
          * <p>The data synchronization point in time selected from the parent branch when this branch was created, in ISO 8601 UTC format.</p>
-         * <p>Note:</p>
+         * <p>Description:</p>
          * <ul>
          * <li>For child branches, this value indicates the point in time of the parent branch selected during creation.</li>
          * <li>If no parent branch exists, the value 1970-01-01T00:00:00.000Z is returned.</li>
@@ -202,7 +202,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String parentTimestamp;
 
         /**
-         * <p>The Supabase project ID associated with the primary branch.</p>
+         * <p>The Supabase project ID that corresponds to the primary branch.</p>
          * 
          * <strong>example:</strong>
          * <p>spb-xxxx</p>
@@ -233,6 +233,9 @@ public class DescribeBranchResponseBody extends TeaModel {
         @NameInMap("ServiceType")
         public String serviceType;
 
+        @NameInMap("SpbProjectId")
+        public String spbProjectId;
+
         /**
          * <p>The branch status.</p>
          * 
@@ -243,7 +246,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The branch tag list.</p>
+         * <p>The list of branch tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeBranchResponseBodyBranchTags> tags;
@@ -371,6 +374,14 @@ public class DescribeBranchResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public DescribeBranchResponseBodyBranch setSpbProjectId(String spbProjectId) {
+            this.spbProjectId = spbProjectId;
+            return this;
+        }
+        public String getSpbProjectId() {
+            return this.spbProjectId;
         }
 
         public DescribeBranchResponseBodyBranch setStatus(String status) {
