@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelBatchGetHotelDetailShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the distributor account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GlobalHotelBatchGetHotelDetailShrinkRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The language. For example, en or zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -21,6 +24,7 @@ public class GlobalHotelBatchGetHotelDetailShrinkRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The list of standard hotel IDs. A maximum of 100 IDs are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class GlobalHotelBatchGetHotelDetailShrinkRequest extends TeaModel {
     public String standardHotelIdsShrink;
 
     /**
+     * <p>string</p>
+     * 
      * <strong>example:</strong>
      * <p>traceId</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelPayResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateOrderFailed</p>
      */
@@ -12,13 +14,17 @@ public class GlobalHotelPayResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>创建订单失败</p>
+     * <p>Failed to create order</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -26,6 +32,8 @@ public class GlobalHotelPayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class GlobalHotelPayResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */

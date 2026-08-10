@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelBatchGetHotelDetailResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CityCodeRequired</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>城市编码不能为空</p>
+     * <p>City code cannot be empty</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,6 +38,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>traceId</p>
+     * 
      * <strong>example:</strong>
      * <p>traceId</p>
      */
@@ -97,25 +110,31 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities extends TeaModel {
         /**
+         * <p>The facility description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>室外恒温泳池</p>
+         * <p>Outdoor heated swimming pool</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the facility.</p>
+         * 
          * <strong>example:</strong>
-         * <p>F001</p>
-         */
-        @NameInMap("FacilityId")
-        public String facilityId;
-
-        /**
-         * <strong>example:</strong>
-         * <p>游泳池</p>
+         * <p>Swimming pool</p>
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>The type of the facility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parkade</p>
+         */
+        @NameInMap("Type")
+        public String type;
 
         public static GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities build(java.util.Map<String, ?> map) throws Exception {
             GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities self = new GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities();
@@ -130,14 +149,6 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities setFacilityId(String facilityId) {
-            this.facilityId = facilityId;
-            return this;
-        }
-        public String getFacilityId() {
-            return this.facilityId;
-        }
-
         public GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities setName(String name) {
             this.name = name;
             return this;
@@ -146,17 +157,29 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPictures extends TeaModel {
         /**
+         * <p>The description of the picture.</p>
+         * 
          * <strong>example:</strong>
-         * <p>酒店大堂</p>
+         * <p>Hotel lobby</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The first-level category code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HOTEL</p>
          */
@@ -164,13 +187,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String firstCategoryCode;
 
         /**
+         * <p>The first-level category name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>酒店</p>
+         * <p>Hotel</p>
          */
         @NameInMap("FirstCategoryName")
         public String firstCategoryName;
 
         /**
+         * <p>Indicates whether the picture is the cover image.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -178,6 +205,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public Boolean isHeadPic;
 
         /**
+         * <p>The picture ID. The URL takes precedence.</p>
+         * 
          * <strong>example:</strong>
          * <p>PIC001</p>
          */
@@ -185,6 +214,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String pictureId;
 
         /**
+         * <p>The second-level category code.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOBBY</p>
          */
@@ -192,13 +223,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String secondCategoryCode;
 
         /**
+         * <p>The second-level category name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>大堂</p>
+         * <p>Lobby</p>
          */
         @NameInMap("SecondCategoryName")
         public String secondCategoryName;
 
         /**
+         * <p>The URL of the picture.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://img.example.com/1.jpg">https://img.example.com/1.jpg</a></p>
          */
@@ -277,17 +312,24 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPoliciesItems extends TeaModel {
+        /**
+         * <p>The list of child items.</p>
+         */
         @NameInMap("Children")
         public java.util.List<?> children;
 
         /**
+         * <p>The item name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>入住时间</p>
+         * <p>Check-in time</p>
          */
         @NameInMap("ItemName")
         public String itemName;
 
         /**
+         * <p>The item type ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHECK_IN_TIME</p>
          */
@@ -295,6 +337,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String itemTypeId;
 
         /**
+         * <p>The text value.</p>
+         * 
          * <strong>example:</strong>
          * <p>14:00</p>
          */
@@ -342,19 +386,26 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPolicies extends TeaModel {
         /**
+         * <p>The group name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>入住政策</p>
+         * <p>Check-in policy</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
+         * <p>The group type ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHECK_IN</p>
          */
         @NameInMap("GroupTypeId")
         public String groupTypeId;
 
+        /**
+         * <p>The list of policy items.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPoliciesItems> items;
 
@@ -391,6 +442,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypesBedType extends TeaModel {
         /**
+         * <p>The number of beds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -398,6 +451,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public Integer bedCount;
 
         /**
+         * <p>The bed width in meters.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.8</p>
          */
@@ -405,8 +460,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String bedSize;
 
         /**
+         * <p>The bed type name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>大床</p>
+         * <p>King bed</p>
          */
         @NameInMap("BedType")
         public String bedType;
@@ -444,13 +501,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypesPictures extends TeaModel {
         /**
+         * <p>The description of the picture.</p>
+         * 
          * <strong>example:</strong>
-         * <p>酒店大堂</p>
+         * <p>Hotel lobby</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The first-level category code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HOTEL</p>
          */
@@ -458,13 +519,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String firstCategoryCode;
 
         /**
+         * <p>The first-level category name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>酒店</p>
+         * <p>Hotel</p>
          */
         @NameInMap("FirstCategoryName")
         public String firstCategoryName;
 
         /**
+         * <p>Indicates whether the picture is the cover image.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -472,6 +537,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public Boolean isHeadPic;
 
         /**
+         * <p>The picture ID. The URL takes precedence.</p>
+         * 
          * <strong>example:</strong>
          * <p>PIC001</p>
          */
@@ -479,6 +546,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String pictureId;
 
         /**
+         * <p>The second-level category code.</p>
+         * 
          * <strong>example:</strong>
          * <p>LOBBY</p>
          */
@@ -486,13 +555,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String secondCategoryCode;
 
         /**
+         * <p>The second-level category name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>大堂</p>
+         * <p>Lobby</p>
          */
         @NameInMap("SecondCategoryName")
         public String secondCategoryName;
 
         /**
+         * <p>The URL of the picture.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://img.example.com/1.jpg">https://img.example.com/1.jpg</a></p>
          */
@@ -571,13 +644,21 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypes extends TeaModel {
+        /**
+         * <p>The list of bed types.</p>
+         */
         @NameInMap("BedType")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypesBedType> bedType;
 
+        /**
+         * <p>The list of room type pictures.</p>
+         */
         @NameInMap("Pictures")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypesPictures> pictures;
 
         /**
+         * <p>The room type name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Deluxe King Room</p>
          */
@@ -585,6 +666,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String roomName;
 
         /**
+         * <p>The Chinese room type name.</p>
+         * 
          * <strong>example:</strong>
          * <p>豪华大床房</p>
          */
@@ -592,6 +675,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String roomNameCn;
 
         /**
+         * <p>The room size.</p>
+         * 
          * <strong>example:</strong>
          * <p>35.0</p>
          */
@@ -599,6 +684,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public Double roomSize;
 
         /**
+         * <p>The size unit (SQM/SQFT).</p>
+         * 
          * <strong>example:</strong>
          * <p>SQM</p>
          */
@@ -606,6 +693,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String roomSizeUnit;
 
         /**
+         * <p>The platform standard room type ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>R001</p>
          */
@@ -613,6 +702,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String standardRoomId;
 
         /**
+         * <p>The window type.</p>
+         * 
          * <strong>example:</strong>
          * <p>WINDOW</p>
          */
@@ -620,6 +711,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String windowType;
 
         /**
+         * <p>The defective window type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SMALL_WINDOW</p>
          */
@@ -707,6 +800,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyDataHotels extends TeaModel {
         /**
+         * <p>The address of the hotel.</p>
+         * 
          * <strong>example:</strong>
          * <p>No.33 East Chang An Avenue</p>
          */
@@ -714,6 +809,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>The default check-in time.</p>
+         * 
          * <strong>example:</strong>
          * <p>14:00</p>
          */
@@ -721,6 +818,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String checkInTime;
 
         /**
+         * <p>The default check-out time.</p>
+         * 
          * <strong>example:</strong>
          * <p>12:00</p>
          */
@@ -728,6 +827,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String checkOutTime;
 
         /**
+         * <p>The city name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing</p>
          */
@@ -735,6 +836,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String cityName;
 
         /**
+         * <p>The country name.</p>
+         * 
          * <strong>example:</strong>
          * <p>China</p>
          */
@@ -742,13 +845,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String countryName;
 
         /**
+         * <p>The description of the hotel.</p>
+         * 
          * <strong>example:</strong>
-         * <p>五星级豪华酒店</p>
+         * <p>Five-star luxury hotel</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The error code for the individual hotel.</p>
+         * 
          * <strong>example:</strong>
          * <p>HOTEL_NOT_FOUND</p>
          */
@@ -756,16 +863,23 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message for the individual hotel.</p>
+         * 
          * <strong>example:</strong>
-         * <p>酒店不存在</p>
+         * <p>Hotel does not exist</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The list of facilities.</p>
+         */
         @NameInMap("Facilities")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsFacilities> facilities;
 
         /**
+         * <p>The hotel name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing Hotel</p>
          */
@@ -773,6 +887,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String hotelName;
 
         /**
+         * <p>The Chinese name of the hotel.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京饭店</p>
          */
@@ -780,6 +896,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String hotelNameCn;
 
         /**
+         * <p>The type of the hotel. Valid values: LUXURY, DELUXE, and COMFORT.</p>
+         * 
          * <strong>example:</strong>
          * <p>LUXURY</p>
          */
@@ -787,6 +905,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String hotelType;
 
         /**
+         * <p>The latitude of the hotel.</p>
+         * 
          * <strong>example:</strong>
          * <p>39.9042</p>
          */
@@ -794,6 +914,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String latitude;
 
         /**
+         * <p>The longitude of the hotel.</p>
+         * 
          * <strong>example:</strong>
          * <p>116.4074</p>
          */
@@ -801,19 +923,29 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String longitude;
 
         /**
+         * <p>The year the hotel opened.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018</p>
          */
         @NameInMap("OpeningTime")
         public Integer openingTime;
 
+        /**
+         * <p>The list of pictures.</p>
+         */
         @NameInMap("Pictures")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPictures> pictures;
 
+        /**
+         * <p>The hotel policy information.</p>
+         */
         @NameInMap("Policies")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsPolicies> policies;
 
         /**
+         * <p>The source of the latitude and longitude coordinates.</p>
+         * 
          * <strong>example:</strong>
          * <p>GOOGLE</p>
          */
@@ -821,16 +953,23 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String positionType;
 
         /**
+         * <p>The year the hotel was last renovated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021</p>
          */
         @NameInMap("RenovationTime")
         public Integer renovationTime;
 
+        /**
+         * <p>The list of room types.</p>
+         */
         @NameInMap("RoomTypes")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotelsRoomTypes> roomTypes;
 
         /**
+         * <p>The standard hotel ID on the platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>H001</p>
          */
@@ -838,6 +977,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String standardHotelId;
 
         /**
+         * <p>The star rating of the hotel.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -845,6 +986,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String star;
 
         /**
+         * <p>The status of the hotel. Valid values: ONLINE and OFFLINE.</p>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
          */
@@ -852,6 +995,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The phone number of the hotel.</p>
+         * 
          * <strong>example:</strong>
          * <p>+86-10-65137766</p>
          */
@@ -859,6 +1004,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public String tel;
 
         /**
+         * <p>The time zone of the hotel in IANA ID format.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
@@ -1073,6 +1220,9 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelBatchGetHotelDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of hotel details.</p>
+         */
         @NameInMap("Hotels")
         public java.util.List<GlobalHotelBatchGetHotelDetailResponseBodyDataHotels> hotels;
 

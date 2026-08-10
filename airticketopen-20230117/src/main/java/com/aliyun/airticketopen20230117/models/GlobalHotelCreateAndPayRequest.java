@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelCreateAndPayRequest extends TeaModel {
     /**
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The contact information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Contact")
     public GlobalHotelCreateAndPayRequestContact contact;
 
     /**
+     * <p>The external order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,12 +32,14 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
     public String externalOrderNo;
 
     /**
+     * <p>The guests grouped by room.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Guests")
     public java.util.List<java.util.List<GlobalHotelCreateAndPayRequestGuests>> guests;
 
     /**
+     * <p>The offer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +49,7 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
     public String itemOfferId;
 
     /**
+     * <p>The number of rooms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +59,8 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
     public Integer roomCount;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */
@@ -122,6 +130,7 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
 
     public static class GlobalHotelCreateAndPayRequestContact extends TeaModel {
         /**
+         * <p>The email address of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +140,7 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
         public String email;
 
         /**
+         * <p>The first name of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +150,7 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
         public String firstName;
 
         /**
+         * <p>The last name of the contact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,6 +160,8 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
         public String lastName;
 
         /**
+         * <p>The phone number of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>+86-13800138000</p>
          */
@@ -156,6 +169,8 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
         public String phone;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -211,6 +226,7 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
 
     public static class GlobalHotelCreateAndPayRequestGuests extends TeaModel {
         /**
+         * <p>The first name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +236,7 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
         public String firstName;
 
         /**
+         * <p>The last name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +246,8 @@ public class GlobalHotelCreateAndPayRequest extends TeaModel {
         public String lastName;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */

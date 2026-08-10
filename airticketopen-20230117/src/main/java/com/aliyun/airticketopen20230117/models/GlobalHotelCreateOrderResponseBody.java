@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelCreateOrderResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelCreateOrderResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateOrderFailed</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelCreateOrderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>创建订单失败</p>
+     * <p>Failed to create order</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,12 +38,20 @@ public class GlobalHotelCreateOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>TracerId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TracerId</p>
+     */
     @NameInMap("TracerId")
     public String tracerId;
 
@@ -93,12 +110,20 @@ public class GlobalHotelCreateOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelCreateOrderResponseBodyData extends TeaModel {
         /**
+         * <p>The sales order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>SO202606290001</p>
          */
         @NameInMap("OrderNo")
         public String orderNo;
 
+        /**
+         * <p>TracerId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TracerId</p>
+         */
         @NameInMap("TracerId")
         public String tracerId;
 

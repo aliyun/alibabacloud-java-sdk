@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelSearchCityPageResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CityCodeRequired</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>城市编码不能为空</p>
+     * <p>City code cannot be empty</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,6 +38,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */
@@ -97,6 +110,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
 
     public static class GlobalHotelSearchCityPageResponseBodyDataCities extends TeaModel {
         /**
+         * <p>The Chinese name of the city.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京市</p>
          */
@@ -104,6 +119,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public String cnName;
 
         /**
+         * <p>The city code.</p>
+         * 
          * <strong>example:</strong>
          * <p>110100</p>
          */
@@ -111,6 +128,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public Integer code;
 
         /**
+         * <p>The country code.</p>
+         * 
          * <strong>example:</strong>
          * <p>156</p>
          */
@@ -118,6 +137,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public Integer country;
 
         /**
+         * <p>The country code in ISO 3166-1 alpha-2 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -125,6 +146,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public String countryCode;
 
         /**
+         * <p>The English name of the city.</p>
+         * 
          * <strong>example:</strong>
          * <p>Beijing</p>
          */
@@ -132,6 +155,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public String enName;
 
         /**
+         * <p>The administrative level.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -139,6 +164,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public Integer level;
 
         /**
+         * <p>The parent city code.</p>
+         * 
          * <strong>example:</strong>
          * <p>110000</p>
          */
@@ -146,18 +173,13 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public Integer parentCode;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Region")
         public Integer region;
-
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("Type")
-        public Integer type;
 
         public static GlobalHotelSearchCityPageResponseBodyDataCities build(java.util.Map<String, ?> map) throws Exception {
             GlobalHotelSearchCityPageResponseBodyDataCities self = new GlobalHotelSearchCityPageResponseBodyDataCities();
@@ -228,18 +250,12 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             return this.region;
         }
 
-        public GlobalHotelSearchCityPageResponseBodyDataCities setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
     }
 
     public static class GlobalHotelSearchCityPageResponseBodyData extends TeaModel {
         /**
+         * <p>The list of cities.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -247,6 +263,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public java.util.List<GlobalHotelSearchCityPageResponseBodyDataCities> cities;
 
         /**
+         * <p>Indicates whether there is a next page.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -254,6 +272,8 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         public Boolean hasNext;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelCancelOrRefundResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateOrderFailed</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>创建订单失败</p>
+     * <p>Failed to create order</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,6 +38,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */
@@ -97,6 +110,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
 
     public static class GlobalHotelCancelOrRefundResponseBodyDataTotalPenaltyAmount extends TeaModel {
         /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -104,6 +119,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency code in ISO 4217 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -111,6 +128,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -150,6 +169,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
 
     public static class GlobalHotelCancelOrRefundResponseBodyDataTotalRefundAmount extends TeaModel {
         /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -157,6 +178,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency code in ISO 4217 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -164,6 +187,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -203,19 +228,29 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
 
     public static class GlobalHotelCancelOrRefundResponseBodyData extends TeaModel {
         /**
+         * <p>The after-sales refund order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>RF202606290001</p>
          */
         @NameInMap("RefundOrderId")
         public String refundOrderId;
 
+        /**
+         * <p>The total penalty amount on the sales side.</p>
+         */
         @NameInMap("TotalPenaltyAmount")
         public GlobalHotelCancelOrRefundResponseBodyDataTotalPenaltyAmount totalPenaltyAmount;
 
+        /**
+         * <p>The total refund amount.</p>
+         */
         @NameInMap("TotalRefundAmount")
         public GlobalHotelCancelOrRefundResponseBodyDataTotalRefundAmount totalRefundAmount;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */

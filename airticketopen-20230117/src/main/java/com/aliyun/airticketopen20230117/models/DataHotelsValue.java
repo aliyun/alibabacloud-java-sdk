@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataHotelsValue extends TeaModel {
     /**
+     * <p>The check-in date in the format of yyyy-MM-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-01</p>
      */
@@ -12,22 +14,32 @@ public class DataHotelsValue extends TeaModel {
     public String checkInDate;
 
     /**
+     * <p>The check-out date in the format of yyyy-MM-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-01-02</p>
      */
     @NameInMap("CheckOutDate")
     public String checkOutDate;
 
+    /**
+     * <p>The list of available room types for the day.</p>
+     */
     @NameInMap("Rooms")
     public java.util.List<DataHotelsValueRooms> rooms;
 
     /**
+     * <p>The standard room type ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>R001</p>
      */
     @NameInMap("StandardRoomId")
     public String standardRoomId;
 
+    /**
+     * <p>All available offers for the room type.</p>
+     */
     @NameInMap("Offers")
     public java.util.List<DataHotelsValueOffers> offers;
 
@@ -78,6 +90,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsLowestSellingPrice extends TeaModel {
         /**
+         * <p>The amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
@@ -85,6 +99,8 @@ public class DataHotelsValue extends TeaModel {
         public Double amount;
 
         /**
+         * <p>The currency code.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -92,6 +108,8 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
+         * <p>traceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -131,6 +149,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffersCancelPolicyPenalties extends TeaModel {
         /**
+         * <p>The effective start time, in UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
@@ -138,6 +158,8 @@ public class DataHotelsValue extends TeaModel {
         public Long start;
 
         /**
+         * <p>The effective end time, in UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
          */
@@ -145,6 +167,8 @@ public class DataHotelsValue extends TeaModel {
         public Long end;
 
         /**
+         * <p>The penalty type. Valid values: PERCENTAGE, AMOUNT, and NIGHTS.</p>
+         * 
          * <strong>example:</strong>
          * <p>PERCENTAGE</p>
          */
@@ -152,6 +176,8 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyType;
 
         /**
+         * <p>The penalty value (percentage, amount, or number of nights).</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -159,6 +185,8 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyValue;
 
         /**
+         * <p>The currency. This parameter has a value only when PenaltyType is set to AMOUNT.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -166,6 +194,8 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
+         * <p>traceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -229,16 +259,23 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffersCancelPolicy extends TeaModel {
         /**
+         * <p>The policy type. Valid values: NON_REFUNDABLE, FREE_CANCELLATION, and PARTIAL_REFUND.</p>
+         * 
          * <strong>example:</strong>
          * <p>FREE_CANCELLATION</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The list of penalty details.</p>
+         */
         @NameInMap("Penalties")
         public java.util.List<DataHotelsValueRoomsOffersCancelPolicyPenalties> penalties;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -278,6 +315,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffersSellingTotalPrice extends TeaModel {
         /**
+         * <p>The amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
@@ -285,6 +324,8 @@ public class DataHotelsValue extends TeaModel {
         public Double amount;
 
         /**
+         * <p>The currency code.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -292,6 +333,8 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -331,6 +374,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffersSellingDailyPricesPrice extends TeaModel {
         /**
+         * <p>The amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
@@ -338,6 +383,8 @@ public class DataHotelsValue extends TeaModel {
         public Double amount;
 
         /**
+         * <p>The currency code.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -345,6 +392,8 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
+         * <p>traceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -384,16 +433,23 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffersSellingDailyPrices extends TeaModel {
         /**
+         * <p>The check-in date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-01</p>
          */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>The price for the day.</p>
+         */
         @NameInMap("Price")
         public DataHotelsValueRoomsOffersSellingDailyPricesPrice price;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -433,6 +489,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRoomsOffers extends TeaModel {
         /**
+         * <p>The item-level offer identifier (price verification key, passed through as-is).</p>
+         * 
          * <strong>example:</strong>
          * <p>itemOffer_123</p>
          */
@@ -440,13 +498,17 @@ public class DataHotelsValue extends TeaModel {
         public String itemOfferKey;
 
         /**
+         * <p>The rate plan name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>含早房</p>
+         * <p>Room with breakfast</p>
          */
         @NameInMap("RatePlanName")
         public String ratePlanName;
 
         /**
+         * <p>The meal type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BREAKFAST</p>
          */
@@ -454,22 +516,35 @@ public class DataHotelsValue extends TeaModel {
         public String mealType;
 
         /**
+         * <p>The number of meals included.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("MealCount")
         public Integer mealCount;
 
+        /**
+         * <p>The cancellation policy.</p>
+         */
         @NameInMap("CancelPolicy")
         public DataHotelsValueRoomsOffersCancelPolicy cancelPolicy;
 
+        /**
+         * <p>The total selling price.</p>
+         */
         @NameInMap("SellingTotalPrice")
         public DataHotelsValueRoomsOffersSellingTotalPrice sellingTotalPrice;
 
+        /**
+         * <p>The list of daily selling prices.</p>
+         */
         @NameInMap("SellingDailyPrices")
         public java.util.List<DataHotelsValueRoomsOffersSellingDailyPrices> sellingDailyPrices;
 
         /**
+         * <p>The number of available rooms.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -477,6 +552,8 @@ public class DataHotelsValue extends TeaModel {
         public Integer availableRooms;
 
         /**
+         * <p>The maximum number of guests.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -484,6 +561,8 @@ public class DataHotelsValue extends TeaModel {
         public Integer maxOccupancy;
 
         /**
+         * <p>The confirmation type. Valid values: INSTANT_CONFIRM and NON_INSTANT_CONFIRM.</p>
+         * 
          * <strong>example:</strong>
          * <p>INSTANT_CONFIRM</p>
          */
@@ -579,15 +658,23 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueRooms extends TeaModel {
         /**
+         * <p>The standard room type ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>R001</p>
          */
         @NameInMap("StandardRoomId")
         public String standardRoomId;
 
+        /**
+         * <p>The lowest selling price for the room type on the day.</p>
+         */
         @NameInMap("LowestSellingPrice")
         public DataHotelsValueRoomsLowestSellingPrice lowestSellingPrice;
 
+        /**
+         * <p>The list of all available offers for the room type. Calendar quotes cannot be used for price verification, so itemOfferKey is not returned.</p>
+         */
         @NameInMap("Offers")
         public java.util.List<DataHotelsValueRoomsOffers> offers;
 
@@ -624,6 +711,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffersCancelPolicyPenalties extends TeaModel {
         /**
+         * <p>The effective start time (UTC millisecond timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
@@ -631,6 +720,8 @@ public class DataHotelsValue extends TeaModel {
         public Long start;
 
         /**
+         * <p>The effective end time (UTC millisecond timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
          */
@@ -638,6 +729,8 @@ public class DataHotelsValue extends TeaModel {
         public Long end;
 
         /**
+         * <p>The penalty type (PERCENTAGE/AMOUNT/NIGHTS).</p>
+         * 
          * <strong>example:</strong>
          * <p>PERCENTAGE</p>
          */
@@ -645,6 +738,8 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyType;
 
         /**
+         * <p>The penalty value (percentage/amount/number of nights).</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -652,6 +747,8 @@ public class DataHotelsValue extends TeaModel {
         public String penaltyValue;
 
         /**
+         * <p>The currency code (only applicable when the penalty type is AMOUNT).</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -659,6 +756,8 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -722,16 +821,23 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffersCancelPolicy extends TeaModel {
         /**
+         * <p>The policy type (NON_REFUNDABLE/FREE_CANCELLATION/PARTIAL_REFUND).</p>
+         * 
          * <strong>example:</strong>
          * <p>FREE_CANCELLATION</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The list of penalty details.</p>
+         */
         @NameInMap("Penalties")
         public java.util.List<DataHotelsValueOffersCancelPolicyPenalties> penalties;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -771,6 +877,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffersSellingTotalPrice extends TeaModel {
         /**
+         * <p>The amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
@@ -778,6 +886,8 @@ public class DataHotelsValue extends TeaModel {
         public Double amount;
 
         /**
+         * <p>The currency code.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -785,6 +895,8 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -824,6 +936,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffersSellingDailyPricesPrice extends TeaModel {
         /**
+         * <p>The amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
@@ -831,6 +945,8 @@ public class DataHotelsValue extends TeaModel {
         public Double amount;
 
         /**
+         * <p>The currency code.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -838,6 +954,8 @@ public class DataHotelsValue extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -877,16 +995,23 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffersSellingDailyPrices extends TeaModel {
         /**
+         * <p>The check-in date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-01</p>
          */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>The price for the day.</p>
+         */
         @NameInMap("Price")
         public DataHotelsValueOffersSellingDailyPricesPrice price;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -926,6 +1051,8 @@ public class DataHotelsValue extends TeaModel {
 
     public static class DataHotelsValueOffers extends TeaModel {
         /**
+         * <p>The item-domain offer identifier (price verification key, passed through as-is).</p>
+         * 
          * <strong>example:</strong>
          * <p>itemOffer_123</p>
          */
@@ -933,13 +1060,17 @@ public class DataHotelsValue extends TeaModel {
         public String itemOfferKey;
 
         /**
+         * <p>The rate plan name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>含早房</p>
+         * <p>Breakfast Included</p>
          */
         @NameInMap("RatePlanName")
         public String ratePlanName;
 
         /**
+         * <p>The meal type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BREAKFAST</p>
          */
@@ -947,22 +1078,35 @@ public class DataHotelsValue extends TeaModel {
         public String mealType;
 
         /**
+         * <p>The number of meals included.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("MealCount")
         public Integer mealCount;
 
+        /**
+         * <p>The cancellation and modification policy.</p>
+         */
         @NameInMap("CancelPolicy")
         public DataHotelsValueOffersCancelPolicy cancelPolicy;
 
+        /**
+         * <p>The total selling price.</p>
+         */
         @NameInMap("SellingTotalPrice")
         public DataHotelsValueOffersSellingTotalPrice sellingTotalPrice;
 
+        /**
+         * <p>The list of daily selling prices.</p>
+         */
         @NameInMap("SellingDailyPrices")
         public java.util.List<DataHotelsValueOffersSellingDailyPrices> sellingDailyPrices;
 
         /**
+         * <p>The number of available rooms.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -970,6 +1114,8 @@ public class DataHotelsValue extends TeaModel {
         public Integer availableRooms;
 
         /**
+         * <p>The maximum number of guests allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -977,6 +1123,8 @@ public class DataHotelsValue extends TeaModel {
         public Integer maxOccupancy;
 
         /**
+         * <p>The confirmation type (INSTANT_CONFIRM/NON_INSTANT_CONFIRM).</p>
+         * 
          * <strong>example:</strong>
          * <p>INSTANT_CONFIRM</p>
          */

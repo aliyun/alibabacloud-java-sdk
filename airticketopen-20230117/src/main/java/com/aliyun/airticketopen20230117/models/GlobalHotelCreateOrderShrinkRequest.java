@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelCreateOrderShrinkRequest extends TeaModel {
     /**
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class GlobalHotelCreateOrderShrinkRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The contact information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Contact")
     public String contactShrink;
 
     /**
+     * <p>The external order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,12 +32,14 @@ public class GlobalHotelCreateOrderShrinkRequest extends TeaModel {
     public String externalOrderNo;
 
     /**
+     * <p>The guests grouped by room.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Guests")
     public String guestsShrink;
 
     /**
+     * <p>The offer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +49,7 @@ public class GlobalHotelCreateOrderShrinkRequest extends TeaModel {
     public String itemOfferId;
 
     /**
+     * <p>The number of rooms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +59,8 @@ public class GlobalHotelCreateOrderShrinkRequest extends TeaModel {
     public Integer roomCount;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */

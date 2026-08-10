@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelQueryAvailabilityResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelQueryAvailabilityResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CityCodeRequired</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelQueryAvailabilityResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>城市编码不能为空</p>
+     * <p>City code cannot be empty</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,6 +38,8 @@ public class GlobalHotelQueryAvailabilityResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GlobalHotelQueryAvailabilityResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */
@@ -96,10 +109,15 @@ public class GlobalHotelQueryAvailabilityResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelQueryAvailabilityResponseBodyData extends TeaModel {
+        /**
+         * <p>The room type offers grouped by standard hotel ID.</p>
+         */
         @NameInMap("Hotels")
         public java.util.Map<String, java.util.List<DataHotelsValue>> hotels;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */

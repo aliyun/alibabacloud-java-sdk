@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelQueryOrderRequest extends TeaModel {
     /**
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GlobalHotelQueryOrderRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The external order number. At least one of ExternalOrderNo and OrderNo is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>EXT_ORDER_001</p>
      */
@@ -21,6 +24,8 @@ public class GlobalHotelQueryOrderRequest extends TeaModel {
     public String externalOrderNo;
 
     /**
+     * <p>The sales order number. At least one of OrderNo and ExternalOrderNo is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>SO202606290001</p>
      */
@@ -28,6 +33,8 @@ public class GlobalHotelQueryOrderRequest extends TeaModel {
     public String orderNo;
 
     /**
+     * <p>TracerId</p>
+     * 
      * <strong>example:</strong>
      * <p>TracerId</p>
      */

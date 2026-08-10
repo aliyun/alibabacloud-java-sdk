@@ -54,6 +54,10 @@ public class GlobalHotelValidatePriceRequest extends TeaModel {
     @NameInMap("RoomCount")
     public Integer roomCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TracerId</p>
+     */
     @NameInMap("TracerId")
     public String tracerId;
 

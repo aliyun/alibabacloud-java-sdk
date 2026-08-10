@@ -35,6 +35,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TracerId</p>
+     */
     @NameInMap("TracerId")
     public String tracerId;
 
@@ -127,6 +131,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         @NameInMap("Start")
         public Long start;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TracerId</p>
+         */
         @NameInMap("TracerId")
         public String tracerId;
 
@@ -196,6 +204,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TracerId</p>
+         */
         @NameInMap("TracerId")
         public String tracerId;
 
@@ -245,6 +257,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TracerId</p>
+         */
         @NameInMap("TracerId")
         public String tracerId;
 
@@ -297,6 +313,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         @NameInMap("TotalAmount")
         public String totalAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TracerId</p>
+         */
         @NameInMap("TracerId")
         public String tracerId;
 
@@ -353,6 +373,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         @NameInMap("Pricing")
         public GlobalHotelValidatePriceResponseBodyDataPricing pricing;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TracerId</p>
+         */
         @NameInMap("TracerId")
         public String tracerId;
 

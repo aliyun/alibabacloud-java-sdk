@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelQueryCalendarAvailabilityResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CityCodeRequired</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>城市编码不能为空</p>
+     * <p>City code cannot be empty</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,6 +38,8 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */
@@ -97,6 +110,8 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HOTEL_NOT_FOUND</p>
          */
@@ -104,13 +119,17 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>酒店不存在</p>
+         * <p>The hotel does not exist</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
+         * <p>The standard hotel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>H001</p>
          */
@@ -149,13 +168,21 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelQueryCalendarAvailabilityResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of failed hotels (in partial success mode).</p>
+         */
         @NameInMap("FailedHotels")
         public java.util.List<GlobalHotelQueryCalendarAvailabilityResponseBodyDataFailedHotels> failedHotels;
 
+        /**
+         * <p>The calendar quotes grouped by standard hotel ID.</p>
+         */
         @NameInMap("Hotels")
         public java.util.Map<String, java.util.List<DataHotelsValue>> hotels;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */

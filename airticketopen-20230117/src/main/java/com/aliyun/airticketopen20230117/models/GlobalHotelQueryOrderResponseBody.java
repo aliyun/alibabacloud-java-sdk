@@ -4,10 +4,15 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class GlobalHotelQueryOrderResponseBody extends TeaModel {
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public GlobalHotelQueryOrderResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreateOrderFailed</p>
      */
@@ -15,13 +20,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>创建订单失败</p>
+     * <p>Failed to create order</p>
      */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
      */
@@ -29,6 +38,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>TracerId</p>
+     * 
      * <strong>example:</strong>
      * <p>TracerId</p>
      */
@@ -97,6 +110,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties extends TeaModel {
         /**
+         * <p>The currency code. This parameter is valid only when the penalty type is AMOUNT.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -104,6 +119,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The effective end time in UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672617600000</p>
          */
@@ -111,6 +128,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Long end;
 
         /**
+         * <p>The penalty type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PERCENTAGE</p>
          */
@@ -118,6 +137,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String penaltyType;
 
         /**
+         * <p>The penalty value, which can be a percentage, amount, or number of nights.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -125,6 +146,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String penaltyValue;
 
         /**
+         * <p>The effective start time in UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
@@ -132,6 +155,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Long start;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -194,10 +219,15 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicy extends TeaModel {
+        /**
+         * <p>The list of cancellation penalties.</p>
+         */
         @NameInMap("Penalties")
         public java.util.List<GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties> penalties;
 
         /**
+         * <p>The cancellation policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>FREE_CANCELLATION</p>
          */
@@ -205,6 +235,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String policyType;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -244,6 +276,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency extends TeaModel {
         /**
+         * <p>The currency code.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -251,6 +285,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currencyCode;
 
         /**
+         * <p>DefaultFractionDigits</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -258,6 +294,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Integer defaultFractionDigits;
 
         /**
+         * <p>NumericCode</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -297,12 +335,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice extends TeaModel {
         /**
+         * <p>cent</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Cent")
         public Long cent;
 
+        /**
+         * <p>The currency.</p>
+         */
         @NameInMap("Currency")
         public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPriceCurrency currency;
 
@@ -331,12 +374,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPrices extends TeaModel {
         /**
+         * <p>LocalDate</p>
+         * 
          * <strong>example:</strong>
          * <p>LocalDate</p>
          */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPricesPrice price;
 
@@ -365,13 +413,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoMeal extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>含早餐</p>
+         * <p>Breakfast included</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The meal type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BREAKFAST</p>
          */
@@ -379,6 +431,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String mealType;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -418,6 +472,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice extends TeaModel {
         /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -425,6 +481,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency code in ISO 4217 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -432,6 +490,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -470,10 +530,15 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelQueryOrderResponseBodyDataItemInfo extends TeaModel {
+        /**
+         * <p>The cancellation policy.</p>
+         */
         @NameInMap("CancelPolicy")
         public GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicy cancelPolicy;
 
         /**
+         * <p>The check-in date in yyyy-MM-dd format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-01</p>
          */
@@ -481,6 +546,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String checkIn;
 
         /**
+         * <p>The number of guests checking in.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -488,25 +555,38 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Integer checkInNumber;
 
         /**
+         * <p>The check-out date in yyyy-MM-dd format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07-03</p>
          */
         @NameInMap("CheckOut")
         public String checkOut;
 
+        /**
+         * <p>The list of nightly rates.</p>
+         */
         @NameInMap("DailyPrices")
         public java.util.List<GlobalHotelQueryOrderResponseBodyDataItemInfoDailyPrices> dailyPrices;
 
+        /**
+         * <p>The meal information.</p>
+         */
         @NameInMap("Meal")
         public GlobalHotelQueryOrderResponseBodyDataItemInfoMeal meal;
 
         /**
+         * <p>The number of rooms.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RoomCount")
         public Integer roomCount;
 
+        /**
+         * <p>The total selling price.</p>
+         */
         @NameInMap("SellingTotalPrice")
         public GlobalHotelQueryOrderResponseBodyDataItemInfoSellingTotalPrice sellingTotalPrice;
 
@@ -583,6 +663,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataPaymentAmount extends TeaModel {
         /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -590,6 +672,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency code in ISO 4217 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -597,6 +681,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */
@@ -635,10 +721,15 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
     }
 
     public static class GlobalHotelQueryOrderResponseBodyDataPayment extends TeaModel {
+        /**
+         * <p>The payment amount.</p>
+         */
         @NameInMap("Amount")
         public GlobalHotelQueryOrderResponseBodyDataPaymentAmount amount;
 
         /**
+         * <p>The payment completion time in UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
@@ -646,6 +737,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Long gmtPaid;
 
         /**
+         * <p>The payment method.</p>
+         * 
          * <strong>example:</strong>
          * <p>BALANCE</p>
          */
@@ -653,6 +746,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String paymentMethod;
 
         /**
+         * <p>The payment transaction ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>PAY202606290001</p>
          */
@@ -700,6 +795,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataRefundOrdersTotalPenaltyAmount extends TeaModel {
         /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -707,6 +804,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency code in ISO 4217 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -714,6 +813,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -753,6 +854,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataRefundOrdersTotalRefundAmount extends TeaModel {
         /**
+         * <p>The amount in the smallest currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -760,6 +863,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>The currency code in ISO 4217 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -767,6 +872,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -806,6 +913,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataRefundOrders extends TeaModel {
         /**
+         * <p>The creation time of the refund order, in UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
@@ -813,6 +922,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The refund transaction ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>TXN001</p>
          */
@@ -820,13 +931,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String refundTransactionId;
 
         /**
+         * <p>The reason for rejection.</p>
+         * 
          * <strong>example:</strong>
-         * <p>供应商拒绝</p>
+         * <p>Supplier rejected</p>
          */
         @NameInMap("RejectReason")
         public String rejectReason;
 
         /**
+         * <p>The external refund order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>RF202606290001</p>
          */
@@ -834,15 +949,23 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String sellRefundOrderNo;
 
         /**
+         * <p>The unified refund status.</p>
+         * 
          * <strong>example:</strong>
          * <p>REFUNDED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The penalty amount on the sales side.</p>
+         */
         @NameInMap("TotalPenaltyAmount")
         public GlobalHotelQueryOrderResponseBodyDataRefundOrdersTotalPenaltyAmount totalPenaltyAmount;
 
+        /**
+         * <p>The actual refund amount.</p>
+         */
         @NameInMap("TotalRefundAmount")
         public GlobalHotelQueryOrderResponseBodyDataRefundOrdersTotalRefundAmount totalRefundAmount;
 
@@ -911,6 +1034,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataRoomStaysGuests extends TeaModel {
         /**
+         * <p>The first name of the guest.</p>
+         * 
          * <strong>example:</strong>
          * <p>John</p>
          */
@@ -918,6 +1043,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String firstName;
 
         /**
+         * <p>The last name of the guest.</p>
+         * 
          * <strong>example:</strong>
          * <p>Doe</p>
          */
@@ -925,6 +1052,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String lastName;
 
         /**
+         * <p>TraceId</p>
+         * 
          * <strong>example:</strong>
          * <p>TraceId</p>
          */
@@ -964,16 +1093,23 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
     public static class GlobalHotelQueryOrderResponseBodyDataRoomStays extends TeaModel {
         /**
+         * <p>The room confirmation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONF001</p>
          */
         @NameInMap("ConfirmationId")
         public String confirmationId;
 
+        /**
+         * <p>The list of guests.</p>
+         */
         @NameInMap("Guests")
         public java.util.List<GlobalHotelQueryOrderResponseBodyDataRoomStaysGuests> guests;
 
         /**
+         * <p>The room index, starting from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -981,11 +1117,13 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public Integer roomIndex;
 
         /**
+         * <p>The delivery status. Valid values: PENDING_CHECKIN, CHECKED_IN, CHECKED_OUT, and CANCELLED. The value is null before the delivery is created.</p>
+         * 
          * <strong>example:</strong>
-         * <p>豪华大床房</p>
+         * <p>CHECKED_IN</p>
          */
-        @NameInMap("RoomName")
-        public String roomName;
+        @NameInMap("Status")
+        public String status;
 
         public static GlobalHotelQueryOrderResponseBodyDataRoomStays build(java.util.Map<String, ?> map) throws Exception {
             GlobalHotelQueryOrderResponseBodyDataRoomStays self = new GlobalHotelQueryOrderResponseBodyDataRoomStays();
@@ -1016,18 +1154,20 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.roomIndex;
         }
 
-        public GlobalHotelQueryOrderResponseBodyDataRoomStays setRoomName(String roomName) {
-            this.roomName = roomName;
+        public GlobalHotelQueryOrderResponseBodyDataRoomStays setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getRoomName() {
-            return this.roomName;
+        public String getStatus() {
+            return this.status;
         }
 
     }
 
     public static class GlobalHotelQueryOrderResponseBodyData extends TeaModel {
         /**
+         * <p>The buyer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -1035,6 +1175,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String buyerId;
 
         /**
+         * <p>The external order number of the buyer.</p>
+         * 
          * <strong>example:</strong>
          * <p>EXT_ORDER_001</p>
          */
@@ -1042,32 +1184,50 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String externalOrderNo;
 
         /**
+         * <p>The creation time in UTC millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672531200000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The item information.</p>
+         */
         @NameInMap("ItemInfo")
         public GlobalHotelQueryOrderResponseBodyDataItemInfo itemInfo;
 
         /**
+         * <p>The order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>SO202606290001</p>
          */
         @NameInMap("OrderNo")
         public String orderNo;
 
+        /**
+         * <p>The payment information.</p>
+         */
         @NameInMap("Payment")
         public GlobalHotelQueryOrderResponseBodyDataPayment payment;
 
+        /**
+         * <p>The list of refund orders.</p>
+         */
         @NameInMap("RefundOrders")
         public java.util.List<GlobalHotelQueryOrderResponseBodyDataRefundOrders> refundOrders;
 
+        /**
+         * <p>The list of room stays.</p>
+         */
         @NameInMap("RoomStays")
         public java.util.List<GlobalHotelQueryOrderResponseBodyDataRoomStays> roomStays;
 
         /**
+         * <p>The sales channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>POP</p>
          */
@@ -1075,6 +1235,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String salesChannel;
 
         /**
+         * <p>The unified order status.</p>
+         * 
          * <strong>example:</strong>
          * <p>CONFIRMED</p>
          */
@@ -1082,6 +1244,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>TracerId</p>
+         * 
          * <strong>example:</strong>
          * <p>TracerId</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     /**
+     * <p>The account ID of the distributor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The number of adults.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public Integer adultCount;
 
     /**
+     * <p>The check-in date in the format of yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public String checkInDate;
 
     /**
+     * <p>The check-out date in the format of yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,8 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public String checkOutDate;
 
     /**
+     * <p>The number of children.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -48,6 +54,8 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public Integer childCount;
 
     /**
+     * <p>The list of children\&quot;s ages.</p>
+     * 
      * <strong>example:</strong>
      * <p>[8]</p>
      */
@@ -55,6 +63,7 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public String childrenAgesShrink;
 
     /**
+     * <p>The number of rooms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +73,7 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public Integer roomCount;
 
     /**
+     * <p>The list of standard hotel IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +83,8 @@ public class GlobalHotelQueryAvailabilityShrinkRequest extends TeaModel {
     public String standardHotelIdsShrink;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */

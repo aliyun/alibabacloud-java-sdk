@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     /**
+     * <p>The account ID of the distributor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The number of adults.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Integer adultCount;
 
     /**
+     * <p>The end date of the check-in date range in the format yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public String checkInDateEnd;
 
     /**
+     * <p>The start date of the check-in date range in the format yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,8 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public String checkInDateStart;
 
     /**
+     * <p>The number of children.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -48,6 +54,8 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Integer childCount;
 
     /**
+     * <p>The list of children\&quot;s ages.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -55,6 +63,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public java.util.List<Integer> childrenAges;
 
     /**
+     * <p>The number of rooms.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +73,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public Integer roomCount;
 
     /**
+     * <p>The IDs of the hotels.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,6 +83,8 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends TeaModel {
     public java.util.List<String> standardHotelIds;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>traceId</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelCancelOrRefundRequest extends TeaModel {
     /**
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GlobalHotelCancelOrRefundRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The sales order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GlobalHotelCancelOrRefundRequest extends TeaModel {
     public String orderNo;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */

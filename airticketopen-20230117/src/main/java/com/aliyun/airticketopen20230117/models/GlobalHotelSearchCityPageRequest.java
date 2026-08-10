@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GlobalHotelSearchCityPageRequest extends TeaModel {
     /**
+     * <p>The distributor account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GlobalHotelSearchCityPageRequest extends TeaModel {
     public Long accountNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class GlobalHotelSearchCityPageRequest extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The country code in ISO 3166-1 alpha-2 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>CN</p>
      */
@@ -30,6 +34,8 @@ public class GlobalHotelSearchCityPageRequest extends TeaModel {
     public String countryCode;
 
     /**
+     * <p>The pagination offset, starting from 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -37,6 +43,8 @@ public class GlobalHotelSearchCityPageRequest extends TeaModel {
     public Integer start;
 
     /**
+     * <p>TraceId</p>
+     * 
      * <strong>example:</strong>
      * <p>TraceId</p>
      */
