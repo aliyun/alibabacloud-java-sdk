@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class LivePackagingConfig extends TeaModel {
     /**
-     * <p>Configuration for the DRM provider. To disable DRM, leave all fields in this object empty.</p>
+     * <p>The DRM encryption provider configuration. If encryption is not required, leave all fields empty.</p>
      */
     @NameInMap("DrmConfig")
     public LivePackagingConfigDrmConfig drmConfig;
 
     /**
-     * <p>Live stream manifest configuration. Only one configuration is supported.</p>
+     * <p>The live manifest configurations. A maximum of one configuration is supported.</p>
      */
     @NameInMap("LiveManifestConfigs")
     public java.util.List<LiveManifestConfig> liveManifestConfigs;
 
+    @NameInMap("PartDurationMs")
+    public Integer partDurationMs;
+
     /**
-     * <p>The duration of each output segment, in seconds. If not set, this defaults to the channel\&quot;s configured segment duration. The final segment duration is a multiple of the source segment duration that is closest to and not less than this value. Valid values: 1 to 30.</p>
+     * <p>The duration of each segment, in seconds. Default value: the channel segment duration. The actual segment duration is the nearest multiple of the source segment duration that is greater than or equal to the configured value. Valid values: 1 to 30.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -26,7 +29,7 @@ public class LivePackagingConfig extends TeaModel {
     public Integer segmentDuration;
 
     /**
-     * <p>Specifies whether to create separate audio rendition groups for TS segments.</p>
+     * <p>Specifies whether to separate audio tracks in TS segments.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -55,6 +58,14 @@ public class LivePackagingConfig extends TeaModel {
         return this.liveManifestConfigs;
     }
 
+    public LivePackagingConfig setPartDurationMs(Integer partDurationMs) {
+        this.partDurationMs = partDurationMs;
+        return this;
+    }
+    public Integer getPartDurationMs() {
+        return this.partDurationMs;
+    }
+
     public LivePackagingConfig setSegmentDuration(Integer segmentDuration) {
         this.segmentDuration = segmentDuration;
         return this;
@@ -73,7 +84,7 @@ public class LivePackagingConfig extends TeaModel {
 
     public static class LivePackagingConfigDrmConfig extends TeaModel {
         /**
-         * <p>The content ID in the DRM system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported. You must ensure this ID is unique to prevent playback failures.</p>
+         * <p>The content ID in the DRM system. Format: [A-Za-z0-9_-]+. Maximum length: 256 characters. Ensure that the content ID is unique. Otherwise, DRM playback may fail.</p>
          * 
          * <strong>example:</strong>
          * <p>live-axb1-9dd2fa123</p>
@@ -82,11 +93,11 @@ public class LivePackagingConfig extends TeaModel {
         public String contentId;
 
         /**
-         * <p>The encryption method. Valid value:</p>
+         * <p>The encryption algorithm. Valid values:</p>
          * <ul>
          * <li>SAMPLE_AES</li>
          * </ul>
-         * <p>If not specified, encryption is disabled.</p>
+         * <p>Default value: empty, which indicates no encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>SAMPLE_AES</p>
@@ -95,7 +106,7 @@ public class LivePackagingConfig extends TeaModel {
         public String encryptionMethod;
 
         /**
-         * <p>A 128-bit, 16-byte hex value represented by a 32-character string that is used with the key for encrypting data blocks. If you leave this parameter empty, MediaPackage creates a constant initialization vector (IV). If it is specified, the value is passed to the DRM service.</p>
+         * <p>An optional 128-bit (16-byte) hexadecimal value represented by a 32-character string. This value is used together with the key to encrypt data blocks. If you do not specify this value, MediaPackage creates a constant initialization vector (IV). Default value: empty. If specified, the value is passed through to the provider as a constant initialization vector.</p>
          * 
          * <strong>example:</strong>
          * <p>00000000000000000000000000000000</p>
@@ -104,7 +115,7 @@ public class LivePackagingConfig extends TeaModel {
         public String IV;
 
         /**
-         * <p>The key rotation interval for DRM, in seconds. The default value of 0 disables key rotation.</p>
+         * <p>The DRM key rotation interval. Unit: seconds. Default value: 0, which indicates that key rotation is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -113,17 +124,20 @@ public class LivePackagingConfig extends TeaModel {
         public Integer rotatePeriod;
 
         /**
-         * <p>The ID of the DRM system. The supported systems depend on the protocol.</p>
+         * <p>The DRM system IDs, determined by the protocol type.</p>
          * <ul>
-         * <li>DASH: Supports Google Widevine and Microsoft PlayReady.</li>
-         * <li>HLS: DRM is not supported.</li>
-         * <li>HLS-CMAF: Supports Apple FairPlay, Google Widevine, and Microsoft PlayReady.</li>
+         * <li>DASH: supports Google Widevine and Microsoft PlayReady.</li>
+         * <li>HLS: not supported.</li>
+         * <li>HLS_CMAF: supports Apple FairPlay, Google Widevine, and Microsoft PlayReady.</li>
          * </ul>
-         * <p>The corresponding System IDs are:</p>
+         * <p>Three DRM systems are supported: Apple FairPlay, Google Widevine, and Microsoft PlayReady. The corresponding system IDs are:</p>
          * <ul>
-         * <li>Apple FairPlay: 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</li>
-         * <li>Google Widevine: edef8ba9-79d6-4ace-a3c8-27dcd51d21ed</li>
-         * <li>Microsoft PlayReady: 9a04f079-9840-4286-ab92-e65be0885f95</li>
+         * <li>Apple FairPlay:
+         * 94ce86fb-07ff-4f43-adb8-93d2fa968ca2</li>
+         * <li>Google Widevine:
+         * edef8ba9-79d6-4ace-a3c8-27dcd51d21ed</li>
+         * <li>Microsoft PlayReady:
+         * 9a04f079-9840-4286-ab92-e65be0885f95.</li>
          * </ul>
          */
         @NameInMap("SystemIds")

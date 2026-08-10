@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitASRJobRequest extends TeaModel {
     /**
-     * <p>The task description. The value can be up to 128 bytes in length.</p>
+     * <p>The task description. The description can be up to 128 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Test description</p>
@@ -25,7 +25,9 @@ public class SubmitASRJobRequest extends TeaModel {
     /**
      * <p>The audio-to-text recognition configuration:</p>
      * <ul>
-     * <li>HotwordLibraryIdList: the list of hotword library IDs. Currently, only one hotword library ID can be specified. Support for multiple hotword library IDs is planned for the future.</li>
+     * <li>HotwordLibraryIdList: the list of hotword library IDs. Currently, only one hotword library ID is supported. Support for multiple hotword library IDs is planned for the future.</li>
+     * <li>SentenceMaxLength: the maximum length of each sentence in the output. Type: int.</li>
+     * <li>EnableSemanticSentenceDetection: specifies whether to segment sentences based on semantics in the output. Type: bool. Default value: false.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,10 +39,10 @@ public class SubmitASRJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>The input configuration. OSS URLs and content library material IDs are supported.</p>
+     * <p>The input configuration. OSS addresses and content library material IDs are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or <strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+     * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 或 <strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
     @NameInMap("InputFile")
     public String inputFile;
@@ -55,7 +57,7 @@ public class SubmitASRJobRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The task title. The value can be up to 128 bytes in length.</p>
+     * <p>The task title. The title can be up to 128 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Test title</p>

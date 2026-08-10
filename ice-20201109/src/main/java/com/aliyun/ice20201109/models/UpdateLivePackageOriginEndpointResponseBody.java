@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
     /**
-     * <p>The information about the origin endpoint.</p>
+     * <p>The origin endpoint information.</p>
      */
     @NameInMap("LivePackageOriginEndpoint")
     public UpdateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint livePackageOriginEndpoint;
@@ -69,7 +69,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The endpoint description.</p>
+         * <p>The description of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>This is an origin endpoint.</p>
@@ -105,7 +105,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP address blacklist. It supports subnet masks. Multiple IP addresses are separated by commas (,).</p>
+         * <p>The IP blacklist. Subnet masks are supported. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>10.21.222.1/32,192.168.100.0/24</p>
@@ -114,7 +114,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
-         * <p>The IP address whitelist. It supports subnet masks. Multiple IP addresses are separated by commas (,).</p>
+         * <p>The IP whitelist. Subnet masks are supported. Multiple IP addresses are separated with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -132,7 +132,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>Live packaging configuration</p>
+         * <p>The live packaging configuration.</p>
          */
         @NameInMap("LivePackagingConfig")
         public LivePackagingConfig livePackagingConfig;
@@ -147,7 +147,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String manifestName;
 
         /**
-         * <p>The protocol. Only HLS is supported.</p>
+         * <p>The protocol. Currently, only HLS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>HLS</p>
@@ -156,7 +156,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of days that time-shifted content is available. Maximum value: 30.</p>
+         * <p>The number of time-shifting days. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

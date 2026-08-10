@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelResponseBody extends TeaModel {
     /**
-     * <p>The information about the live package channel.</p>
+     * <p>The details of the live packaging channel.</p>
      */
     @NameInMap("LivePackageChannel")
     public UpdateLivePackageChannelResponseBodyLivePackageChannel livePackageChannel;
@@ -127,7 +127,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>The time when the channel was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-16T02:24:42Z</p>
@@ -136,7 +136,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The channel description. It can be up to 1,000 characters in length.</p>
+         * <p>The description. Maximum length: 1000 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test channel.</p>
@@ -154,13 +154,13 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The ingest endpoints.</p>
+         * <p>The array of ingest endpoints.</p>
          */
         @NameInMap("IngestEndpoints")
         public java.util.List<UpdateLivePackageChannelResponseBodyLivePackageChannelIngestEndpoints> ingestEndpoints;
 
         /**
-         * <p>The time when the channel was last modified.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-16T02:24:42Z</p>
@@ -169,7 +169,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>The ingest protocol. Only HLS is supported.</p>
+         * <p>The input stream protocol. HLS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>HLS</p>
@@ -178,7 +178,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of segments.</p>
+         * <p>The number of segments in the input stream.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -187,7 +187,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public Integer segmentCount;
 
         /**
-         * <p>The segment duration.</p>
+         * <p>The segment duration of the input stream.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

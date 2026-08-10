@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
     /**
-     * <p>The information about the origin endpoints.</p>
+     * <p>The origin endpoint type.</p>
      */
     @NameInMap("LivePackageOriginEndpoint")
     public GetLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint livePackageOriginEndpoint;
@@ -60,7 +60,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>The time when the endpoint was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -105,7 +105,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP address blacklist.</p>
+         * <p>The IP blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>10.21.222.1/32</p>
@@ -114,7 +114,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -123,7 +123,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
-         * <p>The time when the endpoint was last modified.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -132,13 +132,13 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>Live packaging configuration</p>
+         * <p>The live packaging configuration.</p>
          */
         @NameInMap("LivePackagingConfig")
         public LivePackagingConfig livePackagingConfig;
 
         /**
-         * <p>The playlist name.</p>
+         * <p>The manifest name.</p>
          * 
          * <strong>example:</strong>
          * <p>manifest</p>
@@ -156,7 +156,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of days that time-shifted content is available.</p>
+         * <p>The number of time-shift days.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

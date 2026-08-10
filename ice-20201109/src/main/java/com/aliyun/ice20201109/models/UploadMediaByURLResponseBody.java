@@ -14,7 +14,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of upload jobs.</p>
+     * <p>The information about multiple jobs.</p>
      */
     @NameInMap("UploadJobs")
     public java.util.List<UploadMediaByURLResponseBodyUploadJobs> uploadJobs;
@@ -42,7 +42,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
 
     public static class UploadMediaByURLResponseBodyUploadJobs extends TeaModel {
         /**
-         * <p>The upload job ID.</p>
+         * <p>The upload task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20ce1e05dba64576b96e9683879f0***</p>
@@ -51,7 +51,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The media ID.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>f476988629f54a7b8a4ba90d1a6c7***</p>
@@ -60,7 +60,7 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The source URL corresponding to the upload job.</p>
+         * <p>The source file URL of the upload task.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example****.mp4">http://example****.mp4</a></p>

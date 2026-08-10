@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivePackageChannelResponseBody extends TeaModel {
     /**
-     * <p>The information about the live package channel.</p>
+     * <p>The details of the live packaging channel.</p>
      */
     @NameInMap("LivePackageChannel")
     public CreateLivePackageChannelResponseBodyLivePackageChannel livePackageChannel;
@@ -127,7 +127,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>The time when the channel was created. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+         * <p>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -136,7 +136,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The channel description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test channel.</p>
@@ -160,7 +160,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         public java.util.List<CreateLivePackageChannelResponseBodyLivePackageChannelIngestEndpoints> ingestEndpoints;
 
         /**
-         * <p>The time when the channel was last modified. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+         * <p>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -169,7 +169,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>The ingest protocol. Only HLS is supported.</p>
+         * <p>The input protocol. Valid value: HLS.</p>
          * 
          * <strong>example:</strong>
          * <p>HLS</p>
@@ -178,7 +178,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of M3U8 segments.</p>
+         * <p>The number of m3u8 segments for the input stream.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -187,7 +187,7 @@ public class CreateLivePackageChannelResponseBody extends TeaModel {
         public Integer segmentCount;
 
         /**
-         * <p>The segment duration.</p>
+         * <p>The segment duration of the input stream.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateEditingProjectRequest extends TeaModel {
     /**
-     * <p>The business status of the project. You can typically ignore this parameter for standard cloud editing projects. Use this parameter to modify the project\&quot;s reservation status:</p>
+     * <p>The business status of the project. This parameter can be ignored for general editing projects. You can modify the reservation status of the project. Valid values:</p>
      * <ul>
-     * <li><p><code>Reserving</code>: The project is being reserved.</p>
-     * </li>
-     * <li><p><code>ReservationCanceled</code>: The reservation for the project is canceled.</p>
-     * </li>
+     * <li>Reserving: The project is being reserved.</li>
+     * <li>ReservationCanceled: The reservation is canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String businessStatus;
 
     /**
-     * <p>The clip parameters for the template, in JSON format. This parameter is required if you specify <code>TemplateId</code>.&lt;props=&quot;china&quot;&gt; For more information about the format, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a standard template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</p>
+     * <p>The material parameters for the template in JSON format. If TemplateId is specified, ClipsParam must also be specified.&lt;props=&quot;china&quot;&gt;For more information about the format, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a common template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>See the template user guide.</p>
@@ -29,7 +27,7 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String clipsParam;
 
     /**
-     * <p>The project cover.</p>
+     * <p>The cover URL of the cloud editing project.</p>
      * 
      * <strong>example:</strong>
      * <p>https://<strong><strong>.com/6AB4D0E1E1C7446888</strong></strong>.png</p>
@@ -38,7 +36,7 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String coverURL;
 
     /**
-     * <p>The project description.</p>
+     * <p>The description of the cloud editing project.</p>
      * 
      * <strong>example:</strong>
      * <p>testtimeline001desciption</p>
@@ -47,7 +45,7 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project ID.</p>
+     * <p>The ID of the cloud editing project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +55,7 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The template ID. Use this parameter to quickly build a timeline.&gt;Notice: You can specify only one of <code>ProjectId</code>, <code>Timeline</code>, and <code>TemplateId</code>. If you specify <code>TemplateId</code>, <code>ClipsParam</code> is required.</p>
+     * <p>The template ID, which is used to quickly build a timeline with minimal effort.&gt;Notice: Exactly one of ProjectId, Timeline, and TemplateId must be specified. If TemplateId is specified, ClipsParam must also be specified.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -66,13 +64,13 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The project timeline, in JSON format.</p>
+     * <p>The timeline of the cloud editing project in JSON format.</p>
      */
     @NameInMap("Timeline")
     public String timeline;
 
     /**
-     * <p>The project title.</p>
+     * <p>The title of the cloud editing project.</p>
      * 
      * <strong>example:</strong>
      * <p>testtimeline</p>

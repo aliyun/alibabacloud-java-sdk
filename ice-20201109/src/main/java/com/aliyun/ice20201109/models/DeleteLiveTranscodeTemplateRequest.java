@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveTranscodeTemplateRequest extends TeaModel {
     /**
-     * <p>The template ID. To obtain the template ID, log on to the <a href="https://ice.console.aliyun.com/summary">Intelligent Media Services (IMS) console</a>, choose Real-time Media Processing &gt; Template Management, and then click the Transcoding tab. Alternatively, find the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/449217.html">CreateLiveTranscodeTemplate</a> operation.</p>
+     * <p>The template ID. You can obtain the ID from the <a href="https://ice.console.aliyun.com/summary">Intelligent Media Services console</a> &gt; Template Management &gt; Real-time Transcoding Template, or from the response parameters of <a href="https://help.aliyun.com/document_detail/449217.html">CreateLiveTranscodeTemplate</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
     /**
-     * <p>The information about the origin endpoint.</p>
+     * <p>The LivePackageOriginEndpoint object.</p>
      */
     @NameInMap("LivePackageOriginEndpoint")
     public CreateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint livePackageOriginEndpoint;
@@ -51,7 +51,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String authorizationCode;
 
         /**
-         * <p>The channel name.</p>
+         * <p>The name of the channel.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-1</p>
@@ -69,7 +69,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The endpoint description.</p>
+         * <p>The description of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>This is an origin endpoint.</p>
@@ -78,7 +78,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The endpoint name.</p>
+         * <p>The name of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>endpoint-1</p>
@@ -87,7 +87,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String endpointName;
 
         /**
-         * <p>The endpoint URL.</p>
+         * <p>The playback URL of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
@@ -96,7 +96,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String endpointUrl;
 
         /**
-         * <p>The channel group name.</p>
+         * <p>The name of the channel group.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-group-1</p>
@@ -105,7 +105,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP address blacklist.</p>
+         * <p>The IP blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>103.21.222.1/32,192.168.100.0/24</p>
@@ -114,7 +114,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
-         * <p>The IP address whitelist.</p>
+         * <p>The IP whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -132,13 +132,13 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>Live packaging configuration</p>
+         * <p>The live packaging configuration.</p>
          */
         @NameInMap("LivePackagingConfig")
         public LivePackagingConfig livePackagingConfig;
 
         /**
-         * <p>The playlist name.</p>
+         * <p>The manifest name.</p>
          * 
          * <strong>example:</strong>
          * <p>manifest</p>
@@ -147,7 +147,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String manifestName;
 
         /**
-         * <p>The protocol. Only HLS is supported.</p>
+         * <p>The protocol. Currently, only HLS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>HLS</p>
@@ -156,7 +156,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of days that time-shifted content is available. Maximum value: 30.</p>
+         * <p>The number of days for time-shifting. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

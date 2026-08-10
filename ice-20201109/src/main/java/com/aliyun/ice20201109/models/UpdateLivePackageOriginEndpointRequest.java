@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     /**
-     * <p>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</p>
+     * <p>The authorization code. You must specify at least one of AuthorizationCode and IpWhitelist. Maximum length: 200 characters. Format: [A-Za-z0-9-_.]+</p>
      * 
      * <strong>example:</strong>
      * <p>Abc123Def456</p>
@@ -14,7 +14,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String authorizationCode;
 
     /**
-     * <p>The channel name.</p>
+     * <p>The name of an existing channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The endpoint description.</p>
+     * <p>The description of the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>This is an origin endpoint.</p>
@@ -33,7 +33,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The origin endpoint name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+     * <p>The name of the origin endpoint. The name can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The channel group name.</p>
+     * <p>The name of an existing channel group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The IP address blacklist. It supports subnet masks. Separate multiple IP addresses with commas (,).</p>
+     * <p>The IP blacklist. Subnet masks are supported. Separate multiple IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>103.0.0.0/8</p>
@@ -62,7 +62,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String ipBlacklist;
 
     /**
-     * <p>The IP address whitelist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,). You must configure AuthorizationCode, IpWhitelist, or both.</p>
+     * <p>The IP whitelist. Subnet masks are supported. The value 0.0.0.0/0 is not allowed. Separate multiple IP addresses with commas (,). You must specify at least one of IpWhitelist and AuthorizationCode. Maximum length: 1000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.0/24,10.0.0.1</p>
@@ -71,7 +71,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String ipWhitelist;
 
     /**
-     * <p>Live stream encapsulation configuration</p>
+     * <p>The live packaging configuration.</p>
      */
     @NameInMap("LivePackagingConfig")
     public LivePackagingConfig livePackagingConfig;
@@ -86,7 +86,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String manifestName;
 
     /**
-     * <p>The protocol. Only HLS is supported.</p>
+     * <p>The protocol. Currently, only HLS is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The number of days that time-shifted content is available. Maximum value: 30.</p>
+     * <p>The number of time-shifting days. Maximum value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

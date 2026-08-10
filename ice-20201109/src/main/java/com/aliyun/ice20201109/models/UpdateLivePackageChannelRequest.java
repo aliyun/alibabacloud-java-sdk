@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelRequest extends TeaModel {
     /**
-     * <p>The channel name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+     * <p>The channel name. The name can contain only uppercase and lowercase letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The channel description. It can be up to 1,000 characters in length.</p>
+     * <p>The description. Maximum length: 1000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a test channel.</p>
@@ -24,7 +24,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The channel group name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+     * <p>The channel group name. The name can contain only uppercase and lowercase letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ingest protocol. Only HLS is supported.</p>
+     * <p>The input protocol. Currently, only HLS is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,8 +44,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The number of M3U8 segments. Valid values: 2 to 100.</p>
-     * <p>This parameter is required.</p>
+     * <p>The number of segments in the input stream m3u8 file. Valid values: 2 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -54,8 +53,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public Integer segmentCount;
 
     /**
-     * <p>The segment duration. Valid values: 1 to 30.</p>
-     * <p>This parameter is required.</p>
+     * <p>The segment duration of the input stream. Valid values: 1 to 30.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>

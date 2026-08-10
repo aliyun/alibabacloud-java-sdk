@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     /**
-     * <p>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</p>
+     * <p>The authorization code. You must specify at least one of AuthorizationCode and IpWhitelist. Maximum length: 200 characters. Format: [A-Za-z0-9-_.]+</p>
      * 
      * <strong>example:</strong>
      * <p>AbcDef123</p>
@@ -14,7 +14,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String authorizationCode;
 
     /**
-     * <p>The channel name.</p>
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>0311a423d11a5f7dee713535</strong></strong></p>
@@ -33,7 +33,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The endpoint description.</p>
+     * <p>The description of the endpoint.</p>
      * 
      * <strong>example:</strong>
      * <p>This is an origin endpoint.</p>
@@ -42,7 +42,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The origin endpoint name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
+     * <p>The name of the origin endpoint. The name must contain only letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The channel group name.</p>
+     * <p>The name of the channel group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The IP address blacklist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,).</p>
+     * <p>The IP blacklist. Subnet masks are supported. The value 0.0.0.0/0 is not allowed. Separate multiple IP addresses with commas (,). Maximum length: 1000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>103.21.222.1/32,192.168.100.0/24</p>
@@ -71,7 +71,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String ipBlacklist;
 
     /**
-     * <p>The IP address whitelist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,). You must configure AuthorizationCode, IpWhitelist, or both.</p>
+     * <p>The IP whitelist. Subnet masks are supported. The value 0.0.0.0/0 is not allowed. Separate multiple IP addresses with commas (,). You must specify at least one of IpWhitelist and AuthorizationCode. Maximum length: 1000 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -80,13 +80,13 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String ipWhitelist;
 
     /**
-     * <p>Live stream encapsulation configuration</p>
+     * <p>The live packaging configuration.</p>
      */
     @NameInMap("LivePackagingConfig")
     public String livePackagingConfigShrink;
 
     /**
-     * <p>The playlist name. Default value: manifest.</p>
+     * <p>The manifest name. Default value: manifest.</p>
      * 
      * <strong>example:</strong>
      * <p>manifest</p>
@@ -105,7 +105,7 @@ public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The number of days that time-shifted content is available. Maximum value: 30. Default value: 0, which indicates that time shifting is not supported.</p>
+     * <p>The number of days for time-shifting. Maximum value: 30. Default value: 0, which indicates that time-shifting is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

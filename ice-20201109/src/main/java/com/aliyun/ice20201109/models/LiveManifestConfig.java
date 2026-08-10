@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class LiveManifestConfig extends TeaModel {
     /**
-     * <p>The type of ad markers to include in the manifest.</p>
+     * <p>The ad markers supported in the playlist. Valid values:</p>
      * <ul>
-     * <li>NONE: Removes all ad markers.</li>
-     * <li>DATE_RANGE: Inserts EXT-X-DATERANGE tags (HLS spec). Valid for HLS/HLS-CMAF endpoints.</li>
-     * <li>XML: Inserts XML-based ad markers (DASH spec). Valid for DASH endpoints.</li>
+     * <li>NONE: removes ad markers.</li>
+     * <li>DATE_RANGE: uses the EXT-X-DATERANGE tag defined in the HLS specification. This value is available when the endpoint protocol is HLS/HLS_CMAF.</li>
+     * <li>XML: uses the XML ad markers defined in the DASH specification. This value is available when the endpoint protocol is DASH.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class LiveManifestConfig extends TeaModel {
     public String adMarkers;
 
     /**
-     * <p>The interval, in seconds, at which to insert the EXT-X-PROGRAM-DATE-TIME tag into the playlist. By default, no tags are inserted. Valid values: 1 to 3600. Applies only to HLS and HLS-CMAF endpoints.</p>
+     * <p>The interval (in seconds) for inserting the EXT-X-PROGRAM-DATE-TIME time tag. By default, the tag is not inserted. Valid values: 1 to 3600. This parameter applies to the HLS/HLS_CMAF protocol.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -28,7 +28,7 @@ public class LiveManifestConfig extends TeaModel {
     public Integer dateTimeInterval;
 
     /**
-     * <p>The duration of the startover window, in seconds. It defines the maximum time a viewer can seek backward in the live stream. Valid values: 1 to 3600. Default value: 60. Applies only to DASH endpoints.</p>
+     * <p>The maximum time-shift duration during live streaming. Unit: seconds. Valid values: 1 to 3600. Default value: 60. This parameter applies to DASH.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -37,7 +37,7 @@ public class LiveManifestConfig extends TeaModel {
     public Integer manifestDuration;
 
     /**
-     * <p>The maximum bitrate threshold (in bits per second) that video tracks must be at or below to be available for playback from this endpoint. It must be a positive integer. If not set, no maximum bitrate is enforced.</p>
+     * <p>The maximum input bitrate threshold (unit: bit/s). A video track must have a bitrate less than or equal to this threshold to be played from this endpoint. Valid values: integers greater than 0. By default, this parameter is empty and no maximum bitrate limit is set.</p>
      * 
      * <strong>example:</strong>
      * <p>8000000</p>
@@ -46,8 +46,10 @@ public class LiveManifestConfig extends TeaModel {
     public Integer maxVideoBitrate;
 
     /**
-     * <p>The minimum buffer time, in seconds. Valid values: 1 to 30. Default value: the duration of two segments. Applies only to DASH endpoints.</p>
-     * <p>Note: Setting this value too low may cause playback to stutter. We recommend a value no less than two segment durations.</p>
+     * <p>The minimum buffer time. Unit: seconds. Valid values: 1 to 30. Default value: 2 segment durations. This parameter applies only to DASH.</p>
+     * <blockquote>
+     * <p> An excessively small minimum buffer time may cause playback stuttering. Set this parameter to a value no less than 2 segment durations.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -56,8 +58,10 @@ public class LiveManifestConfig extends TeaModel {
     public Integer minBufferTime;
 
     /**
-     * <p>The minimum update period for the manifest, in seconds. Valid values: 1 to 3600. Default value: the duration of two segments. Applies only to DASH endpoints.</p>
-     * <p>Note: For smooth playback, set this value to be less than MinBufferTime.</p>
+     * <p>The minimum update interval. Unit: seconds. Valid values: 1 to 3600. Default value: 2 segment durations. This parameter applies to DASH.</p>
+     * <blockquote>
+     * <p> Set this parameter to a value less than the minimum buffer time. An excessively large value may cause DASH playback stuttering.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -66,7 +70,7 @@ public class LiveManifestConfig extends TeaModel {
     public Integer minUpdatePeriod;
 
     /**
-     * <p>The minimum bitrate threshold (in bits per second) that video tracks must be at or above to be available for playback from this endpoint. It must be a positive integer. If not set, no minimum bitrate is enforced.</p>
+     * <p>The minimum input bitrate threshold (unit: bit/s). A video track must have a bitrate greater than or equal to this threshold to be played from this endpoint. Valid values: integers greater than 0. By default, this parameter is empty and no minimum bitrate is set.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000</p>
@@ -74,8 +78,11 @@ public class LiveManifestConfig extends TeaModel {
     @NameInMap("MinVideoBitrate")
     public Integer minVideoBitrate;
 
+    @NameInMap("PartHoldBackMs")
+    public Integer partHoldBackMs;
+
     /**
-     * <p>The suggested presentation delay, in seconds. Valid values: 1 to 60. Default value: the duration of three segments.</p>
+     * <p>The suggested presentation delay. Unit: seconds. Valid values: 1 to 60. Default value: 3 segment durations.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -84,7 +91,7 @@ public class LiveManifestConfig extends TeaModel {
     public Integer presentationDelay;
 
     /**
-     * <p>The number of segments to include in the playlist. Applies to HLS and HLS-CMAF protocols. If not set, the channel\&quot;s default configuration is used. Valid values: 2 to 100.</p>
+     * <p>The number of segments. This parameter applies to the HLS/HLS_CMAF protocol. By default, the channel configuration is used. Valid values: 2 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -93,7 +100,7 @@ public class LiveManifestConfig extends TeaModel {
     public Integer segmentCount;
 
     /**
-     * <p>The format of the segment template. Only NUMBER_TIMELINE is supported (default). Applies only to DASH endpoints.</p>
+     * <p>The segment template. Currently, only NUMBER_TIMELINE (default) is supported. This parameter applies to DASH.</p>
      * 
      * <strong>example:</strong>
      * <p>NUMBER_TIMELINE</p>
@@ -102,11 +109,11 @@ public class LiveManifestConfig extends TeaModel {
     public String segmentTemplateFormat;
 
     /**
-     * <p>The order of streams in the master playlist. Valid values:</p>
+     * <p>The stream sorting rule. Valid values:</p>
      * <ul>
-     * <li>ORIGINAL: Preserves the original order of the input streams.</li>
-     * <li>VIDEO_BITRATE_ASCENDING: sorts the streams in ascending order of bitrates, from lowest to highest.</li>
-     * <li>VIDEO_BITRATE_DESCENDING: sorts the streams in descending order of bitrates, from highest to lowest.</li>
+     * <li>ORIGINAL: retains the original order of the input sub-manifest.</li>
+     * <li>VIDEO_BITRATE_ASCENDING: sorts by video stream bitrate in ascending order.</li>
+     * <li>VIDEO_BITRATE_DESCENDING: sorts by video stream bitrate in descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -174,6 +181,14 @@ public class LiveManifestConfig extends TeaModel {
     }
     public Integer getMinVideoBitrate() {
         return this.minVideoBitrate;
+    }
+
+    public LiveManifestConfig setPartHoldBackMs(Integer partHoldBackMs) {
+        this.partHoldBackMs = partHoldBackMs;
+        return this;
+    }
+    public Integer getPartHoldBackMs() {
+        return this.partHoldBackMs;
     }
 
     public LiveManifestConfig setPresentationDelay(Integer presentationDelay) {
