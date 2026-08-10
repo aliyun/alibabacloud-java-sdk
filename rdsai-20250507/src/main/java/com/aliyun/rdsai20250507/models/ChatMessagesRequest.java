@@ -19,6 +19,9 @@ public class ChatMessagesRequest extends TeaModel {
     @NameInMap("EventMode")
     public String eventMode;
 
+    @NameInMap("Files")
+    public java.util.List<ChatMessagesRequestFiles> files;
+
     /**
      * <p>The task input.</p>
      */
@@ -65,6 +68,14 @@ public class ChatMessagesRequest extends TeaModel {
         return this.eventMode;
     }
 
+    public ChatMessagesRequest setFiles(java.util.List<ChatMessagesRequestFiles> files) {
+        this.files = files;
+        return this;
+    }
+    public java.util.List<ChatMessagesRequestFiles> getFiles() {
+        return this.files;
+    }
+
     public ChatMessagesRequest setInputs(ChatMessagesRequestInputs inputs) {
         this.inputs = inputs;
         return this;
@@ -87,6 +98,47 @@ public class ChatMessagesRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public static class ChatMessagesRequestFiles extends TeaModel {
+        @NameInMap("TransferMethod")
+        public String transferMethod;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UploadFileId")
+        public String uploadFileId;
+
+        public static ChatMessagesRequestFiles build(java.util.Map<String, ?> map) throws Exception {
+            ChatMessagesRequestFiles self = new ChatMessagesRequestFiles();
+            return TeaModel.build(map, self);
+        }
+
+        public ChatMessagesRequestFiles setTransferMethod(String transferMethod) {
+            this.transferMethod = transferMethod;
+            return this;
+        }
+        public String getTransferMethod() {
+            return this.transferMethod;
+        }
+
+        public ChatMessagesRequestFiles setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ChatMessagesRequestFiles setUploadFileId(String uploadFileId) {
+            this.uploadFileId = uploadFileId;
+            return this;
+        }
+        public String getUploadFileId() {
+            return this.uploadFileId;
+        }
+
     }
 
     public static class ChatMessagesRequestInputs extends TeaModel {

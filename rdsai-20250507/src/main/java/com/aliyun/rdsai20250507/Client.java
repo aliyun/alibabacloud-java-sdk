@@ -10,8 +10,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("us-west-1", "rdsai.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "rdsai.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "rdsai.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "rdsai.aliyuncs.com"),
             new TeaPair("cn-shanghai", "rdsai.aliyuncs.com"),
@@ -23,7 +21,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "rdsai.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "rdsai.us-west-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("rdsai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -54,6 +54,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ChatMessagesShrinkRequest request = new ChatMessagesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.files)) {
+            request.filesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.files, "Files", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputs)) {
             request.inputsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputs, "Inputs", "json");
         }
@@ -65,6 +69,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventMode)) {
             query.put("EventMode", request.eventMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
+            query.put("Files", request.filesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputsShrink)) {
@@ -360,6 +368,184 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAppInstanceResponse createAppInstance(CreateAppInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAppInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建 API Key（返回明文 apiKey）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建上下文数据库 API Key</p>
+     * 
+     * @param request CreateContextDatabaseApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextDatabaseApiKeyResponse
+     */
+    public CreateContextDatabaseApiKeyResponse createContextDatabaseApiKeyWithOptions(CreateContextDatabaseApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextDatabaseApiKey"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextDatabaseApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建 API Key（返回明文 apiKey）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建上下文数据库 API Key</p>
+     * 
+     * @param request CreateContextDatabaseApiKeyRequest
+     * @return CreateContextDatabaseApiKeyResponse
+     */
+    public CreateContextDatabaseApiKeyResponse createContextDatabaseApiKey(CreateContextDatabaseApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContextDatabaseApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建上下文数据库成员</p>
+     * 
+     * @param request CreateContextDatabaseMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextDatabaseMemberResponse
+     */
+    public CreateContextDatabaseMemberResponse createContextDatabaseMemberWithOptions(CreateContextDatabaseMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generateInitialKey)) {
+            query.put("GenerateInitialKey", request.generateInitialKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initialKeyName)) {
+            query.put("InitialKeyName", request.initialKeyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberName)) {
+            query.put("MemberName", request.memberName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextDatabaseMember"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextDatabaseMemberResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建上下文数据库成员</p>
+     * 
+     * @param request CreateContextDatabaseMemberRequest
+     * @return CreateContextDatabaseMemberResponse
+     */
+    public CreateContextDatabaseMemberResponse createContextDatabaseMember(CreateContextDatabaseMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContextDatabaseMemberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建上下文数据库工作区</p>
+     * 
+     * @param request CreateContextDatabaseWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContextDatabaseWorkspaceResponse
+     */
+    public CreateContextDatabaseWorkspaceResponse createContextDatabaseWorkspaceWithOptions(CreateContextDatabaseWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.memberName)) {
+            query.put("MemberName", request.memberName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContextDatabaseWorkspace"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContextDatabaseWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建上下文数据库工作区</p>
+     * 
+     * @param request CreateContextDatabaseWorkspaceRequest
+     * @return CreateContextDatabaseWorkspaceResponse
+     */
+    public CreateContextDatabaseWorkspaceResponse createContextDatabaseWorkspace(CreateContextDatabaseWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContextDatabaseWorkspaceWithOptions(request, runtime);
     }
 
     /**
@@ -962,6 +1148,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAppInstanceResponse deleteAppInstance(DeleteAppInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAppInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除成员（硬删除，不可恢复）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除上下文数据库成员</p>
+     * 
+     * @param request DeleteContextDatabaseMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextDatabaseMemberResponse
+     */
+    public DeleteContextDatabaseMemberResponse deleteContextDatabaseMemberWithOptions(DeleteContextDatabaseMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContextDatabaseMember"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextDatabaseMemberResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除成员（硬删除，不可恢复）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除上下文数据库成员</p>
+     * 
+     * @param request DeleteContextDatabaseMemberRequest
+     * @return DeleteContextDatabaseMemberResponse
+     */
+    public DeleteContextDatabaseMemberResponse deleteContextDatabaseMember(DeleteContextDatabaseMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteContextDatabaseMemberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除上下文数据库工作区</p>
+     * 
+     * @param request DeleteContextDatabaseWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContextDatabaseWorkspaceResponse
+     */
+    public DeleteContextDatabaseWorkspaceResponse deleteContextDatabaseWorkspaceWithOptions(DeleteContextDatabaseWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContextDatabaseWorkspace"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContextDatabaseWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除上下文数据库工作区</p>
+     * 
+     * @param request DeleteContextDatabaseWorkspaceRequest
+     * @return DeleteContextDatabaseWorkspaceResponse
+     */
+    public DeleteContextDatabaseWorkspaceResponse deleteContextDatabaseWorkspace(DeleteContextDatabaseWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteContextDatabaseWorkspaceWithOptions(request, runtime);
     }
 
     /**
@@ -2644,7 +2934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of messages in a specific conversation.</p>
+     * <p>Queries the details of specific conversation messages.</p>
      * 
      * @param request GetMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2688,7 +2978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of messages in a specific conversation.</p>
+     * <p>Queries the details of specific conversation messages.</p>
      * 
      * @param request GetMessagesRequest
      * @return GetMessagesResponse
@@ -3019,6 +3309,200 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListApiKeysResponse listApiKeys(ListApiKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listApiKeysWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>列出指定成员名下的 API Key（不返回明文）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出成员名下 API Key</p>
+     * 
+     * @param request ListContextDatabaseApiKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseApiKeysResponse
+     */
+    public ListContextDatabaseApiKeysResponse listContextDatabaseApiKeysWithOptions(ListContextDatabaseApiKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseApiKeys"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseApiKeysResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>列出指定成员名下的 API Key（不返回明文）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出成员名下 API Key</p>
+     * 
+     * @param request ListContextDatabaseApiKeysRequest
+     * @return ListContextDatabaseApiKeysResponse
+     */
+    public ListContextDatabaseApiKeysResponse listContextDatabaseApiKeys(ListContextDatabaseApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseApiKeysWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作区成员</p>
+     * 
+     * @param request ListContextDatabaseMembersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseMembersResponse
+     */
+    public ListContextDatabaseMembersResponse listContextDatabaseMembersWithOptions(ListContextDatabaseMembersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseMembers"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseMembersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出工作区成员</p>
+     * 
+     * @param request ListContextDatabaseMembersRequest
+     * @return ListContextDatabaseMembersResponse
+     */
+    public ListContextDatabaseMembersResponse listContextDatabaseMembers(ListContextDatabaseMembersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseMembersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定条件下的工作区列表。</li>
+     * <li><code>workspaceId</code> 和 <code>status</code> 参数均为可选，可以根据需要进行过滤。</li>
+     * <li>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</li>
+     * <li>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>根据workspaceId和状态过滤调用方账号下的工作区列表。</p>
+     * 
+     * @param request ListContextDatabaseWorkspacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListContextDatabaseWorkspacesResponse
+     */
+    public ListContextDatabaseWorkspacesResponse listContextDatabaseWorkspacesWithOptions(ListContextDatabaseWorkspacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListContextDatabaseWorkspaces"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListContextDatabaseWorkspacesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定条件下的工作区列表。</li>
+     * <li><code>workspaceId</code> 和 <code>status</code> 参数均为可选，可以根据需要进行过滤。</li>
+     * <li>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</li>
+     * <li>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>根据workspaceId和状态过滤调用方账号下的工作区列表。</p>
+     * 
+     * @param request ListContextDatabaseWorkspacesRequest
+     * @return ListContextDatabaseWorkspacesResponse
+     */
+    public ListContextDatabaseWorkspacesResponse listContextDatabaseWorkspaces(ListContextDatabaseWorkspacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listContextDatabaseWorkspacesWithOptions(request, runtime);
     }
 
     /**
@@ -4478,6 +4962,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>吊销 API Key。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>吊销上下文数据库 API Key</p>
+     * 
+     * @param request RevokeContextDatabaseApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeContextDatabaseApiKeyResponse
+     */
+    public RevokeContextDatabaseApiKeyResponse revokeContextDatabaseApiKeyWithOptions(RevokeContextDatabaseApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyId)) {
+            query.put("KeyId", request.keyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeContextDatabaseApiKey"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeContextDatabaseApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>吊销 API Key。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>吊销上下文数据库 API Key</p>
+     * 
+     * @param request RevokeContextDatabaseApiKeyRequest
+     * @return RevokeContextDatabaseApiKeyResponse
+     */
+    public RevokeContextDatabaseApiKeyResponse revokeContextDatabaseApiKey(RevokeContextDatabaseApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeContextDatabaseApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related feature documentation</h3>
@@ -4668,6 +5210,188 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApiKeyQuotaResponse updateApiKeyQuota(UpdateApiKeyQuotaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateApiKeyQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新上下文数据库 API Key 元数据</p>
+     * 
+     * @param request UpdateContextDatabaseApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseApiKeyResponse
+     */
+    public UpdateContextDatabaseApiKeyResponse updateContextDatabaseApiKeyWithOptions(UpdateContextDatabaseApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyId)) {
+            query.put("KeyId", request.keyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseApiKey"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新上下文数据库 API Key 元数据</p>
+     * 
+     * @param request UpdateContextDatabaseApiKeyRequest
+     * @return UpdateContextDatabaseApiKeyResponse
+     */
+    public UpdateContextDatabaseApiKeyResponse updateContextDatabaseApiKey(UpdateContextDatabaseApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseApiKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新成员的角色 / 状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新上下文数据库成员</p>
+     * 
+     * @param request UpdateContextDatabaseMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseMemberResponse
+     */
+    public UpdateContextDatabaseMemberResponse updateContextDatabaseMemberWithOptions(UpdateContextDatabaseMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.memberId)) {
+            query.put("MemberId", request.memberId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseMember"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseMemberResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新成员的角色 / 状态。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新上下文数据库成员</p>
+     * 
+     * @param request UpdateContextDatabaseMemberRequest
+     * @return UpdateContextDatabaseMemberResponse
+     */
+    public UpdateContextDatabaseMemberResponse updateContextDatabaseMember(UpdateContextDatabaseMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseMemberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>修改 workspace 名称。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改上下文数据库工作区</p>
+     * 
+     * @param request UpdateContextDatabaseWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContextDatabaseWorkspaceResponse
+     */
+    public UpdateContextDatabaseWorkspaceResponse updateContextDatabaseWorkspaceWithOptions(UpdateContextDatabaseWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContextDatabaseWorkspace"),
+            new TeaPair("version", "2025-05-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContextDatabaseWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>修改 workspace 名称。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>修改上下文数据库工作区</p>
+     * 
+     * @param request UpdateContextDatabaseWorkspaceRequest
+     * @return UpdateContextDatabaseWorkspaceResponse
+     */
+    public UpdateContextDatabaseWorkspaceResponse updateContextDatabaseWorkspace(UpdateContextDatabaseWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContextDatabaseWorkspaceWithOptions(request, runtime);
     }
 
     /**

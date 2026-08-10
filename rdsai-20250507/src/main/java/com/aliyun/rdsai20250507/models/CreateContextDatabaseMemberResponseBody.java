@@ -1,0 +1,305 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.rdsai20250507.models;
+
+import com.aliyun.tea.*;
+
+public class CreateContextDatabaseMemberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ctxdb-*****</p>
+     */
+    @NameInMap("ApiKey")
+    public String apiKey;
+
+    @NameInMap("Member")
+    public CreateContextDatabaseMemberResponseBodyMember member;
+
+    /**
+     * <strong>example:</strong>
+     * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static CreateContextDatabaseMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateContextDatabaseMemberResponseBody self = new CreateContextDatabaseMemberResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateContextDatabaseMemberResponseBody setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
+    }
+
+    public CreateContextDatabaseMemberResponseBody setMember(CreateContextDatabaseMemberResponseBodyMember member) {
+        this.member = member;
+        return this;
+    }
+    public CreateContextDatabaseMemberResponseBodyMember getMember() {
+        return this.member;
+    }
+
+    public CreateContextDatabaseMemberResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class CreateContextDatabaseMemberResponseBodyMemberKeys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2026-05-28T17:59:55Z</p>
+         */
+        @NameInMap("CreatedAt")
+        public String createdAt;
+
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <strong>example:</strong>
+         * <p>(null)</p>
+         */
+        @NameInMap("ExpiresAt")
+        public String expiresAt;
+
+        /**
+         * <strong>example:</strong>
+         * <p>33631c</p>
+         */
+        @NameInMap("KeyDisplaySuffix")
+        public String keyDisplaySuffix;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("KeyId")
+        public Long keyId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ctxdb-</p>
+         */
+        @NameInMap("KeyPrefix")
+        public String keyPrefix;
+
+        /**
+         * <strong>example:</strong>
+         * <p>(null)</p>
+         */
+        @NameInMap("LastUsedAt")
+        public String lastUsedAt;
+
+        /**
+         * <strong>example:</strong>
+         * <p>my-key</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>(null)</p>
+         */
+        @NameInMap("RevokedAt")
+        public String revokedAt;
+
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static CreateContextDatabaseMemberResponseBodyMemberKeys build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextDatabaseMemberResponseBodyMemberKeys self = new CreateContextDatabaseMemberResponseBodyMemberKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setExpiresAt(String expiresAt) {
+            this.expiresAt = expiresAt;
+            return this;
+        }
+        public String getExpiresAt() {
+            return this.expiresAt;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setKeyDisplaySuffix(String keyDisplaySuffix) {
+            this.keyDisplaySuffix = keyDisplaySuffix;
+            return this;
+        }
+        public String getKeyDisplaySuffix() {
+            return this.keyDisplaySuffix;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setKeyId(Long keyId) {
+            this.keyId = keyId;
+            return this;
+        }
+        public Long getKeyId() {
+            return this.keyId;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setKeyPrefix(String keyPrefix) {
+            this.keyPrefix = keyPrefix;
+            return this;
+        }
+        public String getKeyPrefix() {
+            return this.keyPrefix;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setLastUsedAt(String lastUsedAt) {
+            this.lastUsedAt = lastUsedAt;
+            return this;
+        }
+        public String getLastUsedAt() {
+            return this.lastUsedAt;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setRevokedAt(String revokedAt) {
+            this.revokedAt = revokedAt;
+            return this;
+        }
+        public String getRevokedAt() {
+            return this.revokedAt;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMemberKeys setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class CreateContextDatabaseMemberResponseBodyMember extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2026-05-28T17:59:55Z</p>
+         */
+        @NameInMap("CreatedAt")
+        public String createdAt;
+
+        @NameInMap("Keys")
+        public java.util.List<CreateContextDatabaseMemberResponseBodyMemberKeys> keys;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mb-cz51tnnp8****</p>
+         */
+        @NameInMap("MemberId")
+        public String memberId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Alice</p>
+         */
+        @NameInMap("MemberName")
+        public String memberName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
+        @NameInMap("Role")
+        public String role;
+
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static CreateContextDatabaseMemberResponseBodyMember build(java.util.Map<String, ?> map) throws Exception {
+            CreateContextDatabaseMemberResponseBodyMember self = new CreateContextDatabaseMemberResponseBodyMember();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMember setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMember setKeys(java.util.List<CreateContextDatabaseMemberResponseBodyMemberKeys> keys) {
+            this.keys = keys;
+            return this;
+        }
+        public java.util.List<CreateContextDatabaseMemberResponseBodyMemberKeys> getKeys() {
+            return this.keys;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMember setMemberId(String memberId) {
+            this.memberId = memberId;
+            return this;
+        }
+        public String getMemberId() {
+            return this.memberId;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMember setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMember setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public CreateContextDatabaseMemberResponseBodyMember setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+}

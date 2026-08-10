@@ -1,3 +1,18 @@
+2026-08-10 Version: 3.8.0
+- Support API CreateContextDatabaseApiKey.
+- Support API CreateContextDatabaseMember.
+- Support API CreateContextDatabaseWorkspace.
+- Support API DeleteContextDatabaseMember.
+- Support API DeleteContextDatabaseWorkspace.
+- Support API ListContextDatabaseApiKeys.
+- Support API ListContextDatabaseMembers.
+- Support API ListContextDatabaseWorkspaces.
+- Support API RevokeContextDatabaseApiKey.
+- Support API UpdateContextDatabaseApiKey.
+- Support API UpdateContextDatabaseMember.
+- Support API UpdateContextDatabaseWorkspace.
+
+
 2026-08-06 Version: 3.7.0
 - Support API DescribeMOTokenUsageSummary.
 

@@ -19,6 +19,9 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     @NameInMap("EventMode")
     public String eventMode;
 
+    @NameInMap("Files")
+    public String filesShrink;
+
     /**
      * <p>The task input.</p>
      */
@@ -63,6 +66,14 @@ public class ChatMessagesShrinkRequest extends TeaModel {
     }
     public String getEventMode() {
         return this.eventMode;
+    }
+
+    public ChatMessagesShrinkRequest setFilesShrink(String filesShrink) {
+        this.filesShrink = filesShrink;
+        return this;
+    }
+    public String getFilesShrink() {
+        return this.filesShrink;
     }
 
     public ChatMessagesShrinkRequest setInputsShrink(String inputsShrink) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMessagesRequest extends TeaModel {
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>941c6f59-acf5-4e11-9adc-31e52e1f****</p>
@@ -17,7 +17,7 @@ public class GetMessagesRequest extends TeaModel {
     public String eventMode;
 
     /**
-     * <p>The ID of the message from which to start fetching the list. Use this for pagination.</p>
+     * <p>The ID of the first message.</p>
      * 
      * <strong>example:</strong>
      * <p>038866af-a050-4bc5-bfad-b7bfc838****</p>
@@ -26,7 +26,7 @@ public class GetMessagesRequest extends TeaModel {
     public String firstId;
 
     /**
-     * <p>The maximum number of messages to return per page. Valid values: 1–100. Default: 100.</p>
+     * <p>The number of entries per page in a paging query. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
