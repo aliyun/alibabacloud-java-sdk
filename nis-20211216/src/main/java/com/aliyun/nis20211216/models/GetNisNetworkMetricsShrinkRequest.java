@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetNisNetworkMetricsShrinkRequest extends TeaModel {
     /**
-     * <p>Explicitly passes sub-account IDs.</p>
+     * <p>Explicitly passes member account IDs.</p>
      */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The start time, in <strong>ms</strong>, in <strong>UNIX</strong> timestamp format. If not specified, the most recent 1 hour is queried by default. The earliest start time is 7 days ago.</p>
+     * <p>The start time, in <strong>ms</strong>, in <strong>UNIX</strong> timestamp format. If not specified, the most recent 1 hour is queried by default. The earliest start time can be 7 days ago.</p>
      * 
      * <strong>example:</strong>
      * <p>1638239092000</p>
@@ -46,7 +46,7 @@ public class GetNisNetworkMetricsShrinkRequest extends TeaModel {
      * <li>rtt: round-trip time when establishing a TCP connection.</li>
      * <li>RetransmitRate: retransmission rate.</li>
      * <li>RatelimitDropPps: rate of packets dropped due to throttling.</li>
-     * <li>ActiveSessionCount: concurrent sessions.</li>
+     * <li>ActiveSessionCount: concurrent session count.</li>
      * <li>NewSessionPerSecond: new sessions per second.</li>
      * <li>BandwidthUtilization: bandwidth utilization.</li>
      * <li>passRate: inspection pass rate.<blockquote>
@@ -80,12 +80,11 @@ public class GetNisNetworkMetricsShrinkRequest extends TeaModel {
      * <li>ElasticIP: Elastic IP Address (EIP) (IPv4).</li>
      * <li>PublicIpEcs: static public IP address bound to an ECS instance (IPv4).</li>
      * <li>PublicIpClb: static public IP address bound to a CLB instance (IPv4).</li>
-     * <li>NAT: public traffic through SNAT.</li>
+     * <li>NAT: public network traffic through SNAT.</li>
      * <li>TR: traffic through Cloud Enterprise Network (CEN) transit routers.</li>
      * <li>TRAttachment: traffic through CEN connection instances, including intra-region and inter-region connections. Intra-region connections have inbound and outbound directions. Inter-region connections have only the outbound direction.</li>
      * <li>VBR: traffic through virtual border routers.</li>
      * <li>GA: traffic through Global Accelerator.</li>
-     * <li>InternetProbing: Internet quality probing data.</li>
      * <li>IntranetProbing: internal network quality probing data.</li>
      * <li>NisInspectionHistoryReportScore: inspection history scores.</li>
      * </ul>
@@ -114,7 +113,7 @@ public class GetNisNetworkMetricsShrinkRequest extends TeaModel {
     public Integer stepMinutes;
 
     /**
-     * <p>Specifies whether to use cross-account access mode. This is a reserved parameter and is not currently supported.</p>
+     * <p>Specifies whether to use multi-account access mode. This is a reserved parameter and is not currently supported.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

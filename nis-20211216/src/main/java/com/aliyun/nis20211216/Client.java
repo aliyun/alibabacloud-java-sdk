@@ -4478,113 +4478,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>API data is synchronized every 6 hours. You can query current network analysis data only after 6 hours.
      * Supported analysis scenarios: </li>
-     * <li>Internet performance observation dashboard scenario</li>
      * <li>Cross-zone internal network performance observation dashboard scenario</li>
      * <li>Cross-region internal network performance observation dashboard scenario</li>
      * </ul>
-     * <h2>Internet performance observation dashboard scenario</h2>
-     * <p><strong>Note</strong>
-     * The maximum query time span is 24 hours. If not specified, the most recent 1 hour is queried by default. The query result contains one data point per minute.</p>
-     * <h3><strong>Request parameters</strong></h3>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th><strong>Name</strong></th>
-     * <th><strong>Type</strong></th>
-     * <th><strong>Required</strong></th>
-     * <th><strong>Description</strong></th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RegionNo</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>The Alibaba Cloud region where the probing source is located.</td>
-     * </tr>
-     * <tr>
-     * <td>ResourceType</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>Set to <strong>InternetProbing</strong> to query Internet performance monitoring trends.</td>
-     * </tr>
-     * <tr>
-     * <td>MetricName</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>The metric for which to query trends. Valid value: <strong>rtt</strong>, the round-trip time of probing.</td>
-     * </tr>
-     * <tr>
-     * <td>Dimensions</td>
-     * <td>object[\]</td>
-     * <td>Yes</td>
-     * <td>The filter information.</td>
-     * </tr>
-     * <tr>
-     * <td>\-Name</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>The filter condition. Valid values:</td>
-     * </tr>
-     * </tbody></table>
-     * <ul>
-     * <li><strong>Country</strong>: the probing country.</li>
-     * <li><strong>Province</strong>: the probing province.</li>
-     * <li><strong>Isp</strong>: the probing ISP.
-     *  <strong>Note:</strong> Specify at least one of the preceding parameters. |
-     * | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</li>
-     * <li>Country: China</li>
-     * <li>Province: Zhejiang </li>
-     * <li>Isp: Alibaba 
-     * <strong>Note:</strong> Country and province values are capitalized. The ISP parameter value must match the name displayed in the console. |</li>
-     * </ul>
-     * <h3><strong>Response parameters</strong></h3>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th><strong>Name</strong></th>
-     * <th><strong>Type</strong></th>
-     * <th><strong>Description</strong></th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RequestId</td>
-     * <td>string</td>
-     * <td>The request ID.</td>
-     * </tr>
-     * <tr>
-     * <td>Data</td>
-     * <td>object</td>
-     * <td>The cloud network metric trends data object.</td>
-     * </tr>
-     * <tr>
-     * <td>Metrics</td>
-     * <td>array</td>
-     * <td>The collection of metric trends data.</td>
-     * </tr>
-     * <tr>
-     * <td>\-TimeStamp</td>
-     * <td>long</td>
-     * <td>The UNIX timestamp in milliseconds.</td>
-     * </tr>
-     * <tr>
-     * <td>\-Value</td>
-     * <td>double</td>
-     * <td>The metric value corresponding to the <strong>MetricName</strong> input parameter.</td>
-     * </tr>
-     * <tr>
-     * <td>Unit</td>
-     * <td>String</td>
-     * <td>The unit of <strong>Value</strong>.</td>
-     * </tr>
-     * </tbody></table>
      * <h2>Cross-zone internal network performance observation dashboard scenario</h2>
-     * <p><strong>Note</strong></p>
+     * <p><strong>Description</strong></p>
      * <ul>
-     * <li><p>If the query time span exceeds 5 days, the query result contains one data point per day.</p>
+     * <li><p>If the query time span exceeds 5 days, the query result contains one data entry per day.</p>
      * </li>
-     * <li><p>If the query time span exceeds 1 day, the query result contains one data point per hour.</p>
+     * <li><p>If the query time span exceeds 1 day, the query result contains one data entry per hour.</p>
      * </li>
-     * <li><p>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</p>
+     * <li><p>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</p>
      * </li>
      * </ul>
      * <h3><strong>Request parameters</strong></h3>
@@ -4629,8 +4533,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <ul>
-     * <li><strong>SourceZone</strong>: the source zone for probing. This parameter is required.</li>
-     * <li><strong>DestinationZone</strong>: the destination zone for probing. This parameter is required. |
+     * <li><strong>SourceZone</strong>: the source zone of probing. This parameter is required.</li>
+     * <li><strong>DestinationZone</strong>: the destination zone of probing. This parameter is required. |
      * | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</li>
      * <li>SourceZone: cn-hangzhou-j</li>
      * <li>DestinationZone: cn-hangzhou-k |</li>
@@ -4667,7 +4571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>\-Value</td>
      * <td>double</td>
-     * <td>The metric value corresponding to the <strong>MetricName</strong> input parameter.</td>
+     * <td>The metric value corresponding to the input parameter <strong>MetricName</strong>.</td>
      * </tr>
      * <tr>
      * <td>Unit</td>
@@ -4676,13 +4580,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2><strong>Cross-region internal network performance observation dashboard scenario</strong></h2>
-     * <p><strong>Note</strong></p>
+     * <p><strong>Description</strong></p>
      * <ul>
-     * <li><p>If the query time span exceeds 5 days, the query result contains one data point per day.</p>
+     * <li><p>If the query time span exceeds 5 days, the query result contains one data entry per day.</p>
      * </li>
-     * <li><p>If the query time span exceeds 1 day, the query result contains one data point per hour.</p>
+     * <li><p>If the query time span exceeds 1 day, the query result contains one data entry per hour.</p>
      * </li>
-     * <li><p>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</p>
+     * <li><p>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</p>
      * </li>
      * </ul>
      * <h3><strong>Request parameters</strong></h3>
@@ -4719,7 +4623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><strong>out</strong>: probing with RegionNo as the source. |
      * | MetricName | string | Yes | The metric for which to query trends. Valid value: <strong>rtt</strong>, the round-trip time of probing. |
      * | Dimensions | object[\] | No | The filter information. |
-     * | \-Name | string | No | The filter condition. Valid value: <strong>DestinationRegionNo</strong>, the destination region for probing. This parameter is required. |
+     * | \-Name | string | No | The filter condition. Valid value: <strong>DestinationRegionNo</strong>, the destination region of probing. This parameter is required. |
      * | \-Value | string | No | The destination region ID. Example: DestinationRegionNo: cn-shenzhen |</li>
      * </ul>
      * <h3><strong>Response parameters</strong></h3>
@@ -4754,7 +4658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>\-Value</td>
      * <td>double</td>
-     * <td>The metric value corresponding to the <strong>MetricName</strong> input parameter.</td>
+     * <td>The metric value corresponding to the input parameter <strong>MetricName</strong>.</td>
      * </tr>
      * <tr>
      * <td>Unit</td>
@@ -4842,113 +4746,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>API data is synchronized every 6 hours. You can query current network analysis data only after 6 hours.
      * Supported analysis scenarios: </li>
-     * <li>Internet performance observation dashboard scenario</li>
      * <li>Cross-zone internal network performance observation dashboard scenario</li>
      * <li>Cross-region internal network performance observation dashboard scenario</li>
      * </ul>
-     * <h2>Internet performance observation dashboard scenario</h2>
-     * <p><strong>Note</strong>
-     * The maximum query time span is 24 hours. If not specified, the most recent 1 hour is queried by default. The query result contains one data point per minute.</p>
-     * <h3><strong>Request parameters</strong></h3>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th><strong>Name</strong></th>
-     * <th><strong>Type</strong></th>
-     * <th><strong>Required</strong></th>
-     * <th><strong>Description</strong></th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RegionNo</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>The Alibaba Cloud region where the probing source is located.</td>
-     * </tr>
-     * <tr>
-     * <td>ResourceType</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>Set to <strong>InternetProbing</strong> to query Internet performance monitoring trends.</td>
-     * </tr>
-     * <tr>
-     * <td>MetricName</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>The metric for which to query trends. Valid value: <strong>rtt</strong>, the round-trip time of probing.</td>
-     * </tr>
-     * <tr>
-     * <td>Dimensions</td>
-     * <td>object[\]</td>
-     * <td>Yes</td>
-     * <td>The filter information.</td>
-     * </tr>
-     * <tr>
-     * <td>\-Name</td>
-     * <td>string</td>
-     * <td>Yes</td>
-     * <td>The filter condition. Valid values:</td>
-     * </tr>
-     * </tbody></table>
-     * <ul>
-     * <li><strong>Country</strong>: the probing country.</li>
-     * <li><strong>Province</strong>: the probing province.</li>
-     * <li><strong>Isp</strong>: the probing ISP.
-     *  <strong>Note:</strong> Specify at least one of the preceding parameters. |
-     * | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</li>
-     * <li>Country: China</li>
-     * <li>Province: Zhejiang </li>
-     * <li>Isp: Alibaba 
-     * <strong>Note:</strong> Country and province values are capitalized. The ISP parameter value must match the name displayed in the console. |</li>
-     * </ul>
-     * <h3><strong>Response parameters</strong></h3>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th><strong>Name</strong></th>
-     * <th><strong>Type</strong></th>
-     * <th><strong>Description</strong></th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RequestId</td>
-     * <td>string</td>
-     * <td>The request ID.</td>
-     * </tr>
-     * <tr>
-     * <td>Data</td>
-     * <td>object</td>
-     * <td>The cloud network metric trends data object.</td>
-     * </tr>
-     * <tr>
-     * <td>Metrics</td>
-     * <td>array</td>
-     * <td>The collection of metric trends data.</td>
-     * </tr>
-     * <tr>
-     * <td>\-TimeStamp</td>
-     * <td>long</td>
-     * <td>The UNIX timestamp in milliseconds.</td>
-     * </tr>
-     * <tr>
-     * <td>\-Value</td>
-     * <td>double</td>
-     * <td>The metric value corresponding to the <strong>MetricName</strong> input parameter.</td>
-     * </tr>
-     * <tr>
-     * <td>Unit</td>
-     * <td>String</td>
-     * <td>The unit of <strong>Value</strong>.</td>
-     * </tr>
-     * </tbody></table>
      * <h2>Cross-zone internal network performance observation dashboard scenario</h2>
-     * <p><strong>Note</strong></p>
+     * <p><strong>Description</strong></p>
      * <ul>
-     * <li><p>If the query time span exceeds 5 days, the query result contains one data point per day.</p>
+     * <li><p>If the query time span exceeds 5 days, the query result contains one data entry per day.</p>
      * </li>
-     * <li><p>If the query time span exceeds 1 day, the query result contains one data point per hour.</p>
+     * <li><p>If the query time span exceeds 1 day, the query result contains one data entry per hour.</p>
      * </li>
-     * <li><p>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</p>
+     * <li><p>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</p>
      * </li>
      * </ul>
      * <h3><strong>Request parameters</strong></h3>
@@ -4993,8 +4801,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <ul>
-     * <li><strong>SourceZone</strong>: the source zone for probing. This parameter is required.</li>
-     * <li><strong>DestinationZone</strong>: the destination zone for probing. This parameter is required. |
+     * <li><strong>SourceZone</strong>: the source zone of probing. This parameter is required.</li>
+     * <li><strong>DestinationZone</strong>: the destination zone of probing. This parameter is required. |
      * | \-Value | string | Yes | The filter value corresponding to the filter condition. Examples:</li>
      * <li>SourceZone: cn-hangzhou-j</li>
      * <li>DestinationZone: cn-hangzhou-k |</li>
@@ -5031,7 +4839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>\-Value</td>
      * <td>double</td>
-     * <td>The metric value corresponding to the <strong>MetricName</strong> input parameter.</td>
+     * <td>The metric value corresponding to the input parameter <strong>MetricName</strong>.</td>
      * </tr>
      * <tr>
      * <td>Unit</td>
@@ -5040,13 +4848,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * </tbody></table>
      * <h2><strong>Cross-region internal network performance observation dashboard scenario</strong></h2>
-     * <p><strong>Note</strong></p>
+     * <p><strong>Description</strong></p>
      * <ul>
-     * <li><p>If the query time span exceeds 5 days, the query result contains one data point per day.</p>
+     * <li><p>If the query time span exceeds 5 days, the query result contains one data entry per day.</p>
      * </li>
-     * <li><p>If the query time span exceeds 1 day, the query result contains one data point per hour.</p>
+     * <li><p>If the query time span exceeds 1 day, the query result contains one data entry per hour.</p>
      * </li>
-     * <li><p>If the query time span is less than 1 day, the query result contains one data point per 5 minutes.</p>
+     * <li><p>If the query time span is less than 1 day, the query result contains one data entry per 5 minutes.</p>
      * </li>
      * </ul>
      * <h3><strong>Request parameters</strong></h3>
@@ -5083,7 +4891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><strong>out</strong>: probing with RegionNo as the source. |
      * | MetricName | string | Yes | The metric for which to query trends. Valid value: <strong>rtt</strong>, the round-trip time of probing. |
      * | Dimensions | object[\] | No | The filter information. |
-     * | \-Name | string | No | The filter condition. Valid value: <strong>DestinationRegionNo</strong>, the destination region for probing. This parameter is required. |
+     * | \-Name | string | No | The filter condition. Valid value: <strong>DestinationRegionNo</strong>, the destination region of probing. This parameter is required. |
      * | \-Value | string | No | The destination region ID. Example: DestinationRegionNo: cn-shenzhen |</li>
      * </ul>
      * <h3><strong>Response parameters</strong></h3>
@@ -5118,7 +4926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <tr>
      * <td>\-Value</td>
      * <td>double</td>
-     * <td>The metric value corresponding to the <strong>MetricName</strong> input parameter.</td>
+     * <td>The metric value corresponding to the input parameter <strong>MetricName</strong>.</td>
      * </tr>
      * <tr>
      * <td>Unit</td>
@@ -5757,6 +5565,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNisInspectionTasksResponse listNisInspectionTasks(ListNisInspectionTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNisInspectionTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sends an A2A streaming message.</p>
+     * 
+     * @param tmpReq SendNapalStreamMessageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendNapalStreamMessageResponse
+     */
+    public SendNapalStreamMessageResponse sendNapalStreamMessageWithOptions(SendNapalStreamMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SendNapalStreamMessageShrinkRequest request = new SendNapalStreamMessageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.configuration)) {
+            request.configurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.configuration, "Configuration", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.message)) {
+            request.messageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.message, "Message", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadata)) {
+            request.metadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadata, "Metadata", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configurationShrink)) {
+            body.put("Configuration", request.configurationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageShrink)) {
+            body.put("Message", request.messageShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {
+            body.put("Metadata", request.metadataShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendNapalStreamMessage"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendNapalStreamMessageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Sends an A2A streaming message.</p>
+     * 
+     * @param request SendNapalStreamMessageRequest
+     * @return SendNapalStreamMessageResponse
+     */
+    public SendNapalStreamMessageResponse sendNapalStreamMessage(SendNapalStreamMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendNapalStreamMessageWithOptions(request, runtime);
     }
 
     /**
