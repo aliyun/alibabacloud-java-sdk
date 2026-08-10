@@ -4,10 +4,15 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class GetVideoRenderJobResponseBody extends TeaModel {
+    /**
+     * <p>The video rendering and composition task object.</p>
+     */
     @NameInMap("Job")
     public GetVideoRenderJobResponseBodyJob job;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
@@ -37,6 +42,8 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
 
     public static class GetVideoRenderJobResponseBodyJob extends TeaModel {
         /**
+         * <p>The online editing project ID, which can be used for secondary editing of the output video.</p>
+         * 
          * <strong>example:</strong>
          * <p>8239345231244512***</p>
          */
@@ -44,6 +51,8 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         public String editingProjectId;
 
         /**
+         * <p>The error code. This parameter is returned when the task is in the Failed state.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -51,6 +60,8 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message. This parameter is returned when the task is in the Failed state.</p>
+         * 
          * <strong>example:</strong>
          * <p>The specified product does not exist.</p>
          */
@@ -58,6 +69,8 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>68ca759e798b40b4903b255*******</p>
          */
@@ -65,6 +78,8 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The narration language of the output video.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -72,6 +87,8 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <p>The download URL of the rendered and composed video.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx.mp4">https://xxxx.mp4</a></p>
          */
@@ -79,6 +96,15 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Created: The task is created.</li>
+         * <li>Executing: The task is being executed.</li>
+         * <li>Finished: The task is completed.</li>
+         * <li>Failed: The task has failed.</li>
+         * <li>Deleted: The task is deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Executing</p>
          */
@@ -86,6 +112,8 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The custom user data in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
          */

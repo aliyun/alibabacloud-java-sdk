@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoRenderJobResponseBody extends TeaModel {
     /**
+     * <p>The error code. This parameter is returned when the task is in the Failed state.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class SubmitVideoRenderJobResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68ca759e798b40b4903b255*******</p>
      */
@@ -19,6 +23,8 @@ public class SubmitVideoRenderJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */

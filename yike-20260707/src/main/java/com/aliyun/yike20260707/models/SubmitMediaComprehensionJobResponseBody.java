@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaComprehensionJobResponseBody extends TeaModel {
     /**
+     * <p>The business error code. An empty string is returned when the submission is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,6 +14,8 @@ public class SubmitMediaComprehensionJobResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68ca759e798b40b4903b255********</p>
      */
@@ -19,6 +23,8 @@ public class SubmitMediaComprehensionJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

@@ -63,8 +63,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The output configuration JSON string.</p>
-     * <p>This parameter is required.</p>
+     * <p>The output configuration JSON string. The OssUri value must be a folder.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;OssUri&quot;:&quot;oss://bucket/output/&quot;}</p>

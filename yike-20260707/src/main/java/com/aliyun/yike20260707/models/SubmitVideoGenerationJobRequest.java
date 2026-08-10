@@ -35,25 +35,25 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
      * <p>The task input in JSON string format. Fields include:</p>
      * <ul>
      * <li>Prompt: String. Required. The prompt.</li>
-     * <li>Medias: The list of media items.<ul>
-     * <li>When JobType is image_to_video, this field is required and only 1 Media item is needed.</li>
-     * <li>When JobType is first_last_frame, this field is required and exactly 2 Media items are needed.</li>
-     * <li>When JobType is reference_to_video, this field is required and up to 9 Media items are allowed.</li>
+     * <li>Medias: The media list.<ul>
+     * <li>When JobType is image_to_video, this field is required. Only 1 Media item is needed.</li>
+     * <li>When JobType is first_last_frame, this field is required. Only 2 Media items are needed.</li>
+     * <li>When JobType is reference_to_video, this field is required. A maximum of 9 Media items are supported.<blockquote>
+     * <p>The Media struct contains: Type, the media type, String, valid values are <code>image</code>/<code>video</code>/<code>audio</code>; URL, the media download URL, String; MediaId, the media asset ID, String.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>The Media structure contains: Type, the media type (String, valid values: <code>image</code>/<code>video</code>/<code>audio</code>); URL, the media download URL (String); MediaId, the media asset ID (String).</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Prompt&quot;:&quot;Person in image 1 dunks a basketball on the court using image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
+     * <p>{&quot;Prompt&quot;:&quot;Person 1 is on the basketball court, and Person 2 makes a slam dunk&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
-     * <p>The task feature parameters. No configuration is required at this time.</p>
+     * <p>The task function parameters. No configuration is required at this time.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -98,6 +98,9 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
      */
     @NameInMap("N")
     public Integer n;
+
+    @NameInMap("Output")
+    public String output;
 
     /**
      * <p>The resolution. Valid values: 720P (default) and 1080P.</p>
@@ -193,6 +196,14 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     }
     public Integer getN() {
         return this.n;
+    }
+
+    public SubmitVideoGenerationJobRequest setOutput(String output) {
+        this.output = output;
+        return this;
+    }
+    public String getOutput() {
+        return this.output;
     }
 
     public SubmitVideoGenerationJobRequest setResolution(String resolution) {

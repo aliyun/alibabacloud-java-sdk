@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMediaRequest extends TeaModel {
     /**
+     * <p>The validity period of the signed file URL. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class GetMediaRequest extends TeaModel {
     public Long authTimeout;
 
     /**
+     * <p>Currently unavailable.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
      */
@@ -19,6 +23,8 @@ public class GetMediaRequest extends TeaModel {
     public String inputURL;
 
     /**
+     * <p>The media asset ID. If this parameter is not empty, the system queries the media asset by this ID and validates whether the value is a valid MediaId.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */

@@ -140,6 +140,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an infinite canvas.</p>
+     * 
+     * @param request CreateInfiniteCanvasRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInfiniteCanvasResponse
+     */
+    public CreateInfiniteCanvasResponse createInfiniteCanvasWithOptions(CreateInfiniteCanvasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.coverUrl)) {
+            query.put("CoverUrl", request.coverUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionId)) {
+            query.put("ProductionId", request.productionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInfiniteCanvas"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInfiniteCanvasResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an infinite canvas.</p>
+     * 
+     * @param request CreateInfiniteCanvasRequest
+     * @return CreateInfiniteCanvasResponse
+     */
+    public CreateInfiniteCanvasResponse createInfiniteCanvas(CreateInfiniteCanvasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createInfiniteCanvasWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</p>
      * 
      * <b>summary</b> : 
@@ -186,6 +250,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAssetCategoryResponse deleteAssetCategory(DeleteAssetCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAssetCategoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an infinite canvas.</p>
+     * 
+     * @param request DeleteInfiniteCanvasRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInfiniteCanvasResponse
+     */
+    public DeleteInfiniteCanvasResponse deleteInfiniteCanvasWithOptions(DeleteInfiniteCanvasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.canvasId)) {
+            query.put("CanvasId", request.canvasId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInfiniteCanvas"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInfiniteCanvasResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an infinite canvas.</p>
+     * 
+     * @param request DeleteInfiniteCanvasRequest
+     * @return DeleteInfiniteCanvasResponse
+     */
+    public DeleteInfiniteCanvasResponse deleteInfiniteCanvas(DeleteInfiniteCanvasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteInfiniteCanvasWithOptions(request, runtime);
     }
 
     /**
@@ -238,6 +354,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMediasResponse deleteMedias(DeleteMediasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMediasWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a login token for an enterprise account.</p>
+     * 
+     * @param request GenerateYikeLoginTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateYikeLoginTokenResponse
+     */
+    public GenerateYikeLoginTokenResponse generateYikeLoginTokenWithOptions(GenerateYikeLoginTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoCreateProduction)) {
+            query.put("AutoCreateProduction", request.autoCreateProduction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expires)) {
+            query.put("Expires", request.expires);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nickName)) {
+            query.put("NickName", request.nickName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionAuth)) {
+            query.put("ProductionAuth", request.productionAuth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subUserCredit)) {
+            query.put("SubUserCredit", request.subUserCredit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenant)) {
+            query.put("Tenant", request.tenant);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateYikeLoginToken"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateYikeLoginTokenResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a login token for an enterprise account.</p>
+     * 
+     * @param request GenerateYikeLoginTokenRequest
+     * @return GenerateYikeLoginTokenResponse
+     */
+    public GenerateYikeLoginTokenResponse generateYikeLoginToken(GenerateYikeLoginTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateYikeLoginTokenWithOptions(request, runtime);
     }
 
     /**
@@ -330,11 +528,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Description</h2>
+     * <p>This API is used to query a media asset content understanding job.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询媒资</p>
+     * <p>Queries an infinite canvas.</p>
+     * 
+     * @param request GetInfiniteCanvasRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInfiniteCanvasResponse
+     */
+    public GetInfiniteCanvasResponse getInfiniteCanvasWithOptions(GetInfiniteCanvasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.canvasId)) {
+            query.put("CanvasId", request.canvasId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInfiniteCanvas"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInfiniteCanvasResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API is used to query a media asset content understanding job.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries an infinite canvas.</p>
+     * 
+     * @param request GetInfiniteCanvasRequest
+     * @return GetInfiniteCanvasResponse
+     */
+    public GetInfiniteCanvasResponse getInfiniteCanvas(GetInfiniteCanvasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInfiniteCanvasWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description.</h2>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a media asset.</p>
      * 
      * @param request GetMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -374,11 +623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于查询媒资内容理解作业。</p>
+     * <h2>Operation description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>查询媒资</p>
+     * <p>Queries a media asset.</p>
      * 
      * @param request GetMediaRequest
      * @return GetMediaResponse
@@ -534,7 +782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询爆款新视频渲染任务</p>
+     * <p>Submits a video rendering and composition task.</p>
      * 
      * @param request GetVideoRenderJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -566,7 +814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询爆款新视频渲染任务</p>
+     * <p>Submits a video rendering and composition task.</p>
      * 
      * @param request GetVideoRenderJobRequest
      * @return GetVideoRenderJobResponse
@@ -574,6 +822,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetVideoRenderJobResponse getVideoRenderJob(GetVideoRenderJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getVideoRenderJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于根据<code>JobId</code>获取视频翻译任务的状态和详细信息。</li>
+     * <li><code>JobId</code>是必需参数，通过query或form方式传递。</li>
+     * <li>如果任务不存在或者不属于当前调用方，则返回<code>InvalidParameter</code>错误码与400状态码。</li>
+     * <li>成功响应时，HTTP状态码为200，任务对象位于<code>data.Job</code>中。</li>
+     * <li>当任务完成(<code>Status=Finished</code>)时，业务产物可以在<code>data.Job.Output</code>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</li>
+     * <li>对于多语言目标的任务，直接使用<code>Output.AiResult.ResultMap</code>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<code>data.Job.EditingProjectId</code>便捷地获取剪辑工程ID。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询视频翻译任务</p>
+     * 
+     * @param request GetVideoTranslationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoTranslationJobResponse
+     */
+    public GetVideoTranslationJobResponse getVideoTranslationJobWithOptions(GetVideoTranslationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoTranslationJob"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoTranslationJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于根据<code>JobId</code>获取视频翻译任务的状态和详细信息。</li>
+     * <li><code>JobId</code>是必需参数，通过query或form方式传递。</li>
+     * <li>如果任务不存在或者不属于当前调用方，则返回<code>InvalidParameter</code>错误码与400状态码。</li>
+     * <li>成功响应时，HTTP状态码为200，任务对象位于<code>data.Job</code>中。</li>
+     * <li>当任务完成(<code>Status=Finished</code>)时，业务产物可以在<code>data.Job.Output</code>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</li>
+     * <li>对于多语言目标的任务，直接使用<code>Output.AiResult.ResultMap</code>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<code>data.Job.EditingProjectId</code>便捷地获取剪辑工程ID。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>查询视频翻译任务</p>
+     * 
+     * @param request GetVideoTranslationJobRequest
+     * @return GetVideoTranslationJobResponse
+     */
+    public GetVideoTranslationJobResponse getVideoTranslationJob(GetVideoTranslationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoTranslationJobWithOptions(request, runtime);
     }
 
     /**
@@ -806,6 +1120,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of infinite canvases.</p>
+     * 
+     * @param request ListInfiniteCanvasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInfiniteCanvasesResponse
+     */
+    public ListInfiniteCanvasesResponse listInfiniteCanvasesWithOptions(ListInfiniteCanvasesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInfiniteCanvases"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInfiniteCanvasesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of infinite canvases.</p>
+     * 
+     * @param request ListInfiniteCanvasesRequest
+     * @return ListInfiniteCanvasesResponse
+     */
+    public ListInfiniteCanvasesResponse listInfiniteCanvases(ListInfiniteCanvasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInfiniteCanvasesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Returns media asset information that matches the specified filter conditions.</p>
      * 
@@ -951,11 +1333,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交媒资内容理解作业</p>
+     * <p>Submits a media asset content understanding job.</p>
      * 
      * @param request SubmitMediaComprehensionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -999,11 +1381,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<code>UserData</code>字段传递自定义参数，在回调时原样返回。</p>
+     * <h2>Operation description</h2>
+     * <p>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交媒资内容理解作业</p>
+     * <p>Submits a media asset content understanding job.</p>
      * 
      * @param request SubmitMediaComprehensionJobRequest
      * @return SubmitMediaComprehensionJobResponse
@@ -1015,10 +1397,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</p>
+     * <p>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交爆款复刻新脚本生成任务</p>
+     * <p>Submits a creative script generation task.</p>
      * 
      * @param request SubmitRemakeScriptJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1058,10 +1440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</p>
+     * <p>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交爆款复刻新脚本生成任务</p>
+     * <p>Submits a creative script generation task.</p>
      * 
      * @param request SubmitRemakeScriptJobRequest
      * @return SubmitRemakeScriptJobResponse
@@ -1114,6 +1496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("N", request.n);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            query.put("Output", request.output);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resolution)) {
             query.put("Resolution", request.resolution);
         }
@@ -1157,7 +1543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交爆款新视频渲染任务</p>
+     * <p>Submits a video rendering and compositing task.</p>
      * 
      * @param request SubmitVideoRenderJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1197,7 +1583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交爆款新视频渲染任务</p>
+     * <p>Submits a video rendering and compositing task.</p>
      * 
      * @param request SubmitVideoRenderJobRequest
      * @return SubmitVideoRenderJobResponse
@@ -1355,6 +1741,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAssetCategoryResponse updateAssetCategory(UpdateAssetCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAssetCategoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information of an infinite canvas.</p>
+     * 
+     * @param request UpdateInfiniteCanvasRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInfiniteCanvasResponse
+     */
+    public UpdateInfiniteCanvasResponse updateInfiniteCanvasWithOptions(UpdateInfiniteCanvasRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.canvasId)) {
+            query.put("CanvasId", request.canvasId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.coverUrl)) {
+            query.put("CoverUrl", request.coverUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInfiniteCanvas"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInfiniteCanvasResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information of an infinite canvas.</p>
+     * 
+     * @param request UpdateInfiniteCanvasRequest
+     * @return UpdateInfiniteCanvasResponse
+     */
+    public UpdateInfiniteCanvasResponse updateInfiniteCanvas(UpdateInfiniteCanvasRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateInfiniteCanvasWithOptions(request, runtime);
     }
 
     /**
